@@ -1,69 +1,116 @@
-import Image from "next/image";
+'use client';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { useStore } from '@/lib/store';
+import { useRouter } from 'next/navigation';
 
-export default function Home() {
+export default function LandingPage() {
+  const router = useRouter();
+  const { setLanguage } = useStore();
+
+  const handleSelectLang = (lang: 'hi' | 'pa' | 'en') => {
+    setLanguage(lang);
+    router.push('/dashboard');
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex flex-col items-center justify-center p-6 text-center text-slate-100">
+      
+      <motion.div 
+        initial={{ scale: 0.9, opacity: 0 }} 
+        animate={{ scale: 1, opacity: 1 }} 
+        transition={{ duration: 0.5 }}
+        className="mb-6 max-w-md"
+      >
+        <span className="text-4xl mb-2 inline-block">🎓</span>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">ExamSathi</h1>
+        <p className="text-lg text-teal-300 font-medium">परीक्षा साथी • ਪ੍ਰੀਖਿਆ ਸਾਥੀ</p>
+        <p className="text-xs text-slate-400 mt-2 leading-relaxed">
+          Open-Access Multi-Disciplinary Exam Preparation Portal for State & Central Government Examinations
+        </p>
+      </motion.div>
+
+      {/* Choose Preferred Language */}
+      <motion.div 
+        initial={{ y: 20, opacity: 0 }} 
+        animate={{ y: 0, opacity: 1 }} 
+        transition={{ delay: 0.2, duration: 0.5 }}
+        className="flex flex-col items-center gap-2 mb-8"
+      >
+        <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+          अपनी भाषा चुनें / ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ
+        </span>
+        <div className="flex gap-2.5">
+          <button 
+            onClick={() => handleSelectLang('hi')} 
+            className="bg-slate-800/90 hover:bg-indigo-600 transition-all px-4 py-2 rounded-xl border border-slate-700 hover:border-indigo-400 text-xs font-bold flex items-center gap-1.5 shadow"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <span>🇮🇳</span> हिंदी
+          </button>
+          <button 
+            onClick={() => handleSelectLang('pa')} 
+            className="bg-slate-800/90 hover:bg-indigo-600 transition-all px-4 py-2 rounded-xl border border-slate-700 hover:border-indigo-400 text-xs font-bold flex items-center gap-1.5 shadow"
           >
-            Documentation
-          </a>
+            <span>🌾</span> ਪੰਜਾਬੀ
+          </button>
+          <button 
+            onClick={() => handleSelectLang('en')} 
+            className="bg-slate-800/90 hover:bg-indigo-600 transition-all px-4 py-2 rounded-xl border border-slate-700 hover:border-indigo-400 text-xs font-bold flex items-center gap-1.5 shadow"
+          >
+            <span>🇬🇧</span> English
+          </button>
         </div>
-      </main>
+      </motion.div>
+
+      {/* Stats KPI */}
+      <motion.div 
+        initial={{ y: 20, opacity: 0 }} 
+        animate={{ y: 0, opacity: 1 }} 
+        transition={{ delay: 0.35, duration: 0.5 }}
+        className="grid grid-cols-3 gap-3 mb-10 w-full max-w-sm"
+      >
+        <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
+          <div className="text-xl font-bold text-amber-400">50+</div>
+          <div className="text-[11px] text-slate-400">Recruitments</div>
+        </div>
+        <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
+          <div className="text-xl font-bold text-teal-400">10k+</div>
+          <div className="text-[11px] text-slate-400">Questions</div>
+        </div>
+        <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
+          <div className="text-xl font-bold text-indigo-400">100%</div>
+          <div className="text-[11px] text-slate-400">Deep Syllabus</div>
+        </div>
+      </motion.div>
+
+      {/* Call to Actions */}
+      <motion.div 
+        initial={{ y: 20, opacity: 0 }} 
+        animate={{ y: 0, opacity: 1 }} 
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="w-full max-w-sm flex flex-col gap-3"
+      >
+        <Link 
+          href="/dashboard" 
+          className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold py-3.5 rounded-xl shadow-lg transition text-sm flex items-center justify-center gap-2"
+        >
+          <span>Start Learning • अध्ययन शुरू करें</span>
+        </Link>
+        <div className="flex justify-center gap-4 text-xs text-slate-400">
+          <Link href="/login" className="hover:text-white transition">
+            Student Login
+          </Link>
+          <span>•</span>
+          <Link href="/register" className="hover:text-white transition">
+            Register Free
+          </Link>
+          <span>•</span>
+          <Link href="/admin" className="hover:text-teal-300 transition">
+            Publisher Portal
+          </Link>
+        </div>
+      </motion.div>
+
     </div>
   );
 }
