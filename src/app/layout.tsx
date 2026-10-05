@@ -1,11 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Noto_Sans } from 'next/font/google';
 import './globals.css';
-
-const notoSans = Noto_Sans({ 
-  subsets: ['latin', 'devanagari'],
-  weight: ['400', '500', '600', '700']
-});
 
 export const metadata: Metadata = {
   title: 'ExamSathi - परीक्षा साथी',
@@ -26,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${notoSans.className} min-h-screen antialiased`}>
+      <body className="min-h-screen antialiased bg-slate-900 text-slate-100">
         <main className="max-w-[480px] mx-auto min-h-screen bg-slate-900 relative shadow-2xl overflow-x-hidden">
           {children}
         </main>
