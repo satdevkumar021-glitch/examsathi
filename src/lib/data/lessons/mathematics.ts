@@ -179,6 +179,42 @@ export const MATHEMATICS_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Mathematics Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/MathSyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Ganit (ਗਣਿਤ) Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561226_Ganit-10%28Punjabi%29.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Mathematics Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jemh1dd.zip",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · गणित पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhmh1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Mathematics Core Module",
+            "url": "https://nios.ac.in/media/documents/SecMathCour/English/Lesson-01.pdf",
+            "language": "English",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Mathematics Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/MathSyllabus04_05_2022.pdf"
+},
   },
 
   // -------------------------------------------------------------
@@ -319,5 +355,41 @@ export const MATHEMATICS_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Mathematics Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/MathSyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Ganit (ਗਣਿਤ) Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561226_Ganit-10%28Punjabi%29.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Mathematics Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jemh1dd.zip",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · गणित पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhmh1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Mathematics Core Module",
+            "url": "https://nios.ac.in/media/documents/SecMathCour/English/Lesson-01.pdf",
+            "language": "English",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Mathematics Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/MathSyllabus04_05_2022.pdf"
+},
   },
 };

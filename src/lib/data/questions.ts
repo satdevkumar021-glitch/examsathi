@@ -908,7 +908,50 @@ export const QUESTIONS: Question[] = [
   },
 ];
 
+import { REFERENCE_SST_QUESTIONS } from './questions/reference_questions';
+
+export const ALL_QUESTIONS: Question[] = [
+  ...QUESTIONS,
+  ...REFERENCE_SST_QUESTIONS,
+];
+
+// Topic alias mapping to ensure cross-compatibility between syllabus IDs and reference IDs
+const TOPIC_ALIASES: Record<string, string[]> = {
+  'ancient-india': ['sst-harappa', 'sst-buddhism-jainism', 'sst-maurya'],
+  'medieval-india': ['sst-punjab-sikh'],
+  'punjab-history': ['sst-punjab-sikh'],
+  'modern-india': ['sst-national-movement'],
+  'fundamental-rights': ['sst-fundamental-rights', 'sst-constitution'],
+  'parliament': ['sst-legislature', 'sst-executive'],
+  'judiciary': ['sst-judiciary'],
+  'local-govt': ['sst-federal-local'],
+  'indian-economy': ['sst-economic-sectors', 'sst-national-income', 'sst-demand-supply', 'sst-inflation-employment', 'sst-development', 'sst-trade'],
+  'world-history': ['sst-renaissance', 'sst-french-revolution', 'sst-industrial-revolution', 'sst-world-wars'],
+  'punjab-geography': ['sst-geo-punjab', 'sst-geo-monsoon'],
+  'physical-geography': ['sst-geo-earth', 'sst-geo-atmosphere', 'sst-geo-tectonics', 'sst-geo-landforms', 'sst-geo-oceans', 'sst-geo-environment'],
+};
+
 export function getQuestionsByTopic(topicId: string): Question[] {
-  const filtered = QUESTIONS.filter(q => q.topicId === topicId);
-  return filtered.length > 0 ? filtered : QUESTIONS;
+  // 1. Direct match
+  const directMatches = ALL_QUESTIONS.filter(q => q.topicId === topicId);
+  if (directMatches.length > 0) return directMatches;
+
+  // 2. Alias match
+  const aliases = TOPIC_ALIASES[topicId];
+  if (aliases && aliases.length > 0) {
+    const aliasMatches = ALL_QUESTIONS.filter(q => aliases.includes(q.topicId));
+    if (aliasMatches.length > 0) return aliasMatches;
+  }
+
+  // 3. Reverse alias match (if queried with a reference ID)
+  for (const [canonicalId, refList] of Object.entries(TOPIC_ALIASES)) {
+    if (refList.includes(topicId)) {
+      const canonicalMatches = ALL_QUESTIONS.filter(q => q.topicId === canonicalId);
+      if (canonicalMatches.length > 0) return canonicalMatches;
+    }
+  }
+
+  // 4. Fallback to general question pool
+  return ALL_QUESTIONS.slice(0, 10);
 }
+

@@ -171,5 +171,41 @@ export const ENGLISH_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre English Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/EnglishSyllabus04_05_2022.pdf",
+            "language": "English",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · English Grammar and Composition · English",
+            "url": "https://static.pseb.ac.in/media/1670561605_English%20Grammar-10.pdf",
+            "language": "English",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · First Flight (Literature Textbook)",
+            "url": "https://ncert.nic.in/textbook/pdf/jeff1dd.zip",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · Footprints Without Feet (Supplementary Reader)",
+            "url": "https://ncert.nic.in/textbook/pdf/jefp1dd.zip",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · English Core Language Module",
+            "url": "https://nios.ac.in/media/documents/SecEngCour/English/Lesson-01.pdf",
+            "language": "English",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre English Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/EnglishSyllabus04_05_2022.pdf"
+},
   },
 };

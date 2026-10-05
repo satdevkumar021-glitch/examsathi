@@ -221,5 +221,35 @@ export const WORLD_HISTORY_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "NCERT Class 9 · India and the Contemporary World I · English",
+            "url": "https://ncert.nic.in/textbook/pdf/iess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 9 · भारत और समकालीन विश्व भाग-1 · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/ihss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS · World History & Revolutions Lesson PDF",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-03.pdf",
+            "language": "English",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science (World History) Syllabus",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 };

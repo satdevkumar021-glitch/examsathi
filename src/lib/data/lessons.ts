@@ -14,46 +14,11 @@ import { ENGLISH_LESSONS } from './lessons/english';
 import { PATWARI_POLICE_LESSONS } from './lessons/patwari_police';
 import { PEDAGOGY_LESSONS } from './lessons/pedagogy';
 import { RAJASTHAN_LESSONS } from './lessons/rajasthan';
+import { REFERENCE_SST_LESSONS } from './lessons/reference_sst';
 
-export interface Flashcard {
-  id?: string;
-  q: { hi: string; pa: string; en: string };
-  a: { hi: string; pa: string; en: string };
-  difficulty?: 'easy' | 'medium' | 'hard';
-}
+export * from './lessons/types';
+import type { Lesson, DocumentResource, SyllabusReference, VideoResource, BookReference, Flashcard } from './lessons/types';
 
-export interface VideoResource {
-  title: string;
-  channel: string;
-  youtubeId: string;
-  language: 'hi' | 'pa' | 'en';
-  views: string;
-  duration: string;
-  tags: string[];
-}
-
-export interface BookReference {
-  title: string;
-  author: string;
-  chapters: string;
-  type?: 'ncert' | 'state-board' | 'standard';
-}
-
-export interface Lesson {
-  id: string;
-  topicId: string;
-  subjectId: string;
-  category: 'history' | 'polity' | 'geography' | 'economy' | 'science' | 'clerk' | 'language' | 'math' | 'pedagogy' | 'patwari' | 'police' | 'rajasthan';
-  title: { hi: string; pa: string; en: string };
-  examRelevance: string;
-  estimatedTime: string;
-  content: { hi: string; pa: string; en: string };
-  summary: { hi: string; pa: string; en: string };
-  keyNotes: { hi: string[]; pa: string[]; en: string[] };
-  flashcards: Flashcard[];
-  videos: VideoResource[];
-  bookRefs: BookReference[];
-}
 
 export const BASE_LESSONS: Record<string, Lesson> = {
   // =========================================================================
@@ -281,6 +246,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'state-board',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -458,6 +459,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'state-board',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -622,6 +659,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -763,6 +836,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'ncert',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -895,6 +1004,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'ncert',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -1033,6 +1178,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'state-board',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -1152,6 +1333,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -1294,6 +1511,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -1423,6 +1676,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'ncert',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // =========================================================================
@@ -1560,6 +1849,42 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Samajik Sikhya Complete Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Social Science Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · सामाजिक विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Social Science Study Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 };
 
@@ -1576,11 +1901,47 @@ export const ALL_LESSONS: Record<string, Lesson> = {
   ...PATWARI_POLICE_LESSONS,
   ...PEDAGOGY_LESSONS,
   ...RAJASTHAN_LESSONS,
+  ...REFERENCE_SST_LESSONS,
 };
 
 export const LESSONS = ALL_LESSONS;
 
+const TOPIC_ALIASES: Record<string, string> = {
+  'ancient-india': 'sst-harappa',
+  'medieval-india': 'sst-punjab-sikh',
+  'punjab-history': 'sst-punjab-sikh',
+  'modern-india': 'sst-national-movement',
+  'fundamental-rights': 'sst-fundamental-rights',
+  'parliament': 'sst-legislature',
+  'judiciary': 'sst-judiciary',
+  'local-govt': 'sst-federal-local',
+  'indian-economy': 'sst-economic-sectors',
+  'world-history': 'sst-renaissance',
+  'punjab-geography': 'sst-geo-punjab',
+  'physical-geography': 'sst-geo-earth',
+  'motion': 'physics-concepts',
+  'cell': 'biology-concepts',
+  'electricity': 'physics-concepts',
+  'percent': 'mathematics-core',
+  'ratio': 'mathematics-core',
+  'constitution': 'sst-constitution',
+  'agreement': 'english-grammar-lit',
+  'sandhi': 'hindi-vyakaran',
+  'computer': 'computer-awareness',
+  'series': 'quantitative-aptitude',
+};
+
 export function getLessonByTopicId(topicId: string): Lesson {
-  return LESSONS[topicId] || LESSONS['modern-india'];
+  if (LESSONS[topicId]) return LESSONS[topicId];
+  const alias = TOPIC_ALIASES[topicId];
+  if (alias && LESSONS[alias]) return LESSONS[alias];
+  
+  // Reverse alias check
+  for (const [key, target] of Object.entries(TOPIC_ALIASES)) {
+    if (target === topicId && LESSONS[key]) return LESSONS[key];
+  }
+
+  return LESSONS['modern-india'];
 }
+
 

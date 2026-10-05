@@ -175,6 +175,42 @@ export const HINDI_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Hindi Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf",
+            "language": "Hindi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Hindi Pustak (द्वितीय भाषा) · Hindi",
+            "url": "https://static.pseb.ac.in/media/1670561054_Hindi%20Pustak-10.pdf",
+            "language": "Hindi",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · क्षितिज भाग-2 (Kshitij Part 2) · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhks1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · कृतिका भाग-2 (Kritika Part 2) · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhkr1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Hindi Sahitya & Vyakaran Modules",
+            "url": "https://nios.ac.in/media/documents/SecHindiCour/Hindi/Lesson-01.pdf",
+            "language": "Hindi",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Hindi Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf"
+},
   },
 
   // -------------------------------------------------------------
@@ -348,5 +384,41 @@ export const HINDI_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Hindi Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf",
+            "language": "Hindi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Hindi Pustak (द्वितीय भाषा) · Hindi",
+            "url": "https://static.pseb.ac.in/media/1670561054_Hindi%20Pustak-10.pdf",
+            "language": "Hindi",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · क्षितिज भाग-2 (Kshitij Part 2) · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhks1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · कृतिका भाग-2 (Kritika Part 2) · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhkr1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Hindi Sahitya & Vyakaran Modules",
+            "url": "https://nios.ac.in/media/documents/SecHindiCour/Hindi/Lesson-01.pdf",
+            "language": "Hindi",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Hindi Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf"
+},
   },
 };

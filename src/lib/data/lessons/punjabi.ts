@@ -183,6 +183,42 @@ export const PUNJABI_LESSONS: Record<string, Lesson> = {
         type: 'state-board',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Punjabi Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/PunjabiSyllabus04_05_2022.pdf",
+            "language": "ਪੰਜਾਬੀ (Official ERD)",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Sahit Mala (ਸਾਹਿਤ ਮਾਲਾ ਕਾਵਿ ਤੇ ਵਾਰਤਕ) · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561421_Sahit%20Mala-10%28Punjabi%29.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "PSEB Class 10 · Vangi (ਵੰਨਗੀ ਕਹਾਣੀਆਂ ਤੇ ਇਕਾਂਗੀ) · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561462_Vangi-10.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "PSEB Class 10 · Punjabi Vyakaran ate Rachnavali (ਪੰਜਾਬੀ ਵਿਆਕਰਨ)",
+            "url": "https://static.pseb.ac.in/media/1670561510_Panjabi%20Vyakaran-10.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "Punjab Govt Notification · Paper A Punjabi Qualifying (50 Marks) Rules",
+            "url": "https://sssb.punjab.gov.in/Downloads/2023/Punjabi_Qualifying_Notification.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "official"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Punjabi Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/PunjabiSyllabus04_05_2022.pdf"
+},
   },
 
   // -------------------------------------------------------------
@@ -348,5 +384,41 @@ export const PUNJABI_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Punjabi Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/PunjabiSyllabus04_05_2022.pdf",
+            "language": "ਪੰਜਾਬੀ (Official ERD)",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Sahit Mala (ਸਾਹਿਤ ਮਾਲਾ ਕਾਵਿ ਤੇ ਵਾਰਤਕ) · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561421_Sahit%20Mala-10%28Punjabi%29.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "PSEB Class 10 · Vangi (ਵੰਨਗੀ ਕਹਾਣੀਆਂ ਤੇ ਇਕਾਂਗੀ) · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561462_Vangi-10.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "PSEB Class 10 · Punjabi Vyakaran ate Rachnavali (ਪੰਜਾਬੀ ਵਿਆਕਰਨ)",
+            "url": "https://static.pseb.ac.in/media/1670561510_Panjabi%20Vyakaran-10.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "Punjab Govt Notification · Paper A Punjabi Qualifying (50 Marks) Rules",
+            "url": "https://sssb.punjab.gov.in/Downloads/2023/Punjabi_Qualifying_Notification.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "official"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Punjabi Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/PunjabiSyllabus04_05_2022.pdf"
+},
   },
 };

@@ -218,5 +218,41 @@ export const ECONOMICS_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "NCERT Class 10 · Understanding Economic Development · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jess201.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · आर्थिक विकास की समझ · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhss201.pdf",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "PSEB Class 10 · Arthik Vikas di Samajh · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NIOS · Indian Economy and Sectors Module",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-19.pdf",
+            "language": "English",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Social Science (Economics) Syllabus",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 };

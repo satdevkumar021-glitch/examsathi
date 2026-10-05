@@ -196,5 +196,41 @@ export const PEDAGOGY_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "CBSE CTET · Child Development & Pedagogy Detailed Syllabus PDF",
+            "url": "https://ctet.nic.in/document/information-bulletin-ctet-2024.pdf",
+            "language": "English / Hindi",
+            "type": "syllabus"
+      },
+      {
+            "title": "ERD Punjab ETT 6635 · Teaching Methodology Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/ETT6635/Docs/ETT6635Syllabus13_08_2021.pdf",
+            "language": "Punjabi / English",
+            "type": "syllabus"
+      },
+      {
+            "title": "NCERT · Learning and Development of Children Study Guide",
+            "url": "https://ncert.nic.in/pdf/publication/otherpublications/Children_Learning.pdf",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "Right to Free and Compulsory Education Act (RTE 2009) Gazette",
+            "url": "https://dsel.education.gov.in/rte",
+            "language": "Hindi / English",
+            "type": "official"
+      },
+      {
+            "title": "NIOS D.El.Ed Course 501: Elementary Education in India",
+            "url": "https://nios.ac.in/media/documents/dled/501/Block1/Unit1.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "CBSE CTET & Punjab ETT Official CDP & Pedagogy Syllabus",
+      "url": "https://ctet.nic.in/document/information-bulletin-ctet-2024.pdf"
+},
   },
 };

@@ -195,6 +195,42 @@ export const SCIENCE_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/ScienceSyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Vigyan (ਸਾਇੰਸ) Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561141_Vigyan-10%28Punjabi%29.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Science Complete Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jesc1dd.zip",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhsc1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Science & Technology Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/secscicour/English/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/ScienceSyllabus04_05_2022.pdf"
+},
   },
 
   // -------------------------------------------------------------
@@ -372,6 +408,42 @@ export const SCIENCE_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/ScienceSyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Vigyan (ਸਾਇੰਸ) Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561141_Vigyan-10%28Punjabi%29.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Science Complete Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jesc1dd.zip",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhsc1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Science & Technology Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/secscicour/English/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/ScienceSyllabus04_05_2022.pdf"
+},
   },
 
   // -------------------------------------------------------------
@@ -550,5 +622,41 @@ export const SCIENCE_LESSONS: Record<string, Lesson> = {
         type: 'standard',
       },
     ],
+    documents: [
+      {
+            "title": "ERD Punjab · Master Cadre Science Official Syllabus PDF",
+            "url": "https://erd.punjab.gov.in/master2022/Docs/ScienceSyllabus04_05_2022.pdf",
+            "language": "English / Punjabi",
+            "type": "syllabus"
+      },
+      {
+            "title": "PSEB Class 10 · Vigyan (ਸਾਇੰਸ) Textbook · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561141_Vigyan-10%28Punjabi%29.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NCERT Class 10 · Science Complete Textbook · English",
+            "url": "https://ncert.nic.in/textbook/pdf/jesc1dd.zip",
+            "language": "English",
+            "type": "ncert"
+      },
+      {
+            "title": "NCERT Class 10 · विज्ञान पाठ्यपुस्तक · Hindi",
+            "url": "https://ncert.nic.in/textbook/pdf/jhsc1dd.zip",
+            "language": "Hindi",
+            "type": "ncert"
+      },
+      {
+            "title": "NIOS Secondary · Science & Technology Modules · Hindi/English",
+            "url": "https://nios.ac.in/media/documents/secscicour/English/Lesson-01.pdf",
+            "language": "Bilingual",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Science Official Syllabus PDF",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/ScienceSyllabus04_05_2022.pdf"
+},
   },
 };

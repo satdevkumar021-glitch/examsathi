@@ -8,11 +8,12 @@ export interface Flashcard {
 export interface VideoResource {
   title: string;
   channel: string;
-  youtubeId: string;
-  language: 'hi' | 'pa' | 'en';
-  views: string;
-  duration: string;
-  tags: string[];
+  youtubeId?: string;
+  url?: string;
+  language: 'hi' | 'pa' | 'en' | string;
+  views?: string;
+  duration?: string;
+  tags?: string[];
 }
 
 export interface BookReference {
@@ -22,11 +23,32 @@ export interface BookReference {
   type?: 'ncert' | 'state-board' | 'standard';
 }
 
+export interface DocumentResource {
+  title: string;
+  url: string;
+  language: string;
+  type?: 'syllabus' | 'textbook' | 'nios' | 'notes' | 'official' | string;
+  fileSize?: string;
+}
+
+export interface SyllabusReference {
+  title: string;
+  url: string;
+  examName?: string;
+  department?: string;
+}
+
+export interface LessonSection {
+  heading: { hi: string; pa: string; en: string };
+  text: { hi: string; pa: string; en: string };
+  bulletPoints?: { hi: string[]; pa: string[]; en: string[] };
+}
+
 export interface Lesson {
   id: string;
   topicId: string;
   subjectId: string;
-  category: 'history' | 'polity' | 'geography' | 'economy' | 'science' | 'clerk' | 'language' | 'math' | 'pedagogy' | 'patwari' | 'police' | 'rajasthan';
+  category: 'history' | 'polity' | 'geography' | 'economy' | 'science' | 'clerk' | 'language' | 'math' | 'pedagogy' | 'patwari' | 'police' | 'rajasthan' | 'general';
   title: { hi: string; pa: string; en: string };
   examRelevance: string;
   estimatedTime: string;
@@ -36,4 +58,8 @@ export interface Lesson {
   flashcards: Flashcard[];
   videos: VideoResource[];
   bookRefs: BookReference[];
+  documents?: DocumentResource[];
+  syllabusReference?: SyllabusReference;
+  sources?: Array<{ title: string; url: string }>;
+  sections?: LessonSection[];
 }

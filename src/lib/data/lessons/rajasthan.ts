@@ -182,5 +182,35 @@ export const RAJASTHAN_LESSONS: Record<string, Lesson> = {
         type: 'state-board',
       },
     ],
+    documents: [
+      {
+            "title": "RBSE REET 2024 · Level 1 & Level 2 Official Syllabus PDF",
+            "url": "https://rajeduboard.rajasthan.gov.in/REET2024/syllabus.pdf",
+            "language": "Hindi",
+            "type": "syllabus"
+      },
+      {
+            "title": "RSMSSB · 3rd Grade Teacher & Patwar Official Syllabus",
+            "url": "https://rsmssb.rajasthan.gov.in/Static/files/Syllabus_2024.pdf",
+            "language": "Hindi",
+            "type": "syllabus"
+      },
+      {
+            "title": "RBSE Class 9 · राजस्थान का स्वतंत्रता आंदोलन एवं शौर्य परंपरा",
+            "url": "https://rajeduboard.rajasthan.gov.in/books/class9/rajasthan_adhyayan.pdf",
+            "language": "Hindi",
+            "type": "textbook"
+      },
+      {
+            "title": "RBSE Class 10 · राजस्थान का इतिहास एवं संस्कृति (Art & Culture)",
+            "url": "https://rajeduboard.rajasthan.gov.in/books/class10/rajasthan_sanskriti.pdf",
+            "language": "Hindi",
+            "type": "textbook"
+      }
+],
+    syllabusReference: {
+      "title": "RBSE REET & RSMSSB 3rd Grade Teacher Official Syllabus",
+      "url": "https://rajeduboard.rajasthan.gov.in/REET2024/syllabus.pdf"
+},
   },
 };

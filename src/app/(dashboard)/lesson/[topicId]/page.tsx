@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { 
   ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, 
   HelpCircle, ChevronLeft, ChevronRight, Bookmark, RotateCcw, 
-  Sparkles, Award, Play
+  Sparkles, Award, Play, FileText, Download, ExternalLink, ShieldCheck
 } from 'lucide-react';
 import { LESSONS, getLessonByTopicId } from '@/lib/data/lessons';
 import { getQuestionsByTopic, Question } from '@/lib/data/questions';
@@ -14,7 +14,7 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
   const resolvedParams = use(params);
   const router = useRouter();
   
-  const [activeTab, setActiveTab] = useState<'read' | 'cards' | 'practice' | 'video' | 'notes'>('read');
+  const [activeTab, setActiveTab] = useState<'read' | 'docs' | 'cards' | 'practice' | 'video' | 'notes'>('read');
   const [lang, setLang] = useState<'hi' | 'pa' | 'en'>('hi');
   const [cardIndex, setCardIndex] = useState(0);
   const [isReadMarked, setIsReadMarked] = useState(false);
@@ -90,15 +90,15 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
 
   const currentCards = lesson.flashcards && lesson.flashcards.length > 0 ? lesson.flashcards : [
     {
-      q: { hi: 'क्या यह विषय महत्वपूर्ण है?', pa: 'ਕੀ ਇਹ ਵਿਸ਼ਾ ਅਹਿਮ ਹੈ?', en: 'Is this topic important?' },
-      a: { hi: 'हाँ, परीक्षा में बार-बार पूछा जाता है।', pa: 'ਹਾਂ, ਇਮਤਿਹਾਨ ਵਿੱਚ ਅਕਸਰ ਆਉਂਦਾ ਹੈ।', en: 'Yes, heavily tested.' },
+      q: { hi: 'क्या यह विषय परीक्षा के लिए महत्वपूर्ण है?', pa: 'ਕੀ ਇਹ ਵਿਸ਼ਾ ਇਮਤਿਹਾਨ ਲਈ ਅਹਿਮ ਹੈ?', en: 'Is this topic crucial for examination?' },
+      a: { hi: 'हाँ, आधिकारिक पाठ्यक्रम के अनुसार सीधे प्रश्न पूछे जाते हैं।', pa: 'ਹਾਂ, ਅਧਿਕਾਰਤ ਸਿਲੇਬਸ ਮੁਤਾਬਕ ਸਿੱਧੇ ਸਵਾਲ ਪੁੱਛੇ ਜਾਂਦੇ ਹਨ।', en: 'Yes, directly tested per official syllabus.' },
     },
   ];
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 pb-20 text-slate-100">
       
-      {/* Sticky Header */}
+      {/* Sticky Top Header */}
       <div className="sticky top-0 z-20 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 p-4 pb-0">
         <div className="flex items-center justify-between gap-3 mb-3">
           <div className="flex items-center gap-2.5 min-w-0">
@@ -119,7 +119,7 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
             </div>
           </div>
 
-          {/* 3-Language Selector */}
+          {/* 3-Language Toggle Selector */}
           <div className="flex bg-slate-800/90 rounded-lg p-1 border border-slate-700/80 shrink-0">
             <button 
               onClick={() => setLang('hi')} 
@@ -142,7 +142,7 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
           </div>
         </div>
 
-        {/* Scrollable Tabs */}
+        {/* 6 Tabs: Read | Docs & PDFs | Flip Cards | Mini Mock | Videos | Notes */}
         <div className="flex w-full overflow-x-auto no-scrollbar gap-1 border-b border-slate-800">
           <button 
             onClick={() => setActiveTab('read')} 
@@ -151,6 +151,20 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
             <BookOpen size={14} /> 
             <span>{lang === 'pa' ? 'ਪੜ੍ਹੋ (Read)' : lang === 'hi' ? 'अध्ययन (Read)' : 'Read'}</span>
           </button>
+
+          <button 
+            onClick={() => setActiveTab('docs')} 
+            className={`flex items-center gap-1.5 pb-2.5 px-3 text-xs font-bold border-b-2 transition-all shrink-0 ${activeTab === 'docs' ? 'border-teal-400 text-teal-300' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
+          >
+            <FileText size={14} /> 
+            <span>{lang === 'pa' ? 'ਸਰੋਤ / PDFs' : lang === 'hi' ? 'दस्तावेज / PDFs' : 'Official PDFs'}</span>
+            {lesson.documents && lesson.documents.length > 0 && (
+              <span className="bg-indigo-500/20 text-indigo-300 text-[10px] px-1.5 py-0.2 rounded-full font-mono">
+                {lesson.documents.length}
+              </span>
+            )}
+          </button>
+
           <button 
             onClick={() => setActiveTab('cards')} 
             className={`flex items-center gap-1.5 pb-2.5 px-3 text-xs font-bold border-b-2 transition-all shrink-0 ${activeTab === 'cards' ? 'border-teal-400 text-teal-300' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
@@ -158,6 +172,7 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
             <Layers size={14} /> 
             <span>{lang === 'pa' ? 'ਫਲਿੱਪਕਾਰਡ' : lang === 'hi' ? 'फ्लिपकार्ड' : 'Flip Cards'}</span>
           </button>
+
           <button 
             onClick={() => setActiveTab('practice')} 
             className={`flex items-center gap-1.5 pb-2.5 px-3 text-xs font-bold border-b-2 transition-all shrink-0 ${activeTab === 'practice' ? 'border-teal-400 text-teal-300' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
@@ -165,6 +180,7 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
             <HelpCircle size={14} /> 
             <span>{lang === 'pa' ? 'ਮਿੰਨੀ ਮੌਕ' : lang === 'hi' ? 'मिनी मॉक' : 'Mini Mock'}</span>
           </button>
+
           <button 
             onClick={() => setActiveTab('video')} 
             className={`flex items-center gap-1.5 pb-2.5 px-3 text-xs font-bold border-b-2 transition-all shrink-0 ${activeTab === 'video' ? 'border-teal-400 text-teal-300' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
@@ -172,6 +188,7 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
             <Video size={14} /> 
             <span>{lang === 'pa' ? 'ਵੀਡੀਓਜ਼' : lang === 'hi' ? 'वीडियो' : 'Videos'}</span>
           </button>
+
           <button 
             onClick={() => setActiveTab('notes')} 
             className={`flex items-center gap-1.5 pb-2.5 px-3 text-xs font-bold border-b-2 transition-all shrink-0 ${activeTab === 'notes' ? 'border-teal-400 text-teal-300' : 'border-transparent text-slate-400 hover:text-slate-200'}`}
@@ -185,24 +202,70 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
       {/* Main Tab Content */}
       <div className="p-4 flex-1 overflow-y-auto max-w-2xl mx-auto w-full">
         
-        {/* ================= READ TAB ================= */}
+        {/* ================= TAB 1: READ ================= */}
         {activeTab === 'read' && (
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-5">
             
-            {/* Exam Target Alert */}
-            <div className="bg-gradient-to-r from-indigo-900/60 to-teal-950/60 border border-indigo-500/30 p-3.5 rounded-xl flex items-center justify-between text-xs">
+            {/* Official Government Syllabus Banner with Clickable PDF Link */}
+            {lesson.syllabusReference && (
+              <div className="bg-gradient-to-r from-indigo-950/80 via-slate-900 to-indigo-900/60 border border-indigo-500/40 p-3 rounded-xl flex items-center justify-between text-xs shadow-sm">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className="w-7 h-7 rounded-lg bg-indigo-500/20 text-indigo-300 flex items-center justify-center shrink-0">
+                    <ShieldCheck size={16} />
+                  </div>
+                  <div className="min-w-0">
+                    <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider block">
+                      {lang === 'pa' ? 'ਸਰਕਾਰੀ ਸਿਲੇਬਸ ਨਾਲ ਪ੍ਰਮਾਣਿਤ' : 'आधिकारिक सरकारी पाठ्यक्रम से मैप किया गया'}
+                    </span>
+                    <p className="text-slate-200 font-medium truncate text-xs">
+                      {lesson.syllabusReference.title}
+                    </p>
+                  </div>
+                </div>
+                <a 
+                  href={lesson.syllabusReference.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 border border-indigo-500/50 px-2.5 py-1.5 rounded-lg font-bold text-[11px] flex items-center gap-1 shrink-0 transition"
+                >
+                  <span>PDF</span>
+                  <ExternalLink size={12} />
+                </a>
+              </div>
+            )}
+
+            {/* Exam Target & Read Status Pill */}
+            <div className="bg-slate-800/80 border border-slate-700/80 p-3 rounded-xl flex items-center justify-between text-xs">
               <div className="flex items-center gap-2">
                 <Sparkles size={16} className="text-amber-400 shrink-0" />
-                <span className="text-indigo-200 font-medium">{lesson.examRelevance}</span>
+                <span className="text-slate-200 font-medium">{lesson.examRelevance}</span>
               </div>
               {isReadMarked && (
                 <span className="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full text-[10px] font-bold flex items-center gap-1">
-                  <CheckCircle2 size={12} /> Completed
+                  <CheckCircle2 size={12} /> {lang === 'pa' ? 'ਪੂਰਾ ਹੋ ਗਿਆ' : 'पूर्ण'}
                 </span>
               )}
             </div>
 
-            {/* Injected Rich Content */}
+            {/* Quick Shortcut to Official Documents Tab */}
+            {lesson.documents && lesson.documents.length > 0 && (
+              <div 
+                onClick={() => setActiveTab('docs')}
+                className="cursor-pointer bg-teal-950/40 hover:bg-teal-950/60 border border-teal-500/40 p-2.5 rounded-xl flex items-center justify-between text-xs transition"
+              >
+                <div className="flex items-center gap-2">
+                  <FileText size={15} className="text-teal-400" />
+                  <span className="text-teal-200 font-medium">
+                    {lang === 'pa' ? `ਇਸ ਪਾਠ ਲਈ ${lesson.documents.length} ਅਧਿਕਾਰਤ PSEB/NCERT/NIOS ਕਿਤਾਬਾਂ ਉਪਲਬਧ ਹਨ` : `इस पाठ हेतु ${lesson.documents.length} आधिकारिक PSEB/NCERT/NIOS पुस्तकें उपलब्ध हैं`}
+                  </span>
+                </div>
+                <span className="text-[11px] font-bold text-teal-400 underline">
+                  {lang === 'pa' ? 'ਦੇਖੋ →' : 'देखें →'}
+                </span>
+              </div>
+            )}
+
+            {/* Injected Detailed Rich Content */}
             <div 
               className="text-slate-200 leading-relaxed text-sm space-y-4"
               dangerouslySetInnerHTML={{ __html: lesson.content[lang] || lesson.content.hi || lesson.content.en }} 
@@ -270,7 +333,126 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
           </div>
         )}
 
-        {/* ================= FLASHCARDS (FLIPKART) TAB ================= */}
+        {/* ================= TAB 2: OFFICIAL DOCUMENTS & TEXTBOOKS ================= */}
+        {activeTab === 'docs' && (
+          <div className="flex flex-col gap-4">
+            
+            <div className="bg-gradient-to-r from-slate-800 to-slate-800/90 border border-slate-700 p-4 rounded-xl">
+              <div className="flex items-center gap-2 mb-1.5">
+                <FileText size={18} className="text-teal-400" />
+                <h3 className="text-white font-bold text-sm">
+                  {lang === 'pa' ? 'ਅਧਿਕਾਰਤ ਸਰਕਾਰੀ ਦਸਤਾਵੇਜ਼ ਅਤੇ ਪਾਠ ਪੁਸਤਕਾਂ' : 'आधिकारिक सरकारी दस्तावेज एवं पाठ्यपुस्तकें (Official PDFs)'}
+                </h3>
+              </div>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                {lang === 'pa' 
+                  ? 'ਪੰਜਾਬ ਸਕੂਲ ਸਿੱਖਿਆ ਬੋਰਡ (PSEB), NCERT ਅਤੇ NIOS ਵੱਲੋਂ ਪ੍ਰਮਾਣਿਤ ਮੁਫ਼ਤ ਪੀਡੀਐਫ ਡਾਊਨਲੋਡ ਕਰੋ ਅਤੇ ਸਿੱਧਾ ਅਧਿਐਨ ਕਰੋ।' 
+                  : 'पंजाब स्कूल शिक्षा बोर्ड (PSEB), NCERT एवं NIOS द्वारा प्रमाणित आधिकारिक पीडीएफ दस्तावेज सीधे डाउनलोड अथवा ऑनलाइन पढ़ें।'}
+              </p>
+            </div>
+
+            {/* Official Syllabus Reference Card */}
+            {lesson.syllabusReference && (
+              <div className="bg-indigo-950/50 border border-indigo-500/50 rounded-xl p-4 shadow-sm">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <span className="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider inline-block mb-1.5">
+                      🏛️ Official Notification
+                    </span>
+                    <h4 className="text-white font-bold text-sm">
+                      {lesson.syllabusReference.title}
+                    </h4>
+                    <p className="text-[11px] text-slate-300 mt-1">
+                      {lang === 'pa' ? 'ਸਰਕਾਰੀ ਭਰਤੀ ਬੋਰਡ ਵੱਲੋਂ ਜਾਰੀ ਅਸਲ ਸਿਲੇਬਸ' : 'भर्ती बोर्ड द्वारा जारी अधिकृत मूल पाठ्यक्रम'}
+                    </p>
+                  </div>
+                  <a
+                    href={lesson.syllabusReference.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs px-3 py-2 rounded-lg flex items-center gap-1.5 shadow shrink-0 transition"
+                  >
+                    <span>{lang === 'pa' ? 'ਦੇਖੋ' : 'देखें'}</span>
+                    <ExternalLink size={13} />
+                  </a>
+                </div>
+              </div>
+            )}
+
+            {/* List of Official Textbooks & Modules */}
+            <div className="space-y-3">
+              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider px-1">
+                {lang === 'pa' ? 'ਸੰਬੰਧਿਤ ਪੁਸਤਕਾਂ ਅਤੇ ਅਧਿਆਇ' : 'संबंधित पाठ्य सामग्री एवं मॉड्यूल'} ({lesson.documents?.length || 0})
+              </h4>
+
+              {(!lesson.documents || lesson.documents.length === 0) ? (
+                <div className="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 text-center text-slate-400 text-xs">
+                  {lang === 'pa' ? 'ਕੋਈ ਦਸਤਾਵੇਜ਼ ਨਹੀਂ ਮਿਲਿਆ' : 'इस टॉपिक के लिए अभी अतिरिक्त दस्तावेज लोड हो रहे हैं।'}
+                </div>
+              ) : (
+                lesson.documents.map((doc, dIdx) => (
+                  <div key={dIdx} className="bg-slate-800 border border-slate-700/80 rounded-xl p-3.5 flex items-center justify-between gap-3 shadow hover:border-slate-600 transition">
+                    <div className="flex items-start gap-3 min-w-0">
+                      <div className="w-9 h-9 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center shrink-0 mt-0.5">
+                        <FileText size={18} />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="flex items-center gap-1.5 mb-1">
+                          <span className="text-[10px] bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">
+                            {doc.language}
+                          </span>
+                          <span className="text-[10px] bg-indigo-950 text-indigo-300 border border-indigo-700/40 px-1.5 py-0.5 rounded uppercase font-bold">
+                            {doc.type || 'PDF'}
+                          </span>
+                        </div>
+                        <h5 className="text-white font-semibold text-xs leading-snug truncate">
+                          {doc.title}
+                        </h5>
+                      </div>
+                    </div>
+
+                    <a 
+                      href={doc.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="bg-slate-700 hover:bg-slate-600 text-teal-300 hover:text-white px-3 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 shrink-0 transition"
+                      title="Open PDF"
+                    >
+                      <Download size={13} />
+                      <span>{lang === 'pa' ? 'ਖੋਲ੍ਹੋ' : 'खोलें'}</span>
+                    </a>
+                  </div>
+                ))
+              )}
+            </div>
+
+            {/* Recommended Hardcover Books List */}
+            {lesson.bookRefs && lesson.bookRefs.length > 0 && (
+              <div className="bg-slate-800/80 border border-slate-700/80 rounded-xl p-4 mt-2">
+                <h4 className="text-amber-300 font-bold text-xs mb-3 flex items-center gap-1.5">
+                  <Bookmark size={14} />
+                  <span>{lang === 'pa' ? 'ਸਿਫਾਰਿਸ਼ ਕੀਤੀਆਂ ਸਟੈਂਡਰਡ ਕਿਤਾਬਾਂ' : 'सत्यापित स्टैंडर्ड किताबें (Physical Reference Books)'}</span>
+                </h4>
+                <div className="space-y-2">
+                  {lesson.bookRefs.map((b, i) => (
+                    <div key={i} className="flex justify-between items-center bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/40 text-xs">
+                      <div>
+                        <p className="text-white font-medium">{b.title}</p>
+                        <p className="text-slate-400 text-[11px]">{b.author}</p>
+                      </div>
+                      <span className="text-teal-400 text-[11px] font-mono bg-teal-950 px-2 py-0.5 rounded">
+                        {b.chapters}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+          </div>
+        )}
+
+        {/* ================= TAB 3: FLASHCARDS (FLIP CARDS) ================= */}
         {activeTab === 'cards' && (
           <div className="flex flex-col items-center gap-5">
             <div className="w-full flex justify-between items-center text-xs text-slate-400 px-1">
@@ -341,7 +523,7 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
           </div>
         )}
 
-        {/* ================= MINI MOCK / PRACTICE TAB ================= */}
+        {/* ================= TAB 4: MINI MOCK / PRACTICE ================= */}
         {activeTab === 'practice' && (
           <div className="flex flex-col gap-6">
             <div className="bg-slate-800/80 border border-slate-700 p-4 rounded-xl flex items-center justify-between">
@@ -428,7 +610,7 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
           </div>
         )}
 
-        {/* ================= VIDEOS TAB ================= */}
+        {/* ================= TAB 5: VIDEOS ================= */}
         {activeTab === 'video' && (
           <div className="flex flex-col gap-4">
             <div className="bg-slate-800/80 border border-slate-700 p-3.5 rounded-xl">
@@ -440,38 +622,44 @@ export default function LessonView({ params }: { params: Promise<{ topicId: stri
               </p>
             </div>
 
-            {lesson.videos.map((vid, i) => (
-              <div key={i} className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-lg">
-                {/* Embed YouTube player or Fallback preview */}
-                <div className="relative aspect-video w-full bg-black">
-                  <iframe 
-                    className="w-full h-full"
-                    src={`https://www.youtube-nocookie.com/embed/${vid.youtubeId}?rel=0&modestbranding=1`}
-                    title={vid.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <div className="p-3.5">
-                  <div className="flex gap-1.5 mb-2">
-                    {vid.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-[10px] px-2 py-0.5 rounded font-medium">
-                        {tag}
-                      </span>
-                    ))}
+            {lesson.videos.map((vid, i) => {
+              const ytId = vid.youtubeId || (vid.url?.includes('watch?v=') ? vid.url.split('watch?v=')[1]?.split('&')[0] : 'UDyj1iXKgD0');
+
+              return (
+                <div key={i} className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-lg">
+                  {/* YouTube Player Embed */}
+                  <div className="relative aspect-video w-full bg-black">
+                    <iframe 
+                      className="w-full h-full"
+                      src={`https://www.youtube-nocookie.com/embed/${ytId}?rel=0&modestbranding=1`}
+                      title={vid.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
                   </div>
-                  <h4 className="text-white font-bold text-sm mb-1 line-clamp-2">{vid.title}</h4>
-                  <div className="flex justify-between text-slate-400 text-xs">
-                    <span>{vid.channel}</span>
-                    <span>{vid.duration}</span>
+                  <div className="p-3.5">
+                    {vid.tags && vid.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-1.5 mb-2">
+                        {vid.tags.map((tag, tIdx) => (
+                          <span key={tIdx} className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-[10px] px-2 py-0.5 rounded font-medium">
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                    <h4 className="text-white font-bold text-sm mb-1 line-clamp-2">{vid.title}</h4>
+                    <div className="flex justify-between text-slate-400 text-xs">
+                      <span>{vid.channel}</span>
+                      <span>{vid.duration || 'Full Lecture'}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         )}
 
-        {/* ================= MY NOTES TAB ================= */}
+        {/* ================= TAB 6: MY NOTES ================= */}
         {activeTab === 'notes' && (
           <div className="flex flex-col gap-4">
             <div className="bg-slate-800/90 border border-slate-700 rounded-xl p-4">

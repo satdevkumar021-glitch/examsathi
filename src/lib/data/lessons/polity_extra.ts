@@ -174,6 +174,36 @@ export const POLITY_EXTRA_LESSONS: Record<string, Lesson> = {
         type: 'ncert',
       },
     ],
+    documents: [
+      {
+            "title": "Constitution of India · Official Edition · Legislative Department",
+            "url": "https://legislative.gov.in/sites/default/files/COI_English.pdf",
+            "language": "English",
+            "type": "official"
+      },
+      {
+            "title": "भारत का संविधान · आधिकारिक हिंदी संस्करण · विधायी विभाग",
+            "url": "https://legislative.gov.in/sites/default/files/COI_Hindi.pdf",
+            "language": "Hindi",
+            "type": "official"
+      },
+      {
+            "title": "PSEB Class 10 · Civics (ਨਾਗਰਿਕ ਸ਼ਾਸਤਰ) Part I · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NIOS · Indian Judiciary and Local Self Government Module",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-18.pdf",
+            "language": "English",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Civics (Judiciary & Local Govt) Syllabus",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 
   // -------------------------------------------------------------
@@ -348,5 +378,35 @@ export const POLITY_EXTRA_LESSONS: Record<string, Lesson> = {
         type: 'ncert',
       },
     ],
+    documents: [
+      {
+            "title": "Constitution of India · Official Edition · Legislative Department",
+            "url": "https://legislative.gov.in/sites/default/files/COI_English.pdf",
+            "language": "English",
+            "type": "official"
+      },
+      {
+            "title": "भारत का संविधान · आधिकारिक हिंदी संस्करण · विधायी विभाग",
+            "url": "https://legislative.gov.in/sites/default/files/COI_Hindi.pdf",
+            "language": "Hindi",
+            "type": "official"
+      },
+      {
+            "title": "PSEB Class 10 · Civics (ਨਾਗਰਿਕ ਸ਼ਾਸਤਰ) Part I · Punjabi",
+            "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+            "language": "ਪੰਜਾਬੀ",
+            "type": "textbook"
+      },
+      {
+            "title": "NIOS · Indian Judiciary and Local Self Government Module",
+            "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-18.pdf",
+            "language": "English",
+            "type": "nios"
+      }
+],
+    syllabusReference: {
+      "title": "ERD Punjab · Master Cadre Civics (Judiciary & Local Govt) Syllabus",
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+},
   },
 };
