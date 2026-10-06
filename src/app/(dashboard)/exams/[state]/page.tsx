@@ -1,11 +1,8 @@
 import StateExamsClient from './StateExamsClient';
+import { STATES_CATALOG } from '@/lib/data/exams';
 
 export function generateStaticParams() {
-  return [
-    { state: 'punjab' },
-    { state: 'rajasthan' },
-    { state: 'central' },
-  ];
+  return STATES_CATALOG.map(s => ({ state: s.id }));
 }
 
 export default async function StateExamsPage({ params }: { params: Promise<{ state: string }> }) {

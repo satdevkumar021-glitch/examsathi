@@ -3,7 +3,7 @@
 // Compiled from official PSSSB, ERB Punjab, PPSC, RBSE, CBSE, and SSC sources
 // ============================================================
 
-export type State = 'punjab' | 'rajasthan' | 'central';
+export type State = 'punjab' | 'rajasthan' | 'haryana' | 'delhi' | 'central' | 'defence';
 
 export interface Exam {
   id: string;
@@ -1218,13 +1218,43 @@ export const CENTRAL_EXAMS: Exam[] = [
   },
 ];
 
+import {
+  HARYANA_EXAMS,
+  DELHI_EXAMS,
+  DEFENCE_EXAMS,
+  PUNJAB_ADDITIONAL_EXAMS,
+  RAJASTHAN_ADDITIONAL_EXAMS
+} from './exams_expansion';
+
+export interface StateMeta {
+  id: State;
+  name: string;
+  nameHindi: string;
+  namePunjabi: string;
+  icon: string;
+  tagline: string;
+  color: string;
+}
+
+export const STATES_CATALOG: StateMeta[] = [
+  { id: 'punjab', name: 'Punjab', nameHindi: 'पंजाब', namePunjabi: 'ਪੰਜਾਬ', icon: '🌾', tagline: 'Master Cadre, ETT 5994, PSSSB Clerk, Police, Patwari', color: 'from-amber-600 to-orange-700' },
+  { id: 'rajasthan', name: 'Rajasthan', nameHindi: 'राजस्थान', namePunjabi: 'ਰਾਜਸਥਾਨ', icon: '🏜️', tagline: 'REET L1/L2, 3rd Grade, Patwar, Police SI', color: 'from-rose-600 to-pink-700' },
+  { id: 'haryana', name: 'Haryana', nameHindi: 'हरियाणा', namePunjabi: 'ਹਰਿਆਣਾ', icon: '⚡', tagline: 'HTET (PRT/TGT/PGT), Haryana Police, HSSC CET Clerk', color: 'from-emerald-600 to-teal-700' },
+  { id: 'delhi', name: 'Delhi & Police/CAPF', nameHindi: 'दिल्ली पुलिस व CAPF', namePunjabi: 'ਦਿੱਲੀ ਪੁਲਿਸ ਤੇ CAPF', icon: '👮', tagline: 'Delhi Police Constable, SSC GD Constable, CAPF', color: 'from-sky-600 to-blue-700' },
+  { id: 'central', name: 'Central Govt', nameHindi: 'केंद्रीय भर्ती', namePunjabi: 'ਕੇਂਦਰੀ ਭਰਤੀ', icon: '🏛️', tagline: 'SSC CGL, CHSL, MTS, CTET Paper 1/2, UGC NET', color: 'from-indigo-600 to-violet-700' },
+  { id: 'defence', name: 'Army & Defence', nameHindi: 'भारतीय सेना व सुरक्षा', namePunjabi: 'ਭਾਰਤੀ ਫੌਜ ਤੇ ਰੱਖਿਆ', icon: '🎖️', tagline: 'Indian Army Agniveer GD, Clerk, Store Keeper, Air Force', color: 'from-yellow-600 to-amber-700' },
+];
+
 // ============================================================
 // EXPORTS & HELPERS
 // ============================================================
 export const ALL_EXAMS: Record<State, Exam[]> = {
-  punjab: PUNJAB_EXAMS,
-  rajasthan: RAJASTHAN_EXAMS,
+  punjab: [...PUNJAB_EXAMS, ...PUNJAB_ADDITIONAL_EXAMS],
+  rajasthan: [...RAJASTHAN_EXAMS, ...RAJASTHAN_ADDITIONAL_EXAMS],
+  haryana: HARYANA_EXAMS,
+  delhi: DELHI_EXAMS,
   central: CENTRAL_EXAMS,
+  defence: DEFENCE_EXAMS,
 };
 
 export const EXAMS = ALL_EXAMS;
@@ -1235,7 +1265,7 @@ export const STATE_INFO: Record<State, { name: string; nameHindi: string; emoji:
     nameHindi: 'पंजाब',
     emoji: '🌾',
     color: '#4338CA',
-    bodies: ['PSSSB', 'PPSC', 'ERB Punjab', 'Punjab Police'],
+    bodies: ['PSSSB', 'PPSC', 'ERB Punjab', 'Punjab Police', 'SCERT'],
   },
   rajasthan: {
     name: 'Rajasthan',
@@ -1244,12 +1274,33 @@ export const STATE_INFO: Record<State, { name: string; nameHindi: string; emoji:
     color: '#EF4444',
     bodies: ['RPSC', 'RSMSSB/RSSB', 'BSER', 'Rajasthan Police'],
   },
+  haryana: {
+    name: 'Haryana',
+    nameHindi: 'हरियाणा',
+    emoji: '⚡',
+    color: '#059669',
+    bodies: ['BSEH Bhiwani', 'HSSC Panchkula', 'Haryana Police'],
+  },
+  delhi: {
+    name: 'Delhi & CAPF',
+    nameHindi: 'दिल्ली पुलिस व अर्धसैनिक बल',
+    emoji: '👮',
+    color: '#0284c7',
+    bodies: ['Delhi Police', 'SSC', 'MHA / CAPF'],
+  },
   central: {
     name: 'Central Govt',
     nameHindi: 'केंद्र सरकार',
     emoji: '🏛️',
     color: '#10B981',
-    bodies: ['SSC', 'CBSE', 'Railway', 'Banking'],
+    bodies: ['SSC', 'CBSE', 'NTA', 'Railway', 'Banking'],
+  },
+  defence: {
+    name: 'Army & Defence',
+    nameHindi: 'भारतीय सेना',
+    emoji: '🎖️',
+    color: '#ca8a04',
+    bodies: ['Indian Army', 'Indian Air Force', 'Indian Navy'],
   },
 };
 

@@ -1,26 +1,33 @@
 'use client';
-import { use } from 'react';
 import Link from 'next/link';
-import { EXAMS } from '@/lib/data/exams';
+import { EXAMS, STATES_CATALOG } from '@/lib/data/exams';
 import { ArrowLeft, BookOpen, Clock, Award } from 'lucide-react';
-import { useRouter } from 'next/navigation';
+import { useStore } from '@/lib/store';
 
 export default function StateExams({ state }: { state: string }) {
-  const router = useRouter();
+  const { language } = useStore();
   const stateKey = state as keyof typeof EXAMS;
   const stateExams = EXAMS[stateKey] || [];
   
-  const stateName = state.charAt(0).toUpperCase() + state.slice(1);
+  const stateMeta = STATES_CATALOG.find(s => s.id === state);
+  const stateName = stateMeta 
+    ? (language === 'pa' ? stateMeta.namePunjabi : language === 'hi' ? stateMeta.nameHindi : stateMeta.name)
+    : state.charAt(0).toUpperCase() + state.slice(1);
 
   return (
     <div className="p-4 flex flex-col gap-6">
       <div className="flex items-center gap-3">
-        <button onClick={() => router.back()} className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 border border-slate-700 hover:bg-slate-700 transition">
+        <Link href="/exams" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 border border-slate-700 hover:bg-slate-700 transition">
           <ArrowLeft size={20} />
-        </button>
+        </Link>
         <div>
-          <h1 className="text-2xl font-bold text-white">{stateName} Examinations</h1>
-          <p className="text-xs text-slate-400">Select an exam to begin structured preparation</p>
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">{stateMeta?.icon || '🎯'}</span>
+            <h1 className="text-xl font-bold text-white">{stateName} Examinations</h1>
+          </div>
+          <p className="text-xs text-slate-400 mt-0.5">
+            {language === 'pa' ? 'ਸਿਲੇਬਸ ਤੇ ਮੌਕ ਟੈਸਟ ਲਈ ਪ੍ਰੀਖਿਆ ਚੁਣੋ' : language === 'hi' ? 'सिलेबस व अभ्यास हेतु परीक्षा चुनें' : 'Select an exam to begin structured preparation'}
+          </p>
         </div>
       </div>
 
