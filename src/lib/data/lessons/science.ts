@@ -172,13 +172,12 @@ export const SCIENCE_LESSONS: Record<string, Lesson> = {
     ],
     videos: [
       {
-        title: 'Master Cadre Science - Physics Complete Crash Course',
-        channel: 'Science Point Punjab',
-        youtubeId: 'Phy100MasterMCQ',
+        title: 'General Science Complete for SSC/Railway/Police — Physics Chemistry Biology',
+        channel: 'Adda247',
+        youtubeId: 'uqVT9QQe0qU',
         language: 'hi',
-        views: '430K',
-        duration: '1:50:00',
-        tags: ['Physics', 'Master Cadre', 'Science'],
+        duration: '2 hr',
+        tags: ['Physics', 'Chemistry', 'Biology', 'General Science', 'SSC', 'Police'],
       },
     ],
     bookRefs: [

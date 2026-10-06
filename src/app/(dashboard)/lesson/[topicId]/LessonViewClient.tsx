@@ -667,40 +667,83 @@ export default function LessonView({ topicId }: { topicId: string }) {
               </p>
             </div>
 
-            {lesson.videos.map((vid, i) => {
-              const ytId = vid.youtubeId || (vid.url?.includes('watch?v=') ? vid.url.split('watch?v=')[1]?.split('&')[0] : 'UDyj1iXKgD0');
-
-              return (
-                <div key={i} className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-lg">
-                  {/* YouTube Player Embed */}
-                  <div className="relative aspect-video w-full bg-black">
-                    <iframe 
-                      className="w-full h-full"
-                      src={`https://www.youtube-nocookie.com/embed/${ytId}?rel=0&modestbranding=1`}
-                      title={vid.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                  <div className="p-3.5">
-                    {vid.tags && vid.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 mb-2">
-                        {vid.tags.map((tag, tIdx) => (
-                          <span key={tIdx} className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-[10px] px-2 py-0.5 rounded font-medium">
-                            {tag}
-                          </span>
-                        ))}
+            {lesson.videos.length === 0 ? (
+              <div className="space-y-3">
+                <div className="bg-amber-950/40 border border-amber-700/50 rounded-xl p-4">
+                  <p className="text-amber-200 text-sm font-bold mb-1">📹 Curated videos for this topic coming soon</p>
+                  <p className="text-amber-300/80 text-xs">Meanwhile, use these official free resources:</p>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    { name: 'DIKSHA (Govt. of India)', url: 'https://diksha.gov.in', desc: 'Official e-learning content by NCERT & State Boards', emoji: '🏛️' },
+                    { name: 'SWAYAM — Free Courses', url: 'https://swayam.gov.in', desc: 'Free certified online courses by IITs and central universities', emoji: '🎓' },
+                    { name: 'NCERT Textbooks (Free PDF)', url: 'https://ncert.nic.in/textbook.php', desc: 'Download all NCERT books Class 1-12 for free', emoji: '📚' },
+                    { name: 'e-Pathshala (NCERT)', url: 'https://epathshala.nic.in', desc: 'NCERT audio-visual learning resources, all subjects', emoji: '📖' },
+                    { name: 'NIOS (Open School)', url: 'https://nios.ac.in', desc: 'National Institute of Open Schooling — free study material', emoji: '🌐' },
+                  ].map((res, i) => (
+                    <a
+                      key={i}
+                      href={res.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-slate-800 hover:bg-slate-750 border border-slate-700 hover:border-teal-500/50 rounded-xl p-3.5 flex items-start gap-3 transition group"
+                    >
+                      <span className="text-xl shrink-0">{res.emoji}</span>
+                      <div>
+                        <p className="text-white font-bold text-xs group-hover:text-teal-300 transition">{res.name}</p>
+                        <p className="text-slate-400 text-[11px] mt-0.5">{res.desc}</p>
                       </div>
-                    )}
-                    <h4 className="text-white font-bold text-sm mb-1 line-clamp-2">{vid.title}</h4>
-                    <div className="flex justify-between text-slate-400 text-xs">
-                      <span>{vid.channel}</span>
-                      <span>{vid.duration || 'Full Lecture'}</span>
+                    </a>
+                  ))}
+                </div>
+                <p className="text-[11px] text-slate-500 text-center pt-1">
+                  Found a good video for this topic? <a href="/contact" className="text-teal-400 underline">Suggest it to us ↗</a>
+                </p>
+              </div>
+            ) : (
+              lesson.videos.map((vid, i) => {
+                const ytId = vid.youtubeId || (vid.url?.includes('watch?v=') ? vid.url.split('watch?v=')[1]?.split('&')[0] : 'UDyj1iXKgD0');
+
+                return (
+                  <div key={i} className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-lg">
+                    {/* YouTube Player Embed */}
+                    <div className="relative aspect-video w-full bg-black">
+                      <iframe
+                        className="w-full h-full"
+                        src={`https://www.youtube-nocookie.com/embed/${ytId}?rel=0&modestbranding=1`}
+                        title={vid.title}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                    <div className="p-3.5">
+                      {vid.tags && vid.tags.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mb-2">
+                          {vid.tags.map((tag, tIdx) => (
+                            <span key={tIdx} className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-[10px] px-2 py-0.5 rounded font-medium">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                      <h4 className="text-white font-bold text-sm mb-1 line-clamp-2">{vid.title}</h4>
+                      <div className="flex justify-between text-slate-400 text-xs">
+                        <span>{vid.channel}</span>
+                        <span>{vid.duration || 'Full Lecture'}</span>
+                      </div>
+                      <a
+                        href={`https://www.youtube.com/watch?v=${ytId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 flex items-center gap-1.5 text-xs text-red-400 hover:text-red-300 font-semibold transition"
+                      >
+                        <span>▶</span> Watch on YouTube ↗
+                      </a>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })
+            )}
           </div>
         )}
 
