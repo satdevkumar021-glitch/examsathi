@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useStore } from '@/lib/store';
 import { getStoredUser } from '@/lib/auth';
 import StreakBadge from '@/components/ui/StreakBadge';
+import DailyKnowledge from '@/components/dashboard/DailyKnowledge';
 import { 
   Target, Book, Layers, CheckCircle, ArrowRight, Keyboard, 
   ShieldCheck, Compass, Sparkles, Award, GraduationCap, Briefcase, 
@@ -183,6 +184,9 @@ export default function Dashboard() {
         )}
       </div>
 
+      {/* Daily Knowledge, Inspiration & Free Govt Portals */}
+      <DailyKnowledge />
+
       {/* Featured Learning Modules */}
       <div>
         <div className="flex justify-between items-center mb-3">
@@ -346,7 +350,7 @@ export default function Dashboard() {
           </Link>
 
           <Link 
-            href="/lesson/modern-india" 
+            href="/mock-test?mode=flip" 
             className="bg-slate-800/90 p-4 rounded-xl border border-slate-700 flex flex-col items-center justify-center gap-2 hover:bg-slate-750 transition shadow"
           >
             <div className="bg-amber-500/20 p-2.5 rounded-full text-amber-400">

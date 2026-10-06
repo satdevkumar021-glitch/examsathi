@@ -10,6 +10,7 @@ import {
 import { LESSONS, getLessonByTopicId } from '@/lib/data/lessons';
 import { getQuestionsByTopic, Question } from '@/lib/data/questions';
 import FlipCard from '@/components/ui/FlipCard';
+import { getCardState, scheduleNextReview, saveCardState, Rating } from '@/lib/fsrs';
 
 export default function LessonView({ topicId }: { topicId: string }) {
   const router = useRouter();
@@ -94,6 +95,23 @@ export default function LessonView({ topicId }: { topicId: string }) {
       a: { hi: 'हाँ, आधिकारिक पाठ्यक्रम के अनुसार सीधे प्रश्न पूछे जाते हैं।', pa: 'ਹਾਂ, ਅਧਿਕਾਰਤ ਸਿਲੇਬਸ ਮੁਤਾਬਕ ਸਿੱਧੇ ਸਵਾਲ ਪੁੱਛੇ ਜਾਂਦੇ ਹਨ।', en: 'Yes, directly tested per official syllabus.' },
     },
   ];
+
+  const handleRateCard = (rating: Rating) => {
+    const cardId = `fc-${lesson.id}-${cardIndex}`;
+    const currentState = getCardState(cardId, lesson.id);
+    const { nextState } = scheduleNextReview(currentState, rating);
+    saveCardState(nextState);
+    if (cardIndex < currentCards.length - 1) {
+      setCardIndex(prev => prev + 1);
+    }
+  };
+
+  const currentCardId = `fc-${lesson.id}-${cardIndex}`;
+  const currentCardSRS = getCardState(currentCardId, lesson.id);
+  const againLabel = scheduleNextReview(currentCardSRS, 1).intervalLabel;
+  const hardLabel = scheduleNextReview(currentCardSRS, 2).intervalLabel;
+  const goodLabel = scheduleNextReview(currentCardSRS, 3).intervalLabel;
+  const easyLabel = scheduleNextReview(currentCardSRS, 4).intervalLabel;
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 pb-20 text-slate-100">
@@ -521,28 +539,32 @@ export default function LessonView({ topicId }: { topicId: string }) {
               
               <div className="grid grid-cols-4 gap-2 flex-1">
                 <button 
-                  onClick={() => setCardIndex(prev => Math.min(currentCards.length - 1, prev + 1))}
-                  className="bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 py-2.5 rounded-lg text-xs font-bold text-center"
+                  onClick={() => handleRateCard(1)}
+                  className="bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
+                  title="Needs repetition (< 10m)"
                 >
-                  Again <br/><span className="text-[9px] font-normal text-slate-400">1m</span>
+                  Again <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{againLabel}</span>
                 </button>
                 <button 
-                  onClick={() => setCardIndex(prev => Math.min(currentCards.length - 1, prev + 1))}
-                  className="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 py-2.5 rounded-lg text-xs font-bold text-center"
+                  onClick={() => handleRateCard(2)}
+                  className="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
+                  title="Difficult recall"
                 >
-                  Hard <br/><span className="text-[9px] font-normal text-slate-400">10m</span>
+                  Hard <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{hardLabel}</span>
                 </button>
                 <button 
-                  onClick={() => setCardIndex(prev => Math.min(currentCards.length - 1, prev + 1))}
-                  className="bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 py-2.5 rounded-lg text-xs font-bold text-center"
+                  onClick={() => handleRateCard(3)}
+                  className="bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
+                  title="Correct recall"
                 >
-                  Good <br/><span className="text-[9px] font-normal text-slate-400">1d</span>
+                  Good <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{goodLabel}</span>
                 </button>
                 <button 
-                  onClick={() => setCardIndex(prev => Math.min(currentCards.length - 1, prev + 1))}
-                  className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 border border-blue-500/40 py-2.5 rounded-lg text-xs font-bold text-center"
+                  onClick={() => handleRateCard(4)}
+                  className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 border border-blue-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
+                  title="Effortless recall"
                 >
-                  Easy <br/><span className="text-[9px] font-normal text-slate-400">4d</span>
+                  Easy <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{easyLabel}</span>
                 </button>
               </div>
 

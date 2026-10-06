@@ -55,6 +55,8 @@ export default function VirtualStudyLibrary() {
     { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', testUrl: '/mock-test/topic-fundamental-rights' },
   ];
 
+  const [wellnessAlert, setWellnessAlert] = useState<string | null>(null);
+
   useEffect(() => {
     try {
       const user = getStoredUser();
@@ -62,12 +64,63 @@ export default function VirtualStudyLibrary() {
     } catch {}
   }, []);
 
-  // Timer countdown
+  // Web Audio ambient sound synthesizer (offline pink noise simulation)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    let audioCtx: any = null;
+    let whiteNoise: any = null;
+
+    if (soundEnabled && isRunning) {
+      try {
+        const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+        if (AudioContextClass) {
+          audioCtx = new AudioContextClass();
+          const bufferSize = audioCtx.sampleRate * 2;
+          const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+          const output = noiseBuffer.getChannelData(0);
+          let b0 = 0, b1 = 0, b2 = 0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            b0 = 0.99886 * b0 + white * 0.0555179;
+            b1 = 0.99332 * b1 + white * 0.0750759;
+            b2 = 0.96900 * b2 + white * 0.1538520;
+            output[i] = (b0 + b1 + b2 + white * 0.1) * 0.015;
+          }
+          whiteNoise = audioCtx.createBufferSource();
+          whiteNoise.buffer = noiseBuffer;
+          whiteNoise.loop = true;
+          const filter = audioCtx.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.value = 650;
+          whiteNoise.connect(filter);
+          filter.connect(audioCtx.destination);
+          whiteNoise.start();
+        }
+      } catch {}
+    }
+
+    return () => {
+      try {
+        if (whiteNoise) whiteNoise.stop?.();
+        if (audioCtx && audioCtx.state !== 'closed') audioCtx.close?.();
+      } catch {}
+    };
+  }, [soundEnabled, isRunning]);
+
+  // Timer countdown & 20-20-20 Wellness Coach Alerts
   useEffect(() => {
     let interval: any = null;
     if (isRunning && secondsRemaining > 0) {
       interval = setInterval(() => {
-        setSecondsRemaining(prev => prev - 1);
+        setSecondsRemaining(prev => {
+          const nextSec = prev - 1;
+          const elapsed = (timerMode * 60) - nextSec;
+          // Trigger 20-20-20 rule after 20 minutes (1200s)
+          if (elapsed === 1200) {
+            setWellnessAlert('👀 20-20-20 Eye Care: You have been focused for 20 minutes! Look 20 feet away for 20 seconds to prevent digital fatigue. Drink some water 💧');
+          }
+          return nextSec;
+        });
       }, 1000);
     } else if (secondsRemaining === 0 && isRunning) {
       setIsRunning(false);
@@ -299,6 +352,21 @@ export default function VirtualStudyLibrary() {
           </button>
         </div>
 
+        {wellnessAlert && (
+          <div className="bg-sky-950/80 border border-sky-500/60 p-3.5 rounded-xl text-sky-200 text-xs flex items-center justify-between gap-3 shadow-md animate-pulse">
+            <div className="flex items-center gap-2">
+              <span className="text-base shrink-0">💧</span>
+              <p className="leading-relaxed">{wellnessAlert}</p>
+            </div>
+            <button 
+              onClick={() => setWellnessAlert(null)}
+              className="px-2 py-1 bg-sky-900 hover:bg-sky-800 text-white rounded text-[10px] font-bold shrink-0"
+            >
+              Dismiss
+            </button>
+          </div>
+        )}
+
         {sessionCompleted && (
           <div className="bg-emerald-950/60 border border-emerald-500/50 p-3 rounded-xl text-emerald-300 text-xs flex items-center justify-center gap-2 font-bold animate-bounce">
             <CheckCircle2 size={16} />
@@ -313,7 +381,7 @@ export default function VirtualStudyLibrary() {
           <span>🎯</span> Ready to test your mastery from this Desk?
         </h3>
         <p className="text-[11px] text-slate-400 leading-relaxed">
-          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk\'s topic: <strong>{activeTopicObj.label}</strong>.
+          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk&apos;s topic: <strong>{activeTopicObj.label}</strong>.
         </p>
 
         <div className="flex gap-2 mt-1">

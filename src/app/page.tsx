@@ -133,6 +133,25 @@ export default function LandingPage() {
             All State Exams
           </Link>
         </div>
+
+        {/* Footer Policy Links for Google AdSense & DPDP Compliance */}
+        <div className="pt-3 border-t border-slate-800/80 flex flex-wrap justify-center gap-x-4 gap-y-1.5 text-[11px] text-slate-500">
+          <Link href="/privacy-policy" className="hover:text-slate-300 transition">
+            Privacy Policy
+          </Link>
+          <span>•</span>
+          <Link href="/terms" className="hover:text-slate-300 transition">
+            Terms of Service
+          </Link>
+          <span>•</span>
+          <Link href="/about" className="hover:text-slate-300 transition">
+            About Us
+          </Link>
+          <span>•</span>
+          <Link href="/contact" className="hover:text-slate-300 transition">
+            Contact & Errata
+          </Link>
+        </div>
       </motion.div>
 
     </div>
