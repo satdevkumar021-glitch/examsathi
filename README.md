@@ -55,6 +55,7 @@ Comprehensive architectural and engineering specifications:
 | **[`docs/AI_PIPELINE.md`](docs/AI_PIPELINE.md)** | PDF-to-MCQ parsing, semantic chunking, deduplication, JSON schema validation, and cost caps. |
 | **[`docs/ROADMAP.md`](docs/ROADMAP.md)** | Multi-milestone delivery timeline, sprint breakdown, and risk mitigation. |
 | **[`docs/SECURITY.md`](docs/SECURITY.md)** | Threat model, OWASP Top 10 defenses, Content Security Policy (CSP), and DPDP Act 2023 compliance. |
+| **[`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)** | Production deployment, Vercel 1-click hosting, Supabase PostgreSQL, and Gemini AI vision runbook. |
 | **[`docs/TESTING.md`](docs/TESTING.md)** | Playwright E2E suite, unit test matrix, and CI test execution instructions. |
 | **[`docs/CONTENT_GUIDE.md`](docs/CONTENT_GUIDE.md)** | Primary source citations (NCERT, PSEB, ERB gazettes), PYQ authenticity, and Gurmukhi/Devanagari standards. |
 | **[`docs/ADSENSE_CHECKLIST.md`](docs/ADSENSE_CHECKLIST.md)** | Google AdSense monetization readiness, student-focus ad placement policy, and Core Web Vitals. |

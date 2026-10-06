@@ -18,8 +18,28 @@ export default function Register() {
   const [state, setState] = useState('punjab');
   const [toastMsg, setToastMsg] = useState<string | null>(null);
 
-  const handleRegister = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
+    let cloudUser: any = null;
+    try {
+      const res = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, password, targetExam, state }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.success && data.user) {
+          cloudUser = data.user;
+        }
+      }
+    } catch {
+      // Running in static export or offline mode
+    }
+
     const newUser = registerUser({
       name,
       email,
@@ -28,8 +48,10 @@ export default function Register() {
       targetExam,
       state,
     });
-    setUser({ name: newUser.name, streak: newUser.streak, xp: newUser.xp });
-    setToastMsg(`Account created for ${newUser.name}! 🎓`);
+    const resolvedName = cloudUser?.name || newUser.name;
+    setUser({ name: resolvedName, streak: newUser.streak, xp: newUser.xp });
+    setToastMsg(`Account created for ${resolvedName}! 🎓`);
+    setIsLoading(false);
     setTimeout(() => {
       router.push('/dashboard');
     }, 600);
@@ -131,9 +153,10 @@ export default function Register() {
 
           <button 
             type="submit" 
-            className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-3.5 rounded-xl shadow-lg mt-2 text-xs flex items-center justify-center gap-2 transition"
+            disabled={isLoading}
+            className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-3.5 rounded-xl shadow-lg mt-2 text-xs flex items-center justify-center gap-2 transition disabled:opacity-50"
           >
-            <span>Create Account & Start Preparing</span>
+            <span>{isLoading ? 'Creating Account...' : 'Create Account & Start Preparing'}</span>
             <ArrowRight size={15} />
           </button>
         </form>
