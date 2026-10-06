@@ -8,10 +8,10 @@ export default function ExamsHome() {
   const [search, setSearch] = useState('');
   const matches = Object.values(ALL_EXAMS).flat().filter(e => `${e.name} ${e.nameHindi} ${e.namePunjabi || ''} ${e.body}`.toLowerCase().includes(search.trim().toLowerCase()));
   const states = [
-    { id: 'punjab', name: 'Punjab', icon: '🌾', count: 7, color: 'from-amber-600 to-orange-700' },
-    { id: 'rajasthan', name: 'Rajasthan', icon: '🏜️', count: 8, color: 'from-rose-600 to-pink-700' },
-    { id: 'central', name: 'Central Govt', icon: '🏛️', count: 5, color: 'from-blue-600 to-indigo-700' },
-    { id: 'haryana', name: 'Haryana', icon: '🏖️', count: 2, color: 'from-sky-600 to-cyan-700' },
+    { id: 'punjab', name: 'Punjab', icon: '🌾', color: 'from-amber-600 to-orange-700' },
+    { id: 'rajasthan', name: 'Rajasthan', icon: '🏜️', color: 'from-rose-600 to-pink-700' },
+    { id: 'central', name: 'Central Govt', icon: '🏛️', color: 'from-blue-600 to-indigo-700' },
+    { id: 'haryana', name: 'Haryana', icon: '🏖️', color: 'from-sky-600 to-cyan-700' },
   ];
 
   return (

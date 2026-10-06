@@ -23,7 +23,7 @@ export interface Question {
   explanation: { hi: string; pa?: string; en: string };
   thought?: { hi: string; pa?: string; en: string }; // Strategic Examiner Insight & Elimination Technique
   difficulty: 'easy' | 'medium' | 'hard';
-  year: number;
+  year?: number;
 }
 
 export const QUESTIONS: Question[] = [

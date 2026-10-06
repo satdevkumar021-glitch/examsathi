@@ -128,10 +128,6 @@ export default function LandingPage() {
           <Link href="/forgot-password" className="hover:text-amber-300 transition">
             Forgot Password?
           </Link>
-          <span>•</span>
-          <Link href="/admin" className="hover:text-teal-300 transition">
-            Publisher Portal
-          </Link>
         </div>
       </motion.div>
 

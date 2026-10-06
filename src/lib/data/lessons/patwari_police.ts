@@ -169,30 +169,18 @@ export const PATWARI_POLICE_LESSONS: Record<string, Lesson> = {
     ],
     documents: [
       {
-            "title": "PSSSB Patwari · Official Detailed Syllabus Notification PDF",
-            "url": "https://sssb.punjab.gov.in/Downloads/2023/Patwari_Syllabus.pdf",
-            "language": "Punjabi / English",
-            "type": "syllabus"
+        title: 'Punjab Land Revenue Act 1887 — Official Text (PDF)',
+        url: 'https://punjabrevenue.nic.in/land-revenue-act.pdf',
+        language: 'en',
+        type: 'official',
       },
       {
-            "title": "Punjab Police Recruitment Board · Constable & SI Official Syllabus",
-            "url": "https://punjabpolice.gov.in/recruitment/syllabus_2024.pdf",
-            "language": "Punjabi / English",
-            "type": "syllabus"
+        title: 'PSSSB Patwari Official Syllabus 2024',
+        url: 'https://sssb.punjab.gov.in',
+        language: 'en',
+        type: 'syllabus',
       },
-      {
-            "title": "Punjab Land Records Society (PLRS) · Official Land Glossary & Manual",
-            "url": "https://plrs.org.in/manual/revenue_terms_punjabi.pdf",
-            "language": "ਪੰਜਾਬੀ",
-            "type": "official"
-      },
-      {
-            "title": "Ministry of Law & Justice · Bharatiya Nyaya Sanhita (BNS 2023) Official Gazette",
-            "url": "https://egazette.gov.in/WriteReadData/2023/250883.pdf",
-            "language": "Hindi / English",
-            "type": "official"
-      }
-],
+    ],
     syllabusReference: {
       "title": "PSSSB Patwari & Punjab Police Official Examination Scheme",
       "url": "https://sssb.punjab.gov.in/Downloads/2023/Patwari_Syllabus.pdf"
