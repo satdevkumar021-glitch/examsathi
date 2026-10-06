@@ -105,6 +105,25 @@ export default function Dashboard() {
         </div>
       </Link>
 
+      {/* AI Drill Generator Quick Action */}
+      <Link 
+        href="/ai-generator"
+        className="bg-gradient-to-r from-indigo-950 via-slate-850 to-teal-950 p-3.5 rounded-2xl border border-indigo-500/40 hover:border-indigo-400 shadow flex items-center justify-between gap-3 group transition"
+      >
+        <div className="flex items-center gap-2.5 min-w-0">
+          <div className="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-300 flex items-center justify-center shrink-0">
+            <Sparkles size={16} />
+          </div>
+          <div className="min-w-0">
+            <h4 className="text-white font-bold text-xs truncate">AI Practice Drill Generator ✨</h4>
+            <p className="text-[11px] text-slate-300 truncate">Turn notes or PDF excerpts into live MCQs with explanations</p>
+          </div>
+        </div>
+        <span className="text-[10px] text-teal-300 font-bold shrink-0 bg-teal-500/10 px-2 py-1 rounded border border-teal-500/30">
+          Try Free &rarr;
+        </span>
+      </Link>
+
       {/* Official Examination Tracks */}
       <div>
         <div className="flex justify-between items-center mb-3">

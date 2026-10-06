@@ -133,6 +133,20 @@ export default function MockTest({ testId }: { testId?: string }) {
       count 
     });
 
+    // Check custom AI-generated question drill from sessionStorage
+    if (topicId === 'ai-custom') {
+      try {
+        const rawCustom = sessionStorage.getItem('examsathi_custom_cbt_questions');
+        if (rawCustom) {
+          const parsed = JSON.parse(rawCustom);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            loadedQuestions = parsed;
+            setTestTitle(`AI Practice Drill — ${parsed.length} Questions (Custom Notes)`);
+          }
+        }
+      } catch {}
+    }
+
     // Failsafe fallback: if no topic-specific questions exist, load standard 50-Qs CBT drill
     if (!loadedQuestions || loadedQuestions.length === 0) {
       loadedQuestions = getTestQuestions({ topicId: 'all', count: 50 });

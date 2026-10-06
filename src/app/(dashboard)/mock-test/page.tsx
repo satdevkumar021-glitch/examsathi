@@ -183,6 +183,28 @@ export default function MockTestHub() {
         </button>
       </div>
 
+      {/* AI Drill Generator Banner */}
+      <Link
+        href="/ai-generator"
+        className="bg-gradient-to-r from-indigo-950 via-slate-800 to-teal-950 p-4 rounded-2xl border border-indigo-500/50 hover:border-indigo-400 shadow-lg flex items-center justify-between gap-3 group transition"
+      >
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+            <Sparkles size={20} />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h3 className="text-white font-bold text-xs sm:text-sm">AI Drill Generator ✨</h3>
+              <span className="text-[9px] bg-teal-500/20 text-teal-300 font-bold px-1.5 py-0.5 rounded border border-teal-500/30 font-mono">Gemini 2.5</span>
+            </div>
+            <p className="text-[11px] text-slate-300 mt-0.5">
+              Paste handwritten notes, PDF text, or coaching material to generate custom CBT drills instantly.
+            </p>
+          </div>
+        </div>
+        <ChevronRight size={18} className="text-slate-400 group-hover:text-teal-300 transition shrink-0" />
+      </Link>
+
       {/* Target Exam Quick Cards (Launches Bottom Sheet with that Exam pre-selected) */}
       <div>
         <div className="flex items-center justify-between mb-2">

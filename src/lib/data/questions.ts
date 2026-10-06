@@ -973,3 +973,12 @@ export function getQuestionsByTopic(topicId: string): Question[] {
   return ALL_QUESTIONS.slice(0, 10);
 }
 
+export function getQuestionById(id: string): Question | undefined {
+  return ALL_QUESTIONS.find(q => q.id === id);
+}
+
+export function getQuestionsByIds(ids: string[]): Question[] {
+  if (!ids || ids.length === 0) return [];
+  const set = new Set(ids);
+  return ALL_QUESTIONS.filter(q => set.has(q.id));
+}

@@ -10,6 +10,7 @@ export function generateStaticParams() {
     { testId: 'clerk' },
     { testId: 'patwari' },
     { testId: 'topic-all' },
+    { testId: 'topic-ai-custom' },
   ];
 
   const topicParams = AVAILABLE_TEST_TOPICS.map(t => ({

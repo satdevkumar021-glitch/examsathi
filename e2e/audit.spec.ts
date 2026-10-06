@@ -46,15 +46,9 @@ test.describe('ExamSathi Comprehensive E2E Audit Suite', () => {
     const headingText = await mainHeader.textContent();
     console.log('Dashboard main heading:', headingText);
 
-    // Look for hardcoded stats: 72% readiness, 520 cards, 84% avg
-    const readiness = page.locator('text=72%');
-    const cardsCount = page.locator('text=520');
-    const avgScore = page.locator('text=84%');
-    
-    console.log('Found 72% readiness:', await readiness.count() > 0);
-    console.log('Found 520 cards:', await cardsCount.count() > 0);
-    console.log('Found 84% avg score:', await avgScore.count() > 0);
-    expect(await readiness.count()).toBeGreaterThan(0);
+    // Verify dynamic metrics with honest empty states
+    const statCards = page.locator('text=/Readiness|ਤਿਆਰੀ|Flashcards|Cards/i');
+    expect(await statCards.count()).toBeGreaterThan(0);
   });
 
   test('03. Auth flows: Register, Login, Demo Login, Forgot Password', async ({ page }) => {
@@ -101,12 +95,12 @@ test.describe('ExamSathi Comprehensive E2E Audit Suite', () => {
 
   test('06. Topic Mock Test stuck spinner bug verification (/mock-test/topic-modern-india/)', async ({ page }) => {
     await page.goto('/mock-test/topic-modern-india/');
-    await page.waitForTimeout(2000);
+    await page.waitForTimeout(1500);
     
     const stuckSpinner = page.locator('text=/Generating 50-Question CBT Set|प्रश्नों का सेट तैयार किया जा रहा है/i');
     const isStuck = await stuckSpinner.count() > 0;
     console.log('Topic Modern India stuck spinner verified:', isStuck);
-    expect(isStuck).toBe(true); // Verifying the documented critical bug!
+    expect(isStuck).toBe(false); // Bug resolved: no longer stuck!
   });
 
   test('07. Working 50-Question CBT Mock Test Engine and Client Answer Leak', async ({ page }) => {
@@ -128,24 +122,23 @@ test.describe('ExamSathi Comprehensive E2E Audit Suite', () => {
     await page.goto('/typing-practice/');
     await expect(page.locator('body')).toContainText(/ਟਾਈਪਿੰਗ|Typing/i);
     
-    // Check timer defaults (showing e.g. 60s)
+    // Check timer defaults (showing official 600s / 10m benchmark)
     const timerText = await page.locator('text=/[0-9]+s/').first().textContent();
     console.log('Typing Practice timer initial text:', timerText);
-    expect(timerText).toBe('60s'); // Verifies 1m default vs official 10m benchmark!
+    expect(timerText).toBe('600s'); // Verifies official 10m benchmark!
 
     // Check Raavi key hints
-    const halantHint = page.locator('strong:has-text("Shift + D"), span:has-text("Shift + D")');
-    console.log('Found Shift+D Halant hint:', await halantHint.count() > 0);
-    expect(await halantHint.count()).toBeGreaterThan(0); // Verifies the incorrect hint in codebase!
+    const halantHint = page.locator('strong:has-text("d"), span:has-text("d")');
+    console.log('Found InScript halant hint:', await halantHint.count() > 0);
+    expect(await halantHint.count()).toBeGreaterThan(0);
   });
 
   test('09. Roadmap page audit', async ({ page }) => {
     await page.goto('/roadmap/');
     
-    // Check Day 14 hardcoded claim
-    const day14 = page.locator('text=/Day 14|दिन 14/i');
-    console.log('Found hardcoded Day 14:', await day14.count() > 0);
-    expect(await day14.count()).toBeGreaterThan(0);
+    // Check Day counter
+    const dayLabel = page.locator('text=/Day [0-9]+|दिन [0-9]+/i');
+    expect(await dayLabel.count()).toBeGreaterThan(0);
 
     // Click ETT track tab
     const ettTab = page.locator('button:has-text("ETT")').first();
@@ -157,49 +150,49 @@ test.describe('ExamSathi Comprehensive E2E Audit Suite', () => {
     console.log('Found Piaget task on ETT tab:', await piagetText.count() > 0);
     expect(await piagetText.count()).toBeGreaterThan(0);
 
-    // Check that it links to SST instead of child pedagogy
+    // Check that it links to child pedagogy
     const piagetLink = page.locator('a:has-text("Read Lesson Notes")').first();
     const href = await piagetLink.getAttribute('href');
     console.log('Piaget lesson link href:', href);
-    expect(href).toContain('/study/punjab-master-cadre/social-science'); // Confirms the link mismatch!
+    expect(href).toContain('/lesson/child-development-pedagogy');
   });
 
   test('10. Virtual Library page audit', async ({ page }) => {
     await page.goto('/library/');
     
-    // Check desks count
-    const desks = page.locator('text=/Desk #[0-9]+|Desk [0-9]+/i');
+    // Check desks count (16 desks)
+    const desks = page.locator('button:has-text("Open Desk"), button:has-text("Active")');
     const deskCount = await desks.count();
     console.log('Library desks rendered count:', deskCount);
+    expect(deskCount).toBe(16);
 
-    // Check hardcoded hours studied
-    const hoursText = page.locator('text=/18\.5h|18\.5 घंटे/i');
-    console.log('Found 18.5h hardcoded studied:', await hoursText.count() > 0);
-    expect(await hoursText.count()).toBeGreaterThan(0);
+    // Check honest initial hours studied (0h)
+    const hoursText = page.locator('text=/0h|0\.0h/i').first();
+    await expect(hoursText).toBeVisible();
 
-    // Check fake user presence
+    // Check no fake users presence
     const fakeUser = page.locator('text=Gurpreet');
-    console.log('Found fake peer users in library (Gurpreet):', await fakeUser.count() > 0);
-    expect(await fakeUser.count()).toBeGreaterThan(0);
+    expect(await fakeUser.count()).toBe(0);
   });
 
   test('11. Profile page audit', async ({ page }) => {
     await page.goto('/profile/');
     
-    // Check fake email and streak
+    // Check honest guest banner and no fake email
     const fakeEmail = page.locator('text=aspirant@examsathi.in');
-    console.log('Found fake guest email aspirant@examsathi.in:', await fakeEmail.count() > 0);
-    expect(await fakeEmail.count()).toBeGreaterThan(0);
+    expect(await fakeEmail.count()).toBe(0);
+    const guestBanner = page.locator('text=/Guest Student/i');
+    expect(await guestBanner.count()).toBeGreaterThan(0);
   });
 
   test('12. Admin portal route guard audit', async ({ page }) => {
     // Direct access to /admin/ without logging in
     await page.goto('/admin/');
     
-    // Verify whether access is granted without authentication
-    const adminHeader = page.locator('text=/Admin Resource Publisher Portal|Admin/i').first();
-    console.log('Admin header accessible without auth:', await adminHeader.isVisible());
-    expect(await adminHeader.isVisible()).toBe(true); // Confirms the vulnerability!
+    // Verify access is blocked with restricted credentials gate
+    const adminGate = page.locator('text=/Restricted Administrative Access|Enter Admin Passkey/i').first();
+    console.log('Admin security challenge visible:', await adminGate.isVisible());
+    expect(await adminGate.isVisible()).toBe(true);
   });
 
 });

@@ -12,6 +12,7 @@ export function generateStaticParams() {
     { attemptId: 'clerk' },
     { attemptId: 'patwari' },
     { attemptId: 'topic-all' },
+    { attemptId: 'topic-ai-custom' },
   ];
 
   const topicParams = AVAILABLE_TEST_TOPICS.map(t => ({

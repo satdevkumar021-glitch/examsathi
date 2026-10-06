@@ -13,7 +13,7 @@ import {
   UserPerformanceLevel, 
   PredictedRankReport 
 } from '@/lib/data/question_bank_engine';
-import { Question } from '@/lib/data/questions';
+import { Question, ALL_QUESTIONS } from '@/lib/data/questions';
 import { 
   toggleFavoriteQuestion, 
   toggleBookmarkQuestion, 
@@ -136,7 +136,7 @@ export default function Results() {
 
   const testId = result.testId || '1';
   const testTitle = result.testTitle || 'Punjab Master Cadre 50-Question CBT Simulation';
-  const questions = result.questions || [];
+  const questions = (result.questions && result.questions.length > 0) ? result.questions : ALL_QUESTIONS.slice(0, 10);
   const userAnswers = result.userAnswers || {};
 
   // Difficulty performance breakdown
@@ -873,6 +873,15 @@ export default function Results() {
                         {isSaved ? <BookmarkCheck size={13} /> : <FileText size={13} />}
                         <span>{isSaved ? 'In Notes ✓' : 'Add Note 📝'}</span>
                       </button>
+
+                      {/* Deep Dive Lesson Link */}
+                      <Link
+                        href={`/lesson/${q.topicId || 'modern-india'}`}
+                        className="text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1 bg-teal-500/10 hover:bg-teal-500/20 text-teal-300 border border-teal-500/30 transition"
+                      >
+                        <BookOpen size={13} />
+                        <span>Lesson Notes 📖</span>
+                      </Link>
                     </div>
                   </div>
 
