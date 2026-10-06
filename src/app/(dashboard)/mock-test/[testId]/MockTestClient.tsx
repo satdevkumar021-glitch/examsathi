@@ -1,13 +1,14 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  Clock, 
-  CheckCircle2, 
-  ChevronRight, 
-  ChevronLeft, 
-  AlertCircle, 
-  Layers, 
+import Link from 'next/link';
+import {
+  Clock,
+  CheckCircle2,
+  ChevronRight,
+  ChevronLeft,
+  AlertCircle,
+  Layers,
   HelpCircle,
   RotateCw,
   Award,
@@ -17,23 +18,36 @@ import {
   ShieldAlert
 } from 'lucide-react';
 import { Question } from '@/lib/data/questions';
-import { 
-  getTestQuestions, 
-  evaluateUserLevel, 
+import {
+  getTestQuestions,
+  evaluateUserLevel,
   calculatePredictedRank,
   AVAILABLE_TEST_TOPICS,
   AVAILABLE_EXAMS
 } from '@/lib/data/question_bank_engine';
+import { computeScore, computeTopicBreakdown } from '@/lib/scoring';
+import {
+  CardRating,
+  reviewCard,
+  loadSRSStates,
+  saveSRSStates,
+  createNewCard,
+  getSRSSummary,
+} from '@/lib/srs';
 
 export default function MockTest({ testId }: { testId?: string }) {
   const router = useRouter();
 
+  const submitRef = useRef<() => void>(() => {});
+  const submittingRef = useRef(false);
+  const [loaded, setLoaded] = useState(false);
   const [qIndex, setQIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<string, string>>({});
   const [markedForReview, setMarkedForReview] = useState<Record<string, boolean>>({});
   const [lang, setLang] = useState<'hi' | 'pa' | 'en'>('hi');
   const [mode, setMode] = useState<'exam' | 'flip'>('exam');
   const [isFlipped, setIsFlipped] = useState(false);
+  const [srsSummary, setSrsSummary] = useState({ due: 0, new_: 0, learning: 0, review: 0 });
   const [questions, setQuestions] = useState<Question[]>([]);
   const [testTitle, setTestTitle] = useState('Master Cadre & State CBT Mock Test');
   const [secondsRemaining, setSecondsRemaining] = useState(45 * 60);
@@ -91,6 +105,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       const storedConfig = sessionStorage.getItem('examsathi_test_config');
       if (storedConfig) {
         const parsed = JSON.parse(storedConfig);
+        sessionStorage.removeItem('examsathi_test_config');
         if (parsed.topicId) topicId = parsed.topicId;
         if (parsed.count) count = parsed.count;
         if (parsed.mode) requestedMode = parsed.mode;
@@ -103,6 +118,11 @@ export default function MockTest({ testId }: { testId?: string }) {
       // Fallback
     }
 
+    const query = new URLSearchParams(window.location.search);
+    if (query.has('mode')) requestedMode = query.get('mode') === 'flip' ? 'flip' : 'exam';
+    if (query.has('exam')) examId = query.get('exam') || undefined;
+    if (query.has('diff')) difficulty = ['easy', 'medium', 'hard'].includes(query.get('diff') || '') ? query.get('diff') as 'easy' | 'medium' | 'hard' : 'all';
+    if (query.has('count')) count = Math.max(1, Math.min(150, Number(query.get('count')) || 50));
     setMode(requestedMode);
     if (examId) setActiveExamId(examId);
     setActiveDifficulty(difficulty);
@@ -133,11 +153,19 @@ export default function MockTest({ testId }: { testId?: string }) {
       count 
     });
     setQuestions(loadedQuestions);
+    setLoaded(true);
 
     const allocatedSeconds = Math.max(300, loadedQuestions.length * 54); // 54 seconds per question (~45 mins for 50 Qs)
     setSecondsRemaining(allocatedSeconds);
     setTotalTimeSeconds(allocatedSeconds);
   }, [testId]);
+
+  // Refresh SRS summary whenever questions load or mode switches to flip
+  useEffect(() => {
+    if (mode !== 'flip' || questions.length === 0) return;
+    const ids = questions.map(q => q.id);
+    setSrsSummary(getSRSSummary(ids));
+  }, [mode, questions]);
 
   // Countdown timer in exam mode
   useEffect(() => {
@@ -147,7 +175,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       setSecondsRemaining(prev => {
         if (prev <= 1) {
           clearInterval(timer);
-          handleSubmitTest();
+          submitRef.current();
           return 0;
         }
         return prev - 1;
@@ -188,46 +216,47 @@ export default function MockTest({ testId }: { testId?: string }) {
   };
 
   const handleSubmitTest = () => {
-    if (isSubmitting || questions.length === 0) return;
+    if (submittingRef.current || questions.length === 0) return;
+    submittingRef.current = true;
     setIsSubmitting(true);
 
-    let correctCount = 0;
-    let wrongCount = 0;
+    const examMeta = AVAILABLE_EXAMS.find(e => e.id === activeExamId);
+    const correctAnswers = questions.reduce<Record<string, string>>(
+      (acc, q) => ({ ...acc, [q.id]: q.correct }),
+      {}
+    );
+    const config = {
+      marksPerQuestion: 1,
+      negativeMarking: examMeta?.negativeMarking ?? 0.25,
+      totalQuestions: questions.length,
+    };
+    const timeTaken = totalTimeSeconds - secondsRemaining;
+    const scored = computeScore(correctAnswers, userAnswers, config, timeTaken);
+    const topicBreakdown = computeTopicBreakdown(
+      questions.map(q => ({ id: q.id, topicId: q.topicId || 'general' })),
+      correctAnswers,
+      userAnswers
+    );
 
-    questions.forEach(q => {
-      const chosen = userAnswers[q.id];
-      if (chosen) {
-        if (chosen === q.correct) {
-          correctCount++;
-        } else {
-          wrongCount++;
-        }
-      }
-    });
-
-    const unattempted = questions.length - (correctCount + wrongCount);
-    // Negative marking: 1 mark for correct, -0.25 for incorrect
-    const rawScore = Math.max(0, correctCount - (wrongCount * 0.25));
-    const percentage = Math.round((correctCount / questions.length) * 100);
-    const accuracy = Math.round((correctCount / (correctCount + wrongCount || 1)) * 100);
-    const levelInfo = evaluateUserLevel(percentage, accuracy);
-    const predictedRank = calculatePredictedRank(percentage, rawScore, questions.length);
+    const levelInfo = evaluateUserLevel(scored.percentage, scored.accuracy);
+    const predictedRank = calculatePredictedRank(scored.percentage, scored.rawScore, questions.length);
 
     const resultPayload = {
       testId: testId || 'custom',
       testTitle,
       examId: activeExamId,
       difficulty: activeDifficulty,
-      total: questions.length,
-      correct: correctCount,
-      wrong: wrongCount,
-      unattempted,
-      rawScore: rawScore.toFixed(2),
-      percentage,
-      accuracy,
-      timeTaken: totalTimeSeconds - secondsRemaining,
+      total: scored.total,
+      correct: scored.correct,
+      wrong: scored.wrong,
+      unattempted: scored.unattempted,
+      rawScore: scored.rawScore.toFixed(2),
+      percentage: scored.percentage,
+      accuracy: scored.accuracy,
+      timeTaken,
       level: levelInfo,
       predictedRank,
+      topicBreakdown,
       questions,
       userAnswers,
       completedAt: new Date().toISOString(),
@@ -238,8 +267,40 @@ export default function MockTest({ testId }: { testId?: string }) {
       localStorage.setItem('examsathi_last_result', JSON.stringify(resultPayload));
     } catch {}
 
+    // Append to history
+    try {
+      const historyRaw = localStorage.getItem('examsathi_mock_history') || '[]';
+      const history = JSON.parse(historyRaw);
+      history.unshift({
+        testTitle: testTitle,
+        completedAt: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
+        percentage: scored.percentage,
+        correct: scored.correct,
+        total: scored.total,
+      });
+      // Keep only last 20 attempts
+      localStorage.setItem('examsathi_mock_history', JSON.stringify(history.slice(0, 20)));
+    } catch {}
+
     router.push(`/results/${testId || 'latest'}`);
   };
+
+  submitRef.current = handleSubmitTest;
+
+  if (loaded && questions.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4 p-6 text-center">
+        <div className="text-5xl">📚</div>
+        <h2 className="text-white font-bold text-lg">Questions Coming Soon</h2>
+        <p className="text-slate-400 text-sm max-w-xs">
+          We are building the question bank for this topic. Check back soon, or try a different topic.
+        </p>
+        <Link href="/mock-test" className="bg-teal-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-teal-400 transition">
+          ← Browse All Mock Tests
+        </Link>
+      </div>
+    );
+  }
 
   if (!currentQuestion) {
     return (
@@ -258,9 +319,29 @@ export default function MockTest({ testId }: { testId?: string }) {
     ? { label: 'Hard 🔴', color: 'bg-rose-500/15 text-rose-300 border-rose-500/30' }
     : { label: 'Mid 🟡', color: 'bg-amber-500/15 text-amber-300 border-amber-500/30' };
 
+  const activeExamMeta = AVAILABLE_EXAMS.find(e => e.id === activeExamId);
+
   return (
     <div className="flex flex-col h-screen bg-slate-900 pb-safe text-slate-100">
-      
+
+      {/* Exam Pattern Info Banner */}
+      {loaded && questions.length > 0 && activeExamMeta && (
+        <div className="bg-amber-950/40 border-b border-amber-700/40 px-3 py-1.5 flex items-center gap-2 text-[10px] text-amber-200 shrink-0">
+          <ShieldAlert size={12} className="text-amber-400 shrink-0" />
+          <span>
+            <span className="font-bold text-amber-300">⚠️ Negative marking:</span>
+            {' '}-{activeExamMeta.negativeMarking} per wrong answer
+            {' '}|{' '}
+            <span className="font-semibold">Total:</span> {questions.length} Qs
+            {' '}|{' '}
+            <span className="font-semibold">{Math.round(totalTimeSeconds / 60)} minutes</span>
+            {activeExamMeta.negativeMarking === 0 && (
+              <span className="ml-1 text-emerald-300 font-bold">✓ No negative marking</span>
+            )}
+          </span>
+        </div>
+      )}
+
       {/* Top Test Header Bar */}
       <div className="bg-slate-900/95 border-b border-slate-800 p-3.5 flex justify-between items-center shrink-0">
         <div className="min-w-0 pr-2">
@@ -276,7 +357,7 @@ export default function MockTest({ testId }: { testId?: string }) {
           {/* Mode Switcher */}
           <button
             onClick={() => {
-              setMode(m => m === 'exam' ? 'flip' : 'exam');
+              router.push('/mock-test');
               setIsFlipped(false);
             }}
             className={`px-2 py-1 rounded-lg text-[10px] font-bold border flex items-center gap-1 transition ${
@@ -287,7 +368,7 @@ export default function MockTest({ testId }: { testId?: string }) {
             title="Switch between Exam CBT mode and 3D Flip Card mode"
           >
             <Layers size={12} />
-            {mode === 'exam' ? 'CBT' : 'Flip'}
+            {mode === 'exam' ? 'Exit CBT' : 'Exit Flip'}
           </button>
 
           {/* Lang toggle */}
@@ -418,7 +499,17 @@ export default function MockTest({ testId }: { testId?: string }) {
         ) : (
           // ==================== MODE 2: 3D FLIP CARD ====================
           <div className="flex flex-col items-center justify-center h-full gap-4">
-            <div 
+            {/* SRS Progress Indicator */}
+            <div className="w-full flex items-center justify-center gap-3 text-[11px] bg-slate-800/60 border border-slate-700 rounded-xl px-3 py-1.5">
+              <span className="text-slate-400">📅</span>
+              <span className="text-amber-400"><strong>{srsSummary.due}</strong> due today</span>
+              <span className="text-slate-600">|</span>
+              <span className="text-blue-400"><strong>{srsSummary.learning}</strong> learning</span>
+              <span className="text-slate-600">|</span>
+              <span className="text-green-400"><strong>{srsSummary.review}</strong> review</span>
+            </div>
+
+            <div
               onClick={() => setIsFlipped(!isFlipped)}
               className="cursor-pointer w-full min-h-[320px] bg-gradient-to-br from-slate-800 to-slate-850 border border-slate-700 rounded-2xl p-5 flex flex-col justify-between shadow-xl relative hover:border-amber-500/50 transition"
             >
@@ -498,42 +589,32 @@ export default function MockTest({ testId }: { testId?: string }) {
             {/* FSRS Rating Buttons when flipped */}
             {isFlipped && (
               <div className="w-full grid grid-cols-4 gap-2">
-                <button
-                  onClick={() => {
-                    setIsFlipped(false);
-                    setQIndex(prev => Math.min(questions.length - 1, prev + 1));
-                  }}
-                  className="bg-rose-900/40 hover:bg-rose-800/60 border border-rose-700/50 text-rose-300 p-2 rounded-xl text-center text-[10px] font-bold"
-                >
-                  Again (&lt;1d)
-                </button>
-                <button
-                  onClick={() => {
-                    setIsFlipped(false);
-                    setQIndex(prev => Math.min(questions.length - 1, prev + 1));
-                  }}
-                  className="bg-amber-900/40 hover:bg-amber-800/60 border border-amber-700/50 text-amber-300 p-2 rounded-xl text-center text-[10px] font-bold"
-                >
-                  Hard (1d)
-                </button>
-                <button
-                  onClick={() => {
-                    setIsFlipped(false);
-                    setQIndex(prev => Math.min(questions.length - 1, prev + 1));
-                  }}
-                  className="bg-emerald-900/40 hover:bg-emerald-800/60 border border-emerald-700/50 text-emerald-300 p-2 rounded-xl text-center text-[10px] font-bold"
-                >
-                  Good (3d)
-                </button>
-                <button
-                  onClick={() => {
-                    setIsFlipped(false);
-                    setQIndex(prev => Math.min(questions.length - 1, prev + 1));
-                  }}
-                  className="bg-indigo-900/40 hover:bg-indigo-800/60 border border-indigo-700/50 text-indigo-300 p-2 rounded-xl text-center text-[10px] font-bold"
-                >
-                  Easy (7d)
-                </button>
+                {([
+                  { rating: 'again' as CardRating, label: '🔴 Again', cls: 'bg-rose-900/40 hover:bg-rose-800/60 border-rose-700/50 text-rose-300' },
+                  { rating: 'hard'  as CardRating, label: '🟠 Hard',  cls: 'bg-amber-900/40 hover:bg-amber-800/60 border-amber-700/50 text-amber-300' },
+                  { rating: 'good'  as CardRating, label: '🟢 Good',  cls: 'bg-emerald-900/40 hover:bg-emerald-800/60 border-emerald-700/50 text-emerald-300' },
+                  { rating: 'easy'  as CardRating, label: '🔵 Easy',  cls: 'bg-indigo-900/40 hover:bg-indigo-800/60 border-indigo-700/50 text-indigo-300' },
+                ] as const).map(({ rating, label, cls }) => (
+                  <button
+                    key={rating}
+                    onClick={() => {
+                      // Persist SRS state
+                      const states = loadSRSStates();
+                      const existing = states[currentQuestion.id] ?? createNewCard(currentQuestion.id);
+                      const updated = reviewCard(existing, rating);
+                      saveSRSStates({ ...states, [currentQuestion.id]: updated });
+                      // Refresh summary badge
+                      const ids = questions.map(q => q.id);
+                      setSrsSummary(getSRSSummary(ids));
+                      // Advance to next card
+                      setIsFlipped(false);
+                      setQIndex(prev => Math.min(questions.length - 1, prev + 1));
+                    }}
+                    className={`border text-xs px-3 py-1.5 rounded-full font-bold transition ${cls}`}
+                  >
+                    {label}
+                  </button>
+                ))}
               </div>
             )}
           </div>

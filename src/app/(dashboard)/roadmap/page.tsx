@@ -7,6 +7,7 @@ import {
   ShieldAlert, Brain, ChevronRight, Check
 } from 'lucide-react';
 import { getStoredUser } from '@/lib/auth';
+import { getSRSSummary } from '@/lib/srs';
 
 interface RoadmapTask {
   id: string;
@@ -29,9 +30,10 @@ interface RoadmapDay {
 export default function StudyRoadmap() {
   const [selectedTrack, setSelectedTrack] = useState<'ett' | 'clerk' | 'master-cadre'>('ett');
   const [completedTasks, setCompletedTasks] = useState<Record<string, boolean>>({});
-  const [activeDay, setActiveDay] = useState<number>(14);
+  const [activeDay, setActiveDay] = useState<number>(1);
   const [dailyChallengeAnswer, setDailyChallengeAnswer] = useState<string | null>(null);
   const [showChallengeSolution, setShowChallengeSolution] = useState(false);
+  const [srsSummary, setSrsSummary] = useState({ due: 0, new_: 0, learning: 0, review: 0 });
 
   useEffect(() => {
     try {
@@ -43,6 +45,26 @@ export default function StudyRoadmap() {
       const saved = localStorage.getItem('examsathi_roadmap_completed');
       if (saved) setCompletedTasks(JSON.parse(saved));
     } catch {}
+  }, []);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('examsathi_study_start_date');
+      if (stored) {
+        const startDate = new Date(stored);
+        const today = new Date();
+        const diffDays = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+        setActiveDay(Math.max(1, Math.min(diffDays, 60)));
+      } else {
+        // First visit — set start date to today
+        localStorage.setItem('examsathi_study_start_date', new Date().toISOString());
+        setActiveDay(1);
+      }
+    } catch {}
+  }, []);
+
+  useEffect(() => {
+    setSrsSummary(getSRSSummary([]));
   }, []);
 
   const toggleTask = (taskId: string) => {
@@ -83,7 +105,7 @@ export default function StudyRoadmap() {
               titlePa: 'ਪਿਆਜੇ ਦੇ 4 ਪੜਾਅ ਅਤੇ ਸੰਭਾਲ (Conservation) ਸਿਧਾਂਤ',
               category: 'concept',
               estimatedMinutes: 25,
-              link: '/study/punjab-master-cadre/social-science',
+              link: '/lesson/ett-child-pedagogy',
               linkText: 'Read Lesson Notes',
               xp: 40,
             },
@@ -146,7 +168,7 @@ export default function StudyRoadmap() {
           tasks: [
             {
               id: 'clk-t1',
-              title: 'Master Raavi Unicode Doot Akhar (Halant \'d\' Key Rules)',
+              title: "Master Raavi Unicode Doot Akhar (Halant 'd' Key Rules)",
               titlePa: 'ਰਾਵੀ ਫੌਂਟ ਵਿੱਚ ਪੈਰੀਂ ਅੱਖਰ ਪਾਉਣ ਦੇ ਨਿਯਮ',
               category: 'concept',
               estimatedMinutes: 20,
@@ -317,7 +339,7 @@ export default function StudyRoadmap() {
           <div>
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-teal-400" />
-              <h2 className="text-sm font-bold text-white">Today\'s Action Plan (दिन का लक्ष्य)</h2>
+              <h2 className="text-sm font-bold text-white">Today&apos;s Action Plan (दिन का लक्ष्य)</h2>
             </div>
             <p className="text-[11px] text-slate-400 mt-0.5">
               {completedCount} of {dayTasks.length} tasks completed ({completionPercentage}%)
@@ -326,6 +348,19 @@ export default function StudyRoadmap() {
           <span className="text-xs font-black text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/30 font-mono">
             +{completedCount * 50} XP Today
           </span>
+        </div>
+
+        {/* SRS Flashcard Queue */}
+        <div className="bg-slate-800/60 rounded-xl p-3 border border-slate-700 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <Layers size={16} className="text-teal-400" />
+            <span className="text-xs font-bold text-white">Today&apos;s Flashcard Queue</span>
+          </div>
+          <div className="flex gap-3 text-xs">
+            <span className="text-amber-400"><strong>{srsSummary.due}</strong> due</span>
+            <span className="text-blue-400"><strong>{srsSummary.new_}</strong> new</span>
+            <span className="text-green-400"><strong>{srsSummary.review}</strong> review</span>
+          </div>
         </div>
 
         {/* Progress Bar */}

@@ -1,0 +1,44 @@
+{
+  "name": "ExamSathi — परीक्षा साथी",
+  "short_name": "ExamSathi",
+  "description": "Free exam preparation for Punjab, Rajasthan and Central government exams. Mock tests, flip cards, study notes.",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0f172a",
+  "theme_color": "#14b8a6",
+  "lang": "hi",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Mock Tests",
+      "short_name": "Tests",
+      "description": "Start a CBT mock test",
+      "url": "/mock-test",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Study Material",
+      "short_name": "Study",
+      "description": "Browse exam catalog",
+      "url": "/exams",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

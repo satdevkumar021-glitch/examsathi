@@ -355,7 +355,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     correct: 'B',
     explanation: {
       hi: 'गागरोन दुर्ग (झालावाड़) आहू और कालीसिंध नदियों के संगम पर स्थित एक बिना नींव वाला प्रसिद्ध जल दुर्ग है, जो यूनेस्को विश्व धरोहर स्थल भी है।',
-      pa: 'ਗਾਗਰੋਨ ਕਿਲ੍ਹਾ ਆਹੂ ਅਤੇ ਕਾਲੀਸਿੰਧ ਨਦੀਆਂ ਦੇ ਸੰਗਮ \'ਤੇ ਬਣਿਆ ਪ੍ਰਸਿੱਧ ਜਲ ਕਿਲ੍ਹਾ ਹੈ।',
+      pa: "ਗਾਗਰੋਨ ਕਿਲ੍ਹਾ ਆਹੂ ਅਤੇ ਕਾਲੀਸਿੰਧ ਨਦੀਆਂ ਦੇ ਸੰਗਮ 'ਤੇ ਬਣਿਆ ਪ੍ਰਸਿੱਧ ਜਲ ਕਿਲ੍ਹਾ ਹੈ।",
       en: 'Gagron Fort in Jhalawar is encircled by the Ahu and Kalisindh rivers, making it India’s premier Jal Durg.',
     },
     thought: {

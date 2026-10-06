@@ -76,7 +76,7 @@ export const BASE_LESSONS: Record<string, Lesson> = {
               <p>• <strong>तत्कालीन कारण:</strong> एनफील्ड राइफल में चर्बी लगे कारतूस (गाय व सूअर की चर्बी) का प्रयोग।</p>
               <p>• <strong>प्रथम शहादत:</strong> 29 मार्च 1857 को बैरकपुर में 34वीं नेटिव इन्फैंट्री के <strong>मंगल पांडे</strong> ने बगावत की।</p>
               <p>• <strong>विद्रोह का आगाज:</strong> 10 मई 1857 को मेरठ छावनी से सैनिकों ने दिल्ली कूच किया।</p>
-              <p>• <strong>प्रमुख केंद्र और नायक:</strong> दिल्ली (बहादुर शाह जफर ও बख्त खां), झांसी (रानी लक्ष्मीबाई), कानपुर (नाना साहब ও तात्या टोपे), जगदीशपुर बिहार (कुंवर सिंह), लखनऊ (बेगम हजरत महल)।</p>
+              <p>• <strong>प्रमुख केंद्र और नायक:</strong> दिल्ली (बहादुर शाह जफर और बख्त खां), झांसी (रानी लक्ष्मीबाई), कानपुर (नाना साहब और तात्या टोपे), जगदीशपुर बिहार (कुंवर सिंह), लखनऊ (बेगम हजरत महल)।</p>
               <p class="text-xs text-amber-300 pt-1">• <strong>1858 का भारत सरकार अधिनियम:</strong> कंपनी शासन समाप्त, ब्रिटिश क्राउन का सीधा शासन, लॉर्ड कैनिंग भारत के पहले वायसराय बने।</p>
             </div>
           </div>
@@ -385,7 +385,7 @@ export const BASE_LESSONS: Record<string, Lesson> = {
     summary: {
       hi: 'पंजाब का इतिहास गुरु नानक देव जी (1469) से प्रारंभ होकर दस गुरुओं के बलिदान, 1699 में खालसा पंथ की स्थापना, 12 सिख मिसलों और महाराजा रणजीत सिंह के शासन (1799-1839) से समृद्ध है। 1849 में ब्रिटिश विलय के बाद गदर पार्टी, जलियांवाला बाग और भगत सिंह ने स्वतंत्रता में अमर योगदान दिया।',
       pa: 'ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ ਗੁਰੂ ਸਾਹਿਬਾਨਾਂ, ਖਾਲਸਾ ਸਾਜਨਾ (1699), ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਅਤੇ ਆਜ਼ਾਦੀ ਲਹਿਰ ਦੀਆਂ ਸ਼ਹਾਦਤਾਂ ਨਾਲ ਭਰਿਆ ਹੈ।',
-      en: 'Punjab history encompasses the Ten Sikh Gurus (1469-1708), Creation of Khalsa (1699), Maharaja Ranjit Singh\'s kingdom (1799-1839), Anglo-Sikh Wars, and legendary contributions to Indian freedom.',
+      en: "Punjab history encompasses the Ten Sikh Gurus (1469-1708), Creation of Khalsa (1699), Maharaja Ranjit Singh's kingdom (1799-1839), Anglo-Sikh Wars, and legendary contributions to Indian freedom.",
     },
     keyNotes: {
       hi: [
@@ -800,7 +800,7 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         '📌 1921 — Discovery of Harappa by Dayaram Sahni on River Ravi.',
         '📌 1922 — Discovery of Mohenjo-Daro by R.D. Banerjee (Great Bath, Bronze Dancing Girl).',
         '📌 Ropar (Punjab) — Major Indus Valley site excavated on River Satluj.',
-        '📌 Lothal (Gujarat) — World\'s earliest artificial dockyard.',
+        "📌 Lothal (Gujarat) — World's earliest artificial dockyard.",
         '📌 261 BCE — Kalinga War (13th Rock Edict), transforming Ashoka towards Dhamma.',
       ],
     },
@@ -1619,7 +1619,7 @@ export const BASE_LESSONS: Record<string, Lesson> = {
     summary: {
       hi: 'भारत के 6 भौतिक भागों में हिमालय की तीन श्रेणियां (हिमाद्रि, हिमाचल, शिवालिक), उत्तर का विशाल मैदान, प्रायद्वीपीय पठार और तटीय मैदान शामिल हैं। गंगा भारत की सबसे लंबी नदी (2525 किमी) है और गोदावरी प्रायद्वीपीय भारत की सबसे लंबी नदी है जिसे दक्षिण गंगा कहा जाता है। नर्मदा और ताप्ती भ्रंश घाटी से बहकर अरब सागर में गिरती हैं।',
       pa: 'ਹਿਮਾਲਿਆ ਪਰਬਤ, ਉੱਤਰੀ ਮੈਦਾਨ, ਪਠਾਰ ਅਤੇ ਦਰਿਆ ਭਾਰਤ ਦੇ ਮੁੱਖ ਭੂਗੋਲਿਕ ਹਿੱਸੇ ਹਨ।',
-      en: 'India\'s physiography features the tripartite Himalayan ranges, fertile northern plains, ancient peninsular shield, and rich river drainage systems (Ganga, Indus, Brahmaputra, Godavari).',
+      en: "India's physiography features the tripartite Himalayan ranges, fertile northern plains, ancient peninsular shield, and rich river drainage systems (Ganga, Indus, Brahmaputra, Godavari).",
     },
     keyNotes: {
       hi: [
@@ -1641,7 +1641,7 @@ export const BASE_LESSONS: Record<string, Lesson> = {
         '📌 K2 / Godwin-Austen (8611 m): Highest peak in Karakoram range.',
         '📌 Devprayag: Confluence of Bhagirathi and Alaknanda forming the Ganga.',
         '📌 Godavari: Longest peninsular river (Dakshin Ganga).',
-        '📌 Majuli: World\'s largest riverine island in Brahmaputra River, Assam.',
+        "📌 Majuli: World's largest riverine island in Brahmaputra River, Assam.",
       ],
     },
     flashcards: [

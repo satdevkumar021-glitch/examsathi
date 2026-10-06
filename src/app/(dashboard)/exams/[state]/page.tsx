@@ -5,6 +5,7 @@ export function generateStaticParams() {
     { state: 'punjab' },
     { state: 'rajasthan' },
     { state: 'central' },
+    { state: 'haryana' },
   ];
 }
 

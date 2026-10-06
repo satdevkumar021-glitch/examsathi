@@ -2,15 +2,29 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ExamSathi - परीक्षा साथी',
-  description: 'Your ultimate exam preparation companion. भारत का सर्वश्रेष्ठ परीक्षा तैयारी मंच।',
-  manifest: '/manifest.json'
+  title: {
+    default: 'ExamSathi — परीक्षा साथी | Free Exam Preparation',
+    template: '%s | ExamSathi'
+  },
+  description: 'Free exam preparation for Punjab, Rajasthan and Central government exams. Master Cadre, ETT, PSSSB Clerk, Police, REET, CTET and more. Study notes, MCQs, mock tests and flip cards.',
+  keywords: ['Punjab Master Cadre', 'ETT Punjab', 'PSSSB Clerk', 'REET', 'CTET', 'mock test', 'exam preparation India'],
+  manifest: '/manifest.json',
+  openGraph: {
+    title: 'ExamSathi — Free Exam Preparation Platform',
+    description: 'Free study material, MCQs, mock tests and flip cards for Punjab, Rajasthan and Central exams.',
+    type: 'website',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'ExamSathi',
+  },
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
+  themeColor: '#14b8a6',
 };
 
 export default function RootLayout({
@@ -24,6 +38,17 @@ export default function RootLayout({
         <main className="max-w-[480px] mx-auto min-h-screen bg-slate-900 relative shadow-2xl overflow-x-hidden">
           {children}
         </main>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').catch(function() {});
+                });
+              }
+            `,
+          }}
+        />
       </body>
     </html>
   );

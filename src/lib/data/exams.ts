@@ -3,7 +3,7 @@
 // Compiled from official PSSSB, ERB Punjab, PPSC, RBSE, CBSE, and SSC sources
 // ============================================================
 
-export type State = 'punjab' | 'rajasthan' | 'central';
+export type State = 'punjab' | 'rajasthan' | 'central' | 'haryana';
 
 export interface Exam {
   id: string;
@@ -453,7 +453,7 @@ export const PUNJAB_EXAMS: Exam[] = [
                 subtopics: [
                   'Quadratic Equations: Discriminant D = b² - 4ac (D=0 equal roots, D>0 real distinct, D<0 complex)',
                   'Progressions: AP (Tn = a+(n-1)d), GP (Tn = ar^(n-1), S_inf = a/(1-r))',
-                  'Differential Calculus: Limits, L Hopital Rule (0/0, inf/inf), Maxima and Minima (f\'\'(x) < 0 maximum)',
+                  "Differential Calculus: Limits, L Hopital Rule (0/0, inf/inf), Maxima and Minima (f''(x) < 0 maximum)",
                   'Integral Calculus: King Property integral 0 to a f(x)dx = integral 0 to a f(a-x)dx',
                   'Matrices & Determinants: Inverse A^-1 = adj(A)/|A| (requires |A| != 0), Transpose (AB)^T = B^T A^T',
                   'Empirical Statistics: Mode = 3 Median - 2 Mean; Probability addition theorem',
@@ -1074,6 +1074,67 @@ export const RAJASTHAN_EXAMS: Exam[] = [
 ];
 
 // ---------------------------------------------------------------------------
+// 2.3 Rajasthan Police Constable (new entry)
+// ---------------------------------------------------------------------------
+const RAJASTHAN_POLICE_EXAM: Exam = {
+  id: 'rajasthan-police',
+  state: 'rajasthan',
+  name: 'Rajasthan Police Constable',
+  nameHindi: 'राजस्थान पुलिस कांस्टेबल',
+  namePunjabi: 'ਰਾਜਸਥਾਨ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ',
+  body: 'Rajasthan Police Subordinate Service Board',
+  level: 'Constable',
+  totalMarks: 150,
+  duration: '2 Hours',
+  negativeMarking: 0.25,
+  officialWebsite: 'https://police.rajasthan.gov.in',
+  emoji: '👮',
+  color: '#7C3AED',
+  sections: [
+    { name: 'Rajasthan GK & History', nameHindi: 'राजस्थान सामान्य ज्ञान व इतिहास', marks: 45, questions: 45 },
+    { name: 'Indian Constitution & Polity', nameHindi: 'भारतीय संविधान व राजनीति', marks: 30, questions: 30 },
+    { name: 'Science & Technology', nameHindi: 'विज्ञान व प्रौद्योगिकी', marks: 30, questions: 30 },
+    { name: 'Mathematics & Computer Basics', nameHindi: 'गणित व कंप्यूटर', marks: 45, questions: 45 },
+  ],
+  subjects: [
+    {
+      id: 'raj-police-core',
+      name: 'Rajasthan Police Core',
+      nameHindi: 'राजस्थान पुलिस मुख्य विषय',
+      emoji: '🚔',
+      chapters: [
+        {
+          id: 'raj-gk',
+          name: 'Rajasthan GK & Current Affairs',
+          nameHindi: 'राजस्थान सामान्य ज्ञान',
+          topics: [
+            {
+              id: 'raj-history-police',
+              name: 'Rajasthan History & Heritage',
+              nameHindi: 'राजस्थान इतिहास व विरासत',
+              subtopics: ['Rajput kingdoms, Mewar, 1857 Revolt in Rajasthan, Integration of Rajasthan', 'Forts, Palaces, Art & Culture, Folk music and dance'],
+              examQuestions: '30',
+              difficulty: 'medium',
+            },
+            {
+              id: 'science-tech-police',
+              name: 'Science, Technology & Computer Basics',
+              nameHindi: 'विज्ञान, प्रौद्योगिकी व कंप्यूटर',
+              subtopics: ['General Science fundamentals', 'Computer basics: hardware, software, internet', 'Current affairs: national & Rajasthan'],
+              examQuestions: '45',
+              difficulty: 'easy',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+// Append Rajasthan Police to RAJASTHAN_EXAMS after declaration
+RAJASTHAN_EXAMS.push(RAJASTHAN_POLICE_EXAM);
+
+// ---------------------------------------------------------------------------
 // 3. CENTRAL EXAMS DATABASE
 // ---------------------------------------------------------------------------
 export const CENTRAL_EXAMS: Exam[] = [
@@ -1218,6 +1279,374 @@ export const CENTRAL_EXAMS: Exam[] = [
   },
 ];
 
+// ---------------------------------------------------------------------------
+// 3.3 SSC CGL
+// ---------------------------------------------------------------------------
+const SSC_CGL_EXAM: Exam = {
+  id: 'ssc-cgl',
+  state: 'central',
+  name: 'SSC CGL (Combined Graduate Level)',
+  nameHindi: 'SSC CGL',
+  namePunjabi: 'ਐਸ.ਐਸ.ਸੀ. ਸੀ.ਜੀ.ਐਲ.',
+  body: 'Staff Selection Commission',
+  level: 'Graduate Level',
+  totalMarks: 200,
+  duration: '60 Minutes',
+  negativeMarking: 0.5,
+  officialWebsite: 'https://ssc.gov.in',
+  emoji: '🏛️',
+  color: '#D97706',
+  sections: [
+    { name: 'General Intelligence & Reasoning', nameHindi: 'सामान्य बुद्धिमत्ता व तर्कशक्ति', marks: 50, questions: 25 },
+    { name: 'General Awareness', nameHindi: 'सामान्य जागरूकता', marks: 50, questions: 25 },
+    { name: 'Quantitative Aptitude', nameHindi: 'मात्रात्मक योग्यता', marks: 50, questions: 25 },
+    { name: 'English Comprehension', nameHindi: 'अंग्रेजी बोध', marks: 50, questions: 25 },
+  ],
+  subjects: [
+    {
+      id: 'ssc-cgl-core',
+      name: 'SSC CGL Core Modules',
+      nameHindi: 'SSC CGL मुख्य मॉड्यूल',
+      emoji: '📊',
+      chapters: [
+        {
+          id: 'ssc-cgl-general',
+          name: 'Reasoning & GA',
+          nameHindi: 'तर्कशक्ति व सामान्य ज्ञान',
+          topics: [
+            {
+              id: 'ssc-cgl-reasoning',
+              name: 'General Intelligence & Reasoning',
+              nameHindi: 'सामान्य बुद्धिमत्ता व तर्कशक्ति',
+              subtopics: ['Analogy, Classification, Series, Coding-Decoding', 'Syllogism, Blood relations, Direction sense, Puzzles'],
+              examQuestions: '25',
+              difficulty: 'medium',
+            },
+            {
+              id: 'ssc-cgl-quant',
+              name: 'Quantitative Aptitude',
+              nameHindi: 'मात्रात्मक योग्यता',
+              subtopics: ['Percentage, Profit & Loss, SI/CI', 'Geometry, Trigonometry, Algebra, Data Interpretation'],
+              examQuestions: '25',
+              difficulty: 'hard',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// 3.4 CTET Paper 2
+// ---------------------------------------------------------------------------
+const CTET_P2_EXAM: Exam = {
+  id: 'ctet-paper2',
+  state: 'central',
+  name: 'CTET Paper 2 (Class 6-8)',
+  nameHindi: 'CTET पेपर 2 (कक्षा 6-8)',
+  namePunjabi: 'ਸੀ.ਟੀ.ਈ.ਟੀ. ਪੇਪਰ 2',
+  body: 'Central Board of Secondary Education (CBSE)',
+  level: 'Upper Primary Teachers (TGT)',
+  totalMarks: 150,
+  duration: '2 Hours 30 Minutes',
+  negativeMarking: false,
+  officialWebsite: 'https://ctet.nic.in',
+  emoji: '🏛️',
+  color: '#047857',
+  sections: [
+    { name: 'Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
+    { name: 'Language I', nameHindi: 'भाषा I', marks: 30, questions: 30 },
+    { name: 'Language II', nameHindi: 'भाषा II', marks: 30, questions: 30 },
+    { name: 'Subject-specific Paper (SST or Maths/Science)', nameHindi: 'विषय-विशिष्ट पेपर', marks: 60, questions: 60 },
+  ],
+  subjects: [
+    {
+      id: 'ctet-p2-core',
+      name: 'CTET Paper 2 Curriculum',
+      nameHindi: 'CTET पेपर 2 पाठ्यक्रम',
+      emoji: '📚',
+      chapters: [
+        {
+          id: 'ctet-p2-general',
+          name: 'Core Curriculum',
+          nameHindi: 'मुख्य पाठ्यक्रम',
+          topics: [
+            {
+              id: 'cdp-adolescent',
+              name: 'Adolescent Development & Pedagogy',
+              nameHindi: 'किशोरावस्था विकास व शिक्षाशास्त्र',
+              subtopics: ['Adolescent psychology, Identity crisis', 'Formative assessment, NCF 2005, Learning theories'],
+              examQuestions: '30',
+              difficulty: 'medium',
+            },
+            {
+              id: 'social-studies-p2',
+              name: 'Social Studies (History, Geography, Civics)',
+              nameHindi: 'सामाजिक अध्ययन',
+              subtopics: ['Medieval India, Mughal administration', 'Indian geography, Resources', 'Democratic process, Parliament'],
+              examQuestions: '60',
+              difficulty: 'medium',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// 3.5 UGC NET Paper 1
+// ---------------------------------------------------------------------------
+const UGC_NET_EXAM: Exam = {
+  id: 'ugc-net',
+  state: 'central',
+  name: 'UGC NET (Paper 1 General)',
+  nameHindi: 'UGC NET',
+  namePunjabi: 'ਯੂ.ਜੀ.ਸੀ. ਨੈੱਟ',
+  body: 'National Testing Agency (NTA)',
+  level: 'Assistant Professor / JRF',
+  totalMarks: 100,
+  duration: '60 Minutes',
+  negativeMarking: false,
+  officialWebsite: 'https://ugcnet.nta.nic.in',
+  emoji: '🎓',
+  color: '#6D28D9',
+  sections: [
+    { name: 'Teaching & Research Aptitude', nameHindi: 'शिक्षण व शोध अभिरुचि', marks: 20, questions: 10 },
+    { name: 'Reading Comprehension & Communication', nameHindi: 'पठन बोध व संचार', marks: 20, questions: 10 },
+    { name: 'Reasoning, Data Interpretation & ICT', nameHindi: 'तर्कशक्ति, डेटा व ICT', marks: 20, questions: 10 },
+    { name: 'Environment & Higher Education', nameHindi: 'पर्यावरण व उच्च शिक्षा', marks: 40, questions: 20 },
+  ],
+  subjects: [
+    {
+      id: 'ugc-net-p1',
+      name: 'UGC NET Paper 1',
+      nameHindi: 'UGC NET पेपर 1',
+      emoji: '🎓',
+      chapters: [
+        {
+          id: 'ugc-net-general',
+          name: 'General Aptitude',
+          nameHindi: 'सामान्य अभिरुचि',
+          topics: [
+            {
+              id: 'teaching-aptitude',
+              name: 'Teaching & Research Aptitude',
+              nameHindi: 'शिक्षण व शोध अभिरुचि',
+              subtopics: ['Teaching methods, Characteristics of good teacher', 'Research types, Thesis writing, Sampling methods'],
+              examQuestions: '10',
+              difficulty: 'medium',
+            },
+            {
+              id: 'ict-net',
+              name: 'ICT, Data Interpretation & Higher Education',
+              nameHindi: 'ICT, डेटा व उच्च शिक्षा',
+              subtopics: ['Internet, E-learning, Digital literacy', 'Bar graphs, Pie charts, Tables', 'UGC Act, Universities in India, NAAC'],
+              examQuestions: '30',
+              difficulty: 'medium',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+// ---------------------------------------------------------------------------
+// 3.6 Army Agniveer
+// ---------------------------------------------------------------------------
+const ARMY_AGNIVEER_EXAM: Exam = {
+  id: 'army-agniveer',
+  state: 'central',
+  name: 'Army Agniveer (General Duty)',
+  nameHindi: 'सेना अग्निवीर',
+  namePunjabi: 'ਅਗਨੀਵੀਰ ਆਰਮੀ',
+  body: 'Indian Army',
+  level: 'General Duty (GD)',
+  totalMarks: 100,
+  duration: '60 Minutes',
+  negativeMarking: 1,
+  officialWebsite: 'https://joinindianarmy.nic.in',
+  emoji: '⚔️',
+  color: '#15803D',
+  sections: [
+    { name: 'General Knowledge', nameHindi: 'सामान्य ज्ञान', marks: 30, questions: 15 },
+    { name: 'General Science', nameHindi: 'सामान्य विज्ञान', marks: 40, questions: 20 },
+    { name: 'Mathematics', nameHindi: 'गणित', marks: 20, questions: 10 },
+    { name: 'Computer Science', nameHindi: 'कंप्यूटर विज्ञान', marks: 10, questions: 5 },
+  ],
+  subjects: [
+    {
+      id: 'agniveer-core',
+      name: 'Agniveer Core Subjects',
+      nameHindi: 'अग्निवीर मुख्य विषय',
+      emoji: '⚔️',
+      chapters: [
+        {
+          id: 'agniveer-general',
+          name: 'General Knowledge & Science',
+          nameHindi: 'सामान्य ज्ञान व विज्ञान',
+          topics: [
+            {
+              id: 'gk-agniveer',
+              name: 'General Knowledge & Current Affairs',
+              nameHindi: 'सामान्य ज्ञान व सामयिकी',
+              subtopics: ['Indian History, Geography, Polity', 'Defence, awards, sports current affairs'],
+              examQuestions: '15',
+              difficulty: 'easy',
+            },
+            {
+              id: 'science-agniveer',
+              name: 'General Science & Mathematics',
+              nameHindi: 'सामान्य विज्ञान व गणित',
+              subtopics: ['Physics: Motion, Force, Optics', 'Chemistry: Elements, Acids, Bases', 'Biology: Cell, Nutrition', 'Maths: Percentage, Ratio, Algebra'],
+              examQuestions: '30',
+              difficulty: 'medium',
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
+CENTRAL_EXAMS.push(SSC_CGL_EXAM, CTET_P2_EXAM, UGC_NET_EXAM, ARMY_AGNIVEER_EXAM);
+
+// ---------------------------------------------------------------------------
+// 4. HARYANA EXAMS DATABASE
+// ---------------------------------------------------------------------------
+export const HARYANA_EXAMS: Exam[] = [
+  // 4.1 HTET Level 1 (PRT)
+  {
+    id: 'htet-l1',
+    state: 'haryana',
+    name: 'HTET Level 1 (PRT)',
+    nameHindi: 'HTET स्तर 1',
+    namePunjabi: 'ਐਚ.ਟੀ.ਈ.ਟੀ. ਪੱਧਰ 1',
+    body: 'Board of School Education Haryana (BSEH)',
+    level: 'Primary Teacher (PRT)',
+    totalMarks: 150,
+    duration: '2 Hours 30 Minutes',
+    negativeMarking: false,
+    officialWebsite: 'https://bseh.org.in',
+    emoji: '🏖️',
+    color: '#0369A1',
+    sections: [
+      { name: 'Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
+      { name: 'Hindi', nameHindi: 'हिंदी', marks: 30, questions: 30 },
+      { name: 'English', nameHindi: 'अंग्रेजी', marks: 30, questions: 30 },
+      { name: 'Mathematics', nameHindi: 'गणित', marks: 30, questions: 30 },
+      { name: 'EVS', nameHindi: 'पर्यावरण अध्ययन', marks: 30, questions: 30 },
+    ],
+    subjects: [
+      {
+        id: 'htet-l1-core',
+        name: 'HTET Level 1 Core',
+        nameHindi: 'HTET स्तर 1 मुख्य विषय',
+        emoji: '📖',
+        chapters: [
+          {
+            id: 'htet-l1-cdp',
+            name: 'Child Development & Pedagogy',
+            nameHindi: 'बाल विकास व शिक्षाशास्त्र',
+            topics: [
+              {
+                id: 'cdp-htet-l1',
+                name: 'Child Development, Learning Theories & Pedagogy',
+                nameHindi: 'बाल विकास, अधिगम सिद्धांत व शिक्षाशास्त्र',
+                subtopics: [
+                  'Piaget cognitive stages, Vygotsky ZPD, Kohlberg moral development',
+                  'Inclusive education, RTE Act 2009, CCE',
+                  'Behaviorism, Constructivism, Motivation theories',
+                ],
+                examQuestions: '30',
+                difficulty: 'medium',
+              },
+              {
+                id: 'haryana-gk-htet',
+                name: 'Haryana GK & EVS',
+                nameHindi: 'हरियाणा सामान्य ज्ञान व पर्यावरण',
+                subtopics: [
+                  'Haryana formation (Nov 1966), districts, culture, festivals',
+                  'Environmental studies: plants, animals, water, food, shelter',
+                  'Basic Mathematics: Number system, shapes, measurement',
+                ],
+                examQuestions: '60',
+                difficulty: 'easy',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // 4.2 HTET Level 2 (TGT)
+  {
+    id: 'htet-l2',
+    state: 'haryana',
+    name: 'HTET Level 2 (TGT)',
+    nameHindi: 'HTET स्तर 2',
+    namePunjabi: 'ਐਚ.ਟੀ.ਈ.ਟੀ. ਪੱਧਰ 2',
+    body: 'Board of School Education Haryana (BSEH)',
+    level: 'Trained Graduate Teacher (TGT)',
+    totalMarks: 150,
+    duration: '2 Hours 30 Minutes',
+    negativeMarking: false,
+    officialWebsite: 'https://bseh.org.in',
+    emoji: '🏖️',
+    color: '#0E7490',
+    sections: [
+      { name: 'Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
+      { name: 'Language Paper I', nameHindi: 'भाषा पेपर I', marks: 30, questions: 30 },
+      { name: 'Language Paper II', nameHindi: 'भाषा पेपर II', marks: 30, questions: 30 },
+      { name: 'Subject-Specific Paper', nameHindi: 'विषय-विशिष्ट पेपर', marks: 60, questions: 60 },
+    ],
+    subjects: [
+      {
+        id: 'htet-l2-core',
+        name: 'HTET Level 2 Core',
+        nameHindi: 'HTET स्तर 2 मुख्य विषय',
+        emoji: '📐',
+        chapters: [
+          {
+            id: 'htet-l2-cdp',
+            name: 'Adolescent Development & Subject Pedagogy',
+            nameHindi: 'किशोर विकास व विषय शिक्षाशास्त्र',
+            topics: [
+              {
+                id: 'cdp-htet-l2',
+                name: 'Adolescent Development & Pedagogy',
+                nameHindi: 'किशोरावस्था विकास व शिक्षाशास्त्र',
+                subtopics: [
+                  'Adolescent characteristics, Erik Erikson stages',
+                  'Formative & summative assessment, NCF 2005',
+                  'Haryana school education policies',
+                ],
+                examQuestions: '30',
+                difficulty: 'medium',
+              },
+              {
+                id: 'subject-specific-htet-l2',
+                name: 'Subject-Specific Domain Knowledge',
+                nameHindi: 'विषय-विशिष्ट ज्ञान',
+                subtopics: [
+                  'Mathematics: Algebra, Geometry, Trigonometry, Statistics',
+                  'Science: Physics, Chemistry, Biology fundamentals',
+                  'Social Studies: History, Geography, Civics, Economics',
+                ],
+                examQuestions: '60',
+                difficulty: 'hard',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+];
+
 // ============================================================
 // EXPORTS & HELPERS
 // ============================================================
@@ -1225,6 +1654,7 @@ export const ALL_EXAMS: Record<State, Exam[]> = {
   punjab: PUNJAB_EXAMS,
   rajasthan: RAJASTHAN_EXAMS,
   central: CENTRAL_EXAMS,
+  haryana: HARYANA_EXAMS,
 };
 
 export const EXAMS = ALL_EXAMS;
@@ -1250,6 +1680,13 @@ export const STATE_INFO: Record<State, { name: string; nameHindi: string; emoji:
     emoji: '🏛️',
     color: '#10B981',
     bodies: ['SSC', 'CBSE', 'Railway', 'Banking'],
+  },
+  haryana: {
+    name: 'Haryana',
+    nameHindi: 'हरियाणा',
+    emoji: '🏖️',
+    color: '#0369A1',
+    bodies: ['HPSC', 'HSSC', 'BSEH', 'Haryana Police'],
   },
 };
 

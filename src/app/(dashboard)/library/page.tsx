@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { 
   BookOpen, Clock, Play, Pause, RotateCcw, Volume2, VolumeX, 
@@ -13,37 +13,35 @@ interface LibrarySeat {
   label: string;
   type: 'quiet' | 'cbt' | 'pod';
   status: 'available' | 'occupied' | 'selected';
-  occupant?: string;
-  target?: string;
 }
 
 export default function VirtualStudyLibrary() {
   const [selectedSeat, setSelectedSeat] = useState<number>(7);
   const [selectedTopic, setSelectedTopic] = useState<string>('ett-child-pedagogy');
-  const [timerMode, setTimerMode] = useState<25 | 45 | 60>(45);
-  const [secondsRemaining, setSecondsRemaining] = useState<number>(45 * 60);
+  const [timerMode, setTimerMode] = useState<25 | 45 | 60>(25);
+  const [secondsRemaining, setSecondsRemaining] = useState<number>(25 * 60);
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [soundEnabled, setSoundEnabled] = useState<boolean>(false);
   const [sessionCompleted, setSessionCompleted] = useState<boolean>(false);
-  const [totalHours, setTotalHours] = useState<number>(18.5);
+  const [totalHours, setTotalHours] = useState<number>(0);
 
   const SEATS: LibrarySeat[] = [
-    { id: 1, label: 'Desk 01', type: 'quiet', status: 'occupied', occupant: 'Gurpreet', target: 'ETT Child Psychology' },
-    { id: 2, label: 'Desk 02', type: 'quiet', status: 'occupied', occupant: 'Manpreet', target: 'PSSSB Computer IT' },
-    { id: 3, label: 'Desk 03', type: 'quiet', status: 'available' },
-    { id: 4, label: 'Desk 04', type: 'quiet', status: 'available' },
-    { id: 5, label: 'Desk 05', type: 'quiet', status: 'occupied', occupant: 'Simran', target: 'Master Cadre SST' },
-    { id: 6, label: 'Desk 06', type: 'quiet', status: 'available' },
-    { id: 7, label: 'Desk 07 (Window)', type: 'quiet', status: 'selected' },
-    { id: 8, label: 'Desk 08', type: 'quiet', status: 'available' },
-    { id: 9, label: 'Desk 09', type: 'cbt', status: 'occupied', occupant: 'Aman', target: '50 Qs CBT Simulator' },
-    { id: 10, label: 'Desk 10', type: 'cbt', status: 'available' },
-    { id: 11, label: 'Desk 11', type: 'cbt', status: 'available' },
-    { id: 12, label: 'Desk 12', type: 'cbt', status: 'occupied', occupant: 'Rajwinder', target: 'Raavi Typing Lab' },
-    { id: 13, label: 'Desk 13', type: 'cbt', status: 'available' },
-    { id: 14, label: 'Desk 14', type: 'cbt', status: 'available' },
-    { id: 15, label: 'Desk 15', type: 'pod', status: 'available' },
-    { id: 16, label: 'Desk 16', type: 'pod', status: 'occupied', occupant: 'Harpreet', target: 'Punjab Police GK' },
+    { id: 1,  label: 'Desk 01',          type: 'quiet', status: 'available' },
+    { id: 2,  label: 'Desk 02',          type: 'quiet', status: 'available' },
+    { id: 3,  label: 'Desk 03',          type: 'quiet', status: 'available' },
+    { id: 4,  label: 'Desk 04',          type: 'quiet', status: 'available' },
+    { id: 5,  label: 'Desk 05',          type: 'quiet', status: 'available' },
+    { id: 6,  label: 'Desk 06',          type: 'quiet', status: 'available' },
+    { id: 7,  label: 'Desk 07 (Window)', type: 'quiet', status: 'selected' },
+    { id: 8,  label: 'Desk 08',          type: 'quiet', status: 'available' },
+    { id: 9,  label: 'Desk 09',          type: 'cbt',   status: 'available' },
+    { id: 10, label: 'Desk 10',          type: 'cbt',   status: 'available' },
+    { id: 11, label: 'Desk 11',          type: 'cbt',   status: 'available' },
+    { id: 12, label: 'Desk 12',          type: 'cbt',   status: 'available' },
+    { id: 13, label: 'Desk 13',          type: 'cbt',   status: 'available' },
+    { id: 14, label: 'Desk 14',          type: 'cbt',   status: 'available' },
+    { id: 15, label: 'Desk 15',          type: 'pod',   status: 'available' },
+    { id: 16, label: 'Desk 16',          type: 'pod',   status: 'available' },
   ];
 
   const TOPIC_OPTIONS = [
@@ -84,11 +82,36 @@ export default function VirtualStudyLibrary() {
     return () => clearInterval(interval);
   }, [isRunning, secondsRemaining, timerMode, totalHours]);
 
+  const [nudge, setNudge] = useState<{ type: 'eyes' | 'hydration' | 'stretch' | null; snoozed: boolean }>({ type: null, snoozed: false });
+  const [minutesElapsed, setMinutesElapsed] = useState(0);
+  const nudgeTimerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Wellness nudge logic — triggers every 20 minutes (eyes) and 45 minutes (stretch+water)
+  useEffect(() => {
+    if (!isRunning) return;
+
+    nudgeTimerRef.current = setInterval(() => {
+      setMinutesElapsed(prev => {
+        const next = prev + 1;
+        if (next % 45 === 0) {
+          setNudge({ type: 'stretch', snoozed: false });
+        } else if (next % 20 === 0) {
+          setNudge({ type: 'eyes', snoozed: false });
+        }
+        return next;
+      });
+    }, 60 * 1000); // every real minute
+
+    return () => { if (nudgeTimerRef.current) clearInterval(nudgeTimerRef.current); };
+  }, [isRunning]);
+
   const setTimerPreset = (mins: 25 | 45 | 60) => {
     setTimerMode(mins);
     setSecondsRemaining(mins * 60);
     setIsRunning(false);
     setSessionCompleted(false);
+    setMinutesElapsed(0);
+    setNudge({ type: null, snoozed: false });
   };
 
   const formatTimer = (secs: number) => {
@@ -166,7 +189,7 @@ export default function VirtualStudyLibrary() {
                 onClick={() => !isOccupied && setSelectedSeat(seat.id)}
                 disabled={isOccupied}
                 className={`p-2.5 rounded-xl border text-left transition flex flex-col justify-between min-h-[64px] ${seatClass}`}
-                title={isOccupied ? `${seat.occupant} is studying ${seat.target}` : 'Click to claim this desk'}
+                title={isOccupied ? 'This desk is occupied' : 'Click to claim this desk'}
               >
                 <div className="flex items-center justify-between w-full">
                   <span className="text-[10px] font-bold font-mono">#{seat.id.toString().padStart(2, '0')}</span>
@@ -175,12 +198,13 @@ export default function VirtualStudyLibrary() {
                 </div>
 
                 <div className="text-[10px] leading-tight truncate">
-                  {isSelected ? 'You (Active)' : isOccupied ? seat.occupant : 'Open Desk'}
+                  {isSelected ? 'You (Active)' : isOccupied ? 'Occupied' : 'Open Desk'}
                 </div>
               </button>
             );
           })}
         </div>
+        <p className="text-xs text-slate-500">Showing your desk. Real-time presence coming soon.</p>
       </div>
 
       {/* 2. CHOOSE TOPIC FOR THIS SESSION */}
@@ -299,6 +323,39 @@ export default function VirtualStudyLibrary() {
           </button>
         </div>
 
+        {nudge.type && !nudge.snoozed && (
+          <div className={`rounded-xl p-4 border flex flex-col gap-2 ${
+            nudge.type === 'eyes' ? 'bg-blue-950/40 border-blue-700/50' : 'bg-green-950/40 border-green-700/50'
+          }`}>
+            {nudge.type === 'eyes' && (
+              <>
+                <p className="text-blue-200 font-bold text-sm">👁️ 20-20-20 Eye Rest</p>
+                <p className="text-blue-300 text-xs">You have been studying for 20 minutes. Look at something 20 feet away for 20 seconds to rest your eyes.</p>
+              </>
+            )}
+            {nudge.type === 'stretch' && (
+              <>
+                <p className="text-green-200 font-bold text-sm">🧘 Time for a Break!</p>
+                <p className="text-green-300 text-xs">45 minutes done! Stand up, stretch, drink some water, and take a 5-minute walk. Your brain will thank you.</p>
+              </>
+            )}
+            {nudge.type === 'hydration' && (
+              <>
+                <p className="text-cyan-200 font-bold text-sm">💧 Hydration Reminder</p>
+                <p className="text-cyan-300 text-xs">Remember to drink water! Staying hydrated improves focus and memory retention.</p>
+              </>
+            )}
+            <div className="flex gap-2 mt-1">
+              <button onClick={() => setNudge({ type: null, snoozed: false })} className="bg-slate-700 hover:bg-slate-600 text-white text-xs px-3 py-1.5 rounded-lg font-semibold">
+                ✓ Got it
+              </button>
+              <button onClick={() => setNudge(n => ({ ...n, snoozed: true }))} className="text-slate-400 text-xs px-3 py-1.5 rounded-lg hover:text-slate-300">
+                Snooze 5 min
+              </button>
+            </div>
+          </div>
+        )}
+
         {sessionCompleted && (
           <div className="bg-emerald-950/60 border border-emerald-500/50 p-3 rounded-xl text-emerald-300 text-xs flex items-center justify-center gap-2 font-bold animate-bounce">
             <CheckCircle2 size={16} />
@@ -313,7 +370,7 @@ export default function VirtualStudyLibrary() {
           <span>🎯</span> Ready to test your mastery from this Desk?
         </h3>
         <p className="text-[11px] text-slate-400 leading-relaxed">
-          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk\'s topic: <strong>{activeTopicObj.label}</strong>.
+          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk&apos;s topic: <strong>{activeTopicObj.label}</strong>.
         </p>
 
         <div className="flex gap-2 mt-1">

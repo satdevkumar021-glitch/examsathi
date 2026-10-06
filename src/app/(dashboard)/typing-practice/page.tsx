@@ -21,10 +21,11 @@ export default function TypingPracticePage() {
   
   const [lang, setLang] = useState<'punjabi' | 'english'>('punjabi');
   const [difficulty, setDifficulty] = useState<'beginner' | 'intermediate' | 'hard'>('intermediate');
-  const [testDuration, setTestDuration] = useState<number>(60); // 1 min (or 300 for 5m, 600 for 10m)
+  // Official Punjab Clerk typing test: 10 minutes benchmark
+  const [testDuration, setTestDuration] = useState<number>(600);
   
   const [userInput, setUserInput] = useState('');
-  const [timeLeft, setTimeLeft] = useState(60);
+  const [timeLeft, setTimeLeft] = useState(600);
   const [isRunning, setIsRunning] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
 
@@ -87,22 +88,29 @@ export default function TypingPracticePage() {
 
   // Metrics
   const timeElapsed = testDuration - timeLeft;
-  const wordsTyped = userInput.trim().split(/\s+/).filter(Boolean).length;
-  const wpm = timeElapsed > 0 ? Math.round((wordsTyped / timeElapsed) * 60) : 0;
+  const timeInMinutes = timeElapsed / 60;
+  const totalCharsTyped = userInput.length;
+  // WPM: standard formula — (chars / 5) / minutes; 5 chars = 1 word
+  const wpm = timeInMinutes > 0 ? Math.round((totalCharsTyped / 5) / timeInMinutes) : 0;
 
-  // Calculate Accuracy
+  // Calculate Accuracy: correct chars vs total chars typed
   let correctChars = 0;
   for (let i = 0; i < userInput.length; i++) {
     if (userInput[i] === targetText[i]) {
       correctChars++;
     }
   }
-  const accuracy = userInput.length > 0 ? Math.round((correctChars / userInput.length) * 100) : 100;
+  const accuracy = totalCharsTyped > 0 ? Math.round((correctChars / totalCharsTyped) * 100) : 100;
   const isPsssBQualified = wpm >= 30 && accuracy >= 92;
 
   return (
     <div className="p-4 flex flex-col gap-5 min-h-screen bg-slate-900 pb-20 text-slate-100 max-w-2xl mx-auto w-full">
-      
+
+      {/* Raavi Unicode Notice Banner */}
+      <div className="bg-amber-950/40 border border-amber-700/50 rounded-xl p-3 text-xs text-amber-200">
+        <strong>📋 Important:</strong> This practice uses the <strong>Raavi Unicode</strong> keyboard layout (recommended by Punjab government). If your system uses legacy ASCII Raavi (Asees font), the key positions may differ. Always check your exam hall instruction before the exam.
+      </div>
+
       {/* Header */}
       <div className="flex items-center justify-between gap-3 pt-2">
         <div className="flex items-center gap-3">
@@ -140,7 +148,8 @@ export default function TypingPracticePage() {
       </div>
 
       {/* Controls Bar: Language, Level, Time */}
-      <div className="grid grid-cols-3 gap-2 text-xs">
+      <div className="flex flex-col gap-2 text-xs">
+        <div className="grid grid-cols-2 gap-2">
         {/* Language */}
         <div className="bg-slate-800/90 border border-slate-700 p-2 rounded-xl">
           <span className="text-[10px] text-slate-400 font-semibold block mb-1">Language</span>
@@ -173,30 +182,40 @@ export default function TypingPracticePage() {
             <option value="hard">Hard (Official)</option>
           </select>
         </div>
+        </div>{/* end grid-cols-2 */}
 
         {/* Duration */}
         <div className="bg-slate-800/90 border border-slate-700 p-2 rounded-xl">
-          <span className="text-[10px] text-slate-400 font-semibold block mb-1">Timer</span>
+          <span className="text-[10px] text-slate-400 font-semibold block mb-1">Timer Preset</span>
           <div className="flex gap-1">
-            <button 
+            <button
               onClick={() => handleDurationChange(60)}
-              className={`flex-1 py-1 rounded text-center font-bold ${testDuration === 60 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 60 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
             >
-              1m
+              1m Practice
             </button>
-            <button 
+            <button
               onClick={() => handleDurationChange(300)}
-              className={`flex-1 py-1 rounded text-center font-bold ${testDuration === 300 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 300 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
             >
-              5m
+              5m Warm-up
             </button>
-            <button 
+            <button
               onClick={() => handleDurationChange(600)}
-              className={`flex-1 py-1 rounded text-center font-bold ${testDuration === 600 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 600 ? 'bg-amber-500 text-slate-950' : 'text-amber-400'}`}
             >
-              10m
+              ⭐ 10m Official
+            </button>
+            <button
+              onClick={() => handleDurationChange(900)}
+              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 900 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
+            >
+              15m Extended
             </button>
           </div>
+          {testDuration === 600 && (
+            <p className="text-[9px] text-amber-400 mt-1 text-center font-semibold">Punjab Clerk Benchmark — 30 WPM / 96%</p>
+          )}
         </div>
       </div>
 
@@ -271,7 +290,7 @@ export default function TypingPracticePage() {
             {isPsssBQualified ? 'Congratulations! You qualified PSSSB criteria!' : 'Keep practicing! Minimum 30 WPM & 92% accuracy needed.'}
           </h3>
           <p className="text-xs text-slate-300">
-            Speed: <strong>{wpm} WPM</strong> | Accuracy: <strong>{accuracy}%</strong> | Words: <strong>{wordsTyped}</strong>
+            Speed: <strong>{wpm} WPM</strong> | Accuracy: <strong>{accuracy}%</strong> | Chars: <strong>{totalCharsTyped}</strong>
           </p>
           <button 
             onClick={handleReset}
@@ -288,11 +307,13 @@ export default function TypingPracticePage() {
           <span>💡</span> ਰਾਵੀ ਫੌਂਟ ਜ਼ਰੂਰੀ ਕਮਾਂਡਾਂ (Raavi Font Special Keys)
         </h4>
         <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-400 pt-1">
-          <span>• ਪੈਰੀਂ ਰ (Halant): <strong>Shift + D</strong></span>
+          <span>• ਪੈਰੀਂ ਰ (Subscript Ra): <strong>Shift + D</strong></span>
           <span>• ਬਿੰਦੀ: <strong>Shift + Z</strong></span>
           <span>• ਟਿੱਪੀ: <strong>Shift + X</strong></span>
           <span>• ਅੱਧਕ: <strong>Shift + U</strong></span>
+          <span className="col-span-2">• ਵਿਰਾਮ ਚਿੰਨ੍ਹ (Halant ੍): <strong>Shift + D</strong> (਼ combiner)</span>
         </div>
+        <p className="text-[10px] text-amber-400/80 mt-2">⚠️ Key hints are for Raavi Unicode layout. Legacy ASCII Raavi layouts differ.</p>
       </div>
 
     </div>

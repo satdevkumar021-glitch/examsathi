@@ -18,7 +18,7 @@ export const useStore = create<AppState>((set) => ({
   selectedState: null,
   selectedExam: null,
   selectedSubject: null,
-  user: { name: 'Aspirant', streak: 14, xp: 450 },
+  user: null,
   completedTopics: ['ancient-india'],
   setLanguage: (lang) => set({ language: lang }),
   setSelectedExam: (state, exam) => set({ selectedState: state, selectedExam: exam }),

@@ -1,19 +1,44 @@
 'use client';
 import Link from 'next/link';
 import { useStore } from '@/lib/store';
+import { useAuth } from '@/lib/hooks/useAuth';
 import StreakBadge from '@/components/ui/StreakBadge';
-import { 
-  Target, Book, Layers, CheckCircle, ArrowRight, Keyboard, 
-  ShieldCheck, Compass, Sparkles, Award, GraduationCap, Briefcase, 
-  Search, BookOpen, Flame, Share2, Calendar, Library
+import { getTodayContent } from '@/lib/data/daily_content';
+import {
+  Target, Book, Layers, ArrowRight, Keyboard,
+  Compass, Sparkles, GraduationCap, Briefcase,
+  Share2, Brain
 } from 'lucide-react';
 
 export default function Dashboard() {
   const { user } = useStore();
+  const { user: authUser, isGuest, loading: authLoading } = useAuth();
 
   return (
     <div className="p-4 flex flex-col gap-6 max-w-xl mx-auto w-full pb-20 text-slate-100">
-      
+
+      {/* Guest banner — shown when not signed in to a real account */}
+      {!authLoading && isGuest && (
+        <div className="bg-amber-950/60 border border-amber-500/40 rounded-2xl px-4 py-3 text-xs text-amber-200 flex items-center gap-2">
+          <span>👤</span>
+          <span>
+            <strong>Guest mode</strong> — progress is saved locally only.{' '}
+            <Link href="/login" className="text-amber-300 underline font-semibold">Sign in</Link>{' '}
+            to sync across devices.
+          </span>
+        </div>
+      )}
+
+      {/* Signed-in welcome */}
+      {!authLoading && !isGuest && authUser && (
+        <div className="bg-teal-950/60 border border-teal-500/40 rounded-2xl px-4 py-3 text-xs text-teal-200 flex items-center gap-2">
+          <span>✅</span>
+          <span>
+            Signed in as <strong className="text-teal-100">{authUser.user_metadata?.full_name || authUser.email}</strong>
+          </span>
+        </div>
+      )}
+
       {/* Platform Banner */}
       <div className="bg-gradient-to-r from-indigo-700 via-indigo-600 to-teal-600 rounded-3xl p-5 shadow-xl relative overflow-hidden border border-indigo-400/20">
         <div className="absolute top-0 right-0 w-44 h-44 bg-white/10 rounded-full -translate-y-12 translate-x-12 blur-2xl pointer-events-none"></div>
@@ -27,22 +52,24 @@ export default function Dashboard() {
             <p className="text-teal-100 text-xs mb-3.5">
               Comprehensive Multi-Disciplinary Exam Preparation Portal
             </p>
-            
+
             <div className="flex flex-wrap gap-2">
-              <Link 
-                href="/exams" 
+              <Link
+                href="/exams"
                 className="bg-white/20 hover:bg-white/30 transition-colors px-3 py-1.5 rounded-lg text-white text-xs font-semibold backdrop-blur-sm inline-flex items-center gap-1"
               >
                 <Compass size={13} /> Select Exam
               </Link>
-              <Link 
-                href="/login" 
-                className="bg-teal-950/80 hover:bg-teal-900 border border-teal-400/50 px-3 py-1.5 rounded-lg text-teal-200 text-xs font-semibold inline-flex items-center gap-1 shadow-sm"
-              >
-                <span>🔐</span> Student Login
-              </Link>
-              <Link 
-                href="/profile" 
+              {isGuest ? (
+                <Link
+                  href="/login"
+                  className="bg-teal-950/80 hover:bg-teal-900 border border-teal-400/50 px-3 py-1.5 rounded-lg text-teal-200 text-xs font-semibold inline-flex items-center gap-1 shadow-sm"
+                >
+                  <span>🔐</span> Student Login
+                </Link>
+              ) : null}
+              <Link
+                href="/profile"
                 className="bg-indigo-950/70 hover:bg-indigo-900 border border-indigo-400/40 px-3 py-1.5 rounded-lg text-indigo-200 text-xs font-semibold inline-flex items-center gap-1"
               >
                 <span>👤</span> Study Vault
@@ -50,9 +77,42 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <StreakBadge streak={user?.streak || 14} />
+          {user ? (
+            <StreakBadge streak={user.streak || 0} />
+          ) : (
+            <Link
+              href="/login"
+              className="text-[11px] text-teal-300 hover:text-teal-200 bg-slate-800/80 border border-slate-700 px-2.5 py-1 rounded-full whitespace-nowrap self-start"
+            >
+              Login to track streak
+            </Link>
+          )}
         </div>
       </div>
+
+      {/* Daily Content Card */}
+      {(() => {
+        const daily = getTodayContent('hi'); // will use user's language preference later
+        if (!daily) return null;
+        return (
+          <div className="bg-gradient-to-br from-amber-950/50 to-orange-950/40 rounded-2xl p-4 border border-amber-700/40">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-amber-300 text-sm font-bold">💡 आज का विचार</span>
+              <span className="text-xs text-amber-500 ml-auto">{new Date().toLocaleDateString('hi-IN', { day: 'numeric', month: 'long' })}</span>
+            </div>
+            <blockquote className="text-slate-200 text-sm italic mb-1">&ldquo;{daily.thought}&rdquo;</blockquote>
+            <p className="text-amber-400 text-xs">— {daily.thoughtAuthor}</p>
+            {daily.gkTitle && (
+              <div className="mt-3 pt-3 border-t border-amber-800/50">
+                <p className="text-xs font-bold text-orange-300 mb-1">📅 आज इतिहास में</p>
+                <p className="text-xs font-semibold text-slate-200">{daily.gkTitle}</p>
+                <p className="text-xs text-slate-400 mt-1 line-clamp-2">{daily.gkDescription}</p>
+                {daily.gkSource && <p className="text-[10px] text-slate-500 mt-1">स्रोत: {daily.gkSource}</p>}
+              </div>
+            )}
+          </div>
+        );
+      })()}
 
       {/* 50-Question CBT Live Mock & 20-Year Archive Banner */}
       <Link
@@ -140,7 +200,7 @@ export default function Dashboard() {
       {/* Preparation KPI Readiness */}
       <div className="grid grid-cols-4 gap-2.5">
         <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
-          <span className="text-teal-400 font-bold text-lg">72%</span>
+          <span className="text-teal-400 font-bold text-lg">—</span>
           <span className="text-slate-400 text-[10px] uppercase font-semibold">Readiness</span>
         </div>
         <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
@@ -152,7 +212,7 @@ export default function Dashboard() {
           <span className="text-slate-400 text-[10px] uppercase font-semibold">Cards</span>
         </div>
         <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
-          <span className="text-emerald-400 font-bold text-lg">84%</span>
+          <span className="text-emerald-400 font-bold text-lg">—</span>
           <span className="text-slate-400 text-[10px] uppercase font-semibold">Avg Score</span>
         </div>
       </div>
@@ -339,14 +399,27 @@ export default function Dashboard() {
             <span className="text-slate-200 text-xs font-semibold text-center">Topic Mock & PYQ Portal</span>
           </Link>
 
-          <Link 
-            href="/typing-practice" 
+          <Link
+            href="/typing-practice"
             className="bg-slate-800/90 p-4 rounded-xl border border-slate-700 flex flex-col items-center justify-center gap-2 hover:bg-slate-750 transition shadow"
           >
             <div className="bg-purple-500/20 p-2.5 rounded-full text-purple-400">
               <Keyboard size={20} />
             </div>
             <span className="text-slate-200 text-xs font-semibold text-center">Raavi Typing Simulator</span>
+          </Link>
+
+          <Link
+            href="/exam-coach"
+            className="bg-slate-800/90 p-3.5 rounded-2xl border border-slate-700 hover:border-teal-400/60 transition group flex flex-col gap-2 col-span-2 sm:col-span-1"
+          >
+            <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
+              <Brain size={20} />
+            </div>
+            <div>
+              <h3 className="text-white font-bold text-xs">Exam-Day Coach</h3>
+              <p className="text-[11px] text-slate-400">Calm-down tips, time strategy</p>
+            </div>
           </Link>
         </div>
       </div>
@@ -377,6 +450,35 @@ export default function Dashboard() {
         >
           <span>📲 Share on WhatsApp (व्हाट्सएप पर शेयर करें)</span>
         </a>
+      </div>
+
+      {/* PWA Install Prompt */}
+      <div className="bg-slate-800/60 border border-slate-700 rounded-2xl p-4 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">📱</span>
+          <div>
+            <p className="text-xs font-bold text-white">Install ExamSathi App</p>
+            <p className="text-[11px] text-slate-400">Works offline • No Play Store needed</p>
+          </div>
+        </div>
+        <button
+          onClick={() => {
+            // The browser install prompt is triggered by the beforeinstallprompt event
+            // This button just informs the user how to install
+            alert('To install: tap the browser menu (⋮) → "Add to Home Screen" or "Install App"');
+          }}
+          className="bg-teal-500 text-slate-950 font-bold text-xs px-3 py-2 rounded-xl shrink-0 hover:bg-teal-400 transition"
+        >
+          Install
+        </button>
+      </div>
+
+      {/* Footer */}
+      <div className="mt-4 pt-4 border-t border-slate-800 flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+        <Link href="/about" className="hover:text-slate-400">About</Link>
+        <Link href="/privacy" className="hover:text-slate-400">Privacy Policy</Link>
+        <Link href="/terms" className="hover:text-slate-400">Terms</Link>
+        <Link href="/contact" className="hover:text-slate-400">Contact</Link>
       </div>
 
     </div>

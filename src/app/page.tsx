@@ -70,12 +70,12 @@ export default function LandingPage() {
         className="grid grid-cols-3 gap-3 mb-10 w-full max-w-sm"
       >
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-amber-400">50+</div>
-          <div className="text-[11px] text-slate-400">Recruitments</div>
+          <div className="text-xl font-bold text-amber-400">20+</div>
+          <div className="text-[11px] text-slate-400">Exam Tracks</div>
         </div>
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-teal-400">10k+</div>
-          <div className="text-[11px] text-slate-400">Questions</div>
+          <div className="text-xl font-bold text-teal-400">Growing</div>
+          <div className="text-[11px] text-slate-400">Question Bank</div>
         </div>
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
           <div className="text-xl font-bold text-indigo-400">100%</div>
