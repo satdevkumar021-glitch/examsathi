@@ -185,13 +185,20 @@ export const PEDAGOGY_LESSONS: Record<string, Lesson> = {
     ],
     videos: [
       {
-        title: 'Child Development & Pedagogy Complete Marathon for CTET, REET & ETT',
-        channel: 'Teaching Exam Gurukul',
-        youtubeId: 'CDPMasterClassAllExams',
+        title: 'Child Development & Pedagogy — Piaget, Vygotsky, Kohlberg',
+        channel: 'Lets LEARN',
+        youtubeId: 'X6P1pNpHg7M',
         language: 'hi',
-        views: '890K',
-        duration: '2:40:00',
-        tags: ['CDP', 'Piaget', 'CTET', 'REET'],
+        duration: '55 min',
+        tags: ['Piaget', 'Vygotsky', 'CDP', 'ETT', 'CTET', 'PSTET'],
+      },
+      {
+        title: 'RTE Act 2009 — Complete Analysis for TET Exams',
+        channel: 'Teach With Flair',
+        youtubeId: 'UDyj1iXKgD0',
+        language: 'hi',
+        duration: '30 min',
+        tags: ['RTE 2009', 'Right to Education', 'CTET', 'HTET', 'REET'],
       },
     ],
     bookRefs: [

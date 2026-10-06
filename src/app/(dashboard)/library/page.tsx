@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { 
   BookOpen, Clock, Play, Pause, RotateCcw, Volume2, VolumeX, 
@@ -52,7 +52,9 @@ export default function VirtualStudyLibrary() {
     { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', testUrl: '/mock-test/topic-fundamental-rights' },
   ];
 
-  const [wellnessAlert, setWellnessAlert] = useState<string | null>(null);
+  const [nudge, setNudge] = useState<{ type: 'eyes' | 'hydration' | 'stretch' | null; snoozed: boolean }>({ type: null, snoozed: false });
+  const [minutesElapsed, setMinutesElapsed] = useState(0);
+  const nudgeTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     try {
@@ -113,18 +115,13 @@ export default function VirtualStudyLibrary() {
     };
   }, [soundEnabled, isRunning]);
 
-  // Timer countdown & 20-20-20 Wellness Coach Alerts
+  // Timer countdown
   useEffect(() => {
     let interval: any = null;
     if (isRunning && secondsRemaining > 0) {
       interval = setInterval(() => {
         setSecondsRemaining(prev => {
           const nextSec = prev - 1;
-          const elapsed = (timerMode * 60) - nextSec;
-          // Trigger 20-20-20 rule after 20 minutes (1200s)
-          if (elapsed === 1200) {
-            setWellnessAlert('20-20-20 Eye Care: You have been focused for 20 minutes! Look 20 feet away for 20 seconds to prevent digital fatigue. Drink some water.');
-          }
           return nextSec;
         });
       }, 1000);
@@ -143,11 +140,32 @@ export default function VirtualStudyLibrary() {
     return () => clearInterval(interval);
   }, [isRunning, secondsRemaining, timerMode, totalHours]);
 
+  // Wellness nudge logic — triggers every 20 minutes (eyes) and 45 minutes (stretch+water)
+  useEffect(() => {
+    if (!isRunning) return;
+
+    nudgeTimerRef.current = setInterval(() => {
+      setMinutesElapsed(prev => {
+        const next = prev + 1;
+        if (next % 45 === 0) {
+          setNudge({ type: 'stretch', snoozed: false });
+        } else if (next % 20 === 0) {
+          setNudge({ type: 'eyes', snoozed: false });
+        }
+        return next;
+      });
+    }, 60 * 1000); // every real minute
+
+    return () => { if (nudgeTimerRef.current) clearInterval(nudgeTimerRef.current); };
+  }, [isRunning]);
+
   const setTimerPreset = (mins: 25 | 45 | 60) => {
     setTimerMode(mins);
     setSecondsRemaining(mins * 60);
     setIsRunning(false);
     setSessionCompleted(false);
+    setMinutesElapsed(0);
+    setNudge({ type: null, snoozed: false });
   };
 
   const formatTimer = (secs: number) => {
@@ -171,7 +189,7 @@ export default function VirtualStudyLibrary() {
               <BookOpen size={22} />
             </span>
             <div>
-              <h1 className="text-white font-extrabold text-lg">Virtual Study Library & Desk</h1>
+              <h1 className="text-white font-extrabold text-lg">Virtual Study Library &amp; Desk</h1>
               <p className="text-[11px] text-teal-300">
                 Claim your Desk • Set Session Focus • Deep Work Pomodoro Timer
               </p>
@@ -234,6 +252,7 @@ export default function VirtualStudyLibrary() {
             );
           })}
         </div>
+        <p className="text-xs text-slate-500">Showing your desk. Real-time presence coming soon.</p>
       </div>
 
       {/* 2. CHOOSE TOPIC FOR THIS SESSION */}
@@ -352,18 +371,36 @@ export default function VirtualStudyLibrary() {
           </button>
         </div>
 
-        {wellnessAlert && (
-          <div className="bg-sky-950/80 border border-sky-500/60 p-3.5 rounded-xl text-sky-200 text-xs flex items-center justify-between gap-3 shadow-md animate-pulse">
-            <div className="flex items-center gap-2">
-              <span className="text-base shrink-0">💧</span>
-              <p className="leading-relaxed">{wellnessAlert}</p>
+        {nudge.type && !nudge.snoozed && (
+          <div className={`rounded-xl p-4 border flex flex-col gap-2 ${
+            nudge.type === 'eyes' ? 'bg-blue-950/40 border-blue-700/50' : 'bg-green-950/40 border-green-700/50'
+          }`}>
+            {nudge.type === 'eyes' && (
+              <>
+                <p className="text-blue-200 font-bold text-sm">👁️ 20-20-20 Eye Rest</p>
+                <p className="text-blue-300 text-xs">You have been studying for 20 minutes. Look at something 20 feet away for 20 seconds to rest your eyes.</p>
+              </>
+            )}
+            {nudge.type === 'stretch' && (
+              <>
+                <p className="text-green-200 font-bold text-sm">🧘 Time for a Break!</p>
+                <p className="text-green-300 text-xs">45 minutes done! Stand up, stretch, drink some water, and take a 5-minute walk. Your brain will thank you.</p>
+              </>
+            )}
+            {nudge.type === 'hydration' && (
+              <>
+                <p className="text-cyan-200 font-bold text-sm">💧 Hydration Reminder</p>
+                <p className="text-cyan-300 text-xs">Remember to drink water! Staying hydrated improves focus and memory retention.</p>
+              </>
+            )}
+            <div className="flex gap-2 mt-1">
+              <button onClick={() => setNudge({ type: null, snoozed: false })} className="bg-slate-700 hover:bg-slate-600 text-white text-xs px-3 py-1.5 rounded-lg font-semibold">
+                ✓ Got it
+              </button>
+              <button onClick={() => setNudge(n => ({ ...n, snoozed: true }))} className="text-slate-400 text-xs px-3 py-1.5 rounded-lg hover:text-slate-300">
+                Snooze 5 min
+              </button>
             </div>
-            <button 
-              onClick={() => setWellnessAlert(null)}
-              className="px-2 py-1 bg-sky-900 hover:bg-sky-800 text-white rounded text-[10px] font-bold shrink-0"
-            >
-              Dismiss
-            </button>
           </div>
         )}
 
@@ -381,7 +418,7 @@ export default function VirtualStudyLibrary() {
           <span>🎯</span> Ready to test your mastery from this Desk?
         </h3>
         <p className="text-[11px] text-slate-400 leading-relaxed">
-          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk focus topic: <strong>{activeTopicObj.label}</strong>.
+          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk&apos;s topic: <strong>{activeTopicObj.label}</strong>.
         </p>
 
         <div className="flex gap-2 mt-1">

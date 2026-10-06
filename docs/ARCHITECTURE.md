@@ -175,3 +175,47 @@ To transition from the current static export to the full target architecture wit
 1. **Milestone 1 & 2:** Harden the existing client code, eliminating all 16 Phase 0 bugs (stuck spinners, link mismatches, fake library presence, and typos) on the existing static build.
 2. **Milestone 3:** Deploy database migrations to Supabase and seed all existing static data (`exams.ts`, `lessons.ts`, `questions.ts`, `pyqs.ts`) into Postgres tables with 100% data fidelity.
 3. **Milestone 4:** Connect Next.js data fetching to Supabase with progressive enhancement (falls back to local static JSON if the network is completely down).
+
+---
+
+## 8. Folder Structure & Codebase Organization
+
+```
+examsathi-web/
+├── src/
+│   ├── app/                   # Next.js App Router
+│   │   ├── (auth)/            # Login, Register, Forgot Password
+│   │   ├── (dashboard)/       # Protected app pages (Dashboard, Admin, Library, Roadmap, Typing)
+│   │   ├── about/             # About page (SEO)
+│   │   ├── privacy/           # Privacy Policy
+│   │   └── terms/             # Terms of Service
+│   ├── components/
+│   │   ├── layout/            # BottomNav, LanguageToggle
+│   │   └── ui/                # FlipCard, StreakBadge, MockTestBottomSheet
+│   └── lib/
+│       ├── auth.ts            # Local fallback auth (guest mode)
+│       ├── hooks/             # useAuth (Supabase real auth)
+│       ├── scoring.ts         # Pure scoring functions (server-authoritative)
+│       ├── srs.ts             # FSRS-inspired spaced repetition
+│       ├── store.ts           # Zustand UI state
+│       ├── supabase/          # Supabase client factory (SSR & browser)
+│       └── data/              # Verified data (exams, questions, lessons)
+│           ├── daily_content.ts
+│           ├── exams.ts
+│           ├── lessons/       # Per-subject lesson data
+│           └── questions/     # PYQ and reference questions
+├── public/
+│   ├── sitemap.xml
+│   ├── robots.txt
+│   └── ads.txt
+└── docs/                      # Architectural and engineering specifications
+```
+
+---
+
+## 9. Security Model & Production Guardrails
+
+1. **Correct Answers**: In static export mode, correct answers are in the client JS bundle. When connected to the Supabase backend, the scoring endpoint accepts candidate responses and computes results server-side—never returning correct keys prior to submission.
+2. **Auth Tokens**: With Supabase Auth, session tokens are securely handled via cookies and Supabase client storage, with automatic token refresh.
+3. **Role-Based Access Control (RBAC)**: Admin operations are restricted by multi-tier roles (Superadmin, Reviewer, Educator) and protected passkey verification.
+4. **User Storage Isolation**: Aspirant notes and uploaded PDFs are isolated using Postgres Row Level Security (RLS) policies scoped strictly to `auth.uid() = user_id`.

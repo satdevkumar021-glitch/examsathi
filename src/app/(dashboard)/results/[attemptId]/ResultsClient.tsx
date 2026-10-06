@@ -1,17 +1,17 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { 
-  Target, Clock, Trophy, CheckCircle2, XCircle, MinusCircle, 
-  ArrowRight, RotateCcw, Layers, Award, Sparkles, AlertCircle, 
+import {
+  Target, Clock, Trophy, CheckCircle2, XCircle, MinusCircle,
+  ArrowRight, RotateCcw, Layers, Award, Sparkles, AlertCircle,
   BookOpen, Brain, BookmarkCheck, Bookmark, Check, SlidersHorizontal,
   FileText, Share2, Flame, HelpCircle, Star, Lightbulb, Compass, Library
 } from 'lucide-react';
-import { 
-  evaluateUserLevel, 
-  calculatePredictedRank, 
-  UserPerformanceLevel, 
-  PredictedRankReport 
+import {
+  evaluateUserLevel,
+  calculatePredictedRank,
+  UserPerformanceLevel,
+  PredictedRankReport
 } from '@/lib/data/question_bank_engine';
 import { Question, ALL_QUESTIONS } from '@/lib/data/questions';
 import { 
@@ -20,6 +20,7 @@ import {
   getStoredUser 
 } from '@/lib/auth';
 import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
+import { computeTopicBreakdown, TopicBreakdown } from '@/lib/scoring';
 
 interface StoredResult {
   testId?: string;
@@ -36,22 +37,15 @@ interface StoredResult {
   timeTaken?: number;
   level?: UserPerformanceLevel;
   predictedRank?: PredictedRankReport;
+  topicBreakdown?: TopicBreakdown[];
   questions?: Question[];
   userAnswers?: Record<string, string>;
   completedAt?: string;
 }
 
 export default function Results() {
-  const [result, setResult] = useState<StoredResult>({
-    total: 50,
-    correct: 42,
-    wrong: 8,
-    unattempted: 0,
-    timeTaken: 2100,
-    rawScore: '40.00',
-    percentage: 84,
-    accuracy: 84,
-  });
+  const [result, setResult] = useState<StoredResult>({});
+  const [loaded, setLoaded] = useState(false);
 
   const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong' | 'correct' | 'favorites' | 'saved'>('all');
   const [reviewLang, setReviewLang] = useState<'hi' | 'pa' | 'en'>('hi');
@@ -89,8 +83,8 @@ export default function Results() {
       (user.bookmarkedQuestionIds || []).forEach(id => { bMap[id] = true; });
       setBookmarkedIds(bMap);
     } catch {
-      // Fallback
-    }
+      // Invalid or unavailable browser storage.
+    } finally { setLoaded(true); }
   }, []);
 
   const showToast = (msg: string) => {
@@ -126,7 +120,7 @@ export default function Results() {
 
   const numericRawScore = parseFloat(rawScore.toString());
 
-  const timeTaken = result.timeTaken || 2100;
+  const timeTaken = result.timeTaken ?? 0;
   const minsTaken = Math.floor(timeTaken / 60);
   const secsTaken = timeTaken % 60;
 
@@ -138,6 +132,15 @@ export default function Results() {
   const testTitle = result.testTitle || 'Punjab Master Cadre 50-Question CBT Simulation';
   const questions = (result.questions && result.questions.length > 0) ? result.questions : ALL_QUESTIONS.slice(0, 10);
   const userAnswers = result.userAnswers || {};
+
+  // Topic breakdown: use stored value or compute from questions
+  const topicBreakdown: TopicBreakdown[] = result.topicBreakdown?.length
+    ? result.topicBreakdown
+    : computeTopicBreakdown(
+        questions.map(q => ({ id: q.id, topicId: q.topicId || 'general' })),
+        questions.reduce<Record<string, string>>((acc, q) => ({ ...acc, [q.id]: q.correct }), {}),
+        userAnswers
+      );
 
   // Difficulty performance breakdown
   const difficultyStats = {
@@ -276,6 +279,8 @@ export default function Results() {
   };
   const levelColor = STATUS_COLORS[candidateLevel.status] || 'border-teal-500/50 bg-teal-950/30 text-teal-300';
 
+  if (!loaded) return <p className="p-6 text-white">Loading result…</p>;
+  if (!result.questions?.length) return <div className="p-6 text-white"><h1>No completed test yet</h1><Link href="/mock-test" className="text-teal-300">Start a practice test</Link></div>;
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-28 text-slate-100 max-w-xl mx-auto w-full relative">
       
@@ -305,70 +310,81 @@ export default function Results() {
               <span className="text-[10px] uppercase font-bold text-teal-400 tracking-wider">
                 Official Competitive Benchmark
               </span>
-              <h2 className="text-base font-black text-white">Predicted State Merit Rank</h2>
+              <h2 className="text-base font-black text-white">Illustrative Practice Benchmark</h2>
             </div>
           </div>
-          <span className="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-black px-2.5 py-1 rounded-full">
-            Top {100 - predictedRank.percentile}% Tier
-          </span>
-        </div>
-
-        {/* State Rank & Percentile Big Stats */}
-        <div className="grid grid-cols-2 gap-3 bg-slate-900/70 p-3.5 rounded-xl border border-slate-700/60">
-          <div>
-            <span className="text-[10px] text-slate-400 font-semibold block uppercase">Predicted State Rank</span>
-            <div className="text-2xl font-black text-teal-300 font-mono mt-0.5">
-              #{predictedRank.stateRank.toLocaleString()}
-            </div>
-            <span className="text-[10px] text-slate-400">
-              out of {predictedRank.totalCandidates.toLocaleString()} Aspirants
+          {predictedRank.hasEnoughData && (
+            <span className="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-black px-2.5 py-1 rounded-full">
+              Top {100 - predictedRank.percentile}% Tier
             </span>
-          </div>
-
-          <div className="text-right border-l border-slate-800 pl-3">
-            <span className="text-[10px] text-slate-400 font-semibold block uppercase">Percentile Score</span>
-            <div className="text-2xl font-black text-white font-mono mt-0.5">
-              {predictedRank.percentile}%
-            </div>
-            <span className="text-[10px] text-emerald-400 font-bold">
-              {predictedRank.selectionProbability}
-            </span>
-          </div>
+          )}
         </div>
 
-        {/* Category-Wise Predicted Ranks */}
-        <div>
-          <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
-            Category-Wise Merit Projection
-          </span>
-          <div className="grid grid-cols-4 gap-2">
-            <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
-              <span className="text-[10px] text-slate-400 block font-semibold">General</span>
-              <span className="text-xs font-black text-white font-mono">#{predictedRank.categoryRank.general}</span>
-            </div>
-            <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
-              <span className="text-[10px] text-slate-400 block font-semibold">SC (M&B/R&O)</span>
-              <span className="text-xs font-black text-teal-300 font-mono">#{predictedRank.categoryRank.sc}</span>
-            </div>
-            <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
-              <span className="text-[10px] text-slate-400 block font-semibold">BC / OBC</span>
-              <span className="text-xs font-black text-amber-300 font-mono">#{predictedRank.categoryRank.bc}</span>
-            </div>
-            <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
-              <span className="text-[10px] text-slate-400 block font-semibold">EWS</span>
-              <span className="text-xs font-black text-indigo-300 font-mono">#{predictedRank.categoryRank.ews}</span>
-            </div>
-          </div>
-        </div>
+        {predictedRank.hasEnoughData === false ? (
+          <p className="text-sm text-slate-300 text-center py-4">
+            📊 Rank prediction available once more students attempt this exam.
+          </p>
+        ) : (
+          <>
+            <p className="text-sm text-amber-200">Illustrative formula using a fictional candidate pool. No live candidate or category data is available. This cannot predict selection or official merit.</p>
+            {/* State Rank & Percentile Big Stats */}
+            <div className="grid grid-cols-2 gap-3 bg-slate-900/70 p-3.5 rounded-xl border border-slate-700/60">
+              <div>
+                <span className="text-[10px] text-slate-400 font-semibold block uppercase">Illustrative Rank</span>
+                <div className="text-2xl font-black text-teal-300 font-mono mt-0.5">
+                  #{predictedRank.stateRank.toLocaleString()}
+                </div>
+                <span className="text-[10px] text-slate-400">
+                  out of {predictedRank.totalCandidates.toLocaleString()} Aspirants
+                </span>
+              </div>
 
-        {/* Antigravity Strategic Advice */}
-        <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60 text-xs text-slate-300 leading-relaxed flex items-start gap-2">
-          <Brain size={16} className="text-teal-400 shrink-0 mt-0.5" />
-          <div>
-            <span className="font-bold text-teal-300 block mb-0.5">Examiner Strategy Insight:</span>
-            <span>{predictedRank.strategicAdvice}</span>
-          </div>
-        </div>
+              <div className="text-right border-l border-slate-800 pl-3">
+                <span className="text-[10px] text-slate-400 font-semibold block uppercase">Percentile Score</span>
+                <div className="text-2xl font-black text-white font-mono mt-0.5">
+                  {predictedRank.percentile}%
+                </div>
+                <span className="text-[10px] text-emerald-400 font-bold">
+                  {predictedRank.selectionProbability}
+                </span>
+              </div>
+            </div>
+
+            {/* Category-Wise Predicted Ranks */}
+            <div>
+              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
+                Illustrative Category Split
+              </span>
+              <div className="grid grid-cols-4 gap-2">
+                <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
+                  <span className="text-[10px] text-slate-400 block font-semibold">General</span>
+                  <span className="text-xs font-black text-white font-mono">#{predictedRank.categoryRank.general}</span>
+                </div>
+                <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
+                  <span className="text-[10px] text-slate-400 block font-semibold">SC (M&B/R&O)</span>
+                  <span className="text-xs font-black text-teal-300 font-mono">#{predictedRank.categoryRank.sc}</span>
+                </div>
+                <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
+                  <span className="text-[10px] text-slate-400 block font-semibold">BC / OBC</span>
+                  <span className="text-xs font-black text-amber-300 font-mono">#{predictedRank.categoryRank.bc}</span>
+                </div>
+                <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
+                  <span className="text-[10px] text-slate-400 block font-semibold">EWS</span>
+                  <span className="text-xs font-black text-indigo-300 font-mono">#{predictedRank.categoryRank.ews}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Antigravity Strategic Advice */}
+            <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700/60 text-xs text-slate-300 leading-relaxed flex items-start gap-2">
+              <Brain size={16} className="text-teal-400 shrink-0 mt-0.5" />
+              <div>
+                <span className="font-bold text-teal-300 block mb-0.5">Examiner Strategy Insight:</span>
+                <span>{predictedRank.strategicAdvice}</span>
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       {/* 2. Candidate Diagnostic Level Card */}
@@ -452,7 +468,9 @@ export default function Results() {
         </div>
         <div className="bg-slate-800/90 p-3.5 rounded-xl border border-slate-700 text-center shadow">
           <Trophy size={18} className="text-indigo-400 mx-auto mb-1" />
-          <div className="text-white font-bold text-base">#{predictedRank.stateRank}</div>
+          <div className="text-white font-bold text-base">
+            {predictedRank.hasEnoughData ? `#${predictedRank.stateRank}` : '—'}
+          </div>
           <div className="text-[10px] text-slate-400 uppercase font-semibold">State Rank</div>
         </div>
       </div>
@@ -549,6 +567,19 @@ export default function Results() {
             </div>
             <span className="text-emerald-300 font-black text-base">{rawScore} / {total}</span>
           </div>
+
+          {/* Weak topics that need more practice */}
+          {topicBreakdown.filter(t => t.accuracy < 50 && t.total >= 2).length > 0 && (
+            <div className="bg-red-950/30 border border-red-800/50 rounded-xl p-3 mt-3">
+              <p className="text-red-300 text-xs font-bold mb-2">⚠️ Topics Needing More Practice</p>
+              {topicBreakdown.filter(t => t.accuracy < 50 && t.total >= 2).map(t => (
+                <div key={t.topicId} className="flex justify-between items-center py-1">
+                  <span className="text-slate-300 text-xs capitalize">{t.topicId.replace(/-/g, ' ')}</span>
+                  <span className="text-red-400 text-xs font-bold">{t.accuracy}%</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -897,7 +928,7 @@ export default function Results() {
         {/* Share Score on WhatsApp */}
         <a 
           href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-            `🎓 *ExamSathi CBT Mock Test Scorecard!* 🇮🇳\n\nमैंने अभी ExamSathi पर ${testTitle} दिया:\n📊 Score: ${rawScore}/${total} (${percentage}%)\n🎯 Accuracy: ${accuracy}%\n🏆 Predicted State Rank: #${predictedRank.stateRank} / ${predictedRank.totalCandidates.toLocaleString()}\n\nयह 100% Free Portal है (Master Cadre, Clerk, Police, Patwari, REET, CTET)।\n👉 आप भी अपना टेस्ट दें और तैयारी करें:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
+            `🎓 *ExamSathi CBT Mock Test Scorecard!* 🇮🇳\n\nमैंने अभी ExamSathi पर ${testTitle} दिया:\n📊 Score: ${rawScore}/${total} (${percentage}%)\n🎯 Accuracy: ${accuracy}%\n🏆 Illustrative Rank: #${predictedRank.stateRank} / ${predictedRank.totalCandidates.toLocaleString()}\n\nयह 100% Free Portal है (Master Cadre, Clerk, Police, Patwari, REET, CTET)।\n👉 आप भी अपना टेस्ट दें और तैयारी करें:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
           )}`}
           target="_blank"
           rel="noopener noreferrer"

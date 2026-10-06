@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, Heart, Award, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, BookOpen, Heart, Award, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Us & Educational Mission',
@@ -42,7 +42,7 @@ export default function AboutPage() {
           <ul className="list-disc pl-5 space-y-1 text-slate-300">
             <li><strong>Punjab School Education Board (PSEB):</strong> Classes 6 to 12 state history, geography, and Gurmukhi grammar.</li>
             <li><strong>NCERT:</strong> Canonical Indian History, Polity, Economics, and Environmental Science.</li>
-            <li><strong>Board of School Education Haryana (BSEH) & RBSE:</strong> State-specific pedagogical gazettes.</li>
+            <li><strong>Board of School Education Haryana (BSEH) &amp; RBSE:</strong> State-specific pedagogical gazettes.</li>
             <li><strong>Official PYQ Gazettes:</strong> Authentic question papers from 2004 through 2024 with detailed step-by-step rationales.</li>
           </ul>
         </section>
@@ -61,6 +61,27 @@ export default function AboutPage() {
             <li><strong>Virtual Focus Room:</strong> Pomodoro timekeeping with 20-20-20 eye wellness guidelines to support candidate mental stamina.</li>
           </ul>
         </section>
+
+        <div className="bg-slate-900/60 rounded-xl p-4 border border-slate-700/60">
+          <h2 className="text-white font-bold mb-2 flex items-center gap-2">
+            <CheckCircle size={15} className="text-teal-400" />
+            Comprehensive Exam Coverage
+          </h2>
+          <p className="text-xs text-slate-400"><strong>Punjab:</strong> Master Cadre, Lecturer Cadre, ETT, PSTET, PSSSB Clerk/Patwari, Punjab Police</p>
+          <p className="text-xs text-slate-400 mt-1"><strong>Rajasthan:</strong> REET Level 1 &amp; 2, Rajasthan Police, RSMSSB exams</p>
+          <p className="text-xs text-slate-400 mt-1"><strong>Haryana:</strong> HTET, Haryana Police, PRT / ETT</p>
+          <p className="text-xs text-slate-400 mt-1"><strong>Central:</strong> SSC CGL/CHSL/MTS, CTET, UGC NET, Army Agniveer</p>
+        </div>
+
+        <p className="text-xs text-slate-400">
+          ExamSathi is an independent educational platform and is not affiliated with any recruitment board or government body. Always check official recruiting portals for official notifications, admit cards, and results.
+        </p>
+
+        <div className="flex gap-4 pt-2 border-t border-slate-700/80">
+          <Link href="/privacy/" className="text-teal-400 hover:underline">Privacy Policy</Link>
+          <Link href="/terms/" className="text-teal-400 hover:underline">Terms of Service</Link>
+          <Link href="/contact/" className="text-teal-400 hover:underline">Contact Us</Link>
+        </div>
       </div>
     </div>
   );

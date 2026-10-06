@@ -37,7 +37,7 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     question: {
       hi: 'लेव वाइगोत्स्की के सामाजिक-सांस्कृतिक सिद्धांत के अनुसार, एक बच्चे के स्वतंत्र कार्य स्तर और किसी कुशल वयस्क के मार्गदर्शन में किए जाने वाले कार्य स्तर के बीच के अंतर को क्या कहा जाता है?',
       pa: 'ਲੈਵ ਵਾਈਗੋਤਸਕੀ ਦੇ ਸਮਾਜਿਕ-ਸੱਭਿਆਚਾਰਕ ਸਿਧਾਂਤ ਅਨੁਸਾਰ, ਬੱਚੇ ਦੇ ਸੁਤੰਤਰ ਕੰਮ ਅਤੇ ਕਿਸੇ ਮਾਹਿਰ ਦੀ ਅਗਵਾਈ ਹੇਠ ਕੀਤੇ ਜਾਣ ਵਾਲੇ ਕੰਮ ਵਿਚਕਾਰਲੇ ਪਾੜੇ ਨੂੰ ਕੀ ਆਖਿਆ ਜਾਂਦਾ ਹੈ?',
-      en: 'According to Lev Vygotsky\'s sociocultural theory, the difference between what a child can achieve independently and what they can achieve with skilled guidance is termed as:',
+      en: "According to Lev Vygotsky's sociocultural theory, the difference between what a child can achieve independently and what they can achieve with skilled guidance is termed as:",
     },
     options: {
       A: {
@@ -65,12 +65,12 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     explanation: {
       hi: 'वाइगोत्स्की ने ZPD (Zone of Proximal Development) का प्रतिपादन किया। इसमें जो अस्थायी सहायता शिक्षक या साथी प्रदान करता है उसे पाड़ (Scaffolding) कहा जाता है। Assimilation पियाजे का सिद्धांत है।',
       pa: 'ਜ਼ੋਨ ਆਫ਼ ਪ੍ਰੌਕਸੀਮਲ ਡਿਵੈਲਪਮੈਂਟ (ZPD) ਵਾਈਗੋਤਸਕੀ ਦਾ ਮੁੱਖ ਸੰਕਲਪ ਹੈ। ਇਸ ਵਿੱਚ ਮਿਲਦੀ ਆਰਜ਼ੀ ਸਹਾਇਤਾ ਨੂੰ ਸਕੈਫੋਲਡਿੰਗ (Scaffolding) ਕਿਹਾ ਜਾਂਦਾ ਹੈ।',
-      en: 'Vygotsky formulated ZPD. The temporary assistance provided by a more knowledgeable other (MKO) is called Scaffolding, while Assimilation belongs to Piaget\'s theory.',
+      en: "Vygotsky formulated ZPD. The temporary assistance provided by a more knowledgeable other (MKO) is called Scaffolding, while Assimilation belongs to Piaget's theory.",
     },
     thought: {
-      hi: 'परीक्षक जाल: विकल्प A (Assimilation) और D (Egocentric) जीन पियाजे से संबंधित हैं। जब भी \'सहयोग/मार्गदर्शन\' (Scaffolding/Adult guidance) शब्द आए, उत्तर हमेशा वाइगोत्स्की का ZPD होगा।',
-      pa: 'ਪ੍ਰੀਖਿਅਕ ਟਰੈਪ: ਜਦੋਂ ਵੀ \'ਮਦਦ ਜਾਂ ਸਕੈਫੋਲਡਿੰਗ\' ਦੀ ਗੱਲ ਆਵੇ, ਸਿੱਧਾ ਉੱਤਰ ਵਾਈਗੋਤਸਕੀ ਦਾ ZPD ਹੋਵੇਗਾ। ਪਿਆਜੇ ਦੇ ਵਿਕਲਪਾਂ ਤੋਂ ਬਚੋ।',
-      en: 'Examiner trap: Assimilation and Egocentrism are Piagetian distractors. Whenever collaboration/guidance is tested, Vygotsky\'s ZPD is the definitive answer.',
+      hi: "परीक्षक जाल: विकल्प A (Assimilation) और D (Egocentric) जीन पियाजे से संबंधित हैं। जब भी 'सहयोग/मार्गदर्शन' (Scaffolding/Adult guidance) शब्द आए, उत्तर हमेशा वाइगोत्स्की का ZPD होगा।",
+      pa: "ਪ੍ਰੀਖਿਅਕ ਟਰੈਪ: ਜਦੋਂ ਵੀ 'ਮਦਦ ਜਾਂ ਸਕੈਫੋਲਡਿੰਗ' ਦੀ ਗੱਲ ਆਵੇ, ਸਿੱਧਾ ਉੱਤਰ ਵਾਈਗੋਤਸਕੀ ਦਾ ZPD ਹੋਵੇਗਾ। ਪਿਆਜੇ ਦੇ ਵਿਕਲਪਾਂ ਤੋਂ ਬਚੋ।",
+      en: "Examiner trap: Assimilation and Egocentrism are Piagetian distractors. Whenever collaboration/guidance is tested, Vygotsky's ZPD is the definitive answer.",
     },
   },
   {
@@ -88,7 +88,7 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     },
     subtopic: {
       hi: 'प्राथमिक स्तर पर छात्र-शिक्षक अनुपात (Pupil-Teacher Ratio - PTR)',
-      pa: 'ਪ੍ਰਾਇਮਰੀ ਪੱਧਰ \'ਤੇ ਵਿਦਿਆਰਥੀ-ਅਧਿਆਪਕ ਅਨੁਪਾਤ (PTR)',
+      pa: "ਪ੍ਰਾਇਮਰੀ ਪੱਧਰ 'ਤੇ ਵਿਦਿਆਰਥੀ-ਅਧਿਆਪਕ ਅਨੁਪਾਤ (PTR)",
       en: 'Pupil-Teacher Ratio (PTR) in Primary Schools',
     },
     deepConceptNote: {
@@ -130,7 +130,7 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     topicName: {
       hi: 'जीन पियाजे का संज्ञानात्मक विकास सिद्धांत',
       pa: 'ਜੀਨ ਪਿਆਜੇ ਦਾ ਸੰਗਿਆਨਾਤਮਕ ਵਿਕਾਸ ਸਿਧਾਂਤ',
-      en: 'Jean Piaget\'s Cognitive Development Theory',
+      en: "Jean Piaget's Cognitive Development Theory",
     },
     subtopic: {
       hi: 'संरक्षण (Conservation) एवं पलटावी चिंतन (Reversibility)',
@@ -171,13 +171,13 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     },
     correct: 'C',
     explanation: {
-      hi: 'संरक्षण (Conservation), पलटावीपन (Reversibility) और श्रेणीकरण (Seriation) की क्षमता 7 से 11 वर्ष (मूर्त संक्रियात्मक अवस्था - Concrete Operational) में आती है। पूर्व संक्रियात्मक अवस्था में बच्चा \'केंद्रीयकरण\' (Centration) के कारण यह नहीं समझ पाता।',
+      hi: "संरक्षण (Conservation), पलटावीपन (Reversibility) और श्रेणीकरण (Seriation) की क्षमता 7 से 11 वर्ष (मूर्त संक्रियात्मक अवस्था - Concrete Operational) में आती है। पूर्व संक्रियात्मक अवस्था में बच्चा 'केंद्रीयकरण' (Centration) के कारण यह नहीं समझ पाता।",
       pa: 'ਮੂਰਤ ਸੰਕਿਰਿਆਤਮਕ ਪੜਾਅ (7-11 ਸਾਲ) ਵਿੱਚ ਬੱਚਾ Conservation ਅਤੇ Reversibility ਸਿੱਖਦਾ ਹੈ।',
       en: 'Conservation and Reversibility emerge during the Concrete Operational Stage (7-11 years). In pre-operational stage, centration prevents conservation.',
     },
     thought: {
-      hi: 'परीक्षक चाल: 2-7 वर्ष में बच्चा परीक्षण में फेल होता है (Centration)। जब पूछा जाए कि \'क्षमता कब आती है\', उत्तर सदैव 7-11 वर्ष (मूर्त अवस्था) होगा।',
-      pa: 'ਸਵਾਲ ਦੀ ਬਰੀਕੀ: ਬੱਚਾ 2-7 ਸਾਲ \'ਚ ਅਸਮਰੱਥ ਹੁੰਦਾ ਹੈ, ਪਰ 7-11 ਸਾਲ \'ਚ ਸਿੱਖ ਲੈਂਦਾ ਹੈ।',
+      hi: "परीक्षक चाल: 2-7 वर्ष में बच्चा परीक्षण में फेल होता है (Centration)। जब पूछा जाए कि 'क्षमता कब आती है', उत्तर सदैव 7-11 वर्ष (मूर्त अवस्था) होगा।",
+      pa: "ਸਵਾਲ ਦੀ ਬਰੀਕੀ: ਬੱਚਾ 2-7 ਸਾਲ 'ਚ ਅਸਮਰੱਥ ਹੁੰਦਾ ਹੈ, ਪਰ 7-11 ਸਾਲ 'ਚ ਸਿੱਖ ਲੈਂਦਾ ਹੈ।",
       en: 'Nuance: Pre-operational fails conservation; Concrete Operational masters conservation.',
     },
   },
@@ -205,12 +205,12 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     },
     deepConceptNote: {
       hi: 'पंजाब में 6 अंतरराष्ट्रीय रामसर वेटलैंड्स हैं: हरिके (व्यास-सतलुज संगम), रोपड़, कांजली (काली बेईं), केशोपुर-मियानी (गुरदासपुर), नांगल, और ब्यास कंजर्वेशन रिजर्व।',
-      pa: 'ਪੰਜਾਬ ਵਿੱਚ 6 ਰਾਮਸਰ ਵੈਟਲੈਂਡਜ਼ ਹਨ। ਹਰੀਕੇ ਪੱਤਣ ਸਭ ਤੋਂ ਵੱਡਾ ਹੈ ਜੋ ਸਤਲੁਜ ਤੇ ਬਿਆਸ ਦੇ ਸੰਗਮ \'ਤੇ ਸਥਿਤ ਹੈ।',
+      pa: "ਪੰਜਾਬ ਵਿੱਚ 6 ਰਾਮਸਰ ਵੈਟਲੈਂਡਜ਼ ਹਨ। ਹਰੀਕੇ ਪੱਤਣ ਸਭ ਤੋਂ ਵੱਡਾ ਹੈ ਜੋ ਸਤਲੁਜ ਤੇ ਬਿਆਸ ਦੇ ਸੰਗਮ 'ਤੇ ਸਥਿਤ ਹੈ।",
       en: 'Punjab has 6 designated Ramsar wetland sites: Harike (largest, at Sutlej-Beas confluence), Ropar, Kanjli, Keshopur-Miani, Nangal, and Beas Conservation Reserve.',
     },
     question: {
       hi: 'पंजाब का सबसे बड़ा रामसर आर्द्रभूमि स्थल (Ramsar Wetland Site) कौन सा है जो सतलुज और ब्यास नदियों के संगम पर स्थित है?',
-      pa: 'ਪੰਜਾਬ ਦਾ ਸਭ ਤੋਂ ਵੱਡਾ ਰਾਮਸਰ ਵੈਟਲੈਂਡ ਕਿਹੜਾ ਹੈ ਜੋ ਸਤਲੁਜ ਅਤੇ ਬਿਆਸ ਦਰਿਆਵਾਂ ਦੇ ਸੰਗਮ \'ਤੇ ਸਥਿਤ ਹੈ?',
+      pa: "ਪੰਜਾਬ ਦਾ ਸਭ ਤੋਂ ਵੱਡਾ ਰਾਮਸਰ ਵੈਟਲੈਂਡ ਕਿਹੜਾ ਹੈ ਜੋ ਸਤਲੁਜ ਅਤੇ ਬਿਆਸ ਦਰਿਆਵਾਂ ਦੇ ਸੰਗਮ 'ਤੇ ਸਥਿਤ ਹੈ?",
       en: 'Which is the largest Ramsar Wetland Site in Punjab situated at the confluence of the Sutlej and Beas rivers?',
     },
     options: {
@@ -222,12 +222,12 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     correct: 'B',
     explanation: {
       hi: 'हरिके वेटलैंड (Harike Pattan) पंजाब का सबसे बड़ा रामसर स्थल है। यह सतलुज और ब्यास नदियों के संगम पर स्थित है और सर्दियों में साइबेरिया से आने वाले प्रवासी पक्षियों का मुख्य केंद्र है।',
-      pa: 'ਹਰੀਕੇ ਪੱਤਣ ਸਤਲੁਜ ਤੇ ਬਿਆਸ ਦੇ ਮੇਲ \'ਤੇ ਬਣਿਆ ਸਭ ਤੋਂ ਵੱਡਾ ਵੈਟਲੈਂਡ ਹੈ ਜਿੱਥੇ ਪਰਵਾਸੀ ਪੰਛੀ ਆਉਂਦੇ ਹਨ।',
-      en: 'Harike Wetland is Punjab\'s largest Ramsar wetland site, formed at the confluence of the Sutlej and Beas rivers, welcoming thousands of migratory birds annually.',
+      pa: "ਹਰੀਕੇ ਪੱਤਣ ਸਤਲੁਜ ਤੇ ਬਿਆਸ ਦੇ ਮੇਲ 'ਤੇ ਬਣਿਆ ਸਭ ਤੋਂ ਵੱਡਾ ਵੈਟਲੈਂਡ ਹੈ ਜਿੱਥੇ ਪਰਵਾਸੀ ਪੰਛੀ ਆਉਂਦੇ ਹਨ।",
+      en: "Harike Wetland is Punjab's largest Ramsar wetland site, formed at the confluence of the Sutlej and Beas rivers, welcoming thousands of migratory birds annually.",
     },
     thought: {
       hi: 'परीक्षक दृष्टि: हरिके (सतलुज+ब्यास), कांजली (काली बेईं नदी), रोपड़ (सतलुज नदी)। संगम की बात हो तो आंख बंद करके हरिके पत्तन सही है।',
-      pa: 'ਕਾਂਜਲੀ ਕਾਲੀ ਵੇਈਂ \'ਤੇ ਹੈ, ਰੋਪੜ ਸਤਲੁਜ \'ਤੇ ਹੈ, ਪਰ ਸੰਗਮ ਸਿਰਫ਼ ਹਰੀਕੇ \'ਤੇ ਹੈ।',
+      pa: "ਕਾਂਜਲੀ ਕਾਲੀ ਵੇਈਂ 'ਤੇ ਹੈ, ਰੋਪੜ ਸਤਲੁਜ 'ਤੇ ਹੈ, ਪਰ ਸੰਗਮ ਸਿਰਫ਼ ਹਰੀਕੇ 'ਤੇ ਹੈ।",
       en: 'Confluence mnemonic: Sutlej + Beas = Harike.',
     },
   },
@@ -259,8 +259,8 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
       en: 'In MS Word, Ctrl + E centers text, Ctrl + L aligns left, Ctrl + R aligns right, Ctrl + J justifies, and Ctrl + K inserts a hyperlink.',
     },
     question: {
-      hi: 'माइक्रोसॉफ्ट वर्ड (MS Word) में चयनित टेक्स्ट को \'सेंटर अलाइन\' (Center Align) करने के लिए किस कीबोर्ड शॉर्टकट का उपयोग किया जाता है?',
-      pa: 'ਮਾਈਕ੍ਰੋਸਾਫਟ ਵਰਡ (MS Word) ਵਿੱਚ ਚੁਣੇ ਹੋਏ ਟੈਕਸਟ ਨੂੰ \'ਸੈਂਟਰ ਅਲਾਈਨ\' (Center Align) ਕਰਨ ਲਈ ਕਿਹੜੀ ਸ਼ਾਰਟਕੱਟ ਕੀਅ ਵਰਤੀ ਜਾਂਦੀ ਹੈ?',
+      hi: "माइक्रोसॉफ्ट वर्ड (MS Word) में चयनित टेक्स्ट को 'सेंटर अलाइन' (Center Align) करने के लिए किस कीबोर्ड शॉर्टकट का उपयोग किया जाता है?",
+      pa: "ਮਾਈਕ੍ਰੋਸਾਫਟ ਵਰਡ (MS Word) ਵਿੱਚ ਚੁਣੇ ਹੋਏ ਟੈਕਸਟ ਨੂੰ 'ਸੈਂਟਰ ਅਲਾਈਨ' (Center Align) ਕਰਨ ਲਈ ਕਿਹੜੀ ਸ਼ਾਰਟਕੱਟ ਕੀਅ ਵਰਤੀ ਜਾਂਦੀ ਹੈ?",
       en: 'In Microsoft Word, which keyboard shortcut is used to Center Align the selected paragraph or text?',
     },
     options: {
@@ -276,7 +276,7 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
       en: 'Ctrl + E is Center Align. Ctrl + C is Copy, Ctrl + J is Justify, and Ctrl + M is Indent.',
     },
     thought: {
-      hi: 'परीक्षक चाल: छात्र Center के \'C\' को देखकर Ctrl + C चुन लेते हैं, जबकि Ctrl + C कॉपी के लिए होता है। Center के लिए हमेशा Ctrl + E होता है।',
+      hi: "परीक्षक चाल: छात्र Center के 'C' को देखकर Ctrl + C चुन लेते हैं, जबकि Ctrl + C कॉपी के लिए होता है। Center के लिए हमेशा Ctrl + E होता है।",
       pa: 'ਟਰੈਪ: ਵਿਦਿਆਰਥੀ C ਤੋਂ Center ਸਮਝ ਕੇ Ctrl+C ਲਗਾ ਦਿੰਦੇ ਹਨ ਜੋ ਕਿ ਕਾਪੀ ਹੈ। ਸੈਂਟਰ ਲਈ Ctrl+E ਹੁੰਦਾ ਹੈ।',
       en: 'Trap: Students mistakenly map Center to Ctrl+C (which is Copy). Center alignment is Ctrl+E.',
     },
@@ -350,14 +350,14 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
       en: 'Subscript Characters (Doot Akhar: Halant Key Logic in Raavi)',
     },
     deepConceptNote: {
-      hi: 'रावी यूनिकोड फॉन्ट में किसी अक्षर के पैर में र (ਪ੍ਰ), ह (ਪ੍ਹ) या व (ਸ੍ਵ) डालने के लिए अक्षर के बाद हलंत (Halant - \'d\' key in Inscript) दबाकर संबंधित अक्षर दबाया जाता है।',
+      hi: "रावी यूनिकोड फॉन्ट में किसी अक्षर के पैर में र (ਪ੍ਰ), ह (ਪ੍ਹ) या व (ਸ੍ਵ) डालने के लिए अक्षर के बाद हलंत (Halant - 'd' key in Inscript) दबाकर संबंधित अक्षर दबाया जाता है।",
       pa: 'ਰਾਵੀ ਫੌਂਟ ਵਿੱਚ ਦੁੱਤ ਅੱਖਰ (ਪੈਰ ਵਿੱਚ ਰ, ਹ, ਵ) ਪਾਉਣ ਲਈ ਪਹਿਲੇ ਅੱਖਰ ਤੋਂ ਬਾਅਦ ਹਲੰਤ (d ਕੁੰਜੀ) ਦਬਾ ਕੇ ਅਗਲਾ ਅੱਖਰ ਦਬਾਇਆ ਜਾਂਦਾ ਹੈ।',
-      en: 'In Punjabi Raavi Inscript keyboard, to type subscript letters (Doot Akhar like Pair vich Rara/Haha/Vava), press the base letter, followed by Halant (\'d\' key), and then the consonant.',
+      en: "In Punjabi Raavi Inscript keyboard, to type subscript letters (Doot Akhar like Pair vich Rara/Haha/Vava), press the base letter, followed by Halant ('d' key), and then the consonant.",
     },
     question: {
-      hi: 'PSSSB क्लर्क रावी (Raavi Inscript) टाइपिंग टेस्ट में किसी अक्षर के पैर में \'र\' (जैसे \'ਪ੍ਰਕਾਸ਼\' में \'ਪ੍ਰ\') लिखने के लिए कीबोर्ड पर सही क्रम क्या है?',
-      pa: 'PSSSB ਕਲਰਕ ਰਾਵੀ (Raavi Inscript) ਟਾਈਪਿੰਗ ਵਿੱਚ ਪੈਰ ਵਿੱਚ \'ਰ\' (ਜਿਵੇਂ \'ਪ੍ਰਕਾਸ਼\' ਵਿਚ \'ਪ੍ਰ\') ਪਾਉਣ ਲਈ ਸਹੀ ਤਰਤੀਬ ਕੀ ਹੈ?',
-      en: 'In the official PSSSB Raavi Inscript typing test, what is the correct key sequence to type a subscript \'Rara\' (e.g. \'ਪ੍ਰ\' in \'Prakash\')?',
+      hi: "PSSSB क्लर्क रावी (Raavi Inscript) टाइपिंग टेस्ट में किसी अक्षर के पैर में 'र' (जैसे 'ਪ੍ਰਕਾਸ਼' में 'ਪ੍ਰ') लिखने के लिए कीबोर्ड पर सही क्रम क्या है?",
+      pa: "PSSSB ਕਲਰਕ ਰਾਵੀ (Raavi Inscript) ਟਾਈਪਿੰਗ ਵਿੱਚ ਪੈਰ ਵਿੱਚ 'ਰ' (ਜਿਵੇਂ 'ਪ੍ਰਕਾਸ਼' ਵਿਚ 'ਪ੍ਰ') ਪਾਉਣ ਲਈ ਸਹੀ ਤਰਤੀਬ ਕੀ ਹੈ?",
+      en: "In the official PSSSB Raavi Inscript typing test, what is the correct key sequence to type a subscript 'Rara' (e.g. 'ਪ੍ਰ' in 'Prakash')?",
     },
     options: {
       A: {
@@ -414,7 +414,7 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     deepConceptNote: {
       hi: '14 मई 2021 को मलेरकोटला को संगरूर से अलग करके पंजाब का 23वां जिला घोषित किया गया था। वर्तमान में पंजाब में कुल 23 जिले और 5 प्रशासनिक मंडल (Divisions) हैं।',
       pa: 'ਮਲੇਰਕੋਟਲਾ 14 ਮਈ 2021 ਨੂੰ ਸੰਗਰੂਰ ਤੋਂ ਵੱਖ ਕਰਕੇ ਪੰਜਾਬ ਦਾ 23ਵਾਂ ਜ਼ਿਲ੍ਹਾ ਬਣਾਇਆ ਗਿਆ।',
-      en: 'Malerkotla was carved out of Sangrur on 14 May 2021 to become Punjab\'s 23rd district. Punjab currently has 23 districts and 5 administrative divisions.',
+      en: "Malerkotla was carved out of Sangrur on 14 May 2021 to become Punjab's 23rd district. Punjab currently has 23 districts and 5 administrative divisions.",
     },
     question: {
       hi: 'मई 2021 में संगरूर जिले से अलग करके बनाया गया पंजाब का 23वां जिला कौन सा है?',
@@ -463,13 +463,13 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     },
     deepConceptNote: {
       hi: 'किसी संख्या में अंक का स्थानीय मान उसकी स्थिति (इकाई, दहाई, सैकड़ा) पर निर्भर करता है, जबकि जातीय मान (Face Value) अंक का वास्तविक मान होता है।',
-      pa: 'ਸਥਾਨਕ ਮੁੱਲ ਅੰਕ ਦੇ ਸਥਾਨ \'ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ ਜਦਕਿ ਅੰਕਿਤ ਮੁੱਲ ਉਹੀ ਅੰਕ ਹੁੰਦਾ ਹੈ।',
+      pa: "ਸਥਾਨਕ ਮੁੱਲ ਅੰਕ ਦੇ ਸਥਾਨ 'ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ ਜਦਕਿ ਅੰਕਿਤ ਮੁੱਲ ਉਹੀ ਅੰਕ ਹੁੰਦਾ ਹੈ।",
       en: 'Place value depends on the position of the digit (units, tens, hundreds), while face value is the literal digit itself regardless of position.',
     },
     question: {
-      hi: 'संख्या 7,53,892 में अंक \'5\' के स्थानीय मान (Place Value) और जातीय मान (Face Value) के बीच का अंतर कितना है?',
-      pa: 'ਸੰਖਿਆ 7,53,892 ਵਿੱਚ ਅੰਕ \'5\' ਦੇ ਸਥਾਨਕ ਮੁੱਲ ਅਤੇ ਅੰਕਿਤ ਮੁੱਲ ਵਿਚਕਾਰ ਕਿੰਨਾ ਅੰਤਰ ਹੈ?',
-      en: 'In the number 7,53,892, what is the difference between the Place Value and Face Value of the digit \'5\'?',
+      hi: "संख्या 7,53,892 में अंक '5' के स्थानीय मान (Place Value) और जातीय मान (Face Value) के बीच का अंतर कितना है?",
+      pa: "ਸੰਖਿਆ 7,53,892 ਵਿੱਚ ਅੰਕ '5' ਦੇ ਸਥਾਨਕ ਮੁੱਲ ਅਤੇ ਅੰਕਿਤ ਮੁੱਲ ਵਿਚਕਾਰ ਕਿੰਨਾ ਅੰਤਰ ਹੈ?",
+      en: "In the number 7,53,892, what is the difference between the Place Value and Face Value of the digit '5'?",
     },
     options: {
       A: { hi: '49,995', pa: '49,995', en: '49,995' },
@@ -479,13 +479,13 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     },
     correct: 'A',
     explanation: {
-      hi: '7,53,892 में \'5\' दस हजार के स्थान पर है, इसलिए स्थानीय मान = 50,000। \'5\' का जातीय मान (Face Value) = 5। अंतर = 50,000 - 5 = 49,995।',
+      hi: "7,53,892 में '5' दस हजार के स्थान पर है, इसलिए स्थानीय मान = 50,000। '5' का जातीय मान (Face Value) = 5। अंतर = 50,000 - 5 = 49,995।",
       pa: 'ਸਥਾਨਕ ਮੁੱਲ = 50,000, ਅੰਕਿਤ ਮੁੱਲ = 5। ਅੰਤਰ = 50,000 - 5 = 49,995।',
       en: 'Place value of 5 is 50,000. Face value of 5 is 5. Difference = 50,000 - 5 = 49,995.',
     },
     thought: {
-      hi: 'परीक्षक चाल: जल्दबाजी में अभ्यर्थी केवल 50,000 चुनते हैं और अंतर घटाना भूल जाते हैं। प्रश्न को पूरा पढ़ें: \'अंतर\' पूछा गया है।',
-      pa: 'ਸਵਾਲ \'ਚ ਅੰਤਰ ਪੁੱਛਿਆ ਗਿਆ ਹੈ, ਇਸ ਲਈ 50,000 ਵਿੱਚੋਂ 5 ਘਟਾਉਣਾ ਨਾ ਭੁੱਲੋ।',
+      hi: "परीक्षक चाल: जल्दबाजी में अभ्यर्थी केवल 50,000 चुनते हैं और अंतर घटाना भूल जाते हैं। प्रश्न को पूरा पढ़ें: 'अंतर' पूछा गया है।",
+      pa: "ਸਵਾਲ 'ਚ ਅੰਤਰ ਪੁੱਛਿਆ ਗਿਆ ਹੈ, ਇਸ ਲਈ 50,000 ਵਿੱਚੋਂ 5 ਘਟਾਉਣਾ ਨਾ ਭੁੱਲੋ।",
       en: 'Trap: Candidates select 50,000 directly. Always compute Difference = Place Value - Face Value.',
     },
   },

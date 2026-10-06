@@ -27,7 +27,7 @@ export default function LandingPage() {
         <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-2 tracking-tight">ExamSathi</h1>
         <p className="text-lg text-teal-300 font-medium">परीक्षा साथी • ਪ੍ਰੀਖਿਆ ਸਾਥੀ</p>
         <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-          Open-Access Multi-Disciplinary Exam Preparation Portal for State & Central Government Examinations
+          Open-Access Multi-Disciplinary Exam Preparation Portal for State &amp; Central Government Examinations
         </p>
       </motion.div>
 
@@ -152,7 +152,7 @@ export default function LandingPage() {
           </Link>
           <span>•</span>
           <Link href="/contact" className="hover:text-slate-300 transition">
-            Contact & Errata
+            Contact &amp; Errata
           </Link>
         </div>
       </motion.div>

@@ -1,7 +1,13 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import BottomNav from '@/components/layout/BottomNav';
 import LanguageToggle from '@/components/layout/LanguageToggle';
 import OnboardingGuideModal from '@/components/ui/OnboardingGuideModal';
+
+export const metadata: Metadata = {
+  title: 'Dashboard | ExamSathi',
+  description: 'Your personal exam preparation dashboard. Track progress, start mock tests, and study topic-wise for Punjab, Rajasthan and Central government exams.',
+};
 
 export default function DashboardLayout({
   children,

@@ -2,17 +2,20 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useStore } from '@/lib/store';
+import { useAuth } from '@/lib/hooks/useAuth';
 import { getStoredUser } from '@/lib/auth';
 import StreakBadge from '@/components/ui/StreakBadge';
 import DailyKnowledge from '@/components/dashboard/DailyKnowledge';
+import { getTodayContent } from '@/lib/data/daily_content';
 import { 
-  Target, Book, Layers, CheckCircle, ArrowRight, Keyboard, 
-  ShieldCheck, Compass, Sparkles, Award, GraduationCap, Briefcase, 
-  Search, BookOpen, Flame, Share2, Calendar, Library
+  Target, Book, Layers, ArrowRight, Keyboard, 
+  Compass, Sparkles, GraduationCap, Briefcase, 
+  Share2, Brain
 } from 'lucide-react';
 
 export default function Dashboard() {
   const { user: storeUser, completedTopics } = useStore();
+  const { user: authUser, isGuest, loading: authLoading } = useAuth();
   const [currentUser, setCurrentUser] = useState<any>(null);
   const [lastResult, setLastResult] = useState<any>(null);
 
@@ -33,7 +36,29 @@ export default function Dashboard() {
 
   return (
     <div className="p-4 flex flex-col gap-6 max-w-xl mx-auto w-full pb-20 text-slate-100">
-      
+
+      {/* Guest banner — shown when not signed in to a real account */}
+      {!authLoading && isGuest && (
+        <div className="bg-amber-950/60 border border-amber-500/40 rounded-2xl px-4 py-3 text-xs text-amber-200 flex items-center gap-2">
+          <span>👤</span>
+          <span>
+            <strong>Guest mode</strong> — progress is saved locally only.{' '}
+            <Link href="/login" className="text-amber-300 underline font-semibold">Sign in</Link>{' '}
+            to access your account. Cloud progress sync is coming later.
+          </span>
+        </div>
+      )}
+
+      {/* Signed-in welcome */}
+      {!authLoading && !isGuest && authUser && (
+        <div className="bg-teal-950/60 border border-teal-500/40 rounded-2xl px-4 py-3 text-xs text-teal-200 flex items-center gap-2">
+          <span>✅</span>
+          <span>
+            Signed in as <strong className="text-teal-100">{authUser.user_metadata?.full_name || authUser.email}</strong>
+          </span>
+        </div>
+      )}
+
       {/* Platform Banner */}
       <div className="bg-gradient-to-r from-indigo-700 via-indigo-600 to-teal-600 rounded-3xl p-5 shadow-xl relative overflow-hidden border border-indigo-400/20">
         <div className="absolute top-0 right-0 w-44 h-44 bg-white/10 rounded-full -translate-y-12 translate-x-12 blur-2xl pointer-events-none"></div>
@@ -47,22 +72,24 @@ export default function Dashboard() {
             <p className="text-teal-100 text-xs mb-3.5">
               Comprehensive Multi-Disciplinary Exam Preparation Portal
             </p>
-            
+
             <div className="flex flex-wrap gap-2">
-              <Link 
-                href="/exams" 
+              <Link
+                href="/exams"
                 className="bg-white/20 hover:bg-white/30 transition-colors px-3 py-1.5 rounded-lg text-white text-xs font-semibold backdrop-blur-sm inline-flex items-center gap-1"
               >
                 <Compass size={13} /> Select Exam
               </Link>
-              <Link 
-                href="/login" 
-                className="bg-teal-950/80 hover:bg-teal-900 border border-teal-400/50 px-3 py-1.5 rounded-lg text-teal-200 text-xs font-semibold inline-flex items-center gap-1 shadow-sm"
-              >
-                <span>🔐</span> Student Login
-              </Link>
-              <Link 
-                href="/profile" 
+              {isGuest ? (
+                <Link
+                  href="/login"
+                  className="bg-teal-950/80 hover:bg-teal-900 border border-teal-400/50 px-3 py-1.5 rounded-lg text-teal-200 text-xs font-semibold inline-flex items-center gap-1 shadow-sm"
+                >
+                  <span>🔐</span> Student Login
+                </Link>
+              ) : null}
+              <Link
+                href="/profile"
                 className="bg-indigo-950/70 hover:bg-indigo-900 border border-indigo-400/40 px-3 py-1.5 rounded-lg text-indigo-200 text-xs font-semibold inline-flex items-center gap-1"
               >
                 <span>👤</span> Study Vault
@@ -73,6 +100,30 @@ export default function Dashboard() {
           <StreakBadge streak={streakCount} />
         </div>
       </div>
+
+      {/* Daily Content Card */}
+      {(() => {
+        const daily = getTodayContent('hi');
+        if (!daily) return null;
+        return (
+          <div className="bg-gradient-to-br from-amber-950/50 to-orange-950/40 rounded-2xl p-4 border border-amber-700/40">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-amber-300 text-sm font-bold">💡 आज का विचार</span>
+              <span className="text-xs text-amber-500 ml-auto">{new Date().toLocaleDateString('hi-IN', { day: 'numeric', month: 'long' })}</span>
+            </div>
+            <blockquote className="text-slate-200 text-sm italic mb-1">&ldquo;{daily.thought}&rdquo;</blockquote>
+            <p className="text-amber-400 text-xs">— {daily.thoughtAuthor}</p>
+            {daily.gkTitle && (
+              <div className="mt-3 pt-3 border-t border-amber-800/50">
+                <p className="text-xs font-bold text-orange-300 mb-1">📅 आज इतिहास में</p>
+                <p className="text-xs font-semibold text-slate-200">{daily.gkTitle}</p>
+                <p className="text-xs text-slate-400 mt-1 line-clamp-2">{daily.gkDescription}</p>
+                {daily.gkSource && <p className="text-[10px] text-slate-500 mt-1">स्रोत: {daily.gkSource}</p>}
+              </div>
+            )}
+          </div>
+        );
+      })()}
 
       {/* 50-Question CBT Live Mock & 20-Year Archive Banner */}
       <Link
@@ -93,10 +144,10 @@ export default function Dashboard() {
               </span>
             </div>
             <h3 className="text-white font-black text-sm truncate">
-              Live CBT Mock Test & State Merit Rank
+              Live CBT Mock Test &amp; State Merit Rank
             </h3>
             <p className="text-[11px] text-slate-300 truncate">
-              Simple, Mid & Hard sets • Master Cadre, Clerk, Police, Patwari & REET
+              Simple, Mid &amp; Hard sets • Master Cadre, Clerk, Police, Patwari &amp; REET
             </p>
           </div>
         </div>
@@ -164,9 +215,9 @@ export default function Dashboard() {
               <Briefcase size={20} />
             </div>
             <div>
-              <h3 className="text-white font-bold text-sm">Clerical & Ministerial</h3>
+              <h3 className="text-white font-bold text-sm">Clerical &amp; Ministerial</h3>
               <p className="text-[11px] text-slate-400 leading-snug mt-0.5">
-                PSSSB Clerk, Patwari, Police, RSMSSB, SSC CHSL & CGL
+                PSSSB Clerk, Patwari, Police, RSMSSB, SSC CHSL &amp; CGL
               </p>
             </div>
             <span className="text-[10px] text-teal-400 font-semibold mt-auto flex items-center gap-1">
@@ -198,7 +249,7 @@ export default function Dashboard() {
         </div>
         {!lastResult && (
           <p className="text-[10px] text-slate-400 text-center">
-            🎯 Complete your first CBT Mock Test to calculate live Readiness & Merit Rank.
+            🎯 Complete your first CBT Mock Test to calculate live Readiness &amp; Merit Rank.
           </p>
         )}
       </div>
@@ -226,8 +277,8 @@ export default function Dashboard() {
                 01
               </span>
               <div className="min-w-0">
-                <h4 className="text-white font-bold text-xs truncate">History of Punjab & Sikh Gurus</h4>
-                <p className="text-slate-400 text-[11px] truncate">1469-1708, Khalsa 1699, Misals, Ranjit Singh & Ghadar</p>
+                <h4 className="text-white font-bold text-xs truncate">History of Punjab &amp; Sikh Gurus</h4>
+                <p className="text-slate-400 text-[11px] truncate">1469-1708, Khalsa 1699, Misals, Ranjit Singh &amp; Ghadar</p>
               </div>
             </div>
             <span className="bg-slate-700 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
@@ -265,7 +316,7 @@ export default function Dashboard() {
               </span>
               <div className="min-w-0">
                 <h4 className="text-white font-bold text-xs truncate">Indian Polity — Fundamental Rights</h4>
-                <p className="text-slate-400 text-[11px] truncate">Part III, Articles 12-35, 6 Categories & 5 Supreme Court Writs</p>
+                <p className="text-slate-400 text-[11px] truncate">Part III, Articles 12-35, 6 Categories &amp; 5 Supreme Court Writs</p>
               </div>
             </div>
             <span className="bg-slate-700 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
@@ -283,7 +334,7 @@ export default function Dashboard() {
                 04
               </span>
               <div className="min-w-0">
-                <h4 className="text-white font-bold text-xs truncate">PSSSB Clerk Prep & Raavi Typing Rules</h4>
+                <h4 className="text-white font-bold text-xs truncate">PSSSB Clerk Prep &amp; Raavi Typing Rules</h4>
                 <p className="text-slate-400 text-[11px] truncate">30 WPM Benchmark, 92% Accuracy, MS Office Shortcuts</p>
               </div>
             </div>
@@ -298,7 +349,7 @@ export default function Dashboard() {
       <div>
         <div className="flex justify-between items-center mb-3">
           <h2 className="text-white font-bold text-sm flex items-center gap-2">
-            <span>⚡</span> Daily Discipline & Smart Prep Suites
+            <span>⚡</span> Daily Discipline &amp; Smart Prep Suites
           </h2>
           <span className="text-[11px] text-teal-300 font-semibold">New Features</span>
         </div>
@@ -318,13 +369,13 @@ export default function Dashboard() {
               </span>
             </div>
             <div>
-              <h3 className="text-white font-bold text-xs sm:text-sm">Study Roadmap & Daily Plan</h3>
+              <h3 className="text-white font-bold text-xs sm:text-sm">Study Roadmap &amp; Daily Plan</h3>
               <p className="text-[11px] text-slate-400 leading-snug mt-1">
-                ETT, Clerk & Master Cadre daily milestones + merit decider challenge
+                ETT, Clerk &amp; Master Cadre daily milestones + merit decider challenge
               </p>
             </div>
             <span className="text-[10px] text-indigo-400 font-bold mt-auto flex items-center gap-1">
-              Today's Targets &rarr;
+              Today&apos;s Targets &rarr;
             </span>
           </Link>
 
@@ -344,7 +395,7 @@ export default function Dashboard() {
             <div>
               <h3 className="text-white font-bold text-xs sm:text-sm">Virtual Study Library</h3>
               <p className="text-[11px] text-slate-400 leading-snug mt-1">
-                Quiet reading desks, Pomodoro timer (25/45/60m) & live desk mock
+                Quiet reading desks, Pomodoro timer (25/45/60m) &amp; live desk mock
               </p>
             </div>
             <span className="text-[10px] text-teal-400 font-bold mt-auto flex items-center gap-1">
@@ -385,17 +436,30 @@ export default function Dashboard() {
             <div className="bg-teal-500/20 p-2.5 rounded-full text-teal-400">
               <Target size={20} />
             </div>
-            <span className="text-slate-200 text-xs font-semibold text-center">Topic Mock & PYQ Portal</span>
+            <span className="text-slate-200 text-xs font-semibold text-center">Topic Mock &amp; PYQ Portal</span>
           </Link>
 
-          <Link 
-            href="/typing-practice" 
+          <Link
+            href="/typing-practice"
             className="bg-slate-800/90 p-4 rounded-xl border border-slate-700 flex flex-col items-center justify-center gap-2 hover:bg-slate-750 transition shadow"
           >
             <div className="bg-purple-500/20 p-2.5 rounded-full text-purple-400">
               <Keyboard size={20} />
             </div>
             <span className="text-slate-200 text-xs font-semibold text-center">Raavi Typing Simulator</span>
+          </Link>
+
+          <Link
+            href="/exam-coach"
+            className="bg-slate-800/90 p-3.5 rounded-2xl border border-slate-700 hover:border-teal-400/60 transition group flex flex-col gap-2 col-span-2 sm:col-span-1"
+          >
+            <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center">
+              <Brain size={20} />
+            </div>
+            <div>
+              <h3 className="text-white font-bold text-xs">Exam-Day Coach</h3>
+              <p className="text-[11px] text-slate-400">Calm-down tips, time strategy</p>
+            </div>
           </Link>
         </div>
       </div>
@@ -408,7 +472,7 @@ export default function Dashboard() {
               <Share2 size={18} />
             </span>
             <div>
-              <h3 className="text-white font-bold text-xs">Share ExamSathi with Friends & Aspirants</h3>
+              <h3 className="text-white font-bold text-xs">Share ExamSathi with Friends &amp; Aspirants</h3>
               <p className="text-[10px] text-emerald-300">100% Free • Open Learning Movement • Spread the Word</p>
             </div>
           </div>
@@ -426,6 +490,33 @@ export default function Dashboard() {
         >
           <span>📲 Share on WhatsApp (व्हाट्सएप पर शेयर करें)</span>
         </a>
+      </div>
+
+      {/* PWA Install Prompt */}
+      <div className="bg-slate-800/60 border border-slate-700 rounded-2xl p-4 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <span className="text-2xl">📱</span>
+          <div>
+            <p className="text-xs font-bold text-white">Install ExamSathi App</p>
+            <p className="text-[11px] text-slate-400">Works offline • No Play Store needed</p>
+          </div>
+        </div>
+        <button
+          onClick={() => {
+            alert('To install: tap the browser menu (⋮) → "Add to Home Screen" or "Install App"');
+          }}
+          className="bg-teal-500 text-slate-950 font-bold text-xs px-3 py-2 rounded-xl shrink-0 hover:bg-teal-400 transition"
+        >
+          Install
+        </button>
+      </div>
+
+      {/* Footer */}
+      <div className="mt-4 pt-4 border-t border-slate-800 flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+        <Link href="/about" className="hover:text-slate-400">About</Link>
+        <Link href="/privacy" className="hover:text-slate-400">Privacy Policy</Link>
+        <Link href="/terms" className="hover:text-slate-400">Terms</Link>
+        <Link href="/contact" className="hover:text-slate-400">Contact</Link>
       </div>
 
     </div>

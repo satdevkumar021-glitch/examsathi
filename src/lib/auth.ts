@@ -28,15 +28,13 @@ const DEFAULT_USER: AuthUser = {
   state: 'punjab',
   streak: 0,
   xp: 0,
-  libraryHours: 0.0,
+  libraryHours: 0,
   favoriteQuestionIds: [],
   bookmarkedQuestionIds: [],
   joinedDate: 'New Member',
 };
 
 const STORAGE_KEY = 'examsathi_auth_user';
-const USERS_DB_KEY = 'examsathi_users_db';
-const OTP_STORAGE_KEY = 'examsathi_reset_otp';
 
 export function getStoredUser(): AuthUser {
   if (typeof window === 'undefined') return DEFAULT_USER;
@@ -79,39 +77,11 @@ export function registerUser(payload: {
 
   saveUserSession(newUser);
 
-  // Save to simulated database
-  if (typeof window !== 'undefined') {
-    try {
-      const dbRaw = localStorage.getItem(USERS_DB_KEY);
-      const db = dbRaw ? JSON.parse(dbRaw) : [];
-      db.push({ ...newUser, password: payload.password || 'password123' });
-      localStorage.setItem(USERS_DB_KEY, JSON.stringify(db));
-    } catch {}
-  }
-
   return newUser;
 }
 
-export function loginUser(emailOrPhone: string, password?: string): AuthUser {
-  let matchedUser = getStoredUser();
-
-  if (typeof window !== 'undefined') {
-    try {
-      const dbRaw = localStorage.getItem(USERS_DB_KEY);
-      if (dbRaw) {
-        const db = JSON.parse(dbRaw);
-        const found = db.find(
-          (u: any) => u.email.toLowerCase() === emailOrPhone.toLowerCase() || u.phone === emailOrPhone
-        );
-        if (found) matchedUser = found;
-      }
-    } catch {}
-  }
-
-  // Update streak
-  matchedUser.streak = Math.max(1, matchedUser.streak);
-  saveUserSession(matchedUser);
-  return matchedUser;
+export function loginUser(_identifier: string, _password?: string): AuthUser {
+  throw new Error('Account login is unavailable on this static site. Use guest or demo access.');
 }
 
 export function instantDemoLogin(role: 'ett' | 'clerk' | 'master-cadre' = 'ett'): AuthUser {
@@ -156,29 +126,11 @@ export function instantDemoLogin(role: 'ett' | 'clerk' | 'master-cadre' = 'ett')
   return user;
 }
 
-export function requestPasswordReset(emailOrPhone: string): { otp: string; success: boolean } {
-  const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  if (typeof window !== 'undefined') {
-    try {
-      localStorage.setItem(OTP_STORAGE_KEY, JSON.stringify({ emailOrPhone, otp, time: Date.now() }));
-    } catch {}
-  }
-  return { otp, success: true };
+export function requestPasswordReset(_identifier: string): { otp: string; success: boolean } {
+  return { otp: '', success: false };
 }
 
-export function verifyAndResetPassword(otpInput: string, newPassword: string): boolean {
-  if (typeof window !== 'undefined') {
-    try {
-      const raw = localStorage.getItem(OTP_STORAGE_KEY);
-      if (raw) {
-        const data = JSON.parse(raw);
-        if (data.otp === otpInput && Date.now() - data.time < 10 * 60 * 1000) {
-          localStorage.removeItem(OTP_STORAGE_KEY);
-          return true;
-        }
-      }
-    } catch {}
-  }
+export function verifyAndResetPassword(_otp: string, _password: string): boolean {
   return false;
 }
 

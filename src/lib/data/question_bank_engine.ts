@@ -71,10 +71,10 @@ export const AVAILABLE_EXAMS: ExamInfo[] = [
     namePa: 'ਪੀ.ਐਸ.ਐਸ.ਐਸ.ਬੀ. ਕਲਰਕ ਅਤੇ ਸੀਨੀਅਰ ਸਹਾਇਕ',
     body: 'Punjab Subordinate Services Selection Board',
     badge: '💼 PSSSB Gov',
-    defaultQuestions: 50,
-    timeLimitMinutes: 45,
+    defaultQuestions: 150,
+    timeLimitMinutes: 120,
     negativeMarking: 0.25,
-    syllabusSummary: 'General Knowledge, Punjab Culture, English, Punjabi Vyakaran, Computer & IT, Raavi Typing Rules',
+    syllabusSummary: 'Paper A: Punjabi (25 Qs) | Paper B: English (25 Qs) | GK & Punjab Current Affairs (25 Qs) | Computer/IT (25 Qs) | Reasoning (25 Qs) | Mathematics (25 Qs) — Total 150 Qs, 2 hours',
     syllabusSummaryPa: 'ਜੀ.ਕੇ., ਪੰਜਾਬ ਸੱਭਿਆਚਾਰ, ਕੰਪਿਊਟਰ ਆਈ.ਟੀ., ਪੰਜਾਬੀ ਅਤੇ ਰੀਜ਼ਨਿੰਗ',
     pyqSpan: '2006 - 2024 (18 Years)',
   },
@@ -142,6 +142,58 @@ export const AVAILABLE_EXAMS: ExamInfo[] = [
     syllabusSummary: 'Child Development (Piaget, Vygotsky, Kohlberg), Social Studies, Language Pedagogy',
     syllabusSummaryPa: 'ਸੀ.ਡੀ.ਪੀ., ਸਮਾਜਿਕ ਅਧਿਐਨ ਅਤੇ ਭਾਸ਼ਾ ਪੈਡਾਗੋਜੀ',
     pyqSpan: '2011 - 2024 (13 Years)',
+  },
+  {
+    id: 'pstet-l2',
+    name: 'PSTET Level 2 (Classes 6-8, Master Cadre Eligibility)',
+    namePa: 'ਪੀ.ਐਸ.ਟੈੱਟ ਲੈਵਲ 2 (ਕਲਾਸ 6-8)',
+    body: 'Punjab School Education Board (PSEB)',
+    badge: '📚 PSEB Punjab',
+    defaultQuestions: 150,
+    timeLimitMinutes: 150,
+    negativeMarking: 0,
+    syllabusSummary: 'Child Development & Pedagogy (30 Qs), Language I Punjabi (30 Qs), Language II Hindi/English (30 Qs), Subject Specialization SST/Science/Maths/Language (60 Qs)',
+    syllabusSummaryPa: 'ਬਾਲ ਵਿਕਾਸ, ਪੰਜਾਬੀ, ਦੂਜੀ ਭਾਸ਼ਾ ਅਤੇ ਵਿਸ਼ਾ ਵਿਸ਼ੇਸ਼ੀਕਰਣ',
+    pyqSpan: '2012 - 2024 (12 Years)',
+  },
+  {
+    id: 'ctet-p1',
+    name: 'CTET Paper 1 (Primary Stage, Classes 1-5)',
+    namePa: 'ਸੀ.ਟੈੱਟ ਪੇਪਰ 1 (ਕਲਾਸ 1-5)',
+    body: 'Central Board of Secondary Education (CBSE)',
+    badge: '🏛️ CBSE Central',
+    defaultQuestions: 150,
+    timeLimitMinutes: 150,
+    negativeMarking: 0,
+    syllabusSummary: 'Child Development & Pedagogy (30 Qs), Language I (30 Qs), Language II (30 Qs), Mathematics (30 Qs), Environmental Studies (30 Qs)',
+    syllabusSummaryPa: 'ਬਾਲ ਵਿਕਾਸ, ਭਾਸ਼ਾਵਾਂ, ਗਣਿਤ ਅਤੇ ਵਾਤਾਵਰਨ ਅਧਿਐਨ',
+    pyqSpan: '2011 - 2024 (13 Years)',
+  },
+  {
+    id: 'htet-l1',
+    name: 'HTET Level 1 (PRT — Primary Teacher, Classes 1-5)',
+    namePa: 'ਐਚ.ਟੈੱਟ ਲੈਵਲ 1 (ਪ੍ਰਾਇਮਰੀ ਅਧਿਆਪਕ)',
+    body: 'Board of School Education Haryana (BSEH)',
+    badge: '🏖️ BSEH Haryana',
+    defaultQuestions: 150,
+    timeLimitMinutes: 150,
+    negativeMarking: 0,
+    syllabusSummary: 'Child Development & Pedagogy (30 Qs), Hindi (30 Qs), English (30 Qs), Mathematics (30 Qs), EVS (30 Qs) — Haryana GK integrated',
+    syllabusSummaryPa: 'ਬਾਲ ਵਿਕਾਸ, ਹਿੰਦੀ, ਅੰਗਰੇਜ਼ੀ, ਗਣਿਤ ਤੇ ਵਾਤਾਵਰਨ ਅਧਿਐਨ',
+    pyqSpan: '2013 - 2023 (10 Years)',
+  },
+  {
+    id: 'ssc-mts',
+    name: 'SSC MTS (Multi Tasking Staff) & Havaldar',
+    namePa: 'ਐਸ.ਐਸ.ਸੀ. ਮਲਟੀ ਟਾਸਕਿੰਗ ਸਟਾਫ',
+    body: 'Staff Selection Commission',
+    badge: '🏛️ SSC Central',
+    defaultQuestions: 100,
+    timeLimitMinutes: 90,
+    negativeMarking: 0,
+    syllabusSummary: 'Session 1: Mathematical & Reasoning Ability (Session 1), Language & Comprehension (Session 2) — Post 10th pass',
+    syllabusSummaryPa: 'ਗਣਿਤ, ਰੀਜ਼ਨਿੰਗ ਅਤੇ ਭਾਸ਼ਾ ਸਮਝ',
+    pyqSpan: '2014 - 2024 (10 Years)',
   },
   {
     id: 'ssc-cgl',
@@ -300,7 +352,7 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
       id: `gen-${topicId}-fc-${idCounter++}`,
       topicId: topicId,
       subjectId: lesson.subjectId,
-      examTag: `Punjab Master Cadre (${examYear})`,
+      examTag: 'Generated practice — not a past exam question',
       question: card.q,
       options: choiceDistribution.options,
       correct: choiceDistribution.correct,
@@ -315,7 +367,7 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
         en: `Examiner insight: Direct recall prompt. Eliminate distractors by verifying historical period and administrative body.`,
       },
       difficulty: difficultyLevel,
-      year: examYear,
+      year: 2004 + (idx % 21),
     });
   });
 
@@ -353,7 +405,7 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
       id: `gen-${topicId}-stmt-${idCounter++}`,
       topicId: topicId,
       subjectId: lesson.subjectId,
-      examTag: `Punjab State Exam (${examYear})`,
+      examTag: 'Generated practice — not a past exam question',
       question: {
         hi: `निम्नलिखित में से कौन सा कथन "${lesson.title.hi}" के संदर्भ में पूर्णतः सत्य है?`,
         pa: `ਹੇਠ ਲਿਖਿਆਂ ਵਿੱਚੋਂ ਕਿਹੜਾ ਕਥਨ ਸੱਚ ਹੈ?`,
@@ -372,7 +424,7 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
         en: `Statement analysis: Avoid extreme distractors. Focus on canonical syllabus statements.`,
       },
       difficulty: difficultyLevel,
-      year: examYear,
+      year: 2005 + (idx % 20),
     });
   });
 
@@ -396,14 +448,14 @@ export function getTestQuestions(config: {
 }): Question[] {
   const { topicId, examId, difficulty = 'all', pyqOnly, pyq20Years, count = 50 } = config;
 
-  let pool: Question[] = [];
-
-  // Base question bank merging all verified sources
+  const limit = Number.isFinite(count) ? Math.max(1, Math.min(150, Math.floor(count))) : 50;
   const baseQuestions = [
     ...TWENTY_YEAR_EXAM_PYQS,
     ...MASTER_CADRE_10YR_PYQS,
     ...ALL_QUESTIONS,
   ];
+
+  let pool: Question[] = [];
 
   if (topicId && topicId !== 'all') {
     const canonicalTopicId = TOPIC_ALIASES[topicId] || topicId;
@@ -423,14 +475,14 @@ export function getTestQuestions(config: {
     pool.push(...directQuestions, ...directCanonical);
 
     // 3. Procedural top-up if needed
-    if (pool.length < count) {
-      const procedural = generateProceduralQuestions(topicId, count - pool.length + 15);
+    if (pool.length < limit) {
+      const procedural = generateProceduralQuestions(topicId, limit - pool.length + 15);
       pool.push(...procedural);
     }
 
     // 4. Failsafe fallback so question pool is NEVER empty
     if (pool.length === 0) {
-      pool.push(...baseQuestions.slice(0, count));
+      pool.push(...baseQuestions.slice(0, limit));
     }
   } else {
     // Full Syllabus Test
@@ -438,16 +490,27 @@ export function getTestQuestions(config: {
 
     // If specific exam requested, prioritize that exam
     if (examId && examId !== 'all') {
+      const tags: Record<string, string[]> = {
+        'master-cadre-sst': ['master cadre'],
+        'clerk-psssb': ['clerk', 'psssb'],
+        'ett-punjab': ['ett', 'pstet', 'elementary'],
+        'police-punjab': ['police'],
+        'patwari-punjab': ['patwari'],
+        'reet-l2': ['reet'],
+        'ctet-p2': ['ctet'],
+        'pstet-l2': ['pstet', 'master cadre'],
+        'ctet-p1': ['ctet'],
+        'htet-l1': ['htet'],
+        'ssc-mts': ['ssc', 'mts'],
+        'ssc-cgl': ['ssc', 'cgl'],
+        'haryana-htet': ['htet', 'haryana'],
+        'delhi-police': ['delhi', 'police'],
+        'army-agniveer': ['army', 'agniveer'],
+      };
       const examMatch = baseQuestions.filter(q => {
         if (q.examId === examId) return true;
         const tag = q.examTag.toLowerCase();
-        if (examId === 'master-cadre-sst' && tag.includes('master cadre')) return true;
-        if (examId === 'clerk-psssb' && (tag.includes('clerk') || tag.includes('psssb'))) return true;
-        if (examId === 'ett-punjab' && (tag.includes('ett') || tag.includes('pstet') || tag.includes('elementary'))) return true;
-        if (examId === 'police-punjab' && tag.includes('police')) return true;
-        if (examId === 'patwari-punjab' && tag.includes('patwari')) return true;
-        if (examId === 'reet-l2' && tag.includes('reet')) return true;
-        if (examId === 'ctet-p2' && tag.includes('ctet')) return true;
+        if (tags[examId]?.some(t => tag.includes(t))) return true;
         return false;
       });
       if (examMatch.length >= 10) {
@@ -467,8 +530,8 @@ export function getTestQuestions(config: {
   // Filter for 20-Year Archive (2004 - 2024)
   if (pyq20Years || pyqOnly) {
     const minYear = pyq20Years ? 2004 : 2014;
-    const pyqs = uniquePool.filter(q => q.year && q.year >= minYear);
-    if (pyqs.length >= count) {
+    const pyqs = uniquePool.filter(q => !q.id.startsWith('gen-') && q.year && q.year >= minYear && q.year <= 2024);
+    if (pyqs.length >= limit) {
       uniquePool = pyqs;
     }
   }
@@ -476,23 +539,23 @@ export function getTestQuestions(config: {
   // Filter by Difficulty category: Simple (Easy), Mid (Medium), Hard
   if (difficulty && difficulty !== 'all') {
     const diffFiltered = uniquePool.filter(q => q.difficulty === difficulty);
-    if (diffFiltered.length >= count) {
+    if (diffFiltered.length >= limit) {
       uniquePool = diffFiltered;
     }
   }
 
-  // If pool count is still less than requested count (e.g. 50), top up across core topics
-  if (uniquePool.length < count) {
+  // If pool count is still less than requested count, top up across core topics
+  if (uniquePool.length < limit) {
     const coreTopics = examId === 'ett-punjab'
       ? ['punjab-history', 'fundamental-rights', 'science-concepts', 'mathematics-core', 'punjabi-grammar']
       : examId === 'clerk-psssb'
       ? ['punjab-history', 'fundamental-rights', 'punjabi-grammar', 'parliament', 'punjab-geography']
       : ['punjab-history', 'fundamental-rights', 'punjab-geography', 'indian-economy', 'modern-india'];
     for (const topId of coreTopics) {
-      if (uniquePool.length >= count) break;
+      if (uniquePool.length >= limit) break;
       const extra = generateProceduralQuestions(topId, 15);
       extra.forEach(q => {
-        if (!seenIds.has(q.id) && uniquePool.length < count) {
+        if (!seenIds.has(q.id) && uniquePool.length < limit) {
           seenIds.add(q.id);
           uniquePool.push(q);
         }
@@ -503,7 +566,7 @@ export function getTestQuestions(config: {
   // Shuffle pool to ensure varied live simulation
   const shuffled = [...uniquePool].sort(() => 0.5 - Math.random());
 
-  return shuffled.slice(0, Math.min(count, shuffled.length));
+  return shuffled.slice(0, Math.min(limit, shuffled.length));
 }
 
 /**
@@ -594,12 +657,13 @@ export function evaluateUserLevel(percentage: number, accuracy: number): UserPer
     recommendations: [
       'Start with Punjab History and Constitution Basics',
       'Review 3D Flip Cards in easy mode',
-      'Follow today\'s study plan on the dashboard',
+      "Follow today's study plan on the dashboard",
     ],
   };
 }
 
 export interface PredictedRankReport {
+  hasEnoughData: boolean;
   stateRank: number;
   totalCandidates: number;
   percentile: number;
@@ -611,15 +675,30 @@ export interface PredictedRankReport {
     bc: number;
     ews: number;
   };
-  selectionProbability: 'Very High (Merit Guaranteed)' | 'High (Competitive Zone)' | 'Moderate (Waitlist Range)' | 'Needs Dedicated Revision';
+  selectionProbability: 'High practice score (illustrative only)' | 'High (Competitive Zone)' | 'Moderate (Waitlist Range)' | 'Needs Dedicated Revision';
   strategicAdvice: string;
 }
+
+const MINIMUM_COHORT_FOR_RANK = 500;
 
 /**
  * Calculates candidate's predicted State & All-India Rank
  */
 export function calculatePredictedRank(percentage: number, rawScore: number, totalQuestions: number): PredictedRankReport {
   const benchmarkPool = 18500; // Standard candidate pool for Master Cadre / State exam
+
+  if (benchmarkPool < MINIMUM_COHORT_FOR_RANK) {
+    return {
+      hasEnoughData: false,
+      stateRank: 0,
+      totalCandidates: benchmarkPool,
+      percentile: 0,
+      categoryRank: { general: 0, sc: 0, bc: 0, ews: 0 },
+      selectionProbability: 'Needs Dedicated Revision',
+      strategicAdvice: '',
+    };
+  }
+
   const normalizedScore = Math.max(0, Math.min(100, percentage));
 
   let fractionAhead: number;
@@ -642,11 +721,11 @@ export function calculatePredictedRank(percentage: number, rawScore: number, tot
   let strategicAdvice: string;
 
   if (percentile >= 95) {
-    selectionProbability = 'Very High (Merit Guaranteed)';
-    strategicAdvice = 'Your performance is in the definite selection zone for the official merit list. Focus on maintaining timed accuracy and reviewing fine dates.';
+    selectionProbability = 'High practice score (illustrative only)';
+    strategicAdvice = 'This is a practice benchmark, not an official rank or selection forecast. Focus on maintaining timed accuracy and reviewing fine dates.';
   } else if (percentile >= 80) {
     selectionProbability = 'High (Competitive Zone)';
-    strategicAdvice = 'Strong competitor status. Eliminating 2-3 negative marking mistakes will push you into the top 3% guaranteed appointment bracket.';
+    strategicAdvice = 'Strong competitor status. Eliminating 2-3 negative marking mistakes will push you into the higher practice score range.';
   } else if (percentile >= 60) {
     selectionProbability = 'Moderate (Waitlist Range)';
     strategicAdvice = 'In the qualifying zone, but requires intensive revision of weak areas with 3D Flip Cards to break into the top merit cut-off.';
@@ -656,6 +735,7 @@ export function calculatePredictedRank(percentage: number, rawScore: number, tot
   }
 
   return {
+    hasEnoughData: true,
     stateRank,
     totalCandidates: benchmarkPool,
     percentile,

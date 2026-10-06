@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Mail, MessageSquare, AlertCircle } from 'lucide-react';
+import { ArrowLeft, Mail, MessageSquare, AlertCircle, Github, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact Us & Errata Support',
@@ -27,11 +27,11 @@ export default function ContactPage() {
             <h3>Direct Email Contact</h3>
           </div>
           <p className="text-slate-300 text-xs">
-            For general feedback, partnership inquiries, or suggestions:
+            For general feedback, inquiries, or support:
           </p>
-          <p className="font-mono text-white text-xs bg-slate-800 p-2 rounded border border-slate-700 inline-block">
-            support@examsathi.in
-          </p>
+          <a href="mailto:contact@examsathi.in" className="font-mono text-teal-300 text-xs bg-slate-800 p-2 rounded border border-slate-700 inline-block hover:underline">
+            contact@examsathi.in
+          </a>
         </div>
 
         <div className="p-4 bg-amber-950/40 border border-amber-500/40 rounded-xl space-y-2">
@@ -40,7 +40,7 @@ export default function ContactPage() {
             <h3>Report Question Errata / Discrepancy</h3>
           </div>
           <p className="text-slate-300 text-xs leading-relaxed">
-            Found an issue with a question or answer key? Please email us with:
+            Found an issue with a question or answer key? Please email us at <a href="mailto:content@examsathi.in" className="text-amber-300 underline">content@examsathi.in</a> with:
           </p>
           <ul className="list-disc pl-5 space-y-1 text-slate-300 text-[11px]">
             <li>Question ID or Topic Name</li>
@@ -52,20 +52,33 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="p-4 bg-emerald-950/40 border border-emerald-500/40 rounded-xl space-y-2">
-          <div className="flex items-center gap-2 text-emerald-300 font-bold text-sm">
-            <MessageSquare size={16} />
-            <h3>WhatsApp Student Community</h3>
+        <div className="p-4 bg-blue-950/40 border border-blue-500/40 rounded-xl space-y-2">
+          <div className="flex items-center gap-2 text-blue-300 font-bold text-sm">
+            <Lightbulb size={16} />
+            <h3>Suggest a Feature</h3>
           </div>
           <p className="text-slate-300 text-xs">
-            Join thousands of Punjab & state aspirants sharing daily notes, study schedules, and mock test scores for free.
+            Have an idea to make studying easier for students? Let us know at <a href="mailto:feedback@examsathi.in" className="text-blue-300 underline">feedback@examsathi.in</a>.
           </p>
-          <Link
-            href="/dashboard"
-            className="inline-flex items-center gap-1.5 text-emerald-400 font-bold hover:underline"
-          >
-            Go to Student Dashboard &rarr;
-          </Link>
+        </div>
+
+        <div className="p-4 bg-slate-900/60 border border-slate-700/60 rounded-xl space-y-2">
+          <div className="flex items-center gap-2 text-indigo-400 font-bold text-sm">
+            <Github size={16} />
+            <h3>Open Source & Repository</h3>
+          </div>
+          <p className="text-slate-300 text-xs">
+            Contribute questions, fixes, or view code on GitHub:
+          </p>
+          <a href="https://github.com/satdevkumar021-glitch/examsathi" target="_blank" rel="noopener noreferrer" className="text-indigo-300 underline font-mono text-xs">
+            github.com/satdevkumar021-glitch/examsathi
+          </a>
+        </div>
+
+        <div className="flex gap-4 pt-3 border-t border-slate-700/80 text-xs justify-center text-slate-400">
+          <Link href="/privacy/" className="hover:text-teal-400">Privacy Policy</Link>
+          <Link href="/terms/" className="hover:text-teal-400">Terms of Service</Link>
+          <Link href="/about/" className="hover:text-teal-400">About ExamSathi</Link>
         </div>
       </div>
     </div>

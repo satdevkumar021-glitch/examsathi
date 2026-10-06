@@ -195,13 +195,20 @@ export const ECONOMICS_LESSONS: Record<string, Lesson> = {
     ],
     videos: [
       {
-        title: 'Macroeconomics & Indian Economy Complete Revision Masterclass',
-        channel: 'Economy With Dr. Arora',
-        youtubeId: 'Economy1991Master',
+        title: 'Indian Economy Basics — RBI, Banking & GDP | UPSC/SSC/State PSC',
+        channel: 'StudyIQ IAS',
+        youtubeId: 'SJxMBRTB1Ic',
         language: 'hi',
-        views: '610K',
-        duration: '1:30:00',
-        tags: ['Economics', 'RBI', 'Master Cadre'],
+        duration: '45 min',
+        tags: ['RBI', 'Banking', 'GDP', 'Economy', 'Master Cadre', 'SSC CGL'],
+      },
+      {
+        title: 'Five Year Plans & NITI Aayog Complete Lecture',
+        channel: 'Khan GS Research Centre',
+        youtubeId: 'xZbKHDPPrrc',
+        language: 'hi',
+        duration: '35 min',
+        tags: ['NITI Aayog', 'Five Year Plans', 'Economy'],
       },
     ],
     bookRefs: [

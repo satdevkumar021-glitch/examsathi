@@ -3,9 +3,13 @@
   "short_name": "ExamSathi",
   "description": "Free, high-fidelity exam preparation platform for Punjab, Rajasthan, Haryana, Delhi, and Central examinations.",
   "start_url": "/dashboard/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
+  "lang": "hi",
+  "categories": ["education"],
   "icons": [
     {
       "src": "/globe.svg",
@@ -18,6 +22,22 @@
       "sizes": "512x512",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mock Tests",
+      "short_name": "Tests",
+      "description": "Start a CBT mock test",
+      "url": "/mock-test/",
+      "icons": [{ "src": "/globe.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Study Material",
+      "short_name": "Study",
+      "description": "Browse exam catalog",
+      "url": "/exams/",
+      "icons": [{ "src": "/globe.svg", "sizes": "192x192" }]
     }
   ]
 }

@@ -7,6 +7,7 @@ import {
   ShieldAlert, Brain, ChevronRight, Check, ChevronLeft
 } from 'lucide-react';
 import { getStoredUser } from '@/lib/auth';
+import { getSRSSummary } from '@/lib/srs';
 
 interface RoadmapTask {
   id: string;
@@ -27,17 +28,19 @@ interface RoadmapDay {
 }
 
 export default function StudyRoadmap() {
-  const [selectedTrack, setSelectedTrack] = useState<'ett' | 'clerk' | 'master-cadre'>('ett');
+  const [selectedTrack, setSelectedTrack] = useState<'ett' | 'clerk' | 'master-cadre' | 'reet'>('ett');
   const [completedTasks, setCompletedTasks] = useState<Record<string, boolean>>({});
-  const [activeDay, setActiveDay] = useState<number>(14);
+  const [activeDay, setActiveDay] = useState<number>(1);
   const [dailyChallengeAnswer, setDailyChallengeAnswer] = useState<string | null>(null);
   const [showChallengeSolution, setShowChallengeSolution] = useState(false);
+  const [srsSummary, setSrsSummary] = useState({ due: 0, new_: 0, learning: 0, review: 0 });
 
   useEffect(() => {
     try {
       const storedUser = getStoredUser();
       if (storedUser.targetExam.includes('clerk')) setSelectedTrack('clerk');
       else if (storedUser.targetExam.includes('master')) setSelectedTrack('master-cadre');
+      else if (storedUser.targetExam.includes('reet')) setSelectedTrack('reet');
       else setSelectedTrack('ett');
 
       // Calculate dynamic day from user joined date or streak
@@ -56,6 +59,26 @@ export default function StudyRoadmap() {
       const saved = localStorage.getItem('examsathi_roadmap_completed');
       if (saved) setCompletedTasks(JSON.parse(saved));
     } catch {}
+  }, []);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('examsathi_study_start_date');
+      if (stored) {
+        const startDate = new Date(stored);
+        const today = new Date();
+        const diffDays = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+        setActiveDay(Math.max(1, Math.min(diffDays, 60)));
+      } else {
+        // First visit — set start date to today
+        localStorage.setItem('examsathi_study_start_date', new Date().toISOString());
+        setActiveDay(1);
+      }
+    } catch {}
+  }, []);
+
+  useEffect(() => {
+    setSrsSummary(getSRSSummary([]));
   }, []);
 
   const toggleTask = (taskId: string) => {
@@ -498,6 +521,71 @@ export default function StudyRoadmap() {
         },
       ],
     },
+    reet: {
+      name: 'REET Level 1 & 2 (Rajasthan Eligibility Exam)',
+      badge: '🌵 REET Track',
+      dailyChallenge: {
+        id: 'chal-reet-1',
+        title: 'Daily Merit-Decider: Vygotsky ZPD & Scaffolding',
+        question: "वायगोत्स्की का समीपस्थ विकास का क्षेत्र (ZPD) किस अवधारणा को दर्शाता है?",
+        options: {
+          A: 'बच्चे की वर्तमान क्षमता',
+          B: 'वह क्षेत्र जो बच्चा अकेले नहीं पर मदद से कर सकता है',
+          C: 'बच्चे की अधिकतम क्षमता',
+          D: 'बच्चे की सीखने की गति',
+        },
+        correct: 'B',
+        rationale: 'ZPD वह दूरी है जो बच्चा अकेले और किसी सक्षम व्यक्ति की मदद से कर सकता है। यह Scaffolding की नींव है।',
+        xp: 50,
+      },
+      days: [
+        {
+          dayNumber: 1,
+          phase: 'Foundation',
+          theme: 'Child Development & Pedagogy — Piaget Stages',
+          tasks: [
+            { id: 'reet-t1', title: 'Piaget के 4 Stages पढ़ें', titlePa: 'ਪਿਆਜੇ ਦੇ 4 ਪੜਾਅ ਪੜ੍ਹੋ', category: 'concept', estimatedMinutes: 30, link: '/lesson/ett-child-pedagogy', linkText: 'CDP Lesson', xp: 30 },
+            { id: 'reet-t2', title: '10 Qs Practice on Piaget', titlePa: 'ਪਿਆਜੇ ਉੱਤੇ 10 ਸਵਾਲ', category: 'mcq', estimatedMinutes: 15, link: '/mock-test/topic-ett-child-pedagogy', linkText: 'Practise MCQs', xp: 20 },
+          ],
+        },
+        {
+          dayNumber: 2,
+          phase: 'Foundation',
+          theme: "Vygotsky, Kohlberg & Bloom's Taxonomy",
+          tasks: [
+            { id: 'reet-t3', title: 'Vygotsky ZPD और Scaffolding', titlePa: 'ਵਾਈਗੋਤਸਕੀ ZPD', category: 'concept', estimatedMinutes: 20, link: '/lesson/ett-child-pedagogy', linkText: 'CDP Lesson', xp: 20 },
+            { id: 'reet-t4', title: 'RTE 2009 के मुख्य प्रावधान', titlePa: 'RTE 2009 ਮੁੱਖ ਧਾਰਾਵਾਂ', category: 'flip', estimatedMinutes: 20, link: '/mock-test/topic-ett-child-pedagogy?mode=flip', linkText: 'Flip Cards', xp: 20 },
+          ],
+        },
+        {
+          dayNumber: 3,
+          phase: 'Core Content',
+          theme: 'Rajasthan History — Ancient and Medieval',
+          tasks: [
+            { id: 'reet-t5', title: 'Maharana Pratap और Battle of Haldighati', titlePa: 'ਮਹਾਰਾਣਾ ਪ੍ਰਤਾਪ', category: 'concept', estimatedMinutes: 25, link: '/lesson/raj-history-pratap', linkText: 'History Lesson', xp: 25 },
+            { id: 'reet-t6', title: 'Rajasthan History MCQs', titlePa: 'ਰਾਜਸਥਾਨ ਇਤਿਹਾਸ MCQs', category: 'mcq', estimatedMinutes: 20, link: '/mock-test/topic-modern-india', linkText: 'Practise', xp: 20 },
+          ],
+        },
+        {
+          dayNumber: 4,
+          phase: 'Core Content',
+          theme: 'Rajasthan Geography — Rivers and Terrain',
+          tasks: [
+            { id: 'reet-t7', title: 'Chambal, Luni, Banas नदियाँ', titlePa: 'ਰਾਜਸਥਾਨ ਦੇ ਦਰਿਆ', category: 'concept', estimatedMinutes: 25, link: '/lesson/punjab-geography', linkText: 'Geography Lesson', xp: 25 },
+            { id: 'reet-t8', title: 'Geography Flip Cards', titlePa: 'ਭੂਗੋਲ ਫਲਿੱਪ ਕਾਰਡ', category: 'flip', estimatedMinutes: 15, link: '/mock-test/topic-physical-geography?mode=flip', linkText: 'Flip Cards', xp: 15 },
+          ],
+        },
+        {
+          dayNumber: 5,
+          phase: 'Mock & Review',
+          theme: 'Full REET Mock Test',
+          tasks: [
+            { id: 'reet-t9', title: 'REET 50 Qs Full Mock Test', titlePa: 'REET ਪੂਰਾ ਮਾਕ ਟੈਸਟ', category: 'cbt', estimatedMinutes: 50, link: '/mock-test/topic-ett-child-pedagogy', linkText: 'Start Mock', xp: 50 },
+            { id: 'reet-t10', title: 'Result Analysis — Weak Topics', titlePa: 'ਨਤੀਜਾ ਵਿਸ਼ਲੇਸ਼ਣ', category: 'concept', estimatedMinutes: 20, link: '/mock-test', linkText: 'Review', xp: 10 },
+          ],
+        },
+      ],
+    },
   };
 
   const activeRoadmap = TRACK_ROADMAPS[selectedTrack] || TRACK_ROADMAPS.ett;
@@ -536,11 +624,12 @@ export default function StudyRoadmap() {
         </div>
 
         {/* Track Selector Tabs */}
-        <div className="grid grid-cols-3 gap-2 mt-1">
+        <div className="grid grid-cols-4 gap-2 mt-1">
           {[
             { id: 'ett', label: '👶 ETT Punjab', desc: '6635/5994' },
             { id: 'clerk', label: '💼 PSSSB Clerk', desc: 'Raavi & IT' },
             { id: 'master-cadre', label: '🌾 Master Cadre', desc: 'SST Core Track' },
+            { id: 'reet', label: '🌵 REET', desc: 'Level 1 & 2' },
           ].map(track => {
             const isSelected = selectedTrack === track.id;
             return (
@@ -605,6 +694,19 @@ export default function StudyRoadmap() {
           <span className="text-xs font-black text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/30 font-mono shrink-0">
             +{completedCount * 50} XP
           </span>
+        </div>
+
+        {/* SRS Flashcard Queue */}
+        <div className="bg-slate-800/60 rounded-xl p-3 border border-slate-700 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            <Layers size={16} className="text-teal-400" />
+            <span className="text-xs font-bold text-white">Today&apos;s Flashcard Queue</span>
+          </div>
+          <div className="flex gap-3 text-xs">
+            <span className="text-amber-400"><strong>{srsSummary.due}</strong> due</span>
+            <span className="text-blue-400"><strong>{srsSummary.new_}</strong> new</span>
+            <span className="text-green-400"><strong>{srsSummary.review}</strong> review</span>
+          </div>
         </div>
 
         {/* Progress Bar */}

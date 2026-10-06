@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /admin
+Disallow: /editor
 Disallow: /api/
 
 Sitemap: https://satdevkumar021-glitch.github.io/examsathi/sitemap.xml

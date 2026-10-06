@@ -1,138 +1,125 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
-import { Mail, KeyRound, Lock, ArrowRight, CheckCircle2, ChevronLeft } from 'lucide-react';
-import { requestPasswordReset, verifyAndResetPassword } from '@/lib/auth';
+import { Mail, ArrowRight, Check } from 'lucide-react';
+import { createClient } from '@/lib/supabase/client';
+import { isSupabaseConfigured, authRedirectUrl } from '@/lib/supabase/config';
 
 export default function ForgotPassword() {
-  const router = useRouter();
-  const [step, setStep] = useState<1 | 2>(1);
-  const [identifier, setIdentifier] = useState('');
-  const [otp, setOtp] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-  const [generatedOtp, setGeneratedOtp] = useState('');
-  const [errorMsg, setErrorMsg] = useState<string | null>(null);
-  const [successMsg, setSuccessMsg] = useState<string | null>(null);
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const configured = isSupabaseConfigured();
 
-  const handleRequestOtp = (e: React.FormEvent) => {
+  const handleReset = async (e: React.FormEvent) => {
     e.preventDefault();
-    const res = requestPasswordReset(identifier);
-    setGeneratedOtp(res.otp);
-    setStep(2);
-    setErrorMsg(null);
-  };
-
-  const handleResetPassword = (e: React.FormEvent) => {
-    e.preventDefault();
-    const ok = verifyAndResetPassword(otp, newPassword);
-    if (ok) {
-      setSuccessMsg('Password reset successfully! Redirecting to login...');
-      setTimeout(() => {
-        router.push('/login');
-      }, 1500);
-    } else {
-      setErrorMsg('Invalid OTP. Please enter the simulated OTP shown above or 123456.');
+    if (!isSupabaseConfigured() || loading) return;
+    setError(null);
+    setLoading(true);
+    try {
+      const supabase = createClient();
+      const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: authRedirectUrl('/auth/reset-password'),
+      });
+      if (resetError) {
+        setError(resetError.message);
+        setLoading(false);
+        return;
+      }
+      setSent(true);
+      setLoading(false);
+    } catch {
+      setError('An unexpected error occurred. Please try again.');
+      setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex flex-col p-6 justify-center max-w-lg mx-auto w-full text-slate-100">
-      
+    <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex flex-col p-6 justify-center max-w-lg mx-auto w-full text-slate-100">
       <div className="bg-slate-900/90 backdrop-blur-xl p-7 rounded-3xl border border-slate-700/80 shadow-2xl">
-        
-        <Link href="/login" className="inline-flex items-center gap-1 text-xs text-slate-400 hover:text-white mb-4">
-          <ChevronLeft size={16} />
-          <span>Back to Login</span>
-        </Link>
 
         <div className="text-center mb-6">
-          <div className="w-12 h-12 bg-gradient-to-tr from-amber-500 to-teal-500 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2 shadow-lg">
+          <div className="w-12 h-12 bg-gradient-to-tr from-teal-500 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2 shadow-lg">
             🔑
           </div>
-          <h2 className="text-2xl font-black text-white">Reset Account Password</h2>
+          <h1 className="text-2xl font-black text-white">Reset Password</h1>
           <p className="text-xs text-slate-400 mt-1">
-            {step === 1 ? 'Enter your registered email or phone to receive a reset code' : 'Enter the verification code and your new password'}
+            Enter your email to receive a password reset link
           </p>
         </div>
 
-        {errorMsg && (
-          <div className="bg-rose-950/60 border border-rose-500/50 p-2.5 rounded-xl text-rose-300 text-xs mb-4 text-center">
-            {errorMsg}
+        {/* Backend not configured notice */}
+        {!configured && (
+          <div className="bg-amber-950/60 border border-amber-500/40 rounded-xl p-3 mb-4 text-xs text-amber-200">
+            ⚠️ <strong>Backend not configured</strong> — password reset is only available when Supabase is set up.
+            <br />
+            <Link href="/login" className="text-teal-300 underline mt-1 inline-block">
+              Continue with guest or demo access →
+            </Link>
           </div>
         )}
 
-        {successMsg && (
-          <div className="bg-emerald-950/60 border border-emerald-500/50 p-3 rounded-xl text-emerald-300 text-xs mb-4 text-center flex items-center justify-center gap-1.5 font-bold">
-            <CheckCircle2 size={16} />
-            <span>{successMsg}</span>
-          </div>
-        )}
-
-        {step === 1 ? (
-          <form onSubmit={handleRequestOtp} className="flex flex-col gap-3.5">
-            <div className="relative">
-              <Mail className="absolute left-3.5 top-3.5 text-slate-400" size={18} />
-              <input 
-                type="text" 
-                value={identifier}
-                onChange={e => setIdentifier(e.target.value)}
-                placeholder="Email address or phone number" 
-                required 
-                className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl py-3 pl-11 pr-4 text-xs focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 placeholder-slate-500"
-              />
+        {sent ? (
+          <div className="text-center py-4">
+            <div className="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+              <Check size={24} className="text-teal-400" />
             </div>
-
-            <button 
-              type="submit" 
-              className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-3.5 rounded-xl shadow-lg mt-2 text-xs flex items-center justify-center gap-2 transition"
+            <p className="text-sm text-slate-200 font-semibold mb-1">Recovery request received</p>
+            <p className="text-xs text-slate-400 mb-4">If an account exists, a recovery link will be sent to <span className="text-teal-300">{email}</span></p>
+            <Link
+              href="/login"
+              className="inline-flex items-center gap-2 text-xs text-teal-400 hover:text-teal-300 underline"
             >
-              <span>Send Verification Code</span>
-              <ArrowRight size={15} />
-            </button>
-          </form>
+              Back to Login <ArrowRight size={13} />
+            </Link>
+          </div>
         ) : (
-          <form onSubmit={handleResetPassword} className="flex flex-col gap-3.5">
-            {/* Simulation Notification */}
-            <div className="bg-teal-950/50 border border-teal-500/40 p-2.5 rounded-xl text-center text-xs text-teal-300">
-              <span>Demo Security Code: <strong>{generatedOtp || '123456'}</strong></span>
-            </div>
+          <>
+            {error && (
+              <div className="bg-red-950/60 border border-red-500/40 rounded-xl p-3 mb-4 text-xs text-red-300">
+                {error}
+              </div>
+            )}
 
-            <div className="relative">
-              <KeyRound className="absolute left-3.5 top-3.5 text-slate-400" size={18} />
-              <input 
-                type="text" 
-                value={otp}
-                onChange={e => setOtp(e.target.value)}
-                placeholder="6-digit verification code" 
-                required 
-                className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl py-3 pl-11 pr-4 text-xs focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 placeholder-slate-500 font-mono tracking-widest text-center"
-              />
-            </div>
+            <form onSubmit={handleReset} className="flex flex-col gap-3.5">
+              <div className="relative">
+                <Mail className="absolute left-3.5 top-3.5 text-slate-400" size={16} />
+                <input
+                  type="email"
+              aria-label="Email address"
+              autoComplete="email"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
+                  placeholder="Your email address"
+                  required
+                  disabled={!configured}
+                  className="w-full bg-slate-800/70 border border-slate-700 text-white rounded-xl py-3 pl-10 pr-4 text-sm outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 disabled:opacity-50 disabled:cursor-not-allowed transition"
+                />
+              </div>
 
-            <div className="relative">
-              <Lock className="absolute left-3.5 top-3.5 text-slate-400" size={18} />
-              <input 
-                type="password" 
-                value={newPassword}
-                onChange={e => setNewPassword(e.target.value)}
-                placeholder="Set New Password" 
-                required 
-                className="w-full bg-slate-800 border border-slate-700 text-white rounded-xl py-3 pl-11 pr-4 text-xs focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 placeholder-slate-500"
-              />
-            </div>
-
-            <button 
-              type="submit" 
-              className="w-full bg-gradient-to-r from-teal-500 to-emerald-500 hover:opacity-95 text-slate-950 font-black py-3.5 rounded-xl shadow-lg mt-2 text-xs flex items-center justify-center gap-2 transition"
-            >
-              <span>Update Password & Login</span>
-              <CheckCircle2 size={15} />
-            </button>
-          </form>
+              <button
+                type="submit"
+                disabled={loading || !configured}
+                className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-black py-3 rounded-xl shadow-lg text-sm flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {loading ? (
+                  <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                ) : (
+                  <>Send Reset Link <ArrowRight size={15} /></>
+                )}
+              </button>
+            </form>
+          </>
         )}
 
+        <p className="text-center mt-5 text-xs text-slate-400">
+          Remembered your password?{' '}
+          <Link href="/login" className="text-teal-400 font-bold hover:underline">
+            Sign In
+          </Link>
+        </p>
       </div>
-    </div>
+    </main>
   );
 }

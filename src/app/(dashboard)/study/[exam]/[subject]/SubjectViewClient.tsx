@@ -57,6 +57,17 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
           <p className="text-xs text-slate-400 truncate">
             {exam.body} • {exam.totalMarks} Marks • {exam.duration}
           </p>
+          {exam.officialWebsite && (
+            <a
+              href={exam.officialWebsite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-teal-400 hover:text-teal-300 transition truncate"
+              onClick={e => e.stopPropagation()}
+            >
+              📋 Official Source ↗
+            </a>
+          )}
         </div>
       </div>
 

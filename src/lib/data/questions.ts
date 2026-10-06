@@ -23,7 +23,7 @@ export interface Question {
   explanation: { hi: string; pa?: string; en: string };
   thought?: { hi: string; pa?: string; en: string }; // Strategic Examiner Insight & Elimination Technique
   difficulty: 'easy' | 'medium' | 'hard';
-  year: number;
+  year?: number;
 }
 
 export const QUESTIONS: Question[] = [
@@ -918,6 +918,9 @@ import { SST_MISSING_QUESTIONS } from './questions/sst_missing_questions';
 import { MASTER_CADRE_10YR_PYQS } from './questions/master_cadre_pyqs';
 import { TWENTY_YEAR_EXAM_PYQS } from './questions/twenty_year_pyqs';
 import { ETT_AND_CLERK_PYQS } from './questions/ett_and_clerk_pyqs';
+import { REET_QUESTIONS } from './questions/reet_questions';
+import { POLICE_PATWARI_QUESTIONS } from './questions/police_patwari_questions';
+import { SSC_HTET_QUESTIONS } from './questions/ssc_htet_questions';
 
 export const ALL_QUESTIONS: Question[] = [
   ...QUESTIONS,
@@ -926,6 +929,9 @@ export const ALL_QUESTIONS: Question[] = [
   ...MASTER_CADRE_10YR_PYQS,
   ...TWENTY_YEAR_EXAM_PYQS,
   ...ETT_AND_CLERK_PYQS,
+  ...REET_QUESTIONS,
+  ...POLICE_PATWARI_QUESTIONS,
+  ...SSC_HTET_QUESTIONS,
 ];
 
 // Topic alias mapping to ensure cross-compatibility between syllabus IDs and reference IDs

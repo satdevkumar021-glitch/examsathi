@@ -448,3 +448,18 @@ The Phase 0 audit reveals that ExamSathi possesses a well-structured Indic educa
 
 **Total Regression Tests:** 79/79 passed across `e2e/link_checker.spec.ts`, `e2e/audit.spec.ts`, `e2e/milestone4.spec.ts`, and `e2e/milestone5.spec.ts`.  
 **Static Export:** 210/210 SSG routes compiled without errors to `./out`.
+
+---
+
+## 4. Backend & Storage Status
+
+**Current Hosting Architecture:**
+- The current GitHub Pages deployment runs a static Next.js export (`output: 'export'`).
+- Auth is supported via Supabase Auth client (`@supabase/ssr`) with automatic fallback to local guest session state when credentials are unset.
+- All core syllabus trees, lesson chapters, and past questions are statically bundled for zero-latency, offline-capable performance.
+
+## 5. Editorial & Content Review Notes
+
+- **PYQ Verification:** ETT Punjab is verified against 12-Year PYQs; Punjab Master Cadre is backed by 2004–2024 (20-Year) past question archives.
+- **Editorial Review Workflow:** An authoring and editorial review pipeline (`draft` → `review` → `published`) is available in `/admin` with role-based access control.
+- **Typography & Orthography:** Scanned across all lessons to remove misplaced glyphs and ensure correct Gurmukhi and Devanagari Unicode rendering.

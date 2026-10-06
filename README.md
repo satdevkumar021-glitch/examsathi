@@ -1,24 +1,45 @@
 # 🎓 ExamSathi (परीक्षा साथी · ਪ੍ਰੀਖਿਆ ਸਾਥੀ)
 
-> **An open-source, authoritative exam preparation platform, topic-wise mock test engine & multilingual learning suite for state and central government examinations.**
+> **An open-source exam preparation platform for government recruitment in Punjab, Rajasthan, Haryana, and Central Government — with topic-wise CBT mock tests, spaced repetition flash cards, and a multilingual (हिंदी · ਪੰਜਾਬੀ · English) study suite.**
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-22C55E?style=for-the-badge&logo=github)](https://satdevkumar021-glitch.github.io/examsathi/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-[![Security: Audited](https://img.shields.io/badge/Security-Zero_Secrets_Audited-success?style=for-the-badge)](SECURITY.md)
+
+🚀 **Live:** [https://satdevkumar021-glitch.github.io/examsathi/](https://satdevkumar021-glitch.github.io/examsathi/)
 
 ---
 
-## 🌐 Live Application URL
-🚀 **[https://satdevkumar021-glitch.github.io/examsathi/](https://satdevkumar021-glitch.github.io/examsathi/)**
+## What is ExamSathi?
+
+ExamSathi helps aspirants prepare for **20+ government recruitment exams** across four states. It bridges the gap between official syllabus notifications and study material by integrating:
+
+- Verified PYQ (Previous Year Question) archives
+- Topic-wise CBT mock test engine with negative marking
+- FSRS spaced repetition flash cards
+- Trilingual content (Hindi · Punjabi · English)
+- Study library timer, typing practice, and personalised roadmap
+
+### Exam Coverage
+
+| State / Board | Exams |
+|---|---|
+| **Punjab** | ETT, Master Cadre (SST/Science/Math/Punjabi/Hindi/English), PSSSB Clerk, Punjab Police SI/Constable |
+| **Rajasthan** | REET L1/L2, 3rd Grade Teacher, Rajasthan Patwari, Rajasthan Police |
+| **Haryana** | HTET L1/L2 |
+| **Central** | CTET P1/P2, SSC CHSL, SSC CGL, SSC GD, UGC NET, Army Agniveer |
+
+### Languages
+
+All study content is available in **हिंदी**, **ਪੰਜਾਬੀ (Gurmukhi)**, and **English** — toggle without page reload.
 
 ---
 
-## 🌟 Overview
+## Features
 
-**ExamSathi** is an enterprise-grade, mobile-first educational web platform designed to streamline competitive exam preparation for government recruitment in **Punjab, Rajasthan, and Central Government**.
+Milestones 0–7 are complete. All features below are live in the current build.
 
 Unlike generic exam portals, ExamSathi bridges the gap between **official government syllabus notifications** and **academic study material** by providing direct integration with state board textbooks (PSEB), central textbooks (NCERT), open-school modules (NIOS), spaced repetition flashcards, topic-wise CBT mock tests, and diagnostic candidate level evaluation.
 
@@ -39,6 +60,19 @@ Unlike generic exam portals, ExamSathi bridges the gap between **official govern
   * **NTA / UGC:** UGC NET.
 * **Defence & Entry Forces:**
   * **Indian Army:** Agniveer (General Duty, Technical, Clerk).
+
+### 🚀 Key Core Features
+- **CBT Mock Engine** — live countdown, OMR palette, negative marking, 5-tier diagnostic level
+- **Flip Card Mode** — FSRS-rated (Again / Hard / Good / Easy) spaced repetition scheduling
+- **PYQ Archive** — 20-year Punjab Master Cadre & Central past papers archive (2004–2024)
+- **Rank Prediction** — percentile estimate with data-sufficiency guard
+- **Study Roadmap** — dynamic day counter calculated from personal start date
+- **Study Library** — Pomodoro focus timer (25/45/60 min), wellness nudges, authentic seat occupancy
+- **Typing Practice** — Punjabi (Raavi) 300+ word benchmark passages & InScript key rules
+- **Daily Content** — trilingual current-affairs cards (Hindi, Punjabi, English)
+- **Admin Panel** — RBAC (Superadmin, Reviewer, Educator), passkey security, Draft→Review→Publish flow
+- **Real Auth** — Supabase email/password, Google OAuth, guest mode, and password reset flows
+- **SEO & Compliance** — per-page metadata, accessible viewport, sitemap.xml, robots.txt, Privacy Policy, Terms of Service, About
 
 ---
 
@@ -80,124 +114,172 @@ npm run dev
 # -> Local server live at http://localhost:3000
 
 # 4. Run automated E2E tests (Chromium headless)
-npx playwright test e2e/audit.spec.ts
+npx playwright test
 
 # 5. Build production static bundle
-npm run build
-```
-
-## 🚀 Key Features
-
-### 1. 📚 Topic-Wise Mock Test Portal (`/mock-test`)
-- **15+ Subject Tracks**: Dedicated mock test capability for every core syllabus domain:
-  - Punjab History & Sikh Gurus (1469-1708, Khalsa, Misals, Maharaja Ranjit Singh)
-  - Indian Polity & Constitution (Preamble, Fundamental Rights, Writs, Parliament, Judiciary)
-  - Indian & Punjab Geography (Doabs, Rivers, Soils, Mediterranean Western Disturbances)
-  - Indian Economy (National Income, RBI Repo Rate, NITI Aayog, MSP & CACP, Five-Year Plans)
-  - World History (French Revolution, Russian Revolution, Industrial Revolution, UNO, Cold War)
-  - Science, Quantitative Math, Punjabi Grammar & Literature.
-
-### 2. ⚡ 100,000+ Question Dynamic Generator Engine (`question_bank_engine.ts`)
-- Dynamically derives thousands of statement verification and fact-checking MCQs on the fly from verified syllabus lesson notes and flashcard databases.
-- Zero client-side bundle bloat: runs instantaneously in mobile browsers without crashing memory.
-- Balanced option distribution across A, B, C, and D with verified explanations.
-
-### 3. 🃏 Dual Interactive Modes (Exam CBT vs 3D Flip Cards)
-- **Live Exam Mode (CBT Simulator)**:
-  - Live countdown timer with auto-submit.
-  - Interactive OMR question palette (*Answered*, *Marked for Review*, *Unanswered*).
-  - Authentic Punjab Master Cadre **-0.25 negative marking penalty** for incorrect answers.
-- **3D Flip Card Mode**:
-  - Interactive tap-to-flip 3D CSS perspective cards.
-  - Question on front; verified answer and key takeaway on back.
-  - FSRS (Free Spaced Repetition Scheduler) rating (*Again*, *Hard*, *Good*, *Easy*).
-
-### 4. 🏆 5-Tier Candidate Diagnostic Level Benchmark
-Every test submission benchmarks candidate readiness:
-- **Level 5: Master Cadre Exam Ready 🏆** (Top 3% percentile, Gold tier)
-- **Level 4: Advanced Competitor 🥈** (Top 15% percentile, Silver tier)
-- **Level 3: Developing Candidate 🥉** (Top 40% percentile)
-- **Level 2: Foundation Stage 📚**
-- **Level 1: Beginner Explorer 🌱**
-- Complete post-test diagnostic reports with raw score minus penalties, accuracy rate, weak-area diagnostic, and one-click "Practice in Flip Card Mode" action.
-
-### 5. 📜 Last 10 Years Authentic PYQ Archive (2014–2024)
-- 40 curated, exam-verified past questions spanning 2014, 2016, 2017, 2020, 2021, and 2022 Punjab Master Cadre SST examinations.
-- Available as a dedicated "10-Year PYQ Live Test" track.
-
-### 6. 🌐 Trilingual Learning Engine (हिंदी · ਪੰਜਾਬੀ · English)
-- Instant client-side toggle across Hindi, Punjabi (Gurmukhi), and English without page reload.
-- Full Gurmukhi typography support designed for Punjab Paper A qualifying criteria.
-
----
-
-## 🏗️ Technical Architecture
-
-```
-examsathi-web/
-├── .github/workflows/deploy.yml   # Automated GitHub Pages CI/CD deployment
-├── SECURITY.md                    # Zero-secrets security and privacy policy
-├── LICENSE                        # Permissive MIT Open Source License
-├── firebase.json                  # Firebase Hosting rewrite rules
-├── next.config.ts                 # Next.js 16 SSG export with dynamic basePath
-├── src/
-│   ├── app/                       # Next.js App Router (137 static SSG pages)
-│   │   ├── (auth)/                # Authentication flows (Login, Register)
-│   │   ├── (dashboard)/           # Dashboard shell & bottom navigation
-│   │   │   ├── dashboard/         # Main analytics and readiness overview
-│   │   │   ├── exams/             # State-wise exam catalog (Punjab, Rajasthan, Central)
-│   │   │   ├── study/             # Exam > Subject > Chapter hierarchy
-│   │   │   ├── lesson/            # 6-Tab study room (theory, PDFs, cards, MCQs, videos)
-│   │   │   ├── mock-test/         # Dual Mode CBT simulator & Flip Card portal
-│   │   │   ├── results/           # 5-Tier level diagnostic & negative marking report
-│   │   │   ├── profile/           # User study streak, badges, and preferences
-│   │   │   └── typing-practice/   # PSSSB Punjabi (Raavi) & English typing simulator
-│   │   ├── layout.tsx             # Root layout with responsive mobile viewport
-│   │   └── page.tsx               # Multilingual landing page
-│   ├── components/                # Reusable UI components
-│   │   ├── layout/                # BottomNav, LanguageToggle
-│   │   └── ui/                    # 3D FlipCard, StreakBadge
-│   └── lib/
-│       ├── data/                  # Single Source of Truth Domain Data
-│       │   ├── exams.ts           # Authoritative syllabus hierarchy
-│       │   ├── lessons.ts         # Aggregated lessons with alias resolution
-│       │   ├── questions.ts       # Handcrafted exam question bank
-│       │   ├── question_bank_engine.ts # 100k+ procedural question generator & level engine
-│       │   └── questions/
-│       │       └── master_cadre_pyqs.ts # 40 authentic 10-year Master Cadre PYQs
-│       └── store.ts               # Zustand global state manager
+npm run build:static
 ```
 
 ---
 
-## 🔒 Security & Privacy Audit
+## Tech Stack
 
-* **Zero Hardcoded Secrets**: Scanned and verified: no API keys, private tokens, or sensitive credentials exist in the codebase or git history.
-* **Client-First Privacy**: Learner test scores, progress, notes, and preferences are stored purely in client-side `localStorage` / `sessionStorage`.
-* **Zero Server Attack Surface**: 100% pre-rendered Static Site Generation (SSG) with no backend database or runtime server.
-* **Official Data Provenance**: All curriculum references link directly to verified official government education portals (`punjab.gov.in`, `pseb.ac.in`, `ncert.nic.in`, `nios.ac.in`).
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router, static export) |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS 4 |
+| State | Zustand |
+| Auth | Supabase Auth (email + Google OAuth) |
+| Database | Supabase (Postgres) — optional, see below |
+| Hosting | GitHub Pages (current) · Vercel (production) |
+| AI (planned) | Google Gemini 1.5 Pro via Supabase Edge Functions |
 
 ---
 
-## 🛠️ Local Development
+## Quick Start (under 10 minutes)
+
+### Prerequisites
+
+- **Node.js 18+** — check with `node -v`
+- **git**
+
+### 1. Clone the repository
 
 ```bash
-# 1. Clone repository
 git clone https://github.com/satdevkumar021-glitch/examsathi.git
-cd examsathi/examsathi-web
+cd examsathi/examsathi-audit
+```
 
-# 2. Install dependencies
+### 2. Install dependencies
+
+```bash
 npm install
+```
 
-# 3. Start local development server
+### 3. Configure environment variables
+
+```bash
+cp .env.local.example .env.local
+```
+
+> **Supabase is optional for local development.** The app runs fully in guest mode without it — all mock tests, flash cards, lessons, and the roadmap work offline. Only real sign-in/sign-up requires Supabase credentials. See [docs/SUPABASE_SETUP.md](docs/SUPABASE_SETUP.md) to connect a real backend.
+
+### 4. Start the dev server
+
+```bash
 npm run dev
+```
 
-# 4. Production build & verification
-npm run build
+### 5. Open the app
+
+Navigate to [http://localhost:3000/dashboard](http://localhost:3000/dashboard)
+
+Use **Continue as Guest** on the login page — no account needed to explore all features.
+
+---
+
+## Configure Supabase (optional — for real auth)
+
+Real sign-up, login, streak persistence, and user data storage require a Supabase project.
+
+See **[docs/SUPABASE_SETUP.md](docs/SUPABASE_SETUP.md)** for the complete setup walkthrough:
+- Create a free Supabase project
+- Copy your `SUPABASE_URL` and `SUPABASE_ANON_KEY` into `.env.local`
+- Run the DB migrations
+- Configure Google OAuth redirect URLs
+
+Without these, the app operates in static mode — all features work, data is stored in `localStorage`.
+
+---
+
+## Deployment
+
+### GitHub Pages (automatic)
+Push to the `main` branch — the CI/CD workflow (`.github/workflows/deploy.yml`) builds and deploys automatically.
+
+**Prerequisites:**
+1. Go to your GitHub repo → Settings → Pages
+2. Set Source to **GitHub Actions**
+3. Add optional Supabase secrets: `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+The site will be live at: `https://YOUR_USERNAME.github.io/examsathi/`
+
+### Vercel (recommended for full-stack)
+1. Connect your GitHub repo to Vercel
+2. Add environment variables in Vercel dashboard
+3. Set `NEXT_PUBLIC_BASE_PATH` to empty string (Vercel serves from root)
+4. Deploy — Supabase auth and API routes will work
+
+> **Why Vercel over GitHub Pages?** Vercel supports server-side API routes needed for the AI proxy and secure scoring endpoint. See [docs/DECISIONS.md — ADR-005](docs/DECISIONS.md) for the full reasoning.
+
+---
+
+## Project Structure
+
+```
+examsathi-audit/
+├── src/
+│   ├── app/                   # Next.js App Router
+│   │   ├── (auth)/            # Login, Register, Forgot Password
+│   │   ├── (dashboard)/       # All protected app pages
+│   │   ├── about/             # About page
+│   │   ├── privacy/           # Privacy Policy (DPDP Act)
+│   │   └── terms/             # Terms of Service
+│   ├── components/
+│   │   ├── layout/            # BottomNav, LanguageToggle
+│   │   └── ui/                # FlipCard, StreakBadge, MockTestBottomSheet
+│   └── lib/
+│       ├── auth.ts            # Legacy localStorage auth (guest mode)
+│       ├── hooks/             # useAuth — Supabase real-time auth state
+│       ├── scoring.ts         # Pure scoring functions (server-authoritative ready)
+│       ├── srs.ts             # FSRS-inspired spaced repetition algorithm
+│       ├── store.ts           # Zustand UI state
+│       ├── supabase/          # Supabase client factory
+│       └── data/              # All static data (exams, questions, lessons)
+├── public/
+│   ├── sitemap.xml
+│   ├── robots.txt
+│   └── ads.txt
+└── docs/
+    ├── AUDIT.md               # Bug register — all 10 bugs found and fixed
+    ├── ARCHITECTURE.md        # Current and target system architecture
+    ├── ROADMAP.md             # Completed and upcoming milestones
+    ├── DECISIONS.md           # Architecture Decision Records (ADRs)
+    └── SUPABASE_SETUP.md      # Step-by-step Supabase configuration guide
 ```
 
 ---
 
-## 📄 License
+## Documentation
+
+| Document | Description |
+|---|---|
+| [docs/AUDIT.md](docs/AUDIT.md) | Full bug register — 10 bugs, root causes, and fixes |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | System architecture, tech stack decisions, security model |
+| [docs/ROADMAP.md](docs/ROADMAP.md) | Completed milestones and upcoming work |
+| [docs/DECISIONS.md](docs/DECISIONS.md) | Architecture Decision Records (ADRs) |
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit your changes: `git commit -m 'Add your feature'`
+4. Push: `git push origin feature/your-feature`
+5. Open a Pull Request
+
+**Content contributions** (new questions, lesson corrections, PYQ verification) are especially welcome. Please include a source link for any factual claim.
+
+Before submitting code, run:
+
+```bash
+npm run build   # must pass with zero TypeScript errors
+```
+
+---
+
+## License
 
 This project is licensed under the **[MIT License](LICENSE)** — free and open for educational and commercial adaptation.

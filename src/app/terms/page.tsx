@@ -22,32 +22,52 @@ export default function TermsPage() {
 
       <div className="bg-slate-800/80 border border-slate-700 rounded-2xl p-5 space-y-4 text-xs text-slate-300 leading-relaxed">
         <section className="space-y-1.5">
-          <h2 className="text-sm font-bold text-white">1. Nature of the Platform</h2>
+          <h2 className="text-sm font-bold text-white">1. Nature of the Platform &amp; Disclaimer</h2>
           <p>
             ExamSathi is an independent, free educational technology platform designed to assist candidates with competitive exam preparation. ExamSathi is NOT an official agency of any state government, central government body, PSSSB, PPSC, HSSC, RPSC, or SSC. Official notifications, admit cards, and results must always be verified on the respective official government portals.
           </p>
         </section>
 
         <section className="space-y-1.5">
-          <h2 className="text-sm font-bold text-white">2. Free Access & Non-Commercial Use</h2>
+          <h2 className="text-sm font-bold text-white">2. Free Access &amp; Non-Commercial Use</h2>
           <p>
             All study notes, flashcard sets, past year question archives, and CBT tests on ExamSathi are provided free of cost for personal, non-commercial educational study. Redistribution, commercial resale, or bulk scraping of questions without explicit attribution is strictly prohibited.
           </p>
         </section>
 
         <section className="space-y-1.5">
-          <h2 className="text-sm font-bold text-white">3. Content Accuracy & Errata Protocol</h2>
+          <h2 className="text-sm font-bold text-white">3. Content Accuracy &amp; Errata Protocol</h2>
           <p>
             While every question, syllabus module, and answer key is curated from official gazettes and standard textbooks (NCERT, PSEB, BSEH), typographical errors or syllabus revisions by exam boards may occur. If you discover a discrepancy, please use our Errata Report feature to alert our editorial team.
           </p>
         </section>
 
         <section className="space-y-1.5">
-          <h2 className="text-sm font-bold text-white">4. User Conduct</h2>
+          <h2 className="text-sm font-bold text-white">4. Advertisements &amp; Operations</h2>
           <p>
-            Users agree to use our discussion and study features respectfully, avoiding defamatory, obscene, or fraudulent behavior. We reserve the right to suspend any account violating community guidelines.
+            ExamSathi may display clean educational advertisements on informative pages to cover server and hosting costs. Advertisements are strictly prohibited and never displayed during live CBT mock tests or focused study sessions.
           </p>
         </section>
+
+        <section className="space-y-1.5">
+          <h2 className="text-sm font-bold text-white">5. Limitation of Liability</h2>
+          <p>
+            ExamSathi is provided &apos;as is&apos;. We are not liable for any loss resulting from reliance on content, technical interruptions, or individual exam results.
+          </p>
+        </section>
+
+        <section className="space-y-1.5">
+          <h2 className="text-sm font-bold text-white">6. Inquiries</h2>
+          <p>
+            Questions regarding these terms: <a href="mailto:contact@examsathi.in" className="text-teal-400 hover:underline">contact@examsathi.in</a>
+          </p>
+        </section>
+
+        <div className="flex gap-4 pt-3 border-t border-slate-700/80 text-xs justify-center text-slate-400">
+          <Link href="/privacy/" className="hover:text-teal-400">Privacy Policy</Link>
+          <Link href="/about/" className="hover:text-teal-400">About Us</Link>
+          <Link href="/contact/" className="hover:text-teal-400">Contact</Link>
+        </div>
       </div>
     </div>
   );

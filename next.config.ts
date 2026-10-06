@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (isProd ? '/examsathi' : '');
 
 const isStaticExport = process.env.STATIC_EXPORT === 'true';
 
@@ -11,6 +12,7 @@ const nextConfig: NextConfig = {
   },
   trailingSlash: true,
   basePath: basePath ? `/${basePath.replace(/^\//, '')}` : undefined,
+  assetPrefix: basePath ? `/${basePath.replace(/^\//, '')}` : undefined,
 };
 
 export default nextConfig;
