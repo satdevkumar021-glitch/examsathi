@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { Settings, LogOut, Award, Flame, User as UserIcon, Bookmark, Trash2, ChevronRight, FileText, Star, Compass, Library, Brain } from 'lucide-react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { isSupabaseConfigured } from '@/lib/supabase/config';
 import { getStoredUser, logoutUser, AuthUser } from '@/lib/auth';
 import { useAuth } from '@/lib/hooks/useAuth';
 import { createClient } from '@/lib/supabase/client';
@@ -29,12 +31,15 @@ interface MockAttempt {
 }
 
 export default function Profile() {
+  const router = useRouter();
+  const [logoutError, setLogoutError] = useState<string | null>(null);
+  const [loggingOut, setLoggingOut] = useState(false);
   const [user, setUser] = useState<AuthUser | null>(null);
   const [savedNotes, setSavedNotes] = useState<SavedNoteItem[]>([]);
   const [selectedNote, setSelectedNote] = useState<SavedNoteItem | null>(null);
   const [mockHistory, setMockHistory] = useState<MockAttempt[]>([]);
 
-  const { user: supabaseUser, isGuest } = useAuth();
+  const { user: supabaseUser, isGuest, error: sessionError } = useAuth();
 
   useEffect(() => {
     try {
@@ -67,13 +72,17 @@ export default function Profile() {
   };
 
   const handleLogout = async () => {
-    logoutUser(); // Clear localStorage
-    const supabaseConfigured = !!(process.env.NEXT_PUBLIC_SUPABASE_URL && !process.env.NEXT_PUBLIC_SUPABASE_URL.includes('your-project-ref'));
-    if (supabaseConfigured) {
-      const supabase = createClient();
-      await supabase.auth.signOut();
-    }
-    window.location.href = '/login';
+    if (loggingOut) return;
+    setLoggingOut(true); setLogoutError(null);
+    try {
+      if (isSupabaseConfigured()) {
+        const { error } = await createClient().auth.signOut({ scope: 'local' });
+        if (error) throw error;
+      }
+      logoutUser();
+      router.replace('/login');
+    } catch { setLogoutError('Unable to sign out. Check your connection and try again.'); }
+    finally { setLoggingOut(false); }
   };
 
   const displayName = supabaseUser
@@ -86,6 +95,8 @@ export default function Profile() {
   return (
     <div className="p-4 flex flex-col gap-6 max-w-xl mx-auto w-full pb-24 text-slate-100">
       
+      {sessionError && <p role="alert" className="text-amber-200">{sessionError}</p>}
+      {logoutError && <p role="alert" className="text-amber-200">{logoutError}</p>}
       <div className="flex justify-between items-start">
         <div>
           <h1 className="text-2xl font-bold text-white">Profile & Study Vault</h1>
@@ -316,6 +327,7 @@ export default function Profile() {
         </Link>
         <button
           onClick={handleLogout}
+          disabled={loggingOut}
           className="w-full flex items-center gap-3 p-4 hover:bg-slate-750 transition-colors text-rose-400 text-xs text-left"
         >
           <LogOut size={18} />

@@ -24,7 +24,7 @@ export default function Dashboard() {
           <span>
             <strong>Guest mode</strong> — progress is saved locally only.{' '}
             <Link href="/login" className="text-amber-300 underline font-semibold">Sign in</Link>{' '}
-            to sync across devices.
+            to access your account. Cloud progress sync is coming later.
           </span>
         </div>
       )}

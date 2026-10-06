@@ -1,16 +1,12 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { User, Mail, Lock, Target, ArrowRight, Check } from 'lucide-react';
 import { registerUser } from '@/lib/auth';
 import { useStore } from '@/lib/store';
 import { createClient } from '@/lib/supabase/client';
-
-const isSupabaseConfigured = () => {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  return !!(url && !url.includes('your-project-ref'));
-};
+import { isSupabaseConfigured, authRedirectUrl } from '@/lib/supabase/config';
 
 export default function Register() {
   const router = useRouter();
@@ -20,16 +16,12 @@ export default function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [targetExam, setTargetExam] = useState('ett-punjab');
-  const [state, setState] = useState('punjab');
+  const state = 'punjab';
   const [toastMsg, setToastMsg] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const [configured, setConfigured] = useState(false);
+  const configured = isSupabaseConfigured();
   const [emailSent, setEmailSent] = useState(false);
-
-  useEffect(() => {
-    setConfigured(isSupabaseConfigured());
-  }, []);
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -40,11 +32,12 @@ export default function Register() {
       setLoading(true);
       try {
         const supabase = createClient();
-        const { error: signUpError } = await supabase.auth.signUp({
+        const { data, error: signUpError } = await supabase.auth.signUp({
           email,
           password,
           options: {
-            data: { full_name: name },
+            emailRedirectTo: authRedirectUrl('/auth/callback'),
+            data: { full_name: name, target_exam: targetExam, state },
           },
         });
         if (signUpError) {
@@ -52,7 +45,7 @@ export default function Register() {
           setLoading(false);
           return;
         }
-        setEmailSent(true);
+        if (data.session) { router.push('/dashboard'); } else { setEmailSent(true); }
         setLoading(false);
       } catch {
         setError('An unexpected error occurred. Please try again.');
@@ -152,6 +145,8 @@ export default function Register() {
             <Mail className="absolute left-3.5 top-3.5 text-slate-400" size={18} />
             <input
               type="email"
+              aria-label="Email address"
+              autoComplete="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="Email address"
@@ -165,11 +160,13 @@ export default function Register() {
               <Lock className="absolute left-3.5 top-3.5 text-slate-400" size={18} />
               <input
                 type="password"
+                aria-label="Password"
+                autoComplete="new-password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
-                placeholder="Password (min 6 characters)"
+                placeholder="Password (min 8 characters)"
                 required
-                minLength={6}
+                minLength={8}
                 className="form-input"
               />
             </div>

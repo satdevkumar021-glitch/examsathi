@@ -1,33 +1,26 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { Mail, ArrowRight, Check } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
-
-const isSupabaseConfigured = () => {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  return !!(url && !url.includes('your-project-ref'));
-};
+import { isSupabaseConfigured, authRedirectUrl } from '@/lib/supabase/config';
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [configured, setConfigured] = useState(false);
-
-  useEffect(() => {
-    setConfigured(isSupabaseConfigured());
-  }, []);
+  const configured = isSupabaseConfigured();
 
   const handleReset = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isSupabaseConfigured() || loading) return;
     setError(null);
     setLoading(true);
     try {
       const supabase = createClient();
       const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: window.location.origin + '/auth/reset-password',
+        redirectTo: authRedirectUrl('/auth/reset-password'),
       });
       if (resetError) {
         setError(resetError.message);
@@ -72,8 +65,8 @@ export default function ForgotPassword() {
             <div className="w-12 h-12 bg-teal-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
               <Check size={24} className="text-teal-400" />
             </div>
-            <p className="text-sm text-slate-200 font-semibold mb-1">Password reset link sent!</p>
-            <p className="text-xs text-slate-400 mb-4">Check your email at <span className="text-teal-300">{email}</span></p>
+            <p className="text-sm text-slate-200 font-semibold mb-1">Recovery request received</p>
+            <p className="text-xs text-slate-400 mb-4">If an account exists, a recovery link will be sent to <span className="text-teal-300">{email}</span></p>
             <Link
               href="/login"
               className="inline-flex items-center gap-2 text-xs text-teal-400 hover:text-teal-300 underline"
@@ -94,6 +87,8 @@ export default function ForgotPassword() {
                 <Mail className="absolute left-3.5 top-3.5 text-slate-400" size={16} />
                 <input
                   type="email"
+              aria-label="Email address"
+              autoComplete="email"
                   value={email}
                   onChange={e => setEmail(e.target.value)}
                   placeholder="Your email address"

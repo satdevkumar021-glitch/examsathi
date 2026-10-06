@@ -1,16 +1,12 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Eye, EyeOff, Mail, Lock, Sparkles, Check, ArrowRight } from 'lucide-react';
 import { instantDemoLogin } from '@/lib/auth';
 import { useStore } from '@/lib/store';
 import { createClient } from '@/lib/supabase/client';
-
-const isSupabaseConfigured = () => {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  return !!(url && !url.includes('your-project-ref'));
-};
+import { isSupabaseConfigured, authRedirectUrl } from '@/lib/supabase/config';
 
 export default function Login() {
   const [showPwd, setShowPwd] = useState(false);
@@ -20,13 +16,9 @@ export default function Login() {
   const [toastMsg, setToastMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [oauthLoading, setOauthLoading] = useState(false);
-  const [configured, setConfigured] = useState(false);
+  const configured = isSupabaseConfigured();
   const router = useRouter();
   const { setUser } = useStore();
-
-  useEffect(() => {
-    setConfigured(isSupabaseConfigured());
-  }, []);
 
   const handleDemoLogin = (role: 'ett' | 'clerk' | 'master-cadre') => {
     const user = instantDemoLogin(role);
@@ -39,6 +31,7 @@ export default function Login() {
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!isSupabaseConfigured() || loading) return;
     setError(null);
     setLoading(true);
     try {
@@ -49,11 +42,11 @@ export default function Login() {
         setLoading(false);
         return;
       }
-      if (data.user) {
+      if (data.user && data.session) {
         const displayName = data.user.user_metadata?.full_name || data.user.email || 'Student';
         setUser({ name: displayName, streak: 0, xp: 0 });
         router.push('/dashboard');
-      }
+      } else { setError('No account session was created. Please try again.'); setLoading(false); }
     } catch {
       setError('An unexpected error occurred. Please try again.');
       setLoading(false);
@@ -61,6 +54,7 @@ export default function Login() {
   };
 
   const handleGoogleSignIn = async () => {
+    if (!isSupabaseConfigured() || oauthLoading) return;
     setOauthLoading(true);
     setError(null);
     try {
@@ -68,7 +62,7 @@ export default function Login() {
       const { error: oauthError } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${window.location.origin}/dashboard`,
+          redirectTo: authRedirectUrl('/auth/callback'),
         },
       });
       if (oauthError) {
@@ -100,7 +94,7 @@ export default function Login() {
           </div>
           <h2 className="text-2xl font-black text-white">ExamSathi Login</h2>
           <p className="text-xs text-slate-400 mt-1">
-            Sign in to sync your progress across devices
+            Sign in to your account. Study progress currently stays in this browser.
           </p>
         </div>
 
@@ -152,7 +146,7 @@ export default function Login() {
         {!configured && (
           <div className="bg-amber-950/60 border border-amber-500/40 rounded-xl p-3 mb-4 text-xs text-amber-200">
             ⚠️ <strong>Backend not configured</strong> — running in guest/demo mode only. To enable real accounts, follow the{' '}
-            <Link href="/docs/SUPABASE_SETUP" className="underline text-amber-300">Supabase setup guide</Link>.
+            <Link href="https://github.com/satdevkumar021-glitch/examsathi/blob/main/docs/SUPABASE_SETUP.md" className="underline text-amber-300">Supabase setup guide</Link>.
           </div>
         )}
 
@@ -169,6 +163,8 @@ export default function Login() {
             <Mail className="absolute left-3.5 top-3.5 text-slate-400" size={16} />
             <input
               type="email"
+              aria-label="Email address"
+              autoComplete="email"
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="Email address"
@@ -182,6 +178,8 @@ export default function Login() {
             <Lock className="absolute left-3.5 top-3.5 text-slate-400" size={16} />
             <input
               type={showPwd ? 'text' : 'password'}
+              aria-label="Password"
+              autoComplete="current-password"
               value={password}
               onChange={e => setPassword(e.target.value)}
               placeholder="Password"
@@ -191,6 +189,7 @@ export default function Login() {
             />
             <button
               type="button"
+              aria-label={showPwd ? 'Hide password' : 'Show password'}
               onClick={() => setShowPwd(v => !v)}
               className="absolute right-3.5 top-3 text-slate-400 hover:text-slate-200"
               tabIndex={-1}
