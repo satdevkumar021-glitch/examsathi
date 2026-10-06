@@ -6,7 +6,7 @@ import { Eye, EyeOff, Mail, Lock, Sparkles, Check, ArrowRight } from 'lucide-rea
 import { instantDemoLogin } from '@/lib/auth';
 import { useStore } from '@/lib/store';
 import { createClient } from '@/lib/supabase/client';
-import { isSupabaseConfigured, authRedirectUrl } from '@/lib/supabase/config';
+import { isSupabaseConfigured, authRedirectUrl, isGoogleAuthEnabled } from '@/lib/supabase/config';
 
 export default function Login() {
   const [showPwd, setShowPwd] = useState(false);
@@ -17,6 +17,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [oauthLoading, setOauthLoading] = useState(false);
   const configured = isSupabaseConfigured();
+  const googleEnabled = isGoogleAuthEnabled();
   const router = useRouter();
   const { setUser } = useStore();
 
@@ -54,7 +55,7 @@ export default function Login() {
   };
 
   const handleGoogleSignIn = async () => {
-    if (!isSupabaseConfigured() || oauthLoading) return;
+    if (!isGoogleAuthEnabled() || oauthLoading) return;
     setOauthLoading(true);
     setError(null);
     try {
@@ -221,7 +222,7 @@ export default function Login() {
         <button
           type="button"
           onClick={handleGoogleSignIn}
-          disabled={oauthLoading || !configured}
+          disabled={oauthLoading || !googleEnabled}
           className="mt-3 w-full bg-slate-800 hover:bg-slate-700 border border-slate-600 text-white font-semibold py-3 rounded-xl text-sm flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {oauthLoading ? (

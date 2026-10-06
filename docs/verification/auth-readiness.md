@@ -23,6 +23,6 @@ Not verified against a live Supabase project:
 - Google provider round trip.
 - Session refresh and sign-out against the deployed project.
 
-No new Supabase account was created and no production backend settings were changed. The user's existing project reference is needed to continue. Browser tests must not collect or print credentials; the user completes actual new-password entry.
+Connected existing project nrzuihzvgnmpikwzbqam. Saved production Site URL and both production auth callbacks. Configured public frontend build variables in GitHub Actions. The public auth settings endpoint returns HTTP 200; email is enabled, confirmation required, Google disabled. The connected frontend rejected invalid login credentials in a real browser test. Custom SMTP remains off, so general-user email delivery is not ready. Browser tests must not collect or print credentials; the user completes actual new-password entry.
 
 Known pre-existing limitation outside this phase: account study records remain in browser storage. Authentication does not enable cross-device saving or backend publisher authorization.

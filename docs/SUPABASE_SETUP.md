@@ -8,7 +8,7 @@ Create a project in https://supabase.com/dashboard. Save its database password s
 
 ## 2. Configure public build values
 
-Add these repository Actions secrets, already referenced by `.github/workflows/deploy.yml`:
+Add these repository Actions variables (legacy Actions secrets are also supported), already referenced by `.github/workflows/deploy.yml`:
 
 - `NEXT_PUBLIC_SUPABASE_URL`: project URL, for example `https://PROJECT.supabase.co`.
 - `NEXT_PUBLIC_SUPABASE_ANON_KEY`: the publishable key (`sb_publishable_…`) or legacy **anon** JWT key. The variable name remains compatible with the existing workflow.
@@ -39,6 +39,8 @@ This client uses PKCE. Open email links in the same browser that requested them 
 Supabase's default email service is intended for testing and has delivery restrictions. Configure a production SMTP provider and verify its sending domain before inviting general users. Check provider limits in the dashboard.
 
 ## 5. Optional Google login
+
+After configuring the provider, set the repository Actions variable `NEXT_PUBLIC_GOOGLE_AUTH_ENABLED=true` and rebuild to enable the Google button.
 
 Enable Google in Supabase Authentication → Providers. Configure the Google client ID and secret **in Supabase**, not in GitHub public environment variables. Set Google's authorized redirect URI to the Supabase callback URI shown in the provider settings (normally `https://PROJECT.supabase.co/auth/v1/callback`). Supabase then redirects back to the application's `/examsathi/auth/callback/` page.
 
@@ -75,3 +77,7 @@ Sources:
 - https://supabase.com/docs/guides/auth/sessions/pkce-flow
 - https://supabase.com/docs/guides/auth/auth-smtp
 - https://supabase.com/docs/guides/database/postgres/row-level-security
+
+## Connected project
+
+Project reference: `nrzuihzvgnmpikwzbqam`. Production Site URL and both production callback URLs were saved on 6 October 2026. Email authentication and email confirmation are enabled. Google is currently disabled. Custom SMTP is not enabled. Public email delivery must be configured and tested before general-user launch.

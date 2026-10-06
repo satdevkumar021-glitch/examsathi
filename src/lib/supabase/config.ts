@@ -28,3 +28,7 @@ export function authRedirectUrl(path: '/auth/callback' | '/auth/reset-password')
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.NODE_ENV === 'production' ? 'examsathi' : '');
   return buildAuthRedirect(window.location.origin, path, basePath);
 }
+
+export function isGoogleAuthEnabled(): boolean {
+  return isSupabaseConfigured() && process.env.NEXT_PUBLIC_GOOGLE_AUTH_ENABLED === 'true';
+}
