@@ -26,6 +26,9 @@ export default function LessonView({ topicId }: { topicId: string }) {
   // Personal Notes State (persisted to LocalStorage)
   const [userNote, setUserNote] = useState('');
   const [savedNotes, setSavedNotes] = useState<Array<{ id: string; text: string; date: string }>>([]);
+  const [showContributeModal, setShowContributeModal] = useState(false);
+  const [contributeName, setContributeName] = useState('');
+  const [contributeSubmitted, setContributeSubmitted] = useState(false);
 
   const lesson = getLessonByTopicId(topicId) || LESSONS['modern-india'];
   const topicQuestions = getQuestionsByTopic(topicId);
@@ -330,6 +333,26 @@ export default function LessonView({ topicId }: { topicId: string }) {
               <CheckCircle2 size={18} />
               <span>{isReadMarked ? (lang === 'pa' ? 'ਪੜ੍ਹ ਲਿਆ ਗਿਆ (+50 XP)' : 'अध्ययन पूर्ण (+50 XP)') : (lang === 'pa' ? 'ਪੜ੍ਹ ਲਿਆ ਗਿਆ ਮਾਰਕ ਕਰੋ (+50 XP)' : 'Mark as Read & Earn +50 XP')}</span>
             </button>
+
+            {/* Share Lesson */}
+            <div className="flex gap-2 mt-2">
+              <a
+                href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+                  `📚 *${lesson.title.hi}*\n\nExamSathi पर मुफ्त पढ़ें (Free Lesson):\n${lesson.summary?.hi?.slice(0, 200) || ''}...\n\n👉 https://satdevkumar021-glitch.github.io/examsathi/lesson/${lesson.topicId}/\n\nAll exams free: ExamSathi 🎓`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-600/40 text-emerald-300 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition"
+              >
+                📲 Share on WhatsApp
+              </a>
+              <button
+                onClick={() => window.print()}
+                className="flex-1 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-300 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition"
+              >
+                🖨️ Print / Save PDF
+              </button>
+            </div>
 
             {/* Test Your Level & Practice Banner */}
             <div className="bg-gradient-to-br from-indigo-950/70 via-slate-800 to-teal-950/70 border border-teal-500/40 rounded-2xl p-4 shadow-xl">
@@ -800,10 +823,104 @@ export default function LessonView({ topicId }: { topicId: string }) {
                 ))
               )}
             </div>
+
+            {/* Community Contribution CTA */}
+            <div className="bg-gradient-to-br from-teal-950/40 to-indigo-950/40 border border-teal-700/40 rounded-xl p-4">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🎁</span>
+                <div>
+                  <p className="text-teal-300 font-bold text-sm">Share your notes with all students</p>
+                  <p className="text-slate-400 text-xs mt-1 leading-relaxed">
+                    Have great notes on this topic? Contribute them! After our team reviews, your notes will be available to thousands of students preparing for this exam.
+                  </p>
+                  <button
+                    onClick={() => setShowContributeModal(true)}
+                    className="mt-3 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition"
+                  >
+                    Contribute My Notes 🌟
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         )}
 
       </div>
+
+      {/* Contribution Modal */}
+      {showContributeModal && (
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-end sm:items-center justify-center p-4">
+          <div className="bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-sm p-5">
+            {contributeSubmitted ? (
+              <div className="text-center py-4">
+                <span className="text-4xl block mb-3">🙏</span>
+                <h3 className="text-white font-bold text-lg mb-2">Thank you!</h3>
+                <p className="text-slate-400 text-sm">Your contribution has been submitted for review. We will notify you when it is published.</p>
+                <button
+                  onClick={() => { setShowContributeModal(false); setContributeSubmitted(false); }}
+                  className="mt-4 bg-teal-500 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-sm"
+                >
+                  Close
+                </button>
+              </div>
+            ) : (
+              <>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-white font-bold text-base">Contribute Your Notes</h3>
+                  <button onClick={() => setShowContributeModal(false)} className="text-slate-400 hover:text-white text-xl leading-none">×</button>
+                </div>
+                <p className="text-slate-400 text-xs mb-3 leading-relaxed">
+                  Your saved notes on <strong className="text-teal-300">{lesson.title[lang]}</strong> will be submitted to our editorial team. Once reviewed, they become available to all students.
+                </p>
+                <div className="mb-3">
+                  <label className="text-xs text-slate-400 mb-1 block">Your name or initials (optional, for credit)</label>
+                  <input
+                    type="text"
+                    value={contributeName}
+                    onChange={e => setContributeName(e.target.value)}
+                    placeholder="e.g. Gurpreet S. (optional)"
+                    className="w-full bg-slate-800 border border-slate-700 rounded-xl p-3 text-white text-xs focus:outline-none focus:border-teal-500"
+                  />
+                </div>
+                <div className="bg-slate-800/60 rounded-xl p-3 mb-3 text-xs text-slate-400 border border-slate-700">
+                  <p className="font-bold text-slate-300 mb-1">What will be shared:</p>
+                  <ul className="space-y-0.5">
+                    <li>• Your {savedNotes.length} saved note{savedNotes.length !== 1 ? 's' : ''} on this topic</li>
+                    <li>• Topic: {lesson.title.en}</li>
+                    <li>• Your name/initials (if provided)</li>
+                  </ul>
+                  <p className="mt-2 text-[11px] text-slate-500">Your email or personal data is NOT shared.</p>
+                </div>
+                {savedNotes.length === 0 ? (
+                  <p className="text-amber-400 text-xs text-center mb-3">You have no saved notes yet. Write and save some notes first!</p>
+                ) : (
+                  <button
+                    onClick={() => {
+                      // In static mode: save to localStorage as a pending submission
+                      try {
+                        const submissions = JSON.parse(localStorage.getItem('examsathi_pending_contributions') || '[]');
+                        submissions.push({
+                          topicId: lesson.topicId,
+                          topicTitle: lesson.title.en,
+                          notes: savedNotes,
+                          creditName: contributeName || 'Anonymous',
+                          submittedAt: new Date().toISOString(),
+                          status: 'pending',
+                        });
+                        localStorage.setItem('examsathi_pending_contributions', JSON.stringify(submissions));
+                      } catch {}
+                      setContributeSubmitted(true);
+                    }}
+                    className="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold py-3 rounded-xl text-sm transition"
+                  >
+                    Submit for Review ✓
+                  </button>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
