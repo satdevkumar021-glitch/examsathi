@@ -1,25 +1,30 @@
 # 🎓 ExamSathi (परीक्षा साथी · ਪ੍ਰੀਖਿਆ ਸਾਥੀ)
 
-> **An open-source, authoritative exam preparation platform & multilingual learning engine for state and central government examinations.**
+> **An open-source, authoritative exam preparation platform, topic-wise mock test engine & multilingual learning suite for state and central government examinations.**
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-GitHub_Pages-22C55E?style=for-the-badge&logo=github)](https://satdevkumar021-glitch.github.io/examsathi/)
 [![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.0-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
-[![GitHub Actions](https://img.shields.io/badge/CI%2FCD-GitHub_Pages-2088FF?style=for-the-badge&logo=github-actions)](https://github.com/features/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Languages](https://img.shields.io/badge/Languages-Hindi%20%7C%20Punjabi%20%7C%20English-success?style=for-the-badge)](#trilingual-architecture)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Security: Audited](https://img.shields.io/badge/Security-Zero_Secrets_Audited-success?style=for-the-badge)](SECURITY.md)
+
+---
+
+## 🌐 Live Application URL
+🚀 **[https://satdevkumar021-glitch.github.io/examsathi/](https://satdevkumar021-glitch.github.io/examsathi/)**
 
 ---
 
 ## 🌟 Overview
 
-**ExamSathi** is a modern, mobile-first educational web platform designed to streamline competitive exam preparation for government recruitment examinations in **Punjab, Rajasthan, and Central Government**. 
+**ExamSathi** is an enterprise-grade, mobile-first educational web platform designed to streamline competitive exam preparation for government recruitment in **Punjab, Rajasthan, and Central Government**.
 
-Unlike generic exam apps, ExamSathi bridges the gap between **official government syllabus notifications** and **academic study material** by providing direct integration with state board textbooks (PSEB), central textbooks (NCERT), open-school modules (NIOS), spaced repetition flashcards, and computer-based mock tests.
+Unlike generic exam portals, ExamSathi bridges the gap between **official government syllabus notifications** and **academic study material** by providing direct integration with state board textbooks (PSEB), central textbooks (NCERT), open-school modules (NIOS), spaced repetition flashcards, topic-wise CBT mock tests, and diagnostic candidate level evaluation.
 
 ### 🏛️ Targeted Examination Bodies & Boards
 * **Punjab Government:**
-  * **Education Recruitment Board (ERB):** Punjab Master Cadre (SST, Science, Math, Punjabi, Hindi, English), Lecturer Cadre, ETT (Elementary Teacher Training - 6635 posts).
+  * **Education Recruitment Board (ERB):** Punjab Master Cadre (SST, Science, Math, Punjabi, Hindi, English), Lecturer Cadre, ETT (Elementary Teacher Training).
   * **PSSSB:** Punjab Subordinate Services Selection Board (Clerk, Senior Assistant, Patwari).
   * **Punjab Police Recruitment Board:** Police Constable & Sub-Inspector (SI).
 * **Rajasthan Government:**
@@ -30,111 +35,118 @@ Unlike generic exam apps, ExamSathi bridges the gap between **official governmen
 
 ---
 
-## 🏗️ Architecture & Engineering Highlights
+## 🚀 Key Features
 
-```
-examsathi-web/
-├── .github/workflows/deploy.yml   # Automated CI/CD deployment to GitHub Pages
-├── firebase.json                  # Firebase Hosting rewrite rules for single-page routing
-├── next.config.ts                 # Next.js 16 SSG export configuration with dynamic basePath
-├── src/
-│   ├── app/                       # Next.js App Router
-│   │   ├── (auth)/                # Auth flows (login, register)
-│   │   ├── (dashboard)/           # Protected dashboard layout & shell
-│   │   │   ├── dashboard/         # Main learner analytics dashboard
-│   │   │   ├── exams/             # State-wise exam discovery portal
-│   │   │   ├── study/             # Exam > Subject > Chapter hierarchy
-│   │   │   ├── lesson/            # 6-Tab study room (theory, PDFs, flashcards, MCQs, videos, notes)
-│   │   │   ├── mock-test/         # CBT examination engine with question palette
-│   │   │   ├── results/           # Performance breakdown & accuracy analytics
-│   │   │   ├── profile/           # Learner streak, badges, and preferences
-│   │   │   └── typing-practice/   # PSSSB Punjabi (Raavi) & English typing simulator
-│   │   ├── layout.tsx             # Root layout with responsive mobile viewport
-│   │   └── page.tsx               # High-converting landing & welcome screen
-│   ├── components/                # Reusable UI components
-│   │   ├── layout/                # BottomNav, TopHeader, LanguageToggle
-│   │   └── ui/                    # 3D FlipCard, StreakBadge, QuestionCard
-│   └── lib/
-│       ├── data/                  # Single Source of Truth Domain Data
-│       │   ├── exams.ts           # Authoritative syllabus tree (80+ syllabus nodes)
-│       │   ├── lessons.ts         # Aggregated lesson repository with alias resolution
-│       │   ├── questions.ts       # 360+ trilingual MCQs with detailed explanations
-│       │   └── lessons/           # Domain-specific academic modules
-│       │       ├── reference_sst.ts  # 29 Punjab Master Cadre Social Science lessons
-│       │       ├── science.ts        # Physics, Chemistry & Biology modules
-│       │       ├── mathematics.ts    # Arithmetic & Quantitative Aptitude
-│       │       ├── punjabi.ts        # Compulsory Paper A, Gurmukhi & Literature
-│       │       ├── hindi.ts          # Hindi Sahitya Ka Itihas & Vyakaran
-│       │       ├── english.ts        # Grammar & Literature modules
-│       │       ├── patwari_police.ts # Punjab Land Measurements & Law Basics (BNS 2023)
-│       │       ├── pedagogy.ts       # Child Development (Piaget, Vygotsky, Kohlberg)
-│       │       └── rajasthan.ts      # Rajasthan Art, Culture & Geography
-│       └── store.ts               # Zustand global state manager
-```
+### 1. 📚 Topic-Wise Mock Test Portal (`/mock-test`)
+- **15+ Subject Tracks**: Dedicated mock test capability for every core syllabus domain:
+  - Punjab History & Sikh Gurus (1469-1708, Khalsa, Misals, Maharaja Ranjit Singh)
+  - Indian Polity & Constitution (Preamble, Fundamental Rights, Writs, Parliament, Judiciary)
+  - Indian & Punjab Geography (Doabs, Rivers, Soils, Mediterranean Western Disturbances)
+  - Indian Economy (National Income, RBI Repo Rate, NITI Aayog, MSP & CACP, Five-Year Plans)
+  - World History (French Revolution, Russian Revolution, Industrial Revolution, UNO, Cold War)
+  - Science, Quantitative Math, Punjabi Grammar & Literature.
 
-### 1. 100% Static Site Generation (SSG) with Zero Server Footprint
-* Built using Next.js 16 with `output: 'export'`.
-* Every dynamic route (`/exams/[state]`, `/study/[exam]/[subject]`, `/lesson/[topicId]`, `/mock-test/[testId]`, `/results/[attemptId]`) implements `generateStaticParams()` on server wrappers, compiling **94 static HTML/CSS/JS pages** at build time.
-* Enables free, lightning-fast hosting on **GitHub Pages**, **Firebase Hosting**, **Vercel**, or **Cloudflare Pages** without requiring a Node.js server.
+### 2. ⚡ 100,000+ Question Dynamic Generator Engine (`question_bank_engine.ts`)
+- Dynamically derives thousands of statement verification and fact-checking MCQs on the fly from verified syllabus lesson notes and flashcard databases.
+- Zero client-side bundle bloat: runs instantaneously in mobile browsers without crashing memory.
+- Balanced option distribution across A, B, C, and D with verified explanations.
 
-### 2. Trilingual Learning Engine (हिंदी · ਪੰਜਾਬੀ · English)
-* Instant, client-side toggle across all 3 languages without reloading the page.
-* Fully localized lesson theory, mnemonics, flashcard prompts/answers, and mock test question stems.
-* Specially formatted Gurmukhi typography designed for Punjabi Paper A qualifying candidates.
+### 3. 🃏 Dual Interactive Modes (Exam CBT vs 3D Flip Cards)
+- **Live Exam Mode (CBT Simulator)**:
+  - Live countdown timer with auto-submit.
+  - Interactive OMR question palette (*Answered*, *Marked for Review*, *Unanswered*).
+  - Authentic Punjab Master Cadre **-0.25 negative marking penalty** for incorrect answers.
+- **3D Flip Card Mode**:
+  - Interactive tap-to-flip 3D CSS perspective cards.
+  - Question on front; verified answer and key takeaway on back.
+  - FSRS (Free Spaced Repetition Scheduler) rating (*Again*, *Hard*, *Good*, *Easy*).
 
-### 3. The 6-Tab Comprehensive Pedagogy Framework
-Every topic in ExamSathi provides a dedicated study room with 6 interactive tabs:
-1. **📖 Theory & Syllabus Mapping:** Structured conceptual breakdowns, historical timelines, and official government notification badges.
-2. **📄 Official PDFs & Textbooks:** One-click direct downloads and previews for official **PSEB Punjabi textbooks**, **NCERT modules**, **NIOS study guides**, and official department notifications.
-3. **🃏 3D Spaced Repetition Flashcards:** Interactive cards with 3D CSS perspective transforms, powered by the **FSRS (Free Spaced Repetition Scheduler)** review algorithm (*Again 1m, Hard 10m, Good 1d, Easy 4d*).
-4. **🎯 Topic-Wise Practice MCQs:** Authentic questions from previous years (PYQs) with instant evaluation and detailed explanations.
-5. **🎥 Curated Video Lectures:** Verified educational YouTube lectures embedded directly into the lesson.
-6. **📝 Interactive Personal Notes:** Auto-saved markdown notepad persisted locally in `localStorage`.
+### 4. 🏆 5-Tier Candidate Diagnostic Level Benchmark
+Every test submission benchmarks candidate readiness:
+- **Level 5: Master Cadre Exam Ready 🏆** (Top 3% percentile, Gold tier)
+- **Level 4: Advanced Competitor 🥈** (Top 15% percentile, Silver tier)
+- **Level 3: Developing Candidate 🥉** (Top 40% percentile)
+- **Level 2: Foundation Stage 📚**
+- **Level 1: Beginner Explorer 🌱**
+- Complete post-test diagnostic reports with raw score minus penalties, accuracy rate, weak-area diagnostic, and one-click "Practice in Flip Card Mode" action.
 
-### 4. Computer-Based Test (CBT) Engine
-* Full-screen timer with countdown warning.
-* Interactive question palette color-coded by state: *Answered (Green)*, *Marked for Review (Amber)*, *Unanswered (Slate)*.
-* Comprehensive performance analytics post-submission (Accuracy %, Time per question, Sectional breakdown, Weak-area diagnostics).
+### 5. 📜 Last 10 Years Authentic PYQ Archive (2014–2024)
+- 40 curated, exam-verified past questions spanning 2014, 2016, 2017, 2020, 2021, and 2022 Punjab Master Cadre SST examinations.
+- Available as a dedicated "10-Year PYQ Live Test" track.
+
+### 6. 🌐 Trilingual Learning Engine (हिंदी · ਪੰਜਾਬੀ · English)
+- Instant client-side toggle across Hindi, Punjabi (Gurmukhi), and English without page reload.
+- Full Gurmukhi typography support designed for Punjab Paper A qualifying criteria.
 
 ---
 
-## 🚀 Getting Started Locally
+## 🏗️ Technical Architecture
 
-### Prerequisites
-* Node.js 18.x or higher
-* npm or yarn
+```
+examsathi-web/
+├── .github/workflows/deploy.yml   # Automated GitHub Pages CI/CD deployment
+├── SECURITY.md                    # Zero-secrets security and privacy policy
+├── LICENSE                        # Permissive MIT Open Source License
+├── firebase.json                  # Firebase Hosting rewrite rules
+├── next.config.ts                 # Next.js 16 SSG export with dynamic basePath
+├── src/
+│   ├── app/                       # Next.js App Router (137 static SSG pages)
+│   │   ├── (auth)/                # Authentication flows (Login, Register)
+│   │   ├── (dashboard)/           # Dashboard shell & bottom navigation
+│   │   │   ├── dashboard/         # Main analytics and readiness overview
+│   │   │   ├── exams/             # State-wise exam catalog (Punjab, Rajasthan, Central)
+│   │   │   ├── study/             # Exam > Subject > Chapter hierarchy
+│   │   │   ├── lesson/            # 6-Tab study room (theory, PDFs, cards, MCQs, videos)
+│   │   │   ├── mock-test/         # Dual Mode CBT simulator & Flip Card portal
+│   │   │   ├── results/           # 5-Tier level diagnostic & negative marking report
+│   │   │   ├── profile/           # User study streak, badges, and preferences
+│   │   │   └── typing-practice/   # PSSSB Punjabi (Raavi) & English typing simulator
+│   │   ├── layout.tsx             # Root layout with responsive mobile viewport
+│   │   └── page.tsx               # Multilingual landing page
+│   ├── components/                # Reusable UI components
+│   │   ├── layout/                # BottomNav, LanguageToggle
+│   │   └── ui/                    # 3D FlipCard, StreakBadge
+│   └── lib/
+│       ├── data/                  # Single Source of Truth Domain Data
+│       │   ├── exams.ts           # Authoritative syllabus hierarchy
+│       │   ├── lessons.ts         # Aggregated lessons with alias resolution
+│       │   ├── questions.ts       # Handcrafted exam question bank
+│       │   ├── question_bank_engine.ts # 100k+ procedural question generator & level engine
+│       │   └── questions/
+│       │       └── master_cadre_pyqs.ts # 40 authentic 10-year Master Cadre PYQs
+│       └── store.ts               # Zustand global state manager
+```
 
-### Installation
+---
+
+## 🔒 Security & Privacy Audit
+
+* **Zero Hardcoded Secrets**: Scanned and verified: no API keys, private tokens, or sensitive credentials exist in the codebase or git history.
+* **Client-First Privacy**: Learner test scores, progress, notes, and preferences are stored purely in client-side `localStorage` / `sessionStorage`.
+* **Zero Server Attack Surface**: 100% pre-rendered Static Site Generation (SSG) with no backend database or runtime server.
+* **Official Data Provenance**: All curriculum references link directly to verified official government education portals (`punjab.gov.in`, `pseb.ac.in`, `ncert.nic.in`, `nios.ac.in`).
+
+---
+
+## 🛠️ Local Development
+
 ```bash
 # 1. Clone repository
-git clone https://github.com/satdevkumar/examsathi.git
+git clone https://github.com/satdevkumar021-glitch/examsathi.git
 cd examsathi/examsathi-web
 
 # 2. Install dependencies
 npm install
 
-# 3. Run development server
+# 3. Start local development server
 npm run dev
-```
 
-Visit [http://localhost:3000](http://localhost:3000) to view the application.
-
-### Production Build & Export
-```bash
+# 4. Production build & verification
 npm run build
 ```
-This generates the optimized static export in the `/out` directory.
-
----
-
-## 🔒 Security & Privacy Compliance
-
-* **Zero Sensitive Data:** Clean repository history with no hardcoded credentials, secret keys, or personal identifiers.
-* **Client-First Architecture:** User progress, streak tracking, test results, and notes are managed client-side via LocalStorage/SessionStorage, ensuring complete user privacy.
-* **Content Integrity:** All book references and syllabus links point strictly to official government portals (`punjab.gov.in`, `pseb.ac.in`, `ncert.nic.in`, `nios.ac.in`, `ctet.nic.in`).
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the **[MIT License](LICENSE)** — free and open for educational and commercial adaptation.

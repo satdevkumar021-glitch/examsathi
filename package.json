@@ -1,7 +1,23 @@
 {
   "name": "examsathi-web",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "Authoritative multilingual exam preparation platform for Punjab Master Cadre, PSSSB, REET, and Central government examinations.",
+  "license": "MIT",
+  "homepage": "https://satdevkumar021-glitch.github.io/examsathi/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satdevkumar021-glitch/examsathi.git"
+  },
+  "keywords": [
+    "punjab-exams",
+    "master-cadre",
+    "mock-test",
+    "nextjs",
+    "typescript",
+    "tailwind",
+    "pwa",
+    "education"
+  ],
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
