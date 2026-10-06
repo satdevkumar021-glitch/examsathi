@@ -423,3 +423,28 @@ The Phase 0 audit reveals that ExamSathi possesses a well-structured Indic educa
 2. **Server-Authoritative CBT Scoring:** Keep question answer keys and rationales in Supabase Edge Functions / Route Handlers, validating and scoring attempts server-side.
 3. **True Multilingual Database Schema:** Migrate static TypeScript lesson files into versioned PostgreSQL tables (`lessons`, `questions`, `syllabus_nodes`).
 4. **Honest Metrics Policy:** Completely eliminate fabricated candidate pools and fake rank numbers. Implement empty states when cohort data is insufficient.
+
+---
+
+## 7. Resolution & Verification Matrix (Milestones 1–5 Complete)
+
+| Bug ID | Description | Severity | Resolved Commit | Verification Suite | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **B1** | 404s on `/lesson/ett-child-pedagogy/` & `/lesson/psssb-computer-it/` | `CRITICAL` | `3795afc` | `link_checker.spec.ts` (34/34 passed) | ✅ **RESOLVED** |
+| **B2** | Fabricated dashboard KPIs & fake library desks | `CRITICAL` | `47e2159` | `milestone4.spec.ts` (M4-3) & `audit.spec.ts` | ✅ **RESOLVED** |
+| **B3** | Admin portal unprotected without review workflow | `CRITICAL` | `47e2159` | `milestone4.spec.ts` (M4-1) & `audit.spec.ts` | ✅ **RESOLVED** |
+| **B4** | Infinite loading hang on `/mock-test/topic-*/` CBT generator | `CRITICAL` | `3795afc` | `audit.spec.ts` (BUG-01) | ✅ **RESOLVED** |
+| **B5** | Unrelated syllabus PDFs & generic CTAs in lesson views | `MEDIUM` | `f3dd872` | `milestone5.spec.ts` (M5-3) | ✅ **RESOLVED** |
+| **B6** | Inconsistent counts & inflated marketing claims | `MEDIUM` | `f3dd872` | `milestone5.spec.ts` (M5-4) | ✅ **RESOLVED** |
+| **B7** | Missing national (SSC CGL/MTS, UGC NET, UTET) & state exams | `MEDIUM` | `f3dd872` | `milestone5.spec.ts` (M5-1, M5-2) | ✅ **RESOLVED** |
+| **B8** | Roadmap hardcoded Day 14, Piaget SST link, escaped quotes | `MEDIUM` | `47e2159` | `milestone4.spec.ts` (M4-2) | ✅ **RESOLVED** |
+| **B9** | Library timer 45:00 vs 25m Pomodoro default mismatch | `MEDIUM` | `47e2159` | `milestone4.spec.ts` (M4-3) | ✅ **RESOLVED** |
+| **B10**| Raavi typing short passage, legacy Remington confusion | `MEDIUM` | `47e2159` | `milestone4.spec.ts` (M4-4) | ✅ **RESOLVED** |
+| **B11**| Stray Bengali 'ও' glyphs in Hindi history content | `LOW` | `9a9e2ab` | `verification.spec.ts` (BUG-15) | ✅ **RESOLVED** |
+| **B12**| Redundant double titles (`ExamSathi \| ExamSathi`) | `LOW` | `00d1e8c` | `audit.spec.ts` (BUG-16) | ✅ **RESOLVED** |
+| **B13**| Viewport meta blocking mobile zoom (`maximum-scale=1`) | `LOW` | `00d1e8c` | `audit.spec.ts` (BUG-14) | ✅ **RESOLVED** |
+| **B14**| WhatsApp share broken / mixed scripts | `LOW` | `9a9e2ab` | `audit.spec.ts` (BUG-14) | ✅ **RESOLVED** |
+| **B15**| Missing robots.txt, sitemap.xml, styled 404 page | `LOW` | `00d1e8c` | `audit.spec.ts` (BUG-15) | ✅ **RESOLVED** |
+
+**Total Regression Tests:** 79/79 passed across `e2e/link_checker.spec.ts`, `e2e/audit.spec.ts`, `e2e/milestone4.spec.ts`, and `e2e/milestone5.spec.ts`.  
+**Static Export:** 210/210 SSG routes compiled without errors to `./out`.
