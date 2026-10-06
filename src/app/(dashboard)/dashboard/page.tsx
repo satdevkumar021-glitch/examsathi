@@ -33,13 +33,19 @@ export default function Dashboard() {
                 href="/exams" 
                 className="bg-white/20 hover:bg-white/30 transition-colors px-3 py-1.5 rounded-lg text-white text-xs font-semibold backdrop-blur-sm inline-flex items-center gap-1"
               >
-                <Compass size={13} /> Select Examination
+                <Compass size={13} /> Select Exam
               </Link>
               <Link 
-                href="/admin" 
+                href="/login" 
+                className="bg-teal-950/80 hover:bg-teal-900 border border-teal-400/50 px-3 py-1.5 rounded-lg text-teal-200 text-xs font-semibold inline-flex items-center gap-1 shadow-sm"
+              >
+                <span>🔐</span> Student Login
+              </Link>
+              <Link 
+                href="/profile" 
                 className="bg-indigo-950/70 hover:bg-indigo-900 border border-indigo-400/40 px-3 py-1.5 rounded-lg text-indigo-200 text-xs font-semibold inline-flex items-center gap-1"
               >
-                <ShieldCheck size={13} /> Resource Publisher
+                <span>👤</span> Study Vault
               </Link>
             </div>
           </div>

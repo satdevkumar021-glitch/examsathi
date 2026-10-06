@@ -97,6 +97,21 @@ export default function LandingPage() {
           <span>Start Learning • अध्ययन शुरू करें</span>
         </Link>
 
+        <div className="grid grid-cols-2 gap-2.5">
+          <Link 
+            href="/login" 
+            className="w-full bg-slate-800/90 hover:bg-slate-750 text-indigo-300 hover:text-white border border-indigo-500/40 hover:border-indigo-400 font-bold py-3 rounded-xl shadow transition text-xs flex items-center justify-center gap-1.5"
+          >
+            <span>🔐</span> Student Login
+          </Link>
+          <Link 
+            href="/register" 
+            className="w-full bg-slate-800/90 hover:bg-slate-750 text-teal-300 hover:text-white border border-teal-500/40 hover:border-teal-400 font-bold py-3 rounded-xl shadow transition text-xs flex items-center justify-center gap-1.5"
+          >
+            <span>✨</span> Register Free
+          </Link>
+        </div>
+
         {/* WhatsApp Share Button */}
         <a 
           href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
@@ -110,12 +125,8 @@ export default function LandingPage() {
         </a>
 
         <div className="flex justify-center gap-4 text-xs text-slate-400">
-          <Link href="/login" className="hover:text-white transition">
-            Student Login
-          </Link>
-          <span>•</span>
-          <Link href="/register" className="hover:text-white transition">
-            Register Free
+          <Link href="/forgot-password" className="hover:text-amber-300 transition">
+            Forgot Password?
           </Link>
           <span>•</span>
           <Link href="/admin" className="hover:text-teal-300 transition">

@@ -23,7 +23,17 @@ export default function DashboardLayout({
             </span>
           </div>
         </Link>
-        <LanguageToggle />
+        <div className="flex items-center gap-2">
+          <LanguageToggle />
+          <Link
+            href="/login"
+            className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 hover:text-white border border-indigo-500/40 text-xs font-bold transition shadow-sm"
+            title="Student Login / Sign Up"
+          >
+            <span>🔐</span>
+            <span className="text-[11px]">Login</span>
+          </Link>
+        </div>
       </header>
       
       <main className="flex-1 overflow-y-auto">
