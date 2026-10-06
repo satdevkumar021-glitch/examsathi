@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { 
   Compass, Calendar, CheckCircle2, Circle, Flame, Target, 
   Sparkles, Award, ArrowRight, Clock, BookOpen, Layers, 
-  ShieldAlert, Brain, ChevronRight, Check
+  ShieldAlert, Brain, ChevronRight, Check, ChevronLeft
 } from 'lucide-react';
 import { getStoredUser } from '@/lib/auth';
 
@@ -40,6 +40,19 @@ export default function StudyRoadmap() {
       else if (storedUser.targetExam.includes('master')) setSelectedTrack('master-cadre');
       else setSelectedTrack('ett');
 
+      // Calculate dynamic day from user joined date or streak
+      let computedDay = 14;
+      if (storedUser.joinedDate && storedUser.joinedDate !== 'New Member') {
+        const joinedTime = new Date(storedUser.joinedDate).getTime();
+        if (!isNaN(joinedTime)) {
+          const diff = Math.floor((Date.now() - joinedTime) / (1000 * 60 * 60 * 24)) + 1;
+          computedDay = Math.min(60, Math.max(1, diff));
+        }
+      } else if (storedUser.streak && storedUser.streak > 0) {
+        computedDay = Math.min(60, Math.max(1, storedUser.streak));
+      }
+      setActiveDay(computedDay);
+
       const saved = localStorage.getItem('examsathi_roadmap_completed');
       if (saved) setCompletedTasks(JSON.parse(saved));
     } catch {}
@@ -73,6 +86,33 @@ export default function StudyRoadmap() {
       },
       days: [
         {
+          dayNumber: 1,
+          phase: 'Phase 1: Orientation & Child Psychology Basics',
+          theme: 'Syllabus Breakdown, RTE 2009 Act & Growth vs Development',
+          tasks: [
+            {
+              id: 'ett-d1-t1',
+              title: 'Study RTE Act 2009 & Teacher-Pupil Ratio (30:1)',
+              titlePa: 'ਸਿੱਖਿਆ ਦਾ ਅਧਿਕਾਰ ਕਾਨੂੰਨ 2009 ਨਿਯਮ',
+              category: 'concept',
+              estimatedMinutes: 25,
+              link: '/lesson/child-development-pedagogy',
+              linkText: 'Read RTE Notes',
+              xp: 40,
+            },
+            {
+              id: 'ett-d1-t2',
+              title: 'Solve 20 CDP Growth & Development MCQs',
+              titlePa: 'ਵਾਧਾ ਅਤੇ ਵਿਕਾਸ ਸਿਧਾਂਤ ਪ੍ਰਸ਼ਨ',
+              category: 'mcq',
+              estimatedMinutes: 20,
+              link: '/mock-test/topic-child-development-pedagogy?count=20',
+              linkText: 'Practice 20 Qs',
+              xp: 50,
+            },
+          ],
+        },
+        {
           dayNumber: 14,
           phase: 'Phase 1: Pedagogy & Child Psychology Foundations',
           theme: 'Cognitive Theories: Piaget Stages vs Vygotsky Social Interaction',
@@ -93,7 +133,7 @@ export default function StudyRoadmap() {
               titlePa: '25 ਬਾਲ ਮਨੋਵਿਗਿਆਨ MCQs ਹੱਲ ਕਰੋ',
               category: 'mcq',
               estimatedMinutes: 20,
-              link: '/mock-test/topic-ett-child-pedagogy?count=25',
+              link: '/mock-test/topic-child-development-pedagogy?count=25',
               linkText: 'Start 25 Qs Drill',
               xp: 60,
             },
@@ -103,7 +143,7 @@ export default function StudyRoadmap() {
               titlePa: 'ਹਰੀਕੇ, ਰੋਪੜ ਤੇ ਕਾਂਜਲੀ ਵੈਟਲੈਂਡਜ਼ ਫਲਿੱਪ ਕਾਰਡ',
               category: 'flip',
               estimatedMinutes: 15,
-              link: '/mock-test/topic-ett-evs-science?mode=flip',
+              link: '/mock-test/topic-environment-ecology?mode=flip',
               linkText: 'Practice 3D Cards',
               xp: 35,
             },
@@ -116,6 +156,67 @@ export default function StudyRoadmap() {
               link: '/mock-test/topic-all?exam=ett-punjab&count=50',
               linkText: 'Take 50 Qs CBT',
               xp: 100,
+            },
+          ],
+        },
+        {
+          dayNumber: 30,
+          phase: 'Phase 2: 12-Year PYQ Topic-by-Topic Drill',
+          theme: 'Inclusive Education, CCE & NEP 2020 Pedagogical Structure',
+          tasks: [
+            {
+              id: 'ett-d30-t1',
+              title: 'Master Continuous & Comprehensive Evaluation (CCE)',
+              titlePa: 'ਸਤਤ ਅਤੇ ਵਿਆਪਕ ਮੁਲਾਂਕਣ (CCE)',
+              category: 'concept',
+              estimatedMinutes: 30,
+              link: '/lesson/child-development-pedagogy',
+              linkText: 'CCE Notes',
+              xp: 50,
+            },
+            {
+              id: 'ett-d30-t2',
+              title: 'Attempt 35 Mixed ETT Cadre Previous Year Questions',
+              titlePa: 'ਪਿਛਲੇ ਸਾਲਾਂ ਦੇ 35 ਮਿਸ਼ਰਤ ਪ੍ਰਸ਼ਨ',
+              category: 'mcq',
+              estimatedMinutes: 30,
+              link: '/mock-test/topic-child-development-pedagogy?count=35',
+              linkText: 'PYQ Drill',
+              xp: 75,
+            },
+          ],
+        },
+        {
+          dayNumber: 45,
+          phase: 'Phase 3: Speed, Accuracy & Negative Marking Elimination',
+          theme: 'Full Speed Tests under strict 45-minute countdown',
+          tasks: [
+            {
+              id: 'ett-d45-t1',
+              title: 'Speed Drill: 50 Questions in 40 Minutes',
+              titlePa: 'ਰਫ਼ਤਾਰ ਟੈਸਟ: 40 ਮਿੰਟ ਵਿੱਚ 50 ਸਵਾਲ',
+              category: 'cbt',
+              estimatedMinutes: 40,
+              link: '/mock-test/topic-all?exam=ett-punjab&count=50',
+              linkText: 'Speed Drill',
+              xp: 90,
+            },
+          ],
+        },
+        {
+          dayNumber: 60,
+          phase: 'Phase 4: Final State Rank Simulation',
+          theme: 'Grand Mock CBT with negative marking and state rank projection',
+          tasks: [
+            {
+              id: 'ett-d60-t1',
+              title: 'Full 100-Question Grand CBT Mock Test',
+              titlePa: 'ਪੂਰਾ ਗ੍ਰੈਂਡ ਸੀ.ਬੀ.ਟੀ. ਮੌਕ ਟੈਸਟ',
+              category: 'cbt',
+              estimatedMinutes: 90,
+              link: '/mock-test/topic-all?exam=ett-punjab&count=50',
+              linkText: 'Grand CBT',
+              xp: 150,
             },
           ],
         },
@@ -140,13 +241,40 @@ export default function StudyRoadmap() {
       },
       days: [
         {
+          dayNumber: 1,
+          phase: 'Phase 1: Basic Computer & Raavi Keyboard Setup',
+          theme: 'Hardware, OS Basics & InScript Layout Finger Placement',
+          tasks: [
+            {
+              id: 'clk-d1-t1',
+              title: 'Raavi Keyboard Layout: Home Row & InScript Rules',
+              titlePa: 'ਰਾਵੀ ਹੋਮ ਰੋਅ ਅਤੇ ਉਂਗਲਾਂ ਦੀ ਸਹੀ ਸਥਿਤੀ',
+              category: 'concept',
+              estimatedMinutes: 20,
+              link: '/typing-practice',
+              linkText: 'Typing Rules',
+              xp: 40,
+            },
+            {
+              id: 'clk-d1-t2',
+              title: 'Attempt 20 Computer Hardware & Memory MCQs',
+              titlePa: '20 ਕੰਪਿਊਟਰ ਮੈਮੋਰੀ ਅਤੇ ਹਾਰਡਵੇਅਰ ਪ੍ਰਸ਼ਨ',
+              category: 'mcq',
+              estimatedMinutes: 20,
+              link: '/mock-test/topic-computer-awareness?count=20',
+              linkText: 'Computer Drill',
+              xp: 50,
+            },
+          ],
+        },
+        {
           dayNumber: 14,
           phase: 'Phase 1: Computer IT & Raavi Typing Mastery',
           theme: 'MS Office Advanced Shortcuts, Binary/ASCII & Inscript Halant Rules',
           tasks: [
             {
               id: 'clk-t1',
-              title: 'Master Raavi Unicode Doot Akhar (Halant \'d\' Key Rules)',
+              title: 'Master Raavi Unicode Doot Akhar (Halant d Key Rules)',
               titlePa: 'ਰਾਵੀ ਫੌਂਟ ਵਿੱਚ ਪੈਰੀਂ ਅੱਖਰ ਪਾਉਣ ਦੇ ਨਿਯਮ',
               category: 'concept',
               estimatedMinutes: 20,
@@ -160,7 +288,7 @@ export default function StudyRoadmap() {
               titlePa: '25 ਕੰਪਿਊਟਰ ਅਤੇ ਆਈ.ਟੀ. ਸਵਾਲ ਹੱਲ ਕਰੋ',
               category: 'mcq',
               estimatedMinutes: 20,
-              link: '/mock-test/topic-psssb-computer-it?count=25',
+              link: '/mock-test/topic-computer-awareness?count=25',
               linkText: 'Start 25 Qs Drill',
               xp: 60,
             },
@@ -186,6 +314,50 @@ export default function StudyRoadmap() {
             },
           ],
         },
+        {
+          dayNumber: 30,
+          phase: 'Phase 2: Networking & MS Excel Deep Mastery',
+          theme: 'Networking Topologies, OSI Model & Spreadsheet Formulas',
+          tasks: [
+            {
+              id: 'clk-d30-t1',
+              title: 'Review MS Excel Formulas (VLOOKUP, IF, SUMIF)',
+              titlePa: 'ਐਕਸਲ ਫਾਰਮੂਲੇ ਅਤੇ ਸ਼ਾਰਟਕੱਟ',
+              category: 'concept',
+              estimatedMinutes: 25,
+              link: '/lesson/computer-awareness',
+              linkText: 'Excel Notes',
+              xp: 45,
+            },
+            {
+              id: 'clk-d30-t2',
+              title: '10-Minute Official Benchmark Typing Session',
+              titlePa: '10 ਮਿੰਟ ਰਾਵੀ ਟੈਸਟ (30 WPM & 92% ਸ਼ੁੱਧਤਾ)',
+              category: 'flip',
+              estimatedMinutes: 15,
+              link: '/typing-practice',
+              linkText: 'Take 10m Test',
+              xp: 50,
+            },
+          ],
+        },
+        {
+          dayNumber: 60,
+          phase: 'Phase 4: Final PSSSB Qualifying Simulation',
+          theme: 'Full 100-Question Clerk Exam + 10-Minute Raavi Exam',
+          tasks: [
+            {
+              id: 'clk-d60-t1',
+              title: 'Comprehensive 100 Qs Clerk Mock Simulation',
+              titlePa: 'ਪੂਰਾ 100 ਸਵਾਲਾਂ ਦਾ ਕਲਰਕ ਮੌਕ ਟੈਸਟ',
+              category: 'cbt',
+              estimatedMinutes: 90,
+              link: '/mock-test/topic-all?exam=clerk-psssb&count=50',
+              linkText: 'Grand Clerk CBT',
+              xp: 150,
+            },
+          ],
+        },
       ],
     },
     'master-cadre': {
@@ -206,6 +378,33 @@ export default function StudyRoadmap() {
         xp: 50,
       },
       days: [
+        {
+          dayNumber: 1,
+          phase: 'Phase 1: Punjab History & Ancient Civilizations',
+          theme: 'Harappan Civilization in Punjab & Sikh Guru Period Overview',
+          tasks: [
+            {
+              id: 'sst-d1-t1',
+              title: 'Study Harappan Sites in Punjab (Ropar, Kotla Nihang)',
+              titlePa: 'ਪੰਜਾਬ ਵਿੱਚ ਹੜੱਪਾ ਸੱਭਿਅਤਾ ਦੇ ਕੇਂਦਰ',
+              category: 'concept',
+              estimatedMinutes: 30,
+              link: '/lesson/sst-harappa',
+              linkText: 'Harappa Notes',
+              xp: 45,
+            },
+            {
+              id: 'sst-d1-t2',
+              title: '25 History MCQs: Indus Valley to Vedic Period',
+              titlePa: 'ਸਿੰਧੂ ਘਾਟੀ ਤੋਂ ਵੈਦਿਕ ਕਾਲ ਪ੍ਰਸ਼ਨ',
+              category: 'mcq',
+              estimatedMinutes: 20,
+              link: '/mock-test/topic-ancient-india?count=25',
+              linkText: 'History Drill',
+              xp: 55,
+            },
+          ],
+        },
         {
           dayNumber: 14,
           phase: 'Phase 2: Punjab History & 12 Misls Intensive',
@@ -253,15 +452,66 @@ export default function StudyRoadmap() {
             },
           ],
         },
+        {
+          dayNumber: 30,
+          phase: 'Phase 3: Indian Polity & Economic Fundamentals',
+          theme: 'Parliament, Judiciary, Writs, RBI & National Income',
+          tasks: [
+            {
+              id: 'sst-d30-t1',
+              title: 'Indian Judiciary: Supreme Court Writs & Art 72 Pardon Scope',
+              titlePa: 'ਸੁਪਰੀਮ ਕੋਰਟ ਰਿੱਟਾਂ ਅਤੇ ਨਿਆਂਇਕ ਸਮੀਖਿਆ',
+              category: 'concept',
+              estimatedMinutes: 30,
+              link: '/lesson/fundamental-rights',
+              linkText: 'Polity Notes',
+              xp: 50,
+            },
+            {
+              id: 'sst-d30-t2',
+              title: 'Solve 30 Economics & RBI Monetary Policy MCQs',
+              titlePa: 'ਭਾਰਤੀ ਅਰਥਵਿਵਸਥਾ ਅਤੇ ਆਰ.ਬੀ.ਆਈ. ਪ੍ਰਸ਼ਨ',
+              category: 'mcq',
+              estimatedMinutes: 25,
+              link: '/mock-test/topic-indian-economy?count=30',
+              linkText: 'Eco Drill',
+              xp: 65,
+            },
+          ],
+        },
+        {
+          dayNumber: 60,
+          phase: 'Phase 4: Full 150-Question Master Cadre Simulation',
+          theme: 'Complete 150-Mark 4-Subject SST Merit Decider',
+          tasks: [
+            {
+              id: 'sst-d60-t1',
+              title: 'Official Pattern 150 Qs Grand CBT Mock Test',
+              titlePa: 'ਮਾਸਟਰ ਕੈਡਰ 150 ਸਵਾਲਾਂ ਦਾ ਮੁਕੰਮਲ ਮੌਕ ਟੈਸਟ',
+              category: 'cbt',
+              estimatedMinutes: 150,
+              link: '/mock-test/topic-all?exam=master-cadre-sst&count=50',
+              linkText: 'Grand 150 CBT',
+              xp: 200,
+            },
+          ],
+        },
       ],
     },
   };
 
   const activeRoadmap = TRACK_ROADMAPS[selectedTrack] || TRACK_ROADMAPS.ett;
-  const currentDayData = activeRoadmap.days[0];
+  
+  // Find current day data, or fallback to closest available day milestone
+  const currentDayData = activeRoadmap.days.find(d => d.dayNumber === activeDay) 
+    || activeRoadmap.days.reduce((prev, curr) => 
+        Math.abs(curr.dayNumber - activeDay) < Math.abs(prev.dayNumber - activeDay) ? curr : prev, 
+        activeRoadmap.days[0]
+      );
+
   const dayTasks = currentDayData.tasks;
   const completedCount = dayTasks.filter(t => completedTasks[t.id]).length;
-  const completionPercentage = Math.round((completedCount / dayTasks.length) * 100);
+  const completionPercentage = dayTasks.length > 0 ? Math.round((completedCount / dayTasks.length) * 100) : 0;
 
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-28 text-slate-100 max-w-xl mx-auto w-full">
@@ -276,11 +526,11 @@ export default function StudyRoadmap() {
             <div>
               <h1 className="text-white font-extrabold text-lg">Daily Preparation Roadmap</h1>
               <p className="text-[11px] text-teal-300">
-                60-Day Day-by-Day Master Schedule • ETT, Clerk & Master Cadre
+                60-Day Adaptive Study Schedule • ETT, Clerk & Master Cadre
               </p>
             </div>
           </div>
-          <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-1 rounded-full border border-amber-500/40 flex items-center gap-1">
+          <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-1 rounded-full border border-amber-500/40 flex items-center gap-1 font-mono">
             <Flame size={12} /> Day {activeDay} of 60
           </span>
         </div>
@@ -311,20 +561,49 @@ export default function StudyRoadmap() {
         </div>
       </div>
 
+      {/* MILESTONE DAY SELECTOR PILLS */}
+      <div className="bg-slate-800/90 rounded-2xl p-3.5 border border-slate-700 shadow flex flex-col gap-2.5">
+        <div className="flex items-center justify-between text-xs">
+          <span className="text-slate-300 font-bold flex items-center gap-1.5">
+            <Calendar size={14} className="text-teal-400" />
+            Select Study Day / Milestone:
+          </span>
+          <span className="text-teal-400 font-mono font-bold text-[11px]">
+            {currentDayData.phase.split(':')[0]}
+          </span>
+        </div>
+
+        <div className="flex items-center justify-between gap-1.5 overflow-x-auto pb-1">
+          {[1, 14, 30, 45, 60].map(day => (
+            <button
+              key={day}
+              onClick={() => setActiveDay(day)}
+              className={`flex-1 py-1.5 px-2 rounded-xl text-xs font-bold transition border ${
+                activeDay === day
+                  ? 'bg-teal-500 text-slate-950 border-teal-400 shadow'
+                  : 'bg-slate-900 border-slate-750 text-slate-400 hover:text-white'
+              }`}
+            >
+              Day {day}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* TODAY'S ACTION PLAN CHECKLIST CARD */}
       <div className="bg-slate-800/90 rounded-2xl p-4 border border-slate-700 shadow-lg flex flex-col gap-3.5">
         <div className="flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-teal-400" />
-              <h2 className="text-sm font-bold text-white">Today&apos;s Action Plan (दिन का लक्ष्य)</h2>
+              <h2 className="text-sm font-bold text-white">Day {currentDayData.dayNumber}: {currentDayData.theme}</h2>
             </div>
             <p className="text-[11px] text-slate-400 mt-0.5">
               {completedCount} of {dayTasks.length} tasks completed ({completionPercentage}%)
             </p>
           </div>
-          <span className="text-xs font-black text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/30 font-mono">
-            +{completedCount * 50} XP Today
+          <span className="text-xs font-black text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded-full border border-teal-500/30 font-mono shrink-0">
+            +{completedCount * 50} XP
           </span>
         </div>
 
@@ -386,7 +665,7 @@ export default function StudyRoadmap() {
         </div>
       </div>
 
-      {/* DAILY HARD MERIT CHALLENGE (आज की कठिन चुनौती) */}
+      {/* DAILY HARD MERIT CHALLENGE */}
       <div className="bg-gradient-to-br from-rose-950/40 via-slate-850 to-indigo-950/40 rounded-2xl p-4 border border-rose-500/40 shadow-lg flex flex-col gap-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -461,10 +740,10 @@ export default function StudyRoadmap() {
               <span className="w-6 h-6 rounded-lg bg-teal-500/20 text-teal-300 font-bold flex items-center justify-center text-[10px]">P1</span>
               <div>
                 <strong className="text-white block">Days 1 – 15: Core Foundations</strong>
-                <span className="text-[10px] text-slate-400">Theory, CDP / IT & Key Notes</span>
+                <span className="text-[10px] text-slate-400">Theory, Child Development & Computer IT</span>
               </div>
             </div>
-            <span className="text-teal-400 text-[10px] font-bold">Current Phase</span>
+            <span className="text-teal-400 text-[10px] font-bold">Foundation</span>
           </div>
 
           <div className="p-2.5 rounded-xl bg-slate-900/40 border border-slate-800 flex items-center justify-between opacity-80">
@@ -475,7 +754,7 @@ export default function StudyRoadmap() {
                 <span className="text-[10px] text-slate-400">Topic-by-topic PYQ drills</span>
               </div>
             </div>
-            <span className="text-slate-500 text-[10px]">Upcoming</span>
+            <span className="text-slate-500 text-[10px]">Practice</span>
           </div>
 
           <div className="p-2.5 rounded-xl bg-slate-900/40 border border-slate-800 flex items-center justify-between opacity-80">
@@ -486,7 +765,7 @@ export default function StudyRoadmap() {
                 <span className="text-[10px] text-slate-400">Eliminating -0.25 Negative Marking</span>
               </div>
             </div>
-            <span className="text-slate-500 text-[10px]">Upcoming</span>
+            <span className="text-slate-500 text-[10px]">Speed Drills</span>
           </div>
 
           <div className="p-2.5 rounded-xl bg-slate-900/40 border border-slate-800 flex items-center justify-between opacity-80">

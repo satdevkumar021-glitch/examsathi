@@ -1,18 +1,25 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { ArrowLeft, Clock, Award, RotateCcw, CheckCircle2, AlertTriangle, Keyboard } from 'lucide-react';
+import { 
+  ArrowLeft, Clock, Award, RotateCcw, CheckCircle2, 
+  AlertTriangle, Keyboard, Info, Check, HelpCircle 
+} from 'lucide-react';
 
 const PRACTICE_PASSAGES = {
   punjabi: {
-    beginner: 'ਪੰਜਾਬ ਭਾਰਤ ਦਾ ਇੱਕ ਖੁਸ਼ਹਾਲ ਸੂਬਾ ਹੈ। ਇਸ ਦੀ ਧਰਤੀ ਬਹੁਤ ਉਪਜਾਊ ਹੈ। ਪੰਜਾਬ ਵਿੱਚ ਪੰਜ ਦਰਿਆ ਵਗਦੇ ਰਹੇ ਹਨ ਜਿਨ੍ਹਾਂ ਕਾਰਨ ਇਸ ਦਾ ਨਾਮ ਪੰਜਾਬ ਪਿਆ। ਇੱਥੋਂ ਦੇ ਕਿਸਾਨ ਬਹੁਤ ਮਿਹਨਤੀ ਹਨ ਅਤੇ ਦੇਸ਼ ਦੇ ਅੰਨ ਭੰਡਾਰ ਵਿੱਚ ਵੱਡਾ ਯੋਗਦਾਨ ਪਾਉਂਦੇ ਹਨ।',
-    intermediate: 'ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਨੇ ਕਿਰਤ ਕਰੋ, ਨਾਮ ਜਪੋ ਅਤੇ ਵੰਡ ਛਕੋ ਦਾ ਸੰਦੇਸ਼ ਦਿੱਤਾ। ਪੰਜਾਬ ਸਰਕਾਰ ਵੱਲੋਂ ਨੌਜਵਾਨਾਂ ਨੂੰ ਸਰਕਾਰੀ ਨੌਕਰੀਆਂ ਪ੍ਰਦਾਨ ਕਰਨ ਲਈ ਭਰਤੀ ਮੁਹਿੰਮ ਚਲਾਈ ਗਈ ਹੈ। ਪੰਜਾਬ ਅਧੀਨ ਸੇਵਾਵਾਂ ਚੋਣ ਬੋਰਡ ਵੱਲੋਂ ਕਲਰਕ ਦੀ ਭਰਤੀ ਲਈ ਰਾਵੀ ਫੌਂਟ ਦੀ ਟਾਈਪਿੰਗ ਪ੍ਰੀਖਿਆ ਲਾਜ਼ਮੀ ਕੀਤੀ ਗਈ ਹੈ।',
-    hard: 'ਪੰਜਾਬ ਸਿਵਲ ਸੇਵਾਵਾਂ ਨਿਯਮਾਂ ਅਧੀਨ ਸਮੂਹ ਬੋਰਡਾਂ ਅਤੇ ਨਿਗਮਾਂ ਵਿੱਚ ਗਰੁੱਪ ਸੀ ਦੀਆਂ ਅਸਾਮੀਆਂ ਲਈ ਉਮੀਦਵਾਰਾਂ ਨੂੰ ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਵਿੱਚ ਯੋਗਤਾ ਟੈਸਟ ਪਾਸ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੋਵੇਗਾ। ਇਸ ਇਮਤਿਹਾਨ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ ਤੀਹ ਸ਼ਬਦ ਪ੍ਰਤੀ ਮਿੰਟ ਦੀ ਗਤੀ ਅਤੇ ਬਾਨਵੇਂ ਫੀਸਦੀ ਸ਼ੁੱਧਤਾ ਹੋਣੀ ਅਤਿ ਜ਼ਰੂਰੀ ਹੈ ਤਾਂ ਜੋ ਪ੍ਰਬੰਧਕੀ ਕੰਮਕਾਜ ਸੁਚਾਰੂ ਢੰਗ ਨਾਲ ਚਲਾਇਆ ਜਾ ਸਕੇ।',
+    beginner: `ਪੰਜਾਬ ਭਾਰਤ ਦਾ ਇੱਕ ਅਤਿਅੰਤ ਖੁਸ਼ਹਾਲ ਅਤੇ ਇਤਿਹਾਸਕ ਸੂਬਾ ਹੈ। ਇਸ ਦੀ ਪਵਿੱਤਰ ਧਰਤੀ ਬਹੁਤ ਹੀ ਉਪਜਾਊ ਅਤੇ ਜਰਖੇਜ਼ ਹੈ। ਪੰਜਾਬ ਵਿੱਚ ਸਦੀਆਂ ਤੋਂ ਪੰਜ ਮਹਾਨ ਦਰਿਆ ਵਗਦੇ ਰਹੇ ਹਨ ਜਿਨ੍ਹਾਂ ਕਾਰਨ ਇਸ ਧਰਤੀ ਨੂੰ ਪੰਚ-ਨਦ ਜਾਂ ਪੰਜਾਬ ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਇੱਥੋਂ ਦੇ ਮਿਹਨਤੀ ਕਿਸਾਨਾਂ ਨੇ ਦੇਸ਼ ਦੇ ਅੰਨ ਭੰਡਾਰ ਨੂੰ ਭਰਨ ਵਿੱਚ ਹਮੇਸ਼ਾ ਵੱਡਾ ਯੋਗਦਾਨ ਪਾਇਆ ਹੈ। ਸ੍ਰੀ ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਨੇ ਕਿਰਤ ਕਰੋ, ਨਾਮ ਜਪੋ ਅਤੇ ਵੰਡ ਛਕੋ ਦਾ ਅਮਰ ਸੰਦੇਸ਼ ਦਿੱਤਾ ਜਿਸ ਨੇ ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ ਦੀ ਨੀਂਹ ਰੱਖੀ। ਪੰਜਾਬ ਸਰਕਾਰ ਵੱਲੋਂ ਨੌਜਵਾਨਾਂ ਲਈ ਸਰਕਾਰੀ ਰੁਜ਼ਗਾਰ ਦੇ ਮੌਕੇ ਪ੍ਰਦਾਨ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ। ਪ੍ਰਸ਼ਾਸਨਿਕ ਕੰਮਕਾਜ ਨੂੰ ਸੁਚਾਰੂ ਅਤੇ ਪਾਰਦਰਸ਼ੀ ਬਣਾਉਣ ਲਈ ਕੰਪਿਊਟਰ ਅਤੇ ਪੰਜਾਬੀ ਟਾਈਪਿੰਗ ਦਾ ਗਿਆਨ ਬਹੁਤ ਲਾਜ਼ਮੀ ਕੀਤਾ ਗਿਆ ਹੈ। ਹਰੇਕ ਉਮੀਦਵਾਰ ਨੂੰ ਰੋਜ਼ਾਨਾ ਅਭਿਆਸ ਕਰਕੇ ਆਪਣੀ ਰਫ਼ਤਾਰ ਅਤੇ ਸ਼ੁੱਧਤਾ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ।`,
+    
+    intermediate: `ਪੰਜਾਬ ਅਧੀਨ ਸੇਵਾਵਾਂ ਚੋਣ ਬੋਰਡ ਵੱਲੋਂ ਵੱਖ-ਵੱਖ ਵਿਭਾਗਾਂ ਵਿੱਚ ਕਲਰਕ ਅਤੇ ਡਾਟਾ ਐਂਟਰੀ ਆਪਰੇਟਰਾਂ ਦੀ ਭਰਤੀ ਲਈ ਰਾਵੀ ਫੌਂਟ ਵਿੱਚ ਟਾਈਪਿੰਗ ਪ੍ਰੀਖਿਆ ਲਾਜ਼ਮੀ ਕਰਾਰ ਦਿੱਤੀ ਗਈ ਹੈ। ਇਸ ਸਰਕਾਰੀ ਇਮਤਿਹਾਨ ਵਿੱਚ ਸਫਲਤਾ ਹਾਸਲ ਕਰਨ ਲਈ ਉਮੀਦਵਾਰ ਨੂੰ ਦਸ ਮਿੰਟਾਂ ਦੇ ਸਮੇਂ ਅੰਦਰ ਘੱਟੋ-ਘੱਟ ਤੀਹ ਸ਼ਬਦ ਪ੍ਰਤੀ ਮਿੰਟ ਦੀ ਗਤੀ ਅਤੇ ਬਾਨਵੇਂ ਫੀਸਦੀ ਸ਼ੁੱਧਤਾ ਬਣਾ ਕੇ ਰੱਖਣੀ ਹੁੰਦੀ ਹੈ। ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਵਿੱਚ ਸ਼ੁੱਧ ਟਾਈਪ ਕਰਨ ਲਈ ਰਾਵੀ ਯੂਨੀਕੋਡ ਇਨਸਕ੍ਰਿਪਟ ਕੀਬੋਰਡ ਦੀ ਜਾਣਕਾਰੀ ਹੋਣੀ ਅਤਿਅੰਤ ਜ਼ਰੂਰੀ ਹੈ। ਦੁੱਤ ਅੱਖਰ ਜਿਵੇਂ ਕਿ ਪੈਰ ਵਿੱਚ ਰਾਰਾ, ਹਾਹਾ ਜਾਂ ਵਾਵਾ ਪਾਉਣ ਲਈ ਹਲੰਤ ਕੁੰਜੀ ਦੀ ਸਹੀ ਵਰਤੋਂ ਕਰਨੀ ਪੈਂਦੀ ਹੈ। ਜਦੋਂ ਅਸੀਂ ਕਿਸੇ ਸ਼ਬਦ ਵਿੱਚ ਪੈਰੀਂ ਅੱਖਰ ਲਿਖਣਾ ਹੋਵੇ ਤਾਂ ਪਹਿਲਾਂ ਮੁੱਖ ਅੱਖਰ ਦਬਾ ਕੇ ਹਲੰਤ ਕੁੰਜੀ ਦਬਾਈ ਜਾਂਦੀ ਹੈ ਅਤੇ ਉਸ ਤੋਂ ਤੁਰੰਤ ਬਾਅਦ ਸੰਬੰਧਿਤ ਅੱਖਰ ਦਬਾਇਆ ਜਾਂਦਾ ਹੈ। ਮਿਸਾਲ ਵਜੋਂ ਪ੍ਰਕਾਸ਼ ਸ਼ਬਦ ਲਿਖਣ ਲਈ ਪੱਪਾ, ਹਲੰਤ ਅਤੇ ਰਾਰਾ ਦਬਾਉਣਾ ਪੈਂਦਾ ਹੈ। ਪੰਜਾਬ ਸਰਕਾਰ ਦੇ ਸਾਰੇ ਦਫ਼ਤਰਾਂ ਵਿੱਚ ਹੁਣ ਈ-ਆਫਿਸ ਪ੍ਰਣਾਲੀ ਲਾਗੂ ਹੋ ਚੁੱਕੀ ਹੈ ਜਿਸ ਕਾਰਨ ਦਫ਼ਤਰੀ ਨੋਟਿੰਗ ਅਤੇ ਡਰਾਫਟਿੰਗ ਕੇਵਲ ਪੰਜਾਬੀ ਯੂਨੀਕੋਡ ਵਿੱਚ ਹੀ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਨਿਰੰਤਰ ਅਭਿਆਸ ਅਤੇ ਸਹੀ ਉਂਗਲਾਂ ਦੀ ਸਥਿਤੀ ਨਾਲ ਕੋਈ ਵੀ ਵਿਦਿਆਰਥੀ ਇਸ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਮੈਰਿਟ ਸਥਾਨ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦਾ ਹੈ। ਪ੍ਰੀਖਿਆ ਕੇਂਦਰ ਵਿੱਚ ਸ਼ਾਂਤ ਚਿੱਤ ਰਹਿ ਕੇ ਟਾਈਪ ਕਰਨਾ ਬਹੁਤ ਜ਼ਰੂਰੀ ਹੈ ਤਾਂ ਜੋ ਗਲਤੀਆਂ ਦੀ ਦਰ ਘੱਟ ਤੋਂ ਘੱਟ ਰਹੇ।`,
+    
+    hard: `ਪੰਜਾਬ ਸਿਵਲ ਸੇਵਾਵਾਂ ਪ੍ਰਬੰਧਕੀ ਨਿਯਮਾਵਲੀ ਅਧੀਨ ਸਮੂਹ ਵਿਭਾਗਾਂ, ਬੋਰਡਾਂ ਅਤੇ ਨਿਗਮਾਂ ਵਿੱਚ ਗਰੁੱਪ ਸੀ ਦੀਆਂ ਅਸਾਮੀਆਂ ਲਈ ਉਮੀਦਵਾਰਾਂ ਨੂੰ ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ ਯੋਗਤਾ ਟੈਸਟ ਪਾਸ ਕਰਨਾ ਕਾਨੂੰਨੀ ਤੌਰ 'ਤੇ ਲਾਜ਼ਮੀ ਹੈ। ਇਸ ਇਮਤਿਹਾਨ ਦਾ ਮੁੱਖ ਮੰਤਵ ਸਰਕਾਰੀ ਦਫ਼ਤਰਾਂ ਵਿੱਚ ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਦੇ ਕਾਨੂੰਨੀ ਪ੍ਰਯੋਗ ਨੂੰ ਯਕੀਨੀ ਬਣਾਉਣਾ ਹੈ। ਸਰਕਾਰੀ ਨੋਟੀਫਿਕੇਸ਼ਨਾਂ, ਗਜ਼ਟ ਆਦੇਸ਼ਾਂ ਅਤੇ ਅਦਾਲਤੀ ਫੈਸਲਿਆਂ ਦੀ ਤਿਆਰੀ ਵਿੱਚ ਸ਼ੁੱਧ ਗੁਰਮੁਖੀ ਲਿਪੀ, ਵਿਸ਼ਰਾਮ ਚਿੰਨ੍ਹਾਂ ਅਤੇ ਵਿਆਕਰਣਿਕ ਨਿਯਮਾਂ ਦੀ ਪਾਲਣਾ ਕਰਨਾ ਪ੍ਰਸ਼ਾਸਨਿਕ ਜ਼ਿੰਮੇਵਾਰੀ ਦਾ ਅਹਿਮ ਹਿੱਸਾ ਹੈ। ਰਾਵੀ ਯੂਨੀਕੋਡ ਪ੍ਰਣਾਲੀ ਵਿੱਚ ਬਿੰਦੀ, ਟਿੱਪੀ ਅਤੇ ਅੱਧਕ ਦੀ ਵਰਤੋਂ ਬੜੀ ਸੁਚੇਤਤਾ ਨਾਲ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ ਕਿਉਂਕਿ ਇੱਕ ਮਾਤਰਾ ਦੀ ਗਲਤੀ ਨਾਲ ਸ਼ਬਦ ਦਾ ਸੰਪੂਰਨ ਅਰਥ ਬਦਲ ਸਕਦਾ ਹੈ। ਉਦਾਹਰਨ ਵਜੋਂ 'ਜਗ' ਅਤੇ 'ਜੱਗ' ਜਾਂ 'ਸਤ' ਅਤੇ 'ਸੱਤ' ਵਿਚਲਾ ਅੰਤਰ ਕੇਵਲ ਅੱਧਕ ਦੀ ਵਰਤੋਂ 'ਤੇ ਨਿਰਭਰ ਕਰਦਾ ਹੈ। ਪੰਜਾਬ ਅਧੀਨ ਸੇਵਾਵਾਂ ਚੋਣ ਬੋਰਡ ਵੱਲੋਂ ਤੈਅ ਕੀਤੇ ਮਾਪਦੰਡਾਂ ਅਨੁਸਾਰ ਤੀਹ ਸ਼ਬਦ ਪ੍ਰਤੀ ਮਿੰਟ ਦੀ ਰਫ਼ਤਾਰ ਅਤੇ ਅੱਠ ਫੀਸਦੀ ਤੋਂ ਘੱਟ ਗਲਤੀਆਂ ਦੀ ਸੀਮਾ ਨਿਰਧਾਰਤ ਹੈ। ਪੁਰਾਣੇ ਰੈਮਿੰਗਟਨ ਜਾਂ ਅਸੀਸ ਫੌਂਟ ਦੀ ਬਜਾਏ ਭਾਰਤ ਸਰਕਾਰ ਦੇ ਮਿਆਰੀ ਇਨਸਕ੍ਰਿਪਟ ਕੀਬੋਰਡ ਨੂੰ ਅਪਣਾਉਣ ਨਾਲ ਰਾਸ਼ਟਰੀ ਪੱਧਰ 'ਤੇ ਡਿਜੀਟਲ ਇਕਸਾਰਤਾ ਕਾਇਮ ਰਹਿੰਦੀ ਹੈ। ਨਿਯਮਤ ਅਭਿਆਸੀ ਉਮੀਦਵਾਰ ਸਮੇਂ ਦੇ ਪ੍ਰਬੰਧਨ ਅਤੇ ਸ਼ੁੱਧਤਾ ਦੇ ਸੁਮੇਲ ਰਾਹੀਂ ਸੁਚੱਜੇ ਪ੍ਰਸ਼ਾਸਨਿਕ ਸੇਵਕ ਬਣਨ ਦੇ ਯੋਗ ਸਿੱਧ ਹੁੰਦੇ ਹਨ।`,
   },
   english: {
-    beginner: 'Punjab is a vibrant and culturally rich state located in northwest India. It is globally renowned for its immense agricultural contribution and rich traditions. Hard work and resilience define the true spirit of the people of Punjab.',
-    intermediate: 'The Subordinate Services Selection Board of Punjab conducts regular recruitment drives for Clerk and administrative cadres. Candidates are required to demonstrate proficiency in English typing at a minimum speed of thirty words per minute with ninety-two percent accuracy.',
-    hard: 'In accordance with official government directives, administrative efficiency necessitates proficient bilingual keyboard skills. The standardized assessment framework benchmarks candidates on keystroke fidelity, word pacing, and rigorous accuracy standards to ensure seamless office document processing.',
+    beginner: `Punjab is a historically renowned and vibrant state situated in northwest India. Its fertile land is nourished by the perennial waters of the Himalayan rivers, which earned the region its historic name of the land of five rivers. The hardworking farmers of Punjab have served as the backbone of national food security for decades. Revered spiritual leaders and freedom fighters have shaped the progressive mindset of its people. The Government of Punjab is actively organizing recruitment drives to induct capable and disciplined candidates into administrative cadres. Professional typing proficiency and computer literacy are vital skills required for ensuring seamless public service delivery. Consistent daily practice with proper keyboard posture is essential for achieving higher speed and accuracy.`,
+    
+    intermediate: `The Punjab Subordinate Services Selection Board conducts mandatory bilingual typing examinations for recruitment to Clerk and Junior Assistant cadres across state departments. Candidates are required to demonstrate a minimum typing speed of thirty words per minute with at least ninety-two percent accuracy during an uninterrupted ten-minute assessment period. In modern administrative governance, computer literacy and rapid keystroke accuracy are imperative for handling official documentation, citizen charters, and internal memos. With the widespread adoption of the e-Office digital workflow, administrative files and cabinet notes are processed electronically, making bilingual proficiency in English and Punjabi Unicode InScript indispensable for ministerial staff. Regular practice with standard keyboard layouts enables aspirants to maintain consistent rhythm, minimize backspace dependency, and eliminate errors. Focused preparation and endurance will guarantee success in qualifying the official state benchmarks.`,
+    
+    hard: `In accordance with statutory administrative guidelines, recruitment to ministerial and secretarial services in the state government mandates strict demonstration of bilingual typing competence. Standardized assessment protocols evaluate candidates on keystroke fidelity, word pacing, and rigorous error tolerances to ensure the smooth handling of sensitive administrative records, legislative bills, and financial statements. Modern public administration requires staff who can seamlessly transcribe technical terminology, legal statutes, and statistical appendices under strict deadlines. The transition from legacy non-Unicode fonts to standardized Unicode keyboard layouts guarantees cross-platform interoperability across state and central digital portals. Candidates must cultivate systematic typing ergonomics, avoiding looking at the keyboard while maintaining rhythmic hand movements across the home row. Rigorous adherence to punctuation, capitalization, and numerical fidelity differentiates high-ranking candidates in competitive public service selections.`,
   },
 };
 
@@ -55,12 +62,12 @@ export default function TypingPracticePage() {
   }, [isRunning, timeLeft]);
 
   const handleStartTyping = (text: string) => {
-    if (!isRunning && !isFinished) {
+    if (!isRunning && !isFinished && text.length > 0) {
       setIsRunning(true);
     }
     setUserInput(text);
 
-    // If typed everything
+    // If candidate has completed full target passage
     if (text.length >= targetText.length) {
       setIsRunning(false);
       setIsFinished(true);
@@ -85,7 +92,7 @@ export default function TypingPracticePage() {
     setIsFinished(false);
   };
 
-  // Metrics
+  // Metrics calculation
   const timeElapsed = testDuration - timeLeft;
   const wordsTyped = userInput.trim().split(/\s+/).filter(Boolean).length;
   const wpm = timeElapsed > 0 ? Math.round((wordsTyped / timeElapsed) * 60) : 0;
@@ -101,7 +108,7 @@ export default function TypingPracticePage() {
   const isPsssBQualified = wpm >= 30 && accuracy >= 92;
 
   return (
-    <div className="p-4 flex flex-col gap-5 min-h-screen bg-slate-900 pb-20 text-slate-100 max-w-2xl mx-auto w-full">
+    <div className="p-4 flex flex-col gap-5 min-h-screen bg-slate-900 pb-24 text-slate-100 max-w-2xl mx-auto w-full">
       
       {/* Header */}
       <div className="flex items-center justify-between gap-3 pt-2">
@@ -134,8 +141,17 @@ export default function TypingPracticePage() {
         <div className="flex items-center gap-2">
           <Award size={16} className="text-amber-400 shrink-0" />
           <span className="text-indigo-200">
-            <strong>Official Benchmark:</strong> 30 WPM with &ge;92% Accuracy in 10 mins (Raavi Font)
+            <strong>Official PSSSB Benchmark:</strong> 30 WPM with &ge;92% Accuracy in 10 mins (Raavi Font)
           </span>
+        </div>
+      </div>
+
+      {/* Font & Layout Clarification Banner */}
+      <div className="bg-slate-800/80 border border-teal-500/30 p-3 rounded-xl text-xs text-slate-300 flex items-start gap-2.5">
+        <Info size={16} className="text-teal-400 shrink-0 mt-0.5" />
+        <div className="leading-relaxed text-[11px]">
+          <strong className="text-white block mb-0.5">Unicode InScript Layout (Not Legacy Remington / Asees):</strong>
+          Official PSSSB Clerk exams strictly use the <strong>Government of India InScript keyboard layout</strong> in Raavi Unicode font. Legacy typing layouts like Remington or non-Unicode fonts (Asees, Joy) are NOT accepted in online government exams.
         </div>
       </div>
 
@@ -149,7 +165,7 @@ export default function TypingPracticePage() {
               onClick={() => { setLang('punjabi'); handleReset(); }}
               className={`flex-1 py-1 rounded text-center font-bold ${lang === 'punjabi' ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'}`}
             >
-              ਪੰਜਾਬੀ
+              ਪੰਜਾਬੀ (ਰਾਵੀ)
             </button>
             <button 
               onClick={() => { setLang('english'); handleReset(); }}
@@ -162,15 +178,15 @@ export default function TypingPracticePage() {
 
         {/* Difficulty */}
         <div className="bg-slate-800/90 border border-slate-700 p-2 rounded-xl">
-          <span className="text-[10px] text-slate-400 font-semibold block mb-1">Level</span>
+          <span className="text-[10px] text-slate-400 font-semibold block mb-1">Passage Length</span>
           <select 
             value={difficulty}
             onChange={e => { setDifficulty(e.target.value as any); handleReset(); }}
-            className="w-full bg-slate-900 border border-slate-700 rounded p-1 text-slate-200 font-medium outline-none"
+            className="w-full bg-slate-900 border border-slate-700 rounded p-1 text-slate-200 font-medium outline-none text-xs"
           >
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Exam Level</option>
-            <option value="hard">Hard (Official)</option>
+            <option value="beginner">Short Warmup (~160 words)</option>
+            <option value="intermediate">Exam Level (300+ words)</option>
+            <option value="hard">Hard Gazette (360+ words)</option>
           </select>
         </div>
 
@@ -194,7 +210,7 @@ export default function TypingPracticePage() {
               onClick={() => handleDurationChange(600)}
               className={`flex-1 py-1 rounded text-center font-bold ${testDuration === 600 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
             >
-              10m
+              10m (Exam)
             </button>
           </div>
         </div>
@@ -224,12 +240,12 @@ export default function TypingPracticePage() {
 
       {/* Target Paragraph Display */}
       <div className="bg-slate-800/90 border border-slate-700 rounded-2xl p-4 shadow-inner">
-        <p className="text-[11px] text-slate-400 uppercase tracking-wider mb-2 font-bold flex items-center justify-between">
-          <span>Target Text Passage</span>
+        <div className="text-[11px] text-slate-400 uppercase tracking-wider mb-2 font-bold flex items-center justify-between">
+          <span>Target Official Passage ({targetText.trim().split(/\s+/).length} Words)</span>
           <span className="text-teal-400 font-mono">{userInput.length} / {targetText.length} chars</span>
-        </p>
+        </div>
 
-        <div className="text-sm font-medium leading-relaxed tracking-wide select-none p-3 bg-slate-900/80 rounded-xl border border-slate-700/60 max-h-40 overflow-y-auto">
+        <div className="text-sm font-medium leading-relaxed tracking-wide select-none p-3.5 bg-slate-900/80 rounded-xl border border-slate-700/60 max-h-48 overflow-y-auto">
           {targetText.split('').map((char, index) => {
             let color = 'text-slate-400';
             if (index < userInput.length) {
@@ -254,7 +270,7 @@ export default function TypingPracticePage() {
           disabled={isFinished}
           onChange={e => handleStartTyping(e.target.value)}
           placeholder={lang === 'punjabi' ? 'ਇੱਥੇ ਟਾਈਪ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ (ਟਾਈਪਿੰਗ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹੀ ਟਾਈਮਰ ਚੱਲ ਪਵੇਗਾ)...' : 'Start typing here (timer triggers automatically on first keystroke)...'}
-          className="w-full bg-slate-800 border-2 border-slate-700 focus:border-teal-400 rounded-2xl p-4 text-white text-sm leading-relaxed outline-none transition h-32 resize-none disabled:opacity-60"
+          className="w-full bg-slate-800 border-2 border-slate-700 focus:border-teal-400 rounded-2xl p-4 text-white text-sm leading-relaxed outline-none transition h-36 resize-none disabled:opacity-60"
         />
         {!isRunning && !isFinished && userInput.length === 0 && (
           <div className="absolute bottom-4 right-4 pointer-events-none text-slate-500 text-xs">
@@ -283,17 +299,23 @@ export default function TypingPracticePage() {
       )}
 
       {/* Raavi Keyboard Shortcuts Cheat Sheet */}
-      <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3.5 text-xs text-slate-300">
-        <h4 className="font-bold text-white mb-1.5 flex items-center gap-1.5">
-          <span>💡</span> ਰਾਵੀ ਯੂਨੀਕੋਡ ਇਨਸਕ੍ਰਿਪਟ ਕੁੰਜੀਆਂ (Raavi Unicode Inscript Standard)
+      <div className="bg-slate-800/80 border border-slate-700 rounded-xl p-4 text-xs text-slate-300 space-y-2">
+        <h4 className="font-bold text-white flex items-center gap-1.5">
+          <span>💡</span> ਰਾਵੀ ਯੂਨੀਕੋਡ ਇਨਸਕ੍ਰਿਪਟ ਕੁੰਜੀਆਂ (Raavi Unicode InScript Standard Cheat Sheet)
         </h4>
-        <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-400 pt-1">
-          <span>• ਪੈਰੀਂ ਅੱਖਰ (Halant): <strong>d</strong> (ਮੁੱਖ ਅੱਖਰ + d + j = ੍ਰ)</span>
-          <span>• ਪੂਰਾ ਅ (Vowel A): <strong>Shift + D</strong></span>
-          <span>• ਬਿੰਦੀ (ਂ): <strong>x</strong></span>
-          <span>• ਟਿੱਪੀ (ੰ): <strong>Shift + X</strong></span>
-          <span>• ਅੱਧਕ (ੱ): <strong>Shift + =</strong> (ਜਾਂ <strong>]</strong>)</span>
-          <span>• ਔਂਕੜ (ੁ): <strong>m</strong> | ਦੁਲੈਂਕੜ (ੂ): <strong>Shift + M</strong></span>
+        <div className="grid grid-cols-2 gap-2.5 text-[11px] text-slate-300 pt-1">
+          <div>• ਪੈਰੀਂ ਅੱਖਰ (Halant): <strong>d</strong> (ਉਦਾ: ਪ + d + ਰ = ਪ੍ਰ)</div>
+          <div>• ਪੂਰਾ ਸਵਰ ਅ: <strong>Shift + D</strong></div>
+          <div>• ਬਿੰਦੀ (ਂ): <strong>x</strong></div>
+          <div>• ਟਿੱਪੀ (ੰ): <strong>Shift + X</strong></div>
+          <div>• ਅੱਧਕ (ੱ): <strong>Shift + =</strong> (ਜਾਂ <strong>]</strong>)</div>
+          <div>• ਕੰਨਾ (ਾ): <strong>e</strong></div>
+          <div>• ਸਿਹਾਰੀ (ਿ): <strong>f</strong></div>
+          <div>• ਬਿਹਾਰੀ (ੀ): <strong>r</strong></div>
+          <div>• ਔਂਕੜ (ੁ): <strong>m</strong></div>
+          <div>• ਦੁਲੈਂਕੜ (ੂ): <strong>Shift + M</strong></div>
+          <div>• ਲਾਂ (ੇ): <strong>s</strong> | ਦੁਲਾਵਾਂ (ੈ): <strong>w</strong></div>
+          <div>• ਹੋੜਾ (ੋ): <strong>a</strong> | ਕਨੌੜਾ (ੌ): <strong>q</strong></div>
         </div>
       </div>
 

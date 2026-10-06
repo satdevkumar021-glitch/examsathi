@@ -12,14 +12,11 @@ interface LibrarySeat {
   id: number;
   label: string;
   type: 'quiet' | 'cbt' | 'pod';
-  status: 'available' | 'occupied' | 'selected';
-  occupant?: string;
-  target?: string;
 }
 
 export default function VirtualStudyLibrary() {
-  const [selectedSeat, setSelectedSeat] = useState<number>(7);
-  const [selectedTopic, setSelectedTopic] = useState<string>('ett-child-pedagogy');
+  const [selectedSeat, setSelectedSeat] = useState<number | null>(null);
+  const [selectedTopic, setSelectedTopic] = useState<string>('child-development-pedagogy');
   const [timerMode, setTimerMode] = useState<25 | 45 | 60>(25);
   const [secondsRemaining, setSecondsRemaining] = useState<number>(25 * 60);
   const [isRunning, setIsRunning] = useState<boolean>(false);
@@ -28,29 +25,29 @@ export default function VirtualStudyLibrary() {
   const [totalHours, setTotalHours] = useState<number>(0.0);
 
   const SEATS: LibrarySeat[] = [
-    { id: 1, label: 'Focus Desk 01', type: 'quiet', status: 'available' },
-    { id: 2, label: 'Focus Desk 02', type: 'quiet', status: 'available' },
-    { id: 3, label: 'Silent Pod 03', type: 'quiet', status: 'available' },
-    { id: 4, label: 'Silent Pod 04', type: 'quiet', status: 'available' },
-    { id: 5, label: 'Reading Desk 05', type: 'quiet', status: 'available' },
-    { id: 6, label: 'Reading Desk 06', type: 'quiet', status: 'available' },
-    { id: 7, label: 'Window Desk 07', type: 'quiet', status: 'selected' },
-    { id: 8, label: 'Window Desk 08', type: 'quiet', status: 'available' },
-    { id: 9, label: 'CBT Terminal 09', type: 'cbt', status: 'available' },
-    { id: 10, label: 'CBT Terminal 10', type: 'cbt', status: 'available' },
-    { id: 11, label: 'CBT Terminal 11', type: 'cbt', status: 'available' },
-    { id: 12, label: 'Typing Lab Desk 12', type: 'cbt', status: 'available' },
-    { id: 13, label: 'Typing Lab Desk 13', type: 'cbt', status: 'available' },
-    { id: 14, label: 'Deep Study Pod 14', type: 'pod', status: 'available' },
-    { id: 15, label: 'Deep Study Pod 15', type: 'pod', status: 'available' },
-    { id: 16, label: 'Deep Study Pod 16', type: 'pod', status: 'available' },
+    { id: 1, label: 'Focus Desk 01', type: 'quiet' },
+    { id: 2, label: 'Focus Desk 02', type: 'quiet' },
+    { id: 3, label: 'Silent Pod 03', type: 'quiet' },
+    { id: 4, label: 'Silent Pod 04', type: 'quiet' },
+    { id: 5, label: 'Reading Desk 05', type: 'quiet' },
+    { id: 6, label: 'Reading Desk 06', type: 'quiet' },
+    { id: 7, label: 'Window Desk 07', type: 'quiet' },
+    { id: 8, label: 'Window Desk 08', type: 'quiet' },
+    { id: 9, label: 'CBT Terminal 09', type: 'cbt' },
+    { id: 10, label: 'CBT Terminal 10', type: 'cbt' },
+    { id: 11, label: 'CBT Terminal 11', type: 'cbt' },
+    { id: 12, label: 'Typing Lab Desk 12', type: 'cbt' },
+    { id: 13, label: 'Typing Lab Desk 13', type: 'cbt' },
+    { id: 14, label: 'Deep Study Pod 14', type: 'pod' },
+    { id: 15, label: 'Deep Study Pod 15', type: 'pod' },
+    { id: 16, label: 'Deep Study Pod 16', type: 'pod' },
   ];
 
   const TOPIC_OPTIONS = [
-    { id: 'ett-child-pedagogy', label: '👶 ETT Child Psychology (Piaget, Vygotsky, RTE 2009)', testUrl: '/mock-test/topic-ett-child-pedagogy' },
-    { id: 'ett-evs-science', label: '🌿 ETT Environmental Studies & Punjab Ramsar Wetlands', testUrl: '/mock-test/topic-ett-evs-science' },
-    { id: 'psssb-computer-it', label: '💻 PSSSB Clerk Computer IT & MS Office Shortcuts', testUrl: '/mock-test/topic-psssb-computer-it' },
-    { id: 'psssb-raavi-typing', label: '⌨️ PSSSB Raavi Typing Rules & Paper A Punjabi Vyakaran', testUrl: '/mock-test/topic-psssb-raavi-typing' },
+    { id: 'child-development-pedagogy', label: '👶 ETT Child Psychology (Piaget, Vygotsky, RTE 2009)', testUrl: '/mock-test/topic-child-development-pedagogy' },
+    { id: 'environment-ecology', label: '🌿 ETT Environmental Studies & Punjab Ramsar Wetlands', testUrl: '/mock-test/topic-environment-ecology' },
+    { id: 'computer-awareness', label: '💻 PSSSB Clerk Computer IT & MS Office Shortcuts', testUrl: '/mock-test/topic-computer-awareness' },
+    { id: 'punjabi-grammar-lit', label: '⌨️ PSSSB Raavi Typing Rules & Paper A Punjabi Vyakaran', testUrl: '/mock-test/topic-punjabi-grammar-lit' },
     { id: 'punjab-history', label: '🌾 Punjab History: 10 Gurus, Misals & Ranjit Singh', testUrl: '/mock-test/topic-punjab-history' },
     { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', testUrl: '/mock-test/topic-fundamental-rights' },
   ];
@@ -61,8 +58,17 @@ export default function VirtualStudyLibrary() {
     try {
       const user = getStoredUser();
       if (user.libraryHours) setTotalHours(user.libraryHours);
+      const savedSeat = localStorage.getItem('examsathi_library_seat');
+      if (savedSeat) setSelectedSeat(parseInt(savedSeat, 10));
     } catch {}
   }, []);
+
+  const handleSelectSeat = (id: number) => {
+    setSelectedSeat(id);
+    try {
+      localStorage.setItem('examsathi_library_seat', String(id));
+    } catch {}
+  };
 
   // Web Audio ambient sound synthesizer (offline pink noise simulation)
   useEffect(() => {
@@ -117,7 +123,7 @@ export default function VirtualStudyLibrary() {
           const elapsed = (timerMode * 60) - nextSec;
           // Trigger 20-20-20 rule after 20 minutes (1200s)
           if (elapsed === 1200) {
-            setWellnessAlert('👀 20-20-20 Eye Care: You have been focused for 20 minutes! Look 20 feet away for 20 seconds to prevent digital fatigue. Drink some water 💧');
+            setWellnessAlert('20-20-20 Eye Care: You have been focused for 20 minutes! Look 20 feet away for 20 seconds to prevent digital fatigue. Drink some water.');
           }
           return nextSec;
         });
@@ -172,7 +178,7 @@ export default function VirtualStudyLibrary() {
             </div>
           </div>
           <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2 py-1 rounded-full border border-emerald-500/40 flex items-center gap-1 font-mono">
-            <Flame size={12} /> {totalHours}h Studied
+            <Flame size={12} /> {totalHours > 0 ? `${totalHours}h Studied` : '0.0h Studied'}
           </span>
         </div>
       </div>
@@ -184,51 +190,45 @@ export default function VirtualStudyLibrary() {
             <User size={16} className="text-teal-400" />
             <h2 className="text-sm font-bold text-white">1. Select Your Library Desk</h2>
           </div>
-          <span className="text-[10px] text-slate-400">Desk #{selectedSeat} Reserved</span>
+          <span className="text-[10px] text-teal-300 font-semibold">
+            {selectedSeat ? `Desk #${selectedSeat.toString().padStart(2, '0')} Claimed` : 'No Desk Claimed (Choose a desk below)'}
+          </span>
         </div>
 
         {/* Legend */}
         <div className="flex items-center gap-3 text-[10px] text-slate-400 border-b border-slate-750 pb-2">
           <span className="flex items-center gap-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-teal-400 ring-2 ring-teal-400/30" /> Your Seat
+            <span className="w-2.5 h-2.5 rounded-full bg-teal-400 ring-2 ring-teal-400/30" /> Your Claimed Seat
           </span>
           <span className="flex items-center gap-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-slate-700" /> Available
-          </span>
-          <span className="flex items-center gap-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-indigo-500/60" /> Aspirant Studying
+            <span className="w-2.5 h-2.5 rounded-full bg-slate-700" /> Open Desk (Available)
           </span>
         </div>
 
-        {/* Seating Grid (4x4) */}
+        {/* Seating Grid (4x4 = 16 Desks, all authentic) */}
         <div className="grid grid-cols-4 gap-2">
           {SEATS.map(seat => {
             const isSelected = selectedSeat === seat.id;
-            const isOccupied = seat.status === 'occupied';
 
-            let seatClass = 'bg-slate-800 border-slate-700 hover:border-slate-600 text-slate-300';
+            let seatClass = 'bg-slate-800 border-slate-700 hover:border-slate-500 text-slate-300';
             if (isSelected) {
               seatClass = 'bg-teal-500/20 border-teal-400 text-teal-300 ring-2 ring-teal-400 font-bold shadow-lg';
-            } else if (isOccupied) {
-              seatClass = 'bg-indigo-950/40 border-indigo-700/50 text-indigo-300 opacity-90';
             }
 
             return (
               <button
                 key={seat.id}
-                onClick={() => !isOccupied && setSelectedSeat(seat.id)}
-                disabled={isOccupied}
+                onClick={() => handleSelectSeat(seat.id)}
                 className={`p-2.5 rounded-xl border text-left transition flex flex-col justify-between min-h-[64px] ${seatClass}`}
-                title={isOccupied ? `${seat.occupant} is studying ${seat.target}` : 'Click to claim this desk'}
+                title="Click to claim this desk"
               >
                 <div className="flex items-center justify-between w-full">
                   <span className="text-[10px] font-bold font-mono">#{seat.id.toString().padStart(2, '0')}</span>
                   {isSelected && <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />}
-                  {isOccupied && <span className="w-2 h-2 rounded-full bg-indigo-400" />}
                 </div>
 
                 <div className="text-[10px] leading-tight truncate">
-                  {isSelected ? 'You (Active)' : isOccupied ? seat.occupant : 'Open Desk'}
+                  {isSelected ? 'Your Desk (Active)' : 'Open Desk'}
                 </div>
               </button>
             );
@@ -312,7 +312,7 @@ export default function VirtualStudyLibrary() {
               {isRunning ? 'Desk Focus Active' : 'Session Paused'}
             </span>
             <span className="text-[10px] text-slate-400 font-mono">
-              Desk #{selectedSeat}
+              {selectedSeat ? `Desk #${selectedSeat.toString().padStart(2, '0')}` : 'No Desk Claimed'}
             </span>
           </div>
         </div>
@@ -370,7 +370,7 @@ export default function VirtualStudyLibrary() {
         {sessionCompleted && (
           <div className="bg-emerald-950/60 border border-emerald-500/50 p-3 rounded-xl text-emerald-300 text-xs flex items-center justify-center gap-2 font-bold animate-bounce">
             <CheckCircle2 size={16} />
-            <span>Bravo! Completed {timerMode} mins focus on Desk #{selectedSeat}! (+50 XP)</span>
+            <span>Bravo! Completed {timerMode} mins focus{selectedSeat ? ` on Desk #${selectedSeat}` : ''}! (+50 XP)</span>
           </div>
         )}
       </div>
@@ -381,7 +381,7 @@ export default function VirtualStudyLibrary() {
           <span>🎯</span> Ready to test your mastery from this Desk?
         </h3>
         <p className="text-[11px] text-slate-400 leading-relaxed">
-          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk&apos;s topic: <strong>{activeTopicObj.label}</strong>.
+          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk focus topic: <strong>{activeTopicObj.label}</strong>.
         </p>
 
         <div className="flex gap-2 mt-1">
