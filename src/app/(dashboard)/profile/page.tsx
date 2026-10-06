@@ -1,7 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Settings, LogOut, Award, Flame, User as UserIcon, Bookmark, Trash2, ChevronRight, FileText } from 'lucide-react';
+import { Settings, LogOut, Award, Flame, User as UserIcon, Bookmark, Trash2, ChevronRight, FileText, Star, Compass, Library } from 'lucide-react';
 import Link from 'next/link';
+import { getStoredUser, logoutUser, AuthUser } from '@/lib/auth';
 
 interface SavedNoteItem {
   id: string;
@@ -18,11 +19,15 @@ interface SavedNoteItem {
 }
 
 export default function Profile() {
+  const [user, setUser] = useState<AuthUser | null>(null);
   const [savedNotes, setSavedNotes] = useState<SavedNoteItem[]>([]);
   const [selectedNote, setSelectedNote] = useState<SavedNoteItem | null>(null);
 
   useEffect(() => {
     try {
+      const u = getStoredUser();
+      setUser(u);
+
       const raw = localStorage.getItem('examsathi_saved_review_notes');
       if (raw) {
         setSavedNotes(JSON.parse(raw));
@@ -40,41 +45,64 @@ export default function Profile() {
     if (selectedNote?.id === id) setSelectedNote(null);
   };
 
+  const handleLogout = () => {
+    logoutUser();
+    window.location.href = '/login';
+  };
+
+  const avatarInitial = user?.name ? user.name.charAt(0).toUpperCase() : '🎓';
+
   return (
     <div className="p-4 flex flex-col gap-6 max-w-xl mx-auto w-full pb-24 text-slate-100">
       
       <div className="flex justify-between items-start">
-        <h1 className="text-2xl font-bold text-white">Profile & Study Vault</h1>
-        <button className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 border border-slate-700">
-          <Settings size={20} />
-        </button>
+        <div>
+          <h1 className="text-2xl font-bold text-white">Profile & Study Vault</h1>
+          <p className="text-xs text-slate-400">Personal Performance & Saved Question Bank</p>
+        </div>
+        <Link 
+          href="/login" 
+          className="text-xs bg-slate-800 text-teal-300 px-3 py-1.5 rounded-xl border border-slate-700 hover:border-teal-500/50 transition font-semibold"
+        >
+          Switch Account
+        </Link>
       </div>
 
-      <div className="flex flex-col items-center gap-3 mt-2">
-        <div className="w-24 h-24 rounded-full bg-gradient-to-tr from-indigo-500 to-teal-500 p-1">
+      <div className="flex flex-col items-center gap-3 mt-1">
+        <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-indigo-500 to-teal-500 p-1 shadow-lg">
           <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center border-4 border-slate-900">
-            <span className="text-3xl font-bold text-white">R</span>
+            <span className="text-2xl font-black text-teal-300">{avatarInitial}</span>
           </div>
         </div>
         <div className="text-center">
-          <h2 className="text-xl font-bold text-white">Aspirant Candidate</h2>
-          <p className="text-slate-400 text-sm">punjab.aspirant@examsathi.in</p>
+          <h2 className="text-lg font-bold text-white">{user?.name || 'Aspirant Candidate'}</h2>
+          <p className="text-slate-400 text-xs">{user?.email || 'aspirant@examsathi.in'}</p>
         </div>
-        <div className="bg-slate-800 text-teal-400 px-3 py-1 rounded-full text-xs font-medium border border-slate-700">
-          Target: Punjab Master Cadre & PSSSB
+        <div className="bg-slate-800 text-teal-400 px-3 py-1 rounded-full text-xs font-semibold border border-slate-700">
+          Target: {user?.targetExam ? user.targetExam.toUpperCase().replace('-', ' ') : 'PUNJAB GOVT EXAMS'}
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mt-2">
-        <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 flex flex-col gap-1">
-          <Flame size={24} className="text-amber-500 mb-1" />
-          <span className="text-2xl font-bold text-white">14 Days</span>
-          <span className="text-slate-400 text-xs">Current Daily Streak</span>
+      <div className="grid grid-cols-4 gap-2.5 mt-1">
+        <div className="bg-slate-800/90 rounded-xl p-3 border border-slate-700 flex flex-col items-center justify-center text-center">
+          <Flame size={18} className="text-amber-500 mb-0.5" />
+          <span className="text-lg font-black text-white">{user?.streak || 14}d</span>
+          <span className="text-slate-400 text-[10px] uppercase font-semibold">Streak</span>
         </div>
-        <div className="bg-slate-800 rounded-xl p-4 border border-slate-700 flex flex-col gap-1">
-          <Award size={24} className="text-indigo-400 mb-1" />
-          <span className="text-2xl font-bold text-white">{savedNotes.length} Notes</span>
-          <span className="text-slate-400 text-xs">Saved Explanations</span>
+        <div className="bg-slate-800/90 rounded-xl p-3 border border-slate-700 flex flex-col items-center justify-center text-center">
+          <Star size={18} className="text-amber-400 mb-0.5" />
+          <span className="text-lg font-black text-white">{user?.favoriteQuestionIds?.length || 0}</span>
+          <span className="text-slate-400 text-[10px] uppercase font-semibold">Favorites</span>
+        </div>
+        <div className="bg-slate-800/90 rounded-xl p-3 border border-slate-700 flex flex-col items-center justify-center text-center">
+          <FileText size={18} className="text-indigo-400 mb-0.5" />
+          <span className="text-lg font-black text-white">{savedNotes.length}</span>
+          <span className="text-slate-400 text-[10px] uppercase font-semibold">Notes</span>
+        </div>
+        <div className="bg-slate-800/90 rounded-xl p-3 border border-slate-700 flex flex-col items-center justify-center text-center">
+          <Library size={18} className="text-teal-400 mb-0.5" />
+          <span className="text-lg font-black text-white">{user?.libraryHours || 0}h</span>
+          <span className="text-slate-400 text-[10px] uppercase font-semibold">Library</span>
         </div>
       </div>
 
@@ -148,6 +176,20 @@ export default function Profile() {
       </div>
 
       <div className="bg-slate-800 rounded-xl border border-slate-700 overflow-hidden">
+        <Link href="/roadmap" className="flex items-center justify-between p-4 border-b border-slate-700 hover:bg-slate-750 transition-colors">
+          <div className="flex items-center gap-3">
+            <Compass size={18} className="text-indigo-400" />
+            <span className="text-slate-200 text-xs font-medium">60-Day Prep Roadmap & Today's Plan (🧭)</span>
+          </div>
+          <ChevronRight size={16} className="text-slate-500" />
+        </Link>
+        <Link href="/library" className="flex items-center justify-between p-4 border-b border-slate-700 hover:bg-slate-750 transition-colors">
+          <div className="flex items-center gap-3">
+            <Library size={18} className="text-teal-400" />
+            <span className="text-slate-200 text-xs font-medium">Virtual Study Library & Pomodoro Room (🏛️)</span>
+          </div>
+          <ChevronRight size={16} className="text-slate-500" />
+        </Link>
         <Link href="/mock-test" className="flex items-center justify-between p-4 border-b border-slate-700 hover:bg-slate-750 transition-colors">
           <div className="flex items-center gap-3">
             <Award size={18} className="text-teal-400" />
@@ -162,10 +204,13 @@ export default function Profile() {
           </div>
           <ChevronRight size={16} className="text-slate-500" />
         </Link>
-        <Link href="/login" className="flex items-center gap-3 p-4 hover:bg-slate-750 transition-colors text-rose-400 text-xs">
+        <button 
+          onClick={handleLogout}
+          className="w-full flex items-center gap-3 p-4 hover:bg-slate-750 transition-colors text-rose-400 text-xs text-left"
+        >
           <LogOut size={18} />
-          <span className="font-medium">Logout</span>
-        </Link>
+          <span className="font-medium">Logout / Clear Session</span>
+        </button>
       </div>
 
     </div>

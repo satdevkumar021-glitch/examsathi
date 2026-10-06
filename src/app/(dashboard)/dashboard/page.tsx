@@ -5,7 +5,7 @@ import StreakBadge from '@/components/ui/StreakBadge';
 import { 
   Target, Book, Layers, CheckCircle, ArrowRight, Keyboard, 
   ShieldCheck, Compass, Sparkles, Award, GraduationCap, Briefcase, 
-  Search, BookOpen, Flame, Share2
+  Search, BookOpen, Flame, Share2, Calendar, Library
 } from 'lucide-react';
 
 export default function Dashboard() {
@@ -234,6 +234,66 @@ export default function Dashboard() {
             </div>
             <span className="bg-slate-700 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
               20 Qs
+            </span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Structured Preparation Roadmap & Virtual Study Library */}
+      <div>
+        <div className="flex justify-between items-center mb-3">
+          <h2 className="text-white font-bold text-sm flex items-center gap-2">
+            <span>⚡</span> Daily Discipline & Smart Prep Suites
+          </h2>
+          <span className="text-[11px] text-teal-300 font-semibold">New Features</span>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3">
+          {/* 60-Day Prep Roadmap */}
+          <Link 
+            href="/roadmap"
+            className="bg-gradient-to-br from-indigo-950/80 to-slate-800/90 border border-indigo-500/40 hover:border-indigo-400 p-4 rounded-2xl flex flex-col justify-between gap-2.5 transition shadow-md group"
+          >
+            <div className="flex items-center justify-between">
+              <div className="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                🧭
+              </div>
+              <span className="text-[9px] bg-indigo-500/20 text-indigo-300 font-bold px-2 py-0.5 rounded border border-indigo-500/30">
+                60-Day Plan
+              </span>
+            </div>
+            <div>
+              <h3 className="text-white font-bold text-xs sm:text-sm">Study Roadmap & Daily Plan</h3>
+              <p className="text-[11px] text-slate-400 leading-snug mt-1">
+                ETT, Clerk & Master Cadre daily milestones + merit decider challenge
+              </p>
+            </div>
+            <span className="text-[10px] text-indigo-400 font-bold mt-auto flex items-center gap-1">
+              Today's Targets &rarr;
+            </span>
+          </Link>
+
+          {/* Virtual Study Library & Focus Desk */}
+          <Link 
+            href="/library"
+            className="bg-gradient-to-br from-teal-950/80 to-slate-800/90 border border-teal-500/40 hover:border-teal-400 p-4 rounded-2xl flex flex-col justify-between gap-2.5 transition shadow-md group"
+          >
+            <div className="flex items-center justify-between">
+              <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
+                🏛️
+              </div>
+              <span className="text-[9px] bg-teal-500/20 text-teal-300 font-bold px-2 py-0.5 rounded border border-teal-500/30">
+                24 Desks
+              </span>
+            </div>
+            <div>
+              <h3 className="text-white font-bold text-xs sm:text-sm">Virtual Study Library</h3>
+              <p className="text-[11px] text-slate-400 leading-snug mt-1">
+                Quiet reading desks, Pomodoro timer (25/45/60m) & live desk mock
+              </p>
+            </div>
+            <span className="text-[10px] text-teal-400 font-bold mt-auto flex items-center gap-1">
+              Select Your Desk &rarr;
             </span>
           </Link>
         </div>

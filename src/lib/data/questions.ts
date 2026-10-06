@@ -7,8 +7,11 @@ export interface Question {
   id: string;
   topicId: string;
   subjectId: string;
-  examId?: string; // e.g. 'master-cadre', 'clerk', 'police', 'patwari', 'reet', 'ctet'
-  examTag: string; // e.g., 'Punjab Master Cadre 2022', 'PSSSB Clerk 2023'
+  examId?: string; // e.g. 'master-cadre-sst', 'ett-punjab', 'clerk-psssb', 'police-punjab', 'patwari-punjab', 'reet-l2', 'ctet-p2'
+  examTag: string; // e.g., 'Punjab Master Cadre 2022', 'PSSSB Clerk 2023', 'Punjab ETT Cadre 5994'
+  topicName?: { hi: string; pa?: string; en: string };
+  subtopic?: { hi: string; pa?: string; en: string };
+  deepConceptNote?: { hi: string; pa?: string; en: string };
   question: { hi: string; pa?: string; en: string };
   options: {
     A: { hi: string; pa?: string; en: string };
@@ -914,6 +917,7 @@ import { REFERENCE_SST_QUESTIONS } from './questions/reference_questions';
 import { SST_MISSING_QUESTIONS } from './questions/sst_missing_questions';
 import { MASTER_CADRE_10YR_PYQS } from './questions/master_cadre_pyqs';
 import { TWENTY_YEAR_EXAM_PYQS } from './questions/twenty_year_pyqs';
+import { ETT_AND_CLERK_PYQS } from './questions/ett_and_clerk_pyqs';
 
 export const ALL_QUESTIONS: Question[] = [
   ...QUESTIONS,
@@ -921,6 +925,7 @@ export const ALL_QUESTIONS: Question[] = [
   ...SST_MISSING_QUESTIONS,
   ...MASTER_CADRE_10YR_PYQS,
   ...TWENTY_YEAR_EXAM_PYQS,
+  ...ETT_AND_CLERK_PYQS,
 ];
 
 // Topic alias mapping to ensure cross-compatibility between syllabus IDs and reference IDs
@@ -937,6 +942,11 @@ const TOPIC_ALIASES: Record<string, string[]> = {
   'world-history': ['sst-world-history-modern', 'sst-renaissance', 'sst-french-revolution', 'sst-industrial-revolution', 'sst-world-wars'],
   'punjab-geography': ['sst-geo-punjab', 'sst-geo-monsoon'],
   'physical-geography': ['sst-india-geography', 'sst-geo-earth', 'sst-geo-atmosphere', 'sst-geo-tectonics', 'sst-geo-landforms', 'sst-geo-oceans', 'sst-geo-environment'],
+  'ett-child-pedagogy': ['ett-child-pedagogy', 'cdp'],
+  'ett-evs-science': ['ett-evs-science', 'evs'],
+  'ett-primary-math': ['ett-primary-math', 'math'],
+  'psssb-computer-it': ['psssb-computer-it', 'computer'],
+  'psssb-raavi-typing': ['psssb-raavi-typing', 'raavi-typing'],
 };
 
 export function getQuestionsByTopic(topicId: string): Question[] {

@@ -79,6 +79,19 @@ export const AVAILABLE_EXAMS: ExamInfo[] = [
     pyqSpan: '2006 - 2024 (18 Years)',
   },
   {
+    id: 'ett-punjab',
+    name: 'Punjab ETT Cadre (6635 / 5994 Posts) & PSTET P1',
+    namePa: 'ਪੰਜਾਬ ਈ.ਟੀ.ਟੀ. ਕੈਡਰ (6635/5994) ਅਤੇ ਪੀਸਟੈੱਟ 1',
+    body: 'Department of School Education, Punjab (ERD)',
+    badge: '👶 ETT Punjab',
+    defaultQuestions: 50,
+    timeLimitMinutes: 45,
+    negativeMarking: 0.25,
+    syllabusSummary: 'Child Development & Pedagogy, Primary Mathematics, EVS & Punjab Ecology, Punjabi Vyakaran, General Science',
+    syllabusSummaryPa: 'ਬਾਲ ਮਨੋਵਿਗਿਆਨ, ਈ.ਵੀ.ਐਸ., ਗਣਿਤ ਅਤੇ ਪੰਜਾਬੀ ਵਿਆਕਰਨ',
+    pyqSpan: '2012 - 2024 (12 Years)',
+  },
+  {
     id: 'police-punjab',
     name: 'Punjab Police Constable & SI',
     namePa: 'ਪੰਜਾਬ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਅਤੇ ਸਬ-ਇੰਸਪੈਕਟਰ',
@@ -143,6 +156,15 @@ export interface TopicMeta {
 }
 
 export const AVAILABLE_TEST_TOPICS: TopicMeta[] = [
+  // ETT Punjab & Pedagogy Tracks
+  { id: 'ett-child-pedagogy', name: 'ETT Child Development & Pedagogy (Piaget, Vygotsky, RTE 2009)', namePa: 'ਈ.ਟੀ.ਟੀ. ਬਾਲ ਵਿਕਾਸ ਤੇ ਸਿੱਖਿਆ ਸ਼ਾਸਤਰ', subject: 'Teaching', questionCount: '15,000+', examWeightage: '20-25 Qs', isPYQRich: true },
+  { id: 'ett-evs-science', name: 'ETT Environmental Studies & Punjab Ecology (EVS)', namePa: 'ਈ.ਟੀ.ਟੀ. ਵਾਤਾਵਰਨ ਅਧਿਐਨ (EVS)', subject: 'Teaching', questionCount: '10,000+', examWeightage: '15-20 Qs', isPYQRich: true },
+  { id: 'ett-primary-math', name: 'ETT Primary Mathematics & Teaching Methodology', namePa: 'ਈ.ਟੀ.ਟੀ. ਪ੍ਰਾਇਮਰੀ ਗਣਿਤ', subject: 'Teaching', questionCount: '10,000+', examWeightage: '15-20 Qs', isPYQRich: true },
+
+  // PSSSB Clerk Tracks
+  { id: 'psssb-computer-it', name: 'PSSSB Clerk Computer & IT (MS Office, Shortcuts, IPv4/6, Networking)', namePa: 'ਕੰਪਿਊਟਰ ਗਿਆਨ ਤੇ ਆਈ.ਟੀ. ਸ਼ਾਰਟਕੱਟ', subject: 'Clerk', questionCount: '12,000+', examWeightage: '15-20 Qs', isPYQRich: true },
+  { id: 'psssb-raavi-typing', name: 'PSSSB Raavi Typing Unicode Rules & Paper A Punjabi Grammar', namePa: 'ਰਾਵੀ ਟਾਈਪਿੰਗ ਨਿਯਮ ਤੇ ਪੇਪਰ ਏ', subject: 'Clerk', questionCount: '10,000+', examWeightage: '20-25 Qs', isPYQRich: true },
+
   // History & Punjab
   { id: 'punjab-history', name: 'Punjab History (10 Sikh Gurus, Banda Singh, Ranjit Singh)', namePa: 'ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ ਤੇ ਸਿੱਖ ਗੁਰੂ ਸਾਹਿਬਾਨ', subject: 'History', questionCount: '10,000+', examWeightage: '10-12 Qs', isPYQRich: true },
   { id: 'modern-india', name: 'Modern India (1757 - 1947 & Freedom Struggle)', namePa: 'ਆਧੁਨਿਕ ਭਾਰਤ ਦਾ ਇਤਿਹਾਸ', subject: 'History', questionCount: '10,000+', examWeightage: '10-12 Qs', isPYQRich: true },
@@ -357,7 +379,8 @@ export function getTestQuestions(config: {
         if (q.examId === examId) return true;
         const tag = q.examTag.toLowerCase();
         if (examId === 'master-cadre-sst' && tag.includes('master cadre')) return true;
-        if (examId === 'clerk-psssb' && tag.includes('clerk')) return true;
+        if (examId === 'clerk-psssb' && (tag.includes('clerk') || tag.includes('psssb'))) return true;
+        if (examId === 'ett-punjab' && (tag.includes('ett') || tag.includes('pstet') || tag.includes('elementary'))) return true;
         if (examId === 'police-punjab' && tag.includes('police')) return true;
         if (examId === 'patwari-punjab' && tag.includes('patwari')) return true;
         if (examId === 'reet-l2' && tag.includes('reet')) return true;
@@ -397,7 +420,11 @@ export function getTestQuestions(config: {
 
   // If pool count is still less than requested count (e.g. 50), top up across core topics
   if (uniquePool.length < count) {
-    const coreTopics = ['punjab-history', 'fundamental-rights', 'punjab-geography', 'indian-economy', 'modern-india'];
+    const coreTopics = examId === 'ett-punjab'
+      ? ['punjab-history', 'fundamental-rights', 'science-concepts', 'mathematics-core', 'punjabi-grammar']
+      : examId === 'clerk-psssb'
+      ? ['punjab-history', 'fundamental-rights', 'punjabi-grammar', 'parliament', 'punjab-geography']
+      : ['punjab-history', 'fundamental-rights', 'punjab-geography', 'indian-economy', 'modern-india'];
     for (const topId of coreTopics) {
       if (uniquePool.length >= count) break;
       const extra = generateProceduralQuestions(topId, 15);

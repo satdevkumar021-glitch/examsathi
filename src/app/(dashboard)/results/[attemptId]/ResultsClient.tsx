@@ -5,7 +5,7 @@ import {
   Target, Clock, Trophy, CheckCircle2, XCircle, MinusCircle, 
   ArrowRight, RotateCcw, Layers, Award, Sparkles, AlertCircle, 
   BookOpen, Brain, BookmarkCheck, Bookmark, Check, SlidersHorizontal,
-  FileText, Share2, Flame, HelpCircle
+  FileText, Share2, Flame, HelpCircle, Star, Lightbulb, Compass, Library
 } from 'lucide-react';
 import { 
   evaluateUserLevel, 
@@ -14,6 +14,11 @@ import {
   PredictedRankReport 
 } from '@/lib/data/question_bank_engine';
 import { Question } from '@/lib/data/questions';
+import { 
+  toggleFavoriteQuestion, 
+  toggleBookmarkQuestion, 
+  getStoredUser 
+} from '@/lib/auth';
 import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 
 interface StoredResult {
@@ -48,9 +53,11 @@ export default function Results() {
     accuracy: 84,
   });
 
-  const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong' | 'correct'>('all');
+  const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong' | 'correct' | 'favorites' | 'saved'>('all');
   const [reviewLang, setReviewLang] = useState<'hi' | 'pa' | 'en'>('hi');
   const [savedNoteIds, setSavedNoteIds] = useState<Record<string, boolean>>({});
+  const [favIds, setFavIds] = useState<Record<string, boolean>>({});
+  const [bookmarkedIds, setBookmarkedIds] = useState<Record<string, boolean>>({});
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isBottomSheetOpen, setIsBottomSheetOpen] = useState<boolean>(false);
 
@@ -71,6 +78,16 @@ export default function Results() {
         });
         setSavedNoteIds(map);
       }
+
+      // Load user favorites and bookmarks
+      const user = getStoredUser();
+      const fMap: Record<string, boolean> = {};
+      (user.favoriteQuestionIds || []).forEach(id => { fMap[id] = true; });
+      setFavIds(fMap);
+
+      const bMap: Record<string, boolean> = {};
+      (user.bookmarkedQuestionIds || []).forEach(id => { bMap[id] = true; });
+      setBookmarkedIds(bMap);
     } catch {
       // Fallback
     }
@@ -79,6 +96,18 @@ export default function Results() {
   const showToast = (msg: string) => {
     setToastMessage(msg);
     setTimeout(() => setToastMessage(null), 3000);
+  };
+
+  const handleToggleFavorite = (qId: string) => {
+    const isFav = toggleFavoriteQuestion(qId);
+    setFavIds(prev => ({ ...prev, [qId]: isFav }));
+    showToast(isFav ? 'Added to ⭐ Favorite Questions!' : 'Removed from Favorites');
+  };
+
+  const handleToggleBookmark = (qId: string) => {
+    const isBookmarked = toggleBookmarkQuestion(qId);
+    setBookmarkedIds(prev => ({ ...prev, [qId]: isBookmarked }));
+    showToast(isBookmarked ? 'Saved for Later (🔖 Bookmarked)!' : 'Removed from Saved for Later');
   };
 
   const total = result.total || 50;
@@ -127,12 +156,20 @@ export default function Results() {
     }
   });
 
+  const getLocalizedText = (obj?: { hi: string; pa?: string; en: string } | string): string => {
+    if (!obj) return '';
+    if (typeof obj === 'string') return obj;
+    return obj[reviewLang] || obj.hi || obj.en || '';
+  };
+
   // Filter questions for detailed review
   const filteredQuestions = questions.filter(q => {
     const isAnswered = Boolean(userAnswers[q.id]);
     const isCorrect = userAnswers[q.id] === q.correct;
     if (reviewFilter === 'wrong') return isAnswered && !isCorrect;
     if (reviewFilter === 'correct') return isCorrect;
+    if (reviewFilter === 'favorites') return Boolean(favIds[q.id]);
+    if (reviewFilter === 'saved') return Boolean(bookmarkedIds[q.id]);
     return true; // 'all'
   });
 
@@ -552,7 +589,7 @@ export default function Results() {
 
         {/* Filter Pills & Batch Save to Notes Button */}
         <div className="flex items-center justify-between gap-2 flex-wrap">
-          <div className="flex gap-1.5">
+          <div className="flex gap-1.5 flex-wrap">
             <button
               onClick={() => setReviewFilter('all')}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition ${
@@ -582,6 +619,28 @@ export default function Results() {
               }`}
             >
               Correct ({correct})
+            </button>
+            <button
+              onClick={() => setReviewFilter('favorites')}
+              className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1 ${
+                reviewFilter === 'favorites'
+                  ? 'bg-amber-500 text-slate-950'
+                  : 'bg-slate-800 text-amber-300 hover:bg-slate-750'
+              }`}
+            >
+              <Star size={12} className={reviewFilter === 'favorites' ? 'fill-slate-950' : 'fill-amber-400'} />
+              <span>Favorites ({Object.keys(favIds).filter(k => favIds[k]).length})</span>
+            </button>
+            <button
+              onClick={() => setReviewFilter('saved')}
+              className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1 ${
+                reviewFilter === 'saved'
+                  ? 'bg-cyan-600 text-white'
+                  : 'bg-slate-800 text-cyan-300 hover:bg-slate-750'
+              }`}
+            >
+              <Bookmark size={12} className={reviewFilter === 'saved' ? 'fill-white' : 'fill-cyan-400'} />
+              <span>Saved ({Object.keys(bookmarkedIds).filter(k => bookmarkedIds[k]).length})</span>
             </button>
           </div>
 
@@ -658,6 +717,25 @@ export default function Results() {
                     </div>
                   </div>
 
+                  {/* Topic & Subtopic Identification (Informing candidate of topic and subtopic on ALL answers) */}
+                  {(q.topicName || q.subtopic || q.topicId) && (
+                    <div className="bg-indigo-950/60 border border-indigo-500/40 rounded-xl px-3 py-2 flex items-center justify-between gap-2 flex-wrap">
+                      <div className="flex items-center gap-1.5 text-xs text-indigo-200">
+                        <span className="text-amber-400 font-bold">🏷️ Topic:</span>
+                        <span className="text-white font-extrabold">{getLocalizedText(q.topicName) || q.topicId}</span>
+                        {q.subtopic && (
+                          <>
+                            <span className="text-indigo-400 font-bold">→</span>
+                            <span className="text-teal-300 font-semibold">{getLocalizedText(q.subtopic)}</span>
+                          </>
+                        )}
+                      </div>
+                      <span className="text-[10px] bg-slate-900/90 text-indigo-300 px-2 py-0.5 rounded border border-indigo-500/30 font-medium">
+                        {isCorrect ? 'Mastered in Mock ✓' : 'Revision Focus 📌'}
+                      </span>
+                    </div>
+                  )}
+
                   {/* Question Text */}
                   <div>
                     <h4 className="text-xs sm:text-sm font-bold text-white leading-relaxed">
@@ -732,8 +810,21 @@ export default function Results() {
                     </div>
                   )}
 
-                  {/* Action Bar: Save Explanation into Notes */}
-                  <div className="flex items-center justify-between pt-2 border-t border-slate-700/60">
+                  {/* Deep Dive Knowledge Concept Note */}
+                  {q.deepConceptNote && (
+                    <div className="bg-teal-950/50 p-3.5 rounded-xl border border-teal-500/40 text-xs text-teal-200 leading-relaxed shadow-sm">
+                      <div className="flex items-center gap-1.5 text-teal-300 font-bold mb-1">
+                        <Lightbulb size={14} className="text-amber-400 shrink-0" />
+                        <span>💡 Deep Dive Knowledge & Concepts (गहन विषय ज्ञान):</span>
+                      </div>
+                      <p>
+                        {q.deepConceptNote[reviewLang] || q.deepConceptNote.hi || q.deepConceptNote.en}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Action Bar: Favorite, Save for Later, and Save to Notes */}
+                  <div className="flex items-center justify-between pt-2 border-t border-slate-700/60 gap-2 flex-wrap">
                     <span className="text-[11px] text-slate-400">
                       Correct: <strong className="text-emerald-400">Option ({q.correct})</strong>
                       {userChoice && (
@@ -741,17 +832,48 @@ export default function Results() {
                       )}
                     </span>
 
-                    <button
-                      onClick={() => handleSaveToNotes(q)}
-                      className={`text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition ${
-                        isSaved
-                          ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
-                          : 'bg-slate-700 hover:bg-slate-600 text-slate-200'
-                      }`}
-                    >
-                      {isSaved ? <BookmarkCheck size={14} /> : <Bookmark size={14} />}
-                      <span>{isSaved ? 'Saved in Notes ✓' : 'Save to Notes 📝'}</span>
-                    </button>
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      {/* Favorite Button */}
+                      <button
+                        onClick={() => handleToggleFavorite(q.id)}
+                        title="Add to Favorites"
+                        className={`text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition ${
+                          favIds[q.id]
+                            ? 'bg-amber-500/20 text-amber-300 border border-amber-500/50'
+                            : 'bg-slate-700/80 hover:bg-slate-700 text-slate-300'
+                        }`}
+                      >
+                        <Star size={13} className={favIds[q.id] ? 'fill-amber-400 text-amber-400' : ''} />
+                        <span>{favIds[q.id] ? 'Favorited ⭐' : 'Favorite'}</span>
+                      </button>
+
+                      {/* Save for Later Button */}
+                      <button
+                        onClick={() => handleToggleBookmark(q.id)}
+                        title="Save for Later"
+                        className={`text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition ${
+                          bookmarkedIds[q.id]
+                            ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50'
+                            : 'bg-slate-700/80 hover:bg-slate-700 text-slate-300'
+                        }`}
+                      >
+                        <Bookmark size={13} className={bookmarkedIds[q.id] ? 'fill-cyan-400 text-cyan-400' : ''} />
+                        <span>{bookmarkedIds[q.id] ? 'Saved 🔖' : 'Save for Later'}</span>
+                      </button>
+
+                      {/* Save to Notes Button */}
+                      <button
+                        onClick={() => handleSaveToNotes(q)}
+                        className={`text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1 transition ${
+                          isSaved
+                            ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
+                            : 'bg-slate-700 hover:bg-slate-600 text-slate-200'
+                        }`}
+                      >
+                        {isSaved ? <BookmarkCheck size={13} /> : <FileText size={13} />}
+                        <span>{isSaved ? 'In Notes ✓' : 'Add Note 📝'}</span>
+                      </button>
+                    </div>
                   </div>
 
                 </div>
@@ -794,14 +916,23 @@ export default function Results() {
           <span>Retake CBT Mock Test (Shuffle Questions)</span>
         </Link>
 
-        {/* Configure Another Mock Test (Drawer) */}
-        <button 
-          onClick={() => setIsBottomSheetOpen(true)}
-          className="w-full bg-slate-850 hover:bg-slate-800 border border-teal-500/40 text-teal-300 font-bold py-3 rounded-xl text-center text-xs flex items-center justify-center gap-2 transition"
+        {/* View 60-Day Prep Roadmap */}
+        <Link 
+          href="/roadmap"
+          className="w-full bg-slate-800/90 hover:bg-slate-750 border border-indigo-500/40 text-indigo-200 font-bold py-3 rounded-xl text-center text-xs flex items-center justify-center gap-2 transition"
         >
-          <SlidersHorizontal size={14} />
-          <span>Configure Another Exam Test (Bottom Sheet)</span>
-        </button>
+          <Compass size={14} className="text-indigo-400" />
+          <span>Track 60-Day Prep Roadmap & Daily Plan (🧭 रोडमैप)</span>
+        </Link>
+
+        {/* Enter Virtual Study Library */}
+        <Link 
+          href="/library"
+          className="w-full bg-slate-800/90 hover:bg-slate-750 border border-teal-500/40 text-teal-200 font-bold py-3 rounded-xl text-center text-xs flex items-center justify-center gap-2 transition"
+        >
+          <Library size={14} className="text-teal-400" />
+          <span>Enter Virtual Study Library & Pomodoro Room (🏛️ लाइब्रेरी)</span>
+        </Link>
 
         {/* Return to Dashboard */}
         <Link 
