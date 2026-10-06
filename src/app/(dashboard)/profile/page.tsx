@@ -20,7 +20,8 @@ import {
   Layers, 
   CheckCircle2, 
   RotateCw,
-  ExternalLink
+  ExternalLink,
+  HelpCircle
 } from 'lucide-react';
 import { 
   getStoredUser, 
@@ -475,13 +476,16 @@ export default function Profile() {
           </div>
           <ChevronRight size={16} className="text-slate-500" />
         </Link>
-        <Link href="/dashboard" className="flex items-center justify-between p-4 border-b border-slate-700 hover:bg-slate-750 transition-colors">
+        <button 
+          onClick={() => window.dispatchEvent(new CustomEvent('examsathi_open_onboarding'))}
+          className="w-full flex items-center justify-between p-4 border-b border-slate-700 hover:bg-slate-750 transition-colors text-teal-300 text-xs text-left"
+        >
           <div className="flex items-center gap-3">
-            <UserIcon size={18} className="text-indigo-400" />
-            <span className="text-slate-200 text-xs font-medium">Dashboard Overview</span>
+            <HelpCircle size={18} className="text-teal-400" />
+            <span className="font-semibold text-slate-200">Platform Guidance & Onboarding Tour (मार्गदर्शन 💡)</span>
           </div>
           <ChevronRight size={16} className="text-slate-500" />
-        </Link>
+        </button>
         <button 
           onClick={handleLogout}
           className="w-full flex items-center gap-3 p-4 hover:bg-slate-750 transition-colors text-rose-400 text-xs text-left"

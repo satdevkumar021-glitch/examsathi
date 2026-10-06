@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import BottomNav from '@/components/layout/BottomNav';
 import LanguageToggle from '@/components/layout/LanguageToggle';
+import OnboardingGuideModal from '@/components/ui/OnboardingGuideModal';
 
 export default function DashboardLayout({
   children,
@@ -40,6 +41,7 @@ export default function DashboardLayout({
         {children}
       </main>
 
+      <OnboardingGuideModal />
       <BottomNav />
     </div>
   );

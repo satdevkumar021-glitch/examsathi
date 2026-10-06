@@ -92,4 +92,37 @@ test.describe('ExamSathi AI Generator, Study Vault & Knowledge Deep-Dive Suite',
     expect(firstHref).toContain('/lesson/');
   });
 
+  test('05. Onboarding Guide Modal guides first-time users and can be re-opened from profile', async ({ page }) => {
+    await page.goto('/profile/');
+    await page.waitForTimeout(300);
+
+    // Click Platform Guidance & Onboarding Tour button
+    const tourBtn = page.locator('button:has-text("Platform Guidance & Onboarding Tour")');
+    await expect(tourBtn).toBeVisible();
+    await tourBtn.click();
+
+    // Verify modal is visible
+    const modalHeading = page.locator('#onboarding-guide-title');
+    await expect(modalHeading).toBeVisible();
+    await expect(modalHeading).toContainText(/परीक्षा साथी/i);
+
+    // Click Next
+    const nextBtn = page.locator('button:has-text("Next")');
+    await nextBtn.click();
+    await expect(modalHeading).toContainText(/CBT/i);
+
+    // Click Next again
+    await nextBtn.click();
+    await expect(modalHeading).toContainText(/AI/i);
+
+    // Click Next again
+    await nextBtn.click();
+    await expect(modalHeading).toContainText(/लाइब्रेरी/i);
+
+    // Complete tour
+    const startBtn = page.locator('button:has-text("Start Learning")');
+    await startBtn.click();
+    await expect(modalHeading).not.toBeVisible();
+  });
+
 });
