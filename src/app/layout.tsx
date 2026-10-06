@@ -2,15 +2,18 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ExamSathi - परीक्षा साथी',
-  description: 'Your ultimate exam preparation companion. भारत का सर्वश्रेष्ठ परीक्षा तैयारी मंच।',
+  title: {
+    template: '%s | ExamSathi (परीक्षा साथी)',
+    default: 'ExamSathi - परीक्षा साथी • ਮੁਫ਼ਤ ਪ੍ਰੀਖਿਆ ਤਿਆਰੀ ਮੰਚ',
+  },
+  description: '100% Free, High-Fidelity Exam Preparation Platform for Punjab (Master Cadre, ETT, Clerk, Police, Patwari), Rajasthan (REET, Patwar), and Central Exams (CTET, SSC). Real CBT drills, 20-Year PYQ archives, and Raavi typing benchmark.',
+  keywords: ['Punjab Master Cadre', 'PSTET', 'ETT Punjab', 'PSSSB Clerk', 'Raavi Typing', 'REET', 'CTET', 'Free Mock Test', 'ਪੰਜਾਬੀ ਟਾਈਪਿੰਗ'],
   manifest: '/manifest.json'
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export default function RootLayout({

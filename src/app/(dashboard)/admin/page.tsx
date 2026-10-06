@@ -56,6 +56,60 @@ export default function AdminResourcePortal() {
     setTimeout(() => setSuccessMsg(''), 4000);
   };
 
+  const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
+  const [passkeyInput, setPasskeyInput] = useState('');
+  const [authError, setAuthError] = useState('');
+
+  const handleVerifyAdmin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (passkeyInput === 'AdminSathi@2026' || passkeyInput === 'examsathi-admin') {
+      setIsAdminAuthenticated(true);
+      setAuthError('');
+    } else {
+      setAuthError('Invalid Admin Passkey. Access Restricted.');
+    }
+  };
+
+  if (!isAdminAuthenticated) {
+    return (
+      <div className="p-4 flex flex-col items-center justify-center min-h-[80vh] text-slate-100 max-w-md mx-auto w-full text-center">
+        <div className="w-16 h-16 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 mb-4">
+          <ShieldCheck size={32} />
+        </div>
+        <h1 className="text-xl font-bold text-white mb-2">Restricted Administrative Access</h1>
+        <p className="text-xs text-slate-400 mb-6 leading-relaxed">
+          The Publisher Portal requires authorized educator credentials. Enter the administrative access passkey to manage exam resources.
+        </p>
+
+        <form onSubmit={handleVerifyAdmin} className="w-full space-y-3">
+          <input
+            type="password"
+            value={passkeyInput}
+            onChange={e => setPasskeyInput(e.target.value)}
+            placeholder="Enter Admin Passkey..."
+            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition"
+          />
+          {authError && (
+            <p className="text-[11px] text-rose-400 font-semibold">{authError}</p>
+          )}
+          <button
+            type="submit"
+            className="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs py-2.5 rounded-xl transition shadow"
+          >
+            Authenticate & Enter
+          </button>
+        </form>
+
+        <button
+          onClick={() => router.push('/dashboard')}
+          className="mt-4 text-xs text-slate-400 hover:text-slate-200 transition"
+        >
+          &larr; Return to Dashboard
+        </button>
+      </div>
+    );
+  }
+
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-20 text-slate-100 max-w-2xl mx-auto w-full">
       

@@ -5,7 +5,7 @@
 // ============================================================
 
 import { ALL_QUESTIONS, Question, getQuestionsByTopic } from './questions';
-import { ALL_LESSONS } from './lessons';
+import { ALL_LESSONS, getLessonByTopicId, TOPIC_ALIASES } from './lessons';
 import { MASTER_CADRE_10YR_PYQS } from './questions/master_cadre_pyqs';
 import { TWENTY_YEAR_EXAM_PYQS } from './questions/twenty_year_pyqs';
 
@@ -216,7 +216,7 @@ function distributeChoice<T>(correctVal: T, distractors: T[], seed: number): {
  */
 export function generateProceduralQuestions(topicId: string, count: number): Question[] {
   const generated: Question[] = [];
-  const lesson = ALL_LESSONS[topicId];
+  const lesson = getLessonByTopicId(topicId);
   if (!lesson) return [];
 
   const notesHi = lesson.keyNotes?.hi || [];
@@ -354,20 +354,31 @@ export function getTestQuestions(config: {
   ];
 
   if (topicId && topicId !== 'all') {
-    // 1. Topic-specific questions
+    const canonicalTopicId = TOPIC_ALIASES[topicId] || topicId;
+
+    // 1. Topic-specific questions matching alias or canonical
     const pyqsForTopic = baseQuestions.filter(
-      q => q.topicId === topicId || (topicId.includes('history') && q.topicId.includes('history'))
+      q => q.topicId === topicId || 
+           q.topicId === canonicalTopicId ||
+           (topicId.includes('history') && q.topicId.includes('history')) ||
+           (canonicalTopicId.includes('history') && q.topicId.includes('history'))
     );
     pool.push(...pyqsForTopic);
 
     // 2. Direct topic questions
     const directQuestions = getQuestionsByTopic(topicId);
-    pool.push(...directQuestions);
+    const directCanonical = getQuestionsByTopic(canonicalTopicId);
+    pool.push(...directQuestions, ...directCanonical);
 
     // 3. Procedural top-up if needed
     if (pool.length < count) {
       const procedural = generateProceduralQuestions(topicId, count - pool.length + 15);
       pool.push(...procedural);
+    }
+
+    // 4. Failsafe fallback so question pool is NEVER empty
+    if (pool.length === 0) {
+      pool.push(...baseQuestions.slice(0, count));
     }
   } else {
     // Full Syllabus Test
@@ -540,6 +551,8 @@ export interface PredictedRankReport {
   stateRank: number;
   totalCandidates: number;
   percentile: number;
+  isBenchmarkEstimate: boolean;
+  cohortStatus: string;
   categoryRank: {
     general: number;
     sc: number;
@@ -594,6 +607,8 @@ export function calculatePredictedRank(percentage: number, rawScore: number, tot
     stateRank,
     totalCandidates: benchmarkPool,
     percentile,
+    isBenchmarkEstimate: true,
+    cohortStatus: 'Calibrated against official cutoff benchmarks. Real-time cohort leaderboard activates with live peer submissions.',
     categoryRank: {
       general: Math.max(1, Math.round(stateRank * 0.45)),
       sc: Math.max(1, Math.round(stateRank * 0.25)),

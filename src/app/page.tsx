@@ -129,8 +129,8 @@ export default function LandingPage() {
             Forgot Password?
           </Link>
           <span>•</span>
-          <Link href="/admin" className="hover:text-teal-300 transition">
-            Publisher Portal
+          <Link href="/exams" className="hover:text-teal-300 transition">
+            All State Exams
           </Link>
         </div>
       </motion.div>

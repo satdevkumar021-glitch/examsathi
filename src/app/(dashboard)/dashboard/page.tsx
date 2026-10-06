@@ -1,6 +1,8 @@
 'use client';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useStore } from '@/lib/store';
+import { getStoredUser } from '@/lib/auth';
 import StreakBadge from '@/components/ui/StreakBadge';
 import { 
   Target, Book, Layers, CheckCircle, ArrowRight, Keyboard, 
@@ -9,7 +11,24 @@ import {
 } from 'lucide-react';
 
 export default function Dashboard() {
-  const { user } = useStore();
+  const { user: storeUser, completedTopics } = useStore();
+  const [currentUser, setCurrentUser] = useState<any>(null);
+  const [lastResult, setLastResult] = useState<any>(null);
+
+  useEffect(() => {
+    try {
+      const u = getStoredUser();
+      setCurrentUser(u);
+      const res = localStorage.getItem('examsathi_last_result');
+      if (res) setLastResult(JSON.parse(res));
+    } catch {}
+  }, []);
+
+  const readinessValue = lastResult ? `${lastResult.percentage}%` : '0%';
+  const topicsDone = completedTopics?.length || 0;
+  const cardsCount = currentUser?.xp ? Math.round(currentUser.xp / 10) : 0;
+  const avgScore = lastResult ? `${lastResult.accuracy}%` : '--';
+  const streakCount = currentUser?.streak || storeUser?.streak || 0;
 
   return (
     <div className="p-4 flex flex-col gap-6 max-w-xl mx-auto w-full pb-20 text-slate-100">
@@ -50,7 +69,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <StreakBadge streak={user?.streak || 14} />
+          <StreakBadge streak={streakCount} />
         </div>
       </div>
 
@@ -138,23 +157,30 @@ export default function Dashboard() {
       </div>
 
       {/* Preparation KPI Readiness */}
-      <div className="grid grid-cols-4 gap-2.5">
-        <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
-          <span className="text-teal-400 font-bold text-lg">72%</span>
-          <span className="text-slate-400 text-[10px] uppercase font-semibold">Readiness</span>
+      <div className="flex flex-col gap-1.5">
+        <div className="grid grid-cols-4 gap-2.5">
+          <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
+            <span className="text-teal-400 font-bold text-lg">{readinessValue}</span>
+            <span className="text-slate-400 text-[10px] uppercase font-semibold">Readiness</span>
+          </div>
+          <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
+            <span className="text-indigo-400 font-bold text-lg">{topicsDone}</span>
+            <span className="text-slate-400 text-[10px] uppercase font-semibold">Topics</span>
+          </div>
+          <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
+            <span className="text-amber-400 font-bold text-lg">{cardsCount}</span>
+            <span className="text-slate-400 text-[10px] uppercase font-semibold">Cards</span>
+          </div>
+          <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
+            <span className="text-emerald-400 font-bold text-lg">{avgScore}</span>
+            <span className="text-slate-400 text-[10px] uppercase font-semibold">Avg Score</span>
+          </div>
         </div>
-        <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
-          <span className="text-indigo-400 font-bold text-lg">36</span>
-          <span className="text-slate-400 text-[10px] uppercase font-semibold">Topics</span>
-        </div>
-        <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
-          <span className="text-amber-400 font-bold text-lg">520</span>
-          <span className="text-slate-400 text-[10px] uppercase font-semibold">Cards</span>
-        </div>
-        <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
-          <span className="text-emerald-400 font-bold text-lg">84%</span>
-          <span className="text-slate-400 text-[10px] uppercase font-semibold">Avg Score</span>
-        </div>
+        {!lastResult && (
+          <p className="text-[10px] text-slate-400 text-center">
+            🎯 Complete your first CBT Mock Test to calculate live Readiness & Merit Rank.
+          </p>
+        )}
       </div>
 
       {/* Featured Learning Modules */}
@@ -289,7 +315,7 @@ export default function Dashboard() {
                 🏛️
               </div>
               <span className="text-[9px] bg-teal-500/20 text-teal-300 font-bold px-2 py-0.5 rounded border border-teal-500/30">
-                24 Desks
+                16 Focus Desks
               </span>
             </div>
             <div>

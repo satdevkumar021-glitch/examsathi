@@ -76,7 +76,9 @@ export default function Profile() {
         </div>
         <div className="text-center">
           <h2 className="text-lg font-bold text-white">{user?.name || 'Aspirant Candidate'}</h2>
-          <p className="text-slate-400 text-xs">{user?.email || 'aspirant@examsathi.in'}</p>
+          <p className="text-slate-400 text-xs">
+            {user?.email || 'Guest Student • Register to sync across devices'}
+          </p>
         </div>
         <div className="bg-slate-800 text-teal-400 px-3 py-1 rounded-full text-xs font-semibold border border-slate-700">
           Target: {user?.targetExam ? user.targetExam.toUpperCase().replace('-', ' ') : 'PUNJAB GOVT EXAMS'}
@@ -86,7 +88,7 @@ export default function Profile() {
       <div className="grid grid-cols-4 gap-2.5 mt-1">
         <div className="bg-slate-800/90 rounded-xl p-3 border border-slate-700 flex flex-col items-center justify-center text-center">
           <Flame size={18} className="text-amber-500 mb-0.5" />
-          <span className="text-lg font-black text-white">{user?.streak || 14}d</span>
+          <span className="text-lg font-black text-white">{user?.streak || 0}d</span>
           <span className="text-slate-400 text-[10px] uppercase font-semibold">Streak</span>
         </div>
         <div className="bg-slate-800/90 rounded-xl p-3 border border-slate-700 flex flex-col items-center justify-center text-center">

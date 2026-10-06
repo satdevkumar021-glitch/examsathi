@@ -9,13 +9,13 @@ export default function BottomNav() {
   const navs = [
     { name: 'Home', path: '/dashboard', icon: Home },
     { name: 'Study', path: '/exams', icon: BookOpen },
-    { name: 'Cards', path: '/lesson/modern-india', icon: Layers },
+    { name: 'Cards', path: '/mock-test?mode=flip', icon: Layers },
     { name: 'Test', path: '/mock-test', icon: CheckCircle },
     { name: 'Profile', path: '/profile', icon: User },
   ];
 
   return (
-    <div className="fixed bottom-0 w-full max-w-[480px] bg-slate-900 border-t border-slate-800 pb-safe">
+    <nav aria-label="Bottom Navigation" className="fixed bottom-0 w-full max-w-[480px] bg-slate-900 border-t border-slate-800 pb-safe">
       <div className="flex justify-around items-center h-16">
         {navs.map((nav) => {
           const Icon = nav.icon;
@@ -29,6 +29,6 @@ export default function BottomNav() {
           );
         })}
       </div>
-    </div>
+    </nav>
   );
 }

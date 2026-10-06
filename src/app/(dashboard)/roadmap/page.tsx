@@ -83,7 +83,7 @@ export default function StudyRoadmap() {
               titlePa: 'ਪਿਆਜੇ ਦੇ 4 ਪੜਾਅ ਅਤੇ ਸੰਭਾਲ (Conservation) ਸਿਧਾਂਤ',
               category: 'concept',
               estimatedMinutes: 25,
-              link: '/study/punjab-master-cadre/social-science',
+              link: '/lesson/child-development-pedagogy',
               linkText: 'Read Lesson Notes',
               xp: 40,
             },
@@ -290,7 +290,7 @@ export default function StudyRoadmap() {
           {[
             { id: 'ett', label: '👶 ETT Punjab', desc: '6635/5994' },
             { id: 'clerk', label: '💼 PSSSB Clerk', desc: 'Raavi & IT' },
-            { id: 'master-cadre', label: '🌾 Master Cadre', desc: 'SST 150 Qs' },
+            { id: 'master-cadre', label: '🌾 Master Cadre', desc: 'SST Core Track' },
           ].map(track => {
             const isSelected = selectedTrack === track.id;
             return (
@@ -317,7 +317,7 @@ export default function StudyRoadmap() {
           <div>
             <div className="flex items-center gap-2">
               <Calendar size={18} className="text-teal-400" />
-              <h2 className="text-sm font-bold text-white">Today\'s Action Plan (दिन का लक्ष्य)</h2>
+              <h2 className="text-sm font-bold text-white">Today&apos;s Action Plan (दिन का लक्ष्य)</h2>
             </div>
             <p className="text-[11px] text-slate-400 mt-0.5">
               {completedCount} of {dayTasks.length} tasks completed ({completionPercentage}%)

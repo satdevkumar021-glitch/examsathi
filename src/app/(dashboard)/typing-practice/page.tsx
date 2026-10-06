@@ -21,10 +21,10 @@ export default function TypingPracticePage() {
   
   const [lang, setLang] = useState<'punjabi' | 'english'>('punjabi');
   const [difficulty, setDifficulty] = useState<'beginner' | 'intermediate' | 'hard'>('intermediate');
-  const [testDuration, setTestDuration] = useState<number>(60); // 1 min (or 300 for 5m, 600 for 10m)
+  const [testDuration, setTestDuration] = useState<number>(600); // 10 min (Official PSSSB Benchmark)
   
   const [userInput, setUserInput] = useState('');
-  const [timeLeft, setTimeLeft] = useState(60);
+  const [timeLeft, setTimeLeft] = useState(600);
   const [isRunning, setIsRunning] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
 
@@ -285,13 +285,15 @@ export default function TypingPracticePage() {
       {/* Raavi Keyboard Shortcuts Cheat Sheet */}
       <div className="bg-slate-800/60 border border-slate-700/60 rounded-xl p-3.5 text-xs text-slate-300">
         <h4 className="font-bold text-white mb-1.5 flex items-center gap-1.5">
-          <span>💡</span> ਰਾਵੀ ਫੌਂਟ ਜ਼ਰੂਰੀ ਕਮਾਂਡਾਂ (Raavi Font Special Keys)
+          <span>💡</span> ਰਾਵੀ ਯੂਨੀਕੋਡ ਇਨਸਕ੍ਰਿਪਟ ਕੁੰਜੀਆਂ (Raavi Unicode Inscript Standard)
         </h4>
         <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-400 pt-1">
-          <span>• ਪੈਰੀਂ ਰ (Halant): <strong>Shift + D</strong></span>
-          <span>• ਬਿੰਦੀ: <strong>Shift + Z</strong></span>
-          <span>• ਟਿੱਪੀ: <strong>Shift + X</strong></span>
-          <span>• ਅੱਧਕ: <strong>Shift + U</strong></span>
+          <span>• ਪੈਰੀਂ ਅੱਖਰ (Halant): <strong>d</strong> (ਮੁੱਖ ਅੱਖਰ + d + j = ੍ਰ)</span>
+          <span>• ਪੂਰਾ ਅ (Vowel A): <strong>Shift + D</strong></span>
+          <span>• ਬਿੰਦੀ (ਂ): <strong>x</strong></span>
+          <span>• ਟਿੱਪੀ (ੰ): <strong>Shift + X</strong></span>
+          <span>• ਅੱਧਕ (ੱ): <strong>Shift + =</strong> (ਜਾਂ <strong>]</strong>)</span>
+          <span>• ਔਂਕੜ (ੁ): <strong>m</strong> | ਦੁਲੈਂਕੜ (ੂ): <strong>Shift + M</strong></span>
         </div>
       </div>
 

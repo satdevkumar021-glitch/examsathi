@@ -21,17 +21,17 @@ export interface AuthUser {
 
 const DEFAULT_USER: AuthUser = {
   id: 'usr-default',
-  name: 'Aspirant Candidate',
-  email: 'aspirant@examsathi.in',
-  phone: '9876543210',
+  name: 'Aspirant',
+  email: '',
+  phone: '',
   targetExam: 'master-cadre-sst',
   state: 'punjab',
-  streak: 14,
-  xp: 450,
-  libraryHours: 18.5,
+  streak: 0,
+  xp: 0,
+  libraryHours: 0.0,
   favoriteQuestionIds: [],
   bookmarkedQuestionIds: [],
-  joinedDate: 'Oct 2026',
+  joinedDate: 'New Member',
 };
 
 const STORAGE_KEY = 'examsathi_auth_user';
@@ -172,14 +172,14 @@ export function verifyAndResetPassword(otpInput: string, newPassword: string): b
       const raw = localStorage.getItem(OTP_STORAGE_KEY);
       if (raw) {
         const data = JSON.parse(raw);
-        if (data.otp === otpInput || otpInput === '123456') {
+        if (data.otp === otpInput && Date.now() - data.time < 10 * 60 * 1000) {
           localStorage.removeItem(OTP_STORAGE_KEY);
           return true;
         }
       }
     } catch {}
   }
-  return otpInput === '123456';
+  return false;
 }
 
 export function logoutUser(): void {

@@ -124,7 +124,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     }
 
     // 5. Fetch questions from Question Bank Engine
-    const loadedQuestions = getTestQuestions({ 
+    let loadedQuestions = getTestQuestions({ 
       topicId, 
       examId,
       difficulty,
@@ -132,6 +132,12 @@ export default function MockTest({ testId }: { testId?: string }) {
       pyqOnly, 
       count 
     });
+
+    // Failsafe fallback: if no topic-specific questions exist, load standard 50-Qs CBT drill
+    if (!loadedQuestions || loadedQuestions.length === 0) {
+      loadedQuestions = getTestQuestions({ topicId: 'all', count: 50 });
+    }
+
     setQuestions(loadedQuestions);
 
     const allocatedSeconds = Math.max(300, loadedQuestions.length * 54); // 54 seconds per question (~45 mins for 50 Qs)
@@ -243,11 +249,23 @@ export default function MockTest({ testId }: { testId?: string }) {
 
   if (!currentQuestion) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen bg-slate-900 text-slate-100 p-4">
-        <div className="animate-spin text-teal-400 mb-3">
-          <RotateCw size={32} />
+      <div className="flex flex-col items-center justify-center min-h-screen bg-slate-900 text-slate-100 p-6 text-center">
+        <div className="animate-spin text-teal-400 mb-4">
+          <RotateCw size={36} />
         </div>
-        <p className="text-sm font-semibold">Generating 50-Question CBT Set from 20-Year Archive...</p>
+        <h2 className="text-base font-bold text-white mb-1">Generating 50-Question CBT Set...</h2>
+        <p className="text-xs text-slate-400 mb-4 max-w-xs">
+          Loading topic questions, past year archives, and verifying answer keys.
+        </p>
+        <button
+          onClick={() => {
+            const fallback = getTestQuestions({ topicId: 'all', count: 50 });
+            setQuestions(fallback);
+          }}
+          className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs px-4 py-2 rounded-xl transition"
+        >
+          Load Practice Set Directly
+        </button>
       </div>
     );
   }

@@ -20,30 +20,30 @@ interface LibrarySeat {
 export default function VirtualStudyLibrary() {
   const [selectedSeat, setSelectedSeat] = useState<number>(7);
   const [selectedTopic, setSelectedTopic] = useState<string>('ett-child-pedagogy');
-  const [timerMode, setTimerMode] = useState<25 | 45 | 60>(45);
-  const [secondsRemaining, setSecondsRemaining] = useState<number>(45 * 60);
+  const [timerMode, setTimerMode] = useState<25 | 45 | 60>(25);
+  const [secondsRemaining, setSecondsRemaining] = useState<number>(25 * 60);
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [soundEnabled, setSoundEnabled] = useState<boolean>(false);
   const [sessionCompleted, setSessionCompleted] = useState<boolean>(false);
-  const [totalHours, setTotalHours] = useState<number>(18.5);
+  const [totalHours, setTotalHours] = useState<number>(0.0);
 
   const SEATS: LibrarySeat[] = [
-    { id: 1, label: 'Desk 01', type: 'quiet', status: 'occupied', occupant: 'Gurpreet', target: 'ETT Child Psychology' },
-    { id: 2, label: 'Desk 02', type: 'quiet', status: 'occupied', occupant: 'Manpreet', target: 'PSSSB Computer IT' },
-    { id: 3, label: 'Desk 03', type: 'quiet', status: 'available' },
-    { id: 4, label: 'Desk 04', type: 'quiet', status: 'available' },
-    { id: 5, label: 'Desk 05', type: 'quiet', status: 'occupied', occupant: 'Simran', target: 'Master Cadre SST' },
-    { id: 6, label: 'Desk 06', type: 'quiet', status: 'available' },
-    { id: 7, label: 'Desk 07 (Window)', type: 'quiet', status: 'selected' },
-    { id: 8, label: 'Desk 08', type: 'quiet', status: 'available' },
-    { id: 9, label: 'Desk 09', type: 'cbt', status: 'occupied', occupant: 'Aman', target: '50 Qs CBT Simulator' },
-    { id: 10, label: 'Desk 10', type: 'cbt', status: 'available' },
-    { id: 11, label: 'Desk 11', type: 'cbt', status: 'available' },
-    { id: 12, label: 'Desk 12', type: 'cbt', status: 'occupied', occupant: 'Rajwinder', target: 'Raavi Typing Lab' },
-    { id: 13, label: 'Desk 13', type: 'cbt', status: 'available' },
-    { id: 14, label: 'Desk 14', type: 'cbt', status: 'available' },
-    { id: 15, label: 'Desk 15', type: 'pod', status: 'available' },
-    { id: 16, label: 'Desk 16', type: 'pod', status: 'occupied', occupant: 'Harpreet', target: 'Punjab Police GK' },
+    { id: 1, label: 'Focus Desk 01', type: 'quiet', status: 'available' },
+    { id: 2, label: 'Focus Desk 02', type: 'quiet', status: 'available' },
+    { id: 3, label: 'Silent Pod 03', type: 'quiet', status: 'available' },
+    { id: 4, label: 'Silent Pod 04', type: 'quiet', status: 'available' },
+    { id: 5, label: 'Reading Desk 05', type: 'quiet', status: 'available' },
+    { id: 6, label: 'Reading Desk 06', type: 'quiet', status: 'available' },
+    { id: 7, label: 'Window Desk 07', type: 'quiet', status: 'selected' },
+    { id: 8, label: 'Window Desk 08', type: 'quiet', status: 'available' },
+    { id: 9, label: 'CBT Terminal 09', type: 'cbt', status: 'available' },
+    { id: 10, label: 'CBT Terminal 10', type: 'cbt', status: 'available' },
+    { id: 11, label: 'CBT Terminal 11', type: 'cbt', status: 'available' },
+    { id: 12, label: 'Typing Lab Desk 12', type: 'cbt', status: 'available' },
+    { id: 13, label: 'Typing Lab Desk 13', type: 'cbt', status: 'available' },
+    { id: 14, label: 'Deep Study Pod 14', type: 'pod', status: 'available' },
+    { id: 15, label: 'Deep Study Pod 15', type: 'pod', status: 'available' },
+    { id: 16, label: 'Deep Study Pod 16', type: 'pod', status: 'available' },
   ];
 
   const TOPIC_OPTIONS = [

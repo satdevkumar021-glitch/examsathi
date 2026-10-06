@@ -24,16 +24,66 @@ Unlike generic exam portals, ExamSathi bridges the gap between **official govern
 
 ### 🏛️ Targeted Examination Bodies & Boards
 * **Punjab Government:**
-  * **Education Recruitment Board (ERB):** Punjab Master Cadre (SST, Science, Math, Punjabi, Hindi, English), Lecturer Cadre, ETT (Elementary Teacher Training).
+  * **Education Recruitment Board (ERB):** Punjab Master Cadre (SST, Science, Math, Punjabi, Hindi, English), Lecturer Cadre, ETT (Elementary Teacher Training), PSTET.
   * **PSSSB:** Punjab Subordinate Services Selection Board (Clerk, Senior Assistant, Patwari).
   * **Punjab Police Recruitment Board:** Police Constable & Sub-Inspector (SI).
 * **Rajasthan Government:**
-  * **RBSE / RSMSSB:** REET (Level 1 & 2), 3rd Grade Teacher, Rajasthan Patwar, Rajasthan Police.
+  * **RBSE / RSMSSB:** REET (Level 1 & 2), 3rd Grade Teacher, Rajasthan Patwar, Rajasthan Police, RSMSSB Clerk.
+* **Haryana Government:**
+  * **BSEH / HSSC:** HTET (Level 1, 2, 3), Haryana Police Constable, Haryana Clerk.
+* **Delhi & Central Police:**
+  * **SSC / DP:** Delhi Police Constable, Delhi Police SI, CAPF.
 * **Central Government:**
   * **CBSE / CTET:** Central Teacher Eligibility Test (Paper 1 & Paper 2).
-  * **Staff Selection Commission (SSC):** SSC CHSL (10+2), SSC CGL, SSC GD Constable.
+  * **Staff Selection Commission (SSC):** SSC CHSL (10+2), SSC CGL, SSC MTS, SSC GD Constable.
+  * **NTA / UGC:** UGC NET.
+* **Defence & Entry Forces:**
+  * **Indian Army:** Agniveer (General Duty, Technical, Clerk).
 
 ---
+
+## 📚 Complete Engineering Documentation (`/docs`)
+
+Comprehensive architectural and engineering specifications:
+
+| Document | Purpose & Contents |
+| :--- | :--- |
+| **[`docs/AUDIT.md`](docs/AUDIT.md)** | Phase 0 verification report & exhaustive 16-bug register with root causes and fixes. |
+| **[`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)** | Target system architecture (Next.js PWA, Supabase Postgres vs Firebase, AI gateway, low-end device optimizations). |
+| **[`docs/DATA_MODEL.md`](docs/DATA_MODEL.md)** | Database ERD, complete SQL DDL migrations with RLS policies, indexes, and server-authoritative scoring view. |
+| **[`docs/API.md`](docs/API.md)** | Typed REST and RPC API specifications with request/response schemas for CBT scoring, auth, and AI. |
+| **[`docs/AI_PIPELINE.md`](docs/AI_PIPELINE.md)** | PDF-to-MCQ parsing, semantic chunking, deduplication, JSON schema validation, and cost caps. |
+| **[`docs/ROADMAP.md`](docs/ROADMAP.md)** | Multi-milestone delivery timeline, sprint breakdown, and risk mitigation. |
+| **[`docs/SECURITY.md`](docs/SECURITY.md)** | Threat model, OWASP Top 10 defenses, Content Security Policy (CSP), and DPDP Act 2023 compliance. |
+| **[`docs/TESTING.md`](docs/TESTING.md)** | Playwright E2E suite, unit test matrix, and CI test execution instructions. |
+| **[`docs/CONTENT_GUIDE.md`](docs/CONTENT_GUIDE.md)** | Primary source citations (NCERT, PSEB, ERB gazettes), PYQ authenticity, and Gurmukhi/Devanagari standards. |
+| **[`docs/ADSENSE_CHECKLIST.md`](docs/ADSENSE_CHECKLIST.md)** | Google AdSense monetization readiness, student-focus ad placement policy, and Core Web Vitals. |
+| **[`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md)** | Contributor guidelines, code standards, and PR process. |
+
+---
+
+## ⚡ Quick Start Setup (Under 10 Minutes)
+
+Get ExamSathi running locally in under 10 minutes:
+
+```bash
+# 1. Clone repository
+git clone https://github.com/satdevkumar021-glitch/examsathi.git
+cd examsathi/examsathi-web
+
+# 2. Install dependencies (Node.js 20+ recommended)
+npm install
+
+# 3. Start local development server
+npm run dev
+# -> Local server live at http://localhost:3000
+
+# 4. Run automated E2E tests (Chromium headless)
+npx playwright test e2e/audit.spec.ts
+
+# 5. Build production static bundle
+npm run build
+```
 
 ## 🚀 Key Features
 
