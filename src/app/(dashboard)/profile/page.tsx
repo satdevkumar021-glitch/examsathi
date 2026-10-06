@@ -437,7 +437,9 @@ export default function Profile() {
           Invite fellow aspirants on WhatsApp to prepare together for Punjab Master Cadre, ETT, Clerk, and REET with 20-year past papers and mock tests.
         </p>
         <a
-          href="https://api.whatsapp.com/send?text=%F0%9F%8E%93%20Hey!%20Check%20out%20ExamSathi%20(%E0%A4%AA%E0%A4%B0%E0%A5%80%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE%20%E0%A4%B8%E0%A4%BE%E0%A4%A5%E0%A5%80)%20%E2%80%94%20100%25%20Free%20Exam%20Prep%20with%20100%2C000%2B%20MCQs%2C%2020-Year%20PYQs%2C%20and%20Live%20CBT%20Mock%20Tests%20for%20Punjab%2C%20Rajasthan%20%26%20Central%20Exams!%20Join%20here%3A%20https%3A%2F%2Fsatdevkumar021-glitch.github.io%2Fexamsathi%2F"
+          href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+            `🎓 *ExamSathi (परीक्षा साथी · ਪ੍ਰੀਖਿਆ ਸਾਥੀ)* 🇮🇳\n\nपंजाब, राजस्थान और केंद्रीय भर्ती परीक्षाओं (Master Cadre, ETT, Clerk, Police, Patwari, REET, CTET) की तैयारी हेतु ExamSathi:\n\n✨ 50-Question Live CBT Mock Tests with Negative Marking\n✨ Predicted State & Category Merit Rank\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ (Gurmukhi) & English\n\n👉 Platform Link:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
+          )}`}
           target="_blank"
           rel="noopener noreferrer"
           className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition shadow-md"

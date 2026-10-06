@@ -418,7 +418,7 @@ export default function Dashboard() {
         </p>
         <a 
           href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-            `🎓 *ExamSathi (परीक्षा साथी) — 100% Free Govt Exam Portal!* 🇮🇳\n\nदोस्तों, पंजाब और सरकारी भर्ती परीक्षाओं (Master Cadre SST, PSSSB Clerk, Police, Patwari, REET, CTET) की मुफ्त तैयारी के लिए ExamSathi देखें:\n\n✨ 20-Year Archive (2004–2024)\n✨ 50-Question Live CBT Mock Tests with Negative Marking\n✨ Predicted State & Category Merit Rank\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ & English\n\n👉 100% Free Link:\nhttps://satdevkumar021-glitch.github.io/examsathi/\n\nकृपया इसे अपने दोस्तों के साथ शेयर करें और अपना फीडबैक दें! 🙏`
+            `🎓 *ExamSathi (परीक्षा साथी · ਪ੍ਰੀਖਿਆ ਸਾਥੀ)* 🇮🇳\n\nपंजाब, राजस्थान और केंद्रीय भर्ती परीक्षाओं (Master Cadre, ETT, Clerk, Police, Patwari, REET, CTET) की तैयारी हेतु ExamSathi:\n\n✨ 50-Question Live CBT Mock Tests with Negative Marking\n✨ Predicted State & Category Merit Rank\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ (Gurmukhi) & English\n\n👉 Platform Link:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
           )}`}
           target="_blank"
           rel="noopener noreferrer"

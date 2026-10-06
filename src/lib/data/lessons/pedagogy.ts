@@ -69,14 +69,20 @@ export const PEDAGOGY_LESSONS: Record<string, Lesson> = {
                   <p class="text-slate-300">• <strong>निजी वार्ता (Private Speech):</strong> बच्चा अपने कार्यों को दिशा देने हेतु स्वयं से बोलकर बात करता है।</p>
                 </div>
                 <div class="bg-slate-900/90 p-3 rounded-lg border border-slate-700">
-                  <span class="text-emerald-400 font-bold block mb-1">लॉरेंस कोहलबर्ग (नैतिक विकास)</span>
-                  <p class="text-slate-300">• 'हाइन्ज दुविधा' (Heinz Dilemma) पर आधारित।</p>
-                  <p class="text-slate-300">• <strong>3 स्तर व 6 अवस्थाएं:</strong>
-                    <br/>1. <em>पूर्व-पारंपरिक:</em> दंड व आज्ञापालन, जैसे को तैसा।
-                    <br/>2. <em>पारंपरिक:</em> अच्छा लड़का/अच्छी लड़की, कानून व व्यवस्था।
-                    <br/>3. <em>उत्तर-पारंपरिक:</em> सामाजिक अनुबंध, सार्वभौमिक नैतिक सिद्धांत।
-                  </p>
-                  <p class="text-slate-300">• कैरोल गिलिगन ने महिला नैतिकता (Care of Ethics) की उपेक्षा करने पर इसकी आलोचना की।</p>
+                  <span class="text-emerald-400 font-bold block mb-1">लॉरेंस कोहलबर्ग (नैतिक विकास सिद्धांत - Moral Development)</span>
+                  <p class="text-slate-300">• 'हाइन्ज दुविधा' (Heinz Dilemma) और नैतिक तर्कणा (Moral Reasoning) पर आधारित।</p>
+                  <div class="space-y-1.5 pt-1 text-[11px] text-slate-300">
+                    <p class="font-bold text-amber-300">स्तर 1: पूर्व-पारंपरिक स्तर (Pre-Conventional Level, 4-10 वर्ष)</p>
+                    <p className="pl-2">• <em>चरण 1: आज्ञाकारिता एवं दंड अभिविन्यास (Obedience & Punishment)</em> — सजा से बचने हेतु आज्ञा मानना।</p>
+                    <p className="pl-2">• <em>चरण 2: वैयक्तिकता एवं विनिमय (Individualism & Exchange / Instrumental)</em> — अपने हित साधना, जैसे को तैसा।</p>
+                    <p class="font-bold text-teal-300 pt-1">स्तर 2: पारंपरिक स्तर (Conventional Level, 10-13 वर्ष)</p>
+                    <p className="pl-2">• <em>चरण 3: अच्छा लड़का-अच्छी लड़की अभिविन्यास (Good Boy-Nice Girl Orientation)</em> — दूसरों की नजरों में खरा उतरना।</p>
+                    <p className="pl-2">• <em>चरण 4: कानून एवं सामाजिक व्यवस्था बनाए रखना (Law & Order / Maintaining Social Order)</em> — सामाजिक नियमों का निष्ठा से पालन।</p>
+                    <p class="font-bold text-indigo-300 pt-1">स्तर 3: उत्तर-पारंपरिक स्तर (Post-Conventional Level, 13+ वर्ष)</p>
+                    <p className="pl-2">• <em>चरण 5: सामाजिक अनुबंध एवं व्यक्तिगत अधिकार (Social Contract & Individual Rights)</em> — समाज हित में नियमों का लचीलापन।</p>
+                    <p className="pl-2">• <em>चरण 6: सार्वभौमिक नैतिक सिद्धांत (Universal Ethical Principles)</em> — अंतरात्मा के सर्वोच्च नैतिक मूल्य।</p>
+                  </div>
+                  <p class="text-[10px] text-slate-400 pt-1">• कैरोल गिलिगन ने महिला नैतिकता (Care of Ethics) की उपेक्षा करने पर इसकी आलोचना की।</p>
                 </div>
               </div>
             </div>
