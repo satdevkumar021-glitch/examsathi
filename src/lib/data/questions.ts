@@ -909,26 +909,28 @@ export const QUESTIONS: Question[] = [
 ];
 
 import { REFERENCE_SST_QUESTIONS } from './questions/reference_questions';
+import { SST_MISSING_QUESTIONS } from './questions/sst_missing_questions';
 
 export const ALL_QUESTIONS: Question[] = [
   ...QUESTIONS,
   ...REFERENCE_SST_QUESTIONS,
+  ...SST_MISSING_QUESTIONS,
 ];
 
 // Topic alias mapping to ensure cross-compatibility between syllabus IDs and reference IDs
 const TOPIC_ALIASES: Record<string, string[]> = {
   'ancient-india': ['sst-harappa', 'sst-buddhism-jainism', 'sst-maurya'],
-  'medieval-india': ['sst-punjab-sikh'],
-  'punjab-history': ['sst-punjab-sikh'],
+  'medieval-india': ['sst-medieval-india', 'sst-punjab-sikh'],
+  'punjab-history': ['sst-punjab-history-deep', 'sst-punjab-sikh'],
   'modern-india': ['sst-national-movement'],
   'fundamental-rights': ['sst-fundamental-rights', 'sst-constitution'],
   'parliament': ['sst-legislature', 'sst-executive'],
   'judiciary': ['sst-judiciary'],
   'local-govt': ['sst-federal-local'],
-  'indian-economy': ['sst-economic-sectors', 'sst-national-income', 'sst-demand-supply', 'sst-inflation-employment', 'sst-development', 'sst-trade'],
-  'world-history': ['sst-renaissance', 'sst-french-revolution', 'sst-industrial-revolution', 'sst-world-wars'],
+  'indian-economy': ['sst-indian-economy-deep', 'sst-economic-sectors', 'sst-national-income', 'sst-demand-supply', 'sst-inflation-employment', 'sst-development', 'sst-trade'],
+  'world-history': ['sst-world-history-modern', 'sst-renaissance', 'sst-french-revolution', 'sst-industrial-revolution', 'sst-world-wars'],
   'punjab-geography': ['sst-geo-punjab', 'sst-geo-monsoon'],
-  'physical-geography': ['sst-geo-earth', 'sst-geo-atmosphere', 'sst-geo-tectonics', 'sst-geo-landforms', 'sst-geo-oceans', 'sst-geo-environment'],
+  'physical-geography': ['sst-india-geography', 'sst-geo-earth', 'sst-geo-atmosphere', 'sst-geo-tectonics', 'sst-geo-landforms', 'sst-geo-oceans', 'sst-geo-environment'],
 };
 
 export function getQuestionsByTopic(topicId: string): Question[] {

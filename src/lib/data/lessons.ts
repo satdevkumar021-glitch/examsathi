@@ -5,6 +5,7 @@
 
 import { WORLD_HISTORY_LESSONS } from './lessons/world_history';
 import { POLITY_EXTRA_LESSONS } from './lessons/polity_extra';
+import { SST_MISSING_LESSONS } from './lessons/sst_missing';
 import { ECONOMICS_LESSONS } from './lessons/economics';
 import { SCIENCE_LESSONS } from './lessons/science';
 import { MATHEMATICS_LESSONS } from './lessons/mathematics';
@@ -1902,23 +1903,39 @@ export const ALL_LESSONS: Record<string, Lesson> = {
   ...PEDAGOGY_LESSONS,
   ...RAJASTHAN_LESSONS,
   ...REFERENCE_SST_LESSONS,
+  ...SST_MISSING_LESSONS,
 };
 
 export const LESSONS = ALL_LESSONS;
 
 const TOPIC_ALIASES: Record<string, string> = {
+  'russian-revolution': 'sst-world-history-modern',
+  'uno': 'sst-world-history-modern',
+  'cold-war': 'sst-world-history-modern',
+  'soil': 'sst-india-geography',
+  'rivers': 'sst-india-geography',
+  'green-revolution': 'sst-india-geography',
+  'niti-aayog': 'sst-indian-economy-deep',
+  'rbi': 'sst-indian-economy-deep',
+  'delhi-sultanate': 'sst-medieval-india',
+  'mughal': 'sst-medieval-india',
+  'sufi': 'sst-medieval-india',
+  'bhakti': 'sst-medieval-india',
+  'ranjit-singh': 'sst-punjab-history-deep',
+  'misals': 'sst-punjab-history-deep',
+  'banda-singh': 'sst-punjab-history-deep',
   'ancient-india': 'sst-harappa',
-  'medieval-india': 'sst-punjab-sikh',
-  'punjab-history': 'sst-punjab-sikh',
+  'medieval-india': 'sst-medieval-india',
+  'punjab-history': 'sst-punjab-history-deep',
   'modern-india': 'sst-national-movement',
   'fundamental-rights': 'sst-fundamental-rights',
   'parliament': 'sst-legislature',
   'judiciary': 'sst-judiciary',
   'local-govt': 'sst-federal-local',
-  'indian-economy': 'sst-economic-sectors',
-  'world-history': 'sst-renaissance',
+  'indian-economy': 'sst-indian-economy-deep',
+  'world-history': 'sst-world-history-modern',
   'punjab-geography': 'sst-geo-punjab',
-  'physical-geography': 'sst-geo-earth',
+  'physical-geography': 'sst-india-geography',
   'motion': 'physics-concepts',
   'cell': 'biology-concepts',
   'electricity': 'physics-concepts',
