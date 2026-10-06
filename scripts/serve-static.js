@@ -23,6 +23,11 @@ const server = http.createServer((req, res) => {
   try {
     urlPath = decodeURIComponent(rawPath);
   } catch (e) {}
+  if (urlPath.startsWith('/examsathi/')) {
+    urlPath = urlPath.substring('/examsathi'.length);
+  } else if (urlPath === '/examsathi') {
+    urlPath = '/';
+  }
   let filePath = path.join(OUT_DIR, urlPath);
 
   // Check if directory -> try index.html

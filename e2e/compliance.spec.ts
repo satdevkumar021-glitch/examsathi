@@ -6,10 +6,10 @@ test.describe('ExamSathi Google AdSense & DPDP Legal Compliance Suite', () => {
     await page.goto('/');
     await page.waitForTimeout(500);
 
-    await expect(page.locator('a[href^="/privacy-policy"]').first()).toBeVisible();
-    await expect(page.locator('a[href^="/terms"]').first()).toBeVisible();
-    await expect(page.locator('a[href^="/about"]').first()).toBeVisible();
-    await expect(page.locator('a[href^="/contact"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="/privacy-policy"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="/terms"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="/about"]').first()).toBeVisible();
+    await expect(page.locator('a[href*="/contact"]').first()).toBeVisible();
   });
 
   test('02. /privacy-policy renders DPDP Act 2023 and Google AdSense disclosures', async ({ page }) => {

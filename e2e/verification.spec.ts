@@ -91,7 +91,7 @@ test.describe('ExamSathi Bug Fix Verification Suite', () => {
     const cardsNav = page.locator('nav a:has-text("Cards")');
     const href = await cardsNav.getAttribute('href');
     console.log('Verified Cards Nav href:', href);
-    expect(href).toMatch(/^\/mock-test\/?\?mode=flip/);
+    expect(href).toMatch(/(\/examsathi)?\/mock-test\/?\?mode=flip/);
   });
 
   test('VERIFY BUG-03: Admin portal is protected and rejects unauthorized access', async ({ page }) => {

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Mail, MessageSquare, AlertCircle, Github, Lightbulb } from 'lucide-react';
+import { ArrowLeft, Mail, MessageSquare, AlertCircle, Code2, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact Us & Errata Support',
@@ -29,8 +29,8 @@ export default function ContactPage() {
           <p className="text-slate-300 text-xs">
             For general feedback, inquiries, or support:
           </p>
-          <a href="mailto:contact@examsathi.in" className="font-mono text-teal-300 text-xs bg-slate-800 p-2 rounded border border-slate-700 inline-block hover:underline">
-            contact@examsathi.in
+          <a href="mailto:support@examsathi.in" className="font-mono text-teal-300 text-xs bg-slate-800 p-2 rounded border border-slate-700 inline-block hover:underline">
+            support@examsathi.in
           </a>
         </div>
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
 
         <div className="p-4 bg-slate-900/60 border border-slate-700/60 rounded-xl space-y-2">
           <div className="flex items-center gap-2 text-indigo-400 font-bold text-sm">
-            <Github size={16} />
+            <Code2 size={16} />
             <h3>Open Source & Repository</h3>
           </div>
           <p className="text-slate-300 text-xs">

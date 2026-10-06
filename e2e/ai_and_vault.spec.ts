@@ -40,12 +40,12 @@ test.describe('ExamSathi AI Generator, Study Vault & Knowledge Deep-Dive Suite',
   test('02. Mock Test Hub and Dashboard render AI Drill Generator entry points', async ({ page }) => {
     // Check Mock Test Hub
     await page.goto('/mock-test/');
-    const mockAiLink = page.locator('a[href^="/ai-generator"]');
+    const mockAiLink = page.locator('a[href*="/ai-generator"]');
     await expect(mockAiLink).toBeVisible();
 
     // Check Dashboard
     await page.goto('/dashboard/');
-    const dashAiLink = page.locator('a[href^="/ai-generator"]');
+    const dashAiLink = page.locator('a[href*="/ai-generator"]');
     await expect(dashAiLink).toBeVisible();
   });
 

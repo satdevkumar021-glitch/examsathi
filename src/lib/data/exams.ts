@@ -1586,7 +1586,7 @@ export const CENTRAL_EXAMS: Exam[] = [
 ];
 
 import {
-  HARYANA_EXAMS,
+  HARYANA_EXAMS as HARYANA_EXPANSION_EXAMS,
   DELHI_EXAMS,
   DEFENCE_EXAMS,
   PUNJAB_ADDITIONAL_EXAMS,
@@ -1978,6 +1978,7 @@ export const HARYANA_EXAMS: Exam[] = [
       },
     ],
   },
+  ...HARYANA_EXPANSION_EXAMS,
 ];
 
 // ============================================================

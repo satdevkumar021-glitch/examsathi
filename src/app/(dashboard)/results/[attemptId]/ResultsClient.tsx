@@ -280,7 +280,7 @@ export default function Results() {
   const levelColor = STATUS_COLORS[candidateLevel.status] || 'border-teal-500/50 bg-teal-950/30 text-teal-300';
 
   if (!loaded) return <p className="p-6 text-white">Loading result…</p>;
-  if (!result.questions?.length) return <div className="p-6 text-white"><h1>No completed test yet</h1><Link href="/mock-test" className="text-teal-300">Start a practice test</Link></div>;
+  if (!questions.length) return <div className="p-6 text-white"><h1>No completed test yet</h1><Link href="/mock-test" className="text-teal-300">Start a practice test</Link></div>;
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-28 text-slate-100 max-w-xl mx-auto w-full relative">
       

@@ -690,6 +690,8 @@ export function calculatePredictedRank(percentage: number, rawScore: number, tot
   if (benchmarkPool < MINIMUM_COHORT_FOR_RANK) {
     return {
       hasEnoughData: false,
+      isBenchmarkEstimate: false,
+      cohortStatus: 'Insufficient verified cohort data',
       stateRank: 0,
       totalCandidates: benchmarkPool,
       percentile: 0,

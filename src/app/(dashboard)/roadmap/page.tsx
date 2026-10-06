@@ -114,6 +114,16 @@ export default function StudyRoadmap() {
           theme: 'Syllabus Breakdown, RTE 2009 Act & Growth vs Development',
           tasks: [
             {
+              id: 'ett-t1',
+              title: 'Revise Piaget Concrete Operational Stage (7-11 yrs)',
+              titlePa: 'ਪਿਆਜੇ ਦੇ 4 ਪੜਾਅ ਅਤੇ ਸੰਭਾਲ (Conservation) ਸਿਧਾਂਤ',
+              category: 'concept',
+              estimatedMinutes: 25,
+              link: '/lesson/child-development-pedagogy',
+              linkText: 'Read Lesson Notes',
+              xp: 40,
+            },
+            {
               id: 'ett-d1-t1',
               title: 'Study RTE Act 2009 & Teacher-Pupil Ratio (30:1)',
               titlePa: 'ਸਿੱਖਿਆ ਦਾ ਅਧਿਕਾਰ ਕਾਨੂੰਨ 2009 ਨਿਯਮ',
