@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '60-Day Structured Syllabus Roadmap | ExamSathi',
+  title: '60-Day Structured Syllabus Roadmap',
   description: 'Follow day-by-day study milestones and revision schedules for Master Cadre SST, ETT 5994, and PSSSB Clerk recruitment.',
 };
 

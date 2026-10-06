@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Reset Password | ExamSathi',
+  title: 'Reset Password',
   description: 'Reset your ExamSathi account password via secure OTP verification.',
 };
 

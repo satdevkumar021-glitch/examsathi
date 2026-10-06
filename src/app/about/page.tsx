@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, BookOpen, Heart, Award, ShieldCheck } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us | ExamSathi',
+  title: 'About Us & Educational Mission',
   description: 'Learn about ExamSathi, our mission to democratize competitive exam education for Punjab, Haryana, Rajasthan, and Central aspirants at 100% free of cost.',
 };
 

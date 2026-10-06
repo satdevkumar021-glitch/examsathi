@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Free Student Registration | ExamSathi',
+  title: 'Free Student Registration',
   description: 'Create a free student account on ExamSathi to prepare for Punjab Master Cadre, ETT, PSSSB Clerk, REET, and CTET.',
 };
 

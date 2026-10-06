@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Student Dashboard & Today’s Plan | ExamSathi',
+  title: 'Student Dashboard & Today’s Plan',
   description: 'Track your daily study streak, syllabus readiness, and personalized practice tasks on ExamSathi.',
 };
 

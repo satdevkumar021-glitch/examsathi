@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | ExamSathi',
+  title: 'Terms of Service & Disclaimer',
   description: 'ExamSathi Terms of Service governing free access, educational content use, and disclaimers of official government affiliation.',
 };
 

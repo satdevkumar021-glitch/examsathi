@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ShieldCheck, ArrowLeft } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | ExamSathi',
+  title: 'Privacy Policy & DPDP Act 2023 Compliance',
   description: 'ExamSathi Privacy Policy detailing data protection, cookie policy, Google AdSense compliance, and candidate privacy rights under DPDP Act 2023.',
 };
 

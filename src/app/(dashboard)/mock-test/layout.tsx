@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'CBT Mock Tests & Spaced Repetition Practice | ExamSathi',
+  title: 'CBT Mock Tests & Spaced Repetition Practice',
   description: 'Simulate official computer-based tests (CBT) with exact exam timings, -0.25 negative marking, and 3D flashcards powered by FSRS.',
 };
 

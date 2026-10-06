@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Mail, MessageSquare, AlertCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact Us & Errata Support | ExamSathi',
+  title: 'Contact Us & Errata Support',
   description: 'Contact ExamSathi editorial team, submit syllabus feedback, report question errata, or get help with your free account.',
 };
 
