@@ -12,10 +12,18 @@ import {
   RotateCw,
   Award,
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Brain,
+  ShieldAlert
 } from 'lucide-react';
 import { Question } from '@/lib/data/questions';
-import { getTestQuestions, evaluateUserLevel, AVAILABLE_TEST_TOPICS } from '@/lib/data/question_bank_engine';
+import { 
+  getTestQuestions, 
+  evaluateUserLevel, 
+  calculatePredictedRank,
+  AVAILABLE_TEST_TOPICS,
+  AVAILABLE_EXAMS
+} from '@/lib/data/question_bank_engine';
 
 export default function MockTest({ testId }: { testId?: string }) {
   const router = useRouter();
@@ -27,33 +35,58 @@ export default function MockTest({ testId }: { testId?: string }) {
   const [mode, setMode] = useState<'exam' | 'flip'>('exam');
   const [isFlipped, setIsFlipped] = useState(false);
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [testTitle, setTestTitle] = useState('Master Cadre & Clerk Mock Test');
-  const [secondsRemaining, setSecondsRemaining] = useState(25 * 60);
-  const [totalTimeSeconds, setTotalTimeSeconds] = useState(25 * 60);
+  const [testTitle, setTestTitle] = useState('Master Cadre & State CBT Mock Test');
+  const [secondsRemaining, setSecondsRemaining] = useState(45 * 60);
+  const [totalTimeSeconds, setTotalTimeSeconds] = useState(45 * 60);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [activeExamId, setActiveExamId] = useState<string>('master-cadre-sst');
+  const [activeDifficulty, setActiveDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
 
   // Initialize test configuration and questions
   useEffect(() => {
     let topicId = 'all';
-    let count = 25;
+    let count = 50;
     let pyqOnly = false;
+    let pyq20Years = false;
     let requestedMode: 'exam' | 'flip' = 'exam';
+    let examId: string | undefined = undefined;
+    let difficulty: 'all' | 'easy' | 'medium' | 'hard' = 'all';
 
-    // 1. Check testId parameter
+    // 1. Read URL query parameters (Client-side safe for static export)
+    if (typeof window !== 'undefined') {
+      const searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.get('exam')) examId = searchParams.get('exam')!;
+      if (searchParams.get('diff')) difficulty = searchParams.get('diff') as any;
+      if (searchParams.get('count')) {
+        const parsed = parseInt(searchParams.get('count')!, 10);
+        if (!isNaN(parsed)) count = parsed;
+      }
+      if (searchParams.get('pyq') === '20y') {
+        pyq20Years = true;
+      }
+      if (searchParams.get('mode') === 'flip' || searchParams.get('mode') === 'exam') {
+        requestedMode = searchParams.get('mode') as any;
+      }
+    }
+
+    // 2. Check testId parameter
     if (testId) {
       if (testId.startsWith('topic-')) {
         topicId = testId.replace('topic-', '');
       } else if (testId === 'clerk') {
         topicId = 'punjab-clerk-prep';
+        examId = 'clerk-psssb';
       } else if (testId === 'patwari') {
         topicId = 'punjab-patwari-prep';
+        examId = 'patwari-punjab';
       } else if (testId === 'punjab-master-cadre') {
         topicId = 'all';
+        examId = 'master-cadre-sst';
         count = 50;
       }
     }
 
-    // 2. Override with custom session config if present
+    // 3. Override with custom session config if present
     try {
       const storedConfig = sessionStorage.getItem('examsathi_test_config');
       if (storedConfig) {
@@ -62,28 +95,46 @@ export default function MockTest({ testId }: { testId?: string }) {
         if (parsed.count) count = parsed.count;
         if (parsed.mode) requestedMode = parsed.mode;
         if (parsed.pyqOnly !== undefined) pyqOnly = parsed.pyqOnly;
+        if (parsed.pyq20Years !== undefined) pyq20Years = parsed.pyq20Years;
+        if (parsed.examId) examId = parsed.examId;
+        if (parsed.difficulty) difficulty = parsed.difficulty;
       }
     } catch {
       // Fallback
     }
 
     setMode(requestedMode);
+    if (examId) setActiveExamId(examId);
+    setActiveDifficulty(difficulty);
 
-    // 3. Derive title
+    // 4. Derive title
+    const examMeta = AVAILABLE_EXAMS.find(e => e.id === examId);
     const topicMeta = AVAILABLE_TEST_TOPICS.find(t => t.id === topicId);
-    if (topicMeta) {
-      setTestTitle(pyqOnly ? `${topicMeta.name} — 10-Yr PYQs` : topicMeta.name);
-    } else if (pyqOnly) {
-      setTestTitle('10-Year Master Cadre PYQ Live Test (2014-2024)');
+
+    const diffLabel = difficulty === 'easy' ? ' (Simple)' : difficulty === 'medium' ? ' (Mid)' : difficulty === 'hard' ? ' (Hard)' : '';
+
+    if (examMeta) {
+      setTestTitle(`${examMeta.name} — ${count} Qs Set${diffLabel}`);
+    } else if (topicMeta) {
+      setTestTitle(pyqOnly || pyq20Years ? `${topicMeta.name} — 20-Yr PYQs${diffLabel}` : `${topicMeta.name}${diffLabel}`);
+    } else if (pyq20Years) {
+      setTestTitle(`20-Year Archive PYQ Live CBT (2004-2024)${diffLabel}`);
     } else {
-      setTestTitle('Full CBT Master Cadre Mock Test');
+      setTestTitle(`Master Cadre & State 50 Qs CBT Simulator${diffLabel}`);
     }
 
-    // 4. Fetch questions from Question Bank Engine
-    const loadedQuestions = getTestQuestions({ topicId, pyqOnly, count });
+    // 5. Fetch questions from Question Bank Engine
+    const loadedQuestions = getTestQuestions({ 
+      topicId, 
+      examId,
+      difficulty,
+      pyq20Years,
+      pyqOnly, 
+      count 
+    });
     setQuestions(loadedQuestions);
 
-    const allocatedSeconds = Math.max(300, loadedQuestions.length * 75); // 75 seconds per question
+    const allocatedSeconds = Math.max(300, loadedQuestions.length * 54); // 54 seconds per question (~45 mins for 50 Qs)
     setSecondsRemaining(allocatedSeconds);
     setTotalTimeSeconds(allocatedSeconds);
   }, [testId]);
@@ -160,10 +211,13 @@ export default function MockTest({ testId }: { testId?: string }) {
     const percentage = Math.round((correctCount / questions.length) * 100);
     const accuracy = Math.round((correctCount / (correctCount + wrongCount || 1)) * 100);
     const levelInfo = evaluateUserLevel(percentage, accuracy);
+    const predictedRank = calculatePredictedRank(percentage, rawScore, questions.length);
 
     const resultPayload = {
       testId: testId || 'custom',
       testTitle,
+      examId: activeExamId,
+      difficulty: activeDifficulty,
       total: questions.length,
       correct: correctCount,
       wrong: wrongCount,
@@ -173,6 +227,9 @@ export default function MockTest({ testId }: { testId?: string }) {
       accuracy,
       timeTaken: totalTimeSeconds - secondsRemaining,
       level: levelInfo,
+      predictedRank,
+      questions,
+      userAnswers,
       completedAt: new Date().toISOString(),
     };
 
@@ -190,10 +247,16 @@ export default function MockTest({ testId }: { testId?: string }) {
         <div className="animate-spin text-teal-400 mb-3">
           <RotateCw size={32} />
         </div>
-        <p className="text-sm font-semibold">Loading Test Questions from Bank...</p>
+        <p className="text-sm font-semibold">Generating 50-Question CBT Set from 20-Year Archive...</p>
       </div>
     );
   }
+
+  const difficultyBadge = currentQuestion.difficulty === 'easy'
+    ? { label: 'Simple 🟢', color: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30' }
+    : currentQuestion.difficulty === 'hard'
+    ? { label: 'Hard 🔴', color: 'bg-rose-500/15 text-rose-300 border-rose-500/30' }
+    : { label: 'Mid 🟡', color: 'bg-amber-500/15 text-amber-300 border-amber-500/30' };
 
   return (
     <div className="flex flex-col h-screen bg-slate-900 pb-safe text-slate-100">
@@ -252,8 +315,8 @@ export default function MockTest({ testId }: { testId?: string }) {
           {/* Timer (Exam Mode) */}
           {mode === 'exam' && (
             <div className="flex items-center gap-1 bg-slate-800 px-2 py-1 rounded-lg border border-slate-700">
-              <Clock size={13} className={secondsRemaining < 120 ? 'text-rose-400 animate-pulse' : 'text-amber-400'} />
-              <span className={`font-mono text-xs font-bold ${secondsRemaining < 120 ? 'text-rose-400' : 'text-white'}`}>
+              <Clock size={13} className={secondsRemaining < 180 ? 'text-rose-400 animate-pulse' : 'text-amber-400'} />
+              <span className={`font-mono text-xs font-bold ${secondsRemaining < 180 ? 'text-rose-400' : 'text-white'}`}>
                 {formatTimer(secondsRemaining)}
               </span>
             </div>
@@ -298,13 +361,19 @@ export default function MockTest({ testId }: { testId?: string }) {
           // ==================== MODE 1: EXAM CBT ====================
           <div>
             <div className="mb-4">
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex justify-between items-center mb-2 gap-2 flex-wrap">
                 <span className="text-teal-400 font-bold text-xs">
                   Question {qIndex + 1} of {questions.length}
                 </span>
-                <span className="text-[10px] bg-slate-800 text-slate-400 border border-slate-700 px-2 py-0.5 rounded">
-                  {currentQuestion.examTag || 'Punjab Master Cadre PYQ'}
-                </span>
+                
+                <div className="flex items-center gap-1.5">
+                  <span className={`text-[10px] px-2 py-0.5 rounded border font-bold ${difficultyBadge.color}`}>
+                    {difficultyBadge.label}
+                  </span>
+                  <span className="text-[10px] bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded truncate max-w-[190px]">
+                    {currentQuestion.examTag || 'Punjab Master Cadre PYQ'} {currentQuestion.year ? `(${currentQuestion.year})` : ''}
+                  </span>
+                </div>
               </div>
 
               <h3 className="text-sm font-semibold text-white mb-1 leading-relaxed">
@@ -351,12 +420,17 @@ export default function MockTest({ testId }: { testId?: string }) {
           <div className="flex flex-col items-center justify-center h-full gap-4">
             <div 
               onClick={() => setIsFlipped(!isFlipped)}
-              className="cursor-pointer w-full min-h-[300px] bg-gradient-to-br from-slate-800 to-slate-850 border border-slate-700 rounded-2xl p-5 flex flex-col justify-between shadow-xl relative hover:border-amber-500/50 transition"
+              className="cursor-pointer w-full min-h-[320px] bg-gradient-to-br from-slate-800 to-slate-850 border border-slate-700 rounded-2xl p-5 flex flex-col justify-between shadow-xl relative hover:border-amber-500/50 transition"
             >
-              <div className="flex justify-between items-center">
-                <span className="text-[10px] uppercase font-bold text-amber-400 tracking-wider">
-                  {isFlipped ? 'Answer & Explanation' : 'Question Card (Click to Flip)'}
-                </span>
+              <div className="flex justify-between items-center gap-2">
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[10px] uppercase font-bold text-amber-400 tracking-wider">
+                    {isFlipped ? 'Answer & Strategic Analysis' : 'Question Card (Tap to Flip)'}
+                  </span>
+                  <span className={`text-[9px] px-1.5 py-0.2 rounded border font-bold ${difficultyBadge.color}`}>
+                    {difficultyBadge.label}
+                  </span>
+                </div>
                 <span className="text-[10px] text-slate-400">Card {qIndex + 1} of {questions.length}</span>
               </div>
 
@@ -383,18 +457,33 @@ export default function MockTest({ testId }: { testId?: string }) {
                   </div>
                 </div>
               ) : (
-                // Back: Correct Answer & Explanation
-                <div className="my-auto py-3">
-                  <div className="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 rounded-full text-xs font-bold mb-2">
+                // Back: Correct Answer, Explanation & Examiner Thought
+                <div className="my-auto py-2 space-y-2.5">
+                  <div className="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 rounded-full text-xs font-bold">
                     <CheckCircle2 size={14} /> Correct Option: ({currentQuestion.correct})
                   </div>
-                  <h4 className="text-white font-bold text-xs mb-2">
+                  <h4 className="text-white font-bold text-xs">
                     {currentQuestion.options[currentQuestion.correct]?.[lang] || currentQuestion.options[currentQuestion.correct]?.hi}
                   </h4>
+                  
+                  {/* Detailed Explanation */}
                   <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700 text-xs text-slate-300 leading-relaxed">
-                    <span className="text-amber-400 font-bold block mb-1">Key Takeaway:</span>
+                    <span className="text-amber-400 font-bold block mb-1">Official Rationalization:</span>
                     {currentQuestion.explanation[lang] || currentQuestion.explanation.hi || currentQuestion.explanation.en}
                   </div>
+
+                  {/* Strategic Examiner Thought */}
+                  {currentQuestion.thought && (
+                    <div className="bg-indigo-950/40 p-3 rounded-xl border border-indigo-700/50 text-[11px] text-indigo-200 leading-relaxed">
+                      <div className="flex items-center gap-1.5 text-indigo-300 font-bold mb-1">
+                        <Brain size={13} className="text-teal-400" />
+                        <span>🧠 Antigravity Strategic Thought (Examiner Mindset):</span>
+                      </div>
+                      <p>
+                        {currentQuestion.thought[lang] || currentQuestion.thought.hi || currentQuestion.thought.en}
+                      </p>
+                    </div>
+                  )}
                 </div>
               )}
 

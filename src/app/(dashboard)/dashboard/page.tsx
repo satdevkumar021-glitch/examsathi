@@ -48,6 +48,37 @@ export default function Dashboard() {
         </div>
       </div>
 
+      {/* 50-Question CBT Live Mock & 20-Year Archive Banner */}
+      <Link
+        href="/mock-test"
+        className="bg-gradient-to-r from-teal-950 via-slate-850 to-indigo-950 p-4 rounded-2xl border-2 border-teal-500/50 shadow-xl flex items-center justify-between gap-3 group hover:border-teal-400 transition"
+      >
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="w-11 h-11 rounded-xl bg-teal-500/20 text-teal-300 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+            <Target size={24} />
+          </div>
+          <div className="min-w-0">
+            <div className="flex items-center gap-1.5 mb-0.5">
+              <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">
+                ⚡ 2004–2024 Archive
+              </span>
+              <span className="bg-teal-500/20 text-teal-300 text-[9px] font-bold px-1.5 py-0.2 rounded border border-teal-500/30">
+                50 Qs Set
+              </span>
+            </div>
+            <h3 className="text-white font-black text-sm truncate">
+              Live CBT Mock Test & State Merit Rank
+            </h3>
+            <p className="text-[11px] text-slate-300 truncate">
+              Simple, Mid & Hard sets • Master Cadre, Clerk, Police, Patwari & REET
+            </p>
+          </div>
+        </div>
+        <div className="w-8 h-8 rounded-full bg-teal-500 text-slate-950 flex items-center justify-center shrink-0 group-hover:translate-x-1 transition-transform">
+          <ArrowRight size={16} />
+        </div>
+      </Link>
+
       {/* Official Examination Tracks */}
       <div>
         <div className="flex justify-between items-center mb-3">

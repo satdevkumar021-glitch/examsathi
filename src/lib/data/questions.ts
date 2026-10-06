@@ -7,6 +7,7 @@ export interface Question {
   id: string;
   topicId: string;
   subjectId: string;
+  examId?: string; // e.g. 'master-cadre', 'clerk', 'police', 'patwari', 'reet', 'ctet'
   examTag: string; // e.g., 'Punjab Master Cadre 2022', 'PSSSB Clerk 2023'
   question: { hi: string; pa?: string; en: string };
   options: {
@@ -17,6 +18,7 @@ export interface Question {
   };
   correct: 'A' | 'B' | 'C' | 'D';
   explanation: { hi: string; pa?: string; en: string };
+  thought?: { hi: string; pa?: string; en: string }; // Strategic Examiner Insight & Elimination Technique
   difficulty: 'easy' | 'medium' | 'hard';
   year: number;
 }
@@ -910,11 +912,15 @@ export const QUESTIONS: Question[] = [
 
 import { REFERENCE_SST_QUESTIONS } from './questions/reference_questions';
 import { SST_MISSING_QUESTIONS } from './questions/sst_missing_questions';
+import { MASTER_CADRE_10YR_PYQS } from './questions/master_cadre_pyqs';
+import { TWENTY_YEAR_EXAM_PYQS } from './questions/twenty_year_pyqs';
 
 export const ALL_QUESTIONS: Question[] = [
   ...QUESTIONS,
   ...REFERENCE_SST_QUESTIONS,
   ...SST_MISSING_QUESTIONS,
+  ...MASTER_CADRE_10YR_PYQS,
+  ...TWENTY_YEAR_EXAM_PYQS,
 ];
 
 // Topic alias mapping to ensure cross-compatibility between syllabus IDs and reference IDs

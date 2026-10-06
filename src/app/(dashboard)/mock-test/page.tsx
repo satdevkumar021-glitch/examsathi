@@ -15,22 +15,29 @@ import {
   HelpCircle,
   Filter,
   BarChart3,
-  Calendar
+  Calendar,
+  Sparkles,
+  SlidersHorizontal,
+  GraduationCap,
+  Briefcase,
+  ShieldAlert
 } from 'lucide-react';
-import { AVAILABLE_TEST_TOPICS, TopicMeta } from '@/lib/data/question_bank_engine';
+import { AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS, TopicMeta, ExamInfo } from '@/lib/data/question_bank_engine';
+import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 
 export default function MockTestHub() {
   const router = useRouter();
   const [selectedSubject, setSelectedSubject] = useState<string>('All');
   const [testMode, setTestMode] = useState<'exam' | 'flip'>('exam');
-  const [questionCount, setQuestionCount] = useState<number>(25);
-  const [selectedTopic, setSelectedTopic] = useState<string>('punjab-history');
-  const [pyqOnly, setPyqOnly] = useState<boolean>(false);
-  const [lastLevel, setLastLevel] = useState<{ level: number; title: string; badge: string; percentage: number } | null>(null);
+  const [questionCount, setQuestionCount] = useState<number>(50);
+  const [difficultyFilter, setDifficultyFilter] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
+  const [isBottomSheetOpen, setIsBottomSheetOpen] = useState<boolean>(false);
+  const [selectedExamForDrawer, setSelectedExamForDrawer] = useState<string>('master-cadre-sst');
+  const [lastLevel, setLastLevel] = useState<{ level: number; title: string; badge: string; percentage: number; rankText?: string } | null>(null);
 
   useEffect(() => {
     try {
-      const stored = sessionStorage.getItem('examsathi_last_result');
+      const stored = sessionStorage.getItem('examsathi_last_result') || localStorage.getItem('examsathi_last_result');
       if (stored) {
         const parsed = JSON.parse(stored);
         const percentage = Math.round((parsed.correct / (parsed.total || 1)) * 100);
@@ -50,7 +57,12 @@ export default function MockTestHub() {
           title = 'Foundation Stage 🔰';
           badge = 'Study Required';
         }
-        setLastLevel({ level, title, badge, percentage });
+
+        const rankText = parsed.predictedRank?.stateRank 
+          ? `Rank #${parsed.predictedRank.stateRank}` 
+          : undefined;
+
+        setLastLevel({ level, title, badge, percentage, rankText });
       }
     } catch {
       // Fallback
@@ -63,28 +75,39 @@ export default function MockTestHub() {
     selectedSubject === 'All' ? true : t.subject.toLowerCase() === selectedSubject.toLowerCase()
   );
 
-  const startTest = (topicId: string, customMode?: 'exam' | 'flip', isPyq = false) => {
+  const startTopicTest = (topicId: string, customMode?: 'exam' | 'flip', isPyq = false) => {
     const mode = customMode || testMode;
-    const pyq = isPyq || pyqOnly;
-    // Store test session settings in sessionStorage
     try {
       sessionStorage.setItem('examsathi_test_config', JSON.stringify({
         topicId,
         mode,
         count: questionCount,
-        pyqOnly: pyq,
-        timeLimitMinutes: Math.round(questionCount * 1.2), // 1.2 mins per question
+        difficulty: difficultyFilter,
+        pyqOnly: isPyq,
+        timeLimitMinutes: Math.round(questionCount * 0.9), // 45 mins for 50 Qs
       }));
     } catch {}
 
-    router.push(`/mock-test/topic-${topicId}`);
+    const query = new URLSearchParams({
+      diff: difficultyFilter,
+      count: questionCount.toString(),
+      pyq: isPyq ? '20y' : 'all',
+      mode,
+    });
+
+    router.push(`/mock-test/topic-${topicId}?${query.toString()}`);
+  };
+
+  const openDrawerForExam = (examId: string) => {
+    setSelectedExamForDrawer(examId);
+    setIsBottomSheetOpen(true);
   };
 
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-24 text-slate-100 max-w-xl mx-auto w-full">
       
       {/* Header Banner */}
-      <div className="bg-gradient-to-br from-indigo-900/60 via-slate-800 to-teal-900/40 p-5 rounded-2xl border border-indigo-700/40 shadow-lg">
+      <div className="bg-gradient-to-br from-indigo-900/70 via-slate-800 to-teal-900/50 p-5 rounded-2xl border border-indigo-700/40 shadow-lg">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <span className="p-2 bg-indigo-500/20 text-indigo-400 rounded-xl">
@@ -92,19 +115,19 @@ export default function MockTestHub() {
             </span>
             <div>
               <h1 className="text-white font-extrabold text-lg">Mock Test & PYQ Portal</h1>
-              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — 100,000+ Topic MCQs & 10-Yr Past Papers</p>
+              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — 100,000+ Topic MCQs & 20-Yr Past Papers (2004–2024)</p>
             </div>
           </div>
-          <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
+          <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
             <Flame size={12} /> Live CBT
           </span>
         </div>
 
         {/* Level Status Card */}
         {lastLevel ? (
-          <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between bg-slate-900/50 p-3 rounded-xl">
+          <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between bg-slate-900/60 p-3 rounded-xl">
             <div>
-              <span className="text-[10px] uppercase font-bold text-slate-400">Your Current Level</span>
+              <span className="text-[10px] uppercase font-bold text-slate-400">Latest Performance</span>
               <div className="text-sm font-bold text-teal-300 flex items-center gap-1.5 mt-0.5">
                 <Award size={16} className="text-amber-400" />
                 {lastLevel.title}
@@ -112,19 +135,134 @@ export default function MockTestHub() {
             </div>
             <div className="text-right">
               <span className="text-xs font-mono font-bold text-white">{lastLevel.percentage}% Score</span>
-              <div className="text-[10px] text-teal-400 font-medium">{lastLevel.badge}</div>
+              <div className="text-[10px] text-teal-400 font-medium">
+                {lastLevel.rankText || lastLevel.badge}
+              </div>
             </div>
           </div>
         ) : (
           <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
-            <span>Take your first topic test to diagnose your <strong>Master Cadre Readiness Level</strong>.</span>
+            <span>Take your first 50-question mock test to diagnose your <strong>State Merit Rank</strong>.</span>
           </div>
         )}
       </div>
 
-      {/* Test Mode Selector Pill */}
+      {/* Prominent CBT Bottom Sheet Launcher Banner */}
+      <div className="bg-gradient-to-r from-teal-950 via-slate-850 to-indigo-950 p-4 rounded-2xl border-2 border-teal-500/60 shadow-xl flex flex-col gap-3 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/10 rounded-full blur-2xl pointer-events-none" />
+        
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="p-2 bg-teal-500/20 text-teal-300 rounded-xl">
+              <Sparkles size={18} />
+            </span>
+            <div>
+              <h2 className="text-white font-extrabold text-sm sm:text-base">
+                ⚡ 50-Question CBT Mock Test Simulator
+              </h2>
+              <p className="text-[11px] text-teal-300">
+                Official Exam Pattern • 20-Year Archive (2004–2024) • Negative Marking
+              </p>
+            </div>
+          </div>
+          <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-black px-2 py-0.5 rounded-full border border-emerald-500/30">
+            50 Qs Set
+          </span>
+        </div>
+
+        <p className="text-xs text-slate-300 leading-relaxed">
+          Open the interactive drawer to configure your test by target exam (Master Cadre SST, PSSSB Clerk, Punjab Police, Patwari, REET, CTET) with Simple, Mid, or Hard questions.
+        </p>
+
+        <button
+          onClick={() => openDrawerForExam('master-cadre-sst')}
+          className="w-full bg-gradient-to-r from-teal-400 via-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition"
+        >
+          <SlidersHorizontal size={15} />
+          <span>Open Exam Configurator & Launch 50 Qs Set</span>
+        </button>
+      </div>
+
+      {/* Target Exam Quick Cards (Launches Bottom Sheet with that Exam pre-selected) */}
       <div>
-        <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider mb-2">1. Choose Practice Mode</h2>
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
+            1. Select Target Examination (20-Year Archive)
+          </h2>
+          <span className="text-[10px] text-teal-400 font-semibold">2004 – 2024 Archive</span>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-2.5">
+          {AVAILABLE_EXAMS.map(exam => (
+            <div
+              key={exam.id}
+              onClick={() => openDrawerForExam(exam.id)}
+              className="cursor-pointer bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-teal-400/60 p-3 rounded-xl flex flex-col justify-between transition group shadow-sm"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-[9px] font-bold text-teal-400 bg-teal-500/10 px-1.5 py-0.5 rounded border border-teal-500/20">
+                    {exam.badge}
+                  </span>
+                  <span className="text-[9px] text-slate-400 font-mono">
+                    50 Qs
+                  </span>
+                </div>
+                <h3 className="text-white font-bold text-xs group-hover:text-teal-300 transition line-clamp-1">
+                  {exam.name}
+                </h3>
+                <p className="text-[10px] text-slate-400 mt-0.5 line-clamp-1">
+                  {exam.pyqSpan}
+                </p>
+              </div>
+
+              <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-700/60 text-[10px] text-teal-400 font-bold">
+                <span>Configure Test</span>
+                <ChevronRight size={12} className="group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Difficulty Category Filter (Simple / Mid / Hard) */}
+      <div>
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
+            2. Question Difficulty Tier
+          </h2>
+          <span className="text-[10px] text-slate-400">Exam Grading Filter</span>
+        </div>
+
+        <div className="grid grid-cols-4 gap-2">
+          {[
+            { id: 'all', label: 'Balanced', desc: 'Standard Mix', color: 'border-slate-600 text-teal-300' },
+            { id: 'easy', label: 'Simple 🟢', desc: 'Direct Facts', color: 'border-emerald-500/60 text-emerald-300' },
+            { id: 'medium', label: 'Mid 🟡', desc: 'Competitive', color: 'border-amber-500/60 text-amber-300' },
+            { id: 'hard', label: 'Hard 🔴', desc: 'Merit Maker', color: 'border-rose-500/60 text-rose-300' },
+          ].map(diff => {
+            const isSelected = difficultyFilter === diff.id;
+            return (
+              <button
+                key={diff.id}
+                onClick={() => setDifficultyFilter(diff.id as any)}
+                className={`p-2.5 rounded-xl border text-center transition ${
+                  isSelected
+                    ? 'bg-slate-750 border-teal-400 text-white ring-1 ring-teal-400 shadow-md'
+                    : 'bg-slate-800 border-slate-700 text-slate-300 hover:border-slate-600'
+                }`}
+              >
+                <div className={`text-xs font-bold ${diff.color}`}>{diff.label}</div>
+                <div className="text-[9px] text-slate-400 mt-0.5">{diff.desc}</div>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Practice Mode Selector Pill */}
+      <div>
+        <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider mb-2">3. Practice Format</h2>
         <div className="grid grid-cols-2 gap-3">
           <button
             onClick={() => setTestMode('exam')}
@@ -141,7 +279,7 @@ export default function MockTestHub() {
               {testMode === 'exam' && <CheckCircle2 size={16} className="text-indigo-400" />}
             </div>
             <p className="text-[11px] text-slate-400 leading-snug">
-              Real timer, -0.25 negative marking, OMR question palette, and level score.
+              Timed CBT simulation, -0.25 negative marking, rank prediction & report.
             </p>
           </button>
 
@@ -160,70 +298,20 @@ export default function MockTestHub() {
               {testMode === 'flip' && <CheckCircle2 size={16} className="text-amber-400" />}
             </div>
             <p className="text-[11px] text-slate-400 leading-snug">
-              Interactive 3D flip card practice with instant answers and FSRS algorithm.
+              3D card flip practice with instant explanations and FSRS spaced repetition.
             </p>
           </button>
         </div>
       </div>
 
-      {/* Quick Launch Cards */}
-      <div>
-        <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider mb-2">2. Special Exam Tracks</h2>
-        <div className="grid grid-cols-2 gap-3">
-          {/* Last 10 Years PYQs Card */}
-          <div 
-            onClick={() => startTest('all', 'exam', true)}
-            className="cursor-pointer bg-gradient-to-br from-emerald-900/40 to-slate-800 border border-emerald-500/40 p-3.5 rounded-xl flex flex-col justify-between hover:border-emerald-400 transition group shadow"
-          >
-            <div>
-              <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-500/30 inline-block mb-1.5">
-                2014 – 2024 Papers
-              </span>
-              <h3 className="text-white font-bold text-sm group-hover:text-emerald-300 transition">
-                10-Year PYQ Live Test
-              </h3>
-              <p className="text-[11px] text-slate-400 mt-1 leading-snug">
-                Official Punjab Master Cadre & PSSSB past papers with rationales.
-              </p>
-            </div>
-            <div className="flex items-center justify-between mt-3 text-emerald-400 font-bold text-xs">
-              <span>Start PYQ Test</span>
-              <Play size={14} className="group-hover:translate-x-1 transition-transform" />
-            </div>
-          </div>
-
-          {/* Full CBT 150 Qs Simulator */}
-          <div 
-            onClick={() => startTest('all', 'exam', false)}
-            className="cursor-pointer bg-gradient-to-br from-purple-900/40 to-slate-800 border border-purple-500/40 p-3.5 rounded-xl flex flex-col justify-between hover:border-purple-400 transition group shadow"
-          >
-            <div>
-              <span className="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-purple-500/30 inline-block mb-1.5">
-                Full 150 Marks
-              </span>
-              <h3 className="text-white font-bold text-sm group-hover:text-purple-300 transition">
-                Master Cadre Mock
-              </h3>
-              <p className="text-[11px] text-slate-400 mt-1 leading-snug">
-                Complete 4-section simulation (History, Polity, Geography, Economy).
-              </p>
-            </div>
-            <div className="flex items-center justify-between mt-3 text-purple-400 font-bold text-xs">
-              <span>Start 150 CBT</span>
-              <Play size={14} className="group-hover:translate-x-1 transition-transform" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Question Count Selector */}
-      <div className="bg-slate-800/60 p-3.5 rounded-xl border border-slate-700/80 flex items-center justify-between">
+      {/* Question Set Size Selector */}
+      <div className="bg-slate-800/70 p-3.5 rounded-xl border border-slate-700/80 flex items-center justify-between">
         <div>
-          <span className="text-xs font-bold text-white block">Question Length</span>
-          <span className="text-[11px] text-slate-400">Select number of questions per test</span>
+          <span className="text-xs font-bold text-white block">Question Set Size</span>
+          <span className="text-[11px] text-slate-400">Official standard is 50 Questions</span>
         </div>
         <div className="flex gap-1.5">
-          {[10, 25, 50].map((count) => (
+          {[50, 25, 10].map((count) => (
             <button
               key={count}
               onClick={() => setQuestionCount(count)}
@@ -233,19 +321,19 @@ export default function MockTestHub() {
                   : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
               }`}
             >
-              {count} Qs
+              {count} Qs {count === 50 && '⭐'}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Topic Filter Chips */}
+      {/* Topic Filter Chips & Topic-Wise Tests */}
       <div>
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
-            3. Topic-Wise Mock Tests ({filteredTopics.length})
+            4. Topic-Wise Question Bank ({filteredTopics.length} Topics)
           </h2>
-          <span className="text-[10px] text-teal-400 font-semibold">Instant Evaluation</span>
+          <span className="text-[10px] text-teal-400 font-semibold">100,000+ Questions</span>
         </div>
         
         {/* Subject Filter Pills */}
@@ -280,7 +368,7 @@ export default function MockTestHub() {
                     </span>
                     {topic.isPYQRich && (
                       <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
-                        <Calendar size={10} /> 10-Yr PYQs
+                        <Calendar size={10} /> 20-Yr Archive
                       </span>
                     )}
                     <span className="text-teal-400 text-[10px] font-semibold">
@@ -299,16 +387,16 @@ export default function MockTestHub() {
               {/* Action Buttons */}
               <div className="flex items-center gap-2 pt-2 border-t border-slate-700/60">
                 <button
-                  onClick={() => startTest(topic.id, 'exam')}
+                  onClick={() => startTopicTest(topic.id, 'exam')}
                   className="flex-1 bg-teal-500/20 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  <Play size={12} /> Live MCQ Test
+                  <Play size={12} /> Live {questionCount} Qs CBT
                 </button>
                 <button
-                  onClick={() => startTest(topic.id, 'flip')}
+                  onClick={() => startTopicTest(topic.id, 'flip')}
                   className="flex-1 bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 border border-amber-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  <Layers size={12} /> Flip Practice
+                  <Layers size={12} /> 3D Flip Cards
                 </button>
                 <Link
                   href={`/lesson/${topic.id}`}
@@ -322,6 +410,13 @@ export default function MockTestHub() {
           ))}
         </div>
       </div>
+
+      {/* Interactive Bottom Sheet */}
+      <MockTestBottomSheet
+        isOpen={isBottomSheetOpen}
+        onClose={() => setIsBottomSheetOpen(false)}
+        defaultExamId={selectedExamForDrawer}
+      />
 
     </div>
   );
