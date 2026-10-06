@@ -763,6 +763,19 @@ export default function Results() {
 
       {/* 7. ACTION BUTTONS */}
       <div className="flex flex-col gap-2.5 mt-2">
+        {/* Share Score on WhatsApp */}
+        <a 
+          href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+            `🎓 *ExamSathi CBT Mock Test Scorecard!* 🇮🇳\n\nमैंने अभी ExamSathi पर ${testTitle} दिया:\n📊 Score: ${rawScore}/${total} (${percentage}%)\n🎯 Accuracy: ${accuracy}%\n🏆 Predicted State Rank: #${predictedRank.stateRank} / ${predictedRank.totalCandidates.toLocaleString()}\n\nयह 100% Free Portal है (Master Cadre, Clerk, Police, Patwari, REET, CTET)।\n👉 आप भी अपना टेस्ट दें और तैयारी करें:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3.5 rounded-xl text-center text-xs shadow-lg flex items-center justify-center gap-2 transition"
+        >
+          <Share2 size={16} />
+          <span>Share Score & Platform on WhatsApp 📲</span>
+        </a>
+
         {/* Review in Flip Card Mode */}
         <Link 
           href={`/mock-test/${testId}?mode=flip`}

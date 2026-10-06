@@ -96,6 +96,19 @@ export default function LandingPage() {
         >
           <span>Start Learning • अध्ययन शुरू करें</span>
         </Link>
+
+        {/* WhatsApp Share Button */}
+        <a 
+          href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+            `🎓 *ExamSathi (परीक्षा साथी) — 100% Free Govt Exam Portal!* 🇮🇳\n\nनमस्ते / ਸਤਿ ਸ਼੍ਰੀ ਅਕਾਲ दोस्तों!\nपंजाब और सरकारी भर्ती परीक्षाओं (Master Cadre SST, PSSSB Clerk, Police, Patwari, REET, CTET) की मुफ्त तैयारी के लिए ExamSathi देखें:\n\n✨ 20-Year Archive (2004–2024)\n✨ 50-Question Live CBT Mock Tests with Negative Marking\n✨ Predicted State & Category Merit Rank\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ (Gurmukhi) & English\n\n👉 100% Free Link (No ads / No fees):\nhttps://satdevkumar021-glitch.github.io/examsathi/\n\nकृपया इसे अपने दोस्तों व स्टडी ग्रुप्स में शेयर करें और फीडबैक दें! 🙏`
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full bg-emerald-600/90 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow transition text-xs flex items-center justify-center gap-2 border border-emerald-500/50"
+        >
+          <span>📲 Share on WhatsApp (व्हाट्सएप पर शेयर करें)</span>
+        </a>
+
         <div className="flex justify-center gap-4 text-xs text-slate-400">
           <Link href="/login" className="hover:text-white transition">
             Student Login

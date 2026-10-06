@@ -5,7 +5,7 @@ import StreakBadge from '@/components/ui/StreakBadge';
 import { 
   Target, Book, Layers, CheckCircle, ArrowRight, Keyboard, 
   ShieldCheck, Compass, Sparkles, Award, GraduationCap, Briefcase, 
-  Search, BookOpen, Flame
+  Search, BookOpen, Flame, Share2
 } from 'lucide-react';
 
 export default function Dashboard() {
@@ -283,6 +283,34 @@ export default function Dashboard() {
             <span className="text-slate-200 text-xs font-semibold text-center">Raavi Typing Simulator</span>
           </Link>
         </div>
+      </div>
+
+      {/* Share with Friends on WhatsApp Banner */}
+      <div className="bg-gradient-to-r from-emerald-950/80 via-slate-850 to-teal-950/80 p-4 rounded-2xl border border-emerald-500/40 shadow-lg flex flex-col gap-2.5">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="p-2 bg-emerald-500/20 text-emerald-400 rounded-xl">
+              <Share2 size={18} />
+            </span>
+            <div>
+              <h3 className="text-white font-bold text-xs">Share ExamSathi with Friends & Aspirants</h3>
+              <p className="text-[10px] text-emerald-300">100% Free • Open Learning Movement • Spread the Word</p>
+            </div>
+          </div>
+        </div>
+        <p className="text-[11px] text-slate-300 leading-relaxed">
+          Invite your friends, colleagues, and study groups on WhatsApp to practice 20-year PYQs, take 50-mark CBT tests, and share their feedback!
+        </p>
+        <a 
+          href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
+            `🎓 *ExamSathi (परीक्षा साथी) — 100% Free Govt Exam Portal!* 🇮🇳\n\nदोस्तों, पंजाब और सरकारी भर्ती परीक्षाओं (Master Cadre SST, PSSSB Clerk, Police, Patwari, REET, CTET) की मुफ्त तैयारी के लिए ExamSathi देखें:\n\n✨ 20-Year Archive (2004–2024)\n✨ 50-Question Live CBT Mock Tests with Negative Marking\n✨ Predicted State & Category Merit Rank\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ & English\n\n👉 100% Free Link:\nhttps://satdevkumar021-glitch.github.io/examsathi/\n\nकृपया इसे अपने दोस्तों के साथ शेयर करें और अपना फीडबैक दें! 🙏`
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-2 shadow transition"
+        >
+          <span>📲 Share on WhatsApp (व्हाट्सएप पर शेयर करें)</span>
+        </a>
       </div>
 
     </div>
