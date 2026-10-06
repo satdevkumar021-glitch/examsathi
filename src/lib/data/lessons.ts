@@ -1947,6 +1947,11 @@ export const TOPIC_ALIASES: Record<string, string> = {
   'agreement': 'english-grammar-lit',
   'sandhi': 'hindi-vyakaran',
   'computer': 'computer-awareness',
+  'psssb-computer-it': 'computer-awareness',
+  'computer-it': 'computer-awareness',
+  'psssb-raavi-typing': 'punjabi-grammar-lit',
+  'punjabi-clerk-prep': 'punjabi-grammar-lit',
+  'ett-evs-science': 'environment-ecology',
   'series': 'quantitative-aptitude',
 };
 

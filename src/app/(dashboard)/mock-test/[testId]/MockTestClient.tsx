@@ -41,6 +41,7 @@ export default function MockTest({ testId }: { testId?: string }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [activeExamId, setActiveExamId] = useState<string>('master-cadre-sst');
   const [activeDifficulty, setActiveDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
+  const [loadError, setLoadError] = useState(false);
 
   // Initialize test configuration and questions
   useEffect(() => {
@@ -152,11 +153,18 @@ export default function MockTest({ testId }: { testId?: string }) {
       loadedQuestions = getTestQuestions({ topicId: 'all', count: 50 });
     }
 
-    setQuestions(loadedQuestions);
-
-    const allocatedSeconds = Math.max(300, loadedQuestions.length * 54); // 54 seconds per question (~45 mins for 50 Qs)
-    setSecondsRemaining(allocatedSeconds);
-    setTotalTimeSeconds(allocatedSeconds);
+    if (loadedQuestions && loadedQuestions.length > 0) {
+      setQuestions(loadedQuestions);
+      setLoadError(false);
+      const allocatedSeconds = Math.max(300, loadedQuestions.length * 54);
+      setSecondsRemaining(allocatedSeconds);
+      setTotalTimeSeconds(allocatedSeconds);
+    } else {
+      const fallbackTimer = setTimeout(() => {
+        setLoadError(true);
+      }, 2000);
+      return () => clearTimeout(fallbackTimer);
+    }
   }, [testId]);
 
   // Countdown timer in exam mode
@@ -262,6 +270,49 @@ export default function MockTest({ testId }: { testId?: string }) {
   };
 
   if (!currentQuestion) {
+    if (loadError) {
+      return (
+        <div className="flex flex-col items-center justify-center min-h-screen bg-slate-900 text-slate-100 p-6 text-center">
+          <div className="w-14 h-14 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4 border border-amber-500/30 shadow-lg">
+            <AlertCircle size={32} />
+          </div>
+          <h2 className="text-base font-bold text-white mb-1">
+            Question Loading Timed Out / प्रश्न लोड करने में विलंब
+          </h2>
+          <p className="text-xs text-slate-400 mb-6 max-w-sm leading-relaxed">
+            The question set for this topic took too long to assemble. You can load our standard 50-question simulation directly or retry.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
+            <button
+              onClick={() => {
+                setLoadError(false);
+                const fallback = getTestQuestions({ topicId: 'all', count: 50 });
+                setQuestions(fallback);
+              }}
+              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-90 text-slate-950 font-bold text-xs py-3 px-4 rounded-xl transition shadow"
+            >
+              Load 50-Q Comprehensive Drill
+            </button>
+            <button
+              onClick={() => {
+                setLoadError(false);
+                const loaded = getTestQuestions({ topicId: testId?.replace('topic-', '') || 'all', count: 50 });
+                if (loaded && loaded.length > 0) {
+                  setQuestions(loaded);
+                } else {
+                  const fallback = getTestQuestions({ topicId: 'all', count: 50 });
+                  setQuestions(fallback);
+                }
+              }}
+              className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs py-3 px-4 rounded-xl transition"
+            >
+              Retry Loading Topic
+            </button>
+          </div>
+        </div>
+      );
+    }
+
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-slate-900 text-slate-100 p-6 text-center">
         <div className="animate-spin text-teal-400 mb-4">
