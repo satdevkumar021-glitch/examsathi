@@ -1,10 +1,11 @@
 'use client';
 import { useState, useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { 
   ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, 
   HelpCircle, ChevronLeft, ChevronRight, Bookmark, RotateCcw, 
-  Sparkles, Award, Play, FileText, Download, ExternalLink, ShieldCheck
+  Sparkles, Award, Play, FileText, Download, ExternalLink, ShieldCheck, Target
 } from 'lucide-react';
 import { LESSONS, getLessonByTopicId } from '@/lib/data/lessons';
 import { getQuestionsByTopic, Question } from '@/lib/data/questions';
@@ -329,6 +330,45 @@ export default function LessonView({ topicId }: { topicId: string }) {
               <CheckCircle2 size={18} />
               <span>{isReadMarked ? (lang === 'pa' ? 'ਪੜ੍ਹ ਲਿਆ ਗਿਆ (+50 XP)' : 'अध्ययन पूर्ण (+50 XP)') : (lang === 'pa' ? 'ਪੜ੍ਹ ਲਿਆ ਗਿਆ ਮਾਰਕ ਕਰੋ (+50 XP)' : 'Mark as Read & Earn +50 XP')}</span>
             </button>
+
+            {/* Test Your Level & Practice Banner */}
+            <div className="bg-gradient-to-br from-indigo-950/70 via-slate-800 to-teal-950/70 border border-teal-500/40 rounded-2xl p-4 shadow-xl">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="text-xs font-black uppercase text-teal-300 flex items-center gap-1.5">
+                  <Target size={14} className="text-teal-400" />
+                  <span>{lang === 'pa' ? 'ਆਪਣੀ ਤਿਆਰੀ ਦਾ ਪੱਧਰ ਜਾਂਚੋ' : 'तैयारी का स्तर जाँचें'}</span>
+                </span>
+                <span className="bg-teal-500/20 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                  10-Yr PYQs + -0.25 Marking
+                </span>
+              </div>
+              
+              <h4 className="text-white font-bold text-sm mb-1.5">
+                {lang === 'pa' ? 'ਇਸ ਵਿਸ਼ੇ ਦਾ ਲਾਈਵ ਮੌਕ ਟੈਸਟ ਦਿਓ' : 'इस टॉपिक का लाइव मॉक टेस्ट दें'}
+              </h4>
+              <p className="text-xs text-slate-300 leading-relaxed mb-3">
+                {lang === 'pa' 
+                  ? 'ਅਧਿਕਾਰਤ ਪੈਟਰਨ ਮੁਤਾਬਕ ਨੈਗੇਟਿਵ ਮਾਰਕਿੰਗ (-0.25) ਅਤੇ 3D ਫਲਿੱਪ ਕਾਰਡਾਂ ਨਾਲ ਅਭਿਆਸ ਕਰੋ।'
+                  : 'ऑफिशियल पंजाब मास्टर कैडर परीक्षा पैटर्न (-0.25 नेगेटिव मार्किंग) पर अपनी तैयारी का स्तर (Level 1-5) और रैंक चेक करें।'}
+              </p>
+
+              <div className="grid grid-cols-2 gap-2.5">
+                <Link
+                  href={`/mock-test/topic-${topicId}`}
+                  className="bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-xs py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 shadow transition"
+                >
+                  <Target size={14} />
+                  <span>{lang === 'pa' ? 'ਲਾਈਵ ਟੈਸਟ' : 'लाइव टेस्ट'}</span>
+                </Link>
+                <Link
+                  href={`/mock-test/topic-${topicId}?mode=flip`}
+                  className="bg-slate-700/80 hover:bg-slate-650 border border-slate-600 text-teal-300 font-bold text-xs py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 transition"
+                >
+                  <Layers size={14} />
+                  <span>{lang === 'pa' ? 'ਫਲਿੱਪ ਕਾਰਡ' : 'फ्लिप कार्ड्स'}</span>
+                </Link>
+              </div>
+            </div>
           </div>
         )}
 
@@ -525,18 +565,24 @@ export default function LessonView({ topicId }: { topicId: string }) {
         {/* ================= TAB 4: MINI MOCK / PRACTICE ================= */}
         {activeTab === 'practice' && (
           <div className="flex flex-col gap-6">
-            <div className="bg-slate-800/80 border border-slate-700 p-4 rounded-xl flex items-center justify-between">
+            <div className="bg-slate-800/80 border border-slate-700 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <h3 className="text-white font-bold text-sm">
                   {lang === 'pa' ? 'ਅਭਿਆਸ ਪ੍ਰਸ਼ਨ (Topic Practice)' : 'टॉपिक अभ्यास प्रश्न (Practice MCQs)'}
                 </h3>
                 <p className="text-xs text-slate-400">
-                  {topicQuestions.length} {lang === 'pa' ? 'ਸਵਾਲ ਉਪਲਬਧ ਹਨ' : 'महत्वपूर्ण प्रश्न'}
+                  {topicQuestions.length} {lang === 'pa' ? 'ਸਵਾਲ ਉਪਲਬਧ ਹਨ' : 'महत्वपूर्ण प्रश्न'} • 10-Yr PYQs
                 </p>
               </div>
-              <span className="bg-teal-500/20 text-teal-300 text-xs px-2.5 py-1 rounded-full font-bold">
-                PYQs Included
-              </span>
+              <div className="flex items-center gap-2">
+                <Link
+                  href={`/mock-test/topic-${topicId}`}
+                  className="bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
+                >
+                  <Target size={14} />
+                  <span>{lang === 'pa' ? 'ਪੂਰਾ ਲਾਈਵ ਟੈਸਟ ਸ਼ੁਰੂ ਕਰੋ' : 'फुल लाइव CBT टेस्ट (-0.25)'}</span>
+                </Link>
+              </div>
             </div>
 
             <div className="space-y-6">

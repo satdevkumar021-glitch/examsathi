@@ -10,7 +10,7 @@ export default function BottomNav() {
     { name: 'Home', path: '/dashboard', icon: Home },
     { name: 'Study', path: '/exams', icon: BookOpen },
     { name: 'Cards', path: '/lesson/modern-india', icon: Layers },
-    { name: 'Test', path: '/mock-test/1', icon: CheckCircle },
+    { name: 'Test', path: '/mock-test', icon: CheckCircle },
     { name: 'Profile', path: '/profile', icon: User },
   ];
 

@@ -170,10 +170,10 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
 
       {/* CBT Mock Test CTA */}
       <Link 
-        href="/mock-test/1" 
+        href="/mock-test" 
         className="mt-2 w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-bold py-3.5 rounded-2xl shadow-lg text-center text-xs flex items-center justify-center gap-2"
       >
-        <Target size={16} /> Take Sectional Mock Test ({exam.name})
+        <Target size={16} /> Take Topic-Wise & PYQ Mock Tests ({exam.name})
       </Link>
 
     </div>

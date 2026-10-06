@@ -233,13 +233,13 @@ export default function Dashboard() {
           </Link>
 
           <Link 
-            href="/mock-test/1" 
+            href="/mock-test" 
             className="bg-slate-800/90 p-4 rounded-xl border border-slate-700 flex flex-col items-center justify-center gap-2 hover:bg-slate-750 transition shadow"
           >
             <div className="bg-teal-500/20 p-2.5 rounded-full text-teal-400">
               <Target size={20} />
             </div>
-            <span className="text-slate-200 text-xs font-semibold text-center">Full CBT Mock Test</span>
+            <span className="text-slate-200 text-xs font-semibold text-center">Topic Mock & PYQ Portal</span>
           </Link>
 
           <Link 
