@@ -36,6 +36,8 @@ export interface SyllabusReference {
   url: string;
   examName?: string;
   department?: string;
+  body?: string;
+  verifiedOn?: string;
 }
 
 export interface LessonSection {

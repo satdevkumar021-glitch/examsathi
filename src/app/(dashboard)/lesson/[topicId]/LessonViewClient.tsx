@@ -232,10 +232,23 @@ export default function LessonView({ topicId }: { topicId: string }) {
                     <ShieldCheck size={16} />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider block">
-                      {lang === 'pa' ? 'ਸਰਕਾਰੀ ਸਿਲੇਬਸ ਨਾਲ ਪ੍ਰਮਾਣਿਤ' : 'आधिकारिक सरकारी पाठ्यक्रम से मैप किया गया'}
-                    </span>
-                    <p className="text-slate-200 font-medium truncate text-xs">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider">
+                        {lang === 'pa' ? 'ਸਰਕਾਰੀ ਸਿਲੇਬਸ ਨਾਲ ਪ੍ਰਮਾਣਿਤ' : 'आधिकारिक सरकारी पाठ्यक्रम से मैप किया गया'}
+                      </span>
+                      {lesson.syllabusReference.body && (
+                        <span className="text-[10px] bg-indigo-900/60 text-indigo-200 px-1.5 py-0.5 rounded border border-indigo-600/40 font-medium">
+                          🏛️ {lesson.syllabusReference.body}
+                        </span>
+                      )}
+                      {lesson.syllabusReference.verifiedOn && (
+                        <span className="text-[10px] bg-emerald-950/60 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-600/40 font-medium flex items-center gap-1">
+                          <CheckCircle2 size={10} className="text-emerald-400" />
+                          Verified on {lesson.syllabusReference.verifiedOn}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-slate-200 font-medium truncate text-xs mt-0.5">
                       {lesson.syllabusReference.title}
                     </p>
                   </div>
@@ -357,7 +370,7 @@ export default function LessonView({ topicId }: { topicId: string }) {
                   <span>{lang === 'pa' ? 'ਆਪਣੀ ਤਿਆਰੀ ਦਾ ਪੱਧਰ ਜਾਂਚੋ' : 'तैयारी का स्तर जाँचें'}</span>
                 </span>
                 <span className="bg-teal-500/20 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                  10-Yr PYQs + -0.25 Marking
+                  20-Yr Archive + -0.25 Marking
                 </span>
               </div>
               
@@ -366,8 +379,8 @@ export default function LessonView({ topicId }: { topicId: string }) {
               </h4>
               <p className="text-xs text-slate-300 leading-relaxed mb-3">
                 {lang === 'pa' 
-                  ? 'ਅਧਿਕਾਰਤ ਪੈਟਰਨ ਮੁਤਾਬਕ ਨੈਗੇਟਿਵ ਮਾਰਕਿੰਗ (-0.25) ਅਤੇ 3D ਫਲਿੱਪ ਕਾਰਡਾਂ ਨਾਲ ਅਭਿਆਸ ਕਰੋ।'
-                  : 'ऑफिशियल पंजाब मास्टर कैडर परीक्षा पैटर्न (-0.25 नेगेटिव मार्किंग) पर अपनी तैयारी का स्तर (Level 1-5) और रैंक चेक करें।'}
+                  ? `${lesson.examRelevance || 'ਅਧਿਕਾਰਤ ਭਰਤੀ ਪ੍ਰੀਖਿਆ'} ਦੇ ਪੈਟਰਨ ਅਤੇ ਕਠਿਨਾਈ ਪੱਧਰਾਂ (Easy, Moderate, Hard) ਮੁਤਾਬਕ ਆਪਣੀ ਰੈਂਕ ਜਾਂਚੋ।`
+                  : `${lesson.examRelevance || 'आधिकारिक भर्ती परीक्षा'} के पैटर्न एवं वास्तविक कठिनाई स्तरों (Easy, Moderate, Hard) पर अपनी तैयारी और मेरिट रैंक चेक करें।`}
               </p>
 
               <div className="grid grid-cols-2 gap-2.5">
@@ -413,9 +426,17 @@ export default function LessonView({ topicId }: { topicId: string }) {
               <div className="bg-indigo-950/50 border border-indigo-500/50 rounded-xl p-4 shadow-sm">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <span className="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider inline-block mb-1.5">
-                      🏛️ Official Notification
-                    </span>
+                    <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                      <span className="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider inline-block">
+                        🏛️ {lesson.syllabusReference.body || 'Official Notification'}
+                      </span>
+                      {lesson.syllabusReference.verifiedOn && (
+                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                          <CheckCircle2 size={11} className="text-emerald-400" />
+                          Verified on {lesson.syllabusReference.verifiedOn}
+                        </span>
+                      )}
+                    </div>
                     <h4 className="text-white font-bold text-sm">
                       {lesson.syllabusReference.title}
                     </h4>
@@ -593,7 +614,7 @@ export default function LessonView({ topicId }: { topicId: string }) {
                   {lang === 'pa' ? 'ਅਭਿਆਸ ਪ੍ਰਸ਼ਨ (Topic Practice)' : 'टॉपिक अभ्यास प्रश्न (Practice MCQs)'}
                 </h3>
                 <p className="text-xs text-slate-400">
-                  {topicQuestions.length} {lang === 'pa' ? 'ਸਵਾਲ ਉਪਲਬਧ ਹਨ' : 'महत्वपूर्ण प्रश्न'} • 10-Yr PYQs
+                  {topicQuestions.length} {lang === 'pa' ? 'ਸਵਾਲ ਉਪਲਬਧ ਹਨ' : 'महत्वपूर्ण प्रश्न'} • 20-Yr Archive (2004–2024)
                 </p>
               </div>
               <div className="flex items-center gap-2">

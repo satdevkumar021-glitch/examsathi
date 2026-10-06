@@ -240,7 +240,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -483,7 +485,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -726,7 +730,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -957,7 +963,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -1209,7 +1217,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -1457,7 +1467,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -1705,7 +1717,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -1952,7 +1966,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -2200,7 +2216,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -2447,7 +2465,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -2699,7 +2719,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {
@@ -2938,7 +2960,9 @@ export const REFERENCE_SST_LESSONS: Record<string, Lesson> = {
     ],
     "syllabusReference": {
       "title": "Punjab Master Cadre Social Science syllabus, 2022",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "verifiedOn": "15 March 2024"
     },
     "sources": [
       {

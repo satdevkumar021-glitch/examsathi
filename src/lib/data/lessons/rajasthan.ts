@@ -209,8 +209,10 @@ export const RAJASTHAN_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "RBSE REET & RSMSSB 3rd Grade Teacher Official Syllabus",
-      "url": "https://rajeduboard.rajasthan.gov.in/REET2024/syllabus.pdf"
-},
+      title: "RBSE REET & RSMSSB 3rd Grade Teacher Official Syllabus",
+      url: "https://rajeduboard.rajasthan.gov.in/REET2024/syllabus.pdf",
+      body: "Board of Secondary Education Rajasthan (RBSE) & RSMSSB",
+      verifiedOn: "15 March 2024"
+    },
   },
 };

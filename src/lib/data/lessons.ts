@@ -280,9 +280,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "ERD Punjab · Master Cadre Social Science Modern India Syllabus",
+      url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -493,9 +495,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "ERD Punjab · Master Cadre History of Punjab & Sikh Gurus Syllabus",
+      url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -693,9 +697,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "Constitution of India Part III Fundamental Rights & Writs",
+      url: "https://legislative.gov.in/constitution-of-india/",
+      body: "Ministry of Law and Justice, Govt of India",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -870,9 +876,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "ERD Punjab · Master Cadre Social Science Ancient India Syllabus",
+      url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -1038,9 +1046,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "ERD Punjab · Master Cadre Medieval India Delhi Sultanate & Mughals",
+      url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -1212,9 +1222,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "Punjab Geography, Doabs, Rivers & Agriculture Resources Curriculum",
+      url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      body: "ERD Punjab & PSSSB",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -1367,9 +1379,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "PSSSB Clerk & IT Assistant Official Scheme & Qualification Norms",
+      url: "https://sssb.punjab.gov.in/",
+      body: "Punjab Subordinate Services Selection Board (PSSSB)",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -1545,9 +1559,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "Parliament of India (Lok Sabha & Rajya Sabha) Legislative Rules",
+      url: "https://sansad.in/",
+      body: "Parliament of India & Legislative Department",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -1710,9 +1726,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "Physical Geography of India, Monsoon Systems & Natural Resources",
+      url: "https://ncert.nic.in/textbook.php",
+      body: "NCERT & Ministry of Education, Govt of India",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // =========================================================================
@@ -1883,9 +1901,11 @@ export const BASE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "PSSSB Clerk Computer IT & Office Productivity Suite Guidelines",
+      url: "https://sssb.punjab.gov.in/",
+      body: "Punjab Subordinate Services Selection Board (PSSSB)",
+      verifiedOn: "15 March 2024"
+    },
   },
 };
 

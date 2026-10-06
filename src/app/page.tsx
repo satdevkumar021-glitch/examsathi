@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useStore } from '@/lib/store';
 import { useRouter } from 'next/navigation';
+import { ALL_EXAMS } from '@/lib/data/exams';
 
 export default function LandingPage() {
   const router = useRouter();
@@ -70,16 +71,18 @@ export default function LandingPage() {
         className="grid grid-cols-3 gap-3 mb-10 w-full max-w-sm"
       >
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-amber-400">50+</div>
+          <div className="text-xl font-bold text-amber-400">
+            {Object.values(ALL_EXAMS).reduce((acc, l) => acc + l.length, 0)}
+          </div>
           <div className="text-[11px] text-slate-400">Recruitments</div>
         </div>
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-teal-400">10k+</div>
-          <div className="text-[11px] text-slate-400">Questions</div>
+          <div className="text-xl font-bold text-teal-400">20-Yr</div>
+          <div className="text-[11px] text-slate-400">PYQ Archive</div>
         </div>
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-indigo-400">100%</div>
-          <div className="text-[11px] text-slate-400">Deep Syllabus</div>
+          <div className="text-xl font-bold text-indigo-400">600+</div>
+          <div className="text-[11px] text-slate-400">Authentic MCQs</div>
         </div>
       </motion.div>
 

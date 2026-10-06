@@ -198,6 +198,53 @@ export const HARYANA_EXAMS: Exam[] = [
       },
     ],
   },
+  {
+    id: 'haryana-ett-prt',
+    state: 'haryana',
+    name: 'Haryana PRT Primary Teacher (JBT / D.El.Ed Cadre)',
+    nameHindi: 'हरियाणा प्राथमिक शिक्षक भर्ती (PRT / JBT)',
+    namePunjabi: 'ਹਰਿਆਣਾ ਪ੍ਰਾਇਮਰੀ ਅਧਿਆਪਕ ਭਰਤੀ',
+    body: 'Board of School Education Haryana (BSEH) / HSSC',
+    level: 'PRT - Classes 1 to 5',
+    totalMarks: 150,
+    duration: '2 Hours 30 Minutes',
+    negativeMarking: false,
+    officialWebsite: 'https://bseh.org.in',
+    emoji: '👶',
+    color: '#059669',
+    sections: [
+      { name: 'Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
+      { name: 'Language I (Hindi)', nameHindi: 'अनिवार्य हिंदी भाषा', marks: 15, questions: 15 },
+      { name: 'Language II (English)', nameHindi: 'सामान्य अंग्रेजी', marks: 15, questions: 15 },
+      { name: 'Quantitative Aptitude, Reasoning & Haryana GK', nameHindi: 'गणित, रीजनिंग व हरियाणा सामान्य ज्ञान', marks: 30, questions: 30 },
+      { name: 'Mathematics & Environmental Studies (EVS)', nameHindi: 'गणित व पर्यावरण अध्ययन', marks: 60, questions: 60 },
+    ],
+    subjects: [
+      {
+        id: 'haryana-prt-domain',
+        name: 'Haryana PRT Core Curriculum',
+        nameHindi: 'हरियाणा पीआरटी पाठ्यक्रम',
+        emoji: '📚',
+        chapters: [
+          {
+            id: 'haryana-prt-pedagogy',
+            name: 'Primary Pedagogy & EVS',
+            nameHindi: 'प्राथमिक शिक्षाशास्त्र व पर्यावरण',
+            topics: [
+              {
+                id: 'child-development-pedagogy',
+                name: 'Primary Child Development & Learning Concepts',
+                nameHindi: 'प्राथमिक बाल विकास व अधिगम सिद्धांत',
+                subtopics: ['Piaget, Kohlberg, Vygotsky, Inclusive Classrooms, Learning Disabilities, RTE 2009'],
+                examQuestions: '30',
+                difficulty: 'medium',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -616,6 +663,59 @@ export const RAJASTHAN_ADDITIONAL_EXAMS: Exam[] = [
                 subtopics: ['Sandhi (Swar, Vyanjan, Visarga), Samas, Upsarg and Pratyay, Tatsam-Tadbhav, Vakya shuddhi, Muhavare'],
                 examQuestions: '100',
                 difficulty: 'medium',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'rajasthan-police-constable',
+    state: 'rajasthan',
+    name: 'Rajasthan Police Constable',
+    nameHindi: 'राजस्थान पुलिस कांस्टेबल भर्ती',
+    namePunjabi: 'ਰਾਜਸਥਾਨ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ',
+    body: 'Rajasthan Police Recruitment Board / Police Headquarters Jaipur',
+    level: '12th Senior Secondary Level',
+    totalMarks: 150,
+    duration: '2 Hours (120 Minutes)',
+    negativeMarking: 0.25,
+    officialWebsite: 'https://police.rajasthan.gov.in',
+    emoji: '🛡️',
+    color: '#b91c1c',
+    sections: [
+      { name: 'Reasoning, Logic & Basic Computer Knowledge', nameHindi: 'तार्किक योग्यता व कंप्यूटर सामान्य ज्ञान', marks: 60, questions: 60 },
+      { name: 'General Knowledge, General Science, Current Affairs & Women/Child Crimes Law', nameHindi: 'सामान्य ज्ञान, सामान्य विज्ञान, समसामयिकी व महिला एवं बाल अपराध कानून', marks: 45, questions: 45 },
+      { name: 'Rajasthan History, Culture, Geography, Economy & Polity', nameHindi: 'राजस्थान का इतिहास, कला-संस्कृति, भूगोल व अर्थव्यवस्था', marks: 45, questions: 45 },
+    ],
+    subjects: [
+      {
+        id: 'raj-police-constable-domain',
+        name: 'Rajasthan Police Constable Curriculum',
+        nameHindi: 'राजस्थान पुलिस कांस्टेबल पाठ्यक्रम',
+        emoji: '🚔',
+        chapters: [
+          {
+            id: 'raj-constable-core',
+            name: 'Reasoning, Computer & Rajasthan Heritage',
+            nameHindi: 'रीजनिंग, कंप्यूटर व राजस्थान धरोहर',
+            topics: [
+              {
+                id: 'rajasthan-gk-heritage',
+                name: 'Rajasthan History, Forts, Geography & Police Law',
+                nameHindi: 'राजस्थान का इतिहास, दुर्ग, भूगोल व पुलिस विधि',
+                subtopics: ['Mewar, Marwar, 1857 Revolt, Prajamandal, Aravalli, POCSO Act & IPC/BNS Women Safety provisions'],
+                examQuestions: '45',
+                difficulty: 'medium',
+              },
+              {
+                id: 'computer-awareness',
+                name: 'Basic Computer Literacy & Operating Systems',
+                nameHindi: 'मूल कंप्यूटर ज्ञान व एमएस ऑफिस',
+                subtopics: ['Hardware, RAM, ROM, MS Office, Internet, Cyber Crime & IT Act fundamentals'],
+                examQuestions: '30',
+                difficulty: 'easy',
               },
             ],
           },

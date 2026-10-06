@@ -1216,6 +1216,312 @@ export const CENTRAL_EXAMS: Exam[] = [
       },
     ],
   },
+
+  // 3.3 SSC CGL (Combined Graduate Level)
+  {
+    id: 'ssc-cgl',
+    state: 'central',
+    name: 'SSC CGL (Combined Graduate Level)',
+    nameHindi: 'एसएससी सीजीएल (संयुक्त स्नातक स्तरीय परीक्षा)',
+    namePunjabi: 'ਐਸ.ਐਸ.ਸੀ. ਸੀ.ਜੀ.ਐਲ.',
+    body: 'Staff Selection Commission (SSC)',
+    level: 'Graduation Degree Level (Inspector / ASO / Auditor)',
+    totalMarks: 200,
+    duration: '60 Minutes (Tier 1)',
+    negativeMarking: 0.5,
+    officialWebsite: 'https://ssc.gov.in',
+    emoji: '🏆',
+    color: '#2563eb',
+    sections: [
+      { name: 'General Intelligence and Reasoning', nameHindi: 'तर्कशक्ति व मानसिक योग्यता', marks: 50, questions: 25 },
+      { name: 'General Awareness', nameHindi: 'सामान्य जागरूकता व समसामयिकी', marks: 50, questions: 25 },
+      { name: 'Quantitative Aptitude', nameHindi: 'मात्रात्मक अभियोग्यता', marks: 50, questions: 25 },
+      { name: 'English Comprehension', nameHindi: 'अंग्रेजी भाषा व समझ', marks: 50, questions: 25 },
+    ],
+    subjects: [
+      {
+        id: 'ssc-cgl-core',
+        name: 'SSC CGL Syllabus & General Studies',
+        nameHindi: 'एसएससी सीजीएल सामान्य अध्ययन व योग्यता',
+        emoji: '📚',
+        chapters: [
+          {
+            id: 'cgl-general-studies',
+            name: 'General Studies Modules',
+            nameHindi: 'सामान्य अध्ययन मॉड्यूल',
+            topics: [
+              {
+                id: 'fundamental-rights',
+                name: 'Indian Polity, Constitution & Governance',
+                nameHindi: 'भारतीय राजव्यवस्था व संविधान',
+                subtopics: ['Constitutional Framework, Articles & Amendments, Parliament, Supreme Court & Writs'],
+                examQuestions: '6-8',
+                difficulty: 'medium',
+              },
+              {
+                id: 'modern-india',
+                name: 'Modern Indian History & Freedom Struggle',
+                nameHindi: 'आधुनिक भारतीय इतिहास',
+                subtopics: ['British Rule, 1857 Revolt, Indian National Congress, Gandhian Era & Independence'],
+                examQuestions: '5-7',
+                difficulty: 'medium',
+              },
+              {
+                id: 'indian-economy',
+                name: 'Indian Economy, Banking & National Income',
+                nameHindi: 'भारतीय अर्थव्यवस्था व बैंकिंग',
+                subtopics: ['Fiscal Policy, RBI Monetary Policy, Inflation, GDP, Budget, Five Year Plans & NITI Aayog'],
+                examQuestions: '5-7',
+                difficulty: 'medium',
+              },
+              {
+                id: 'quantitative-aptitude',
+                name: 'Advanced Quantitative Aptitude & Geometry',
+                nameHindi: 'मात्रात्मक अभियोग्यता व ज्यामिति',
+                subtopics: ['Arithmetic, Trigonometry, Geometry, Mensuration, Algebra & Data Interpretation'],
+                examQuestions: '25',
+                difficulty: 'hard',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // 3.4 SSC MTS & Havaldar
+  {
+    id: 'ssc-mts',
+    state: 'central',
+    name: 'SSC MTS (Multi-Tasking Staff & Havaldar)',
+    nameHindi: 'एसएससी एमटीएस व हवलदार',
+    namePunjabi: 'ਐਸ.ਐਸ.ਸੀ. ਐਮ.ਟੀ.ਐਸ.',
+    body: 'Staff Selection Commission (SSC)',
+    level: '10th Matriculation Pass',
+    totalMarks: 270,
+    duration: '90 Minutes (2 Sessions)',
+    negativeMarking: 1.0,
+    officialWebsite: 'https://ssc.gov.in',
+    emoji: '📄',
+    color: '#0891b2',
+    sections: [
+      { name: 'Session I: Numerical & Mathematical Ability', nameHindi: 'संख्यात्मक गणित (सत्र 1)', marks: 60, questions: 20 },
+      { name: 'Session I: Reasoning Ability & Problem Solving', nameHindi: 'तर्कशक्ति (सत्र 1)', marks: 60, questions: 20 },
+      { name: 'Session II: General Awareness', nameHindi: 'सामान्य जागरूकता (सत्र 2)', marks: 75, questions: 25 },
+      { name: 'Session II: English Language & Comprehension', nameHindi: 'अंग्रेजी भाषा (सत्र 2)', marks: 75, questions: 25 },
+    ],
+    subjects: [
+      {
+        id: 'ssc-mts-domain',
+        name: 'SSC MTS Core Syllabus',
+        nameHindi: 'एसएससी एमटीएस मुख्य पाठ्यक्रम',
+        emoji: '🧠',
+        chapters: [
+          {
+            id: 'mts-studies',
+            name: 'General Awareness & Arithmetic',
+            nameHindi: 'सामान्य जागरूकता व अंकगणित',
+            topics: [
+              {
+                id: 'modern-india',
+                name: 'General Awareness & Indian Heritage',
+                nameHindi: 'सामान्य जागरूकता व भारतीय धरोहर',
+                subtopics: ['Indian History, Culture, Geography, Polity, Basic Science & Static GK'],
+                examQuestions: '25',
+                difficulty: 'easy',
+              },
+              {
+                id: 'quantitative-aptitude',
+                name: 'Elementary Mathematics & Number Systems',
+                nameHindi: 'प्रारंभिक गणित व संख्या पद्धति',
+                subtopics: ['LCM, HCF, Decimals, Percentages, Ratio, Work & Time, Averages'],
+                examQuestions: '20',
+                difficulty: 'easy',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // 3.5 CTET Paper 2 (Classes 6-8)
+  {
+    id: 'ctet-paper2',
+    state: 'central',
+    name: 'CTET Paper 2 (Upper Primary Classes 6-8)',
+    nameHindi: 'सीटेट पेपर 2 (कक्षा 6-8)',
+    namePunjabi: 'ਸੀ.ਟੈੱਟ ਪੇਪਰ 2',
+    body: 'Central Board of Secondary Education (CBSE)',
+    level: 'Upper Primary Teachers (TGT)',
+    totalMarks: 150,
+    duration: '2 Hours 30 Minutes',
+    negativeMarking: false,
+    officialWebsite: 'https://ctet.nic.in',
+    emoji: '🏫',
+    color: '#0d9488',
+    sections: [
+      { name: 'Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
+      { name: 'Mathematics & Science OR Social Studies/Social Science', nameHindi: 'गणित-विज्ञान अथवा सामाजिक अध्ययन', marks: 60, questions: 60 },
+      { name: 'Language I (Compulsory)', nameHindi: 'भाषा I (अनिवार्य)', marks: 30, questions: 30 },
+      { name: 'Language II (Compulsory)', nameHindi: 'भाषा II (अनिवार्य)', marks: 30, questions: 30 },
+    ],
+    subjects: [
+      {
+        id: 'ctet-p2-curriculum',
+        name: 'CTET Paper 2 Pedagogical & Subject Domain',
+        nameHindi: 'सीटेट पेपर 2 विषय व शिक्षण विधियां',
+        emoji: '📐',
+        chapters: [
+          {
+            id: 'ctet-p2-core',
+            name: 'Child Development & Social Science / Science',
+            nameHindi: 'बाल विकास व सामाजिक विज्ञान',
+            topics: [
+              {
+                id: 'child-development-pedagogy',
+                name: 'Adolescent Psychology: Piaget, Vygotsky, Kohlberg & CCE',
+                nameHindi: 'किशोरावस्था मनोविज्ञान, पियाजे, वाइगोत्स्की व सतत मूल्यांकन',
+                subtopics: ['Cognitive Development, Social Constructivism, Moral Stages, Inclusive Education, RTE 2009'],
+                examQuestions: '30',
+                difficulty: 'medium',
+              },
+              {
+                id: 'fundamental-rights',
+                name: 'Social and Political Life (Constitution & Democratic Diversity)',
+                nameHindi: 'सामाजिक एवं राजनीतिक जीवन (संविधान व विविधता)',
+                subtopics: ['Preamble, Fundamental Rights, Judiciary, Social Justice & Marginalization'],
+                examQuestions: '20',
+                difficulty: 'medium',
+              },
+              {
+                id: 'modern-india',
+                name: 'Our Pasts (History: Ancient, Medieval & Modern)',
+                nameHindi: 'हमारा अतीत (इतिहास: प्राचीन, मध्यकालीन व आधुनिक)',
+                subtopics: ['First Cities, New Empires, Delhi Sultans, Mughals, Colonialism & National Movement'],
+                examQuestions: '20',
+                difficulty: 'medium',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // 3.6 UGC NET Paper 1
+  {
+    id: 'ugc-net',
+    state: 'central',
+    name: 'UGC NET Paper 1 (Teaching & Research Aptitude)',
+    nameHindi: 'यूजीसी नेट पेपर 1 (शिक्षण व शोध अभिवृत्ति)',
+    namePunjabi: 'ਯੂ.ਜੀ.ਸੀ. ਨੈੱਟ ਪੇਪਰ 1',
+    body: 'National Testing Agency (NTA) / University Grants Commission',
+    level: 'Assistant Professor & JRF Eligibility (Postgraduate Level)',
+    totalMarks: 100,
+    duration: '60 Minutes (Paper 1)',
+    negativeMarking: false,
+    officialWebsite: 'https://ugcnet.nta.ac.in',
+    emoji: '🎓',
+    color: '#7c3aed',
+    sections: [
+      { name: 'Teaching Aptitude', nameHindi: 'शिक्षण अभिवृत्ति', marks: 10, questions: 5 },
+      { name: 'Research Aptitude', nameHindi: 'शोध अभिवृत्ति', marks: 10, questions: 5 },
+      { name: 'Comprehension & Communication', nameHindi: 'बोध व संप्रेषण', marks: 20, questions: 10 },
+      { name: 'Mathematical Reasoning & Data Interpretation', nameHindi: 'गणितीय तर्क व डेटा व्याख्या', marks: 20, questions: 10 },
+      { name: 'ICT & Higher Education System', nameHindi: 'सूचना प्रौद्योगिकी व उच्च शिक्षा प्रणाली', marks: 20, questions: 10 },
+      { name: 'People, Development & Environment', nameHindi: 'लोग, विकास व पर्यावरण', marks: 20, questions: 10 },
+    ],
+    subjects: [
+      {
+        id: 'ugc-net-core',
+        name: 'Paper 1 General Aptitude & Higher Education',
+        nameHindi: 'पेपर 1 सामान्य योग्यता व उच्च शिक्षा',
+        emoji: '🧠',
+        chapters: [
+          {
+            id: 'net-teaching-research',
+            name: 'Teaching, Research & ICT Frameworks',
+            nameHindi: 'शिक्षण, शोध व आईसीटी संरचना',
+            topics: [
+              {
+                id: 'child-development-pedagogy',
+                name: 'Teaching Aptitude, Evaluation Systems & NEP 2020',
+                nameHindi: 'शिक्षण अभिवृत्ति, मूल्यांकन प्रणालियां व एनईपी 2020',
+                subtopics: ['Levels of Teaching (Memory, Understanding, Reflective), CBCS, NEP 2020 Higher Education Provisions'],
+                examQuestions: '10',
+                difficulty: 'hard',
+              },
+              {
+                id: 'computer-awareness',
+                name: 'Information & Communication Technology (ICT) in Education',
+                nameHindi: 'शिक्षा में सूचना एवं संचार प्रौद्योगिकी (ICT)',
+                subtopics: ['Digital initiatives in higher education: SWAYAM, SWAYAMPRABHA, Digilocker, IPv4 vs IPv6, Cloud'],
+                examQuestions: '10',
+                difficulty: 'medium',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+
+  // 3.7 UTET (Uttarakhand Teacher Eligibility Test)
+  {
+    id: 'utet-teaching',
+    state: 'central',
+    name: 'UTET (Uttarakhand Teacher Eligibility Test)',
+    nameHindi: 'यूटीईटी (उत्तराखंड शिक्षक पात्रता परीक्षा)',
+    namePunjabi: 'ਯੂ.ਟੀ.ਈ.ਟੀ. ਅਧਿਆਪਕ ਪ੍ਰੀਖਿਆ',
+    body: 'Uttarakhand Board of School Education (UBSE), Ramnagar',
+    level: 'UTET Paper I (PRT) & Paper II (TGT)',
+    totalMarks: 150,
+    duration: '2 Hours 30 Minutes',
+    negativeMarking: false,
+    officialWebsite: 'https://uktet.com',
+    emoji: '🏔️',
+    color: '#047857',
+    sections: [
+      { name: 'Child Development and Pedagogy', nameHindi: 'बाल विकास एवं शिक्षाशास्त्र', marks: 30, questions: 30 },
+      { name: 'Language I (Hindi compulsory)', nameHindi: 'भाषा I (हिंदी)', marks: 30, questions: 30 },
+      { name: 'Language II (English / Sanskrit / Urdu)', nameHindi: 'भाषा II', marks: 30, questions: 30 },
+      { name: 'Subject Domain (Math & EVS OR Social Science)', nameHindi: 'विषय डोमेन (गणित-पर्यावरण अथवा सामाजिक अध्ययन)', marks: 60, questions: 60 },
+    ],
+    subjects: [
+      {
+        id: 'utet-curriculum',
+        name: 'UTET Core Pedagogy & Domain',
+        nameHindi: 'यूटीईटी मुख्य शिक्षाशास्त्र व विषय',
+        emoji: '🌲',
+        chapters: [
+          {
+            id: 'utet-core-pedagogy',
+            name: 'Child Development & Environmental Studies',
+            nameHindi: 'बाल विकास व पर्यावरण अध्ययन',
+            topics: [
+              {
+                id: 'child-development-pedagogy',
+                name: 'Child Development, Piaget, Vygotsky & Inclusive Education',
+                nameHindi: 'बाल विकास, पियाजे, वाइगोत्स्की व समावेशी शिक्षा',
+                subtopics: ['Piaget cognitive development, Kohlberg moral stages, Vygotsky ZPD, RTE Act 2009 in hilly areas'],
+                examQuestions: '30',
+                difficulty: 'medium',
+              },
+              {
+                id: 'hindi-vyakaran',
+                name: 'Hindi Grammar & Pedagogy',
+                nameHindi: 'हिंदी व्याकरण व शिक्षण शास्त्र',
+                subtopics: ['Sandhi, Samas, Tatsam-Tadbhav, Bhasha Shikshan Sidhant'],
+                examQuestions: '30',
+                difficulty: 'easy',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 import {
@@ -1237,11 +1543,11 @@ export interface StateMeta {
 }
 
 export const STATES_CATALOG: StateMeta[] = [
-  { id: 'punjab', name: 'Punjab', nameHindi: 'पंजाब', namePunjabi: 'ਪੰਜਾਬ', icon: '🌾', tagline: 'Master Cadre, ETT 5994, PSSSB Clerk, Police, Patwari', color: 'from-amber-600 to-orange-700' },
-  { id: 'rajasthan', name: 'Rajasthan', nameHindi: 'राजस्थान', namePunjabi: 'ਰਾਜਸਥਾਨ', icon: '🏜️', tagline: 'REET L1/L2, 3rd Grade, Patwar, Police SI', color: 'from-rose-600 to-pink-700' },
-  { id: 'haryana', name: 'Haryana', nameHindi: 'हरियाणा', namePunjabi: 'ਹਰਿਆਣਾ', icon: '⚡', tagline: 'HTET (PRT/TGT/PGT), Haryana Police, HSSC CET Clerk', color: 'from-emerald-600 to-teal-700' },
-  { id: 'delhi', name: 'Delhi & Police/CAPF', nameHindi: 'दिल्ली पुलिस व CAPF', namePunjabi: 'ਦਿੱਲੀ ਪੁਲਿਸ ਤੇ CAPF', icon: '👮', tagline: 'Delhi Police Constable, SSC GD Constable, CAPF', color: 'from-sky-600 to-blue-700' },
-  { id: 'central', name: 'Central Govt', nameHindi: 'केंद्रीय भर्ती', namePunjabi: 'ਕੇਂਦਰੀ ਭਰਤੀ', icon: '🏛️', tagline: 'SSC CGL, CHSL, MTS, CTET Paper 1/2, UGC NET', color: 'from-indigo-600 to-violet-700' },
+  { id: 'punjab', name: 'Punjab', nameHindi: 'पंजाब', namePunjabi: 'ਪੰਜਾਬ', icon: '🌾', tagline: 'Master Cadre, ETT 5994, PSSSB Clerk, Police, Patwari, PSTET, Lecturer Cadre', color: 'from-amber-600 to-orange-700' },
+  { id: 'rajasthan', name: 'Rajasthan', nameHindi: 'राजस्थान', namePunjabi: 'ਰਾਜਸਥਾਨ', icon: '🏜️', tagline: 'REET L1/L2, 3rd Grade, Patwar, Police SI & Constable', color: 'from-rose-600 to-pink-700' },
+  { id: 'haryana', name: 'Haryana', nameHindi: 'हरियाणा', namePunjabi: 'ਹਰਿਆਣਾ', icon: '⚡', tagline: 'HTET (PRT/TGT/PGT), Haryana Police, HSSC CET, JBT/PRT', color: 'from-emerald-600 to-teal-700' },
+  { id: 'delhi', name: 'Delhi & Police/CAPF', nameHindi: 'दिल्ली पुलिस व CAPF', namePunjabi: 'ਦਿੱਲੀ ਪੁਲਿਸ ਤੇ CAPF', icon: '👮', tagline: 'Delhi Police Constable, SSC GD Constable, CAPF Forces', color: 'from-sky-600 to-blue-700' },
+  { id: 'central', name: 'Central Govt', nameHindi: 'केंद्रीय भर्ती', namePunjabi: 'ਕੇਂਦਰੀ ਭਰਤੀ', icon: '🏛️', tagline: 'SSC CGL, CHSL, MTS, CTET Paper 1/2, UGC NET, UTET', color: 'from-indigo-600 to-violet-700' },
   { id: 'defence', name: 'Army & Defence', nameHindi: 'भारतीय सेना व सुरक्षा', namePunjabi: 'ਭਾਰਤੀ ਫੌਜ ਤੇ ਰੱਖਿਆ', icon: '🎖️', tagline: 'Indian Army Agniveer GD, Clerk, Store Keeper, Air Force', color: 'from-yellow-600 to-amber-700' },
 ];
 

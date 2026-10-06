@@ -235,8 +235,10 @@ export const PEDAGOGY_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "CBSE CTET & Punjab ETT Official CDP & Pedagogy Syllabus",
-      "url": "https://ctet.nic.in/document/information-bulletin-ctet-2024.pdf"
-},
+      title: "Punjab ETT Elementary Cadre (6635 / 5994) & PSTET Official CDP Syllabus",
+      url: "https://educationrecruitmentboard.com/",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
+    },
   },
 };

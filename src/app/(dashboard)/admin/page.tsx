@@ -603,7 +603,7 @@ export default function AdminResourcePortal() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Target Topic (All 50+ Topics)</label>
+              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Target Topic (All {uniqueTopics.length} Topics)</label>
               <select 
                 value={qTopic} 
                 onChange={e => setQTopic(e.target.value)}

@@ -115,7 +115,7 @@ export default function MockTestHub() {
             </span>
             <div>
               <h1 className="text-white font-extrabold text-lg">Mock Test & PYQ Portal</h1>
-              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — 100,000+ Topic MCQs & 20-Yr Past Papers (2004–2024)</p>
+              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — 20-Year PYQ Archive (2004–2024) & Dynamic CBT Sets</p>
             </div>
           </div>
           <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
@@ -355,7 +355,7 @@ export default function MockTestHub() {
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
             4. Topic-Wise Question Bank ({filteredTopics.length} Topics)
           </h2>
-          <span className="text-[10px] text-teal-400 font-semibold">100,000+ Questions</span>
+          <span className="text-[10px] text-teal-400 font-semibold">600+ PYQs & Drills</span>
         </div>
         
         {/* Subject Filter Pills */}

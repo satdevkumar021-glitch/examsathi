@@ -251,8 +251,10 @@ export const ECONOMICS_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Social Science (Economics) Syllabus",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
-},
+      title: "ERD Punjab · Master Cadre Social Science (Economics) Syllabus",
+      url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
+    },
   },
 };

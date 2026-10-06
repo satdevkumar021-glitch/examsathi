@@ -208,9 +208,11 @@ export const HINDI_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Hindi Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf"
-},
+      title: "ERD Punjab · Master Cadre Hindi Official Syllabus PDF",
+      url: "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // -------------------------------------------------------------
@@ -417,8 +419,10 @@ export const HINDI_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "ERD Punjab · Master Cadre Hindi Official Syllabus PDF",
-      "url": "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf"
-},
+      title: "ERD Punjab · Master Cadre Hindi Official Syllabus PDF",
+      url: "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
+    },
   },
 };

@@ -180,7 +180,7 @@ export default function MockTestBottomSheet({
                   : 'bg-slate-800 border-slate-700 text-slate-400'
               }`}
             >
-              <span>⚡ Full 100,000+ Question Bank</span>
+              <span>⚡ Complete Practice Pool</span>
             </button>
           </div>
         </div>

@@ -128,6 +128,8 @@ export const SST_MISSING_LESSONS: Record<string, Lesson> = {
       title: "Punjab Master Cadre Social Science syllabus, 2022",
       url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
       examName: "Punjab Master Cadre SST",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
     },
   },
 
@@ -233,6 +235,8 @@ export const SST_MISSING_LESSONS: Record<string, Lesson> = {
       title: "Punjab Master Cadre Social Science syllabus, 2022",
       url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
       examName: "Punjab Master Cadre SST",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
     },
   },
 
@@ -340,6 +344,8 @@ export const SST_MISSING_LESSONS: Record<string, Lesson> = {
       title: "Punjab Master Cadre Social Science syllabus, 2022",
       url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
       examName: "Punjab Master Cadre SST",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
     },
   },
 
@@ -443,6 +449,8 @@ export const SST_MISSING_LESSONS: Record<string, Lesson> = {
       title: "Punjab Master Cadre Social Science syllabus, 2022",
       url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
       examName: "Punjab Master Cadre SST",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
     },
   },
 
@@ -562,6 +570,8 @@ export const SST_MISSING_LESSONS: Record<string, Lesson> = {
       title: "Punjab Master Cadre Social Science syllabus, 2022",
       url: "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
       examName: "Punjab Master Cadre SST",
+      body: "Education Recruitment Board (ERB), Punjab",
+      verifiedOn: "15 March 2024"
     },
   },
 };

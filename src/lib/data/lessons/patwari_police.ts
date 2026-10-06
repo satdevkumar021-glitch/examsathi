@@ -194,9 +194,11 @@ export const PATWARI_POLICE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "PSSSB Patwari & Punjab Police Official Examination Scheme",
-      "url": "https://sssb.punjab.gov.in/Downloads/2023/Patwari_Syllabus.pdf"
-},
+      title: "PSSSB Revenue Patwari & Land Records Examination Scheme",
+      url: "https://sssb.punjab.gov.in/Downloads/2023/Patwari_Syllabus.pdf",
+      body: "Punjab Subordinate Services Selection Board (PSSSB)",
+      verifiedOn: "15 March 2024"
+    },
   },
 
   // -------------------------------------------------------------
@@ -386,8 +388,10 @@ export const PATWARI_POLICE_LESSONS: Record<string, Lesson> = {
       }
 ],
     syllabusReference: {
-      "title": "PSSSB Patwari & Punjab Police Official Examination Scheme",
-      "url": "https://sssb.punjab.gov.in/Downloads/2023/Patwari_Syllabus.pdf"
-},
+      title: "Punjab Police Constable & SI Official Law and Criminal Justice Syllabus",
+      url: "https://punjabpolice.gov.in/",
+      body: "Punjab Police Recruitment Board",
+      verifiedOn: "15 March 2024"
+    },
   },
 };

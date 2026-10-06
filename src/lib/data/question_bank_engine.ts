@@ -143,6 +143,58 @@ export const AVAILABLE_EXAMS: ExamInfo[] = [
     syllabusSummaryPa: 'ਸੀ.ਡੀ.ਪੀ., ਸਮਾਜਿਕ ਅਧਿਐਨ ਅਤੇ ਭਾਸ਼ਾ ਪੈਡਾਗੋਜੀ',
     pyqSpan: '2011 - 2024 (13 Years)',
   },
+  {
+    id: 'ssc-cgl',
+    name: 'SSC CGL & CHSL (Central Recruitments)',
+    namePa: 'ਐਸ.ਐਸ.ਸੀ. ਸੀ.ਜੀ.ਐਲ. ਤੇ ਸੀ.ਐਚ.ਐਸ.ਐਲ.',
+    body: 'Staff Selection Commission (SSC)',
+    badge: '🏆 Central SSC',
+    defaultQuestions: 50,
+    timeLimitMinutes: 45,
+    negativeMarking: 0.50,
+    syllabusSummary: 'General Studies, Indian Constitution, Modern History, Quantitative Aptitude & Reasoning',
+    syllabusSummaryPa: 'ਜਨਰਲ ਸਟੱਡੀਜ਼, ਭਾਰਤੀ ਸੰਵਿਧਾਨ, ਆਧੁਨਿਕ ਇਤਿਹਾਸ ਤੇ ਮੈਥ-ਰੀਜ਼ਨਿੰਗ',
+    pyqSpan: '2004 - 2024 (20 Years)',
+  },
+  {
+    id: 'haryana-htet',
+    name: 'Haryana HTET & Police Constable',
+    namePa: 'ਹਰਿਆਣਾ ਐਚ.ਟੈੱਟ ਅਤੇ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ',
+    body: 'BSEH Bhiwani / HSSC Panchkula',
+    badge: '⚡ Haryana State',
+    defaultQuestions: 50,
+    timeLimitMinutes: 45,
+    negativeMarking: 0.0,
+    syllabusSummary: 'Child Development, Haryana GK & Rakhigarhi, General Science, Agriculture & Reasoning',
+    syllabusSummaryPa: 'ਬਾਲ ਵਿਕਾਸ, ਹਰਿਆਣਾ ਜੀ.ਕੇ., ਜਨਰਲ ਸਾਇੰਸ ਤੇ ਖੇਤੀਬਾੜੀ',
+    pyqSpan: '2011 - 2024 (13 Years)',
+  },
+  {
+    id: 'delhi-police',
+    name: 'Delhi Police Constable & CAPF GD',
+    namePa: 'ਦਿੱਲੀ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ ਤੇ CAPF ਜੀ.ਡੀ.',
+    body: 'Delhi Police / SSC / MHA',
+    badge: '👮 Delhi & Forces',
+    defaultQuestions: 50,
+    timeLimitMinutes: 45,
+    negativeMarking: 0.25,
+    syllabusSummary: 'Delhi History & Culture, General Awareness, Numerical Ability & Computer Fundamentals',
+    syllabusSummaryPa: 'ਦਿੱਲੀ ਇਤਿਹਾਸ, ਜਨਰਲ ਅਵੇਅਰਨੈੱਸ, ਮੈਥ ਅਤੇ ਕੰਪਿਊਟਰ',
+    pyqSpan: '2012 - 2024 (12 Years)',
+  },
+  {
+    id: 'army-agniveer',
+    name: 'Indian Army Agniveer GD & Clerk',
+    namePa: 'ਭਾਰਤੀ ਫੌਜ ਅਗਨੀਵੀਰ ਜੀ.ਡੀ. ਤੇ ਕਲਰਕ',
+    body: 'Join Indian Army Recruitment HQ',
+    badge: '🎖️ Indian Army',
+    defaultQuestions: 50,
+    timeLimitMinutes: 45,
+    negativeMarking: 0.50,
+    syllabusSummary: 'Military General Knowledge, Honours, General Science, Elementary Math & English Grammar',
+    syllabusSummaryPa: 'ਮਿਲਟਰੀ ਜੀ.ਕੇ., ਜਨਰਲ ਸਾਇੰਸ, ਮੈਥ ਅਤੇ ਅੰਗਰੇਜ਼ੀ ਵਿਆਕਰਨ',
+    pyqSpan: '2010 - 2024 (14 Years)',
+  },
 ];
 
 export interface TopicMeta {
@@ -157,38 +209,38 @@ export interface TopicMeta {
 
 export const AVAILABLE_TEST_TOPICS: TopicMeta[] = [
   // ETT Punjab & Pedagogy Tracks
-  { id: 'ett-child-pedagogy', name: 'ETT Child Development & Pedagogy (Piaget, Vygotsky, RTE 2009)', namePa: 'ਈ.ਟੀ.ਟੀ. ਬਾਲ ਵਿਕਾਸ ਤੇ ਸਿੱਖਿਆ ਸ਼ਾਸਤਰ', subject: 'Teaching', questionCount: '15,000+', examWeightage: '20-25 Qs', isPYQRich: true },
-  { id: 'ett-evs-science', name: 'ETT Environmental Studies & Punjab Ecology (EVS)', namePa: 'ਈ.ਟੀ.ਟੀ. ਵਾਤਾਵਰਨ ਅਧਿਐਨ (EVS)', subject: 'Teaching', questionCount: '10,000+', examWeightage: '15-20 Qs', isPYQRich: true },
-  { id: 'ett-primary-math', name: 'ETT Primary Mathematics & Teaching Methodology', namePa: 'ਈ.ਟੀ.ਟੀ. ਪ੍ਰਾਇਮਰੀ ਗਣਿਤ', subject: 'Teaching', questionCount: '10,000+', examWeightage: '15-20 Qs', isPYQRich: true },
+  { id: 'ett-child-pedagogy', name: 'ETT Child Development & Pedagogy (Piaget, Vygotsky, RTE 2009)', namePa: 'ਈ.ਟੀ.ਟੀ. ਬਾਲ ਵਿਕਾਸ ਤੇ ਸਿੱਖਿਆ ਸ਼ਾਸਤਰ', subject: 'Teaching', questionCount: '50+ Qs', examWeightage: '20-25 Qs', isPYQRich: true },
+  { id: 'ett-evs-science', name: 'ETT Environmental Studies & Punjab Ecology (EVS)', namePa: 'ਈ.ਟੀ.ਟੀ. ਵਾਤਾਵਰਨ ਅਧਿਐਨ (EVS)', subject: 'Teaching', questionCount: '40+ Qs', examWeightage: '15-20 Qs', isPYQRich: true },
+  { id: 'ett-primary-math', name: 'ETT Primary Mathematics & Teaching Methodology', namePa: 'ਈ.ਟੀ.ਟੀ. ਪ੍ਰਾਇਮਰੀ ਗਣਿਤ', subject: 'Teaching', questionCount: '40+ Qs', examWeightage: '15-20 Qs', isPYQRich: true },
 
   // PSSSB Clerk Tracks
-  { id: 'psssb-computer-it', name: 'PSSSB Clerk Computer & IT (MS Office, Shortcuts, IPv4/6, Networking)', namePa: 'ਕੰਪਿਊਟਰ ਗਿਆਨ ਤੇ ਆਈ.ਟੀ. ਸ਼ਾਰਟਕੱਟ', subject: 'Clerk', questionCount: '12,000+', examWeightage: '15-20 Qs', isPYQRich: true },
-  { id: 'psssb-raavi-typing', name: 'PSSSB Raavi Typing Unicode Rules & Paper A Punjabi Grammar', namePa: 'ਰਾਵੀ ਟਾਈਪਿੰਗ ਨਿਯਮ ਤੇ ਪੇਪਰ ਏ', subject: 'Clerk', questionCount: '10,000+', examWeightage: '20-25 Qs', isPYQRich: true },
+  { id: 'psssb-computer-it', name: 'PSSSB Clerk Computer & IT (MS Office, Shortcuts, IPv4/6, Networking)', namePa: 'ਕੰਪਿਊਟਰ ਗਿਆਨ ਤੇ ਆਈ.ਟੀ. ਸ਼ਾਰਟਕੱਟ', subject: 'Clerk', questionCount: '45+ Qs', examWeightage: '15-20 Qs', isPYQRich: true },
+  { id: 'psssb-raavi-typing', name: 'PSSSB Raavi Typing Unicode Rules & Paper A Punjabi Grammar', namePa: 'ਰਾਵੀ ਟਾਈਪਿੰਗ ਨਿਯਮ ਤੇ ਪੇਪਰ ਏ', subject: 'Clerk', questionCount: '50+ Qs', examWeightage: '20-25 Qs', isPYQRich: true },
 
   // History & Punjab
-  { id: 'punjab-history', name: 'Punjab History (10 Sikh Gurus, Banda Singh, Ranjit Singh)', namePa: 'ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ ਤੇ ਸਿੱਖ ਗੁਰੂ ਸਾਹਿਬਾਨ', subject: 'History', questionCount: '10,000+', examWeightage: '10-12 Qs', isPYQRich: true },
-  { id: 'modern-india', name: 'Modern India (1757 - 1947 & Freedom Struggle)', namePa: 'ਆਧੁਨਿਕ ਭਾਰਤ ਦਾ ਇਤਿਹਾਸ', subject: 'History', questionCount: '10,000+', examWeightage: '10-12 Qs', isPYQRich: true },
-  { id: 'ancient-india', name: 'Ancient India (Indus Valley, Vedic, Maurya, Gupta)', namePa: 'ਪ੍ਰਾਚੀਨ ਭਾਰਤ ਤੇ ਹੜੱਪਾ ਸਭਿਅਤਾ', subject: 'History', questionCount: '8,000+', examWeightage: '8-10 Qs', isPYQRich: true },
-  { id: 'medieval-india', name: 'Medieval India (Delhi Sultanate, Mughals, Bhakti & Sufi)', namePa: 'ਮੱਧਕਾਲੀਨ ਭਾਰਤ ਤੇ ਮੁਗਲ ਸਾਮਰਾਜ', subject: 'History', questionCount: '8,000+', examWeightage: '8-10 Qs', isPYQRich: true },
-  { id: 'world-history', name: 'World History (Renaissance, Revolutions, WWI/II, UNO)', namePa: 'ਵਿਸ਼ਵ ਇਤਿਹਾਸ ਤੇ ਕ੍ਰਾਂਤੀਆਂ', subject: 'History', questionCount: '6,000+', examWeightage: '6-8 Qs', isPYQRich: true },
+  { id: 'punjab-history', name: 'Punjab History (10 Sikh Gurus, Banda Singh, Ranjit Singh)', namePa: 'ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ ਤੇ ਸਿੱਖ ਗੁਰੂ ਸਾਹਿਬਾਨ', subject: 'History', questionCount: '55+ Qs', examWeightage: '10-12 Qs', isPYQRich: true },
+  { id: 'modern-india', name: 'Modern India (1757 - 1947 & Freedom Struggle)', namePa: 'ਆਧੁਨਿਕ ਭਾਰਤ ਦਾ ਇਤਿਹਾਸ', subject: 'History', questionCount: '50+ Qs', examWeightage: '10-12 Qs', isPYQRich: true },
+  { id: 'ancient-india', name: 'Ancient India (Indus Valley, Vedic, Maurya, Gupta)', namePa: 'ਪ੍ਰਾਚੀਨ ਭਾਰਤ ਤੇ ਹੜੱਪਾ ਸਭਿਅਤਾ', subject: 'History', questionCount: '40+ Qs', examWeightage: '8-10 Qs', isPYQRich: true },
+  { id: 'medieval-india', name: 'Medieval India (Delhi Sultanate, Mughals, Bhakti & Sufi)', namePa: 'ਮੱਧਕਾਲੀਨ ਭਾਰਤ ਤੇ ਮੁਗਲ ਸਾਮਰਾਜ', subject: 'History', questionCount: '40+ Qs', examWeightage: '8-10 Qs', isPYQRich: true },
+  { id: 'world-history', name: 'World History (Renaissance, Revolutions, WWI/II, UNO)', namePa: 'ਵਿਸ਼ਵ ਇਤਿਹਾਸ ਤੇ ਕ੍ਰਾਂਤੀਆਂ', subject: 'History', questionCount: '35+ Qs', examWeightage: '6-8 Qs', isPYQRich: true },
 
   // Civics & Political Science
-  { id: 'fundamental-rights', name: 'Indian Constitution, Preamble & Fundamental Rights', namePa: 'ਭਾਰਤੀ ਸੰਵਿਧਾਨ ਤੇ ਮੌਲਿਕ ਅਧਿਕਾਰ', subject: 'Civics', questionCount: '10,000+', examWeightage: '10-12 Qs', isPYQRich: true },
-  { id: 'parliament', name: 'Union Parliament, President & Executive', namePa: 'ਸੰਸਦ, ਰਾਸ਼ਟਰਪਤੀ ਤੇ ਕਾਰਜਪਾਲਿਕਾ', subject: 'Civics', questionCount: '8,000+', examWeightage: '8-10 Qs', isPYQRich: true },
-  { id: 'judiciary', name: 'Judiciary: Supreme Court, High Courts & Writs', namePa: 'ਨਿਆਂਪਾਲਿਕਾ: ਸੁਪਰੀਮ ਕੋਰਟ ਤੇ ਹਾਈ ਕੋਰਟ', subject: 'Civics', questionCount: '6,000+', examWeightage: '6-8 Qs', isPYQRich: true },
-  { id: 'local-govt', name: 'Local Government: 73rd & 74th Amendments (Panchayati Raj)', namePa: 'ਸਥਾਨਕ ਸਰਕਾਰ ਤੇ ਪੰਚਾਇਤੀ ਰਾਜ', subject: 'Civics', questionCount: '6,000+', examWeightage: '6-8 Qs', isPYQRich: true },
+  { id: 'fundamental-rights', name: 'Indian Constitution, Preamble & Fundamental Rights', namePa: 'ਭਾਰਤੀ ਸੰਵਿਧਾਨ ਤੇ ਮੌਲਿਕ ਅਧਿਕਾਰ', subject: 'Civics', questionCount: '50+ Qs', examWeightage: '10-12 Qs', isPYQRich: true },
+  { id: 'parliament', name: 'Union Parliament, President & Executive', namePa: 'ਸੰਸਦ, ਰਾਸ਼ਟਰਪਤੀ ਤੇ ਕਾਰਜਪਾਲਿਕਾ', subject: 'Civics', questionCount: '40+ Qs', examWeightage: '8-10 Qs', isPYQRich: true },
+  { id: 'judiciary', name: 'Judiciary: Supreme Court, High Courts & Writs', namePa: 'ਨਿਆਂਪਾਲਿਕਾ: ਸੁਪਰੀਮ ਕੋਰਟ ਤੇ ਹਾਈ ਕੋਰਟ', subject: 'Civics', questionCount: '35+ Qs', examWeightage: '6-8 Qs', isPYQRich: true },
+  { id: 'local-govt', name: 'Local Government: 73rd & 74th Amendments (Panchayati Raj)', namePa: 'ਸਥਾਨਕ ਸਰਕਾਰ ਤੇ ਪੰਚਾਇਤੀ ਰਾਜ', subject: 'Civics', questionCount: '35+ Qs', examWeightage: '6-8 Qs', isPYQRich: true },
 
   // Geography
-  { id: 'punjab-geography', name: 'Geography of Punjab: Rivers, Doabs, Soils & Wetlands', namePa: 'ਪੰਜਾਬ ਦਾ ਭੂਗੋਲ, ਦਰਿਆ ਤੇ ਦੁਆਬੇ', subject: 'Geography', questionCount: '8,000+', examWeightage: '8-10 Qs', isPYQRich: true },
-  { id: 'physical-geography', name: 'Physical Geography of India, Monsoon & Agriculture', namePa: 'ਭਾਰਤ ਦਾ ਭੌਤਿਕ ਭੂਗੋਲ ਤੇ ਮਾਨਸੂਨ', subject: 'Geography', questionCount: '10,000+', examWeightage: '8-10 Qs', isPYQRich: true },
+  { id: 'punjab-geography', name: 'Geography of Punjab: Rivers, Doabs, Soils & Wetlands', namePa: 'ਪੰਜਾਬ ਦਾ ਭੂਗੋਲ, ਦਰਿਆ ਤੇ ਦੁਆਬੇ', subject: 'Geography', questionCount: '40+ Qs', examWeightage: '8-10 Qs', isPYQRich: true },
+  { id: 'physical-geography', name: 'Physical Geography of India, Monsoon & Agriculture', namePa: 'ਭਾਰਤ ਦਾ ਭੌਤਿਕ ਭੂਗੋਲ ਤੇ ਮਾਨਸੂਨ', subject: 'Geography', questionCount: '45+ Qs', examWeightage: '8-10 Qs', isPYQRich: true },
 
   // Economics
-  { id: 'indian-economy', name: 'Indian Economy: RBI, Banking, NITI Aayog, MSP & Reforms', namePa: 'ਭਾਰਤੀ ਅਰਥਵਿਵਸਥਾ, ਬੈਂਕਿੰਗ ਤੇ MSP', subject: 'Economics', questionCount: '10,000+', examWeightage: '8-10 Qs', isPYQRich: true },
+  { id: 'indian-economy', name: 'Indian Economy: RBI, Banking, NITI Aayog, MSP & Reforms', namePa: 'ਭਾਰਤੀ ਅਰਥਵਿਵਸਥਾ, ਬੈਂਕਿੰਗ ਤੇ MSP', subject: 'Economics', questionCount: '45+ Qs', examWeightage: '8-10 Qs', isPYQRich: true },
 
   // Other Subjects
-  { id: 'science-concepts', name: 'General Science: Physics, Chemistry & Biology', namePa: 'ਜਨਰਲ ਸਾਇੰਸ', subject: 'Science', questionCount: '10,000+', examWeightage: '25-30 Qs', isPYQRich: true },
-  { id: 'mathematics-core', name: 'Mathematics: Arithmetic, Algebra & Mensuration', namePa: 'ਗਣਿਤ', subject: 'Math', questionCount: '10,000+', examWeightage: '20-25 Qs', isPYQRich: true },
-  { id: 'punjabi-grammar', name: 'Punjabi Language & Vyakaran (ਪੰਜਾਬੀ ਵਿਆਕਰਨ)', namePa: 'ਪੰਜਾਬੀ ਵਿਆਕਰਨ ਤੇ ਸਾਹਿਤ', subject: 'Punjabi', questionCount: '8,000+', examWeightage: '15-20 Qs', isPYQRich: true },
+  { id: 'science-concepts', name: 'General Science: Physics, Chemistry & Biology', namePa: 'ਜਨਰਲ ਸਾਇੰਸ', subject: 'Science', questionCount: '50+ Qs', examWeightage: '25-30 Qs', isPYQRich: true },
+  { id: 'mathematics-core', name: 'Mathematics: Arithmetic, Algebra & Mensuration', namePa: 'ਗਣਿਤ', subject: 'Math', questionCount: '50+ Qs', examWeightage: '20-25 Qs', isPYQRich: true },
+  { id: 'punjabi-grammar', name: 'Punjabi Language & Vyakaran (ਪੰਜਾਬੀ ਵਿਆਕਰਨ)', namePa: 'ਪੰਜਾਬੀ ਵਿਆਕਰਨ ਤੇ ਸਾਹਿਤ', subject: 'Punjabi', questionCount: '40+ Qs', examWeightage: '15-20 Qs', isPYQRich: true },
 ];
 
 /**
