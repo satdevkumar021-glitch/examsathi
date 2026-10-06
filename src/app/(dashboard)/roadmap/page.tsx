@@ -28,7 +28,7 @@ interface RoadmapDay {
 }
 
 export default function StudyRoadmap() {
-  const [selectedTrack, setSelectedTrack] = useState<'ett' | 'clerk' | 'master-cadre' | 'reet'>('ett');
+  const [selectedTrack, setSelectedTrack] = useState<'ett' | 'clerk' | 'master-cadre' | 'reet' | 'ssc-cgl'>('ett');
   const [completedTasks, setCompletedTasks] = useState<Record<string, boolean>>({});
   const [activeDay, setActiveDay] = useState<number>(1);
   const [dailyChallengeAnswer, setDailyChallengeAnswer] = useState<string | null>(null);
@@ -38,9 +38,11 @@ export default function StudyRoadmap() {
   useEffect(() => {
     try {
       const storedUser = getStoredUser();
-      if (storedUser.targetExam.includes('clerk')) setSelectedTrack('clerk');
-      else if (storedUser.targetExam.includes('master')) setSelectedTrack('master-cadre');
-      else if (storedUser.targetExam.includes('reet')) setSelectedTrack('reet');
+      const target = storedUser.targetExam.toLowerCase();
+      if (target.includes('clerk') || target.includes('psssb')) setSelectedTrack('clerk');
+      else if (target.includes('master') || target.includes('cadre')) setSelectedTrack('master-cadre');
+      else if (target.includes('reet') || target.includes('rajasthan')) setSelectedTrack('reet');
+      else if (target.includes('ssc') || target.includes('cgl') || target.includes('chsl') || target.includes('army') || target.includes('police')) setSelectedTrack('ssc-cgl');
       else setSelectedTrack('ett');
 
       // Calculate dynamic day from user joined date or streak
@@ -596,6 +598,52 @@ export default function StudyRoadmap() {
         },
       ],
     },
+    'ssc-cgl': {
+      name: 'SSC CGL/CHSL Combined Graduate & 10+2 Level',
+      badge: '🎓 SSC Track',
+      dailyChallenge: {
+        id: 'chal-ssc-1',
+        title: 'SSC Merit-Decider: Profit & Loss',
+        question: 'A shopkeeper marks up an item by 40% and then gives a 20% discount. What is the net profit percentage?',
+        options: { A: '12% Profit', B: '20% Profit', C: 'No profit', D: '8% Loss' },
+        correct: 'A',
+        rationale: 'Net = 1.4 × 0.8 − 1 = 0.12 = 12% Profit.',
+        xp: 60,
+      },
+      days: [
+        {
+          dayNumber: 1,
+          phase: 'Phase 1: General Awareness Foundation',
+          theme: 'History, Polity & Economy for SSC Tier I',
+          tasks: [
+            { id: 'ssc-t1', title: 'Modern India & Freedom Struggle (25 Qs PYQ Drill)', titlePa: 'ਆਧੁਨਿਕ ਭਾਰਤ ਅਤੇ ਆਜ਼ਾਦੀ ਸੰਗਰਾਮ', category: 'mcq' as const, estimatedMinutes: 20, link: '/mock-test/topic-modern-india?count=25', linkText: 'Start 25 Qs Drill', xp: 60 },
+            { id: 'ssc-t2', title: 'Indian Constitution & Polity Flip Cards', titlePa: 'ਭਾਰਤੀ ਸੰਵਿਧਾਨ ਫਲਿੱਪ ਕਾਰਡ', category: 'flip' as const, estimatedMinutes: 15, link: '/mock-test/topic-fundamental-rights?mode=flip', linkText: 'Flip Cards', xp: 35 },
+            { id: 'ssc-t3', title: 'Indian Economy — RBI, GST, NITI Aayog Notes', titlePa: 'ਭਾਰਤੀ ਅਰਥਵਿਵਸਥਾ ਨੋਟਸ', category: 'concept' as const, estimatedMinutes: 25, link: '/lesson/indian-economy', linkText: 'Read Notes', xp: 40 },
+            { id: 'ssc-t4', title: 'SSC CGL Tier I — Full 100 Qs CBT (1 hr, -0.5 marking)', titlePa: 'SSC CGL ਪੂਰਾ 100 ਸਵਾਲ CBT', category: 'cbt' as const, estimatedMinutes: 60, link: '/mock-test/topic-all?exam=ssc-cgl&count=100', linkText: 'Take SSC CGL Mock', xp: 100 },
+          ],
+        },
+        {
+          dayNumber: 2,
+          phase: 'Phase 1: Quantitative Aptitude Drills',
+          theme: 'Percentage, Profit-Loss, Speed-Distance, Geometry',
+          tasks: [
+            { id: 'ssc-t5', title: 'Percentage & Profit-Loss Shortcuts (SSC Pattern)', titlePa: 'ਪ੍ਰਤੀਸ਼ਤ ਅਤੇ ਲਾਭ-ਹਾਨੀ ਸ਼ਾਰਟਕੱਟ', category: 'concept' as const, estimatedMinutes: 30, link: '/lesson/mathematics-core', linkText: 'Maths Notes', xp: 40 },
+            { id: 'ssc-t6', title: 'Quantitative Aptitude 30 Qs Drill', titlePa: 'ਮੈਥ ਐਪਟੀਟਿਊਡ 30 ਸਵਾਲ', category: 'mcq' as const, estimatedMinutes: 25, link: '/mock-test/topic-ssc-quantitative?count=30', linkText: 'Start Drill', xp: 70 },
+            { id: 'ssc-t7', title: 'Reasoning — Coding-Decoding, Series, Analogy (20 Qs)', titlePa: 'ਰੀਜ਼ਨਿੰਗ: ਕੋਡਿੰਗ, ਸੀਰੀਜ਼', category: 'mcq' as const, estimatedMinutes: 20, link: '/mock-test/topic-ssc-reasoning?count=20', linkText: 'Reasoning Drill', xp: 50 },
+          ],
+        },
+        {
+          dayNumber: 3,
+          phase: 'Phase 2: Science, English & Mock',
+          theme: 'General Science + English + CHSL Full Mock',
+          tasks: [
+            { id: 'ssc-t8', title: 'General Science Flip Cards (Physics, Chemistry, Bio)', titlePa: 'ਜਨਰਲ ਸਾਇੰਸ ਫਲਿੱਪ ਕਾਰਡ', category: 'flip' as const, estimatedMinutes: 15, link: '/mock-test/topic-science-concepts?mode=flip', linkText: 'Science Flip', xp: 30 },
+            { id: 'ssc-t9', title: 'English Grammar — Spot Error, Synonyms (20 Qs)', titlePa: 'ਅੰਗਰੇਜ਼ੀ ਵਿਆਕਰਨ 20 ਸਵਾਲ', category: 'mcq' as const, estimatedMinutes: 20, link: '/mock-test/topic-ssc-english?count=20', linkText: 'English Practice', xp: 50 },
+            { id: 'ssc-t10', title: 'SSC CHSL Full Mock — 100 Qs, 60 min', titlePa: 'SSC CHSL ਪੂਰਾ ਟੈਸਟ', category: 'cbt' as const, estimatedMinutes: 60, link: '/mock-test/topic-all?exam=ssc-chsl&count=100', linkText: 'CHSL Mock', xp: 80 },
+          ],
+        },
+      ],
+    },
   };
 
   const activeRoadmap = TRACK_ROADMAPS[selectedTrack] || TRACK_ROADMAPS.ett;
@@ -634,12 +682,13 @@ export default function StudyRoadmap() {
         </div>
 
         {/* Track Selector Tabs */}
-        <div className="grid grid-cols-4 gap-2 mt-1">
+        <div className="grid grid-cols-5 gap-1.5 mt-1">
           {[
             { id: 'ett', label: '👶 ETT Punjab', desc: '6635/5994' },
             { id: 'clerk', label: '💼 PSSSB Clerk', desc: 'Raavi & IT' },
-            { id: 'master-cadre', label: '🌾 Master Cadre', desc: 'SST Core Track' },
+            { id: 'master-cadre', label: '🌾 Master Cadre', desc: 'SST Core' },
             { id: 'reet', label: '🌵 REET', desc: 'Level 1 & 2' },
+            { id: 'ssc-cgl', label: '🎓 SSC CGL', desc: 'Tier I CBT' },
           ].map(track => {
             const isSelected = selectedTrack === track.id;
             return (
