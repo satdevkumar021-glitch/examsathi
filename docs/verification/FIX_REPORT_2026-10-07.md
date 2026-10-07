@@ -35,7 +35,7 @@ This report distinguishes implemented fixes, tested behaviour and remaining work
 - `npx tsc --noEmit`: passed.
 - `npm run lint`: zero errors; existing unused-import and dependency warnings remain. Client hydration exceptions are documented at the individual calls; minified vendor worker is excluded from source lint.
 - Static production build: passed. Dynamic production build also passed before the final UI wording/route additions; cloud generation is not live-tested without a provider key and deployed dynamic host.
-- Browser: syllabus page; 50-question arithmetic set with strict easy filter; four Gandhi-source recall questions; launch into CBT; saved answer and continuing timer after reload; mixed-answer result with zero penalty; review/retake URLs.
+- Browser: actual TXT/PDF/DOCX uploads and extracted-text review; syllabus page; 50-question arithmetic set with strict easy filter; four Gandhi-source recall questions; launch into CBT; saved answer and continuing timer after reload; mixed-answer result with zero penalty; review/retake URLs.
 - Supabase: migration success, RLS and grants verified (`true / false / false / false / true` for RLS, anonymous table read, signed-in table read, anonymous function execution, signed-in function execution).
 - Earlier audit screenshots/data are retained in this directory for traceability; `data-checks.json` is regenerated for the current code.
 
@@ -44,7 +44,7 @@ This report distinguishes implemented fixes, tested behaviour and remaining work
 1. **Complete academic coverage:** All supported topic routes exist, but not all topics have reviewed full lessons or 50 distinct questions. Some foundation notes retain English until translations are reviewed. The coverage browser explicitly shows pending material. All-India exam coverage is not claimed.
 2. **Past-paper provenance:** Legacy year/exam tags need original paper and answer-key verification. Generated practice is not a PYQ; no generated question receives a fabricated year. Archive descriptions mark provenance as under review.
 3. **AI deployment:** GitHub Pages cannot execute API routes. Deploy the dynamic Next application and configure a server-only Gemini key. The quota database is ready; cloud AI remains unavailable until this setup is complete.
-4. **Scanned uploads:** Photos/scanned PDFs require OCR; unsupported input produces an error. Text-based files are supported. Browser file-chooser upload itself still needs an end-to-end fixture check; do not infer that every PDF/DOCX layout was tested.
+4. **Scanned uploads:** Photos/scanned PDFs require OCR; unsupported input produces an error. Text-based files are supported. Browser file-chooser and text extraction passed disposable TXT, PDF and DOCX fixtures. Complex layouts, handwriting and scanned PDFs are not covered by these checks.
 5. **SMTP / Google login:** Existing Supabase custom SMTP is not configured; sender domain/provider and Google OAuth credentials remain external setup. Real confirmation/reset-email delivery is unverified.
 6. **Cloud progress sync:** Study progress is isolated per account on this browser; it is not yet synced across devices.
 7. **Admin publishing:** Secure server publishing and review workflow are not implemented; the page is a role-gated local draft workspace.
@@ -52,6 +52,12 @@ This report distinguishes implemented fixes, tested behaviour and remaining work
 9. **Accessibility / devices:** Full screen-reader audit, physical Punjabi keyboard validation, mobile-device testing and a complete offline-device install cycle remain unverified.
 
 ## Backend setup
+
+## Deployment verification
+
+Code release `adf842b` was pushed to `main` without rewriting remote history. [GitHub Pages deployment run](https://github.com/satdevkumar021-glitch/examsathi/actions/runs/37594913396) completed successfully. Live `/syllabus/`, `/pdf.worker.min.mjs`, and `/manifest.json` returned HTTP 200. The live syllabus hierarchy was checked in the browser; proof is saved in `live-syllabus-deployed.png`. Supabase access verification is saved in `supabase-quota-applied.png`.
+
+## Dynamic backend setup
 
 For a single-origin dynamic Next deployment use `npm run build`, leave `STATIC_EXPORT` unset, set `NEXT_PUBLIC_BASE_PATH` to an empty string, and configure public Supabase URL/key plus server-only `GEMINI_API_KEY`. Never publish a service-role or Gemini secret as `NEXT_PUBLIC_*`. Keep Supabase auth redirect allowlists aligned with the deployed origin. The quota migration in `supabase/migrations/202610070001_ai_quota.sql` has already been applied to project `nrzuihzvgnmpikwzbqam`.
 
