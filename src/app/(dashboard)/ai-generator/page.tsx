@@ -371,7 +371,7 @@ export default function AIGeneratorPage() {
               <p className="text-xs text-slate-300">Question generation</p>
               <button type="button" disabled={isGenerating} aria-pressed={generationMode === 'local'} className={`p-2 rounded mr-2 ${generationMode === 'local' ? 'bg-teal-700' : 'bg-slate-800'}`} onClick={() => setGenerationMode('local')}>Local source recall</button>
               <button type="button" disabled={isGenerating || !apiUrl('/api/ai/generate')} aria-pressed={generationMode === 'cloud'} className={`p-2 rounded disabled:opacity-40 ${generationMode === 'cloud' ? 'bg-indigo-700' : 'bg-slate-800'}`} onClick={() => setGenerationMode('cloud')}>Cloud AI drafts</button>
-              <p className="text-xs text-slate-400">{generationMode === 'local' ? 'Free recall practice on this device. It may return fewer questions when the source is short.' : 'Requires sign-in and a configured provider. Generating sends reviewed notes text to the AI provider; answers need review.'}</p>
+              <p className="text-xs text-slate-400">{generationMode === 'local' ? 'Free recall practice on this device. It may return fewer questions when the source is short.' : 'Requires sign-in and a configured provider. Generating sends reviewed notes to Google Gemini. Free-tier data may be used to improve Google products; use local recall for private notes. Answers need review.'}</p>
             </div>
             <label className="text-[10px] font-bold text-slate-400 block mb-1">Question Count</label>
             <div className="grid grid-cols-3 gap-1.5">
