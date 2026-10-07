@@ -29,8 +29,8 @@ export default function ContactPage() {
           <p className="text-slate-300 text-xs">
             For general feedback, inquiries, or support:
           </p>
-          <a href="mailto:support@examsathi.in" className="font-mono text-teal-300 text-xs bg-slate-800 p-2 rounded border border-slate-700 inline-block hover:underline">
-            support@examsathi.in
+          <a href="https://github.com/satdevkumar021-glitch/examsathi/issues/new" target="_blank" rel="noopener noreferrer" className="font-mono text-teal-300 text-xs bg-slate-800 p-2 rounded border border-slate-700 inline-block hover:underline">
+            Open a GitHub issue
           </a>
         </div>
 
@@ -40,7 +40,7 @@ export default function ContactPage() {
             <h3>Report Question Errata / Discrepancy</h3>
           </div>
           <p className="text-slate-300 text-xs leading-relaxed">
-            Found an issue with a question or answer key? Please email us at <a href="mailto:content@examsathi.in" className="text-amber-300 underline">content@examsathi.in</a> with:
+            Found an issue with a question or answer key? Report it at <a href="https://github.com/satdevkumar021-glitch/examsathi/issues/new" target="_blank" rel="noopener noreferrer" className="text-amber-300 underline">Open a GitHub issue</a> with:
           </p>
           <ul className="list-disc pl-5 space-y-1 text-slate-300 text-[11px]">
             <li>Question ID or Topic Name</li>
@@ -48,7 +48,7 @@ export default function ContactPage() {
             <li>Authoritative reference source (NCERT Chapter, PSEB Gazette, or Official Board Key)</li>
           </ul>
           <p className="text-[10px] text-amber-400">
-            Our educator review panel resolves and updates verified errata within 48 hours.
+            Include the question ID, expected answer and an official source. Reports are public; do not include passwords or private documents.
           </p>
         </div>
 
@@ -58,7 +58,7 @@ export default function ContactPage() {
             <h3>Suggest a Feature</h3>
           </div>
           <p className="text-slate-300 text-xs">
-            Have an idea to make studying easier for students? Let us know at <a href="mailto:feedback@examsathi.in" className="text-blue-300 underline">feedback@examsathi.in</a>.
+            Have an idea to make studying easier for students? Let us know at <a href="https://github.com/satdevkumar021-glitch/examsathi/issues/new" target="_blank" rel="noopener noreferrer" className="text-blue-300 underline">Open a GitHub issue</a>.
           </p>
         </div>
 

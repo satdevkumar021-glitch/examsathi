@@ -6,6 +6,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (isProd ? '/examsathi' : '
 const isStaticExport = process.env.STATIC_EXPORT === 'true';
 
 const nextConfig: NextConfig = {
+  outputFileTracingRoot: process.cwd(),
   output: isStaticExport ? 'export' : undefined,
   images: {
     unoptimized: true,

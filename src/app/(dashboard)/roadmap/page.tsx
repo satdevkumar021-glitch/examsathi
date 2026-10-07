@@ -1,4 +1,5 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
@@ -39,6 +40,7 @@ export default function StudyRoadmap() {
     try {
       const storedUser = getStoredUser();
       const target = storedUser.targetExam.toLowerCase();
+                                                                // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
       if (target.includes('clerk') || target.includes('psssb')) setSelectedTrack('clerk');
       else if (target.includes('master') || target.includes('cadre')) setSelectedTrack('master-cadre');
       else if (target.includes('reet') || target.includes('rajasthan')) setSelectedTrack('reet');
@@ -58,28 +60,30 @@ export default function StudyRoadmap() {
       }
       setActiveDay(computedDay);
 
-      const saved = localStorage.getItem('examsathi_roadmap_completed');
+      const saved = studyStorage.getItem('examsathi_roadmap_completed');
       if (saved) setCompletedTasks(JSON.parse(saved));
     } catch {}
   }, []);
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem('examsathi_study_start_date');
+      const stored = studyStorage.getItem('examsathi_study_start_date');
       if (stored) {
         const startDate = new Date(stored);
         const today = new Date();
         const diffDays = Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
         setActiveDay(Math.max(1, Math.min(diffDays, 60)));
       } else {
         // First visit — set start date to today
-        localStorage.setItem('examsathi_study_start_date', new Date().toISOString());
+        studyStorage.setItem('examsathi_study_start_date', new Date().toISOString());
         setActiveDay(1);
       }
     } catch {}
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
     setSrsSummary(getSRSSummary([]));
   }, []);
 
@@ -87,11 +91,11 @@ export default function StudyRoadmap() {
     const updated = { ...completedTasks, [taskId]: !completedTasks[taskId] };
     setCompletedTasks(updated);
     try {
-      localStorage.setItem('examsathi_roadmap_completed', JSON.stringify(updated));
+      studyStorage.setItem('examsathi_roadmap_completed', JSON.stringify(updated));
     } catch {}
   };
 
-  const TRACK_ROADMAPS: Record<string, { name: string; badge: string; days: RoadmapDay[]; dailyChallenge: any }> = {
+  const TRACK_ROADMAPS: Record<string, { name: string; badge: string; days: RoadmapDay[]; dailyChallenge: { id: string; title: string; question: string; options: Record<string, string>; correct: string; rationale: string; xp: number } }> = {
     ett: {
       name: 'Punjab ETT Elementary Cadre (6635 / 5994)',
       badge: '👶 ETT Track',
@@ -677,7 +681,7 @@ export default function StudyRoadmap() {
             </div>
           </div>
           <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-1 rounded-full border border-amber-500/40 flex items-center gap-1 font-mono">
-            <Flame size={12} /> Day {activeDay} of 60
+            <Flame size={12} /> Milestone day {currentDayData.dayNumber} of 60
           </span>
         </div>
 
@@ -694,7 +698,7 @@ export default function StudyRoadmap() {
             return (
               <button
                 key={track.id}
-                onClick={() => setSelectedTrack(track.id as any)}
+                onClick={() => setSelectedTrack(track.id as typeof selectedTrack)}
                 className={`p-2 rounded-xl border text-center transition ${
                   isSelected
                     ? 'bg-teal-500/20 border-teal-400 text-white font-bold ring-1 ring-teal-400'
@@ -722,7 +726,7 @@ export default function StudyRoadmap() {
         </div>
 
         <div className="flex items-center justify-between gap-1.5 overflow-x-auto pb-1">
-          {[1, 14, 30, 45, 60].map(day => (
+          {activeRoadmap.days.map(item => item.dayNumber).map(day => (
             <button
               key={day}
               onClick={() => setActiveDay(day)}
@@ -851,7 +855,7 @@ export default function StudyRoadmap() {
 
         {/* Options */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-          {Object.entries(activeRoadmap.dailyChallenge.options).map(([key, label]: [string, any]) => {
+          {Object.entries(activeRoadmap.dailyChallenge.options).map(([key, label]) => {
             const isSelected = dailyChallengeAnswer === key;
             const isCorrect = key === activeRoadmap.dailyChallenge.correct;
 

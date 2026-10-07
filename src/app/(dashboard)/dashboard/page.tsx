@@ -1,9 +1,13 @@
 'use client';
+import { getAllCardStates } from '@/lib/fsrs';
+import { loadSRSStates } from '@/lib/srs';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useStore } from '@/lib/store';
 import { useAuth } from '@/lib/hooks/useAuth';
 import { getStoredUser } from '@/lib/auth';
+import InstallAppButton from '@/components/ui/InstallAppButton';
 import StreakBadge from '@/components/ui/StreakBadge';
 import DailyKnowledge from '@/components/dashboard/DailyKnowledge';
 import { getTodayContent } from '@/lib/data/daily_content';
@@ -16,21 +20,22 @@ import {
 export default function Dashboard() {
   const { user: storeUser, completedTopics } = useStore();
   const { user: authUser, isGuest, loading: authLoading } = useAuth();
-  const [currentUser, setCurrentUser] = useState<any>(null);
-  const [lastResult, setLastResult] = useState<any>(null);
+  const [currentUser, setCurrentUser] = useState<ReturnType<typeof getStoredUser> | null>(null);
+  const [lastResult, setLastResult] = useState<{ accuracy: number; percentage: number } | null>(null);
 
   useEffect(() => {
     try {
       const u = getStoredUser();
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
       setCurrentUser(u);
-      const res = localStorage.getItem('examsathi_last_result');
+      const res = studyStorage.getItem('examsathi_last_result');
       if (res) setLastResult(JSON.parse(res));
     } catch {}
   }, []);
 
   const readinessValue = lastResult ? `${lastResult.percentage}%` : '0%';
   const topicsDone = completedTopics?.length || 0;
-  const cardsCount = currentUser?.xp ? Math.round(currentUser.xp / 10) : 0;
+  const cardsCount = Object.keys({ ...getAllCardStates(), ...loadSRSStates() }).length;
   const avgScore = lastResult ? `${lastResult.accuracy}%` : '--';
   const streakCount = currentUser?.streak || storeUser?.streak || 0;
 
@@ -498,17 +503,10 @@ export default function Dashboard() {
           <span className="text-2xl">📱</span>
           <div>
             <p className="text-xs font-bold text-white">Install ExamSathi App</p>
-            <p className="text-[11px] text-slate-400">Works offline • No Play Store needed</p>
+            <p className="text-[11px] text-slate-400">Installable • Public offline fallback</p>
           </div>
         </div>
-        <button
-          onClick={() => {
-            alert('To install: tap the browser menu (⋮) → "Add to Home Screen" or "Install App"');
-          }}
-          className="bg-teal-500 text-slate-950 font-bold text-xs px-3 py-2 rounded-xl shrink-0 hover:bg-teal-400 transition"
-        >
-          Install
-        </button>
+        <InstallAppButton />
       </div>
 
       {/* Footer */}

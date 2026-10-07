@@ -127,7 +127,7 @@ export default function ExamDayCoach() {
         </div>
         <div className="bg-amber-950/40 rounded-xl p-3 border border-amber-700/50">
           <p className="font-bold text-amber-300 mb-1">⚠️ Negative marking rule:</p>
-          <p>At -0.25 per wrong, you need <strong>4 correct</strong> answers to recover 1 wrong. <strong>Do not guess</strong> on questions you have zero idea about. Leave them blank.</p>
+          <p>At -0.25 per wrong, one correct answer (+1) offsets four wrong answers (−0.25 each). <strong>Do not guess</strong> on questions you have zero idea about. Leave them blank.</p>
         </div>
       </div>
     ),
@@ -164,7 +164,7 @@ export default function ExamDayCoach() {
         </div>
         <div className="bg-slate-900/60 rounded-xl p-3 border border-slate-700">
           <p className="font-bold text-white mb-1">Statement questions (True/False type):</p>
-          <p>Eliminate options with absolute words: "always", "never", "only", "all". These are almost always wrong in factual exams.</p>
+          <p>Eliminate options with absolute words: &quot;always&quot;, &quot;never&quot;, &quot;only&quot;, &quot;all&quot;. These are almost always wrong in factual exams.</p>
         </div>
         <div className="bg-slate-900/60 rounded-xl p-3 border border-slate-700">
           <p className="font-bold text-white mb-1">Match-the-following:</p>

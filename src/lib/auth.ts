@@ -1,3 +1,4 @@
+import { studyStorage } from '@/lib/storage';
 // ============================================================
 // ExamSathi - Client-Side Authentication, Session & Vault Manager
 // Supports Sign-Up, Login, Demo 1-Click Login, Forgot Password,
@@ -37,18 +38,24 @@ const DEFAULT_USER: AuthUser = {
 const STORAGE_KEY = 'examsathi_auth_user';
 
 export function getStoredUser(): AuthUser {
-  if (typeof window === 'undefined') return DEFAULT_USER;
+  if (typeof window === 'undefined') return { ...DEFAULT_USER, favoriteQuestionIds: [], bookmarkedQuestionIds: [] };
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return JSON.parse(raw);
+    const raw = studyStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const value = JSON.parse(raw);
+      return { ...DEFAULT_USER, ...value,
+        favoriteQuestionIds: Array.isArray(value.favoriteQuestionIds) ? value.favoriteQuestionIds : [],
+        bookmarkedQuestionIds: Array.isArray(value.bookmarkedQuestionIds) ? value.bookmarkedQuestionIds : [],
+      };
+    }
   } catch {}
-  return DEFAULT_USER;
+  return { ...DEFAULT_USER, favoriteQuestionIds: [], bookmarkedQuestionIds: [] };
 }
 
 export function saveUserSession(user: AuthUser): void {
   if (typeof window === 'undefined') return;
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+    studyStorage.setItem(STORAGE_KEY, JSON.stringify(user));
   } catch {}
 }
 
@@ -137,7 +144,7 @@ export function verifyAndResetPassword(_otp: string, _password: string): boolean
 export function logoutUser(): void {
   if (typeof window === 'undefined') return;
   try {
-    localStorage.removeItem(STORAGE_KEY);
+    studyStorage.removeItem(STORAGE_KEY);
   } catch {}
 }
 

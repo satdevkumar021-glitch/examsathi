@@ -141,7 +141,7 @@ export default function MockTestBottomSheet({
               return (
                 <button
                   key={diff.id}
-                  onClick={() => setSelectedDifficulty(diff.id as any)}
+                  onClick={() => setSelectedDifficulty(diff.id as 'all' | 'easy' | 'medium' | 'hard')}
                   className={`p-2 rounded-xl border text-center transition ${
                     isSelected
                       ? 'bg-slate-750 border-teal-400 text-white ring-1 ring-teal-400'

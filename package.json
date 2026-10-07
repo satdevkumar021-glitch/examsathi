@@ -24,7 +24,8 @@
     "build:static": "node scripts/build-static.js",
     "start": "next start",
     "lint": "eslint",
-    "test:auth": "node --test tests/auth.test.mjs"
+    "test:auth": "node --test tests/auth.test.mjs",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.27.0",
@@ -35,7 +36,9 @@
     "@supabase/supabase-js": "^2.117.2",
     "framer-motion": "^14.0.0",
     "lucide-react": "^1.52.0",
+    "mammoth": "^1.13.0",
     "next": "16.3.8",
+    "pdfjs-dist": "^6.4.299",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "zustand": "^5.0.15"

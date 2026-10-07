@@ -1,31 +1,5 @@
-// ============================================================
-// ExamSathi - AI Question & Flashcard Gateway (Gemini 2.5)
-// DPDP Act 2023 Compliant / Zero Data Leakage / Schema Validated
-// ============================================================
-
-import { Question } from './data/questions';
-
-export interface GeneratedAIQuestion {
-  stem: {
-    hi: string;
-    pa?: string;
-    en: string;
-  };
-  options: {
-    A: { hi: string; pa?: string; en: string };
-    B: { hi: string; pa?: string; en: string };
-    C: { hi: string; pa?: string; en: string };
-    D: { hi: string; pa?: string; en: string };
-  };
-  correct: 'A' | 'B' | 'C' | 'D';
-  explanation: {
-    hi: string;
-    pa?: string;
-    en: string;
-  };
-  difficulty: 'easy' | 'medium' | 'hard';
-  topicTag: string;
-}
+import { studyStorage } from '@/lib/storage';
+import type { Question } from './data/questions';
 
 export interface AIGenerationResult {
   success: boolean;
@@ -34,147 +8,67 @@ export interface AIGenerationResult {
   isVerified: boolean;
   message?: string;
 }
-
 const DAILY_LIMIT = 5;
 const STORAGE_USAGE_KEY = 'examsathi_ai_quota';
-
-/**
- * Checks remaining daily AI generation quota
- */
 export function checkAIQuota(): { remaining: number; allowed: boolean } {
-  if (typeof window === 'undefined') return { remaining: DAILY_LIMIT, allowed: true };
   try {
-    const raw = localStorage.getItem(STORAGE_USAGE_KEY);
-    const today = new Date().toISOString().split('T')[0];
-    if (!raw) return { remaining: DAILY_LIMIT, allowed: true };
-    const parsed = JSON.parse(raw);
-    if (parsed.date !== today) {
-      localStorage.setItem(STORAGE_USAGE_KEY, JSON.stringify({ date: today, count: 0 }));
-      return { remaining: DAILY_LIMIT, allowed: true };
-    }
-    const remaining = Math.max(0, DAILY_LIMIT - (parsed.count || 0));
+    const parsed = JSON.parse(studyStorage.getItem(STORAGE_USAGE_KEY) || 'null');
+    const used = parsed?.date === new Date().toISOString().slice(0, 10) ? Math.max(0, Number(parsed.count) || 0) : 0;
+    const remaining = Math.max(0, DAILY_LIMIT - used);
     return { remaining, allowed: remaining > 0 };
-  } catch {
-    return { remaining: DAILY_LIMIT, allowed: true };
-  }
+  } catch { return { remaining: DAILY_LIMIT, allowed: true }; }
 }
-
-/**
- * Increments AI generation count for today
- */
 export function incrementAIQuota(): void {
-  if (typeof window === 'undefined') return;
-  try {
-    const today = new Date().toISOString().split('T')[0];
-    const quota = checkAIQuota();
-    localStorage.setItem(STORAGE_USAGE_KEY, JSON.stringify({
-      date: today,
-      count: DAILY_LIMIT - quota.remaining + 1,
-    }));
-  } catch {}
-}
-
-/**
- * Fallback semantic extractor when offline or API key is absent
- */
-function extractProceduralMCQs(text: string, count: number): Question[] {
-  const sentences = text
-    .split(/[.।\n]/)
-    .map(s => s.trim())
-    .filter(s => s.length > 25);
-
-  const generated: Question[] = [];
-  const letters: Array<'A' | 'B' | 'C' | 'D'> = ['A', 'B', 'C', 'D'];
-
-  sentences.slice(0, count).forEach((sent, idx) => {
-    const correctLetter = letters[idx % 4];
-    const otherLetters = letters.filter(l => l !== correctLetter);
-
-    const options: any = {};
-    options[correctLetter] = {
-      hi: sent,
-      pa: sent,
-      en: sent,
-    };
-    options[otherLetters[0]] = {
-      hi: 'यह कथन इस संदर्भ में ऐतिहासिक रूप से अप्रासंगिक है।',
-      pa: 'ਇਹ ਕਥਨ ਇਤਿਹਾਸਕ ਤੌਰ ਤੇ ਅਸੰਗਤ ਹੈ।',
-      en: 'This statement is contextually invalid.',
-    };
-    options[otherLetters[1]] = {
-      hi: 'उपरोक्त प्रावधान 1995 के बाद लागू किया गया था।',
-      pa: 'ਇਹ ਪ੍ਰਾਵਧਾਨ 1995 ਤੋਂ ਬਾਅਦ ਲਾਗੂ ਹੋਇਆ ਸੀ।',
-      en: 'This provision was enacted post-1995.',
-    };
-    options[otherLetters[2]] = {
-      hi: 'उपरोक्त में से कोई भी कथन सत्य नहीं है।',
-      pa: 'ਉਪਰੋਕਤ ਵਿੱਚੋਂ ਕੋਈ ਵੀ ਕਥਨ ਸੱਚ ਨਹੀਂ ਹੈ।',
-      en: 'None of the above statements is true.',
-    };
-
-    generated.push({
-      id: `ai-gen-${Date.now()}-${idx}`,
-      topicId: 'custom-notes',
-      subjectId: 'general',
-      examTag: 'AI Generated Practice Drill (Unverified)',
-      question: {
-        hi: `नोट्स के अनुसार निम्नलिखित में से कौन सा तथ्य सत्य है? (अंश ${idx + 1})`,
-        pa: `ਨੋਟਸ ਅਨੁਸਾਰ ਹੇਠ ਲਿਖਿਆਂ ਵਿੱਚੋਂ ਕਿਹੜਾ ਤੱਥ ਸੱਚ ਹੈ?`,
-        en: `According to your study material, which of the following is correct?`,
-      },
-      options,
-      correct: correctLetter,
-      explanation: {
-        hi: `सही उत्तर विकल्प (${correctLetter}) है। यह सीधे आपके अपलोड किए गए नोट्स के अंश पर आधारित है: "${sent}"`,
-        pa: `ਸਹੀ ਉੱਤਰ ਵਿਕਲਪ (${correctLetter}) ਹੈ।`,
-        en: `Correct answer is (${correctLetter}) based directly on your excerpt: "${sent}"`,
-      },
-      difficulty: idx % 3 === 0 ? 'hard' : idx % 2 === 0 ? 'medium' : 'easy',
-      year: 2024,
-    });
-  });
-
-  return generated;
-}
-
-/**
- * Main AI generation entry point
- */
-export async function generateMCQsFromNotes(
-  content: string,
-  targetCount: number = 5
-): Promise<AIGenerationResult> {
   const quota = checkAIQuota();
-  if (!quota.allowed) {
-    return {
-      success: false,
-      questions: [],
-      source: 'client_heuristic_engine',
-      isVerified: false,
-      message: 'Daily free AI quota reached (5 requests/day). Resets at midnight.',
-    };
+  studyStorage.setItem(STORAGE_USAGE_KEY, JSON.stringify({ date: new Date().toISOString().slice(0, 10), count: DAILY_LIMIT - quota.remaining + 1 }));
+}
+
+/** Local recall practice: a term is removed from an actual sentence, never invented. */
+export function extractRecallQuestions(content: string, targetCount: number): Question[] {
+  const sentences = Array.from(new Set(content.split(/(?<=[.!?।])\s*|\n+/u).map(s => s.trim()).filter(s => s.length >= 35 && s.length <= 700)));
+  const candidates = sentences.map(sentence => {
+    const terms = sentence.match(/\p{N}{2,}|[\p{L}\p{M}]{5,}/gu) || [];
+    return { sentence, answer: terms.find(t => /^\p{N}/u.test(t)) || terms[Math.floor(terms.length / 2)] };
+  }).filter((c): c is { sentence: string; answer: string } => Boolean(c.answer));
+  const letters = ['A', 'B', 'C', 'D'] as const;
+  const result: Question[] = [];
+  for (const [index, item] of candidates.entries()) {
+    const isNumber = /^\p{N}/u.test(item.answer);
+    const distractors = Array.from(new Set(candidates.map(c => c.answer).filter(a => a !== item.answer && /^\p{N}/u.test(a) === isNumber))).slice(0, 3);
+    if (distractors.length !== 3) continue;
+    const correct = letters[index % 4];
+    const options = {} as Question['options'];
+    let other = 0;
+    for (const letter of letters) {
+      const value = letter === correct ? item.answer : distractors[other++];
+      options[letter] = { en: value, hi: value, pa: value };
+    }
+    const prompt = item.sentence.replace(item.answer, '______');
+    const evidence = `Source excerpt: ${item.sentence}`;
+    result.push({ id: `notes-${Date.now()}-${index}`, topicId: 'custom-notes', subjectId: 'general', examTag: 'Local notes recall • not AI verified', question: { en: prompt, hi: prompt, pa: prompt }, options, correct, explanation: { en: evidence, hi: evidence, pa: evidence }, difficulty: 'easy' });
+    if (result.length >= Math.max(1, Math.min(50, targetCount))) break;
   }
+  return result;
+}
 
-  const sanitized = content.replace(/[^\w\s\u0900-\u097F\u0A00-\u0A7F.,\-()?:/]/g, ' ').trim();
-  if (sanitized.length < 50) {
-    return {
-      success: false,
-      questions: [],
-      source: 'client_heuristic_engine',
-      isVerified: false,
-      message: 'Study notes too short. Please provide at least 50 characters of notes or syllabus text.',
-    };
-  }
-
-  incrementAIQuota();
-
-  // Procedural client generation with strict validation
-  const generated = extractProceduralMCQs(sanitized, targetCount);
-
-  return {
-    success: true,
-    questions: generated,
-    source: 'client_heuristic_engine',
-    isVerified: false, // Flagged for candidate awareness per DPDP guidelines
-  };
+/** Validates untrusted model output and requires a literal excerpt from the source. */
+export function validateGeneratedQuestions(value: unknown, content: string, count: number): Question[] {
+  if (!Array.isArray(value) || value.length === 0 || value.length > count) throw new Error('Invalid question count');
+  const normalize = (text: string) => text.replace(/\s+/g, ' ').trim();
+  const source = normalize(content);
+  const text = (v: unknown): v is { hi: string; pa: string; en: string } => Boolean(v && typeof v === 'object' && ['hi', 'pa', 'en'].every(k => typeof (v as Record<string, unknown>)[k] === 'string' && String((v as Record<string, unknown>)[k]).trim().length > 0 && String((v as Record<string, unknown>)[k]).length <= 4000));
+  return value.map((v, index) => {
+    if (!v || typeof v !== 'object') throw new Error('Invalid question');
+    const q = v as Record<string, unknown>;
+    const options = q.options as Record<string, unknown>;
+    if (!text(q.question) || !text(q.explanation) || !options || !['A', 'B', 'C', 'D'].every(k => text(options[k])) || !['A', 'B', 'C', 'D'].includes(String(q.correct)) || !['easy', 'medium', 'hard'].includes(String(q.difficulty))) throw new Error('Malformed question');
+    if (new Set(Object.values(options).map(v => (v as { en: string }).en.trim().toLowerCase())).size !== 4) throw new Error('Duplicate options');
+    if (typeof q.sourceExcerpt !== 'string' || q.sourceExcerpt.length < 15 || !source.includes(normalize(q.sourceExcerpt))) throw new Error('Question is missing source evidence');
+    const explanation = q.explanation;
+    return { id: `ai-${Date.now()}-${index}`, topicId: 'custom-notes', subjectId: 'general', examTag: 'AI notes draft • review before use', question: q.question, options: options as Question['options'], correct: q.correct as Question['correct'], difficulty: q.difficulty as Question['difficulty'], explanation: { hi: `${explanation.hi}\n${q.sourceExcerpt}`, pa: `${explanation.pa}\n${q.sourceExcerpt}`, en: `${explanation.en}\nSource excerpt: ${q.sourceExcerpt}` } };
+  });
+}
+export async function generateMCQsFromNotes(content: string, targetCount = 5): Promise<AIGenerationResult> {
+  const questions = content.trim().length >= 50 && content.length <= 100000 ? extractRecallQuestions(content, targetCount) : [];
+  return { success: questions.length > 0, questions, source: 'client_heuristic_engine', isVerified: false, message: questions.length ? `Created ${questions.length} local recall questions from your text. These are not AI-generated or independently verified.` : 'Not enough distinct facts to create reliable recall questions. Add several complete sentences or use the configured AI backend.' };
 }

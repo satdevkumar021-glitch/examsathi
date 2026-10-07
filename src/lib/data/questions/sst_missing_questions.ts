@@ -453,7 +453,7 @@ export const SST_MISSING_QUESTIONS: Question[] = [
     "year": 2020
   },
   {
-    "id": "q-eco-1",
+    "id": "q-sst-eco-1",
     "topicId": "sst-indian-economy-deep",
     "subjectId": "social-science",
     "examTag": "Punjab Master Cadre SST",

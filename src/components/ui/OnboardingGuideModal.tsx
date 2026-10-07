@@ -1,4 +1,5 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import { 
   Sparkles, 
@@ -50,7 +51,7 @@ const STEPS: GuideStep[] = [
     icon: <Sparkles className="text-indigo-400" size={28} />,
     content: 'क्या आपके पास अपनी हैंडराइटिंग के नोट्स या कोचिंग की पीडीएफ है? बस अपने नोट्स को कॉपी-पेस्ट करें, और हमारा AI तुरंत आधिकारिक पैटर्न के 5 से 15 अभ्यास प्रश्न उनके विस्तृत स्पष्टीकरण और परीक्षक की मानसिकता (Examiner Mindset) के साथ तैयार कर देगा।',
     contentPa: 'ਆਪਣੇ ਹੱਥ ਨਾਲ ਲਿਖੇ ਨੋਟਸ ਜਾਂ ਕੋਚਿੰਗ ਸਮੱਗਰੀ ਨੂੰ ਪੇਸਟ ਕਰੋ, ਸਾਡਾ AI ਕੁਝ ਸਕਿੰਟਾਂ ਵਿੱਚ ਅਧਿਕਾਰਤ ਪੈਟਰਨ ਦੇ MCQs ਤਿਆਰ ਕਰ ਦੇਵੇਗਾ।',
-    highlight: 'DPDP Act 2023 Compliant • In-Memory Processing • 1-Click CBT Launch'
+    highlight: 'Review extracted text • Source excerpts • Notes-based practice'
   },
   {
     title: '🏛️ वर्चुअल स्टडी लाइब्रेरी व पर्सनल स्टडी वॉल्ट',
@@ -69,7 +70,7 @@ export default function OnboardingGuideModal() {
 
   useEffect(() => {
     try {
-      const completed = localStorage.getItem('examsathi_onboarding_completed');
+      const completed = studyStorage.getItem('examsathi_onboarding_completed');
       if (!completed) {
         // Auto show for first-time visitors after short delay
         const timer = setTimeout(() => setIsOpen(true), 1200);
@@ -89,7 +90,7 @@ export default function OnboardingGuideModal() {
   const handleDismiss = () => {
     setIsOpen(false);
     try {
-      localStorage.setItem('examsathi_onboarding_completed', 'true');
+      studyStorage.setItem('examsathi_onboarding_completed', 'true');
     } catch {}
   };
 

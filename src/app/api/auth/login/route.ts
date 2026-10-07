@@ -46,25 +46,11 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    // Local / Offline Simulation
-    return NextResponse.json({
-      success: true,
-      source: 'simulated_local_auth',
-      user: {
-        id: `local-session`,
-        email,
-        name: splitEmail(email),
-        targetExam: 'master-cadre-sst',
-        state: 'punjab',
-        streak: 1,
-        xp: 150,
-      },
-      message: 'Authenticated locally. To enable cloud cross-device sync, configure Supabase credentials in .env.local',
-    });
-  } catch (err: any) {
+    return NextResponse.json({ success: false, message: 'Authentication service is not configured.' }, { status: 503 });
+  } catch {
     return NextResponse.json({
       success: false,
-      message: 'Login server error: ' + err.message,
+      message: 'Unable to sign in. Please try again.',
     }, { status: 500 });
   }
 }

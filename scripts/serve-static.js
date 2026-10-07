@@ -8,6 +8,7 @@ const OUT_DIR = path.resolve(__dirname, '..', 'out');
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
+  '.mjs': 'application/javascript; charset=utf-8',
   '.js': 'application/javascript; charset=utf-8',
   '.json': 'application/json; charset=utf-8',
   '.png': 'image/png',
@@ -29,6 +30,8 @@ const server = http.createServer((req, res) => {
     urlPath = '/';
   }
   let filePath = path.join(OUT_DIR, urlPath);
+
+  if (!filePath.startsWith(OUT_DIR + path.sep) && filePath !== OUT_DIR) { res.writeHead(403); res.end(); return; }
 
   // Check if directory -> try index.html
   if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {

@@ -1,3 +1,5 @@
+import { ALL_TOPIC_IDS } from '@/lib/data/curriculum';
+import { ALL_LESSONS, TOPIC_ALIASES } from '@/lib/data/lessons';
 import MockTestClient from './MockTestClient';
 import { AVAILABLE_TEST_TOPICS } from '@/lib/data/question_bank_engine';
 
@@ -17,7 +19,7 @@ export function generateStaticParams() {
     testId: `topic-${t.id}`,
   }));
 
-  return [...baseParams, ...topicParams];
+  return Array.from(new Set([...baseParams, ...topicParams, ...[...ALL_TOPIC_IDS, ...Object.keys(ALL_LESSONS), ...Object.keys(TOPIC_ALIASES)].map(id => ({ testId: `topic-${id}` }))].map(p => p.testId))).map(testId => ({ testId }));
 }
 
 export default async function MockTestPage({ params }: { params: Promise<{ testId: string }> }) {

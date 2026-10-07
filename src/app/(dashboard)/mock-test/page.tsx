@@ -1,4 +1,5 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -37,10 +38,10 @@ export default function MockTestHub() {
 
   useEffect(() => {
     try {
-      const stored = sessionStorage.getItem('examsathi_last_result') || localStorage.getItem('examsathi_last_result');
+      const stored = sessionStorage.getItem('examsathi_last_result') || studyStorage.getItem('examsathi_last_result');
       if (stored) {
         const parsed = JSON.parse(stored);
-        const percentage = Math.round((parsed.correct / (parsed.total || 1)) * 100);
+        const percentage = parsed.percentage ?? Math.round((parsed.correct / (parsed.total || 1)) * 100);
         let level = 3;
         let title = 'Intermediate Aspirant 🥉';
         let badge = 'Bronze Rank';
@@ -62,6 +63,7 @@ export default function MockTestHub() {
           ? `Rank #${parsed.predictedRank.stateRank}` 
           : undefined;
 
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
         setLastLevel({ level, title, badge, percentage, rankText });
       }
     } catch {
@@ -267,7 +269,7 @@ export default function MockTestHub() {
             return (
               <button
                 key={diff.id}
-                onClick={() => setDifficultyFilter(diff.id as any)}
+                onClick={() => setDifficultyFilter(diff.id as 'all' | 'easy' | 'medium' | 'hard')}
                 className={`p-2.5 rounded-xl border text-center transition ${
                   isSelected
                     ? 'bg-slate-750 border-teal-400 text-white ring-1 ring-teal-400 shadow-md'
@@ -330,7 +332,7 @@ export default function MockTestHub() {
       <div className="bg-slate-800/70 p-3.5 rounded-xl border border-slate-700/80 flex items-center justify-between">
         <div>
           <span className="text-xs font-bold text-white block">Question Set Size</span>
-          <span className="text-[11px] text-slate-400">Official standard is 50 Questions</span>
+          <span className="text-[11px] text-slate-400">Choose a practice length; availability depends on filters</span>
         </div>
         <div className="flex gap-1.5">
           {[50, 25, 10].map((count) => (

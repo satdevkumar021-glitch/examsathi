@@ -1,3 +1,4 @@
+import { studyStorage } from '@/lib/storage';
 // ============================================================
 // ExamSathi - Simplified FSRS-inspired Spaced Repetition
 // Based on the FSRS algorithm (open-source, better than SM-2)
@@ -108,23 +109,23 @@ export function reviewCard(card: SRSCard, rating: CardRating): SRSCard {
 }
 
 /**
- * Load all SRS card states from localStorage.
+ * Load all SRS card states from studyStorage.
  */
 export function loadSRSStates(): Record<string, SRSCard> {
   if (typeof window === 'undefined') return {};
   try {
-    const raw = localStorage.getItem('examsathi_srs_states');
+    const raw = studyStorage.getItem('examsathi_srs_states');
     return raw ? JSON.parse(raw) : {};
   } catch { return {}; }
 }
 
 /**
- * Save updated SRS card states to localStorage.
+ * Save updated SRS card states to studyStorage.
  */
 export function saveSRSStates(states: Record<string, SRSCard>): void {
   if (typeof window === 'undefined') return;
   try {
-    localStorage.setItem('examsathi_srs_states', JSON.stringify(states));
+    studyStorage.setItem('examsathi_srs_states', JSON.stringify(states));
   } catch {}
 }
 

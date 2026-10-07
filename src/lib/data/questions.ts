@@ -829,7 +829,7 @@ export const QUESTIONS: Question[] = [
     year: 2021,
   },
   {
-    id: 'q-pol-1',
+    id: 'q-police-arrest-1',
     topicId: 'police-law-basics',
     subjectId: 'police-special',
     examTag: 'Punjab Police SI 2021',

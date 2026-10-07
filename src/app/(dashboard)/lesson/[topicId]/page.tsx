@@ -1,8 +1,13 @@
+import { ALL_QUESTIONS } from '@/lib/data/questions';
+import { ALL_TOPIC_IDS } from '@/lib/data/curriculum';
 import { ALL_LESSONS, TOPIC_ALIASES } from '@/lib/data/lessons';
 import LessonViewClient from './LessonViewClient';
 
 export function generateStaticParams() {
   const slugs = new Set([
+    ...ALL_TOPIC_IDS,
+    ...ALL_QUESTIONS.map(q => q.topicId),
+    'custom-notes', 'uploaded-notes',
     ...Object.keys(ALL_LESSONS),
     ...Object.keys(TOPIC_ALIASES),
     'ett-child-pedagogy',

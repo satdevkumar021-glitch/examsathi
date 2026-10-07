@@ -59,7 +59,7 @@ export default function TermsPage() {
         <section className="space-y-1.5">
           <h2 className="text-sm font-bold text-white">6. Inquiries</h2>
           <p>
-            Questions regarding these terms: <a href="mailto:contact@examsathi.in" className="text-teal-400 hover:underline">contact@examsathi.in</a>
+            Questions regarding these terms: <a href="https://github.com/satdevkumar021-glitch/examsathi/issues" className="text-teal-400 hover:underline">Contact the project maintainer</a>
           </p>
         </section>
 

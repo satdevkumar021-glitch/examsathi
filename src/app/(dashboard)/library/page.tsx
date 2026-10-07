@@ -1,4 +1,5 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { 
@@ -59,8 +60,9 @@ export default function VirtualStudyLibrary() {
   useEffect(() => {
     try {
       const user = getStoredUser();
+                             // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
       if (user.libraryHours) setTotalHours(user.libraryHours);
-      const savedSeat = localStorage.getItem('examsathi_library_seat');
+      const savedSeat = studyStorage.getItem('examsathi_library_seat');
       if (savedSeat) setSelectedSeat(parseInt(savedSeat, 10));
     } catch {}
   }, []);
@@ -68,19 +70,19 @@ export default function VirtualStudyLibrary() {
   const handleSelectSeat = (id: number) => {
     setSelectedSeat(id);
     try {
-      localStorage.setItem('examsathi_library_seat', String(id));
+      studyStorage.setItem('examsathi_library_seat', String(id));
     } catch {}
   };
 
   // Web Audio ambient sound synthesizer (offline pink noise simulation)
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    let audioCtx: any = null;
-    let whiteNoise: any = null;
+    let audioCtx: AudioContext | null = null;
+    let whiteNoise: AudioBufferSourceNode | null = null;
 
     if (soundEnabled && isRunning) {
       try {
-        const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+        const AudioContextClass = window.AudioContext || (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
         if (AudioContextClass) {
           audioCtx = new AudioContextClass();
           const bufferSize = audioCtx.sampleRate * 2;
@@ -117,7 +119,7 @@ export default function VirtualStudyLibrary() {
 
   // Timer countdown
   useEffect(() => {
-    let interval: any = null;
+    let interval: ReturnType<typeof setInterval> | null = null;
     if (isRunning && secondsRemaining > 0) {
       interval = setInterval(() => {
         setSecondsRemaining(prev => {
@@ -126,6 +128,7 @@ export default function VirtualStudyLibrary() {
         });
       }, 1000);
     } else if (secondsRemaining === 0 && isRunning) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Transition once when the running timer completes.
       setIsRunning(false);
       setSessionCompleted(true);
       const updatedHours = parseFloat((totalHours + timerMode / 60).toFixed(1));
@@ -137,7 +140,7 @@ export default function VirtualStudyLibrary() {
         saveUserSession(user);
       } catch {}
     }
-    return () => clearInterval(interval);
+    return () => { if (interval) clearInterval(interval); };
   }, [isRunning, secondsRemaining, timerMode, totalHours]);
 
   // Wellness nudge logic — triggers every 20 minutes (eyes) and 45 minutes (stretch+water)
@@ -290,7 +293,7 @@ export default function VirtualStudyLibrary() {
           ].map(preset => (
             <button
               key={preset.mins}
-              onClick={() => setTimerPreset(preset.mins as any)}
+              onClick={() => setTimerPreset(preset.mins as 25 | 45 | 60)}
               className={`px-3 py-1.5 rounded-xl text-xs font-bold transition border ${
                 timerMode === preset.mins
                   ? 'bg-teal-500 text-slate-950 border-teal-400 shadow-md'

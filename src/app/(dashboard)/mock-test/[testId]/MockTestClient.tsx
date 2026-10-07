@@ -1,4 +1,6 @@
 'use client';
+import { useStore } from '@/lib/store';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -38,13 +40,15 @@ import {
 export default function MockTest({ testId }: { testId?: string }) {
   const router = useRouter();
 
+  const deadlineRef = useRef(0);
+  const attemptKeyRef = useRef('');
   const submitRef = useRef<() => void>(() => {});
   const submittingRef = useRef(false);
   const [loaded, setLoaded] = useState(false);
   const [qIndex, setQIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<Record<string, string>>({});
   const [markedForReview, setMarkedForReview] = useState<Record<string, boolean>>({});
-  const [lang, setLang] = useState<'hi' | 'pa' | 'en'>('hi');
+  const { language: lang, setLanguage: setLang } = useStore();
   const [mode, setMode] = useState<'exam' | 'flip'>('exam');
   const [isFlipped, setIsFlipped] = useState(false);
   const [srsSummary, setSrsSummary] = useState({ due: 0, new_: 0, learning: 0, review: 0 });
@@ -55,6 +59,7 @@ export default function MockTest({ testId }: { testId?: string }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [activeExamId, setActiveExamId] = useState<string>('master-cadre-sst');
   const [activeDifficulty, setActiveDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
+  const [sourceConfig, setSourceConfig] = useState({ count: 50, pyq20Years: false, pyqOnly: false });
   const [loadError, setLoadError] = useState(false);
 
   // Initialize test configuration and questions
@@ -71,7 +76,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     if (typeof window !== 'undefined') {
       const searchParams = new URLSearchParams(window.location.search);
       if (searchParams.get('exam')) examId = searchParams.get('exam')!;
-      if (searchParams.get('diff')) difficulty = searchParams.get('diff') as any;
+      if (searchParams.get('diff')) difficulty = searchParams.get('diff') as 'easy' | 'medium' | 'hard';
       if (searchParams.get('count')) {
         const parsed = parseInt(searchParams.get('count')!, 10);
         if (!isNaN(parsed)) count = parsed;
@@ -80,7 +85,7 @@ export default function MockTest({ testId }: { testId?: string }) {
         pyq20Years = true;
       }
       if (searchParams.get('mode') === 'flip' || searchParams.get('mode') === 'exam') {
-        requestedMode = searchParams.get('mode') as any;
+        requestedMode = searchParams.get('mode') as 'exam' | 'flip';
       }
     }
 
@@ -103,10 +108,10 @@ export default function MockTest({ testId }: { testId?: string }) {
 
     // 3. Override with custom session config if present
     try {
-      const storedConfig = sessionStorage.getItem('examsathi_test_config');
+      const storedConfig = studyStorage.getItem('examsathi_test_config');
       if (storedConfig) {
         const parsed = JSON.parse(storedConfig);
-        sessionStorage.removeItem('examsathi_test_config');
+        studyStorage.removeItem('examsathi_test_config');
         if (parsed.topicId) topicId = parsed.topicId;
         if (parsed.count) count = parsed.count;
         if (parsed.mode) requestedMode = parsed.mode;
@@ -124,6 +129,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     if (query.has('exam')) examId = query.get('exam') || undefined;
     if (query.has('diff')) difficulty = ['easy', 'medium', 'hard'].includes(query.get('diff') || '') ? query.get('diff') as 'easy' | 'medium' | 'hard' : 'all';
     if (query.has('count')) count = Math.max(1, Math.min(150, Number(query.get('count')) || 50));
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
     setMode(requestedMode);
     if (examId) setActiveExamId(examId);
     setActiveDifficulty(difficulty);
@@ -144,6 +150,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       setTestTitle(`Master Cadre & State 50 Qs CBT Simulator${diffLabel}`);
     }
 
+    setSourceConfig({ count, pyq20Years, pyqOnly });
     // 5. Fetch questions from Question Bank Engine
     let loadedQuestions = getTestQuestions({ 
       topicId, 
@@ -156,34 +163,55 @@ export default function MockTest({ testId }: { testId?: string }) {
     // Check custom AI-generated question drill from sessionStorage
     if (topicId === 'ai-custom') {
       try {
-        const rawCustom = sessionStorage.getItem('examsathi_custom_cbt_questions');
+        const rawCustom = studyStorage.getItem('examsathi_custom_cbt_questions');
         if (rawCustom) {
           const parsed = JSON.parse(rawCustom);
           if (Array.isArray(parsed) && parsed.length > 0) {
             loadedQuestions = parsed;
-            setTestTitle(`AI Practice Drill — ${parsed.length} Questions (Custom Notes)`);
+            setActiveExamId('custom-notes');
+            setTestTitle(`Notes Practice Drill — ${parsed.length} Questions (Custom Notes)`);
           }
         }
       } catch {}
     }
 
-    // Failsafe fallback: if no topic-specific questions exist, load standard 50-Qs CBT drill
-    if (!loadedQuestions || loadedQuestions.length === 0) {
-      loadedQuestions = getTestQuestions({ topicId: 'all', count: 50 });
-    }
-
     if (loadedQuestions && loadedQuestions.length > 0) {
-      setQuestions(loadedQuestions);
+      const reviewId = query.get('review');
+    if (reviewId) {
+      try {
+        const saved = JSON.parse(studyStorage.getItem(`examsathi_result_${reviewId}`) || 'null');
+        if (saved?.questions?.length) {
+          loadedQuestions.splice(0, loadedQuestions.length, ...saved.questions);
+          setTestTitle(saved.testTitle);
+        }
+      } catch { /* Invalid saved review is ignored. */ }
+    }
+    setQuestions(loadedQuestions);
       setLoaded(true);
       setLoadError(false);
       const allocatedSeconds = Math.max(300, loadedQuestions.length * 54);
-      setSecondsRemaining(allocatedSeconds);
       setTotalTimeSeconds(allocatedSeconds);
+      setSecondsRemaining(allocatedSeconds);
+      deadlineRef.current = Date.now() + allocatedSeconds * 1000;
+      attemptKeyRef.current = `examsathi_active_attempt_${testId}_${window.location.search}`;
+      if (requestedMode === 'exam' && !query.has('review')) {
+        try {
+          const saved = JSON.parse(studyStorage.getItem(attemptKeyRef.current) || 'null');
+          if (saved?.questions?.length && Number.isFinite(saved.deadline) && Number.isFinite(saved.totalTime)) {
+            setQuestions(saved.questions);
+            setUserAnswers(saved.answers || {});
+            setMarkedForReview(saved.marked || {});
+            setQIndex(Math.min(saved.index || 0, saved.questions.length - 1));
+            setTotalTimeSeconds(saved.totalTime);
+            deadlineRef.current = saved.deadline;
+            setSecondsRemaining(Math.max(0, Math.ceil((saved.deadline - Date.now()) / 1000)));
+          }
+        } catch { /* A corrupt draft starts a fresh attempt. */ }
+      }
     } else {
-      const fallbackTimer = setTimeout(() => {
-        setLoadError(true);
-      }, 2000);
-      return () => clearTimeout(fallbackTimer);
+      setQuestions([]);
+      setLoaded(true);
+      setLoadError(false);
     }
   }, [testId]);
 
@@ -191,6 +219,7 @@ export default function MockTest({ testId }: { testId?: string }) {
   useEffect(() => {
     if (mode !== 'flip' || questions.length === 0) return;
     const ids = questions.map(q => q.id);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
     setSrsSummary(getSRSSummary(ids));
   }, [mode, questions]);
 
@@ -198,19 +227,19 @@ export default function MockTest({ testId }: { testId?: string }) {
   useEffect(() => {
     if (mode !== 'exam' || questions.length === 0) return;
 
-    const timer = setInterval(() => {
-      setSecondsRemaining(prev => {
-        if (prev <= 1) {
-          clearInterval(timer);
-          submitRef.current();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
+    const tick = () => {
+      const remaining = Math.max(0, Math.ceil((deadlineRef.current - Date.now()) / 1000));
+      setSecondsRemaining(remaining);
+      if (remaining === 0) submitRef.current();
+    };
+    const timer = setInterval(tick, 1000);
     return () => clearInterval(timer);
   }, [mode, questions]);
+
+  useEffect(() => {
+    if (!loaded || mode !== 'exam' || !questions.length || submittingRef.current) return;
+    try { studyStorage.setItem(attemptKeyRef.current, JSON.stringify({ questions, answers: userAnswers, marked: markedForReview, index: qIndex, deadline: deadlineRef.current, totalTime: totalTimeSeconds })); } catch { /* Storage may be unavailable; the current attempt remains playable. */ }
+  }, [loaded, mode, questions, userAnswers, markedForReview, qIndex, totalTimeSeconds]);
 
   const formatTimer = (totalSeconds: number) => {
     const mins = Math.floor(totalSeconds / 60);
@@ -254,10 +283,10 @@ export default function MockTest({ testId }: { testId?: string }) {
     );
     const config = {
       marksPerQuestion: 1,
-      negativeMarking: examMeta?.negativeMarking ?? 0.25,
+      negativeMarking: activeExamId === 'custom-notes' ? 0 : examMeta?.negativeMarking ?? 0.25,
       totalQuestions: questions.length,
     };
-    const timeTaken = totalTimeSeconds - secondsRemaining;
+    const timeTaken = Math.min(totalTimeSeconds, Math.max(0, totalTimeSeconds - Math.ceil((deadlineRef.current - Date.now()) / 1000)));
     const scored = computeScore(correctAnswers, userAnswers, config, timeTaken);
     const topicBreakdown = computeTopicBreakdown(
       questions.map(q => ({ id: q.id, topicId: q.topicId || 'general' })),
@@ -269,6 +298,9 @@ export default function MockTest({ testId }: { testId?: string }) {
     const predictedRank = calculatePredictedRank(scored.percentage, scored.rawScore, questions.length);
 
     const resultPayload = {
+      attemptId: crypto.randomUUID(),
+      scoringConfig: config,
+      sourceConfig,
       testId: testId || 'custom',
       testTitle,
       examId: activeExamId,
@@ -290,15 +322,16 @@ export default function MockTest({ testId }: { testId?: string }) {
     };
 
     try {
-      sessionStorage.setItem('examsathi_last_result', JSON.stringify(resultPayload));
-      localStorage.setItem('examsathi_last_result', JSON.stringify(resultPayload));
+      studyStorage.setItem('examsathi_last_result', JSON.stringify(resultPayload));
+      studyStorage.setItem(`examsathi_result_${resultPayload.attemptId}`, JSON.stringify(resultPayload));
     } catch {}
 
     // Append to history
     try {
-      const historyRaw = localStorage.getItem('examsathi_mock_history') || '[]';
+      const historyRaw = studyStorage.getItem('examsathi_mock_history') || '[]';
       const history = JSON.parse(historyRaw);
       history.unshift({
+        attemptId: resultPayload.attemptId,
         testTitle: testTitle,
         completedAt: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
         percentage: scored.percentage,
@@ -306,21 +339,22 @@ export default function MockTest({ testId }: { testId?: string }) {
         total: scored.total,
       });
       // Keep only last 20 attempts
-      localStorage.setItem('examsathi_mock_history', JSON.stringify(history.slice(0, 20)));
+      studyStorage.setItem('examsathi_mock_history', JSON.stringify(history.slice(0, 20)));
     } catch {}
 
-    router.push(`/results/${testId || 'latest'}`);
+    studyStorage.removeItem(attemptKeyRef.current);
+    router.push(`/results/latest/?attempt=${resultPayload.attemptId}`);
   };
 
-  submitRef.current = handleSubmitTest;
+  useEffect(() => { submitRef.current = handleSubmitTest; });
 
   if (loaded && questions.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4 p-6 text-center">
         <div className="text-5xl">📚</div>
-        <h2 className="text-white font-bold text-lg">Questions Coming Soon</h2>
+        <h2 className="text-white font-bold text-lg">No questions match these filters</h2>
         <p className="text-slate-400 text-sm max-w-xs">
-          We are building the question bank for this topic. Check back soon, or try a different topic.
+          No matching questions are available yet. Choose a different difficulty or practice pool; we never fill this set with unrelated questions.
         </p>
         <Link href="/mock-test" className="bg-teal-500 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-teal-400 transition">
           ← Browse All Mock Tests
@@ -431,7 +465,7 @@ export default function MockTest({ testId }: { testId?: string }) {
             {testTitle}
           </h1>
           <p className="text-[10px] text-slate-400">
-            {questions.length} Questions • {mode === 'exam' ? 'Exam Mode (-0.25 Mark)' : '3D Flip Card Practice'}
+            {questions.length} Questions • {mode === 'exam' ? 'Exam Mode (Practice scoring)' : '3D Flip Card Practice'}
           </p>
         </div>
 
@@ -557,6 +591,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                 return (
                   <button 
                     key={key} 
+                    aria-pressed={isSelected}
                     onClick={() => handleSelectOption(key)}
                     className={`w-full text-left p-3.5 rounded-xl border flex items-center gap-3 transition-all ${
                       isSelected 

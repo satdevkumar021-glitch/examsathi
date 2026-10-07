@@ -1984,13 +1984,36 @@ export const HARYANA_EXAMS: Exam[] = [
 // ============================================================
 // EXPORTS & HELPERS
 // ============================================================
+function mergeExamCatalog(exams: Exam[]): Exam[] {
+  const merged = new Map<string, Exam>();
+  for (const exam of exams) {
+    const previous = merged.get(exam.id);
+    if (!previous) { merged.set(exam.id, { ...exam, subjects: [...exam.subjects] }); continue; }
+    for (const subject of exam.subjects) {
+      const existing = previous.subjects.find(s => s.id === subject.id);
+      if (!existing) { previous.subjects.push(subject); continue; }
+      existing.chapters = [...existing.chapters];
+      for (const chapter of subject.chapters) {
+        const current = existing.chapters.find(c => c.id === chapter.id);
+        if (!current) { existing.chapters.push(chapter); continue; }
+        current.topics = [...current.topics];
+        for (const topic of chapter.topics) {
+          const known = current.topics.find(t => t.id === topic.id);
+          if (!known) current.topics.push(topic);
+          else known.subtopics = Array.from(new Set([...known.subtopics, ...topic.subtopics]));
+        }
+      }
+    }
+  }
+  return Array.from(merged.values());
+}
 export const ALL_EXAMS: Record<State, Exam[]> = {
-  punjab: [...PUNJAB_EXAMS, ...PUNJAB_ADDITIONAL_EXAMS],
-  rajasthan: [...RAJASTHAN_EXAMS, ...RAJASTHAN_ADDITIONAL_EXAMS],
-  haryana: HARYANA_EXAMS,
-  delhi: DELHI_EXAMS,
-  central: CENTRAL_EXAMS,
-  defence: DEFENCE_EXAMS,
+  punjab: mergeExamCatalog([...PUNJAB_EXAMS, ...PUNJAB_ADDITIONAL_EXAMS]),
+  rajasthan: mergeExamCatalog([...RAJASTHAN_EXAMS, ...RAJASTHAN_ADDITIONAL_EXAMS]),
+  haryana: mergeExamCatalog(HARYANA_EXAMS),
+  delhi: mergeExamCatalog(DELHI_EXAMS),
+  central: mergeExamCatalog(CENTRAL_EXAMS),
+  defence: mergeExamCatalog(DEFENCE_EXAMS),
 };
 
 export const EXAMS = ALL_EXAMS;

@@ -1,4 +1,5 @@
 'use client';
+import { setStorageAccount } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import { createClient } from '@/lib/supabase/client';
 import { isSupabaseConfigured } from '@/lib/supabase/config';
@@ -18,7 +19,7 @@ export function useAuth(): AuthState {
   const [loading, setLoading] = useState(isSupabaseConfigured);
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
-    if (!isSupabaseConfigured()) return;
+    if (!isSupabaseConfigured()) { setStorageAccount(null); return; }
     let active = true;
     let revision = 0;
     let unsubscribe: (() => void) | undefined;
@@ -28,16 +29,17 @@ export function useAuth(): AuthState {
         const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, next) => {
           revision++;
           if (!active) return;
-          setSession(next); setUser(next?.user ?? null); setError(null); setLoading(false);
+          setStorageAccount(next?.user.id || null); setSession(next); setUser(next?.user ?? null); setError(null); setLoading(false);
         });
         unsubscribe = () => subscription.unsubscribe();
         const initialRevision = revision;
         const { data, error: sessionError } = await supabase.auth.getSession();
         if (!active || revision !== initialRevision) return;
         if (sessionError) throw sessionError;
-        setSession(data.session); setUser(data.session?.user ?? null); setLoading(false);
+        setStorageAccount(data.session?.user.id || null); setSession(data.session); setUser(data.session?.user ?? null); setLoading(false);
       } catch {
         if (!active) return;
+        setStorageAccount(null);
         setError('Unable to restore your account session. Please try signing in again.');
         setLoading(false);
       }

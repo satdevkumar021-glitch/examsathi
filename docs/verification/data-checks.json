@@ -1,430 +1,1122 @@
 {
-  "questionCount": 405,
-  "lessonCount": 62,
+  "questionCount": 505,
+  "lessonCount": 72,
   "checks": [
     {
       "exam": "master-cadre-sst",
       "diff": "all",
       "pyq": false,
-      "count": 50
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "master-cadre-sst",
       "diff": "all",
       "pyq": true,
-      "count": 50
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "master-cadre-sst",
       "diff": "easy",
       "pyq": false,
-      "count": 43
+      "count": 43,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "master-cadre-sst",
       "diff": "easy",
       "pyq": true,
-      "count": 43
+      "count": 43,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "master-cadre-sst",
       "diff": "medium",
       "pyq": false,
-      "count": 50
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "master-cadre-sst",
       "diff": "medium",
       "pyq": true,
-      "count": 50
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "master-cadre-sst",
       "diff": "hard",
       "pyq": false,
-      "count": 4
+      "count": 4,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "master-cadre-sst",
       "diff": "hard",
       "pyq": true,
-      "count": 4
+      "count": 4,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "clerk-psssb",
       "diff": "all",
       "pyq": false,
-      "count": 9
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "clerk-psssb",
       "diff": "all",
       "pyq": true,
-      "count": 9
+      "count": 11,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "clerk-psssb",
       "diff": "easy",
       "pyq": false,
-      "count": 6
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "clerk-psssb",
       "diff": "easy",
       "pyq": true,
-      "count": 6
+      "count": 7,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "clerk-psssb",
       "diff": "medium",
       "pyq": false,
-      "count": 2
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "clerk-psssb",
       "diff": "medium",
       "pyq": true,
-      "count": 2
+      "count": 3,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "clerk-psssb",
       "diff": "hard",
       "pyq": false,
-      "count": 1
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "clerk-psssb",
       "diff": "hard",
       "pyq": true,
-      "count": 1
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ett-punjab",
       "diff": "all",
       "pyq": false,
-      "count": 5
+      "count": 5,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ett-punjab",
       "diff": "all",
       "pyq": true,
-      "count": 5
+      "count": 5,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ett-punjab",
       "diff": "easy",
       "pyq": false,
-      "count": 1
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ett-punjab",
       "diff": "easy",
       "pyq": true,
-      "count": 1
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ett-punjab",
       "diff": "medium",
       "pyq": false,
-      "count": 3
+      "count": 3,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ett-punjab",
       "diff": "medium",
       "pyq": true,
-      "count": 3
+      "count": 3,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ett-punjab",
       "diff": "hard",
       "pyq": false,
-      "count": 1
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ett-punjab",
       "diff": "hard",
       "pyq": true,
-      "count": 1
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "police-punjab",
       "diff": "all",
       "pyq": false,
-      "count": 2
+      "count": 25,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "police-punjab",
       "diff": "all",
       "pyq": true,
-      "count": 2
+      "count": 25,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "police-punjab",
       "diff": "easy",
       "pyq": false,
-      "count": 2
+      "count": 7,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "police-punjab",
       "diff": "easy",
       "pyq": true,
-      "count": 2
+      "count": 7,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "police-punjab",
       "diff": "medium",
       "pyq": false,
-      "count": 0
+      "count": 12,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "police-punjab",
       "diff": "medium",
       "pyq": true,
-      "count": 0
+      "count": 12,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "police-punjab",
       "diff": "hard",
       "pyq": false,
-      "count": 0
+      "count": 6,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "police-punjab",
       "diff": "hard",
       "pyq": true,
-      "count": 0
+      "count": 6,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "patwari-punjab",
       "diff": "all",
       "pyq": false,
-      "count": 3
+      "count": 10,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "patwari-punjab",
       "diff": "all",
       "pyq": true,
-      "count": 3
+      "count": 10,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "patwari-punjab",
       "diff": "easy",
       "pyq": false,
-      "count": 2
+      "count": 3,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "patwari-punjab",
       "diff": "easy",
       "pyq": true,
-      "count": 2
+      "count": 3,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "patwari-punjab",
       "diff": "medium",
       "pyq": false,
-      "count": 1
+      "count": 5,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "patwari-punjab",
       "diff": "medium",
       "pyq": true,
-      "count": 1
+      "count": 5,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "patwari-punjab",
       "diff": "hard",
       "pyq": false,
-      "count": 0
+      "count": 2,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "patwari-punjab",
       "diff": "hard",
       "pyq": true,
-      "count": 0
+      "count": 2,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "reet-l2",
       "diff": "all",
       "pyq": false,
-      "count": 3
+      "count": 33,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "reet-l2",
       "diff": "all",
       "pyq": true,
-      "count": 3
+      "count": 33,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "reet-l2",
       "diff": "easy",
       "pyq": false,
-      "count": 3
+      "count": 11,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "reet-l2",
       "diff": "easy",
       "pyq": true,
-      "count": 3
+      "count": 11,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "reet-l2",
       "diff": "medium",
       "pyq": false,
-      "count": 0
+      "count": 16,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "reet-l2",
       "diff": "medium",
       "pyq": true,
-      "count": 0
+      "count": 16,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "reet-l2",
       "diff": "hard",
       "pyq": false,
-      "count": 0
+      "count": 6,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "reet-l2",
       "diff": "hard",
       "pyq": true,
-      "count": 0
+      "count": 6,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ctet-p2",
       "diff": "all",
       "pyq": false,
-      "count": 1
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ctet-p2",
       "diff": "all",
       "pyq": true,
-      "count": 1
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ctet-p2",
       "diff": "easy",
       "pyq": false,
-      "count": 1
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ctet-p2",
       "diff": "easy",
       "pyq": true,
-      "count": 1
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ctet-p2",
       "diff": "medium",
       "pyq": false,
-      "count": 0
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ctet-p2",
       "diff": "medium",
       "pyq": true,
-      "count": 0
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ctet-p2",
       "diff": "hard",
       "pyq": false,
-      "count": 0
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "exam": "ctet-p2",
       "diff": "hard",
       "pyq": true,
-      "count": 0
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "pstet-l2",
+      "diff": "all",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "pstet-l2",
+      "diff": "all",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "pstet-l2",
+      "diff": "easy",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "pstet-l2",
+      "diff": "easy",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "pstet-l2",
+      "diff": "medium",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "pstet-l2",
+      "diff": "medium",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "pstet-l2",
+      "diff": "hard",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "pstet-l2",
+      "diff": "hard",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ctet-p1",
+      "diff": "all",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ctet-p1",
+      "diff": "all",
+      "pyq": true,
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ctet-p1",
+      "diff": "easy",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ctet-p1",
+      "diff": "easy",
+      "pyq": true,
+      "count": 1,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ctet-p1",
+      "diff": "medium",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ctet-p1",
+      "diff": "medium",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ctet-p1",
+      "diff": "hard",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ctet-p1",
+      "diff": "hard",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "htet-l1",
+      "diff": "all",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "htet-l1",
+      "diff": "all",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "htet-l1",
+      "diff": "easy",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "htet-l1",
+      "diff": "easy",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "htet-l1",
+      "diff": "medium",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "htet-l1",
+      "diff": "medium",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "htet-l1",
+      "diff": "hard",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "htet-l1",
+      "diff": "hard",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-mts",
+      "diff": "all",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-mts",
+      "diff": "all",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-mts",
+      "diff": "easy",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-mts",
+      "diff": "easy",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-mts",
+      "diff": "medium",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-mts",
+      "diff": "medium",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-mts",
+      "diff": "hard",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-mts",
+      "diff": "hard",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-cgl",
+      "diff": "all",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-cgl",
+      "diff": "all",
+      "pyq": true,
+      "count": 20,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-cgl",
+      "diff": "easy",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-cgl",
+      "diff": "easy",
+      "pyq": true,
+      "count": 6,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-cgl",
+      "diff": "medium",
+      "pyq": false,
+      "count": 50,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-cgl",
+      "diff": "medium",
+      "pyq": true,
+      "count": 10,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-cgl",
+      "diff": "hard",
+      "pyq": false,
+      "count": 4,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "ssc-cgl",
+      "diff": "hard",
+      "pyq": true,
+      "count": 4,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "haryana-htet",
+      "diff": "all",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "haryana-htet",
+      "diff": "all",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "haryana-htet",
+      "diff": "easy",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "haryana-htet",
+      "diff": "easy",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "haryana-htet",
+      "diff": "medium",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "haryana-htet",
+      "diff": "medium",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "haryana-htet",
+      "diff": "hard",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "haryana-htet",
+      "diff": "hard",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "delhi-police",
+      "diff": "all",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "delhi-police",
+      "diff": "all",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "delhi-police",
+      "diff": "easy",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "delhi-police",
+      "diff": "easy",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "delhi-police",
+      "diff": "medium",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "delhi-police",
+      "diff": "medium",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "delhi-police",
+      "diff": "hard",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "delhi-police",
+      "diff": "hard",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "army-agniveer",
+      "diff": "all",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "army-agniveer",
+      "diff": "all",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "army-agniveer",
+      "diff": "easy",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "army-agniveer",
+      "diff": "easy",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "army-agniveer",
+      "diff": "medium",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "army-agniveer",
+      "diff": "medium",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "army-agniveer",
+      "diff": "hard",
+      "pyq": false,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
+    },
+    {
+      "exam": "army-agniveer",
+      "diff": "hard",
+      "pyq": true,
+      "count": 0,
+      "wrongDifficulty": 0,
+      "generatedInPyq": 0
     },
     {
       "topic": "ett-child-pedagogy",
-      "count": 3
+      "count": 34,
+      "returnedTopicIds": [
+        "child-development-pedagogy",
+        "ett-child-pedagogy"
+      ]
     },
     {
       "topic": "ett-evs-science",
-      "count": 1
+      "count": 1,
+      "returnedTopicIds": [
+        "ett-evs-science"
+      ]
     },
     {
       "topic": "ett-primary-math",
-      "count": 1
+      "count": 50,
+      "returnedTopicIds": [
+        "ett-primary-math",
+        "mathematics-core"
+      ]
     },
     {
       "topic": "psssb-computer-it",
-      "count": 2
+      "count": 2,
+      "returnedTopicIds": [
+        "psssb-computer-it"
+      ]
     },
     {
       "topic": "psssb-raavi-typing",
-      "count": 1
+      "count": 1,
+      "returnedTopicIds": [
+        "psssb-raavi-typing"
+      ]
     },
     {
       "topic": "punjab-history",
-      "count": 32
+      "count": 22,
+      "returnedTopicIds": [
+        "punjab-history",
+        "sst-punjab-history-deep"
+      ]
     },
     {
       "topic": "modern-india",
-      "count": 21
+      "count": 19,
+      "returnedTopicIds": [
+        "modern-india",
+        "sst-national-movement"
+      ]
     },
     {
       "topic": "ancient-india",
-      "count": 10
+      "count": 10,
+      "returnedTopicIds": [
+        "sst-harappa"
+      ]
     },
     {
       "topic": "medieval-india",
-      "count": 9
+      "count": 5,
+      "returnedTopicIds": [
+        "sst-medieval-india"
+      ]
     },
     {
       "topic": "world-history",
-      "count": 16
+      "count": 12,
+      "returnedTopicIds": [
+        "world-history",
+        "sst-world-history-modern"
+      ]
     },
     {
       "topic": "fundamental-rights",
-      "count": 22
+      "count": 30,
+      "returnedTopicIds": [
+        "fundamental-rights",
+        "sst-fundamental-rights"
+      ]
     },
     {
       "topic": "parliament",
-      "count": 9
+      "count": 10,
+      "returnedTopicIds": [
+        "sst-legislature"
+      ]
     },
     {
       "topic": "judiciary",
-      "count": 8
+      "count": 11,
+      "returnedTopicIds": [
+        "sst-judiciary",
+        "judiciary"
+      ]
     },
     {
       "topic": "local-govt",
-      "count": 8
+      "count": 11,
+      "returnedTopicIds": [
+        "sst-federal-local",
+        "local-govt"
+      ]
     },
     {
       "topic": "punjab-geography",
-      "count": 18
+      "count": 18,
+      "returnedTopicIds": [
+        "punjab-geography",
+        "sst-geo-punjab"
+      ]
     },
     {
       "topic": "physical-geography",
-      "count": 9
+      "count": 3,
+      "returnedTopicIds": [
+        "sst-india-geography"
+      ]
     },
     {
       "topic": "indian-economy",
-      "count": 8
+      "count": 4,
+      "returnedTopicIds": [
+        "indian-economy",
+        "sst-indian-economy-deep"
+      ]
     },
     {
       "topic": "science-concepts",
-      "count": 0
+      "count": 8,
+      "returnedTopicIds": [
+        "science-concepts"
+      ]
     },
     {
       "topic": "mathematics-core",
-      "count": 8
+      "count": 50,
+      "returnedTopicIds": [
+        "mathematics-core",
+        "ett-primary-math"
+      ]
     },
     {
       "topic": "punjabi-grammar",
-      "count": 0
+      "count": 1,
+      "returnedTopicIds": [
+        "psssb-raavi-typing"
+      ]
     }
   ],
   "failures": [],
   "invalidAnswers": [],
-  "duplicateIds": [
-    "q-pol-1",
-    "q-eco-1"
-  ],
+  "duplicateIds": [],
   "sampleScore": {
     "total": 3,
     "correct": 1,
@@ -445,7 +1137,7 @@
     "scheduledDays": 2,
     "reps": 1,
     "lapses": 0,
-    "lastReview": "2026-10-06",
-    "dueDate": "2026-10-08"
+    "lastReview": "2026-10-07",
+    "dueDate": "2026-10-09"
   }
 }

@@ -1,4 +1,5 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -76,9 +77,10 @@ export default function Profile() {
   useEffect(() => {
     try {
       const u = getStoredUser();
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
       setUser(u);
 
-      const raw = localStorage.getItem('examsathi_saved_review_notes');
+      const raw = studyStorage.getItem('examsathi_saved_review_notes');
       if (raw) {
         setSavedNotes(JSON.parse(raw));
       }
@@ -90,7 +92,7 @@ export default function Profile() {
         setBookmarkedQuestions(getQuestionsByIds(u.bookmarkedQuestionIds));
       }
 
-      const historyRaw = localStorage.getItem('examsathi_mock_history');
+      const historyRaw = studyStorage.getItem('examsathi_mock_history');
       if (historyRaw) {
         setMockHistory(JSON.parse(historyRaw));
       }
@@ -102,7 +104,7 @@ export default function Profile() {
     const updated = savedNotes.filter(n => n.id !== id);
     setSavedNotes(updated);
     try {
-      localStorage.setItem('examsathi_saved_review_notes', JSON.stringify(updated));
+      studyStorage.setItem('examsathi_saved_review_notes', JSON.stringify(updated));
     } catch {}
     if (selectedNote?.id === id) setSelectedNote(null);
   };

@@ -3,6 +3,7 @@
 // Detailed, Academic-Grade Study Material for Punjab, Rajasthan & Central Exams
 // ============================================================
 
+import { SUPPLEMENTAL_LESSONS } from './lessons/supplemental';
 import { WORLD_HISTORY_LESSONS } from './lessons/world_history';
 import { POLITY_EXTRA_LESSONS } from './lessons/polity_extra';
 import { SST_MISSING_LESSONS } from './lessons/sst_missing';
@@ -1924,6 +1925,7 @@ export const ALL_LESSONS: Record<string, Lesson> = {
   ...RAJASTHAN_LESSONS,
   ...REFERENCE_SST_LESSONS,
   ...SST_MISSING_LESSONS,
+  ...SUPPLEMENTAL_LESSONS,
 };
 
 export const LESSONS = ALL_LESSONS;
@@ -1961,8 +1963,6 @@ export const TOPIC_ALIASES: Record<string, string> = {
   'motion': 'physics-concepts',
   'cell': 'biology-concepts',
   'electricity': 'physics-concepts',
-  'percent': 'mathematics-core',
-  'ratio': 'mathematics-core',
   'constitution': 'sst-constitution',
   'agreement': 'english-grammar-lit',
   'sandhi': 'hindi-vyakaran',
@@ -1972,10 +1972,13 @@ export const TOPIC_ALIASES: Record<string, string> = {
   'psssb-raavi-typing': 'punjabi-grammar-lit',
   'punjabi-clerk-prep': 'punjabi-grammar-lit',
   'ett-evs-science': 'environment-ecology',
-  'series': 'quantitative-aptitude',
+  'series': 'ssc-cgl-reasoning',
+  'punjabi-grammar': 'punjabi-grammar-lit',
+  'english-practice': 'english-grammar-lit',
+  'ett-primary-math': 'mathematics-core',
 };
 
-export function getLessonByTopicId(topicId: string): Lesson {
+export function getLessonByTopicId(topicId: string): Lesson | undefined {
   if (LESSONS[topicId]) return LESSONS[topicId];
   const alias = TOPIC_ALIASES[topicId];
   if (alias && LESSONS[alias]) return LESSONS[alias];
@@ -1985,7 +1988,7 @@ export function getLessonByTopicId(topicId: string): Lesson {
     if (target === topicId && LESSONS[key]) return LESSONS[key];
   }
 
-  return LESSONS['modern-india'];
+  return undefined;
 }
 
 

@@ -1,6 +1,9 @@
-// Server-side Supabase client (for API routes and Server Components)
-// NOTE: This is a placeholder for when Next.js API routes are added.
-// The static export currently does not support server-side rendering.
-// Once deployed to Vercel, this will use cookies() from next/headers.
-
-export { createClient } from './client';
+import 'server-only';
+import { createClient as createSupabaseClient } from '@supabase/supabase-js';
+/** Request-scoped server client. Never reuse sessions across requests. */
+export function createClient(token?: string) {
+  return createSupabaseClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
+    auth: { persistSession: false, autoRefreshToken: false },
+    global: token ? { headers: { Authorization: `Bearer ${token}` } } : undefined,
+  });
+}

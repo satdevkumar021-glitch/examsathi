@@ -5,6 +5,7 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  { files: ["scripts/*.js"], rules: { "@typescript-eslint/no-require-imports": "off" } }, // Node CommonJS entry points.
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
@@ -12,6 +13,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    "public/pdf.worker.min.mjs", // Vendored PDF.js worker; lint source package, not its minified build.
   ]),
 ]);
 

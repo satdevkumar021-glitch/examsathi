@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { publicPath } from '@/lib/paths';
 
 export const metadata: Metadata = {
   title: {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   },
   description: '100% Free, High-Fidelity Exam Preparation Platform for Punjab (Master Cadre, ETT, Clerk, Police, Patwari), Rajasthan (REET, Patwar), and Central Exams (CTET, SSC). Real CBT drills, 20-Year PYQ archives, and Raavi typing benchmark.',
   keywords: ['Punjab Master Cadre', 'PSTET', 'ETT Punjab', 'PSSSB Clerk', 'Raavi Typing', 'REET', 'CTET', 'Free Mock Test', 'ਪੰਜਾਬੀ ਟਾਈਪਿੰਗ'],
-  manifest: '/manifest.json',
+  manifest: publicPath('/manifest.json'),
   openGraph: {
     title: 'ExamSathi — Free Exam Preparation Platform',
     description: 'Free study material, MCQs, mock tests and flip cards for Punjab, Rajasthan and Central exams.',
@@ -51,7 +52,7 @@ export default function RootLayout({
             __html: `
               if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
-                  navigator.serviceWorker.register('/sw.js').catch(function() {});
+                  navigator.serviceWorker.register('${publicPath('/sw.js')}').catch(function() {});
                 });
               }
             `,

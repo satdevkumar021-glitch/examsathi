@@ -7,7 +7,6 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
 
 /**
  * Checks whether valid Supabase credentials are configured in environment variables
@@ -37,20 +36,4 @@ export function getSupabaseClient(): SupabaseClient | null {
     browserClient = createClient(supabaseUrl, supabaseAnonKey);
   }
   return browserClient;
-}
-
-/**
- * Returns elevated server-side admin client (using service role key)
- * WARNING: Never call this from client components!
- */
-export function getSupabaseAdminClient(): SupabaseClient | null {
-  if (!supabaseUrl || !supabaseServiceKey || supabaseUrl.includes('your-project-id')) {
-    return null;
-  }
-  return createClient(supabaseUrl, supabaseServiceKey, {
-    auth: {
-      autoRefreshToken: false,
-      persistSession: false,
-    },
-  });
 }

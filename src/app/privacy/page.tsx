@@ -44,7 +44,7 @@ export default function PrivacyPolicy() {
         
         <section>
           <h2 className="text-lg font-bold text-white">5. Contact</h2>
-          <p>For privacy concerns, data deletion requests, or questions: <a href="mailto:contact@examsathi.in" className="text-teal-400 hover:underline">contact@examsathi.in</a></p>
+          <p>For privacy concerns, data deletion requests, or questions: <a href="https://github.com/satdevkumar021-glitch/examsathi/issues" className="text-teal-400 hover:underline">Contact the project maintainer</a></p>
         </section>
       </div>
     </div>

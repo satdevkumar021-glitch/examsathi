@@ -13,11 +13,12 @@ try {
     renamed = true;
   }
 
+  fs.copyFileSync(path.join(rootDir, 'node_modules/pdfjs-dist/build/pdf.worker.min.mjs'), path.join(rootDir, 'public/pdf.worker.min.mjs'));
   console.log('Building static export for GitHub Pages...');
   execSync('STATIC_EXPORT=true npx next build --webpack', {
     cwd: rootDir,
     stdio: 'inherit',
-    env: { ...process.env, STATIC_EXPORT: 'true' },
+    env: { ...process.env, STATIC_EXPORT: 'true', NEXT_PUBLIC_STATIC_EXPORT: 'true' },
   });
   console.log('Static export build succeeded! Output in ./out');
 } finally {

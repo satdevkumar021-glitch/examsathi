@@ -33,42 +33,39 @@ export default function TypingPracticePage() {
   const [userInput, setUserInput] = useState('');
   const [timeLeft, setTimeLeft] = useState(600);
   const [isRunning, setIsRunning] = useState(false);
+  const [finishedElapsed, setFinishedElapsed] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const startedRef = useRef(0);
+  const finishedRef = useRef(0);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const targetText = PRACTICE_PASSAGES[lang][difficulty];
 
-  // Handle timer
+  // Compare against wall time so background tabs do not extend the test.
   useEffect(() => {
-    if (isRunning && timeLeft > 0) {
-      timerRef.current = setInterval(() => {
-        setTimeLeft(prev => {
-          if (prev <= 1) {
-            clearInterval(timerRef.current!);
-            setIsRunning(false);
-            setIsFinished(true);
-            return 0;
-          }
-          return prev - 1;
-        });
-      }, 1000);
-    }
-
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
-  }, [isRunning, timeLeft]);
+    if (!isRunning) return;
+    const timer = setInterval(() => {
+      const remaining = Math.max(0, testDuration - Math.floor((Date.now() - startedRef.current) / 1000));
+      setTimeLeft(remaining);
+      if (remaining === 0) { finishedRef.current = startedRef.current + testDuration * 1000; setFinishedElapsed(testDuration); setIsRunning(false); setIsFinished(true); }
+    }, 250);
+    return () => clearInterval(timer);
+  }, [isRunning, testDuration]);
 
   const handleStartTyping = (text: string) => {
     if (!isRunning && !isFinished && text.length > 0) {
+      startedRef.current = Date.now();
+      finishedRef.current = 0;
       setIsRunning(true);
     }
     setUserInput(text);
 
     // If candidate has completed full target passage
     if (text.length >= targetText.length) {
+      finishedRef.current = Date.now();
+      setFinishedElapsed(Math.max(0.001, (finishedRef.current - startedRef.current) / 1000));
       setIsRunning(false);
       setIsFinished(true);
       if (timerRef.current) clearInterval(timerRef.current);
@@ -77,6 +74,7 @@ export default function TypingPracticePage() {
 
   const handleReset = () => {
     if (timerRef.current) clearInterval(timerRef.current);
+    startedRef.current = 0; finishedRef.current = 0;
     setUserInput('');
     setTimeLeft(testDuration);
     setIsRunning(false);
@@ -87,13 +85,14 @@ export default function TypingPracticePage() {
   const handleDurationChange = (dur: number) => {
     setTestDuration(dur);
     setTimeLeft(dur);
+    startedRef.current = 0; finishedRef.current = 0;
     setUserInput('');
     setIsRunning(false);
     setIsFinished(false);
   };
 
   // Metrics calculation
-  const timeElapsed = testDuration - timeLeft;
+  const timeElapsed = isFinished ? finishedElapsed : testDuration - timeLeft;
   const timeInMinutes = timeElapsed / 60;
   const totalCharsTyped = userInput.length;
   // WPM: standard formula — (chars / 5) / minutes; 5 chars = 1 word
@@ -146,7 +145,7 @@ export default function TypingPracticePage() {
         <div className="flex items-center gap-2">
           <Award size={16} className="text-amber-400 shrink-0" />
           <span className="text-indigo-200">
-            <strong>Official PSSSB Benchmark:</strong> 30 WPM with &ge;92% Accuracy in 10 mins (Raavi Font)
+            <strong>Practice target:</strong> 30 WPM with &ge;92% Accuracy in 10 mins (Raavi Font)
           </span>
         </div>
       </div>
@@ -187,7 +186,7 @@ export default function TypingPracticePage() {
           <span className="text-[10px] text-slate-400 font-semibold block mb-1">Passage Length</span>
           <select 
             value={difficulty}
-            onChange={e => { setDifficulty(e.target.value as any); handleReset(); }}
+            onChange={e => { setDifficulty(e.target.value as typeof difficulty); handleReset(); }}
             className="w-full bg-slate-900 border border-slate-700 rounded p-1 text-slate-200 font-medium outline-none text-xs"
           >
             <option value="beginner">Short Warmup (~160 words)</option>
@@ -227,7 +226,7 @@ export default function TypingPracticePage() {
             </button>
           </div>
           {testDuration === 600 && (
-            <p className="text-[9px] text-amber-400 mt-1 text-center font-semibold">Punjab Clerk Benchmark — 30 WPM / 96%</p>
+            <p className="text-[9px] text-amber-400 mt-1 text-center font-semibold">Practice target — 30 WPM / 92%</p>
           )}
         </div>
       </div>
@@ -284,6 +283,8 @@ export default function TypingPracticePage() {
           ref={inputRef}
           value={userInput}
           disabled={isFinished}
+          onPaste={e => e.preventDefault()}
+          onDrop={e => e.preventDefault()}
           onChange={e => handleStartTyping(e.target.value)}
           placeholder={lang === 'punjabi' ? 'ਇੱਥੇ ਟਾਈਪ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ (ਟਾਈਪਿੰਗ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹੀ ਟਾਈਮਰ ਚੱਲ ਪਵੇਗਾ)...' : 'Start typing here (timer triggers automatically on first keystroke)...'}
           className="w-full bg-slate-800 border-2 border-slate-700 focus:border-teal-400 rounded-2xl p-4 text-white text-sm leading-relaxed outline-none transition h-36 resize-none disabled:opacity-60"
@@ -300,7 +301,7 @@ export default function TypingPracticePage() {
         <div className={`p-4 rounded-2xl border ${isPsssBQualified ? 'bg-emerald-950/60 border-emerald-500/50' : 'bg-rose-950/60 border-rose-500/50'} animate-fadeIn text-center space-y-2`}>
           <div className="text-2xl mb-1">{isPsssBQualified ? '🏆' : '⚠️'}</div>
           <h3 className="font-bold text-base text-white">
-            {isPsssBQualified ? 'Congratulations! You qualified PSSSB criteria!' : 'Keep practicing! Minimum 30 WPM & 92% accuracy needed.'}
+            {isPsssBQualified ? 'Practice target achieved. Check official test rules for your recruitment.' : 'Keep practicing toward 30 WPM and 92% accuracy.'}
           </h3>
           <p className="text-xs text-slate-300">
             Speed: <strong>{wpm} WPM</strong> | Accuracy: <strong>{accuracy}%</strong> | Chars: <strong>{totalCharsTyped}</strong>

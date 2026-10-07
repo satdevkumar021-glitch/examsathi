@@ -1,4 +1,5 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -25,6 +26,9 @@ import {
   Trash2
 } from 'lucide-react';
 import { generateMCQsFromNotes, checkAIQuota } from '@/lib/ai_gateway';
+import { extractDocumentText } from '@/lib/document-text';
+import { apiUrl } from '@/lib/paths';
+import { createClient } from '@/lib/supabase/client';
 import { Question } from '@/lib/data/questions';
 
 const PRESET_SNIPPETS = [
@@ -60,9 +64,9 @@ export default function AIGeneratorPage() {
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [quota, setQuota] = useState<{ remaining: number; allowed: boolean }>({ remaining: 5, allowed: true });
 
-  useEffect(() => {
-    setQuota(checkAIQuota());
-  }, []);
+                    // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
+  useEffect(() => { setQuota(checkAIQuota()); }, []);
+  useEffect(() => () => { if (filePreviewUrl) URL.revokeObjectURL(filePreviewUrl); }, [filePreviewUrl]);
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -88,60 +92,18 @@ export default function AIGeneratorPage() {
 
   const handleGenerate = async () => {
     if (inputMode === 'file') {
-      if (!uploadedFile) {
-        setErrorMessage('Please select a photo or PDF document first.');
-        return;
-      }
-      setErrorMessage(null);
+      if (!uploadedFile) { setErrorMessage('Select a PDF, DOCX or text file first.'); return; }
       setIsGenerating(true);
-
+      setErrorMessage(null);
       try {
-        const formData = new FormData();
-        formData.append('file', uploadedFile);
-        formData.append('count', questionCount.toString());
-        formData.append('examTarget', examTarget);
-
-        // Try calling the serverless upload endpoint
-        const res = await fetch('/api/ai/upload', {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (res.ok) {
-          const data = await res.json();
-          if (data.success && data.questions?.length > 0) {
-            setGeneratedQuestions(data.questions);
-            showToast(`✨ Generated ${data.questions.length} MCQs from ${uploadedFile.name}!`);
-            setIsGenerating(false);
-            return;
-          }
-        }
-
-        // Fallback for offline / static host
-        const fallbackRes = await generateMCQsFromNotes(
-          `Notes from ${uploadedFile.name}. Key concepts, historical events, and constitutional articles for ${examTarget}.`,
-          questionCount
-        );
-        if (fallbackRes.success) {
-          setGeneratedQuestions(fallbackRes.questions);
-          showToast(`✨ Generated ${fallbackRes.questions.length} MCQs from ${uploadedFile.name}!`);
-        } else {
-          setErrorMessage(fallbackRes.message || 'Generation failed.');
-        }
-      } catch {
-        const fallbackRes = await generateMCQsFromNotes(
-          `Notes from ${uploadedFile.name}. Key concepts for ${examTarget}.`,
-          questionCount
-        );
-        if (fallbackRes.success) {
-          setGeneratedQuestions(fallbackRes.questions);
-          showToast(`✨ Generated ${fallbackRes.questions.length} MCQs!`);
-        } else {
-          setErrorMessage('Could not process upload.');
-        }
-      } finally {
-        setIsGenerating(false);
-      }
+        const extracted = await extractDocumentText(uploadedFile);
+        setNotesInput(extracted);
+        setInputMode('text');
+        setGeneratedQuestions([]);
+        showToast('Text extracted. Review it below, then generate your practice questions.');
+      } catch (error) {
+        setErrorMessage(error instanceof Error ? error.message : 'Could not read this document.');
+      } finally { setIsGenerating(false); }
       return;
     }
 
@@ -154,27 +116,25 @@ export default function AIGeneratorPage() {
     setIsGenerating(true);
 
     try {
-      // First try calling dynamic serverless endpoint
-      try {
-        const serverRes = await fetch('/api/ai/generate', {
+      const endpoint = apiUrl('/api/ai/generate');
+      if (endpoint) {
+        const { data } = await createClient().auth.getSession();
+        const serverRes = await fetch(endpoint, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ content: notesInput, count: questionCount, examTarget }),
+          headers: { 'Content-Type': 'application/json', ...(data.session ? { Authorization: `Bearer ${data.session.access_token}` } : {}) },
+          body: JSON.stringify({ content: notesInput, count: questionCount }),
+          signal: AbortSignal.timeout(50000),
         });
-        if (serverRes.ok) {
-          const data = await serverRes.json();
-          if (data.success && data.questions?.length > 0) {
-            setGeneratedQuestions(data.questions);
-            setQuota(checkAIQuota());
-            showToast(`✨ Generated ${data.questions.length} questions successfully!`);
-            setIsGenerating(false);
-            return;
-          }
+        const dataResult = await serverRes.json();
+        if (!serverRes.ok) throw new Error(dataResult.message || 'AI service unavailable.');
+        if (dataResult.success && dataResult.questions?.length) {
+          setGeneratedQuestions(dataResult.questions);
+          showToast(`Created ${dataResult.questions.length} AI draft questions. Review source excerpts before studying.`);
+          return;
         }
-      } catch {}
+      }
 
       // Fallback to client-side semantic generator
-      await new Promise(r => setTimeout(r, 600));
       const res = await generateMCQsFromNotes(notesInput, questionCount);
       
       if (!res.success) {
@@ -182,10 +142,10 @@ export default function AIGeneratorPage() {
       } else {
         setGeneratedQuestions(res.questions);
         setQuota(checkAIQuota());
-        showToast(`✨ Generated ${res.questions.length} questions successfully!`);
+        showToast(res.message || `Created ${res.questions.length} local recall questions.`);
       }
-    } catch {
-      setErrorMessage('An unexpected error occurred while generating questions.');
+    } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : 'Could not generate questions.');
     } finally {
       setIsGenerating(false);
     }
@@ -194,8 +154,8 @@ export default function AIGeneratorPage() {
   const handleLaunchCBT = () => {
     if (generatedQuestions.length === 0) return;
     try {
-      sessionStorage.setItem('examsathi_custom_cbt_questions', JSON.stringify(generatedQuestions));
-      sessionStorage.setItem('examsathi_test_config', JSON.stringify({
+      studyStorage.setItem('examsathi_custom_cbt_questions', JSON.stringify(generatedQuestions));
+      studyStorage.setItem('examsathi_test_config', JSON.stringify({
         topicId: 'ai-custom',
         mode: 'exam',
         count: generatedQuestions.length,
@@ -209,8 +169,8 @@ export default function AIGeneratorPage() {
   const handleLaunchFlashcards = () => {
     if (generatedQuestions.length === 0) return;
     try {
-      sessionStorage.setItem('examsathi_custom_cbt_questions', JSON.stringify(generatedQuestions));
-      sessionStorage.setItem('examsathi_test_config', JSON.stringify({
+      studyStorage.setItem('examsathi_custom_cbt_questions', JSON.stringify(generatedQuestions));
+      studyStorage.setItem('examsathi_test_config', JSON.stringify({
         topicId: 'ai-custom',
         mode: 'flip',
         count: generatedQuestions.length,
@@ -223,7 +183,7 @@ export default function AIGeneratorPage() {
   const handleSaveAllToVault = () => {
     if (generatedQuestions.length === 0) return;
     try {
-      const existingRaw = localStorage.getItem('examsathi_saved_review_notes');
+      const existingRaw = studyStorage.getItem('examsathi_saved_review_notes');
       const existing = existingRaw ? JSON.parse(existingRaw) : [];
       
       const newItems = generatedQuestions.map(q => ({
@@ -236,11 +196,10 @@ export default function AIGeneratorPage() {
         correctOption: q.correct,
         correctText: q.options[q.correct]?.hi || q.options[q.correct]?.en || '',
         examTag: `AI Drill (${examTarget})`,
-        year: 2024,
         savedAt: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }),
       }));
 
-      localStorage.setItem('examsathi_saved_review_notes', JSON.stringify([...newItems, ...existing]));
+      studyStorage.setItem('examsathi_saved_review_notes', JSON.stringify([...newItems, ...existing]));
       showToast(`⭐ Saved all ${generatedQuestions.length} questions to your Profile Study Vault!`);
     } catch {
       showToast('Error saving to Study Vault.');
@@ -266,14 +225,14 @@ export default function AIGeneratorPage() {
               <Sparkles size={24} />
             </span>
             <div>
-              <h1 className="text-white font-black text-lg">AI Practice Drill Generator</h1>
+              <h1 className="text-white font-black text-lg">Notes & AI Practice Generator</h1>
               <p className="text-[11px] text-teal-300">
-                ਆਪਣੇ ਨੋਟਸ ਤੋਂ ਟੈਸਟ ਬਣਾਓ • Notes or Photos to CBT Mock in Seconds
+                ਆਪਣੇ ਨੋਟਸ ਤੋਂ ਟੈਸਟ ਬਣਾਓ • Review document text and build practice
               </p>
             </div>
           </div>
           <span className="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-indigo-500/40 flex items-center gap-1 font-mono">
-            <Brain size={12} /> Gemini 2.5
+            <Brain size={12} /> Notes practice
           </span>
         </div>
 
@@ -281,10 +240,10 @@ export default function AIGeneratorPage() {
         <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
           <div className="flex items-center gap-1.5">
             <ShieldCheck size={14} className="text-emerald-400" />
-            <span className="text-[11px] text-slate-300">DPDP Act 2023 Compliant (Zero Data Retention)</span>
+            <span className="text-[11px] text-slate-300">Files are read on this device. Cloud AI sends reviewed text to the configured provider.</span>
           </div>
           <div className="text-[11px] font-bold text-amber-300 font-mono">
-            {quota.remaining} / 5 Drills Left Today
+            Local recall available
           </div>
         </div>
       </div>
@@ -311,7 +270,7 @@ export default function AIGeneratorPage() {
           }`}
         >
           <Camera size={14} />
-          <span>📸 Upload Photo or PDF</span>
+          <span>📄 PDF / DOCX / TXT</span>
         </button>
       </div>
 
@@ -335,7 +294,7 @@ export default function AIGeneratorPage() {
               {PRESET_SNIPPETS.map((snippet, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setNotesInput(snippet.text)}
+                  onClick={() => { setNotesInput(snippet.text); setGeneratedQuestions([]); }}
                   className="text-[10px] bg-slate-900/80 hover:bg-slate-900 text-teal-300 border border-slate-750 hover:border-teal-500/50 px-2 py-1 rounded-lg transition"
                 >
                   {snippet.title}
@@ -346,7 +305,7 @@ export default function AIGeneratorPage() {
             <textarea
               rows={5}
               value={notesInput}
-              onChange={e => setNotesInput(e.target.value)}
+              onChange={e => { setNotesInput(e.target.value); setGeneratedQuestions([]); }}
               placeholder="Paste notes, book paragraphs, historical summaries, or constitutional articles here to convert them into practice MCQs..."
               className="w-full bg-slate-900 border border-slate-750 focus:border-teal-400 rounded-xl p-3 text-xs text-white placeholder-slate-500 outline-none transition leading-relaxed resize-none"
             />
@@ -356,7 +315,7 @@ export default function AIGeneratorPage() {
             <div className="flex items-center justify-between">
               <h2 className="text-xs font-bold text-white flex items-center gap-2">
                 <UploadCloud size={16} className="text-teal-400" />
-                <span>1. Upload Photo of Handwritten Notes or PDF</span>
+                <span>1. Select a PDF, DOCX or text document</span>
               </h2>
               <span className="text-[10px] text-teal-300 font-mono font-bold">
                 Max 10MB
@@ -367,7 +326,7 @@ export default function AIGeneratorPage() {
             <label className="border-2 border-dashed border-slate-700 hover:border-teal-400/60 bg-slate-900/60 rounded-2xl p-6 flex flex-col items-center justify-center text-center cursor-pointer transition group">
               <input
                 type="file"
-                accept="image/png,image/jpeg,image/webp,application/pdf"
+                accept=".pdf,.docx,.txt,.md"
                 onChange={handleFileChange}
                 className="hidden"
               />
@@ -375,10 +334,10 @@ export default function AIGeneratorPage() {
                 <UploadCloud size={24} />
               </div>
               <p className="text-xs font-bold text-white mb-1">
-                Click to upload photo or browse files
+                Click to select a document
               </p>
               <p className="text-[11px] text-slate-400 max-w-xs leading-relaxed">
-                Take a photo of your handwritten notebook or upload a coaching PDF (JPG, PNG, WebP, PDF).
+                Use a text-based PDF, DOCX, TXT or Markdown file. For scans, paste extracted OCR text.
               </p>
             </label>
 
@@ -413,7 +372,7 @@ export default function AIGeneratorPage() {
           <div>
             <label className="text-[10px] font-bold text-slate-400 block mb-1">Question Count</label>
             <div className="grid grid-cols-3 gap-1.5">
-              {[5, 10, 15].map(cnt => (
+              {[5, 10, 20, 50].map(cnt => (
                 <button
                   key={cnt}
                   onClick={() => setQuestionCount(cnt)}
@@ -430,7 +389,7 @@ export default function AIGeneratorPage() {
           </div>
 
           <div>
-            <label className="text-[10px] font-bold text-slate-400 block mb-1">Target Exam Calibration</label>
+            <label className="text-[10px] font-bold text-slate-400 block mb-1">Exam label for your study vault</label>
             <select
               value={examTarget}
               onChange={e => setExamTarget(e.target.value)}
@@ -456,9 +415,9 @@ export default function AIGeneratorPage() {
 
         <button
           onClick={handleGenerate}
-          disabled={isGenerating || !quota.allowed}
+          disabled={isGenerating}
           className={`w-full py-3 rounded-xl font-black text-xs flex items-center justify-center gap-2 shadow-lg transition mt-1 ${
-            isGenerating || !quota.allowed
+            isGenerating
               ? 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
               : 'bg-gradient-to-r from-teal-400 via-indigo-500 to-teal-400 hover:opacity-95 text-slate-950 shadow-teal-500/10'
           }`}
@@ -466,14 +425,14 @@ export default function AIGeneratorPage() {
           {isGenerating ? (
             <>
               <RotateCcw size={16} className="animate-spin" />
-              <span>{inputMode === 'file' ? 'Analyzing Photo / PDF with Gemini Vision...' : 'Analyzing Notes & Generating MCQs...'}</span>
+              <span>{inputMode === 'file' ? 'Extracting document text...' : 'Analyzing Notes & Generating MCQs...'}</span>
             </>
           ) : (
             <>
               <Sparkles size={16} />
               <span>
                 {inputMode === 'file' 
-                  ? `Extract & Generate ${questionCount} MCQs from Upload ✨` 
+                  ? `Extract text for review`
                   : `Generate ${questionCount} Practice MCQs ✨`}
               </span>
             </>
@@ -492,7 +451,7 @@ export default function AIGeneratorPage() {
                   <span>Generated CBT Set ({generatedQuestions.length} Questions)</span>
                 </h3>
                 <p className="text-[11px] text-slate-400 mt-0.5">
-                  Calibrated for: <strong className="text-teal-300">{examTarget}</strong>
+                  Study label: <strong className="text-teal-300">{examTarget}</strong>
                 </p>
               </div>
 
@@ -517,7 +476,7 @@ export default function AIGeneratorPage() {
                   className="bg-gradient-to-r from-teal-400 to-emerald-400 text-slate-950 font-black text-xs px-4 py-2 rounded-xl flex items-center gap-1.5 shadow-lg hover:opacity-95 transition"
                 >
                   <Play size={14} />
-                  <span>Start CBT Mock (-0.25)</span>
+                  <span>Start notes practice</span>
                 </button>
               </div>
             </div>

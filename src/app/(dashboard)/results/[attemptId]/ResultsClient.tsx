@@ -1,4 +1,5 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
@@ -13,7 +14,7 @@ import {
   UserPerformanceLevel,
   PredictedRankReport
 } from '@/lib/data/question_bank_engine';
-import { Question, ALL_QUESTIONS } from '@/lib/data/questions';
+import { Question } from '@/lib/data/questions';
 import { 
   toggleFavoriteQuestion, 
   toggleBookmarkQuestion, 
@@ -23,6 +24,9 @@ import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 import { computeTopicBreakdown, TopicBreakdown } from '@/lib/scoring';
 
 interface StoredResult {
+  attemptId?: string;
+  scoringConfig?: { marksPerQuestion: number; negativeMarking: number; totalQuestions: number };
+  sourceConfig?: { count: number; pyq20Years: boolean; pyqOnly: boolean };
   testId?: string;
   testTitle?: string;
   examId?: string;
@@ -57,17 +61,19 @@ export default function Results() {
 
   useEffect(() => {
     try {
-      const stored = sessionStorage.getItem('examsathi_last_result') || localStorage.getItem('examsathi_last_result');
+      const attempt = new URLSearchParams(window.location.search).get('attempt');
+      const stored = attempt ? studyStorage.getItem(`examsathi_result_${attempt}`) : studyStorage.getItem('examsathi_last_result');
       if (stored) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
         setResult(JSON.parse(stored));
       }
       
       // Load saved notes index
-      const savedNotesRaw = localStorage.getItem('examsathi_saved_review_notes');
+      const savedNotesRaw = studyStorage.getItem('examsathi_saved_review_notes');
       if (savedNotesRaw) {
         const parsed = JSON.parse(savedNotesRaw);
         const map: Record<string, boolean> = {};
-        parsed.forEach((item: any) => {
+        parsed.forEach((item: { questionId?: string }) => {
           if (item.questionId) map[item.questionId] = true;
         });
         setSavedNoteIds(map);
@@ -104,19 +110,18 @@ export default function Results() {
     showToast(isBookmarked ? 'Saved for Later (🔖 Bookmarked)!' : 'Removed from Saved for Later');
   };
 
-  const total = result.total || 50;
+  const total = result.total ?? 0;
   const correct = result.correct || 0;
   const wrong = result.wrong || 0;
   const unattempted = result.unattempted ?? Math.max(0, total - (correct + wrong));
   
   const accuracy = result.accuracy ?? (total > 0 ? Math.round((correct / (correct + wrong || 1)) * 100) : 0);
-  const percentage = result.percentage ?? Math.round((correct / total) * 100);
+  const percentage = result.percentage ?? (total ? Math.round((correct / total) * 100) : 0);
   
-  // Calculate or retrieve raw score with -0.25 negative marking
-  const penalty = (wrong * 0.25).toFixed(2);
-  const rawScore = result.rawScore 
-    ? typeof result.rawScore === 'number' ? result.rawScore.toFixed(2) : result.rawScore 
-    : Math.max(0, correct - (wrong * 0.25)).toFixed(2);
+  const negativeMarking = result.scoringConfig?.negativeMarking ?? 0.25;
+  const marksPerQuestion = result.scoringConfig?.marksPerQuestion ?? 1;
+  const penalty = (wrong * negativeMarking).toFixed(2);
+  const rawScore = Number(result.rawScore ?? (correct * marksPerQuestion - wrong * negativeMarking)).toFixed(2);
 
   const numericRawScore = parseFloat(rawScore.toString());
 
@@ -125,12 +130,13 @@ export default function Results() {
   const secsTaken = timeTaken % 60;
 
   // Evaluate candidate level and predicted rank if not precomputed
-  const candidateLevel: UserPerformanceLevel = result.level || evaluateUserLevel(percentage, accuracy);
-  const predictedRank: PredictedRankReport = result.predictedRank || calculatePredictedRank(percentage, numericRawScore, total);
+  const candidateLevel: UserPerformanceLevel = evaluateUserLevel(percentage, accuracy);
+  const predictedRank: PredictedRankReport = calculatePredictedRank(percentage, numericRawScore, total);
 
   const testId = result.testId || '1';
+  const retakeQuery = new URLSearchParams({ exam: result.examId || 'all', diff: result.difficulty || 'all', count: String(total), pyq: result.sourceConfig?.pyq20Years ? '20y' : 'all', mode: 'exam' }).toString();
   const testTitle = result.testTitle || 'Punjab Master Cadre 50-Question CBT Simulation';
-  const questions = (result.questions && result.questions.length > 0) ? result.questions : ALL_QUESTIONS.slice(0, 10);
+  const questions = (result.questions && result.questions.length > 0) ? result.questions : [];
   const userAnswers = result.userAnswers || {};
 
   // Topic breakdown: use stored value or compute from questions
@@ -179,7 +185,7 @@ export default function Results() {
   // Handler: Save single question explanation to notes
   const handleSaveToNotes = (q: Question) => {
     try {
-      const existingRaw = localStorage.getItem('examsathi_saved_review_notes');
+      const existingRaw = studyStorage.getItem('examsathi_saved_review_notes');
       const existing = existingRaw ? JSON.parse(existingRaw) : [];
 
       const noteEntry = {
@@ -198,19 +204,19 @@ export default function Results() {
 
       // Also append into topic-specific notes key for seamless LessonView access
       const topicNotesKey = `examsathi_notes_${q.topicId || 'general'}`;
-      const topicRaw = localStorage.getItem(topicNotesKey);
+      const topicRaw = studyStorage.getItem(topicNotesKey);
       const topicNotes = topicRaw ? JSON.parse(topicRaw) : [];
       topicNotes.unshift({
         id: noteEntry.id,
         text: `📌 [MCQ Review - ${q.examTag || 'Exam'}]\n\nप्रश्न: ${q.question.hi}\n\nसही उत्तर (${q.correct}): ${noteEntry.correctText}\n\nव्याख्या: ${noteEntry.explanation}${noteEntry.thought ? `\n\nपरीक्षक विचार: ${noteEntry.thought}` : ''}`,
         date: noteEntry.savedAt,
       });
-      localStorage.setItem(topicNotesKey, JSON.stringify(topicNotes));
+      studyStorage.setItem(topicNotesKey, JSON.stringify(topicNotes));
 
       // Append to global saved review notes
-      const filtered = existing.filter((item: any) => item.questionId !== q.id);
+      const filtered = existing.filter((item: { questionId?: string }) => item.questionId !== q.id);
       filtered.unshift(noteEntry);
-      localStorage.setItem('examsathi_saved_review_notes', JSON.stringify(filtered));
+      studyStorage.setItem('examsathi_saved_review_notes', JSON.stringify(filtered));
 
       setSavedNoteIds(prev => ({ ...prev, [q.id]: true }));
       showToast('Explanation & Strategic Thought saved to your Study Notes! 📝');
@@ -228,7 +234,7 @@ export default function Results() {
     }
 
     try {
-      const existingRaw = localStorage.getItem('examsathi_saved_review_notes');
+      const existingRaw = studyStorage.getItem('examsathi_saved_review_notes');
       const existing = existingRaw ? JSON.parse(existingRaw) : [];
 
       mistakes.forEach(q => {
@@ -247,18 +253,18 @@ export default function Results() {
         };
 
         const topicNotesKey = `examsathi_notes_${q.topicId || 'general'}`;
-        const topicRaw = localStorage.getItem(topicNotesKey);
+        const topicRaw = studyStorage.getItem(topicNotesKey);
         const topicNotes = topicRaw ? JSON.parse(topicRaw) : [];
         topicNotes.unshift({
           id: noteEntry.id,
           text: `📌 [Mistake Review - ${q.examTag || 'Exam'}]\n\nप्रश्न: ${q.question.hi}\n\nसही उत्तर (${q.correct}): ${noteEntry.correctText}\n\nव्याख्या: ${noteEntry.explanation}${noteEntry.thought ? `\n\nपरीक्षक विचार: ${noteEntry.thought}` : ''}`,
           date: noteEntry.savedAt,
         });
-        localStorage.setItem(topicNotesKey, JSON.stringify(topicNotes));
+        studyStorage.setItem(topicNotesKey, JSON.stringify(topicNotes));
         existing.unshift(noteEntry);
       });
 
-      localStorage.setItem('examsathi_saved_review_notes', JSON.stringify(existing));
+      studyStorage.setItem('examsathi_saved_review_notes', JSON.stringify(existing));
 
       const updatedIds: Record<string, boolean> = { ...savedNoteIds };
       mistakes.forEach(q => { updatedIds[q.id] = true; });
@@ -279,6 +285,7 @@ export default function Results() {
   };
   const levelColor = STATUS_COLORS[candidateLevel.status] || 'border-teal-500/50 bg-teal-950/30 text-teal-300';
 
+  if (loaded && !result.questions?.length) return <div className="p-6 text-slate-300"><h1>No saved result</h1><p>Complete a practice test to see your own report.</p><Link href="/mock-test">Browse tests</Link></div>;
   if (!loaded) return <p className="p-6 text-white">Loading result…</p>;
   if (!questions.length) return <div className="p-6 text-white"><h1>No completed test yet</h1><Link href="/mock-test" className="text-teal-300">Start a practice test</Link></div>;
   return (
@@ -308,7 +315,7 @@ export default function Results() {
             </span>
             <div>
               <span className="text-[10px] uppercase font-bold text-teal-400 tracking-wider">
-                Official Competitive Benchmark
+                Practice feedback
               </span>
               <h2 className="text-base font-black text-white">Illustrative Practice Benchmark</h2>
             </div>
@@ -322,7 +329,7 @@ export default function Results() {
 
         {predictedRank.hasEnoughData === false ? (
           <p className="text-sm text-slate-300 text-center py-4">
-            📊 Rank prediction available once more students attempt this exam.
+            📊 A reliable rank requires a real comparison cohort. No rank is available for this attempt.
           </p>
         ) : (
           <>
@@ -489,7 +496,7 @@ export default function Results() {
           <div className="bg-slate-900/60 p-3 rounded-xl border border-emerald-500/30 text-center">
             <span className="text-[10px] font-bold text-emerald-300 block mb-0.5">Simple 🟢</span>
             <div className="text-base font-black text-white">
-              {difficultyStats.easy.correct} / {difficultyStats.easy.total || (total ? Math.round(total * 0.3) : 15)}
+              {difficultyStats.easy.correct} / {difficultyStats.easy.total}
             </div>
             <span className="text-[9px] text-slate-400">
               {difficultyStats.easy.total > 0 
@@ -502,7 +509,7 @@ export default function Results() {
           <div className="bg-slate-900/60 p-3 rounded-xl border border-amber-500/30 text-center">
             <span className="text-[10px] font-bold text-amber-300 block mb-0.5">Mid 🟡</span>
             <div className="text-base font-black text-white">
-              {difficultyStats.medium.correct} / {difficultyStats.medium.total || (total ? Math.round(total * 0.5) : 25)}
+              {difficultyStats.medium.correct} / {difficultyStats.medium.total}
             </div>
             <span className="text-[9px] text-slate-400">
               {difficultyStats.medium.total > 0 
@@ -515,7 +522,7 @@ export default function Results() {
           <div className="bg-slate-900/60 p-3 rounded-xl border border-rose-500/30 text-center">
             <span className="text-[10px] font-bold text-rose-300 block mb-0.5">Hard 🔴</span>
             <div className="text-base font-black text-white">
-              {difficultyStats.hard.correct} / {difficultyStats.hard.total || (total ? Math.round(total * 0.2) : 10)}
+              {difficultyStats.hard.correct} / {difficultyStats.hard.total}
             </div>
             <span className="text-[9px] text-slate-400">
               {difficultyStats.hard.total > 0 
@@ -531,7 +538,7 @@ export default function Results() {
         <div className="flex items-center justify-between mb-3.5">
           <h3 className="text-white font-bold text-sm">Negative Marking Breakdown</h3>
           <span className="text-[10px] bg-slate-700/80 text-amber-300 font-semibold px-2 py-0.5 rounded">
-            -0.25 Mark Penalty
+            -{negativeMarking} Mark Penalty
           </span>
         </div>
         
@@ -547,7 +554,7 @@ export default function Results() {
           <div className="flex items-center justify-between text-xs bg-slate-900/60 p-2.5 rounded-xl border border-slate-700/50">
             <div className="flex items-center gap-2">
               <XCircle size={16} className="text-rose-400" />
-              <span className="text-slate-300">Incorrect Penalty (-0.25 Mark)</span>
+              <span className="text-slate-300">Incorrect Penalty (-{negativeMarking} Mark)</span>
             </div>
             <span className="text-rose-400 font-bold text-sm">-{penalty}</span>
           </div>
@@ -742,7 +749,7 @@ export default function Results() {
                         </span>
                       ) : (
                         <span className="bg-rose-500/20 text-rose-300 text-[10px] font-bold px-2 py-0.5 rounded border border-rose-500/40 flex items-center gap-1">
-                          <XCircle size={12} /> Incorrect (-0.25)
+                          <XCircle size={12} /> Incorrect (-{negativeMarking})
                         </span>
                       )}
                     </div>
@@ -928,7 +935,7 @@ export default function Results() {
         {/* Share Score on WhatsApp */}
         <a 
           href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-            `🎓 *ExamSathi CBT Mock Test Scorecard!* 🇮🇳\n\nमैंने अभी ExamSathi पर ${testTitle} दिया:\n📊 Score: ${rawScore}/${total} (${percentage}%)\n🎯 Accuracy: ${accuracy}%\n🏆 Illustrative Rank: #${predictedRank.stateRank} / ${predictedRank.totalCandidates.toLocaleString()}\n\nयह 100% Free Portal है (Master Cadre, Clerk, Police, Patwari, REET, CTET)।\n👉 आप भी अपना टेस्ट दें और तैयारी करें:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
+            `🎓 *ExamSathi CBT Mock Test Scorecard!* 🇮🇳\n\nमैंने अभी ExamSathi पर ${testTitle} दिया:\n📊 Score: ${rawScore}/${total} (${percentage}%)\n🎯 Accuracy: ${accuracy}%\n\nयह 100% Free Portal है (Master Cadre, Clerk, Police, Patwari, REET, CTET)।\n👉 आप भी अपना टेस्ट दें और तैयारी करें:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
           )}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -940,16 +947,16 @@ export default function Results() {
 
         {/* Review in Flip Card Mode */}
         <Link 
-          href={`/mock-test/${testId}?mode=flip`}
+          href={`/mock-test/${testId}?${retakeQuery.replace('mode=exam', 'mode=flip')}&review=${result.attemptId || ''}`}
           className="w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-bold py-3.5 rounded-xl text-center text-xs shadow-lg flex items-center justify-center gap-2"
         >
           <Layers size={16} />
-          <span>Review Entire 50 Qs Set in 3D Flip Card Mode</span>
+          <span>Review These {total} Questions in Flip Card Mode</span>
         </Link>
 
         {/* Retake Live Test */}
         <Link 
-          href={`/mock-test/${testId}`}
+          href={`/mock-test/${testId}?${retakeQuery}`}
           className="w-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium py-3 rounded-xl text-center text-xs flex items-center justify-center gap-2 transition"
         >
           <RotateCcw size={14} /> 

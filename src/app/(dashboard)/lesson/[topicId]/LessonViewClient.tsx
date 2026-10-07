@@ -1,4 +1,5 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect, use } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
@@ -7,16 +8,24 @@ import {
   HelpCircle, ChevronLeft, ChevronRight, Bookmark, RotateCcw, 
   Sparkles, Award, Play, FileText, Download, ExternalLink, ShieldCheck, Target
 } from 'lucide-react';
-import { LESSONS, getLessonByTopicId } from '@/lib/data/lessons';
-import { getQuestionsByTopic, Question } from '@/lib/data/questions';
+import { getLessonByTopicId, Lesson } from '@/lib/data/lessons';
+import { getTestQuestions } from '@/lib/data/question_bank_engine';
+import { Question } from '@/lib/data/questions';
 import FlipCard from '@/components/ui/FlipCard';
+import { useStore } from '@/lib/store';
+import { getStoredUser, saveUserSession } from '@/lib/auth';
 import { getCardState, scheduleNextReview, saveCardState, Rating } from '@/lib/fsrs';
 
 export default function LessonView({ topicId }: { topicId: string }) {
+  const lesson = getLessonByTopicId(topicId);
+  if (!lesson) return <div className="p-6 text-slate-200"><h1 className="text-xl font-bold">Study material is being prepared</h1><p>This topic does not yet have a reviewed lesson. Check the syllabus and official resources.</p><Link href="/syllabus" className="text-teal-300 underline">Browse syllabus coverage</Link></div>;
+  return <LessonContent key={topicId} topicId={topicId} lesson={lesson} />;
+}
+function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson }) {
   const router = useRouter();
   
   const [activeTab, setActiveTab] = useState<'read' | 'docs' | 'cards' | 'practice' | 'video' | 'notes'>('read');
-  const [lang, setLang] = useState<'hi' | 'pa' | 'en'>('hi');
+  const { language: lang, setLanguage: setLang, markTopicComplete } = useStore();
   const [cardIndex, setCardIndex] = useState(0);
   const [isReadMarked, setIsReadMarked] = useState(false);
   
@@ -31,18 +40,19 @@ export default function LessonView({ topicId }: { topicId: string }) {
   const [contributeName, setContributeName] = useState('');
   const [contributeSubmitted, setContributeSubmitted] = useState(false);
 
-  const lesson = getLessonByTopicId(topicId) || LESSONS['modern-india'];
-  const topicQuestions = getQuestionsByTopic(topicId);
+  const [practiceCount, setPracticeCount] = useState(10);
+  const [topicQuestions, setTopicQuestions] = useState(() => getTestQuestions({ topicId, count: 10 }));
 
   // Load saved notes from LocalStorage on mount
   useEffect(() => {
     try {
       const storageKey = `examsathi_notes_${lesson.id}`;
-      const existing = localStorage.getItem(storageKey);
+      const existing = studyStorage.getItem(storageKey);
       if (existing) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
         setSavedNotes(JSON.parse(existing));
       }
-      const readStatus = localStorage.getItem(`examsathi_read_${lesson.id}`);
+      const readStatus = studyStorage.getItem(`examsathi_read_${lesson.id}`);
       if (readStatus === 'true') {
         setIsReadMarked(true);
       }
@@ -62,7 +72,7 @@ export default function LessonView({ topicId }: { topicId: string }) {
     setSavedNotes(updated);
     setUserNote('');
     try {
-      localStorage.setItem(`examsathi_notes_${lesson.id}`, JSON.stringify(updated));
+      studyStorage.setItem(`examsathi_notes_${lesson.id}`, JSON.stringify(updated));
     } catch {
       // Fallback
     }
@@ -72,16 +82,21 @@ export default function LessonView({ topicId }: { topicId: string }) {
     const updated = savedNotes.filter(n => n.id !== noteId);
     setSavedNotes(updated);
     try {
-      localStorage.setItem(`examsathi_notes_${lesson.id}`, JSON.stringify(updated));
+      studyStorage.setItem(`examsathi_notes_${lesson.id}`, JSON.stringify(updated));
     } catch {
       // Fallback
     }
   };
 
   const handleMarkAsRead = () => {
+    if (isReadMarked) return;
     setIsReadMarked(true);
+    markTopicComplete(lesson.id);
+    const user = getStoredUser();
+    user.xp += 50;
+    saveUserSession(user);
     try {
-      localStorage.setItem(`examsathi_read_${lesson.id}`, 'true');
+      studyStorage.setItem(`examsathi_read_${lesson.id}`, 'true');
     } catch {
       // Fallback
     }
@@ -564,7 +579,7 @@ export default function LessonView({ topicId }: { topicId: string }) {
             </div>
             
             <div className="w-full flex justify-center">
-              <FlipCard 
+              <FlipCard key={`${lesson.id}-${cardIndex}`}
                 question={currentCards[cardIndex]?.q[lang] || currentCards[cardIndex]?.q.hi || currentCards[cardIndex]?.q.en} 
                 answer={currentCards[cardIndex]?.a[lang] || currentCards[cardIndex]?.a.hi || currentCards[cardIndex]?.a.en} 
               />
@@ -631,6 +646,13 @@ export default function LessonView({ topicId }: { topicId: string }) {
         {/* ================= TAB 4: MINI MOCK / PRACTICE ================= */}
         {activeTab === 'practice' && (
           <div className="flex flex-col gap-6">
+            <label className="flex items-center gap-3 text-slate-200">Practice set
+              <select aria-label="Practice question count" value={practiceCount} onChange={e => { const count = Number(e.target.value); setPracticeCount(count); setTopicQuestions(getTestQuestions({ topicId, count })); setSelectedAnswers({}); setShowExplanation({}); }} className="bg-slate-800 p-2 rounded">
+                {[10, 20, 50].map(count => <option key={count} value={count}>{count} questions</option>)}
+              </select>
+            </label>
+            <p className="text-xs text-slate-400">{topicQuestions.length} matching questions available in this set. Short sets stay within this topic.</p>
+
             <div className="bg-slate-800/80 border border-slate-700 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <h3 className="text-white font-bold text-sm">
@@ -763,17 +785,17 @@ export default function LessonView({ topicId }: { topicId: string }) {
                   ))}
                 </div>
                 <p className="text-[11px] text-slate-500 text-center pt-1">
-                  Found a good video for this topic? <a href="/contact" className="text-teal-400 underline">Suggest it to us ↗</a>
+                  Found a good video for this topic? <Link href="/contact" className="text-teal-400 underline">Suggest it to us ↗</Link>
                 </p>
               </div>
             ) : (
               lesson.videos.map((vid, i) => {
-                const ytId = vid.youtubeId || (vid.url?.includes('watch?v=') ? vid.url.split('watch?v=')[1]?.split('&')[0] : 'UDyj1iXKgD0');
+                const ytId = vid.youtubeId || (vid.url?.includes('watch?v=') ? vid.url.split('watch?v=')[1]?.split('&')[0] : undefined);
 
                 return (
                   <div key={i} className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden shadow-lg">
                     {/* YouTube Player Embed */}
-                    <div className="relative aspect-video w-full bg-black">
+                    {ytId && <div className="relative aspect-video w-full bg-black">
                       <iframe
                         className="w-full h-full"
                         src={`https://www.youtube-nocookie.com/embed/${ytId}?rel=0&modestbranding=1`}
@@ -781,7 +803,7 @@ export default function LessonView({ topicId }: { topicId: string }) {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                       />
-                    </div>
+                    </div>}
                     <div className="p-3.5">
                       {vid.tags && vid.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 mb-2">
@@ -798,7 +820,7 @@ export default function LessonView({ topicId }: { topicId: string }) {
                         <span>{vid.duration || 'Full Lecture'}</span>
                       </div>
                       <a
-                        href={`https://www.youtube.com/watch?v=${ytId}`}
+                        href={vid.url || `https://www.youtube.com/watch?v=${ytId}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-2 flex items-center gap-1.5 text-xs text-red-400 hover:text-red-300 font-semibold transition"
@@ -941,7 +963,7 @@ export default function LessonView({ topicId }: { topicId: string }) {
                     onClick={() => {
                       // In static mode: save to localStorage as a pending submission
                       try {
-                        const submissions = JSON.parse(localStorage.getItem('examsathi_pending_contributions') || '[]');
+                        const submissions = JSON.parse(studyStorage.getItem('examsathi_pending_contributions') || '[]');
                         submissions.push({
                           topicId: lesson.topicId,
                           topicTitle: lesson.title.en,
@@ -950,7 +972,7 @@ export default function LessonView({ topicId }: { topicId: string }) {
                           submittedAt: new Date().toISOString(),
                           status: 'pending',
                         });
-                        localStorage.setItem('examsathi_pending_contributions', JSON.stringify(submissions));
+                        studyStorage.setItem('examsathi_pending_contributions', JSON.stringify(submissions));
                       } catch {}
                       setContributeSubmitted(true);
                     }}

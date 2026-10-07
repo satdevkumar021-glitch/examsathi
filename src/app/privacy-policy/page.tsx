@@ -62,7 +62,7 @@ export default function PrivacyPolicyPage() {
         <section className="space-y-1.5">
           <h2 className="text-sm font-bold text-white">5. Contact Our Data Protection Officer</h2>
           <p>
-            For privacy inquiries, data rectification, or account deletion requests, reach out directly to our team at: <strong className="text-white">privacy@examsathi.in</strong>.
+            For privacy inquiries, data rectification, or account deletion requests, reach out directly to our team at: <strong className="text-white">Contact the maintainer via the Contact page</strong>.
           </p>
         </section>
       </div>

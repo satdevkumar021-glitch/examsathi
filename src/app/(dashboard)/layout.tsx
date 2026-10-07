@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import BottomNav from '@/components/layout/BottomNav';
 import LanguageToggle from '@/components/layout/LanguageToggle';
+import AccountBoundary from '@/components/layout/AccountBoundary';
 import OnboardingGuideModal from '@/components/ui/OnboardingGuideModal';
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function DashboardLayout({
           </div>
         </Link>
         <div className="flex items-center gap-2">
+          <Link href="/syllabus" className="text-xs text-teal-300 underline">Syllabus</Link>
           <LanguageToggle />
           <Link
             href="/login"
@@ -44,7 +46,7 @@ export default function DashboardLayout({
       </header>
       
       <main className="flex-1 overflow-y-auto">
-        {children}
+        <AccountBoundary>{children}</AccountBoundary>
       </main>
 
       <OnboardingGuideModal />

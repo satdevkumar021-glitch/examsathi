@@ -40,7 +40,7 @@ export default function StateExams({ state }: { state: string }) {
           stateExams.map(exam => {
             const firstSubjectId = exam.subjects && exam.subjects.length > 0 ? exam.subjects[0].id : 'general';
             const subjectLabels = exam.subjects && exam.subjects.length > 0
-              ? exam.subjects.map((s: any) => typeof s === 'string' ? s : s.name).join(', ')
+              ? exam.subjects.map((s) => typeof s === 'string' ? s : s.name).join(', ')
               : 'General Studies, Mental Ability, Language';
 
             return (

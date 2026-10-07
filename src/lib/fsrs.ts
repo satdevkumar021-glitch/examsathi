@@ -1,3 +1,4 @@
+import { studyStorage } from '@/lib/storage';
 // ============================================================
 // ExamSathi - Free Spaced Repetition Scheduler (FSRS v4.5)
 // Mathematically sound memory retention model for competitive exams
@@ -67,7 +68,8 @@ export function scheduleNextReview(
   rating: Rating,
   reviewDate: Date = new Date()
 ): { nextState: CardSRSState; intervalDays: number; intervalLabel: string } {
-  let { stability, difficulty, reps, lapses, state, lastReviewedAt } = currentState;
+  const { stability, difficulty, state, lastReviewedAt } = currentState;
+  let { reps, lapses } = currentState;
 
   // Calculate elapsed days since last review
   const elapsedDays = lastReviewedAt
@@ -167,7 +169,7 @@ const STORAGE_KEY = 'examsathi_fsrs_deck';
 export function getAllCardStates(): Record<string, CardSRSState> {
   if (typeof window === 'undefined') return {};
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = studyStorage.getItem(STORAGE_KEY);
     return raw ? JSON.parse(raw) : {};
   } catch {
     return {};
@@ -179,7 +181,7 @@ export function saveCardState(cardState: CardSRSState): void {
   try {
     const all = getAllCardStates();
     all[cardState.cardId] = cardState;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+    studyStorage.setItem(STORAGE_KEY, JSON.stringify(all));
   } catch {}
 }
 

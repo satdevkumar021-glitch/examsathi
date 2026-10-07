@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+    "status": 200,
+    "type": "application/pdf"
+  },
+  {
+    "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://ncert.nic.in/textbook/pdf/jess301.pdf",
+    "status": 200,
+    "type": "application/pdf"
+  },
+  {
+    "url": "https://ncert.nic.in/textbook/pdf/jhss301.pdf",
+    "status": 200,
+    "type": "application/pdf"
+  },
+  {
+    "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+    "status": 200,
+    "type": "application/pdf"
+  }
+]

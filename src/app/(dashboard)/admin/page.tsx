@@ -1,4 +1,6 @@
 'use client';
+import { useAuth } from '@/lib/hooks/useAuth';
+import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { 
@@ -22,7 +24,7 @@ export interface PipelineItem {
   createdAt: string;
   reviewedBy?: string;
   feedback?: string;
-  data: any;
+  data: Record<string, unknown>;
 }
 
 const DEFAULT_PIPELINE: PipelineItem[] = [
@@ -73,6 +75,7 @@ const DEFAULT_PIPELINE: PipelineItem[] = [
 ];
 
 export default function AdminResourcePortal() {
+  const { user: verifiedUser, loading: authLoading } = useAuth();
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<'pipeline' | 'question' | 'lesson' | 'video' | 'pdf'>('pipeline');
   const [successMsg, setSuccessMsg] = useState('');
@@ -114,16 +117,9 @@ export default function AdminResourcePortal() {
   // Load Pipeline and Session
   useEffect(() => {
     try {
-      const savedAuth = localStorage.getItem('examsathi_admin_session');
-      if (savedAuth) {
-        const parsed = JSON.parse(savedAuth);
-        setIsAdminAuthenticated(true);
-        setAdminRole(parsed.role || 'educator');
-        setAdminUser(parsed.user || 'Educator Sathi');
-      }
-
-      const savedPipeline = localStorage.getItem('examsathi_admin_pipeline');
+      const savedPipeline = studyStorage.getItem('examsathi_admin_pipeline');
       if (savedPipeline) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
         setPipeline(JSON.parse(savedPipeline));
       }
     } catch {}
@@ -132,54 +128,22 @@ export default function AdminResourcePortal() {
   const savePipeline = (updated: PipelineItem[]) => {
     setPipeline(updated);
     try {
-      localStorage.setItem('examsathi_admin_pipeline', JSON.stringify(updated));
+      studyStorage.setItem('examsathi_admin_pipeline', JSON.stringify(updated));
     } catch {}
   };
 
-  const handleVerifyAdmin = (e: React.FormEvent) => {
-    e.preventDefault();
-    const cleanKey = passkeyInput.trim();
-    if (cleanKey === 'AdminSathi@2026' || cleanKey === 'examsathi-admin') {
-      setIsAdminAuthenticated(true);
-      setAdminRole('superadmin');
-      setAdminUser('Chief Administrator');
-      setAuthError('');
-      try {
-        localStorage.setItem('examsathi_admin_session', JSON.stringify({ role: 'superadmin', user: 'Chief Administrator' }));
-      } catch {}
-    } else if (cleanKey.toLowerCase() === 'reviewer' || cleanKey === 'ReviewerSathi@2026') {
-      setIsAdminAuthenticated(true);
-      setAdminRole('reviewer');
-      setAdminUser('Senior Reviewer');
-      setAuthError('');
-      try {
-        localStorage.setItem('examsathi_admin_session', JSON.stringify({ role: 'reviewer', user: 'Senior Reviewer' }));
-      } catch {}
-    } else if (cleanKey.toLowerCase() === 'educator' || cleanKey === 'EducatorSathi@2026' || cleanKey === 'teacher') {
-      setIsAdminAuthenticated(true);
-      setAdminRole('educator');
-      setAdminUser('Subject Educator');
-      setAuthError('');
-      try {
-        localStorage.setItem('examsathi_admin_session', JSON.stringify({ role: 'educator', user: 'Subject Educator' }));
-      } catch {}
-    } else {
-      setAuthError('Invalid passkey. Use AdminSathi@2026 (Superadmin), reviewer (Reviewer), or educator (Educator).');
-    }
+  useEffect(() => {
+    const trustedRole = verifiedUser?.app_metadata?.role;
+    const allowed = ['educator', 'reviewer', 'superadmin'].includes(trustedRole);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
+    setIsAdminAuthenticated(allowed);
+    if (allowed) { setAdminRole(trustedRole); setAdminUser(verifiedUser?.email || 'Educator'); }
+  }, [verifiedUser]);
+  const handleVerifyAdmin = (event: React.FormEvent) => {
+    event.preventDefault();
+    setAuthError('Administrator access requires a verified account role assigned by the server.');
   };
-
-  const handleSwitchRole = (newRole: AdminRole) => {
-    setAdminRole(newRole);
-    const nameMap = {
-      educator: 'Subject Educator',
-      reviewer: 'Senior Reviewer',
-      superadmin: 'Chief Administrator'
-    };
-    setAdminUser(nameMap[newRole]);
-    try {
-      localStorage.setItem('examsathi_admin_session', JSON.stringify({ role: newRole, user: nameMap[newRole] }));
-    } catch {}
-  };
+  const handleSwitchRole = (_role: AdminRole) => { setAuthError('Roles are managed by the server.'); };
 
   // Pipeline Actions
   const handleUpdateStatus = (id: string, newStatus: WorkflowStatus, note?: string) => {
@@ -318,52 +282,12 @@ export default function AdminResourcePortal() {
     ? pipeline 
     : pipeline.filter(i => i.status === pipelineFilter);
 
-  if (!isAdminAuthenticated) {
-    return (
-      <div className="p-4 flex flex-col items-center justify-center min-h-[80vh] text-slate-100 max-w-md mx-auto w-full text-center">
-        <div className="w-16 h-16 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 mb-4">
-          <ShieldCheck size={32} />
-        </div>
-        <h1 className="text-xl font-bold text-white mb-2">Restricted Administrative Access</h1>
-        <p className="text-xs text-slate-400 mb-6 leading-relaxed">
-          The Publisher Portal requires authorized educator or reviewer credentials. Enter your administrative access passkey.
-        </p>
-
-        <form onSubmit={handleVerifyAdmin} className="w-full space-y-3">
-          <input
-            type="password"
-            value={passkeyInput}
-            onChange={e => setPasskeyInput(e.target.value)}
-            placeholder="Passkey (AdminSathi@2026 / reviewer / educator)..."
-            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white outline-none focus:border-teal-400 transition"
-          />
-          {authError && (
-            <p className="text-[11px] text-rose-400 font-semibold">{authError}</p>
-          )}
-          <button
-            type="submit"
-            className="w-full bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs py-2.5 rounded-xl transition shadow"
-          >
-            Authenticate & Enter
-          </button>
-        </form>
-
-        <div className="mt-4 p-3 bg-slate-800/60 rounded-xl border border-slate-700/60 text-[11px] text-slate-400 text-left space-y-1">
-          <span className="font-bold text-slate-300 block">Passkeys for Verification:</span>
-          <div>• <strong>AdminSathi@2026</strong>: Superadmin (Publish & Manage)</div>
-          <div>• <strong>reviewer</strong>: Senior Reviewer (Review & Approve)</div>
-          <div>• <strong>educator</strong>: Subject Educator (Draft & Submit)</div>
-        </div>
-
-        <button
-          onClick={() => router.push('/dashboard')}
-          className="mt-4 text-xs text-slate-400 hover:text-slate-200 transition"
-        >
-          &larr; Return to Dashboard
-        </button>
-      </div>
-    );
-  }
+  if (authLoading || !isAdminAuthenticated) return <div className="max-w-xl mx-auto p-6 text-slate-200 space-y-3">
+    <h1 className="text-xl font-bold">Educator workspace</h1>
+    <p>{authLoading ? 'Checking access…' : 'Sign in with an educator or administrator account. Access roles must be assigned by the server.'}</p>
+    <a href="../login/" className="text-teal-300 underline">Sign in</a>
+    <p className="text-sm text-slate-400">This workspace stores local drafts. Publishing to the live question bank requires a reviewed backend workflow.</p>
+  </div>;
 
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-24 text-slate-100 max-w-3xl mx-auto w-full">
@@ -699,7 +623,7 @@ export default function AdminResourcePortal() {
               <label className="text-[11px] text-slate-300 font-semibold block mb-1">Correct Answer</label>
               <select 
                 value={correctOpt}
-                onChange={e => setCorrectOpt(e.target.value as any)}
+                onChange={e => setCorrectOpt(e.target.value as 'A' | 'B' | 'C' | 'D')}
                 className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white"
               >
                 <option value="A">Option A</option>
