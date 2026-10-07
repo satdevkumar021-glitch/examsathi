@@ -1,5 +1,5 @@
 const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ??
-  (process.env.NODE_ENV === 'production' ? '/examsathi' : '')).replace(/\/$/, '');
+  (process.env.NEXT_PUBLIC_STATIC_EXPORT === 'true' ? '/examsathi' : '')).replace(/\/$/, '');
 
 /** Next Link adds basePath itself; use this for assets, fetch and native URLs. */
 export function publicPath(path: string): string {

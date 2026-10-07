@@ -25,7 +25,7 @@ export function buildAuthRedirect(origin: string, path: '/auth/callback' | '/aut
 }
 
 export function authRedirectUrl(path: '/auth/callback' | '/auth/reset-password'): string {
-  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.NODE_ENV === 'production' ? 'examsathi' : '');
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.NEXT_PUBLIC_STATIC_EXPORT === 'true' ? 'examsathi' : '');
   return buildAuthRedirect(window.location.origin, path, basePath);
 }
 

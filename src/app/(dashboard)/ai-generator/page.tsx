@@ -40,6 +40,7 @@ export default function AIGeneratorPage() {
   const extractionController = useRef<AbortController | null>(null);
   const [filePreviewUrl, setFilePreviewUrl] = useState<string | null>(null);
   const [questionCount, setQuestionCount] = useState<number>(5);
+  const [generationMode, setGenerationMode] = useState<'local' | 'cloud'>('local');
   const [examTarget, setExamTarget] = useState<string>('Punjab Master Cadre SST');
   const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [generatedQuestions, setGeneratedQuestions] = useState<Question[]>([]);
@@ -103,7 +104,8 @@ export default function AIGeneratorPage() {
 
     try {
       const endpoint = apiUrl('/api/ai/generate');
-      if (endpoint) {
+      if (generationMode === 'cloud') {
+        if (!endpoint) throw new Error('Cloud AI is not available on this static deployment. Choose local recall.');
         const { data } = await createClient().auth.getSession();
         const serverRes = await fetch(endpoint, {
           method: 'POST',
@@ -118,6 +120,7 @@ export default function AIGeneratorPage() {
           showToast(`Created ${dataResult.questions.length} AI draft questions. Review source excerpts before studying.`);
           return;
         }
+        throw new Error('No supported AI questions were returned. Try clearer notes or choose local recall.');
       }
 
       // Fallback to client-side semantic generator
@@ -256,7 +259,7 @@ export default function AIGeneratorPage() {
           }`}
         >
           <Camera size={14} />
-          <span>📄 PDF / DOCX / TXT</span>
+          <span>📄 Documents / Photos</span>
         </button>
       </div>
 
@@ -364,6 +367,12 @@ export default function AIGeneratorPage() {
         {/* Configuration Row */}
         <div className="grid grid-cols-2 gap-3 pt-1">
           <div>
+            <div className="space-y-2 mb-4">
+              <p className="text-xs text-slate-300">Question generation</p>
+              <button type="button" disabled={isGenerating} aria-pressed={generationMode === 'local'} className={`p-2 rounded mr-2 ${generationMode === 'local' ? 'bg-teal-700' : 'bg-slate-800'}`} onClick={() => setGenerationMode('local')}>Local source recall</button>
+              <button type="button" disabled={isGenerating || !apiUrl('/api/ai/generate')} aria-pressed={generationMode === 'cloud'} className={`p-2 rounded disabled:opacity-40 ${generationMode === 'cloud' ? 'bg-indigo-700' : 'bg-slate-800'}`} onClick={() => setGenerationMode('cloud')}>Cloud AI drafts</button>
+              <p className="text-xs text-slate-400">{generationMode === 'local' ? 'Free recall practice on this device. It may return fewer questions when the source is short.' : 'Requires sign-in and a configured provider. Generating sends reviewed notes text to the AI provider; answers need review.'}</p>
+            </div>
             <label className="text-[10px] font-bold text-slate-400 block mb-1">Question Count</label>
             <div className="grid grid-cols-3 gap-1.5">
               {[5, 10, 20, 50].map(cnt => (
@@ -427,7 +436,7 @@ export default function AIGeneratorPage() {
               <span>
                 {inputMode === 'file' 
                   ? `Extract text for review`
-                  : `Generate ${questionCount} Practice MCQs ✨`}
+                  : `Generate up to ${questionCount} ${generationMode === 'local' ? 'recall' : 'AI draft'} MCQs ✨`}
               </span>
             </>
           )}
