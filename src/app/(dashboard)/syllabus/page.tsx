@@ -23,7 +23,7 @@ export default function SyllabusPage() {
               <p className="text-xs text-slate-400">{lesson ? 'Study lesson available' : 'Lesson pending'} · {available} practice questions available</p>
               <div className="flex flex-wrap gap-3 mt-2 text-sm text-teal-300">
                 <Link href={`/lesson/${topic.id}/`}>{lesson ? 'Read lesson' : 'View coverage status'}</Link>
-                {[10, 20, 50].map(count => <Link key={count} href={`/mock-test/topic-${topic.id}/?count=${count}`}>{count}-question practice</Link>)}
+                {available > 0 ? Array.from(new Set([10, 20, 50].map(count => Math.min(count, available)))).map(count => <Link key={count} href={`/mock-test/topic-${topic.id}/?count=${count}`}>{count}-question practice</Link>) : <span className="text-slate-400">Question set pending</span>}
               </div>
             </article>;
           })}

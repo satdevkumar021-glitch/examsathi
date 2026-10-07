@@ -14,6 +14,7 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
+    "public/ocr/**", // Generated third-party OCR runtime; source is audited through npm.
     "build/**",
     "next-env.d.ts",
     "public/pdf.worker.min.mjs", // Vendored PDF.js worker; lint source package, not its minified build.

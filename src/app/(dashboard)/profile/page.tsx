@@ -8,6 +8,7 @@ import { getStoredUser, toggleFavoriteQuestion, toggleBookmarkQuestion, logoutUs
 import { getVaultQuestions, saveCustomPractice } from '@/lib/question-vault';
 import { studyStorage } from '@/lib/storage';
 import { exportStudyBackup, restoreStudyBackup } from '@/lib/study-backup';
+import { readCloudStudy, saveCloudStudy, restoreCloudStudy, type CloudSnapshot } from '@/lib/cloud-study';
 import { activityStreak } from '@/lib/study-progress';
 import { Question } from '@/lib/data/questions';
 import { createClient } from '@/lib/supabase/client';
@@ -27,6 +28,23 @@ export default function Profile() {
   const [status, setStatus] = useState('');
   const [streak, setStreak] = useState(0);
   const [busy, setBusy] = useState(false);
+  const [cloud, setCloud] = useState<CloudSnapshot | null>(null);
+  const [cloudReady, setCloudReady] = useState(false);
+  const [cloudAccount, setCloudAccount] = useState<string | null>(null);
+  const [cloudBusy, setCloudBusy] = useState(false);
+  const [allowUpload, setAllowUpload] = useState(false);
+  const [allowRestore, setAllowRestore] = useState(false);
+  const cloudAction = async (action: 'refresh' | 'save' | 'restore') => {
+    if (action !== 'refresh' && cloudAccount !== authUser?.id) { setStatus('Refresh cloud status for this account first.'); return; }
+    setCloudBusy(true);
+    try {
+      if (action === 'save') { await saveCloudStudy(cloud?.version || 0); setAllowUpload(false); }
+      if (action === 'restore') { await restoreCloudStudy(); window.location.reload(); return; }
+      setCloud(await readCloudStudy()); setCloudAccount(authUser?.id || null); setCloudReady(true);
+      setStatus(action === 'save' ? t('Cloud backup saved.', 'क्लाउड बैकअप सहेजा गया।', 'ਕਲਾਉਡ ਬੈਕਅੱਪ ਸੰਭਾਲਿਆ ਗਿਆ।') : t('Cloud status refreshed.', 'क्लाउड स्थिति अपडेट हुई।', 'ਕਲਾਉਡ ਸਥਿਤੀ ਅੱਪਡੇਟ ਹੋਈ।'));
+    } catch (error) { setStatus(error instanceof Error ? error.message : 'Cloud transfer failed.'); }
+    finally { setCloudBusy(false); }
+  };
   useEffect(() => {
     const refresh = () => {
       try {
@@ -39,7 +57,7 @@ export default function Profile() {
       } catch { setStatus('Unable to read saved study data. Restore a valid backup.'); }
     };
     refresh();
-  }, [tab]);
+  }, [tab, authUser?.id]);
   const practice = () => {
     try { saveCustomPractice(questions); router.push(`/mock-test/topic-ai-custom/?mode=exam&count=${questions.length}`); }
     catch { setStatus(t('Could not save this drill. Free browser storage and retry.', 'अभ्यास सहेजा नहीं जा सका। ब्राउज़र संग्रहण जांचें।', 'ਅਭਿਆਸ ਸੰਭਾਲਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ। ਬ੍ਰਾਊਜ਼ਰ ਸਟੋਰੇਜ ਵੇਖੋ।')); }
@@ -72,7 +90,7 @@ export default function Profile() {
   return <div className="p-5 space-y-5 text-slate-200 pb-24">
     <h1 className="text-2xl font-bold">{t('Profile & study vault', 'प्रोफाइल और अध्ययन संग्रह', 'ਪ੍ਰੋਫਾਈਲ ਅਤੇ ਅਧਿਐਨ ਸੰਗ੍ਰਹਿ')}</h1>
     <p>{authUser?.user_metadata?.full_name || authUser?.email || user?.name || t('Guest student', 'अतिथि विद्यार्थी', 'ਮਹਿਮਾਨ ਵਿਦਿਆਰਥੀ')}</p>
-    <p className="text-sm text-amber-200">{t('Study data stays in this browser. Accounts have separate local vaults; cloud sync is not enabled. Download a backup to transfer progress.', 'अध्ययन डेटा इस ब्राउज़र में रहता है। खातों के अलग स्थानीय संग्रह हैं; क्लाउड सिंक उपलब्ध नहीं है। स्थानांतरण के लिए बैकअप डाउनलोड करें।', 'ਅਧਿਐਨ ਡਾਟਾ ਇਸ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ। ਖਾਤਿਆਂ ਦੇ ਵੱਖਰੇ ਸਥਾਨਕ ਸੰਗ੍ਰਹਿ ਹਨ; ਕਲਾਉਡ ਸਿੰਕ ਨਹੀਂ ਹੈ। ਤਬਦੀਲੀ ਲਈ ਬੈਕਅੱਪ ਡਾਊਨਲੋਡ ਕਰੋ।')}</p>
+    <p className="text-sm text-amber-200">{t('Progress is saved in this browser. Use downloaded or cloud backups to transfer it. Cloud transfers are manual; signing in does not automatically upload your notes.', 'प्रगति इस ब्राउज़र में सहेजी जाती है। स्थानांतरण के लिए फ़ाइल या क्लाउड बैकअप उपयोग करें। क्लाउड स्थानांतरण मैन्युअल है; लॉगिन से नोट्स स्वतः अपलोड नहीं होते।', 'ਤਰੱਕੀ ਇਸ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਸੰਭਾਲੀ ਜਾਂਦੀ ਹੈ। ਤਬਦੀਲੀ ਲਈ ਫਾਈਲ ਜਾਂ ਕਲਾਉਡ ਬੈਕਅੱਪ ਵਰਤੋ। ਕਲਾਉਡ ਤਬਦੀਲੀ ਹੱਥੀਂ ਹੈ; ਲਾਗਇਨ ਨਾਲ ਨੋਟਸ ਆਪਣੇ ਆਪ ਅੱਪਲੋਡ ਨਹੀਂ ਹੁੰਦੇ।')}</p>
     <p>{streak} {t('day streak', 'दिन लगातार अध्ययन', 'ਦਿਨ ਲਗਾਤਾਰ ਅਧਿਐਨ')} · {user?.xp || 0} XP · {(user?.libraryHours || 0).toFixed(1)} {t('study hours', 'अध्ययन घंटे', 'ਅਧਿਐਨ ਘੰਟੇ')}</p>
     {(status || authError) && <p role="alert">{status || authError}</p>}
     <div className="flex gap-2 flex-wrap">{(['notes', 'favorites', 'bookmarks'] as const).map(item => <button key={item} aria-pressed={tab === item} className={`p-3 rounded-lg ${tab === item ? 'bg-teal-700' : 'bg-slate-800'}`} onClick={() => setTab(item)}>{labels[item]} ({item === 'notes' ? notes.length : item === 'favorites' ? user?.favoriteQuestionIds.length || 0 : user?.bookmarkedQuestionIds.length || 0})</button>)}</div>
@@ -81,6 +99,18 @@ export default function Profile() {
     {(tab === 'notes' ? notes.length === 0 : questions.length === 0) && <p>{t('No saved items in this list.', 'इस सूची में कोई सामग्री नहीं है।', 'ਇਸ ਸੂਚੀ ਵਿੱਚ ਕੋਈ ਸਮੱਗਰੀ ਨਹੀਂ ਹੈ।')}</p>}
     <section className="space-y-3"><h2 className="font-bold">{t('Recent attempts', 'हाल के प्रयास', 'ਹਾਲੀਆ ਕੋਸ਼ਿਸ਼ਾਂ')}</h2>{history.slice(0, 10).map((item, i) => <article className="bg-slate-800 rounded-lg p-3" key={item.attemptId || i}><p>{item.testTitle} · {item.percentage ?? 0}% · {item.correct ?? 0}/{item.total ?? 0}</p>{item.attemptId && <Link className="text-teal-300 underline" href={`/results/latest/?attempt=${encodeURIComponent(item.attemptId)}`}>{t('Review result', 'परिणाम देखें', 'ਨਤੀਜਾ ਵੇਖੋ')}</Link>}</article>)}</section>
     <section className="bg-slate-800 p-4 rounded-xl space-y-3"><h2 className="font-bold">{t('Study backup', 'अध्ययन बैकअप', 'ਅਧਿਐਨ ਬੈਕਅੱਪ')}</h2><button className="underline text-teal-300" onClick={download}>{t('Download backup', 'बैकअप डाउनलोड करें', 'ਬੈਕਅੱਪ ਡਾਊਨਲੋਡ ਕਰੋ')}</button><label className="block">{t('Restore backup (replaces local study records)', 'बैकअप बहाल करें (स्थानीय अध्ययन रिकॉर्ड बदलेंगे)', 'ਬੈਕਅੱਪ ਬਹਾਲ ਕਰੋ (ਸਥਾਨਕ ਅਧਿਐਨ ਰਿਕਾਰਡ ਬਦਲਣਗੇ)')}<input aria-label={t('Restore study backup', 'अध्ययन बैकअप बहाल करें', 'ਅਧਿਐਨ ਬੈਕਅੱਪ ਬਹਾਲ ਕਰੋ')} type="file" accept=".json" className="block mt-2" onChange={e => { void restore(e.target.files?.[0]); }} /></label></section>
+    <section className="bg-slate-800 p-4 rounded-xl space-y-3">
+      <h2 className="font-bold">{t('Cloud study backup', 'क्लाउड अध्ययन बैकअप', 'ਕਲਾਉਡ ਅਧਿਐਨ ਬੈਕਅੱਪ')}</h2>
+      <p className="text-sm">{t('Up to 2 MB. Save on this device, then restore on another signed in to the same account. Download a local backup first. Restoring replaces local progress; it does not merge it.', 'अधिकतम 2 MB। इस डिवाइस से सहेजें और उसी खाते के दूसरे डिवाइस पर बहाल करें। पहले फ़ाइल बैकअप लें। बहाली स्थानीय प्रगति बदलती है; मर्ज नहीं करती।', 'ਵੱਧ ਤੋਂ ਵੱਧ 2 MB। ਇਸ ਡਿਵਾਈਸ ਤੋਂ ਸੰਭਾਲੋ ਅਤੇ ਉਸੇ ਖਾਤੇ ਦੇ ਦੂਜੇ ਡਿਵਾਈਸ ਉੱਤੇ ਬਹਾਲ ਕਰੋ। ਪਹਿਲਾਂ ਫਾਈਲ ਬੈਕਅੱਪ ਲਵੋ। ਬਹਾਲੀ ਸਥਾਨਕ ਤਰੱਕੀ ਬਦਲਦੀ ਹੈ; ਮਿਲਾਉਂਦੀ ਨਹੀਂ।')}</p>
+      {!authUser ? <Link className="underline" href="/login/">{t('Sign in for cloud backup', 'क्लाउड बैकअप के लिए लॉगिन करें', 'ਕਲਾਉਡ ਬੈਕਅੱਪ ਲਈ ਲਾਗਇਨ ਕਰੋ')}</Link> : <>
+        <button disabled={cloudBusy} className="underline text-teal-300" onClick={() => { void cloudAction('refresh'); }}>{t('Refresh cloud status', 'क्लाउड स्थिति अपडेट करें', 'ਕਲਾਉਡ ਸਥਿਤੀ ਅੱਪਡੇਟ ਕਰੋ')}</button>
+        {cloudReady && cloudAccount === authUser.id && <p>{cloud ? `${t('Saved', 'सहेजा गया', 'ਸੰਭਾਲਿਆ ਗਿਆ')}: ${new Date(cloud.updated_at).toLocaleString()} · v${cloud.version}` : t('No cloud backup yet.', 'अभी कोई क्लाउड बैकअप नहीं है।', 'ਹਾਲੇ ਕੋਈ ਕਲਾਉਡ ਬੈਕਅੱਪ ਨਹੀਂ ਹੈ।')}</p>}
+        <label className="flex gap-2"><input type="checkbox" checked={allowUpload} disabled={cloudBusy} onChange={event => setAllowUpload(event.target.checked)} />{t('Upload my notes and progress to my Supabase account, replacing its previous backup.', 'मेरे नोट्स और प्रगति मेरे Supabase खाते में अपलोड करें और पिछला बैकअप बदलें।', 'ਮੇਰੇ ਨੋਟਸ ਅਤੇ ਤਰੱਕੀ ਮੇਰੇ Supabase ਖਾਤੇ ਵਿੱਚ ਅੱਪਲੋਡ ਕਰਕੇ ਪਿਛਲਾ ਬੈਕਅੱਪ ਬਦਲੋ।')}</label>
+        <button disabled={cloudBusy || !cloudReady || cloudAccount !== authUser.id || !allowUpload} className="p-2 rounded bg-teal-700 disabled:opacity-40" onClick={() => { void cloudAction('save'); }}>{t('Save to cloud', 'क्लाउड में सहेजें', 'ਕਲਾਉਡ ਵਿੱਚ ਸੰਭਾਲੋ')}</button>
+        <label className="flex gap-2"><input type="checkbox" checked={allowRestore} disabled={cloudBusy} onChange={event => setAllowRestore(event.target.checked)} />{t('Replace this device’s study records with the cloud backup.', 'इस डिवाइस के अध्ययन रिकॉर्ड क्लाउड बैकअप से बदलें।', 'ਇਸ ਡਿਵਾਈਸ ਦੇ ਅਧਿਐਨ ਰਿਕਾਰਡ ਕਲਾਉਡ ਬੈਕਅੱਪ ਨਾਲ ਬਦਲੋ।')}</label>
+        <button disabled={cloudBusy || !cloudReady || cloudAccount !== authUser.id || !cloud || !allowRestore} className="p-2 rounded bg-indigo-700 disabled:opacity-40" onClick={() => { void cloudAction('restore'); }}>{t('Restore from cloud', 'क्लाउड से बहाल करें', 'ਕਲਾਉਡ ਤੋਂ ਬਹਾਲ ਕਰੋ')}</button>
+      </>}
+    </section>
     <nav className="flex gap-4 flex-wrap"><Link href="/syllabus/">{t('Syllabus', 'पाठ्यक्रम', 'ਸਿਲੇਬਸ')}</Link><Link href="/ai-generator/">{t('Notes practice', 'नोट्स अभ्यास', 'ਨੋਟਸ ਅਭਿਆਸ')}</Link><Link href="/login/">{t('Switch account', 'खाता बदलें', 'ਖਾਤਾ ਬਦਲੋ')}</Link><button disabled={busy} onClick={() => { void logout(); }}>{t('Sign out', 'लॉगआउट', 'ਲਾਗਆਉਟ')}</button></nav>
   </div>;
 }

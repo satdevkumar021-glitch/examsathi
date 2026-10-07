@@ -135,3 +135,9 @@ test('study backup restores allowed records and rejects credentials before mutat
   assert.throws(() => backup.restoreStudyBackup(JSON.stringify({ version: 1, records: { 'sb-token': '{}' } })));
   assert.equal(JSON.parse(studyStorage.getItem('examsathi_saved_review_notes'))[0].id, 'one');
 });
+test('elementary math practice supplies 50 distinct variants with localized prompts', () => {
+  const questions = engine.getTestQuestions({ topicId: 'elementary-mathematics', count: 50 });
+  assert.equal(questions.length, 50);
+  assert.equal(new Set(questions.map(q => q.question.en)).size, 50);
+  assert.ok(questions.filter(q => q.id.startsWith('gen-quant')).every(q => q.question.hi !== q.question.en && q.question.pa !== q.question.en));
+});

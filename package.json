@@ -25,7 +25,10 @@
     "start": "next start",
     "lint": "eslint",
     "test:auth": "node --test tests/auth.test.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "predev": "node scripts/prepare-assets.js",
+    "prebuild": "node scripts/prepare-assets.js",
+    "prebuild:static": "node scripts/prepare-assets.js"
   },
   "dependencies": {
     "@google/genai": "^2.27.0",
@@ -41,6 +44,7 @@
     "pdfjs-dist": "^6.4.299",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "tesseract.js": "^7.0.0",
     "zustand": "^5.0.15"
   },
   "devDependencies": {

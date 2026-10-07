@@ -48,3 +48,17 @@ For each new production origin, update Supabase Site URL and the exact callback/
 ## Release validation and limits
 
 See `docs/verification/FIX_REPORT_2026-10-07.md`. This distinguishes fixes, browser checks and pending syllabus/content/service work. Passing HTTP checks does not establish that every feature or question is correct.
+
+## Free starter deployment selected on 7 October 2026
+
+Use Render's free Node web service, importing the checked-in `render.yaml` Blueprint. It runs the frontend and API on one origin and keeps the existing Pages site available separately. Free services sleep after inactivity and have usage limits; this is a starter deployment, not guaranteed always-on hosting. Official limits: https://render.com/docs/free.
+
+1. Sign in at https://dashboard.render.com/ and choose New → Blueprint, selecting this repository and `main`.
+2. Confirm the free service shown in `render.yaml`. Enter the existing public Supabase URL/anon key and the server-only Gemini key in Render's environment form. Never commit credentials.
+3. Wait for the build/deployment, then check `/api/health/`. This is a liveness check only.
+4. Add the actual Render HTTPS origin's `/auth/callback/` and `/auth/reset-password/` to Supabase redirect URLs. Preserve Pages redirects if Pages remains active.
+5. Test an authenticated generation request, source excerpts, quota exhaustion and unauthenticated rejection before advertising cloud AI as live.
+
+For email, use Resend's free transactional plan with a domain you own and can verify. DNS verification and a sender domain are required for general recipient delivery; a provider test sender is not a production sender. Configure Supabase custom SMTP from the current Resend SMTP documentation: https://resend.com/docs/send-with-supabase-smtp. Sign-in/account terms, provider credentials, domain/DNS access and a real confirmation/reset inbox are still required; no domain purchase is included or authorized here.
+
+OCR now runs in the browser for PNG/JPEG/WebP and optional scanned PDF pages (maximum 10 pages). Choose English, Hindi or Punjabi/Gurmukhi and review recognized text. Runtime assets are hosted by ExamSathi; language models download from Tesseract's default language-data host on first use. Document pixels are not uploaded by OCR. Handwriting and poor scans may be inaccurate. A 10 MB file limit, pixel cap, per-page rendering cap, cancellation and timeout limit expensive work.

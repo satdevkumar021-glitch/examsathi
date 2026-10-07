@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === 'production';
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (isProd ? '/examsathi' : '');
-
 const isStaticExport = process.env.STATIC_EXPORT === 'true';
+// Pages needs its repository prefix; a Node-hosted backend uses its domain root.
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? (isStaticExport ? '/examsathi' : '');
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: process.cwd(),

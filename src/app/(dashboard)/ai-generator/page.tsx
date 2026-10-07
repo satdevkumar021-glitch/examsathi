@@ -1,6 +1,6 @@
 'use client';
 import { studyStorage } from '@/lib/storage';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { Sparkles, Brain, Play, Layers, BookOpen, ShieldCheck, AlertTriangle, CheckCircle2, RotateCcw, Bookmark, UploadCloud, Camera, Trash2 } from 'lucide-react';
@@ -34,6 +34,10 @@ export default function AIGeneratorPage() {
   const [inputMode, setInputMode] = useState<'text' | 'file'>('text');
   const [notesInput, setNotesInput] = useState('');
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [ocrLanguage, setOCRLanguage] = useState<'eng' | 'hin' | 'pan'>('eng');
+  const [scanPDF, setScanPDF] = useState(false);
+  const [extractionProgress, setExtractionProgress] = useState('');
+  const extractionController = useRef<AbortController | null>(null);
   const [filePreviewUrl, setFilePreviewUrl] = useState<string | null>(null);
   const [questionCount, setQuestionCount] = useState<number>(5);
   const [examTarget, setExamTarget] = useState<string>('Punjab Master Cadre SST');
@@ -46,6 +50,7 @@ export default function AIGeneratorPage() {
                     // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
   useEffect(() => { setQuota(checkAIQuota()); }, []);
   useEffect(() => () => { if (filePreviewUrl) URL.revokeObjectURL(filePreviewUrl); }, [filePreviewUrl]);
+  useEffect(() => () => extractionController.current?.abort(), []);
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -74,15 +79,17 @@ export default function AIGeneratorPage() {
       if (!uploadedFile) { setErrorMessage('Select a PDF, DOCX or text file first.'); return; }
       setIsGenerating(true);
       setErrorMessage(null);
+      const controller = new AbortController();
+      extractionController.current = controller;
       try {
-        const extracted = await extractDocumentText(uploadedFile);
+        const extracted = await extractDocumentText(uploadedFile, { language: ocrLanguage, scanPDF, signal: controller.signal, onProgress: setExtractionProgress });
         setNotesInput(extracted);
         setInputMode('text');
         setGeneratedQuestions([]);
         showToast('Text extracted. Review it below, then generate your practice questions.');
       } catch (error) {
-        setErrorMessage(error instanceof Error ? error.message : 'Could not read this document.');
-      } finally { setIsGenerating(false); }
+        setErrorMessage(controller.signal.aborted ? 'Extraction cancelled. Your existing notes are unchanged.' : error instanceof Error ? error.message : 'Could not read this document.');
+      } finally { extractionController.current = null; setExtractionProgress(''); setIsGenerating(false); }
       return;
     }
 
@@ -294,7 +301,7 @@ export default function AIGeneratorPage() {
             <div className="flex items-center justify-between">
               <h2 className="text-xs font-bold text-white flex items-center gap-2">
                 <UploadCloud size={16} className="text-teal-400" />
-                <span>1. Select a PDF, DOCX or text document</span>
+                <span>1. Select a document or study photo</span>
               </h2>
               <span className="text-[10px] text-teal-300 font-mono font-bold">
                 Max 10MB
@@ -305,7 +312,8 @@ export default function AIGeneratorPage() {
             <label className="border-2 border-dashed border-slate-700 hover:border-teal-400/60 bg-slate-900/60 rounded-2xl p-6 flex flex-col items-center justify-center text-center cursor-pointer transition group">
               <input
                 type="file"
-                accept=".pdf,.docx,.txt,.md"
+                accept=".pdf,.docx,.txt,.md,.png,.jpg,.jpeg,.webp"
+                disabled={isGenerating}
                 onChange={handleFileChange}
                 className="hidden"
               />
@@ -316,9 +324,16 @@ export default function AIGeneratorPage() {
                 Click to select a document
               </p>
               <p className="text-[11px] text-slate-400 max-w-xs leading-relaxed">
-                Use a text-based PDF, DOCX, TXT or Markdown file. For scans, paste extracted OCR text.
+                PDF, DOCX, TXT, Markdown, PNG, JPEG or WebP. OCR runs on this device; first use downloads language data. Review recognition errors before generating questions.
               </p>
             </label>
+            <label className="block text-sm text-slate-300">OCR language
+              <select aria-label="OCR language" className="block bg-slate-800 p-2 rounded mt-1" value={ocrLanguage} disabled={isGenerating} onChange={event => setOCRLanguage(event.target.value as 'eng' | 'hin' | 'pan')}>
+                <option value="eng">English</option><option value="hin">Hindi</option><option value="pan">Punjabi (Gurmukhi)</option>
+              </select>
+            </label>
+            <label className="flex gap-2 text-sm text-slate-300"><input type="checkbox" checked={scanPDF} disabled={isGenerating} onChange={event => setScanPDF(event.target.checked)} />Enable OCR for scanned PDF pages (maximum 10 pages)</label>
+            {isGenerating && inputMode === 'file' && <div><p role="status" className="text-sm text-teal-300">{extractionProgress || 'Reading document…'}</p><button type="button" className="underline text-sm text-white" onClick={() => extractionController.current?.abort()}>Cancel extraction</button></div>}
 
             {/* Selected File Info */}
             {uploadedFile && (
