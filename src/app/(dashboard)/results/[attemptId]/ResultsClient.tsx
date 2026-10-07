@@ -1,25 +1,13 @@
 'use client';
+import { rememberQuestions } from '@/lib/question-vault';
+import { useStore } from '@/lib/store';
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import {
-  Target, Clock, Trophy, CheckCircle2, XCircle, MinusCircle,
-  ArrowRight, RotateCcw, Layers, Award, Sparkles, AlertCircle,
-  BookOpen, Brain, BookmarkCheck, Bookmark, Check, SlidersHorizontal,
-  FileText, Share2, Flame, HelpCircle, Star, Lightbulb, Compass, Library
-} from 'lucide-react';
-import {
-  evaluateUserLevel,
-  calculatePredictedRank,
-  UserPerformanceLevel,
-  PredictedRankReport
-} from '@/lib/data/question_bank_engine';
+import { Target, Clock, Trophy, CheckCircle2, XCircle, MinusCircle, RotateCcw, Layers, Award, Sparkles, BookOpen, Brain, BookmarkCheck, Bookmark, Check, FileText, Share2, Star, Lightbulb, Compass, Library } from 'lucide-react';
+import { evaluateUserLevel, calculatePredictedRank, UserPerformanceLevel, PredictedRankReport } from '@/lib/data/question_bank_engine';
 import { Question } from '@/lib/data/questions';
-import { 
-  toggleFavoriteQuestion, 
-  toggleBookmarkQuestion, 
-  getStoredUser 
-} from '@/lib/auth';
+import { toggleFavoriteQuestion, toggleBookmarkQuestion, getStoredUser } from '@/lib/auth';
 import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 import { computeTopicBreakdown, TopicBreakdown } from '@/lib/scoring';
 
@@ -52,7 +40,7 @@ export default function Results() {
   const [loaded, setLoaded] = useState(false);
 
   const [reviewFilter, setReviewFilter] = useState<'all' | 'wrong' | 'correct' | 'favorites' | 'saved'>('all');
-  const [reviewLang, setReviewLang] = useState<'hi' | 'pa' | 'en'>('hi');
+  const { language: reviewLang, setLanguage: setReviewLang } = useStore();
   const [savedNoteIds, setSavedNoteIds] = useState<Record<string, boolean>>({});
   const [favIds, setFavIds] = useState<Record<string, boolean>>({});
   const [bookmarkedIds, setBookmarkedIds] = useState<Record<string, boolean>>({});
@@ -64,8 +52,10 @@ export default function Results() {
       const attempt = new URLSearchParams(window.location.search).get('attempt');
       const stored = attempt ? studyStorage.getItem(`examsathi_result_${attempt}`) : studyStorage.getItem('examsathi_last_result');
       if (stored) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
-        setResult(JSON.parse(stored));
+        const parsedResult = JSON.parse(stored);
+        rememberQuestions(parsedResult.questions || []);
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate persisted attempt once after mount.
+        setResult(parsedResult);
       }
       
       // Load saved notes index

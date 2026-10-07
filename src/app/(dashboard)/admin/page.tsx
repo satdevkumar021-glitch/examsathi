@@ -3,11 +3,7 @@ import { useAuth } from '@/lib/hooks/useAuth';
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  PlusCircle, BookOpen, HelpCircle, Video, FileText, CheckCircle2, 
-  ArrowLeft, ShieldCheck, UploadCloud, Eye, AlertCircle, Clock, 
-  Check, X, Filter, UserCheck, RefreshCw, Layers
-} from 'lucide-react';
+import { PlusCircle, BookOpen, HelpCircle, Video, FileText, CheckCircle2, ArrowLeft, ShieldCheck, UploadCloud, Check, X, Layers } from 'lucide-react';
 import { ALL_LESSONS } from '@/lib/data/lessons';
 
 export type AdminRole = 'educator' | 'reviewer' | 'superadmin';
@@ -83,14 +79,12 @@ export default function AdminResourcePortal() {
   // Auth & Role Management
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const [adminRole, setAdminRole] = useState<AdminRole>('educator');
-  const [passkeyInput, setPasskeyInput] = useState('');
-  const [authError, setAuthError] = useState('');
+  const [, setAuthError] = useState('');
   const [adminUser, setAdminUser] = useState('Educator Sathi');
 
   // Content Pipeline Store
   const [pipeline, setPipeline] = useState<PipelineItem[]>(DEFAULT_PIPELINE);
   const [pipelineFilter, setPipelineFilter] = useState<'all' | WorkflowStatus>('all');
-  const [feedbackInput, setFeedbackInput] = useState<Record<string, string>>({});
 
   // Question Form States
   const [qTopic, setQTopic] = useState('punjab-history');
@@ -139,10 +133,6 @@ export default function AdminResourcePortal() {
     setIsAdminAuthenticated(allowed);
     if (allowed) { setAdminRole(trustedRole); setAdminUser(verifiedUser?.email || 'Educator'); }
   }, [verifiedUser]);
-  const handleVerifyAdmin = (event: React.FormEvent) => {
-    event.preventDefault();
-    setAuthError('Administrator access requires a verified account role assigned by the server.');
-  };
   const handleSwitchRole = (_role: AdminRole) => { setAuthError('Roles are managed by the server.'); };
 
   // Pipeline Actions

@@ -5,8 +5,22 @@ export async function extractDocumentText(file: File): Promise<string> {
   let text: string;
   if (ext === 'txt' || ext === 'md') text = await file.text();
   else if (ext === 'docx') {
-    const mammoth = await import('mammoth');
-    text = (await mammoth.extractRawText({ arrayBuffer: await file.arrayBuffer() })).value;
+    const { unzipSync, strFromU8 } = await import('fflate');
+    let expanded = 0;
+    const files = unzipSync(new Uint8Array(await file.arrayBuffer()), { filter: entry => {
+      if (!/^word\/(document|footnotes|endnotes|header\d*|footer\d*)\.xml$/.test(entry.name)) return false;
+      expanded += entry.originalSize;
+      if (expanded > 10 * 1024 * 1024) throw new Error('DOCX content is too large. Split it into smaller sections.');
+      return true;
+    } });
+    if (!files['word/document.xml']) throw new Error('This is not a readable DOCX document.');
+    text = Object.values(files).map(bytes => {
+      const xml = new DOMParser().parseFromString(strFromU8(bytes), 'application/xml');
+      if (xml.getElementsByTagName('parsererror').length) throw new Error('Invalid DOCX text content.');
+      return Array.from(xml.getElementsByTagNameNS('*', 'p')).map(paragraph =>
+        Array.from(paragraph.getElementsByTagNameNS('*', 't')).map(node => node.textContent || '').join('')
+      ).join('\n');
+    }).join('\n');
   } else if (ext === 'pdf') {
     const pdfjs = await import('pdfjs-dist');
     pdfjs.GlobalWorkerOptions.workerSrc = publicPath('/pdf.worker.min.mjs');

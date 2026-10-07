@@ -1,3 +1,4 @@
+import { publicPath } from '@/lib/paths';
 export const metadata = {
   title: 'Offline | ExamSathi',
 };
@@ -8,16 +9,16 @@ export default function OfflinePage() {
       <div className="text-6xl mb-4">📚</div>
       <h1 className="text-2xl font-bold text-white mb-2">You are offline</h1>
       <p className="text-slate-400 text-sm max-w-xs mb-6">
-        No internet connection. Previously visited lessons and pages are still available from cache.
+        No internet connection. Your saved study records remain on this browser. Reconnect to open pages.
       </p>
       <a
-        href="/dashboard"
+        href={publicPath('/dashboard/')}
         className="bg-teal-500 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm hover:bg-teal-400 transition"
       >
         Go to Dashboard
       </a>
       <p className="text-xs text-slate-500 mt-4">
-        Mock tests started offline will sync automatically when you reconnect.
+        Study data does not sync automatically. Download a backup from your profile.
       </p>
     </div>
   );

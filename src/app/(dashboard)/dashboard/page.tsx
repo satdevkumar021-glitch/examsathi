@@ -6,21 +6,18 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useStore } from '@/lib/store';
 import { useAuth } from '@/lib/hooks/useAuth';
+import { activityStreak } from '@/lib/study-progress';
 import { getStoredUser } from '@/lib/auth';
 import InstallAppButton from '@/components/ui/InstallAppButton';
 import StreakBadge from '@/components/ui/StreakBadge';
 import DailyKnowledge from '@/components/dashboard/DailyKnowledge';
 import { getTodayContent } from '@/lib/data/daily_content';
-import { 
-  Target, Book, Layers, ArrowRight, Keyboard, 
-  Compass, Sparkles, GraduationCap, Briefcase, 
-  Share2, Brain
-} from 'lucide-react';
+import { Target, Book, Layers, ArrowRight, Keyboard, Compass, Sparkles, GraduationCap, Briefcase, Share2, Brain } from 'lucide-react';
 
 export default function Dashboard() {
-  const { user: storeUser, completedTopics } = useStore();
+  const { completedTopics } = useStore();
   const { user: authUser, isGuest, loading: authLoading } = useAuth();
-  const [currentUser, setCurrentUser] = useState<ReturnType<typeof getStoredUser> | null>(null);
+  const [, setCurrentUser] = useState<ReturnType<typeof getStoredUser> | null>(null);
   const [lastResult, setLastResult] = useState<{ accuracy: number; percentage: number } | null>(null);
 
   useEffect(() => {
@@ -37,7 +34,7 @@ export default function Dashboard() {
   const topicsDone = completedTopics?.length || 0;
   const cardsCount = Object.keys({ ...getAllCardStates(), ...loadSRSStates() }).length;
   const avgScore = lastResult ? `${lastResult.accuracy}%` : '--';
-  const streakCount = currentUser?.streak || storeUser?.streak || 0;
+  const streakCount = activityStreak(JSON.parse(studyStorage.getItem('examsathi_activity_days') || '[]'));
 
   return (
     <div className="p-4 flex flex-col gap-6 max-w-xl mx-auto w-full pb-20 text-slate-100">
@@ -149,7 +146,7 @@ export default function Dashboard() {
               </span>
             </div>
             <h3 className="text-white font-black text-sm truncate">
-              Live CBT Mock Test &amp; State Merit Rank
+              Timed Practice &amp; Answer Review
             </h3>
             <p className="text-[11px] text-slate-300 truncate">
               Simple, Mid &amp; Hard sets • Master Cadre, Clerk, Police, Patwari &amp; REET
@@ -254,7 +251,7 @@ export default function Dashboard() {
         </div>
         {!lastResult && (
           <p className="text-[10px] text-slate-400 text-center">
-            🎯 Complete your first CBT Mock Test to calculate live Readiness &amp; Merit Rank.
+            🎯 Complete your first CBT Mock Test to calculate practice accuracy and answer explanations.
           </p>
         )}
       </div>
@@ -483,11 +480,11 @@ export default function Dashboard() {
           </div>
         </div>
         <p className="text-[11px] text-slate-300 leading-relaxed">
-          Invite your friends, colleagues, and study groups on WhatsApp to practice 20-year PYQs, take 50-mark CBT tests, and share their feedback!
+          Invite your friends, colleagues, and study groups on WhatsApp to practice source-labelled historical practice, take 50-mark CBT tests, and share their feedback!
         </p>
         <a 
           href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-            `🎓 *ExamSathi (परीक्षा साथी · ਪ੍ਰੀਖਿਆ ਸਾਥੀ)* 🇮🇳\n\nपंजाब, राजस्थान और केंद्रीय भर्ती परीक्षाओं (Master Cadre, ETT, Clerk, Police, Patwari, REET, CTET) की तैयारी हेतु ExamSathi:\n\n✨ 50-Question Live CBT Mock Tests with Negative Marking\n✨ Predicted State & Category Merit Rank\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ (Gurmukhi) & English\n\n👉 Platform Link:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
+            `🎓 *ExamSathi (परीक्षा साथी · ਪ੍ਰੀਖਿਆ ਸਾਥੀ)* 🇮🇳\n\nपंजाब, राजस्थान और केंद्रीय भर्ती परीक्षाओं (Master Cadre, ETT, Clerk, Police, Patwari, REET, CTET) की तैयारी हेतु ExamSathi:\n\n✨ Topic Practice with Available Questions\n✨ Saved attempts and answer explanations\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ (Gurmukhi) & English\n\n👉 Platform Link:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
           )}`}
           target="_blank"
           rel="noopener noreferrer"

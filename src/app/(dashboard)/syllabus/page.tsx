@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { TOPIC_DOCUMENTS } from '@/lib/data/topic-resources';
 import { ALL_EXAMS } from '@/lib/data/exams';
 import { getLessonByTopicId } from '@/lib/data/lessons';
 import { getTestQuestions } from '@/lib/data/question_bank_engine';
@@ -18,6 +19,7 @@ export default function SyllabusPage() {
             return <article key={topic.id} className="my-3 border border-slate-700 rounded-lg p-3">
               <h4 className="font-semibold">{topic.name}</h4>
               <ul className="list-disc pl-5 my-2 text-sm text-slate-300">{topic.subtopics.flatMap(s => s.split(/,\s*/)).map((subtopic, i) => <li key={i}>{subtopic}</li>)}</ul>
+              {(TOPIC_DOCUMENTS[topic.id] || []).map(resource => <a key={resource.url} className="block text-sm underline text-teal-300" href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title} ↗</a>)}
               <p className="text-xs text-slate-400">{lesson ? 'Study lesson available' : 'Lesson pending'} · {available} practice questions available</p>
               <div className="flex flex-wrap gap-3 mt-2 text-sm text-teal-300">
                 <Link href={`/lesson/${topic.id}/`}>{lesson ? 'Read lesson' : 'View coverage status'}</Link>

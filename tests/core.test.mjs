@@ -91,3 +91,47 @@ test('no rank is invented without a verified candidate cohort', () => {
   assert.equal(rank.hasEnoughData, false);
   assert.equal(rank.totalCandidates, 0);
 });
+test('saved generated questions survive vault lookup and custom-practice transport', () => {
+  local.clear();
+  const vault = load('src/lib/question-vault.ts');
+  const { studyStorage } = load('src/lib/storage.ts');
+  const generated = engine.getTestQuestions({ topicId: 'percent', count: 50 }).find(q => q.id.startsWith('gen-quant'));
+  vault.saveCustomPractice([generated]);
+  assert.equal(JSON.parse(studyStorage.getItem('examsathi_custom_cbt_questions'))[0].id, generated.id);
+  assert.equal(vault.getVaultQuestions([generated.id])[0].question.en, generated.question.en);
+  studyStorage.setItem('examsathi_result_example', JSON.stringify({ questions: [generated], testTitle: 'Saved review' }));
+  assert.equal(vault.savedReviewQuestions('example').questions[0].id, generated.id);
+  assert.equal(vault.savedReviewQuestions('missing'), null);
+});
+test('focus session handles sleeping tabs and pause/resume without elapsed-time drift', () => {
+  const focus = load('src/lib/focus-session.ts');
+  let session = focus.resumeFocus(focus.newFocus(25), 1000);
+  assert.equal(focus.focusRemaining(session, 601000), 900);
+  session = focus.pauseFocus(session, 601000);
+  assert.equal(focus.focusRemaining(session, 9999999), 900);
+  session = focus.resumeFocus(session, 2000000);
+  assert.equal(focus.focusRemaining(session, 2900000), 0);
+});
+test('study XP awards are once-only and streak resets after missing a full day', () => {
+  local.clear();
+  const progress = load('src/lib/study-progress.ts');
+  const auth = load('src/lib/auth.ts');
+  assert.equal(progress.awardStudyXP('task-one', 20), true);
+  assert.equal(progress.awardStudyXP('task-one', 20), false);
+  assert.equal(auth.getStoredUser().xp, 20);
+  assert.equal(progress.activityStreak(['2026-10-05', '2026-10-06'], '2026-10-07'), 2);
+  assert.equal(progress.activityStreak(['2026-10-05'], '2026-10-07'), 0);
+});
+test('study backup restores allowed records and rejects credentials before mutation', () => {
+  local.clear();
+  const { studyStorage } = load('src/lib/storage.ts');
+  const backup = load('src/lib/study-backup.ts');
+  studyStorage.setItem('examsathi_saved_review_notes', JSON.stringify([{ id: 'one', title: 'Saved note', explanation: 'Source explanation', correctText: 'Answer' }]));
+  studyStorage.setItem('examsathi_study_start_date', '2026-10-07');
+  const saved = backup.exportStudyBackup();
+  studyStorage.setItem('examsathi_saved_review_notes', '[]');
+  backup.restoreStudyBackup(saved);
+  assert.equal(JSON.parse(studyStorage.getItem('examsathi_saved_review_notes'))[0].id, 'one');
+  assert.throws(() => backup.restoreStudyBackup(JSON.stringify({ version: 1, records: { 'sb-token': '{}' } })));
+  assert.equal(JSON.parse(studyStorage.getItem('examsathi_saved_review_notes'))[0].id, 'one');
+});

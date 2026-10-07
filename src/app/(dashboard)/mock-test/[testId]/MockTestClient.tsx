@@ -1,41 +1,16 @@
 'use client';
 import { useStore } from '@/lib/store';
+import { rememberQuestions, savedReviewQuestions } from '@/lib/question-vault';
+import { recordStudyActivity } from '@/lib/study-progress';
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import {
-  Clock,
-  CheckCircle2,
-  ChevronRight,
-  ChevronLeft,
-  AlertCircle,
-  Layers,
-  HelpCircle,
-  RotateCw,
-  Award,
-  Sparkles,
-  ArrowRight,
-  Brain,
-  ShieldAlert
-} from 'lucide-react';
+import { Clock, CheckCircle2, ChevronRight, ChevronLeft, AlertCircle, Layers, RotateCw, Award, Brain, ShieldAlert } from 'lucide-react';
 import { Question } from '@/lib/data/questions';
-import {
-  getTestQuestions,
-  evaluateUserLevel,
-  calculatePredictedRank,
-  AVAILABLE_TEST_TOPICS,
-  AVAILABLE_EXAMS
-} from '@/lib/data/question_bank_engine';
+import { getTestQuestions, evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
 import { computeScore, computeTopicBreakdown } from '@/lib/scoring';
-import {
-  CardRating,
-  reviewCard,
-  loadSRSStates,
-  saveSRSStates,
-  createNewCard,
-  getSRSSummary,
-} from '@/lib/srs';
+import { CardRating, reviewCard, loadSRSStates, saveSRSStates, createNewCard, getSRSSummary } from '@/lib/srs';
 
 export default function MockTest({ testId }: { testId?: string }) {
   const router = useRouter();
@@ -56,7 +31,7 @@ export default function MockTest({ testId }: { testId?: string }) {
   const [testTitle, setTestTitle] = useState('Master Cadre & State CBT Mock Test');
   const [secondsRemaining, setSecondsRemaining] = useState(45 * 60);
   const [totalTimeSeconds, setTotalTimeSeconds] = useState(45 * 60);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [, setIsSubmitting] = useState(false);
   const [activeExamId, setActiveExamId] = useState<string>('master-cadre-sst');
   const [activeDifficulty, setActiveDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [sourceConfig, setSourceConfig] = useState({ count: 50, pyq20Years: false, pyqOnly: false });
@@ -66,6 +41,7 @@ export default function MockTest({ testId }: { testId?: string }) {
   useEffect(() => {
     let topicId = 'all';
     let count = 50;
+    let minutes: number | undefined;
     let pyqOnly = false;
     let pyq20Years = false;
     let requestedMode: 'exam' | 'flip' = 'exam';
@@ -113,6 +89,7 @@ export default function MockTest({ testId }: { testId?: string }) {
         const parsed = JSON.parse(storedConfig);
         studyStorage.removeItem('examsathi_test_config');
         if (parsed.topicId) topicId = parsed.topicId;
+        if (Number.isFinite(parsed.timeLimitMinutes)) minutes = parsed.timeLimitMinutes;
         if (parsed.count) count = parsed.count;
         if (parsed.mode) requestedMode = parsed.mode;
         if (parsed.pyqOnly !== undefined) pyqOnly = parsed.pyqOnly;
@@ -129,6 +106,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     if (query.has('exam')) examId = query.get('exam') || undefined;
     if (query.has('diff')) difficulty = ['easy', 'medium', 'hard'].includes(query.get('diff') || '') ? query.get('diff') as 'easy' | 'medium' | 'hard' : 'all';
     if (query.has('count')) count = Math.max(1, Math.min(150, Number(query.get('count')) || 50));
+    if (query.has('minutes')) minutes = Math.max(1, Math.min(180, Number(query.get('minutes')) || 45));
     // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
     setMode(requestedMode);
     if (examId) setActiveExamId(examId);
@@ -143,11 +121,11 @@ export default function MockTest({ testId }: { testId?: string }) {
     if (examMeta) {
       setTestTitle(`${examMeta.name} — ${count} Qs Set${diffLabel}`);
     } else if (topicMeta) {
-      setTestTitle(pyqOnly || pyq20Years ? `${topicMeta.name} — 20-Yr PYQs${diffLabel}` : `${topicMeta.name}${diffLabel}`);
+      setTestTitle(pyqOnly || pyq20Years ? `${topicMeta.name} — Historical labels (unverified)${diffLabel}` : `${topicMeta.name}${diffLabel}`);
     } else if (pyq20Years) {
-      setTestTitle(`20-Year Archive PYQ Live CBT (2004-2024)${diffLabel}`);
+      setTestTitle(`Historical practice archive (provenance under review)${diffLabel}`);
     } else {
-      setTestTitle(`Master Cadre & State 50 Qs CBT Simulator${diffLabel}`);
+      setTestTitle(`Topic Practice Set${diffLabel}`);
     }
 
     setSourceConfig({ count, pyq20Years, pyqOnly });
@@ -169,27 +147,26 @@ export default function MockTest({ testId }: { testId?: string }) {
           if (Array.isArray(parsed) && parsed.length > 0) {
             loadedQuestions = parsed;
             setActiveExamId('custom-notes');
-            setTestTitle(`Notes Practice Drill — ${parsed.length} Questions (Custom Notes)`);
+            setTestTitle(`Custom Practice — ${parsed.length} Saved Questions`);
           }
         }
       } catch {}
     }
 
-    if (loadedQuestions && loadedQuestions.length > 0) {
-      const reviewId = query.get('review');
-    if (reviewId) {
-      try {
-        const saved = JSON.parse(studyStorage.getItem(`examsathi_result_${reviewId}`) || 'null');
-        if (saved?.questions?.length) {
-          loadedQuestions.splice(0, loadedQuestions.length, ...saved.questions);
-          setTestTitle(saved.testTitle);
-        }
-      } catch { /* Invalid saved review is ignored. */ }
+    // Saved reviews are independent of today's bank or filter availability.
+    const reviewId = query.get('review');
+    const review = reviewId ? savedReviewQuestions(reviewId) : null;
+    if (review) {
+      loadedQuestions = review.questions;
+      if (review.testTitle) setTestTitle(review.testTitle);
+      if (review.examId) setActiveExamId(review.examId);
     }
+    if (loadedQuestions.length > 0) {
+      rememberQuestions(loadedQuestions);
     setQuestions(loadedQuestions);
       setLoaded(true);
       setLoadError(false);
-      const allocatedSeconds = Math.max(300, loadedQuestions.length * 54);
+      const allocatedSeconds = minutes !== undefined ? Math.max(60, Math.min(10800, Math.round(minutes * 60))) : Math.max(300, loadedQuestions.length * 54);
       setTotalTimeSeconds(allocatedSeconds);
       setSecondsRemaining(allocatedSeconds);
       deadlineRef.current = Date.now() + allocatedSeconds * 1000;
@@ -272,6 +249,7 @@ export default function MockTest({ testId }: { testId?: string }) {
   };
 
   const handleSubmitTest = () => {
+    recordStudyActivity();
     if (submittingRef.current || questions.length === 0) return;
     submittingRef.current = true;
     setIsSubmitting(true);
@@ -719,6 +697,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                       const states = loadSRSStates();
                       const existing = states[currentQuestion.id] ?? createNewCard(currentQuestion.id);
                       const updated = reviewCard(existing, rating);
+                      recordStudyActivity();
                       saveSRSStates({ ...states, [currentQuestion.id]: updated });
                       // Refresh summary badge
                       const ids = questions.map(q => q.id);

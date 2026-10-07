@@ -1,5 +1,5 @@
 'use client';
-import { Sparkles, Calendar, ExternalLink, Lightbulb, GraduationCap } from 'lucide-react';
+import { Calendar, ExternalLink, Lightbulb, GraduationCap } from 'lucide-react';
 import { useStore } from '@/lib/store';
 
 export default function DailyKnowledge() {

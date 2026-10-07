@@ -1,19 +1,15 @@
 'use client';
 import { studyStorage } from '@/lib/storage';
-import { useState, useEffect, use } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { 
-  ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, 
-  HelpCircle, ChevronLeft, ChevronRight, Bookmark, RotateCcw, 
-  Sparkles, Award, Play, FileText, Download, ExternalLink, ShieldCheck, Target
-} from 'lucide-react';
+import { ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, HelpCircle, ChevronLeft, ChevronRight, Bookmark, Sparkles, FileText, Download, ExternalLink, ShieldCheck, Target } from 'lucide-react';
 import { getLessonByTopicId, Lesson } from '@/lib/data/lessons';
 import { getTestQuestions } from '@/lib/data/question_bank_engine';
 import { Question } from '@/lib/data/questions';
 import FlipCard from '@/components/ui/FlipCard';
 import { useStore } from '@/lib/store';
-import { getStoredUser, saveUserSession } from '@/lib/auth';
+import { awardStudyXP } from '@/lib/study-progress';
 import { getCardState, scheduleNextReview, saveCardState, Rating } from '@/lib/fsrs';
 
 export default function LessonView({ topicId }: { topicId: string }) {
@@ -92,9 +88,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
     if (isReadMarked) return;
     setIsReadMarked(true);
     markTopicComplete(lesson.id);
-    const user = getStoredUser();
-    user.xp += 50;
-    saveUserSession(user);
+    awardStudyXP(`lesson-${lesson.id}`, 50);
     try {
       studyStorage.setItem(`examsathi_read_${lesson.id}`, 'true');
     } catch {

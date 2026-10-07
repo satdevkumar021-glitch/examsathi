@@ -2,29 +2,8 @@
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { 
-  Sparkles, 
-  Brain, 
-  Target, 
-  Play, 
-  Layers, 
-  BookOpen, 
-  ShieldCheck, 
-  AlertTriangle, 
-  CheckCircle2, 
-  RotateCcw, 
-  Bookmark, 
-  Flame, 
-  ArrowRight,
-  Clock,
-  ChevronDown,
-  UploadCloud,
-  FileText,
-  Camera,
-  Image as ImageIcon,
-  Trash2
-} from 'lucide-react';
+
+import { Sparkles, Brain, Play, Layers, BookOpen, ShieldCheck, AlertTriangle, CheckCircle2, RotateCcw, Bookmark, UploadCloud, Camera, Trash2 } from 'lucide-react';
 import { generateMCQsFromNotes, checkAIQuota } from '@/lib/ai_gateway';
 import { extractDocumentText } from '@/lib/document-text';
 import { apiUrl } from '@/lib/paths';
@@ -62,7 +41,7 @@ export default function AIGeneratorPage() {
   const [generatedQuestions, setGeneratedQuestions] = useState<Question[]>([]);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-  const [quota, setQuota] = useState<{ remaining: number; allowed: boolean }>({ remaining: 5, allowed: true });
+  const [, setQuota] = useState<{ remaining: number; allowed: boolean }>({ remaining: 5, allowed: true });
 
                     // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
   useEffect(() => { setQuota(checkAIQuota()); }, []);
@@ -192,14 +171,14 @@ export default function AIGeneratorPage() {
         topicId: 'ai-custom',
         title: q.question.hi || q.question.en,
         explanation: q.explanation.hi || q.explanation.en,
-        thought: 'AI Generated Revision Note',
+        thought: q.examTag.startsWith('Local') ? 'Local source recall — not independently verified' : 'AI draft — review source evidence',
         correctOption: q.correct,
         correctText: q.options[q.correct]?.hi || q.options[q.correct]?.en || '',
-        examTag: `AI Drill (${examTarget})`,
+        examTag: q.examTag,
         savedAt: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short' }),
       }));
 
-      studyStorage.setItem('examsathi_saved_review_notes', JSON.stringify([...newItems, ...existing]));
+      studyStorage.setItem('examsathi_saved_review_notes', JSON.stringify(Array.from(new Map([...existing, ...newItems].map(item => [item.id, item])).values())));
       showToast(`⭐ Saved all ${generatedQuestions.length} questions to your Profile Study Vault!`);
     } catch {
       showToast('Error saving to Study Vault.');

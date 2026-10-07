@@ -1,3 +1,4 @@
+import { TOPIC_DOCUMENTS } from './topic-resources';
 // ============================================================
 // ExamSathi - Comprehensive Public Examination Knowledge Base
 // Detailed, Academic-Grade Study Material for Punjab, Rajasthan & Central Exams
@@ -19,7 +20,7 @@ import { RAJASTHAN_LESSONS } from './lessons/rajasthan';
 import { REFERENCE_SST_LESSONS } from './lessons/reference_sst';
 
 export * from './lessons/types';
-import type { Lesson, DocumentResource, SyllabusReference, VideoResource, BookReference, Flashcard } from './lessons/types';
+import type { Lesson } from './lessons/types';
 
 
 export const BASE_LESSONS: Record<string, Lesson> = {
@@ -1927,6 +1928,21 @@ export const ALL_LESSONS: Record<string, Lesson> = {
   ...SST_MISSING_LESSONS,
   ...SUPPLEMENTAL_LESSONS,
 };
+
+// Remove known seeded video placeholders; expose an honest publisher search link.
+for (const lesson of Object.values(ALL_LESSONS)) {
+  lesson.videos = lesson.videos.map(video => video.youtubeId?.startsWith('p2aGZ3fXw_') ? {
+    title: `Find ${lesson.title.en} videos on NCERT's official channel`,
+    channel: 'NCERT official — topic search',
+    url: `https://www.youtube.com/ncertofficial/search?query=${encodeURIComponent(lesson.title.en)}`,
+    language: 'Source language varies',
+  } : video);
+  const resources = TOPIC_DOCUMENTS[lesson.id] || [];
+  lesson.documents = Array.from(new Map([...resources, ...(lesson.documents || [])].map(doc => [doc.url, {
+    ...doc,
+    title: doc.url === 'https://ncert.nic.in/textbook/pdf/jess301.pdf' ? 'NCERT Class 10 — The Rise of Nationalism in Europe (chapter PDF)' : doc.title,
+  }])).values());
+}
 
 export const LESSONS = ALL_LESSONS;
 

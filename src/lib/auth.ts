@@ -15,6 +15,7 @@ export interface AuthUser {
   streak: number;
   xp: number;
   libraryHours: number;
+  librarySeconds?: number;
   favoriteQuestionIds: string[];
   bookmarkedQuestionIds: string[];
   joinedDate: string;

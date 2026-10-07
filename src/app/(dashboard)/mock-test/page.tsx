@@ -3,27 +3,8 @@ import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { 
-  Target, 
-  Clock, 
-  Layers, 
-  Award, 
-  CheckCircle2, 
-  Play, 
-  BookOpen, 
-  ChevronRight, 
-  Flame, 
-  HelpCircle,
-  Filter,
-  BarChart3,
-  Calendar,
-  Sparkles,
-  SlidersHorizontal,
-  GraduationCap,
-  Briefcase,
-  ShieldAlert
-} from 'lucide-react';
-import { AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS, TopicMeta, ExamInfo } from '@/lib/data/question_bank_engine';
+import { Target, Clock, Layers, Award, CheckCircle2, Play, BookOpen, ChevronRight, Flame, Calendar, Sparkles, SlidersHorizontal } from 'lucide-react';
+import { AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
 import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 
 export default function MockTestHub() {
@@ -44,7 +25,7 @@ export default function MockTestHub() {
         const percentage = parsed.percentage ?? Math.round((parsed.correct / (parsed.total || 1)) * 100);
         let level = 3;
         let title = 'Intermediate Aspirant 🥉';
-        let badge = 'Bronze Rank';
+        let badge = 'Foundation practice';
         if (percentage >= 80) {
           level = 5;
           title = 'Master Cadre Exam Ready 🏆';
@@ -52,16 +33,14 @@ export default function MockTestHub() {
         } else if (percentage >= 65) {
           level = 4;
           title = 'Advanced Competitor 🥈';
-          badge = 'Silver Rank';
+          badge = 'Developing practice';
         } else if (percentage < 35) {
           level = 1;
           title = 'Foundation Stage 🔰';
           badge = 'Study Required';
         }
 
-        const rankText = parsed.predictedRank?.stateRank 
-          ? `Rank #${parsed.predictedRank.stateRank}` 
-          : undefined;
+        const rankText = 'Practice level — not a candidate rank';
 
         // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
         setLastLevel({ level, title, badge, percentage, rankText });
@@ -117,7 +96,7 @@ export default function MockTestHub() {
             </span>
             <div>
               <h1 className="text-white font-extrabold text-lg">Mock Test & PYQ Portal</h1>
-              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — 20-Year PYQ Archive (2004–2024) & Dynamic CBT Sets</p>
+              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — Historical labels under review & topic practice</p>
             </div>
           </div>
           <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
@@ -144,7 +123,7 @@ export default function MockTestHub() {
           </div>
         ) : (
           <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
-            <span>Take your first 50-question mock test to diagnose your <strong>State Merit Rank</strong>.</span>
+            <span>Take your first 50-question mock test to diagnose your <strong>practice accuracy</strong>.</span>
           </div>
         )}
       </div>
@@ -163,7 +142,7 @@ export default function MockTestHub() {
                 ⚡ 50-Question CBT Mock Test Simulator
               </h2>
               <p className="text-[11px] text-teal-300">
-                Official Exam Pattern • 20-Year Archive (2004–2024) • Negative Marking
+                Practice settings • Historical labels under review • Exam-specific scoring
               </p>
             </div>
           </div>
@@ -211,7 +190,7 @@ export default function MockTestHub() {
       <div>
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
-            1. Select Target Examination (20-Year Archive)
+            1. Select Target Examination (practice)
           </h2>
           <span className="text-[10px] text-teal-400 font-semibold">2004 – 2024 Archive</span>
         </div>
@@ -303,7 +282,7 @@ export default function MockTestHub() {
               {testMode === 'exam' && <CheckCircle2 size={16} className="text-indigo-400" />}
             </div>
             <p className="text-[11px] text-slate-400 leading-snug">
-              Timed CBT simulation, -0.25 negative marking, rank prediction & report.
+              Timed practice with clearly stated marking and answer review.
             </p>
           </button>
 

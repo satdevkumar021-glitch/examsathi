@@ -1,10 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  ArrowLeft, Clock, Award, RotateCcw, CheckCircle2, 
-  AlertTriangle, Keyboard, Info, Check, HelpCircle 
-} from 'lucide-react';
+import { ArrowLeft, Award, RotateCcw, Keyboard, Info } from 'lucide-react';
 
 const PRACTICE_PASSAGES = {
   punjabi: {

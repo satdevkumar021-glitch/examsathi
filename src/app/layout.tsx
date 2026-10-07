@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: '%s | ExamSathi (परीक्षा साथी)',
     default: 'ExamSathi - परीक्षा साथी • ਮੁਫ਼ਤ ਪ੍ਰੀਖਿਆ ਤਿਆਰੀ ਮੰਚ',
   },
-  description: '100% Free, High-Fidelity Exam Preparation Platform for Punjab (Master Cadre, ETT, Clerk, Police, Patwari), Rajasthan (REET, Patwar), and Central Exams (CTET, SSC). Real CBT drills, 20-Year PYQ archives, and Raavi typing benchmark.',
+  description: '100% Free, High-Fidelity Exam Preparation Platform for Punjab (Master Cadre, ETT, Clerk, Police, Patwari), Rajasthan (REET, Patwar), and Central Exams (CTET, SSC). Topic practice, source-labelled historical questions, and typing practice.',
   keywords: ['Punjab Master Cadre', 'PSTET', 'ETT Punjab', 'PSSSB Clerk', 'Raavi Typing', 'REET', 'CTET', 'Free Mock Test', 'ਪੰਜਾਬੀ ਟਾਈਪਿੰਗ'],
   manifest: publicPath('/manifest.json'),
   openGraph: {

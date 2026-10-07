@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
   let urlPath = rawPath;
   try {
     urlPath = decodeURIComponent(rawPath);
-  } catch (e) {}
+  } catch {}
   if (urlPath.startsWith('/examsathi/')) {
     urlPath = urlPath.substring('/examsathi'.length);
   } else if (urlPath === '/examsathi') {

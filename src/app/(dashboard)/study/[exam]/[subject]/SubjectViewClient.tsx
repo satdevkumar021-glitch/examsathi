@@ -1,10 +1,7 @@
 'use client';
-import { useState, use } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { 
-  ArrowLeft, CheckCircle2, Circle, Clock, BookOpen, Layers, 
-  Target, ChevronRight, Sparkles, Award 
-} from 'lucide-react';
+import { ArrowLeft, BookOpen, Target, ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { getExamById, ALL_EXAMS, Exam, Subject, Chapter, Topic } from '@/lib/data/exams';
 

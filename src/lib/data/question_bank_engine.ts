@@ -330,13 +330,13 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
 
   // Template 1: Direct fact verification from flashcards
   flashcards.forEach((card, idx) => {
-    if (!card.q.hi || !card.a.hi) return;
+    if (!card.q.hi || !card.a.hi || /^Explain:/i.test(card.q.en)) return;
 
     // Create 3 plausible distractors from other flashcards
-    const otherAnswers = flashcards
+    const otherAnswers = Array.from(new Map(flashcards
       .filter((_, i) => i !== idx)
       .map(c => c.a)
-      .filter(a => a.hi && a.hi !== card.a.hi);
+      .filter(a => a.hi && a.hi !== card.a.hi).map(a => [a.en || a.hi, a])).values());
 
     if (new Set(otherAnswers.map(a => a.en || a.hi)).size < 3) return;
     const distractor1 = otherAnswers[0] || { hi: 'उपरोक्त में से कोई नहीं', pa: 'ਉਪਰੋਕਤ ਵਿੱਚੋਂ ਕੋਈ ਨਹੀਂ', en: 'None of the above' };
@@ -358,11 +358,6 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
         hi: `सही उत्तर विकल्प (${choiceDistribution.correct}) है: ${card.a.hi}। यह पाठ के फ्लैशकार्ड पर आधारित अभ्यास प्रश्न है।`,
         pa: `ਸਹੀ ਉੱਤਰ ਵਿਕਲਪ (${choiceDistribution.correct}) ਹੈ: ${card.a.pa || card.a.hi}।`,
         en: `Correct option (${choiceDistribution.correct}): ${card.a.en} based on this lesson’s flashcard. Verify the lesson source when needed.`,
-      },
-      thought: {
-        hi: `रणनीतिक विश्लेषण: परीक्षक ऐसे बुनियादी तथ्यों पर सीधे सवाल पूछते हैं। विकल्प (${choiceDistribution.correct}) को लॉक करें और अन्य को कालक्रम के आधार पर हटाएं।`,
-        pa: `ਰਣਨੀਤਕ ਨੁਕਤਾ: ਪੇਪਰ ਸੈੱਟਰ ਸਿੱਧੇ ਸਵਾਲ ਪੁੱਛਦੇ ਹਨ। ਗਲਤ ਵਿਕਲਪਾਂ ਨੂੰ ਰੱਦ ਕਰਕੇ ਸਹੀ ਉੱਤਰ ਲੱਭੋ।`,
-        en: `Examiner insight: Direct recall prompt. Eliminate distractors by verifying historical period and administrative body.`,
       },
       difficulty: difficultyLevel,
     });
@@ -533,7 +528,7 @@ export interface PredictedRankReport {
   strategicAdvice: string;
 }
 
-const MINIMUM_COHORT_FOR_RANK = 500;
+
 
 /**
  * Calculates candidate's predicted State & All-India Rank

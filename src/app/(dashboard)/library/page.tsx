@@ -1,12 +1,10 @@
 'use client';
+import { FocusSession, focusRemaining, newFocus, pauseFocus, resumeFocus } from '@/lib/focus-session';
+import { awardStudyXP } from '@/lib/study-progress';
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { 
-  BookOpen, Clock, Play, Pause, RotateCcw, Volume2, VolumeX, 
-  CheckCircle2, Target, Award, Sparkles, User, Coffee, 
-  Flame, HelpCircle, Layers, ArrowRight, ShieldCheck
-} from 'lucide-react';
+import { BookOpen, Play, Pause, RotateCcw, Volume2, VolumeX, CheckCircle2, Target, User, Flame } from 'lucide-react';
 import { getStoredUser, saveUserSession } from '@/lib/auth';
 
 interface LibrarySeat {
@@ -20,7 +18,9 @@ export default function VirtualStudyLibrary() {
   const [selectedTopic, setSelectedTopic] = useState<string>('child-development-pedagogy');
   const [timerMode, setTimerMode] = useState<25 | 45 | 60>(25);
   const [secondsRemaining, setSecondsRemaining] = useState<number>(25 * 60);
-  const [isRunning, setIsRunning] = useState<boolean>(false);
+  const [focus, setFocus] = useState<FocusSession | null>(null);
+  const focusRef = useRef<FocusSession | null>(null);
+  const isRunning = focus?.deadline != null && !focus.completed;
   const [soundEnabled, setSoundEnabled] = useState<boolean>(false);
   const [sessionCompleted, setSessionCompleted] = useState<boolean>(false);
   const [totalHours, setTotalHours] = useState<number>(0.0);
@@ -54,8 +54,8 @@ export default function VirtualStudyLibrary() {
   ];
 
   const [nudge, setNudge] = useState<{ type: 'eyes' | 'hydration' | 'stretch' | null; snoozed: boolean }>({ type: null, snoozed: false });
-  const [minutesElapsed, setMinutesElapsed] = useState(0);
-  const nudgeTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const [, setMinutesElapsed] = useState(0);
+  const lastNudgeRef = useRef(0);
 
   useEffect(() => {
     try {
@@ -64,6 +64,17 @@ export default function VirtualStudyLibrary() {
       if (user.libraryHours) setTotalHours(user.libraryHours);
       const savedSeat = studyStorage.getItem('examsathi_library_seat');
       if (savedSeat) setSelectedSeat(parseInt(savedSeat, 10));
+      const raw = studyStorage.getItem('examsathi_focus_session');
+      if (raw) {
+        const saved = JSON.parse(raw) as FocusSession;
+        if ([25, 45, 60].includes(saved.minutes) && typeof saved.id === 'string' && Number.isFinite(saved.remaining) && (saved.deadline === null || Number.isFinite(saved.deadline))) {
+          focusRef.current = saved;
+          setFocus(saved);
+          setTimerMode(saved.minutes);
+          setSecondsRemaining(focusRemaining(saved));
+          setSessionCompleted(saved.completed);
+        }
+      }
     } catch {}
   }, []);
 
@@ -117,58 +128,58 @@ export default function VirtualStudyLibrary() {
     };
   }, [soundEnabled, isRunning]);
 
-  // Timer countdown
+  const persistFocus = (session: FocusSession) => {
+    focusRef.current = session;
+    setFocus(session);
+    setSecondsRemaining(focusRemaining(session));
+    studyStorage.setItem('examsathi_focus_session', JSON.stringify(session));
+  };
+  // Deadline survives reload/background throttling; completion awards are idempotent.
   useEffect(() => {
-    let interval: ReturnType<typeof setInterval> | null = null;
-    if (isRunning && secondsRemaining > 0) {
-      interval = setInterval(() => {
-        setSecondsRemaining(prev => {
-          const nextSec = prev - 1;
-          return nextSec;
-        });
-      }, 1000);
-    } else if (secondsRemaining === 0 && isRunning) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- Transition once when the running timer completes.
-      setIsRunning(false);
-      setSessionCompleted(true);
-      const updatedHours = parseFloat((totalHours + timerMode / 60).toFixed(1));
-      setTotalHours(updatedHours);
-      try {
-        const user = getStoredUser();
-        user.libraryHours = updatedHours;
-        user.xp += 50;
-        saveUserSession(user);
-      } catch {}
-    }
-    return () => { if (interval) clearInterval(interval); };
-  }, [isRunning, secondsRemaining, timerMode, totalHours]);
-
-  // Wellness nudge logic — triggers every 20 minutes (eyes) and 45 minutes (stretch+water)
-  useEffect(() => {
-    if (!isRunning) return;
-
-    nudgeTimerRef.current = setInterval(() => {
-      setMinutesElapsed(prev => {
-        const next = prev + 1;
-        if (next % 45 === 0) {
-          setNudge({ type: 'stretch', snoozed: false });
-        } else if (next % 20 === 0) {
-          setNudge({ type: 'eyes', snoozed: false });
+    const tick = () => {
+      const current = focusRef.current;
+      if (!current || current.completed || current.deadline === null) return;
+      const remaining = focusRemaining(current);
+      setSecondsRemaining(remaining);
+      const elapsedMinutes = Math.floor((current.minutes * 60 - remaining) / 60);
+      setMinutesElapsed(elapsedMinutes);
+      if (elapsedMinutes >= lastNudgeRef.current + 20) {
+        lastNudgeRef.current = elapsedMinutes;
+        setNudge({ type: elapsedMinutes >= 45 ? 'stretch' : 'eyes', snoozed: false });
+      }
+      if (remaining === 0) {
+        const completed = { ...current, remaining: 0, deadline: null, completed: true };
+        focusRef.current = completed;
+        setFocus(completed);
+        setSessionCompleted(true);
+        studyStorage.setItem('examsathi_focus_session', JSON.stringify(completed));
+        if (awardStudyXP(current.id, 50)) {
+          const user = getStoredUser();
+          user.librarySeconds = (user.librarySeconds ?? Math.round(user.libraryHours * 3600)) + current.minutes * 60;
+          user.libraryHours = user.librarySeconds / 3600;
+          saveUserSession(user);
+          setTotalHours(user.libraryHours);
         }
-        return next;
-      });
-    }, 60 * 1000); // every real minute
-
-    return () => { if (nudgeTimerRef.current) clearInterval(nudgeTimerRef.current); };
-  }, [isRunning]);
+      }
+    };
+    const timer = setInterval(tick, 1000);
+    window.addEventListener('focus', tick);
+    return () => { clearInterval(timer); window.removeEventListener('focus', tick); };
+  }, []);
 
   const setTimerPreset = (mins: 25 | 45 | 60) => {
     setTimerMode(mins);
-    setSecondsRemaining(mins * 60);
-    setIsRunning(false);
+    persistFocus(newFocus(mins));
     setSessionCompleted(false);
     setMinutesElapsed(0);
+    lastNudgeRef.current = 0;
     setNudge({ type: null, snoozed: false });
+  };
+  const toggleTimer = () => {
+    const current = focusRef.current;
+    const session = !current || current.completed ? newFocus(timerMode) : current;
+    persistFocus(session.deadline === null ? resumeFocus(session) : pauseFocus(session));
+    setSessionCompleted(false);
   };
 
   const formatTimer = (secs: number) => {
@@ -199,7 +210,7 @@ export default function VirtualStudyLibrary() {
             </div>
           </div>
           <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2 py-1 rounded-full border border-emerald-500/40 flex items-center gap-1 font-mono">
-            <Flame size={12} /> {totalHours > 0 ? `${totalHours}h Studied` : '0.0h Studied'}
+            <Flame size={12} /> {totalHours > 0 ? `${totalHours.toFixed(1)}h Studied` : '0.0h Studied'}
           </span>
         </div>
       </div>
@@ -342,7 +353,7 @@ export default function VirtualStudyLibrary() {
         {/* Timer Control Buttons */}
         <div className="flex items-center gap-3">
           <button
-            onClick={() => setIsRunning(!isRunning)}
+            onClick={toggleTimer}
             className={`px-6 py-3 rounded-xl font-black text-xs flex items-center gap-2 shadow-lg transition ${
               isRunning
                 ? 'bg-amber-500 hover:bg-amber-400 text-slate-950'
@@ -437,7 +448,7 @@ export default function VirtualStudyLibrary() {
             className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-2.5 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5 shadow"
           >
             <Target size={13} />
-            <span>50 Qs CBT Mock (-0.25)</span>
+            <span>Up to 50 Qs Practice</span>
           </Link>
         </div>
       </div>

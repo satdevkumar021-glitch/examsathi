@@ -11,7 +11,6 @@ test.describe('ExamSathi Comprehensive E2E Audit Suite', () => {
     // Language switch test
     const langHi = page.locator('button:has-text("हिंदी")');
     const langPa = page.locator('button:has-text("ਪੰਜਾਬੀ")');
-    const langEn = page.locator('button:has-text("English")');
     
     if (await langPa.count() > 0) {
       await langPa.click();

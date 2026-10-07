@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, Mail, MessageSquare, AlertCircle, Code2, Lightbulb } from 'lucide-react';
+import { ArrowLeft, Mail, AlertCircle, Code2, Lightbulb } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Contact Us & Errata Support',

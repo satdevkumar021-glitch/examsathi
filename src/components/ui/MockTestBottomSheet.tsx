@@ -1,11 +1,9 @@
 'use client';
+import { studyStorage } from '@/lib/storage';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { 
-  X, Target, Layers, Sparkles, Check, 
-  HelpCircle, ShieldAlert, BookOpen, Clock
-} from 'lucide-react';
-import { AVAILABLE_EXAMS, ExamInfo } from '@/lib/data/question_bank_engine';
+import { X, Target, Layers, Check, ShieldAlert } from 'lucide-react';
+import { AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
 
 interface MockTestBottomSheetProps {
   isOpen: boolean;
@@ -36,7 +34,7 @@ export default function MockTestBottomSheet({
       testId: `exam-${selectedExam}`,
       examId: selectedExam,
       topicId: defaultTopicId,
-      title: `${activeExam.name} - ${questionCount} Qs ${is20YearPYQ ? '(20-Yr PYQs)' : 'Simulator'}`,
+      title: `${activeExam.name} - ${questionCount} Qs ${is20YearPYQ ? '(Historical labels (unverified))' : 'Simulator'}`,
       titlePa: `${activeExam.namePa} - ${questionCount} ਸਵਾਲ`,
       count: questionCount,
       difficulty: selectedDifficulty,
@@ -47,7 +45,7 @@ export default function MockTestBottomSheet({
     };
 
     try {
-      sessionStorage.setItem('examsathi_test_config', JSON.stringify(configPayload));
+      studyStorage.setItem('examsathi_test_config', JSON.stringify(configPayload));
     } catch {}
 
     const queryParams = new URLSearchParams({
@@ -56,10 +54,11 @@ export default function MockTestBottomSheet({
       count: questionCount.toString(),
       pyq: is20YearPYQ ? '20y' : 'all',
       mode,
+      minutes: String(configPayload.timeLimitMinutes),
     });
 
     onClose();
-    router.push(`/mock-test/topic-all?${queryParams.toString()}`);
+    router.push(`/mock-test/topic-${defaultTopicId}?${queryParams.toString()}`);
   };
 
   return (
@@ -79,7 +78,7 @@ export default function MockTestBottomSheet({
               <h2 className="text-base font-black text-white">Configure CBT Mock Test</h2>
             </div>
             <p className="text-[11px] text-slate-400">
-              Official Exam Pattern · 20-Year Archive (2004–2024) · 50 Qs Set
+              Practice settings · Availability depends on filters
             </p>
           </div>
           <button 

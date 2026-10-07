@@ -1,7 +1,7 @@
-const CACHE = 'examsathi-public-v2';
+const CACHE = 'examsathi-public-v3';
 const root = new URL('./', self.location.href);
-const offline = new URL('offline/', root).href;
-const publicPages = ['offline/', '', 'about/'].map(path => new URL(path, root).href);
+const offline = new URL('offline.html', root).href;
+const publicPages = [offline];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(publicPages)));
   self.skipWaiting();

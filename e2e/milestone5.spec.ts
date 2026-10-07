@@ -7,7 +7,6 @@ test.describe('Milestone 5 Regression Suite (B5, B6, B7)', () => {
     await expect(page).toHaveURL(/.*\/exams\/central\/?/);
 
     // Verify all central exams are present in the DOM
-    const examCards = page.locator('div[data-testid="exam-card"], div.rounded-2xl.border');
     const pageText = await page.textContent('body');
 
     expect(pageText).toContain('SSC CGL');
