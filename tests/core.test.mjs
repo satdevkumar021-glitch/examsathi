@@ -9,6 +9,7 @@ const local = new Map();
 const window = { localStorage: { getItem: key => local.get(key) ?? null, setItem: (key, value) => local.set(key, value), removeItem: key => local.delete(key) }, dispatchEvent() {} };
 function load(file) {
   file = path.resolve(file); if (!path.extname(file)) file += '.ts';
+  if (file.endsWith('.json')) return { default: JSON.parse(readFileSync(file,'utf8')) };
   if (cache.has(file)) return cache.get(file).exports;
   const loaded = { exports: {} }; cache.set(file, loaded);
   const js = ts.transpileModule(readFileSync(file, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
@@ -140,4 +141,37 @@ test('elementary math practice supplies 50 distinct variants with localized prom
   assert.equal(questions.length, 50);
   assert.equal(new Set(questions.map(q => q.question.en)).size, 50);
   assert.ok(questions.filter(q => q.id.startsWith('gen-quant')).every(q => q.question.hi !== q.question.en && q.question.pa !== q.question.en));
+});
+test('every catalogue exam only supplies its mapped syllabus topics and unknown exams stay empty', () => {
+  const { ALL_EXAMS } = load('src/lib/data/exams.ts');
+  for (const exam of Object.values(ALL_EXAMS).flat()) {
+    const topics = new Set(exam.subjects.flatMap(s => s.chapters.flatMap(c => c.topics.map(t => canonical(t.id)))));
+    const pool = engine.getQuestionPool({ examId: exam.id });
+    assert.ok(pool.every(q => topics.has(canonical(q.topicId))), exam.id);
+    assert.equal(new Set(pool.map(engine.questionIdentity)).size, pool.length);
+  }
+  assert.deepEqual([...engine.getQuestionPool({ examId: 'unknown-exam' })], []);
+});
+test('fresh sets exclude completed wording across IDs and stop at exhaustion', () => {
+  const pool = engine.getQuestionPool({ examId: 'ssc-cgl' });
+  const first = engine.getTestQuestions({ examId: 'ssc-cgl', count: 50 });
+  const excluded = first.map(engine.questionIdentity);
+  const next = engine.getTestQuestions({ examId: 'ssc-cgl', count: 50, excludeKeys: excluded });
+  assert.equal(first.length, 50); assert.equal(next.length, 50);
+  assert.ok(next.every(q => !excluded.includes(engine.questionIdentity(q))));
+  assert.equal(engine.getTestQuestions({ examId: 'ssc-cgl', excludeKeys: pool.map(engine.questionIdentity) }).length, 0);
+  const q = first[0]; assert.equal(engine.questionIdentity(q), engine.questionIdentity({ ...q, id: 'other-id' }));
+});
+test('legacy ETT aliases resolve to the same strict pool; CTET primary does not select civics', () => {
+  const keys = config => engine.getQuestionPool(config).map(engine.questionIdentity).sort();
+  assert.deepEqual(keys({ examId: 'ett-punjab' }), keys({ examId: 'punjab-ett' }));
+  const primary = engine.getQuestionPool({ examId: 'ctet-paper1' });
+  assert.ok(!primary.some(q => canonical(q.topicId) === canonical('fundamental-rights')));
+  assert.ok(primary.some(q => q.topicId === 'primary-mathematics'));
+});
+test('Haryana general-knowledge questions are not child-pedagogy or Punjab ETT practice', () => {
+  const unrelated = new Set(['q-htet-001', 'q-htet-002', 'q-htet-003', 'q-htet-006', 'q-htet-008', 'q-htet-010']);
+  for (const config of [{examId:'punjab-ett'}, {topicId:'child-development-pedagogy'}, {examId:'ctet-paper1'}]) {
+    assert.ok(engine.getQuestionPool(config).every(q=>!unrelated.has(q.id)));
+  }
 });

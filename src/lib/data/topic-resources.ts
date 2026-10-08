@@ -1,4 +1,4 @@
-import type { DocumentResource } from './lessons/types';
+import type { DocumentResource, VideoResource } from './lessons/types';
 const history = { title: 'NCERT Class 10 — The Rise of Nationalism in Europe (chapter PDF)', url: 'https://ncert.nic.in/textbook/pdf/jess301.pdf', language: 'English', type: 'textbook' };
 const economy = { title: 'NCERT Class 10 — Development (chapter PDF)', url: 'https://ncert.nic.in/textbook/pdf/jess201.pdf', language: 'English', type: 'textbook' };
 const geography = { title: 'NCERT Class 10 — Resources and Development (chapter PDF)', url: 'https://ncert.nic.in/textbook/pdf/jess101.pdf', language: 'English', type: 'textbook' };
@@ -21,4 +21,15 @@ export const TOPIC_DOCUMENTS: Record<string, DocumentResource[]> = {
   'physics-concepts': [light], 'science-concepts': [reactions, acids, life, light],
   'mathematics-core': [numbers], 'elementary-mathematics': [numbers], 'ett-primary-math': [numbers],
   'indian-polity': [democracy], 'sst-indian-polity': [democracy],
+};
+
+/** Publisher and title verified through YouTube oEmbed on 8 October 2026. */
+export const TOPIC_VIDEOS: Record<string, VideoResource[]> = {
+  'primary-mathematics': [{
+    title: 'NCERT Class V Mathematics — Chapter 2: Fractions',
+    channel: 'NCERT OFFICIAL',
+    youtubeId: '_NcccWCcfj4',
+    url: 'https://www.youtube.com/watch?v=_NcccWCcfj4',
+    language: 'Source language varies',
+  }],
 };

@@ -26,4 +26,4 @@ export const useStore = create<AppState>()(persist((set) => ({
   setSelectedExam: (state, exam) => set({ selectedState: state, selectedExam: exam }),
   setUser: (user) => set({ user }),
   markTopicComplete: (topicId) => set((state) => ({ completedTopics: Array.from(new Set([...state.completedTopics, topicId])) })),
-}), { name: 'examsathi_preferences', storage: createJSONStorage(() => studyStorage), merge: (persisted, current) => ({ ...current, language: 'hi', completedTopics: [], user: null, ...(persisted as Partial<AppState> || {}) }), partialize: state => ({ language: state.language, completedTopics: state.completedTopics }) }));
+}), { name: 'examsathi_preferences', storage: createJSONStorage(() => studyStorage), merge: (persisted, current) => ({ ...current, language: 'hi', completedTopics: [], user: null, selectedExam: null, selectedState: null, ...(persisted as Partial<AppState> || {}) }), partialize: state => ({ language: state.language, completedTopics: state.completedTopics, selectedState: state.selectedState, selectedExam: state.selectedExam }) }));

@@ -5,7 +5,7 @@ const KEYS = [
   'examsathi_last_result', 'examsathi_preferences', 'examsathi_srs_states',
   'examsathi_fsrs_deck', 'examsathi_activity_days', 'examsathi_roadmap_completed_v2',
   'examsathi_xp_awards', 'examsathi_study_start_date',
-  'examsathi_study_profile',
+  'examsathi_study_profile', 'examsathi_completed_question_keys',
 ];
 const allowed = (key: string) => KEYS.includes(key) || /^examsathi_result_[a-f0-9-]{36}$/.test(key);
 function validQuestion(value: unknown): boolean {

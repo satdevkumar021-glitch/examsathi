@@ -1,4 +1,7 @@
 'use client';
+import QuestionSyllabusScope from '@/components/ui/QuestionSyllabusScope';
+import { getQuestionPool } from '@/lib/data/question_bank_engine';
+import { completedQuestionKeys } from '@/lib/practice-history';
 import { rememberQuestions } from '@/lib/question-vault';
 import { useStore } from '@/lib/store';
 import { studyStorage } from '@/lib/storage';
@@ -124,6 +127,8 @@ export default function Results() {
   const predictedRank: PredictedRankReport = calculatePredictedRank(percentage, numericRawScore, total);
 
   const testId = result.testId || '1';
+  const topicId = testId.startsWith('topic-') ? testId.slice(6) : 'all';
+  const remaining = result.examId === 'custom-notes' ? 0 : getQuestionPool({ examId: result.examId, topicId, difficulty: result.difficulty, pyq20Years: result.sourceConfig?.pyq20Years, pyqOnly: result.sourceConfig?.pyqOnly, excludeKeys: completedQuestionKeys() }).length;
   const retakeQuery = new URLSearchParams({ exam: result.examId || 'all', diff: result.difficulty || 'all', count: String(total), pyq: result.sourceConfig?.pyq20Years ? '20y' : 'all', mode: 'exam' }).toString();
   const testTitle = result.testTitle || 'Punjab Master Cadre 50-Question CBT Simulation';
   const questions = (result.questions && result.questions.length > 0) ? result.questions : [];
@@ -902,6 +907,7 @@ export default function Results() {
                         <span>{isSaved ? 'In Notes ✓' : 'Add Note 📝'}</span>
                       </button>
 
+                      <QuestionSyllabusScope topicId={q.topicId} />
                       {/* Deep Dive Lesson Link */}
                       <Link
                         href={['custom-notes', 'uploaded-notes'].includes(q.topicId) ? '/ai-generator' : `/lesson/${q.topicId || 'modern-india'}`}
@@ -944,9 +950,13 @@ export default function Results() {
           <span>Review These {total} Questions in Flip Card Mode</span>
         </Link>
 
+        {result.examId !== 'custom-notes' && <div className="p-3 border border-teal-700 rounded-xl text-sm">
+          <p>{remaining} unseen questions remain in this exam/topic/filter pool.</p>
+          {remaining > 0 ? <Link className="block underline text-teal-300 mt-2" href={`/mock-test/${testId}?${retakeQuery}&fresh=1&set=${result.attemptId}`}>Next fresh set ({Math.min(total, remaining)} questions)</Link> : <p className="text-amber-200">Fresh questions exhausted. Review earlier sets or change the topic. Questions will not be silently repeated.</p>}
+        </div>}
         {/* Retake Live Test */}
         <Link 
-          href={`/mock-test/${testId}?${retakeQuery}`}
+          href={`/mock-test/${testId}?${retakeQuery}&repeat=1&set=retake-${result.attemptId}`}
           className="w-full bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium py-3 rounded-xl text-center text-xs flex items-center justify-center gap-2 transition"
         >
           <RotateCcw size={14} /> 

@@ -1,10 +1,13 @@
 'use client';
+import { useStore } from '@/lib/store';
+import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
+import { getQuestionPool } from '@/lib/data/question_bank_engine';
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Target, Clock, Layers, Award, CheckCircle2, Play, BookOpen, ChevronRight, Flame, Calendar, Sparkles, SlidersHorizontal } from 'lucide-react';
-import { AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
+import { getExamTopics, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
 import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 
 export default function MockTestHub() {
@@ -18,8 +21,13 @@ export default function MockTestHub() {
   const [lastLevel, setLastLevel] = useState<{ level: number; title: string; badge: string; percentage: number; rankText?: string } | null>(null);
 
   useEffect(() => {
+    const query = new URLSearchParams(window.location.search);
+    const exam = normalizePracticeExamId(query.get('exam') || useStore.getState().selectedExam || 'punjab-master-cadre');
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Restore explicit route or saved exam context after mount.
+    setSelectedExamForDrawer(exam);
+    setTestMode(query.get('mode') === 'flip' ? 'flip' : 'exam');
     try {
-      const stored = sessionStorage.getItem('examsathi_last_result') || studyStorage.getItem('examsathi_last_result');
+      const stored = studyStorage.getItem('examsathi_last_result');
       if (stored) {
         const parsed = JSON.parse(stored);
         const percentage = parsed.percentage ?? Math.round((parsed.correct / (parsed.total || 1)) * 100);
@@ -28,7 +36,7 @@ export default function MockTestHub() {
         let badge = 'Foundation practice';
         if (percentage >= 80) {
           level = 5;
-          title = 'Master Cadre Exam Ready 🏆';
+          title = 'Strong practice result 🏆';
           badge = 'Gold Merit Tier';
         } else if (percentage >= 65) {
           level = 4;
@@ -42,7 +50,6 @@ export default function MockTestHub() {
 
         const rankText = 'Practice level — not a candidate rank';
 
-        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
         setLastLevel({ level, title, badge, percentage, rankText });
       }
     } catch {
@@ -50,17 +57,16 @@ export default function MockTestHub() {
     }
   }, []);
 
-  const subjects = ['All', 'History', 'Civics', 'Geography', 'Economics', 'Science', 'Punjabi'];
-
-  const filteredTopics = AVAILABLE_TEST_TOPICS.filter(t => 
-    selectedSubject === 'All' ? true : t.subject.toLowerCase() === selectedSubject.toLowerCase()
-  );
+  const examTopics = getExamTopics(selectedExamForDrawer);
+  const subjects = ['All', ...new Set(examTopics.map(topic => topic.subject))];
+  const filteredTopics = examTopics.filter(topic => selectedSubject === 'All' || topic.subject === selectedSubject);
 
   const startTopicTest = (topicId: string, customMode?: 'exam' | 'flip', isPyq = false) => {
     const mode = customMode || testMode;
     try {
       sessionStorage.setItem('examsathi_test_config', JSON.stringify({
         topicId,
+        examId: selectedExamForDrawer,
         mode,
         count: questionCount,
         difficulty: difficultyFilter,
@@ -70,6 +76,7 @@ export default function MockTestHub() {
     } catch {}
 
     const query = new URLSearchParams({
+      exam: selectedExamForDrawer,
       diff: difficultyFilter,
       count: questionCount.toString(),
       pyq: isPyq ? '20y' : 'all',
@@ -81,12 +88,22 @@ export default function MockTestHub() {
 
   const openDrawerForExam = (examId: string) => {
     setSelectedExamForDrawer(examId);
+    setSelectedSubject('All');
+    const chosen = practiceExam(examId);
+    if (chosen) useStore.getState().setSelectedExam(chosen.state, chosen.id);
     setIsBottomSheetOpen(true);
   };
 
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-24 text-slate-100 max-w-xl mx-auto w-full">
       
+      <label className="text-sm text-teal-200">Selected exam
+        <select aria-label="Selected exam" value={selectedExamForDrawer} onChange={event => { const id = event.target.value; setSelectedExamForDrawer(id); setSelectedSubject('All'); const exam = AVAILABLE_EXAMS.find(e => e.id === id); if (exam) { const catalogue = practiceExam(id); if (catalogue) useStore.getState().setSelectedExam(catalogue.state, id); } }} className="block w-full bg-slate-800 rounded-lg p-3 mt-2">
+          {AVAILABLE_EXAMS.map(exam => <option key={exam.id} value={exam.id}>{exam.name}</option>)}
+        </select>
+      </label>
+      <p className="text-xs text-amber-200">Only questions mapped to this exam’s current topic outline are shown. Coverage is incomplete; shared topics can use questions labelled from another exam. See the coverage report before treating this as a full mock.</p>
+      <Link href="/coverage" className="underline text-teal-300 text-sm">Check topic coverage & available fresh sets</Link>
       {/* Header Banner */}
       <div className="bg-gradient-to-br from-indigo-900/70 via-slate-800 to-teal-900/50 p-5 rounded-2xl border border-indigo-700/40 shadow-lg">
         <div className="flex items-center justify-between mb-2">
@@ -123,7 +140,7 @@ export default function MockTestHub() {
           </div>
         ) : (
           <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between text-xs text-slate-300">
-            <span>Take your first 50-question mock test to diagnose your <strong>practice accuracy</strong>.</span>
+            <span>Take a topic practice set to diagnose your <strong>practice accuracy</strong>.</span>
           </div>
         )}
       </div>
@@ -139,7 +156,7 @@ export default function MockTestHub() {
             </span>
             <div>
               <h2 className="text-white font-extrabold text-sm sm:text-base">
-                ⚡ 50-Question CBT Mock Test Simulator
+                ⚡ Exam-specific practice sets
               </h2>
               <p className="text-[11px] text-teal-300">
                 Practice settings • Historical labels under review • Exam-specific scoring
@@ -147,7 +164,7 @@ export default function MockTestHub() {
             </div>
           </div>
           <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-black px-2 py-0.5 rounded-full border border-emerald-500/30">
-            50 Qs Set
+            Up to 50 Qs
           </span>
         </div>
 
@@ -156,11 +173,11 @@ export default function MockTestHub() {
         </p>
 
         <button
-          onClick={() => openDrawerForExam('master-cadre-sst')}
+          onClick={() => openDrawerForExam(selectedExamForDrawer)}
           className="w-full bg-gradient-to-r from-teal-400 via-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-3 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition"
         >
           <SlidersHorizontal size={15} />
-          <span>Open Exam Configurator & Launch 50 Qs Set</span>
+          <span>Open Exam Configurator</span>
         </button>
       </div>
 
@@ -176,7 +193,7 @@ export default function MockTestHub() {
           <div>
             <div className="flex items-center gap-2">
               <h3 className="text-white font-bold text-xs sm:text-sm">AI Drill Generator ✨</h3>
-              <span className="text-[9px] bg-teal-500/20 text-teal-300 font-bold px-1.5 py-0.5 rounded border border-teal-500/30 font-mono">Gemini 2.5</span>
+              <span className="text-[9px] bg-teal-500/20 text-teal-300 font-bold px-1.5 py-0.5 rounded border border-teal-500/30 font-mono">Cloud AI drafts</span>
             </div>
             <p className="text-[11px] text-slate-300 mt-0.5">
               Paste handwritten notes, PDF text, or coaching material to generate custom CBT drills instantly.
@@ -190,14 +207,14 @@ export default function MockTestHub() {
       <div>
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
-            1. Select Target Examination (practice)
+            1. Configure selected examination
           </h2>
-          <span className="text-[10px] text-teal-400 font-semibold">2004 – 2024 Archive</span>
+          <span className="text-[10px] text-teal-400 font-semibold">Coverage under review</span>
         </div>
         
         <div className="grid grid-cols-2 gap-2.5">
-          {AVAILABLE_EXAMS.map(exam => (
-            <div
+          {AVAILABLE_EXAMS.filter(exam => exam.id === selectedExamForDrawer).map(exam => (
+            <button type="button"
               key={exam.id}
               onClick={() => openDrawerForExam(exam.id)}
               className="cursor-pointer bg-slate-800/80 hover:bg-slate-800 border border-slate-700 hover:border-teal-400/60 p-3 rounded-xl flex flex-col justify-between transition group shadow-sm"
@@ -208,7 +225,7 @@ export default function MockTestHub() {
                     {exam.badge}
                   </span>
                   <span className="text-[9px] text-slate-400 font-mono">
-                    50 Qs
+                    {getQuestionPool({examId: exam.id}).length} available
                   </span>
                 </div>
                 <h3 className="text-white font-bold text-xs group-hover:text-teal-300 transition line-clamp-1">
@@ -223,7 +240,7 @@ export default function MockTestHub() {
                 <span>Configure Test</span>
                 <ChevronRight size={12} className="group-hover:translate-x-1 transition-transform" />
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
@@ -336,7 +353,7 @@ export default function MockTestHub() {
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
             4. Topic-Wise Question Bank ({filteredTopics.length} Topics)
           </h2>
-          <span className="text-[10px] text-teal-400 font-semibold">600+ PYQs & Drills</span>
+          <span className="text-[10px] text-teal-400 font-semibold">Topic availability below</span>
         </div>
         
         {/* Subject Filter Pills */}
@@ -390,12 +407,14 @@ export default function MockTestHub() {
               {/* Action Buttons */}
               <div className="flex items-center gap-2 pt-2 border-t border-slate-700/60">
                 <button
+                  disabled={!getQuestionPool({examId: selectedExamForDrawer, topicId: topic.id, difficulty: difficultyFilter}).length}
                   onClick={() => startTopicTest(topic.id, 'exam')}
                   className="flex-1 bg-teal-500/20 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  <Play size={12} /> Live {questionCount} Qs CBT
+                  <Play size={12} /> Practice {Math.min(questionCount, getQuestionPool({examId: selectedExamForDrawer, topicId: topic.id, difficulty: difficultyFilter}).length)} Qs
                 </button>
                 <button
+                  disabled={!getQuestionPool({examId: selectedExamForDrawer, topicId: topic.id, difficulty: difficultyFilter}).length}
                   onClick={() => startTopicTest(topic.id, 'flip')}
                   className="flex-1 bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 border border-amber-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >
@@ -419,6 +438,7 @@ export default function MockTestHub() {
         isOpen={isBottomSheetOpen}
         onClose={() => setIsBottomSheetOpen(false)}
         defaultExamId={selectedExamForDrawer}
+        onExamChange={setSelectedExamForDrawer}
       />
 
     </div>

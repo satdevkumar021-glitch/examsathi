@@ -1,9 +1,11 @@
 // ============================================================
 // ExamSathi - Scalable Question Bank & Dynamic Generator Engine
-// Supports 100,000+ topic-wise permutations, 20-Year PYQs (2004-2024),
+// Uses a finite, deduplicated topic pool with historical labels under review,
 // 50-Question Sets, Difficulty Filters (Simple/Mid/Hard), and Rank Engine
 // ============================================================
 
+import { ALL_EXAMS } from './exams';
+import { normalizePracticeExamId, practiceExam } from '../exam-context';
 import { generateQuantPractice } from './quant-practice';
 import { ALL_QUESTIONS, Question } from './questions';
 import { getLessonByTopicId, TOPIC_ALIASES } from './lessons';
@@ -52,7 +54,7 @@ export interface ExamInfo {
   pyqSpan: string;
 }
 
-export const AVAILABLE_EXAMS: ExamInfo[] = [
+const LEGACY_EXAMS: ExamInfo[] = [
   {
     id: 'master-cadre-sst',
     name: 'Punjab Master Cadre (Social Studies)',
@@ -260,6 +262,25 @@ export interface TopicMeta {
   isPYQRich: boolean;
 }
 
+export const AVAILABLE_EXAMS: ExamInfo[] = Object.values(ALL_EXAMS).flat().map(exam => {
+  const legacy = LEGACY_EXAMS.find(item => normalizePracticeExamId(item.id) === exam.id);
+  return { ...legacy, id: exam.id, name: exam.name, namePa: exam.namePunjabi || exam.name,
+    body: exam.body, badge: exam.emoji, defaultQuestions: 50, timeLimitMinutes: 45,
+    negativeMarking: typeof exam.negativeMarking === 'number' ? exam.negativeMarking : 0,
+    syllabusSummary: exam.subjects.map(s => s.name).join(', '),
+    syllabusSummaryPa: exam.subjects.map(s => s.namePunjabi || s.nameHindi).join(', '),
+    pyqSpan: 'Practice coverage incomplete • source labels under review' };
+});
+
+export function getExamTopics(examId: string): TopicMeta[] {
+  const exam = practiceExam(examId);
+  if (!exam) return [];
+  return exam.subjects.flatMap(subject => subject.chapters.flatMap(chapter => chapter.topics.map(topic => ({
+    id: topic.id, name: topic.name, namePa: topic.namePunjabi || topic.nameHindi,
+    subject: subject.name, questionCount: 'See availability', examWeightage: 'Not certified', isPYQRich: false,
+  }))));
+}
+
 export const AVAILABLE_TEST_TOPICS: TopicMeta[] = [
   // ETT Punjab & Pedagogy Tracks
   { id: 'ett-child-pedagogy', name: 'ETT Child Development & Pedagogy (Piaget, Vygotsky, RTE 2009)', namePa: 'ਈ.ਟੀ.ਟੀ. ਬਾਲ ਵਿਕਾਸ ਤੇ ਸਿੱਖਿਆ ਸ਼ਾਸਤਰ', subject: 'Teaching', questionCount: 'Availability varies by filter', examWeightage: 'Check the current notification', isPYQRich: true },
@@ -317,7 +338,7 @@ function distributeChoice<T>(correctVal: T, distractors: T[], seed: number): {
 /**
  * Procedural Dynamic Question Generator
  * Generates algorithmic high-yield questions on the fly from key notes and flashcards
- * enabling 100,000+ topic-wise permutations without crashing browser memory.
+ * using finite lesson flashcards without claiming a larger authored bank.
  */
 export function generateProceduralQuestions(topicId: string, count: number): Question[] {
   const generated: Question[] = [];
@@ -372,18 +393,19 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
  * 1. 20-Year Exam Question Archive (2004-2024)
  * 2. 10-Year Master Cadre PYQs
  * 3. Handcrafted reference question bank (380+ questions)
- * 4. Procedural generator expansion to guarantee sets of 50 questions
+ * 4. Finite computed/lesson variants; short pools stay short
  */
-export function getTestQuestions(config: {
+export function getQuestionPool(config: {
   topicId?: string;
   examId?: string;
   difficulty?: 'all' | 'easy' | 'medium' | 'hard';
   pyqOnly?: boolean;
   pyq20Years?: boolean;
   count?: number;
+  excludeKeys?: string[];
 }): Question[] {
   const { topicId, examId, difficulty = 'all', pyqOnly, pyq20Years, count = 50 } = config;
-  const limit = Number.isFinite(count) ? Math.max(1, Math.min(150, Math.floor(count))) : 50;
+  void count;
   const canonical = (id: string) => TOPIC_ALIASES[id] || id;
   let pool = [...TWENTY_YEAR_EXAM_PYQS, ...MASTER_CADRE_10YR_PYQS, ...ALL_QUESTIONS];
   if ((!topicId || topicId === 'all') && !pyqOnly && !pyq20Years) pool.push(...generateQuantPractice('mathematics-core', 150));
@@ -392,29 +414,41 @@ export function getTestQuestions(config: {
     if (!pyqOnly && !pyq20Years) pool.push(...generateProceduralQuestions(topicId, 150), ...generateQuantPractice(topicId, 150));
   }
   if (examId && examId !== 'all') {
-    const tags: Record<string, string[]> = {
-      'master-cadre-sst': ['master cadre'], 'clerk-psssb': ['clerk', 'psssb'],
-      'ett-punjab': ['ett', 'pstet', 'elementary'], 'police-punjab': ['punjab police'],
-      'patwari-punjab': ['patwari'], 'reet-l2': ['reet'], 'ctet-p2': ['ctet'],
-      'ctet-p1': ['ctet'], 'pstet-l2': ['pstet'], 'ssc-cgl': ['ssc', 'cgl'],
-      'ssc-chsl': ['ssc', 'chsl'], 'ssc-mts': ['ssc', 'mts'],
-      'htet-l1': ['htet'], 'haryana-htet': ['htet', 'haryana'],
-      'delhi-police': ['delhi police'], 'army-agniveer': ['army', 'agniveer'],
-    };
-    pool = pool.filter(q => q.examId ? q.examId === examId :
-      (tags[examId] || []).some(tag => q.examTag.toLowerCase().includes(tag)));
+    const exam = practiceExam(examId);
+    if (!exam) return [];
+    const topics = new Set(exam.subjects.flatMap(subject => subject.chapters.flatMap(chapter => chapter.topics.map(topic => canonical(topic.id)))));
+    // Only syllabus topics are eligible. Shared-topic questions retain their original source labels.
+    pool = pool.filter(q => topics.has(canonical(q.topicId || '')));
+    if (!pyqOnly && !pyq20Years && (!topicId || topicId === 'all')) {
+      for (const id of topics) pool.push(...generateProceduralQuestions(id, 150), ...generateQuantPractice(id, 150));
+    }
   }
   if (pyqOnly || pyq20Years) {
     pool = pool.filter(q => !q.id.startsWith('gen-') && q.year !== undefined &&
       q.year >= (pyq20Years ? 2004 : 2014) && q.year <= 2024);
   }
   if (difficulty !== 'all') pool = pool.filter(q => q.difficulty === difficulty);
-  const seen = new Set<string>();
-  pool = pool.filter(q => !seen.has(q.id) && Boolean(seen.add(q.id)));
+  const seen = new Set<string>(config.excludeKeys || []);
+  pool = pool.filter(q => {
+    const key = questionIdentity(q);
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  });
+  return pool;
+}
+
+/** Stable wording identity: repeated wording with shuffled options is still one question. */
+export function questionIdentity(q: Question): string {
+  const normalize = (text: string) => text.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  return normalize(q.question.en || q.question.hi || q.question.pa || q.id);
+}
+export function getTestQuestions(config: Parameters<typeof getQuestionPool>[0]): Question[] {
+  const pool = getQuestionPool(config);
   for (let i = pool.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
   }
+  const limit = Number.isFinite(config.count) ? Math.max(1, Math.min(150, Math.floor(config.count!))) : 50;
   return pool.slice(0, limit);
 }
 
@@ -504,7 +538,7 @@ export function evaluateUserLevel(percentage: number, accuracy: number): UserPer
     description: 'Welcome to exam preparation! Consistent daily practice with ExamSathi structured curriculum will build your confidence quickly.',
     descriptionPa: 'ਰੋਜ਼ਾਨਾ ਅਧਿਐਨ ਕਰੋ ਅਤੇ ਪੰਜਾਬੀ ਤੇ ਜਨਰਲ ਅਧਿਐਨ ਦੇ ਮੁੱਢਲੇ ਵਿਸ਼ਿਆਂ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ।',
     recommendations: [
-      'Start with Punjab History and Constitution Basics',
+      'Review foundational topics in your selected exam syllabus',
       'Review 3D Flip Cards in easy mode',
       "Follow today's study plan on the dashboard",
     ],

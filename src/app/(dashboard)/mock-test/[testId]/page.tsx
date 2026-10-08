@@ -1,5 +1,7 @@
+import { ALL_EXAMS } from '@/lib/data/exams';
 import { ALL_TOPIC_IDS } from '@/lib/data/curriculum';
 import { ALL_LESSONS, TOPIC_ALIASES } from '@/lib/data/lessons';
+import { Suspense } from 'react';
 import MockTestClient from './MockTestClient';
 import { AVAILABLE_TEST_TOPICS } from '@/lib/data/question_bank_engine';
 
@@ -19,10 +21,10 @@ export function generateStaticParams() {
     testId: `topic-${t.id}`,
   }));
 
-  return Array.from(new Set([...baseParams, ...topicParams, ...[...ALL_TOPIC_IDS, ...Object.keys(ALL_LESSONS), ...Object.keys(TOPIC_ALIASES)].map(id => ({ testId: `topic-${id}` }))].map(p => p.testId))).map(testId => ({ testId }));
+  return Array.from(new Set([...baseParams, ...topicParams, ...[...ALL_TOPIC_IDS, ...Object.values(ALL_EXAMS).flat().flatMap(exam => exam.subjects.flatMap(subject => subject.chapters.flatMap(chapter => chapter.topics.map(topic => topic.id)))), ...Object.keys(ALL_LESSONS), ...Object.keys(TOPIC_ALIASES)].map(id => ({ testId: `topic-${id}` }))].map(p => p.testId))).map(testId => ({ testId }));
 }
 
 export default async function MockTestPage({ params }: { params: Promise<{ testId: string }> }) {
   const resolved = await params;
-  return <MockTestClient testId={resolved.testId} />;
+  return <Suspense fallback={<p role="status">Loading practice…</p>}><MockTestClient testId={resolved.testId} /></Suspense>;
 }

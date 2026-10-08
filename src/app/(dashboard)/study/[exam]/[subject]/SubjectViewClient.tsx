@@ -1,5 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { getQuestionPool } from '@/lib/data/question_bank_engine';
+import { useStore } from '@/lib/store';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Target, ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -10,7 +12,8 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
 
   // Find exam
   const exam: Exam = getExamById(examId) || ALL_EXAMS.punjab[0];
-  
+  useEffect(() => { const selected = getExamById(examId); if (selected) useStore.getState().setSelectedExam(selected.state, selected.id); }, [examId]);
+
   // Available subjects for this exam
   const availableSubjects: Subject[] = exam.subjects && exam.subjects.length > 0 ? exam.subjects : [
     {
@@ -36,11 +39,11 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
 
   return (
     <div className="p-4 flex flex-col gap-5 min-h-screen bg-slate-900 pb-24 text-slate-100 max-w-xl mx-auto w-full">
-      
+
       {/* Top Header with Back button */}
       <div className="flex items-center gap-3 pt-2">
-        <button 
-          onClick={() => router.back()} 
+        <button
+          onClick={() => router.back()}
           className="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 border border-slate-700 hover:bg-slate-700 transition shrink-0"
           aria-label="Back"
         >
@@ -118,8 +121,8 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
           </div>
         ) : (
           topics.map(topic => (
-            <Link 
-              key={topic.id} 
+            <Link
+              key={topic.id}
               href={`/lesson/${topic.id}`}
               className="bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-indigo-500/60 rounded-2xl p-4 flex flex-col gap-2.5 transition shadow group"
             >
@@ -141,7 +144,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
                 </div>
 
                 <span className="bg-slate-700/80 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
-                  {topic.examQuestions} Qs
+                  {getQuestionPool({examId, topicId: topic.id}).length} practice Qs
                 </span>
               </div>
 
@@ -153,7 +156,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {topic.subtopics.map((sub, sIdx) => (
-                      <span 
+                      <span
                         key={sIdx}
                         className="bg-slate-800 border border-slate-700/80 text-slate-300 text-[10px] px-2 py-0.5 rounded-md leading-tight"
                       >
@@ -177,8 +180,8 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
       </div>
 
       {/* CBT Mock Test CTA */}
-      <Link 
-        href="/mock-test" 
+      <Link
+        href={`/mock-test?exam=${examId}`}
         className="mt-2 w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-bold py-3.5 rounded-2xl shadow-lg text-center text-xs flex items-center justify-center gap-2"
       >
         <Target size={16} /> Take Topic-Wise & PYQ Mock Tests ({exam.name})

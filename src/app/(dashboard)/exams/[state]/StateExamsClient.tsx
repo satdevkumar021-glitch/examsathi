@@ -5,12 +5,12 @@ import { ArrowLeft, BookOpen, Clock, Award } from 'lucide-react';
 import { useStore } from '@/lib/store';
 
 export default function StateExams({ state }: { state: string }) {
-  const { language } = useStore();
+  const { language, setSelectedExam } = useStore();
   const stateKey = state as keyof typeof EXAMS;
   const stateExams = EXAMS[stateKey] || [];
-  
+
   const stateMeta = STATES_CATALOG.find(s => s.id === state);
-  const stateName = stateMeta 
+  const stateName = stateMeta
     ? (language === 'pa' ? stateMeta.namePunjabi : language === 'hi' ? stateMeta.nameHindi : stateMeta.name)
     : state.charAt(0).toUpperCase() + state.slice(1);
 
@@ -44,9 +44,10 @@ export default function StateExams({ state }: { state: string }) {
               : 'General Studies, Mental Ability, Language';
 
             return (
-              <Link 
-                key={exam.id} 
-                href={`/study/${exam.id}/${firstSubjectId}`} 
+              <Link
+                key={exam.id}
+                href={`/study/${exam.id}/${firstSubjectId}`}
+                onClick={() => setSelectedExam(state, exam.id)}
                 className="bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-indigo-500/50 transition rounded-xl p-4 flex flex-col gap-3 shadow-lg"
               >
                 <div className="flex justify-between items-start gap-2">
@@ -62,7 +63,7 @@ export default function StateExams({ state }: { state: string }) {
                     {exam.body}
                   </span>
                 </div>
-                
+
                 <div className="flex items-center gap-4 text-xs text-slate-400">
                   <div className="flex items-center gap-1">
                     <Clock size={13} className="text-amber-400" />
@@ -80,7 +81,7 @@ export default function StateExams({ state }: { state: string }) {
                 </div>
 
                 <div className="h-px w-full bg-slate-700/60"></div>
-                
+
                 <div className="flex items-center gap-2 text-xs text-slate-300">
                   <BookOpen size={14} className="text-teal-400 shrink-0" />
                   <span className="truncate">{subjectLabels}</span>

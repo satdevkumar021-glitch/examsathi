@@ -1,3 +1,4 @@
+import unavailableResources from './unavailable-resources.json';
 import { TOPIC_DOCUMENTS } from './topic-resources';
 // ============================================================
 // ExamSathi - Comprehensive Public Examination Knowledge Base
@@ -1929,16 +1930,21 @@ export const ALL_LESSONS: Record<string, Lesson> = {
   ...SUPPLEMENTAL_LESSONS,
 };
 
-// Remove known seeded video placeholders; expose an honest publisher search link.
+// Remove unavailable or unrelated seeded videos; expose an honest publisher search link.
+const rejectedVideoIds = new Set(['W8L_w_eU014', 'Jud1947LawX', 'SJxMBRTB1Ic', 'uqVT9QQe0qU', 'xZbKHDPPrrc']);
 for (const lesson of Object.values(ALL_LESSONS)) {
-  lesson.videos = lesson.videos.map(video => video.youtubeId?.startsWith('p2aGZ3fXw_') ? {
+  lesson.videos = lesson.videos.map(video => {
+    const id = video.youtubeId || (video.url?.includes('youtube.com/watch') ? new URL(video.url).searchParams.get('v') : null);
+    return id && (!/^[A-Za-z0-9_-]{11}$/.test(id) || id.startsWith('p2aGZ3fXw_') || rejectedVideoIds.has(id)) ? {
     title: `Find ${lesson.title.en} videos on NCERT's official channel`,
     channel: 'NCERT official — topic search',
     url: `https://www.youtube.com/ncertofficial/search?query=${encodeURIComponent(lesson.title.en)}`,
     language: 'Source language varies',
-  } : video);
+  } : { ...video, views: undefined };
+  });
   const resources = TOPIC_DOCUMENTS[lesson.id] || [];
-  lesson.documents = Array.from(new Map([...resources, ...(lesson.documents || [])].map(doc => [doc.url, {
+  const genericBundle = new Set(['https://erd.punjab.gov.in/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf', 'https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf', 'https://ncert.nic.in/textbook/pdf/jess301.pdf', 'https://ncert.nic.in/textbook/pdf/jhss301.pdf', 'https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf']);
+  lesson.documents = Array.from(new Map([...resources, ...(lesson.documents || []).filter(doc => !genericBundle.has(doc.url) && !unavailableResources.includes(doc.url))].map(doc => [doc.url, {
     ...doc,
     title: doc.url === 'https://ncert.nic.in/textbook/pdf/jess301.pdf' ? 'NCERT Class 10 — The Rise of Nationalism in Europe (chapter PDF)' : doc.title,
   }])).values());

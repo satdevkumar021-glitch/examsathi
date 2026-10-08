@@ -1,15 +1,19 @@
 'use client';
 import { studyStorage } from '@/lib/storage';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { X, Target, Layers, Check, ShieldAlert } from 'lucide-react';
-import { AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
+import { completedQuestionKeys } from '@/lib/practice-history';
+import { useStore } from '@/lib/store';
+import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
+import { getQuestionPool, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
 
 interface MockTestBottomSheetProps {
   isOpen: boolean;
   onClose: () => void;
   defaultExamId?: string;
   defaultTopicId?: string;
+  onExamChange?: (examId: string) => void;
 }
 
 export default function MockTestBottomSheet({
@@ -17,25 +21,38 @@ export default function MockTestBottomSheet({
   onClose,
   defaultExamId = 'master-cadre-sst',
   defaultTopicId = 'all',
+  onExamChange,
 }: MockTestBottomSheetProps) {
   const router = useRouter();
 
-  const [selectedExam, setSelectedExam] = useState<string>(defaultExamId);
+  const [selectedExam, setSelectedExam] = useState<string>(normalizePracticeExamId(defaultExamId));
+  const rememberExam = useStore(state => state.setSelectedExam);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Reset the drawer when opened for a new exam.
+    if (isOpen) setSelectedExam(normalizePracticeExamId(defaultExamId));
+  }, [isOpen, defaultExamId]);
   const [selectedDifficulty, setSelectedDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
-  const [is20YearPYQ, setIs20YearPYQ] = useState<boolean>(true);
+  const [is20YearPYQ, setIs20YearPYQ] = useState<boolean>(false);
   const [questionCount, setQuestionCount] = useState<number>(50);
 
   if (!isOpen) return null;
 
-  const activeExam = AVAILABLE_EXAMS.find(e => e.id === selectedExam) || AVAILABLE_EXAMS[0];
+  const activeExam = AVAILABLE_EXAMS.find(e => e.id === selectedExam);
+
+  const availableCount = getQuestionPool({ examId: selectedExam, topicId: defaultTopicId, difficulty: selectedDifficulty, pyq20Years: is20YearPYQ }).length;
+
+  const freshCount = getQuestionPool({ examId: selectedExam, topicId: defaultTopicId, difficulty: selectedDifficulty, pyq20Years: is20YearPYQ, excludeKeys: completedQuestionKeys() }).length;
 
   const handleStartTest = (mode: 'exam' | 'flip') => {
+    if (!activeExam || !availableCount || (mode === 'exam' && !freshCount)) return;
+    const catalogue = practiceExam(selectedExam);
+    if (catalogue) rememberExam(catalogue.state, catalogue.id);
     const configPayload = {
       testId: `exam-${selectedExam}`,
       examId: selectedExam,
       topicId: defaultTopicId,
       title: `${activeExam.name} - ${questionCount} Qs ${is20YearPYQ ? '(Historical labels (unverified))' : 'Simulator'}`,
-      titlePa: `${activeExam.namePa} - ${questionCount} ਸਵਾਲ`,
+      titlePa: `${activeExam?.namePa} - ${questionCount} ਸਵਾਲ`,
       count: questionCount,
       difficulty: selectedDifficulty,
       timeLimitMinutes: Math.round(questionCount * 0.9), // ~45 mins for 50 Qs
@@ -90,6 +107,7 @@ export default function MockTestBottomSheet({
           </button>
         </div>
 
+        <p role="status" className="text-sm text-amber-200">{availableCount} distinct questions match these filters. This set will contain {Math.min(questionCount, freshCount)} unseen questions ({freshCount} remaining). Flipcards can review the full pool. Shared syllabus questions retain their source labels. This is topic practice, not a complete official paper.</p>
         {/* 1. Target Examination Selector */}
         <div>
           <label className="text-xs font-bold text-slate-300 mb-2 block uppercase tracking-wider">
@@ -101,7 +119,8 @@ export default function MockTestBottomSheet({
               return (
                 <button
                   key={exam.id}
-                  onClick={() => setSelectedExam(exam.id)}
+                  onClick={() => { setSelectedExam(exam.id); const chosen = practiceExam(exam.id); if (chosen) rememberExam(chosen.state, chosen.id); onExamChange?.(exam.id); }}
+                  aria-pressed={isSelected}
                   className={`p-2.5 rounded-xl border text-left transition flex flex-col gap-1 ${
                     isSelected 
                       ? 'bg-teal-500/15 border-teal-500 text-white shadow-md' 
@@ -120,7 +139,7 @@ export default function MockTestBottomSheet({
           </div>
           <div className="mt-2 p-2.5 bg-slate-800/60 rounded-xl border border-slate-700/60 text-[11px] text-slate-300">
             <span className="font-semibold text-teal-300">Syllabus Scope: </span>
-            {activeExam.syllabusSummary}
+            {activeExam?.syllabusSummary}
           </div>
         </div>
 
@@ -218,21 +237,23 @@ export default function MockTestBottomSheet({
         <div className="bg-amber-950/30 border border-amber-500/40 rounded-xl p-2.5 flex items-center gap-2 text-xs text-amber-300">
           <ShieldAlert size={16} className="shrink-0 text-amber-400" />
           <span>
-            Negative Marking: <strong>-{activeExam.negativeMarking} Mark</strong> per wrong answer (+1.00 for correct).
+            Negative Marking: <strong>-{activeExam?.negativeMarking} Mark</strong> per wrong answer (+1.00 for correct).
           </span>
         </div>
 
         {/* Start Actions */}
         <div className="flex flex-col gap-2 pt-2">
           <button
+            disabled={!freshCount || !activeExam}
             onClick={() => handleStartTest('exam')}
             className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-3.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition"
           >
             <Target size={16} />
-            <span>Start {questionCount}-Question Live CBT Exam</span>
+            <span>Start {Math.min(questionCount, freshCount)}-Question Practice</span>
           </button>
 
           <button
+            disabled={!availableCount || !activeExam}
             onClick={() => handleStartTest('flip')}
             className="w-full bg-slate-800 hover:bg-slate-750 border border-slate-700 text-teal-300 font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition"
           >

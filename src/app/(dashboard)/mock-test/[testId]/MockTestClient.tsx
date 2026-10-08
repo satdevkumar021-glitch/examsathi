@@ -1,19 +1,23 @@
 'use client';
+import { normalizePracticeExamId } from '@/lib/exam-context';
+import { completedQuestionKeys, rememberCompletedQuestions } from '@/lib/practice-history';
+import QuestionSyllabusScope from '@/components/ui/QuestionSyllabusScope';
 import { useStore } from '@/lib/store';
 import { rememberQuestions, savedReviewQuestions } from '@/lib/question-vault';
 import { recordStudyActivity } from '@/lib/study-progress';
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Clock, CheckCircle2, ChevronRight, ChevronLeft, AlertCircle, Layers, RotateCw, Award, Brain, ShieldAlert } from 'lucide-react';
 import { Question } from '@/lib/data/questions';
-import { getTestQuestions, evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
+import { getQuestionPool, getTestQuestions, evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
 import { computeScore, computeTopicBreakdown } from '@/lib/scoring';
 import { CardRating, reviewCard, loadSRSStates, saveSRSStates, createNewCard, getSRSSummary } from '@/lib/srs';
 
 export default function MockTest({ testId }: { testId?: string }) {
   const router = useRouter();
+  const searchKey = useSearchParams().toString();
 
   const deadlineRef = useRef(0);
   const attemptKeyRef = useRef('');
@@ -39,6 +43,9 @@ export default function MockTest({ testId }: { testId?: string }) {
 
   // Initialize test configuration and questions
   useEffect(() => {
+    submittingRef.current = false;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Reset the browser attempt when URL configuration changes.
+    setUserAnswers({}); setMarkedForReview({}); setQIndex(0); setIsFlipped(false);
     let topicId = 'all';
     let count = 50;
     let minutes: number | undefined;
@@ -88,7 +95,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       if (storedConfig) {
         const parsed = JSON.parse(storedConfig);
         studyStorage.removeItem('examsathi_test_config');
-        if (parsed.topicId) topicId = parsed.topicId;
+        if (parsed.topicId && !testId?.startsWith('topic-')) topicId = parsed.topicId;
         if (Number.isFinite(parsed.timeLimitMinutes)) minutes = parsed.timeLimitMinutes;
         if (parsed.count) count = parsed.count;
         if (parsed.mode) requestedMode = parsed.mode;
@@ -104,10 +111,12 @@ export default function MockTest({ testId }: { testId?: string }) {
     const query = new URLSearchParams(window.location.search);
     if (query.has('mode')) requestedMode = query.get('mode') === 'flip' ? 'flip' : 'exam';
     if (query.has('exam')) examId = query.get('exam') || undefined;
+    else if (!examId) examId = useStore.getState().selectedExam || undefined;
+    if (examId && examId !== 'all') examId = normalizePracticeExamId(examId);
+    if (query.has('pyq')) { pyq20Years = query.get('pyq') === '20y'; pyqOnly = query.get('pyq') === 'only'; }
     if (query.has('diff')) difficulty = ['easy', 'medium', 'hard'].includes(query.get('diff') || '') ? query.get('diff') as 'easy' | 'medium' | 'hard' : 'all';
     if (query.has('count')) count = Math.max(1, Math.min(150, Number(query.get('count')) || 50));
     if (query.has('minutes')) minutes = Math.max(1, Math.min(180, Number(query.get('minutes')) || 45));
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
     setMode(requestedMode);
     if (examId) setActiveExamId(examId);
     setActiveDifficulty(difficulty);
@@ -136,7 +145,8 @@ export default function MockTest({ testId }: { testId?: string }) {
       difficulty,
       pyq20Years,
       pyqOnly, 
-      count 
+      count,
+      excludeKeys: requestedMode === 'exam' && query.get('repeat') !== '1' ? completedQuestionKeys() : [],
     });
     // Check custom AI-generated question drill from sessionStorage
     if (topicId === 'ai-custom') {
@@ -162,6 +172,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       if (review.examId) setActiveExamId(review.examId);
     }
     if (loadedQuestions.length > 0) {
+      if (examMeta && !review) setTestTitle(`${examMeta.name} — ${loadedQuestions.length} questions${diffLabel}`);
       rememberQuestions(loadedQuestions);
     setQuestions(loadedQuestions);
       setLoaded(true);
@@ -174,7 +185,9 @@ export default function MockTest({ testId }: { testId?: string }) {
       if (requestedMode === 'exam' && !query.has('review')) {
         try {
           const saved = JSON.parse(studyStorage.getItem(attemptKeyRef.current) || 'null');
-          if (saved?.questions?.length && Number.isFinite(saved.deadline) && Number.isFinite(saved.totalTime)) {
+          const eligibleIds = new Set(getQuestionPool({ examId, topicId, difficulty, pyqOnly, pyq20Years }).map(q => q.id));
+          const validScope = saved?.questions?.every((q: Question) => topicId === 'ai-custom' || eligibleIds.has(q.id));
+          if (validScope && saved?.questions?.length && Number.isFinite(saved.deadline) && Number.isFinite(saved.totalTime)) {
             setQuestions(saved.questions);
             setUserAnswers(saved.answers || {});
             setMarkedForReview(saved.marked || {});
@@ -190,7 +203,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       setLoaded(true);
       setLoadError(false);
     }
-  }, [testId]);
+  }, [testId, searchKey]);
 
   // Refresh SRS summary whenever questions load or mode switches to flip
   useEffect(() => {
@@ -300,6 +313,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     };
 
     try {
+      rememberCompletedQuestions(questions);
       studyStorage.setItem('examsathi_last_result', JSON.stringify(resultPayload));
       studyStorage.setItem(`examsathi_result_${resultPayload.attemptId}`, JSON.stringify(resultPayload));
     } catch {}
@@ -418,6 +432,7 @@ export default function MockTest({ testId }: { testId?: string }) {
   return (
     <div className="flex flex-col h-screen bg-slate-900 pb-safe text-slate-100">
 
+      <QuestionSyllabusScope topicId={currentQuestion.topicId} />
       {/* Exam Pattern Info Banner */}
       {loaded && questions.length > 0 && activeExamMeta && (
         <div className="bg-amber-950/40 border-b border-amber-700/40 px-3 py-1.5 flex items-center gap-2 text-[10px] text-amber-200 shrink-0">
@@ -546,7 +561,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                     {difficultyBadge.label}
                   </span>
                   <span className="text-[10px] bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded truncate max-w-[190px]">
-                    {currentQuestion.examTag || 'Punjab Master Cadre PYQ'} {currentQuestion.year ? `(${currentQuestion.year})` : ''}
+                    {currentQuestion.examTag || 'Practice question — source unverified'} {currentQuestion.year ? `(${currentQuestion.year})` : ''}
                   </span>
                 </div>
               </div>

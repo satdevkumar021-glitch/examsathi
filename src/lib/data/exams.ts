@@ -1,3 +1,4 @@
+import { CTET_PRIMARY_SUBJECTS } from './ctet-primary-outline';
 // ============================================================
 // ExamSathi - Authoritative Examination Database & Syllabus Tree
 // Compiled from official PSSSB, ERB Punjab, PPSC, RBSE, CBSE, and SSC sources
@@ -2012,7 +2013,7 @@ export const ALL_EXAMS: Record<State, Exam[]> = {
   rajasthan: mergeExamCatalog([...RAJASTHAN_EXAMS, ...RAJASTHAN_ADDITIONAL_EXAMS]),
   haryana: mergeExamCatalog(HARYANA_EXAMS),
   delhi: mergeExamCatalog(DELHI_EXAMS),
-  central: mergeExamCatalog(CENTRAL_EXAMS),
+  central: mergeExamCatalog(CENTRAL_EXAMS).map(exam => exam.id === 'ctet-paper1' ? { ...exam, subjects: CTET_PRIMARY_SUBJECTS } : exam),
   defence: mergeExamCatalog(DEFENCE_EXAMS),
 };
 

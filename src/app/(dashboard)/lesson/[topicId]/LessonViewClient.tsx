@@ -37,7 +37,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   const [contributeSubmitted, setContributeSubmitted] = useState(false);
 
   const [practiceCount, setPracticeCount] = useState(10);
-  const [topicQuestions, setTopicQuestions] = useState(() => getTestQuestions({ topicId, count: 10 }));
+  const [topicQuestions, setTopicQuestions] = useState(() => getTestQuestions({ topicId, examId: useStore.getState().selectedExam || undefined, count: 10 }));
 
   // Load saved notes from LocalStorage on mount
   useEffect(() => {
@@ -417,14 +417,14 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
               <div className="grid grid-cols-2 gap-2.5">
                 <Link
-                  href={`/mock-test/topic-${topicId}`}
+                  href={`/mock-test/topic-${topicId}?exam=${useStore.getState().selectedExam || 'all'}`}
                   className="bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-xs py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 shadow transition"
                 >
                   <Target size={14} />
                   <span>{lang === 'pa' ? 'ਲਾਈਵ ਟੈਸਟ' : 'लाइव टेस्ट'}</span>
                 </Link>
                 <Link
-                  href={`/mock-test/topic-${topicId}?mode=flip`}
+                  href={`/mock-test/topic-${topicId}?mode=flip&exam=${useStore.getState().selectedExam || 'all'}`}
                   className="bg-slate-700/80 hover:bg-slate-650 border border-slate-600 text-teal-300 font-bold text-xs py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 transition"
                 >
                   <Layers size={14} />
@@ -641,7 +641,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
         {activeTab === 'practice' && (
           <div className="flex flex-col gap-6">
             <label className="flex items-center gap-3 text-slate-200">Practice set
-              <select aria-label="Practice question count" value={practiceCount} onChange={e => { const count = Number(e.target.value); setPracticeCount(count); setTopicQuestions(getTestQuestions({ topicId, count })); setSelectedAnswers({}); setShowExplanation({}); }} className="bg-slate-800 p-2 rounded">
+              <select aria-label="Practice question count" value={practiceCount} onChange={e => { const count = Number(e.target.value); setPracticeCount(count); setTopicQuestions(getTestQuestions({ topicId, examId: useStore.getState().selectedExam || undefined, count })); setSelectedAnswers({}); setShowExplanation({}); }} className="bg-slate-800 p-2 rounded">
                 {[10, 20, 50].map(count => <option key={count} value={count}>{count} questions</option>)}
               </select>
             </label>
@@ -658,7 +658,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </div>
               <div className="flex items-center gap-2">
                 <Link
-                  href={`/mock-test/topic-${topicId}`}
+                  href={`/mock-test/topic-${topicId}?exam=${useStore.getState().selectedExam || 'all'}`}
                   className="bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
                 >
                   <Target size={14} />

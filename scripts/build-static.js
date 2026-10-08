@@ -13,6 +13,8 @@ try {
     renamed = true;
   }
 
+  // Remove only generated stale dev route declarations before temporarily excluding API routes.
+  fs.rmSync(path.join(rootDir, '.next/dev/types'), { recursive: true, force: true });
   fs.copyFileSync(path.join(rootDir, 'node_modules/pdfjs-dist/build/pdf.worker.min.mjs'), path.join(rootDir, 'public/pdf.worker.min.mjs'));
   console.log('Building static export for GitHub Pages...');
   execSync('STATIC_EXPORT=true npx next build --webpack', {

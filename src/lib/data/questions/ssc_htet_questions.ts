@@ -508,8 +508,8 @@ export const SSC_HTET_QUESTIONS: Question[] = [
   // =========================================================================
   {
     id: 'q-htet-001',
-    topicId: 'ett-child-pedagogy',
-    subjectId: 'pedagogy',
+    topicId: 'haryana-gk-htet',
+    subjectId: 'haryana-general-knowledge',
     examId: 'htet',
     examTag: 'HTET Level 2 2023',
     year: 2023,
@@ -536,8 +536,8 @@ export const SSC_HTET_QUESTIONS: Question[] = [
   },
   {
     id: 'q-htet-002',
-    topicId: 'ett-child-pedagogy',
-    subjectId: 'pedagogy',
+    topicId: 'haryana-gk-htet',
+    subjectId: 'haryana-general-knowledge',
     examId: 'htet',
     examTag: 'HTET Level 1 2023',
     year: 2023,
@@ -560,8 +560,8 @@ export const SSC_HTET_QUESTIONS: Question[] = [
   },
   {
     id: 'q-htet-003',
-    topicId: 'ett-child-pedagogy',
-    subjectId: 'pedagogy',
+    topicId: 'haryana-gk-htet',
+    subjectId: 'haryana-general-knowledge',
     examId: 'htet',
     examTag: 'HTET Level 2 2023',
     year: 2023,
@@ -632,8 +632,8 @@ export const SSC_HTET_QUESTIONS: Question[] = [
   },
   {
     id: 'q-htet-006',
-    topicId: 'ett-child-pedagogy',
-    subjectId: 'pedagogy',
+    topicId: 'haryana-gk-htet',
+    subjectId: 'haryana-general-knowledge',
     examId: 'htet',
     examTag: 'HTET Level 2 2023',
     year: 2023,
@@ -680,8 +680,8 @@ export const SSC_HTET_QUESTIONS: Question[] = [
   },
   {
     id: 'q-htet-008',
-    topicId: 'ett-child-pedagogy',
-    subjectId: 'pedagogy',
+    topicId: 'haryana-gk-htet',
+    subjectId: 'haryana-general-knowledge',
     examId: 'htet',
     examTag: 'HTET Level 2 2023',
     year: 2023,
@@ -728,8 +728,8 @@ export const SSC_HTET_QUESTIONS: Question[] = [
   },
   {
     id: 'q-htet-010',
-    topicId: 'ett-child-pedagogy',
-    subjectId: 'pedagogy',
+    topicId: 'haryana-gk-htet',
+    subjectId: 'haryana-general-knowledge',
     examId: 'htet',
     examTag: 'HTET Level 2 2022',
     year: 2022,
