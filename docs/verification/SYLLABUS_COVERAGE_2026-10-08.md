@@ -81,3 +81,11 @@ The remaining content work is not complete. This report exposes shortages rather
 ## Release verification
 
 Code commit `8a8796151d7b1a8eefbd42bc4f02cbfce3774733` deployed successfully to GitHub Pages (Actions run 37746953838) and Render. Both live coverage pages rendered the audited ETT count of 22. Render `/api/health/` returned HTTP 200 with `status: ok`. Live browser session remained authenticated. See `coverage-ett-live.png`.
+
+### Expanded content release
+
+Code commit `c11584f2a25205b9c6d35526ae1e1e248ce0c1dc` deployed successfully to GitHub Pages (Actions run 37783344901) and Render (live, 2m21s). First foundation batch `d658508` also deployed successfully.
+
+Live Render coverage visibly shows 0 empty tracks, 0 missing catalogue lesson slots, 37 topic entries below 50 and 0 tracks with 1,000 recorded reviewed questions. ETT has 120 eligible items; Patwari has 130; these are partial-outline pools, not full official exam banks. `/api/health/` returned HTTP 200 and `{ "status": "ok" }`. GitHub Pages coverage returned HTTP 200 with the expanded coverage data. The live authenticated profile link remained visible. See `coverage-expanded-live.png`.
+
+The exported-site browser check confirmed a 50-question Patwari land-measurement set with explicit unit assumptions and translation notices. All 40 automated tests, lint, TypeScript and the 395-page static build pass. The full remaining work is listed in `CONTENT_COMPLETION_BACKLOG.md`; the requested all-exam syllabus and reviewed-question targets are not complete.
