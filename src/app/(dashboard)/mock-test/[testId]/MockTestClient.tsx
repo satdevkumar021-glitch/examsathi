@@ -654,7 +654,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                   
                   {/* Detailed Explanation */}
                   <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700 text-xs text-slate-300 leading-relaxed">
-                    <span className="text-amber-400 font-bold block mb-1">Official Rationalization:</span>
+                    <span className="text-amber-400 font-bold block mb-1">Answer explanation:</span>
                     {currentQuestion.explanation[lang] || currentQuestion.explanation.hi || currentQuestion.explanation.en}
                   </div>
 
