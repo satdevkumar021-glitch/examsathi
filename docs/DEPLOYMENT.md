@@ -13,10 +13,10 @@ Run `npm ci`, `npm test`, `npm run lint` and `npm run build:static` before publi
 - Browser extraction of text-based PDF, DOCX, TXT and Markdown documents.
 - Local source-grounded recall questions; this is explicitly labelled local practice rather than cloud AI.
 - Supabase browser authentication when public URL/key and redirect allowlists are configured.
-- Per-account browser progress. **Cross-device study sync is not implemented.**
+- Per-account browser progress. Manual same-account cloud backup/restore is available; automatic sync/merging is not implemented.
 - Public offline fallback and install prompt where the browser supports them.
 
-Pages does not execute `/api/*`. It cannot provide Gemini generation, image OCR or server publishing.
+Pages does not execute `/api/*`. It cannot provide Gemini generation or server publishing. OCR runs locally in the browser.
 
 ## Dynamic Next deployment for cloud AI
 
@@ -31,7 +31,7 @@ Set:
 
 Use a single origin for frontend and API. A separate `NEXT_PUBLIC_API_URL` backend requires an explicit CORS allowlist and has not been end-to-end validated here. Never expose a Gemini or Supabase service-role secret as `NEXT_PUBLIC_*`.
 
-The generation route verifies Supabase identity, consumes an atomic quota, validates model JSON and requires supporting excerpts from the submitted notes. Draft answers still require human review. File extraction runs in the browser; photos/scanned PDFs are unsupported until an OCR service is implemented.
+The generation route verifies Supabase identity, consumes an atomic quota, validates model JSON and requires supporting excerpts from the submitted notes. Draft answers still require human review. File extraction runs in the browser; photos and opt-in scanned PDFs use local OCR.
 
 ## Supabase
 
@@ -62,3 +62,7 @@ Use Render's free Node web service, importing the checked-in `render.yaml` Bluep
 For email, use Resend's free transactional plan with a domain you own and can verify. DNS verification and a sender domain are required for general recipient delivery; a provider test sender is not a production sender. Configure Supabase custom SMTP from the current Resend SMTP documentation: https://resend.com/docs/send-with-supabase-smtp. Sign-in/account terms, provider credentials, domain/DNS access and a real confirmation/reset inbox are still required; no domain purchase is included or authorized here.
 
 OCR now runs in the browser for PNG/JPEG/WebP and optional scanned PDF pages (maximum 10 pages). Choose English, Hindi or Punjabi/Gurmukhi and review recognized text. Runtime assets are hosted by ExamSathi; language models download from Tesseract's default language-data host on first use. Document pixels are not uploaded by OCR. Handwriting and poor scans may be inaccurate. A 10 MB file limit, pixel cap, per-page rendering cap, cancellation and timeout limit expensive work.
+
+## Live backend
+
+https://examsathi-sxj3.onrender.com/ runs the frontend and Node API. The public-Git Render service is manually deployed; do not assume each GitHub push deploys Render. Existing authenticated login, cloud backup read/save/restore and five-question Gemini generation/practice were checked on 8 October 2026. The additive study-backup migration is applied. SMTP delivery and Google OAuth are still pending.

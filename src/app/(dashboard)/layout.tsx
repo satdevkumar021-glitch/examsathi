@@ -3,6 +3,7 @@ import Link from 'next/link';
 import BottomNav from '@/components/layout/BottomNav';
 import LanguageToggle from '@/components/layout/LanguageToggle';
 import AccountBoundary from '@/components/layout/AccountBoundary';
+import AccountLink from '@/components/layout/AccountLink';
 import OnboardingGuideModal from '@/components/ui/OnboardingGuideModal';
 
 export const metadata: Metadata = {
@@ -34,14 +35,7 @@ export default function DashboardLayout({
         <div className="flex items-center gap-2">
           <Link href="/syllabus" className="text-xs text-teal-300 underline">Syllabus</Link>
           <LanguageToggle />
-          <Link
-            href="/login"
-            className="flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-indigo-600/30 hover:bg-indigo-600/50 text-indigo-300 hover:text-white border border-indigo-500/40 text-xs font-bold transition shadow-sm"
-            title="Student Login / Sign Up"
-          >
-            <span>🔐</span>
-            <span className="text-[11px]">Login</span>
-          </Link>
+          <AccountLink />
         </div>
       </header>
       

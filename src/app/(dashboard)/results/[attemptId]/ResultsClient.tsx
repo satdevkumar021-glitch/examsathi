@@ -904,11 +904,11 @@ export default function Results() {
 
                       {/* Deep Dive Lesson Link */}
                       <Link
-                        href={`/lesson/${q.topicId || 'modern-india'}`}
+                        href={['custom-notes', 'uploaded-notes'].includes(q.topicId) ? '/ai-generator' : `/lesson/${q.topicId || 'modern-india'}`}
                         className="text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1 bg-teal-500/10 hover:bg-teal-500/20 text-teal-300 border border-teal-500/30 transition"
                       >
                         <BookOpen size={13} />
-                        <span>Lesson Notes 📖</span>
+                        <span>{['custom-notes', 'uploaded-notes'].includes(q.topicId) ? 'Notes Practice 📖' : 'Lesson Notes 📖'}</span>
                       </Link>
                     </div>
                   </div>

@@ -13,10 +13,18 @@
 
 ## Checks
 
-26 regression tests pass, including OCR cancellation/cleanup, PDF page-limit rejection, cloud account isolation/version conflicts and arithmetic variants. ESLint and TypeScript pass. Static production export passes. A root-domain dynamic production build passed before the cloud backup UI addition; final hosting validation is recorded separately.
+27 regression tests pass, including OCR cancellation/cleanup, PDF page-limit rejection, cloud account isolation/version conflicts and arithmetic variants. ESLint and TypeScript pass. Static production export passes. A root-domain dynamic production build passed before the cloud backup UI addition; final hosting validation is recorded separately.
 
 Production dependency audit remains zero findings. Five development toolchain findings remain upstream. Generated third-party OCR runtime is excluded from source lint and is covered by the package audit.
 
 ## Still pending
 
-Full reviewed syllabus lessons and at least 50 unique relevant questions for every topic, official PYQ/answer-key provenance, complete topic video curation, automatic cloud merging, server admin publishing/review, actual email sender/domain verification, Google OAuth and full device/accessibility/authentication matrix. These are not represented as completed. Provider service deployment and real cloud generation require successful hosting setup and a server-side AI key.
+Full reviewed syllabus lessons and at least 50 unique relevant questions for every topic, official PYQ/answer-key provenance, complete topic video curation, automatic cloud merging, server admin publishing/review, actual email sender/domain verification, Google OAuth and full device/accessibility/authentication matrix. These are not represented as completed. Render backend and real authenticated cloud generation are live; SMTP and Google OAuth remain incomplete.
+
+## Live account verification — 8 October 2026
+
+- Existing Supabase login restored on Render profile; authenticated backup read and empty backup v1 save passed. Restoring v1 reloaded the profile with authentication preserved. This is a same-browser check, not a second-device certification.
+- Render health returned `{"status":"ok"}`. Deployed cloud generator produced five Hindi draft MCQs from public Gandhi notes using the configured Gemini provider. Each answer matched its source excerpt.
+- Started generated practice, answered five questions, submitted and verified 5/5 marks, 100% accuracy and answer explanations. This disposable attempt remains in the local study vault.
+- Follow-up fixes make the header show Profile when signed in and route custom-note result links to Notes Practice.
+- Evidence: `cloud-ai-live.png`, `cloud-ai-results.png`, `cloud-backup-rls.png`.
