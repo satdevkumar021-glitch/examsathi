@@ -395,7 +395,7 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
   },
   {
     id: 'psssb-gk-2023-1',
-    topicId: 'punjab-history',
+    topicId: 'punjab-geography',
     subjectId: 'punjab-gk',
     examId: 'clerk-psssb',
     examTag: 'PSSSB Clerk Exam 2023',

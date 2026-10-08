@@ -1242,6 +1242,570 @@
           "They prevent feedback"
         ],
         "explanation": "Combining observations, explanations and tasks can reveal different aspects of understanding."
+      },
+      {
+        "id": "foundation-pedagogy-54",
+        "subtopic": "Adolescence",
+        "prompt": "An adolescent asks for more choice in a class project. Which response best supports growing autonomy?",
+        "answer": "Offer bounded choices with clear goals and responsibility",
+        "distractors": [
+          "Remove every expectation permanently",
+          "Reject all choices solely because of age",
+          "Complete the whole project for the learner"
+        ],
+        "explanation": "Autonomy develops through meaningful choices, guidance and accountability, rather than either total control or absence of boundaries."
+      },
+      {
+        "id": "foundation-pedagogy-55",
+        "subtopic": "Adolescence",
+        "prompt": "Why should a teacher avoid assuming that all adolescents develop at the same rate?",
+        "answer": "Development varies across individuals and domains",
+        "distractors": [
+          "Every learner has an identical timetable",
+          "Age determines every ability exactly",
+          "One test measures every form of development"
+        ],
+        "explanation": "Physical, social, emotional and cognitive development need not progress uniformly or identically in every learner."
+      },
+      {
+        "id": "foundation-pedagogy-56",
+        "subtopic": "Adolescence",
+        "prompt": "A learner seems confident with friends but hesitant in public presentations. What is the most appropriate interpretation?",
+        "answer": "Performance and confidence can vary by context",
+        "distractors": [
+          "The learner has no knowledge in any subject",
+          "The learner must be deliberately dishonest",
+          "Confidence is fixed and cannot change"
+        ],
+        "explanation": "Context, familiarity and perceived social evaluation can affect participation; one behaviour should not define the learner globally."
+      },
+      {
+        "id": "foundation-pedagogy-57",
+        "subtopic": "Adolescence",
+        "prompt": "Which classroom practice can reduce embarrassment when adolescents make mistakes?",
+        "answer": "Treat errors as information for learning and respond respectfully",
+        "distractors": [
+          "Display a public list of the least capable learners",
+          "Mock incorrect answers",
+          "Prohibit every attempt without certainty"
+        ],
+        "explanation": "A respectful environment makes it easier to attempt challenging work and use feedback without fear of humiliation."
+      },
+      {
+        "id": "foundation-pedagogy-58",
+        "subtopic": "Adolescence",
+        "prompt": "How should a teacher respond when peer exclusion is reported?",
+        "answer": "Listen, document concerns and use the school's safeguarding and inclusion procedures",
+        "distractors": [
+          "Dismiss exclusion as always harmless",
+          "Blame the excluded learner automatically",
+          "Require the learner to solve every problem alone"
+        ],
+        "explanation": "Peer exclusion should be taken seriously and addressed through appropriate school procedures rather than public humiliation or unsupported conclusions."
+      },
+      {
+        "id": "foundation-pedagogy-59",
+        "subtopic": "Adolescence",
+        "prompt": "Which arrangement makes collaborative work more accountable?",
+        "answer": "Clear roles, shared goals and evidence of individual contribution",
+        "distractors": [
+          "One learner doing every task",
+          "No roles and no monitoring",
+          "Rewarding only the loudest participant"
+        ],
+        "explanation": "Structure supports participation and prevents group work from hiding unequal contributions or understanding."
+      },
+      {
+        "id": "foundation-pedagogy-60",
+        "subtopic": "Adolescence",
+        "prompt": "Why can peer feedback be useful for adolescent learners?",
+        "answer": "It can expose alternative explanations and support revision when criteria are clear",
+        "distractors": [
+          "Peers are always more accurate than every teacher",
+          "It removes the need to learn the content",
+          "It should consist only of popularity votes"
+        ],
+        "explanation": "Feedback is useful when specific, respectful and linked to evidence, rather than status or friendship."
+      },
+      {
+        "id": "foundation-pedagogy-61",
+        "subtopic": "Adolescence",
+        "prompt": "A student disagrees with a classroom rule. Which response encourages reasoned judgment?",
+        "answer": "Invite reasons and discuss the rule's purpose and fair application",
+        "distractors": [
+          "Treat every disagreement as proof of inability",
+          "End all discussion permanently",
+          "Change the rule randomly without explanation"
+        ],
+        "explanation": "Adolescents can practise examining reasons, consequences and fairness within clear expectations."
+      },
+      {
+        "id": "foundation-pedagogy-62",
+        "subtopic": "Adolescence",
+        "prompt": "Which task especially supports hypothetical reasoning?",
+        "answer": "Predict outcomes under different stated assumptions and justify them",
+        "distractors": [
+          "Copy a heading repeatedly",
+          "Count notebooks without interpreting anything",
+          "Repeat an answer without considering conditions"
+        ],
+        "explanation": "Hypothetical reasoning explores possible conditions and consequences while keeping assumptions explicit."
+      },
+      {
+        "id": "foundation-pedagogy-63",
+        "subtopic": "Adolescence",
+        "prompt": "Why should abstract ideas still be supported by examples in secondary classes?",
+        "answer": "Examples can connect unfamiliar concepts to prior knowledge and reveal misconceptions",
+        "distractors": [
+          "Adolescents never benefit from concrete representations",
+          "Examples replace all reasoning permanently",
+          "Every abstract concept is already understood at a fixed age"
+        ],
+        "explanation": "Age alone does not guarantee mastery; examples and varied representations help learners build and test understanding."
+      },
+      {
+        "id": "foundation-pedagogy-64",
+        "subtopic": "Adolescence",
+        "prompt": "What is metacognitive monitoring during study?",
+        "answer": "Checking one's understanding and deciding whether a strategy is working",
+        "distractors": [
+          "Only rereading without attention",
+          "Only counting study minutes",
+          "Assuming familiarity always means mastery"
+        ],
+        "explanation": "Monitoring lets learners identify gaps and adjust strategies rather than rely only on how familiar material feels."
+      },
+      {
+        "id": "foundation-pedagogy-65",
+        "subtopic": "Adolescence",
+        "prompt": "Which study action best supports retrieval practice?",
+        "answer": "Attempt an answer from memory, then check and correct it",
+        "distractors": [
+          "Look at the answer while copying every time",
+          "Highlight every word without selection",
+          "Avoid checking any response"
+        ],
+        "explanation": "Retrieval requires bringing information to mind; checking afterward helps correct errors and consolidate learning."
+      },
+      {
+        "id": "foundation-pedagogy-66",
+        "subtopic": "Adolescence",
+        "prompt": "How does spaced study differ from cramming?",
+        "answer": "Study opportunities are distributed across time",
+        "distractors": [
+          "Every topic is studied only once",
+          "All study occurs in one uninterrupted block",
+          "The learner never revisits material"
+        ],
+        "explanation": "Spacing provides repeated opportunities for retrieval and consolidation over time rather than one concentrated session."
+      },
+      {
+        "id": "foundation-pedagogy-67",
+        "subtopic": "Adolescence",
+        "prompt": "Which goal is most useful for planning an adolescent learner's next study session?",
+        "answer": "Explain and solve three fraction-equivalence examples, then check errors",
+        "distractors": [
+          "Become perfect at every subject instantly",
+          "Study without a purpose indefinitely",
+          "Never make any mistakes"
+        ],
+        "explanation": "A specific achievable goal names the capability and evidence, helping the learner plan and assess progress."
+      },
+      {
+        "id": "foundation-pedagogy-68",
+        "subtopic": "Adolescence",
+        "prompt": "A learner mistakes fluent rereading for mastery. What would provide stronger evidence?",
+        "answer": "Explain the idea and answer a new question without consulting notes",
+        "distractors": [
+          "Read the title more quickly",
+          "Increase the font size",
+          "Count highlighted sentences"
+        ],
+        "explanation": "Independent explanation and transfer reveal understanding more directly than repeated exposure alone."
+      },
+      {
+        "id": "foundation-pedagogy-69",
+        "subtopic": "Adolescence",
+        "prompt": "What makes formative feedback actionable?",
+        "answer": "It identifies a gap and a feasible next step tied to the task",
+        "distractors": [
+          "It labels the learner permanently",
+          "It states only a mark",
+          "It compares the learner's worth with friends"
+        ],
+        "explanation": "Actionable feedback directs an improvement and should be followed by an opportunity to use it."
+      },
+      {
+        "id": "foundation-pedagogy-70",
+        "subtopic": "Adolescence",
+        "prompt": "Why is private feedback sometimes preferable for a sensitive performance issue?",
+        "answer": "It can protect dignity and support a focused conversation",
+        "distractors": [
+          "It prevents the learner from receiving any feedback",
+          "It guarantees automatic agreement",
+          "It hides every assessment criterion"
+        ],
+        "explanation": "Respectful private discussion can address concerns without unnecessary public embarrassment; transparency about criteria remains important."
+      },
+      {
+        "id": "foundation-pedagogy-71",
+        "subtopic": "Adolescence",
+        "prompt": "What is a mastery-oriented classroom goal?",
+        "answer": "Improve understanding and competence through practice and feedback",
+        "distractors": [
+          "Prove classmates are less worthy",
+          "Avoid all challenging work",
+          "Focus only on appearance"
+        ],
+        "explanation": "Mastery goals emphasize learning progress; they do not remove standards or the need for evidence."
+      },
+      {
+        "id": "foundation-pedagogy-72",
+        "subtopic": "Adolescence",
+        "prompt": "Which statement reflects a useful view of ability during learning?",
+        "answer": "Skills can improve with appropriate strategies, practice and support",
+        "distractors": [
+          "Every difficulty proves a permanent inability",
+          "Effort alone guarantees success regardless of strategy",
+          "Feedback is never needed"
+        ],
+        "explanation": "Development requires effective methods and opportunities; effort matters but should be connected to strategy and evidence."
+      },
+      {
+        "id": "foundation-pedagogy-73",
+        "subtopic": "Adolescence",
+        "prompt": "A learner repeatedly fails a difficult task. What is the best instructional next step?",
+        "answer": "Diagnose prerequisites and provide targeted support before further practice",
+        "distractors": [
+          "Assign the same task indefinitely without feedback",
+          "Conclude the learner cannot improve",
+          "Remove all learning goals"
+        ],
+        "explanation": "Repeated failure can indicate gaps or unsuitable support; diagnosis should guide the next learning opportunity."
+      },
+      {
+        "id": "foundation-pedagogy-74",
+        "subtopic": "Adolescence",
+        "prompt": "Why should assessment use more than one source of evidence when practical?",
+        "answer": "A single task may not capture understanding across contexts",
+        "distractors": [
+          "Every observation is equally valid automatically",
+          "Evidence makes teaching unnecessary",
+          "All learners must submit identical answers"
+        ],
+        "explanation": "Several well-aligned observations can improve interpretation, while each source still needs appropriate criteria."
+      },
+      {
+        "id": "foundation-pedagogy-75",
+        "subtopic": "Adolescence",
+        "prompt": "Which example is an access support rather than an unrelated lowering of the learning goal?",
+        "answer": "An accessible text format while retaining the reasoning objective",
+        "distractors": [
+          "Awarding full marks without any work",
+          "Removing the concept from the task entirely",
+          "Scoring only handwriting in a reasoning task"
+        ],
+        "explanation": "Access supports help learners demonstrate the intended capability without irrelevant barriers."
+      },
+      {
+        "id": "foundation-pedagogy-76",
+        "subtopic": "Adolescence",
+        "prompt": "How should classroom examples represent social and cultural identities?",
+        "answer": "Use varied respectful examples without presenting one group as inherently inferior",
+        "distractors": [
+          "Use stereotypes as fixed explanations",
+          "Assume every family has identical resources",
+          "Exclude every unfamiliar context"
+        ],
+        "explanation": "Representation influences belonging and interpretation; examples should broaden participation rather than impose stereotypes."
+      },
+      {
+        "id": "foundation-pedagogy-77",
+        "subtopic": "Adolescence",
+        "prompt": "Why should a teacher distinguish home-language proficiency from subject understanding?",
+        "answer": "Language demands can obscure what a learner knows",
+        "distractors": [
+          "Using another home language proves low ability",
+          "Only one language can express reasoning",
+          "Content knowledge never depends on prior experience"
+        ],
+        "explanation": "A language barrier and a conceptual gap require different support; multilingual learners may understand more than one assessment format reveals."
+      },
+      {
+        "id": "foundation-pedagogy-78",
+        "subtopic": "Adolescence",
+        "prompt": "Which practice can help a hesitant multilingual learner join discussion?",
+        "answer": "Provide preparation time and supportive ways to express reasoning",
+        "distractors": [
+          "Require instant public responses in every case",
+          "Mock pronunciation",
+          "Ignore the learner permanently"
+        ],
+        "explanation": "Preparation and supportive participation options can reduce language-related pressure while preserving meaningful cognitive engagement."
+      },
+      {
+        "id": "foundation-pedagogy-79",
+        "subtopic": "Adolescence",
+        "prompt": "What is a constructive purpose of classroom debate?",
+        "answer": "Examine claims, evidence and alternative perspectives",
+        "distractors": [
+          "Win by insulting opponents",
+          "Repeat only the teacher's opinion",
+          "Avoid all disagreement"
+        ],
+        "explanation": "Debate is educational when reasoning and respectful response are evaluated rather than personal attacks."
+      },
+      {
+        "id": "foundation-pedagogy-80",
+        "subtopic": "Adolescence",
+        "prompt": "Why should learners be asked to justify an answer?",
+        "answer": "Reasons reveal assumptions and understanding beyond the chosen option",
+        "distractors": [
+          "Longer answers are always more correct",
+          "Every wrong option indicates identical misconceptions",
+          "Justification eliminates the need for subject knowledge"
+        ],
+        "explanation": "Explanations help distinguish sound reasoning from guessing and locate the specific source of an error."
+      },
+      {
+        "id": "foundation-pedagogy-81",
+        "subtopic": "Adolescence",
+        "prompt": "What should a learner do when reliable evidence contradicts an initial explanation?",
+        "answer": "Revise the explanation while examining the evidence",
+        "distractors": [
+          "Reject all evidence automatically",
+          "Change the subject permanently",
+          "Treat revision as proof of personal failure"
+        ],
+        "explanation": "Revising a claim in response to evidence is part of inquiry and does not require abandoning critical evaluation of sources."
+      },
+      {
+        "id": "foundation-pedagogy-82",
+        "subtopic": "Adolescence",
+        "prompt": "Which digital-literacy question helps evaluate an online claim?",
+        "answer": "Who produced it, what evidence supports it and can credible sources corroborate it?",
+        "distractors": [
+          "How colourful is the page?",
+          "How many exclamation marks does it contain?",
+          "Does it agree with every prior belief?"
+        ],
+        "explanation": "Source, evidence and corroboration are stronger criteria than visual appeal or agreement with expectations."
+      },
+      {
+        "id": "foundation-pedagogy-83",
+        "subtopic": "Adolescence",
+        "prompt": "Why is sharing a classmate's personal information online without permission problematic?",
+        "answer": "It can violate privacy and cause harm",
+        "distractors": [
+          "Online information can never affect anyone",
+          "Classmates have no privacy interests",
+          "Only adults need permission"
+        ],
+        "explanation": "Digital citizenship includes respecting others' privacy and using school reporting procedures for concerns."
+      },
+      {
+        "id": "foundation-pedagogy-84",
+        "subtopic": "Adolescence",
+        "prompt": "What is a suitable response to suspected cyberbullying involving students?",
+        "answer": "Preserve relevant evidence safely and follow school safeguarding procedures",
+        "distractors": [
+          "Encourage public retaliation",
+          "Forward the harmful material to everyone",
+          "Assume online harm is irrelevant"
+        ],
+        "explanation": "An appropriate response focuses on support, evidence and established procedures rather than escalating exposure or retaliation."
+      },
+      {
+        "id": "foundation-pedagogy-85",
+        "subtopic": "Adolescence",
+        "prompt": "What is self-regulation in a learning context?",
+        "answer": "Managing goals, attention, strategies and responses while learning",
+        "distractors": [
+          "Never experiencing any emotion",
+          "Always working without support",
+          "Only following a timetable blindly"
+        ],
+        "explanation": "Self-regulation includes planning, monitoring and adjustment, and can be strengthened through explicit instruction and practice."
+      },
+      {
+        "id": "foundation-pedagogy-86",
+        "subtopic": "Adolescence",
+        "prompt": "A student is overwhelmed by a large assignment. Which support is most appropriate?",
+        "answer": "Break it into meaningful stages with checkpoints and feedback",
+        "distractors": [
+          "Add unrelated tasks as punishment",
+          "Demand completion without clarifying requirements",
+          "Remove every opportunity to plan"
+        ],
+        "explanation": "Chunking and checkpoints help manage cognitive and organizational demands while keeping the overall goal clear."
+      },
+      {
+        "id": "foundation-pedagogy-87",
+        "subtopic": "Adolescence",
+        "prompt": "Which classroom response supports emotional regulation during a disagreement?",
+        "answer": "Pause, acknowledge feelings and guide respectful problem solving",
+        "distractors": [
+          "Insist emotions never occur",
+          "Reward the loudest insult",
+          "Humiliate both learners publicly"
+        ],
+        "explanation": "Regulation includes recognizing emotions and choosing constructive responses, rather than suppressing all feelings or escalating conflict."
+      },
+      {
+        "id": "foundation-pedagogy-88",
+        "subtopic": "Adolescence",
+        "prompt": "Why should a teacher avoid diagnosing a learner from one classroom incident?",
+        "answer": "An incident lacks the context and expertise needed for diagnosis",
+        "distractors": [
+          "One behaviour always proves a disorder",
+          "Teachers should ignore every concern",
+          "Diagnosis is identical to a low test score"
+        ],
+        "explanation": "Teachers can observe and refer concerns through appropriate channels without making unsupported clinical conclusions."
+      },
+      {
+        "id": "foundation-pedagogy-89",
+        "subtopic": "Adolescence",
+        "prompt": "Which response is appropriate to a learner expressing persistent distress?",
+        "answer": "Listen respectfully and connect the learner with the school's appropriate support procedures",
+        "distractors": [
+          "Promise that no adult will ever be informed under any circumstances",
+          "Dismiss the concern as laziness",
+          "Offer an unqualified diagnosis"
+        ],
+        "explanation": "Support should follow safeguarding procedures and professional roles; confidentiality has limits where safety obligations apply."
+      },
+      {
+        "id": "foundation-pedagogy-90",
+        "subtopic": "Adolescence",
+        "prompt": "Why should adolescents practise evaluating consequences of choices?",
+        "answer": "It supports more deliberate decision making in real situations",
+        "distractors": [
+          "It guarantees every future choice will be perfect",
+          "It eliminates the influence of context",
+          "It requires the teacher to choose every action forever"
+        ],
+        "explanation": "Considering likely outcomes, alternatives and values helps develop judgment while recognizing uncertainty and support needs."
+      },
+      {
+        "id": "foundation-pedagogy-91",
+        "subtopic": "Adolescence",
+        "prompt": "What is perspective taking?",
+        "answer": "Considering how a situation may appear to another person",
+        "distractors": [
+          "Agreeing with every opinion automatically",
+          "Ignoring one's own evidence",
+          "Assuming all people have identical experiences"
+        ],
+        "explanation": "Perspective taking supports understanding and communication without requiring uncritical agreement."
+      },
+      {
+        "id": "foundation-pedagogy-92",
+        "subtopic": "Adolescence",
+        "prompt": "Which response to a harmful stereotype best supports critical thinking?",
+        "answer": "Ask for evidence, examine counterexamples and discuss its effects respectfully",
+        "distractors": [
+          "Repeat it as an unquestionable fact",
+          "Ban all evidence-based discussion",
+          "Apply it to grade every learner"
+        ],
+        "explanation": "Stereotypes make unsupported generalizations; evidence and respectful examination help learners challenge them."
+      },
+      {
+        "id": "foundation-pedagogy-93",
+        "subtopic": "Adolescence",
+        "prompt": "Why should participation expectations be explicit in a secondary classroom?",
+        "answer": "They help learners understand how to contribute and listen fairly",
+        "distractors": [
+          "They remove the need for respectful conduct",
+          "They guarantee identical opinions",
+          "They permit only one learner to speak all year"
+        ],
+        "explanation": "Clear expectations can support inclusive discussion and make both speaking and listening responsibilities visible."
+      },
+      {
+        "id": "foundation-pedagogy-94",
+        "subtopic": "Adolescence",
+        "prompt": "What is the purpose of a reflective learning journal?",
+        "answer": "Examine strategies, difficulties and next steps using specific evidence",
+        "distractors": [
+          "Copy a mark without interpretation",
+          "Replace every assessment with decoration",
+          "List classmates' private details"
+        ],
+        "explanation": "Reflection is useful when it connects experience with reasons and planned changes rather than only descriptions."
+      },
+      {
+        "id": "foundation-pedagogy-95",
+        "subtopic": "Adolescence",
+        "prompt": "How can a teacher scaffold a challenging explanation task?",
+        "answer": "Model the reasoning, provide prompts and gradually reduce support",
+        "distractors": [
+          "Provide the final answer forever",
+          "Remove every challenge immediately",
+          "Use unrelated punishments"
+        ],
+        "explanation": "Scaffolding helps learners perform with support and move toward greater independence as competence develops."
+      },
+      {
+        "id": "foundation-pedagogy-96",
+        "subtopic": "Adolescence",
+        "prompt": "Why should support be reduced when a learner can perform independently?",
+        "answer": "It encourages independent use of the skill",
+        "distractors": [
+          "It proves the original support was useless",
+          "It removes the need to monitor progress",
+          "It means no future feedback is allowed"
+        ],
+        "explanation": "Support should respond to current needs; fading it allows learners to take over the reasoning and execution."
+      },
+      {
+        "id": "foundation-pedagogy-97",
+        "subtopic": "Adolescence",
+        "prompt": "Which evidence best indicates transfer of learning?",
+        "answer": "Applying a principle appropriately in a new situation and explaining why it fits",
+        "distractors": [
+          "Repeating the original answer verbatim only",
+          "Recognizing a page colour",
+          "Copying an example without understanding"
+        ],
+        "explanation": "Transfer requires identifying relevant relationships across contexts rather than relying on identical surface wording."
+      },
+      {
+        "id": "foundation-pedagogy-98",
+        "subtopic": "Adolescence",
+        "prompt": "Why can comparing two solution methods deepen learning?",
+        "answer": "It reveals assumptions, efficiency and conditions of use",
+        "distractors": [
+          "It proves every method works in every problem",
+          "It eliminates the need to solve either example",
+          "It makes answer accuracy irrelevant"
+        ],
+        "explanation": "Comparison is useful when learners explain similarities, differences and why each method is appropriate."
+      },
+      {
+        "id": "foundation-pedagogy-99",
+        "subtopic": "Adolescence",
+        "prompt": "How should a teacher use students' questions during a lesson?",
+        "answer": "Treat them as evidence of interests, prior knowledge and possible gaps",
+        "distractors": [
+          "Assume every question signals disruption",
+          "Ignore questions that reveal confusion",
+          "Answer only the most confident student"
+        ],
+        "explanation": "Questions can guide clarification and planning, while classroom routines help manage time and participation."
+      },
+      {
+        "id": "foundation-pedagogy-100",
+        "subtopic": "Adolescence",
+        "prompt": "What does learner agency involve?",
+        "answer": "Having meaningful opportunities to influence and take responsibility for learning",
+        "distractors": [
+          "Having no obligations or goals",
+          "Never receiving guidance",
+          "Only selecting the classroom wall colour"
+        ],
+        "explanation": "Agency combines voice and purposeful action with responsibility and support, rather than unrestricted choice alone."
       }
     ]
   },
@@ -1847,6 +2411,1206 @@
           "Vulture"
         ],
         "explanation": "Green plants capture energy through photosynthesis; consumers and decomposers have different ecological roles."
+      },
+      {
+        "id": "foundation-science-51",
+        "subtopic": "Physics",
+        "prompt": "A runner covers 120 metres in 20 seconds at uniform speed. What is the speed?",
+        "answer": "6 m/s",
+        "distractors": [
+          "2400 m/s",
+          "100 m/s",
+          "0.167 m/s"
+        ],
+        "explanation": "Divide distance by time: 120 ÷ 20 = 6 metres per second."
+      },
+      {
+        "id": "foundation-science-52",
+        "subtopic": "Physics",
+        "prompt": "A car's velocity changes from 5 m/s to 17 m/s in 4 seconds. What is its average acceleration?",
+        "answer": "3 m/s²",
+        "distractors": [
+          "12 m/s²",
+          "5.5 m/s²",
+          "48 m/s²"
+        ],
+        "explanation": "Average acceleration is change in velocity divided by time: (17 − 5) ÷ 4 = 3 m/s²."
+      },
+      {
+        "id": "foundation-science-53",
+        "subtopic": "Physics",
+        "prompt": "A 2 kg object accelerates at 3 m/s². What net force acts on it?",
+        "answer": "6 N",
+        "distractors": [
+          "1.5 N",
+          "5 N",
+          "0.67 N"
+        ],
+        "explanation": "Newton's second law gives net force = mass × acceleration = 2 × 3 = 6 N."
+      },
+      {
+        "id": "foundation-science-54",
+        "subtopic": "Physics",
+        "prompt": "An object moves at constant velocity in a straight line. What is the net force on it?",
+        "answer": "Zero",
+        "distractors": [
+          "Always equal to its weight",
+          "Always increasing",
+          "Equal to its mass numerically"
+        ],
+        "explanation": "Constant velocity means zero acceleration, so the vector sum of forces is zero; individual forces may still act."
+      },
+      {
+        "id": "foundation-science-55",
+        "subtopic": "Physics",
+        "prompt": "A person completes one lap and returns to the starting point. What is their displacement?",
+        "answer": "Zero",
+        "distractors": [
+          "Equal to the lap length",
+          "Half the lap length",
+          "Necessarily negative"
+        ],
+        "explanation": "Displacement depends on final minus initial position. The distance travelled is nonzero but displacement is zero."
+      },
+      {
+        "id": "foundation-science-56",
+        "subtopic": "Physics",
+        "prompt": "What does the slope of a distance-time graph represent during uniform straight-line motion?",
+        "answer": "Speed",
+        "distractors": [
+          "Mass",
+          "Force",
+          "Pressure"
+        ],
+        "explanation": "The graph slope is the change in distance divided by the change in time, which is speed."
+      },
+      {
+        "id": "foundation-science-57",
+        "subtopic": "Physics",
+        "prompt": "What does the area under a velocity-time graph represent?",
+        "answer": "Signed displacement",
+        "distractors": [
+          "Instantaneous mass",
+          "Pressure",
+          "Electric charge"
+        ],
+        "explanation": "Velocity integrated over time gives displacement; regions below the time axis contribute negatively."
+      },
+      {
+        "id": "foundation-science-58",
+        "subtopic": "Physics",
+        "prompt": "A 5 N force moves an object 4 metres along the force direction. What work is done?",
+        "answer": "20 J",
+        "distractors": [
+          "1.25 J",
+          "9 J",
+          "0 J"
+        ],
+        "explanation": "For force parallel to displacement, work = force × displacement = 5 × 4 = 20 J."
+      },
+      {
+        "id": "foundation-science-59",
+        "subtopic": "Physics",
+        "prompt": "A 3 kg object travels at 4 m/s. What is its kinetic energy?",
+        "answer": "24 J",
+        "distractors": [
+          "12 J",
+          "48 J",
+          "6 J"
+        ],
+        "explanation": "Kinetic energy is one half of mass times speed squared: 0.5 × 3 × 16 = 24 J."
+      },
+      {
+        "id": "foundation-science-60",
+        "subtopic": "Physics",
+        "prompt": "Using g = 10 m/s², what gravitational potential energy does a 2 kg object gain when raised 3 metres?",
+        "answer": "60 J",
+        "distractors": [
+          "6 J",
+          "15 J",
+          "20 J"
+        ],
+        "explanation": "The gain near Earth's surface is mgh = 2 × 10 × 3 = 60 J."
+      },
+      {
+        "id": "foundation-science-61",
+        "subtopic": "Physics",
+        "prompt": "A machine transfers 600 joules in 30 seconds. What is its average power?",
+        "answer": "20 W",
+        "distractors": [
+          "18000 W",
+          "570 W",
+          "0.05 W"
+        ],
+        "explanation": "Average power is energy divided by time: 600 ÷ 30 = 20 watts."
+      },
+      {
+        "id": "foundation-science-62",
+        "subtopic": "Physics",
+        "prompt": "A 20 N force acts normally on an area of 0.5 m². What is the pressure?",
+        "answer": "40 Pa",
+        "distractors": [
+          "10 Pa",
+          "20.5 Pa",
+          "0.025 Pa"
+        ],
+        "explanation": "Pressure = force ÷ area = 20 ÷ 0.5 = 40 pascals."
+      },
+      {
+        "id": "foundation-science-63",
+        "subtopic": "Physics",
+        "prompt": "An object has mass 200 g and volume 100 cm³. What is its density?",
+        "answer": "2 g/cm³",
+        "distractors": [
+          "20000 g/cm³",
+          "0.5 g/cm³",
+          "300 g/cm³"
+        ],
+        "explanation": "Density is mass per unit volume: 200 ÷ 100 = 2 grams per cubic centimetre."
+      },
+      {
+        "id": "foundation-science-64",
+        "subtopic": "Physics",
+        "prompt": "Why does a sharp blade cut more readily than a blunt blade under the same normal force?",
+        "answer": "Its smaller contact area produces greater pressure",
+        "distractors": [
+          "It eliminates all friction",
+          "Its force must be zero",
+          "It changes the material's mass"
+        ],
+        "explanation": "With equal force, reducing the contact area increases pressure at the edge."
+      },
+      {
+        "id": "foundation-science-65",
+        "subtopic": "Physics",
+        "prompt": "What mainly explains an object's apparent loss of weight when immersed in a fluid?",
+        "answer": "An upward buoyant force",
+        "distractors": [
+          "Disappearance of its mass",
+          "Elimination of gravity",
+          "Conversion of all matter to heat"
+        ],
+        "explanation": "The fluid exerts an upward buoyant force; apparent weight is reduced while the object's mass remains."
+      },
+      {
+        "id": "foundation-science-66",
+        "subtopic": "Physics",
+        "prompt": "Archimedes' principle relates buoyant force to which quantity?",
+        "answer": "Weight of displaced fluid",
+        "distractors": [
+          "Mass of the object alone",
+          "Temperature of the object alone",
+          "Volume of air above the fluid only"
+        ],
+        "explanation": "Buoyant force equals the weight of fluid displaced by the immersed portion of the object."
+      },
+      {
+        "id": "foundation-science-67",
+        "subtopic": "Physics",
+        "prompt": "Which mode of heat transfer can operate across empty space?",
+        "answer": "Radiation",
+        "distractors": [
+          "Conduction through particles only",
+          "Convection of liquid only",
+          "Diffusion of dissolved salt"
+        ],
+        "explanation": "Thermal radiation is electromagnetic and can propagate through a vacuum."
+      },
+      {
+        "id": "foundation-science-68",
+        "subtopic": "Physics",
+        "prompt": "Warm water rising within a heated vessel illustrates which heat-transfer mechanism?",
+        "answer": "Convection",
+        "distractors": [
+          "Reflection",
+          "Electrical induction",
+          "Sublimation"
+        ],
+        "explanation": "Convection transfers heat through bulk fluid movement, influenced by density differences."
+      },
+      {
+        "id": "foundation-science-69",
+        "subtopic": "Physics",
+        "prompt": "Heat travelling along a metal rod mainly demonstrates which process?",
+        "answer": "Conduction",
+        "distractors": [
+          "Convection of the solid as a whole",
+          "Condensation",
+          "Refraction"
+        ],
+        "explanation": "Conduction transfers energy through interactions within a material without bulk transport of the rod."
+      },
+      {
+        "id": "foundation-science-70",
+        "subtopic": "Physics",
+        "prompt": "At a fixed pressure, why can temperature remain constant while pure ice melts?",
+        "answer": "Energy is used for the phase change",
+        "distractors": [
+          "No energy enters the ice",
+          "Water loses all internal energy",
+          "The thermometer creates cold"
+        ],
+        "explanation": "During melting, supplied energy changes the phase rather than increasing temperature until the transition is complete."
+      },
+      {
+        "id": "foundation-science-71",
+        "subtopic": "Physics",
+        "prompt": "What is the angle of reflection when the angle of incidence to the normal is 35 degrees?",
+        "answer": "35 degrees",
+        "distractors": [
+          "55 degrees",
+          "70 degrees",
+          "0 degrees"
+        ],
+        "explanation": "The law of reflection states that incidence and reflection angles, measured from the normal, are equal."
+      },
+      {
+        "id": "foundation-science-72",
+        "subtopic": "Physics",
+        "prompt": "Why does a pencil partly submerged in water appear bent?",
+        "answer": "Light refracts at the water-air boundary",
+        "distractors": [
+          "The pencil necessarily breaks",
+          "Water emits the image independently",
+          "Light can only move in circles"
+        ],
+        "explanation": "Light changes direction when passing obliquely between media with different refractive indices."
+      },
+      {
+        "id": "foundation-science-73",
+        "subtopic": "Physics",
+        "prompt": "A plane mirror forms which kind of image of an ordinary object in front of it?",
+        "answer": "Virtual, erect and the same size",
+        "distractors": [
+          "Real, inverted and always larger",
+          "Virtual and always half size",
+          "Real and always behind the object"
+        ],
+        "explanation": "A plane mirror image is virtual and erect, with image distance behind the mirror equal to object distance in front."
+      },
+      {
+        "id": "foundation-science-74",
+        "subtopic": "Physics",
+        "prompt": "Which property of a sound wave mainly determines perceived pitch?",
+        "answer": "Frequency",
+        "distractors": [
+          "The source's mass only",
+          "The colour of the medium",
+          "Atmospheric pressure alone"
+        ],
+        "explanation": "Higher frequency generally corresponds to higher pitch; loudness is primarily associated with intensity."
+      },
+      {
+        "id": "foundation-science-75",
+        "subtopic": "Physics",
+        "prompt": "In a medium, a wave has frequency 50 Hz and wavelength 2 m. What is its speed?",
+        "answer": "100 m/s",
+        "distractors": [
+          "25 m/s",
+          "52 m/s",
+          "0.04 m/s"
+        ],
+        "explanation": "Wave speed equals frequency times wavelength: 50 × 2 = 100 m/s."
+      },
+      {
+        "id": "foundation-science-76",
+        "subtopic": "Physics",
+        "prompt": "A current of 2 A flows for 5 seconds. How much charge passes a point?",
+        "answer": "10 C",
+        "distractors": [
+          "2.5 C",
+          "7 C",
+          "0.4 C"
+        ],
+        "explanation": "Charge = current × time = 2 × 5 = 10 coulombs."
+      },
+      {
+        "id": "foundation-science-77",
+        "subtopic": "Physics",
+        "prompt": "A 6 V potential difference is applied across a 3 ohm ohmic resistor. What is the current?",
+        "answer": "2 A",
+        "distractors": [
+          "18 A",
+          "9 A",
+          "0.5 A"
+        ],
+        "explanation": "Ohm's law gives current = voltage ÷ resistance = 6 ÷ 3 = 2 A."
+      },
+      {
+        "id": "foundation-science-78",
+        "subtopic": "Physics",
+        "prompt": "What is the total resistance of 2 ohm and 4 ohm resistors connected in series?",
+        "answer": "6 ohms",
+        "distractors": [
+          "1.33 ohms",
+          "8 ohms",
+          "2 ohms"
+        ],
+        "explanation": "Series resistances add because the same current flows through each resistor."
+      },
+      {
+        "id": "foundation-science-79",
+        "subtopic": "Physics",
+        "prompt": "Two identical 6 ohm resistors are connected in parallel. What is their equivalent resistance?",
+        "answer": "3 ohms",
+        "distractors": [
+          "12 ohms",
+          "36 ohms",
+          "6 ohms"
+        ],
+        "explanation": "For two equal parallel resistors, equivalent resistance is half of either resistance; reciprocal conductances add."
+      },
+      {
+        "id": "foundation-science-80",
+        "subtopic": "Physics",
+        "prompt": "A device draws 2 A from a 12 V supply. What electrical power does it use?",
+        "answer": "24 W",
+        "distractors": [
+          "6 W",
+          "14 W",
+          "0.167 W"
+        ],
+        "explanation": "Electrical power = voltage × current = 12 × 2 = 24 watts."
+      },
+      {
+        "id": "foundation-science-81",
+        "subtopic": "Physics",
+        "prompt": "Why is a fuse placed in a circuit?",
+        "answer": "To interrupt excessive current by melting its element",
+        "distractors": [
+          "To guarantee zero resistance in every appliance",
+          "To increase the supply voltage indefinitely",
+          "To store electrical charge permanently"
+        ],
+        "explanation": "A correctly rated fuse opens the circuit if current exceeds the level its element can safely carry."
+      },
+      {
+        "id": "foundation-science-82",
+        "subtopic": "Physics",
+        "prompt": "Which observation shows that an electric current can have a magnetic effect?",
+        "answer": "A compass needle deflects near a current-carrying wire",
+        "distractors": [
+          "A dry stone becomes lighter in sunlight",
+          "Water freezes in a refrigerator",
+          "A mirror reflects a face"
+        ],
+        "explanation": "A current produces a magnetic field around its conductor, which can affect a nearby compass."
+      },
+      {
+        "id": "foundation-science-83",
+        "subtopic": "Chemistry",
+        "prompt": "What is the mass number of an atom with 6 protons and 7 neutrons?",
+        "answer": "13",
+        "distractors": [
+          "6",
+          "7",
+          "42"
+        ],
+        "explanation": "Mass number counts nucleons: protons plus neutrons, so 6 + 7 = 13."
+      },
+      {
+        "id": "foundation-science-84",
+        "subtopic": "Chemistry",
+        "prompt": "A neutral atom has 11 protons. How many electrons does it have?",
+        "answer": "11",
+        "distractors": [
+          "10",
+          "12",
+          "22"
+        ],
+        "explanation": "Electrical neutrality requires equal numbers of protons and electrons."
+      },
+      {
+        "id": "foundation-science-85",
+        "subtopic": "Chemistry",
+        "prompt": "An atom loses one electron without changing its nucleus. What does it become?",
+        "answer": "A positively charged ion",
+        "distractors": [
+          "A new element automatically",
+          "A negatively charged ion",
+          "A neutron"
+        ],
+        "explanation": "Losing a negative charge leaves a net positive charge; the element's proton count stays unchanged."
+      },
+      {
+        "id": "foundation-science-86",
+        "subtopic": "Chemistry",
+        "prompt": "What happens when a neutral atom gains an electron?",
+        "answer": "It becomes a negative ion",
+        "distractors": [
+          "Its atomic number increases by one",
+          "It loses every proton",
+          "It becomes electrically neutral by definition"
+        ],
+        "explanation": "An added electron makes electron count exceed proton count, giving a net negative charge."
+      },
+      {
+        "id": "foundation-science-87",
+        "subtopic": "Chemistry",
+        "prompt": "Why must a chemical equation be balanced?",
+        "answer": "Atoms of each element are conserved in an ordinary chemical reaction",
+        "distractors": [
+          "Reactant names must have equal word lengths",
+          "All products must be gases",
+          "Every reaction has exactly two reactants"
+        ],
+        "explanation": "Balancing coefficients accounts for the same number of each type of atom before and after the reaction."
+      },
+      {
+        "id": "foundation-science-88",
+        "subtopic": "Chemistry",
+        "prompt": "Which balanced equation describes hydrogen reacting with oxygen to form water?",
+        "answer": "2H2 + O2 → 2H2O",
+        "distractors": [
+          "H2 + O2 → H2O",
+          "H2 + 2O2 → H2O",
+          "2H2 + 2O2 → H2O"
+        ],
+        "explanation": "The balanced equation has four hydrogen atoms and two oxygen atoms on each side."
+      },
+      {
+        "id": "foundation-science-89",
+        "subtopic": "Chemistry",
+        "prompt": "In a closed system, what happens to total mass during an ordinary chemical reaction?",
+        "answer": "It remains constant",
+        "distractors": [
+          "It always doubles",
+          "It always becomes zero",
+          "It depends only on the container's colour"
+        ],
+        "explanation": "Conservation of mass includes all reactants and products, including gases retained in the closed system."
+      },
+      {
+        "id": "foundation-science-90",
+        "subtopic": "Chemistry",
+        "prompt": "A reaction releases heat to its surroundings. How is it described?",
+        "answer": "Exothermic",
+        "distractors": [
+          "Endothermic",
+          "Always reversible",
+          "Always physical only"
+        ],
+        "explanation": "An exothermic reaction transfers energy to the surroundings, often observed as heat release."
+      },
+      {
+        "id": "foundation-science-91",
+        "subtopic": "Chemistry",
+        "prompt": "A reaction absorbs heat from its surroundings. How is it described?",
+        "answer": "Endothermic",
+        "distractors": [
+          "Exothermic",
+          "Always explosive",
+          "Always neutralization"
+        ],
+        "explanation": "An endothermic reaction requires net energy input from the surroundings."
+      },
+      {
+        "id": "foundation-science-92",
+        "subtopic": "Chemistry",
+        "prompt": "Which observation alone does NOT establish that a chemical reaction occurred?",
+        "answer": "A material is cut into smaller pieces",
+        "distractors": [
+          "A new precipitate forms from solutions",
+          "A new gas evolves through reaction",
+          "A new substance with different properties forms"
+        ],
+        "explanation": "Changing size by cutting can leave chemical identity unchanged, whereas formation of new substances is evidence of reaction."
+      },
+      {
+        "id": "foundation-science-93",
+        "subtopic": "Chemistry",
+        "prompt": "What is an element?",
+        "answer": "A substance whose atoms have the same proton number",
+        "distractors": [
+          "Any material with two visible layers",
+          "A mixture of any two gases",
+          "Only a substance that dissolves in water"
+        ],
+        "explanation": "An element is identified by atomic number; it cannot be decomposed into simpler substances by ordinary chemical means."
+      },
+      {
+        "id": "foundation-science-94",
+        "subtopic": "Chemistry",
+        "prompt": "What is a compound?",
+        "answer": "A substance with different elements chemically combined in a fixed composition",
+        "distractors": [
+          "Any combination separable by sieving",
+          "Every single atom",
+          "Only a liquid mixture"
+        ],
+        "explanation": "Compounds have a defined chemical composition and properties distinct from those of their constituent elements."
+      },
+      {
+        "id": "foundation-science-95",
+        "subtopic": "Chemistry",
+        "prompt": "Which example is a mixture rather than a pure compound?",
+        "answer": "Air",
+        "distractors": [
+          "Pure sodium chloride",
+          "Pure water",
+          "Pure carbon dioxide"
+        ],
+        "explanation": "Air contains several gases whose proportions can vary; its components are not one fixed chemical compound."
+      },
+      {
+        "id": "foundation-science-96",
+        "subtopic": "Chemistry",
+        "prompt": "Which mixture is homogeneous at the scale of ordinary observation?",
+        "answer": "Salt fully dissolved in water",
+        "distractors": [
+          "Sand mixed with stones",
+          "Oil layered on water",
+          "Soil containing visible pebbles"
+        ],
+        "explanation": "A dissolved salt solution has uniform composition throughout at ordinary scales, unlike the heterogeneous alternatives."
+      },
+      {
+        "id": "foundation-science-97",
+        "subtopic": "Chemistry",
+        "prompt": "What is a solute in a solution?",
+        "answer": "The substance dissolved in the solvent",
+        "distractors": [
+          "Always the container",
+          "Always a gas above the liquid",
+          "Only an insoluble residue"
+        ],
+        "explanation": "A solute is dissolved in a solvent; both can have different physical states depending on the solution."
+      },
+      {
+        "id": "foundation-science-98",
+        "subtopic": "Chemistry",
+        "prompt": "What is a saturated solution at a specified temperature?",
+        "answer": "One containing the maximum amount of solute that can remain dissolved under those conditions",
+        "distractors": [
+          "One containing no solute",
+          "One in which every possible substance dissolves",
+          "One that must be boiling"
+        ],
+        "explanation": "Saturation refers to an equilibrium solubility limit for a particular solute and solvent under stated conditions."
+      },
+      {
+        "id": "foundation-science-99",
+        "subtopic": "Chemistry",
+        "prompt": "Why can ordinary filter paper not separate dissolved sugar from water?",
+        "answer": "Dissolved sugar passes through with the liquid",
+        "distractors": [
+          "Sugar becomes an insoluble metal",
+          "The filter removes only water molecules",
+          "All dissolved substances evaporate instantly"
+        ],
+        "explanation": "Ordinary filtration retains sufficiently large insoluble particles; it does not remove molecularly dissolved sugar."
+      },
+      {
+        "id": "foundation-science-100",
+        "subtopic": "Chemistry",
+        "prompt": "Which technique can recover solid salt from saltwater without collecting the water?",
+        "answer": "Evaporation",
+        "distractors": [
+          "Magnetic separation",
+          "Sieving",
+          "Simple decantation of a uniform solution"
+        ],
+        "explanation": "Evaporating the solvent leaves nonvolatile salt behind; distillation would also collect condensed solvent."
+      },
+      {
+        "id": "foundation-science-101",
+        "subtopic": "Chemistry",
+        "prompt": "Which method can separate iron filings from dry sand?",
+        "answer": "Magnetic separation",
+        "distractors": [
+          "Neutralization",
+          "Condensation",
+          "Chromatography of light"
+        ],
+        "explanation": "A magnet attracts iron filings while ordinary sand is not strongly attracted."
+      },
+      {
+        "id": "foundation-science-102",
+        "subtopic": "Chemistry",
+        "prompt": "Which technique can help separate the coloured components of an ink?",
+        "answer": "Paper chromatography",
+        "distractors": [
+          "Sieving through a kitchen strainer",
+          "Magnetic separation",
+          "Melting the paper"
+        ],
+        "explanation": "Different dissolved components travel differently through the stationary phase with the mobile solvent."
+      },
+      {
+        "id": "foundation-science-103",
+        "subtopic": "Chemistry",
+        "prompt": "Which change of state is sublimation?",
+        "answer": "Solid directly to gas",
+        "distractors": [
+          "Gas to liquid",
+          "Liquid to solid",
+          "Solid to liquid"
+        ],
+        "explanation": "Sublimation bypasses the liquid state; the reverse gas-to-solid change is deposition."
+      },
+      {
+        "id": "foundation-science-104",
+        "subtopic": "Chemistry",
+        "prompt": "What is condensation?",
+        "answer": "Gas changing to liquid",
+        "distractors": [
+          "Solid changing directly to gas",
+          "Liquid changing to solid",
+          "Liquid changing to gas"
+        ],
+        "explanation": "Cooling a vapour under suitable conditions can cause it to form a liquid."
+      },
+      {
+        "id": "foundation-science-105",
+        "subtopic": "Chemistry",
+        "prompt": "What is evaporation?",
+        "answer": "Liquid changing into vapour from its surface",
+        "distractors": [
+          "Only solidification of a melt",
+          "Gas forming a solid directly",
+          "Formation of a new element"
+        ],
+        "explanation": "Evaporation occurs at a liquid's surface and need not wait until the liquid reaches its boiling point."
+      },
+      {
+        "id": "foundation-science-106",
+        "subtopic": "Chemistry",
+        "prompt": "Which condition generally increases evaporation from water at the same temperature?",
+        "answer": "Greater exposed surface area",
+        "distractors": [
+          "Smaller exposed surface area",
+          "Sealing the container completely",
+          "Reducing air movement while other factors stay equal"
+        ],
+        "explanation": "A larger surface gives more molecules an opportunity to escape; humidity and airflow also affect the rate."
+      },
+      {
+        "id": "foundation-science-107",
+        "subtopic": "Chemistry",
+        "prompt": "How does blue litmus respond to a typical acidic aqueous solution?",
+        "answer": "It turns red",
+        "distractors": [
+          "It turns green in every acid",
+          "It remains blue in every acid",
+          "It becomes a metal"
+        ],
+        "explanation": "Litmus is an acid-base indicator; acids turn blue litmus red under ordinary testing conditions."
+      },
+      {
+        "id": "foundation-science-108",
+        "subtopic": "Chemistry",
+        "prompt": "How does red litmus respond to a typical basic aqueous solution?",
+        "answer": "It turns blue",
+        "distractors": [
+          "It turns yellow in every base",
+          "It remains red in every base",
+          "It dissolves into oxygen"
+        ],
+        "explanation": "Bases turn red litmus blue under ordinary testing conditions."
+      },
+      {
+        "id": "foundation-science-109",
+        "subtopic": "Chemistry",
+        "prompt": "What does a higher pH generally indicate when comparing ordinary aqueous solutions?",
+        "answer": "Lower hydrogen-ion activity",
+        "distractors": [
+          "A larger atomic number",
+          "More neutrons in every atom",
+          "Greater mass regardless of volume"
+        ],
+        "explanation": "pH is related logarithmically to hydrogen-ion activity; increasing pH corresponds to decreasing activity."
+      },
+      {
+        "id": "foundation-science-110",
+        "subtopic": "Chemistry",
+        "prompt": "Compared with pH 4, approximately how much greater is hydrogen-ion activity at pH 3?",
+        "answer": "Ten times",
+        "distractors": [
+          "Twice",
+          "One half",
+          "One hundredth"
+        ],
+        "explanation": "A change of one pH unit represents a tenfold change in hydrogen-ion activity."
+      },
+      {
+        "id": "foundation-science-111",
+        "subtopic": "Chemistry",
+        "prompt": "Which type of bonding involves sharing electron pairs between atoms?",
+        "answer": "Covalent bonding",
+        "distractors": [
+          "Ionic bonding by definition only",
+          "Gravitational bonding",
+          "Mechanical fastening"
+        ],
+        "explanation": "Covalent bonds involve shared electron pairs, while ionic bonding is associated with electrostatic attraction between ions."
+      },
+      {
+        "id": "foundation-science-112",
+        "subtopic": "Chemistry",
+        "prompt": "Which attraction primarily holds the ions together in sodium chloride?",
+        "answer": "Electrostatic attraction between oppositely charged ions",
+        "distractors": [
+          "Magnetic attraction between identical nuclei",
+          "Gravity alone",
+          "A string of neutral water molecules"
+        ],
+        "explanation": "Sodium and chloride ions form an ionic lattice maintained by electrostatic interactions."
+      },
+      {
+        "id": "foundation-science-113",
+        "subtopic": "Chemistry",
+        "prompt": "Why can molten sodium chloride conduct electricity?",
+        "answer": "Its ions can move and carry charge",
+        "distractors": [
+          "Its electrons become protons",
+          "All sodium atoms become magnets",
+          "Its neutrons carry electric current"
+        ],
+        "explanation": "Mobile ions carry current in the molten salt; ions in a solid lattice cannot move freely through it."
+      },
+      {
+        "id": "foundation-science-114",
+        "subtopic": "Chemistry",
+        "prompt": "Which property is commonly associated with many metals?",
+        "answer": "Good electrical conductivity",
+        "distractors": [
+          "Complete transparency in every case",
+          "Zero density",
+          "Inability to conduct any heat"
+        ],
+        "explanation": "Many metals have mobile electrons that support electrical and thermal conduction, although properties vary among metals."
+      },
+      {
+        "id": "foundation-science-115",
+        "subtopic": "Chemistry",
+        "prompt": "What is an alloy?",
+        "answer": "A metallic material made by combining a metal with one or more other elements",
+        "distractors": [
+          "Any pure noble gas",
+          "Only a dissolved sugar solution",
+          "A single isolated electron"
+        ],
+        "explanation": "Alloying can change strength, corrosion resistance and other properties; the added element need not itself be a metal."
+      },
+      {
+        "id": "foundation-science-116",
+        "subtopic": "Chemistry",
+        "prompt": "What is galvanizing iron commonly intended to achieve?",
+        "answer": "Reduce corrosion using a protective zinc coating",
+        "distractors": [
+          "Turn iron into a nonmetal",
+          "Remove all mass from iron",
+          "Make iron transparent"
+        ],
+        "explanation": "Zinc protects iron through a barrier and sacrificial corrosion behaviour when the coating is damaged."
+      },
+      {
+        "id": "foundation-science-117",
+        "subtopic": "Chemistry",
+        "prompt": "Which statement about a catalyst in a reaction is correct?",
+        "answer": "It changes reaction rate without changing the equilibrium constant at a fixed temperature",
+        "distractors": [
+          "It always changes the element identities",
+          "It must be consumed as the final product",
+          "It makes conservation of atoms unnecessary"
+        ],
+        "explanation": "A catalyst changes the path and speeds approach to equilibrium; it does not change the thermodynamic equilibrium constant at a given temperature."
+      },
+      {
+        "id": "foundation-science-118",
+        "subtopic": "Chemistry",
+        "prompt": "What distinguishes a reversible reaction in a closed chemical system?",
+        "answer": "Products can react to regenerate reactants",
+        "distractors": [
+          "It can only happen once in the universe",
+          "It violates conservation of mass",
+          "It requires all materials to be solids"
+        ],
+        "explanation": "A reversible reaction can proceed in both directions; equilibrium involves equal forward and reverse rates, not necessarily equal amounts."
+      },
+      {
+        "id": "foundation-science-119",
+        "subtopic": "Biology",
+        "prompt": "Which structure forms the selective boundary of a cell?",
+        "answer": "Cell membrane",
+        "distractors": [
+          "Chromosome alone",
+          "Ribosome alone",
+          "Nucleolus alone"
+        ],
+        "explanation": "The cell membrane regulates exchange between the cell and its surroundings through several transport mechanisms."
+      },
+      {
+        "id": "foundation-science-120",
+        "subtopic": "Biology",
+        "prompt": "Which structure is usually present in plant cells but absent from animal cells?",
+        "answer": "Cell wall",
+        "distractors": [
+          "Cell membrane",
+          "Cytoplasm",
+          "Ribosomes"
+        ],
+        "explanation": "Plant cells usually have a cellulose-containing wall outside the membrane; both plant and animal cells have membranes and ribosomes."
+      },
+      {
+        "id": "foundation-science-121",
+        "subtopic": "Biology",
+        "prompt": "Which organelle is responsible for protein synthesis?",
+        "answer": "Ribosome",
+        "distractors": [
+          "Vacuole",
+          "Cell wall",
+          "Lysosome only"
+        ],
+        "explanation": "Ribosomes assemble amino acids into proteins using information carried by messenger RNA."
+      },
+      {
+        "id": "foundation-science-122",
+        "subtopic": "Biology",
+        "prompt": "What is diffusion?",
+        "answer": "Net movement from higher to lower concentration due to random particle motion",
+        "distractors": [
+          "Movement requiring every particle to travel in one direction",
+          "Production of new atoms",
+          "Movement only of solid rocks"
+        ],
+        "explanation": "Random motion continues in both directions, but a concentration difference causes net movement down the gradient."
+      },
+      {
+        "id": "foundation-science-123",
+        "subtopic": "Biology",
+        "prompt": "What is osmosis?",
+        "answer": "Net movement of water across a selectively permeable membrane down its water-potential gradient",
+        "distractors": [
+          "Movement only of proteins through air",
+          "Formation of new chromosomes",
+          "Movement of salt without any membrane"
+        ],
+        "explanation": "Osmosis concerns water movement across a selectively permeable membrane; solutes can influence the water-potential difference."
+      },
+      {
+        "id": "foundation-science-124",
+        "subtopic": "Biology",
+        "prompt": "What is a tissue?",
+        "answer": "A group of cells organized to perform related functions",
+        "distractors": [
+          "Any group of unrelated planets",
+          "Only one organ system",
+          "Every dissolved mineral"
+        ],
+        "explanation": "Tissues are organized cellular structures; several tissue types can contribute to one organ."
+      },
+      {
+        "id": "foundation-science-125",
+        "subtopic": "Biology",
+        "prompt": "What is an organ system?",
+        "answer": "A set of organs working together in a major body function",
+        "distractors": [
+          "A single electron",
+          "Only a colony of unrelated microbes",
+          "A cell's surrounding water only"
+        ],
+        "explanation": "For example, digestive organs work together to process food and absorb nutrients."
+      },
+      {
+        "id": "foundation-science-126",
+        "subtopic": "Biology",
+        "prompt": "Where does gas exchange chiefly occur in the human lungs?",
+        "answer": "Alveoli",
+        "distractors": [
+          "Tracheal cartilage",
+          "Vocal cords",
+          "Ribs"
+        ],
+        "explanation": "Alveoli provide thin exchange surfaces with nearby capillaries for diffusion of respiratory gases."
+      },
+      {
+        "id": "foundation-science-127",
+        "subtopic": "Biology",
+        "prompt": "What is the basic role of the human heart?",
+        "answer": "Pump blood through the circulation",
+        "distractors": [
+          "Produce all digestive enzymes",
+          "Store every chromosome",
+          "Filter urine directly"
+        ],
+        "explanation": "The heart generates pressure that moves blood through pulmonary and systemic circulations."
+      },
+      {
+        "id": "foundation-science-128",
+        "subtopic": "Biology",
+        "prompt": "Which vessels carry blood away from the heart?",
+        "answer": "Arteries",
+        "distractors": [
+          "Veins",
+          "Ureters",
+          "Bronchi"
+        ],
+        "explanation": "Vessel naming depends on direction relative to the heart, not oxygen content; pulmonary arteries carry relatively deoxygenated blood."
+      },
+      {
+        "id": "foundation-science-129",
+        "subtopic": "Biology",
+        "prompt": "Which vessels carry blood toward the heart?",
+        "answer": "Veins",
+        "distractors": [
+          "Arteries",
+          "Oesophagus",
+          "Trachea"
+        ],
+        "explanation": "Veins return blood to the heart; their oxygen content depends on the circuit."
+      },
+      {
+        "id": "foundation-science-130",
+        "subtopic": "Biology",
+        "prompt": "Why are capillaries important in circulation?",
+        "answer": "Their thin walls support exchange with tissues",
+        "distractors": [
+          "They replace every nerve",
+          "They make bones contract",
+          "They store all body oxygen permanently"
+        ],
+        "explanation": "Capillaries connect small arterial and venous vessels and provide surfaces for exchange of gases, nutrients and wastes."
+      },
+      {
+        "id": "foundation-science-131",
+        "subtopic": "Biology",
+        "prompt": "What is the role of stomata in leaves?",
+        "answer": "Regulate gas exchange and water-vapour loss",
+        "distractors": [
+          "Transport pollen through the root",
+          "Replace the plant's nucleus",
+          "Make soil minerals from sunlight"
+        ],
+        "explanation": "Stomatal pores controlled by guard cells influence carbon-dioxide entry and transpiration."
+      },
+      {
+        "id": "foundation-science-132",
+        "subtopic": "Biology",
+        "prompt": "What is transpiration?",
+        "answer": "Loss of water vapour from aerial plant parts",
+        "distractors": [
+          "Transfer of pollen to the stigma",
+          "Fusion of male and female gametes",
+          "Digestion of starch in the mouth"
+        ],
+        "explanation": "Water loss through stomata and other surfaces contributes to water movement and affects the plant's water balance."
+      },
+      {
+        "id": "foundation-science-133",
+        "subtopic": "Biology",
+        "prompt": "What is the main role of root hairs?",
+        "answer": "Increase the surface for absorbing water and mineral ions",
+        "distractors": [
+          "Produce pollen grains",
+          "Control every leaf's colour",
+          "Carry seeds between flowers"
+        ],
+        "explanation": "Root hairs are extensions of root epidermal cells that increase contact with soil solution."
+      },
+      {
+        "id": "foundation-science-134",
+        "subtopic": "Biology",
+        "prompt": "What is a seed's embryo?",
+        "answer": "The developing young plant within the seed",
+        "distractors": [
+          "Only the outer rock around the seed",
+          "A mature flower outside the seed",
+          "A fungal spore in every case"
+        ],
+        "explanation": "The embryo can develop into a new plant when germination conditions are suitable."
+      },
+      {
+        "id": "foundation-science-135",
+        "subtopic": "Biology",
+        "prompt": "What does germination involve?",
+        "answer": "Resumption of embryo growth from a seed",
+        "distractors": [
+          "Transfer of pollen between flowers only",
+          "Formation of a mineral vein",
+          "Conversion of all roots into leaves immediately"
+        ],
+        "explanation": "Germination commonly requires suitable water, oxygen and temperature; particular species may have additional requirements."
+      },
+      {
+        "id": "foundation-science-136",
+        "subtopic": "Biology",
+        "prompt": "How does fertilization differ from pollination in flowering plants?",
+        "answer": "Fertilization is fusion of gametes; pollination is pollen transfer",
+        "distractors": [
+          "Both mean only water uptake",
+          "Fertilization is soil drying",
+          "Pollination is always chromosome duplication"
+        ],
+        "explanation": "Pollen transfer enables subsequent processes that can lead to gamete fusion, but the terms describe distinct events."
+      },
+      {
+        "id": "foundation-science-137",
+        "subtopic": "Biology",
+        "prompt": "Which example illustrates vegetative propagation?",
+        "answer": "A new plant growing from a potato tuber's bud",
+        "distractors": [
+          "A bird laying an egg",
+          "Pollen moving in the wind only",
+          "A seed produced by fertilization only"
+        ],
+        "explanation": "Vegetative propagation produces new plants from nonseed plant structures such as tubers, stems or leaves."
+      },
+      {
+        "id": "foundation-science-138",
+        "subtopic": "Biology",
+        "prompt": "Which molecule carries hereditary information in most organisms?",
+        "answer": "DNA",
+        "distractors": [
+          "Starch",
+          "Cellulose",
+          "Water"
+        ],
+        "explanation": "DNA sequences encode hereditary information; some viruses have RNA genomes."
+      },
+      {
+        "id": "foundation-science-139",
+        "subtopic": "Biology",
+        "prompt": "What is a gene in a basic genetics description?",
+        "answer": "A hereditary unit associated with a segment of DNA",
+        "distractors": [
+          "Every visible organ as a whole",
+          "A dietary mineral",
+          "A type of blood vessel"
+        ],
+        "explanation": "Genes contribute to functional products and inherited characteristics, with expression influenced by biological context."
+      },
+      {
+        "id": "foundation-science-140",
+        "subtopic": "Biology",
+        "prompt": "Why does sexual reproduction usually generate varied offspring?",
+        "answer": "It combines genetic information from parents and involves recombination and segregation",
+        "distractors": [
+          "It always copies one parent without change",
+          "It removes all chromosomes",
+          "It prevents every mutation"
+        ],
+        "explanation": "The reshuffling and combination of genetic material contributes to variation among offspring."
+      },
+      {
+        "id": "foundation-science-141",
+        "subtopic": "Biology",
+        "prompt": "What is an inherited trait?",
+        "answer": "A characteristic influenced by genetic information transmitted across generations",
+        "distractors": [
+          "Every skill learned yesterday",
+          "Any temporary stain on clothing",
+          "Only a language spoken at school"
+        ],
+        "explanation": "Inherited traits reflect genetic transmission; acquired experiences are not automatically encoded as heritable DNA changes."
+      },
+      {
+        "id": "foundation-science-142",
+        "subtopic": "Biology",
+        "prompt": "Which example is an acquired skill rather than a directly inherited trait?",
+        "answer": "Learning to ride a bicycle",
+        "distractors": [
+          "An inherited blood-group characteristic",
+          "A genetically influenced seed colour",
+          "An inherited allele at a defined locus"
+        ],
+        "explanation": "A practised skill is learned through experience rather than being passed directly as that skill through genes."
+      },
+      {
+        "id": "foundation-science-143",
+        "subtopic": "Biology",
+        "prompt": "What is natural selection?",
+        "answer": "Different survival and reproduction associated with heritable variation in a given environment",
+        "distractors": [
+          "Organisms choosing every future mutation intentionally",
+          "Every individual becoming identical",
+          "The disappearance of all environmental effects"
+        ],
+        "explanation": "Heritable variants that contribute to reproductive success can become more frequent; populations change across generations."
+      },
+      {
+        "id": "foundation-science-144",
+        "subtopic": "Biology",
+        "prompt": "What is a habitat?",
+        "answer": "The place and conditions in which an organism lives",
+        "distractors": [
+          "Only its genetic code",
+          "Only the food in its stomach",
+          "Every continent regardless of occupancy"
+        ],
+        "explanation": "A habitat supplies environmental conditions and resources relevant to an organism's life."
+      },
+      {
+        "id": "foundation-science-145",
+        "subtopic": "Biology",
+        "prompt": "What do decomposers contribute to an ecosystem?",
+        "answer": "Break down dead organic matter and help recycle nutrients",
+        "distractors": [
+          "Create sunlight from soil",
+          "Stop all nutrient movement",
+          "Make every consumer photosynthetic"
+        ],
+        "explanation": "Fungi and many bacteria decompose organic material, returning nutrients to forms that other organisms can use."
+      },
+      {
+        "id": "foundation-science-146",
+        "subtopic": "Biology",
+        "prompt": "Which relationship is predation?",
+        "answer": "One organism captures and consumes another",
+        "distractors": [
+          "Two plants merely receiving sunlight",
+          "Water evaporating from a pond",
+          "A rock eroding in rain"
+        ],
+        "explanation": "Predation is a biological interaction in which a predator obtains food from prey."
+      },
+      {
+        "id": "foundation-science-147",
+        "subtopic": "Biology",
+        "prompt": "What is a food web?",
+        "answer": "A network of interconnected feeding relationships",
+        "distractors": [
+          "Only one organism's name",
+          "Only a map of roads",
+          "A list of rocks ordered by size"
+        ],
+        "explanation": "A food web shows multiple linked food chains and more realistically represents feeding pathways than a single chain."
+      },
+      {
+        "id": "foundation-science-148",
+        "subtopic": "Biology",
+        "prompt": "Why does available energy generally decrease at successive trophic levels?",
+        "answer": "Energy is used in metabolism and much dissipates as heat rather than transferring to the next level",
+        "distractors": [
+          "Energy is created anew without limit",
+          "Every organism passes all energy unchanged",
+          "Plants never absorb energy"
+        ],
+        "explanation": "Not all consumed material is assimilated, and organisms use energy for life processes; only a fraction becomes biomass available to the next level."
+      },
+      {
+        "id": "foundation-science-149",
+        "subtopic": "Biology",
+        "prompt": "What is biodiversity?",
+        "answer": "Variation in living systems, including genes, species and ecosystems",
+        "distractors": [
+          "Only the number of rocks in a forest",
+          "Only average rainfall",
+          "Only the height of the tallest tree"
+        ],
+        "explanation": "Biodiversity describes multiple levels of biological variation rather than one environmental measurement."
+      },
+      {
+        "id": "foundation-science-150",
+        "subtopic": "Biology",
+        "prompt": "How can habitat fragmentation affect wildlife?",
+        "answer": "It can isolate populations and disrupt movement between suitable areas",
+        "distractors": [
+          "It always increases every species' population",
+          "It removes all need for shelter",
+          "It makes every ecosystem identical"
+        ],
+        "explanation": "Breaking continuous habitats into smaller patches can alter resources, movement and genetic exchange, with effects varying by species."
       }
     ]
   },
@@ -2404,6 +4168,510 @@
           "Indian Coast Guard as the only naval service"
         ],
         "explanation": "The Navy is the naval branch of the armed forces; the Coast Guard has distinct maritime law-enforcement and safety roles."
+      },
+      {
+        "id": "foundation-regional-47",
+        "subtopic": "haryana-agri-husbandry/Agronomy",
+        "prompt": "What is the main purpose of preparing a seedbed?",
+        "answer": "Create suitable conditions for seed placement, germination and root establishment",
+        "distractors": [
+          "Remove every soil organism",
+          "Make irrigation permanently unnecessary",
+          "Replace every nutrient with sand"
+        ],
+        "explanation": "Seedbed preparation manages soil structure, weeds and seed contact; excessive disturbance can also damage soil, so methods depend on conditions."
+      },
+      {
+        "id": "foundation-regional-48",
+        "subtopic": "haryana-agri-husbandry/Agronomy",
+        "prompt": "Why is appropriate sowing depth important?",
+        "answer": "It affects moisture access, emergence and seedling establishment",
+        "distractors": [
+          "Every seed must be buried at the same depth",
+          "Deeper sowing always guarantees higher yield",
+          "Seed depth changes the crop's species"
+        ],
+        "explanation": "Depth should suit seed size, soil texture and moisture rather than follow one universal value."
+      },
+      {
+        "id": "foundation-regional-49",
+        "subtopic": "haryana-agri-husbandry/Agronomy",
+        "prompt": "What does seed germination percentage express?",
+        "answer": "The proportion of tested seeds that germinate under the stated test conditions",
+        "distractors": [
+          "The number of leaves on every mature plant",
+          "The proportion of rainfall converted into milk",
+          "The percentage of stones in soil"
+        ],
+        "explanation": "Germination tests estimate viable establishment potential under specified conditions; field emergence can differ."
+      },
+      {
+        "id": "foundation-regional-50",
+        "subtopic": "haryana-agri-husbandry/Agronomy",
+        "prompt": "In a test of 100 seeds, 85 germinate. What is the germination percentage?",
+        "answer": "85 percent",
+        "distractors": [
+          "15 percent",
+          "1.18 percent",
+          "185 percent"
+        ],
+        "explanation": "Germination percentage is germinated seeds divided by tested seeds times 100: 85 ÷ 100 × 100 = 85 percent."
+      },
+      {
+        "id": "foundation-regional-51",
+        "subtopic": "haryana-agri-husbandry/Agronomy",
+        "prompt": "Why should crop spacing be appropriate for the crop and conditions?",
+        "answer": "It affects competition for light, water and nutrients",
+        "distractors": [
+          "Closer spacing always gives unlimited yield",
+          "Spacing makes soil fertility irrelevant",
+          "Plants never compete for resources"
+        ],
+        "explanation": "Population density influences growth and yield; both overcrowding and excessively sparse stands can reduce performance."
+      },
+      {
+        "id": "foundation-regional-52",
+        "subtopic": "haryana-agri-husbandry/Agronomy",
+        "prompt": "What is intercropping?",
+        "answer": "Growing two or more crops together in a planned spatial arrangement",
+        "distractors": [
+          "Growing one crop repeatedly for every season",
+          "Only changing a tractor's tyres",
+          "Harvesting the same crop twice per hour"
+        ],
+        "explanation": "Intercropping differs from a sequence of crops over time; crop combinations and arrangements must be chosen appropriately."
+      },
+      {
+        "id": "foundation-regional-53",
+        "subtopic": "haryana-agri-husbandry/Agronomy",
+        "prompt": "What is a weed in crop production?",
+        "answer": "A plant growing where it is unwanted in the managed crop",
+        "distractors": [
+          "Every plant with green leaves",
+          "Only a crop's harvested grain",
+          "Any plant that can photosynthesize"
+        ],
+        "explanation": "Weed status depends on context; weeds can compete with the intended crop for resources."
+      },
+      {
+        "id": "foundation-regional-54",
+        "subtopic": "haryana-agri-husbandry/Agronomy",
+        "prompt": "Why is early weed control often important?",
+        "answer": "Young crops can be especially vulnerable to resource competition",
+        "distractors": [
+          "Weeds always increase crop yield",
+          "All weeds disappear at sowing",
+          "Weeds cannot use water"
+        ],
+        "explanation": "Control during critical competition periods can protect establishment; timing and method depend on crop and weed ecology."
+      },
+      {
+        "id": "foundation-regional-55",
+        "subtopic": "haryana-agri-husbandry/Soil",
+        "prompt": "Which soil fraction generally has the smallest mineral particles?",
+        "answer": "Clay",
+        "distractors": [
+          "Sand",
+          "Gravel",
+          "Pebbles"
+        ],
+        "explanation": "Clay particles are finer than silt and sand, affecting water retention, aeration and nutrient interactions."
+      },
+      {
+        "id": "foundation-regional-56",
+        "subtopic": "haryana-agri-husbandry/Soil",
+        "prompt": "What does soil texture describe?",
+        "answer": "The relative proportions of sand, silt and clay",
+        "distractors": [
+          "Only the soil's temperature at noon",
+          "Only the number of earthworms",
+          "The colour of harvested grain"
+        ],
+        "explanation": "Texture refers to particle-size composition and influences physical behaviour; it differs from soil structure."
+      },
+      {
+        "id": "foundation-regional-57",
+        "subtopic": "haryana-agri-husbandry/Soil",
+        "prompt": "What does soil structure describe?",
+        "answer": "How soil particles are organized into aggregates",
+        "distractors": [
+          "Only the number of crop varieties",
+          "Only a field's boundary length",
+          "Only dissolved fertilizer colour"
+        ],
+        "explanation": "Aggregation creates pores that influence water movement, aeration and root growth."
+      },
+      {
+        "id": "foundation-regional-58",
+        "subtopic": "haryana-agri-husbandry/Soil",
+        "prompt": "Why can soil organic matter support crop production?",
+        "answer": "It contributes to aggregation, nutrient cycling and water retention",
+        "distractors": [
+          "It eliminates every crop disease permanently",
+          "It makes sunlight unnecessary",
+          "It converts all sand directly into clay"
+        ],
+        "explanation": "Organic matter supports several soil functions, but results depend on its amount, quality and management."
+      },
+      {
+        "id": "foundation-regional-59",
+        "subtopic": "haryana-agri-husbandry/Soil",
+        "prompt": "What is soil erosion?",
+        "answer": "Removal and movement of soil by agents such as water or wind",
+        "distractors": [
+          "Formation of every new root",
+          "Increase in grain protein only",
+          "Storage of milk in a tank"
+        ],
+        "explanation": "Erosion can remove fertile topsoil and transport sediment; ground cover and appropriate management can reduce exposure."
+      },
+      {
+        "id": "foundation-regional-60",
+        "subtopic": "haryana-agri-husbandry/Soil",
+        "prompt": "Which practice can help reduce wind erosion on exposed farmland?",
+        "answer": "Maintaining suitable cover and windbreaks",
+        "distractors": [
+          "Leaving all soil bare indefinitely",
+          "Removing every boundary plant",
+          "Increasing exposure to strong winds"
+        ],
+        "explanation": "Vegetation and shelter reduce near-surface wind effects; design should suit the landscape and farm operations."
+      },
+      {
+        "id": "foundation-regional-61",
+        "subtopic": "haryana-agri-husbandry/Soil",
+        "prompt": "What is salinity in agricultural soil?",
+        "answer": "An accumulation of soluble salts that can affect plant growth",
+        "distractors": [
+          "The complete absence of all mineral ions",
+          "Only a high population of insects",
+          "A synonym for seed maturity"
+        ],
+        "explanation": "Excess salts can limit water uptake and cause other stress; diagnosis and management require site-specific information."
+      },
+      {
+        "id": "foundation-regional-62",
+        "subtopic": "haryana-agri-husbandry/Nutrition",
+        "prompt": "What do N, P and K denote on common fertilizer labels?",
+        "answer": "Nitrogen, phosphorus and potassium",
+        "distractors": [
+          "Nickel, platinum and krypton",
+          "Neon, polonium and calcium",
+          "Sodium, phosphorus and iron"
+        ],
+        "explanation": "NPK identifies three major plant nutrients; label conventions for reporting phosphorus and potassium should be read carefully."
+      },
+      {
+        "id": "foundation-regional-63",
+        "subtopic": "haryana-agri-husbandry/Nutrition",
+        "prompt": "Why is soil testing useful before deciding fertilizer inputs?",
+        "answer": "It informs nutrient status and more appropriate input planning",
+        "distractors": [
+          "It guarantees maximum yield regardless of weather",
+          "It replaces all crop observation",
+          "It removes the need to know the crop"
+        ],
+        "explanation": "A test is one input to nutrient management along with crop requirements, soil conditions and previous management."
+      },
+      {
+        "id": "foundation-regional-64",
+        "subtopic": "haryana-agri-husbandry/Nutrition",
+        "prompt": "Which biological process allows suitable legume-root associations to add usable nitrogen to the system?",
+        "answer": "Nitrogen fixation by symbiotic bacteria",
+        "distractors": [
+          "Conversion of all oxygen into nitrogen by leaves",
+          "Melting of root minerals",
+          "Evaporation of fertilizer bags"
+        ],
+        "explanation": "Symbiotic bacteria in suitable legume nodules can fix atmospheric nitrogen; effectiveness depends on the plant, bacteria and conditions."
+      },
+      {
+        "id": "foundation-regional-65",
+        "subtopic": "haryana-agri-husbandry/Nutrition",
+        "prompt": "Why should fertilizer placement and timing match crop demand?",
+        "answer": "They can improve nutrient use and reduce avoidable losses",
+        "distractors": [
+          "All fertilizer is equally effective at every time",
+          "Plants absorb nutrients only after harvest",
+          "Timing changes soil into a different element"
+        ],
+        "explanation": "Nutrient availability should coincide with uptake while considering rainfall, irrigation and loss pathways."
+      },
+      {
+        "id": "foundation-regional-66",
+        "subtopic": "haryana-agri-husbandry/Nutrition",
+        "prompt": "What is composting?",
+        "answer": "Managed biological decomposition of organic material",
+        "distractors": [
+          "Mixing diesel with irrigation water",
+          "Turning every mineral into a gas",
+          "Freezing fresh grain without change"
+        ],
+        "explanation": "Composting uses organisms to stabilize organic material under suitable moisture, aeration and feedstock conditions."
+      },
+      {
+        "id": "foundation-regional-67",
+        "subtopic": "haryana-agri-husbandry/Water",
+        "prompt": "What is irrigation?",
+        "answer": "Supplying water to crops through managed means",
+        "distractors": [
+          "Only rain falling naturally",
+          "Only storing harvested grain",
+          "Removing all roots from soil"
+        ],
+        "explanation": "Irrigation supplements water availability; suitable timing and amounts depend on crop stage, soil and weather."
+      },
+      {
+        "id": "foundation-regional-68",
+        "subtopic": "haryana-agri-husbandry/Water",
+        "prompt": "Why can over-irrigation be harmful?",
+        "answer": "It can cause waterlogging, nutrient loss and poor root aeration",
+        "distractors": [
+          "It always doubles available oxygen in soil",
+          "It makes drainage unnecessary",
+          "It prevents every pest"
+        ],
+        "explanation": "Excess water can fill pore space and limit oxygen; effects vary with soil and drainage."
+      },
+      {
+        "id": "foundation-regional-69",
+        "subtopic": "haryana-agri-husbandry/Water",
+        "prompt": "What is drip irrigation mainly designed to do?",
+        "answer": "Deliver water locally near the plant root zone",
+        "distractors": [
+          "Flood every field to unlimited depth",
+          "Spray only the road outside the farm",
+          "Remove the crop's need for roots"
+        ],
+        "explanation": "Drip systems apply water through emitters; proper operation requires design, filtration and maintenance."
+      },
+      {
+        "id": "foundation-regional-70",
+        "subtopic": "haryana-agri-husbandry/Water",
+        "prompt": "What is the main function of field drainage?",
+        "answer": "Remove excess water and support suitable root-zone conditions",
+        "distractors": [
+          "Keep every field permanently flooded",
+          "Increase salt inputs deliberately",
+          "Prevent all rainfall from reaching plants"
+        ],
+        "explanation": "Drainage manages excess water; the appropriate system depends on terrain, soil and environmental considerations."
+      },
+      {
+        "id": "foundation-regional-71",
+        "subtopic": "haryana-agri-husbandry/Water",
+        "prompt": "Why can mulching help conserve soil moisture?",
+        "answer": "It reduces exposed-surface evaporation and can moderate conditions",
+        "distractors": [
+          "It creates water from nothing",
+          "It eliminates every irrigation requirement",
+          "It makes roots absorb only air"
+        ],
+        "explanation": "A suitable mulch covers the surface and changes evaporation and temperature; benefits and risks depend on material and setting."
+      },
+      {
+        "id": "foundation-regional-72",
+        "subtopic": "haryana-agri-husbandry/Protection",
+        "prompt": "What is integrated pest management?",
+        "answer": "Combining monitoring and suitable preventive, biological, cultural and other controls",
+        "distractors": [
+          "Using the strongest chemical on every field daily",
+          "Ignoring pest identity",
+          "Removing all beneficial organisms"
+        ],
+        "explanation": "IPM uses evidence and multiple tools to manage pest damage while considering economic and environmental effects."
+      },
+      {
+        "id": "foundation-regional-73",
+        "subtopic": "haryana-agri-husbandry/Protection",
+        "prompt": "Why should a crop pest be identified before choosing a control?",
+        "answer": "Different pests and life stages require different responses",
+        "distractors": [
+          "Every insect is the same pest",
+          "All insects damage crops equally",
+          "Pest identity changes fertilizer colour"
+        ],
+        "explanation": "Correct diagnosis helps avoid ineffective or unnecessary actions and protects beneficial organisms."
+      },
+      {
+        "id": "foundation-regional-74",
+        "subtopic": "haryana-agri-husbandry/Protection",
+        "prompt": "What is one benefit of monitoring fields regularly?",
+        "answer": "Detect emerging problems and guide timely decisions",
+        "distractors": [
+          "Guarantee that weather never changes",
+          "Replace the need for any evidence",
+          "Eliminate all labour permanently"
+        ],
+        "explanation": "Observation helps identify pests, deficiencies and water stress before making management decisions."
+      },
+      {
+        "id": "foundation-regional-75",
+        "subtopic": "haryana-agri-husbandry/Harvest",
+        "prompt": "Why is harvest timing important?",
+        "answer": "It influences yield recovery, quality and storage performance",
+        "distractors": [
+          "All crops mature on the same date",
+          "Late harvest always eliminates every loss",
+          "Harvest timing changes the crop's chromosome count"
+        ],
+        "explanation": "The appropriate stage depends on crop and intended use; excessively early or delayed harvest can cause losses."
+      },
+      {
+        "id": "foundation-regional-76",
+        "subtopic": "haryana-agri-husbandry/Harvest",
+        "prompt": "Why should grain be dried appropriately before storage?",
+        "answer": "Excess moisture can encourage deterioration and mould",
+        "distractors": [
+          "Wet grain never spoils",
+          "Drying always destroys every seed",
+          "Moisture has no effect on storage"
+        ],
+        "explanation": "Safe storage conditions depend on grain type, moisture, temperature and duration; drying is a key part of management."
+      },
+      {
+        "id": "foundation-regional-77",
+        "subtopic": "haryana-agri-husbandry/Harvest",
+        "prompt": "Why are clean storage structures useful?",
+        "answer": "They reduce sources of contamination and stored-product pests",
+        "distractors": [
+          "They make every grain nutritionally identical",
+          "They remove the need to manage moisture",
+          "They turn grain into fertilizer automatically"
+        ],
+        "explanation": "Cleaning and maintenance complement moisture control and monitoring rather than replace them."
+      },
+      {
+        "id": "foundation-regional-78",
+        "subtopic": "haryana-agri-husbandry/Livestock",
+        "prompt": "What distinguishes a breed from a species in animal husbandry?",
+        "answer": "A breed is a selected population within a species with associated traits",
+        "distractors": [
+          "Every breed is a different biological kingdom",
+          "Breed always means only the animal's age",
+          "Species is another word for a feed bag"
+        ],
+        "explanation": "Breeds are populations shaped by selection and history within a species; variation still occurs among individuals."
+      },
+      {
+        "id": "foundation-regional-79",
+        "subtopic": "haryana-agri-husbandry/Livestock",
+        "prompt": "What is a ration in livestock feeding?",
+        "answer": "The feed allowance provided over a stated period, commonly a day",
+        "distractors": [
+          "Only the animal's ear tag",
+          "Only the farm boundary",
+          "The number of wheels on a milk tanker"
+        ],
+        "explanation": "A ration is planned to meet an animal's nutritional needs for its stage and production level."
+      },
+      {
+        "id": "foundation-regional-80",
+        "subtopic": "haryana-agri-husbandry/Livestock",
+        "prompt": "Why should a livestock ration be balanced?",
+        "answer": "Energy, protein, fibre, minerals and other needs must be considered together",
+        "distractors": [
+          "One nutrient alone replaces all others",
+          "Every animal needs identical feed quantities",
+          "Water is never needed"
+        ],
+        "explanation": "Requirements differ with species, age, body size and production; balance concerns the whole diet."
+      },
+      {
+        "id": "foundation-regional-81",
+        "subtopic": "haryana-agri-husbandry/Livestock",
+        "prompt": "Which material is a roughage feed?",
+        "answer": "Dry fodder rich in structural fibre",
+        "distractors": [
+          "A steel bucket",
+          "Pure common salt only",
+          "A plastic ear tag"
+        ],
+        "explanation": "Roughages provide substantial fibre; concentrates generally contain less fibre and more concentrated nutrients."
+      },
+      {
+        "id": "foundation-regional-82",
+        "subtopic": "haryana-agri-husbandry/Livestock",
+        "prompt": "Why is access to clean drinking water important for farm animals?",
+        "answer": "Water supports normal body functions and feed use",
+        "distractors": [
+          "It replaces every nutrient permanently",
+          "It is required only once at birth",
+          "It eliminates every housing need"
+        ],
+        "explanation": "Water needs vary with size, feed, temperature and production, making reliable clean access important."
+      },
+      {
+        "id": "foundation-regional-83",
+        "subtopic": "haryana-agri-husbandry/Livestock",
+        "prompt": "Why should livestock housing have suitable ventilation?",
+        "answer": "It helps manage heat, moisture and air quality",
+        "distractors": [
+          "It removes all need for shelter",
+          "It guarantees zero pathogens",
+          "It prevents every weather event"
+        ],
+        "explanation": "Ventilation is one part of housing management alongside shade, space, cleanliness and protection from unsuitable conditions."
+      },
+      {
+        "id": "foundation-regional-84",
+        "subtopic": "haryana-agri-husbandry/Livestock",
+        "prompt": "What is the main purpose of keeping animal production records?",
+        "answer": "Track performance and inform management decisions",
+        "distractors": [
+          "Replace the animal's identity with a guess",
+          "Make all animals produce identical amounts",
+          "Avoid knowing feed costs"
+        ],
+        "explanation": "Records of identity, production, feeding and other events support comparison and planning."
+      },
+      {
+        "id": "foundation-regional-85",
+        "subtopic": "haryana-agri-husbandry/Dairy",
+        "prompt": "Why is hygiene important during milking and handling milk?",
+        "answer": "It reduces avoidable contamination",
+        "distractors": [
+          "It turns milk into a mineral",
+          "It eliminates the need for clean equipment",
+          "It makes temperature irrelevant"
+        ],
+        "explanation": "Clean handling limits contamination, while appropriate cooling and storage are additional requirements."
+      },
+      {
+        "id": "foundation-regional-86",
+        "subtopic": "haryana-agri-husbandry/Dairy",
+        "prompt": "What does pasteurization of milk primarily involve?",
+        "answer": "A controlled heat treatment to reduce harmful microorganisms",
+        "distractors": [
+          "Removing every protein from milk",
+          "Adding soil to improve flavour",
+          "Converting milk directly into a metal"
+        ],
+        "explanation": "Pasteurization uses a specified time-temperature process; it does not make storage practices unnecessary or sterilize every product."
+      },
+      {
+        "id": "foundation-regional-87",
+        "subtopic": "haryana-agri-husbandry/Dairy",
+        "prompt": "Why is prompt appropriate cooling of collected milk useful?",
+        "answer": "It slows microbial growth during storage",
+        "distractors": [
+          "It guarantees unlimited storage life",
+          "It increases the number of harmful microbes deliberately",
+          "It removes every dissolved nutrient"
+        ],
+        "explanation": "Cooling helps preserve quality alongside hygiene; it does not reverse contamination or remove the need for safe handling."
+      },
+      {
+        "id": "foundation-regional-88",
+        "subtopic": "haryana-agri-husbandry/Farm accounting",
+        "prompt": "A farmer sells 200 kg of produce at 25 rupees per kg. What is gross sales revenue?",
+        "answer": "5000 rupees",
+        "distractors": [
+          "225 rupees",
+          "8 rupees",
+          "175 rupees"
+        ],
+        "explanation": "Revenue is quantity times price: 200 × 25 = 5000 rupees, before subtracting costs."
       }
     ]
   },

@@ -21,7 +21,7 @@ export default function SyllabusPage() {
               <h4 className="font-semibold">{topic.name}</h4>
               <ul className="list-disc pl-5 my-2 text-sm text-slate-300">{topic.subtopics.flatMap(s => s.split(/,\s*/)).map((subtopic, i) => <li key={i}>{subtopic}</li>)}</ul>
               {(TOPIC_DOCUMENTS[topic.id] || []).map(resource => <a key={resource.url} className="block text-sm underline text-teal-300" href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title} ↗</a>)}
-              <p className="text-xs text-slate-400">{lesson ? 'Study lesson available' : 'Lesson pending'} · {available} practice questions available</p>
+              <p className="text-xs text-slate-400">{lesson ? lesson.coverageStatus === 'foundation' ? 'Foundation module; full alignment pending' : 'Study lesson available; depth unverified' : 'Lesson pending'} · {available} practice questions available</p>
               <div className="flex flex-wrap gap-3 mt-2 text-sm text-teal-300">
                 <Link href={`/lesson/${topic.id}/`}>{lesson ? 'Read lesson' : 'View coverage status'}</Link>
                 {available > 0 ? Array.from(new Set([10, 20, 50].map(count => Math.min(count, available)))).map(count => <Link key={count} href={`/mock-test/topic-${topic.id}/?exam=${exam.id}&count=${count}`}>{count}-question practice</Link>) : <span className="text-slate-400">Question set pending</span>}

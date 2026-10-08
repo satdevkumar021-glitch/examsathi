@@ -27,6 +27,7 @@ export interface Question {
   difficulty: 'easy' | 'medium' | 'hard';
   year?: number;
   availableLanguages?: readonly ('en' | 'hi' | 'pa')[];
+  explanationLanguages?: readonly ('en' | 'hi' | 'pa')[];
   editorialStatus?: 'authored' | 'reviewed';
   source?: { title: string; url: string };
 }

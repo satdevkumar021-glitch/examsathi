@@ -1,3 +1,5 @@
+import confirmedEquivalences from './confirmed-question-equivalences.json';
+import { generateLandMeasurementPractice } from './land-measurement-practice';
 import { generateReasoningPractice } from './reasoning-practice';
 import { topicSourceIds, topicIncludes, canonicalTopicId } from './topic-scope';
 // ============================================================
@@ -387,7 +389,7 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
   });
 
 
-  return generated.sort(() => Math.random() - 0.5).slice(0, count);
+  return generated.slice(0, count);
 }
 
 /**
@@ -413,7 +415,7 @@ export function getQuestionPool(config: {
   if ((!topicId || topicId === 'all') && !pyqOnly && !pyq20Years) pool.push(...generateQuantPractice('mathematics-core', 150));
   if (topicId && topicId !== 'all') {
     pool = pool.filter(q => topicIncludes(topicId, q.topicId));
-    if (!pyqOnly && !pyq20Years) pool.push(...generateProceduralQuestions(topicId, 150), ...generateQuantPractice(topicId, 150), ...generateReasoningPractice(canonical(topicId), 1000));
+    if (!pyqOnly && !pyq20Years) pool.push(...generateProceduralQuestions(topicId, 150), ...generateQuantPractice(topicId, 150), ...generateReasoningPractice(canonical(topicId), 1000), ...generateLandMeasurementPractice(canonical(topicId), 100));
   }
   if (examId && examId !== 'all') {
     const exam = practiceExam(examId);
@@ -422,7 +424,7 @@ export function getQuestionPool(config: {
     // Only syllabus topics are eligible. Shared-topic questions retain their original source labels.
     pool = pool.filter(q => topics.has(canonical(q.topicId || '')));
     if (!pyqOnly && !pyq20Years && (!topicId || topicId === 'all')) {
-      for (const id of topics) pool.push(...generateProceduralQuestions(id, 150), ...generateQuantPractice(id, 150), ...generateReasoningPractice(id, 1000));
+      for (const id of topics) pool.push(...generateProceduralQuestions(id, 150), ...generateQuantPractice(id, 150), ...generateReasoningPractice(id, 1000), ...generateLandMeasurementPractice(id, 100));
     }
   }
   if (pyqOnly || pyq20Years) {
@@ -430,7 +432,7 @@ export function getQuestionPool(config: {
       q.year >= (pyq20Years ? 2004 : 2014) && q.year <= 2024);
   }
   if (difficulty !== 'all') pool = pool.filter(q => q.difficulty === difficulty);
-  const seen = new Set<string>(config.excludeKeys || []);
+  const seen = new Set<string>((config.excludeKeys || []).map(canonicalQuestionKey));
   pool = pool.filter(q => {
     const key = questionIdentity(q);
     if (seen.has(key)) return false;
@@ -439,10 +441,16 @@ export function getQuestionPool(config: {
   return pool;
 }
 
-/** Stable wording identity: repeated wording with shuffled options is still one question. */
+const normalizeQuestionText = (text: string) => text.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+const equivalentPrompts = new Map(confirmedEquivalences.flatMap(group => group.prompts.map(prompt => [normalizeQuestionText(prompt), normalizeQuestionText(group.prompts[0])] as const)));
+/** Normalize saved keys too, so earlier completed paraphrases remain excluded. */
+export function canonicalQuestionKey(text: string): string {
+  const key = normalizeQuestionText(text);
+  return equivalentPrompts.get(key) || key;
+}
+/** Wording plus explicitly confirmed semantic duplicates; no speculative fuzzy merging. */
 export function questionIdentity(q: Question): string {
-  const normalize = (text: string) => text.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
-  return normalize(q.question.en || q.question.hi || q.question.pa || q.id);
+  return canonicalQuestionKey(q.question.en || q.question.hi || q.question.pa || q.id);
 }
 export function getTestQuestions(config: Parameters<typeof getQuestionPool>[0]): Question[] {
   const pool = getQuestionPool(config);

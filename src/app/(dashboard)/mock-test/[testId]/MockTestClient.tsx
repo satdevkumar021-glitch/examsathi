@@ -566,7 +566,7 @@ export default function MockTest({ testId }: { testId?: string }) {
               <h3 className="text-sm font-semibold text-white mb-1 leading-relaxed">
                 {currentQuestion.question[lang] || currentQuestion.question.hi || currentQuestion.question.en}
               </h3>
-              {lang !== 'en' && currentQuestion.question.en && (
+              {lang !== 'en' && currentQuestion.question.en && (currentQuestion.question[lang] || currentQuestion.question.hi) !== currentQuestion.question.en && (
                 <h4 className="text-xs text-slate-400 mt-1 italic">{currentQuestion.question.en}</h4>
               )}
             </div>
@@ -596,7 +596,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                     </div>
                     <div className="text-xs">
                       <p className="text-white font-medium">{opt[lang] || opt.hi || opt.en}</p>
-                      {lang !== 'en' && opt.en && <p className="text-slate-400 text-[10px] mt-0.5">{opt.en}</p>}
+                      {lang !== 'en' && opt.en && (opt[lang] || opt.hi) !== opt.en && <p className="text-slate-400 text-[10px] mt-0.5">{opt.en}</p>}
                     </div>
                   </button>
                 );

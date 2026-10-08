@@ -5,6 +5,7 @@ export function generateReasoningPractice(topicId: string, count: number): Quest
  const result:Question[]=[];
  const letters='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
  const ordinal=(value:number)=>`${value}${value%100>=11 && value%100<=13 ? 'th' : value%10===1 ? 'st' : value%10===2 ? 'nd' : value%10===3 ? 'rd' : 'th'}`;
+ const hindiDays=['सोमवार','मंगलवार','बुधवार','गुरुवार','शुक्रवार','शनिवार','रविवार'];
  const days=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
  for(let i=0;i<Math.min(count,1000);i++) {
   const n=Math.floor(i/8)+2,kind=i%8;
@@ -29,7 +30,7 @@ export function generateReasoningPractice(topicId: string, count: number): Quest
   } else if(kind===3) {
    const start=n%7,elapsed=n+8;
    en=`Today is ${days[start]}. What day will it be ${elapsed} days later?`;
-   hi=`आज ${days[start]} है। ${elapsed} दिनों के बाद कौन सा दिन होगा?`;
+   hi=`आज ${hindiDays[start]} है। ${elapsed} दिनों के बाद कौन सा दिन होगा?`;
    const index=(start+elapsed)%7;answer=days[index];wrong=[days[(index+1)%7],days[(index+2)%7],days[(index+3)%7]];explanation=`Weekdays repeat every 7 days. Advance ${elapsed%7} days from ${days[start]} to reach ${answer}.`;subtopic='Calendar cycles';
   } else if(kind===4) {
    const north=n+4,south=n-1;
@@ -58,8 +59,8 @@ export function generateReasoningPractice(topicId: string, count: number): Quest
   }
   if(new Set([answer,...wrong]).size!==4)throw new Error(`Invalid options for reasoning ${i}`);
   const correct=(['A','B','C','D'] as const)[(Math.floor(i/8)+i)%4],distractors=[...wrong];
-  const options=Object.fromEntries(['A','B','C','D'].map(key=>{const value=key===correct?answer:distractors.shift()!;return[key,{en:value,hi:value,pa:value}]})) as Question['options'];
-  result.push({id:`gen-reasoning-${topicId}-${i}`,topicId,subjectId:'reasoning',examTag:'Computed reasoning practice — not a past paper',question:{en,hi},options,correct,explanation:{en:explanation,hi:explanation},difficulty:'medium',subtopic:{en:subtopic,hi:subtopic},availableLanguages:['en','hi']});
+  const options=Object.fromEntries(['A','B','C','D'].map(key=>{const value=key===correct?answer:distractors.shift()!;return[key,{en:value,hi:kind===3?hindiDays[days.indexOf(value)]:value,pa:value}]})) as Question['options'];
+  result.push({id:`gen-reasoning-${topicId}-${i}`,topicId,subjectId:'reasoning',examTag:'Computed reasoning practice — not a past paper',question:{en,hi},options,correct,explanation:{en:explanation,hi:explanation},difficulty:'medium',subtopic:{en:subtopic,hi:subtopic},availableLanguages:['en','hi'],explanationLanguages:['en']});
  }
  return result;
 }

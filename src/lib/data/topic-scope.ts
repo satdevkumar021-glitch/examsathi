@@ -57,6 +57,7 @@ export const TOPIC_ALIASES: Record<string, string> = {
 
 /** Explicit broader-topic -> eligible source-topic families. Never infer from exam tags. */
 export const TOPIC_FAMILIES: Record<string, string[]> = {
+  'english-grammar-lit': ['english-grammar-syntax'],
   'ancient-india': ['sst-harappa', 'sst-buddhism-jainism', 'sst-maurya'],
   'punjab-history': ['sst-punjab-history-deep', 'sst-punjab-sikh'],
   'punjab-history-deep': ['sst-punjab-history-deep', 'sst-punjab-sikh'],
@@ -82,7 +83,7 @@ export function topicSourceIds(topicId: string, visited = new Set<string>()): Se
   if (visited.has(topicId)) return new Set();
   const next = new Set(visited); next.add(topicId);
   const ids = new Set([canonicalTopicId(topicId)]);
-  for (const child of TOPIC_FAMILIES[topicId] || []) for (const id of topicSourceIds(child, next)) ids.add(id);
+  for (const child of TOPIC_FAMILIES[topicId] || TOPIC_FAMILIES[canonicalTopicId(topicId)] || []) for (const id of topicSourceIds(child, next)) ids.add(id);
   return ids;
 }
 export function topicIncludes(requestedTopic: string, questionTopic: string): boolean {

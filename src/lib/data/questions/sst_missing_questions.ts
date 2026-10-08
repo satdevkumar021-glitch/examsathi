@@ -715,9 +715,9 @@ export const SST_MISSING_QUESTIONS: Question[] = [
         "en": "15 August 1847"
       },
       "B": {
-        "hi": "31 मार्च 1849",
-        "pa": "31 ਮਾਰਚ 1849",
-        "en": "31 March 1849"
+        "hi": "29 मार्च 1849",
+        "pa": "29 ਮਾਰਚ 1849",
+        "en": "29 March 1849"
       },
       "C": {
         "hi": "10 मई 1857",
@@ -732,10 +732,11 @@ export const SST_MISSING_QUESTIONS: Question[] = [
     },
     "correct": "B",
     "explanation": {
-      "hi": "द्वितीय आंग्ल-सिख युद्ध (गुजरात की निर्णायक लड़ाई) के पश्चात 31 मार्च 1849 को लॉर्ड डलहौजी ने पंजाब को ब्रिटिश शासन में मिला लिया।",
-      "pa": "31 ਮਾਰਚ 1849 ਨੂੰ ਦੂਜੀ ਐਂਗਲੋ-ਸਿੱਖ ਲੜਾਈ ਤੋਂ ਬਾਅਦ ਪੰਜਾਬ ਅੰਗਰੇਜ਼ੀ ਰਾਜ ਵਿੱਚ ਮਿਲਾ ਲਿਆ ਗਿਆ।",
-      "en": "Following the Second Anglo-Sikh War, Lord Dalhousie formally annexed Punjab on 31 March 1849."
+      "hi": "द्वितीय आंग्ल-सिख युद्ध (गुजरात की निर्णायक लड़ाई) के पश्चात 29 मार्च 1849 को लॉर्ड डलहौजी ने पंजाब को ब्रिटिश शासन में मिला लिया।",
+      "pa": "29 ਮਾਰਚ 1849 ਨੂੰ ਦੂਜੀ ਐਂਗਲੋ-ਸਿੱਖ ਲੜਾਈ ਤੋਂ ਬਾਅਦ ਪੰਜਾਬ ਅੰਗਰੇਜ਼ੀ ਰਾਜ ਵਿੱਚ ਮਿਲਾ ਲਿਆ ਗਿਆ।",
+      "en": "Following the Second Anglo-Sikh War, Lord Dalhousie formally annexed Punjab on 29 March 1849."
     },
+    "source": { "title": "Census of India — 1951 Punjab report, historical account", "url": "https://censusindia.gov.in/nada/index.php/catalog/31666/download/34847/1372_1951_REP.pdf" },
     "difficulty": "medium",
     "year": 2021
   },

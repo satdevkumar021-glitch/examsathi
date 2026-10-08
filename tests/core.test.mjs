@@ -180,7 +180,7 @@ test('Haryana general-knowledge questions are not child-pedagogy or Punjab ETT p
 
 test('foundation content has honest attribution and unambiguous option labels', () => {
   const { FOUNDATION_QUESTIONS } = load('src/lib/data/foundation-content.ts');
-  assert.equal(FOUNDATION_QUESTIONS.length, 449);
+  assert.equal(FOUNDATION_QUESTIONS.length, 638);
   for (const q of FOUNDATION_QUESTIONS) {
     assert.equal(q.editorialStatus, 'authored');
     assert.equal(q.year, undefined);
@@ -242,4 +242,54 @@ test('UGC NET no longer borrows the school child-development bank', () => {
   const qs = engine.getQuestionPool({examId:'ugc-net'});
   assert.ok(qs.length > 0);
   assert.ok(qs.every(q => q.topicId !== 'child-development-pedagogy'));
+});
+
+test('land exercises state conversion rules and pass dimensional calculation checks', () => {
+  const { generateLandMeasurementPractice } = load('src/lib/data/land-measurement-practice.ts');
+  const qs=generateLandMeasurementPractice('patwari-agriculture-accounts',100);
+  assert.equal(qs.length,100);
+  assert.equal(new Set(qs.map(q=>engine.questionIdentity(q))).size,100);
+  for(const q of qs) {
+    const nums=q.question.en.match(/\d+/g).map(Number), kind=q.subtopic.en;
+    let expected;
+    if(kind==='Kanal and marla conversion' || kind==='Acre and kanal conversion') expected=nums[1]*nums[2];
+    if(kind==='Mixed-unit area') expected=nums[1]*nums[2]+nums[3];
+    if(kind==='Field area') expected=nums[0]*nums[1];
+    if(kind==='Boundary measurement') expected=2*(nums[0]+nums[1]);
+    assert.equal(Number(q.options[q.correct].en),expected,q.id);
+    assert.equal(new Set(Object.values(q.options).map(o=>o.en)).size,4);
+    assert.equal(q.year,undefined);
+  }
+});
+test('eligible pools remain stable across repeated reads before shuffling a test', () => {
+  for (const exam of engine.AVAILABLE_EXAMS) {
+    const first=engine.getQuestionPool({examId:exam.id}).map(engine.questionIdentity).sort();
+    const second=engine.getQuestionPool({examId:exam.id}).map(engine.questionIdentity).sort();
+    assert.equal(JSON.stringify(first),JSON.stringify(second),exam.id);
+  }
+});
+
+test('confirmed paraphrases deduplicate and historical completed wording remains excluded', () => {
+  const first=bank.ALL_QUESTIONS.find(q=>q.id==='q-pun-1');
+  const second=bank.ALL_QUESTIONS.find(q=>q.id==='pmc-pyq-his-03');
+  assert.equal(engine.questionIdentity(first),engine.questionIdentity(second));
+  const oldKey=first.question.en.normalize('NFKC').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+  const pool=engine.getQuestionPool({examId:'punjab-master-cadre',excludeKeys:[oldKey]});
+  assert.ok(pool.every(q=>engine.questionIdentity(q)!==engine.questionIdentity(first)));
+  assert.notEqual(engine.questionIdentity(bank.ALL_QUESTIONS.find(q=>q.id==='sst-punjab-sikh-q1')),engine.questionIdentity(bank.ALL_QUESTIONS.find(q=>q.id==='sst-punjab-sikh-q2')));
+});
+test('Punjab date correction and district-topic classification stay intact', () => {
+  const date=bank.ALL_QUESTIONS.find(q=>q.id==='q-pj-4');
+  assert.equal(date.options[date.correct].en,'29 March 1849');
+  assert.ok(date.explanation.en.includes('29 March 1849'));
+  const district=bank.ALL_QUESTIONS.find(q=>q.id==='psssb-gk-2023-1');
+  assert.equal(district.topicId,'punjab-geography');
+  assert.ok(!engine.getQuestionPool({topicId:'punjab-history'}).some(q=>q.id===district.id));
+});
+
+test('completed foundation topics meet fifty authored questions without procedural filler', () => {
+  for (const id of ['physics-concepts','chemistry-concepts','biology-concepts','cdp-adolescent','haryana-agri-husbandry','english-grammar-syntax','computer-awareness','primary-environmental-studies','hindi-vyakaran','language-teaching-foundations']) {
+    const qs=engine.getQuestionPool({topicId:id}).filter(q=>!q.id.startsWith('gen-'));
+    assert.ok(qs.length>=50,`${id}: ${qs.length}`);
+  }
 });
