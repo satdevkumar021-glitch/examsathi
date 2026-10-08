@@ -1,0 +1,242 @@
+{
+  "id": "ett-light-reflection",
+  "topicId": "ett-light-reflection",
+  "subjectId": "ett-science",
+  "category": "science",
+  "availableLanguages": [
+    "en",
+    "hi",
+    "pa"
+  ],
+  "coverageStatus": "foundation",
+  "editorialStatus": "authored",
+  "title": {
+    "en": "Reflection and plane mirrors",
+    "hi": "परावर्तन और समतल दर्पण",
+    "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+  },
+  "examRelevance": "Punjab ETT 5994 archival Paper B: Light Reflection and Refraction; upcoming notification pending. This lesson covers reflection and plane mirrors only.",
+  "estimatedTime": "25 min",
+  "sections": [
+    {
+      "heading": {
+        "en": "1. Reflection and the normal",
+        "hi": "1. परावर्तन और अभिलंब",
+        "pa": "1. ਪਰਾਵਰਤਨ ਅਤੇ ਅਭਿਲੰਬ"
+      },
+      "text": {
+        "en": "Reflection is the return of light into the same medium after striking a surface. Draw a normal perpendicular to the surface at the point where the ray strikes. The incoming ray is the incident ray; the outgoing ray is the reflected ray. The normal is a construction line, not another light ray.",
+        "hi": "जब प्रकाश किसी सतह से टकराकर उसी माध्यम में लौटता है, तो इसे परावर्तन कहते हैं। आपतन बिंदु पर सतह के लंबवत रेखा खींचें: यह अभिलंब है। आने वाली किरण आपतित किरण और लौटने वाली किरण परावर्तित किरण है। अभिलंब सहायक रेखा है, कोई प्रकाश किरण नहीं।",
+        "pa": "ਜਦੋਂ ਪ੍ਰਕਾਸ਼ ਕਿਸੇ ਸਤ੍ਹਾ ਨਾਲ ਟਕਰਾ ਕੇ ਉਸੇ ਮਾਧਿਅਮ ਵਿੱਚ ਵਾਪਸ ਆਉਂਦਾ ਹੈ, ਇਸ ਨੂੰ ਪਰਾਵਰਤਨ ਕਹਿੰਦੇ ਹਨ। ਟਕਰਾਉਣ ਵਾਲੇ ਬਿੰਦੂ ਉੱਤੇ ਸਤ੍ਹਾ ਨਾਲ ਲੰਬ ਰੇਖਾ ਖਿੱਚੋ: ਇਹ ਅਭਿਲੰਬ ਹੈ। ਆਉਣ ਵਾਲੀ ਕਿਰਨ ਆਪਤਿਤ ਅਤੇ ਵਾਪਸ ਜਾਣ ਵਾਲੀ ਕਿਰਨ ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਹੈ। ਅਭਿਲੰਬ ਸਹਾਇਕ ਰੇਖਾ ਹੈ, ਪ੍ਰਕਾਸ਼ ਦੀ ਕਿਰਨ ਨਹੀਂ।"
+      }
+    },
+    {
+      "heading": {
+        "en": "2. Two laws and measuring angles",
+        "hi": "2. दो नियम और कोण मापना",
+        "pa": "2. ਦੋ ਨਿਯਮ ਅਤੇ ਕੋਣ ਮਾਪਣਾ"
+      },
+      "text": {
+        "en": "The angle of incidence i equals the angle of reflection r. Both angles are measured from the normal, never from the mirror surface. The incident ray, reflected ray and normal lie in one plane. If a ray makes 30° with the mirror, i = 90° − 30° = 60°, so r = 60°. At normal incidence i = r = 0° and the ray retraces its path.",
+        "hi": "आपतन कोण i, परावर्तन कोण r के बराबर होता है। दोनों कोण अभिलंब से मापे जाते हैं, दर्पण की सतह से नहीं। आपतित किरण, परावर्तित किरण और अभिलंब एक ही तल में होते हैं। यदि किरण दर्पण से 30° बनाती है, तो i = 90° − 30° = 60° और r = 60°। अभिलंबवत आपतन पर i = r = 0° होता है और किरण उसी मार्ग से लौटती है।",
+        "pa": "ਆਪਤਨ ਕੋਣ i, ਪਰਾਵਰਤਨ ਕੋਣ r ਦੇ ਬਰਾਬਰ ਹੁੰਦਾ ਹੈ। ਦੋਵੇਂ ਕੋਣ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪੇ ਜਾਂਦੇ ਹਨ, ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਨਹੀਂ। ਆਪਤਿਤ ਕਿਰਨ, ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ ਇੱਕੋ ਤਲ ਵਿੱਚ ਹੁੰਦੇ ਹਨ। ਜੇ ਕਿਰਨ ਦਰਪਣ ਨਾਲ 30° ਬਣਾਉਂਦੀ ਹੈ ਤਾਂ i = 90° − 30° = 60° ਅਤੇ r = 60°। ਅਭਿਲੰਬ ਉੱਤੇ ਆਪਤਨ ਹੋਣ ਵੇਲੇ i = r = 0° ਹੁੰਦਾ ਹੈ ਅਤੇ ਕਿਰਨ ਉਸੇ ਰਸਤੇ ਵਾਪਸ ਜਾਂਦੀ ਹੈ।"
+      }
+    },
+    {
+      "heading": {
+        "en": "3. Regular and diffuse reflection",
+        "hi": "3. नियमित और विसरित परावर्तन",
+        "pa": "3. ਨਿਯਮਿਤ ਅਤੇ ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ"
+      },
+      "text": {
+        "en": "A smooth surface has nearly parallel local normals and reflects a parallel beam in one direction. A rough surface has different local normals and reflects it in many directions. Each individual ray still obeys i = r. Diffuse reflection lets us see a page from several directions; it is not failure of the laws of reflection.",
+        "hi": "चिकनी सतह के स्थानीय अभिलंब लगभग समानांतर होते हैं; समानांतर किरणें एक दिशा में लौटती हैं। खुरदरी सतह के स्थानीय अभिलंब अलग-अलग दिशाओं में होते हैं; किरणें कई दिशाओं में लौटती हैं। प्रत्येक किरण फिर भी i = r का पालन करती है। विसरित परावर्तन के कारण हम कागज को कई दिशाओं से देख सकते हैं; परावर्तन के नियम नहीं टूटते।",
+        "pa": "ਚਿਕਣੀ ਸਤ੍ਹਾ ਦੇ ਸਥਾਨਕ ਅਭਿਲੰਬ ਲਗਭਗ ਸਮਾਂਤਰ ਹੁੰਦੇ ਹਨ; ਸਮਾਂਤਰ ਕਿਰਨਾਂ ਇੱਕ ਦਿਸ਼ਾ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਖੁਰਦਰੀ ਸਤ੍ਹਾ ਦੇ ਅਭਿਲੰਬ ਵੱਖ-ਵੱਖ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਹੁੰਦੇ ਹਨ; ਕਿਰਨਾਂ ਕਈ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਹਰ ਕਿਰਨ ਫਿਰ ਵੀ i = r ਨਿਯਮ ਮੰਨਦੀ ਹੈ। ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਕਾਰਨ ਅਸੀਂ ਕਾਗਜ਼ ਨੂੰ ਕਈ ਪਾਸਿਆਂ ਤੋਂ ਵੇਖ ਸਕਦੇ ਹਾਂ; ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਨਹੀਂ ਟੁੱਟਦੇ।"
+      }
+    },
+    {
+      "heading": {
+        "en": "4. How a plane mirror forms an image",
+        "hi": "4. समतल दर्पण में प्रतिबिंब कैसे बनता है",
+        "pa": "4. ਸਮਤਲ ਦਰਪਣ ਵਿੱਚ ਪ੍ਰਤੀਬਿੰਬ ਕਿਵੇਂ ਬਣਦਾ ਹੈ"
+      },
+      "text": {
+        "en": "Trace two reflected rays reaching the eye, then extend them backwards behind the mirror. Their apparent meeting point is the virtual image: no light actually meets there, so it cannot be obtained on a screen. The image is upright, equal in size to the object and as far behind the mirror as the object is in front. An object 2 m in front therefore has an image 2 m behind; object–image separation is 4 m.",
+        "hi": "आँख तक पहुँचने वाली दो परावर्तित किरणें खींचें और उन्हें दर्पण के पीछे पीछे की ओर बढ़ाएँ। जहाँ वे मिलती हुई लगती हैं, वहाँ आभासी प्रतिबिंब है। प्रकाश वास्तव में वहाँ नहीं मिलता, इसलिए इसे पर्दे पर नहीं लिया जा सकता। प्रतिबिंब सीधा, वस्तु के बराबर आकार का और दर्पण के पीछे उतनी ही दूरी पर होता है जितनी वस्तु सामने है। वस्तु 2 m सामने हो तो प्रतिबिंब 2 m पीछे होगा; वस्तु और प्रतिबिंब की दूरी 4 m होगी।",
+        "pa": "ਅੱਖ ਤੱਕ ਪਹੁੰਚਣ ਵਾਲੀਆਂ ਦੋ ਪਰਾਵਰਤਿਤ ਕਿਰਨਾਂ ਖਿੱਚੋ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਧਾਓ। ਜਿੱਥੇ ਉਹ ਮਿਲਦੀਆਂ ਜਾਪਦੀਆਂ ਹਨ, ਉੱਥੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਹੈ। ਪ੍ਰਕਾਸ਼ ਅਸਲ ਵਿੱਚ ਉੱਥੇ ਨਹੀਂ ਮਿਲਦਾ, ਇਸ ਲਈ ਇਹ ਪਰਦੇ ਉੱਤੇ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ। ਪ੍ਰਤੀਬਿੰਬ ਸਿੱਧਾ, ਵਸਤੂ ਦੇ ਬਰਾਬਰ ਆਕਾਰ ਦਾ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਉੱਨੀ ਹੀ ਦੂਰੀ ਉੱਤੇ ਹੁੰਦਾ ਹੈ ਜਿੰਨੀ ਵਸਤੂ ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ 2 m ਸਾਹਮਣੇ ਹੋਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ 2 m ਪਿੱਛੇ ਹੋਵੇਗਾ; ਦੋਵਾਂ ਵਿਚਕਾਰ ਦੂਰੀ 4 m ਹੋਵੇਗੀ।"
+      }
+    },
+    {
+      "heading": {
+        "en": "5. Lateral inversion and motion",
+        "hi": "5. पार्श्व परिवर्तन और गति",
+        "pa": "5. ਪਾਸਵੀ ਉਲਟਾਅ ਅਤੇ ਗਤੀ"
+      },
+      "text": {
+        "en": "A plane mirror produces lateral inversion in the usual comparison between an object and its image. It does not turn an upright object upside down. With a fixed mirror, moving an object 0.5 m towards it moves the image 0.5 m towards it on the other side; the separation decreases by 1 m. State which object is fixed before applying any motion shortcut.",
+        "hi": "वस्तु और उसके प्रतिबिंब की सामान्य तुलना में समतल दर्पण पार्श्व परिवर्तन दिखाता है। वह सीधी वस्तु को ऊपर-नीचे नहीं उलटता। दर्पण स्थिर हो और वस्तु 0.5 m पास आए, तो प्रतिबिंब दूसरी ओर से 0.5 m पास आता है; दोनों की दूरी 1 m घटती है। गति का कोई सूत्र लगाने से पहले स्पष्ट करें कि क्या स्थिर है।",
+        "pa": "ਵਸਤੂ ਅਤੇ ਉਸ ਦੇ ਪ੍ਰਤੀਬਿੰਬ ਦੀ ਆਮ ਤੁਲਨਾ ਵਿੱਚ ਸਮਤਲ ਦਰਪਣ ਪਾਸਵੀ ਉਲਟਾਅ ਦਿਖਾਉਂਦਾ ਹੈ। ਇਹ ਸਿੱਧੀ ਵਸਤੂ ਨੂੰ ਉੱਪਰ-ਥੱਲੇ ਨਹੀਂ ਉਲਟਦਾ। ਦਰਪਣ ਸਥਿਰ ਹੋਵੇ ਅਤੇ ਵਸਤੂ 0.5 m ਨੇੜੇ ਆਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ ਦੂਜੇ ਪਾਸੇ ਤੋਂ 0.5 m ਨੇੜੇ ਆਉਂਦਾ ਹੈ; ਦੋਵਾਂ ਦੀ ਦੂਰੀ 1 m ਘਟਦੀ ਹੈ। ਗਤੀ ਦਾ ਸੂਤਰ ਵਰਤਣ ਤੋਂ ਪਹਿਲਾਂ ਦੱਸੋ ਕਿ ਕੀ ਸਥਿਰ ਹੈ।"
+      }
+    },
+    {
+      "heading": {
+        "en": "6. Draw, check and revise",
+        "hi": "6. बनाएँ, जाँचें और दोहराएँ",
+        "pa": "6. ਬਣਾਓ, ਜਾਂਚੋ ਅਤੇ ਦੁਹਰਾਓ"
+      },
+      "text": {
+        "en": "Draw a mirror, a normal and an incident ray at 40° to the normal. Construct the reflected ray at 40° on the other side. For an object point, use dotted backward extensions to mark its virtual image. Check: equal angles, equal perpendicular distances and no actual ray behind the mirror. Next topics are spherical mirrors and refraction; they are not covered by this lesson.",
+        "hi": "एक दर्पण, अभिलंब और अभिलंब से 40° पर आपतित किरण बनाएँ। दूसरी ओर 40° पर परावर्तित किरण खींचें। किसी वस्तु-बिंदु के लिए किरणों के पीछे की ओर विस्तार को बिंदीदार रेखाओं से दिखाकर आभासी प्रतिबिंब बनाएँ। जाँचें: बराबर कोण, बराबर लंबवत दूरियाँ और दर्पण के पीछे वास्तविक किरण नहीं। अगले विषय गोलीय दर्पण और अपवर्तन हैं; वे इस पाठ में शामिल नहीं हैं।",
+        "pa": "ਦਰਪਣ, ਅਭਿਲੰਬ ਅਤੇ ਅਭਿਲੰਬ ਤੋਂ 40° ਉੱਤੇ ਆਪਤਿਤ ਕਿਰਨ ਬਣਾਓ। ਦੂਜੇ ਪਾਸੇ 40° ਉੱਤੇ ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਖਿੱਚੋ। ਵਸਤੂ-ਬਿੰਦੂ ਲਈ ਕਿਰਨਾਂ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਾਧੇ ਨੂੰ ਬਿੰਦੀਦਾਰ ਰੇਖਾਵਾਂ ਨਾਲ ਦਿਖਾ ਕੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਬਣਾਓ। ਜਾਂਚੋ: ਬਰਾਬਰ ਕੋਣ, ਬਰਾਬਰ ਲੰਬ ਦੂਰੀਆਂ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਕੋਈ ਅਸਲ ਕਿਰਨ ਨਹੀਂ। ਅਗਲੇ ਵਿਸ਼ੇ ਗੋਲੀ ਦਰਪਣ ਅਤੇ ਅਪਵਰਤਨ ਹਨ; ਉਹ ਇਸ ਪਾਠ ਵਿੱਚ ਸ਼ਾਮਲ ਨਹੀਂ ਹਨ।"
+      }
+    }
+  ],
+  "content": {
+    "en": "<div><h3>1. Reflection and the normal</h3><p>Reflection is the return of light into the same medium after striking a surface. Draw a normal perpendicular to the surface at the point where the ray strikes. The incoming ray is the incident ray; the outgoing ray is the reflected ray. The normal is a construction line, not another light ray.</p><h3>2. Two laws and measuring angles</h3><p>The angle of incidence i equals the angle of reflection r. Both angles are measured from the normal, never from the mirror surface. The incident ray, reflected ray and normal lie in one plane. If a ray makes 30° with the mirror, i = 90° − 30° = 60°, so r = 60°. At normal incidence i = r = 0° and the ray retraces its path.</p><h3>3. Regular and diffuse reflection</h3><p>A smooth surface has nearly parallel local normals and reflects a parallel beam in one direction. A rough surface has different local normals and reflects it in many directions. Each individual ray still obeys i = r. Diffuse reflection lets us see a page from several directions; it is not failure of the laws of reflection.</p><h3>4. How a plane mirror forms an image</h3><p>Trace two reflected rays reaching the eye, then extend them backwards behind the mirror. Their apparent meeting point is the virtual image: no light actually meets there, so it cannot be obtained on a screen. The image is upright, equal in size to the object and as far behind the mirror as the object is in front. An object 2 m in front therefore has an image 2 m behind; object–image separation is 4 m.</p><h3>5. Lateral inversion and motion</h3><p>A plane mirror produces lateral inversion in the usual comparison between an object and its image. It does not turn an upright object upside down. With a fixed mirror, moving an object 0.5 m towards it moves the image 0.5 m towards it on the other side; the separation decreases by 1 m. State which object is fixed before applying any motion shortcut.</p><h3>6. Draw, check and revise</h3><p>Draw a mirror, a normal and an incident ray at 40° to the normal. Construct the reflected ray at 40° on the other side. For an object point, use dotted backward extensions to mark its virtual image. Check: equal angles, equal perpendicular distances and no actual ray behind the mirror. Next topics are spherical mirrors and refraction; they are not covered by this lesson.</p></div>",
+    "hi": "<div><h3>1. परावर्तन और अभिलंब</h3><p>जब प्रकाश किसी सतह से टकराकर उसी माध्यम में लौटता है, तो इसे परावर्तन कहते हैं। आपतन बिंदु पर सतह के लंबवत रेखा खींचें: यह अभिलंब है। आने वाली किरण आपतित किरण और लौटने वाली किरण परावर्तित किरण है। अभिलंब सहायक रेखा है, कोई प्रकाश किरण नहीं।</p><h3>2. दो नियम और कोण मापना</h3><p>आपतन कोण i, परावर्तन कोण r के बराबर होता है। दोनों कोण अभिलंब से मापे जाते हैं, दर्पण की सतह से नहीं। आपतित किरण, परावर्तित किरण और अभिलंब एक ही तल में होते हैं। यदि किरण दर्पण से 30° बनाती है, तो i = 90° − 30° = 60° और r = 60°। अभिलंबवत आपतन पर i = r = 0° होता है और किरण उसी मार्ग से लौटती है।</p><h3>3. नियमित और विसरित परावर्तन</h3><p>चिकनी सतह के स्थानीय अभिलंब लगभग समानांतर होते हैं; समानांतर किरणें एक दिशा में लौटती हैं। खुरदरी सतह के स्थानीय अभिलंब अलग-अलग दिशाओं में होते हैं; किरणें कई दिशाओं में लौटती हैं। प्रत्येक किरण फिर भी i = r का पालन करती है। विसरित परावर्तन के कारण हम कागज को कई दिशाओं से देख सकते हैं; परावर्तन के नियम नहीं टूटते।</p><h3>4. समतल दर्पण में प्रतिबिंब कैसे बनता है</h3><p>आँख तक पहुँचने वाली दो परावर्तित किरणें खींचें और उन्हें दर्पण के पीछे पीछे की ओर बढ़ाएँ। जहाँ वे मिलती हुई लगती हैं, वहाँ आभासी प्रतिबिंब है। प्रकाश वास्तव में वहाँ नहीं मिलता, इसलिए इसे पर्दे पर नहीं लिया जा सकता। प्रतिबिंब सीधा, वस्तु के बराबर आकार का और दर्पण के पीछे उतनी ही दूरी पर होता है जितनी वस्तु सामने है। वस्तु 2 m सामने हो तो प्रतिबिंब 2 m पीछे होगा; वस्तु और प्रतिबिंब की दूरी 4 m होगी।</p><h3>5. पार्श्व परिवर्तन और गति</h3><p>वस्तु और उसके प्रतिबिंब की सामान्य तुलना में समतल दर्पण पार्श्व परिवर्तन दिखाता है। वह सीधी वस्तु को ऊपर-नीचे नहीं उलटता। दर्पण स्थिर हो और वस्तु 0.5 m पास आए, तो प्रतिबिंब दूसरी ओर से 0.5 m पास आता है; दोनों की दूरी 1 m घटती है। गति का कोई सूत्र लगाने से पहले स्पष्ट करें कि क्या स्थिर है।</p><h3>6. बनाएँ, जाँचें और दोहराएँ</h3><p>एक दर्पण, अभिलंब और अभिलंब से 40° पर आपतित किरण बनाएँ। दूसरी ओर 40° पर परावर्तित किरण खींचें। किसी वस्तु-बिंदु के लिए किरणों के पीछे की ओर विस्तार को बिंदीदार रेखाओं से दिखाकर आभासी प्रतिबिंब बनाएँ। जाँचें: बराबर कोण, बराबर लंबवत दूरियाँ और दर्पण के पीछे वास्तविक किरण नहीं। अगले विषय गोलीय दर्पण और अपवर्तन हैं; वे इस पाठ में शामिल नहीं हैं।</p></div>",
+    "pa": "<div><h3>1. ਪਰਾਵਰਤਨ ਅਤੇ ਅਭਿਲੰਬ</h3><p>ਜਦੋਂ ਪ੍ਰਕਾਸ਼ ਕਿਸੇ ਸਤ੍ਹਾ ਨਾਲ ਟਕਰਾ ਕੇ ਉਸੇ ਮਾਧਿਅਮ ਵਿੱਚ ਵਾਪਸ ਆਉਂਦਾ ਹੈ, ਇਸ ਨੂੰ ਪਰਾਵਰਤਨ ਕਹਿੰਦੇ ਹਨ। ਟਕਰਾਉਣ ਵਾਲੇ ਬਿੰਦੂ ਉੱਤੇ ਸਤ੍ਹਾ ਨਾਲ ਲੰਬ ਰੇਖਾ ਖਿੱਚੋ: ਇਹ ਅਭਿਲੰਬ ਹੈ। ਆਉਣ ਵਾਲੀ ਕਿਰਨ ਆਪਤਿਤ ਅਤੇ ਵਾਪਸ ਜਾਣ ਵਾਲੀ ਕਿਰਨ ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਹੈ। ਅਭਿਲੰਬ ਸਹਾਇਕ ਰੇਖਾ ਹੈ, ਪ੍ਰਕਾਸ਼ ਦੀ ਕਿਰਨ ਨਹੀਂ।</p><h3>2. ਦੋ ਨਿਯਮ ਅਤੇ ਕੋਣ ਮਾਪਣਾ</h3><p>ਆਪਤਨ ਕੋਣ i, ਪਰਾਵਰਤਨ ਕੋਣ r ਦੇ ਬਰਾਬਰ ਹੁੰਦਾ ਹੈ। ਦੋਵੇਂ ਕੋਣ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪੇ ਜਾਂਦੇ ਹਨ, ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਨਹੀਂ। ਆਪਤਿਤ ਕਿਰਨ, ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ ਇੱਕੋ ਤਲ ਵਿੱਚ ਹੁੰਦੇ ਹਨ। ਜੇ ਕਿਰਨ ਦਰਪਣ ਨਾਲ 30° ਬਣਾਉਂਦੀ ਹੈ ਤਾਂ i = 90° − 30° = 60° ਅਤੇ r = 60°। ਅਭਿਲੰਬ ਉੱਤੇ ਆਪਤਨ ਹੋਣ ਵੇਲੇ i = r = 0° ਹੁੰਦਾ ਹੈ ਅਤੇ ਕਿਰਨ ਉਸੇ ਰਸਤੇ ਵਾਪਸ ਜਾਂਦੀ ਹੈ।</p><h3>3. ਨਿਯਮਿਤ ਅਤੇ ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ</h3><p>ਚਿਕਣੀ ਸਤ੍ਹਾ ਦੇ ਸਥਾਨਕ ਅਭਿਲੰਬ ਲਗਭਗ ਸਮਾਂਤਰ ਹੁੰਦੇ ਹਨ; ਸਮਾਂਤਰ ਕਿਰਨਾਂ ਇੱਕ ਦਿਸ਼ਾ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਖੁਰਦਰੀ ਸਤ੍ਹਾ ਦੇ ਅਭਿਲੰਬ ਵੱਖ-ਵੱਖ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਹੁੰਦੇ ਹਨ; ਕਿਰਨਾਂ ਕਈ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਹਰ ਕਿਰਨ ਫਿਰ ਵੀ i = r ਨਿਯਮ ਮੰਨਦੀ ਹੈ। ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਕਾਰਨ ਅਸੀਂ ਕਾਗਜ਼ ਨੂੰ ਕਈ ਪਾਸਿਆਂ ਤੋਂ ਵੇਖ ਸਕਦੇ ਹਾਂ; ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਨਹੀਂ ਟੁੱਟਦੇ।</p><h3>4. ਸਮਤਲ ਦਰਪਣ ਵਿੱਚ ਪ੍ਰਤੀਬਿੰਬ ਕਿਵੇਂ ਬਣਦਾ ਹੈ</h3><p>ਅੱਖ ਤੱਕ ਪਹੁੰਚਣ ਵਾਲੀਆਂ ਦੋ ਪਰਾਵਰਤਿਤ ਕਿਰਨਾਂ ਖਿੱਚੋ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਧਾਓ। ਜਿੱਥੇ ਉਹ ਮਿਲਦੀਆਂ ਜਾਪਦੀਆਂ ਹਨ, ਉੱਥੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਹੈ। ਪ੍ਰਕਾਸ਼ ਅਸਲ ਵਿੱਚ ਉੱਥੇ ਨਹੀਂ ਮਿਲਦਾ, ਇਸ ਲਈ ਇਹ ਪਰਦੇ ਉੱਤੇ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ। ਪ੍ਰਤੀਬਿੰਬ ਸਿੱਧਾ, ਵਸਤੂ ਦੇ ਬਰਾਬਰ ਆਕਾਰ ਦਾ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਉੱਨੀ ਹੀ ਦੂਰੀ ਉੱਤੇ ਹੁੰਦਾ ਹੈ ਜਿੰਨੀ ਵਸਤੂ ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ 2 m ਸਾਹਮਣੇ ਹੋਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ 2 m ਪਿੱਛੇ ਹੋਵੇਗਾ; ਦੋਵਾਂ ਵਿਚਕਾਰ ਦੂਰੀ 4 m ਹੋਵੇਗੀ।</p><h3>5. ਪਾਸਵੀ ਉਲਟਾਅ ਅਤੇ ਗਤੀ</h3><p>ਵਸਤੂ ਅਤੇ ਉਸ ਦੇ ਪ੍ਰਤੀਬਿੰਬ ਦੀ ਆਮ ਤੁਲਨਾ ਵਿੱਚ ਸਮਤਲ ਦਰਪਣ ਪਾਸਵੀ ਉਲਟਾਅ ਦਿਖਾਉਂਦਾ ਹੈ। ਇਹ ਸਿੱਧੀ ਵਸਤੂ ਨੂੰ ਉੱਪਰ-ਥੱਲੇ ਨਹੀਂ ਉਲਟਦਾ। ਦਰਪਣ ਸਥਿਰ ਹੋਵੇ ਅਤੇ ਵਸਤੂ 0.5 m ਨੇੜੇ ਆਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ ਦੂਜੇ ਪਾਸੇ ਤੋਂ 0.5 m ਨੇੜੇ ਆਉਂਦਾ ਹੈ; ਦੋਵਾਂ ਦੀ ਦੂਰੀ 1 m ਘਟਦੀ ਹੈ। ਗਤੀ ਦਾ ਸੂਤਰ ਵਰਤਣ ਤੋਂ ਪਹਿਲਾਂ ਦੱਸੋ ਕਿ ਕੀ ਸਥਿਰ ਹੈ।</p><h3>6. ਬਣਾਓ, ਜਾਂਚੋ ਅਤੇ ਦੁਹਰਾਓ</h3><p>ਦਰਪਣ, ਅਭਿਲੰਬ ਅਤੇ ਅਭਿਲੰਬ ਤੋਂ 40° ਉੱਤੇ ਆਪਤਿਤ ਕਿਰਨ ਬਣਾਓ। ਦੂਜੇ ਪਾਸੇ 40° ਉੱਤੇ ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਖਿੱਚੋ। ਵਸਤੂ-ਬਿੰਦੂ ਲਈ ਕਿਰਨਾਂ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਾਧੇ ਨੂੰ ਬਿੰਦੀਦਾਰ ਰੇਖਾਵਾਂ ਨਾਲ ਦਿਖਾ ਕੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਬਣਾਓ। ਜਾਂਚੋ: ਬਰਾਬਰ ਕੋਣ, ਬਰਾਬਰ ਲੰਬ ਦੂਰੀਆਂ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਕੋਈ ਅਸਲ ਕਿਰਨ ਨਹੀਂ। ਅਗਲੇ ਵਿਸ਼ੇ ਗੋਲੀ ਦਰਪਣ ਅਤੇ ਅਪਵਰਤਨ ਹਨ; ਉਹ ਇਸ ਪਾਠ ਵਿੱਚ ਸ਼ਾਮਲ ਨਹੀਂ ਹਨ।</p></div>"
+  },
+  "summary": {
+    "en": "Use the normal to measure equal incident and reflected angles. Construct a virtual, upright, equal-size plane-mirror image using backward extensions. Never confuse object–mirror distance with object–image distance.",
+    "hi": "अभिलंब से बराबर आपतन और परावर्तन कोण मापें। किरणों के पीछे की ओर विस्तार से आभासी, सीधा, समान आकार का प्रतिबिंब बनाएँ। वस्तु–दर्पण और वस्तु–प्रतिबिंब की दूरियों में अंतर रखें।",
+    "pa": "ਅਭਿਲੰਬ ਤੋਂ ਬਰਾਬਰ ਆਪਤਨ ਅਤੇ ਪਰਾਵਰਤਨ ਕੋਣ ਮਾਪੋ। ਕਿਰਨਾਂ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਾਧੇ ਨਾਲ ਆਭਾਸੀ, ਸਿੱਧਾ ਅਤੇ ਬਰਾਬਰ ਆਕਾਰ ਦਾ ਪ੍ਰਤੀਬਿੰਬ ਬਣਾਓ। ਵਸਤੂ–ਦਰਪਣ ਅਤੇ ਵਸਤੂ–ਪ੍ਰਤੀਬਿੰਬ ਦੀ ਦੂਰੀ ਵਿੱਚ ਫ਼ਰਕ ਰੱਖੋ।"
+  },
+  "keyNotes": {
+    "en": [
+      "Angles are measured from the normal; i = r.",
+      "Angle with mirror + angle with normal = 90°.",
+      "A plane image is virtual, upright and the same size.",
+      "Object–image distance = twice the distance from a fixed mirror.",
+      "Diffuse reflection obeys the reflection laws too."
+    ],
+    "hi": [
+      "कोण अभिलंब से मापें; i = r।",
+      "दर्पण से कोण + अभिलंब से कोण = 90°।",
+      "समतल दर्पण का प्रतिबिंब आभासी, सीधा और समान आकार का होता है।",
+      "स्थिर दर्पण से वस्तु की दूरी का दोगुना = वस्तु–प्रतिबिंब की दूरी।",
+      "विसरित परावर्तन भी परावर्तन के नियम मानता है।"
+    ],
+    "pa": [
+      "ਕੋਣ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪੋ; i = r।",
+      "ਦਰਪਣ ਨਾਲ ਕੋਣ + ਅਭਿਲੰਬ ਨਾਲ ਕੋਣ = 90°।",
+      "ਸਮਤਲ ਦਰਪਣ ਦਾ ਪ੍ਰਤੀਬਿੰਬ ਆਭਾਸੀ, ਸਿੱਧਾ ਅਤੇ ਬਰਾਬਰ ਆਕਾਰ ਦਾ ਹੁੰਦਾ ਹੈ।",
+      "ਸਥਿਰ ਦਰਪਣ ਤੋਂ ਵਸਤੂ ਦੀ ਦੂਰੀ ਦਾ ਦੁੱਗਣਾ = ਵਸਤੂ–ਪ੍ਰਤੀਬਿੰਬ ਦੀ ਦੂਰੀ।",
+      "ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਵੀ ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਮੰਨਦਾ ਹੈ।"
+    ]
+  },
+  "flashcards": [
+    {
+      "q": {
+        "en": "1. Reflection and the normal",
+        "hi": "1. परावर्तन और अभिलंब",
+        "pa": "1. ਪਰਾਵਰਤਨ ਅਤੇ ਅਭਿਲੰਬ"
+      },
+      "a": {
+        "en": "Reflection is the return of light into the same medium after striking a surface. Draw a normal perpendicular to the surface at the point where the ray strikes. The incoming ray is the incident ray; the outgoing ray is the reflected ray. The normal is a construction line, not another light ray.",
+        "hi": "जब प्रकाश किसी सतह से टकराकर उसी माध्यम में लौटता है, तो इसे परावर्तन कहते हैं। आपतन बिंदु पर सतह के लंबवत रेखा खींचें: यह अभिलंब है। आने वाली किरण आपतित किरण और लौटने वाली किरण परावर्तित किरण है। अभिलंब सहायक रेखा है, कोई प्रकाश किरण नहीं।",
+        "pa": "ਜਦੋਂ ਪ੍ਰਕਾਸ਼ ਕਿਸੇ ਸਤ੍ਹਾ ਨਾਲ ਟਕਰਾ ਕੇ ਉਸੇ ਮਾਧਿਅਮ ਵਿੱਚ ਵਾਪਸ ਆਉਂਦਾ ਹੈ, ਇਸ ਨੂੰ ਪਰਾਵਰਤਨ ਕਹਿੰਦੇ ਹਨ। ਟਕਰਾਉਣ ਵਾਲੇ ਬਿੰਦੂ ਉੱਤੇ ਸਤ੍ਹਾ ਨਾਲ ਲੰਬ ਰੇਖਾ ਖਿੱਚੋ: ਇਹ ਅਭਿਲੰਬ ਹੈ। ਆਉਣ ਵਾਲੀ ਕਿਰਨ ਆਪਤਿਤ ਅਤੇ ਵਾਪਸ ਜਾਣ ਵਾਲੀ ਕਿਰਨ ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਹੈ। ਅਭਿਲੰਬ ਸਹਾਇਕ ਰੇਖਾ ਹੈ, ਪ੍ਰਕਾਸ਼ ਦੀ ਕਿਰਨ ਨਹੀਂ।"
+      }
+    },
+    {
+      "q": {
+        "en": "2. Two laws and measuring angles",
+        "hi": "2. दो नियम और कोण मापना",
+        "pa": "2. ਦੋ ਨਿਯਮ ਅਤੇ ਕੋਣ ਮਾਪਣਾ"
+      },
+      "a": {
+        "en": "The angle of incidence i equals the angle of reflection r. Both angles are measured from the normal, never from the mirror surface. The incident ray, reflected ray and normal lie in one plane. If a ray makes 30° with the mirror, i = 90° − 30° = 60°, so r = 60°. At normal incidence i = r = 0° and the ray retraces its path.",
+        "hi": "आपतन कोण i, परावर्तन कोण r के बराबर होता है। दोनों कोण अभिलंब से मापे जाते हैं, दर्पण की सतह से नहीं। आपतित किरण, परावर्तित किरण और अभिलंब एक ही तल में होते हैं। यदि किरण दर्पण से 30° बनाती है, तो i = 90° − 30° = 60° और r = 60°। अभिलंबवत आपतन पर i = r = 0° होता है और किरण उसी मार्ग से लौटती है।",
+        "pa": "ਆਪਤਨ ਕੋਣ i, ਪਰਾਵਰਤਨ ਕੋਣ r ਦੇ ਬਰਾਬਰ ਹੁੰਦਾ ਹੈ। ਦੋਵੇਂ ਕੋਣ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪੇ ਜਾਂਦੇ ਹਨ, ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਨਹੀਂ। ਆਪਤਿਤ ਕਿਰਨ, ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ ਇੱਕੋ ਤਲ ਵਿੱਚ ਹੁੰਦੇ ਹਨ। ਜੇ ਕਿਰਨ ਦਰਪਣ ਨਾਲ 30° ਬਣਾਉਂਦੀ ਹੈ ਤਾਂ i = 90° − 30° = 60° ਅਤੇ r = 60°। ਅਭਿਲੰਬ ਉੱਤੇ ਆਪਤਨ ਹੋਣ ਵੇਲੇ i = r = 0° ਹੁੰਦਾ ਹੈ ਅਤੇ ਕਿਰਨ ਉਸੇ ਰਸਤੇ ਵਾਪਸ ਜਾਂਦੀ ਹੈ।"
+      }
+    },
+    {
+      "q": {
+        "en": "3. Regular and diffuse reflection",
+        "hi": "3. नियमित और विसरित परावर्तन",
+        "pa": "3. ਨਿਯਮਿਤ ਅਤੇ ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ"
+      },
+      "a": {
+        "en": "A smooth surface has nearly parallel local normals and reflects a parallel beam in one direction. A rough surface has different local normals and reflects it in many directions. Each individual ray still obeys i = r. Diffuse reflection lets us see a page from several directions; it is not failure of the laws of reflection.",
+        "hi": "चिकनी सतह के स्थानीय अभिलंब लगभग समानांतर होते हैं; समानांतर किरणें एक दिशा में लौटती हैं। खुरदरी सतह के स्थानीय अभिलंब अलग-अलग दिशाओं में होते हैं; किरणें कई दिशाओं में लौटती हैं। प्रत्येक किरण फिर भी i = r का पालन करती है। विसरित परावर्तन के कारण हम कागज को कई दिशाओं से देख सकते हैं; परावर्तन के नियम नहीं टूटते।",
+        "pa": "ਚਿਕਣੀ ਸਤ੍ਹਾ ਦੇ ਸਥਾਨਕ ਅਭਿਲੰਬ ਲਗਭਗ ਸਮਾਂਤਰ ਹੁੰਦੇ ਹਨ; ਸਮਾਂਤਰ ਕਿਰਨਾਂ ਇੱਕ ਦਿਸ਼ਾ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਖੁਰਦਰੀ ਸਤ੍ਹਾ ਦੇ ਅਭਿਲੰਬ ਵੱਖ-ਵੱਖ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਹੁੰਦੇ ਹਨ; ਕਿਰਨਾਂ ਕਈ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਹਰ ਕਿਰਨ ਫਿਰ ਵੀ i = r ਨਿਯਮ ਮੰਨਦੀ ਹੈ। ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਕਾਰਨ ਅਸੀਂ ਕਾਗਜ਼ ਨੂੰ ਕਈ ਪਾਸਿਆਂ ਤੋਂ ਵੇਖ ਸਕਦੇ ਹਾਂ; ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਨਹੀਂ ਟੁੱਟਦੇ।"
+      }
+    },
+    {
+      "q": {
+        "en": "4. How a plane mirror forms an image",
+        "hi": "4. समतल दर्पण में प्रतिबिंब कैसे बनता है",
+        "pa": "4. ਸਮਤਲ ਦਰਪਣ ਵਿੱਚ ਪ੍ਰਤੀਬਿੰਬ ਕਿਵੇਂ ਬਣਦਾ ਹੈ"
+      },
+      "a": {
+        "en": "Trace two reflected rays reaching the eye, then extend them backwards behind the mirror. Their apparent meeting point is the virtual image: no light actually meets there, so it cannot be obtained on a screen. The image is upright, equal in size to the object and as far behind the mirror as the object is in front. An object 2 m in front therefore has an image 2 m behind; object–image separation is 4 m.",
+        "hi": "आँख तक पहुँचने वाली दो परावर्तित किरणें खींचें और उन्हें दर्पण के पीछे पीछे की ओर बढ़ाएँ। जहाँ वे मिलती हुई लगती हैं, वहाँ आभासी प्रतिबिंब है। प्रकाश वास्तव में वहाँ नहीं मिलता, इसलिए इसे पर्दे पर नहीं लिया जा सकता। प्रतिबिंब सीधा, वस्तु के बराबर आकार का और दर्पण के पीछे उतनी ही दूरी पर होता है जितनी वस्तु सामने है। वस्तु 2 m सामने हो तो प्रतिबिंब 2 m पीछे होगा; वस्तु और प्रतिबिंब की दूरी 4 m होगी।",
+        "pa": "ਅੱਖ ਤੱਕ ਪਹੁੰਚਣ ਵਾਲੀਆਂ ਦੋ ਪਰਾਵਰਤਿਤ ਕਿਰਨਾਂ ਖਿੱਚੋ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਧਾਓ। ਜਿੱਥੇ ਉਹ ਮਿਲਦੀਆਂ ਜਾਪਦੀਆਂ ਹਨ, ਉੱਥੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਹੈ। ਪ੍ਰਕਾਸ਼ ਅਸਲ ਵਿੱਚ ਉੱਥੇ ਨਹੀਂ ਮਿਲਦਾ, ਇਸ ਲਈ ਇਹ ਪਰਦੇ ਉੱਤੇ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ। ਪ੍ਰਤੀਬਿੰਬ ਸਿੱਧਾ, ਵਸਤੂ ਦੇ ਬਰਾਬਰ ਆਕਾਰ ਦਾ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਉੱਨੀ ਹੀ ਦੂਰੀ ਉੱਤੇ ਹੁੰਦਾ ਹੈ ਜਿੰਨੀ ਵਸਤੂ ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ 2 m ਸਾਹਮਣੇ ਹੋਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ 2 m ਪਿੱਛੇ ਹੋਵੇਗਾ; ਦੋਵਾਂ ਵਿਚਕਾਰ ਦੂਰੀ 4 m ਹੋਵੇਗੀ।"
+      }
+    },
+    {
+      "q": {
+        "en": "5. Lateral inversion and motion",
+        "hi": "5. पार्श्व परिवर्तन और गति",
+        "pa": "5. ਪਾਸਵੀ ਉਲਟਾਅ ਅਤੇ ਗਤੀ"
+      },
+      "a": {
+        "en": "A plane mirror produces lateral inversion in the usual comparison between an object and its image. It does not turn an upright object upside down. With a fixed mirror, moving an object 0.5 m towards it moves the image 0.5 m towards it on the other side; the separation decreases by 1 m. State which object is fixed before applying any motion shortcut.",
+        "hi": "वस्तु और उसके प्रतिबिंब की सामान्य तुलना में समतल दर्पण पार्श्व परिवर्तन दिखाता है। वह सीधी वस्तु को ऊपर-नीचे नहीं उलटता। दर्पण स्थिर हो और वस्तु 0.5 m पास आए, तो प्रतिबिंब दूसरी ओर से 0.5 m पास आता है; दोनों की दूरी 1 m घटती है। गति का कोई सूत्र लगाने से पहले स्पष्ट करें कि क्या स्थिर है।",
+        "pa": "ਵਸਤੂ ਅਤੇ ਉਸ ਦੇ ਪ੍ਰਤੀਬਿੰਬ ਦੀ ਆਮ ਤੁਲਨਾ ਵਿੱਚ ਸਮਤਲ ਦਰਪਣ ਪਾਸਵੀ ਉਲਟਾਅ ਦਿਖਾਉਂਦਾ ਹੈ। ਇਹ ਸਿੱਧੀ ਵਸਤੂ ਨੂੰ ਉੱਪਰ-ਥੱਲੇ ਨਹੀਂ ਉਲਟਦਾ। ਦਰਪਣ ਸਥਿਰ ਹੋਵੇ ਅਤੇ ਵਸਤੂ 0.5 m ਨੇੜੇ ਆਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ ਦੂਜੇ ਪਾਸੇ ਤੋਂ 0.5 m ਨੇੜੇ ਆਉਂਦਾ ਹੈ; ਦੋਵਾਂ ਦੀ ਦੂਰੀ 1 m ਘਟਦੀ ਹੈ। ਗਤੀ ਦਾ ਸੂਤਰ ਵਰਤਣ ਤੋਂ ਪਹਿਲਾਂ ਦੱਸੋ ਕਿ ਕੀ ਸਥਿਰ ਹੈ।"
+      }
+    },
+    {
+      "q": {
+        "en": "6. Draw, check and revise",
+        "hi": "6. बनाएँ, जाँचें और दोहराएँ",
+        "pa": "6. ਬਣਾਓ, ਜਾਂਚੋ ਅਤੇ ਦੁਹਰਾਓ"
+      },
+      "a": {
+        "en": "Draw a mirror, a normal and an incident ray at 40° to the normal. Construct the reflected ray at 40° on the other side. For an object point, use dotted backward extensions to mark its virtual image. Check: equal angles, equal perpendicular distances and no actual ray behind the mirror. Next topics are spherical mirrors and refraction; they are not covered by this lesson.",
+        "hi": "एक दर्पण, अभिलंब और अभिलंब से 40° पर आपतित किरण बनाएँ। दूसरी ओर 40° पर परावर्तित किरण खींचें। किसी वस्तु-बिंदु के लिए किरणों के पीछे की ओर विस्तार को बिंदीदार रेखाओं से दिखाकर आभासी प्रतिबिंब बनाएँ। जाँचें: बराबर कोण, बराबर लंबवत दूरियाँ और दर्पण के पीछे वास्तविक किरण नहीं। अगले विषय गोलीय दर्पण और अपवर्तन हैं; वे इस पाठ में शामिल नहीं हैं।",
+        "pa": "ਦਰਪਣ, ਅਭਿਲੰਬ ਅਤੇ ਅਭਿਲੰਬ ਤੋਂ 40° ਉੱਤੇ ਆਪਤਿਤ ਕਿਰਨ ਬਣਾਓ। ਦੂਜੇ ਪਾਸੇ 40° ਉੱਤੇ ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਖਿੱਚੋ। ਵਸਤੂ-ਬਿੰਦੂ ਲਈ ਕਿਰਨਾਂ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਾਧੇ ਨੂੰ ਬਿੰਦੀਦਾਰ ਰੇਖਾਵਾਂ ਨਾਲ ਦਿਖਾ ਕੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਬਣਾਓ। ਜਾਂਚੋ: ਬਰਾਬਰ ਕੋਣ, ਬਰਾਬਰ ਲੰਬ ਦੂਰੀਆਂ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਕੋਈ ਅਸਲ ਕਿਰਨ ਨਹੀਂ। ਅਗਲੇ ਵਿਸ਼ੇ ਗੋਲੀ ਦਰਪਣ ਅਤੇ ਅਪਵਰਤਨ ਹਨ; ਉਹ ਇਸ ਪਾਠ ਵਿੱਚ ਸ਼ਾਮਲ ਨਹੀਂ ਹਨ।"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "title": "प्रकाश का परावर्तन और परावर्तन के नियम",
+      "channel": "Science Dhoom",
+      "youtubeId": "n6q4mFYR6o0",
+      "url": "https://www.youtube.com/watch?v=n6q4mFYR6o0",
+      "language": "hi",
+      "tags": [
+        "Supplementary teacher resource; playback not verified"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "title": "NCERT textbook selector: Class X Science, Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php",
+      "language": "en/hi",
+      "type": "textbook"
+    },
+    {
+      "title": "Khan Academy: परावर्तन का नियम (Hindi video and exercises)",
+      "url": "https://hi.khanacademy.org/science/ncert-class-8-science/x55541eeaec8b3a9a:light/x55541eeaec8b3a9a:law-of-reflection/v/law-of-reflection",
+      "language": "hi",
+      "type": "notes"
+    }
+  ],
+  "bookRefs": [
+    {
+      "title": "Science, Class X",
+      "author": "NCERT",
+      "chapters": "Light – Reflection and Refraction: reflection and plane-mirror revision",
+      "type": "ncert"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    }
+  ],
+  "practiceSource": "authored-only"
+}

@@ -47,6 +47,8 @@ export interface LessonSection {
 }
 
 export interface Lesson {
+  /** Long explanation cards must not become automatic multiple-choice questions. */
+  practiceSource?: 'authored-only';
   availableLanguages?: readonly ('en' | 'hi' | 'pa')[];
   coverageStatus?: 'foundation' | 'complete';
   editorialStatus?: 'authored' | 'reviewed';

@@ -8,7 +8,7 @@ All 31 tracks have partial preparation outlines. No track is certified as coveri
 | Punjab Clerk (PSSSB) | 4 | 0 | 58 | 0 | 152 | 210 | 4 | 2 | 2 | 4 |
 | Punjab Patwari (PSSSB) | 2 | 0 | 30 | 0 | 100 | 130 | 2 | 1 | 1 | 2 |
 | Punjab Police (Constable & SI) | 3 | 0 | 71 | 0 | 13 | 84 | 1 | 3 | 2 | 3 |
-| Punjab ETT (Elementary Teacher) | 3 | 0 | 118 | 0 | 2 | 120 | 2 | 1 | 0 | 3 |
+| Punjab ETT (Elementary Teacher) | 4 | 0 | 138 | 0 | 2 | 140 | 2 | 2 | 0 | 3 |
 | PSTET (Punjab State Teacher Eligibility Test) | 1 | 0 | 66 | 0 | 0 | 66 | 1 | 0 | 0 | 1 |
 | Punjab Lecturer Cadre (School Education) | 1 | 0 | 28 | 0 | 13 | 41 | 0 | 1 | 0 | 1 |
 | REET Level 1 (Primary Teachers) | 3 | 0 | 119 | 0 | 2 | 121 | 2 | 1 | 0 | 3 |
@@ -36,7 +36,7 @@ All 31 tracks have partial preparation outlines. No track is certified as coveri
 | Indian Army Agniveer General Duty (GD) | 1 | 0 | 12 | 0 | 0 | 12 | 0 | 1 | 1 | 1 |
 | Indian Army Agniveer Clerk / Store Keeper (SKT) | 1 | 0 | 50 | 0 | 0 | 50 | 1 | 0 | 1 | 1 |
 
-Current baseline: 0 empty exam pools; 0 missing lesson slots; 37 topic entries below 50; 0 exams with 1,000 recorded reviewed questions. Foundation modules do not certify full official syllabus coverage.
+Current baseline: 0 empty exam pools; 0 missing lesson slots; 38 topic entries below 50; 0 exams with 1,000 recorded reviewed questions. Foundation modules do not certify full official syllabus coverage.
 
 3 repeated authored prompt groups found; practice pools deduplicate normalized wording and the explicitly confirmed paraphrase groups. Full topic details and resource URLs are in src/lib/data/coverage-audit.json.
 

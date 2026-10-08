@@ -21,6 +21,40 @@ const lessons = load('src/lib/data/lessons.ts');
 const bank = load('src/lib/data/questions.ts');
 const scope = load('src/lib/data/topic-scope.ts');
 const canonical = scope.canonicalTopicId;
+test('ETT archival reference remains provisional and does not certify an upcoming notification', () => {
+  const { ETT_SYLLABUS_REFERENCE, ETT_SCIENCE_UNITS, ETT_REFERENCE_SUBJECTS } = load('src/lib/data/ett-syllabus.ts');
+  assert.equal(ETT_SYLLABUS_REFERENCE.status, 'publisher-unreachable');
+  assert.equal(ETT_SYLLABUS_REFERENCE.upcomingNotification, 'pending');
+  assert.equal(ETT_REFERENCE_SUBJECTS.reduce((n, s) => n + s.marks, 0), 200);
+  assert.equal(ETT_SCIENCE_UNITS.length, 25);
+  assert.equal(new Set(ETT_SCIENCE_UNITS.map(unit => unit[0])).size, 25);
+});
+test('ETT reflection offers real localized lessons and a finite strictly scoped original bank', () => {
+  const lesson = lessons.getLessonByTopicId('ett-light-reflection');
+  for (const lang of ['hi', 'pa']) {
+    assert.notEqual(lesson.content[lang], lesson.content.en);
+    assert.ok(lesson.sections.every(section => section.text[lang].length > 100));
+  }
+  const pool = engine.getQuestionPool({ examId: 'punjab-ett', topicId: 'ett-light-reflection' });
+  assert.equal(pool.length, 20);
+  assert.equal(engine.getTestQuestions({ examId: 'punjab-ett', topicId: 'ett-light-reflection', count: 50 }).length, 20);
+  assert.equal(engine.getQuestionPool({ examId: 'punjab-clerk', topicId: 'ett-light-reflection' }).length, 0);
+  assert.equal(engine.getQuestionPool({ examId: 'punjab-ett', topicId: 'ett-light-reflection', pyqOnly: true }).length, 0);
+  for (const q of pool) {
+    assert.equal(q.topicId, 'ett-light-reflection');
+    assert.equal(q.year, undefined);
+    assert.equal(q.editorialStatus, 'authored');
+    assert.equal(new Set(Object.values(q.options).map(o => o.en)).size, 4);
+    for (const lang of ['hi', 'pa']) {
+      assert.notEqual(q.question[lang], q.question.en);
+      assert.notEqual(q.explanation[lang], q.explanation.en);
+    }
+    const n = Number(q.question.en.match(/\d+/)?.[0]);
+    if (q.question.en.startsWith('A ray makes')) assert.equal(parseInt(q.options[q.correct].en), 90 - n);
+    if (q.question.en.startsWith('An object is')) assert.equal(parseInt(q.options[q.correct].en), 2 * n);
+  }
+  assert.equal(engine.getQuestionPool({ examId: 'punjab-ett', topicId: 'ett-light-reflection', excludeKeys: pool.map(engine.questionIdentity) }).length, 0);
+});
 test('all exam filters stay strict across difficulties and PYQ windows', () => {
   for (const exam of engine.AVAILABLE_EXAMS) for (const difficulty of ['easy', 'medium', 'hard']) for (const pyq20Years of [false, true]) {
     const questions = engine.getTestQuestions({ examId: exam.id, difficulty, pyq20Years, count: 50 });

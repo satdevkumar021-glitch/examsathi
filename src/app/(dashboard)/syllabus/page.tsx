@@ -7,9 +7,11 @@ export default function SyllabusPage() {
   return <div className="max-w-4xl mx-auto p-5 space-y-5 text-slate-200">
     <h1 className="text-2xl font-bold text-white">Exam syllabus & coverage</h1>
     <Link href="/coverage" className="block underline text-teal-300">Exam-by-exam question, lesson, PDF and video counts</Link>
+    <Link href="/syllabus/punjab-ett/" className="block rounded-xl border border-teal-700 p-4 text-teal-200">Punjab ETT: versioned syllabus research and multilingual subtopics →</Link>
     <p className="text-sm text-slate-400">Explore each supported exam by subject, chapter and subtopic. This is a preparation map; check the latest official notification for your paper, year and post. Available material is shown separately from topics still being prepared.</p>
     {Object.values(ALL_EXAMS).flat().map(exam => <details key={exam.id} className="bg-slate-800 rounded-xl p-4">
       <summary className="cursor-pointer font-bold text-teal-300">{exam.emoji} {exam.name}</summary>
+      {exam.id === 'punjab-ett' && <p className="my-3 rounded-lg border border-amber-700 p-3 text-sm text-amber-200">This legacy preparation map is incomplete and its exam pattern is unverified. It combines material from different teaching exams. Use the <Link className="underline" href="/syllabus/punjab-ett/">versioned ETT syllabus research</Link> before planning preparation.</p>}
       <a className="block underline text-sm my-3" href={exam.officialWebsite} target="_blank" rel="noopener noreferrer">Latest official syllabus & notification ↗</a>
       {exam.subjects.map(subject => <section key={subject.id} className="my-4 space-y-3">
         <h2 className="font-bold text-white">{subject.name}</h2>

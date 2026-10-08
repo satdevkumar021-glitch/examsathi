@@ -1,3 +1,4 @@
+import ettReflection from './lessons/ett-reflection.json';
 import { buildGapLessons } from './lessons/gap-foundations';
 import { FOUNDATION_LESSONS } from './foundation-content';
 import { TOPIC_ALIASES } from './topic-scope';
@@ -1918,6 +1919,7 @@ export const BASE_LESSONS: Record<string, Lesson> = {
 
 export const ALL_LESSONS: Record<string, Lesson> = {
   ...BASE_LESSONS,
+  [ettReflection.topicId]: ettReflection as Lesson,
   ...WORLD_HISTORY_LESSONS,
   ...POLITY_EXTRA_LESSONS,
   ...ECONOMICS_LESSONS,

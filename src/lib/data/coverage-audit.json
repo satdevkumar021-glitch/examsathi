@@ -2,7 +2,7 @@
   "summary": {
     "emptyExamPools": 0,
     "missingLessons": 0,
-    "under50Topics": 37,
+    "under50Topics": 38,
     "examsMeetingReviewedTarget": 0
   },
   "auditedOn": "2026-10-08",
@@ -1146,6 +1146,39 @@
       "officialWebsite": "https://educationrecruitmentboard.com",
       "topics": [
         {
+          "id": "ett-light-reflection",
+          "name": "Light: reflection and plane mirrors",
+          "subject": "ETT Curriculum",
+          "chapter": "Foundational Pedagogy & Subjects",
+          "subtopics": [
+            "Reflection laws",
+            "Normal and angle measurement",
+            "Plane-mirror images",
+            "Regular and diffuse reflection"
+          ],
+          "lesson": true,
+          "lessonAlias": null,
+          "lessonStatus": "foundation",
+          "reviewedQuestions": 0,
+          "englishWords": 400,
+          "authoredQuestions": 20,
+          "generatedVariants": 0,
+          "distinctQuestions": 20,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 6,
+          "documents": [
+            "https://ncert.nic.in/textbook.php",
+            "https://hi.khanacademy.org/science/ncert-class-8-science/x55541eeaec8b3a9a:light/x55541eeaec8b3a9a:law-of-reflection/v/law-of-reflection"
+          ],
+          "videos": [
+            {
+              "title": "प्रकाश का परावर्तन और परावर्तन के नियम",
+              "url": "https://www.youtube.com/watch?v=n6q4mFYR6o0",
+              "isSearch": false
+            }
+          ]
+        },
+        {
           "id": "child-development-pedagogy",
           "name": "Child Development, Piaget, Vygotsky & RTE 2009",
           "subject": "ETT Curriculum",
@@ -1245,14 +1278,14 @@
           ]
         }
       ],
-      "topicCount": 3,
+      "topicCount": 4,
       "missingLessons": 0,
-      "under50Topics": 1,
-      "authoredQuestions": 118,
+      "under50Topics": 2,
+      "authoredQuestions": 138,
       "generatedVariants": 2,
       "reviewedQuestions": 0,
       "reviewedTargetShortfall": 1000,
-      "uniqueQuestions": 120,
+      "uniqueQuestions": 140,
       "fullSetsOf50": 2,
       "topicsWithoutPDF": 0,
       "topicsWithoutVideo": 3,

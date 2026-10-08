@@ -1,3 +1,4 @@
+import ettReflectionQuestions from './questions/ett-reflection.json';
 import { FOUNDATION_QUESTIONS } from './foundation-content';
 import { topicIncludes } from './topic-scope';
 // ============================================================
@@ -930,6 +931,7 @@ import { SSC_HTET_QUESTIONS } from './questions/ssc_htet_questions';
 
 export const ALL_QUESTIONS: Question[] = [
   ...QUESTIONS,
+  ...(ettReflectionQuestions as Question[]),
   ...FOUNDATION_QUESTIONS,
   ...REFERENCE_SST_QUESTIONS,
   ...SST_MISSING_QUESTIONS,

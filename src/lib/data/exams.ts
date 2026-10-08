@@ -885,6 +885,15 @@ export const PUNJAB_EXAMS: Exam[] = [
             namePunjabi: 'ਮੁੱਢਲੀ ਸਿੱਖਿਆ',
             topics: [
               {
+                id: 'ett-light-reflection',
+                name: 'Light: reflection and plane mirrors',
+                nameHindi: 'प्रकाश: परावर्तन और समतल दर्पण',
+                namePunjabi: 'ਪ੍ਰਕਾਸ਼: ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ',
+                subtopics: ['Reflection laws', 'Normal and angle measurement', 'Plane-mirror images', 'Regular and diffuse reflection'],
+                examQuestions: 'Weightage not specified',
+                difficulty: 'medium',
+              },
+              {
                 id: 'child-development-pedagogy',
                 name: 'Child Development, Piaget, Vygotsky & RTE 2009',
                 nameHindi: 'बाल विकास, पियाजे, वाइगोत्स्की व RTE 2009',

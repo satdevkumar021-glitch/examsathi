@@ -347,7 +347,7 @@ function distributeChoice<T>(correctVal: T, distractors: T[], seed: number): {
 export function generateProceduralQuestions(topicId: string, count: number): Question[] {
   const generated: Question[] = [];
   const lesson = getLessonByTopicId(topicId);
-  if (!lesson) return [];
+  if (!lesson || lesson.practiceSource === 'authored-only') return [];
 
   const flashcards = lesson.flashcards || [];
 

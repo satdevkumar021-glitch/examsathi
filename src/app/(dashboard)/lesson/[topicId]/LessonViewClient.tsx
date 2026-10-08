@@ -9,6 +9,7 @@ import { getTestQuestions } from '@/lib/data/question_bank_engine';
 import { Question } from '@/lib/data/questions';
 import FlipCard from '@/components/ui/FlipCard';
 import { useStore } from '@/lib/store';
+import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
 import { awardStudyXP } from '@/lib/study-progress';
 import { getCardState, scheduleNextReview, saveCardState, Rating } from '@/lib/fsrs';
 
@@ -21,7 +22,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   const router = useRouter();
   
   const [activeTab, setActiveTab] = useState<'read' | 'docs' | 'cards' | 'practice' | 'video' | 'notes'>('read');
-  const { language: lang, setLanguage: setLang, markTopicComplete } = useStore();
+  const { language: lang, setLanguage: setLang, markTopicComplete, selectedExam, setSelectedExam } = useStore();
   const [cardIndex, setCardIndex] = useState(0);
   const [isReadMarked, setIsReadMarked] = useState(false);
   
@@ -38,6 +39,17 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
   const [practiceCount, setPracticeCount] = useState(10);
   const [topicQuestions, setTopicQuestions] = useState(() => getTestQuestions({ topicId, examId: useStore.getState().selectedExam || undefined, count: 10 }));
+
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get('exam');
+    const resolved = requested ? practiceExam(requested) : undefined;
+    const examId = resolved ? normalizePracticeExamId(requested!) : selectedExam || undefined;
+    if (resolved && selectedExam !== examId) setSelectedExam(resolved.state, resolved.id);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Recompute bounded practice after preference hydration or a syllabus link changes exam context.
+    setTopicQuestions(getTestQuestions({ topicId, examId, count: practiceCount }));
+    setSelectedAnswers({});
+    setShowExplanation({});
+  }, [topicId, selectedExam, setSelectedExam, practiceCount]);
 
   // Load saved notes from LocalStorage on mount
   useEffect(() => {
@@ -128,7 +140,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 pb-20 text-slate-100">
       
-      {lesson.coverageStatus === 'foundation' && <div className="p-3 text-sm text-amber-200 bg-amber-950/30">Foundation module: full official syllabus alignment and independent review are pending. New practice content is primarily English, with Hindi grammar in Hindi; translations remain in progress.</div>}
+      {lesson.coverageStatus === 'foundation' && <div className="p-3 text-sm text-amber-200 bg-amber-950/30">Foundation module: full official syllabus alignment and independent review are pending. {lesson.availableLanguages?.length === 3 ? 'This lesson includes English, Hindi and Punjabi. It covers the named subtopic, not the full exam syllabus.' : 'Some translations remain in progress; check the available language editions.'}</div>}
       {lesson.availableLanguages && !lesson.availableLanguages.includes(lang) && <p className="p-3 text-sm text-amber-200">Translation pending. This module is available in {lesson.availableLanguages.join(', ')}.</p>}
       {/* Sticky Top Header */}
       <div className="sticky top-0 z-20 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 p-4 pb-0">
@@ -301,7 +313,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 <div className="flex items-center gap-2">
                   <FileText size={15} className="text-teal-400" />
                   <span className="text-teal-200 font-medium">
-                    {lang === 'pa' ? `ਇਸ ਪਾਠ ਲਈ ${lesson.documents.length} ਅਧਿਕਾਰਤ PSEB/NCERT/NIOS ਕਿਤਾਬਾਂ ਉਪਲਬਧ ਹਨ` : `इस पाठ हेतु ${lesson.documents.length} आधिकारिक PSEB/NCERT/NIOS पुस्तकें उपलब्ध हैं`}
+                    {lang === 'pa' ? `ਇਸ ਪਾਠ ਲਈ ${lesson.documents.length} ਪਾਠ ਪੁਸਤਕ ਅਤੇ ਸਹਾਇਕ ਸਰੋਤਾਂ ਦੇ ਲਿੰਕ` : lang === 'en' ? `${lesson.documents.length} textbook and supplementary resource links for this lesson` : `इस पाठ हेतु ${lesson.documents.length} पाठ्यपुस्तक और सहायक संसाधन लिंक`}
                   </span>
                 </div>
                 <span className="text-[11px] font-bold text-teal-400 underline">
@@ -419,14 +431,14 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
               <div className="grid grid-cols-2 gap-2.5">
                 <Link
-                  href={`/mock-test/topic-${topicId}?exam=${useStore.getState().selectedExam || 'all'}`}
+                  href={`/mock-test/topic-${topicId}?exam=${selectedExam || 'all'}`}
                   className="bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-xs py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 shadow transition"
                 >
                   <Target size={14} />
                   <span>{lang === 'pa' ? 'ਲਾਈਵ ਟੈਸਟ' : 'लाइव टेस्ट'}</span>
                 </Link>
                 <Link
-                  href={`/mock-test/topic-${topicId}?mode=flip&exam=${useStore.getState().selectedExam || 'all'}`}
+                  href={`/mock-test/topic-${topicId}?mode=flip&exam=${selectedExam || 'all'}`}
                   className="bg-slate-700/80 hover:bg-slate-650 border border-slate-600 text-teal-300 font-bold text-xs py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 transition"
                 >
                   <Layers size={14} />
@@ -450,8 +462,9 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
                 {lang === 'pa' 
-                  ? 'ਪੰਜਾਬ ਸਕੂਲ ਸਿੱਖਿਆ ਬੋਰਡ (PSEB), NCERT ਅਤੇ NIOS ਵੱਲੋਂ ਪ੍ਰਮਾਣਿਤ ਮੁਫ਼ਤ ਪੀਡੀਐਫ ਡਾਊਨਲੋਡ ਕਰੋ ਅਤੇ ਸਿੱਧਾ ਅਧਿਐਨ ਕਰੋ।' 
-                  : 'पंजाब स्कूल शिक्षा बोर्ड (PSEB), NCERT एवं NIOS द्वारा प्रमाणित आधिकारिक पीडीएफ दस्तावेज सीधे डाउनलोड अथवा ऑनलाइन पढ़ें।'}
+                  ? 'ਪਾਠ ਪੁਸਤਕਾਂ ਅਤੇ ਸਹਾਇਕ ਸਰੋਤਾਂ ਨੂੰ ਉਨ੍ਹਾਂ ਦੇ ਪ੍ਰਕਾਸ਼ਕ ਦੀ ਵੈੱਬਸਾਈਟ ਉੱਤੇ ਖੋਲ੍ਹੋ। ਹਰ ਲਿੰਕ PDF ਜਾਂ ਸਰਕਾਰੀ ਸਰੋਤ ਨਹੀਂ ਹੈ।'
+                  : lang === 'en' ? 'Open textbooks and supplementary resources at their publishers. Links may be web pages or PDFs; supplementary resources are not government publications.'
+                  : 'पाठ्यपुस्तक और सहायक संसाधन उनके प्रकाशक की वेबसाइट पर खोलें। हर लिंक PDF या सरकारी प्रकाशन नहीं है।'}
               </p>
             </div>
 
@@ -660,7 +673,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </div>
               <div className="flex items-center gap-2">
                 <Link
-                  href={`/mock-test/topic-${topicId}?exam=${useStore.getState().selectedExam || 'all'}`}
+                  href={`/mock-test/topic-${topicId}?exam=${selectedExam || 'all'}`}
                   className="bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
                 >
                   <Target size={14} />
