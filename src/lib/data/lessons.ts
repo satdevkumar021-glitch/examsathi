@@ -1,3 +1,7 @@
+import { buildGapLessons } from './lessons/gap-foundations';
+import { FOUNDATION_LESSONS } from './foundation-content';
+import { TOPIC_ALIASES } from './topic-scope';
+export { TOPIC_ALIASES } from './topic-scope';
 import unavailableResources from './unavailable-resources.json';
 import { TOPIC_DOCUMENTS } from './topic-resources';
 // ============================================================
@@ -1928,7 +1932,20 @@ export const ALL_LESSONS: Record<string, Lesson> = {
   ...REFERENCE_SST_LESSONS,
   ...SST_MISSING_LESSONS,
   ...SUPPLEMENTAL_LESSONS,
+
 };
+
+// Keep existing translations and expand the English edition with original worked concepts.
+for (const [id, foundation] of Object.entries(FOUNDATION_LESSONS)) {
+  const existing = ALL_LESSONS[id];
+  if (!existing) { ALL_LESSONS[id] = foundation; continue; }
+  ALL_LESSONS[id] = { ...existing, content: { ...existing.content, en: id === 'hindi-vyakaran' ? existing.content.en : existing.content.en + foundation.content.en, hi: id === 'hindi-vyakaran' ? existing.content.hi + foundation.content.hi : existing.content.hi },
+    flashcards: [...existing.flashcards, ...foundation.flashcards],
+    sections: [...(existing.sections || []), ...(foundation.sections || [])],
+    coverageStatus: 'foundation', editorialStatus: 'authored' };
+}
+
+Object.assign(ALL_LESSONS, buildGapLessons(ALL_LESSONS));
 
 // Remove unavailable or unrelated seeded videos; expose an honest publisher search link.
 const rejectedVideoIds = new Set(['W8L_w_eU014', 'Jud1947LawX', 'SJxMBRTB1Ic', 'uqVT9QQe0qU', 'xZbKHDPPrrc']);
@@ -1952,53 +1969,6 @@ for (const lesson of Object.values(ALL_LESSONS)) {
 
 export const LESSONS = ALL_LESSONS;
 
-export const TOPIC_ALIASES: Record<string, string> = {
-  'ett-child-pedagogy': 'child-development-pedagogy',
-  'child-pedagogy': 'child-development-pedagogy',
-  'russian-revolution': 'sst-world-history-modern',
-  'uno': 'sst-world-history-modern',
-  'cold-war': 'sst-world-history-modern',
-  'soil': 'sst-india-geography',
-  'rivers': 'sst-india-geography',
-  'green-revolution': 'sst-india-geography',
-  'niti-aayog': 'sst-indian-economy-deep',
-  'rbi': 'sst-indian-economy-deep',
-  'delhi-sultanate': 'sst-medieval-india',
-  'mughal': 'sst-medieval-india',
-  'sufi': 'sst-medieval-india',
-  'bhakti': 'sst-medieval-india',
-  'ranjit-singh': 'sst-punjab-history-deep',
-  'misals': 'sst-punjab-history-deep',
-  'banda-singh': 'sst-punjab-history-deep',
-  'ancient-india': 'sst-harappa',
-  'medieval-india': 'sst-medieval-india',
-  'punjab-history': 'sst-punjab-history-deep',
-  'modern-india': 'sst-national-movement',
-  'fundamental-rights': 'sst-fundamental-rights',
-  'parliament': 'sst-legislature',
-  'judiciary': 'sst-judiciary',
-  'local-govt': 'sst-federal-local',
-  'indian-economy': 'sst-indian-economy-deep',
-  'world-history': 'sst-world-history-modern',
-  'punjab-geography': 'sst-geo-punjab',
-  'physical-geography': 'sst-india-geography',
-  'motion': 'physics-concepts',
-  'cell': 'biology-concepts',
-  'electricity': 'physics-concepts',
-  'constitution': 'sst-constitution',
-  'agreement': 'english-grammar-lit',
-  'sandhi': 'hindi-vyakaran',
-  'computer': 'computer-awareness',
-  'psssb-computer-it': 'computer-awareness',
-  'computer-it': 'computer-awareness',
-  'psssb-raavi-typing': 'punjabi-grammar-lit',
-  'punjabi-clerk-prep': 'punjabi-grammar-lit',
-  'ett-evs-science': 'environment-ecology',
-  'series': 'ssc-cgl-reasoning',
-  'punjabi-grammar': 'punjabi-grammar-lit',
-  'english-practice': 'english-grammar-lit',
-  'ett-primary-math': 'mathematics-core',
-};
 
 export function getLessonByTopicId(topicId: string): Lesson | undefined {
   if (LESSONS[topicId]) return LESSONS[topicId];

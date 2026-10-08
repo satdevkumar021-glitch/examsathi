@@ -29,6 +29,8 @@ const rows = Object.values(ALL_EXAMS).flat().map(exam => {
     const documents = [...(lesson?.documents || []), ...(TOPIC_DOCUMENTS[topic.id] || [])];
     return { id: topic.id, name: topic.name, subject: subject.name, chapter: chapter.name,
       subtopics: topic.subtopics, lesson: Boolean(lesson), lessonAlias: TOPIC_ALIASES[topic.id] || null,
+      lessonStatus: lesson?.coverageStatus || (lesson ? 'legacy-depth-unverified' : 'missing'),
+      reviewedQuestions: qs.filter(q => q.editorialStatus === 'reviewed').length,
       englishWords: (lesson?.content.en || '').split(/\s+/).filter(Boolean).length,
       authoredQuestions: qs.filter(q => !q.id.startsWith('gen-')).length,
       generatedVariants: qs.filter(q => q.id.startsWith('gen-')).length,
@@ -43,6 +45,8 @@ const rows = Object.values(ALL_EXAMS).flat().map(exam => {
     under50Topics: topics.filter(t => t.distinctQuestions < 50).length,
     authoredQuestions: pool.filter(q => !q.id.startsWith('gen-')).length,
     generatedVariants: pool.filter(q => q.id.startsWith('gen-')).length,
+    reviewedQuestions: pool.filter(q => q.editorialStatus === 'reviewed').length,
+    reviewedTargetShortfall: Math.max(0, 1000 - pool.filter(q => q.editorialStatus === 'reviewed').length),
     uniqueQuestions: pool.length, fullSetsOf50: Math.floor(pool.length / 50),
     topicsWithoutPDF: topics.filter(t => !t.documents.length).length,
     topicsWithoutVideo: topics.filter(t => !t.videos.some(v => v.url && !v.isSearch)).length,
@@ -54,11 +58,12 @@ for (const q of ALL_QUESTIONS) {
  const key=questionIdentity(q); const list=identities.get(key)||[]; list.push(q.id); identities.set(key,list);
 }
 const duplicates=[...identities].filter(([,ids])=>ids.length>1).map(([question,ids])=>({question,ids}));
-writeFileSync('src/lib/data/coverage-audit.json', JSON.stringify({ auditedOn: '2026-10-08', methodology: 'Counts reflect current outline mappings, not certification of complete official syllabus or question correctness. Authored and computed variants are separate. Video links are inventoried, not playback-certified.', exams: rows, duplicatePrompts: duplicates }, null, 2));
+const summary = { emptyExamPools: rows.filter(r => !r.uniqueQuestions).length, missingLessons: rows.reduce((n,r) => n+r.missingLessons,0), under50Topics: rows.reduce((n,r) => n+r.under50Topics,0), examsMeetingReviewedTarget: rows.filter(r => r.reviewedQuestions >= 1000).length };
+writeFileSync('src/lib/data/coverage-audit.json', JSON.stringify({ summary, auditedOn: '2026-10-08', methodology: 'Counts reflect current outline mappings, not certification of complete official syllabus or question correctness. Authored and computed variants are separate. Video links are inventoried, not playback-certified.', exams: rows, duplicatePrompts: duplicates }, null, 2));
 const reportPath = 'docs/verification/SYLLABUS_COVERAGE_2026-10-08.md';
 const previousReport = existsSync(reportPath) ? readFileSync(reportPath, 'utf8') : '';
 const notesIndex = previousReport.indexOf('## Fixes and validation');
 const preservedNotes = notesIndex >= 0 ? '\n' + previousReport.slice(notesIndex) : '';
-const header='# Exam-by-exam coverage audit — 8 October 2026\n\nAll 31 tracks have partial preparation outlines. No track is certified as covering the complete current official syllabus. Shared-topic questions are counted once per exam pool, not as new authoring. Computed variants are separated from authored questions. A topic with 50 variants is not proof of conceptual coverage.\n\n| Exam | Topics | Missing lessons | Authored questions | Generated variants | Distinct pool | Full sets of 50 | Topics below 50 | No PDF | No video |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n';
-writeFileSync('docs/verification/SYLLABUS_COVERAGE_2026-10-08.md', header+rows.map(r=>`| ${r.name} | ${r.topicCount} | ${r.missingLessons} | ${r.authoredQuestions} | ${r.generatedVariants} | ${r.uniqueQuestions} | ${r.fullSetsOf50} | ${r.under50Topics} | ${r.topicsWithoutPDF} | ${r.topicsWithoutVideo} |`).join('\n')+`\n\n${duplicates.length} repeated authored prompt groups found; practice pools now deduplicate normalized wording. Full topic details and resource URLs are in src/lib/data/coverage-audit.json.\n` + preservedNotes);
+const header='# Exam-by-exam coverage audit — 8 October 2026\n\nAll 31 tracks have partial preparation outlines. No track is certified as covering the complete current official syllabus. Shared-topic questions are counted once per exam pool, not as new authoring. Computed variants are separated from authored questions. Reviewed counts require an explicit editorial review record; legacy items without that record do not qualify. A topic with 50 variants is not proof of conceptual coverage.\n\n| Exam | Topics | Missing lessons | Authored questions | Recorded reviewed | Generated variants | Distinct pool | Full sets of 50 | Topics below 50 | No PDF | No video |\n|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|\n';
+writeFileSync('docs/verification/SYLLABUS_COVERAGE_2026-10-08.md', header+rows.map(r=>`| ${r.name} | ${r.topicCount} | ${r.missingLessons} | ${r.authoredQuestions} | ${r.reviewedQuestions} | ${r.generatedVariants} | ${r.uniqueQuestions} | ${r.fullSetsOf50} | ${r.under50Topics} | ${r.topicsWithoutPDF} | ${r.topicsWithoutVideo} |`).join('\n')+`\n\nCurrent baseline: ${summary.emptyExamPools} empty exam pools; ${summary.missingLessons} missing lesson slots; ${summary.under50Topics} topic entries below 50; ${summary.examsMeetingReviewedTarget} exams with 1,000 recorded reviewed questions. Foundation modules do not certify full official syllabus coverage.\n\n${duplicates.length} repeated authored prompt groups found; practice pools now deduplicate normalized wording. Full topic details and resource URLs are in src/lib/data/coverage-audit.json.\n` + preservedNotes);
 console.log(rows.map(r=>({exam:r.id,topics:r.topicCount,questions:r.uniqueQuestions,authored:r.authoredQuestions,missingLessons:r.missingLessons}))); console.log('Duplicate prompt groups:',duplicates.length);

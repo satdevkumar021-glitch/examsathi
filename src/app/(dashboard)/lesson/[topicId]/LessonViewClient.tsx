@@ -128,6 +128,8 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   return (
     <div className="flex flex-col min-h-screen bg-slate-900 pb-20 text-slate-100">
       
+      {lesson.coverageStatus === 'foundation' && <div className="p-3 text-sm text-amber-200 bg-amber-950/30">Foundation module: full official syllabus alignment and independent review are pending. New practice content is primarily English, with Hindi grammar in Hindi; translations remain in progress.</div>}
+      {lesson.availableLanguages && !lesson.availableLanguages.includes(lang) && <p className="p-3 text-sm text-amber-200">Translation pending. This module is available in {lesson.availableLanguages.join(', ')}.</p>}
       {/* Sticky Top Header */}
       <div className="sticky top-0 z-20 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 p-4 pb-0">
         <div className="flex items-center justify-between gap-3 mb-3">
@@ -402,7 +404,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   <span>{lang === 'pa' ? 'ਆਪਣੀ ਤਿਆਰੀ ਦਾ ਪੱਧਰ ਜਾਂਚੋ' : 'तैयारी का स्तर जाँचें'}</span>
                 </span>
                 <span className="bg-teal-500/20 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
-                  20-Yr Archive + -0.25 Marking
+                  Topic practice · source labels on each question
                 </span>
               </div>
               
@@ -411,8 +413,8 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </h4>
               <p className="text-xs text-slate-300 leading-relaxed mb-3">
                 {lang === 'pa' 
-                  ? `${lesson.examRelevance || 'ਅਧਿਕਾਰਤ ਭਰਤੀ ਪ੍ਰੀਖਿਆ'} ਦੇ ਪੈਟਰਨ ਅਤੇ ਕਠਿਨਾਈ ਪੱਧਰਾਂ (Easy, Moderate, Hard) ਮੁਤਾਬਕ ਆਪਣੀ ਰੈਂਕ ਜਾਂਚੋ।`
-                  : `${lesson.examRelevance || 'आधिकारिक भर्ती परीक्षा'} के पैटर्न एवं वास्तविक कठिनाई स्तरों (Easy, Moderate, Hard) पर अपनी तैयारी और मेरिट रैंक चेक करें।`}
+                  ? 'ਇਸ ਵਿਸ਼ੇ ਦੇ ਉਪਲਬਧ ਪ੍ਰਸ਼ਨਾਂ ਨਾਲ ਆਪਣੀ ਸਮਝ ਦੀ ਜਾਂਚ ਕਰੋ। ਪੂਰੇ ਅਧਿਕਾਰਤ ਪੇਪਰ ਦੀ ਕਵਰੇਜ ਹਾਲੇ ਅਧੂਰੀ ਹੈ।'
+                  : 'इस विषय के उपलब्ध प्रश्नों से अपनी समझ जांचें। पूरे आधिकारिक प्रश्नपत्र की कवरेज अभी अधूरी है।'}
               </p>
 
               <div className="grid grid-cols-2 gap-2.5">
@@ -653,7 +655,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   {lang === 'pa' ? 'ਅਭਿਆਸ ਪ੍ਰਸ਼ਨ (Topic Practice)' : 'टॉपिक अभ्यास प्रश्न (Practice MCQs)'}
                 </h3>
                 <p className="text-xs text-slate-400">
-                  {topicQuestions.length} {lang === 'pa' ? 'ਸਵਾਲ ਉਪਲਬਧ ਹਨ' : 'महत्वपूर्ण प्रश्न'} • 20-Yr Archive (2004–2024)
+                  {topicQuestions.length} {lang === 'pa' ? 'ਸਵਾਲ ਉਪਲਬਧ ਹਨ' : 'महत्वपूर्ण प्रश्न'} • Topic practice
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -662,7 +664,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   className="bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
                 >
                   <Target size={14} />
-                  <span>{lang === 'pa' ? 'ਪੂਰਾ ਲਾਈਵ ਟੈਸਟ ਸ਼ੁਰੂ ਕਰੋ' : 'फुल लाइव CBT टेस्ट (-0.25)'}</span>
+                  <span>{lang === 'pa' ? 'ਪੂਰਾ ਲਾਈਵ ਟੈਸਟ ਸ਼ੁਰੂ ਕਰੋ' : 'पूरा टॉपिक अभ्यास शुरू करें'}</span>
                 </Link>
               </div>
             </div>

@@ -19,7 +19,8 @@ function load(file) {
 const engine = load('src/lib/data/question_bank_engine.ts');
 const lessons = load('src/lib/data/lessons.ts');
 const bank = load('src/lib/data/questions.ts');
-const canonical = id => lessons.TOPIC_ALIASES[id] || id;
+const scope = load('src/lib/data/topic-scope.ts');
+const canonical = scope.canonicalTopicId;
 test('all exam filters stay strict across difficulties and PYQ windows', () => {
   for (const exam of engine.AVAILABLE_EXAMS) for (const difficulty of ['easy', 'medium', 'hard']) for (const pyq20Years of [false, true]) {
     const questions = engine.getTestQuestions({ examId: exam.id, difficulty, pyq20Years, count: 50 });
@@ -31,7 +32,7 @@ test('all exam filters stay strict across difficulties and PYQ windows', () => {
 test('topic filtering never fills with unrelated topics; unknown lessons stay missing', () => {
   for (const topic of engine.AVAILABLE_TEST_TOPICS) {
     const questions = engine.getTestQuestions({ topicId: topic.id, count: 50 });
-    assert.ok(questions.every(q => canonical(q.topicId) === canonical(topic.id)), topic.id);
+    assert.ok(questions.every(q => scope.topicIncludes(topic.id,q.topicId)), topic.id);
   }
   assert.equal(lessons.getLessonByTopicId('missing-test-topic'), undefined);
   assert.equal(engine.getTestQuestions({ topicId: 'missing-test-topic', count: 50 }).length, 0);
@@ -145,7 +146,7 @@ test('elementary math practice supplies 50 distinct variants with localized prom
 test('every catalogue exam only supplies its mapped syllabus topics and unknown exams stay empty', () => {
   const { ALL_EXAMS } = load('src/lib/data/exams.ts');
   for (const exam of Object.values(ALL_EXAMS).flat()) {
-    const topics = new Set(exam.subjects.flatMap(s => s.chapters.flatMap(c => c.topics.map(t => canonical(t.id)))));
+    const topics = new Set(exam.subjects.flatMap(s => s.chapters.flatMap(c => c.topics.flatMap(t => [...scope.topicSourceIds(t.id)]))));
     const pool = engine.getQuestionPool({ examId: exam.id });
     assert.ok(pool.every(q => topics.has(canonical(q.topicId))), exam.id);
     assert.equal(new Set(pool.map(engine.questionIdentity)).size, pool.length);
@@ -174,4 +175,71 @@ test('Haryana general-knowledge questions are not child-pedagogy or Punjab ETT p
   for (const config of [{examId:'punjab-ett'}, {topicId:'child-development-pedagogy'}, {examId:'ctet-paper1'}]) {
     assert.ok(engine.getQuestionPool(config).every(q=>!unrelated.has(q.id)));
   }
+});
+
+
+test('foundation content has honest attribution and unambiguous option labels', () => {
+  const { FOUNDATION_QUESTIONS } = load('src/lib/data/foundation-content.ts');
+  assert.equal(FOUNDATION_QUESTIONS.length, 449);
+  for (const q of FOUNDATION_QUESTIONS) {
+    assert.equal(q.editorialStatus, 'authored');
+    assert.equal(q.year, undefined);
+    assert.ok(q.source.url.startsWith('https://'));
+    assert.ok(q.explanation.en.length > 20);
+    assert.equal(new Set(Object.values(q.options).map(o => o.en.toLowerCase().trim())).size, 4, q.id);
+    assert.ok(q.availableLanguages.length);
+  }
+});
+test('every catalogue slot has study material and every track has eligible practice', () => {
+  const { ALL_EXAMS } = load('src/lib/data/exams.ts');
+  for (const exam of Object.values(ALL_EXAMS).flat()) {
+    assert.ok(engine.getQuestionPool({examId:exam.id}).length > 0, exam.id);
+    for (const subject of exam.subjects) for (const chapter of subject.chapters) for (const topic of chapter.topics) {
+      assert.ok(lessons.getLessonByTopicId(topic.id)?.content.en, topic.id);
+    }
+  }
+  assert.equal(bank.getQuestionsByTopic('unknown-unrelated-topic').length, 0);
+});
+test('all 1000 reasoning exercises pass independent numerical and coding checks', () => {
+  const { generateReasoningPractice } = load('src/lib/data/reasoning-practice.ts');
+  const qs = generateReasoningPractice('ssc-cgl-reasoning', 2000);
+  assert.equal(qs.length, 1000);
+  assert.equal(new Set(qs.map(q => engine.questionIdentity(q))).size, 1000);
+  const keys = new Map();
+  const days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  for (const q of qs) {
+    const prompt = q.question.en, nums = (prompt.match(/\d+/g) || []).map(Number);
+    const actual = q.options[q.correct].en;
+    const kind = q.subtopic.en;
+    if (!keys.has(kind)) keys.set(kind, new Set());
+    keys.get(kind).add(q.correct);
+    if (kind === 'Number series') assert.equal(Number(actual), nums[2]+(nums[1]-nums[0]));
+    if (kind === 'Letter coding') {
+      const word = prompt.match(/How is ([A-Z]+) coded/)[1];
+      const expected = [...word].map(c => String.fromCharCode(65+(c.charCodeAt(0)-65+nums[0])%26)).join('');
+      assert.equal(actual, expected);
+    }
+    if (kind === 'Ranking') assert.equal(Number(actual), nums[0]-nums[1]+1);
+    if (kind === 'Calendar cycles') {
+      const start = days.findIndex(day => prompt.includes(`Today is ${day}.`));
+      assert.equal(actual, days[(start+nums[0])%7]);
+    }
+    if (kind === 'Directions and displacement') assert.equal(Number(actual), nums[0]-nums[1]);
+    if (kind === 'Sets and overlap') assert.equal(Number(actual), nums[0]+nums[1]-nums[2]);
+    if (kind === 'Classification') {
+      assert.notEqual(Number(actual)%nums[0],0);
+      for (const [key,value] of Object.entries(q.options)) if (key !== q.correct) assert.equal(Number(value.en)%nums[0],0);
+    }
+    if (kind === 'Number analogy') assert.equal(Number(actual), nums.at(-1)**2);
+    assert.equal(new Set(Object.values(q.options).map(o => o.en)).size,4,q.id);
+    assert.equal(q.year,undefined);
+  }
+  assert.equal(keys.size,8);
+  for (const positions of keys.values()) assert.equal(positions.size,4);
+});
+
+test('UGC NET no longer borrows the school child-development bank', () => {
+  const qs = engine.getQuestionPool({examId:'ugc-net'});
+  assert.ok(qs.length > 0);
+  assert.ok(qs.every(q => q.topicId !== 'child-development-pedagogy'));
 });

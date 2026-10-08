@@ -47,6 +47,9 @@ export interface LessonSection {
 }
 
 export interface Lesson {
+  availableLanguages?: readonly ('en' | 'hi' | 'pa')[];
+  coverageStatus?: 'foundation' | 'complete';
+  editorialStatus?: 'authored' | 'reviewed';
   id: string;
   topicId: string;
   subjectId: string;

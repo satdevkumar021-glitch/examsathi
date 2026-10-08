@@ -1507,7 +1507,7 @@ export const CENTRAL_EXAMS: Exam[] = [
             nameHindi: 'शिक्षण, शोध व आईसीटी संरचना',
             topics: [
               {
-                id: 'child-development-pedagogy',
+                id: 'teaching-aptitude',
                 name: 'Teaching Aptitude, Evaluation Systems & NEP 2020',
                 nameHindi: 'शिक्षण अभिवृत्ति, मूल्यांकन प्रणालियां व एनईपी 2020',
                 subtopics: ['Levels of Teaching (Memory, Understanding, Reflective), CBCS, NEP 2020 Higher Education Provisions'],

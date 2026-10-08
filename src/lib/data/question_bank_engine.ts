@@ -1,3 +1,5 @@
+import { generateReasoningPractice } from './reasoning-practice';
+import { topicSourceIds, topicIncludes, canonicalTopicId } from './topic-scope';
 // ============================================================
 // ExamSathi - Scalable Question Bank & Dynamic Generator Engine
 // Uses a finite, deduplicated topic pool with historical labels under review,
@@ -8,7 +10,7 @@ import { ALL_EXAMS } from './exams';
 import { normalizePracticeExamId, practiceExam } from '../exam-context';
 import { generateQuantPractice } from './quant-practice';
 import { ALL_QUESTIONS, Question } from './questions';
-import { getLessonByTopicId, TOPIC_ALIASES } from './lessons';
+import { getLessonByTopicId } from './lessons';
 import { MASTER_CADRE_10YR_PYQS } from './questions/master_cadre_pyqs';
 import { TWENTY_YEAR_EXAM_PYQS } from './questions/twenty_year_pyqs';
 
@@ -406,21 +408,21 @@ export function getQuestionPool(config: {
 }): Question[] {
   const { topicId, examId, difficulty = 'all', pyqOnly, pyq20Years, count = 50 } = config;
   void count;
-  const canonical = (id: string) => TOPIC_ALIASES[id] || id;
+  const canonical = canonicalTopicId;
   let pool = [...TWENTY_YEAR_EXAM_PYQS, ...MASTER_CADRE_10YR_PYQS, ...ALL_QUESTIONS];
   if ((!topicId || topicId === 'all') && !pyqOnly && !pyq20Years) pool.push(...generateQuantPractice('mathematics-core', 150));
   if (topicId && topicId !== 'all') {
-    pool = pool.filter(q => canonical(q.topicId) === canonical(topicId));
-    if (!pyqOnly && !pyq20Years) pool.push(...generateProceduralQuestions(topicId, 150), ...generateQuantPractice(topicId, 150));
+    pool = pool.filter(q => topicIncludes(topicId, q.topicId));
+    if (!pyqOnly && !pyq20Years) pool.push(...generateProceduralQuestions(topicId, 150), ...generateQuantPractice(topicId, 150), ...generateReasoningPractice(canonical(topicId), 1000));
   }
   if (examId && examId !== 'all') {
     const exam = practiceExam(examId);
     if (!exam) return [];
-    const topics = new Set(exam.subjects.flatMap(subject => subject.chapters.flatMap(chapter => chapter.topics.map(topic => canonical(topic.id)))));
+    const topics = new Set(exam.subjects.flatMap(subject => subject.chapters.flatMap(chapter => chapter.topics.flatMap(topic => [...topicSourceIds(topic.id)]))));
     // Only syllabus topics are eligible. Shared-topic questions retain their original source labels.
     pool = pool.filter(q => topics.has(canonical(q.topicId || '')));
     if (!pyqOnly && !pyq20Years && (!topicId || topicId === 'all')) {
-      for (const id of topics) pool.push(...generateProceduralQuestions(id, 150), ...generateQuantPractice(id, 150));
+      for (const id of topics) pool.push(...generateProceduralQuestions(id, 150), ...generateQuantPractice(id, 150), ...generateReasoningPractice(id, 1000));
     }
   }
   if (pyqOnly || pyq20Years) {
