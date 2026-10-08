@@ -35,3 +35,12 @@ Mirror: https://entri.app/blog/wp-content/uploads/2022/12/SyllabusPaperB01_12_20
 6. Verify teacher identities and playback; add Punjabi videos when matched to the exact subtopic.
 
 No full-syllabus guarantee, full-paper simulation or 1,000-reviewed-question target is achieved by this batch.
+
+## Release proof
+
+- Code commit: `c81b8f188998fbac7b3121c7edb663150ec96edc`.
+- GitHub Pages workflow `37787810528`: completed successfully.
+- Render deployment `dep-db3q08jncjis73bct050`: Deploy succeeded / Live, 2m16s.
+- Live research page and `/api/health/`: HTTP 200. Live lesson rendered in Hindi and Punjabi with corrected resource labels.
+- Production preview CBT retained ETT, 20 reflection questions, Punjabi explanations, and scored two answered-correct / eighteen unattempted as 2/20 with 100% attempted accuracy.
+- Screenshot: `ett-reflection-punjabi-live.png`.
