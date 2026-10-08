@@ -28,3 +28,5 @@ Full reviewed syllabus lessons and at least 50 unique relevant questions for eve
 - Started generated practice, answered five questions, submitted and verified 5/5 marks, 100% accuracy and answer explanations. This disposable attempt remains in the local study vault.
 - Follow-up fixes make the header show Profile when signed in and route custom-note result links to Notes Practice.
 - Evidence: `cloud-ai-live.png`, `cloud-ai-results.png`, `cloud-backup-rls.png`.
+
+Final follow-up commits e7c7a83 and cadc057 deployed successfully to Pages and Render. Live browser verified Profile header, Notes Practice result links, neutral Answer explanation wording, and persisted spaced-repetition status after reload. Latest Render deployment: dep-db3gbv79e2qs7387qu5g. Proof: cloud-ai-final.png.
