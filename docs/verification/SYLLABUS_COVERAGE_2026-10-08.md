@@ -60,3 +60,7 @@ Totals: 28 missing lesson entries, 86 topic entries below 50 questions, and 11 t
 6. Target 1,000 / 2,000 / 5,000 reviewed unique questions per exam through batches. The current bank cannot supply those targets. Use the finite fresh-set workflow until enough reviewed content exists; section-balanced full official mocks require a verified blueprint and adequate questions in each section.
 
 The remaining content work is not complete. This report exposes shortages rather than claiming that finite existing data meets the requested targets.
+
+## Release verification
+
+Code commit `8a8796151d7b1a8eefbd42bc4f02cbfce3774733` deployed successfully to GitHub Pages (Actions run 37746953838) and Render. Both live coverage pages rendered the audited ETT count of 22. Render `/api/health/` returned HTTP 200 with `status: ok`. Live browser session remained authenticated. See `coverage-ett-live.png`.
