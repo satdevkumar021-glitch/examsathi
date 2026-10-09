@@ -42,3 +42,9 @@ The scanned level notes are Punjabi/English through class XII and Science/Mathem
 ## Next content work
 
 The source map is available as a provisional archive. Its **lessons and question banks are not complete**. Next work is to finish one defined subtopic at a time with actual explanations, notes, examples, three-language editions, original syllabus-relevant questions and recorded review. Primary-source comparison and revised Paper A mapping remain separate unresolved work. Do not fill unfinished topics with random shared-bank questions or describe numeric variants as distinct concept coverage.
+
+## Release verification
+
+Code commit `cc564c48cf59dcdd0bd53639da842241aa48b17b` was pushed normally to main. GitHub Pages workflow 37970621991 completed successfully. Render deployment `dep-db4iov0m7kps73c02qs0` succeeded and became Live in 2m24s. The live `/syllabus/punjab-ett/` page displays 96 headings, 26 science units, all six subject cards and 18 mathematics headings. Browser interaction verifies the Punjabi linear-equations study breakdown and mirror page-2 source link. Screenshot: `ett-mapping-punjabi-live.png`. The old `/study/punjab-ett/ett-core/` path was verified in the production static preview to guide users to the new map.
+
+The runtime-only dependency audit (`npm audit --omit=dev`) reports zero vulnerabilities. Render's full install reports five high-severity development dependency findings; these remain a separate tooling follow-up, not a runtime-clean claim for all dependencies.
