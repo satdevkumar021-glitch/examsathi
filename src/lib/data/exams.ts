@@ -1,4 +1,5 @@
 import { CTET_PRIMARY_SUBJECTS } from './ctet-primary-outline';
+import { buildEttSubjects } from './ett-syllabus';
 // ============================================================
 // ExamSathi - Authoritative Examination Database & Syllabus Tree
 // Compiled from official PSSSB, ERB Punjab, PPSC, RBSE, CBSE, and SSC sources
@@ -22,13 +23,14 @@ export interface Exam {
   color: string;
   sections: Section[];
   subjects: Subject[];
+  syllabusStatus?: 'provisional-archive';
 }
 
 export interface Section {
   name: string;
   nameHindi: string;
   marks: number;
-  questions: number;
+  questions?: number;
 }
 
 export interface Subject {
@@ -49,6 +51,8 @@ export interface Chapter {
 }
 
 export interface Topic {
+  sourcePages?: number[];
+  materialStatus?: 'pending';
   id: string;
   name: string;
   nameHindi: string;
@@ -847,89 +851,23 @@ export const PUNJAB_EXAMS: Exam[] = [
     ],
   },
 
-  // 1.5 Punjab ETT (Elementary Teacher Training)
+  // ETT 5994 Paper B reference: separate from PSTET and qualifying Paper A.
   {
-    id: 'punjab-ett',
-    state: 'punjab',
-    name: 'Punjab ETT (Elementary Teacher)',
-    nameHindi: 'पंजाब ईटीटी शिक्षक भर्ती',
-    namePunjabi: 'ਪੰਜਾਬ ਈ.ਟੀ.ਟੀ. ਅਧਿਆਪਕ ਭਰਤੀ',
-    body: 'Education Recruitment Board (ERB), Punjab',
-    level: 'Primary Teachers (Classes 1 to 5)',
-    totalMarks: 100,
-    duration: '100 Minutes',
-    negativeMarking: false,
-    officialWebsite: 'https://educationrecruitmentboard.com',
-    emoji: '🧒',
-    color: '#D97706',
+    id: 'punjab-ett', state: 'punjab', name: 'Punjab ETT — 5994 Paper B reference',
+    nameHindi: 'पंजाब ईटीटी — 5994 पेपर B संदर्भ', namePunjabi: 'ਪੰਜਾਬ ਈਟੀਟੀ — 5994 ਪੇਪਰ B ਹਵਾਲਾ',
+    body: 'Education Recruitment Board (ERB), Punjab', level: 'Archival preparation reference; upcoming notification pending',
+    totalMarks: 200, duration: '100 Minutes (archival reference)', negativeMarking: false,
+    syllabusStatus: 'provisional-archive', officialWebsite: 'https://educationrecruitmentboard.com/ETT5994/',
+    emoji: '🧒', color: '#D97706',
     sections: [
-      { name: 'Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 20, questions: 20 },
-      { name: 'Punjabi Language', nameHindi: 'पंजाबी भाषा', marks: 20, questions: 20 },
-      { name: 'Hindi Language', nameHindi: 'हिंदी भाषा', marks: 15, questions: 15 },
-      { name: 'English Language', nameHindi: 'अंग्रेजी भाषा', marks: 15, questions: 15 },
-      { name: 'Mathematics', nameHindi: 'गणित', marks: 15, questions: 15 },
-      { name: 'General Science', nameHindi: 'सामान्य विज्ञान', marks: 15, questions: 15 },
+      { name: 'Punjabi', nameHindi: 'पंजाबी', marks: 40 },
+      { name: 'General Science', nameHindi: 'सामान्य विज्ञान', marks: 40 },
+      { name: 'Mathematics', nameHindi: 'गणित', marks: 40 },
+      { name: 'Social Science', nameHindi: 'सामाजिक विज्ञान', marks: 40 },
+      { name: 'English', nameHindi: 'अंग्रेज़ी', marks: 20 },
+      { name: 'Hindi', nameHindi: 'हिंदी', marks: 20 },
     ],
-    subjects: [
-      {
-        id: 'ett-core',
-        name: 'ETT Curriculum',
-        nameHindi: 'ईटीटी पाठ्यक्रम',
-        namePunjabi: 'ਈ.ਟੀ.ਟੀ. ਪਾਠਕ੍ਰਮ',
-        emoji: '📚',
-        chapters: [
-          {
-            id: 'ett-foundation',
-            name: 'Foundational Pedagogy & Subjects',
-            nameHindi: 'बुनियादी शिक्षाशास्त्र व विषय',
-            namePunjabi: 'ਮੁੱਢਲੀ ਸਿੱਖਿਆ',
-            topics: [
-              {
-                id: 'ett-light-reflection',
-                name: 'Light: reflection and plane mirrors',
-                nameHindi: 'प्रकाश: परावर्तन और समतल दर्पण',
-                namePunjabi: 'ਪ੍ਰਕਾਸ਼: ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ',
-                subtopics: ['Reflection laws', 'Normal and angle measurement', 'Plane-mirror images', 'Regular and diffuse reflection'],
-                examQuestions: 'Weightage not specified',
-                difficulty: 'medium',
-              },
-              {
-                id: 'child-development-pedagogy',
-                name: 'Child Development, Piaget, Vygotsky & RTE 2009',
-                nameHindi: 'बाल विकास, पियाजे, वाइगोत्स्की व RTE 2009',
-                namePunjabi: 'ਬਾਲ ਵਿਕਾਸ ਤੇ ਸਿੱਖਿਆ ਸ਼ਾਸਤਰ',
-                subtopics: [
-                  'Piaget 4 cognitive stages: Sensorimotor, Preoperational, Concrete, Formal operational',
-                  'Vygotsky ZPD, Scaffolding, and Social Interaction theory',
-                  'Learning disabilities: Dyslexia, Dysgraphia, Dyscalculia',
-                  'RTE Act 2009: 1 April 2010 enforcement, 6-14 years free education, 30:1 PTR',
-                ],
-                examQuestions: '20',
-                difficulty: 'medium',
-              },
-              {
-                id: 'punjabi-paper-a',
-                name: 'Punjabi Language & Grammar',
-                nameHindi: 'पंजाबी भाषा एवं व्याकरण',
-                namePunjabi: 'ਪੰਜਾਬੀ ਭਾਸ਼ਾ',
-                subtopics: ['Gurmukhi alphabet, Lagaan, Lagaakhar, Nouns, Pronouns, Proverbs'],
-                examQuestions: '20',
-                difficulty: 'easy',
-              },
-              {
-                id: 'biology-concepts',
-                name: 'EVS & Basic Biology for Primary Teachers',
-                nameHindi: 'पर्यावरण व मूल जीव विज्ञान',
-                namePunjabi: 'ਵਾਤਾਵਰਣ ਤੇ ਬਾਇਓਲੋਜੀ',
-                subtopics: ['Plant and animal cells, Human body systems, Nutrition, Photosynthesis'],
-                examQuestions: '15',
-                difficulty: 'easy',
-              },
-            ],
-          },
-        ],
-      },
-    ],
+    subjects: buildEttSubjects(),
   },
 ];
 

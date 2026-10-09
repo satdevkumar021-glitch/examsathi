@@ -1,9 +1,13 @@
+import subjectMap from './ett-subject-map.json';
+import type { Subject, Topic } from './exams';
 /** Archival research, not certification of the next recruitment's syllabus. */
 export const ETT_SYLLABUS_REFERENCE = {
   recruitment: '5994 posts',
   paper: 'Paper B',
-  version: '1 December 2022 archival document',
-  checkedOn: '2026-10-08',
+  version: 'Archival filename dated 1 December 2022',
+  checkedOn: '2026-10-09',
+  scanSha256: 'f88a56067d11e63db9acdec68d027fba21f6aa8b6b47478fff9e80beafd29bcd',
+  transcriptionMethod: 'Visual inspection of all four scanned pages',
   status: 'publisher-unreachable' as const,
   publisher: 'https://educationrecruitmentboard.com/ETT5994/',
   mirror: 'https://entri.app/blog/wp-content/uploads/2022/12/SyllabusPaperB01_12_2022.pdf',
@@ -11,12 +15,12 @@ export const ETT_SYLLABUS_REFERENCE = {
 };
 
 export const ETT_REFERENCE_SUBJECTS = [
-  { name: 'Punjabi', hi: 'पंजाबी', pa: 'ਪੰਜਾਬੀ', marks: 40, status: 'Gurmukhi transcription and topic mapping pending' },
-  { name: 'General Science', hi: 'सामान्य विज्ञान', pa: 'ਆਮ ਵਿਗਿਆਨ', marks: 40, status: '25 units transcribed from the English headings; detailed teaching breakdown below' },
-  { name: 'Mathematics', hi: 'गणित', pa: 'ਗਣਿਤ', marks: 40, status: 'Gurmukhi transcription and topic mapping pending' },
-  { name: 'Social Science', hi: 'सामाजिक विज्ञान', pa: 'ਸਮਾਜਿਕ ਵਿਗਿਆਨ', marks: 40, status: 'Gurmukhi transcription and topic mapping pending' },
-  { name: 'English', hi: 'अंग्रेज़ी', pa: 'ਅੰਗਰੇਜ਼ੀ', marks: 20, status: 'Passage comprehension; grammar; vocabulary; Punjabi ↔ English translation. Detailed mapping pending' },
-  { name: 'Hindi', hi: 'हिंदी', pa: 'ਹਿੰਦੀ', marks: 20, status: 'Grammar headings visible; full transcription and detailed mapping pending' },
+  { name: 'Punjabi', hi: 'पंजाबी', pa: 'ਪੰਜਾਬੀ', marks: 40, status: 'Archival headings mapped; detailed teaching material pending' },
+  { name: 'General Science', hi: 'सामान्य विज्ञान', pa: 'ਆਮ ਵਿਗਿਆਨ', marks: 40, status: 'Archival headings mapped; detailed teaching material pending' },
+  { name: 'Mathematics', hi: 'गणित', pa: 'ਗਣਿਤ', marks: 40, status: 'Archival headings mapped; detailed teaching material pending' },
+  { name: 'Social Science', hi: 'सामाजिक विज्ञान', pa: 'ਸਮਾਜਿਕ ਵਿਗਿਆਨ', marks: 40, status: 'Archival headings mapped; detailed teaching material pending' },
+  { name: 'English', hi: 'अंग्रेज़ी', pa: 'ਅੰਗਰੇਜ਼ੀ', marks: 20, status: 'Archival headings mapped; detailed teaching material pending' },
+  { name: 'Hindi', hi: 'हिंदी', pa: 'ਹਿੰਦੀ', marks: 20, status: 'Archival headings mapped; detailed teaching material pending' },
 ] as const;
 
 // Unit names follow the archive. Subtopics are our teaching breakdown, not official wording.
@@ -24,6 +28,7 @@ export const ETT_SCIENCE_UNITS = [
   ['motion', 'Motion', 'गति', 'ਗਤੀ', ['Distance and displacement', 'Speed and velocity', 'Acceleration', 'Distance–time and velocity–time graphs']],
   ['force', 'Force and laws of motion', 'बल और गति के नियम', 'ਬਲ ਅਤੇ ਗਤੀ ਦੇ ਨਿਯਮ', ['Inertia', 'Newton’s laws', 'Momentum', 'Conservation of momentum']],
   ['gravitation', 'Gravitation', 'गुरुत्वाकर्षण', 'ਗੁਰੁਤਵਾਕਰਸ਼ਣ', ['Universal gravitation', 'Free fall', 'Mass and weight', 'Buoyancy and Archimedes’ principle']],
+  ['work-energy', 'Work and energy', 'कार्य और ऊर्जा', 'ਕੰਮ ਅਤੇ ਊਰਜਾ', ['Work done by a force', 'Kinetic and potential energy', 'Conservation of energy', 'Power and units']],
   ['sound', 'Sound', 'ध्वनि', 'ਧੁਨੀ', ['Wave propagation', 'Frequency and pitch', 'Amplitude and loudness', 'Echo and ultrasound']],
   ['light', 'Light reflection and refraction', 'प्रकाश: परावर्तन और अपवर्तन', 'ਪ੍ਰਕਾਸ਼: ਪਰਾਵਰਤਨ ਅਤੇ ਅਪਵਰਤਨ', ['Reflection and plane mirrors', 'Spherical mirrors and ray diagrams', 'Mirror formula and sign convention', 'Refraction and refractive index', 'Lenses, lens formula and power']],
   ['electricity', 'Electricity', 'विद्युत', 'ਬਿਜਲੀ', ['Current and potential difference', 'Ohm’s law and resistance', 'Series and parallel circuits', 'Heating effect and electric power']],
@@ -47,3 +52,46 @@ export const ETT_SCIENCE_UNITS = [
   ['heredity', 'Heredity and evolution', 'आनुवंशिकता और विकास', 'ਵਿਰਾਸਤ ਅਤੇ ਵਿਕਾਸ', ['Inherited variation', 'Mendelian inheritance', 'Sex determination', 'Evolution and speciation']],
   ['eye', 'The human eye and colourful world', 'मानव नेत्र और रंगबिरंगा संसार', 'ਮਨੁੱਖੀ ਅੱਖ ਅਤੇ ਰੰਗੀਨ ਸੰਸਾਰ', ['Eye and accommodation', 'Vision defects', 'Prism and dispersion', 'Scattering of light']],
 ] as const;
+
+export const ETT_MAPPED_GROUPS = subjectMap;
+export const ETT_ARCHIVAL_HEADING_COUNT = subjectMap.reduce<number>((total, group) => total + group.units.length, ETT_SCIENCE_UNITS.length);
+
+/** Only explicitly mapped unit IDs supply ETT practice; no generic TET fallback. */
+const LIGHT_NAMES = [
+  ['परावर्तन और समतल दर्पण', 'ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ'],
+  ['गोलीय दर्पण और किरण आरेख', 'ਗੋਲੀ ਦਰਪਣ ਅਤੇ ਕਿਰਨ ਚਿੱਤਰ'],
+  ['दर्पण सूत्र और चिह्न परिपाटी', 'ਦਰਪਣ ਸੂਤਰ ਅਤੇ ਚਿੰਨ੍ਹ ਰਵਾਇਤ'],
+  ['अपवर्तन और अपवर्तनांक', 'ਅਪਵਰਤਨ ਅਤੇ ਅਪਵਰਤਨ ਅੰਕ'],
+  ['लेंस, लेंस सूत्र और क्षमता', 'ਲੈਂਸ, ਲੈਂਸ ਸੂਤਰ ਅਤੇ ਸ਼ਕਤੀ'],
+];
+export function buildEttSubjects(): Subject[] {
+  const result: Subject[] = [];
+  for (const subject of ETT_REFERENCE_SUBJECTS) {
+    const groups = subject.name === 'Social Science' ? subjectMap.filter(group => group.id.startsWith('sst-'))
+      : subjectMap.filter(group => group.id === (subject.name === 'Mathematics' ? 'math' : subject.name.toLowerCase()));
+    if (subject.name === 'General Science') {
+      result.push({ id: 'ett-science', name: subject.name, nameHindi: subject.hi, namePunjabi: subject.pa, emoji: '🔬',
+        chapters: ETT_SCIENCE_UNITS.map(([id, en, hi, pa, subtopics]) => ({
+          id: `ett-science-${id}`, name: en, nameHindi: hi, namePunjabi: pa,
+          topics: id === 'light' ? subtopics.map((name, index): Topic => ({
+            id: index === 0 ? 'ett-light-reflection' : `ett-light-${index + 1}`,
+            name, nameHindi: LIGHT_NAMES[index][0], namePunjabi: LIGHT_NAMES[index][1],
+            subtopics: [], sourcePages: [1], materialStatus: index === 0 ? undefined : 'pending',
+            examQuestions: 'Not assigned by the archive', difficulty: 'medium',
+          })) : [{ id: `ett-science-${id}`, name: en, nameHindi: hi, namePunjabi: pa,
+            subtopics: [...subtopics], sourcePages: [id === 'eye' ? 2 : 1], materialStatus: 'pending',
+            examQuestions: 'Not assigned by the archive', difficulty: 'medium' }],
+        })),
+      });
+    } else {
+      result.push({ id: `ett-${subject.name.toLowerCase().replaceAll(' ', '-')}`, name: subject.name, nameHindi: subject.hi, namePunjabi: subject.pa, emoji: '📚',
+        chapters: groups.map(group => ({ id: `ett-${group.id}`, name: group.title.en, nameHindi: group.title.hi, namePunjabi: group.title.pa,
+          topics: group.units.map((unit): Topic => ({ id: unit.id, name: unit.title.en, nameHindi: unit.title.hi, namePunjabi: unit.title.pa,
+            subtopics: [...unit.studyTopics.en], sourcePages: [unit.sourcePage], materialStatus: 'pending',
+            examQuestions: 'Not assigned by the archive', difficulty: 'medium' })),
+        })),
+      });
+    }
+  }
+  return result;
+}

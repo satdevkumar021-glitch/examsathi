@@ -1,0 +1,1522 @@
+[
+  {
+    "id": "punjabi",
+    "title": {
+      "en": "Punjabi",
+      "hi": "पंजाबी",
+      "pa": "ਪੰਜਾਬੀ"
+    },
+    "sourcePage": 1,
+    "units": [
+      {
+        "id": "ett-punjabi-1",
+        "title": {
+          "en": "Folk literature",
+          "hi": "लोक साहित्य",
+          "pa": "ਲੋਕ ਸਾਹਿਤ"
+        },
+        "sourcePage": 1,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Folk songs and oral stories",
+            "Forms and themes of folk literature"
+          ],
+          "hi": [
+            "लोकगीत और मौखिक कथाएँ",
+            "लोक साहित्य के रूप और विषय"
+          ],
+          "pa": [
+            "ਲੋਕ ਗੀਤ ਅਤੇ ਮੌਖਿਕ ਕਹਾਣੀਆਂ",
+            "ਲੋਕ ਸਾਹਿਤ ਦੇ ਰੂਪ ਅਤੇ ਵਿਸ਼ੇ"
+          ]
+        }
+      },
+      {
+        "id": "ett-punjabi-2",
+        "title": {
+          "en": "Punjabi cultural traditions",
+          "hi": "पंजाबी सांस्कृतिक परंपराएँ",
+          "pa": "ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ"
+        },
+        "sourcePage": 1,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Customs and festivals",
+            "Traditional life and cultural vocabulary"
+          ],
+          "hi": [
+            "रीति-रिवाज और त्योहार",
+            "परंपरागत जीवन और सांस्कृतिक शब्दावली"
+          ],
+          "pa": [
+            "ਰੀਤੀ-ਰਿਵਾਜ ਅਤੇ ਤਿਉਹਾਰ",
+            "ਰਵਾਇਤੀ ਜੀਵਨ ਅਤੇ ਸੱਭਿਆਚਾਰਕ ਸ਼ਬਦਾਵਲੀ"
+          ]
+        }
+      },
+      {
+        "id": "ett-punjabi-3",
+        "title": {
+          "en": "Idiomatic and proverbial usage",
+          "hi": "मुहावरे और कहावतों का प्रयोग",
+          "pa": "ਮੁਹਾਵਰਿਆਂ ਅਤੇ ਅਖਾਣਾਂ ਦੀ ਵਰਤੋਂ"
+        },
+        "sourcePage": 1,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Meaning in context",
+            "Appropriate use in a sentence"
+          ],
+          "hi": [
+            "प्रसंग में अर्थ",
+            "वाक्य में उपयुक्त प्रयोग"
+          ],
+          "pa": [
+            "ਪ੍ਰਸੰਗ ਵਿੱਚ ਅਰਥ",
+            "ਵਾਕ ਵਿੱਚ ਢੁਕਵੀਂ ਵਰਤੋਂ"
+          ]
+        }
+      },
+      {
+        "id": "ett-punjabi-4",
+        "title": {
+          "en": "Rendering English into Punjabi",
+          "hi": "अंग्रेज़ी से पंजाबी अनुवाद",
+          "pa": "ਅੰਗਰੇਜ਼ੀ ਤੋਂ ਪੰਜਾਬੀ ਅਨੁਵਾਦ"
+        },
+        "sourcePage": 1,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Preserving meaning",
+            "Word order and grammatical agreement"
+          ],
+          "hi": [
+            "अर्थ बनाए रखना",
+            "शब्द क्रम और व्याकरणिक अन्विति"
+          ],
+          "pa": [
+            "ਅਰਥ ਕਾਇਮ ਰੱਖਣਾ",
+            "ਸ਼ਬਦ ਕ੍ਰਮ ਅਤੇ ਵਿਆਕਰਨਿਕ ਮੇਲ"
+          ]
+        }
+      },
+      {
+        "id": "ett-punjabi-5",
+        "title": {
+          "en": "Rewriting sentences",
+          "hi": "वाक्य रूपांतरण",
+          "pa": "ਵਾਕ ਰੂਪਾਂਤਰਣ"
+        },
+        "sourcePage": 1,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Changing sentence structure",
+            "Retaining the original meaning"
+          ],
+          "hi": [
+            "वाक्य की संरचना बदलना",
+            "मूल अर्थ बनाए रखना"
+          ],
+          "pa": [
+            "ਵਾਕ ਦੀ ਬਣਤਰ ਬਦਲਣਾ",
+            "ਮੂਲ ਅਰਥ ਕਾਇਮ ਰੱਖਣਾ"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "math",
+    "title": {
+      "en": "Mathematics",
+      "hi": "गणित",
+      "pa": "ਗਣਿਤ"
+    },
+    "sourcePage": 2,
+    "units": [
+      {
+        "id": "ett-math-1",
+        "title": {
+          "en": "Number systems and their properties",
+          "hi": "संख्या पद्धतियाँ और गुण",
+          "pa": "ਸੰਖਿਆ ਪ੍ਰਣਾਲੀਆਂ ਅਤੇ ਗੁਣ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Rational and irrational numbers",
+            "Representation on a number line"
+          ],
+          "hi": [
+            "परिमेय और अपरिमेय संख्याएँ",
+            "संख्या रेखा पर निरूपण"
+          ],
+          "pa": [
+            "ਪਰਿਮੇਯ ਅਤੇ ਅਪਰਿਮੇਯ ਸੰਖਿਆਵਾਂ",
+            "ਸੰਖਿਆ ਰੇਖਾ ਉੱਤੇ ਦਰਸਾਉਣਾ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-2",
+        "title": {
+          "en": "Working with real numbers",
+          "hi": "वास्तविक संख्याओं पर संक्रियाएँ",
+          "pa": "ਵਾਸਤਵਿਕ ਸੰਖਿਆਵਾਂ ਨਾਲ ਕਿਰਿਆਵਾਂ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Divisibility and prime factorisation",
+            "HCF and LCM"
+          ],
+          "hi": [
+            "विभाज्यता और अभाज्य गुणनखंड",
+            "महत्तम समापवर्तक और लघुत्तम समापवर्त्य"
+          ],
+          "pa": [
+            "ਵੰਡਯੋਗਤਾ ਅਤੇ ਅਭਾਜ ਗੁਣਨਖੰਡ",
+            "ਸਭ ਤੋਂ ਵੱਡਾ ਸਾਂਝਾ ਭਾਜਕ ਅਤੇ ਸਭ ਤੋਂ ਛੋਟਾ ਸਾਂਝਾ ਗੁਣਜ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-3",
+        "title": {
+          "en": "Polynomial expressions",
+          "hi": "बहुपद व्यंजक",
+          "pa": "ਬਹੁਪਦੀ ਬੀਜਗਣਿਤਕ ਵਿਅੰਜਕ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Degree and zeros",
+            "Factorisation and relationships with coefficients"
+          ],
+          "hi": [
+            "घात और शून्यक",
+            "गुणनखंड और गुणांकों से संबंध"
+          ],
+          "pa": [
+            "ਘਾਤ ਅਤੇ ਸਿਫ਼ਰਕ",
+            "ਗੁਣਨਖੰਡ ਅਤੇ ਗੁਣਾਂਕਾਂ ਨਾਲ ਸੰਬੰਧ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-4",
+        "title": {
+          "en": "Linear equations in two variables, including simultaneous pairs",
+          "hi": "दो चरों के रैखिक समीकरण और युग्म",
+          "pa": "ਦੋ ਚਲਾਂ ਦੀਆਂ ਰੇਖੀ ਸਮੀਕਰਨਾਂ ਅਤੇ ਜੋੜੇ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Graphical solutions",
+            "Substitution and elimination"
+          ],
+          "hi": [
+            "आलेखीय हल",
+            "प्रतिस्थापन और विलोपन"
+          ],
+          "pa": [
+            "ਗ੍ਰਾਫ਼ ਰਾਹੀਂ ਹੱਲ",
+            "ਬਦਲ ਅਤੇ ਖ਼ਾਤਮਾ ਵਿਧੀ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-5",
+        "title": {
+          "en": "Solving quadratic equations",
+          "hi": "द्विघात समीकरण हल करना",
+          "pa": "ਦੋ ਘਾਤੀ ਸਮੀਕਰਨਾਂ ਹੱਲ ਕਰਨਾ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Factorisation and quadratic formula",
+            "Discriminant and nature of roots"
+          ],
+          "hi": [
+            "गुणनखंड और द्विघात सूत्र",
+            "विविक्तकर और मूलों की प्रकृति"
+          ],
+          "pa": [
+            "ਗੁਣਨਖੰਡ ਅਤੇ ਦੋ ਘਾਤੀ ਸੂਤਰ",
+            "ਵਿਵੇਚਕ ਅਤੇ ਮੂਲਾਂ ਦੀ ਕਿਸਮ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-6",
+        "title": {
+          "en": "Arithmetic sequences",
+          "hi": "समांतर श्रेणियाँ",
+          "pa": "ਅੰਕਗਣਿਤਕ ਲੜੀਆਂ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Common difference and nth term",
+            "Sum of first n terms"
+          ],
+          "hi": [
+            "सार्व अंतर और nवाँ पद",
+            "पहले n पदों का योग"
+          ],
+          "pa": [
+            "ਸਾਂਝਾ ਅੰਤਰ ਅਤੇ nਵਾਂ ਪਦ",
+            "ਪਹਿਲੇ n ਪਦਾਂ ਦਾ ਜੋੜ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-7",
+        "title": {
+          "en": "Euclidean geometry foundations",
+          "hi": "यूक्लिडीय ज्यामिति के आधार",
+          "pa": "ਯੂਕਲਿਡੀ ਜਿਆਮਿਤੀ ਦੇ ਆਧਾਰ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Definitions and axioms",
+            "Reasoning from postulates"
+          ],
+          "hi": [
+            "परिभाषाएँ और अभिगृहीत",
+            "अभिधारणाओं से तर्क"
+          ],
+          "pa": [
+            "ਪਰਿਭਾਸ਼ਾਵਾਂ ਅਤੇ ਅਕਸੀਓਮ",
+            "ਮਾਨਤਾਵਾਂ ਤੋਂ ਤਰਕ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-8",
+        "title": {
+          "en": "Angles formed by lines",
+          "hi": "रेखाओं से बने कोण",
+          "pa": "ਰੇਖਾਵਾਂ ਨਾਲ ਬਣਦੇ ਕੋਣ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Parallel lines and transversals",
+            "Angle relationships"
+          ],
+          "hi": [
+            "समांतर रेखाएँ और तिर्यक रेखा",
+            "कोणों के संबंध"
+          ],
+          "pa": [
+            "ਸਮਾਂਤਰ ਰੇਖਾਵਾਂ ਅਤੇ ਕਾਟਵੀਂ ਰੇਖਾ",
+            "ਕੋਣਾਂ ਦੇ ਸੰਬੰਧ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-9",
+        "title": {
+          "en": "Properties of triangles, quadrilaterals and circles",
+          "hi": "त्रिभुज, चतुर्भुज और वृत्त के गुण",
+          "pa": "ਤਿਕੋਣਾਂ, ਚਤੁਰਭੁਜਾਂ ਅਤੇ ਚੱਕਰਾਂ ਦੇ ਗੁਣ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Congruence and similarity",
+            "Quadrilateral and circle properties"
+          ],
+          "hi": [
+            "सर्वांगसमता और समरूपता",
+            "चतुर्भुज और वृत्त के गुण"
+          ],
+          "pa": [
+            "ਸਰਬਾਂਗਸਮਤਾ ਅਤੇ ਸਮਰੂਪਤਾ",
+            "ਚਤੁਰਭੁਜ ਅਤੇ ਚੱਕਰ ਦੇ ਗੁਣ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-10",
+        "title": {
+          "en": "Areas of triangular and quadrilateral figures",
+          "hi": "त्रिभुजाकार और चतुर्भुजाकार आकृतियों के क्षेत्रफल",
+          "pa": "ਤਿਕੋਣੀ ਅਤੇ ਚਤੁਰਭੁਜੀ ਆਕਾਰਾਂ ਦੇ ਖੇਤਰਫਲ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Equal-area figures",
+            "Base and height relationships"
+          ],
+          "hi": [
+            "समान क्षेत्रफल वाली आकृतियाँ",
+            "आधार और ऊँचाई के संबंध"
+          ],
+          "pa": [
+            "ਬਰਾਬਰ ਖੇਤਰਫਲ ਵਾਲੇ ਆਕਾਰ",
+            "ਆਧਾਰ ਅਤੇ ਉਚਾਈ ਦੇ ਸੰਬੰਧ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-11",
+        "title": {
+          "en": "Geometry with coordinates",
+          "hi": "निर्देशांक द्वारा ज्यामिति",
+          "pa": "ਨਿਰਦੇਸ਼ ਅੰਕਾਂ ਨਾਲ ਜਿਆਮਿਤੀ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Distance and section formulae",
+            "Area using coordinates"
+          ],
+          "hi": [
+            "दूरी और विभाजन सूत्र",
+            "निर्देशांक से क्षेत्रफल"
+          ],
+          "pa": [
+            "ਦੂਰੀ ਅਤੇ ਵੰਡ ਸੂਤਰ",
+            "ਨਿਰਦੇਸ਼ ਅੰਕਾਂ ਨਾਲ ਖੇਤਰਫਲ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-12",
+        "title": {
+          "en": "Trigonometric ratios and applications",
+          "hi": "त्रिकोणमितीय अनुपात और उपयोग",
+          "pa": "ਤ੍ਰਿਕੋਣਮਿਤੀ ਦੇ ਅਨੁਪਾਤ ਅਤੇ ਵਰਤੋਂ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Ratios and identities",
+            "Heights and distances"
+          ],
+          "hi": [
+            "अनुपात और सर्वसमिकाएँ",
+            "ऊँचाई और दूरी"
+          ],
+          "pa": [
+            "ਅਨੁਪਾਤ ਅਤੇ ਪਛਾਣਾਂ",
+            "ਉਚਾਈ ਅਤੇ ਦੂਰੀ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-13",
+        "title": {
+          "en": "Geometric constructions",
+          "hi": "ज्यामितीय रचनाएँ",
+          "pa": "ਜਿਆਮਿਤੀ ਰਚਨਾਵਾਂ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Constructing similar figures",
+            "Tangents to a circle"
+          ],
+          "hi": [
+            "समरूप आकृतियों की रचना",
+            "वृत्त की स्पर्शरेखाएँ"
+          ],
+          "pa": [
+            "ਸਮਰੂਪ ਆਕਾਰ ਬਣਾਉਣਾ",
+            "ਚੱਕਰ ਦੀਆਂ ਸਪਰਸ਼ ਰੇਖਾਵਾਂ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-14",
+        "title": {
+          "en": "Heron-based triangle area",
+          "hi": "हीरोन विधि से त्रिभुज का क्षेत्रफल",
+          "pa": "ਹੀਰੋਨ ਵਿਧੀ ਨਾਲ ਤਿਕੋਣ ਦਾ ਖੇਤਰਫਲ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Semiperimeter",
+            "Area from three side lengths"
+          ],
+          "hi": [
+            "अर्धपरिमाप",
+            "तीन भुजाओं से क्षेत्रफल"
+          ],
+          "pa": [
+            "ਅੱਧਾ ਘੇਰਾ",
+            "ਤਿੰਨ ਭੁਜਾਵਾਂ ਤੋਂ ਖੇਤਰਫਲ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-15",
+        "title": {
+          "en": "Solid surface measurement and volume",
+          "hi": "ठोसों का पृष्ठीय क्षेत्रफल और आयतन",
+          "pa": "ਠੋਸਾਂ ਦਾ ਸਤ੍ਹਾ ਖੇਤਰਫਲ ਅਤੇ ਆਇਤਨ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Surface areas of solids",
+            "Volumes and combined solids"
+          ],
+          "hi": [
+            "ठोसों के पृष्ठीय क्षेत्रफल",
+            "आयतन और संयुक्त ठोस"
+          ],
+          "pa": [
+            "ਠੋਸਾਂ ਦੇ ਸਤ੍ਹਾ ਖੇਤਰਫਲ",
+            "ਆਇਤਨ ਅਤੇ ਮਿਲੇ ਹੋਏ ਠੋਸ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-16",
+        "title": {
+          "en": "Area involving circular regions",
+          "hi": "वृत्तीय भागों का क्षेत्रफल",
+          "pa": "ਚੱਕਰਾਂ ਵਾਲੇ ਭਾਗਾਂ ਦੇ ਖੇਤਰਫਲ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Sectors and segments",
+            "Combined plane regions"
+          ],
+          "hi": [
+            "त्रिज्यखंड और वृत्तखंड",
+            "संयुक्त समतलीय क्षेत्र"
+          ],
+          "pa": [
+            "ਤ੍ਰਿਜ ਖੰਡ ਅਤੇ ਚੱਕਰ ਖੰਡ",
+            "ਮਿਲੇ ਹੋਏ ਸਮਤਲ ਖੇਤਰ"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-17",
+        "title": {
+          "en": "Interpreting statistical data",
+          "hi": "सांख्यिकीय आँकड़ों की व्याख्या",
+          "pa": "ਅੰਕੜਿਆਂ ਦੀ ਵਿਆਖਿਆ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Mean, median and mode",
+            "Grouped data and graphs"
+          ],
+          "hi": [
+            "माध्य, माध्यिका और बहुलक",
+            "वर्गीकृत आँकड़े और आलेख"
+          ],
+          "pa": [
+            "ਔਸਤ, ਮੱਧਮਾਨ ਅਤੇ ਬਹੁਲਕ",
+            "ਸਮੂਹਬੱਧ ਅੰਕੜੇ ਅਤੇ ਗ੍ਰਾਫ਼"
+          ]
+        }
+      },
+      {
+        "id": "ett-math-18",
+        "title": {
+          "en": "Calculating probability",
+          "hi": "प्रायिकता की गणना",
+          "pa": "ਸੰਭਾਵਨਾ ਦੀ ਗਣਨਾ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Sample spaces and events",
+            "Simple probability calculations"
+          ],
+          "hi": [
+            "प्रतिदर्श समष्टि और घटनाएँ",
+            "सरल प्रायिकता गणना"
+          ],
+          "pa": [
+            "ਨਮੂਨਾ ਸਮੂਹ ਅਤੇ ਘਟਨਾਵਾਂ",
+            "ਸਰਲ ਸੰਭਾਵਨਾ ਦੀ ਗਣਨਾ"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "sst-geography",
+    "title": {
+      "en": "Social Science → Geography",
+      "hi": "सामाजिक विज्ञान → भूगोल",
+      "pa": "ਸਮਾਜਿਕ ਵਿਗਿਆਨ → ਭੂਗੋਲ"
+    },
+    "sourcePage": 2,
+    "units": [
+      {
+        "id": "ett-sst-geography-1",
+        "title": {
+          "en": "India: location and overview",
+          "hi": "भारत: स्थिति और परिचय",
+          "pa": "ਭਾਰਤ: ਸਥਿਤੀ ਅਤੇ ਜਾਣ-ਪਛਾਣ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-geography-2",
+        "title": {
+          "en": "India’s landforms",
+          "hi": "भारत की स्थलाकृतियाँ",
+          "pa": "ਭਾਰਤ ਦੇ ਧਰਾਤਲੀ ਰੂਪ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-geography-3",
+        "title": {
+          "en": "Climate patterns",
+          "hi": "जलवायु के स्वरूप",
+          "pa": "ਜਲਵਾਯੂ ਦੇ ਰੂਪ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-geography-4",
+        "title": {
+          "en": "Vegetation, wildlife and soils",
+          "hi": "वनस्पति, वन्यजीव और मिट्टियाँ",
+          "pa": "ਬਨਸਪਤੀ, ਜੀਵ-ਜੰਤੂ ਅਤੇ ਮਿੱਟੀਆਂ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-geography-5",
+        "title": {
+          "en": "Land use and agricultural activities",
+          "hi": "भूमि उपयोग और कृषि गतिविधियाँ",
+          "pa": "ਭੂਮੀ ਦੀ ਵਰਤੋਂ ਅਤੇ ਖੇਤੀਬਾੜੀ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-geography-6",
+        "title": {
+          "en": "Mineral resources and energy",
+          "hi": "खनिज संसाधन और ऊर्जा",
+          "pa": "ਖਣਿਜ ਸਰੋਤ ਅਤੇ ਊਰਜਾ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-geography-7",
+        "title": {
+          "en": "Population patterns",
+          "hi": "जनसंख्या के स्वरूप",
+          "pa": "ਜਨਸੰਖਿਆ ਦੇ ਰੂਪ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-geography-8",
+        "title": {
+          "en": "Punjab: terrain, drainage, climate, soils and farming",
+          "hi": "पंजाब: स्थलाकृति, जलतंत्र, जलवायु, मिट्टी और कृषि",
+          "pa": "ਪੰਜਾਬ: ਧਰਾਤਲ, ਜਲ-ਤੰਤਰ, ਜਲਵਾਯੂ, ਮਿੱਟੀ ਅਤੇ ਖੇਤੀਬਾੜੀ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "sst-economics",
+    "title": {
+      "en": "Social Science → Economics",
+      "hi": "सामाजिक विज्ञान → अर्थशास्त्र",
+      "pa": "ਸਮਾਜਿਕ ਵਿਗਿਆਨ → ਅਰਥਸ਼ਾਸਤਰ"
+    },
+    "sourcePage": 2,
+    "units": [
+      {
+        "id": "ett-sst-economics-1",
+        "title": {
+          "en": "Economic foundations",
+          "hi": "आर्थिक आधारभूत अवधारणाएँ",
+          "pa": "ਆਰਥਿਕ ਮੁੱਢਲੀਆਂ ਧਾਰਨਾਵਾਂ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-economics-2",
+        "title": {
+          "en": "India’s economic framework",
+          "hi": "भारतीय अर्थव्यवस्था की आधारभूत संरचना",
+          "pa": "ਭਾਰਤੀ ਅਰਥਵਿਵਸਥਾ ਦੀ ਮੁੱਢਲੀ ਬਣਤਰ"
+        },
+        "sourcePage": 2,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-economics-3",
+        "title": {
+          "en": "Agricultural development in India",
+          "hi": "भारत में कृषि विकास",
+          "pa": "ਭਾਰਤ ਵਿੱਚ ਖੇਤੀਬਾੜੀ ਦਾ ਵਿਕਾਸ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-economics-4",
+        "title": {
+          "en": "Industrial development in India",
+          "hi": "भारत में औद्योगिक विकास",
+          "pa": "ਭਾਰਤ ਵਿੱਚ ਉਦਯੋਗਿਕ ਵਿਕਾਸ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "sst-history",
+    "title": {
+      "en": "Social Science → Punjab History",
+      "hi": "सामाजिक विज्ञान → पंजाब का इतिहास",
+      "pa": "ਸਮਾਜਿਕ ਵਿਗਿਆਨ → ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ"
+    },
+    "sourcePage": 3,
+    "units": [
+      {
+        "id": "ett-sst-history-1",
+        "title": {
+          "en": "Geography’s influence on Punjab’s past",
+          "hi": "पंजाब के इतिहास पर भौगोलिक प्रभाव",
+          "pa": "ਪੰਜਾਬ ਦੇ ਇਤਿਹਾਸ ਉੱਤੇ ਭੂਗੋਲ ਦਾ ਪ੍ਰਭਾਵ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-history-2",
+        "title": {
+          "en": "Punjab’s society and politics before Guru Nanak",
+          "hi": "गुरु नानक से पहले पंजाब की सामाजिक और राजनीतिक स्थिति",
+          "pa": "ਗੁਰੂ ਨਾਨਕ ਤੋਂ ਪਹਿਲਾਂ ਪੰਜਾਬ ਦੀ ਸਮਾਜਿਕ ਅਤੇ ਰਾਜਨੀਤਿਕ ਹਾਲਤ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-history-3",
+        "title": {
+          "en": "Guru Nanak’s life and teachings",
+          "hi": "गुरु नानक का जीवन और शिक्षाएँ",
+          "pa": "ਗੁਰੂ ਨਾਨਕ ਦਾ ਜੀਵਨ ਅਤੇ ਸਿੱਖਿਆਵਾਂ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-history-4",
+        "title": {
+          "en": "Contributions of the Gurus from Guru Angad to Guru Tegh Bahadur",
+          "hi": "गुरु अंगद से गुरु तेग बहादुर तक गुरुओं का योगदान",
+          "pa": "ਗੁਰੂ ਅੰਗਦ ਤੋਂ ਗੁਰੂ ਤੇਗ ਬਹਾਦਰ ਤੱਕ ਗੁਰੂਆਂ ਦਾ ਯੋਗਦਾਨ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-history-5",
+        "title": {
+          "en": "Guru Gobind Singh, the Khalsa and its significance",
+          "hi": "गुरु गोबिंद सिंह, खालसा और उसका महत्व",
+          "pa": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ, ਖਾਲਸਾ ਅਤੇ ਇਸ ਦੀ ਮਹੱਤਤਾ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-history-6",
+        "title": {
+          "en": "Banda Singh Bahadur and the Sikh Misls",
+          "hi": "बंदा सिंह बहादुर और सिख मिसलें",
+          "pa": "ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਅਤੇ ਸਿੱਖ ਮਿਸਲਾਂ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-history-7",
+        "title": {
+          "en": "Ranjit Singh: early life, achievements and British relations",
+          "hi": "रणजीत सिंह: प्रारंभिक जीवन, उपलब्धियाँ और अंग्रेज़ों से संबंध",
+          "pa": "ਰਣਜੀਤ ਸਿੰਘ: ਮੁੱਢਲਾ ਜੀਵਨ, ਪ੍ਰਾਪਤੀਆਂ ਅਤੇ ਅੰਗਰੇਜ਼ਾਂ ਨਾਲ ਸੰਬੰਧ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-history-8",
+        "title": {
+          "en": "Anglo-Sikh conflict and annexation",
+          "hi": "अंग्रेज़-सिख संघर्ष और पंजाब पर कब्ज़ा",
+          "pa": "ਅੰਗਰੇਜ਼-ਸਿੱਖ ਟਕਰਾਅ ਅਤੇ ਪੰਜਾਬ ਉੱਤੇ ਕਬਜ਼ਾ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-history-9",
+        "title": {
+          "en": "Punjab’s contribution to the independence struggle",
+          "hi": "स्वतंत्रता संघर्ष में पंजाब का योगदान",
+          "pa": "ਆਜ਼ਾਦੀ ਦੇ ਸੰਘਰਸ਼ ਵਿੱਚ ਪੰਜਾਬ ਦਾ ਯੋਗਦਾਨ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "sst-civics",
+    "title": {
+      "en": "Social Science → Civics",
+      "hi": "सामाजिक विज्ञान → नागरिक शास्त्र",
+      "pa": "ਸਮਾਜਿਕ ਵਿਗਿਆਨ → ਨਾਗਰਿਕ ਸ਼ਾਸਤਰ"
+    },
+    "sourcePage": 3,
+    "units": [
+      {
+        "id": "ett-sst-civics-1",
+        "title": {
+          "en": "Meaning and importance of democracy",
+          "hi": "लोकतंत्र का अर्थ और महत्व",
+          "pa": "ਲੋਕਤੰਤਰ ਦਾ ਅਰਥ ਅਤੇ ਮਹੱਤਤਾ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-civics-2",
+        "title": {
+          "en": "Citizens’ constitutional rights",
+          "hi": "नागरिकों के संवैधानिक अधिकार",
+          "pa": "ਨਾਗਰਿਕਾਂ ਦੇ ਸੰਵਿਧਾਨਕ ਅਧਿਕਾਰ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-civics-3",
+        "title": {
+          "en": "Major constitutional features",
+          "hi": "संविधान की प्रमुख विशेषताएँ",
+          "pa": "ਸੰਵਿਧਾਨ ਦੀਆਂ ਮੁੱਖ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-civics-4",
+        "title": {
+          "en": "Government at the Union level",
+          "hi": "केंद्र स्तर की सरकार",
+          "pa": "ਕੇਂਦਰ ਪੱਧਰ ਦੀ ਸਰਕਾਰ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-civics-5",
+        "title": {
+          "en": "Government at the state level",
+          "hi": "राज्य स्तर की सरकार",
+          "pa": "ਰਾਜ ਪੱਧਰ ਦੀ ਸਰਕਾਰ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-civics-6",
+        "title": {
+          "en": "The structure of Indian democracy",
+          "hi": "भारतीय लोकतंत्र का स्वरूप",
+          "pa": "ਭਾਰਤੀ ਲੋਕਤੰਤਰ ਦਾ ਸਰੂਪ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-sst-civics-7",
+        "title": {
+          "en": "India’s external policy and the United Nations",
+          "hi": "भारत की विदेश नीति और संयुक्त राष्ट्र",
+          "pa": "ਭਾਰਤ ਦੀ ਵਿਦੇਸ਼ ਨੀਤੀ ਅਤੇ ਸੰਯੁਕਤ ਰਾਸ਼ਟਰ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      }
+    ]
+  },
+  {
+    "id": "english",
+    "title": {
+      "en": "English",
+      "hi": "अंग्रेज़ी",
+      "pa": "ਅੰਗਰੇਜ਼ੀ"
+    },
+    "sourcePage": 3,
+    "units": [
+      {
+        "id": "ett-english-1",
+        "title": {
+          "en": "Understanding an unfamiliar passage",
+          "hi": "अपरिचित गद्यांश को समझना",
+          "pa": "ਅਣਪੜ੍ਹੇ ਗੱਦ ਅੰਸ਼ ਨੂੰ ਸਮਝਣਾ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Main idea",
+            "Evidence and inference",
+            "Vocabulary in context"
+          ],
+          "hi": [
+            "मुख्य विचार",
+            "साक्ष्य और निष्कर्ष",
+            "प्रसंग में शब्दार्थ"
+          ],
+          "pa": [
+            "ਮੁੱਖ ਵਿਚਾਰ",
+            "ਸਬੂਤ ਅਤੇ ਨਤੀਜਾ",
+            "ਪ੍ਰਸੰਗ ਵਿੱਚ ਸ਼ਬਦਾਂ ਦੇ ਅਰਥ"
+          ]
+        }
+      },
+      {
+        "id": "ett-english-2",
+        "title": {
+          "en": "Grammar in sentences and clauses",
+          "hi": "वाक्य और उपवाक्य का व्याकरण",
+          "pa": "ਵਾਕਾਂ ਅਤੇ ਉਪਵਾਕਾਂ ਦਾ ਵਿਆਕਰਨ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Articles",
+            "Prepositions",
+            "Determiners",
+            "Conjunctions",
+            "Modals",
+            "Word and sentence error correction",
+            "Tenses",
+            "Voice",
+            "Narration",
+            "Sentence transformation",
+            "Clauses"
+          ],
+          "hi": [
+            "आर्टिकल",
+            "पूर्वसर्ग",
+            "निर्धारक",
+            "संयोजक",
+            "मोडल क्रियाएँ",
+            "शब्द और वाक्य की त्रुटि सुधार",
+            "काल",
+            "वाच्य",
+            "कथन परिवर्तन",
+            "वाक्य रूपांतरण",
+            "उपवाक्य"
+          ],
+          "pa": [
+            "ਆਰਟੀਕਲ",
+            "ਪੂਰਵਸਰਗ",
+            "ਨਿਰਧਾਰਕ",
+            "ਯੋਜਕ",
+            "ਮੋਡਲ ਕਿਰਿਆਵਾਂ",
+            "ਸ਼ਬਦ ਅਤੇ ਵਾਕ ਦੀ ਗਲਤੀ ਸੁਧਾਰ",
+            "ਕਾਲ",
+            "ਵਾਚ",
+            "ਕਥਨ ਬਦਲਾਅ",
+            "ਵਾਕ ਰੂਪਾਂਤਰਣ",
+            "ਉਪਵਾਕ"
+          ]
+        }
+      },
+      {
+        "id": "ett-english-3",
+        "title": {
+          "en": "Vocabulary and idiomatic meaning",
+          "hi": "शब्दावली और मुहावरों का अर्थ",
+          "pa": "ਸ਼ਬਦਾਵਲੀ ਅਤੇ ਮੁਹਾਵਰਿਆਂ ਦੇ ਅਰਥ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "One-word substitution",
+            "Antonyms",
+            "Synonyms",
+            "Idioms and phrases"
+          ],
+          "hi": [
+            "वाक्यांश के लिए एक शब्द",
+            "विलोम",
+            "समानार्थी",
+            "मुहावरे और वाक्यांश"
+          ],
+          "pa": [
+            "ਵਾਕ ਅੰਸ਼ ਲਈ ਇੱਕ ਸ਼ਬਦ",
+            "ਵਿਰੋਧੀ ਸ਼ਬਦ",
+            "ਸਮਾਨ ਅਰਥ ਵਾਲੇ ਸ਼ਬਦ",
+            "ਮੁਹਾਵਰੇ ਅਤੇ ਵਾਕ ਅੰਸ਼"
+          ]
+        }
+      },
+      {
+        "id": "ett-english-4",
+        "title": {
+          "en": "Translation between English and Punjabi",
+          "hi": "अंग्रेज़ी और पंजाबी में परस्पर अनुवाद",
+          "pa": "ਅੰਗਰੇਜ਼ੀ ਅਤੇ ਪੰਜਾਬੀ ਵਿੱਚ ਆਪਸੀ ਅਨੁਵਾਦ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Punjabi to English",
+            "English to Punjabi",
+            "Meaning, grammar and natural phrasing"
+          ],
+          "hi": [
+            "पंजाबी से अंग्रेज़ी",
+            "अंग्रेज़ी से पंजाबी",
+            "अर्थ, व्याकरण और स्वाभाविक भाषा"
+          ],
+          "pa": [
+            "ਪੰਜਾਬੀ ਤੋਂ ਅੰਗਰੇਜ਼ੀ",
+            "ਅੰਗਰੇਜ਼ੀ ਤੋਂ ਪੰਜਾਬੀ",
+            "ਅਰਥ, ਵਿਆਕਰਨ ਅਤੇ ਸੁਭਾਵਿਕ ਭਾਸ਼ਾ"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "hindi",
+    "title": {
+      "en": "Hindi",
+      "hi": "हिंदी",
+      "pa": "ਹਿੰਦੀ"
+    },
+    "sourcePage": 3,
+    "units": [
+      {
+        "id": "ett-hindi-1",
+        "title": {
+          "en": "Language and writing systems",
+          "hi": "भाषा और लिखने की प्रणालियाँ",
+          "pa": "ਭਾਸ਼ਾ ਅਤੇ ਲਿਖਣ ਦੀਆਂ ਪ੍ਰਣਾਲੀਆਂ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-2",
+        "title": {
+          "en": "Sounds and letters",
+          "hi": "ध्वनियाँ और वर्ण",
+          "pa": "ਧੁਨੀਆਂ ਅਤੇ ਅੱਖਰ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-3",
+        "title": {
+          "en": "Word structure and classification",
+          "hi": "शब्द संरचना और वर्गीकरण",
+          "pa": "ਸ਼ਬਦਾਂ ਦੀ ਬਣਤਰ ਅਤੇ ਵਰਗੀਕਰਨ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-4",
+        "title": {
+          "en": "Inflecting word classes",
+          "hi": "रूप बदलने वाले शब्द वर्ग",
+          "pa": "ਰੂਪ ਬਦਲਣ ਵਾਲੀਆਂ ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Nouns",
+            "Pronouns",
+            "Adjectives",
+            "Verbs"
+          ],
+          "hi": [
+            "संज्ञा",
+            "सर्वनाम",
+            "विशेषण",
+            "क्रिया"
+          ],
+          "pa": [
+            "ਨਾਂਵ",
+            "ਪੜਨਾਂਵ",
+            "ਵਿਸ਼ੇਸ਼ਣ",
+            "ਕਿਰਿਆ"
+          ]
+        }
+      },
+      {
+        "id": "ett-hindi-5",
+        "title": {
+          "en": "Uninflected word classes",
+          "hi": "रूप न बदलने वाले शब्द वर्ग",
+          "pa": "ਰੂਪ ਨਾ ਬਦਲਣ ਵਾਲੀਆਂ ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ"
+        },
+        "sourcePage": 3,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [
+            "Adverbs",
+            "Postpositions",
+            "Conjunctions",
+            "Interjections"
+          ],
+          "hi": [
+            "क्रिया विशेषण",
+            "संबंधबोधक",
+            "योजक",
+            "विस्मयादिबोधक"
+          ],
+          "pa": [
+            "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
+            "ਸੰਬੰਧਕ",
+            "ਯੋਜਕ",
+            "ਵਿਸਮਕ"
+          ]
+        }
+      },
+      {
+        "id": "ett-hindi-6",
+        "title": {
+          "en": "Words with similar meanings",
+          "hi": "समान अर्थ वाले शब्द",
+          "pa": "ਮਿਲਦੇ ਅਰਥਾਂ ਵਾਲੇ ਸ਼ਬਦ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-7",
+        "title": {
+          "en": "Sanskrit-derived word forms",
+          "hi": "संस्कृत से आए शब्द रूप",
+          "pa": "ਸੰਸਕ੍ਰਿਤ ਤੋਂ ਆਏ ਸ਼ਬਦ ਰੂਪ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-8",
+        "title": {
+          "en": "Word formation using affixes",
+          "hi": "उपसर्ग और प्रत्यय से शब्द निर्माण",
+          "pa": "ਅਗੇਤਰ ਅਤੇ ਪਿਛੇਤਰ ਨਾਲ ਸ਼ਬਦ ਬਣਾਉਣਾ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-9",
+        "title": {
+          "en": "Replacing a phrase with one word",
+          "hi": "वाक्यांश के बदले एक शब्द",
+          "pa": "ਵਾਕ ਅੰਸ਼ ਦੀ ਥਾਂ ਇੱਕ ਸ਼ਬਦ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-10",
+        "title": {
+          "en": "Words with several meanings",
+          "hi": "अनेक अर्थों वाले शब्द",
+          "pa": "ਕਈ ਅਰਥਾਂ ਵਾਲੇ ਸ਼ਬਦ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-11",
+        "title": {
+          "en": "Opposite-meaning vocabulary",
+          "hi": "विपरीत अर्थ वाली शब्दावली",
+          "pa": "ਉਲਟ ਅਰਥਾਂ ਵਾਲੇ ਸ਼ਬਦ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-12",
+        "title": {
+          "en": "Correct and incorrect word forms",
+          "hi": "शुद्ध और अशुद्ध शब्द रूप",
+          "pa": "ਸ਼ੁੱਧ ਅਤੇ ਅਸ਼ੁੱਧ ਸ਼ਬਦ ਰੂਪ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-13",
+        "title": {
+          "en": "Correcting sentences",
+          "hi": "वाक्य सुधार",
+          "pa": "ਵਾਕ ਸੁਧਾਰ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-14",
+        "title": {
+          "en": "Idioms and proverbs in context",
+          "hi": "प्रसंग में मुहावरे और लोकोक्तियाँ",
+          "pa": "ਪ੍ਰਸੰਗ ਵਿੱਚ ਮੁਹਾਵਰੇ ਅਤੇ ਅਖਾਣ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      },
+      {
+        "id": "ett-hindi-15",
+        "title": {
+          "en": "Rendering Hindi into Punjabi",
+          "hi": "हिंदी से पंजाबी अनुवाद",
+          "pa": "ਹਿੰਦੀ ਤੋਂ ਪੰਜਾਬੀ ਅਨੁਵਾਦ"
+        },
+        "sourcePage": 4,
+        "lessonStatus": "pending",
+        "questionStatus": "pending",
+        "studyTopics": {
+          "en": [],
+          "hi": [],
+          "pa": []
+        }
+      }
+    ]
+  }
+]

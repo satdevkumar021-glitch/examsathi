@@ -5,13 +5,18 @@ import { useStore } from '@/lib/store';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Target, ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { getExamById, ALL_EXAMS, Exam, Subject, Chapter, Topic } from '@/lib/data/exams';
+import { getExamById, Exam, Subject, Chapter, Topic } from '@/lib/data/exams';
 
 export default function SubjectView({ exam: examId, subject: subjectId }: { exam: string; subject: string }) {
+  const exam = getExamById(examId);
+  if (!exam || (exam.subjects.length > 0 && !exam.subjects.some(subject => subject.id === subjectId))) return <div className="p-6 text-slate-200"><h1 className="text-xl font-bold">Exam or subject not found</h1><Link href="/syllabus/" className="underline text-teal-300">Choose a supported exam and subject</Link></div>;
+  return <SubjectContent key={`${examId}/${subjectId}`} exam={exam} subjectId={subjectId} />;
+}
+function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) {
+  const examId = exam.id;
   const router = useRouter();
-
-  // Find exam
-  const exam: Exam = getExamById(examId) || ALL_EXAMS.punjab[0];
+  const { language } = useStore();
+  const localName = (item: { name: string; nameHindi?: string; namePunjabi?: string }) => language === 'pa' ? item.namePunjabi || item.nameHindi || item.name : language === 'hi' ? item.nameHindi || item.name : item.name;
   useEffect(() => { const selected = getExamById(examId); if (selected) useStore.getState().setSelectedExam(selected.state, selected.id); }, [examId]);
 
   // Available subjects for this exam
@@ -52,7 +57,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
         <div className="min-w-0">
           <div className="flex items-center gap-1.5">
             <span className="text-base">{exam.emoji || '🎯'}</span>
-            <h1 className="text-lg font-bold text-white truncate">{exam.name}</h1>
+            <h1 className="text-lg font-bold text-white truncate">{localName(exam)}</h1>
           </div>
           <p className="text-xs text-slate-400 truncate">
             {exam.body} • {exam.totalMarks} Marks • {exam.duration}
@@ -71,6 +76,8 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
         </div>
       </div>
 
+      {exam.syllabusStatus === 'provisional-archive' && <Link href="/syllabus/punjab-ett/" className="rounded-lg border border-amber-700 p-3 text-sm text-amber-200">5994 Paper B archival reference. Upcoming notification and publisher verification pending. Qualifying Paper A is separate. Open source pages and coverage status →</Link>}
+
       {/* Subject Selector Tabs (if multiple subjects exist) */}
       {availableSubjects.length > 1 && (
         <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1">
@@ -88,7 +95,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
                 className={`whitespace-nowrap px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow ${isSelected ? 'bg-indigo-600 text-white' : 'bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-750'}`}
               >
                 <span>{sub.emoji}</span>
-                <span>{sub.name}</span>
+                <span>{localName(sub)}</span>
               </button>
             );
           })}
@@ -106,7 +113,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
                 onClick={() => setActiveChapterId(ch.id)}
                 className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold transition border ${isActive ? 'bg-teal-600/30 border-teal-500 text-teal-300' : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'}`}
               >
-                {ch.nameHindi ? `${ch.name} (${ch.nameHindi})` : ch.name}
+                {localName(ch)}
               </button>
             );
           })}
@@ -123,7 +130,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
           topics.map(topic => (
             <Link
               key={topic.id}
-              href={`/lesson/${topic.id}`}
+              href={`/lesson/${topic.id}/?exam=${examId}`}
               className="bg-slate-800/90 hover:bg-slate-800 border border-slate-700 hover:border-indigo-500/60 rounded-2xl p-4 flex flex-col gap-2.5 transition shadow group"
             >
               {/* Topic Header */}
@@ -134,7 +141,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
                   </div>
                   <div className="min-w-0">
                     <h3 className="text-white font-bold text-sm truncate group-hover:text-indigo-300 transition">
-                      {topic.name}
+                      {localName(topic)}
                     </h3>
                     <p className="text-slate-400 text-xs mt-0.5">
                       {topic.nameHindi}
@@ -149,6 +156,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
               </div>
 
               {/* Detailed Subtopics Pill Grid */}
+              {topic.materialStatus === 'pending' && <p className="text-xs text-amber-200">Detailed lesson and dedicated question bank pending · विस्तृत पाठ बाकी · ਵਿਸਥਾਰ ਵਾਲਾ ਪਾਠ ਬਾਕੀ</p>}
               {topic.subtopics && topic.subtopics.length > 0 && (
                 <div className="bg-slate-900/60 rounded-xl p-2.5 border border-slate-700/50">
                   <span className="text-[10px] text-slate-400 font-semibold block mb-1.5 uppercase tracking-wider">
@@ -169,9 +177,9 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
 
               {/* Action Prompt */}
               <div className="flex justify-between items-center text-[11px] text-teal-400 pt-1 border-t border-slate-700/40">
-                <span>Notes • 3D Flipcards • Videos • Test</span>
+                <span>{topic.materialStatus === 'pending' ? 'Material pending · सामग्री बाकी · ਸਮੱਗਰੀ ਬਾਕੀ' : 'Notes • Flashcards • Resources • Practice'}</span>
                 <span className="flex items-center gap-0.5 font-bold group-hover:translate-x-1 transition-transform">
-                  Open Study Room <ChevronRight size={14} />
+                  {topic.materialStatus === 'pending' ? 'View coverage status' : 'Open Study Room'} <ChevronRight size={14} />
                 </span>
               </div>
             </Link>
@@ -184,7 +192,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
         href={`/mock-test?exam=${examId}`}
         className="mt-2 w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-bold py-3.5 rounded-2xl shadow-lg text-center text-xs flex items-center justify-center gap-2"
       >
-        <Target size={16} /> Take Topic-Wise & PYQ Mock Tests ({exam.name})
+        <Target size={16} /> Browse available topic practice ({localName(exam)})
       </Link>
 
     </div>

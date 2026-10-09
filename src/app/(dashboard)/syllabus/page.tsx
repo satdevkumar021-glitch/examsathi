@@ -11,7 +11,7 @@ export default function SyllabusPage() {
     <p className="text-sm text-slate-400">Explore each supported exam by subject, chapter and subtopic. This is a preparation map; check the latest official notification for your paper, year and post. Available material is shown separately from topics still being prepared.</p>
     {Object.values(ALL_EXAMS).flat().map(exam => <details key={exam.id} className="bg-slate-800 rounded-xl p-4">
       <summary className="cursor-pointer font-bold text-teal-300">{exam.emoji} {exam.name}</summary>
-      {exam.id === 'punjab-ett' && <p className="my-3 rounded-lg border border-amber-700 p-3 text-sm text-amber-200">This legacy preparation map is incomplete and its exam pattern is unverified. It combines material from different teaching exams. Use the <Link className="underline" href="/syllabus/punjab-ett/">versioned ETT syllabus research</Link> before planning preparation.</p>}
+      {exam.id === 'punjab-ett' && <p className="my-3 rounded-lg border border-amber-700 p-3 text-sm text-amber-200">This is a provisional 5994 Paper B archival map, not confirmation of the upcoming notification. Punjabi qualifying Paper A is separate. Most lessons and question banks remain pending. Use the <Link className="underline" href="/syllabus/punjab-ett/">versioned ETT syllabus research</Link> before planning preparation.</p>}
       <a className="block underline text-sm my-3" href={exam.officialWebsite} target="_blank" rel="noopener noreferrer">Latest official syllabus & notification ↗</a>
       {exam.subjects.map(subject => <section key={subject.id} className="my-4 space-y-3">
         <h2 className="font-bold text-white">{subject.name}</h2>
@@ -21,6 +21,7 @@ export default function SyllabusPage() {
             const available = getTestQuestions({ topicId: topic.id, examId: exam.id, count: 150 }).length;
             return <article key={topic.id} className="my-3 border border-slate-700 rounded-lg p-3">
               <h4 className="font-semibold">{topic.name}</h4>
+              {exam.id === 'punjab-ett' && topic.sourcePages?.map(page => <a key={page} className="text-xs underline text-teal-300" href={`https://entri.app/blog/wp-content/uploads/2022/12/SyllabusPaperB01_12_2022.pdf#page=${page}`} target="_blank" rel="noopener noreferrer">Archival mirror · page {page} ↗ </a>)}
               <ul className="list-disc pl-5 my-2 text-sm text-slate-300">{topic.subtopics.flatMap(s => s.split(/,\s*/)).map((subtopic, i) => <li key={i}>{subtopic}</li>)}</ul>
               {(TOPIC_DOCUMENTS[topic.id] || []).map(resource => <a key={resource.url} className="block text-sm underline text-teal-300" href={resource.url} target="_blank" rel="noopener noreferrer">{resource.title} ↗</a>)}
               <p className="text-xs text-slate-400">{lesson ? lesson.coverageStatus === 'foundation' ? 'Foundation module; full alignment pending' : 'Study lesson available; depth unverified' : 'Lesson pending'} · {available} practice questions available</p>

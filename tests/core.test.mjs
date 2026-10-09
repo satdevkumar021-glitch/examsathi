@@ -21,13 +21,38 @@ const lessons = load('src/lib/data/lessons.ts');
 const bank = load('src/lib/data/questions.ts');
 const scope = load('src/lib/data/topic-scope.ts');
 const canonical = scope.canonicalTopicId;
+test('ETT archival map retains scanned headings, multilingual labels and strict unfinished-unit gaps', () => {
+  const { ETT_MAPPED_GROUPS, ETT_ARCHIVAL_HEADING_COUNT, ETT_SCIENCE_UNITS } = load('src/lib/data/ett-syllabus.ts');
+  const { getExamById } = load('src/lib/data/exams.ts');
+  assert.equal(ETT_ARCHIVAL_HEADING_COUNT, 96);
+  assert.ok(ETT_SCIENCE_UNITS.some(unit => unit[0] === 'work-energy'));
+  const expected = { punjabi: 5, math: 18, 'sst-geography': 8, 'sst-economics': 4, 'sst-history': 9, 'sst-civics': 7, english: 4, hindi: 15 };
+  for (const group of ETT_MAPPED_GROUPS) {
+    assert.equal(group.units.length, expected[group.id]);
+    for (const unit of group.units) {
+      assert.ok(unit.sourcePage >= 1 && unit.sourcePage <= 4);
+      for (const lang of ['hi', 'pa']) assert.notEqual(unit.title[lang], unit.title.en);
+      assert.equal(unit.studyTopics.en.length, unit.studyTopics.hi.length);
+      assert.equal(unit.studyTopics.en.length, unit.studyTopics.pa.length);
+    }
+  }
+  const exam = getExamById('punjab-ett');
+  assert.equal(exam.subjects.length, 6);
+  assert.equal(exam.syllabusStatus, 'provisional-archive');
+  assert.equal(exam.sections.reduce((n, section) => n + section.marks, 0), 200);
+  const topics = exam.subjects.flatMap(subject => subject.chapters.flatMap(chapter => chapter.topics));
+  assert.equal(new Set(topics.map(topic => topic.id)).size, topics.length);
+  assert.ok(!topics.some(topic => topic.id === 'child-development-pedagogy' || topic.id === 'punjabi-paper-a'));
+  assert.equal(engine.getQuestionPool({ examId: exam.id, topicId: 'child-development-pedagogy' }).length, 0);
+  assert.equal(engine.getQuestionPool({ examId: exam.id }).length, 20);
+});
 test('ETT archival reference remains provisional and does not certify an upcoming notification', () => {
   const { ETT_SYLLABUS_REFERENCE, ETT_SCIENCE_UNITS, ETT_REFERENCE_SUBJECTS } = load('src/lib/data/ett-syllabus.ts');
   assert.equal(ETT_SYLLABUS_REFERENCE.status, 'publisher-unreachable');
   assert.equal(ETT_SYLLABUS_REFERENCE.upcomingNotification, 'pending');
   assert.equal(ETT_REFERENCE_SUBJECTS.reduce((n, s) => n + s.marks, 0), 200);
-  assert.equal(ETT_SCIENCE_UNITS.length, 25);
-  assert.equal(new Set(ETT_SCIENCE_UNITS.map(unit => unit[0])).size, 25);
+  assert.equal(ETT_SCIENCE_UNITS.length, 26);
+  assert.equal(new Set(ETT_SCIENCE_UNITS.map(unit => unit[0])).size, 26);
 });
 test('ETT reflection offers real localized lessons and a finite strictly scoped original bank', () => {
   const lesson = lessons.getLessonByTopicId('ett-light-reflection');
@@ -224,12 +249,15 @@ test('foundation content has honest attribution and unambiguous option labels', 
     assert.ok(q.availableLanguages.length);
   }
 });
-test('every catalogue slot has study material and every track has eligible practice', () => {
+test('catalogue topics expose available or explicitly pending material; tracks retain eligible practice', () => {
   const { ALL_EXAMS } = load('src/lib/data/exams.ts');
   for (const exam of Object.values(ALL_EXAMS).flat()) {
     assert.ok(engine.getQuestionPool({examId:exam.id}).length > 0, exam.id);
     for (const subject of exam.subjects) for (const chapter of subject.chapters) for (const topic of chapter.topics) {
-      assert.ok(lessons.getLessonByTopicId(topic.id)?.content.en, topic.id);
+      if (topic.materialStatus === 'pending') {
+        assert.equal(lessons.getLessonByTopicId(topic.id), undefined, topic.id);
+        assert.equal(engine.getQuestionPool({ examId: exam.id, topicId: topic.id }).length, 0, topic.id);
+      } else assert.ok(lessons.getLessonByTopicId(topic.id)?.content.en, topic.id);
     }
   }
   assert.equal(bank.getQuestionsByTopic('unknown-unrelated-topic').length, 0);
