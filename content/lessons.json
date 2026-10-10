@@ -33317,6 +33317,1098 @@
     ]
   },
   {
+    "id": "ett-science-human-body",
+    "subject": "Science",
+    "unit": "Human Physiology",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "मानव शरीर: पाचन, श्वसन और रक्त परिसंचरण",
+      "pa": "ਮਨੁੱਖੀ ਸਰੀਰ: ਪਾਚਣ, ਸਾਹ-ਪ੍ਰਣਾਲੀ ਅਤੇ ਖ਼ੂਨ ਦਾ ਗੇੜ",
+      "en": "Human Body: Digestion, Respiration and Blood Circulation"
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "पाचन तंत्र",
+          "pa": "ਪਾਚਣ ਪ੍ਰਣਾਲੀ",
+          "en": "Digestive System"
+        },
+        "text": {
+          "hi": "भोजन का पाचन मुँह से शुरू होता है। लार में टाइलिन एंजाइम स्टार्च को माल्टोज़ में तोड़ता है। आमाशय में HCl पेप्सिनोजन को पेप्सिन में बदलता है जो प्रोटीन पचाता है। छोटी आंत (क्षुद्रांत्र) में पचे भोजन का अवशोषण होता है। यकृत (लिवर) पित्त रस बनाता है जो वसा के पाचन में मदद करता है। अग्न्याशय (पैनक्रियाज़) से एमिलेज, लाइपेज और ट्रिप्सिन निकलते हैं। बड़ी आंत में जल का अवशोषण होता है और मल बनता है।",
+          "pa": "ਭੋਜਨ ਦਾ ਪਾਚਣ ਮੂੰਹ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ। ਥੁੱਕ ਵਿੱਚ ਟਾਇਲਿਨ ਐਨਜ਼ਾਈਮ ਸਟਾਰਚ ਨੂੰ ਮਾਲਟੋਜ਼ ਵਿੱਚ ਤੋੜਦਾ ਹੈ। ਪੇਟ (ਅਮਾਸ਼ਯ) ਵਿੱਚ HCl ਪੈਪਸਿਨੋਜਨ ਨੂੰ ਪੈਪਸਿਨ ਵਿੱਚ ਬਦਲਦਾ ਹੈ ਜੋ ਪ੍ਰੋਟੀਨ ਪਚਾਉਂਦਾ ਹੈ। ਛੋਟੀ ਆਂਦਰ ਵਿੱਚ ਪਚੇ ਭੋਜਨ ਦਾ ਸਮਾਈ ਹੁੰਦੀ ਹੈ। ਜਿਗਰ ਪਿੱਤ ਰਸ ਬਣਾਉਂਦਾ ਹੈ ਜੋ ਚਰਬੀ ਦੇ ਪਾਚਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ। ਪੈਨਕਰੀਅਸ ਤੋਂ ਐਮਾਈਲੇਜ਼, ਲਾਈਪੇਜ਼ ਅਤੇ ਟ੍ਰਿਪਸਿਨ ਨਿਕਲਦੇ ਹਨ। ਵੱਡੀ ਆਂਦਰ ਵਿੱਚ ਪਾਣੀ ਦੀ ਸਮਾਈ ਹੁੰਦੀ ਹੈ ਅਤੇ ਮਲ ਬਣਦਾ ਹੈ।",
+          "en": "Digestion begins in the mouth. Salivary amylase (ptyalin) breaks starch into maltose. In the stomach, HCl converts pepsinogen to pepsin, which digests proteins. The small intestine absorbs digested nutrients. The liver produces bile juice that emulsifies fats. The pancreas secretes amylase, lipase and trypsin. The large intestine absorbs water and forms faeces."
+        }
+      },
+      {
+        "heading": {
+          "hi": "श्वसन तंत्र",
+          "pa": "ਸਾਹ-ਪ੍ਰਣਾਲੀ",
+          "en": "Respiratory System"
+        },
+        "text": {
+          "hi": "मानव श्वसन तंत्र में नाक, श्वासनली (ट्रेकिया), ब्रोंकाई और फेफड़े शामिल हैं। फेफड़ों में वायु-कूपिकाएँ (एल्वियोली) होती हैं जहाँ गैस विनिमय होता है। ऑक्सीजन रक्त में मिलकर हीमोग्लोबिन के साथ जुड़ती है और कोशिकाओं तक पहुँचती है। कोशिकाओं में ग्लूकोज़ का ऑक्सीकरण होता है: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ऊर्जा (ATP)। वयस्क में सामान्य श्वसन दर 15–20 बार प्रति मिनट होती है। डायफ्राम और पसलियों की माँसपेशियाँ श्वसन में सहायता करती हैं।",
+          "pa": "ਮਨੁੱਖੀ ਸਾਹ-ਪ੍ਰਣਾਲੀ ਵਿੱਚ ਨੱਕ, ਸਾਹ-ਨਲੀ (ਟ੍ਰੈਕਿਆ), ਬ੍ਰੌਂਕਾਈ ਅਤੇ ਫੇਫੜੇ ਸ਼ਾਮਲ ਹਨ। ਫੇਫੜਿਆਂ ਵਿੱਚ ਐਲਵੀਓਲਾਈ ਹੁੰਦੇ ਹਨ ਜਿੱਥੇ ਗੈਸ ਅਦਲਾ-ਬਦਲੀ ਹੁੰਦੀ ਹੈ। ਆਕਸੀਜਨ ਖ਼ੂਨ ਵਿੱਚ ਹੀਮੋਗਲੋਬਿਨ ਨਾਲ ਜੁੜ ਕੇ ਕੋਸ਼ਿਕਾਵਾਂ ਤੱਕ ਪਹੁੰਚਦੀ ਹੈ। ਕੋਸ਼ਿਕਾਵਾਂ ਵਿੱਚ ਗਲੂਕੋਜ਼ ਦਾ ਆਕਸੀਕਰਨ ਹੁੰਦਾ ਹੈ। ਬਾਲਗ਼ ਵਿੱਚ ਆਮ ਸਾਹ ਦੀ ਦਰ 15–20 ਵਾਰ ਪ੍ਰਤੀ ਮਿੰਟ ਹੁੰਦੀ ਹੈ।",
+          "en": "The human respiratory system includes the nose, trachea, bronchi and lungs. The lungs contain alveoli where gas exchange occurs. Oxygen binds with haemoglobin in red blood cells and reaches tissues. Glucose oxidation in cells: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy (ATP). Normal breathing rate in adults is 15–20 times per minute. The diaphragm and intercostal muscles drive breathing."
+        }
+      },
+      {
+        "heading": {
+          "hi": "रक्त परिसंचरण तंत्र",
+          "pa": "ਖ਼ੂਨ ਦੇ ਗੇੜ ਦੀ ਪ੍ਰਣਾਲੀ",
+          "en": "Circulatory System"
+        },
+        "text": {
+          "hi": "हृदय एक पेशीय अंग है जिसमें चार कक्ष होते हैं: दो ऊपरी अलिंद (Atria) और दो निचले निलय (Ventricles)। बायाँ निलय सबसे मोटी दीवार वाला होता है क्योंकि यह शरीर भर में रक्त पम्प करता है। शुद्ध रक्त महाधमनी (Aorta) से शरीर में जाता है और अशुद्ध रक्त फुफ्फुसीय धमनी (Pulmonary artery) से फेफड़ों में जाता है। RBC (लाल रक्त कणिकाएँ) हीमोग्लोबिन द्वारा O₂ ले जाती हैं। WBC (श्वेत रक्त कणिकाएँ) रोग प्रतिरोधक क्षमता प्रदान करती हैं। प्लेटलेट्स रक्त को जमाने में सहायता करती हैं। सामान्य रक्तचाप 120/80 mmHg होता है।",
+          "pa": "ਦਿਲ ਇੱਕ ਮਾਸਪੇਸ਼ੀਲ ਅੰਗ ਹੈ ਜਿਸ ਵਿੱਚ ਚਾਰ ਕੋਠੜੀਆਂ ਹਨ: ਦੋ ਉੱਪਰਲੀਆਂ ਆਲਿੰਦ ਅਤੇ ਦੋ ਹੇਠਲੀਆਂ ਨਿਲੈ। ਖੱਬਾ ਨਿਲੈ ਸਭ ਤੋਂ ਮੋਟੀ ਦੀਵਾਰ ਵਾਲਾ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਇਹ ਸਾਰੇ ਸਰੀਰ ਵਿੱਚ ਖ਼ੂਨ ਪੰਪ ਕਰਦਾ ਹੈ। ਸ਼ੁੱਧ ਖ਼ੂਨ ਐਓਰਟਾ ਤੋਂ ਸਰੀਰ ਵਿੱਚ ਜਾਂਦਾ ਹੈ। RBC ਹੀਮੋਗਲੋਬਿਨ ਰਾਹੀਂ O₂ ਲੈ ਜਾਂਦੇ ਹਨ। ਆਮ ਬਲੱਡ ਪ੍ਰੈਸ਼ਰ 120/80 mmHg ਹੁੰਦਾ ਹੈ।",
+          "en": "The heart is a muscular organ with four chambers: two upper atria and two lower ventricles. The left ventricle has the thickest wall as it pumps blood throughout the body. Oxygenated blood leaves via the aorta; deoxygenated blood goes to the lungs via the pulmonary artery. RBCs carry O₂ via haemoglobin. WBCs provide immunity. Platelets aid clotting. Normal blood pressure is 120/80 mmHg."
+        }
+      }
+    ],
+    "keypoints": [
+      {
+        "hi": "टाइलिन (लार) → स्टार्च → माल्टोज़; पेप्सिन (HCl) → प्रोटीन पाचन",
+        "pa": "ਟਾਇਲਿਨ (ਥੁੱਕ) → ਸਟਾਰਚ → ਮਾਲਟੋਜ਼; ਪੈਪਸਿਨ (HCl) → ਪ੍ਰੋਟੀਨ ਪਾਚਣ",
+        "en": "Ptyalin (saliva) → starch → maltose; Pepsin (HCl) → protein digestion"
+      },
+      {
+        "hi": "एल्वियोली में गैस विनिमय; हीमोग्लोबिन O₂ वाहक",
+        "pa": "ਐਲਵੀਓਲਾਈ ਵਿੱਚ ਗੈਸ ਅਦਲਾ-ਬਦਲੀ; ਹੀਮੋਗਲੋਬਿਨ O₂ ਵਾਹਕ",
+        "en": "Alveoli: gas exchange site; haemoglobin carries O₂"
+      },
+      {
+        "hi": "हृदय = 4 कक्ष; बायाँ निलय = सबसे शक्तिशाली; रक्तचाप = 120/80",
+        "pa": "ਦਿਲ = 4 ਕੋਠੜੀਆਂ; ਖੱਬਾ ਨਿਲੈ = ਸਭ ਤੋਂ ਸ਼ਕਤੀਸ਼ਾਲੀ; ਬਲੱਡ ਪ੍ਰੈਸ਼ਰ = 120/80",
+        "en": "Heart = 4 chambers; left ventricle = strongest; BP = 120/80"
+      },
+      {
+        "hi": "RBC: O₂; WBC: रोग प्रतिरोध; प्लेटलेट्स: रक्त-स्राव रोकना",
+        "pa": "RBC: O₂; WBC: ਰੋਗ-ਰੋਧ; ਪਲੇਟਲੈਟਸ: ਖ਼ੂਨ ਵਹਿਣ ਤੋਂ ਰੋਕਣਾ",
+        "en": "RBC: O₂ transport; WBC: immunity; Platelets: clotting"
+      }
+    ],
+    "summary": {
+      "hi": "मानव शरीर के तीन प्रमुख तंत्र—पाचन (टाइलिन, पेप्सिन, पित्त), श्वसन (एल्वियोली, हीमोग्लोबिन, 15-20/मिनट) और परिसंचरण (हृदय-4 कक्ष, RBC/WBC/प्लेटलेट्स, 120/80 mmHg)—ETT पेपर-बी विज्ञान खंड के लिए अत्यंत महत्वपूर्ण हैं।",
+      "pa": "ਮਨੁੱਖੀ ਸਰੀਰ ਦੀਆਂ ਤਿੰਨ ਮੁੱਖ ਪ੍ਰਣਾਲੀਆਂ—ਪਾਚਣ, ਸਾਹ ਅਤੇ ਖ਼ੂਨ ਦਾ ਗੇੜ—ETT ਪੇਪਰ-ਬੀ ਵਿਗਿਆਨ ਭਾਗ ਲਈ ਬਹੁਤ ਮਹੱਤਵਪੂਰਨ ਹਨ।",
+      "en": "The three major human body systems—digestion (ptyalin, pepsin, bile), respiration (alveoli, haemoglobin, 15–20/min) and circulation (4-chamber heart, RBC/WBC/platelets, 120/80 mmHg)—are critical for ETT Paper B Science section."
+    },
+    "flashcards": [
+      {
+        "question": {
+          "hi": "लार में कौन-सा एंजाइम होता है?",
+          "pa": "ਥੁੱਕ ਵਿੱਚ ਕਿਹੜਾ ਐਨਜ਼ਾਈਮ ਹੁੰਦਾ ਹੈ?",
+          "en": "Which enzyme is present in saliva?"
+        },
+        "answer": {
+          "hi": "टाइलिन (Ptyalin / Salivary Amylase) — स्टार्च को माल्टोज़ में तोड़ता है।",
+          "pa": "ਟਾਇਲਿਨ (Ptyalin) — ਸਟਾਰਚ ਨੂੰ ਮਾਲਟੋਜ਼ ਵਿੱਚ ਤੋੜਦਾ ਹੈ।",
+          "en": "Ptyalin (salivary amylase) — breaks starch into maltose."
+        }
+      },
+      {
+        "question": {
+          "hi": "गैस विनिमय कहाँ होता है?",
+          "pa": "ਗੈਸ ਅਦਲਾ-ਬਦਲੀ ਕਿੱਥੇ ਹੁੰਦੀ ਹੈ?",
+          "en": "Where does gas exchange occur in the lungs?"
+        },
+        "answer": {
+          "hi": "एल्वियोली (Alveoli) में।",
+          "pa": "ਐਲਵੀਓਲਾਈ (Alveoli) ਵਿੱਚ।",
+          "en": "In the alveoli."
+        }
+      },
+      {
+        "question": {
+          "hi": "हृदय में कितने कक्ष होते हैं?",
+          "pa": "ਦਿਲ ਵਿੱਚ ਕਿੰਨੀਆਂ ਕੋਠੜੀਆਂ ਹਨ?",
+          "en": "How many chambers does the human heart have?"
+        },
+        "answer": {
+          "hi": "चार — दो अलिंद (Atria) और दो निलय (Ventricles)।",
+          "pa": "ਚਾਰ — ਦੋ ਆਲਿੰਦ ਅਤੇ ਦੋ ਨਿਲੈ।",
+          "en": "Four — two atria and two ventricles."
+        }
+      },
+      {
+        "question": {
+          "hi": "सामान्य रक्तचाप कितना होता है?",
+          "pa": "ਆਮ ਬਲੱਡ ਪ੍ਰੈਸ਼ਰ ਕਿੰਨਾ ਹੁੰਦਾ ਹੈ?",
+          "en": "What is normal blood pressure in adults?"
+        },
+        "answer": {
+          "hi": "120/80 mmHg (Systolic/Diastolic)।",
+          "pa": "120/80 mmHg (Systolic/Diastolic)।",
+          "en": "120/80 mmHg (systolic/diastolic)."
+        }
+      },
+      {
+        "question": {
+          "hi": "O₂ परिवहन कौन करता है?",
+          "pa": "O₂ ਦੀ ਢੋਆ-ਢੁਆਈ ਕੌਣ ਕਰਦਾ ਹੈ?",
+          "en": "Which blood component carries oxygen?"
+        },
+        "answer": {
+          "hi": "RBC (लाल रक्त कणिकाएँ) — हीमोग्लोबिन द्वारा।",
+          "pa": "RBC (ਲਾਲ ਖ਼ੂਨ ਦੇ ਕਣ) — ਹੀਮੋਗਲੋਬਿਨ ਰਾਹੀਂ।",
+          "en": "Red blood cells (RBCs) via haemoglobin."
+        }
+      },
+      {
+        "question": {
+          "hi": "पित्त रस का क्या कार्य है?",
+          "pa": "ਪਿੱਤ ਰਸ ਦਾ ਕੀ ਕੰਮ ਹੈ?",
+          "en": "What is the function of bile juice?"
+        },
+        "answer": {
+          "hi": "यकृत द्वारा बना; वसा का पायसीकरण (Emulsification) करता है।",
+          "pa": "ਜਿਗਰ ਵੱਲੋਂ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ; ਚਰਬੀ ਦਾ ਪਾਇਸੀਕਰਨ ਕਰਦਾ ਹੈ।",
+          "en": "Produced by the liver; emulsifies fats to aid digestion."
+        }
+      },
+      {
+        "question": {
+          "hi": "WBC का मुख्य कार्य क्या है?",
+          "pa": "WBC ਦਾ ਮੁੱਖ ਕੰਮ ਕੀ ਹੈ?",
+          "en": "What is the primary function of white blood cells?"
+        },
+        "answer": {
+          "hi": "रोग प्रतिरोधक क्षमता — रोगाणुओं से लड़ना।",
+          "pa": "ਰੋਗ-ਰੋਧਕ ਸਮਰੱਥਾ — ਰੋਗਾਣੂਆਂ ਨਾਲ ਲੜਨਾ।",
+          "en": "Immune defence — fighting pathogens."
+        }
+      },
+      {
+        "question": {
+          "hi": "अग्न्याशय से कौन-से एंजाइम निकलते हैं?",
+          "pa": "ਪੈਨਕਰੀਅਸ ਤੋਂ ਕਿਹੜੇ ਐਨਜ਼ਾਈਮ ਨਿਕਲਦੇ ਹਨ?",
+          "en": "Which enzymes are secreted by the pancreas?"
+        },
+        "answer": {
+          "hi": "ਐਮਾਈਲੇਜ਼ (starch), ਲਾਈਪੇਜ਼ (fat), ਟ੍ਰਿਪਸਿਨ (protein)।",
+          "pa": "ਐਮਾਈਲੇਜ਼ (ਸਟਾਰਚ), ਲਾਈਪੇਜ਼ (ਚਰਬੀ), ਟ੍ਰਿਪਸਿਨ (ਪ੍ਰੋਟੀਨ)।",
+          "en": "Amylase (starch), lipase (fat) and trypsin (protein)."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "hb-q1",
+        "prompt": {
+          "hi": "लार में उपस्थित एंजाइम का नाम क्या है?",
+          "pa": "ਥੁੱਕ ਵਿੱਚ ਮੌਜੂਦ ਐਨਜ਼ਾਈਮ ਦਾ ਨਾਮ ਕੀ ਹੈ?",
+          "en": "What is the name of the enzyme present in saliva?"
+        },
+        "options": [
+          {
+            "hi": "पेप्सिन",
+            "pa": "ਪੈਪਸਿਨ",
+            "en": "Pepsin"
+          },
+          {
+            "hi": "टाइलिन",
+            "pa": "ਟਾਇਲਿਨ",
+            "en": "Ptyalin"
+          },
+          {
+            "hi": "ट्रिप्सिन",
+            "pa": "ਟ੍ਰਿਪਸਿਨ",
+            "en": "Trypsin"
+          },
+          {
+            "hi": "लाइपेज़",
+            "pa": "ਲਾਈਪੇਜ਼",
+            "en": "Lipase"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "टाइलिन (Salivary Amylase) लार में होता है और स्टार्च को माल्टोज़ में तोड़ता है।",
+          "pa": "ਟਾਇਲਿਨ ਥੁੱਕ ਵਿੱਚ ਹੁੰਦਾ ਹੈ ਅਤੇ ਸਟਾਰਚ ਨੂੰ ਮਾਲਟੋਜ਼ ਵਿੱਚ ਤੋੜਦਾ ਹੈ।",
+          "en": "Ptyalin (salivary amylase) is found in saliva and converts starch to maltose."
+        }
+      },
+      {
+        "id": "hb-q2",
+        "prompt": {
+          "hi": "फेफड़ों में गैस विनिमय किसमें होता है?",
+          "pa": "ਫੇਫੜਿਆਂ ਵਿੱਚ ਗੈਸ ਅਦਲਾ-ਬਦਲੀ ਕਿਸ ਵਿੱਚ ਹੁੰਦੀ ਹੈ?",
+          "en": "Gas exchange in lungs occurs in:"
+        },
+        "options": [
+          {
+            "hi": "ब्रोंकाई",
+            "pa": "ਬ੍ਰੌਂਕਾਈ",
+            "en": "Bronchi"
+          },
+          {
+            "hi": "श्वासनली",
+            "pa": "ਸਾਹ-ਨਲੀ",
+            "en": "Trachea"
+          },
+          {
+            "hi": "एल्वियोली",
+            "pa": "ਐਲਵੀਓਲਾਈ",
+            "en": "Alveoli"
+          },
+          {
+            "hi": "ब्रोंकियोल्स",
+            "pa": "ਬ੍ਰੌਂਕੀਓਲਜ਼",
+            "en": "Bronchioles"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "एल्वियोली छोटे-छोटे वायु-कूपिके हैं जहाँ O₂ रक्त में जाती है और CO₂ बाहर आती है।",
+          "pa": "ਐਲਵੀਓਲਾਈ ਛੋਟੇ ਹਵਾ ਦੇ ਥੈਲੇ ਹਨ ਜਿੱਥੇ O₂ ਖ਼ੂਨ ਵਿੱਚ ਜਾਂਦੀ ਹੈ ਅਤੇ CO₂ ਬਾਹਰ ਆਉਂਦੀ ਹੈ।",
+          "en": "Alveoli are tiny air sacs where O₂ passes into blood and CO₂ is expelled."
+        }
+      },
+      {
+        "id": "hb-q3",
+        "prompt": {
+          "hi": "मानव हृदय में कितने कक्ष हैं?",
+          "pa": "ਮਨੁੱਖੀ ਦਿਲ ਵਿੱਚ ਕਿੰਨੀਆਂ ਕੋਠੜੀਆਂ ਹਨ?",
+          "en": "How many chambers are there in the human heart?"
+        },
+        "options": [
+          {
+            "hi": "2",
+            "pa": "2",
+            "en": "2"
+          },
+          {
+            "hi": "3",
+            "pa": "3",
+            "en": "3"
+          },
+          {
+            "hi": "4",
+            "pa": "4",
+            "en": "4"
+          },
+          {
+            "hi": "5",
+            "pa": "5",
+            "en": "5"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "4 कक्ष — दाहिना अलिंद, दाहिना निलय, बायाँ अलिंद, बायाँ निलय।",
+          "pa": "4 ਕੋਠੜੀਆਂ — ਸੱਜਾ ਆਲਿੰਦ, ਸੱਜਾ ਨਿਲੈ, ਖੱਬਾ ਆਲਿੰਦ, ਖੱਬਾ ਨਿਲੈ।",
+          "en": "4 chambers: right atrium, right ventricle, left atrium, left ventricle."
+        }
+      },
+      {
+        "id": "hb-q4",
+        "prompt": {
+          "hi": "सामान्य रक्तचाप कितना है?",
+          "pa": "ਆਮ ਬਲੱਡ ਪ੍ਰੈਸ਼ਰ ਕਿੰਨਾ ਹੁੰਦਾ ਹੈ?",
+          "en": "What is normal blood pressure (systolic/diastolic)?"
+        },
+        "options": [
+          {
+            "hi": "80/120 mmHg",
+            "pa": "80/120 mmHg",
+            "en": "80/120 mmHg"
+          },
+          {
+            "hi": "120/80 mmHg",
+            "pa": "120/80 mmHg",
+            "en": "120/80 mmHg"
+          },
+          {
+            "hi": "140/90 mmHg",
+            "pa": "140/90 mmHg",
+            "en": "140/90 mmHg"
+          },
+          {
+            "hi": "100/60 mmHg",
+            "pa": "100/60 mmHg",
+            "en": "100/60 mmHg"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "120 mmHg सिस्टोलिक (संकुचन) और 80 mmHg डायस्टोलिक (शिथिलन) — WHO मानक।",
+          "pa": "120 mmHg ਸਿਸਟੋਲਿਕ ਅਤੇ 80 mmHg ਡਾਇਸਟੋਲਿਕ — WHO ਮਾਨਕ।",
+          "en": "120 mmHg systolic (contraction) and 80 mmHg diastolic (relaxation) — WHO standard."
+        }
+      },
+      {
+        "id": "hb-q5",
+        "prompt": {
+          "hi": "पित्त रस कहाँ बनता है?",
+          "pa": "ਪਿੱਤ ਰਸ ਕਿੱਥੇ ਬਣਦਾ ਹੈ?",
+          "en": "Where is bile juice produced?"
+        },
+        "options": [
+          {
+            "hi": "पित्ताशय",
+            "pa": "ਪਿੱਤੇ ਦੀ ਥੈਲੀ",
+            "en": "Gall bladder"
+          },
+          {
+            "hi": "अग्न्याशय",
+            "pa": "ਪੈਨਕਰੀਅਸ",
+            "en": "Pancreas"
+          },
+          {
+            "hi": "यकृत",
+            "pa": "ਜਿਗਰ",
+            "en": "Liver"
+          },
+          {
+            "hi": "छोटी आँत",
+            "pa": "ਛੋਟੀ ਆਂਦਰ",
+            "en": "Small intestine"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "पित्त रस यकृत (Liver) में बनता है और पित्ताशय में जमा होता है।",
+          "pa": "ਪਿੱਤ ਰਸ ਜਿਗਰ ਵਿੱਚ ਬਣਦਾ ਹੈ ਅਤੇ ਪਿੱਤੇ ਦੀ ਥੈਲੀ ਵਿੱਚ ਇਕੱਠਾ ਹੁੰਦਾ ਹੈ।",
+          "en": "Bile is produced in the liver and stored in the gall bladder."
+        }
+      },
+      {
+        "id": "hb-q6",
+        "prompt": {
+          "hi": "RBC का मुख्य कार्य क्या है?",
+          "pa": "RBC ਦਾ ਮੁੱਖ ਕੰਮ ਕੀ ਹੈ?",
+          "en": "What is the primary function of red blood cells (RBC)?"
+        },
+        "options": [
+          {
+            "hi": "रोग प्रतिरोध",
+            "pa": "ਰੋਗ-ਰੋਧ",
+            "en": "Immunity"
+          },
+          {
+            "hi": "रक्त का जमना",
+            "pa": "ਖ਼ੂਨ ਜਮਣਾ",
+            "en": "Clotting"
+          },
+          {
+            "hi": "ऑक्सीजन परिवहन",
+            "pa": "ਆਕਸੀਜਨ ਢੋਆ-ਢੁਆਈ",
+            "en": "Oxygen transport"
+          },
+          {
+            "hi": "पाचन",
+            "pa": "ਪਾਚਣ",
+            "en": "Digestion"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "RBC हीमोग्लोबिन के माध्यम से O₂ को फेफड़ों से ऊतकों तक और CO₂ को वापस फेफड़ों तक ले जाते हैं।",
+          "pa": "RBC ਹੀਮੋਗਲੋਬਿਨ ਰਾਹੀਂ O₂ ਫੇਫੜਿਆਂ ਤੋਂ ਟਿਸ਼ੂਆਂ ਤੱਕ ਅਤੇ CO₂ ਵਾਪਸ ਫੇਫੜਿਆਂ ਤੱਕ ਲੈ ਜਾਂਦੇ ਹਨ।",
+          "en": "RBCs carry O₂ from lungs to tissues and CO₂ back via haemoglobin."
+        }
+      },
+      {
+        "id": "hb-q7",
+        "prompt": {
+          "hi": "वयस्क में सामान्य श्वसन दर कितनी होती है?",
+          "pa": "ਬਾਲਗ਼ ਵਿੱਚ ਆਮ ਸਾਹ ਦੀ ਦਰ ਕਿੰਨੀ ਹੁੰਦੀ ਹੈ?",
+          "en": "What is the normal breathing rate in adults?"
+        },
+        "options": [
+          {
+            "hi": "8–10 बार/मिनट",
+            "pa": "8–10 ਵਾਰ/ਮਿੰਟ",
+            "en": "8–10 per minute"
+          },
+          {
+            "hi": "15–20 बार/मिनट",
+            "pa": "15–20 ਵਾਰ/ਮਿੰਟ",
+            "en": "15–20 per minute"
+          },
+          {
+            "hi": "25–30 बार/मिनट",
+            "pa": "25–30 ਵਾਰ/ਮਿੰਟ",
+            "en": "25–30 per minute"
+          },
+          {
+            "hi": "35–40 बार/मिनट",
+            "pa": "35–40 ਵਾਰ/ਮਿੰਟ",
+            "en": "35–40 per minute"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "वयस्क में सामान्य श्वसन दर 15–20 बार प्रति मिनट होती है।",
+          "pa": "ਬਾਲਗ਼ ਵਿੱਚ ਆਮ ਸਾਹ ਦੀ ਦਰ 15–20 ਵਾਰ ਪ੍ਰਤੀ ਮਿੰਟ ਹੁੰਦੀ ਹੈ।",
+          "en": "Normal breathing rate in adults is 15–20 times per minute."
+        }
+      },
+      {
+        "id": "hb-q8",
+        "prompt": {
+          "hi": "ग्लूकोज़ के ऑक्सीकरण का सही समीकरण कौन-सा है?",
+          "pa": "ਗਲੂਕੋਜ਼ ਦੇ ਆਕਸੀਕਰਨ ਦਾ ਸਹੀ ਸਮੀਕਰਨ ਕਿਹੜਾ ਹੈ?",
+          "en": "Which is the correct equation for glucose oxidation in cells?"
+        },
+        "options": [
+          {
+            "hi": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ऊर्जा",
+            "pa": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ਊਰਜਾ",
+            "en": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy"
+          },
+          {
+            "hi": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂",
+            "pa": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂",
+            "en": "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂"
+          },
+          {
+            "hi": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂",
+            "pa": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂",
+            "en": "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂"
+          },
+          {
+            "hi": "CO₂ + H₂O → HCO₃⁻ + H⁺",
+            "pa": "CO₂ + H₂O → HCO₃⁻ + H⁺",
+            "en": "CO₂ + H₂O → HCO₃⁻ + H⁺"
+          }
+        ],
+        "answerIndex": 0,
+        "explanation": {
+          "hi": "एरोबिक श्वसन: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (ऊर्जा)।",
+          "pa": "ਐਰੋਬਿਕ ਸਾਹ: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP।",
+          "en": "Aerobic respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (energy)."
+        }
+      },
+      {
+        "id": "hb-q9",
+        "prompt": {
+          "hi": "प्लेटलेट्स का क्या कार्य है?",
+          "pa": "ਪਲੇਟਲੈਟਸ ਦਾ ਕੀ ਕੰਮ ਹੈ?",
+          "en": "What is the function of platelets?"
+        },
+        "options": [
+          {
+            "hi": "ऑक्सीजन ले जाना",
+            "pa": "ਆਕਸੀਜਨ ਲੈ ਜਾਣਾ",
+            "en": "Carry oxygen"
+          },
+          {
+            "hi": "रोग प्रतिरोध",
+            "pa": "ਰੋਗ-ਰੋਧ",
+            "en": "Immunity"
+          },
+          {
+            "hi": "रक्त का जमना (Clotting)",
+            "pa": "ਖ਼ੂਨ ਜਮਣਾ (Clotting)",
+            "en": "Blood clotting"
+          },
+          {
+            "hi": "भोजन पाचन",
+            "pa": "ਭੋਜਨ ਪਾਚਣ",
+            "en": "Food digestion"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "प्लेटलेट्स चोट लगने पर रक्त को जमाने (Clotting) में सहायता करते हैं।",
+          "pa": "ਪਲੇਟਲੈਟਸ ਸੱਟ ਲੱਗਣ 'ਤੇ ਖ਼ੂਨ ਜਮਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ।",
+          "en": "Platelets assist in blood clotting when an injury occurs."
+        }
+      },
+      {
+        "id": "hb-q10",
+        "prompt": {
+          "hi": "छोटी आंत का मुख्य कार्य क्या है?",
+          "pa": "ਛੋਟੀ ਆਂਦਰ ਦਾ ਮੁੱਖ ਕੰਮ ਕੀ ਹੈ?",
+          "en": "What is the primary function of the small intestine?"
+        },
+        "options": [
+          {
+            "hi": "जल अवशोषण",
+            "pa": "ਪਾਣੀ ਦੀ ਸਮਾਈ",
+            "en": "Water absorption"
+          },
+          {
+            "hi": "पचे भोजन का अवशोषण",
+            "pa": "ਪਚੇ ਭੋਜਨ ਦੀ ਸਮਾਈ",
+            "en": "Absorption of digested nutrients"
+          },
+          {
+            "hi": "मल निर्माण",
+            "pa": "ਮਲ ਬਣਾਉਣਾ",
+            "en": "Formation of faeces"
+          },
+          {
+            "hi": "प्रोटीन पाचन केवल",
+            "pa": "ਸਿਰਫ਼ ਪ੍ਰੋਟੀਨ ਪਾਚਣ",
+            "en": "Protein digestion only"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "छोटी आंत में पचे पोषक तत्वों का अवशोषण होता है और वे रक्त में मिलते हैं।",
+          "pa": "ਛੋਟੀ ਆਂਦਰ ਵਿੱਚ ਪਚੇ ਪੋਸ਼ਕ ਤੱਤਾਂ ਦੀ ਸਮਾਈ ਹੁੰਦੀ ਹੈ ਅਤੇ ਉਹ ਖ਼ੂਨ ਵਿੱਚ ਮਿਲਦੇ ਹਨ।",
+          "en": "The small intestine is the primary site for absorption of digested nutrients into the bloodstream."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "ETT Paper B Syllabus — ERB Punjab (Science section, Biology unit)",
+        "url": "https://educationrecruitmentboard.com/ETT6635/Docs/ETT6635Syllabus13_08_2021.pdf"
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "ett-sst-harappan",
+    "subject": "SST",
+    "unit": "Ancient India",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "हड़प्पा / सिंधु-सरस्वती सभ्यता",
+      "pa": "ਹੜੱਪਾ / ਸਿੰਧੂ-ਸਰਸਵਤੀ ਸੱਭਿਅਤਾ",
+      "en": "Harappan / Indus-Saraswati Civilisation"
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "काल, विस्तार और प्रमुख स्थल",
+          "pa": "ਕਾਲ, ਵਿਸਤਾਰ ਅਤੇ ਮੁੱਖ ਸਥਾਨ",
+          "en": "Period, Extent and Major Sites"
+        },
+        "text": {
+          "hi": "सिंधु-सरस्वती सभ्यता (हड़प्पा संस्कृति) 2600–1900 BCE के बीच अपने चरम पर थी। यह विश्व की प्राचीनतम नगरीय सभ्यताओं में से एक है। इसका विस्तार पाकिस्तान, भारत (पंजाब, राजस्थान, गुजरात) और अफ़गानिस्तान तक था — लगभग 12.5 लाख वर्ग किमी। प्रमुख स्थल: हड़प्पा और मोहनजो-दड़ो (पाकिस्तान), लोथल, धोलावीरा, कालीबंगा, राखीगढ़ी, बनवाली (भारत)। राखीगढ़ी (हरियाणा) क्षेत्रफल के आधार पर सबसे बड़ा स्थल है। लोथल में एक प्राचीन बंदरगाह और गोदी (Dockyard) थी।",
+          "pa": "ਸਿੰਧੂ-ਸਰਸਵਤੀ ਸੱਭਿਅਤਾ (ਹੜੱਪਾ ਸੰਸਕ੍ਰਿਤੀ) 2600–1900 BCE ਵਿਚਕਾਰ ਆਪਣੇ ਸਿਖ਼ਰ 'ਤੇ ਸੀ। ਇਹ ਸੰਸਾਰ ਦੀਆਂ ਪੁਰਾਤਨ ਸ਼ਹਿਰੀ ਸੱਭਿਅਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ। ਇਸਦਾ ਵਿਸਤਾਰ ਪਾਕਿਸਤਾਨ, ਭਾਰਤ (ਪੰਜਾਬ, ਰਾਜਸਥਾਨ, ਗੁਜਰਾਤ) ਅਤੇ ਅਫ਼ਗਾਨਿਸਤਾਨ ਤੱਕ ਸੀ। ਮੁੱਖ ਸਥਾਨ: ਹੜੱਪਾ, ਮੋਹੰਜੋਦੜੋ, ਲੋਥਲ, ਧੋਲਾਵੀਰਾ, ਕਾਲੀਬੰਗਾ, ਰਾਖੀਗੜ੍ਹੀ। ਲੋਥਲ ਵਿੱਚ ਇੱਕ ਪੁਰਾਤਨ ਬੰਦਰਗਾਹ ਅਤੇ ਗੋਦੀ (Dockyard) ਸੀ।",
+          "en": "The Indus-Saraswati Civilisation (Harappan Culture) peaked between 2600–1900 BCE, making it one of the world's earliest urban civilisations. It spread across Pakistan, India (Punjab, Rajasthan, Gujarat) and Afghanistan — approximately 1.25 million sq km. Major sites: Harappa and Mohenjo-daro (Pakistan), Lothal, Dholavira, Kalibangan, Rakhigarhi, Banawali (India). Rakhigarhi (Haryana) is the largest site by area. Lothal had an ancient port and dockyard."
+        }
+      },
+      {
+        "heading": {
+          "hi": "नगर-योजना और स्थापत्य",
+          "pa": "ਸ਼ਹਿਰ-ਯੋਜਨਾ ਅਤੇ ਇਮਾਰਤਸਾਜ਼ੀ",
+          "en": "Town Planning and Architecture"
+        },
+        "text": {
+          "hi": "हड़प्पाई नगर ग्रिड (चेकरबोर्ड) पैटर्न पर बने थे। दो भाग थे: ऊँचा दुर्ग (Citadel/Upper Town) — शासकीय और धार्मिक भवन, और निचला नगर (Lower Town) — आवासीय। पक्की ईंटों का प्रयोग किया जाता था। उत्कृष्ट जल-निकासी/सीवरेज प्रणाली — घरों में शौचालय और नालियाँ। मोहनजो-दड़ो में विशाल स्नानागार (Great Bath) — 12×7 मीटर। अनाज की बड़ी-बड़ी कोठियाँ (Granaries) हड़प्पा में मिली हैं। शवाधान मिला है — प्राथमिक और द्वितीयक।",
+          "pa": "ਹੜੱਪਾ ਦੇ ਸ਼ਹਿਰ ਗ੍ਰਿੱਡ ਪੈਟਰਨ ਉੱਤੇ ਬਣੇ ਸਨ। ਦੋ ਭਾਗ: ਉੱਚਾ ਕਿਲ੍ਹਾ (Citadel) ਅਤੇ ਹੇਠਲਾ ਸ਼ਹਿਰ। ਪੱਕੀਆਂ ਇੱਟਾਂ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ ਸਨ। ਵਧੀਆ ਪਾਣੀ-ਨਿਕਾਸ/ਸੀਵਰੇਜ ਪ੍ਰਣਾਲੀ। ਮੋਹੰਜੋਦੜੋ ਵਿੱਚ ਵਿਸ਼ਾਲ ਇਸ਼ਨਾਨਘਰ (Great Bath) — 12×7 ਮੀਟਰ। ਹੜੱਪਾ ਵਿੱਚ ਵੱਡੇ ਅਨਾਜ-ਭੰਡਾਰ (Granaries) ਮਿਲੇ ਹਨ।",
+          "en": "Harappan cities were built on a grid (checkerboard) pattern. They had two parts: the elevated Citadel (Upper Town) for civic/religious buildings and the Lower Town for residences. Fired bricks were used. An excellent drainage/sewerage system included toilets and covered drains. Mohenjo-daro has the Great Bath (12×7 m). Large granaries have been found at Harappa."
+        }
+      },
+      {
+        "heading": {
+          "hi": "अर्थव्यवस्था, व्यापार और लेखन",
+          "pa": "ਆਰਥਿਕਤਾ, ਵਪਾਰ ਅਤੇ ਲਿਖਾਈ",
+          "en": "Economy, Trade and Script"
+        },
+        "text": {
+          "hi": "हड़प्पाई कृषि उत्पाद: गेहूँ, जौ, तिल, कपास। कपास की खेती विश्व में सर्वप्रथम यहीं हुई। मेसोपोटामिया (इराक़) के साथ समुद्री व्यापार के प्रमाण मिले हैं। हड़प्पा लिपि (Indus Script) अभी तक पढ़ी नहीं गई। मुहरें (Seals) — स्टीटाइट (Soapstone) की, पशुपति मुहर (Pasupati Seal) महत्वपूर्ण — एक बैठे योगी को दर्शाती है जिसके चारों ओर जानवर हैं। सभ्यता का पतन 1800-1700 BCE के आसपास हुआ — कारण विवादित (जलवायु परिवर्तन, सरस्वती नदी का सूखना)।",
+          "pa": "ਹੜੱਪਾ ਦੀ ਖੇਤੀ: ਕਣਕ, ਜੌਂ, ਤਿਲ, ਕਪਾਹ। ਕਪਾਹ ਦੀ ਖੇਤੀ ਸੰਸਾਰ ਵਿੱਚ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਇੱਥੇ ਹੋਈ। ਮੇਸੋਪੋਟਾਮੀਆ ਨਾਲ ਸਮੁੰਦਰੀ ਵਪਾਰ ਦੇ ਸਬੂਤ ਮਿਲੇ ਹਨ। ਹੜੱਪਾ ਲਿਪੀ ਅਜੇ ਤੱਕ ਪੜ੍ਹੀ ਨਹੀਂ ਗਈ। ਮੋਹਰਾਂ (Seals) — ਸਟੀਆਟਾਈਟ ਦੀਆਂ, ਪਸ਼ੂਪਤੀ ਮੋਹਰ ਮਹੱਤਵਪੂਰਨ।",
+          "en": "Harappan crops: wheat, barley, sesame, cotton. Cotton was first cultivated here. Evidence of maritime trade with Mesopotamia (Iraq). The Indus Script remains undeciphered. Seals were made of steatite (soapstone); the Pasupati Seal shows a seated yogi surrounded by animals. The civilisation declined around 1800–1700 BCE — causes debated (climate change, drying of Saraswati river)."
+        }
+      }
+    ],
+    "keypoints": [
+      {
+        "hi": "काल: 2600–1900 BCE; विस्तार: 12.5 लाख वर्ग किमी; सबसे बड़ा स्थल: राखीगढ़ी",
+        "pa": "ਕਾਲ: 2600–1900 BCE; ਵਿਸਤਾਰ: 12.5 ਲੱਖ ਵਰਗ ਕਿਲੋਮੀਟਰ; ਸਭ ਤੋਂ ਵੱਡਾ ਸਥਾਨ: ਰਾਖੀਗੜ੍ਹੀ",
+        "en": "Period: 2600–1900 BCE; Extent: 1.25 million sq km; Largest site: Rakhigarhi"
+      },
+      {
+        "hi": "ग्रिड पैटर्न + सीवरेज + Great Bath (मोहनजो-दड़ो) + Granaries (हड़प्पा)",
+        "pa": "ਗ੍ਰਿੱਡ ਪੈਟਰਨ + ਸੀਵਰੇਜ + ਵਿਸ਼ਾਲ ਇਸ਼ਨਾਨਘਰ (ਮੋਹੰਜੋਦੜੋ) + ਅਨਾਜ-ਭੰਡਾਰ (ਹੜੱਪਾ)",
+        "en": "Grid plan + sewerage + Great Bath (Mohenjo-daro) + Granaries (Harappa)"
+      },
+      {
+        "hi": "पहली कपास की खेती; लोथल = बंदरगाह; हड़प्पा लिपि = अपठित",
+        "pa": "ਪਹਿਲੀ ਕਪਾਹ ਦੀ ਖੇਤੀ; ਲੋਥਲ = ਬੰਦਰਗਾਹ; ਹੜੱਪਾ ਲਿਪੀ = ਅਪਠਿਤ",
+        "en": "First cotton cultivation; Lothal = port; Indus Script = undeciphered"
+      },
+      {
+        "hi": "पसुपति मुहर = बैठे योगी + जानवर; पतन c.1800 BCE",
+        "pa": "ਪਸ਼ੂਪਤੀ ਮੋਹਰ = ਬੈਠਾ ਯੋਗੀ + ਜਾਨਵਰ; ਪਤਨ c.1800 BCE",
+        "en": "Pasupati Seal = seated yogi + animals; decline c.1800 BCE"
+      }
+    ],
+    "summary": {
+      "hi": "हड़प्पा / सिंधु-सरस्वती सभ्यता (2600–1900 BCE) विश्व की प्रमुख नगरीय सभ्यताओं में से एक थी। ग्रिड नगर-योजना, उत्कृष्ट सीवरेज, Great Bath, Granaries, पहली कपास-खेती, अपठित लिपि और मेसोपोटामिया से व्यापार ETT SST के लिए अत्यंत महत्वपूर्ण बिंदु हैं।",
+      "pa": "ਹੜੱਪਾ ਸੱਭਿਅਤਾ (2600–1900 BCE) ਸੰਸਾਰ ਦੀਆਂ ਮੁੱਖ ਸ਼ਹਿਰੀ ਸੱਭਿਅਤਾਵਾਂ ਵਿੱਚੋਂ ਇੱਕ ਸੀ। ETT SST ਲਈ ਗ੍ਰਿੱਡ ਯੋਜਨਾ, ਸੀਵਰੇਜ, ਵਿਸ਼ਾਲ ਇਸ਼ਨਾਨਘਰ, ਅਨਾਜ-ਭੰਡਾਰ, ਕਪਾਹ ਦੀ ਖੇਤੀ ਅਤੇ ਅਪਠਿਤ ਲਿਪੀ ਮਹੱਤਵਪੂਰਨ ਹਨ।",
+      "en": "The Harappan / Indus-Saraswati Civilisation (2600–1900 BCE) was one of the world's great urban civilisations. Grid town planning, excellent sewerage, Great Bath, granaries, first cotton cultivation, undeciphered script and trade with Mesopotamia are key ETT SST points."
+    },
+    "flashcards": [
+      {
+        "question": {
+          "hi": "सिंधु सभ्यता का काल क्या था?",
+          "pa": "ਸਿੰਧੂ ਸੱਭਿਅਤਾ ਦਾ ਕਾਲ ਕੀ ਸੀ?",
+          "en": "What was the peak period of the Indus civilisation?"
+        },
+        "answer": {
+          "hi": "2600–1900 BCE (लगभग)।",
+          "pa": "2600–1900 BCE (ਲਗਭਗ)।",
+          "en": "Approximately 2600–1900 BCE."
+        }
+      },
+      {
+        "question": {
+          "hi": "क्षेत्रफल के आधार पर सबसे बड़ा हड़प्पाई स्थल?",
+          "pa": "ਖੇਤਰਫਲ ਅਨੁਸਾਰ ਸਭ ਤੋਂ ਵੱਡਾ ਹੜੱਪਾ ਸਥਾਨ?",
+          "en": "Which is the largest Harappan site by area?"
+        },
+        "answer": {
+          "hi": "राखीगढ़ी (हरियाणा)।",
+          "pa": "ਰਾਖੀਗੜ੍ਹੀ (ਹਰਿਆਣਾ)।",
+          "en": "Rakhigarhi, Haryana."
+        }
+      },
+      {
+        "question": {
+          "hi": "Great Bath कहाँ मिला?",
+          "pa": "ਵਿਸ਼ਾਲ ਇਸ਼ਨਾਨਘਰ ਕਿੱਥੇ ਮਿਲਿਆ?",
+          "en": "Where was the Great Bath found?"
+        },
+        "answer": {
+          "hi": "मोहनजो-दड़ो।",
+          "pa": "ਮੋਹੰਜੋਦੜੋ।",
+          "en": "Mohenjo-daro."
+        }
+      },
+      {
+        "question": {
+          "hi": "लोथल क्यों प्रसिद्ध है?",
+          "pa": "ਲੋਥਲ ਕਿਸ ਲਈ ਮਸ਼ਹੂਰ ਹੈ?",
+          "en": "Why is Lothal famous?"
+        },
+        "answer": {
+          "hi": "प्राचीन बंदरगाह (Dockyard) के लिए।",
+          "pa": "ਪੁਰਾਤਨ ਬੰਦਰਗਾਹ (Dockyard) ਲਈ।",
+          "en": "For its ancient port (dockyard)."
+        }
+      },
+      {
+        "question": {
+          "hi": "हड़प्पा लिपि की क्या विशेषता है?",
+          "pa": "ਹੜੱਪਾ ਲਿਪੀ ਦੀ ਕੀ ਵਿਸ਼ੇਸ਼ਤਾ ਹੈ?",
+          "en": "What is notable about the Harappan script?"
+        },
+        "answer": {
+          "hi": "अभी तक पढ़ी/समझी नहीं गई (Undeciphered)।",
+          "pa": "ਅਜੇ ਤੱਕ ਪੜ੍ਹੀ/ਸਮਝੀ ਨਹੀਂ ਗਈ।",
+          "en": "It remains undeciphered."
+        }
+      },
+      {
+        "question": {
+          "hi": "सर्वप्रथम कपास की खेती कहाँ हुई?",
+          "pa": "ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਕਪਾਹ ਦੀ ਖੇਤੀ ਕਿੱਥੇ ਹੋਈ?",
+          "en": "Where was cotton first cultivated in the world?"
+        },
+        "answer": {
+          "hi": "सिंधु-सरस्वती (हड़प्पा) सभ्यता में।",
+          "pa": "ਸਿੰਧੂ-ਸਰਸਵਤੀ (ਹੜੱਪਾ) ਸੱਭਿਅਤਾ ਵਿੱਚ।",
+          "en": "In the Indus-Saraswati (Harappan) civilisation."
+        }
+      },
+      {
+        "question": {
+          "hi": "पसुपति मुहर पर क्या दर्शाया गया है?",
+          "pa": "ਪਸ਼ੂਪਤੀ ਮੋਹਰ ਉੱਤੇ ਕੀ ਦਰਸਾਇਆ ਗਿਆ ਹੈ?",
+          "en": "What is depicted on the Pasupati Seal?"
+        },
+        "answer": {
+          "hi": "एक बैठे योगी के चारों ओर पशु।",
+          "pa": "ਇੱਕ ਬੈਠੇ ਯੋਗੀ ਦੁਆਲੇ ਪਸ਼ੂ।",
+          "en": "A seated yogi surrounded by animals."
+        }
+      },
+      {
+        "question": {
+          "hi": "हड़प्पाई नगर किस पैटर्न पर बने थे?",
+          "pa": "ਹੜੱਪਾ ਦੇ ਸ਼ਹਿਰ ਕਿਸ ਪੈਟਰਨ ਉੱਤੇ ਬਣੇ ਸਨ?",
+          "en": "On what pattern were Harappan cities built?"
+        },
+        "answer": {
+          "hi": "ग्रिड (चेकरबोर्ड) पैटर्न।",
+          "pa": "ਗ੍ਰਿੱਡ (ਚੈੱਕਰਬੋਰਡ) ਪੈਟਰਨ।",
+          "en": "Grid (checkerboard) pattern."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "har-q1",
+        "prompt": {
+          "hi": "सिंधु सभ्यता का चरम काल कौन-सा था?",
+          "pa": "ਸਿੰਧੂ ਸੱਭਿਅਤਾ ਦਾ ਸਿਖ਼ਰ ਦਾ ਕਾਲ ਕਿਹੜਾ ਸੀ?",
+          "en": "What was the peak period of the Indus civilisation?"
+        },
+        "options": [
+          {
+            "hi": "3500–2600 BCE",
+            "pa": "3500–2600 BCE",
+            "en": "3500–2600 BCE"
+          },
+          {
+            "hi": "2600–1900 BCE",
+            "pa": "2600–1900 BCE",
+            "en": "2600–1900 BCE"
+          },
+          {
+            "hi": "1500–1200 BCE",
+            "pa": "1500–1200 BCE",
+            "en": "1500–1200 BCE"
+          },
+          {
+            "hi": "800–600 BCE",
+            "pa": "800–600 BCE",
+            "en": "800–600 BCE"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "2600–1900 BCE — हड़प्पा सभ्यता का परिपक्व (Mature) चरण।",
+          "pa": "2600–1900 BCE — ਹੜੱਪਾ ਸੱਭਿਅਤਾ ਦਾ ਪਰਿਪੱਕ ਪੜਾਅ।",
+          "en": "2600–1900 BCE is the Mature Harappan phase accepted by archaeologists."
+        }
+      },
+      {
+        "id": "har-q2",
+        "prompt": {
+          "hi": "Great Bath कहाँ मिला?",
+          "pa": "ਵਿਸ਼ਾਲ ਇਸ਼ਨਾਨਘਰ ਕਿੱਥੇ ਮਿਲਿਆ?",
+          "en": "Where was the Great Bath discovered?"
+        },
+        "options": [
+          {
+            "hi": "हड़प्पा",
+            "pa": "ਹੜੱਪਾ",
+            "en": "Harappa"
+          },
+          {
+            "hi": "लोथल",
+            "pa": "ਲੋਥਲ",
+            "en": "Lothal"
+          },
+          {
+            "hi": "मोहनजो-दड़ो",
+            "pa": "ਮੋਹੰਜੋਦੜੋ",
+            "en": "Mohenjo-daro"
+          },
+          {
+            "hi": "राखीगढ़ी",
+            "pa": "ਰਾਖੀਗੜ੍ਹੀ",
+            "en": "Rakhigarhi"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "मोहनजो-दड़ो (पाकिस्तान) में 12×7 मीटर का Great Bath मिला।",
+          "pa": "ਮੋਹੰਜੋਦੜੋ ਵਿੱਚ 12×7 ਮੀਟਰ ਦਾ ਵਿਸ਼ਾਲ ਇਸ਼ਨਾਨਘਰ ਮਿਲਿਆ।",
+          "en": "The Great Bath (12×7 m) was found at Mohenjo-daro, Pakistan."
+        }
+      },
+      {
+        "id": "har-q3",
+        "prompt": {
+          "hi": "क्षेत्रफल के आधार पर सबसे बड़ा हड़प्पाई स्थल कौन-सा है?",
+          "pa": "ਖੇਤਰਫਲ ਅਨੁਸਾਰ ਸਭ ਤੋਂ ਵੱਡਾ ਹੜੱਪਾ ਸਥਾਨ ਕਿਹੜਾ ਹੈ?",
+          "en": "Which is the largest Harappan site by area?"
+        },
+        "options": [
+          {
+            "hi": "मोहनजो-दड़ो",
+            "pa": "ਮੋਹੰਜੋਦੜੋ",
+            "en": "Mohenjo-daro"
+          },
+          {
+            "hi": "हड़प्पा",
+            "pa": "ਹੜੱਪਾ",
+            "en": "Harappa"
+          },
+          {
+            "hi": "राखीगढ़ी",
+            "pa": "ਰਾਖੀਗੜ੍ਹੀ",
+            "en": "Rakhigarhi"
+          },
+          {
+            "hi": "धोलावीरा",
+            "pa": "ਧੋਲਾਵੀਰਾ",
+            "en": "Dholavira"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "राखीगढ़ी (हरियाणा) क्षेत्रफल के आधार पर ज्ञात सबसे बड़ा हड़प्पाई स्थल है।",
+          "pa": "ਰਾਖੀਗੜ੍ਹੀ (ਹਰਿਆਣਾ) ਖੇਤਰਫਲ ਅਨੁਸਾਰ ਸਭ ਤੋਂ ਵੱਡਾ ਹੜੱਪਾ ਸਥਾਨ ਹੈ।",
+          "en": "Rakhigarhi, Haryana is the largest known Harappan site by area."
+        }
+      },
+      {
+        "id": "har-q4",
+        "prompt": {
+          "hi": "लोथल में क्या विशेष मिला?",
+          "pa": "ਲੋਥਲ ਵਿੱਚ ਕੀ ਵਿਸ਼ੇਸ਼ ਮਿਲਿਆ?",
+          "en": "What was uniquely found at Lothal?"
+        },
+        "options": [
+          {
+            "hi": "Great Bath",
+            "pa": "ਵਿਸ਼ਾਲ ਇਸ਼ਨਾਨਘਰ",
+            "en": "Great Bath"
+          },
+          {
+            "hi": "बंदरगाह / गोदी (Dockyard)",
+            "pa": "ਬੰਦਰਗਾਹ / ਗੋਦੀ",
+            "en": "Dockyard / Port"
+          },
+          {
+            "hi": "अनाज-कोठी (Granary)",
+            "pa": "ਅਨਾਜ-ਭੰਡਾਰ",
+            "en": "Granary"
+          },
+          {
+            "hi": "पसुपति मुहर",
+            "pa": "ਪਸ਼ੂਪਤੀ ਮੋਹਰ",
+            "en": "Pasupati Seal"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "लोथल (गुजरात) में एक प्राचीन बंदरगाह और गोदी (Dockyard) मिली है।",
+          "pa": "ਲੋਥਲ (ਗੁਜਰਾਤ) ਵਿੱਚ ਇੱਕ ਪੁਰਾਤਨ ਬੰਦਰਗਾਹ ਅਤੇ ਗੋਦੀ ਮਿਲੀ ਹੈ।",
+          "en": "Lothal (Gujarat) had an ancient port and dockyard for maritime trade."
+        }
+      },
+      {
+        "id": "har-q5",
+        "prompt": {
+          "hi": "संसार में कपास की सर्वप्रथम खेती कहाँ हुई?",
+          "pa": "ਸੰਸਾਰ ਵਿੱਚ ਕਪਾਹ ਦੀ ਖੇਤੀ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਕਿੱਥੇ ਹੋਈ?",
+          "en": "Where was cotton first cultivated in the world?"
+        },
+        "options": [
+          {
+            "hi": "मेसोपोटामिया",
+            "pa": "ਮੇਸੋਪੋਟਾਮੀਆ",
+            "en": "Mesopotamia"
+          },
+          {
+            "hi": "मिस्र (Egypt)",
+            "pa": "ਮਿਸਰ (Egypt)",
+            "en": "Egypt"
+          },
+          {
+            "hi": "सिंधु-सरस्वती सभ्यता",
+            "pa": "ਸਿੰਧੂ-ਸਰਸਵਤੀ ਸੱਭਿਅਤਾ",
+            "en": "Indus-Saraswati Civilisation"
+          },
+          {
+            "hi": "चीन",
+            "pa": "ਚੀਨ",
+            "en": "China"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "सिंधु सभ्यता में कपास की खेती विश्व में सर्वप्रथम हुई।",
+          "pa": "ਸਿੰਧੂ ਸੱਭਿਅਤਾ ਵਿੱਚ ਕਪਾਹ ਦੀ ਖੇਤੀ ਸੰਸਾਰ ਵਿੱਚ ਸਭ ਤੋਂ ਪਹਿਲਾਂ ਹੋਈ।",
+          "en": "Cotton was first cultivated in the Indus-Saraswati civilisation."
+        }
+      },
+      {
+        "id": "har-q6",
+        "prompt": {
+          "hi": "हड़प्पा लिपि के बारे में क्या सत्य है?",
+          "pa": "ਹੜੱਪਾ ਲਿਪੀ ਬਾਰੇ ਕੀ ਸੱਚ ਹੈ?",
+          "en": "Which statement is true about the Harappan script?"
+        },
+        "options": [
+          {
+            "hi": "यह ब्राह्मी लिपि से जुड़ी है",
+            "pa": "ਇਹ ਬ੍ਰਾਹਮੀ ਲਿਪੀ ਨਾਲ ਜੁੜੀ ਹੈ",
+            "en": "It is related to Brahmi script"
+          },
+          {
+            "hi": "इसे पूरी तरह पढ़ लिया गया है",
+            "pa": "ਇਸਨੂੰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਪੜ੍ਹ ਲਿਆ ਗਿਆ ਹੈ",
+            "en": "It has been fully deciphered"
+          },
+          {
+            "hi": "यह अभी तक अपठित है",
+            "pa": "ਇਹ ਅਜੇ ਤੱਕ ਅਪਠਿਤ ਹੈ",
+            "en": "It remains undeciphered"
+          },
+          {
+            "hi": "यह दाएँ से बाएँ लिखी जाती थी",
+            "pa": "ਇਹ ਸੱਜੇ ਤੋਂ ਖੱਬੇ ਲਿਖੀ ਜਾਂਦੀ ਸੀ",
+            "en": "It was written right to left only"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "हड़प्पा लिपि (Indus Script) को आज तक पढ़ा नहीं गया।",
+          "pa": "ਹੜੱਪਾ ਲਿਪੀ ਅੱਜ ਤੱਕ ਨਹੀਂ ਪੜ੍ਹੀ ਗਈ।",
+          "en": "The Harappan (Indus) script has not yet been deciphered."
+        }
+      },
+      {
+        "id": "har-q7",
+        "prompt": {
+          "hi": "हड़प्पाई नगरों में कौन-सी विशेषता नहीं थी?",
+          "pa": "ਹੜੱਪਾ ਦੇ ਸ਼ਹਿਰਾਂ ਵਿੱਚ ਕਿਹੜੀ ਵਿਸ਼ੇਸ਼ਤਾ ਨਹੀਂ ਸੀ?",
+          "en": "Which feature was NOT found in Harappan cities?"
+        },
+        "options": [
+          {
+            "hi": "ग्रिड सड़क-योजना",
+            "pa": "ਗ੍ਰਿੱਡ ਸੜਕ-ਯੋਜਨਾ",
+            "en": "Grid road plan"
+          },
+          {
+            "hi": "उत्कृष्ट सीवरेज तंत्र",
+            "pa": "ਵਧੀਆ ਸੀਵਰੇਜ ਪ੍ਰਣਾਲੀ",
+            "en": "Excellent drainage system"
+          },
+          {
+            "hi": "पक्की ईंटों का प्रयोग",
+            "pa": "ਪੱਕੀਆਂ ਇੱਟਾਂ ਦੀ ਵਰਤੋਂ",
+            "en": "Use of fired bricks"
+          },
+          {
+            "hi": "लोहे के औज़ार",
+            "pa": "ਲੋਹੇ ਦੇ ਸੰਦ",
+            "en": "Iron tools"
+          }
+        ],
+        "answerIndex": 3,
+        "explanation": {
+          "hi": "हड़प्पाई सभ्यता कांस्य युग की थी। लोहे के औज़ार बाद के वैदिक काल में आए।",
+          "pa": "ਹੜੱਪਾ ਸੱਭਿਅਤਾ ਕਾਂਸੀ ਯੁੱਗ ਦੀ ਸੀ। ਲੋਹੇ ਦੇ ਸੰਦ ਬਾਅਦ ਦੇ ਵੈਦਿਕ ਕਾਲ ਵਿੱਚ ਆਏ।",
+          "en": "Harappan civilisation was of the Bronze Age. Iron tools came later in the Vedic period."
+        }
+      },
+      {
+        "id": "har-q8",
+        "prompt": {
+          "hi": "पसुपति मुहर पर किसे दर्शाया गया है?",
+          "pa": "ਪਸ਼ੂਪਤੀ ਮੋਹਰ ਉੱਤੇ ਕੀ ਦਰਸਾਇਆ ਗਿਆ ਹੈ?",
+          "en": "What is depicted on the Pasupati Seal?"
+        },
+        "options": [
+          {
+            "hi": "एकल-सींग वाले पशु पर सवार योद्धा",
+            "pa": "ਇੱਕ-ਸਿੰਗ ਵਾਲੇ ਪਸ਼ੂ ਉੱਤੇ ਸਵਾਰ ਯੋਧਾ",
+            "en": "A warrior riding a unicorn"
+          },
+          {
+            "hi": "पशुओं से घिरा बैठा योगी-पुरुष",
+            "pa": "ਪਸ਼ੂਆਂ ਨਾਲ ਘਿਰਿਆ ਬੈਠਾ ਯੋਗੀ-ਪੁਰਸ਼",
+            "en": "A seated yogi surrounded by animals"
+          },
+          {
+            "hi": "नृत्य करती देवी",
+            "pa": "ਨੱਚਦੀ ਦੇਵੀ",
+            "en": "A dancing goddess"
+          },
+          {
+            "hi": "हाथी और शेर की लड़ाई",
+            "pa": "ਹਾਥੀ ਅਤੇ ਸ਼ੇਰ ਦੀ ਲੜਾਈ",
+            "en": "An elephant and lion in combat"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "पसुपति मुहर पर एक बैठे हुए तीन-मुखी योगी पुरुष के चारों ओर हाथी, बाघ, भैंस और गैंडा हैं।",
+          "pa": "ਪਸ਼ੂਪਤੀ ਮੋਹਰ ਉੱਤੇ ਤਿੰਨ-ਮੂੰਹ ਵਾਲੇ ਬੈਠੇ ਯੋਗੀ ਦੁਆਲੇ ਹਾਥੀ, ਬਾਘ, ਮੱਝ ਅਤੇ ਗੈਂਡਾ ਹਨ।",
+          "en": "The Pasupati Seal shows a three-faced seated yogi surrounded by an elephant, tiger, buffalo and rhinoceros."
+        }
+      },
+      {
+        "id": "har-q9",
+        "prompt": {
+          "hi": "हड़प्पा सभ्यता किस युग से संबंधित है?",
+          "pa": "ਹੜੱਪਾ ਸੱਭਿਅਤਾ ਕਿਸ ਯੁੱਗ ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ?",
+          "en": "Harappan civilisation belongs to which age?"
+        },
+        "options": [
+          {
+            "hi": "पाषाण युग",
+            "pa": "ਪੱਥਰ ਯੁੱਗ",
+            "en": "Stone Age"
+          },
+          {
+            "hi": "ताम्र-पाषाण युग",
+            "pa": "ਤਾਂਬਾ-ਪੱਥਰ ਯੁੱਗ",
+            "en": "Chalcolithic Age"
+          },
+          {
+            "hi": "कांस्य युग",
+            "pa": "ਕਾਂਸੀ ਯੁੱਗ",
+            "en": "Bronze Age"
+          },
+          {
+            "hi": "लौह युग",
+            "pa": "ਲੋਹਾ ਯੁੱਗ",
+            "en": "Iron Age"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "हड़प्पा सभ्यता कांस्य युग (Bronze Age) की सभ्यता है।",
+          "pa": "ਹੜੱਪਾ ਸੱਭਿਅਤਾ ਕਾਂਸੀ ਯੁੱਗ ਦੀ ਸੱਭਿਅਤਾ ਹੈ।",
+          "en": "Harappan civilisation belongs to the Bronze Age."
+        }
+      },
+      {
+        "id": "har-q10",
+        "prompt": {
+          "hi": "हड़प्पाई अनाज-कोठियाँ (Granaries) किस स्थल पर मिलीं?",
+          "pa": "ਹੜੱਪਾ ਦੇ ਅਨਾਜ-ਭੰਡਾਰ ਕਿਸ ਸਥਾਨ ਉੱਤੇ ਮਿਲੇ?",
+          "en": "Where were the Harappan granaries found?"
+        },
+        "options": [
+          {
+            "hi": "मोहनजो-दड़ो",
+            "pa": "ਮੋਹੰਜੋਦੜੋ",
+            "en": "Mohenjo-daro"
+          },
+          {
+            "hi": "हड़प्पा",
+            "pa": "ਹੜੱਪਾ",
+            "en": "Harappa"
+          },
+          {
+            "hi": "लोथल",
+            "pa": "ਲੋਥਲ",
+            "en": "Lothal"
+          },
+          {
+            "hi": "कालीबंगा",
+            "pa": "ਕਾਲੀਬੰਗਾ",
+            "en": "Kalibangan"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "हड़प्पा में बड़ी-बड़ी अनाज कोठियाँ (Granaries) मिली हैं जो अनाज भंडारण के लिए थीं।",
+          "pa": "ਹੜੱਪਾ ਵਿੱਚ ਵੱਡੇ ਅਨਾਜ-ਭੰਡਾਰ ਮਿਲੇ ਹਨ ਜੋ ਅਨਾਜ ਰੱਖਣ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਸਨ।",
+          "en": "Large granaries were found at Harappa, used for storing grain."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "ETT Paper B Syllabus — ERB Punjab (SST section, Ancient India)",
+        "url": "https://educationrecruitmentboard.com/ETT6635/Docs/ETT6635Syllabus13_08_2021.pdf"
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
     "id": "commerce-accounting-basics",
     "subject": "Commerce",
     "unit": "Accountancy",

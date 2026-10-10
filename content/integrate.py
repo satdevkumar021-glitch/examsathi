@@ -93,6 +93,11 @@ for l in json.load(open(research/'polsci-lessons-2.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add ETT Science batch 2 (Human Body, Harappan SST) — ETT Paper B
+for l in json.load(open(research/'ett-science-2.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add Commerce lessons (Lecturer Cadre)
 for l in json.load(open(research/'commerce-lessons.json')):
  l['level']='Foundation / concept preparation'

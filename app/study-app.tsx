@@ -200,6 +200,8 @@ export default function StudyApp({
   const [tab, setTab] = useState("read");
   const [noteDrafts, setNoteDrafts] = useState<Record<string, string>>({});
   const noteAutosaveRef = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
+  const [noteSearch, setNoteSearch] = useState("");
+  const [mistakeView, setMistakeView] = useState(false);
   const [cardIndex, setCardIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [practiceLesson, setPracticeLesson] = useState("all");
@@ -263,19 +265,22 @@ export default function StudyApp({
   const go = (v: string, id?: string) => {
     setView(v);
     if (id) setLessonId(id);
+    // Encode lang in hash so deep links open in the same language
+    const langSuffix = `?lang=${lang}`;
     window.history.pushState(
       null,
       "",
       "#" +
         (v === "lesson"
-          ? "lesson/" + examId + "/" + encodeURIComponent(subject) + "/" + id
-          : v),
+          ? "lesson/" + examId + "/" + encodeURIComponent(subject) + "/" + id + langSuffix
+          : v + langSuffix),
     );
     setMenu(false);
     setTab("read");
     setRevealed(false);
     setCardIndex(0);
     setQuiz(null);
+    setMistakeView(false);
     setError("");
     window.scrollTo(0, 0);
   };
@@ -394,6 +399,15 @@ export default function StudyApp({
   }, [identity]);
   // Shared hash parser — used by both mount and popstate (fixes B-4)
   function applyHash(h: string[]) {
+    // Extract optional ?lang= query embedded in the last path segment
+    const last = h[h.length - 1] || "";
+    const qIdx = last.indexOf("?");
+    if (qIdx !== -1) {
+      const qs = last.slice(qIdx + 1);
+      h[h.length - 1] = last.slice(0, qIdx);
+      const langParam = new URLSearchParams(qs).get("lang");
+      if (langParam && ["hi", "pa", "en"].includes(langParam)) setLang(langParam as Lang);
+    }
     if (h[0] === "lesson") {
       setExamId(h[1] || "master");
       setSubject(h[2] || "SST");
@@ -1096,6 +1110,17 @@ export default function StudyApp({
                 ({ lessonId, q }) => quiz.answers[`${lessonId}:${q.id}`] === q.answerIndex
               ).length;
               if (answers.length) await save({ action: "attempt", answers, correct: correctCount });
+              // Record wrong answers to mistake notebook (localStorage)
+              const wrongKeys = quiz.items
+                .filter(({ lessonId, q }) => quiz.answers[`${lessonId}:${q.id}`] !== q.answerIndex)
+                .map(({ lessonId, q }) => `${lessonId}:${q.id}`);
+              if (wrongKeys.length) {
+                try {
+                  const existing: string[] = JSON.parse(localStorage.getItem("saathi-mistakes") || "[]");
+                  const merged = [...new Set([...existing, ...wrongKeys])].slice(0, 500);
+                  localStorage.setItem("saathi-mistakes", JSON.stringify(merged));
+                } catch {}
+              }
             }}
           >
             {tr(
@@ -1466,6 +1491,38 @@ export default function StudyApp({
         <ArrowLeft size={17} />
         {selectedExam.name}
       </button>
+      {/* B01: inline exam context switcher so learner can change exam without going home */}
+      <div className="filter-row" style={{ marginBottom: 10 }}>
+        <span className="muted" style={{ fontSize: 13, alignSelf: "center" }}>
+          {tr(text("परीक्षा:", "ਪ੍ਰੀਖਿਆ:", "Exam:"))}
+        </span>
+        <select
+          aria-label="Switch exam context"
+          value={examId}
+          style={{ fontSize: 13 }}
+          onChange={e => {
+            const ex = catalog.exams.find(x => x.id === e.target.value);
+            setExamId(e.target.value);
+            if (ex && !ex.subjects.includes(subject)) setSubject(ex.subjects[0]);
+          }}
+        >
+          {catalog.exams.map(e => (
+            <option key={e.id} value={e.id}>{e.name} ({e.state})</option>
+          ))}
+        </select>
+        {selectedExam.subjects.length > 1 && (
+          <select
+            aria-label="Switch subject"
+            value={subject}
+            style={{ fontSize: 13 }}
+            onChange={e => setSubject(e.target.value)}
+          >
+            {selectedExam.subjects.map(s => (
+              <option key={s} value={s}>{subjectName(s)}</option>
+            ))}
+          </select>
+        )}
+      </div>
       <div className="intro row between">
         <div>
           <span className="eyebrow">
@@ -1701,6 +1758,19 @@ export default function StudyApp({
               : k === "test"
                 ? ` (${lesson.questions.length})`
                 : ""}
+            {/* SRS due-badge: show count of due cards for this lesson */}
+            {k === "flash" && (() => {
+              const dueCount = lesson.flashcards.filter((card, idx) => {
+                const cardKey = `${lesson.id}::${idx}`;
+                const sr = (state.srCards || []).find(c => c.cardKey === cardKey);
+                return sr && sr.due <= Date.now();
+              }).length;
+              return dueCount > 0 ? (
+                <span style={{ marginLeft: 5, background: "#f59e0b", color: "#fff", borderRadius: "10px", fontSize: "0.7rem", padding: "1px 6px", fontWeight: 700 }}>
+                  {dueCount} {tr(text("आज", "ਅੱਜ", "due"))}
+                </span>
+              ) : null;
+            })()}
           </button>
         ))}
       </div>
@@ -2028,69 +2098,219 @@ export default function StudyApp({
       </div>
     </>
   );
+  // ── Mistake Notebook ────────────────────────────────────────────────────────
+  // Collects all wrong answers from the last 20 practice attempts (stored in state.attempts).
+  // We re-derive from quiz history; each attempt stores total/correct but not individual answers.
+  // For the mistake notebook we expose a "retry wrong answers" shortcut from the practice view instead,
+  // and here we show a summary with links to each lesson's practice.
+  const mistakeNotebook = (() => {
+    // Build a mistake tally from quizView's "retry wrong" context — we track mistakes via a
+    // lightweight local accumulator in localStorage so it persists across sessions.
+    const mistakeKeys: string[] = (() => {
+      try { return JSON.parse(localStorage.getItem("saathi-mistakes") || "[]"); } catch { return []; }
+    })();
+    // Group by lesson
+    const byLesson: Record<string, string[]> = {};
+    for (const k of mistakeKeys) {
+      const [lid] = k.split(":");
+      if (lid) { byLesson[lid] = byLesson[lid] || []; byLesson[lid].push(k); }
+    }
+    const lessonIds = Object.keys(byLesson);
+    return (
+      <>
+        <div className="intro">
+          <h1>{tr(text("ग़लती नोटबुक", "ਗ਼ਲਤੀ ਨੋਟਬੁੱਕ", "Mistake Notebook"))}</h1>
+          <p>{tr(text(`${mistakeKeys.length} ग़लत उत्तर — पाठवार समीक्षा करें।`, `${mistakeKeys.length} ਗ਼ਲਤ ਉੱਤਰ — ਪਾਠਵਾਰ ਸਮੀਖਿਆ ਕਰੋ।`, `${mistakeKeys.length} recorded mistakes — review by lesson.`))}</p>
+        </div>
+        {lessonIds.length === 0 && (
+          <div className="panel empty">
+            <Check size={38} />
+            <h3>{tr(text("कोई दर्ज ग़लती नहीं", "ਕੋਈ ਦਰਜ ਗ਼ਲਤੀ ਨਹੀਂ", "No recorded mistakes yet"))}</h3>
+            <p>{tr(text("प्रश्न अभ्यास करें; ग़लत उत्तर यहाँ दिखेंगे।", "ਸਵਾਲ ਅਭਿਆਸ ਕਰੋ; ਗ਼ਲਤ ਉੱਤਰ ਇੱਥੇ ਦਿਖਣਗੇ।", "Do question practice; wrong answers will appear here."))}</p>
+          </div>
+        )}
+        {lessonIds.map(lid => {
+          const l = lessons.find(x => x.id === lid);
+          const count = byLesson[lid].length;
+          return (
+            <div className="panel" key={lid} style={{ marginBottom: 14 }}>
+              <div className="row between">
+                <div>
+                  <h3 style={{ margin: "0 0 4px" }}>{tr(l?.title || lid)}</h3>
+                  <small className="muted">{count} {tr(text("ग़लत उत्तर", "ਗ਼ਲਤ ਉੱਤਰ", "mistakes"))}</small>
+                </div>
+                <div className="row" style={{ gap: 8 }}>
+                  <button
+                    onClick={() => {
+                      if (l) { setExamId(l.examIds?.[0] || "master"); setSubject(l.subject); }
+                      go("lesson", lid);
+                      setTab("test");
+                    }}
+                  >
+                    {tr(text("पाठ अभ्यास", "ਪਾਠ ਅਭਿਆਸ", "Practice lesson"))}
+                  </button>
+                  <button
+                    style={{ fontSize: 12, color: "#b91c1c", border: "1px solid #fecaca", background: "#fef2f2" }}
+                    onClick={() => {
+                      const updated = mistakeKeys.filter(k => !k.startsWith(lid + ":"));
+                      try { localStorage.setItem("saathi-mistakes", JSON.stringify(updated)); } catch {}
+                      setMistakeView(v => !v); setMistakeView(v => !v); // force re-render
+                    }}
+                  >
+                    {tr(text("साफ़ करें", "ਸਾਫ਼ ਕਰੋ", "Clear"))}
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        {lessonIds.length > 0 && (
+          <button
+            style={{ marginTop: 8, color: "#b91c1c", border: "1px solid #fecaca", background: "#fef2f2" }}
+            onClick={() => { try { localStorage.removeItem("saathi-mistakes"); } catch {} setMistakeView(v => !v); setMistakeView(v => !v); }}
+          >
+            {tr(text("सभी ग़लतियाँ साफ़ करें", "ਸਾਰੀਆਂ ਗ਼ਲਤੀਆਂ ਸਾਫ਼ ਕਰੋ", "Clear all mistakes"))}
+          </button>
+        )}
+      </>
+    );
+  })();
+
   const notes = (
     <>
-      <div className="intro">
-        <h1>{lab("notes")}</h1>
-        <p>
-          {tr(
-            text(
-              "आपकी अपनी समझ—हर पाठ के साथ सेव।",
-              "ਤੁਹਾਡੀ ਆਪਣੀ ਸਮਝ—ਹਰ ਪਾਠ ਨਾਲ ਸੇਵ।",
-              "Your own understanding, saved alongside each lesson.",
-            ),
-          )}
-        </p>
-      </div>
-      {Object.entries(state.notes)
-        .filter(([, v]) => v.trim())
-        .map(([id, n]) => (
-          <div className="panel saved-note" key={id}>
-            <div className="row between" style={{ alignItems: "flex-start", gap: 8 }}>
-              <h3 style={{ margin: 0 }}>{tr(lessons.find((l) => l.id === id)?.title || id)}</h3>
-              <button
-                style={{ fontSize: 12, padding: "3px 10px", color: "#b91c1c", border: "1px solid #fecaca", background: "#fef2f2", flexShrink: 0 }}
-                title={tr(text("नोट हटाएँ", "ਨੋਟ ਮਿਟਾਓ", "Delete note"))}
-                onClick={() => save({ action: "note", lessonId: id, text: "" })}
-              >
-                {tr(text("हटाएँ", "ਮਿਟਾਓ", "Delete"))}
-              </button>
-            </div>
-            <p className="prose" style={{ marginTop: 8 }}>{n}</p>
-            <button onClick={() => go("lesson", id)}>
-              <NotebookPen size={17} />
-              {tr(
-                text("पाठ में संपादित करें", "ਪਾਠ ਵਿੱਚ ਸੋਧੋ", "Edit in lesson"),
-              )}
-            </button>
-          </div>
-        ))}
-      {!Object.values(state.notes).some((v) => v.trim()) && (
-        <div className="panel empty">
-          <NotebookPen size={38} />
-          <h3>
-            {tr(
-              text("पहला नोट लिखें", "ਪਹਿਲਾ ਨੋਟ ਲਿਖੋ", "Write your first note"),
-            )}
-          </h3>
+      <div className="intro row between" style={{ alignItems: "flex-start" }}>
+        <div>
+          <h1>{lab("notes")}</h1>
           <p>
             {tr(
               text(
-                "पाठ खोलें और अपने शब्दों में नोट सेव करें।",
-                "ਪਾਠ ਖੋਲ੍ਹੋ ਅਤੇ ਆਪਣੇ ਸ਼ਬਦਾਂ ਵਿੱਚ ਨੋਟ ਸੇਵ ਕਰੋ।",
-                "Open a lesson and save a note in your own words.",
+                "आपकी अपनी समझ—हर पाठ के साथ सेव।",
+                "ਤੁਹਾਡੀ ਆਪਣੀ ਸਮਝ—ਹਰ ਪਾਠ ਨਾਲ ਸੇਵ।",
+                "Your own understanding, saved alongside each lesson.",
               ),
             )}
           </p>
-          <button
-            onClick={() => {
-              setSubject("SST");
-              go("library");
-            }}
-          >
-            {lab("library")}
-          </button>
         </div>
+        <div className="row" style={{ gap: 8, flexShrink: 0 }}>
+          <button
+            onClick={() => setMistakeView(v => !v)}
+            className={mistakeView ? "primary" : ""}
+            style={{ fontSize: 13 }}
+          >
+            {mistakeView
+              ? tr(text("नोट्स दिखाएँ", "ਨੋਟਸ ਦਿਖਾਓ", "Show notes"))
+              : tr(text("ग़लती नोटबुक", "ਗ਼ਲਤੀ ਨੋਟਬੁੱਕ", "Mistake notebook"))}
+          </button>
+          {!mistakeView && Object.values(state.notes).some(v => v.trim()) && (
+            <button
+              style={{ fontSize: 13 }}
+              onClick={() => {
+                const lines = Object.entries(state.notes)
+                  .filter(([, v]) => v.trim())
+                  .map(([id, n]) => {
+                    const title = tr(lessons.find(l => l.id === id)?.title || id);
+                    return `# ${title}\n\n${n}\n`;
+                  }).join("\n---\n\n");
+                const blob = new Blob([lines], { type: "text/plain;charset=utf-8" });
+                const a = document.createElement("a");
+                a.href = URL.createObjectURL(blob);
+                a.download = "exam-saathi-notes.txt";
+                a.click();
+                URL.revokeObjectURL(a.href);
+              }}
+            >
+              <Download size={15} />
+              {tr(text("निर्यात (.txt)", "ਨਿਰਯਾਤ (.txt)", "Export (.txt)"))}
+            </button>
+          )}
+        </div>
+      </div>
+      {mistakeView ? mistakeNotebook : (
+        <>
+          {/* Search bar */}
+          {Object.values(state.notes).some(v => v.trim()) && (
+            <label className="search" style={{ display: "flex", alignItems: "center", gap: 8, margin: "0 0 16px", maxWidth: 400 }}>
+              <Search size={17} />
+              <input
+                value={noteSearch}
+                onChange={e => setNoteSearch(e.target.value)}
+                placeholder={tr(text("नोट्स में खोजें…", "ਨੋਟਸ ਵਿੱਚ ਲੱਭੋ…", "Search notes…"))}
+                style={{ flex: 1, background: "none", border: "none", outline: "none", fontSize: 14 }}
+              />
+              {noteSearch && (
+                <button className="icon-button" onClick={() => setNoteSearch("")} style={{ padding: 0 }}>
+                  <X size={15} />
+                </button>
+              )}
+            </label>
+          )}
+          {Object.entries(state.notes)
+            .filter(([id, v]) => {
+              if (!v.trim()) return false;
+              if (!noteSearch.trim()) return true;
+              const q = noteSearch.toLowerCase();
+              const title = tr(lessons.find(l => l.id === id)?.title || id).toLowerCase();
+              return title.includes(q) || v.toLowerCase().includes(q);
+            })
+            .map(([id, n]) => (
+              <div className="panel saved-note" key={id}>
+                <div className="row between" style={{ alignItems: "flex-start", gap: 8 }}>
+                  <h3 style={{ margin: 0 }}>{tr(lessons.find((l) => l.id === id)?.title || id)}</h3>
+                  <button
+                    style={{ fontSize: 12, padding: "3px 10px", color: "#b91c1c", border: "1px solid #fecaca", background: "#fef2f2", flexShrink: 0 }}
+                    title={tr(text("नोट हटाएँ", "ਨੋਟ ਮਿਟਾਓ", "Delete note"))}
+                    onClick={() => save({ action: "note", lessonId: id, text: "" })}
+                  >
+                    {tr(text("हटाएँ", "ਮਿਟਾਓ", "Delete"))}
+                  </button>
+                </div>
+                <p className="prose" style={{ marginTop: 8 }}>{n}</p>
+                <button onClick={() => go("lesson", id)}>
+                  <NotebookPen size={17} />
+                  {tr(
+                    text("पाठ में संपादित करें", "ਪਾਠ ਵਿੱਚ ਸੋਧੋ", "Edit in lesson"),
+                  )}
+                </button>
+              </div>
+            ))}
+          {!Object.values(state.notes).some((v) => v.trim()) && (
+            <div className="panel empty">
+              <NotebookPen size={38} />
+              <h3>
+                {tr(
+                  text("पहला नोट लिखें", "ਪਹਿਲਾ ਨੋਟ ਲਿਖੋ", "Write your first note"),
+                )}
+              </h3>
+              <p>
+                {tr(
+                  text(
+                    "पाठ खोलें और अपने शब्दों में नोट सेव करें।",
+                    "ਪਾਠ ਖੋਲ੍ਹੋ ਅਤੇ ਆਪਣੇ ਸ਼ਬਦਾਂ ਵਿੱਚ ਨੋਟ ਸੇਵ ਕਰੋ।",
+                    "Open a lesson and save a note in your own words.",
+                  ),
+                )}
+              </p>
+              <button
+                onClick={() => {
+                  setSubject("SST");
+                  go("library");
+                }}
+              >
+                {lab("library")}
+              </button>
+            </div>
+          )}
+          {noteSearch && !Object.entries(state.notes).some(([id, v]) => {
+            if (!v.trim()) return false;
+            const q = noteSearch.toLowerCase();
+            const title = tr(lessons.find(l => l.id === id)?.title || id).toLowerCase();
+            return title.includes(q) || v.toLowerCase().includes(q);
+          }) && (
+            <div className="panel empty">
+              <p className="muted">{tr(text(`"${noteSearch}" नहीं मिला।`, `"${noteSearch}" ਨਹੀਂ ਮਿਲਿਆ।`, `No notes matching "${noteSearch}".`))}</p>
+            </div>
+          )}
+        </>
       )}
     </>
   );
