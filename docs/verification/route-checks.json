@@ -1,0 +1,678 @@
+[
+  {
+    "path": "",
+    "status": 200
+  },
+  {
+    "path": "contact/",
+    "status": 200
+  },
+  {
+    "path": "study/rajasthan-police/raj-police-core/",
+    "status": 200
+  },
+  {
+    "path": "study/army-agniveer/agniveer-core/",
+    "status": 200
+  },
+  {
+    "path": "study/htet-l1/htet-l1-core/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-police/police-general/",
+    "status": 200
+  },
+  {
+    "path": "study/reet-level1/reet-pedagogy/",
+    "status": 200
+  },
+  {
+    "path": "study/ctet-paper2/ctet-p2-core/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-master-cadre/punjabi/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-master-cadre/hindi/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-master-cadre/science/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-master-cadre/mathematics/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-master-cadre/social-science/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-master-cadre/english/",
+    "status": 200
+  },
+  {
+    "path": "study/ssc-chsl/ssc-ga/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-clerk/clerk-special/",
+    "status": 200
+  },
+  {
+    "path": "study/htet-l2/htet-l2-core/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-ett/ett-core/",
+    "status": 200
+  },
+  {
+    "path": "study/punjab-patwari/patwari-special/",
+    "status": 200
+  },
+  {
+    "path": "study/ugc-net/ugc-net-p1/",
+    "status": 200
+  },
+  {
+    "path": "study/reet-level2/reet-l2-domain/",
+    "status": 200
+  },
+  {
+    "path": "study/ctet-paper1/ctet-core/",
+    "status": 200
+  },
+  {
+    "path": "study/ssc-cgl/ssc-cgl-core/",
+    "status": 200
+  },
+  {
+    "path": "privacy/",
+    "status": 200
+  },
+  {
+    "path": "auth/reset-password/",
+    "status": 200
+  },
+  {
+    "path": "auth/callback/",
+    "status": 200
+  },
+  {
+    "path": "roadmap/",
+    "status": 200
+  },
+  {
+    "path": "terms/",
+    "status": 200
+  },
+  {
+    "path": "admin/",
+    "status": 200
+  },
+  {
+    "path": "exam-coach/",
+    "status": 200
+  },
+  {
+    "path": "library/",
+    "status": 200
+  },
+  {
+    "path": "about/",
+    "status": 200
+  },
+  {
+    "path": "dashboard/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-ett-child-pedagogy/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-modern-india/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-medieval-india/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-mathematics-core/",
+    "status": 200
+  },
+  {
+    "path": "results/patwari/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-ancient-india/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-all/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-psssb-computer-it/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-world-history/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-judiciary/",
+    "status": 200
+  },
+  {
+    "path": "results/default/",
+    "status": 200
+  },
+  {
+    "path": "results/latest/",
+    "status": 200
+  },
+  {
+    "path": "results/punjab-master-cadre/",
+    "status": 200
+  },
+  {
+    "path": "results/1/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-local-govt/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-psssb-raavi-typing/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-ett-evs-science/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-punjabi-grammar/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-science-concepts/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-punjab-geography/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-ett-primary-math/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-physical-geography/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-punjab-history/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-fundamental-rights/",
+    "status": 200
+  },
+  {
+    "path": "results/clerk/",
+    "status": 200
+  },
+  {
+    "path": "results/3/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-parliament/",
+    "status": 200
+  },
+  {
+    "path": "results/topic-indian-economy/",
+    "status": 200
+  },
+  {
+    "path": "results/2/",
+    "status": 200
+  },
+  {
+    "path": "register/",
+    "status": 200
+  },
+  {
+    "path": "profile/",
+    "status": 200
+  },
+  {
+    "path": "forgot-password/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-ett-child-pedagogy/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-modern-india/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-medieval-india/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-mathematics-core/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/patwari/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-ancient-india/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-all/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-psssb-computer-it/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-world-history/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-judiciary/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/punjab-master-cadre/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/1/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-local-govt/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-psssb-raavi-typing/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-ett-evs-science/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-punjabi-grammar/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-science-concepts/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-punjab-geography/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-ett-primary-math/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-physical-geography/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-punjab-history/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-fundamental-rights/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/clerk/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/3/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-parliament/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/topic-indian-economy/",
+    "status": 200
+  },
+  {
+    "path": "mock-test/2/",
+    "status": 200
+  },
+  {
+    "path": "exams/",
+    "status": 200
+  },
+  {
+    "path": "exams/haryana/",
+    "status": 200
+  },
+  {
+    "path": "exams/punjab/",
+    "status": 200
+  },
+  {
+    "path": "exams/rajasthan/",
+    "status": 200
+  },
+  {
+    "path": "exams/central/",
+    "status": 200
+  },
+  {
+    "path": "_not-found/",
+    "status": 200
+  },
+  {
+    "path": "lesson/punjabi-paper-a/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-geo-earth/",
+    "status": 200
+  },
+  {
+    "path": "lesson/modern-india/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-maurya/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-geo-atmosphere/",
+    "status": 200
+  },
+  {
+    "path": "lesson/punjabi-sahitya/",
+    "status": 200
+  },
+  {
+    "path": "lesson/english-grammar-lit/",
+    "status": 200
+  },
+  {
+    "path": "lesson/rajasthan-gk-heritage/",
+    "status": 200
+  },
+  {
+    "path": "lesson/judiciary/",
+    "status": 200
+  },
+  {
+    "path": "lesson/punjab-history/",
+    "status": 200
+  },
+  {
+    "path": "lesson/quantitative-aptitude/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-punjab-sikh/",
+    "status": 200
+  },
+  {
+    "path": "lesson/fundamental-rights/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-geo-landforms/",
+    "status": 200
+  },
+  {
+    "path": "lesson/computer-awareness/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-geo-oceans/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-judiciary/",
+    "status": 200
+  },
+  {
+    "path": "lesson/hindi-vyakaran/",
+    "status": 200
+  },
+  {
+    "path": "lesson/physics-concepts/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-buddhism-jainism/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-industrial-revolution/",
+    "status": 200
+  },
+  {
+    "path": "lesson/physical-geography/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-world-history-modern/",
+    "status": 200
+  },
+  {
+    "path": "lesson/police-law-basics/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-development/",
+    "status": 200
+  },
+  {
+    "path": "lesson/mathematics-core/",
+    "status": 200
+  },
+  {
+    "path": "lesson/indian-economy/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-punjab-history-deep/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-geo-tectonics/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-india-geography/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-geo-environment/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-constitution/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-renaissance/",
+    "status": 200
+  },
+  {
+    "path": "lesson/hindi-sahitya/",
+    "status": 200
+  },
+  {
+    "path": "lesson/punjab-clerk-prep/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-federal-local/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-world-wars/",
+    "status": 200
+  },
+  {
+    "path": "lesson/patwari-agriculture-accounts/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-economic-sectors/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-indian-economy-deep/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-demand-supply/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-national-income/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-medieval-india/",
+    "status": 200
+  },
+  {
+    "path": "lesson/ancient-india/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-harappa/",
+    "status": 200
+  },
+  {
+    "path": "lesson/biology-concepts/",
+    "status": 200
+  },
+  {
+    "path": "lesson/medieval-india/",
+    "status": 200
+  },
+  {
+    "path": "lesson/local-govt/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-trade/",
+    "status": 200
+  },
+  {
+    "path": "lesson/parliament/",
+    "status": 200
+  },
+  {
+    "path": "lesson/chemistry-concepts/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-geo-punjab/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-executive/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-geo-monsoon/",
+    "status": 200
+  },
+  {
+    "path": "lesson/world-history/",
+    "status": 200
+  },
+  {
+    "path": "lesson/punjab-geography/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-fundamental-rights/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-inflation-employment/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-legislature/",
+    "status": 200
+  },
+  {
+    "path": "lesson/child-development-pedagogy/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-national-movement/",
+    "status": 200
+  },
+  {
+    "path": "lesson/sst-french-revolution/",
+    "status": 200
+  },
+  {
+    "path": "typing-practice/",
+    "status": 200
+  },
+  {
+    "path": "404/",
+    "status": 200
+  },
+  {
+    "path": "login/",
+    "status": 200
+  },
+  {
+    "path": "offline/",
+    "status": 200
+  },
+  {
+    "path": "manifest.json",
+    "status": 200
+  },
+  {
+    "path": "sw.js",
+    "status": 200
+  },
+  {
+    "path": "icons/icon-192.png",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "path": "icons/icon-512.png",
+    "error": "HTTP Error 404: Not Found"
+  }
+]

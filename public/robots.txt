@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /examsathi/admin/
+Disallow: /examsathi/admin
+Disallow: /examsathi/editor
+Disallow: /examsathi/api/
+
+Sitemap: https://satdevkumar021-glitch.github.io/examsathi/sitemap.xml

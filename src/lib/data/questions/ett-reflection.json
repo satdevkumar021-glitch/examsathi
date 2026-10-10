@@ -1,0 +1,1222 @@
+[
+  {
+    "id": "ett-reflection-original-01",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "From which line is the angle of incidence measured?",
+      "hi": "आपतन कोण किस रेखा से मापा जाता है?",
+      "pa": "ਆਪਤਨ ਕੋਣ ਕਿਸ ਰੇਖਾ ਤੋਂ ਮਾਪਿਆ ਜਾਂਦਾ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "Normal",
+        "hi": "अभिलंब",
+        "pa": "ਅਭਿਲੰਬ"
+      },
+      "B": {
+        "en": "Mirror surface",
+        "hi": "दर्पण की सतह",
+        "pa": "ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ"
+      },
+      "C": {
+        "en": "Any horizontal line",
+        "hi": "कोई भी क्षैतिज रेखा",
+        "pa": "ਕੋਈ ਵੀ ਲੇਟਵੀਂ ਰੇਖਾ"
+      },
+      "D": {
+        "en": "Reflected ray",
+        "hi": "परावर्तित किरण",
+        "pa": "ਪਰਾਵਰਤਿਤ ਕਿਰਨ"
+      }
+    },
+    "correct": "A",
+    "explanation": {
+      "en": "The angle of incidence i equals the angle of reflection r. Both angles are measured from the normal, never from the mirror surface. The incident ray, reflected ray and normal lie in one plane. If a ray makes 30° with the mirror, i = 90° − 30° = 60°, so r = 60°. At normal incidence i = r = 0° and the ray retraces its path.",
+      "hi": "आपतन कोण i, परावर्तन कोण r के बराबर होता है। दोनों कोण अभिलंब से मापे जाते हैं, दर्पण की सतह से नहीं। आपतित किरण, परावर्तित किरण और अभिलंब एक ही तल में होते हैं। यदि किरण दर्पण से 30° बनाती है, तो i = 90° − 30° = 60° और r = 60°। अभिलंबवत आपतन पर i = r = 0° होता है और किरण उसी मार्ग से लौटती है।",
+      "pa": "ਆਪਤਨ ਕੋਣ i, ਪਰਾਵਰਤਨ ਕੋਣ r ਦੇ ਬਰਾਬਰ ਹੁੰਦਾ ਹੈ। ਦੋਵੇਂ ਕੋਣ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪੇ ਜਾਂਦੇ ਹਨ, ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਨਹੀਂ। ਆਪਤਿਤ ਕਿਰਨ, ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ ਇੱਕੋ ਤਲ ਵਿੱਚ ਹੁੰਦੇ ਹਨ। ਜੇ ਕਿਰਨ ਦਰਪਣ ਨਾਲ 30° ਬਣਾਉਂਦੀ ਹੈ ਤਾਂ i = 90° − 30° = 60° ਅਤੇ r = 60°। ਅਭਿਲੰਬ ਉੱਤੇ ਆਪਤਨ ਹੋਣ ਵੇਲੇ i = r = 0° ਹੁੰਦਾ ਹੈ ਅਤੇ ਕਿਰਨ ਉਸੇ ਰਸਤੇ ਵਾਪਸ ਜਾਂਦੀ ਹੈ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-02",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "Which describes the image of an upright object in a plane mirror?",
+      "hi": "समतल दर्पण में सीधी वस्तु का प्रतिबिंब कैसा होता है?",
+      "pa": "ਸਮਤਲ ਦਰਪਣ ਵਿੱਚ ਸਿੱਧੀ ਵਸਤੂ ਦਾ ਪ੍ਰਤੀਬਿੰਬ ਕਿਹੋ ਜਿਹਾ ਹੁੰਦਾ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "Real and inverted",
+        "hi": "वास्तविक और उल्टा",
+        "pa": "ਅਸਲ ਅਤੇ ਉਲਟਾ"
+      },
+      "B": {
+        "en": "Real and upright",
+        "hi": "वास्तविक और सीधा",
+        "pa": "ਅਸਲ ਅਤੇ ਸਿੱਧਾ"
+      },
+      "C": {
+        "en": "Virtual and vertically inverted",
+        "hi": "आभासी और ऊपर-नीचे उल्टा",
+        "pa": "ਆਭਾਸੀ ਅਤੇ ਉੱਪਰ-ਥੱਲੇ ਉਲਟਾ"
+      },
+      "D": {
+        "en": "Virtual and upright",
+        "hi": "आभासी और सीधा",
+        "pa": "ਆਭਾਸੀ ਅਤੇ ਸਿੱਧਾ"
+      }
+    },
+    "correct": "D",
+    "explanation": {
+      "en": "Trace two reflected rays reaching the eye, then extend them backwards behind the mirror. Their apparent meeting point is the virtual image: no light actually meets there, so it cannot be obtained on a screen. The image is upright, equal in size to the object and as far behind the mirror as the object is in front. An object 2 m in front therefore has an image 2 m behind; object–image separation is 4 m.",
+      "hi": "आँख तक पहुँचने वाली दो परावर्तित किरणें खींचें और उन्हें दर्पण के पीछे पीछे की ओर बढ़ाएँ। जहाँ वे मिलती हुई लगती हैं, वहाँ आभासी प्रतिबिंब है। प्रकाश वास्तव में वहाँ नहीं मिलता, इसलिए इसे पर्दे पर नहीं लिया जा सकता। प्रतिबिंब सीधा, वस्तु के बराबर आकार का और दर्पण के पीछे उतनी ही दूरी पर होता है जितनी वस्तु सामने है। वस्तु 2 m सामने हो तो प्रतिबिंब 2 m पीछे होगा; वस्तु और प्रतिबिंब की दूरी 4 m होगी।",
+      "pa": "ਅੱਖ ਤੱਕ ਪਹੁੰਚਣ ਵਾਲੀਆਂ ਦੋ ਪਰਾਵਰਤਿਤ ਕਿਰਨਾਂ ਖਿੱਚੋ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਧਾਓ। ਜਿੱਥੇ ਉਹ ਮਿਲਦੀਆਂ ਜਾਪਦੀਆਂ ਹਨ, ਉੱਥੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਹੈ। ਪ੍ਰਕਾਸ਼ ਅਸਲ ਵਿੱਚ ਉੱਥੇ ਨਹੀਂ ਮਿਲਦਾ, ਇਸ ਲਈ ਇਹ ਪਰਦੇ ਉੱਤੇ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ। ਪ੍ਰਤੀਬਿੰਬ ਸਿੱਧਾ, ਵਸਤੂ ਦੇ ਬਰਾਬਰ ਆਕਾਰ ਦਾ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਉੱਨੀ ਹੀ ਦੂਰੀ ਉੱਤੇ ਹੁੰਦਾ ਹੈ ਜਿੰਨੀ ਵਸਤੂ ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ 2 m ਸਾਹਮਣੇ ਹੋਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ 2 m ਪਿੱਛੇ ਹੋਵੇਗਾ; ਦੋਵਾਂ ਵਿਚਕਾਰ ਦੂਰੀ 4 m ਹੋਵੇਗੀ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-03",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "Does diffuse reflection violate the reflection laws?",
+      "hi": "क्या विसरित परावर्तन में परावर्तन के नियम टूटते हैं?",
+      "pa": "ਕੀ ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਵਿੱਚ ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਟੁੱਟਦੇ ਹਨ?"
+    },
+    "options": {
+      "A": {
+        "en": "Yes; normals disappear",
+        "hi": "हाँ; अभिलंब नहीं होते",
+        "pa": "ਹਾਂ; ਅਭਿਲੰਬ ਨਹੀਂ ਹੁੰਦੇ"
+      },
+      "B": {
+        "en": "Only in sunlight",
+        "hi": "केवल धूप में",
+        "pa": "ਕੇਵਲ ਧੁੱਪ ਵਿੱਚ"
+      },
+      "C": {
+        "en": "No; each ray obeys them",
+        "hi": "नहीं; हर किरण उनका पालन करती है",
+        "pa": "ਨਹੀਂ; ਹਰ ਕਿਰਨ ਉਨ੍ਹਾਂ ਨੂੰ ਮੰਨਦੀ ਹੈ"
+      },
+      "D": {
+        "en": "Yes; i is always greater than r",
+        "hi": "हाँ; i हमेशा r से बड़ा है",
+        "pa": "ਹਾਂ; i ਹਮੇਸ਼ਾ r ਤੋਂ ਵੱਡਾ ਹੈ"
+      }
+    },
+    "correct": "C",
+    "explanation": {
+      "en": "A smooth surface has nearly parallel local normals and reflects a parallel beam in one direction. A rough surface has different local normals and reflects it in many directions. Each individual ray still obeys i = r. Diffuse reflection lets us see a page from several directions; it is not failure of the laws of reflection.",
+      "hi": "चिकनी सतह के स्थानीय अभिलंब लगभग समानांतर होते हैं; समानांतर किरणें एक दिशा में लौटती हैं। खुरदरी सतह के स्थानीय अभिलंब अलग-अलग दिशाओं में होते हैं; किरणें कई दिशाओं में लौटती हैं। प्रत्येक किरण फिर भी i = r का पालन करती है। विसरित परावर्तन के कारण हम कागज को कई दिशाओं से देख सकते हैं; परावर्तन के नियम नहीं टूटते।",
+      "pa": "ਚਿਕਣੀ ਸਤ੍ਹਾ ਦੇ ਸਥਾਨਕ ਅਭਿਲੰਬ ਲਗਭਗ ਸਮਾਂਤਰ ਹੁੰਦੇ ਹਨ; ਸਮਾਂਤਰ ਕਿਰਨਾਂ ਇੱਕ ਦਿਸ਼ਾ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਖੁਰਦਰੀ ਸਤ੍ਹਾ ਦੇ ਅਭਿਲੰਬ ਵੱਖ-ਵੱਖ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਹੁੰਦੇ ਹਨ; ਕਿਰਨਾਂ ਕਈ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਹਰ ਕਿਰਨ ਫਿਰ ਵੀ i = r ਨਿਯਮ ਮੰਨਦੀ ਹੈ। ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਕਾਰਨ ਅਸੀਂ ਕਾਗਜ਼ ਨੂੰ ਕਈ ਪਾਸਿਆਂ ਤੋਂ ਵੇਖ ਸਕਦੇ ਹਾਂ; ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਨਹੀਂ ਟੁੱਟਦੇ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-04",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "What happens at normal incidence on a plane mirror?",
+      "hi": "समतल दर्पण पर अभिलंबवत आपतन में क्या होता है?",
+      "pa": "ਸਮਤਲ ਦਰਪਣ ਉੱਤੇ ਅਭਿਲੰਬੀ ਆਪਤਨ ਵਿੱਚ ਕੀ ਹੁੰਦਾ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "No reflection occurs",
+        "hi": "परावर्तन नहीं होता",
+        "pa": "ਪਰਾਵਰਤਨ ਨਹੀਂ ਹੁੰਦਾ"
+      },
+      "B": {
+        "en": "Ray retraces its path",
+        "hi": "किरण उसी मार्ग से लौटती है",
+        "pa": "ਕਿਰਨ ਉਸੇ ਰਸਤੇ ਵਾਪਸ ਆਉਂਦੀ ਹੈ"
+      },
+      "C": {
+        "en": "Ray turns by 90°",
+        "hi": "किरण 90° मुड़ती है",
+        "pa": "ਕਿਰਨ 90° ਮੁੜਦੀ ਹੈ"
+      },
+      "D": {
+        "en": "Ray passes through the mirror",
+        "hi": "किरण दर्पण से आर-पार जाती है",
+        "pa": "ਕਿਰਨ ਦਰਪਣ ਵਿੱਚੋਂ ਲੰਘ ਜਾਂਦੀ ਹੈ"
+      }
+    },
+    "correct": "B",
+    "explanation": {
+      "en": "The angle of incidence i equals the angle of reflection r. Both angles are measured from the normal, never from the mirror surface. The incident ray, reflected ray and normal lie in one plane. If a ray makes 30° with the mirror, i = 90° − 30° = 60°, so r = 60°. At normal incidence i = r = 0° and the ray retraces its path.",
+      "hi": "आपतन कोण i, परावर्तन कोण r के बराबर होता है। दोनों कोण अभिलंब से मापे जाते हैं, दर्पण की सतह से नहीं। आपतित किरण, परावर्तित किरण और अभिलंब एक ही तल में होते हैं। यदि किरण दर्पण से 30° बनाती है, तो i = 90° − 30° = 60° और r = 60°। अभिलंबवत आपतन पर i = r = 0° होता है और किरण उसी मार्ग से लौटती है।",
+      "pa": "ਆਪਤਨ ਕੋਣ i, ਪਰਾਵਰਤਨ ਕੋਣ r ਦੇ ਬਰਾਬਰ ਹੁੰਦਾ ਹੈ। ਦੋਵੇਂ ਕੋਣ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪੇ ਜਾਂਦੇ ਹਨ, ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਨਹੀਂ। ਆਪਤਿਤ ਕਿਰਨ, ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ ਇੱਕੋ ਤਲ ਵਿੱਚ ਹੁੰਦੇ ਹਨ। ਜੇ ਕਿਰਨ ਦਰਪਣ ਨਾਲ 30° ਬਣਾਉਂਦੀ ਹੈ ਤਾਂ i = 90° − 30° = 60° ਅਤੇ r = 60°। ਅਭਿਲੰਬ ਉੱਤੇ ਆਪਤਨ ਹੋਣ ਵੇਲੇ i = r = 0° ਹੁੰਦਾ ਹੈ ਅਤੇ ਕਿਰਨ ਉਸੇ ਰਸਤੇ ਵਾਪਸ ਜਾਂਦੀ ਹੈ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-05",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "Why can a plane-mirror image not be caught on a screen?",
+      "hi": "समतल दर्पण का प्रतिबिंब पर्दे पर क्यों नहीं लिया जा सकता?",
+      "pa": "ਸਮਤਲ ਦਰਪਣ ਦਾ ਪ੍ਰਤੀਬਿੰਬ ਪਰਦੇ ਉੱਤੇ ਕਿਉਂ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ?"
+    },
+    "options": {
+      "A": {
+        "en": "Reflected rays only appear to meet behind the mirror",
+        "hi": "परावर्तित किरणें पीछे केवल मिलती हुई लगती हैं",
+        "pa": "ਪਰਾਵਰਤਿਤ ਕਿਰਨਾਂ ਪਿੱਛੇ ਸਿਰਫ਼ ਮਿਲਦੀਆਂ ਜਾਪਦੀਆਂ ਹਨ"
+      },
+      "B": {
+        "en": "The image is always too small",
+        "hi": "प्रतिबिंब हमेशा बहुत छोटा है",
+        "pa": "ਪ੍ਰਤੀਬਿੰਬ ਹਮੇਸ਼ਾ ਬਹੁਤ ਛੋਟਾ ਹੈ"
+      },
+      "C": {
+        "en": "The image has no colour",
+        "hi": "प्रतिबिंब में रंग नहीं है",
+        "pa": "ਪ੍ਰਤੀਬਿੰਬ ਵਿੱਚ ਰੰਗ ਨਹੀਂ ਹੈ"
+      },
+      "D": {
+        "en": "The screen absorbs all light",
+        "hi": "पर्दा सारा प्रकाश सोखता है",
+        "pa": "ਪਰਦਾ ਸਾਰਾ ਪ੍ਰਕਾਸ਼ ਸੋਖਦਾ ਹੈ"
+      }
+    },
+    "correct": "A",
+    "explanation": {
+      "en": "Trace two reflected rays reaching the eye, then extend them backwards behind the mirror. Their apparent meeting point is the virtual image: no light actually meets there, so it cannot be obtained on a screen. The image is upright, equal in size to the object and as far behind the mirror as the object is in front. An object 2 m in front therefore has an image 2 m behind; object–image separation is 4 m.",
+      "hi": "आँख तक पहुँचने वाली दो परावर्तित किरणें खींचें और उन्हें दर्पण के पीछे पीछे की ओर बढ़ाएँ। जहाँ वे मिलती हुई लगती हैं, वहाँ आभासी प्रतिबिंब है। प्रकाश वास्तव में वहाँ नहीं मिलता, इसलिए इसे पर्दे पर नहीं लिया जा सकता। प्रतिबिंब सीधा, वस्तु के बराबर आकार का और दर्पण के पीछे उतनी ही दूरी पर होता है जितनी वस्तु सामने है। वस्तु 2 m सामने हो तो प्रतिबिंब 2 m पीछे होगा; वस्तु और प्रतिबिंब की दूरी 4 m होगी।",
+      "pa": "ਅੱਖ ਤੱਕ ਪਹੁੰਚਣ ਵਾਲੀਆਂ ਦੋ ਪਰਾਵਰਤਿਤ ਕਿਰਨਾਂ ਖਿੱਚੋ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਧਾਓ। ਜਿੱਥੇ ਉਹ ਮਿਲਦੀਆਂ ਜਾਪਦੀਆਂ ਹਨ, ਉੱਥੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਹੈ। ਪ੍ਰਕਾਸ਼ ਅਸਲ ਵਿੱਚ ਉੱਥੇ ਨਹੀਂ ਮਿਲਦਾ, ਇਸ ਲਈ ਇਹ ਪਰਦੇ ਉੱਤੇ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ। ਪ੍ਰਤੀਬਿੰਬ ਸਿੱਧਾ, ਵਸਤੂ ਦੇ ਬਰਾਬਰ ਆਕਾਰ ਦਾ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਉੱਨੀ ਹੀ ਦੂਰੀ ਉੱਤੇ ਹੁੰਦਾ ਹੈ ਜਿੰਨੀ ਵਸਤੂ ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ 2 m ਸਾਹਮਣੇ ਹੋਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ 2 m ਪਿੱਛੇ ਹੋਵੇਗਾ; ਦੋਵਾਂ ਵਿਚਕਾਰ ਦੂਰੀ 4 m ਹੋਵੇਗੀ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-06",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "Which three lie in one plane during reflection?",
+      "hi": "परावर्तन में कौन-सी तीन चीजें एक ही तल में होती हैं?",
+      "pa": "ਪਰਾਵਰਤਨ ਵਿੱਚ ਕਿਹੜੀਆਂ ਤਿੰਨ ਚੀਜ਼ਾਂ ਇੱਕੋ ਤਲ ਵਿੱਚ ਹੁੰਦੀਆਂ ਹਨ?"
+    },
+    "options": {
+      "A": {
+        "en": "Normal, image and screen",
+        "hi": "अभिलंब, प्रतिबिंब और पर्दा",
+        "pa": "ਅਭਿਲੰਬ, ਪ੍ਰਤੀਬਿੰਬ ਅਤੇ ਪਰਦਾ"
+      },
+      "B": {
+        "en": "Any three light rays",
+        "hi": "कोई भी तीन प्रकाश किरणें",
+        "pa": "ਕੋਈ ਵੀ ਤਿੰਨ ਪ੍ਰਕਾਸ਼ ਕਿਰਨਾਂ"
+      },
+      "C": {
+        "en": "Mirror, lens and eye",
+        "hi": "दर्पण, लेंस और आँख",
+        "pa": "ਦਰਪਣ, ਲੈਂਸ ਅਤੇ ਅੱਖ"
+      },
+      "D": {
+        "en": "Incident ray, reflected ray and normal",
+        "hi": "आपतित किरण, परावर्तित किरण और अभिलंब",
+        "pa": "ਆਪਤਿਤ ਕਿਰਨ, ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ"
+      }
+    },
+    "correct": "D",
+    "explanation": {
+      "en": "The angle of incidence i equals the angle of reflection r. Both angles are measured from the normal, never from the mirror surface. The incident ray, reflected ray and normal lie in one plane. If a ray makes 30° with the mirror, i = 90° − 30° = 60°, so r = 60°. At normal incidence i = r = 0° and the ray retraces its path.",
+      "hi": "आपतन कोण i, परावर्तन कोण r के बराबर होता है। दोनों कोण अभिलंब से मापे जाते हैं, दर्पण की सतह से नहीं। आपतित किरण, परावर्तित किरण और अभिलंब एक ही तल में होते हैं। यदि किरण दर्पण से 30° बनाती है, तो i = 90° − 30° = 60° और r = 60°। अभिलंबवत आपतन पर i = r = 0° होता है और किरण उसी मार्ग से लौटती है।",
+      "pa": "ਆਪਤਨ ਕੋਣ i, ਪਰਾਵਰਤਨ ਕੋਣ r ਦੇ ਬਰਾਬਰ ਹੁੰਦਾ ਹੈ। ਦੋਵੇਂ ਕੋਣ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪੇ ਜਾਂਦੇ ਹਨ, ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਨਹੀਂ। ਆਪਤਿਤ ਕਿਰਨ, ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ ਇੱਕੋ ਤਲ ਵਿੱਚ ਹੁੰਦੇ ਹਨ। ਜੇ ਕਿਰਨ ਦਰਪਣ ਨਾਲ 30° ਬਣਾਉਂਦੀ ਹੈ ਤਾਂ i = 90° − 30° = 60° ਅਤੇ r = 60°। ਅਭਿਲੰਬ ਉੱਤੇ ਆਪਤਨ ਹੋਣ ਵੇਲੇ i = r = 0° ਹੁੰਦਾ ਹੈ ਅਤੇ ਕਿਰਨ ਉਸੇ ਰਸਤੇ ਵਾਪਸ ਜਾਂਦੀ ਹੈ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-07",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "Why can a paper page be seen from different directions?",
+      "hi": "कागज का पृष्ठ अलग-अलग दिशाओं से क्यों दिखता है?",
+      "pa": "ਕਾਗਜ਼ ਦਾ ਪੰਨਾ ਵੱਖ-ਵੱਖ ਦਿਸ਼ਾਵਾਂ ਤੋਂ ਕਿਉਂ ਦਿਸਦਾ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "Paper emits its own light",
+        "hi": "कागज स्वयं प्रकाश देता है",
+        "pa": "ਕਾਗਜ਼ ਆਪਣਾ ਪ੍ਰਕਾਸ਼ ਦਿੰਦਾ ਹੈ"
+      },
+      "B": {
+        "en": "Light does not obey laws on paper",
+        "hi": "कागज पर प्रकाश नियम नहीं मानता",
+        "pa": "ਕਾਗਜ਼ ਉੱਤੇ ਪ੍ਰਕਾਸ਼ ਨਿਯਮ ਨਹੀਂ ਮੰਨਦਾ"
+      },
+      "C": {
+        "en": "Diffuse reflection",
+        "hi": "विसरित परावर्तन",
+        "pa": "ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ"
+      },
+      "D": {
+        "en": "Only regular reflection",
+        "hi": "केवल नियमित परावर्तन",
+        "pa": "ਕੇਵਲ ਨਿਯਮਿਤ ਪਰਾਵਰਤਨ"
+      }
+    },
+    "correct": "C",
+    "explanation": {
+      "en": "A smooth surface has nearly parallel local normals and reflects a parallel beam in one direction. A rough surface has different local normals and reflects it in many directions. Each individual ray still obeys i = r. Diffuse reflection lets us see a page from several directions; it is not failure of the laws of reflection.",
+      "hi": "चिकनी सतह के स्थानीय अभिलंब लगभग समानांतर होते हैं; समानांतर किरणें एक दिशा में लौटती हैं। खुरदरी सतह के स्थानीय अभिलंब अलग-अलग दिशाओं में होते हैं; किरणें कई दिशाओं में लौटती हैं। प्रत्येक किरण फिर भी i = r का पालन करती है। विसरित परावर्तन के कारण हम कागज को कई दिशाओं से देख सकते हैं; परावर्तन के नियम नहीं टूटते।",
+      "pa": "ਚਿਕਣੀ ਸਤ੍ਹਾ ਦੇ ਸਥਾਨਕ ਅਭਿਲੰਬ ਲਗਭਗ ਸਮਾਂਤਰ ਹੁੰਦੇ ਹਨ; ਸਮਾਂਤਰ ਕਿਰਨਾਂ ਇੱਕ ਦਿਸ਼ਾ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਖੁਰਦਰੀ ਸਤ੍ਹਾ ਦੇ ਅਭਿਲੰਬ ਵੱਖ-ਵੱਖ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਹੁੰਦੇ ਹਨ; ਕਿਰਨਾਂ ਕਈ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਮੁੜਦੀਆਂ ਹਨ। ਹਰ ਕਿਰਨ ਫਿਰ ਵੀ i = r ਨਿਯਮ ਮੰਨਦੀ ਹੈ। ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਕਾਰਨ ਅਸੀਂ ਕਾਗਜ਼ ਨੂੰ ਕਈ ਪਾਸਿਆਂ ਤੋਂ ਵੇਖ ਸਕਦੇ ਹਾਂ; ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਨਹੀਂ ਟੁੱਟਦੇ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-08",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "Which feature remains unchanged in a plane-mirror image?",
+      "hi": "समतल दर्पण के प्रतिबिंब में कौन-सी विशेषता समान रहती है?",
+      "pa": "ਸਮਤਲ ਦਰਪਣ ਦੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿੱਚ ਕਿਹੜੀ ਵਿਸ਼ੇਸ਼ਤਾ ਬਰਾਬਰ ਰਹਿੰਦੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "Ability to project onto a screen",
+        "hi": "पर्दे पर लेने की क्षमता",
+        "pa": "ਪਰਦੇ ਉੱਤੇ ਲੈਣ ਦੀ ਸਮਰੱਥਾ"
+      },
+      "B": {
+        "en": "Size of the object",
+        "hi": "वस्तु का आकार",
+        "pa": "ਵਸਤੂ ਦਾ ਆਕਾਰ"
+      },
+      "C": {
+        "en": "Front–back orientation",
+        "hi": "आगे-पीछे की दिशा",
+        "pa": "ਅੱਗੇ-ਪਿੱਛੇ ਦੀ ਦਿਸ਼ਾ"
+      },
+      "D": {
+        "en": "Position on the same side of the mirror",
+        "hi": "दर्पण के उसी ओर स्थान",
+        "pa": "ਦਰਪਣ ਦੇ ਉਸੇ ਪਾਸੇ ਸਥਾਨ"
+      }
+    },
+    "correct": "B",
+    "explanation": {
+      "en": "Trace two reflected rays reaching the eye, then extend them backwards behind the mirror. Their apparent meeting point is the virtual image: no light actually meets there, so it cannot be obtained on a screen. The image is upright, equal in size to the object and as far behind the mirror as the object is in front. An object 2 m in front therefore has an image 2 m behind; object–image separation is 4 m.",
+      "hi": "आँख तक पहुँचने वाली दो परावर्तित किरणें खींचें और उन्हें दर्पण के पीछे पीछे की ओर बढ़ाएँ। जहाँ वे मिलती हुई लगती हैं, वहाँ आभासी प्रतिबिंब है। प्रकाश वास्तव में वहाँ नहीं मिलता, इसलिए इसे पर्दे पर नहीं लिया जा सकता। प्रतिबिंब सीधा, वस्तु के बराबर आकार का और दर्पण के पीछे उतनी ही दूरी पर होता है जितनी वस्तु सामने है। वस्तु 2 m सामने हो तो प्रतिबिंब 2 m पीछे होगा; वस्तु और प्रतिबिंब की दूरी 4 m होगी।",
+      "pa": "ਅੱਖ ਤੱਕ ਪਹੁੰਚਣ ਵਾਲੀਆਂ ਦੋ ਪਰਾਵਰਤਿਤ ਕਿਰਨਾਂ ਖਿੱਚੋ ਅਤੇ ਉਨ੍ਹਾਂ ਨੂੰ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਧਾਓ। ਜਿੱਥੇ ਉਹ ਮਿਲਦੀਆਂ ਜਾਪਦੀਆਂ ਹਨ, ਉੱਥੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਹੈ। ਪ੍ਰਕਾਸ਼ ਅਸਲ ਵਿੱਚ ਉੱਥੇ ਨਹੀਂ ਮਿਲਦਾ, ਇਸ ਲਈ ਇਹ ਪਰਦੇ ਉੱਤੇ ਨਹੀਂ ਲਿਆ ਜਾ ਸਕਦਾ। ਪ੍ਰਤੀਬਿੰਬ ਸਿੱਧਾ, ਵਸਤੂ ਦੇ ਬਰਾਬਰ ਆਕਾਰ ਦਾ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਉੱਨੀ ਹੀ ਦੂਰੀ ਉੱਤੇ ਹੁੰਦਾ ਹੈ ਜਿੰਨੀ ਵਸਤੂ ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ 2 m ਸਾਹਮਣੇ ਹੋਵੇ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ 2 m ਪਿੱਛੇ ਹੋਵੇਗਾ; ਦੋਵਾਂ ਵਿਚਕਾਰ ਦੂਰੀ 4 m ਹੋਵੇਗੀ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-09",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "Which construction locates a virtual image in a plane mirror?",
+      "hi": "समतल दर्पण में आभासी प्रतिबिंब कहाँ बनाने के लिए क्या करते हैं?",
+      "pa": "ਸਮਤਲ ਦਰਪਣ ਵਿੱਚ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਲੱਭਣ ਲਈ ਕੀ ਕਰਦੇ ਹਨ?"
+    },
+    "options": {
+      "A": {
+        "en": "Extend reflected rays backwards",
+        "hi": "परावर्तित किरणें पीछे की ओर बढ़ाएँ",
+        "pa": "ਪਰਾਵਰਤਿਤ ਕਿਰਨਾਂ ਪਿੱਛੇ ਵੱਲ ਵਧਾਓ"
+      },
+      "B": {
+        "en": "Draw rays through the opaque mirror",
+        "hi": "अपारदर्शी दर्पण के आर-पार किरणें खींचें",
+        "pa": "ਅਪਾਰਦਰਸ਼ੀ ਦਰਪਣ ਵਿੱਚੋਂ ਕਿਰਨਾਂ ਖਿੱਚੋ"
+      },
+      "C": {
+        "en": "Ignore the normal",
+        "hi": "अभिलंब को अनदेखा करें",
+        "pa": "ਅਭਿਲੰਬ ਨੂੰ ਅਣਡਿੱਠਾ ਕਰੋ"
+      },
+      "D": {
+        "en": "Place a screen behind the mirror",
+        "hi": "दर्पण के पीछे पर्दा रखें",
+        "pa": "ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਪਰਦਾ ਰੱਖੋ"
+      }
+    },
+    "correct": "A",
+    "explanation": {
+      "en": "Draw a mirror, a normal and an incident ray at 40° to the normal. Construct the reflected ray at 40° on the other side. For an object point, use dotted backward extensions to mark its virtual image. Check: equal angles, equal perpendicular distances and no actual ray behind the mirror. Next topics are spherical mirrors and refraction; they are not covered by this lesson.",
+      "hi": "एक दर्पण, अभिलंब और अभिलंब से 40° पर आपतित किरण बनाएँ। दूसरी ओर 40° पर परावर्तित किरण खींचें। किसी वस्तु-बिंदु के लिए किरणों के पीछे की ओर विस्तार को बिंदीदार रेखाओं से दिखाकर आभासी प्रतिबिंब बनाएँ। जाँचें: बराबर कोण, बराबर लंबवत दूरियाँ और दर्पण के पीछे वास्तविक किरण नहीं। अगले विषय गोलीय दर्पण और अपवर्तन हैं; वे इस पाठ में शामिल नहीं हैं।",
+      "pa": "ਦਰਪਣ, ਅਭਿਲੰਬ ਅਤੇ ਅਭਿਲੰਬ ਤੋਂ 40° ਉੱਤੇ ਆਪਤਿਤ ਕਿਰਨ ਬਣਾਓ। ਦੂਜੇ ਪਾਸੇ 40° ਉੱਤੇ ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਖਿੱਚੋ। ਵਸਤੂ-ਬਿੰਦੂ ਲਈ ਕਿਰਨਾਂ ਦੇ ਪਿੱਛੇ ਵੱਲ ਵਾਧੇ ਨੂੰ ਬਿੰਦੀਦਾਰ ਰੇਖਾਵਾਂ ਨਾਲ ਦਿਖਾ ਕੇ ਆਭਾਸੀ ਪ੍ਰਤੀਬਿੰਬ ਬਣਾਓ। ਜਾਂਚੋ: ਬਰਾਬਰ ਕੋਣ, ਬਰਾਬਰ ਲੰਬ ਦੂਰੀਆਂ ਅਤੇ ਦਰਪਣ ਦੇ ਪਿੱਛੇ ਕੋਈ ਅਸਲ ਕਿਰਨ ਨਹੀਂ। ਅਗਲੇ ਵਿਸ਼ੇ ਗੋਲੀ ਦਰਪਣ ਅਤੇ ਅਪਵਰਤਨ ਹਨ; ਉਹ ਇਸ ਪਾਠ ਵਿੱਚ ਸ਼ਾਮਲ ਨਹੀਂ ਹਨ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-10",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "What is the normal at the point of incidence?",
+      "hi": "आपतन बिंदु पर अभिलंब क्या है?",
+      "pa": "ਆਪਤਨ ਬਿੰਦੂ ਉੱਤੇ ਅਭਿਲੰਬ ਕੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "A line along the surface",
+        "hi": "सतह के साथ रेखा",
+        "pa": "ਸਤ੍ਹਾ ਦੇ ਨਾਲ ਰੇਖਾ"
+      },
+      "B": {
+        "en": "The incoming ray itself",
+        "hi": "आने वाली किरण ही",
+        "pa": "ਆਉਣ ਵਾਲੀ ਕਿਰਨ ਹੀ"
+      },
+      "C": {
+        "en": "A line always parallel to the reflected ray",
+        "hi": "परावर्तित किरण के हमेशा समानांतर रेखा",
+        "pa": "ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਨਾਲ ਹਮੇਸ਼ਾ ਸਮਾਂਤਰ ਰੇਖਾ"
+      },
+      "D": {
+        "en": "A line perpendicular to the surface",
+        "hi": "सतह के लंबवत रेखा",
+        "pa": "ਸਤ੍ਹਾ ਨਾਲ ਲੰਬ ਰੇਖਾ"
+      }
+    },
+    "correct": "D",
+    "explanation": {
+      "en": "Reflection is the return of light into the same medium after striking a surface. Draw a normal perpendicular to the surface at the point where the ray strikes. The incoming ray is the incident ray; the outgoing ray is the reflected ray. The normal is a construction line, not another light ray.",
+      "hi": "जब प्रकाश किसी सतह से टकराकर उसी माध्यम में लौटता है, तो इसे परावर्तन कहते हैं। आपतन बिंदु पर सतह के लंबवत रेखा खींचें: यह अभिलंब है। आने वाली किरण आपतित किरण और लौटने वाली किरण परावर्तित किरण है। अभिलंब सहायक रेखा है, कोई प्रकाश किरण नहीं।",
+      "pa": "ਜਦੋਂ ਪ੍ਰਕਾਸ਼ ਕਿਸੇ ਸਤ੍ਹਾ ਨਾਲ ਟਕਰਾ ਕੇ ਉਸੇ ਮਾਧਿਅਮ ਵਿੱਚ ਵਾਪਸ ਆਉਂਦਾ ਹੈ, ਇਸ ਨੂੰ ਪਰਾਵਰਤਨ ਕਹਿੰਦੇ ਹਨ। ਟਕਰਾਉਣ ਵਾਲੇ ਬਿੰਦੂ ਉੱਤੇ ਸਤ੍ਹਾ ਨਾਲ ਲੰਬ ਰੇਖਾ ਖਿੱਚੋ: ਇਹ ਅਭਿਲੰਬ ਹੈ। ਆਉਣ ਵਾਲੀ ਕਿਰਨ ਆਪਤਿਤ ਅਤੇ ਵਾਪਸ ਜਾਣ ਵਾਲੀ ਕਿਰਨ ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਹੈ। ਅਭਿਲੰਬ ਸਹਾਇਕ ਰੇਖਾ ਹੈ, ਪ੍ਰਕਾਸ਼ ਦੀ ਕਿਰਨ ਨਹੀਂ।"
+    },
+    "difficulty": "easy",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-11",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "A ray makes 15° with a plane mirror surface. What is its reflection angle, measured from the normal?",
+      "hi": "किरण समतल दर्पण की सतह से 15° बनाती है। अभिलंब से मापा गया परावर्तन कोण क्या है?",
+      "pa": "ਕਿਰਨ ਸਮਤਲ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਨਾਲ 15° ਬਣਾਉਂਦੀ ਹੈ। ਅਭਿਲੰਬ ਤੋਂ ਮਾਪਿਆ ਪਰਾਵਰਤਨ ਕੋਣ ਕੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "105°",
+        "hi": "105°",
+        "pa": "105°"
+      },
+      "B": {
+        "en": "165°",
+        "hi": "165°",
+        "pa": "165°"
+      },
+      "C": {
+        "en": "75°",
+        "hi": "75°",
+        "pa": "75°"
+      },
+      "D": {
+        "en": "15°",
+        "hi": "15°",
+        "pa": "15°"
+      }
+    },
+    "correct": "C",
+    "explanation": {
+      "en": "i = 90° − 15° = 75°. Since r = i, the answer is 75°.",
+      "hi": "i = 90° − 15° = 75°। r = i, इसलिए उत्तर 75° है।",
+      "pa": "i = 90° − 15° = 75°। r = i, ਇਸ ਲਈ ਉੱਤਰ 75° ਹੈ।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-12",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "A ray makes 25° with a plane mirror surface. What is its reflection angle, measured from the normal?",
+      "hi": "किरण समतल दर्पण की सतह से 25° बनाती है। अभिलंब से मापा गया परावर्तन कोण क्या है?",
+      "pa": "ਕਿਰਨ ਸਮਤਲ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਨਾਲ 25° ਬਣਾਉਂਦੀ ਹੈ। ਅਭਿਲੰਬ ਤੋਂ ਮਾਪਿਆ ਪਰਾਵਰਤਨ ਕੋਣ ਕੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "155°",
+        "hi": "155°",
+        "pa": "155°"
+      },
+      "B": {
+        "en": "65°",
+        "hi": "65°",
+        "pa": "65°"
+      },
+      "C": {
+        "en": "25°",
+        "hi": "25°",
+        "pa": "25°"
+      },
+      "D": {
+        "en": "115°",
+        "hi": "115°",
+        "pa": "115°"
+      }
+    },
+    "correct": "B",
+    "explanation": {
+      "en": "i = 90° − 25° = 65°. Since r = i, the answer is 65°.",
+      "hi": "i = 90° − 25° = 65°। r = i, इसलिए उत्तर 65° है।",
+      "pa": "i = 90° − 25° = 65°। r = i, ਇਸ ਲਈ ਉੱਤਰ 65° ਹੈ।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-13",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "A ray makes 35° with a plane mirror surface. What is its reflection angle, measured from the normal?",
+      "hi": "किरण समतल दर्पण की सतह से 35° बनाती है। अभिलंब से मापा गया परावर्तन कोण क्या है?",
+      "pa": "ਕਿਰਨ ਸਮਤਲ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਨਾਲ 35° ਬਣਾਉਂਦੀ ਹੈ। ਅਭਿਲੰਬ ਤੋਂ ਮਾਪਿਆ ਪਰਾਵਰਤਨ ਕੋਣ ਕੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "55°",
+        "hi": "55°",
+        "pa": "55°"
+      },
+      "B": {
+        "en": "35°",
+        "hi": "35°",
+        "pa": "35°"
+      },
+      "C": {
+        "en": "125°",
+        "hi": "125°",
+        "pa": "125°"
+      },
+      "D": {
+        "en": "145°",
+        "hi": "145°",
+        "pa": "145°"
+      }
+    },
+    "correct": "A",
+    "explanation": {
+      "en": "i = 90° − 35° = 55°. Since r = i, the answer is 55°.",
+      "hi": "i = 90° − 35° = 55°। r = i, इसलिए उत्तर 55° है।",
+      "pa": "i = 90° − 35° = 55°। r = i, ਇਸ ਲਈ ਉੱਤਰ 55° ਹੈ।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-14",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "A ray makes 55° with a plane mirror surface. What is its reflection angle, measured from the normal?",
+      "hi": "किरण समतल दर्पण की सतह से 55° बनाती है। अभिलंब से मापा गया परावर्तन कोण क्या है?",
+      "pa": "ਕਿਰਨ ਸਮਤਲ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਨਾਲ 55° ਬਣਾਉਂਦੀ ਹੈ। ਅਭਿਲੰਬ ਤੋਂ ਮਾਪਿਆ ਪਰਾਵਰਤਨ ਕੋਣ ਕੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "55°",
+        "hi": "55°",
+        "pa": "55°"
+      },
+      "B": {
+        "en": "145°",
+        "hi": "145°",
+        "pa": "145°"
+      },
+      "C": {
+        "en": "125°",
+        "hi": "125°",
+        "pa": "125°"
+      },
+      "D": {
+        "en": "35°",
+        "hi": "35°",
+        "pa": "35°"
+      }
+    },
+    "correct": "D",
+    "explanation": {
+      "en": "i = 90° − 55° = 35°. Since r = i, the answer is 35°.",
+      "hi": "i = 90° − 55° = 35°। r = i, इसलिए उत्तर 35° है।",
+      "pa": "i = 90° − 55° = 35°। r = i, ਇਸ ਲਈ ਉੱਤਰ 35° ਹੈ।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-15",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "A ray makes 70° with a plane mirror surface. What is its reflection angle, measured from the normal?",
+      "hi": "किरण समतल दर्पण की सतह से 70° बनाती है। अभिलंब से मापा गया परावर्तन कोण क्या है?",
+      "pa": "ਕਿਰਨ ਸਮਤਲ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਨਾਲ 70° ਬਣਾਉਂਦੀ ਹੈ। ਅਭਿਲੰਬ ਤੋਂ ਮਾਪਿਆ ਪਰਾਵਰਤਨ ਕੋਣ ਕੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "160°",
+        "hi": "160°",
+        "pa": "160°"
+      },
+      "B": {
+        "en": "110°",
+        "hi": "110°",
+        "pa": "110°"
+      },
+      "C": {
+        "en": "20°",
+        "hi": "20°",
+        "pa": "20°"
+      },
+      "D": {
+        "en": "70°",
+        "hi": "70°",
+        "pa": "70°"
+      }
+    },
+    "correct": "C",
+    "explanation": {
+      "en": "i = 90° − 70° = 20°. Since r = i, the answer is 20°.",
+      "hi": "i = 90° − 70° = 20°। r = i, इसलिए उत्तर 20° है।",
+      "pa": "i = 90° − 70° = 20°। r = i, ਇਸ ਲਈ ਉੱਤਰ 20° ਹੈ।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-16",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "An object is 2 cm in front of a fixed plane mirror. What is the distance between the object and its image?",
+      "hi": "वस्तु स्थिर समतल दर्पण से 2 cm सामने है। वस्तु और प्रतिबिंब के बीच दूरी कितनी है?",
+      "pa": "ਵਸਤੂ ਸਥਿਰ ਸਮਤਲ ਦਰਪਣ ਤੋਂ 2 cm ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ ਅਤੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿਚਕਾਰ ਦੂਰੀ ਕਿੰਨੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "8 cm",
+        "hi": "8 cm",
+        "pa": "8 cm"
+      },
+      "B": {
+        "en": "4 cm",
+        "hi": "4 cm",
+        "pa": "4 cm"
+      },
+      "C": {
+        "en": "2 cm",
+        "hi": "2 cm",
+        "pa": "2 cm"
+      },
+      "D": {
+        "en": "6 cm",
+        "hi": "6 cm",
+        "pa": "6 cm"
+      }
+    },
+    "correct": "B",
+    "explanation": {
+      "en": "The image is 2 cm behind the mirror. Total separation = 2 + 2 = 4 cm.",
+      "hi": "प्रतिबिंब दर्पण के पीछे 2 cm है। कुल दूरी = 2 + 2 = 4 cm।",
+      "pa": "ਪ੍ਰਤੀਬਿੰਬ ਦਰਪਣ ਦੇ ਪਿੱਛੇ 2 cm ਹੈ। ਕੁੱਲ ਦੂਰੀ = 2 + 2 = 4 cm।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-17",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "An object is 3 cm in front of a fixed plane mirror. What is the distance between the object and its image?",
+      "hi": "वस्तु स्थिर समतल दर्पण से 3 cm सामने है। वस्तु और प्रतिबिंब के बीच दूरी कितनी है?",
+      "pa": "ਵਸਤੂ ਸਥਿਰ ਸਮਤਲ ਦਰਪਣ ਤੋਂ 3 cm ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ ਅਤੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿਚਕਾਰ ਦੂਰੀ ਕਿੰਨੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "6 cm",
+        "hi": "6 cm",
+        "pa": "6 cm"
+      },
+      "B": {
+        "en": "3 cm",
+        "hi": "3 cm",
+        "pa": "3 cm"
+      },
+      "C": {
+        "en": "9 cm",
+        "hi": "9 cm",
+        "pa": "9 cm"
+      },
+      "D": {
+        "en": "12 cm",
+        "hi": "12 cm",
+        "pa": "12 cm"
+      }
+    },
+    "correct": "A",
+    "explanation": {
+      "en": "The image is 3 cm behind the mirror. Total separation = 3 + 3 = 6 cm.",
+      "hi": "प्रतिबिंब दर्पण के पीछे 3 cm है। कुल दूरी = 3 + 3 = 6 cm।",
+      "pa": "ਪ੍ਰਤੀਬਿੰਬ ਦਰਪਣ ਦੇ ਪਿੱਛੇ 3 cm ਹੈ। ਕੁੱਲ ਦੂਰੀ = 3 + 3 = 6 cm।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-18",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "An object is 5 cm in front of a fixed plane mirror. What is the distance between the object and its image?",
+      "hi": "वस्तु स्थिर समतल दर्पण से 5 cm सामने है। वस्तु और प्रतिबिंब के बीच दूरी कितनी है?",
+      "pa": "ਵਸਤੂ ਸਥਿਰ ਸਮਤਲ ਦਰਪਣ ਤੋਂ 5 cm ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ ਅਤੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿਚਕਾਰ ਦੂਰੀ ਕਿੰਨੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "5 cm",
+        "hi": "5 cm",
+        "pa": "5 cm"
+      },
+      "B": {
+        "en": "15 cm",
+        "hi": "15 cm",
+        "pa": "15 cm"
+      },
+      "C": {
+        "en": "20 cm",
+        "hi": "20 cm",
+        "pa": "20 cm"
+      },
+      "D": {
+        "en": "10 cm",
+        "hi": "10 cm",
+        "pa": "10 cm"
+      }
+    },
+    "correct": "D",
+    "explanation": {
+      "en": "The image is 5 cm behind the mirror. Total separation = 5 + 5 = 10 cm.",
+      "hi": "प्रतिबिंब दर्पण के पीछे 5 cm है। कुल दूरी = 5 + 5 = 10 cm।",
+      "pa": "ਪ੍ਰਤੀਬਿੰਬ ਦਰਪਣ ਦੇ ਪਿੱਛੇ 5 cm ਹੈ। ਕੁੱਲ ਦੂਰੀ = 5 + 5 = 10 cm।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-19",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "An object is 7 cm in front of a fixed plane mirror. What is the distance between the object and its image?",
+      "hi": "वस्तु स्थिर समतल दर्पण से 7 cm सामने है। वस्तु और प्रतिबिंब के बीच दूरी कितनी है?",
+      "pa": "ਵਸਤੂ ਸਥਿਰ ਸਮਤਲ ਦਰਪਣ ਤੋਂ 7 cm ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ ਅਤੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿਚਕਾਰ ਦੂਰੀ ਕਿੰਨੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "21 cm",
+        "hi": "21 cm",
+        "pa": "21 cm"
+      },
+      "B": {
+        "en": "28 cm",
+        "hi": "28 cm",
+        "pa": "28 cm"
+      },
+      "C": {
+        "en": "14 cm",
+        "hi": "14 cm",
+        "pa": "14 cm"
+      },
+      "D": {
+        "en": "7 cm",
+        "hi": "7 cm",
+        "pa": "7 cm"
+      }
+    },
+    "correct": "C",
+    "explanation": {
+      "en": "The image is 7 cm behind the mirror. Total separation = 7 + 7 = 14 cm.",
+      "hi": "प्रतिबिंब दर्पण के पीछे 7 cm है। कुल दूरी = 7 + 7 = 14 cm।",
+      "pa": "ਪ੍ਰਤੀਬਿੰਬ ਦਰਪਣ ਦੇ ਪਿੱਛੇ 7 cm ਹੈ। ਕੁੱਲ ਦੂਰੀ = 7 + 7 = 14 cm।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  },
+  {
+    "id": "ett-reflection-original-20",
+    "topicId": "ett-light-reflection",
+    "subjectId": "ett-science",
+    "examId": "punjab-ett",
+    "examTag": "Original practice · ETT 5994 archival science reference",
+    "availableLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "explanationLanguages": [
+      "en",
+      "hi",
+      "pa"
+    ],
+    "editorialStatus": "authored",
+    "source": {
+      "title": "NCERT Science: Light – Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook.php"
+    },
+    "question": {
+      "en": "An object is 9 cm in front of a fixed plane mirror. What is the distance between the object and its image?",
+      "hi": "वस्तु स्थिर समतल दर्पण से 9 cm सामने है। वस्तु और प्रतिबिंब के बीच दूरी कितनी है?",
+      "pa": "ਵਸਤੂ ਸਥਿਰ ਸਮਤਲ ਦਰਪਣ ਤੋਂ 9 cm ਸਾਹਮਣੇ ਹੈ। ਵਸਤੂ ਅਤੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿਚਕਾਰ ਦੂਰੀ ਕਿੰਨੀ ਹੈ?"
+    },
+    "options": {
+      "A": {
+        "en": "36 cm",
+        "hi": "36 cm",
+        "pa": "36 cm"
+      },
+      "B": {
+        "en": "18 cm",
+        "hi": "18 cm",
+        "pa": "18 cm"
+      },
+      "C": {
+        "en": "9 cm",
+        "hi": "9 cm",
+        "pa": "9 cm"
+      },
+      "D": {
+        "en": "27 cm",
+        "hi": "27 cm",
+        "pa": "27 cm"
+      }
+    },
+    "correct": "B",
+    "explanation": {
+      "en": "The image is 9 cm behind the mirror. Total separation = 9 + 9 = 18 cm.",
+      "hi": "प्रतिबिंब दर्पण के पीछे 9 cm है। कुल दूरी = 9 + 9 = 18 cm।",
+      "pa": "ਪ੍ਰਤੀਬਿੰਬ ਦਰਪਣ ਦੇ ਪਿੱਛੇ 9 cm ਹੈ। ਕੁੱਲ ਦੂਰੀ = 9 + 9 = 18 cm।"
+    },
+    "difficulty": "medium",
+    "subtopic": {
+      "en": "Reflection and plane mirrors",
+      "hi": "परावर्तन और समतल दर्पण",
+      "pa": "ਪਰਾਵਰਤਨ ਅਤੇ ਸਮਤਲ ਦਰਪਣ"
+    }
+  }
+]

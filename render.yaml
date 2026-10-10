@@ -1,0 +1,22 @@
+# Import this repository as a Render Blueprint. No paid services are requested.
+services:
+  - type: web
+    name: examsathi
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start -- --hostname 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health/
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NEXT_PUBLIC_BASE_PATH
+        value: ""
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        sync: false
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_GOOGLE_AUTH_ENABLED
+        value: "false"

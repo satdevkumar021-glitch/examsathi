@@ -1,0 +1,23 @@
+[
+  {
+    "reason": "Same event and requested fact: year of Adi Granth compilation.",
+    "prompts": [
+      "In which year was the compilation of the Adi Granth completed by Guru Arjan Dev Ji?",
+      "In which year did Sri Guru Arjan Dev Ji complete the compilation of the Adi Granth?"
+    ]
+  },
+  {
+    "reason": "Same requested opponent at Chappar Chiri in 1710.",
+    "prompts": [
+      "Which Mughal governor of Sirhind was defeated and killed by Banda Singh Bahadur at the Battle of Chappar Chiri on 12 May 1710?",
+      "In the Battle of Chappar Chiri (1710), which Nawab of Sirhind was defeated and killed by Banda Singh Bahadur?"
+    ]
+  },
+  {
+    "reason": "Same requested place of Khalsa foundation; do not merge its distinct date or founder questions.",
+    "prompts": [
+      "At which sacred venue did Guru Gobind Singh Ji found the Khalsa Panth on Baisakhi day in 1699?",
+      "Where was the Khalsa founded?"
+    ]
+  }
+]
