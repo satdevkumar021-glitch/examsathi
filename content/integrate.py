@@ -104,6 +104,12 @@ for l in json.load(open(research/'master-sst-polity-2.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add Master Cadre Science batch 1 (Physics Mechanics, Chemistry Atoms+Bonding, Biology Cell+Genetics)
+for l in json.load(open(research/'master-science-lessons-1.json')):
+ l['level']=l.get('level','Master Cadre Science — Class 9-12 + Graduation foundation')
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add Master Cadre SST Polity batch 3 (Political Theories: Liberalism, Marxism, Gandhism)
 for l in json.load(open(research/'master-sst-polity-3.json')):
  l['level']='Foundation / concept preparation'

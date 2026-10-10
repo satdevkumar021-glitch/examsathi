@@ -36056,6 +36056,1250 @@
     "level": "Foundation / concept preparation"
   },
   {
+    "id": "science-physics-mechanics",
+    "subject": "Science",
+    "unit": "Physics",
+    "title": {
+      "hi": "यांत्रिकी: गति, बल और कार्य-ऊर्जा (कक्षा 9–12 + स्नातक)",
+      "pa": "ਮਕੈਨਿਕਸ: ਗਤੀ, ਬਲ ਅਤੇ ਕੰਮ-ਊਰਜਾ (ਕਲਾਸ 9–12 + ਗ੍ਰੈਜੂਏਸ਼ਨ)",
+      "en": "Mechanics: Motion, Forces and Work-Energy (Class 9-12 + Graduation)"
+    },
+    "level": "Master Cadre Science — Physics (Class 9–12 + Graduation foundation)",
+    "depth_note": "Content at Class 9–12 and introductory graduation level. Advanced topics (Lagrangian/Hamiltonian mechanics) are NOT included — their depth in this exam is unverified per master-science-syllabus.json.",
+    "sources": [
+      {
+        "title": "NCERT Class 9 – Motion, Force and Laws of Motion (Chapters 7–9)",
+        "url": "https://ncert.nic.in/textbook/pdf/iesc1.pdf",
+        "note": "Foundation reference. Content is author-generated for Master Cadre exam practice."
+      },
+      {
+        "title": "NCERT Class 11 Physics Part I – Chapters 2–6 (Kinematics, Laws of Motion, Work-Energy)",
+        "url": "https://ncert.nic.in/textbook/pdf/keph1.pdf",
+        "note": "Class 11 foundation reference."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "गति: दूरी, विस्थापन, वेग और त्वरण",
+          "pa": "ਗਤੀ: ਦੂਰੀ, ਵਿਸਥਾਪਨ, ਵੇਗ ਅਤੇ ਪ੍ਰਵੇਗ",
+          "en": "Motion: Distance, Displacement, Velocity and Acceleration"
+        },
+        "text": {
+          "hi": "**ਦੂਰੀ (Distance)** — ਕਿਸੇ ਵਸਤੂ ਦੁਆਰਾ ਤੈਅ ਕੀਤੀ ਕੁੱਲ ਲੰਬਾਈ (scalar); **ਵਿਸਥਾਪਨ (Displacement)** — ਪ੍ਰਾਰੰਭਿਕ ਤੋਂ ਅੰਤਿਮ ਸਥਿਤੀ ਤੱਕ ਸਿੱਧੀ ਰੇਖਾ (vector)।\n\n**ਵੇਗ ਦੀਆਂ ਕਿਸਮਾਂ**:\n- ਔਸਤ ਵੇਗ = ਕੁੱਲ ਵਿਸਥਾਪਨ / ਕੁੱਲ ਸਮਾਂ\n- ਤਾਤਕਾਲਿਕ ਵੇਗ = dx/dt\n- ਯੂਨੀਫਾਰਮ ਵੇਗ: ਇੱਕਸਾਰ ਸਿੱਧੀ-ਰੇਖਾ ਗਤੀ\n\n**ਸਮਾਨ ਪ੍ਰਵੇਗ ਦੇ ਸਮੀਕਰਨ** (Equations of motion for uniform acceleration):\n1. v = u + at\n2. s = ut + ½at²\n3. v² = u² + 2as\n\nਜਿੱਥੇ: u = ਪ੍ਰਾਰੰਭਿਕ ਵੇਗ, v = ਅੰਤਿਮ ਵੇਗ, a = ਪ੍ਰਵੇਗ, s = ਵਿਸਥਾਪਨ, t = ਸਮਾਂ।\n\n**ਮੁਕਤ ਪਤਨ (Free Fall)**: a = g = 9.8 m/s² (ਧਰਤੀ ਦੀ ਸਤ੍ਹਾ 'ਤੇ, ਹੇਠਾਂ ਵੱਲ ਧਨਾਤਮਕ)।\n\n**ਪ੍ਰਕਾਰਜਿਕ ਉਦਾਹਰਨ**: ਇੱਕ ਕਾਰ 20 m/s ਤੋਂ 4 m/s² ਪ੍ਰਵੇਗ ਨਾਲ 5 s ਵਿੱਚ ਕਿੰਨੀ ਦੂਰੀ ਤੈਅ ਕਰੇਗੀ?\ns = ut + ½at² = 20×5 + ½×4×25 = 100 + 50 = **150 m**",
+          "pa": "ਦੂਰੀ = scalar; ਵਿਸਥਾਪਨ = vector। v = u+at; s = ut+½at²; v² = u²+2as। g = 9.8 m/s²।",
+          "en": "**Distance** — total path length (scalar); **Displacement** — shortest line from start to end (vector).\n\n**Velocity types**:\n- Average velocity = total displacement / total time\n- Instantaneous velocity = dx/dt\n\n**Equations of uniform acceleration**:\n1. v = u + at\n2. s = ut + ½at²\n3. v² = u² + 2as\n\nSymbols: u = initial velocity, v = final velocity, a = acceleration, s = displacement, t = time.\n\n**Free fall**: a = g = 9.8 m/s² (downward positive, at Earth's surface).\n\n**Worked example**: A car starts at 20 m/s with acceleration 4 m/s² for 5 s. Distance?\ns = 20×5 + ½×4×25 = 100 + 50 = **150 m**"
+        }
+      },
+      {
+        "heading": {
+          "hi": "न्यूटन के गति के नियम",
+          "pa": "ਨਿਊਟਨ ਦੇ ਗਤੀ ਦੇ ਨਿਯਮ",
+          "en": "Newton's Laws of Motion"
+        },
+        "text": {
+          "hi": "**ਨਿਊਟਨ ਦਾ ਪਹਿਲਾ ਨਿਯਮ (ਜੜਤਾ ਦਾ ਨਿਯਮ)**: ਕੋਈ ਵਸਤੂ ਆਪਣੀ ਅਵਸਥਾ ਵਿੱਚ ਉਦੋਂ ਤੱਕ ਤਬਦੀਲੀ ਨਹੀਂ ਕਰਦੀ ਜਦੋਂ ਤੱਕ ਕੋਈ ਬਾਹਰੀ ਬਲ ਨਾ ਲੱਗੇ।\n**ਜੜਤਾ ∝ ਪੁੰਜ**।\n\n**ਦੂਜਾ ਨਿਯਮ (F = ma)**: ਕਿਸੇ ਵਸਤੂ ਦੀ ਗਤੀ ਵਿੱਚ ਬਦਲਾਅ ਦੀ ਦਰ ਲਾਏ ਗਏ ਬਲ ਦੇ ਅਨੁਪਾਤੀ ਹੈ।\nF = ma = dp/dt (ਜਿੱਥੇ p = ਮੋਮੈਂਟਮ = mv)\n\nSI ਇਕਾਈ: ਨਿਊਟਨ (N) = kg·m/s²।\n\n**ਤੀਜਾ ਨਿਯਮ (ਕਿਰਿਆ-ਪ੍ਰਤੀਕਿਰਿਆ)**: ਹਰ ਕਿਰਿਆ ਦੀ ਬਰਾਬਰ ਅਤੇ ਉਲਟ ਪ੍ਰਤੀਕਿਰਿਆ ਹੁੰਦੀ ਹੈ। (ਬਲ ਵੱਖ-ਵੱਖ ਵਸਤੂਆਂ 'ਤੇ ਲੱਗਦੇ ਹਨ।)\n\n**ਰੇਖਿਕ ਮੋਮੈਂਟਮ ਦੀ ਸੰਰੱਖਿਅਤਾ**: ਜੇ ਕੁੱਲ ਬਾਹਰੀ ਬਲ ਜ਼ੀਰੋ ਹੋਵੇ ਤਾਂ ਕੁੱਲ ਮੋਮੈਂਟਮ ਸਥਿਰ ਰਹਿੰਦਾ ਹੈ।\n\n**ਰਗੜ (Friction)**: ਕਾਇਨੇਟਿਕ ਰਗੜ (fₖ = μₖN) < ਸਟੈਟਿਕ ਰਗੜ (fₛ ≤ μₛN)।\n\n**ਸਰਕੂਲਰ ਗਤੀ**: ਸੈਂਟ੍ਰੀਪੀਟਲ ਪ੍ਰਵੇਗ a = v²/r; ਬਲ F = mv²/r (ਕੇਂਦਰ ਵੱਲ)।",
+          "pa": "1ਲਾ ਨਿਯਮ: ਜੜਤਾ। 2ਰਾ: F=ma=dp/dt। 3ਰਾ: ਕਿਰਿਆ-ਪ੍ਰਤੀਕਿਰਿਆ। ਮੋਮੈਂਟਮ ਸੰਰੱਖਿਅਤਾ। f=μN। ਸੈਂਟ੍ਰੀਪੀਟਲ: a=v²/r।",
+          "en": "**Newton's First Law (Inertia)**: A body remains in its state of rest or uniform motion unless acted upon by an external force. Inertia ∝ mass.\n\n**Second Law (F = ma)**: Rate of change of momentum is proportional to applied force.\nF = ma = dp/dt (where p = momentum = mv). SI unit: Newton (N) = kg·m/s².\n\n**Third Law (Action-Reaction)**: Every action has an equal and opposite reaction (forces act on different bodies).\n\n**Conservation of Linear Momentum**: If net external force = 0, total momentum remains constant.\n\n**Friction**: Kinetic (fₖ = μₖN) < Static (fₛ ≤ μₛN).\n\n**Circular motion**: Centripetal acceleration a = v²/r; Force F = mv²/r (towards centre)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "गुरुत्वाकर्षण, कार्य, ऊर्जा और शक्ति",
+          "pa": "ਗੁਰੂਤਵਾਕਰਸ਼ਨ, ਕੰਮ, ਊਰਜਾ ਅਤੇ ਸ਼ਕਤੀ",
+          "en": "Gravitation, Work, Energy and Power"
+        },
+        "text": {
+          "hi": "**ਨਿਊਟਨ ਦਾ ਗੁਰੂਤਵਾਕਰਸ਼ਨ ਨਿਯਮ**:\nF = Gm₁m₂/r²\nG = 6.674 × 10⁻¹¹ N·m²/kg²\n\n**ਗੁਰੂਤਵ ਪ੍ਰਵੇਗ**: g = GM_E/R_E² ≈ 9.8 m/s²; ਉਚਾਈ 'ਤੇ g ਘਟਦਾ ਹੈ।\n\n**ਬਚਣ ਦਾ ਵੇਗ (Escape velocity)**: v_e = √(2GM/R) ≈ 11.2 km/s (ਧਰਤੀ ਲਈ)।\n**ਔਰਬਿਟਲ ਵੇਗ**: v₀ = √(GM/r)।\n**ਕੇਪਲਰ ਦਾ ਤੀਜਾ ਨਿਯਮ**: T² ∝ R³।\n\n**ਕੰਮ (Work)**: W = Fs cosθ (ਜਿੱਥੇ θ = ਬਲ ਅਤੇ ਵਿਸਥਾਪਨ ਵਿਚਕਾਰ ਕੋਣ)\nਇਕਾਈ: Joule (J) = N·m\n\n**ਊਰਜਾ ਦੇ ਰੂਪ**:\n- ਗਤਿਜ ਊਰਜਾ (KE) = ½mv²\n- ਸਥਿਤਿਜ ਊਰਜਾ (PE) = mgh (ਗੁਰੂਤਵ)\n- ਊਰਜਾ ਸੰਰੱਖਿਅਤਾ: KE + PE = ਸਥਿਰ (ਬਿਨਾਂ ਘਰਸ਼ਣ)\n\n**ਸ਼ਕਤੀ (Power)**: P = W/t = Fv; ਇਕਾਈ: Watt (W) = J/s। 1 HP = 746 W।",
+          "pa": "F=Gm₁m₂/r²; G=6.674×10⁻¹¹। g≈9.8 m/s²। ਬਚਣ ਵੇਗ=11.2 km/s। KE=½mv²; PE=mgh। P=W/t। 1 HP=746 W।",
+          "en": "**Newton's Law of Gravitation**: F = Gm₁m₂/r²; G = 6.674 × 10⁻¹¹ N·m²/kg².\n\n**Gravitational acceleration**: g = GM_E/R_E² ≈ 9.8 m/s²; decreases with height.\n\n**Escape velocity**: v_e = √(2GM/R) ≈ 11.2 km/s (Earth). **Orbital velocity**: v₀ = √(GM/r).\n**Kepler's Third Law**: T² ∝ R³.\n\n**Work**: W = Fs cosθ (θ = angle between force and displacement). Unit: Joule (J) = N·m.\n\n**Energy**:\n- Kinetic Energy (KE) = ½mv²\n- Potential Energy (PE) = mgh (gravitational)\n- Conservation of Energy: KE + PE = constant (no friction)\n\n**Power**: P = W/t = Fv. Unit: Watt (W) = J/s. 1 HP = 746 W."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "v=u+at; s=ut+½at²; v²=u²+2as। F=ma; गुरुत्व F=Gm₁m₂/r²; g≈9.8 m/s²; पलायन वेग 11.2 km/s। KE=½mv²; PE=mgh; P=W/t। न्यूटन के तीन नियम + संवेग संरक्षण। No negative marking → attempt all.",
+      "pa": "v=u+at; s=ut+½at²। F=ma; g=9.8 m/s²; KE=½mv²; PE=mgh। ਨਿਊਟਨ 3 ਨਿਯਮ + ਮੋਮੈਂਟਮ ਸੰਰੱਖਿਅਤਾ।",
+      "en": "v=u+at; s=ut+½at²; v²=u²+2as. F=ma; gravity F=Gm₁m₂/r²; g≈9.8 m/s²; escape velocity 11.2 km/s. KE=½mv²; PE=mgh; P=W/t. Three Newton's laws + momentum conservation."
+    },
+    "keyPoints": [
+      {
+        "hi": "समान त्वरण: v=u+at; s=ut+½at²; v²=u²+2as",
+        "pa": "ਸਮਾਨ ਪ੍ਰਵੇਗ: v=u+at; s=ut+½at²; v²=u²+2as",
+        "en": "Uniform acceleration: v=u+at; s=ut+½at²; v²=u²+2as"
+      },
+      {
+        "hi": "F=ma (दूसरा नियम); F=dp/dt; p=mv",
+        "pa": "F=ma; F=dp/dt; p=mv",
+        "en": "F=ma (2nd law); F=dp/dt; p=mv"
+      },
+      {
+        "hi": "KE=½mv²; PE=mgh; ऊर्जा संरक्षण",
+        "pa": "KE=½mv²; PE=mgh; ਊਰਜਾ ਸੰਰੱਖਿਅਤਾ",
+        "en": "KE=½mv²; PE=mgh; Conservation of energy"
+      },
+      {
+        "hi": "G=6.674×10⁻¹¹ N·m²/kg²; g≈9.8 m/s²; पलायन वेग=11.2 km/s",
+        "pa": "G=6.674×10⁻¹¹; g≈9.8 m/s²; ਬਚਣ ਵੇਗ=11.2 km/s",
+        "en": "G=6.674×10⁻¹¹ N·m²/kg²; g≈9.8 m/s²; escape velocity=11.2 km/s"
+      },
+      {
+        "hi": "कोई ऋणात्मक अंक नहीं → सभी 150 प्रश्न हल करें; संदिग्ध प्रश्नों पर पहले अनुमान लगाएँ",
+        "pa": "ਕੋਈ ਨੈਗੇਟਿਵ ਮਾਰਕਿੰਗ ਨਹੀਂ → ਸਾਰੇ 150 ਸਵਾਲ ਕਰੋ",
+        "en": "No negative marking → attempt all 150 questions; eliminate options then guess"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "समान त्वरण के तीन गति समीकरण?",
+          "pa": "ਸਮਾਨ ਪ੍ਰਵੇਗ ਦੇ ਤਿੰਨ ਸਮੀਕਰਨ?",
+          "en": "Three equations of motion for uniform acceleration?"
+        },
+        "back": {
+          "hi": "1) v=u+at  2) s=ut+½at²  3) v²=u²+2as",
+          "pa": "1) v=u+at  2) s=ut+½at²  3) v²=u²+2as",
+          "en": "1) v=u+at  2) s=ut+½at²  3) v²=u²+2as"
+        }
+      },
+      {
+        "front": {
+          "hi": "न्यूटन का दूसरा नियम क्या है?",
+          "pa": "ਨਿਊਟਨ ਦਾ ਦੂਜਾ ਨਿਯਮ ਕੀ ਹੈ?",
+          "en": "State Newton's Second Law."
+        },
+        "back": {
+          "hi": "F = ma = dp/dt; बल ∝ द्रव्यमान × त्वरण; इकाई: Newton = kg·m/s²",
+          "pa": "F = ma = dp/dt; ਇਕਾਈ: Newton = kg·m/s²",
+          "en": "F = ma = dp/dt; force proportional to rate of change of momentum; unit: Newton = kg·m/s²"
+        }
+      },
+      {
+        "front": {
+          "hi": "गतिज ऊर्जा और स्थितिज ऊर्जा के सूत्र?",
+          "pa": "ਗਤਿਜ ਅਤੇ ਸਥਿਤਿਜ ਊਰਜਾ ਦੇ ਫਾਰਮੂਲੇ?",
+          "en": "Formulas for KE and PE?"
+        },
+        "back": {
+          "hi": "KE = ½mv²  ;  PE = mgh  (गुरुत्व)",
+          "pa": "KE = ½mv²  ;  PE = mgh",
+          "en": "KE = ½mv²  ;  PE = mgh  (gravitational)"
+        }
+      },
+      {
+        "front": {
+          "hi": "पृथ्वी से पलायन वेग कितना है?",
+          "pa": "ਧਰਤੀ ਤੋਂ ਬਚਣ ਦਾ ਵੇਗ ਕਿੰਨਾ ਹੈ?",
+          "en": "What is the escape velocity from Earth?"
+        },
+        "back": {
+          "hi": "≈ 11.2 km/s; ਫਾਰਮੂਲਾ: v_e = √(2GM/R)",
+          "pa": "≈ 11.2 km/s; v_e = √(2GM/R)",
+          "en": "≈ 11.2 km/s; formula: v_e = √(2GM/R)"
+        }
+      },
+      {
+        "front": {
+          "hi": "संवेग संरक्षण का नियम कब लागू होता है?",
+          "pa": "ਮੋਮੈਂਟਮ ਸੰਰੱਖਿਅਤਾ ਕਦੋਂ ਲਾਗੂ ਹੁੰਦੀ ਹੈ?",
+          "en": "When is conservation of momentum valid?"
+        },
+        "back": {
+          "hi": "ਜਦੋਂ ਕੁੱਲ ਬਾਹਰੀ ਬਲ = 0; ਟੱਕਰਾਂ ਅਤੇ ਵਿਸਫੋਟਾਂ ਵਿੱਚ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ",
+          "pa": "ਜਦੋਂ ਕੁੱਲ ਬਾਹਰੀ ਬਲ = 0",
+          "en": "When total external force = 0; used in collisions and explosions"
+        }
+      },
+      {
+        "front": {
+          "hi": "कार्य का सूत्र और SI इकाई?",
+          "pa": "ਕੰਮ ਦਾ ਫਾਰਮੂਲਾ ਅਤੇ SI ਇਕਾਈ?",
+          "en": "Formula for Work and its SI unit?"
+        },
+        "back": {
+          "hi": "W = Fs cosθ; SI ਇਕਾਈ: Joule (J) = N·m",
+          "pa": "W = Fs cosθ; ਇਕਾਈ: Joule (J)",
+          "en": "W = Fs cosθ; SI unit: Joule (J) = N·m"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਸੈਂਟ੍ਰੀਪੀਟਲ ਬਲ ਦਾ ਫਾਰਮੂਲਾ?",
+          "pa": "ਸੈਂਟ੍ਰੀਪੀਟਲ ਬਲ ਦਾ ਫਾਰਮੂਲਾ?",
+          "en": "Formula for centripetal force?"
+        },
+        "back": {
+          "hi": "F = mv²/r (ਕੇਂਦਰ ਵੱਲ); a = v²/r",
+          "pa": "F = mv²/r; a = v²/r",
+          "en": "F = mv²/r (towards centre); a = v²/r"
+        }
+      },
+      {
+        "front": {
+          "hi": "गुरुत्वाकर्षण स्थिरांक G का मान?",
+          "pa": "G ਦਾ ਮੁੱਲ?",
+          "en": "Value of gravitational constant G?"
+        },
+        "back": {
+          "hi": "G = 6.674 × 10⁻¹¹ N·m²/kg²",
+          "pa": "G = 6.674 × 10⁻¹¹ N·m²/kg²",
+          "en": "G = 6.674 × 10⁻¹¹ N·m²/kg²"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sc-mech-q1",
+        "text": {
+          "hi": "एक वस्तु विरामावस्था से 3 m/s² के त्वरण के साथ चलती है। 4 सेकंड में कितनी दूरी तय होगी?",
+          "pa": "ਇੱਕ ਵਸਤੂ ਵਿਰਾਮ ਤੋਂ 3 m/s² ਪ੍ਰਵੇਗ ਨਾਲ ਚੱਲਦੀ ਹੈ। 4 ਸਕਿੰਟ ਵਿੱਚ ਕਿੰਨੀ ਦੂਰੀ?",
+          "en": "An object starts from rest with acceleration 3 m/s². Distance covered in 4 seconds?"
+        },
+        "options": {
+          "hi": [
+            "12 m",
+            "24 m",
+            "48 m",
+            "6 m"
+          ],
+          "pa": [
+            "12 m",
+            "24 m",
+            "48 m",
+            "6 m"
+          ],
+          "en": [
+            "12 m",
+            "24 m",
+            "48 m",
+            "6 m"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "s = ut + ½at² = 0 + ½×3×16 = **24 m**. u=0 (विराम), a=3 m/s², t=4 s।",
+          "en": "s = ut + ½at² = 0 + ½×3×16 = **24 m**. u=0 (rest), a=3 m/s², t=4 s."
+        }
+      },
+      {
+        "id": "sc-mech-q2",
+        "text": {
+          "hi": "10 kg की वस्तु पर 5 m/s² का त्वरण उत्पन्न करने के लिए कितना बल चाहिए?",
+          "pa": "10 kg ਦੀ ਵਸਤੂ 'ਤੇ 5 m/s² ਦਾ ਪ੍ਰਵੇਗ ਦੇਣ ਲਈ ਕਿੰਨਾ ਬਲ?",
+          "en": "What force is needed to give a 10 kg object an acceleration of 5 m/s²?"
+        },
+        "options": {
+          "hi": [
+            "2 N",
+            "15 N",
+            "50 N",
+            "0.5 N"
+          ],
+          "pa": [
+            "2 N",
+            "15 N",
+            "50 N",
+            "0.5 N"
+          ],
+          "en": [
+            "2 N",
+            "15 N",
+            "50 N",
+            "0.5 N"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "F = ma = 10 × 5 = **50 N** (Newton's 2nd Law).",
+          "en": "F = ma = 10 × 5 = **50 N** (Newton's Second Law)."
+        }
+      },
+      {
+        "id": "sc-mech-q3",
+        "text": {
+          "hi": "40 m/s की गति से 5 kg की गेंद का संवेग (momentum) क्या होगा?",
+          "pa": "40 m/s ਨਾਲ 5 kg ਦੀ ਗੇਂਦ ਦਾ ਮੋਮੈਂਟਮ?",
+          "en": "What is the momentum of a 5 kg ball moving at 40 m/s?"
+        },
+        "options": {
+          "hi": [
+            "8 kg·m/s",
+            "45 kg·m/s",
+            "200 kg·m/s",
+            "35 kg·m/s"
+          ],
+          "pa": [
+            "8 kg·m/s",
+            "45 kg·m/s",
+            "200 kg·m/s",
+            "35 kg·m/s"
+          ],
+          "en": [
+            "8 kg·m/s",
+            "45 kg·m/s",
+            "200 kg·m/s",
+            "35 kg·m/s"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "p = mv = 5 × 40 = **200 kg·m/s**.",
+          "en": "p = mv = 5 × 40 = **200 kg·m/s**."
+        }
+      },
+      {
+        "id": "sc-mech-q4",
+        "text": {
+          "hi": "पृथ्वी के लिए पलायन वेग लगभग कितना है?",
+          "pa": "ਧਰਤੀ ਲਈ ਬਚਣ ਦਾ ਵੇਗ ਲਗਭਗ ਕਿੰਨਾ ਹੈ?",
+          "en": "Approximate escape velocity from Earth?"
+        },
+        "options": {
+          "hi": [
+            "7.9 km/s",
+            "11.2 km/s",
+            "9.8 km/s",
+            "3.0 km/s"
+          ],
+          "pa": [
+            "7.9 km/s",
+            "11.2 km/s",
+            "9.8 km/s",
+            "3.0 km/s"
+          ],
+          "en": [
+            "7.9 km/s",
+            "11.2 km/s",
+            "9.8 km/s",
+            "3.0 km/s"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਧਰਤੀ ਤੋਂ ਪਲਾਇਨ ਵੇਗ ≈ 11.2 km/s। 7.9 km/s ਔਰਬਿਟਲ ਵੇਗ ਹੈ (ਪਹਿਲੀ ਬ੍ਰਹਿਮੰਡੀ ਵੇਗ)।",
+          "en": "Escape velocity from Earth ≈ 11.2 km/s. 7.9 km/s is the orbital (first cosmic) velocity."
+        }
+      },
+      {
+        "id": "sc-mech-q5",
+        "text": {
+          "hi": "60 W का एक बल्ब 10 सेकंड में कितना कार्य करेगा?",
+          "pa": "60 W ਦਾ ਇੱਕ ਬੱਲਬ 10 ਸਕਿੰਟ ਵਿੱਚ ਕਿੰਨਾ ਕੰਮ ਕਰੇਗਾ?",
+          "en": "How much work does a 60 W bulb do in 10 seconds?"
+        },
+        "options": {
+          "hi": [
+            "6 J",
+            "600 J",
+            "0.6 J",
+            "60 J"
+          ],
+          "pa": [
+            "6 J",
+            "600 J",
+            "0.6 J",
+            "60 J"
+          ],
+          "en": [
+            "6 J",
+            "600 J",
+            "0.6 J",
+            "60 J"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "W = P × t = 60 × 10 = **600 J**.",
+          "en": "W = P × t = 60 × 10 = **600 J**."
+        }
+      },
+      {
+        "id": "sc-mech-q6",
+        "text": {
+          "hi": "न्यूटन के तीसरे नियम का एक उदाहरण कौन सा है?",
+          "pa": "ਨਿਊਟਨ ਦੇ ਤੀਜੇ ਨਿਯਮ ਦੀ ਇੱਕ ਉਦਾਹਰਨ?",
+          "en": "Which is an example of Newton's Third Law?"
+        },
+        "options": {
+          "hi": [
+            "रॉकेट का आगे बढ़ना जब गैसें पीछे निकलती हैं",
+            "गाड़ी का रुकना ब्रेक से",
+            "गेंद का ऊपर उछलना",
+            "पानी में पत्थर डूबना"
+          ],
+          "pa": [
+            "ਰਾਕੇਟ ਦਾ ਅੱਗੇ ਜਾਣਾ ਜਦੋਂ ਗੈਸਾਂ ਪਿੱਛੇ ਨਿਕਲਦੀਆਂ ਹਨ",
+            "ਗੱਡੀ ਦਾ ਬ੍ਰੇਕ ਨਾਲ ਰੁਕਣਾ",
+            "ਗੇਂਦ ਦਾ ਉੱਪਰ ਉਛਲਣਾ",
+            "ਪੱਥਰ ਦਾ ਪਾਣੀ ਵਿੱਚ ਡੁੱਬਣਾ"
+          ],
+          "en": [
+            "Rocket moves forward as gases are expelled backward",
+            "Car stops due to brakes",
+            "Ball bounces upward",
+            "Stone sinks in water"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "ਰਾਕੇਟ ਦਾ ਉਦਾਹਰਨ: ਗੈਸਾਂ ਪਿੱਛੇ ਧੱਕੀਆਂ (ਕਿਰਿਆ) → ਰਾਕੇਟ ਅੱਗੇ ਜਾਂਦਾ ਹੈ (ਪ੍ਰਤੀਕਿਰਿਆ)। ਇਹ Newton ਦਾ 3ਰਾ ਨਿਯਮ ਹੈ।",
+          "en": "Rocket example: gases expelled backward (action) → rocket moves forward (reaction). Classic example of Newton's 3rd Law."
+        }
+      },
+      {
+        "id": "sc-mech-q7",
+        "text": {
+          "hi": "यदि एक वस्तु 30 m/s वेग से चल रही है और 5 m/s² का ऋणात्मक त्वरण (मंदन) है, तो वस्तु कितने समय में रुकेगी?",
+          "pa": "ਵਸਤੂ 30 m/s ਨਾਲ ਚੱਲ ਰਹੀ ਹੈ ਅਤੇ 5 m/s² ਮੰਦਨ ਹੈ। ਕਿੰਨੇ ਸਮੇਂ ਵਿੱਚ ਰੁਕੇਗੀ?",
+          "en": "Object moves at 30 m/s with deceleration 5 m/s². Time to stop?"
+        },
+        "options": {
+          "hi": [
+            "3 s",
+            "6 s",
+            "4 s",
+            "5 s"
+          ],
+          "pa": [
+            "3 s",
+            "6 s",
+            "4 s",
+            "5 s"
+          ],
+          "en": [
+            "3 s",
+            "6 s",
+            "4 s",
+            "5 s"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "v = u + at → 0 = 30 + (−5)×t → t = 30/5 = **6 s**.",
+          "en": "v = u + at → 0 = 30 + (−5)×t → t = 30/5 = **6 s**."
+        }
+      },
+      {
+        "id": "sc-mech-q8",
+        "text": {
+          "hi": "केपलर का तृतीय नियम क्या कहता है?",
+          "pa": "ਕੇਪਲਰ ਦਾ ਤੀਜਾ ਨਿਯਮ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
+          "en": "What does Kepler's Third Law state?"
+        },
+        "options": {
+          "hi": [
+            "ग्रहों की कक्षा वृत्ताकार होती है",
+            "ग्रह का क्षेत्रफल-वेग स्थिर होता है",
+            "ग्रह के परिक्रमण-काल का वर्ग कक्षा की त्रिज्या के घन के समानुपाती है",
+            "सूर्य की गुरुत्व शक्ति स्थिर है"
+          ],
+          "pa": [
+            "ਗ੍ਰਹਿਆਂ ਦੀ ਕਿਰਿਆ ਗੋਲਾਕਾਰ",
+            "ਖੇਤਰਫਲ-ਵੇਗ ਸਥਿਰ",
+            "T² ∝ R³",
+            "ਸੂਰਜ ਦੀ ਗੁਰੂਤਵ ਸ਼ਕਤੀ ਸਥਿਰ"
+          ],
+          "en": [
+            "Planetary orbits are circular",
+            "Areal velocity is constant",
+            "Square of orbital period is proportional to cube of orbital radius (T² ∝ R³)",
+            "Gravitational force of Sun is constant"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਕੇਪਲਰ ਦਾ ਤੀਜਾ ਨਿਯਮ: T² ∝ R³। ਇਸਦਾ ਮਤਲਬ ਹੈ ਕਿ ਜਿੰਨਾ ਵੱਡਾ ਚੱਕਰ, ਉੱਨਾ ਲੰਮਾ ਸਮਾਂ ਲੱਗਦਾ ਹੈ।",
+          "en": "Kepler's Third Law: T² ∝ R³ — the larger the orbit, the longer the orbital period."
+        }
+      },
+      {
+        "id": "sc-mech-q9",
+        "text": {
+          "hi": "किसी वस्तु का द्रव्यमान 4 kg और वेग 3 m/s है। उसकी गतिज ऊर्जा है:",
+          "pa": "ਵਸਤੂ ਦਾ ਪੁੰਜ 4 kg ਅਤੇ ਵੇਗ 3 m/s। ਗਤਿਜ ਊਰਜਾ?",
+          "en": "Mass 4 kg, velocity 3 m/s. Kinetic energy?"
+        },
+        "options": {
+          "hi": [
+            "6 J",
+            "12 J",
+            "18 J",
+            "36 J"
+          ],
+          "pa": [
+            "6 J",
+            "12 J",
+            "18 J",
+            "36 J"
+          ],
+          "en": [
+            "6 J",
+            "12 J",
+            "18 J",
+            "36 J"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "KE = ½mv² = ½ × 4 × 9 = **18 J**.",
+          "en": "KE = ½mv² = ½ × 4 × 9 = **18 J**."
+        }
+      },
+      {
+        "id": "sc-mech-q10",
+        "text": {
+          "hi": "कौन सी राशि सदिश (vector) है?",
+          "pa": "ਕਿਹੜੀ ਰਾਸ਼ੀ ਵੈਕਟਰ ਹੈ?",
+          "en": "Which of these is a vector quantity?"
+        },
+        "options": {
+          "hi": [
+            "द्रव्यमान",
+            "ताप",
+            "संवेग",
+            "समय"
+          ],
+          "pa": [
+            "ਪੁੰਜ",
+            "ਤਾਪ",
+            "ਮੋਮੈਂਟਮ",
+            "ਸਮਾਂ"
+          ],
+          "en": [
+            "Mass",
+            "Temperature",
+            "Momentum",
+            "Time"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਮੋਮੈਂਟਮ (p=mv) ਇੱਕ ਵੈਕਟਰ ਰਾਸ਼ੀ ਹੈ ਕਿਉਂਕਿ ਇਸਦੀ ਦਿਸ਼ਾ ਵੇਗ ਦੀ ਦਿਸ਼ਾ ਵਾਂਗ ਹੁੰਦੀ ਹੈ। ਪੁੰਜ, ਤਾਪ ਅਤੇ ਸਮਾਂ ਸਕੇਲਰ ਹਨ।",
+          "en": "Momentum (p=mv) is a vector quantity — its direction is the same as velocity. Mass, temperature and time are scalars."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": [],
+    "examIds": [
+      "master",
+      "ett"
+    ]
+  },
+  {
+    "id": "science-chemistry-foundation",
+    "subject": "Science",
+    "unit": "Chemistry",
+    "title": {
+      "hi": "रसायन विज्ञान: परमाणु संरचना, रासायनिक बंधन और मोल संकल्पना",
+      "pa": "ਰਸਾਇਣ ਵਿਗਿਆਨ: ਪਰਮਾਣੂ ਬਣਤਰ, ਰਸਾਇਣਕ ਬੰਧਨ ਅਤੇ ਮੋਲ ਸੰਕਲਪਨਾ",
+      "en": "Chemistry: Atomic Structure, Chemical Bonding and Mole Concept"
+    },
+    "level": "Master Cadre Science — Chemistry (Class 9–12 + Graduation foundation)",
+    "depth_note": "Class 9-12 + graduation level. M.Sc. spectroscopy depth (NMR, MS) is NOT included — not confirmed in past papers per master-science-syllabus.json.",
+    "sources": [
+      {
+        "title": "NCERT Class 11 Chemistry Part 1 – Structure of Atom, Chemical Bonding",
+        "url": "https://ncert.nic.in/textbook/pdf/kech1.pdf",
+        "note": "Standard reference. Content is author-generated for Master Cadre exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "परमाणु संरचना और क्वांटम संख्याएँ",
+          "pa": "ਪਰਮਾਣੂ ਬਣਤਰ ਅਤੇ ਕੁਆਂਟਮ ਸੰਖਿਆਵਾਂ",
+          "en": "Atomic Structure and Quantum Numbers"
+        },
+        "text": {
+          "hi": "**ਉਪ-ਪਰਮਾਣੂ ਕਣ**: ਇਲੈਕਟ੍ਰੋਨ (e⁻, Thomson), ਪ੍ਰੋਟੋਨ (p⁺, Goldstein/Rutherford), ਨਿਊਟ੍ਰੋਨ (n⁰, Chadwick 1932)।\n\n**ਰਦਰਫੋਰਡ ਮਾਡਲ** (1911, ਸੋਨੇ ਦੀ ਪੱਤੀ ਪ੍ਰਯੋਗ): ਪਰਮਾਣੂ ਵਿੱਚ ਛੋਟਾ, ਭਾਰਾ ਨਿਊਕਲੀਅਸ; ਇਲੈਕਟ੍ਰੋਨ ਬਾਹਰ ਚੱਕਰ ਲਗਾਉਂਦੇ ਹਨ। ਕਮੀ: ਊਰਜਾ ਰੇਡੀਏਟ ਕਰਕੇ ਇਲੈਕਟ੍ਰੋਨ ਸਰਪਿਲ ਵਿੱਚ ਡਿੱਗ ਜਾਣੇ ਚਾਹੀਦੇ ਹਨ (ਸਥਿਰਤਾ ਨਹੀਂ)।\n\n**ਬੋਹਰ ਮਾਡਲ** (1913, ਹਾਈਡ੍ਰੋਜਨ): ਇਲੈਕਟ੍ਰੋਨ ਨਿਸ਼ਚਿਤ ਔਰਬਿਟਾਂ (n=1,2,3...) ਵਿੱਚ। ਊਰਜਾ ਕੁਆਂਟਾਈਜ਼ਡ: E_n = -13.6/n² eV। ਟ੍ਰਾਂਜ਼ਿਸ਼ਨ ਦੌਰਾਨ ਫੋਟੋਨ ਨਿਕਲਦਾ/ਜਜ਼ਬ ਹੁੰਦਾ ਹੈ। ਕਮੀ: ਮਲਟੀ-ਇਲੈਕਟ੍ਰੋਨ ਪਰਮਾਣੂਆਂ ਲਈ ਕੰਮ ਨਹੀਂ ਕਰਦਾ।\n\n**ਚਾਰ ਕੁਆਂਟਮ ਸੰਖਿਆਵਾਂ**:\n- n (principal): ਊਰਜਾ ਪੱਧਰ (1, 2, 3...)\n- l (azimuthal): ਸਬ-ਸ਼ੈੱਲ (0 ਤੋਂ n-1): s=0, p=1, d=2, f=3\n- m_l (magnetic): ਔਰਬਿਟਲ ਦਿਸ਼ਾ (−l ਤੋਂ +l)\n- m_s (spin): +½ ਜਾਂ −½\n\n**ਔਫਬਾਊ ਸਿਧਾਂਤ**: ਘੱਟ ਊਰਜਾ ਔਰਬਿਟਲ ਪਹਿਲਾਂ ਭਰਦੇ ਹਨ: 1s < 2s < 2p < 3s < 3p < 4s < 3d...\n**ਪਾਉਲੀ ਬਾਹਰ ਕੱਢਣ ਦਾ ਸਿਧਾਂਤ**: ਇੱਕ ਔਰਬਿਟਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ 2 ਇਲੈਕਟ੍ਰੋਨ, ਉਲਟੀ ਸਪਿੱਨ ਨਾਲ।\n**ਹੁੰਡ ਦਾ ਨਿਯਮ**: ਬਰਾਬਰ ਊਰਜਾ ਔਰਬਿਟਲਾਂ ਵਿੱਚ ਪਹਿਲਾਂ ਹਰੇਕ ਵਿੱਚ ਇੱਕ-ਇੱਕ ਇਲੈਕਟ੍ਰੋਨ ਰੱਖੋ।",
+          "pa": "Thomson (ਇਲੈਕਟ੍ਰੋਨ), Rutherford (ਨਿਊਕਲੀਅਸ), Chadwick (ਨਿਊਟ੍ਰੋਨ 1932), Bohr (E_n=-13.6/n² eV)। 4 ਕੁਆਂਟਮ ਸੰਖਿਆਵਾਂ: n, l, m_l, m_s। ਔਫਬਾਊ, ਪਾਉਲੀ, ਹੁੰਡ।",
+          "en": "**Sub-atomic particles**: Electron (Thomson), Proton (Rutherford), Neutron (Chadwick, 1932).\n\n**Rutherford Model** (1911, gold foil): small dense nucleus; electrons orbit outside. Defect: electrons should spiral inward radiating energy (no stability).\n\n**Bohr Model** (1913, hydrogen): electrons in fixed orbits (n=1,2,3...). Energy quantised: E_n = −13.6/n² eV. Photon emitted/absorbed during transition. Defect: doesn't work for multi-electron atoms.\n\n**Four quantum numbers**:\n- n (principal): energy level (1, 2, 3...)\n- l (azimuthal): sub-shell (0 to n-1): s=0, p=1, d=2, f=3\n- m_l (magnetic): orbital orientation (−l to +l)\n- m_s (spin): +½ or −½\n\n**Aufbau principle**: fill lowest energy orbitals first: 1s < 2s < 2p < 3s < 3p < 4s < 3d...\n**Pauli Exclusion**: max 2 electrons per orbital, with opposite spins.\n**Hund's Rule**: fill degenerate orbitals singly first."
+        }
+      },
+      {
+        "heading": {
+          "hi": "मोल संकल्पना और रासायनिक बंधन",
+          "pa": "ਮੋਲ ਸੰਕਲਪਨਾ ਅਤੇ ਰਸਾਇਣਕ ਬੰਧਨ",
+          "en": "Mole Concept and Chemical Bonding"
+        },
+        "text": {
+          "hi": "**ਮੋਲ ਸੰਕਲਪਨਾ**:\n1 ਮੋਲ = 6.022 × 10²³ ਕਣ (Avogadro ਸੰਖਿਆ, N_A)।\nਮੋਲਰ ਪੁੰਜ = ਗ੍ਰਾਮ ਵਿੱਚ ਆਣਵਿਕ/ਪਰਮਾਣੂ ਪੁੰਜ।\nSTP 'ਤੇ 1 ਮੋਲ ਗੈਸ = 22.4 L ਆਇਤਨ।\nਮੋਲਰ ਪੁੰਜ (g/mol) ਉਦਾਹਰਨ: H₂O = 18, NaCl = 58.5, CO₂ = 44।\n\n**ਰਸਾਇਣਕ ਬੰਧਨ**:\n\n**ਆਇਓਨਿਕ ਬੰਧਨ**: ਇਲੈਕਟ੍ਰੋਨ ਟ੍ਰਾਂਸਫਰ; ਧਾਤਾਂ ਅਤੇ ਅਧਾਤਾਂ ਵਿਚਕਾਰ। ਉਦਾਹਰਨ: NaCl। ਗੁਣ: ਉੱਚ ਗਲਨਾਂਕ, ਖਿੱਚਣਯੋਗ, ਪਾਣੀ ਵਿੱਚ ਘੁਲਣਯੋਗ।\n\n**ਕੋਵੇਲੈਂਟ ਬੰਧਨ**: ਇਲੈਕਟ੍ਰੋਨ ਸਾਂਝੇ; ਅਧਾਤਾਂ ਵਿਚਕਾਰ। ਉਦਾਹਰਨ: H₂, O₂, H₂O। ਇੱਕਲਾ (H₂), ਦੋਹਰਾ (O₂), ਤੀਹਰਾ (N₂) ਬੰਧਨ।\n\n**ਧਾਤਵਿਕ ਬੰਧਨ**: ਇਲੈਕਟ੍ਰੋਨਾਂ ਦਾ 'ਸਮੁੰਦਰ'; ਬਿਜਲੀ ਚਾਲਕਤਾ ਦੱਸਦਾ ਹੈ।\n\n**VSEPR ਸਿਧਾਂਤ** (Valence Shell Electron Pair Repulsion): ਅਣੂ ਦੀ ਸ਼ਕਲ ਦੱਸਦਾ ਹੈ। ਉਦਾਹਰਨ:\n- BeCl₂: ਰੇਖਿਕ (180°)\n- BF₃: ਤ੍ਰਿਕੋਣੀ ਸਮਤਲ (120°)\n- CH₄: ਟੈਟ੍ਰਾਹੇਡਰਲ (109.5°)\n- NH₃: ਪਿਰਾਮਿਡਲ (107°)\n- H₂O: ਮੁੜੀ (104.5°)\n\n**ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ**: F, O, N ਨਾਲ ਜੁੜੇ H ਅਤੇ ਗੁਆਂਢੀ ਅਣੂ ਦੇ F/O/N ਵਿਚਕਾਰ। ਪਾਣੀ ਦਾ ਅਸਾਧਾਰਨ ਗੁਣਾਂ ਦਾ ਕਾਰਨ।",
+          "pa": "1 mol = 6.022×10²³ (Avogadro)। STP 'ਤੇ 1 mol ਗੈਸ = 22.4 L। ਆਇਓਨਿਕ (NaCl), ਕੋਵੇਲੈਂਟ (H₂O), ਧਾਤਵਿਕ ਬੰਧਨ। VSEPR: BeCl₂ (ਰੇਖਿਕ), CH₄ (ਟੈਟ੍ਰਾਹੇਡਰਲ), H₂O (ਮੁੜੀ 104.5°)।",
+          "en": "**Mole Concept**: 1 mole = 6.022 × 10²³ particles (Avogadro's number, N_A). Molar mass = atomic/molecular mass in grams. At STP, 1 mol gas = 22.4 L. Examples: H₂O = 18 g/mol; NaCl = 58.5; CO₂ = 44.\n\n**Chemical Bonding**:\n\n**Ionic bond**: electron transfer; metals to non-metals. Example: NaCl. Properties: high melting point, soluble in water.\n\n**Covalent bond**: electron sharing; between non-metals. Example: H₂, O₂, H₂O. Single (H₂), double (O₂), triple (N₂).\n\n**Metallic bond**: 'sea of electrons'; explains electrical conductivity.\n\n**VSEPR Theory**: predicts molecular shape. Examples:\n- BeCl₂: linear (180°)\n- BF₃: trigonal planar (120°)\n- CH₄: tetrahedral (109.5°)\n- NH₃: pyramidal (107°)\n- H₂O: bent (104.5°)\n\n**Hydrogen bond**: between H (bonded to F/O/N) and F/O/N of adjacent molecule. Explains water's anomalous properties."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "Rutherford (nucleus), Bohr (E_n=−13.6/n² eV), Chadwick (neutron 1932)। 4 quantum numbers (n,l,m_l,m_s)। Aufbau+Pauli+Hund's। 1 mol=6.022×10²³; STP 22.4 L। Ionic/covalent/metallic bonds। VSEPR shapes। H-bonding.",
+      "pa": "Bohr E_n=−13.6/n² eV। 4 ਕੁਆਂਟਮ ਸੰਖਿਆਵਾਂ। 1 mol=6.022×10²³। VSEPR: CH₄ ਟੈਟ੍ਰਾਹੇਡਰਲ, H₂O ਮੁੜੀ।",
+      "en": "Rutherford (nucleus), Bohr (E_n=−13.6/n² eV), Chadwick (neutron 1932). 4 QNs (n,l,m_l,m_s). Aufbau+Pauli+Hund's. 1 mol=6.022×10²³; STP 22.4 L. Ionic/covalent/metallic. VSEPR shapes. H-bonding."
+    },
+    "keyPoints": [
+      {
+        "hi": "Avogadro संख्या = 6.022 × 10²³ mol⁻¹",
+        "pa": "Avogadro ਸੰਖਿਆ = 6.022 × 10²³ mol⁻¹",
+        "en": "Avogadro's number = 6.022 × 10²³ mol⁻¹"
+      },
+      {
+        "hi": "Bohr model: E_n = −13.6/n² eV (hydrogen only)",
+        "pa": "Bohr: E_n = −13.6/n² eV (ਸਿਰਫ਼ ਹਾਈਡ੍ਰੋਜਨ)",
+        "en": "Bohr model: E_n = −13.6/n² eV (hydrogen only)"
+      },
+      {
+        "hi": "VSEPR: CH₄ = tetrahedral (109.5°); H₂O = bent (104.5°); NH₃ = pyramidal (107°)",
+        "pa": "CH₄ = 109.5°; H₂O = 104.5°; NH₃ = 107°",
+        "en": "VSEPR: CH₄ = tetrahedral (109.5°); H₂O = bent (104.5°); NH₃ = pyramidal (107°)"
+      },
+      {
+        "hi": "STP पर 1 mol गैस = 22.4 L (पुराना IUPAC); नया IUPAC (100 kPa) = 22.711 L",
+        "pa": "STP: 1 mol ਗੈਸ = 22.4 L (ਪੁਰਾਣਾ); 22.711 L (ਨਵਾਂ IUPAC)",
+        "en": "STP: 1 mol gas = 22.4 L (old IUPAC 1 atm); 22.711 L (new IUPAC 100 kPa) — exam likely uses 22.4 L"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "Avogadro संख्या का मान?",
+          "pa": "Avogadro ਸੰਖਿਆ?",
+          "en": "Value of Avogadro's number?"
+        },
+        "back": {
+          "hi": "6.022 × 10²³ mol⁻¹",
+          "pa": "6.022 × 10²³ mol⁻¹",
+          "en": "6.022 × 10²³ mol⁻¹"
+        }
+      },
+      {
+        "front": {
+          "hi": "न्यूट्रॉन की खोज किसने की?",
+          "pa": "ਨਿਊਟ੍ਰੋਨ ਦੀ ਖੋਜ ਕਿਸਨੇ ਕੀਤੀ?",
+          "en": "Who discovered the neutron?"
+        },
+        "back": {
+          "hi": "James Chadwick, 1932",
+          "pa": "James Chadwick, 1932",
+          "en": "James Chadwick, 1932"
+        }
+      },
+      {
+        "front": {
+          "hi": "Bohr model में hydrogen का ground state ऊर्जा?",
+          "pa": "Bohr model ਵਿੱਚ H ਦੀ ground state ਊਰਜਾ?",
+          "en": "Ground state energy of hydrogen in Bohr model?"
+        },
+        "back": {
+          "hi": "E₁ = −13.6 eV (n=1)",
+          "pa": "E₁ = −13.6 eV",
+          "en": "E₁ = −13.6 eV (n=1)"
+        }
+      },
+      {
+        "front": {
+          "hi": "VSEPR: H₂O की आकृति और बंध कोण?",
+          "pa": "H₂O ਦੀ ਸ਼ਕਲ ਅਤੇ ਬੰਧ ਕੋਣ?",
+          "en": "Shape and bond angle of H₂O (VSEPR)?"
+        },
+        "back": {
+          "hi": "ਮੁੜੀ / Bent; 104.5°",
+          "pa": "ਮੁੜੀ / Bent; 104.5°",
+          "en": "Bent; 104.5°"
+        }
+      },
+      {
+        "front": {
+          "hi": "अष्टक नियम (Octet Rule) क्या है?",
+          "pa": "ਅਸ਼ਟਕ ਨਿਯਮ ਕੀ ਹੈ?",
+          "en": "What is the Octet Rule?"
+        },
+        "back": {
+          "hi": "ਪਰਮਾਣੂ ਬੰਧਨ ਬਣਾਉਂਦੇ ਸਮੇਂ ਆਪਣੇ ਬਾਹਰਲੇ ਸ਼ੈੱਲ ਵਿੱਚ 8 ਇਲੈਕਟ੍ਰੋਨ ਪੂਰੇ ਕਰਦੇ ਹਨ (ਨੋਬਲ ਗੈਸ ਸੰਰਚਨਾ)",
+          "pa": "ਪਰਮਾਣੂ ਬੰਧਨ ਬਣਾ ਕੇ 8 ਇਲੈਕਟ੍ਰੋਨ ਪੂਰੇ ਕਰਦੇ ਹਨ",
+          "en": "Atoms bond to achieve 8 electrons in their outermost shell (noble gas configuration)"
+        }
+      },
+      {
+        "front": {
+          "hi": "CH₄ की आकृति और बंध कोण?",
+          "pa": "CH₄ ਦੀ ਸ਼ਕਲ?",
+          "en": "Shape and bond angle of CH₄?"
+        },
+        "back": {
+          "hi": "ਟੈਟ੍ਰਾਹੇਡਰਲ; 109.5°",
+          "pa": "ਟੈਟ੍ਰਾਹੇਡਰਲ; 109.5°",
+          "en": "Tetrahedral; 109.5°"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sc-chem-q1",
+        "text": {
+          "hi": "1 मोल CO₂ का मोलर द्रव्यमान क्या है? (C=12, O=16)",
+          "pa": "1 mol CO₂ ਦਾ ਮੋਲਰ ਪੁੰਜ? (C=12, O=16)",
+          "en": "Molar mass of CO₂? (C=12, O=16)"
+        },
+        "options": {
+          "hi": [
+            "28 g/mol",
+            "32 g/mol",
+            "44 g/mol",
+            "40 g/mol"
+          ],
+          "pa": [
+            "28 g/mol",
+            "32 g/mol",
+            "44 g/mol",
+            "40 g/mol"
+          ],
+          "en": [
+            "28 g/mol",
+            "32 g/mol",
+            "44 g/mol",
+            "40 g/mol"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "CO₂ = 12 + 2×16 = 12 + 32 = **44 g/mol**.",
+          "en": "CO₂ = 12 + 2×16 = **44 g/mol**."
+        }
+      },
+      {
+        "id": "sc-chem-q2",
+        "text": {
+          "hi": "नाभिकीय मॉडल किसने दिया?",
+          "pa": "ਨਿਊਕਲੀਅਰ ਮਾਡਲ ਕਿਸਨੇ ਦਿੱਤਾ?",
+          "en": "Who gave the nuclear model of the atom?"
+        },
+        "options": {
+          "hi": [
+            "J.J. Thomson",
+            "Niels Bohr",
+            "Ernest Rutherford",
+            "James Chadwick"
+          ],
+          "pa": [
+            "J.J. Thomson",
+            "Niels Bohr",
+            "Ernest Rutherford",
+            "James Chadwick"
+          ],
+          "en": [
+            "J.J. Thomson",
+            "Niels Bohr",
+            "Ernest Rutherford",
+            "James Chadwick"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "Rutherford ਨੇ 1911 ਵਿੱਚ ਸੋਨੇ ਦੀ ਪੱਤੀ ਪ੍ਰਯੋਗ ਤੋਂ ਨਿਊਕਲੀਅਰ ਮਾਡਲ ਦਿੱਤਾ।",
+          "en": "Rutherford proposed the nuclear model in 1911 from the gold foil experiment."
+        }
+      },
+      {
+        "id": "sc-chem-q3",
+        "text": {
+          "hi": "VSEPR के अनुसार NH₃ की आकृति क्या होती है?",
+          "pa": "VSEPR ਅਨੁਸਾਰ NH₃ ਦੀ ਸ਼ਕਲ?",
+          "en": "Shape of NH₃ according to VSEPR theory?"
+        },
+        "options": {
+          "hi": [
+            "रेखिक",
+            "समतलीय त्रिकोणीय",
+            "पिरामिडाकार",
+            "चतुष्फलकीय"
+          ],
+          "pa": [
+            "ਰੇਖਿਕ",
+            "ਤ੍ਰਿਕੋਣੀ ਸਮਤਲ",
+            "ਪਿਰਾਮਿਡਲ",
+            "ਟੈਟ੍ਰਾਹੇਡਰਲ"
+          ],
+          "en": [
+            "Linear",
+            "Trigonal planar",
+            "Pyramidal",
+            "Tetrahedral"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "NH₃ ਵਿੱਚ 3 ਬੰਧਨ ਜੋੜੇ + 1 ਇਕੱਲਾ ਜੋੜਾ = ਟੈਟ੍ਰਾਹੇਡਰਲ ਇਲੈਕਟ੍ਰੋਨ ਜੋੜੇ, ਪਰ ਅਣੂ ਦੀ ਸ਼ਕਲ ਪਿਰਾਮਿਡਲ (107°)।",
+          "en": "NH₃ has 3 bond pairs + 1 lone pair = tetrahedral electron geometry, but pyramidal molecular shape (107°)."
+        }
+      },
+      {
+        "id": "sc-chem-q4",
+        "text": {
+          "hi": "1 मोल किसी पदार्थ में कितने कण होते हैं?",
+          "pa": "1 mol ਵਿੱਚ ਕਿੰਨੇ ਕਣ?",
+          "en": "How many particles are in 1 mole?"
+        },
+        "options": {
+          "hi": [
+            "6.022 × 10²¹",
+            "6.022 × 10²³",
+            "6.022 × 10²⁵",
+            "3.011 × 10²³"
+          ],
+          "pa": [
+            "6.022 × 10²¹",
+            "6.022 × 10²³",
+            "6.022 × 10²⁵",
+            "3.011 × 10²³"
+          ],
+          "en": [
+            "6.022 × 10²¹",
+            "6.022 × 10²³",
+            "6.022 × 10²⁵",
+            "3.011 × 10²³"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Avogadro ਸੰਖਿਆ N_A = 6.022 × 10²³ mol⁻¹। 1 mol ਵਿੱਚ ਠੀਕ ਇਹ ਹੀ ਕਣ ਹੁੰਦੇ ਹਨ।",
+          "en": "Avogadro's number N_A = 6.022 × 10²³ mol⁻¹. Exactly this many particles in 1 mole."
+        }
+      },
+      {
+        "id": "sc-chem-q5",
+        "text": {
+          "hi": "हाइड्रोजन बंधन (Hydrogen bond) किस कारण होती है?",
+          "pa": "ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ ਕਿਸ ਕਾਰਨ ਹੁੰਦਾ ਹੈ?",
+          "en": "Hydrogen bond forms when hydrogen is bonded to:"
+        },
+        "options": {
+          "hi": [
+            "कार्बन से",
+            "F, O या N से",
+            "सभी धातुओं से",
+            "हीलियम से"
+          ],
+          "pa": [
+            "ਕਾਰਬਨ ਤੋਂ",
+            "F, O ਜਾਂ N ਤੋਂ",
+            "ਸਾਰੀਆਂ ਧਾਤਾਂ ਤੋਂ",
+            "ਹੀਲੀਅਮ ਤੋਂ"
+          ],
+          "en": [
+            "Carbon",
+            "F, O or N",
+            "All metals",
+            "Helium"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ ਉਦੋਂ ਬਣਦਾ ਹੈ ਜਦੋਂ H, F/O/N ਨਾਲ ਜੁੜਿਆ ਹੁੰਦਾ ਹੈ ਅਤੇ ਗੁਆਂਢੀ ਅਣੂ ਦੇ F/O/N ਨਾਲ ਵੀ ਆਕਰਸ਼ਣ ਬਣਦਾ ਹੈ।",
+          "en": "Hydrogen bond forms when H is bonded to a highly electronegative atom (F, O, or N) and interacts with a lone pair on F/O/N of another molecule."
+        }
+      },
+      {
+        "id": "sc-chem-q6",
+        "text": {
+          "hi": "पाउली अपवर्जन सिद्धांत क्या कहता है?",
+          "pa": "ਪਾਉਲੀ ਬਾਹਰ ਕੱਢਣ ਦਾ ਸਿਧਾਂਤ ਕੀ ਕਹਿੰਦਾ ਹੈ?",
+          "en": "What does Pauli Exclusion Principle state?"
+        },
+        "options": {
+          "hi": [
+            "एक परमाणु में दो इलेक्ट्रॉनों के सभी चार क्वांटम नंबर समान नहीं हो सकते",
+            "इलेक्ट्रॉन समान ऊर्जा की कक्षाओं में पहले एकाकी रूप से भरते हैं",
+            "कम ऊर्जा की कक्षाएँ पहले भरती हैं",
+            "प्रत्येक कक्षा में अधिकतम 4 इलेक्ट्रॉन हो सकते हैं"
+          ],
+          "pa": [
+            "ਇੱਕ ਪਰਮਾਣੂ ਵਿੱਚ ਦੋ ਇਲੈਕਟ੍ਰੋਨਾਂ ਦੀਆਂ ਚਾਰੇ ਕੁਆਂਟਮ ਸੰਖਿਆਵਾਂ ਇੱਕੋ ਜਿਹੀਆਂ ਨਹੀਂ ਹੋ ਸਕਦੀਆਂ",
+            "ਬਰਾਬਰ ਊਰਜਾ ਔਰਬਿਟਲਾਂ ਵਿੱਚ ਪਹਿਲਾਂ ਇੱਕਲੇ",
+            "ਘੱਟ ਊਰਜਾ ਪਹਿਲਾਂ",
+            "ਹਰੇਕ ਵਿੱਚ 4 ਤੱਕ"
+          ],
+          "en": [
+            "No two electrons in an atom can have all four identical quantum numbers",
+            "Electrons fill degenerate orbitals singly first",
+            "Lower energy orbitals fill first",
+            "Maximum 4 electrons per orbital"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "ਪਾਉਲੀ ਸਿਧਾਂਤ: ਕਿਸੇ ਵੀ ਪਰਮਾਣੂ ਵਿੱਚ ਦੋ ਇਲੈਕਟ੍ਰੋਨਾਂ ਦੀਆਂ ਚਾਰੇ ਕੁਆਂਟਮ ਸੰਖਿਆਵਾਂ (n, l, m_l, m_s) ਇੱਕੋ ਜਿਹੀਆਂ ਨਹੀਂ ਹੋ ਸਕਦੀਆਂ। ਇਸੇ ਲਈ ਇੱਕ ਔਰਬਿਟਲ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ 2 ਇਲੈਕਟ੍ਰੋਨ।",
+          "en": "Pauli Exclusion: no two electrons in an atom can have all four identical quantum numbers (n, l, m_l, m_s). Therefore max 2 electrons per orbital (with opposite spins)."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": [],
+    "examIds": [
+      "master",
+      "ett"
+    ]
+  },
+  {
+    "id": "science-biology-cell-genetics",
+    "subject": "Science",
+    "unit": "Biology",
+    "title": {
+      "hi": "जीव विज्ञान: कोशिका संरचना, कोशिका विभाजन और आनुवंशिकी",
+      "pa": "ਜੀਵ ਵਿਗਿਆਨ: ਕੋਸ਼ਿਕਾ ਬਣਤਰ, ਕੋਸ਼ਿਕਾ ਵੰਡ ਅਤੇ ਜੈਨੇਟਿਕਸ",
+      "en": "Biology: Cell Structure, Cell Division and Genetics"
+    },
+    "level": "Master Cadre Science — Biology (Class 9–12 + Graduation foundation)",
+    "depth_note": "Class 9-12 and introductory graduation level. Advanced molecular genetics beyond gene expression basics is not included — confirm depth in past papers.",
+    "sources": [
+      {
+        "title": "NCERT Class 11 Biology – Cell: The Unit of Life; Cell Cycle and Cell Division",
+        "url": "https://ncert.nic.in/textbook/pdf/kebo1.pdf",
+        "note": "Standard reference. Content is author-generated for Master Cadre exam practice."
+      },
+      {
+        "title": "NCERT Class 12 Biology – Principles of Inheritance and Variation",
+        "url": "https://ncert.nic.in/textbook/pdf/lebo1.pdf",
+        "note": "Standard reference."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "कोशिका संरचना: प्रोकैरियोटिक और यूकैरियोटिक",
+          "pa": "ਕੋਸ਼ਿਕਾ ਬਣਤਰ: ਪ੍ਰੋਕੈਰੀਓਟਿਕ ਅਤੇ ਯੂਕੈਰੀਓਟਿਕ",
+          "en": "Cell Structure: Prokaryotic and Eukaryotic"
+        },
+        "text": {
+          "hi": "**ਕੋਸ਼ਿਕਾ (Cell)** — ਜੀਵਨ ਦੀ ਬੁਨਿਆਦੀ ਇਕਾਈ (Robert Hooke, 1665; Cell Theory — Schleiden, Schwann 1838-39)।\n\n**ਪ੍ਰੋਕੈਰੀਓਟਿਕ ਬਨਾਮ ਯੂਕੈਰੀਓਟਿਕ**:\n| ਲੱਛਣ | ਪ੍ਰੋਕੈਰੀਓਟਿਕ | ਯੂਕੈਰੀਓਟਿਕ |\n|---|---|---|\n| ਨਿਊਕਲੀਅਸ | ਸੱਚਾ ਨਹੀਂ (ਨਿਊਕਲੀਓਇਡ) | ਝਿੱਲੀ-ਬੱਧ ਸੱਚਾ ਨਿਊਕਲੀਅਸ |\n| ਝਿੱਲੀ ਵਾਲੇ ਅੰਗ | ਨਹੀਂ | ਹਾਂ (mitochondria, ER ਆਦਿ) |\n| ਰਾਇਬੋਸੋਮ | 70S | 80S (ਸਾਈਟੋਪਲਾਜ਼ਮ); 70S (ਮਾਈਟੋਕਾਂਡਰੀਆ) |\n| ਉਦਾਹਰਨ | ਬੈਕਟੀਰੀਆ, ਆਰਕੀਆ | ਪੌਦੇ, ਜਾਨਵਰ, ਉੱਲੀ |\n\n**ਮਹੱਤਵਪੂਰਨ ਕੋਸ਼ਿਕਾ ਅੰਗ**:\n- **ਮਾਈਟੋਕਾਂਡਰੀਆ** (Mitochondria): 'ਕੋਸ਼ਿਕਾ ਦਾ ਬਿਜਲੀ ਘਰ'; ATP ਉਤਪਾਦਨ; ਆਪਣਾ DNA ਅਤੇ 70S ਰਾਇਬੋਸੋਮ।\n- **ਕਲੋਰੋਪਲਾਸਟ** (ਸਿਰਫ਼ ਪੌਦਿਆਂ ਵਿੱਚ): ਪ੍ਰਕਾਸ਼ ਸੰਸ਼ਲੇਸ਼ਣ; ਥਾਈਲਾਕੋਇਡ ਵਿੱਚ ਕਲੋਰੋਫਿਲ।\n- **ਐਂਡੋਪਲਾਜ਼ਮਿਕ ਰੈਟੀਕੁਲਮ (ER)**: RER (ਰਾਇਬੋਸੋਮ ਨਾਲ, ਪ੍ਰੋਟੀਨ ਸੰਸ਼ਲੇਸ਼ਣ); SER (ਲਿਪਿਡ ਸੰਸ਼ਲੇਸ਼ਣ)।\n- **ਗੋਲਜੀ ਯੰਤਰ**: ਪੈਕੇਜਿੰਗ ਅਤੇ ਸੈਕਰੀਸ਼ਨ।\n- **ਲਾਈਸੋਸੋਮ**: 'ਕੋਸ਼ਿਕਾ ਦੇ ਸੁਸਾਈਡ ਬੈਗ'; ਹਾਈਡ੍ਰੋਲਾਈਟਿਕ ਐਨਜ਼ਾਈਮ।\n- **ਰਿਕਟੋਸੋਲ** ਅਤੇ **ਸੈੱਲ ਵਾਲ** (ਪੌਦਿਆਂ ਵਿੱਚ ਸੈਲੂਲੋਜ਼)।",
+          "pa": "ਪ੍ਰੋਕੈਰੀਓਟਿਕ (ਬੈਕਟੀਰੀਆ): ਕੋਈ ਝਿੱਲੀ-ਬੱਧ ਅੰਗ ਨਹੀਂ, 70S ਰਾਇਬੋਸੋਮ। ਯੂਕੈਰੀਓਟਿਕ: ਸੱਚਾ ਨਿਊਕਲੀਅਸ, 80S। ਮਾਈਟੋਕਾਂਡਰੀਆ = ਬਿਜਲੀ ਘਰ। ਕਲੋਰੋਪਲਾਸਟ = ਪ੍ਰਕਾਸ਼ ਸੰਸ਼ਲੇਸ਼ਣ। ਲਾਈਸੋਸੋਮ = ਸੁਸਾਈਡ ਬੈਗ।",
+          "en": "**Cell** — basic unit of life (Robert Hooke, 1665; Cell Theory — Schleiden, Schwann 1838-39).\n\n**Prokaryotic vs Eukaryotic**:\n| Feature | Prokaryotic | Eukaryotic |\n|---|---|---|\n| Nucleus | Absent (nucleoid) | Membrane-bound |\n| Membrane organelles | Absent | Present |\n| Ribosomes | 70S | 80S (cytoplasm); 70S (mitochondria) |\n| Examples | Bacteria, Archaea | Plants, Animals, Fungi |\n\n**Key organelles**:\n- **Mitochondria**: 'Powerhouse'; ATP production; own DNA and 70S ribosomes.\n- **Chloroplast** (plants only): Photosynthesis; chlorophyll in thylakoids.\n- **ER**: RER (with ribosomes, protein synthesis); SER (lipid synthesis).\n- **Golgi apparatus**: Packaging and secretion.\n- **Lysosomes**: 'Suicide bags'; hydrolytic enzymes.\n- **Cell wall** (plants): cellulose."
+        }
+      },
+      {
+        "heading": {
+          "hi": "कोशिका विभाजन (Mitosis और Meiosis) और मेंडल के नियम",
+          "pa": "ਕੋਸ਼ਿਕਾ ਵੰਡ (ਮਾਈਟੋਸਿਸ ਅਤੇ ਮੀਓਸਿਸ) ਅਤੇ ਮੈਂਡਲ ਦੇ ਨਿਯਮ",
+          "en": "Cell Division (Mitosis and Meiosis) and Mendel's Laws"
+        },
+        "text": {
+          "hi": "**ਮਾਈਟੋਸਿਸ (Mitosis)**: ਸਮਸੂਤਰੀ ਵੰਡ — 2 ਧੀ ਕੋਸ਼ਿਕਾਵਾਂ, ਹਰੇਕ ਵਿੱਚ ਉਹੀ ਕ੍ਰੋਮੋਸੋਮ ਸੰਖਿਆ (2n = diploid)। ਵਿਕਾਸ ਅਤੇ ਰਿਪੇਅਰ ਲਈ।\nਅਵਸਥਾਵਾਂ: **Prophase → Metaphase → Anaphase → Telophase** (PMAT)।\n\n**ਮੀਓਸਿਸ (Meiosis)**: ਅਰਧਸੂਤਰੀ ਵੰਡ — 4 ਕੋਸ਼ਿਕਾਵਾਂ, ਹਰੇਕ ਵਿੱਚ ਅੱਧੇ ਕ੍ਰੋਮੋਸੋਮ (n = haploid)। ਲਿੰਗੀ ਪ੍ਰਜਣਨ ਲਈ। ਮੀਓਸਿਸ-I ਵਿੱਚ Crossing Over (ਜੈਨੇਟਿਕ ਵਿਭਿੰਨਤਾ)।\n\n**ਮੈਂਡਲ ਦੇ ਜੈਨੇਟਿਕਸ ਦੇ ਨਿਯਮ** (Gregor Mendel, ਮਟਰ ਦੇ ਪੌਦੇ 1856-63):\n\n1. **ਵਿਯੋਜਨ ਦਾ ਨਿਯਮ (Law of Segregation)**: ਹਰੇਕ ਲੱਛਣ ਲਈ ਐਲੀਲ ਜੋੜਿਆਂ ਵਿੱਚ ਮੌਜੂਦ; ਗੈਮੇਟ ਬਣਦੇ ਸਮੇਂ ਵੱਖ ਹੋ ਜਾਂਦੇ ਹਨ।\nF₁ Aa × Aa → F₂ ਜੀਨੋਟਾਈਪ: 1AA : 2Aa : 1aa (3:1 ਫਿਨੋਟਾਈਪ ਰੇਸ਼ੋ ਜੇ A ਪ੍ਰਭਾਵੀ)।\n\n2. **ਸੁਤੰਤਰ ਵੰਡ ਦਾ ਨਿਯਮ (Law of Independent Assortment)**: ਵੱਖ-ਵੱਖ ਕ੍ਰੋਮੋਸੋਮਾਂ 'ਤੇ ਸਥਿਤ ਜੀਨ ਸੁਤੰਤਰ ਰੂਪ ਵਿੱਚ ਵੰਡੇ ਜਾਂਦੇ ਹਨ। Dihybrid cross F₂ ਰੇਸ਼ੋ: **9:3:3:1**।\n\n**DNA ਬਣਤਰ** (Watson-Crick, 1953, Double Helix): ਦੋਹਰਾ ਹੈਲਿਕਸ; ਨਿਊਕਲੀਓਟਾਈਡ = ਖੰਡ (deoxyribose) + ਫਾਸਫੇਟ + ਨਾਈਟ੍ਰੋਜਨ ਆਧਾਰ।\nBasepairing: A=T (2 H-bonds); G≡C (3 H-bonds)।\n\n**ਕੋਡੋਨ**: mRNA 'ਤੇ 3 ਨਿਊਕਲੀਓਟਾਈਡ = 1 ਅਮੀਨੋ ਐਸਿਡ। ਕੁੱਲ 64 ਕੋਡੋਨ; 61 ਅਮੀਨੋ ਐਸਿਡ, 3 ਸਟੌਪ ਕੋਡੋਨ।",
+          "pa": "ਮਾਈਟੋਸਿਸ = 2 ਧੀ ਕੋਸ਼ਿਕਾਵਾਂ (2n); PMAT। ਮੀਓਸਿਸ = 4 ਕੋਸ਼ਿਕਾਵਾਂ (n); ਲਿੰਗੀ ਪ੍ਰਜਣਨ। ਮੈਂਡਲ: F₂ monohybrid 3:1; dihybrid 9:3:3:1। Watson-Crick DNA (1953): A=T, G≡C।",
+          "en": "**Mitosis**: Equational division — 2 daughter cells, same chromosome number (2n = diploid). For growth and repair.\nStages: **Prophase → Metaphase → Anaphase → Telophase** (PMAT).\n\n**Meiosis**: Reductional division — 4 cells, half chromosomes (n = haploid). For sexual reproduction. Crossing Over in Meiosis-I (genetic variation).\n\n**Mendel's Laws** (Gregor Mendel, pea plants 1856-63):\n\n1. **Law of Segregation**: Alleles separate during gamete formation.\nF₁ Aa × Aa → F₂ genotype: 1AA : 2Aa : 1aa (3:1 phenotype if A dominant).\n\n2. **Law of Independent Assortment**: Genes on different chromosomes assort independently. Dihybrid F₂ ratio: **9:3:3:1**.\n\n**DNA Structure** (Watson-Crick, 1953, Double Helix): nucleotide = deoxyribose + phosphate + nitrogenous base. Base pairing: A=T (2 H-bonds); G≡C (3 H-bonds).\n\n**Codon**: 3 mRNA nucleotides = 1 amino acid. 64 codons; 61 amino acids, 3 stop codons."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "Robert Hooke (1665); Cell Theory (Schleiden+Schwann 1838-39)। Prokaryotic (70S, no membrane organelles) vs Eukaryotic (80S)। Mitochondria=powerhouse; Lysosomes=suicide bags। Mitosis (PMAT, 2n→2n); Meiosis (4 haploid)। Mendel: 3:1 (monohybrid); 9:3:3:1 (dihybrid)। DNA: Watson-Crick 1953; A=T, G≡C।",
+      "pa": "Hooke 1665; Schleiden+Schwann 1838-39। 70S (prokaryote) vs 80S। PMAT ਮਾਈਟੋਸਿਸ। 3:1; 9:3:3:1 ਮੈਂਡਲ। A=T, G≡C।",
+      "en": "Robert Hooke (1665); Cell Theory (Schleiden+Schwann 1838-39). Prokaryotic (70S, no membrane organelles) vs Eukaryotic (80S). Mitochondria=powerhouse; Lysosomes=suicide bags. Mitosis (PMAT, 2n→2n); Meiosis (4 haploid). Mendel: 3:1 (monohybrid); 9:3:3:1 (dihybrid). DNA: Watson-Crick 1953; A=T, G≡C."
+    },
+    "keyPoints": [
+      {
+        "hi": "Cell Theory: Schleiden (1838), Schwann (1839), Virchow (omnis cellula e cellula)",
+        "pa": "Cell Theory: Schleiden (1838), Schwann (1839), Virchow",
+        "en": "Cell Theory: Schleiden (1838), Schwann (1839), Virchow (every cell from a cell)"
+      },
+      {
+        "hi": "Mitochondria: 70S ribosomes, own DNA — evidence for endosymbiont origin",
+        "pa": "Mitochondria: 70S ਰਾਇਬੋਸੋਮ, ਆਪਣਾ DNA",
+        "en": "Mitochondria: 70S ribosomes, own DNA — endosymbiont evidence"
+      },
+      {
+        "hi": "Mitosis: PMAT, 2n→2n, 2 cells. Meiosis: 4 haploid cells, crossing over",
+        "pa": "Mitosis: PMAT, 2n→2n. Meiosis: 4 haploid",
+        "en": "Mitosis: PMAT, 2n→2n, 2 cells. Meiosis: 4 haploid cells, crossing over"
+      },
+      {
+        "hi": "Mendel F₂ monohybrid = 3:1; dihybrid = 9:3:3:1",
+        "pa": "Mendel: 3:1 (monohybrid); 9:3:3:1 (dihybrid)",
+        "en": "Mendel F₂: monohybrid = 3:1; dihybrid = 9:3:3:1"
+      },
+      {
+        "hi": "DNA: Watson-Crick 1953; A=T (2 H-bonds); G≡C (3 H-bonds)",
+        "pa": "DNA: A=T (2 H-ਬੰਧਨ); G≡C (3 H-ਬੰਧਨ)",
+        "en": "DNA: Watson-Crick 1953; A=T (2 H-bonds); G≡C (3 H-bonds)"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "माइटोकॉन्ड्रिया को 'कोशिका का बिजलीघर' क्यों कहते हैं?",
+          "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ ਨੂੰ 'ਬਿਜਲੀ ਘਰ' ਕਿਉਂ ਕਹਿੰਦੇ ਹਨ?",
+          "en": "Why is mitochondria called the 'powerhouse of the cell'?"
+        },
+        "back": {
+          "hi": "ਕਿਉਂਕਿ ਇਹ ਸੈਲੂਲਰ ਸਾਹ ਰਾਹੀਂ ATP (ਊਰਜਾ ਮੁਦਰਾ) ਬਣਾਉਂਦਾ ਹੈ",
+          "pa": "ATP ਉਤਪਾਦਨ (ਸੈਲੂਲਰ ਸਾਹ)",
+          "en": "It produces ATP (energy currency) through cellular respiration"
+        }
+      },
+      {
+        "front": {
+          "hi": "Mendel के दोहरे संकरण का F₂ फेनोटाइप अनुपात?",
+          "pa": "Mendel dihybrid F₂ ਫਿਨੋਟਾਈਪ ਰੇਸ਼ੋ?",
+          "en": "F₂ phenotype ratio in Mendel's dihybrid cross?"
+        },
+        "back": {
+          "hi": "9 : 3 : 3 : 1",
+          "pa": "9 : 3 : 3 : 1",
+          "en": "9 : 3 : 3 : 1"
+        }
+      },
+      {
+        "front": {
+          "hi": "DNA में A किससे जोड़ी बनाता है?",
+          "pa": "DNA ਵਿੱਚ A ਕਿਸ ਨਾਲ ਜੋੜੀ ਬਣਾਉਂਦਾ ਹੈ?",
+          "en": "In DNA, adenine (A) pairs with which base?"
+        },
+        "back": {
+          "hi": "Thymine (T), 2 hydrogen bonds ਨਾਲ। Guanine (G) — Cytosine (C) ਨਾਲ 3 H-bonds.",
+          "pa": "Thymine (T), 2 H-bonds। G=C: 3 H-bonds.",
+          "en": "Thymine (T) with 2 hydrogen bonds. (Guanine pairs with Cytosine with 3 H-bonds.)"
+        }
+      },
+      {
+        "front": {
+          "hi": "प्रोकैरियोटिक कोशिका का एक प्रमुख लक्षण?",
+          "pa": "ਪ੍ਰੋਕੈਰੀਓਟਿਕ ਕੋਸ਼ਿਕਾ ਦੀ ਇੱਕ ਮੁੱਖ ਵਿਸ਼ੇਸ਼ਤਾ?",
+          "en": "One key feature of prokaryotic cells?"
+        },
+        "back": {
+          "hi": "ਕੋਈ ਝਿੱਲੀ-ਬੱਧ ਨਿਊਕਲੀਅਸ ਜਾਂ ਅੰਗ ਨਹੀਂ; 70S ਰਾਇਬੋਸੋਮ; ਉਦਾਹਰਨ: ਬੈਕਟੀਰੀਆ",
+          "pa": "ਕੋਈ ਝਿੱਲੀ-ਬੱਧ ਨਿਊਕਲੀਅਸ ਨਹੀਂ; 70S",
+          "en": "No membrane-bound nucleus or organelles; 70S ribosomes; example: bacteria"
+        }
+      },
+      {
+        "front": {
+          "hi": "DNA की Double Helix संरचना किसने खोजी?",
+          "pa": "DNA ਦੀ Double Helix ਬਣਤਰ ਕਿਸਨੇ ਖੋਜੀ?",
+          "en": "Who discovered the Double Helix structure of DNA?"
+        },
+        "back": {
+          "hi": "James Watson ਅਤੇ Francis Crick, 1953 (Rosalind Franklin ਦੇ X-ray ਡੇਟਾ ਦੀ ਮਦਦ ਨਾਲ)",
+          "pa": "Watson ਅਤੇ Crick, 1953",
+          "en": "James Watson and Francis Crick, 1953 (with key X-ray data from Rosalind Franklin)"
+        }
+      },
+      {
+        "front": {
+          "hi": "मियोसिस और माइटोसिस में क्या अंतर है?",
+          "pa": "ਮੀਓਸਿਸ ਅਤੇ ਮਾਈਟੋਸਿਸ ਵਿੱਚ ਫਰਕ?",
+          "en": "Key difference between mitosis and meiosis?"
+        },
+        "back": {
+          "hi": "ਮਾਈਟੋਸਿਸ: 2 ਧੀ ਕੋਸ਼ਿਕਾਵਾਂ (2n), ਵਿਕਾਸ/ਰਿਪੇਅਰ। ਮੀਓਸਿਸ: 4 ਕੋਸ਼ਿਕਾਵਾਂ (n), ਲਿੰਗੀ ਪ੍ਰਜਣਨ, crossing over.",
+          "pa": "ਮਾਈਟੋਸਿਸ: 2n→2n; ਮੀਓਸਿਸ: 2n→n",
+          "en": "Mitosis: 2 diploid (2n) cells, growth/repair. Meiosis: 4 haploid (n) cells, sexual reproduction, crossing over."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sc-bio-q1",
+        "text": {
+          "hi": "माइटोकॉन्ड्रिया में कौन से राइबोसोम होते हैं?",
+          "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ ਵਿੱਚ ਕਿਹੜੇ ਰਾਇਬੋਸੋਮ ਹੁੰਦੇ ਹਨ?",
+          "en": "What type of ribosomes are found in mitochondria?"
+        },
+        "options": {
+          "hi": [
+            "90S",
+            "80S",
+            "70S",
+            "60S"
+          ],
+          "pa": [
+            "90S",
+            "80S",
+            "70S",
+            "60S"
+          ],
+          "en": [
+            "90S",
+            "80S",
+            "70S",
+            "60S"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਮਾਈਟੋਕਾਂਡਰੀਆ ਵਿੱਚ 70S ਰਾਇਬੋਸੋਮ ਹੁੰਦੇ ਹਨ (ਜਿਵੇਂ ਪ੍ਰੋਕੈਰੀਓਟਾਂ ਵਿੱਚ) — endosymbiont ਥਿਊਰੀ ਦਾ ਸਬੂਤ। ਸਾਈਟੋਪਲਾਜ਼ਮਿਕ ਰਾਇਬੋਸੋਮ 80S ਹਨ।",
+          "en": "Mitochondria have 70S ribosomes (like prokaryotes) — evidence for endosymbiont origin. Cytoplasmic ribosomes are 80S."
+        }
+      },
+      {
+        "id": "sc-bio-q2",
+        "text": {
+          "hi": "Cell Theory किसने दी?",
+          "pa": "Cell Theory ਕਿਸਨੇ ਦਿੱਤੀ?",
+          "en": "Who proposed the Cell Theory?"
+        },
+        "options": {
+          "hi": [
+            "Darwin और Wallace",
+            "Schleiden और Schwann",
+            "Watson और Crick",
+            "Mendel और Morgan"
+          ],
+          "pa": [
+            "Darwin ਅਤੇ Wallace",
+            "Schleiden ਅਤੇ Schwann",
+            "Watson ਅਤੇ Crick",
+            "Mendel ਅਤੇ Morgan"
+          ],
+          "en": [
+            "Darwin and Wallace",
+            "Schleiden and Schwann",
+            "Watson and Crick",
+            "Mendel and Morgan"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Cell Theory Schleiden (1838, ਪੌਦੇ) ਅਤੇ Schwann (1839, ਜਾਨਵਰ) ਨੇ ਦਿੱਤੀ। Virchow ਨੇ ਬਾਅਦ ਵਿੱਚ 'omnis cellula e cellula' ਜੋੜਿਆ।",
+          "en": "Cell Theory was proposed by Schleiden (1838, plants) and Schwann (1839, animals). Virchow later added 'omnis cellula e cellula' (every cell from a cell)."
+        }
+      },
+      {
+        "id": "sc-bio-q3",
+        "text": {
+          "hi": "DNA में Guanine (G) किससे जोड़ी बनाता है?",
+          "pa": "DNA ਵਿੱਚ G ਕਿਸ ਨਾਲ ਜੋੜੀ ਬਣਾਉਂਦਾ ਹੈ?",
+          "en": "With which base does Guanine (G) pair in DNA?"
+        },
+        "options": {
+          "hi": [
+            "Adenine (A)",
+            "Thymine (T)",
+            "Cytosine (C)",
+            "Uracil (U)"
+          ],
+          "pa": [
+            "Adenine (A)",
+            "Thymine (T)",
+            "Cytosine (C)",
+            "Uracil (U)"
+          ],
+          "en": [
+            "Adenine (A)",
+            "Thymine (T)",
+            "Cytosine (C)",
+            "Uracil (U)"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "G ≡ C (3 ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ) ਅਤੇ A = T (2 ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ)। ਉਰੇਸਿਲ (U) DNA ਵਿੱਚ ਨਹੀਂ — ਸਿਰਫ਼ RNA ਵਿੱਚ।",
+          "en": "G ≡ C (3 hydrogen bonds); A = T (2 hydrogen bonds). Uracil (U) is in RNA, not DNA."
+        }
+      },
+      {
+        "id": "sc-bio-q4",
+        "text": {
+          "hi": "Mendel के monohybrid cross के F₂ का फेनोटाइप अनुपात?",
+          "pa": "Mendel ਦੇ monohybrid cross ਦਾ F₂ ਫਿਨੋਟਾਈਪ ਰੇਸ਼ੋ?",
+          "en": "F₂ phenotype ratio in Mendel's monohybrid cross?"
+        },
+        "options": {
+          "hi": [
+            "1:2:1",
+            "1:1",
+            "3:1",
+            "9:3:3:1"
+          ],
+          "pa": [
+            "1:2:1",
+            "1:1",
+            "3:1",
+            "9:3:3:1"
+          ],
+          "en": [
+            "1:2:1",
+            "1:1",
+            "3:1",
+            "9:3:3:1"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "Aa × Aa → 3 ਪ੍ਰਭਾਵੀ : 1 ਅਪ੍ਰਭਾਵੀ (ਫਿਨੋਟਾਈਪ 3:1); ਜੀਨੋਟਾਈਪ 1AA:2Aa:1aa।",
+          "en": "Aa × Aa → 3 dominant : 1 recessive (phenotype 3:1); genotype 1AA:2Aa:1aa."
+        }
+      },
+      {
+        "id": "sc-bio-q5",
+        "text": {
+          "hi": "कोशिका विभाजन माइटोसिस में कौन सा चरण नहीं होता?",
+          "pa": "ਮਾਈਟੋਸਿਸ ਵਿੱਚ ਕਿਹੜੀ ਅਵਸਥਾ ਨਹੀਂ ਹੁੰਦੀ?",
+          "en": "Which stage does NOT occur in mitosis?"
+        },
+        "options": {
+          "hi": [
+            "Prophase",
+            "Metaphase",
+            "Crossing over",
+            "Anaphase"
+          ],
+          "pa": [
+            "Prophase",
+            "Metaphase",
+            "Crossing over",
+            "Anaphase"
+          ],
+          "en": [
+            "Prophase",
+            "Metaphase",
+            "Crossing over",
+            "Anaphase"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "Crossing over ਮੀਓਸਿਸ-I ਦੇ Prophase-I ਵਿੱਚ ਹੁੰਦਾ ਹੈ, ਮਾਈਟੋਸਿਸ ਵਿੱਚ ਨਹੀਂ।",
+          "en": "Crossing over occurs in Prophase-I of Meiosis, NOT in Mitosis. PMAT are the stages of Mitosis."
+        }
+      },
+      {
+        "id": "sc-bio-q6",
+        "text": {
+          "hi": "'लाइसोसोम' को 'कोशिका का आत्मघाती थैला' क्यों कहते हैं?",
+          "pa": "'ਲਾਈਸੋਸੋਮ' ਨੂੰ 'ਸੁਸਾਈਡ ਬੈਗ' ਕਿਉਂ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "en": "Why are lysosomes called 'suicide bags' of the cell?"
+        },
+        "options": {
+          "hi": [
+            "ATP बनाते हैं",
+            "प्रोटीन संश्लेषण करते हैं",
+            "हाइड्रोलाइटिक एंजाइम होते हैं जो क्षतिग्रस्त कोशिकाओं को नष्ट कर सकते हैं",
+            "DNA की प्रतिकृति बनाते हैं"
+          ],
+          "pa": [
+            "ATP ਬਣਾਉਂਦੇ ਹਨ",
+            "ਪ੍ਰੋਟੀਨ ਸੰਸ਼ਲੇਸ਼ਣ",
+            "ਹਾਈਡ੍ਰੋਲਾਈਟਿਕ ਐਨਜ਼ਾਈਮ ਖ਼ਰਾਬ ਕੋਸ਼ਿਕਾਵਾਂ ਨੂੰ ਨਸ਼ਟ ਕਰਦੇ ਹਨ",
+            "DNA ਨਕਲ"
+          ],
+          "en": [
+            "Produce ATP",
+            "Protein synthesis",
+            "Contain hydrolytic enzymes that can destroy damaged cells (autolysis)",
+            "DNA replication"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਲਾਈਸੋਸੋਮ ਵਿੱਚ ਹਾਈਡ੍ਰੋਲਾਈਟਿਕ ਐਨਜ਼ਾਈਮ ਹੁੰਦੇ ਹਨ। ਜਦੋਂ ਕੋਸ਼ਿਕਾ ਖ਼ਰਾਬ ਹੁੰਦੀ ਹੈ, ਇਹ ਫਟ ਜਾਂਦੇ ਹਨ ਅਤੇ ਕੋਸ਼ਿਕਾ ਦੇ ਅੰਦਰਲੇ ਹਿੱਸਿਆਂ ਨੂੰ ਪਚਾ ਦਿੰਦੇ ਹਨ (autolysis)।",
+          "en": "Lysosomes contain hydrolytic enzymes. When they rupture during cell damage, they digest the cell's own components (autolysis) — hence 'suicide bags'."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": [],
+    "examIds": [
+      "master",
+      "ett"
+    ]
+  },
+  {
     "id": "sst-political-theories",
     "subject": "Political Science",
     "unit": "Political Thought",

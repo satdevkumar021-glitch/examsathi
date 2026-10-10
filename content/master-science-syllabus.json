@@ -1,0 +1,103 @@
+{
+  "exam": "Punjab Master Cadre Science",
+  "exam_id": "master-science",
+  "board": "Education Recruitment Board (ERB), Punjab",
+  "notification_identifier": "Advertisement No. 4161 Master Cadre Posts / 2022",
+  "year": 2022,
+  "total_marks": 150,
+  "duration_minutes": 150,
+  "negative_marking": 0,
+  "official_source": "https://educationrecruitmentboard.com/master2022/",
+  "official_syllabus_pdf": "https://educationrecruitmentboard.com/master2022/Docs/Sciencesyllabus04_05_2022.pdf",
+  "syllabus_pdf_verification_status": "URL_NOT_CONFIRMED — must be verified against ERB website before treating as official",
+  "current_version_verified": false,
+  "coaching_source_used": "CareerPower article (June 2026 update) — summary only, not primary document",
+  "depth_warning": "Headings listed by coaching source include M.Sc.-level topics (Quantum Mechanics, Condensed Matter, NMR/MS Spectroscopy, Organometallic). Official PDF text and past papers must confirm whether these appear. Build Class 9-12 + graduation level first. Tag all M.Sc. content as depth_unverified: true.",
+  "branch_split_note": "Physics:Chemistry:Biology split of 50m:50m:50m from provenance.json; derived from coaching summary — verify in official notification. No negative marking confirmed.",
+  "past_paper_status": "No verified paper/answer-key inventory. Branch/topic weightage is UNKNOWN. Proxy only: Chemistry has 38 of ~64 headings, Biology 16, Physics 10 — this is heading count, not exam weightage.",
+  "notes": [
+    "Whether Biology is one combined paper or separate Botany/Zoology is unconfirmed — verify in official notification.",
+    "Whether pedagogy/teaching-method questions are included is unconfirmed.",
+    "Patterns may change per recruitment — store pattern per advertisement.",
+    "Do not conflate with Lecturer Cadre Science which covers depth up to M.Sc."
+  ],
+  "branch_weights_as_reported": {
+    "Chemistry": { "marks": 50, "sub_branches": ["Physical Chemistry", "Inorganic Chemistry", "Organic Chemistry"], "marks_split_within_chemistry": "unknown" },
+    "Physics": { "marks": 50, "sub_branches": ["Mechanics", "Thermodynamics", "Waves & Optics", "EM Theory", "Modern Physics", "Electronics"] },
+    "Biology": { "marks": 50, "sub_branches": ["Zoology", "Botany"], "marks_split_zoology_botany": "unknown" }
+  },
+  "topic_tree": {
+    "Physics": {
+      "depth_range": "Class 9-12 core; Class 9-12 + Graduation extended; M.Sc. unverified",
+      "topics": [
+        { "id": "phy-mechanics", "title": "Mechanics: Units, Kinematics, Laws of Motion, Work & Energy, Rotation, Gravitation", "level_range": "B/I/H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "phy-heat-thermo", "title": "Heat and Thermodynamics: Laws, Kinetic Theory, Entropy", "level_range": "I/H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "phy-waves-sound", "title": "Waves and Sound: Oscillations, Wave motion, Doppler effect, Superposition", "level_range": "I/H", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "phy-optics", "title": "Optics: Reflection, Refraction, Lenses, Interference, Diffraction, Polarisation", "level_range": "I/H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "phy-em", "title": "Electricity & Magnetism: Circuits, Ohm's Law, EM Induction, AC, Maxwell's equations", "level_range": "I/H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "phy-modern", "title": "Modern Physics: Photoelectric Effect, Atomic Models, Nuclei, Radioactivity, Semiconductors", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "phy-electronics", "title": "Electronics: Diodes, Transistors, Logic Gates, Error Analysis", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "phy-math-methods", "title": "Mathematical Methods: Vectors, Calculus, Diff. Equations (graduation)", "level_range": "G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "phy-quantum-solid-nuclear", "title": "Quantum Mechanics, Condensed Matter, Nuclear & Particle Physics", "level_range": "G/P", "depth_verified": false, "depth_unverified_warning": "M.Sc. depth — confirm in past papers before building", "lesson_status": "pending" }
+      ]
+    },
+    "Chemistry": {
+      "depth_range": "Class 9-12 + Graduation; M.Sc. spectroscopy depth unverified",
+      "sub_branches": {
+        "Physical_Chemistry": {
+          "topics": [
+            { "id": "chem-mole-stoichiometry", "title": "Mole Concept & Stoichiometry", "level_range": "H", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-atomic-structure-qn", "title": "Atomic Structure & Quantum Numbers", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-states-of-matter", "title": "States of Matter: Gas Laws, Kinetic Theory, Liquids, Solids", "level_range": "I/H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-bonding", "title": "Chemical Bonding: VSEPR, Hybridisation, MO Theory basics", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-thermodynamics", "title": "Thermodynamics: Laws, Entropy, Gibbs Energy", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-equilibrium", "title": "Equilibrium: Chemical, Ionic, pH, Buffers", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-redox-electrochem", "title": "Redox & Electrochemistry: Nernst Equation, Cells, Electrolysis", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-kinetics", "title": "Chemical Kinetics: Rate Laws, Order, Arrhenius Equation", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-solutions-colligative", "title": "Solutions & Colligative Properties", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-surface-catalysis", "title": "Surface Chemistry & Catalysis", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-solid-state", "title": "Solid State", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-spectroscopy-basics", "title": "Spectroscopy Principles (IR, UV, NMR basics)", "level_range": "G/P", "depth_verified": false, "depth_unverified_warning": "Check past papers for this depth", "lesson_status": "pending" }
+          ]
+        },
+        "Inorganic_Chemistry": {
+          "topics": [
+            { "id": "chem-periodic-trends", "title": "Periodic Table & Trends", "level_range": "I/H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-s-block", "title": "s-Block Elements", "level_range": "H", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-p-block", "title": "p-Block Elements", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-d-f-block", "title": "d- and f-Block Elements (Transition & Lanthanides)", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-coordination", "title": "Coordination Compounds: Nomenclature, Bonding Theories (VBT, CFT)", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-env-nuclear", "title": "Environmental Chemistry & Nuclear Chemistry", "level_range": "H", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-extraction-metals", "title": "Extraction of Metals (Metallurgy)", "level_range": "H", "depth_verified": false, "lesson_status": "pending" }
+          ]
+        },
+        "Organic_Chemistry": {
+          "topics": [
+            { "id": "chem-org-basics", "title": "Basic Principles: IUPAC, Isomerism, Electronic Effects, Reaction Mechanisms", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-org-hydrocarbons", "title": "Hydrocarbons: Alkanes, Alkenes, Alkynes, Aromatic", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-org-halides", "title": "Halogen Compounds", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-org-oxygenated", "title": "Alcohols, Phenols, Ethers, Aldehydes, Ketones, Carboxylic Acids", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-org-nitrogen", "title": "Amines & Nitrogen Compounds", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-biomolecules-polymers", "title": "Biomolecules & Polymers", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+            { "id": "chem-named-reactions", "title": "Named Reactions & Common Reagents", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" }
+          ]
+        }
+      }
+    },
+    "Biology": {
+      "depth_range": "Class 9-12 + Graduation",
+      "note": "Botany and Zoology may be treated as one combined Biology paper — verify in official notification",
+      "topics": [
+        { "id": "bio-diversity", "title": "Diversity in Living World: Classification, Kingdoms, Major Groups", "level_range": "I/H", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "bio-structural-org", "title": "Structural Organisation: Plant and Animal Tissues, Anatomy", "level_range": "I/H", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "bio-plant-physiology", "title": "Plant Physiology: Photosynthesis, Respiration, Transport, Growth", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "bio-animal-physiology", "title": "Animal Physiology: Digestion, Circulation, Respiration, Excretion, Nervous & Endocrine", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "bio-reproduction", "title": "Reproduction: Plants and Animals, Human Reproduction, Development", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "bio-cell-genetics", "title": "Cell Biology, Genetics & Evolution: Cell Structure, Divisions, Mendelian Genetics, DNA/RNA, Evolution", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "bio-human-welfare", "title": "Biology and Human Welfare: Health, Disease, Immunity, Food Production", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "bio-biotechnology", "title": "Biotechnology: Tools, Processes, Applications", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" },
+        { "id": "bio-ecology", "title": "Ecology and Environment: Ecosystems, Biodiversity, Conservation, Pollution", "level_range": "H/G", "depth_verified": false, "lesson_status": "pending" }
+      ]
+    }
+  }
+}

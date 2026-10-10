@@ -54,6 +54,12 @@ function deriveExamIds(lesson) {
     return ['master', 'ett'];
   }
 
+  if (id.startsWith('science-')) {
+    // Lessons prefixed science- are written specifically for Master Cadre Science
+    // (Physics/Chemistry/Biology 50m each) + ETT Science section (20m)
+    return ['master', 'ett'];
+  }
+
   if (id.startsWith('sci-') || (subject === 'Science' && !id.startsWith('biology-'))) {
     // Science lessons cover Master Cadre Science and ETT Science (20m)
     return ['master', 'ett'];
