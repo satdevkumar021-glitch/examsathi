@@ -44022,6 +44022,1853 @@
     ]
   },
   {
+    "id": "ett-punjabi-vocabulary",
+    "subject": "Punjabi",
+    "unit": "ਸ਼ਬਦ ਭੰਡਾਰ ਅਤੇ ਅਰਥ-ਵਿਗਿਆਨ",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "पंजाबी शब्द भंडार: समानार्थी, विपरीतार्थी और एक-शब्द प्रतिस्थापन",
+      "pa": "ਪੰਜਾਬੀ ਸ਼ਬਦ ਭੰਡਾਰ: ਸਮਾਨਾਰਥੀ, ਵਿਰੋਧਾਰਥੀ ਅਤੇ ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ",
+      "en": "Punjabi Vocabulary: Synonyms, Antonyms and One-word Substitution"
+    },
+    "level": "ETT Paper A — Punjabi qualifying (Class 6-10 PSEB level)",
+    "review_note": "Gurmukhi content. Must be reviewed by a native Punjabi-speaking teacher before publishing. Synonyms and antonyms cross-checked against PSEB Punjabi textbooks but require teacher verification.",
+    "sources": [
+      {
+        "title": "PSEB Punjabi textbook — Shabdavali (Class 6-10)",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "Official PSEB textbooks. Word lists drawn from standard PSEB Punjabi curriculum for ETT level."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "समानार्थी शब्द (ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ)",
+          "pa": "ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ",
+          "en": "Synonyms (Samaanarthi Shabd)"
+        },
+        "text": {
+          "hi": "**ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ** ਉਹ ਸ਼ਬਦ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਅਰਥ ਇੱਕੋ ਜਿਹੇ ਜਾਂ ਮਿਲਦੇ-ਜੁਲਦੇ ਹੋਣ।\n\n**ਮਹੱਤਵਪੂਰਨ ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ**:\n\n| ਸ਼ਬਦ | ਸਮਾਨਾਰਥੀ |\n|------|----------|\n| ਅੱਖ | ਨੈਣ, ਨੇਤਰ, ਲੋਚਨ |\n| ਪਾਣੀ | ਜਲ, ਨੀਰ, ਵਾਰਿ |\n| ਅੱਗ | ਅਗਨੀ, ਵਹਨ, ਦਾਵਾਨਲ |\n| ਮੌਤ | ਮਰਨ, ਅਵਸਾਨ, ਦੇਹਾਂਤ |\n| ਦੁੱਖ | ਪੀੜ, ਸੰਤਾਪ, ਕਲੇਸ਼ |\n| ਸੁੱਖ | ਖੁਸ਼ੀ, ਅਨੰਦ, ਅਨੁਗ੍ਰਹਿ |\n| ਮਾਂ | ਅੰਮੜੀ, ਮਾਤਾ, ਜਨਨੀ |\n| ਘਰ | ਗ੍ਰਹਿ, ਭਵਨ, ਮਕਾਨ |\n| ਸੂਰਜ | ਦਿਨਕਰ, ਭਾਸਕਰ, ਆਦਿਤਯ |\n| ਰਾਤ | ਨਿਸ਼ਾ, ਰਜਨੀ, ਕਾਲੀ-ਰਾਤ |",
+          "pa": "ਸਮਾਨਾਰਥੀ = ਇੱਕੋ ਅਰਥ ਵਾਲੇ ਸ਼ਬਦ। ਅੱਖ = ਨੈਣ = ਨੇਤਰ। ਪਾਣੀ = ਜਲ = ਨੀਰ। ਅੱਗ = ਅਗਨੀ। ਮਾਂ = ਮਾਤਾ = ਜਨਨੀ। ਘਰ = ਭਵਨ = ਮਕਾਨ। ਸੂਰਜ = ਭਾਸਕਰ = ਦਿਨਕਰ।",
+          "en": "**Synonyms (ਸਮਾਨਾਰਥੀ)** are words with the same or similar meaning. Key pairs: ਅੱਖ = ਨੈਣ (eye); ਪਾਣੀ = ਜਲ (water); ਅੱਗ = ਅਗਨੀ (fire); ਮਾਂ = ਮਾਤਾ (mother); ਘਰ = ਭਵਨ (home); ਸੂਰਜ = ਭਾਸਕਰ (sun)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "विपरीतार्थी शब्द (ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ)",
+          "pa": "ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ",
+          "en": "Antonyms (Virodharthi Shabd)"
+        },
+        "text": {
+          "hi": "**ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ** ਉਹ ਸ਼ਬਦ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਅਰਥ ਇੱਕ-ਦੂਜੇ ਦੇ ਉਲਟ ਹੋਣ।\n\n**ਮਹੱਤਵਪੂਰਨ ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ**:\n\n| ਸ਼ਬਦ | ਵਿਰੋਧਾਰਥੀ |\n|------|----------|\n| ਦਿਨ | ਰਾਤ |\n| ਚੰਗਾ | ਮਾੜਾ |\n| ਸੱਚ | ਝੂਠ |\n| ਖੁਸ਼ੀ | ਗ਼ਮੀ |\n| ਮੋਟਾ | ਪਤਲਾ |\n| ਅਮੀਰ | ਗ਼ਰੀਬ |\n| ਜ਼ਿੰਦਗੀ | ਮੌਤ |\n| ਰੌਸ਼ਨੀ | ਹਨੇਰਾ |\n| ਲੰਮਾ | ਛੋਟਾ |\n| ਉੱਪਰ | ਹੇਠਾਂ |",
+          "pa": "ਵਿਰੋਧਾਰਥੀ = ਉਲਟ ਅਰਥ ਵਾਲੇ ਸ਼ਬਦ। ਦਿਨ ↔ ਰਾਤ। ਸੱਚ ↔ ਝੂਠ। ਖੁਸ਼ੀ ↔ ਗ਼ਮੀ। ਅਮੀਰ ↔ ਗ਼ਰੀਬ। ਰੌਸ਼ਨੀ ↔ ਹਨੇਰਾ।",
+          "en": "**Antonyms (ਵਿਰੋਧਾਰਥੀ)** are words with opposite meaning. Key pairs: ਦਿਨ↔ਰਾਤ (day/night); ਸੱਚ↔ਝੂਠ (truth/lie); ਖੁਸ਼ੀ↔ਗ਼ਮੀ (joy/grief); ਅਮੀਰ↔ਗ਼ਰੀਬ (rich/poor); ਰੌਸ਼ਨੀ↔ਹਨੇਰਾ (light/dark)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "एक-शब्दीय प्रतिस्थापन (ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ)",
+          "pa": "ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ",
+          "en": "One-word Substitution"
+        },
+        "text": {
+          "hi": "**ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ** ਇੱਕ ਵਾਕੰਸ਼ ਦੀ ਥਾਂ ਇੱਕ ਸ਼ਬਦ ਵਰਤਣਾ ਹੈ।\n\n| ਵਾਕੰਸ਼ | ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ |\n|--------|---------------|\n| ਜੋ ਕਿਸੇ ਤੇ ਰਹਿਮ ਕਰੇ | ਦਿਆਲੂ |\n| ਜੋ ਕਦੇ ਨਾ ਮਰੇ | ਅਮਰ |\n| ਜੋ ਝੂਠ ਨਾ ਬੋਲੇ | ਸੱਚਾ / ਸੱਚਬੋਲ |\n| ਜੋ ਪੜ੍ਹਿਆ-ਲਿਖਿਆ ਨਾ ਹੋਵੇ | ਅਨਪੜ੍ਹ |\n| ਜੋ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰੇ | ਦੇਸ਼ਭਗਤ |\n| ਜਿਸ ਨੂੰ ਭੁੱਲਿਆ ਨਾ ਜਾ ਸਕੇ | ਅਭੁੱਲ |\n| ਜੋ ਆਪਣੇ ਮਨ ਦਾ ਮਾਲਕ ਹੋਵੇ | ਸੁਤੰਤਰ |",
+          "pa": "ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ: ਜੋ ਕਿਸੇ ਤੇ ਰਹਿਮ ਕਰੇ = ਦਿਆਲੂ। ਜੋ ਕਦੇ ਨਾ ਮਰੇ = ਅਮਰ। ਜੋ ਝੂਠ ਨਾ ਬੋਲੇ = ਸੱਚਬੋਲ। ਜੋ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰੇ = ਦੇਸ਼ਭਗਤ।",
+          "en": "One-word substitution replaces a phrase with a single word. 'One who shows mercy' = ਦਿਆਲੂ (merciful). 'One who never dies' = ਅਮਰ (immortal). 'One who loves the country' = ਦੇਸ਼ਭਗਤ (patriot). 'One who cannot read or write' = ਅਨਪੜ੍ਹ (illiterate)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "सारांश और परीक्षा युक्तियाँ",
+          "pa": "ਸਾਰ ਅਤੇ ਪ੍ਰੀਖਿਆ ਸੁਝਾਅ",
+          "en": "Summary and Exam Tips"
+        },
+        "text": {
+          "hi": "**ਮੁੱਖ ਨੁਕਤੇ**:\n1. ਸਮਾਨਾਰਥੀ = ਇੱਕੋ ਅਰਥ; ਵਿਰੋਧਾਰਥੀ = ਉਲਟ ਅਰਥ\n2. PSEB ਪਾਠ-ਪੁਸਤਕਾਂ ਦੀ ਸ਼ਬਦਾਵਲੀ ETT ਪ੍ਰੀਖਿਆ ਲਈ ਸਭ ਤੋਂ ਭਰੋਸੇਮੰਦ ਸ੍ਰੋਤ ਹੈ\n3. ਤਤਸਮ ਸ਼ਬਦ (ਸੰਸਕ੍ਰਿਤ ਮੂਲ) ਅਤੇ ਤਦਭਵ ਸ਼ਬਦ (ਪ੍ਰਚਲਿਤ ਪੰਜਾਬੀ) ਵਿੱਚ ਫ਼ਰਕ ਸਮਝੋ\n4. ਸ਼ਬਦਾਵਲੀ ਸਵਾਲਾਂ ਵਿੱਚ ਸੰਦਰਭ (context) ਦੇਖ ਕੇ ਜਵਾਬ ਦਿਓ",
+          "pa": "ਸਮਾਨਾਰਥੀ = ਇੱਕੋ ਅਰਥ। ਵਿਰੋਧਾਰਥੀ = ਉਲਟ ਅਰਥ। PSEB ਕਿਤਾਬਾਂ ਪੜ੍ਹੋ। ਸੰਦਰਭ ਦੇਖ ਕੇ ਜਵਾਬ ਦਿਓ।",
+          "en": "Key points: (1) Synonyms = same meaning; Antonyms = opposite meaning. (2) PSEB textbooks are the most reliable vocabulary source for ETT. (3) Distinguish tatsam (Sanskrit-origin) from tadbhav (colloquial Punjabi) words. (4) In exam questions always look at context before choosing a synonym."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "ਅੱਖ ਦਾ ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ ਕੀ ਹੈ?",
+          "pa": "ਅੱਖ ਦਾ ਸਮਾਨਾਰਥੀ?",
+          "en": "Synonym of ਅੱਖ (eye)?"
+        },
+        "back": {
+          "hi": "ਨੈਣ, ਨੇਤਰ, ਲੋਚਨ",
+          "pa": "ਨੈਣ, ਨੇਤਰ, ਲੋਚਨ",
+          "en": "ਨੈਣ, ਨੇਤਰ, ਲੋਚਨ"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਖੁਸ਼ੀ ਦਾ ਵਿਰੋਧਾਰਥੀ ਕੀ ਹੈ?",
+          "pa": "ਖੁਸ਼ੀ ਦਾ ਵਿਰੋਧਾਰਥੀ?",
+          "en": "Antonym of ਖੁਸ਼ੀ (happiness)?"
+        },
+        "back": {
+          "hi": "ਗ਼ਮੀ (sadness/grief)",
+          "pa": "ਗ਼ਮੀ",
+          "en": "ਗ਼ਮੀ (grief/sadness)"
+        }
+      },
+      {
+        "front": {
+          "hi": "'ਜੋ ਕਦੇ ਨਾ ਮਰੇ' — ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ?",
+          "pa": "'ਜੋ ਕਦੇ ਨਾ ਮਰੇ' ਲਈ ਇੱਕ ਸ਼ਬਦ?",
+          "en": "One word for 'one who never dies'?"
+        },
+        "back": {
+          "hi": "ਅਮਰ",
+          "pa": "ਅਮਰ",
+          "en": "ਅਮਰ (immortal)"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਪਾਣੀ ਦੇ ਦੋ ਸਮਾਨਾਰਥੀ ਦੱਸੋ",
+          "pa": "ਪਾਣੀ ਦੇ ਦੋ ਸਮਾਨਾਰਥੀ?",
+          "en": "Two synonyms of ਪਾਣੀ (water)?"
+        },
+        "back": {
+          "hi": "ਜਲ, ਨੀਰ",
+          "pa": "ਜਲ, ਨੀਰ",
+          "en": "ਜਲ, ਨੀਰ"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਅਮੀਰ ਦਾ ਵਿਰੋਧਾਰਥੀ?",
+          "pa": "ਅਮੀਰ ਦਾ ਵਿਰੋਧਾਰਥੀ?",
+          "en": "Antonym of ਅਮੀਰ (rich)?"
+        },
+        "back": {
+          "hi": "ਗ਼ਰੀਬ (poor)",
+          "pa": "ਗ਼ਰੀਬ",
+          "en": "ਗ਼ਰੀਬ (poor)"
+        }
+      },
+      {
+        "front": {
+          "hi": "'ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰਨ ਵਾਲਾ' — ਇੱਕ ਸ਼ਬਦ?",
+          "pa": "'ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰਨ ਵਾਲਾ'?",
+          "en": "One word for 'one who loves his country'?"
+        },
+        "back": {
+          "hi": "ਦੇਸ਼ਭਗਤ (patriot)",
+          "pa": "ਦੇਸ਼ਭਗਤ",
+          "en": "ਦੇਸ਼ਭਗਤ (patriot)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "ett-pv-q1",
+        "text": {
+          "hi": "ਹੇਠਾਂ ਦਿੱਤੇ ਸ਼ਬਦ 'ਅੱਖ' ਦਾ ਸਮਾਨਾਰਥੀ ਕਿਹੜਾ ਹੈ?",
+          "pa": "'ਅੱਖ' ਦਾ ਸਮਾਨਾਰਥੀ?",
+          "en": "Which is a synonym of 'ਅੱਖ' (eye)?"
+        },
+        "options": {
+          "hi": [
+            "ਪੈਰ",
+            "ਨੈਣ",
+            "ਦੰਦ",
+            "ਨੱਕ"
+          ],
+          "pa": [
+            "ਪੈਰ",
+            "ਨੈਣ",
+            "ਦੰਦ",
+            "ਨੱਕ"
+          ],
+          "en": [
+            "ਪੈਰ",
+            "ਨੈਣ",
+            "ਦੰਦ",
+            "ਨੱਕ"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਨੈਣ ਦਾ ਅਰਥ ਹੈ ਅੱਖ। ਇਹ ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ ਹੈ। ਪੈਰ=foot, ਦੰਦ=tooth, ਨੱਕ=nose।",
+          "pa": "ਨੈਣ = ਅੱਖ। ਸਮਾਨਾਰਥੀ।",
+          "en": "'ਨੈਣ' means 'eye' — it is a synonym of 'ਅੱਖ'. ਪੈਰ=foot, ਦੰਦ=tooth, ਨੱਕ=nose."
+        }
+      },
+      {
+        "id": "ett-pv-q2",
+        "text": {
+          "hi": "'ਖੁਸ਼ੀ' ਦਾ ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ ਕਿਹੜਾ ਹੈ?",
+          "pa": "'ਖੁਸ਼ੀ' ਦਾ ਵਿਰੋਧਾਰਥੀ?",
+          "en": "What is the antonym of 'ਖੁਸ਼ੀ' (happiness)?"
+        },
+        "options": {
+          "hi": [
+            "ਅਨੰਦ",
+            "ਖੇੜਾ",
+            "ਗ਼ਮੀ",
+            "ਹਰਖ"
+          ],
+          "pa": [
+            "ਅਨੰਦ",
+            "ਖੇੜਾ",
+            "ਗ਼ਮੀ",
+            "ਹਰਖ"
+          ],
+          "en": [
+            "ਅਨੰਦ",
+            "ਖੇੜਾ",
+            "ਗ਼ਮੀ",
+            "ਹਰਖ"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਗ਼ਮੀ ਦਾ ਅਰਥ ਦੁੱਖ/ਉਦਾਸੀ ਹੈ, ਜੋ ਖੁਸ਼ੀ ਦਾ ਵਿਰੋਧਾਰਥੀ ਹੈ। ਅਨੰਦ, ਖੇੜਾ, ਹਰਖ ਸਾਰੇ ਖੁਸ਼ੀ ਦੇ ਸਮਾਨਾਰਥੀ ਹਨ।",
+          "pa": "ਗ਼ਮੀ = ਉਦਾਸੀ = ਖੁਸ਼ੀ ਦਾ ਵਿਰੋਧ।",
+          "en": "'ਗ਼ਮੀ' means grief/sadness — the opposite of happiness. ਅਨੰਦ, ਖੇੜਾ and ਹਰਖ are all synonyms of happiness."
+        }
+      },
+      {
+        "id": "ett-pv-q3",
+        "text": {
+          "hi": "'ਜੋ ਕਦੇ ਨਾ ਮਰੇ' ਲਈ ਪੰਜਾਬੀ ਵਿੱਚ ਸਹੀ ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ ਕਿਹੜਾ ਹੈ?",
+          "pa": "'ਜੋ ਕਦੇ ਨਾ ਮਰੇ' — ਇੱਕ ਸ਼ਬਦ?",
+          "en": "One-word substitution for 'one who never dies' in Punjabi?"
+        },
+        "options": {
+          "hi": [
+            "ਅਨਪੜ੍ਹ",
+            "ਦਿਆਲੂ",
+            "ਅਮਰ",
+            "ਦੇਸ਼ਭਗਤ"
+          ],
+          "pa": [
+            "ਅਨਪੜ੍ਹ",
+            "ਦਿਆਲੂ",
+            "ਅਮਰ",
+            "ਦੇਸ਼ਭਗਤ"
+          ],
+          "en": [
+            "ਅਨਪੜ੍ਹ",
+            "ਦਿਆਲੂ",
+            "ਅਮਰ",
+            "ਦੇਸ਼ਭਗਤ"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਅਮਰ = ਜੋ ਕਦੇ ਨਾ ਮਰੇ (immortal)। ਅਨਪੜ੍ਹ=illiterate, ਦਿਆਲੂ=merciful, ਦੇਸ਼ਭਗਤ=patriot।",
+          "pa": "ਅਮਰ = ਕਦੇ ਨਾ ਮਰੇ।",
+          "en": "'ਅਮਰ' means immortal. ਅਨਪੜ੍ਹ=illiterate, ਦਿਆਲੂ=merciful, ਦੇਸ਼ਭਗਤ=patriot."
+        }
+      },
+      {
+        "id": "ett-pv-q4",
+        "text": {
+          "hi": "ਹੇਠਾਂ ਦਿੱਤੇ ਵਿੱਚੋਂ 'ਪਾਣੀ' ਦਾ ਸਮਾਨਾਰਥੀ ਕਿਹੜਾ ਨਹੀਂ ਹੈ?",
+          "pa": "'ਪਾਣੀ' ਦਾ ਸਮਾਨਾਰਥੀ ਨਹੀਂ?",
+          "en": "Which is NOT a synonym of 'ਪਾਣੀ' (water)?"
+        },
+        "options": {
+          "hi": [
+            "ਜਲ",
+            "ਨੀਰ",
+            "ਵਾਰਿ",
+            "ਅਗਨੀ"
+          ],
+          "pa": [
+            "ਜਲ",
+            "ਨੀਰ",
+            "ਵਾਰਿ",
+            "ਅਗਨੀ"
+          ],
+          "en": [
+            "ਜਲ",
+            "ਨੀਰ",
+            "ਵਾਰਿ",
+            "ਅਗਨੀ"
+          ]
+        },
+        "answer": 3,
+        "explanation": {
+          "hi": "ਅਗਨੀ ਦਾ ਅਰਥ ਅੱਗ ਹੈ, ਪਾਣੀ ਨਹੀਂ। ਜਲ, ਨੀਰ ਅਤੇ ਵਾਰਿ ਸਾਰੇ ਪਾਣੀ ਦੇ ਸਮਾਨਾਰਥੀ ਹਨ।",
+          "pa": "ਅਗਨੀ = ਅੱਗ, ਪਾਣੀ ਨਹੀਂ।",
+          "en": "'ਅਗਨੀ' means fire, not water. ਜਲ, ਨੀਰ and ਵਾਰਿ are all synonyms of water."
+        }
+      },
+      {
+        "id": "ett-pv-q5",
+        "text": {
+          "hi": "'ਸੱਚ' ਦਾ ਵਿਰੋਧਾਰਥੀ ਕਿਹੜਾ ਹੈ?",
+          "pa": "'ਸੱਚ' ਦਾ ਵਿਰੋਧਾਰਥੀ?",
+          "en": "Antonym of 'ਸੱਚ' (truth)?"
+        },
+        "options": {
+          "hi": [
+            "ਸੱਚਾ",
+            "ਝੂਠ",
+            "ਸੱਚਬੋਲ",
+            "ਸੱਚਿਆਰ"
+          ],
+          "pa": [
+            "ਸੱਚਾ",
+            "ਝੂਠ",
+            "ਸੱਚਬੋਲ",
+            "ਸੱਚਿਆਰ"
+          ],
+          "en": [
+            "ਸੱਚਾ",
+            "ਝੂਠ",
+            "ਸੱਚਬੋਲ",
+            "ਸੱਚਿਆਰ"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਝੂਠ ਸੱਚ ਦਾ ਵਿਰੋਧਾਰਥੀ ਹੈ। ਸੱਚਾ, ਸੱਚਬੋਲ ਅਤੇ ਸੱਚਿਆਰ ਸਾਰੇ ਸੱਚ ਦੇ ਅਰਥ ਨਾਲ ਸੰਬੰਧਿਤ ਹਨ।",
+          "pa": "ਝੂਠ = ਸੱਚ ਦਾ ਵਿਰੋਧ।",
+          "en": "'ਝੂਠ' (lie) is the antonym of 'ਸੱਚ' (truth). ਸੱਚਾ, ਸੱਚਬੋਲ, ਸੱਚਿਆਰ all relate to truthfulness."
+        }
+      },
+      {
+        "id": "ett-pv-q6",
+        "text": {
+          "hi": "'ਜੋ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰੇ' — ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ?",
+          "pa": "'ਜੋ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰੇ'?",
+          "en": "One word for 'one who loves his country'?"
+        },
+        "options": {
+          "hi": [
+            "ਸੁਤੰਤਰ",
+            "ਦੇਸ਼ਭਗਤ",
+            "ਅਭੁੱਲ",
+            "ਦਿਆਲੂ"
+          ],
+          "pa": [
+            "ਸੁਤੰਤਰ",
+            "ਦੇਸ਼ਭਗਤ",
+            "ਅਭੁੱਲ",
+            "ਦਿਆਲੂ"
+          ],
+          "en": [
+            "ਸੁਤੰਤਰ",
+            "ਦੇਸ਼ਭਗਤ",
+            "ਅਭੁੱਲ",
+            "ਦਿਆਲੂ"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਦੇਸ਼ਭਗਤ ਉਹ ਵਿਅਕਤੀ ਹੈ ਜੋ ਆਪਣੇ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰਦਾ ਹੈ। ਸੁਤੰਤਰ=free, ਅਭੁੱਲ=unforgettable, ਦਿਆਲੂ=merciful।",
+          "pa": "ਦੇਸ਼ਭਗਤ = ਦੇਸ਼ ਨਾਲ ਪਿਆਰ।",
+          "en": "'ਦੇਸ਼ਭਗਤ' means patriot. ਸੁਤੰਤਰ=free/independent, ਅਭੁੱਲ=unforgettable, ਦਿਆਲੂ=merciful."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "ett-punjabi-idioms-proverbs",
+    "subject": "Punjabi",
+    "unit": "ਮੁਹਾਵਰੇ ਅਤੇ ਅਖਾਣ",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "पंजाबी मुहावरे और कहावतें",
+      "pa": "ਪੰਜਾਬੀ ਮੁਹਾਵਰੇ ਅਤੇ ਅਖਾਣ",
+      "en": "Punjabi Idioms (Muhaavare) and Proverbs (Akhaan)"
+    },
+    "level": "ETT Paper A — Punjabi qualifying (Class 6-10 PSEB level)",
+    "review_note": "Gurmukhi content. Must be reviewed by a native Punjabi-speaking teacher before publishing. Idiom meanings are based on standard PSEB-level usage; regional variants may differ.",
+    "sources": [
+      {
+        "title": "PSEB Punjabi textbook — Muhavare and Akhaan (Class 6-10)",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "Official PSEB textbooks."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "मुहावरे क्या हैं? (ਮੁਹਾਵਰੇ ਕੀ ਹੁੰਦੇ ਹਨ?)",
+          "pa": "ਮੁਹਾਵਰੇ ਕੀ ਹੁੰਦੇ ਹਨ?",
+          "en": "What are Idioms (Muhaavare)?"
+        },
+        "text": {
+          "hi": "**ਮੁਹਾਵਰੇ** ਉਹ ਵਾਕੰਸ਼ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦਾ ਸ਼ਾਬਦਿਕ ਅਰਥ ਨਹੀਂ ਲਿਆ ਜਾਂਦਾ; ਉਨ੍ਹਾਂ ਦਾ ਵਿਸ਼ੇਸ਼ ਭਾਵਾਰਥ ਹੁੰਦਾ ਹੈ।\n\n**ਮਹੱਤਵਪੂਰਨ ਮੁਹਾਵਰੇ**:\n\n| ਮੁਹਾਵਰਾ | ਅਰਥ | ਉਦਾਹਰਨ |\n|----------|------|----------|\n| ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ | ਸੁਰਤ ਆਉਣੀ / ਸਮਝ ਆਉਣੀ | ਹਾਰ ਤੋਂ ਬਾਅਦ ਉਸ ਦੀਆਂ ਅੱਖਾਂ ਖੁੱਲ੍ਹੀਆਂ। |\n| ਕੰਨ ਭਰਨਾ | ਚੁਗ਼ਲੀ ਕਰਨੀ | ਉਸ ਨੇ ਮੇਰੇ ਖ਼ਿਲਾਫ਼ ਕੰਨ ਭਰੇ। |\n| ਹੱਥ ਧੋ ਬੈਠਣਾ | ਗੁਆ ਲੈਣਾ | ਉਸ ਨੇ ਆਪਣੀ ਨੌਕਰੀ ਤੋਂ ਹੱਥ ਧੋ ਲਿਆ। |\n| ਮੂੰਹ ਭਾਰਾ ਕਰਨਾ | ਗੁੱਸੇ ਹੋਣਾ | ਛੋਟੀ ਗੱਲ ਤੇ ਮੂੰਹ ਭਾਰਾ ਨਾ ਕਰੋ। |\n| ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ | ਬਹੁਤ ਤੰਗ ਕਰਨਾ | ਬੱਚਿਆਂ ਨੇ ਨੱਕ ਵਿੱਚ ਦਮ ਕਰ ਦਿੱਤਾ। |\n| ਪੱਲਾ ਝਾੜਨਾ | ਸੰਬੰਧ ਤੋੜਨਾ / ਕਿਨਾਰਾ ਕਰਨਾ | ਔਖੇ ਸਮੇਂ ਉਸ ਨੇ ਪੱਲਾ ਝਾੜ ਲਿਆ। |",
+          "pa": "ਮੁਹਾਵਰੇ = ਵਿਸ਼ੇਸ਼ ਭਾਵਾਰਥ ਵਾਲੇ ਵਾਕੰਸ਼। ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ = ਸਮਝ ਆਉਣੀ। ਕੰਨ ਭਰਨਾ = ਚੁਗ਼ਲੀ। ਹੱਥ ਧੋ ਬੈਠਣਾ = ਗੁਆ ਲੈਣਾ। ਨੱਕ ਵਿੱਚ ਦਮ = ਬਹੁਤ ਤੰਗ ਕਰਨਾ।",
+          "en": "**Idioms (ਮੁਹਾਵਰੇ)** are phrases whose figurative meaning differs from their literal meaning. Key ones: ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ = to gain awareness; ਕੰਨ ਭਰਨਾ = to gossip/slander; ਹੱਥ ਧੋ ਬੈਠਣਾ = to lose; ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ = to annoy greatly; ਪੱਲਾ ਝਾੜਨਾ = to disassociate."
+        }
+      },
+      {
+        "heading": {
+          "hi": "अखाण (कहावतें) — ਅਖਾਣ",
+          "pa": "ਅਖਾਣ (ਕਹਾਵਤਾਂ)",
+          "en": "Proverbs (Akhaan)"
+        },
+        "text": {
+          "hi": "**ਅਖਾਣ** ਲੋਕ-ਸਿਆਣਪ ਤੋਂ ਨਿਕਲੀਆਂ ਛੋਟੀਆਂ ਅਤੇ ਅਰਥਪੂਰਨ ਕਹਾਵਤਾਂ ਹਨ।\n\n**ਮਹੱਤਵਪੂਰਨ ਅਖਾਣ**:\n\n| ਅਖਾਣ | ਅਰਥ |\n|-------|------|\n| ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ | ਚੰਗੇ ਕੰਮ ਦਾ ਚੰਗਾ ਫਲ ਮਿਲਦਾ ਹੈ |\n| ਜੈਸਾ ਕਰੋਗੇ ਵੈਸਾ ਭਰੋਗੇ | ਕਰਮ ਦਾ ਫਲ ਭੋਗਣਾ ਪੈਂਦਾ ਹੈ |\n| ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ | ਆਪਣੇ ਦੀ ਕਦਰ ਨਹੀਂ ਹੁੰਦੀ |\n| ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ | ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਉਣਾ |\n| ਕੱਲ੍ਹ ਦੀ ਬਜਾਏ ਅੱਜ ਕੰਮ ਕਰ | ਕੰਮ ਨੂੰ ਕੱਲ੍ਹ ਤੇ ਨਾ ਛੱਡੋ |",
+          "pa": "ਅਖਾਣ = ਲੋਕ ਸਿਆਣਪ। ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ। ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ। ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ।",
+          "en": "**Proverbs (ਅਖਾਣ)** are short sayings expressing folk wisdom. Key ones: 'ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ' = good deeds bring good results; 'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ' = familiarity breeds contempt; 'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ' = a bad workman blames his tools."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "'ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ?",
+          "pa": "'ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ'?",
+          "en": "Meaning of idiom 'ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ'?"
+        },
+        "back": {
+          "hi": "ਸੁਰਤ ਆਉਣੀ / ਸਮਝ ਆਉਣੀ (to gain awareness)",
+          "pa": "ਸਮਝ ਆਉਣੀ",
+          "en": "To gain awareness / come to one's senses"
+        }
+      },
+      {
+        "front": {
+          "hi": "'ਕੰਨ ਭਰਨਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ?",
+          "pa": "'ਕੰਨ ਭਰਨਾ'?",
+          "en": "Meaning of 'ਕੰਨ ਭਰਨਾ'?"
+        },
+        "back": {
+          "hi": "ਚੁਗ਼ਲੀ ਕਰਨੀ (to slander/gossip)",
+          "pa": "ਚੁਗ਼ਲੀ ਕਰਨੀ",
+          "en": "To gossip / slander someone"
+        }
+      },
+      {
+        "front": {
+          "hi": "'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ' ਅਖਾਣ ਦਾ ਅਰਥ?",
+          "pa": "'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ'?",
+          "en": "Meaning of proverb 'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ'?"
+        },
+        "back": {
+          "hi": "ਆਪਣੇ ਘਰ ਵਾਲੇ ਦੀ ਕਦਰ ਨਹੀਂ ਹੁੰਦੀ (familiarity breeds contempt)",
+          "pa": "ਆਪਣਿਆਂ ਦੀ ਕਦਰ ਨਹੀਂ",
+          "en": "Familiarity breeds contempt — the prophet is not honoured in his own home"
+        }
+      },
+      {
+        "front": {
+          "hi": "'ਪੱਲਾ ਝਾੜਨਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ?",
+          "pa": "'ਪੱਲਾ ਝਾੜਨਾ'?",
+          "en": "Meaning of 'ਪੱਲਾ ਝਾੜਨਾ'?"
+        },
+        "back": {
+          "hi": "ਸੰਬੰਧ ਤੋੜਨਾ / ਕਿਨਾਰਾ ਕਰਨਾ (to disassociate)",
+          "pa": "ਕਿਨਾਰਾ ਕਰਨਾ",
+          "en": "To disassociate / wash one's hands of something"
+        }
+      },
+      {
+        "front": {
+          "hi": "'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ' ਅਖਾਣ?",
+          "pa": "'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ'?",
+          "en": "Meaning of 'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ'?"
+        },
+        "back": {
+          "hi": "ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਉਣਾ",
+          "pa": "ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਉਣਾ",
+          "en": "A bad workman blames his tools"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "ett-pi-q1",
+        "text": {
+          "hi": "'ਕੰਨ ਭਰਨਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ ਕੀ ਹੈ?",
+          "pa": "'ਕੰਨ ਭਰਨਾ' ਦਾ ਅਰਥ?",
+          "en": "What is the meaning of the idiom 'ਕੰਨ ਭਰਨਾ'?"
+        },
+        "options": {
+          "hi": [
+            "ਕੰਨ ਸਾਫ਼ ਕਰਨੇ",
+            "ਚੁਗ਼ਲੀ ਕਰਨੀ",
+            "ਸੁਣਨਾ ਬੰਦ ਕਰਨਾ",
+            "ਕੰਨਾਂ ਵਿੱਚ ਦਰਦ"
+          ],
+          "pa": [
+            "ਕੰਨ ਸਾਫ਼ ਕਰਨੇ",
+            "ਚੁਗ਼ਲੀ ਕਰਨੀ",
+            "ਸੁਣਨਾ ਬੰਦ ਕਰਨਾ",
+            "ਕੰਨਾਂ ਵਿੱਚ ਦਰਦ"
+          ],
+          "en": [
+            "ਕੰਨ ਸਾਫ਼ ਕਰਨੇ",
+            "ਚੁਗ਼ਲੀ ਕਰਨੀ",
+            "ਸੁਣਨਾ ਬੰਦ ਕਰਨਾ",
+            "ਕੰਨਾਂ ਵਿੱਚ ਦਰਦ"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਕੰਨ ਭਰਨਾ ਦਾ ਭਾਵਾਰਥ ਚੁਗ਼ਲੀ ਕਰਨਾ ਜਾਂ ਕਿਸੇ ਦੇ ਵਿਰੁੱਧ ਕੁਝ ਕਹਿਣਾ ਹੈ। ਇਹ ਸ਼ਾਬਦਿਕ ਅਰਥ ਨਹੀਂ ਲਿਆ ਜਾਂਦਾ।",
+          "pa": "ਕੰਨ ਭਰਨਾ = ਚੁਗ਼ਲੀ ਕਰਨੀ।",
+          "en": "'ਕੰਨ ਭਰਨਾ' figuratively means to gossip/slander. The literal 'filling ears' is not the intended meaning."
+        }
+      },
+      {
+        "id": "ett-pi-q2",
+        "text": {
+          "hi": "'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ' ਅਖਾਣ ਦਾ ਅਰਥ ਕੀ ਹੈ?",
+          "pa": "'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ'?",
+          "en": "What is the meaning of the proverb 'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ'?"
+        },
+        "options": {
+          "hi": [
+            "ਘਰ ਵਾਲਿਆਂ ਨੂੰ ਆਦਰ ਮਿਲਦਾ ਹੈ",
+            "ਘਰ ਵਾਲਿਆਂ ਦੀ ਕਦਰ ਨਹੀਂ ਹੁੰਦੀ",
+            "ਯੋਗੀ ਘਰ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ",
+            "ਘਰ ਚੰਗਾ ਹੈ"
+          ],
+          "pa": [
+            "ਆਦਰ ਮਿਲਦਾ ਹੈ",
+            "ਕਦਰ ਨਹੀਂ ਹੁੰਦੀ",
+            "ਯੋਗੀ ਘਰ ਵਿੱਚ",
+            "ਘਰ ਚੰਗਾ ਹੈ"
+          ],
+          "en": [
+            "Home people are respected",
+            "Familiarity breeds contempt",
+            "A yogi lives at home",
+            "Home is good"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਇਸ ਅਖਾਣ ਦਾ ਅਰਥ ਹੈ ਕਿ ਆਪਣੇ ਘਰ ਦੇ ਪੜ੍ਹੇ-ਲਿਖੇ/ਗੁਣੀ ਵਿਅਕਤੀ ਨੂੰ ਓਨੀ ਕਦਰ ਨਹੀਂ ਮਿਲਦੀ ਜਿੰਨੀ ਬਾਹਰ ਵਾਲੇ ਨੂੰ ਮਿਲਦੀ ਹੈ।",
+          "pa": "ਆਪਣਿਆਂ ਦੀ ਕਦਰ ਨਹੀਂ।",
+          "en": "This proverb means that a skilled/learned person is less valued in his own home — similar to 'familiarity breeds contempt' in English."
+        }
+      },
+      {
+        "id": "ett-pi-q3",
+        "text": {
+          "hi": "'ਹੱਥ ਧੋ ਬੈਠਣਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ?",
+          "pa": "'ਹੱਥ ਧੋ ਬੈਠਣਾ'?",
+          "en": "Meaning of idiom 'ਹੱਥ ਧੋ ਬੈਠਣਾ'?"
+        },
+        "options": {
+          "hi": [
+            "ਹੱਥ ਧੋਣੇ",
+            "ਕੋਈ ਚੀਜ਼ ਗੁਆ ਲੈਣੀ",
+            "ਕੰਮ ਸ਼ੁਰੂ ਕਰਨਾ",
+            "ਖੁਸ਼ ਹੋਣਾ"
+          ],
+          "pa": [
+            "ਹੱਥ ਧੋਣੇ",
+            "ਗੁਆ ਲੈਣਾ",
+            "ਕੰਮ ਸ਼ੁਰੂ",
+            "ਖੁਸ਼ ਹੋਣਾ"
+          ],
+          "en": [
+            "To wash hands",
+            "To lose something",
+            "To start work",
+            "To be happy"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਹੱਥ ਧੋ ਬੈਠਣਾ ਦਾ ਭਾਵ ਕਿਸੇ ਚੀਜ਼ ਤੋਂ ਵਾਂਝੇ ਹੋ ਜਾਣਾ ਜਾਂ ਗੁਆ ਲੈਣਾ ਹੈ। ਜਿਵੇਂ: ਉਸ ਨੇ ਆਪਣੀ ਨੌਕਰੀ ਤੋਂ ਹੱਥ ਧੋ ਲਿਆ।",
+          "pa": "ਹੱਥ ਧੋ ਬੈਠਣਾ = ਗੁਆ ਲੈਣਾ।",
+          "en": "'ਹੱਥ ਧੋ ਬੈਠਣਾ' means to lose/be deprived of something. E.g., 'He lost his job.'"
+        }
+      },
+      {
+        "id": "ett-pi-q4",
+        "text": {
+          "hi": "'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ' ਅਖਾਣ ਕਿਹੜੀ ਸਥਿਤੀ ਵਿੱਚ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+          "pa": "ਇਹ ਅਖਾਣ ਕਦੋਂ ਵਰਤਦੇ ਹਨ?",
+          "en": "When is the proverb 'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ' used?"
+        },
+        "options": {
+          "hi": [
+            "ਜਦੋਂ ਕੋਈ ਆਂਗਣ ਸਾਫ਼ ਨਾ ਕਰੇ",
+            "ਜਦੋਂ ਕੋਈ ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਵੇ",
+            "ਜਦੋਂ ਕੋਈ ਚੰਗਾ ਨੱਚੇ",
+            "ਜਦੋਂ ਆਂਗਣ ਵਿੱਚ ਥਾਂ ਘੱਟ ਹੋਵੇ"
+          ],
+          "pa": [
+            "ਆਂਗਣ ਸਾਫ਼ ਨਾ ਕਰੇ",
+            "ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ",
+            "ਚੰਗਾ ਨੱਚੇ",
+            "ਥਾਂ ਘੱਟ ਹੋਵੇ"
+          ],
+          "en": [
+            "When someone doesn't clean the courtyard",
+            "When someone blames others for their own weakness",
+            "When someone dances well",
+            "When there is less space in the courtyard"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਇਹ ਅਖਾਣ ਉਸ ਵਿਅਕਤੀ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ ਜੋ ਆਪਣੀ ਗਲਤੀ/ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਉਂਦਾ ਹੈ — ਜਿਵੇਂ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ 'a bad workman blames his tools'।",
+          "pa": "ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ।",
+          "en": "Used when someone blames others for their own failures — equivalent to English 'a bad workman blames his tools'."
+        }
+      },
+      {
+        "id": "ett-pi-q5",
+        "text": {
+          "hi": "ਹੇਠਾਂ ਦਿੱਤੇ ਵਿੱਚੋਂ ਕਿਹੜਾ ਮੁਹਾਵਰਾ ਨਹੀਂ ਹੈ?",
+          "pa": "ਮੁਹਾਵਰਾ ਨਹੀਂ ਕਿਹੜਾ?",
+          "en": "Which of the following is NOT an idiom (muhaavara)?"
+        },
+        "options": {
+          "hi": [
+            "ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ",
+            "ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ",
+            "ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ",
+            "ਪੱਲਾ ਝਾੜਨਾ"
+          ],
+          "pa": [
+            "ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ",
+            "ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ",
+            "ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ",
+            "ਪੱਲਾ ਝਾੜਨਾ"
+          ],
+          "en": [
+            "ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ",
+            "ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ",
+            "ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ",
+            "ਪੱਲਾ ਝਾੜਨਾ"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "'ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ' ਇੱਕ ਅਖਾਣ (ਕਹਾਵਤ) ਹੈ, ਮੁਹਾਵਰਾ ਨਹੀਂ। ਬਾਕੀ ਤਿੰਨੇ ਮੁਹਾਵਰੇ ਹਨ।",
+          "pa": "'ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ' = ਅਖਾਣ, ਮੁਹਾਵਰਾ ਨਹੀਂ।",
+          "en": "'ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ' is a proverb (ਅਖਾਣ), not an idiom (ਮੁਹਾਵਰਾ). The other three are idioms."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "ett-math-statistics",
+    "subject": "Mathematics",
+    "unit": "Statistics and Data Handling",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "सांख्यिकी: माध्य, माध्यिका, बहुलक और प्रायिकता",
+      "pa": "ਅੰਕੜਾ ਵਿਗਿਆਨ: ਔਸਤ, ਮੱਧਮਾਨ, ਬਹੁਲਕ ਅਤੇ ਸੰਭਾਵਨਾ",
+      "en": "Statistics: Mean, Median, Mode and Probability"
+    },
+    "level": "ETT Paper B — Mathematics (Class 6-10 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Mathematics Class 10 — Statistics and Probability",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB class 9-10 Mathematics textbook — Statistics chapters. Content prepared for ETT exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "माध्य (Mean)",
+          "pa": "ਔਸਤ (ਮੀਨ)",
+          "en": "Mean (Average)"
+        },
+        "text": {
+          "hi": "**माध्य (Mean)** = सभी मानों का योग ÷ मानों की संख्या\n\n$$\\bar{x} = \\frac{\\sum x}{n}$$\n\n**उदाहरण**: 5 छात्रों के अंक: 40, 45, 50, 55, 60\n- योग = 40+45+50+55+60 = 250\n- माध्य = 250 ÷ 5 = **50**\n\n**समूहीकृत आंकड़ों के लिए माध्य**:\n$$\\bar{x} = \\frac{\\sum f_i x_i}{\\sum f_i}$$\nजहाँ $f_i$ = वर्ग की बारम्बारता, $x_i$ = वर्ग मध्य मान",
+          "pa": "**ਔਸਤ (Mean)** = ਸਾਰੇ ਮੁੱਲਾਂ ਦਾ ਜੋੜ ÷ ਮੁੱਲਾਂ ਦੀ ਗਿਣਤੀ\n\nਉਦਾਹਰਨ: 40, 45, 50, 55, 60 → ਜੋੜ=250 → ਔਸਤ = 250÷5 = **50**",
+          "en": "**Mean** = Sum of all values ÷ Number of values\n\n**Formula**: $\\bar{x} = \\frac{\\sum x}{n}$\n\n**Example**: Marks of 5 students: 40, 45, 50, 55, 60\n- Sum = 250; Mean = 250 ÷ 5 = **50**\n\nFor grouped data: $\\bar{x} = \\frac{\\sum f_i x_i}{\\sum f_i}$ where $f_i$ = frequency, $x_i$ = class midpoint."
+        }
+      },
+      {
+        "heading": {
+          "hi": "माध्यिका (Median)",
+          "pa": "ਮੱਧਮਾਨ (ਮੀਡੀਅਨ)",
+          "en": "Median"
+        },
+        "text": {
+          "hi": "**माध्यिका** = बीच का मान जब आंकड़े आरोही/अवरोही क्रम में हों।\n\n- **n विषम हो**: माध्यिका = $\\left(\\frac{n+1}{2}\\right)^{\\text{वाँ}}$ पद\n- **n सम हो**: माध्यिका = $\\frac{\\left(\\frac{n}{2}\\right)^{\\text{वाँ}} + \\left(\\frac{n}{2}+1\\right)^{\\text{वाँ}}}{2}$\n\n**उदाहरण (n=5, विषम)**: 10, 20, 30, 40, 50\n- माध्यिका = 3वाँ पद = **30**\n\n**उदाहरण (n=6, सम)**: 10, 20, 30, 40, 50, 60\n- माध्यिका = (30+40)/2 = **35**",
+          "pa": "**ਮੱਧਮਾਨ** = ਮੱਧ ਵਾਲਾ ਮੁੱਲ (ਕ੍ਰਮ ਵਿੱਚ ਲਾ ਕੇ)। n ਟਾਂਕ: (n+1)/2 ਵਾਂ ਪਦ। n ਜੁੱਫਟ: ਵਿਚਕਾਰਲੇ ਦੋ ਦੀ ਔਸਤ।\n\nਉਦਾਹਰਨ: 10,20,30,40,50 → ਮੱਧਮਾਨ = 30",
+          "en": "**Median** = middle value when data is arranged in order.\n\n- **Odd n**: Median = $\\left(\\frac{n+1}{2}\\right)^{th}$ term\n- **Even n**: Median = average of $\\frac{n}{2}^{th}$ and $\\left(\\frac{n}{2}+1\\right)^{th}$ terms\n\n**Example (n=5, odd)**: 10, 20, **30**, 40, 50 → Median = **30**\n**Example (n=6, even)**: 10, 20, 30, 40, 50, 60 → Median = (30+40)/2 = **35**"
+        }
+      },
+      {
+        "heading": {
+          "hi": "बहुलक (Mode)",
+          "pa": "ਬਹੁਲਕ (ਮੋਡ)",
+          "en": "Mode"
+        },
+        "text": {
+          "hi": "**बहुलक** = वह मान जो सबसे अधिक बार आए।\n\n**उदाहरण**: 2, 3, 4, 4, 4, 5, 6 → बहुलक = **4** (3 बार)\n\n**नोट**:\n- एक से अधिक बहुलक हो सकते हैं (द्वि-बहुलक/त्रि-बहुलक डेटा)\n- यदि सभी मान एक-एक बार आएं → बहुलक नहीं होता\n- **संबंध**: Mean – Mode = 3(Mean – Median) [अनुभवजन्य संबंध]",
+          "pa": "**ਬਹੁਲਕ** = ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਆਉਣ ਵਾਲਾ ਮੁੱਲ।\n\nਉਦਾਹਰਨ: 2,3,4,4,4,5,6 → ਬਹੁਲਕ = 4\n\nਸੰਬੰਧ: Mean – Mode = 3(Mean – Median)",
+          "en": "**Mode** = the value that occurs most frequently.\n\n**Example**: 2, 3, 4, 4, 4, 5, 6 → Mode = **4** (appears 3 times)\n\n**Key relationship** (empirical): Mean – Mode = 3(Mean – Median)\nThis is an approximate relationship used when distribution is moderately skewed."
+        }
+      },
+      {
+        "heading": {
+          "hi": "प्रायिकता (Probability)",
+          "pa": "ਸੰਭਾਵਨਾ (Probability)",
+          "en": "Probability"
+        },
+        "text": {
+          "hi": "**प्रायिकता** = किसी घटना के होने की संभावना\n\n$$P(A) = \\frac{\\text{अनुकूल परिणामों की संख्या}}{\\text{कुल संभव परिणामों की संख्या}}$$\n\n**नियम**:\n- $0 \\leq P(A) \\leq 1$\n- $P(A) + P(A') = 1$ (जहाँ A' = A का पूरक)\n- असंभव घटना: P = 0; निश्चित घटना: P = 1\n\n**उदाहरण**: एक पासे में 6 आने की प्रायिकता\n- अनुकूल = 1; कुल = 6 → P(6) = **1/6**\n\n**ताश के पत्तों** (52 पत्ते):\n- P(इक्का) = 4/52 = **1/13**\n- P(लाल पत्ता) = 26/52 = **1/2**",
+          "pa": "**ਸੰਭਾਵਨਾ** = P(A) = ਅਨੁਕੂਲ / ਕੁੱਲ। ਪਾਸੇ ਵਿੱਚ 6 ਆਉਣਾ = 1/6। ਤਾਸ਼ ਵਿੱਚ ਇੱਕਾ = 4/52 = 1/13।",
+          "en": "**Probability** P(A) = Favourable outcomes / Total outcomes\n\n**Rules**: 0 ≤ P ≤ 1; P(A) + P(A') = 1\n\n**Die (Dice)**: P(getting 6) = 1/6\n**Cards (52)**: P(ace) = 4/52 = 1/13; P(red card) = 26/52 = 1/2"
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "माध्य (Mean) सूत्र?",
+          "pa": "ਔਸਤ ਦਾ ਫਾਰਮੂਲਾ?",
+          "en": "Formula for Mean?"
+        },
+        "back": {
+          "hi": "Mean = Σx / n (सभी मानों का योग ÷ संख्या)",
+          "pa": "Mean = Σx / n",
+          "en": "Mean = Σx / n (sum ÷ count)"
+        }
+      },
+      {
+        "front": {
+          "hi": "n=7 के लिए माध्यिका का पद?",
+          "pa": "n=7 ਲਈ ਮੱਧਮਾਨ ਦਾ ਪਦ?",
+          "en": "Which term is the median for n=7?"
+        },
+        "back": {
+          "hi": "(7+1)/2 = 4वाँ पद",
+          "pa": "(7+1)/2 = 4ਵਾਂ ਪਦ",
+          "en": "(7+1)/2 = 4th term"
+        }
+      },
+      {
+        "front": {
+          "hi": "Mean–Mode = ?",
+          "pa": "Mean–Mode = ?",
+          "en": "Mean – Mode = ?"
+        },
+        "back": {
+          "hi": "3(Mean – Median) — अनुभवजन्य संबंध",
+          "pa": "3(Mean – Median)",
+          "en": "3(Mean – Median) — empirical relationship"
+        }
+      },
+      {
+        "front": {
+          "hi": "एक सिक्के में हेड की प्रायिकता?",
+          "pa": "ਸਿੱਕੇ ਵਿੱਚ ਹੈੱਡ ਦੀ ਸੰਭਾਵਨਾ?",
+          "en": "Probability of Head in a coin toss?"
+        },
+        "back": {
+          "hi": "1/2",
+          "pa": "1/2",
+          "en": "1/2"
+        }
+      },
+      {
+        "front": {
+          "hi": "ताश में इक्के की प्रायिकता?",
+          "pa": "ਤਾਸ਼ ਵਿੱਚ ਇੱਕੇ ਦੀ ਸੰਭਾਵਨਾ?",
+          "en": "Probability of an ace in a 52-card deck?"
+        },
+        "back": {
+          "hi": "4/52 = 1/13",
+          "pa": "4/52 = 1/13",
+          "en": "4/52 = 1/13"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "ett-ms-q1",
+        "text": {
+          "hi": "संख्याओं 4, 7, 8, 9, 7, 5, 7 का बहुलक क्या है?",
+          "pa": "4, 7, 8, 9, 7, 5, 7 ਦਾ ਬਹੁਲਕ?",
+          "en": "What is the mode of 4, 7, 8, 9, 7, 5, 7?"
+        },
+        "options": {
+          "hi": [
+            "4",
+            "7",
+            "8",
+            "9"
+          ],
+          "pa": [
+            "4",
+            "7",
+            "8",
+            "9"
+          ],
+          "en": [
+            "4",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "7 तीन बार आता है (7, 7, 7), बाकी सभी एक-एक बार। अतः बहुलक = 7।",
+          "pa": "7 ਤਿੰਨ ਵਾਰ ਆਉਂਦਾ ਹੈ। ਬਹੁਲਕ = 7।",
+          "en": "7 appears three times — more than any other value. Mode = 7."
+        }
+      },
+      {
+        "id": "ett-ms-q2",
+        "text": {
+          "hi": "आंकड़े 10, 20, 30, 40, 50 का माध्य क्या है?",
+          "pa": "10, 20, 30, 40, 50 ਦੀ ਔਸਤ?",
+          "en": "Mean of 10, 20, 30, 40, 50?"
+        },
+        "options": {
+          "hi": [
+            "25",
+            "30",
+            "35",
+            "20"
+          ],
+          "pa": [
+            "25",
+            "30",
+            "35",
+            "20"
+          ],
+          "en": [
+            "25",
+            "30",
+            "35",
+            "20"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "योग = 10+20+30+40+50 = 150; माध्य = 150 ÷ 5 = 30।",
+          "pa": "ਜੋੜ = 150; ਔਸਤ = 150÷5 = 30।",
+          "en": "Sum = 150; Mean = 150 ÷ 5 = 30."
+        }
+      },
+      {
+        "id": "ett-ms-q3",
+        "text": {
+          "hi": "क्रमबद्ध आंकड़े: 15, 20, 25, 30, 35 की माध्यिका?",
+          "pa": "15, 20, 25, 30, 35 ਦਾ ਮੱਧਮਾਨ?",
+          "en": "Median of 15, 20, 25, 30, 35?"
+        },
+        "options": {
+          "hi": [
+            "20",
+            "25",
+            "30",
+            "27.5"
+          ],
+          "pa": [
+            "20",
+            "25",
+            "30",
+            "27.5"
+          ],
+          "en": [
+            "20",
+            "25",
+            "30",
+            "27.5"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "n=5 (विषम), माध्यिका = (5+1)/2 = 3वाँ पद = 25।",
+          "pa": "n=5, (5+1)/2=3ਵਾਂ ਪਦ = 25।",
+          "en": "n=5 (odd), Median = (5+1)/2 = 3rd term = 25."
+        }
+      },
+      {
+        "id": "ett-ms-q4",
+        "text": {
+          "hi": "एक पासे में सम संख्या आने की प्रायिकता क्या है?",
+          "pa": "ਪਾਸੇ ਵਿੱਚ ਜੁੱਫਟ ਸੰਖਿਆ ਦੀ ਸੰਭਾਵਨਾ?",
+          "en": "Probability of getting an even number on a die?"
+        },
+        "options": {
+          "hi": [
+            "1/6",
+            "1/3",
+            "1/2",
+            "2/3"
+          ],
+          "pa": [
+            "1/6",
+            "1/3",
+            "1/2",
+            "2/3"
+          ],
+          "en": [
+            "1/6",
+            "1/3",
+            "1/2",
+            "2/3"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "पासे में सम संख्याएं: 2, 4, 6 — तीन अनुकूल परिणाम; कुल = 6। P = 3/6 = 1/2।",
+          "pa": "ਜੁੱਫਟ: 2,4,6 → 3 ਅਨੁਕੂਲ; ਕੁੱਲ = 6 → P = 3/6 = 1/2।",
+          "en": "Even numbers on a die: 2, 4, 6 → 3 favourable; total = 6 → P = 3/6 = 1/2."
+        }
+      },
+      {
+        "id": "ett-ms-q5",
+        "text": {
+          "hi": "यदि किसी घटना की प्रायिकता 0.3 है तो उसके न होने की प्रायिकता क्या होगी?",
+          "pa": "ਜੇ P(A)=0.3 ਤਾਂ P(A') = ?",
+          "en": "If P(A) = 0.3, what is P(A')?"
+        },
+        "options": {
+          "hi": [
+            "0.3",
+            "0.6",
+            "0.7",
+            "1.0"
+          ],
+          "pa": [
+            "0.3",
+            "0.6",
+            "0.7",
+            "1.0"
+          ],
+          "en": [
+            "0.3",
+            "0.6",
+            "0.7",
+            "1.0"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "P(A) + P(A') = 1, इसलिए P(A') = 1 – 0.3 = 0.7।",
+          "pa": "P(A') = 1 – P(A) = 1 – 0.3 = 0.7।",
+          "en": "P(A) + P(A') = 1 → P(A') = 1 – 0.3 = 0.7."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "ett-math-algebra",
+    "subject": "Mathematics",
+    "unit": "Algebra and Commercial Mathematics",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "बीजगणित और वाणिज्यिक गणित: प्रतिशत, लाभ-हानि और सरल ब्याज",
+      "pa": "ਬੀਜਗਣਿਤ ਅਤੇ ਵਪਾਰਕ ਗਣਿਤ: ਫ਼ੀਸਦੀ, ਲਾਭ-ਹਾਨੀ ਅਤੇ ਸਾਦਾ ਵਿਆਜ",
+      "en": "Algebra and Commercial Maths: Percentage, Profit-Loss and Simple Interest"
+    },
+    "level": "ETT Paper B — Mathematics (Class 6-10 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Mathematics Class 7-10 — Algebra, Percentage and Commercial Maths",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB class 7-10 Mathematics textbooks. Content prepared for ETT exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "प्रतिशत (Percentage)",
+          "pa": "ਫ਼ੀਸਦੀ (Percentage)",
+          "en": "Percentage"
+        },
+        "text": {
+          "hi": "**प्रतिशत** = प्रति 100 भाग\n\n**प्रमुख सूत्र**:\n- x का y% = $\\frac{x \\times y}{100}$\n- x, y का कितने % है = $\\frac{x}{y} \\times 100$\n- % वृद्धि = $\\frac{\\text{वृद्धि}}{\\text{मूल मान}} \\times 100$\n- % कमी = $\\frac{\\text{कमी}}{\\text{मूल मान}} \\times 100$\n\n**उदाहरण 1**: 500 का 20% = $\\frac{500 \\times 20}{100}$ = **100**\n\n**उदाहरण 2**: 400 से 500 हुआ; % वृद्धि = $\\frac{100}{400} \\times 100$ = **25%**\n\n**उदाहरण 3**: 80 अंक, पूर्णांक 200; प्रतिशत = $\\frac{80}{200} \\times 100$ = **40%**",
+          "pa": "ਫ਼ੀਸਦੀ = ਪ੍ਰਤੀ 100। x ਦਾ y% = (x×y)/100। 500 ਦਾ 20% = 100। % ਵਾਧਾ = (ਵਾਧਾ/ਅਸਲ)×100।",
+          "en": "**Percentage** = per 100\n\nKey formulas:\n- y% of x = (x × y) / 100\n- x as % of y = (x/y) × 100\n- % increase = (increase/original) × 100\n- % decrease = (decrease/original) × 100\n\n**Example 1**: 20% of 500 = (500×20)/100 = **100**\n**Example 2**: 400 → 500; % increase = (100/400)×100 = **25%**"
+        }
+      },
+      {
+        "heading": {
+          "hi": "लाभ और हानि (Profit and Loss)",
+          "pa": "ਲਾਭ ਅਤੇ ਹਾਨੀ",
+          "en": "Profit and Loss"
+        },
+        "text": {
+          "hi": "**परिभाषाएं**:\n- **क्रय मूल्य (CP)**: खरीदने का मूल्य\n- **विक्रय मूल्य (SP)**: बेचने का मूल्य\n- **लाभ**: SP > CP → लाभ = SP – CP\n- **हानि**: CP > SP → हानि = CP – SP\n\n**सूत्र**:\n$$\\text{लाभ%} = \\frac{SP - CP}{CP} \\times 100$$\n$$\\text{हानि%} = \\frac{CP - SP}{CP} \\times 100$$\n$$SP = CP \\times \\frac{100 + \\text{लाभ%}}{100}$$\n$$CP = SP \\times \\frac{100}{100 + \\text{लाभ%}}$$\n\n**उदाहरण**: CP = ₹400, SP = ₹500\n- लाभ = 500–400 = ₹100\n- लाभ% = (100/400)×100 = **25%**\n\n**उदाहरण 2**: CP = ₹200, लाभ% = 15%\n- SP = 200 × (100+15)/100 = 200 × 1.15 = **₹230**",
+          "pa": "ਲਾਭ = SP – CP। ਲਾਭ% = (SP–CP)/CP × 100। CP=400, SP=500 → ਲਾਭ%=25%।",
+          "en": "**Profit** = SP – CP (when SP > CP)\n**Loss** = CP – SP (when CP > SP)\n\nProfit% = [(SP–CP)/CP] × 100\nSP = CP × (100+Profit%)/100\n\n**Example**: CP=₹400, SP=₹500 → Profit=₹100, Profit%=25%"
+        }
+      },
+      {
+        "heading": {
+          "hi": "सरल ब्याज (Simple Interest)",
+          "pa": "ਸਾਦਾ ਵਿਆਜ (Simple Interest)",
+          "en": "Simple Interest"
+        },
+        "text": {
+          "hi": "**सरल ब्याज (SI)**:\n$$SI = \\frac{P \\times R \\times T}{100}$$\n\n- P = मूलधन (Principal)\n- R = वार्षिक ब्याज दर (%)\n- T = समय (वर्षों में)\n- मिश्रधन (A) = P + SI\n\n**उदाहरण**: P=₹1000, R=5% प्रति वर्ष, T=3 वर्ष\n- SI = (1000×5×3)/100 = **₹150**\n- A = 1000+150 = **₹1150**\n\n**उल्टा प्रश्न**: SI=₹240, R=4%, T=3 वर्ष → P=?\n- P = (SI×100)/(R×T) = (240×100)/(4×3) = **₹2000**",
+          "pa": "SI = (P×R×T)/100। P=1000, R=5%, T=3 → SI=150। A=P+SI=1150।",
+          "en": "**Simple Interest**: SI = (P × R × T) / 100\nAmount A = P + SI\n\n**Example**: P=₹1000, R=5%, T=3 years → SI=₹150, A=₹1150\n**Reverse**: P = (SI×100) / (R×T)"
+        }
+      },
+      {
+        "heading": {
+          "hi": "बीजगणित — सर्वसमिकाएं (Algebraic Identities)",
+          "pa": "ਬੀਜਗਣਿਤ ਸਰਵਸਮਿਕਾਵਾਂ",
+          "en": "Algebraic Identities"
+        },
+        "text": {
+          "hi": "**मुख्य सर्वसमिकाएं**:\n1. $(a+b)^2 = a^2 + 2ab + b^2$\n2. $(a-b)^2 = a^2 - 2ab + b^2$\n3. $(a+b)(a-b) = a^2 - b^2$\n4. $(a+b+c)^2 = a^2+b^2+c^2+2ab+2bc+2ca$\n5. $(a+b)^3 = a^3+3a^2b+3ab^2+b^3$\n\n**ETT स्तर उदाहरण**: $(103)^2 = (100+3)^2 = 10000+600+9 = **10609**$\n\n**गुणनखंडन**: $x^2-5x+6 = (x-2)(x-3)$",
+          "pa": "$(a+b)^2=a^2+2ab+b^2$। $(a-b)(a+b)=a^2-b^2$। $(103)^2=(100+3)^2=10609$।",
+          "en": "**Key identities**:\n1. (a+b)² = a²+2ab+b²\n2. (a–b)² = a²–2ab+b²\n3. (a+b)(a–b) = a²–b²\n\n**ETT example**: (103)² = (100+3)² = 10000+600+9 = **10609**\n**Factorization**: x²–5x+6 = (x–2)(x–3)"
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "लाभ% सूत्र?",
+          "pa": "ਲਾਭ% ਫਾਰਮੂਲਾ?",
+          "en": "Profit% formula?"
+        },
+        "back": {
+          "hi": "Profit% = [(SP–CP)/CP] × 100",
+          "pa": "Profit% = [(SP–CP)/CP] × 100",
+          "en": "Profit% = [(SP–CP)/CP] × 100"
+        }
+      },
+      {
+        "front": {
+          "hi": "SI सूत्र?",
+          "pa": "ਸਾਦੇ ਵਿਆਜ ਦਾ ਫਾਰਮੂਲਾ?",
+          "en": "Simple Interest formula?"
+        },
+        "back": {
+          "hi": "SI = (P×R×T)/100",
+          "pa": "SI = (P×R×T)/100",
+          "en": "SI = (P×R×T)/100"
+        }
+      },
+      {
+        "front": {
+          "hi": "(a+b)² = ?",
+          "pa": "(a+b)² = ?",
+          "en": "(a+b)² = ?"
+        },
+        "back": {
+          "hi": "a² + 2ab + b²",
+          "pa": "a² + 2ab + b²",
+          "en": "a² + 2ab + b²"
+        }
+      },
+      {
+        "front": {
+          "hi": "400 से 500 — % वृद्धि?",
+          "pa": "400 ਤੋਂ 500 — % ਵਾਧਾ?",
+          "en": "% increase from 400 to 500?"
+        },
+        "back": {
+          "hi": "(100/400)×100 = 25%",
+          "pa": "25%",
+          "en": "25%"
+        }
+      },
+      {
+        "front": {
+          "hi": "P=1000, R=5%, T=2 → SI=?",
+          "pa": "P=1000, R=5%, T=2 → SI=?",
+          "en": "P=1000, R=5%, T=2 → SI=?"
+        },
+        "back": {
+          "hi": "SI = (1000×5×2)/100 = ₹100",
+          "pa": "₹100",
+          "en": "₹100"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "ett-ma-q1",
+        "text": {
+          "hi": "CP = ₹600, SP = ₹750; लाभ प्रतिशत क्या है?",
+          "pa": "CP=₹600, SP=₹750; ਲਾਭ%?",
+          "en": "CP=₹600, SP=₹750; Profit%?"
+        },
+        "options": {
+          "hi": [
+            "20%",
+            "25%",
+            "15%",
+            "30%"
+          ],
+          "pa": [
+            "20%",
+            "25%",
+            "15%",
+            "30%"
+          ],
+          "en": [
+            "20%",
+            "25%",
+            "15%",
+            "30%"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "लाभ = 750–600 = 150; लाभ% = (150/600)×100 = 25%।",
+          "pa": "ਲਾਭ=150; ਲਾਭ%=(150/600)×100=25%।",
+          "en": "Profit=750–600=150; Profit%=(150/600)×100=25%."
+        }
+      },
+      {
+        "id": "ett-ma-q2",
+        "text": {
+          "hi": "P=₹5000, R=8% प्रति वर्ष, T=2 वर्ष; सरल ब्याज कितना होगा?",
+          "pa": "P=₹5000, R=8%, T=2 → SI=?",
+          "en": "P=₹5000, R=8% per annum, T=2 years. Find SI."
+        },
+        "options": {
+          "hi": [
+            "₹600",
+            "₹700",
+            "₹800",
+            "₹900"
+          ],
+          "pa": [
+            "₹600",
+            "₹700",
+            "₹800",
+            "₹900"
+          ],
+          "en": [
+            "₹600",
+            "₹700",
+            "₹800",
+            "₹900"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "SI = (5000×8×2)/100 = 80000/100 = ₹800।",
+          "pa": "SI=(5000×8×2)/100=800।",
+          "en": "SI = (5000×8×2)/100 = ₹800."
+        }
+      },
+      {
+        "id": "ett-ma-q3",
+        "text": {
+          "hi": "240 का 15% कितना होगा?",
+          "pa": "240 ਦਾ 15%?",
+          "en": "What is 15% of 240?"
+        },
+        "options": {
+          "hi": [
+            "36",
+            "40",
+            "32",
+            "30"
+          ],
+          "pa": [
+            "36",
+            "40",
+            "32",
+            "30"
+          ],
+          "en": [
+            "36",
+            "40",
+            "32",
+            "30"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "15% of 240 = (240×15)/100 = 3600/100 = 36।",
+          "pa": "(240×15)/100=36।",
+          "en": "15% of 240 = (240×15)/100 = 36."
+        }
+      },
+      {
+        "id": "ett-ma-q4",
+        "text": {
+          "hi": "(a–b)² का विस्तार क्या है?",
+          "pa": "(a–b)² ਦਾ ਵਿਸਤਾਰ?",
+          "en": "Expansion of (a–b)²?"
+        },
+        "options": {
+          "hi": [
+            "a²+2ab+b²",
+            "a²–2ab–b²",
+            "a²–2ab+b²",
+            "a²+b²"
+          ],
+          "pa": [
+            "a²+2ab+b²",
+            "a²–2ab–b²",
+            "a²–2ab+b²",
+            "a²+b²"
+          ],
+          "en": [
+            "a²+2ab+b²",
+            "a²–2ab–b²",
+            "a²–2ab+b²",
+            "a²+b²"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "(a–b)² = a² – 2ab + b²। यह एक मानक सर्वसमिका है।",
+          "pa": "(a–b)² = a²–2ab+b²।",
+          "en": "(a–b)² = a²–2ab+b². This is a standard algebraic identity."
+        }
+      },
+      {
+        "id": "ett-ma-q5",
+        "text": {
+          "hi": "एक दुकानदार ने ₹400 में खरीदकर ₹360 में बेचा। हानि% क्या है?",
+          "pa": "CP=₹400, SP=₹360; ਹਾਨੀ%?",
+          "en": "Bought at ₹400, sold at ₹360. Loss%?"
+        },
+        "options": {
+          "hi": [
+            "5%",
+            "8%",
+            "10%",
+            "12%"
+          ],
+          "pa": [
+            "5%",
+            "8%",
+            "10%",
+            "12%"
+          ],
+          "en": [
+            "5%",
+            "8%",
+            "10%",
+            "12%"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "हानि = 400–360 = 40; हानि% = (40/400)×100 = 10%।",
+          "pa": "ਹਾਨੀ=40; ਹਾਨੀ%=(40/400)×100=10%।",
+          "en": "Loss=400–360=40; Loss%=(40/400)×100=10%."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "ett-sst-punjab-geography",
+    "subject": "SST",
+    "unit": "Geography — Punjab",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "पंजाब का भूगोल: नदियाँ, मिट्टी, फसलें और खनिज",
+      "pa": "ਪੰਜਾਬ ਦਾ ਭੂਗੋਲ: ਦਰਿਆ, ਮਿੱਟੀ, ਫਸਲਾਂ ਅਤੇ ਕੁਦਰਤੀ ਸੋਮੇ",
+      "en": "Geography of Punjab: Rivers, Soils, Crops and Natural Resources"
+    },
+    "level": "ETT Paper B — Social Studies (Class 6-8 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Social Studies Class 6-8 — Punjab Geography chapters",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "Official PSEB SST textbooks. Statistical data (area, population) should be verified against latest census."
+      },
+      {
+        "title": "Punjab Government — Key Facts",
+        "url": "https://punjab.gov.in",
+        "note": "Official Punjab state portal. Source for administrative geography."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "पंजाब का परिचय और नदियाँ",
+          "pa": "ਪੰਜਾਬ ਦੀ ਜਾਣ-ਪਛਾਣ ਅਤੇ ਦਰਿਆ",
+          "en": "Introduction to Punjab and its Rivers"
+        },
+        "text": {
+          "hi": "**ਪੰਜਾਬ** ਭਾਰਤ ਦੇ ਉੱਤਰ-ਪੱਛਮ ਵਿੱਚ ਸਥਿਤ ਹੈ। 'ਪੰਜਾਬ' ਫ਼ਾਰਸੀ ਭਾਸ਼ਾ ਦਾ ਸ਼ਬਦ ਹੈ ਜਿਸ ਦਾ ਅਰਥ ਹੈ 'ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ' — ਸਤਲੁਜ, ਬਿਆਸ, ਰਾਵੀ, ਚਨਾਬ ਅਤੇ ਜੇਹਲਮ।\n\n**ਮੌਜੂਦਾ ਪੰਜਾਬ ਦੇ ਪ੍ਰਮੁੱਖ ਦਰਿਆ** (ਭਾਰਤੀ ਪੱਖ):\n- **ਸਤਲੁਜ**: ਪੰਜਾਬ ਦਾ ਸਭ ਤੋਂ ਲੰਮਾ ਦਰਿਆ ਜੋ ਤਿੱਬਤ ਤੋਂ ਨਿਕਲਦਾ ਹੈ। ਰੋਪੜ ਤੋਂ ਪੰਜਾਬ ਵਿੱਚ ਦਾਖ਼ਲ ਹੁੰਦਾ ਹੈ।\n- **ਬਿਆਸ**: ਕੁੱਲੂ ਤੋਂ ਨਿਕਲਦਾ ਹੈ। ਹਾਰੀਕੇ ਪੱਤਣ ਉੱਤੇ ਸਤਲੁਜ ਨਾਲ ਮਿਲਦਾ ਹੈ।\n- **ਰਾਵੀ**: ਰੋਹਤਾਂਗ ਤੋਂ ਨਿਕਲਦਾ ਹੈ; ਪਾਕਿਸਤਾਨ ਵਿੱਚ ਦਾਖ਼ਲ ਹੁੰਦਾ ਹੈ।\n\n**ਨਹਿਰਾਂ**: ਸਰਹੰਦ ਨਹਿਰ, ਭਾਖੜਾ ਨਹਿਰ। ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਸਤਲੁਜ ਤੇ ਬਣਿਆ ਹੈ।",
+          "pa": "ਪੰਜਾਬ = ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ। ਸਤਲੁਜ, ਬਿਆਸ, ਰਾਵੀ, ਚਨਾਬ, ਜੇਹਲਮ। ਹੁਣ ਭਾਰਤੀ ਪੰਜਾਬ ਵਿੱਚ: ਸਤਲੁਜ, ਬਿਆਸ, ਰਾਵੀ। ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਸਤਲੁਜ ਉੱਤੇ।",
+          "en": "**Punjab** = 'Land of Five Rivers' (Persian: Panj=five, Aab=water) — Sutlej, Beas, Ravi, Chenab, Jhelum. Present Indian Punjab's main rivers: **Sutlej** (longest, enters at Ropar), **Beas** (originates in Kullu, meets Sutlej at Harike), **Ravi** (originates at Rohtang). **Bhakra-Nangal Dam** is on the Sutlej."
+        }
+      },
+      {
+        "heading": {
+          "hi": "मिट्टी और कृषि",
+          "pa": "ਮਿੱਟੀ ਅਤੇ ਖੇਤੀਬਾੜੀ",
+          "en": "Soils and Agriculture"
+        },
+        "text": {
+          "hi": "**ਮਿੱਟੀ ਦੀਆਂ ਕਿਸਮਾਂ**:\n- **ਦੋਮਟ ਮਿੱਟੀ (Loamy soil)**: ਬਹੁਤੇ ਹਿੱਸੇ ਵਿੱਚ, ਖੇਤੀ ਲਈ ਸਭ ਤੋਂ ਉਚਿਤ\n- **ਕੱਲਰ ਮਿੱਟੀ (Saline/alkaline)**: ਕੁਝ ਹਿੱਸਿਆਂ ਵਿੱਚ, ਖੇਤੀ ਲਈ ਘੱਟ ਉਚਿਤ\n- **ਰੇਤਲੀ ਮਿੱਟੀ**: ਫ਼ਿਰੋਜ਼ਪੁਰ ਅਤੇ ਸ੍ਰੀ ਮੁਕਤਸਰ ਸਾਹਿਬ ਜ਼ਿਲ੍ਹੇ\n\n**ਖ਼ਰੀਫ਼ ਫ਼ਸਲਾਂ** (ਗਰਮੀਆਂ): ਝੋਨਾ (Rice), ਮੱਕੀ, ਕਪਾਹ, ਗੰਨਾ\n**ਰਬੀ ਫ਼ਸਲਾਂ** (ਸਰਦੀਆਂ): ਕਣਕ (Wheat), ਸਰ੍ਹੋਂ, ਛੋਲੇ, ਜੌਂ\n\n**ਮੁੱਖ ਫ਼ਸਲਾਂ**: ਕਣਕ ਅਤੇ ਝੋਨਾ — ਪੰਜਾਬ ਭਾਰਤ ਦੇ ਅੰਨ ਭੰਡਾਰ ਵਜੋਂ ਜਾਣਿਆ ਜਾਂਦਾ ਹੈ।\n\n**ਹਰੀ ਕ੍ਰਾਂਤੀ (Green Revolution)**: 1960-70 ਦੇ ਦਹਾਕੇ ਵਿੱਚ HYV ਬੀਜਾਂ, ਖਾਦਾਂ ਅਤੇ ਸਿੰਚਾਈ ਦੀ ਵਰਤੋਂ ਨਾਲ ਅਨਾਜ ਉਤਪਾਦਨ ਵਧਿਆ।",
+          "pa": "ਦੋਮਟ ਮਿੱਟੀ = ਖੇਤੀ ਲਈ ਵਧੀਆ। ਖ਼ਰੀਫ਼=ਝੋਨਾ, ਕਪਾਹ। ਰਬੀ=ਕਣਕ, ਸਰ੍ਹੋਂ। ਪੰਜਾਬ = ਭਾਰਤ ਦਾ ਅੰਨ ਭੰਡਾਰ।",
+          "en": "**Soil types**: Loamy (most of Punjab — best for farming); Saline/alkaline (limited areas); Sandy (Ferozepur/Muktsar districts).\n\n**Kharif crops** (summer): Rice (paddy), Maize, Cotton, Sugarcane\n**Rabi crops** (winter): Wheat, Mustard, Chickpea, Barley\n\nPunjab is called India's **Granary/Breadbasket**. The **Green Revolution** (1960s-70s) used HYV seeds, fertilizers and irrigation to boost yields."
+        }
+      },
+      {
+        "heading": {
+          "hi": "जलवायु, उद्योग और परिवहन",
+          "pa": "ਮੌਸਮ, ਉਦਯੋਗ ਅਤੇ ਆਵਾਜਾਈ",
+          "en": "Climate, Industries and Transport"
+        },
+        "text": {
+          "hi": "**ਜਲਵਾਯੂ**: ਮੌਨਸੂਨੀ ਜਲਵਾਯੂ। ਗਰਮੀਆਂ ਵਿੱਚ ਬਹੁਤ ਗਰਮ (45°C ਤੱਕ), ਸਰਦੀਆਂ ਵਿੱਚ ਬਹੁਤ ਠੰਡ। ਔਸਤ ਸਾਲਾਨਾ ਬਾਰਿਸ਼ ਲਗਭਗ 500-700 ਮਿਮੀ।\n\n**ਉਦਯੋਗ**:\n- ਲੁਧਿਆਣਾ: ਸਾਈਕਲ, ਹੌਜ਼ਰੀ, ਮਸ਼ੀਨਾਂ ਲਈ ਪ੍ਰਸਿੱਧ\n- ਅੰਮ੍ਰਿਤਸਰ: ਕੱਪੜਾ ਉਦਯੋਗ, ਪ੍ਰੋਸੈਸਡ ਫੂਡ\n- ਮੋਹਾਲੀ/ਚੰਡੀਗੜ੍ਹ: IT ਅਤੇ ਆਧੁਨਿਕ ਉਦਯੋਗ\n\n**ਆਵਾਜਾਈ**: ਪੰਜਾਬ ਵਿੱਚ ਰੇਲਵੇ, ਸੜਕ ਅਤੇ ਹਵਾਈ ਸੇਵਾਵਾਂ ਦਾ ਚੰਗਾ ਜਾਲ। ਅੰਮ੍ਰਿਤਸਰ ਵਿਖੇ ਅੰਤਰਰਾਸ਼ਟਰੀ ਹਵਾਈ ਅੱਡਾ।",
+          "pa": "ਮੌਨਸੂਨੀ ਜਲਵਾਯੂ। ਲੁਧਿਆਣਾ = ਸਾਈਕਲ, ਹੌਜ਼ਰੀ। ਅੰਮ੍ਰਿਤਸਰ = ਕੱਪੜਾ। ਅੰਮ੍ਰਿਤਸਰ ਅੰਤਰਰਾਸ਼ਟਰੀ ਹਵਾਈ ਅੱਡਾ।",
+          "en": "**Climate**: Monsoon type; summers very hot (up to 45°C), cold winters. Annual rainfall ~500-700mm.\n\n**Industries**: Ludhiana (cycles, hosiery, machine tools); Amritsar (textiles, processed food); Mohali/Chandigarh (IT).\n\n**Transport**: Good road-rail network; Amritsar has an international airport."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "पंजाब का अर्थ क्या है?",
+          "pa": "ਪੰਜਾਬ ਦਾ ਅਰਥ?",
+          "en": "What does 'Punjab' mean?"
+        },
+        "back": {
+          "hi": "ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ (Land of Five Rivers)",
+          "pa": "ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ",
+          "en": "Land of Five Rivers (Panj=five, Aab=water)"
+        }
+      },
+      {
+        "front": {
+          "hi": "भाखड़ा-नांगल बाँध किस नदी पर है?",
+          "pa": "ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਕਿਸ ਦਰਿਆ ਉੱਤੇ?",
+          "en": "Bhakra-Nangal Dam is on which river?"
+        },
+        "back": {
+          "hi": "ਸਤਲੁਜ (Sutlej)",
+          "pa": "ਸਤਲੁਜ",
+          "en": "Sutlej river"
+        }
+      },
+      {
+        "front": {
+          "hi": "पंजाब की मुख्य रबी फसल?",
+          "pa": "ਪੰਜਾਬ ਦੀ ਮੁੱਖ ਰਬੀ ਫ਼ਸਲ?",
+          "en": "Main rabi crop of Punjab?"
+        },
+        "back": {
+          "hi": "ਕਣਕ (Wheat)",
+          "pa": "ਕਣਕ",
+          "en": "Wheat (ਕਣਕ)"
+        }
+      },
+      {
+        "front": {
+          "hi": "पंजाब को __________ कहते हैं",
+          "pa": "ਪੰਜਾਬ ਨੂੰ ਕੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "en": "Punjab is called India's ___?"
+        },
+        "back": {
+          "hi": "ਭਾਰਤ ਦਾ ਅੰਨ ਭੰਡਾਰ (Granary of India)",
+          "pa": "ਭਾਰਤ ਦਾ ਅੰਨ ਭੰਡਾਰ",
+          "en": "Granary / Breadbasket of India"
+        }
+      },
+      {
+        "front": {
+          "hi": "हरी क्रांति कब हुई?",
+          "pa": "ਹਰੀ ਕ੍ਰਾਂਤੀ ਕਦੋਂ ਹੋਈ?",
+          "en": "When did the Green Revolution occur?"
+        },
+        "back": {
+          "hi": "1960-70 ਦਾ ਦਹਾਕਾ (1960s–70s)",
+          "pa": "1960-70 ਦਾ ਦਹਾਕਾ",
+          "en": "1960s–70s"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "ett-pg-q1",
+        "text": {
+          "hi": "भाखड़ा-नांगल बाँध किस नदी पर बनाया गया है?",
+          "pa": "ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਕਿਸ ਦਰਿਆ ਉੱਤੇ ਬਣਾਇਆ ਗਿਆ?",
+          "en": "On which river is Bhakra-Nangal Dam built?"
+        },
+        "options": {
+          "hi": [
+            "ਬਿਆਸ",
+            "ਸਤਲੁਜ",
+            "ਰਾਵੀ",
+            "ਚਨਾਬ"
+          ],
+          "pa": [
+            "ਬਿਆਸ",
+            "ਸਤਲੁਜ",
+            "ਰਾਵੀ",
+            "ਚਨਾਬ"
+          ],
+          "en": [
+            "Beas",
+            "Sutlej",
+            "Ravi",
+            "Chenab"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਸਤਲੁਜ ਦਰਿਆ ਉੱਤੇ ਬਣਿਆ ਹੈ। ਇਹ ਭਾਰਤ ਦੇ ਸਭ ਤੋਂ ਵੱਡੇ ਡੈਮਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।",
+          "pa": "ਭਾਖੜਾ-ਨੰਗਲ = ਸਤਲੁਜ ਦਰਿਆ।",
+          "en": "Bhakra-Nangal Dam is on the Sutlej river — one of India's largest multi-purpose dams."
+        }
+      },
+      {
+        "id": "ett-pg-q2",
+        "text": {
+          "hi": "पंजाब में बियास नदी किससे मिलती है?",
+          "pa": "ਬਿਆਸ ਦਰਿਆ ਕਿਸ ਥਾਂ ਸਤਲੁਜ ਨਾਲ ਮਿਲਦਾ ਹੈ?",
+          "en": "Where does the Beas river meet the Sutlej in Punjab?"
+        },
+        "options": {
+          "hi": [
+            "ਰੋਪੜ",
+            "ਫ਼ਿਰੋਜ਼ਪੁਰ",
+            "ਹਾਰੀਕੇ ਪੱਤਣ",
+            "ਲੁਧਿਆਣਾ"
+          ],
+          "pa": [
+            "ਰੋਪੜ",
+            "ਫ਼ਿਰੋਜ਼ਪੁਰ",
+            "ਹਾਰੀਕੇ ਪੱਤਣ",
+            "ਲੁਧਿਆਣਾ"
+          ],
+          "en": [
+            "Ropar",
+            "Ferozepur",
+            "Harike Pattan",
+            "Ludhiana"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਬਿਆਸ ਦਰਿਆ ਹਾਰੀਕੇ ਪੱਤਣ ਉੱਤੇ ਸਤਲੁਜ ਨਾਲ ਮਿਲਦਾ ਹੈ। ਇੱਥੇ ਇੱਕ ਪ੍ਰਮੁੱਖ ਪੰਛੀ ਅਭਿਆਰਣ ਵੀ ਹੈ।",
+          "pa": "ਬਿਆਸ+ਸਤਲੁਜ = ਹਾਰੀਕੇ ਪੱਤਣ।",
+          "en": "The Beas meets the Sutlej at Harike Pattan (also a major bird sanctuary)."
+        }
+      },
+      {
+        "id": "ett-pg-q3",
+        "text": {
+          "hi": "पंजाब की मुख्य खरीफ फसल कौन सी है?",
+          "pa": "ਪੰਜਾਬ ਦੀ ਮੁੱਖ ਖ਼ਰੀਫ਼ ਫ਼ਸਲ?",
+          "en": "Main kharif crop of Punjab?"
+        },
+        "options": {
+          "hi": [
+            "ਕਣਕ",
+            "ਝੋਨਾ (ਚੌਲ)",
+            "ਸਰ੍ਹੋਂ",
+            "ਜੌਂ"
+          ],
+          "pa": [
+            "ਕਣਕ",
+            "ਝੋਨਾ",
+            "ਸਰ੍ਹੋਂ",
+            "ਜੌਂ"
+          ],
+          "en": [
+            "Wheat",
+            "Rice (paddy)",
+            "Mustard",
+            "Barley"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਝੋਨਾ (ਚੌਲ) ਖ਼ਰੀਫ਼ ਫ਼ਸਲ ਹੈ (ਗਰਮੀਆਂ ਵਿੱਚ ਬੀਜਿਆ ਜਾਂਦਾ ਹੈ)। ਕਣਕ ਰਬੀ ਫ਼ਸਲ ਹੈ। ਸਰ੍ਹੋਂ ਅਤੇ ਜੌਂ ਵੀ ਰਬੀ ਫ਼ਸਲਾਂ ਹਨ।",
+          "pa": "ਝੋਨਾ = ਖ਼ਰੀਫ਼। ਕਣਕ = ਰਬੀ।",
+          "en": "Rice/paddy is a kharif crop (sown in summer). Wheat is rabi. Mustard and barley are also rabi."
+        }
+      },
+      {
+        "id": "ett-pg-q4",
+        "text": {
+          "hi": "'ਪੰਜਾਬ' ਸ਼ਬਦ ਕਿਸ ਭਾਸ਼ਾ ਤੋਂ ਆਇਆ ਹੈ?",
+          "pa": "'ਪੰਜਾਬ' ਸ਼ਬਦ ਕਿੱਥੋਂ ਆਇਆ?",
+          "en": "The word 'Punjab' comes from which language?"
+        },
+        "options": {
+          "hi": [
+            "ਸੰਸਕ੍ਰਿਤ",
+            "ਅਰਬੀ",
+            "ਫ਼ਾਰਸੀ",
+            "ਤੁਰਕੀ"
+          ],
+          "pa": [
+            "ਸੰਸਕ੍ਰਿਤ",
+            "ਅਰਬੀ",
+            "ਫ਼ਾਰਸੀ",
+            "ਤੁਰਕੀ"
+          ],
+          "en": [
+            "Sanskrit",
+            "Arabic",
+            "Persian",
+            "Turkish"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "'ਪੰਜਾਬ' ਫ਼ਾਰਸੀ ਸ਼ਬਦ ਹੈ — ਪੰਜ (ਪੰਜ) + ਆਬ (ਪਾਣੀ/ਦਰਿਆ) = ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ।",
+          "pa": "'ਪੰਜਾਬ' = ਫ਼ਾਰਸੀ। ਪੰਜ+ਆਬ।",
+          "en": "'Punjab' is a Persian compound: Panj (five) + Aab (water/river) = Land of Five Rivers."
+        }
+      },
+      {
+        "id": "ett-pg-q5",
+        "text": {
+          "hi": "लुधियाना किस उद्योग के लिए प्रसिद्ध है?",
+          "pa": "ਲੁਧਿਆਣਾ ਕਿਸ ਉਦਯੋਗ ਲਈ ਮਸ਼ਹੂਰ ਹੈ?",
+          "en": "Ludhiana is famous for which industry?"
+        },
+        "options": {
+          "hi": [
+            "ਖੰਡ ਮਿੱਲਾਂ",
+            "ਸਾਈਕਲ ਅਤੇ ਹੌਜ਼ਰੀ",
+            "ਕਾਗਜ਼ ਮਿੱਲਾਂ",
+            "ਸ਼ੀਸ਼ੇ ਦਾ ਕੰਮ"
+          ],
+          "pa": [
+            "ਖੰਡ ਮਿੱਲਾਂ",
+            "ਸਾਈਕਲ ਅਤੇ ਹੌਜ਼ਰੀ",
+            "ਕਾਗਜ਼ ਮਿੱਲਾਂ",
+            "ਸ਼ੀਸ਼ੇ ਦਾ ਕੰਮ"
+          ],
+          "en": [
+            "Sugar mills",
+            "Cycle and hosiery industry",
+            "Paper mills",
+            "Glass work"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਲੁਧਿਆਣਾ ਸਾਈਕਲ, ਹੌਜ਼ਰੀ (ਉੱਨੀ ਕੱਪੜੇ/ਮੋਜ਼ੇ) ਅਤੇ ਮਸ਼ੀਨਾਂ ਲਈ ਭਾਰਤ ਭਰ ਵਿੱਚ ਮਸ਼ਹੂਰ ਹੈ।",
+          "pa": "ਲੁਧਿਆਣਾ = ਸਾਈਕਲ, ਹੌਜ਼ਰੀ।",
+          "en": "Ludhiana is famous for its cycle industry (world-class exporter) and hosiery/woollen textiles."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "ett-sst-sikh-history",
+    "subject": "SST",
+    "unit": "History — Punjab and Sikhism",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "पंजाब का इतिहास: गुरु परंपरा, महाराजा रणजीत सिंह और अंग्रेज़ों का आगमन",
+      "pa": "ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ: ਗੁਰੂ ਪਰੰਪਰਾ, ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਅਤੇ ਅੰਗਰੇਜ਼ਾਂ ਦਾ ਆਉਣਾ",
+      "en": "History of Punjab: Guru Tradition, Maharaja Ranjit Singh and the British"
+    },
+    "level": "ETT Paper B — Social Studies (Class 6-8 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Social Studies Class 6-8 — History chapters on Punjab and Sikhism",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB SST textbooks Class 6-8. Dates and succession order should be cross-checked with PSEB textbooks for the exact level tested."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "दस गुरुओं की परंपरा",
+          "pa": "ਦਸ ਗੁਰੂਆਂ ਦੀ ਪਰੰਪਰਾ",
+          "en": "The Tradition of Ten Gurus"
+        },
+        "text": {
+          "hi": "ਸਿੱਖ ਧਰਮ ਦੀ ਸਥਾਪਨਾ **ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ** (1469–1539) ਨੇ ਕੀਤੀ। ਕੁੱਲ 10 ਗੁਰੂ ਹੋਏ:\n\n| ਨੰਬਰ | ਗੁਰੂ | ਮਹੱਤਵਪੂਰਨ ਯੋਗਦਾਨ |\n|------|------|--------------------|\n| 1 | ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ | ਸਿੱਖ ਧਰਮ ਦੇ ਬਾਨੀ; ਈਕਓਂਕਾਰ, ਨਾਮ ਜਪੋ |\n| 2 | ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ | ਗੁਰਮੁਖੀ ਲਿਪੀ ਦਾ ਪ੍ਰਚਾਰ |\n| 3 | ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ | ਲੰਗਰ ਪ੍ਰਥਾ ਮਜ਼ਬੂਤ; ਸਤੀ ਪ੍ਰਥਾ ਵਿਰੁੱਧ |\n| 4 | ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ | ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ |\n| 5 | ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ | ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ; ਹਰਿਮੰਦਰ ਸਾਹਿਬ |\n| 6 | ਗੁਰੂ ਹਰਗੋਬਿੰਦ ਜੀ | ਮੀਰੀ-ਪੀਰੀ; ਅਕਾਲ ਤਖ਼ਤ |\n| 7 | ਗੁਰੂ ਹਰ ਰਾਇ ਜੀ | — |\n| 8 | ਗੁਰੂ ਹਰਕ੍ਰਿਸ਼ਨ ਜੀ | ਛੋਟੀ ਉਮਰ ਵਿੱਚ ਗੁਰੂਗੱਦੀ |\n| 9 | ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ | ਹਿੰਦ ਦੀ ਚਾਦਰ; ਕਸ਼ਮੀਰੀ ਪੰਡਿਤਾਂ ਦੀ ਰੱਖਿਆ |\n| 10 | ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ | ਖ਼ਾਲਸਾ ਪੰਥ (1699); ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਨੂੰ ਸ਼ਾਸ਼ਵਤ ਗੁਰੂ ਥਾਪਿਆ |",
+          "pa": "10 ਗੁਰੂ। ਗੁਰੂ ਨਾਨਕ = ਬਾਨੀ। ਗੁਰੂ ਅਰਜਨ = ਆਦਿ ਗ੍ਰੰਥ। ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ = ਖ਼ਾਲਸਾ 1699। ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ = ਹਿੰਦ ਦੀ ਚਾਦਰ।",
+          "en": "Sikhism was founded by **Guru Nanak Dev Ji** (1469–1539). Ten Gurus in succession. Key contributions: Guru Angad Dev — promoted Gurmukhi script; Guru Ram Das — founded Amritsar; Guru Arjan Dev — compiled Adi Granth, built Harmandir Sahib; Guru Hargobind — concept of Miri-Piri; Guru Tegh Bahadur — 'Hind di Chadar', protected Kashmiri Pandits; Guru Gobind Singh — founded Khalsa Panth (1699), declared Guru Granth Sahib as eternal Guru."
+        }
+      },
+      {
+        "heading": {
+          "hi": "महाराजा रणजीत सिंह और सिख राज",
+          "pa": "ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਅਤੇ ਸਿੱਖ ਰਾਜ",
+          "en": "Maharaja Ranjit Singh and the Sikh Kingdom"
+        },
+        "text": {
+          "hi": "**ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ** (1780–1839) ਨੇ ਪੰਜਾਬ ਵਿੱਚ ਇੱਕ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਿੱਖ ਰਾਜ ਸਥਾਪਿਤ ਕੀਤਾ।\n\n**ਮੁੱਖ ਤੱਥ**:\n- ਲਾਹੌਰ ਉੱਤੇ 1799 ਵਿੱਚ ਕਬਜ਼ਾ ਕੀਤਾ; ਲਾਹੌਰ ਰਾਜਧਾਨੀ ਬਣੀ\n- 1801 ਵਿੱਚ ਮਹਾਰਾਜਾ ਦਾ ਖਿਤਾਬ ਪ੍ਰਾਪਤ ਕੀਤਾ\n- ਅਫ਼ਗਾਨਿਸਤਾਨ ਤੋਂ **ਕੋਹਿਨੂਰ ਹੀਰਾ** ਪ੍ਰਾਪਤ ਕੀਤਾ\n- ਸੰਤੁਲਿਤ ਨੀਤੀ: ਹਿੰਦੂ, ਮੁਸਲਮਾਨ ਅਤੇ ਸਿੱਖ ਸਾਰੇ ਫ਼ੌਜ ਵਿੱਚ ਸ਼ਾਮਲ\n- ਯੂਰਪੀਅਨ ਅਫ਼ਸਰਾਂ (ਜਿਵੇਂ ਵੈਂਤੂਰਾ, ਕੋਰਟ) ਨੂੰ ਫ਼ੌਜ ਵਿੱਚ ਰੱਖਿਆ\n- 1839 ਵਿੱਚ ਦੇਹਾਂਤ ਤੋਂ ਬਾਅਦ ਰਾਜ ਕਮਜ਼ੋਰ ਹੋਇਆ\n\n**ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ**:\n- ਪਹਿਲਾ ਯੁੱਧ: 1845–46 → ਲਾਹੌਰ ਸੰਧੀ, ਕਸ਼ਮੀਰ ਅੰਗਰੇਜ਼ਾਂ ਨੂੰ ਮਿਲਿਆ\n- ਦੂਜਾ ਯੁੱਧ: 1848–49 → ਪੰਜਾਬ ਅੰਗਰੇਜ਼ੀ ਸਾਮਰਾਜ ਵਿੱਚ ਸ਼ਾਮਲ",
+          "pa": "ਰਣਜੀਤ ਸਿੰਘ (1780–1839)। ਲਾਹੌਰ 1799, ਮਹਾਰਾਜਾ 1801, ਕੋਹਿਨੂਰ। ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ 1: 1845-46। ਯੁੱਧ 2: 1848-49 → ਪੰਜਾਬ ਅੰਗਰੇਜ਼ਾਂ ਦੇ ਅਧੀਨ।",
+          "en": "**Maharaja Ranjit Singh** (1780–1839) built a powerful Sikh kingdom headquartered in Lahore (captured 1799; became Maharaja 1801). Obtained the Kohinoor diamond. Used European officers to modernize his army. After his death (1839) the kingdom weakened. **Anglo-Sikh Wars**: 1st (1845-46) — Treaty of Lahore, Kashmir transferred; 2nd (1848-49) — Punjab annexed by the British."
+        }
+      },
+      {
+        "heading": {
+          "hi": "सारांश और मुख्य तिथियाँ",
+          "pa": "ਸਾਰ ਅਤੇ ਮੁੱਖ ਤਾਰੀਖ਼ਾਂ",
+          "en": "Summary and Key Dates"
+        },
+        "text": {
+          "hi": "**ਮਹੱਤਵਪੂਰਨ ਤਾਰੀਖ਼ਾਂ**:\n- 1469: ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦਾ ਜਨਮ (ਤਲਵੰਡੀ, ਹੁਣ ਨਨਕਾਣਾ ਸਾਹਿਬ)\n- 1577: ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ (ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ)\n- 1604: ਆਦਿ ਗ੍ਰੰਥ ਸੰਪਾਦਿਤ (ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ)\n- 1699: ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ (ਵੈਸਾਖੀ, ਆਨੰਦਪੁਰ ਸਾਹਿਬ)\n- 1799: ਰਣਜੀਤ ਸਿੰਘ ਨੇ ਲਾਹੌਰ ਜਿੱਤਿਆ\n- 1849: ਪੰਜਾਬ ਦਾ ਬ੍ਰਿਟਿਸ਼ ਸਾਮਰਾਜ ਵਿੱਚ ਮਿਲਾਉਣਾ",
+          "pa": "1469 ਗੁਰੂ ਨਾਨਕ। 1699 ਖ਼ਾਲਸਾ। 1799 ਲਾਹੌਰ। 1849 ਅੰਗਰੇਜ਼ੀ ਰਾਜ।",
+          "en": "Key dates: 1469 — Guru Nanak's birth (Talwandi/Nankana Sahib); 1577 — Amritsar founded by Guru Ram Das; 1604 — Adi Granth compiled; 1699 — Khalsa Panth founded (Vaisakhi, Anandpur Sahib); 1799 — Ranjit Singh captures Lahore; 1849 — Punjab annexed by British."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਕਦੋਂ ਸਥਾਪਿਤ ਹੋਇਆ?",
+          "pa": "ਖ਼ਾਲਸਾ ਕਦੋਂ ਸਥਾਪਿਤ ਹੋਇਆ?",
+          "en": "When was the Khalsa Panth founded?"
+        },
+        "back": {
+          "hi": "1699, ਵੈਸਾਖੀ, ਆਨੰਦਪੁਰ ਸਾਹਿਬ (ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ)",
+          "pa": "1699, ਵੈਸਾਖੀ, ਆਨੰਦਪੁਰ ਸਾਹਿਬ",
+          "en": "1699, Vaisakhi, Anandpur Sahib (Guru Gobind Singh Ji)"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ ਕਿਸ ਗੁਰੂ ਨੇ ਕੀਤੀ?",
+          "pa": "ਆਦਿ ਗ੍ਰੰਥ — ਕਿਸ ਗੁਰੂ ਨੇ?",
+          "en": "Which Guru compiled the Adi Granth?"
+        },
+        "back": {
+          "hi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ (1604)",
+          "pa": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ, 1604",
+          "en": "Guru Arjan Dev Ji (1604)"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਗੁਰਮੁਖੀ ਲਿਪੀ ਦਾ ਪ੍ਰਚਾਰ ਕਿਸ ਗੁਰੂ ਨੇ ਕੀਤਾ?",
+          "pa": "ਗੁਰਮੁਖੀ ਦਾ ਪ੍ਰਚਾਰ — ਕਿਹੜੇ ਗੁਰੂ?",
+          "en": "Which Guru promoted the Gurmukhi script?"
+        },
+        "back": {
+          "hi": "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ (2ਵੇਂ ਗੁਰੂ)",
+          "pa": "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ",
+          "en": "Guru Angad Dev Ji (2nd Guru)"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਨੇ ਲਾਹੌਰ ਕਦੋਂ ਜਿੱਤਿਆ?",
+          "pa": "ਰਣਜੀਤ ਸਿੰਘ — ਲਾਹੌਰ ਕਦੋਂ?",
+          "en": "When did Ranjit Singh capture Lahore?"
+        },
+        "back": {
+          "hi": "1799",
+          "pa": "1799",
+          "en": "1799"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਅੰਗਰੇਜ਼ਾਂ ਨੇ ਪੰਜਾਬ ਕਦੋਂ ਮਿਲਾਇਆ?",
+          "pa": "ਪੰਜਾਬ ਅੰਗਰੇਜ਼ੀ ਰਾਜ ਵਿੱਚ ਕਦੋਂ?",
+          "en": "When did the British annex Punjab?"
+        },
+        "back": {
+          "hi": "1849 (ਦੂਜਾ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ)",
+          "pa": "1849, ਦੂਜਾ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ",
+          "en": "1849 (Second Anglo-Sikh War)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "ett-sh-q1",
+        "text": {
+          "hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਗੁਰੂ ਨੇ ਕੀਤੀ ਅਤੇ ਕਦੋਂ?",
+          "pa": "ਖ਼ਾਲਸਾ ਪੰਥ — ਕਿਸ ਗੁਰੂ ਅਤੇ ਕਦੋਂ?",
+          "en": "Who founded the Khalsa Panth and when?"
+        },
+        "options": {
+          "hi": [
+            "ਗੁਰੂ ਨਾਨਕ, 1469",
+            "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ, 1675",
+            "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ, 1699",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ, 1604"
+          ],
+          "pa": [
+            "ਗੁਰੂ ਨਾਨਕ, 1469",
+            "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ, 1675",
+            "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ, 1699",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ, 1604"
+          ],
+          "en": [
+            "Guru Nanak, 1469",
+            "Guru Tegh Bahadur, 1675",
+            "Guru Gobind Singh, 1699",
+            "Guru Arjan Dev, 1604"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨੇ 1699 ਵਿੱਚ ਵੈਸਾਖੀ ਵਾਲੇ ਦਿਨ ਆਨੰਦਪੁਰ ਸਾਹਿਬ ਵਿਖੇ ਕੀਤੀ।",
+          "pa": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ, 1699।",
+          "en": "Khalsa Panth was founded by Guru Gobind Singh Ji on Vaisakhi 1699 at Anandpur Sahib."
+        }
+      },
+      {
+        "id": "ett-sh-q2",
+        "text": {
+          "hi": "ਆਦਿ ਗ੍ਰੰਥ ਕਿਸ ਗੁਰੂ ਨੇ ਸੰਪਾਦਿਤ ਕੀਤਾ?",
+          "pa": "ਆਦਿ ਗ੍ਰੰਥ ਕਿਸ ਗੁਰੂ ਦਾ ਕੰਮ?",
+          "en": "Which Guru compiled the Adi Granth?"
+        },
+        "options": {
+          "hi": [
+            "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ"
+          ],
+          "pa": [
+            "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ"
+          ],
+          "en": [
+            "Guru Angad Dev Ji",
+            "Guru Ram Das Ji",
+            "Guru Arjan Dev Ji",
+            "Guru Gobind Singh Ji"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਨੇ 1604 ਵਿੱਚ ਆਦਿ ਗ੍ਰੰਥ ਸੰਪਾਦਿਤ ਕੀਤਾ ਅਤੇ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਵਿੱਚ ਸਥਾਪਿਤ ਕੀਤਾ।",
+          "pa": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ, 1604।",
+          "en": "Guru Arjan Dev Ji compiled the Adi Granth in 1604 and installed it in Harmandir Sahib."
+        }
+      },
+      {
+        "id": "ett-sh-q3",
+        "text": {
+          "hi": "ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਦੀ ਰਾਜਧਾਨੀ ਕਿਹੜੀ ਸੀ?",
+          "pa": "ਰਣਜੀਤ ਸਿੰਘ ਦੀ ਰਾਜਧਾਨੀ?",
+          "en": "What was the capital of Maharaja Ranjit Singh's kingdom?"
+        },
+        "options": {
+          "hi": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਦਿੱਲੀ",
+            "ਲਾਹੌਰ",
+            "ਮੁਲਤਾਨ"
+          ],
+          "pa": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਦਿੱਲੀ",
+            "ਲਾਹੌਰ",
+            "ਮੁਲਤਾਨ"
+          ],
+          "en": [
+            "Amritsar",
+            "Delhi",
+            "Lahore",
+            "Multan"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਲਾਹੌਰ ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਦੇ ਰਾਜ ਦੀ ਰਾਜਧਾਨੀ ਸੀ। ਉਨ੍ਹਾਂ ਨੇ 1799 ਵਿੱਚ ਲਾਹੌਰ ਤੇ ਕਬਜ਼ਾ ਕੀਤਾ।",
+          "pa": "ਲਾਹੌਰ = ਰਾਜਧਾਨੀ।",
+          "en": "Lahore was Maharaja Ranjit Singh's capital. He captured it in 1799."
+        }
+      },
+      {
+        "id": "ett-sh-q4",
+        "text": {
+          "hi": "ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ ਕਿਸ ਗੁਰੂ ਨੇ ਰੱਖੀ?",
+          "pa": "ਅੰਮ੍ਰਿਤਸਰ ਦੀ ਨੀਂਹ ਕਿਸ ਗੁਰੂ ਨੇ?",
+          "en": "Which Guru founded the city of Amritsar?"
+        },
+        "options": {
+          "hi": [
+            "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ",
+            "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ"
+          ],
+          "pa": [
+            "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ",
+            "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ"
+          ],
+          "en": [
+            "Guru Angad Dev Ji",
+            "Guru Amar Das Ji",
+            "Guru Ram Das Ji",
+            "Guru Arjan Dev Ji"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ ਨੇ 1577 ਵਿੱਚ ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ ਰੱਖੀ। ਪਹਿਲਾਂ ਇਸ ਨੂੰ ਰਾਮਦਾਸਪੁਰ ਕਿਹਾ ਜਾਂਦਾ ਸੀ।",
+          "pa": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ, 1577।",
+          "en": "Guru Ram Das Ji founded Amritsar in 1577. It was earlier called Ramdaspura."
+        }
+      },
+      {
+        "id": "ett-sh-q5",
+        "text": {
+          "hi": "ਦੂਜੇ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ ਤੋਂ ਬਾਅਦ ਪੰਜਾਬ ਦਾ ਕੀ ਹੋਇਆ?",
+          "pa": "ਦੂਜਾ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ (1849) ਤੋਂ ਬਾਅਦ?",
+          "en": "What happened to Punjab after the 2nd Anglo-Sikh War (1849)?"
+        },
+        "options": {
+          "hi": [
+            "ਪੰਜਾਬ ਆਜ਼ਾਦ ਰਿਹਾ",
+            "ਪੰਜਾਬ ਮੁਗ਼ਲਾਂ ਦੇ ਅਧੀਨ ਗਿਆ",
+            "ਪੰਜਾਬ ਨੂੰ ਬ੍ਰਿਟਿਸ਼ ਸਾਮਰਾਜ ਵਿੱਚ ਮਿਲਾਇਆ",
+            "ਪੰਜਾਬ ਅਫ਼ਗ਼ਾਨਿਸਤਾਨ ਦਾ ਹਿੱਸਾ ਬਣਿਆ"
+          ],
+          "pa": [
+            "ਆਜ਼ਾਦ ਰਿਹਾ",
+            "ਮੁਗ਼ਲਾਂ ਦੇ ਅਧੀਨ",
+            "ਬ੍ਰਿਟਿਸ਼ ਸਾਮਰਾਜ ਵਿੱਚ",
+            "ਅਫ਼ਗ਼ਾਨਿਸਤਾਨ ਵਿੱਚ"
+          ],
+          "en": [
+            "Punjab remained independent",
+            "Punjab came under Mughals",
+            "Punjab was annexed by the British Empire",
+            "Punjab became part of Afghanistan"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "1849 ਵਿੱਚ ਦੂਜੇ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ ਤੋਂ ਬਾਅਦ ਪੰਜਾਬ ਨੂੰ ਬ੍ਰਿਟਿਸ਼ ਈਸਟ ਇੰਡੀਆ ਕੰਪਨੀ ਨੇ ਆਪਣੇ ਸਾਮਰਾਜ ਵਿੱਚ ਮਿਲਾ ਲਿਆ।",
+          "pa": "1849 → ਪੰਜਾਬ ਬ੍ਰਿਟਿਸ਼ ਅਧੀਨ।",
+          "en": "In 1849, after the 2nd Anglo-Sikh War, Punjab was annexed by the British East India Company."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
     "id": "ett-punjab-history-geography",
     "subject": "SST",
     "unit": "Punjab History and Geography",
@@ -44971,9 +46818,6 @@
         "title": "PSEB Samajik Sikhya Class 10 (Punjabi Medium)",
         "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf"
       }
-    ],
-    "examIds": [
-      "ett"
     ]
   },
   {
@@ -45926,9 +47770,6 @@
         "title": "PSEB Science Class 10 Textbook",
         "url": "https://www.pseb.ac.in/public/books"
       }
-    ],
-    "examIds": [
-      "ett"
     ]
   }
 ]

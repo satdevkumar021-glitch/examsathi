@@ -1,0 +1,190 @@
+[
+  {
+    "id": "ett-punjabi-vocabulary",
+    "subject": "Punjabi",
+    "unit": "ਸ਼ਬਦ ਭੰਡਾਰ ਅਤੇ ਅਰਥ-ਵਿਗਿਆਨ",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "पंजाबी शब्द भंडार: समानार्थी, विपरीतार्थी और एक-शब्द प्रतिस्थापन",
+      "pa": "ਪੰਜਾਬੀ ਸ਼ਬਦ ਭੰਡਾਰ: ਸਮਾਨਾਰਥੀ, ਵਿਰੋਧਾਰਥੀ ਅਤੇ ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ",
+      "en": "Punjabi Vocabulary: Synonyms, Antonyms and One-word Substitution"
+    },
+    "level": "ETT Paper A — Punjabi qualifying (Class 6-10 PSEB level)",
+    "review_note": "Gurmukhi content. Must be reviewed by a native Punjabi-speaking teacher before publishing. Synonyms and antonyms cross-checked against PSEB Punjabi textbooks but require teacher verification.",
+    "sources": [
+      {
+        "title": "PSEB Punjabi textbook — Shabdavali (Class 6-10)",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "Official PSEB textbooks. Word lists drawn from standard PSEB Punjabi curriculum for ETT level."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "समानार्थी शब्द (ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ)", "pa": "ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ", "en": "Synonyms (Samaanarthi Shabd)"},
+        "text": {
+          "hi": "**ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ** ਉਹ ਸ਼ਬਦ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਅਰਥ ਇੱਕੋ ਜਿਹੇ ਜਾਂ ਮਿਲਦੇ-ਜੁਲਦੇ ਹੋਣ।\n\n**ਮਹੱਤਵਪੂਰਨ ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ**:\n\n| ਸ਼ਬਦ | ਸਮਾਨਾਰਥੀ |\n|------|----------|\n| ਅੱਖ | ਨੈਣ, ਨੇਤਰ, ਲੋਚਨ |\n| ਪਾਣੀ | ਜਲ, ਨੀਰ, ਵਾਰਿ |\n| ਅੱਗ | ਅਗਨੀ, ਵਹਨ, ਦਾਵਾਨਲ |\n| ਮੌਤ | ਮਰਨ, ਅਵਸਾਨ, ਦੇਹਾਂਤ |\n| ਦੁੱਖ | ਪੀੜ, ਸੰਤਾਪ, ਕਲੇਸ਼ |\n| ਸੁੱਖ | ਖੁਸ਼ੀ, ਅਨੰਦ, ਅਨੁਗ੍ਰਹਿ |\n| ਮਾਂ | ਅੰਮੜੀ, ਮਾਤਾ, ਜਨਨੀ |\n| ਘਰ | ਗ੍ਰਹਿ, ਭਵਨ, ਮਕਾਨ |\n| ਸੂਰਜ | ਦਿਨਕਰ, ਭਾਸਕਰ, ਆਦਿਤਯ |\n| ਰਾਤ | ਨਿਸ਼ਾ, ਰਜਨੀ, ਕਾਲੀ-ਰਾਤ |",
+          "pa": "ਸਮਾਨਾਰਥੀ = ਇੱਕੋ ਅਰਥ ਵਾਲੇ ਸ਼ਬਦ। ਅੱਖ = ਨੈਣ = ਨੇਤਰ। ਪਾਣੀ = ਜਲ = ਨੀਰ। ਅੱਗ = ਅਗਨੀ। ਮਾਂ = ਮਾਤਾ = ਜਨਨੀ। ਘਰ = ਭਵਨ = ਮਕਾਨ। ਸੂਰਜ = ਭਾਸਕਰ = ਦਿਨਕਰ।",
+          "en": "**Synonyms (ਸਮਾਨਾਰਥੀ)** are words with the same or similar meaning. Key pairs: ਅੱਖ = ਨੈਣ (eye); ਪਾਣੀ = ਜਲ (water); ਅੱਗ = ਅਗਨੀ (fire); ਮਾਂ = ਮਾਤਾ (mother); ਘਰ = ਭਵਨ (home); ਸੂਰਜ = ਭਾਸਕਰ (sun)."
+        }
+      },
+      {
+        "heading": {"hi": "विपरीतार्थी शब्द (ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ)", "pa": "ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ", "en": "Antonyms (Virodharthi Shabd)"},
+        "text": {
+          "hi": "**ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ** ਉਹ ਸ਼ਬਦ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦੇ ਅਰਥ ਇੱਕ-ਦੂਜੇ ਦੇ ਉਲਟ ਹੋਣ।\n\n**ਮਹੱਤਵਪੂਰਨ ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ**:\n\n| ਸ਼ਬਦ | ਵਿਰੋਧਾਰਥੀ |\n|------|----------|\n| ਦਿਨ | ਰਾਤ |\n| ਚੰਗਾ | ਮਾੜਾ |\n| ਸੱਚ | ਝੂਠ |\n| ਖੁਸ਼ੀ | ਗ਼ਮੀ |\n| ਮੋਟਾ | ਪਤਲਾ |\n| ਅਮੀਰ | ਗ਼ਰੀਬ |\n| ਜ਼ਿੰਦਗੀ | ਮੌਤ |\n| ਰੌਸ਼ਨੀ | ਹਨੇਰਾ |\n| ਲੰਮਾ | ਛੋਟਾ |\n| ਉੱਪਰ | ਹੇਠਾਂ |",
+          "pa": "ਵਿਰੋਧਾਰਥੀ = ਉਲਟ ਅਰਥ ਵਾਲੇ ਸ਼ਬਦ। ਦਿਨ ↔ ਰਾਤ। ਸੱਚ ↔ ਝੂਠ। ਖੁਸ਼ੀ ↔ ਗ਼ਮੀ। ਅਮੀਰ ↔ ਗ਼ਰੀਬ। ਰੌਸ਼ਨੀ ↔ ਹਨੇਰਾ।",
+          "en": "**Antonyms (ਵਿਰੋਧਾਰਥੀ)** are words with opposite meaning. Key pairs: ਦਿਨ↔ਰਾਤ (day/night); ਸੱਚ↔ਝੂਠ (truth/lie); ਖੁਸ਼ੀ↔ਗ਼ਮੀ (joy/grief); ਅਮੀਰ↔ਗ਼ਰੀਬ (rich/poor); ਰੌਸ਼ਨੀ↔ਹਨੇਰਾ (light/dark)."
+        }
+      },
+      {
+        "heading": {"hi": "एक-शब्दीय प्रतिस्थापन (ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ)", "pa": "ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ", "en": "One-word Substitution"},
+        "text": {
+          "hi": "**ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ** ਇੱਕ ਵਾਕੰਸ਼ ਦੀ ਥਾਂ ਇੱਕ ਸ਼ਬਦ ਵਰਤਣਾ ਹੈ।\n\n| ਵਾਕੰਸ਼ | ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ |\n|--------|---------------|\n| ਜੋ ਕਿਸੇ ਤੇ ਰਹਿਮ ਕਰੇ | ਦਿਆਲੂ |\n| ਜੋ ਕਦੇ ਨਾ ਮਰੇ | ਅਮਰ |\n| ਜੋ ਝੂਠ ਨਾ ਬੋਲੇ | ਸੱਚਾ / ਸੱਚਬੋਲ |\n| ਜੋ ਪੜ੍ਹਿਆ-ਲਿਖਿਆ ਨਾ ਹੋਵੇ | ਅਨਪੜ੍ਹ |\n| ਜੋ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰੇ | ਦੇਸ਼ਭਗਤ |\n| ਜਿਸ ਨੂੰ ਭੁੱਲਿਆ ਨਾ ਜਾ ਸਕੇ | ਅਭੁੱਲ |\n| ਜੋ ਆਪਣੇ ਮਨ ਦਾ ਮਾਲਕ ਹੋਵੇ | ਸੁਤੰਤਰ |",
+          "pa": "ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ: ਜੋ ਕਿਸੇ ਤੇ ਰਹਿਮ ਕਰੇ = ਦਿਆਲੂ। ਜੋ ਕਦੇ ਨਾ ਮਰੇ = ਅਮਰ। ਜੋ ਝੂਠ ਨਾ ਬੋਲੇ = ਸੱਚਬੋਲ। ਜੋ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰੇ = ਦੇਸ਼ਭਗਤ।",
+          "en": "One-word substitution replaces a phrase with a single word. 'One who shows mercy' = ਦਿਆਲੂ (merciful). 'One who never dies' = ਅਮਰ (immortal). 'One who loves the country' = ਦੇਸ਼ਭਗਤ (patriot). 'One who cannot read or write' = ਅਨਪੜ੍ਹ (illiterate)."
+        }
+      },
+      {
+        "heading": {"hi": "सारांश और परीक्षा युक्तियाँ", "pa": "ਸਾਰ ਅਤੇ ਪ੍ਰੀਖਿਆ ਸੁਝਾਅ", "en": "Summary and Exam Tips"},
+        "text": {
+          "hi": "**ਮੁੱਖ ਨੁਕਤੇ**:\n1. ਸਮਾਨਾਰਥੀ = ਇੱਕੋ ਅਰਥ; ਵਿਰੋਧਾਰਥੀ = ਉਲਟ ਅਰਥ\n2. PSEB ਪਾਠ-ਪੁਸਤਕਾਂ ਦੀ ਸ਼ਬਦਾਵਲੀ ETT ਪ੍ਰੀਖਿਆ ਲਈ ਸਭ ਤੋਂ ਭਰੋਸੇਮੰਦ ਸ੍ਰੋਤ ਹੈ\n3. ਤਤਸਮ ਸ਼ਬਦ (ਸੰਸਕ੍ਰਿਤ ਮੂਲ) ਅਤੇ ਤਦਭਵ ਸ਼ਬਦ (ਪ੍ਰਚਲਿਤ ਪੰਜਾਬੀ) ਵਿੱਚ ਫ਼ਰਕ ਸਮਝੋ\n4. ਸ਼ਬਦਾਵਲੀ ਸਵਾਲਾਂ ਵਿੱਚ ਸੰਦਰਭ (context) ਦੇਖ ਕੇ ਜਵਾਬ ਦਿਓ",
+          "pa": "ਸਮਾਨਾਰਥੀ = ਇੱਕੋ ਅਰਥ। ਵਿਰੋਧਾਰਥੀ = ਉਲਟ ਅਰਥ। PSEB ਕਿਤਾਬਾਂ ਪੜ੍ਹੋ। ਸੰਦਰਭ ਦੇਖ ਕੇ ਜਵਾਬ ਦਿਓ।",
+          "en": "Key points: (1) Synonyms = same meaning; Antonyms = opposite meaning. (2) PSEB textbooks are the most reliable vocabulary source for ETT. (3) Distinguish tatsam (Sanskrit-origin) from tadbhav (colloquial Punjabi) words. (4) In exam questions always look at context before choosing a synonym."
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "ਅੱਖ ਦਾ ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ ਕੀ ਹੈ?", "pa": "ਅੱਖ ਦਾ ਸਮਾਨਾਰਥੀ?", "en": "Synonym of ਅੱਖ (eye)?"}, "back": {"hi": "ਨੈਣ, ਨੇਤਰ, ਲੋਚਨ", "pa": "ਨੈਣ, ਨੇਤਰ, ਲੋਚਨ", "en": "ਨੈਣ, ਨੇਤਰ, ਲੋਚਨ"}},
+      {"front": {"hi": "ਖੁਸ਼ੀ ਦਾ ਵਿਰੋਧਾਰਥੀ ਕੀ ਹੈ?", "pa": "ਖੁਸ਼ੀ ਦਾ ਵਿਰੋਧਾਰਥੀ?", "en": "Antonym of ਖੁਸ਼ੀ (happiness)?"}, "back": {"hi": "ਗ਼ਮੀ (sadness/grief)", "pa": "ਗ਼ਮੀ", "en": "ਗ਼ਮੀ (grief/sadness)"}},
+      {"front": {"hi": "'ਜੋ ਕਦੇ ਨਾ ਮਰੇ' — ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ?", "pa": "'ਜੋ ਕਦੇ ਨਾ ਮਰੇ' ਲਈ ਇੱਕ ਸ਼ਬਦ?", "en": "One word for 'one who never dies'?"}, "back": {"hi": "ਅਮਰ", "pa": "ਅਮਰ", "en": "ਅਮਰ (immortal)"}},
+      {"front": {"hi": "ਪਾਣੀ ਦੇ ਦੋ ਸਮਾਨਾਰਥੀ ਦੱਸੋ", "pa": "ਪਾਣੀ ਦੇ ਦੋ ਸਮਾਨਾਰਥੀ?", "en": "Two synonyms of ਪਾਣੀ (water)?"}, "back": {"hi": "ਜਲ, ਨੀਰ", "pa": "ਜਲ, ਨੀਰ", "en": "ਜਲ, ਨੀਰ"}},
+      {"front": {"hi": "ਅਮੀਰ ਦਾ ਵਿਰੋਧਾਰਥੀ?", "pa": "ਅਮੀਰ ਦਾ ਵਿਰੋਧਾਰਥੀ?", "en": "Antonym of ਅਮੀਰ (rich)?"}, "back": {"hi": "ਗ਼ਰੀਬ (poor)", "pa": "ਗ਼ਰੀਬ", "en": "ਗ਼ਰੀਬ (poor)"}},
+      {"front": {"hi": "'ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰਨ ਵਾਲਾ' — ਇੱਕ ਸ਼ਬਦ?", "pa": "'ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰਨ ਵਾਲਾ'?", "en": "One word for 'one who loves his country'?"}, "back": {"hi": "ਦੇਸ਼ਭਗਤ (patriot)", "pa": "ਦੇਸ਼ਭਗਤ", "en": "ਦੇਸ਼ਭਗਤ (patriot)"}}
+    ],
+    "questions": [
+      {
+        "id": "ett-pv-q1",
+        "text": {"hi": "ਹੇਠਾਂ ਦਿੱਤੇ ਸ਼ਬਦ 'ਅੱਖ' ਦਾ ਸਮਾਨਾਰਥੀ ਕਿਹੜਾ ਹੈ?", "pa": "'ਅੱਖ' ਦਾ ਸਮਾਨਾਰਥੀ?", "en": "Which is a synonym of 'ਅੱਖ' (eye)?"},
+        "options": {"hi": ["ਪੈਰ", "ਨੈਣ", "ਦੰਦ", "ਨੱਕ"], "pa": ["ਪੈਰ", "ਨੈਣ", "ਦੰਦ", "ਨੱਕ"], "en": ["ਪੈਰ", "ਨੈਣ", "ਦੰਦ", "ਨੱਕ"]},
+        "answer": 1,
+        "explanation": {"hi": "ਨੈਣ ਦਾ ਅਰਥ ਹੈ ਅੱਖ। ਇਹ ਸਮਾਨਾਰਥੀ ਸ਼ਬਦ ਹੈ। ਪੈਰ=foot, ਦੰਦ=tooth, ਨੱਕ=nose।", "pa": "ਨੈਣ = ਅੱਖ। ਸਮਾਨਾਰਥੀ।", "en": "'ਨੈਣ' means 'eye' — it is a synonym of 'ਅੱਖ'. ਪੈਰ=foot, ਦੰਦ=tooth, ਨੱਕ=nose."}
+      },
+      {
+        "id": "ett-pv-q2",
+        "text": {"hi": "'ਖੁਸ਼ੀ' ਦਾ ਵਿਰੋਧਾਰਥੀ ਸ਼ਬਦ ਕਿਹੜਾ ਹੈ?", "pa": "'ਖੁਸ਼ੀ' ਦਾ ਵਿਰੋਧਾਰਥੀ?", "en": "What is the antonym of 'ਖੁਸ਼ੀ' (happiness)?"},
+        "options": {"hi": ["ਅਨੰਦ", "ਖੇੜਾ", "ਗ਼ਮੀ", "ਹਰਖ"], "pa": ["ਅਨੰਦ", "ਖੇੜਾ", "ਗ਼ਮੀ", "ਹਰਖ"], "en": ["ਅਨੰਦ", "ਖੇੜਾ", "ਗ਼ਮੀ", "ਹਰਖ"]},
+        "answer": 2,
+        "explanation": {"hi": "ਗ਼ਮੀ ਦਾ ਅਰਥ ਦੁੱਖ/ਉਦਾਸੀ ਹੈ, ਜੋ ਖੁਸ਼ੀ ਦਾ ਵਿਰੋਧਾਰਥੀ ਹੈ। ਅਨੰਦ, ਖੇੜਾ, ਹਰਖ ਸਾਰੇ ਖੁਸ਼ੀ ਦੇ ਸਮਾਨਾਰਥੀ ਹਨ।", "pa": "ਗ਼ਮੀ = ਉਦਾਸੀ = ਖੁਸ਼ੀ ਦਾ ਵਿਰੋਧ।", "en": "'ਗ਼ਮੀ' means grief/sadness — the opposite of happiness. ਅਨੰਦ, ਖੇੜਾ and ਹਰਖ are all synonyms of happiness."}
+      },
+      {
+        "id": "ett-pv-q3",
+        "text": {"hi": "'ਜੋ ਕਦੇ ਨਾ ਮਰੇ' ਲਈ ਪੰਜਾਬੀ ਵਿੱਚ ਸਹੀ ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ ਕਿਹੜਾ ਹੈ?", "pa": "'ਜੋ ਕਦੇ ਨਾ ਮਰੇ' — ਇੱਕ ਸ਼ਬਦ?", "en": "One-word substitution for 'one who never dies' in Punjabi?"},
+        "options": {"hi": ["ਅਨਪੜ੍ਹ", "ਦਿਆਲੂ", "ਅਮਰ", "ਦੇਸ਼ਭਗਤ"], "pa": ["ਅਨਪੜ੍ਹ", "ਦਿਆਲੂ", "ਅਮਰ", "ਦੇਸ਼ਭਗਤ"], "en": ["ਅਨਪੜ੍ਹ", "ਦਿਆਲੂ", "ਅਮਰ", "ਦੇਸ਼ਭਗਤ"]},
+        "answer": 2,
+        "explanation": {"hi": "ਅਮਰ = ਜੋ ਕਦੇ ਨਾ ਮਰੇ (immortal)। ਅਨਪੜ੍ਹ=illiterate, ਦਿਆਲੂ=merciful, ਦੇਸ਼ਭਗਤ=patriot।", "pa": "ਅਮਰ = ਕਦੇ ਨਾ ਮਰੇ।", "en": "'ਅਮਰ' means immortal. ਅਨਪੜ੍ਹ=illiterate, ਦਿਆਲੂ=merciful, ਦੇਸ਼ਭਗਤ=patriot."}
+      },
+      {
+        "id": "ett-pv-q4",
+        "text": {"hi": "ਹੇਠਾਂ ਦਿੱਤੇ ਵਿੱਚੋਂ 'ਪਾਣੀ' ਦਾ ਸਮਾਨਾਰਥੀ ਕਿਹੜਾ ਨਹੀਂ ਹੈ?", "pa": "'ਪਾਣੀ' ਦਾ ਸਮਾਨਾਰਥੀ ਨਹੀਂ?", "en": "Which is NOT a synonym of 'ਪਾਣੀ' (water)?"},
+        "options": {"hi": ["ਜਲ", "ਨੀਰ", "ਵਾਰਿ", "ਅਗਨੀ"], "pa": ["ਜਲ", "ਨੀਰ", "ਵਾਰਿ", "ਅਗਨੀ"], "en": ["ਜਲ", "ਨੀਰ", "ਵਾਰਿ", "ਅਗਨੀ"]},
+        "answer": 3,
+        "explanation": {"hi": "ਅਗਨੀ ਦਾ ਅਰਥ ਅੱਗ ਹੈ, ਪਾਣੀ ਨਹੀਂ। ਜਲ, ਨੀਰ ਅਤੇ ਵਾਰਿ ਸਾਰੇ ਪਾਣੀ ਦੇ ਸਮਾਨਾਰਥੀ ਹਨ।", "pa": "ਅਗਨੀ = ਅੱਗ, ਪਾਣੀ ਨਹੀਂ।", "en": "'ਅਗਨੀ' means fire, not water. ਜਲ, ਨੀਰ and ਵਾਰਿ are all synonyms of water."}
+      },
+      {
+        "id": "ett-pv-q5",
+        "text": {"hi": "'ਸੱਚ' ਦਾ ਵਿਰੋਧਾਰਥੀ ਕਿਹੜਾ ਹੈ?", "pa": "'ਸੱਚ' ਦਾ ਵਿਰੋਧਾਰਥੀ?", "en": "Antonym of 'ਸੱਚ' (truth)?"},
+        "options": {"hi": ["ਸੱਚਾ", "ਝੂਠ", "ਸੱਚਬੋਲ", "ਸੱਚਿਆਰ"], "pa": ["ਸੱਚਾ", "ਝੂਠ", "ਸੱਚਬੋਲ", "ਸੱਚਿਆਰ"], "en": ["ਸੱਚਾ", "ਝੂਠ", "ਸੱਚਬੋਲ", "ਸੱਚਿਆਰ"]},
+        "answer": 1,
+        "explanation": {"hi": "ਝੂਠ ਸੱਚ ਦਾ ਵਿਰੋਧਾਰਥੀ ਹੈ। ਸੱਚਾ, ਸੱਚਬੋਲ ਅਤੇ ਸੱਚਿਆਰ ਸਾਰੇ ਸੱਚ ਦੇ ਅਰਥ ਨਾਲ ਸੰਬੰਧਿਤ ਹਨ।", "pa": "ਝੂਠ = ਸੱਚ ਦਾ ਵਿਰੋਧ।", "en": "'ਝੂਠ' (lie) is the antonym of 'ਸੱਚ' (truth). ਸੱਚਾ, ਸੱਚਬੋਲ, ਸੱਚਿਆਰ all relate to truthfulness."}
+      },
+      {
+        "id": "ett-pv-q6",
+        "text": {"hi": "'ਜੋ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰੇ' — ਇੱਕ-ਸ਼ਬਦੀ ਬਦਲ?", "pa": "'ਜੋ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰੇ'?", "en": "One word for 'one who loves his country'?"},
+        "options": {"hi": ["ਸੁਤੰਤਰ", "ਦੇਸ਼ਭਗਤ", "ਅਭੁੱਲ", "ਦਿਆਲੂ"], "pa": ["ਸੁਤੰਤਰ", "ਦੇਸ਼ਭਗਤ", "ਅਭੁੱਲ", "ਦਿਆਲੂ"], "en": ["ਸੁਤੰਤਰ", "ਦੇਸ਼ਭਗਤ", "ਅਭੁੱਲ", "ਦਿਆਲੂ"]},
+        "answer": 1,
+        "explanation": {"hi": "ਦੇਸ਼ਭਗਤ ਉਹ ਵਿਅਕਤੀ ਹੈ ਜੋ ਆਪਣੇ ਦੇਸ਼ ਨਾਲ ਪਿਆਰ ਕਰਦਾ ਹੈ। ਸੁਤੰਤਰ=free, ਅਭੁੱਲ=unforgettable, ਦਿਆਲੂ=merciful।", "pa": "ਦੇਸ਼ਭਗਤ = ਦੇਸ਼ ਨਾਲ ਪਿਆਰ।", "en": "'ਦੇਸ਼ਭਗਤ' means patriot. ਸੁਤੰਤਰ=free/independent, ਅਭੁੱਲ=unforgettable, ਦਿਆਲੂ=merciful."}
+      }
+    ]
+  },
+  {
+    "id": "ett-punjabi-idioms-proverbs",
+    "subject": "Punjabi",
+    "unit": "ਮੁਹਾਵਰੇ ਅਤੇ ਅਖਾਣ",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "पंजाबी मुहावरे और कहावतें",
+      "pa": "ਪੰਜਾਬੀ ਮੁਹਾਵਰੇ ਅਤੇ ਅਖਾਣ",
+      "en": "Punjabi Idioms (Muhaavare) and Proverbs (Akhaan)"
+    },
+    "level": "ETT Paper A — Punjabi qualifying (Class 6-10 PSEB level)",
+    "review_note": "Gurmukhi content. Must be reviewed by a native Punjabi-speaking teacher before publishing. Idiom meanings are based on standard PSEB-level usage; regional variants may differ.",
+    "sources": [
+      {
+        "title": "PSEB Punjabi textbook — Muhavare and Akhaan (Class 6-10)",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "Official PSEB textbooks."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "मुहावरे क्या हैं? (ਮੁਹਾਵਰੇ ਕੀ ਹੁੰਦੇ ਹਨ?)", "pa": "ਮੁਹਾਵਰੇ ਕੀ ਹੁੰਦੇ ਹਨ?", "en": "What are Idioms (Muhaavare)?"},
+        "text": {
+          "hi": "**ਮੁਹਾਵਰੇ** ਉਹ ਵਾਕੰਸ਼ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਦਾ ਸ਼ਾਬਦਿਕ ਅਰਥ ਨਹੀਂ ਲਿਆ ਜਾਂਦਾ; ਉਨ੍ਹਾਂ ਦਾ ਵਿਸ਼ੇਸ਼ ਭਾਵਾਰਥ ਹੁੰਦਾ ਹੈ।\n\n**ਮਹੱਤਵਪੂਰਨ ਮੁਹਾਵਰੇ**:\n\n| ਮੁਹਾਵਰਾ | ਅਰਥ | ਉਦਾਹਰਨ |\n|----------|------|----------|\n| ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ | ਸੁਰਤ ਆਉਣੀ / ਸਮਝ ਆਉਣੀ | ਹਾਰ ਤੋਂ ਬਾਅਦ ਉਸ ਦੀਆਂ ਅੱਖਾਂ ਖੁੱਲ੍ਹੀਆਂ। |\n| ਕੰਨ ਭਰਨਾ | ਚੁਗ਼ਲੀ ਕਰਨੀ | ਉਸ ਨੇ ਮੇਰੇ ਖ਼ਿਲਾਫ਼ ਕੰਨ ਭਰੇ। |\n| ਹੱਥ ਧੋ ਬੈਠਣਾ | ਗੁਆ ਲੈਣਾ | ਉਸ ਨੇ ਆਪਣੀ ਨੌਕਰੀ ਤੋਂ ਹੱਥ ਧੋ ਲਿਆ। |\n| ਮੂੰਹ ਭਾਰਾ ਕਰਨਾ | ਗੁੱਸੇ ਹੋਣਾ | ਛੋਟੀ ਗੱਲ ਤੇ ਮੂੰਹ ਭਾਰਾ ਨਾ ਕਰੋ। |\n| ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ | ਬਹੁਤ ਤੰਗ ਕਰਨਾ | ਬੱਚਿਆਂ ਨੇ ਨੱਕ ਵਿੱਚ ਦਮ ਕਰ ਦਿੱਤਾ। |\n| ਪੱਲਾ ਝਾੜਨਾ | ਸੰਬੰਧ ਤੋੜਨਾ / ਕਿਨਾਰਾ ਕਰਨਾ | ਔਖੇ ਸਮੇਂ ਉਸ ਨੇ ਪੱਲਾ ਝਾੜ ਲਿਆ। |",
+          "pa": "ਮੁਹਾਵਰੇ = ਵਿਸ਼ੇਸ਼ ਭਾਵਾਰਥ ਵਾਲੇ ਵਾਕੰਸ਼। ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ = ਸਮਝ ਆਉਣੀ। ਕੰਨ ਭਰਨਾ = ਚੁਗ਼ਲੀ। ਹੱਥ ਧੋ ਬੈਠਣਾ = ਗੁਆ ਲੈਣਾ। ਨੱਕ ਵਿੱਚ ਦਮ = ਬਹੁਤ ਤੰਗ ਕਰਨਾ।",
+          "en": "**Idioms (ਮੁਹਾਵਰੇ)** are phrases whose figurative meaning differs from their literal meaning. Key ones: ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ = to gain awareness; ਕੰਨ ਭਰਨਾ = to gossip/slander; ਹੱਥ ਧੋ ਬੈਠਣਾ = to lose; ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ = to annoy greatly; ਪੱਲਾ ਝਾੜਨਾ = to disassociate."
+        }
+      },
+      {
+        "heading": {"hi": "अखाण (कहावतें) — ਅਖਾਣ", "pa": "ਅਖਾਣ (ਕਹਾਵਤਾਂ)", "en": "Proverbs (Akhaan)"},
+        "text": {
+          "hi": "**ਅਖਾਣ** ਲੋਕ-ਸਿਆਣਪ ਤੋਂ ਨਿਕਲੀਆਂ ਛੋਟੀਆਂ ਅਤੇ ਅਰਥਪੂਰਨ ਕਹਾਵਤਾਂ ਹਨ।\n\n**ਮਹੱਤਵਪੂਰਨ ਅਖਾਣ**:\n\n| ਅਖਾਣ | ਅਰਥ |\n|-------|------|\n| ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ | ਚੰਗੇ ਕੰਮ ਦਾ ਚੰਗਾ ਫਲ ਮਿਲਦਾ ਹੈ |\n| ਜੈਸਾ ਕਰੋਗੇ ਵੈਸਾ ਭਰੋਗੇ | ਕਰਮ ਦਾ ਫਲ ਭੋਗਣਾ ਪੈਂਦਾ ਹੈ |\n| ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ | ਆਪਣੇ ਦੀ ਕਦਰ ਨਹੀਂ ਹੁੰਦੀ |\n| ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ | ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਉਣਾ |\n| ਕੱਲ੍ਹ ਦੀ ਬਜਾਏ ਅੱਜ ਕੰਮ ਕਰ | ਕੰਮ ਨੂੰ ਕੱਲ੍ਹ ਤੇ ਨਾ ਛੱਡੋ |",
+          "pa": "ਅਖਾਣ = ਲੋਕ ਸਿਆਣਪ। ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ। ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ। ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ।",
+          "en": "**Proverbs (ਅਖਾਣ)** are short sayings expressing folk wisdom. Key ones: 'ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ' = good deeds bring good results; 'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ' = familiarity breeds contempt; 'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ' = a bad workman blames his tools."
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "'ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ?", "pa": "'ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ'?", "en": "Meaning of idiom 'ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ'?"}, "back": {"hi": "ਸੁਰਤ ਆਉਣੀ / ਸਮਝ ਆਉਣੀ (to gain awareness)", "pa": "ਸਮਝ ਆਉਣੀ", "en": "To gain awareness / come to one's senses"}},
+      {"front": {"hi": "'ਕੰਨ ਭਰਨਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ?", "pa": "'ਕੰਨ ਭਰਨਾ'?", "en": "Meaning of 'ਕੰਨ ਭਰਨਾ'?"}, "back": {"hi": "ਚੁਗ਼ਲੀ ਕਰਨੀ (to slander/gossip)", "pa": "ਚੁਗ਼ਲੀ ਕਰਨੀ", "en": "To gossip / slander someone"}},
+      {"front": {"hi": "'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ' ਅਖਾਣ ਦਾ ਅਰਥ?", "pa": "'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ'?", "en": "Meaning of proverb 'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ'?"}, "back": {"hi": "ਆਪਣੇ ਘਰ ਵਾਲੇ ਦੀ ਕਦਰ ਨਹੀਂ ਹੁੰਦੀ (familiarity breeds contempt)", "pa": "ਆਪਣਿਆਂ ਦੀ ਕਦਰ ਨਹੀਂ", "en": "Familiarity breeds contempt — the prophet is not honoured in his own home"}},
+      {"front": {"hi": "'ਪੱਲਾ ਝਾੜਨਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ?", "pa": "'ਪੱਲਾ ਝਾੜਨਾ'?", "en": "Meaning of 'ਪੱਲਾ ਝਾੜਨਾ'?"}, "back": {"hi": "ਸੰਬੰਧ ਤੋੜਨਾ / ਕਿਨਾਰਾ ਕਰਨਾ (to disassociate)", "pa": "ਕਿਨਾਰਾ ਕਰਨਾ", "en": "To disassociate / wash one's hands of something"}},
+      {"front": {"hi": "'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ' ਅਖਾਣ?", "pa": "'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ'?", "en": "Meaning of 'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ'?"}, "back": {"hi": "ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਉਣਾ", "pa": "ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਉਣਾ", "en": "A bad workman blames his tools"}}
+    ],
+    "questions": [
+      {
+        "id": "ett-pi-q1",
+        "text": {"hi": "'ਕੰਨ ਭਰਨਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ ਕੀ ਹੈ?", "pa": "'ਕੰਨ ਭਰਨਾ' ਦਾ ਅਰਥ?", "en": "What is the meaning of the idiom 'ਕੰਨ ਭਰਨਾ'?"},
+        "options": {"hi": ["ਕੰਨ ਸਾਫ਼ ਕਰਨੇ", "ਚੁਗ਼ਲੀ ਕਰਨੀ", "ਸੁਣਨਾ ਬੰਦ ਕਰਨਾ", "ਕੰਨਾਂ ਵਿੱਚ ਦਰਦ"], "pa": ["ਕੰਨ ਸਾਫ਼ ਕਰਨੇ", "ਚੁਗ਼ਲੀ ਕਰਨੀ", "ਸੁਣਨਾ ਬੰਦ ਕਰਨਾ", "ਕੰਨਾਂ ਵਿੱਚ ਦਰਦ"], "en": ["ਕੰਨ ਸਾਫ਼ ਕਰਨੇ", "ਚੁਗ਼ਲੀ ਕਰਨੀ", "ਸੁਣਨਾ ਬੰਦ ਕਰਨਾ", "ਕੰਨਾਂ ਵਿੱਚ ਦਰਦ"]},
+        "answer": 1,
+        "explanation": {"hi": "ਕੰਨ ਭਰਨਾ ਦਾ ਭਾਵਾਰਥ ਚੁਗ਼ਲੀ ਕਰਨਾ ਜਾਂ ਕਿਸੇ ਦੇ ਵਿਰੁੱਧ ਕੁਝ ਕਹਿਣਾ ਹੈ। ਇਹ ਸ਼ਾਬਦਿਕ ਅਰਥ ਨਹੀਂ ਲਿਆ ਜਾਂਦਾ।", "pa": "ਕੰਨ ਭਰਨਾ = ਚੁਗ਼ਲੀ ਕਰਨੀ।", "en": "'ਕੰਨ ਭਰਨਾ' figuratively means to gossip/slander. The literal 'filling ears' is not the intended meaning."}
+      },
+      {
+        "id": "ett-pi-q2",
+        "text": {"hi": "'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ' ਅਖਾਣ ਦਾ ਅਰਥ ਕੀ ਹੈ?", "pa": "'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ'?", "en": "What is the meaning of the proverb 'ਘਰ ਦਾ ਜੋਗੀ ਜੋਗੜਾ'?"},
+        "options": {"hi": ["ਘਰ ਵਾਲਿਆਂ ਨੂੰ ਆਦਰ ਮਿਲਦਾ ਹੈ", "ਘਰ ਵਾਲਿਆਂ ਦੀ ਕਦਰ ਨਹੀਂ ਹੁੰਦੀ", "ਯੋਗੀ ਘਰ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ", "ਘਰ ਚੰਗਾ ਹੈ"], "pa": ["ਆਦਰ ਮਿਲਦਾ ਹੈ", "ਕਦਰ ਨਹੀਂ ਹੁੰਦੀ", "ਯੋਗੀ ਘਰ ਵਿੱਚ", "ਘਰ ਚੰਗਾ ਹੈ"], "en": ["Home people are respected", "Familiarity breeds contempt", "A yogi lives at home", "Home is good"]},
+        "answer": 1,
+        "explanation": {"hi": "ਇਸ ਅਖਾਣ ਦਾ ਅਰਥ ਹੈ ਕਿ ਆਪਣੇ ਘਰ ਦੇ ਪੜ੍ਹੇ-ਲਿਖੇ/ਗੁਣੀ ਵਿਅਕਤੀ ਨੂੰ ਓਨੀ ਕਦਰ ਨਹੀਂ ਮਿਲਦੀ ਜਿੰਨੀ ਬਾਹਰ ਵਾਲੇ ਨੂੰ ਮਿਲਦੀ ਹੈ।", "pa": "ਆਪਣਿਆਂ ਦੀ ਕਦਰ ਨਹੀਂ।", "en": "This proverb means that a skilled/learned person is less valued in his own home — similar to 'familiarity breeds contempt' in English."}
+      },
+      {
+        "id": "ett-pi-q3",
+        "text": {"hi": "'ਹੱਥ ਧੋ ਬੈਠਣਾ' ਮੁਹਾਵਰੇ ਦਾ ਅਰਥ?", "pa": "'ਹੱਥ ਧੋ ਬੈਠਣਾ'?", "en": "Meaning of idiom 'ਹੱਥ ਧੋ ਬੈਠਣਾ'?"},
+        "options": {"hi": ["ਹੱਥ ਧੋਣੇ", "ਕੋਈ ਚੀਜ਼ ਗੁਆ ਲੈਣੀ", "ਕੰਮ ਸ਼ੁਰੂ ਕਰਨਾ", "ਖੁਸ਼ ਹੋਣਾ"], "pa": ["ਹੱਥ ਧੋਣੇ", "ਗੁਆ ਲੈਣਾ", "ਕੰਮ ਸ਼ੁਰੂ", "ਖੁਸ਼ ਹੋਣਾ"], "en": ["To wash hands", "To lose something", "To start work", "To be happy"]},
+        "answer": 1,
+        "explanation": {"hi": "ਹੱਥ ਧੋ ਬੈਠਣਾ ਦਾ ਭਾਵ ਕਿਸੇ ਚੀਜ਼ ਤੋਂ ਵਾਂਝੇ ਹੋ ਜਾਣਾ ਜਾਂ ਗੁਆ ਲੈਣਾ ਹੈ। ਜਿਵੇਂ: ਉਸ ਨੇ ਆਪਣੀ ਨੌਕਰੀ ਤੋਂ ਹੱਥ ਧੋ ਲਿਆ।", "pa": "ਹੱਥ ਧੋ ਬੈਠਣਾ = ਗੁਆ ਲੈਣਾ।", "en": "'ਹੱਥ ਧੋ ਬੈਠਣਾ' means to lose/be deprived of something. E.g., 'He lost his job.'"}
+      },
+      {
+        "id": "ett-pi-q4",
+        "text": {"hi": "'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ' ਅਖਾਣ ਕਿਹੜੀ ਸਥਿਤੀ ਵਿੱਚ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?", "pa": "ਇਹ ਅਖਾਣ ਕਦੋਂ ਵਰਤਦੇ ਹਨ?", "en": "When is the proverb 'ਨੱਚਣਾ ਨਾ ਆਵੇ ਆਂਗਣ ਟੇਢਾ' used?"},
+        "options": {"hi": ["ਜਦੋਂ ਕੋਈ ਆਂਗਣ ਸਾਫ਼ ਨਾ ਕਰੇ", "ਜਦੋਂ ਕੋਈ ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਵੇ", "ਜਦੋਂ ਕੋਈ ਚੰਗਾ ਨੱਚੇ", "ਜਦੋਂ ਆਂਗਣ ਵਿੱਚ ਥਾਂ ਘੱਟ ਹੋਵੇ"], "pa": ["ਆਂਗਣ ਸਾਫ਼ ਨਾ ਕਰੇ", "ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ", "ਚੰਗਾ ਨੱਚੇ", "ਥਾਂ ਘੱਟ ਹੋਵੇ"], "en": ["When someone doesn't clean the courtyard", "When someone blames others for their own weakness", "When someone dances well", "When there is less space in the courtyard"]},
+        "answer": 1,
+        "explanation": {"hi": "ਇਹ ਅਖਾਣ ਉਸ ਵਿਅਕਤੀ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ ਜੋ ਆਪਣੀ ਗਲਤੀ/ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ ਲਾਉਂਦਾ ਹੈ — ਜਿਵੇਂ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ 'a bad workman blames his tools'।", "pa": "ਆਪਣੀ ਕਮਜ਼ੋਰੀ ਦਾ ਦੋਸ਼ ਦੂਜਿਆਂ ਤੇ।", "en": "Used when someone blames others for their own failures — equivalent to English 'a bad workman blames his tools'."}
+      },
+      {
+        "id": "ett-pi-q5",
+        "text": {"hi": "ਹੇਠਾਂ ਦਿੱਤੇ ਵਿੱਚੋਂ ਕਿਹੜਾ ਮੁਹਾਵਰਾ ਨਹੀਂ ਹੈ?", "pa": "ਮੁਹਾਵਰਾ ਨਹੀਂ ਕਿਹੜਾ?", "en": "Which of the following is NOT an idiom (muhaavara)?"},
+        "options": {"hi": ["ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ", "ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ", "ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ", "ਪੱਲਾ ਝਾੜਨਾ"], "pa": ["ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ", "ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ", "ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ", "ਪੱਲਾ ਝਾੜਨਾ"], "en": ["ਅੱਖਾਂ ਖੁੱਲ੍ਹਣਾ", "ਨੱਕ ਵਿੱਚ ਦਮ ਕਰਨਾ", "ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ", "ਪੱਲਾ ਝਾੜਨਾ"]},
+        "answer": 2,
+        "explanation": {"hi": "'ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ' ਇੱਕ ਅਖਾਣ (ਕਹਾਵਤ) ਹੈ, ਮੁਹਾਵਰਾ ਨਹੀਂ। ਬਾਕੀ ਤਿੰਨੇ ਮੁਹਾਵਰੇ ਹਨ।", "pa": "'ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ' = ਅਖਾਣ, ਮੁਹਾਵਰਾ ਨਹੀਂ।", "en": "'ਕਰ ਭਲਾ ਹੋਵੇ ਭਲਾ' is a proverb (ਅਖਾਣ), not an idiom (ਮੁਹਾਵਰਾ). The other three are idioms."}
+      }
+    ]
+  }
+]

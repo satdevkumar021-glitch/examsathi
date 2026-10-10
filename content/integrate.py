@@ -162,6 +162,21 @@ for l in json.load(open(research/'biology-lessons.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add ETT Paper A Punjabi batch 2 (Vocabulary synonyms/antonyms, Idioms/Proverbs)
+for l in json.load(open(research/'ett-punjabi-paper-a-2.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add ETT Mathematics batch 2 (Statistics mean/median/mode/probability, Algebra %)
+for l in json.load(open(research/'ett-math-lessons-2.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add ETT Social Studies batch 1 (Punjab Geography rivers/crops, Sikh History Guru/Ranjit Singh)
+for l in json.load(open(research/'ett-social-studies-1.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 assert len({l['id'] for l in result})==len(result), f"Duplicate IDs: {[l['id'] for l in result if [l2['id'] for l2 in result].count(l['id'])>1]}"
 json.dump(result,open(root/'lessons.json','w'),ensure_ascii=False,indent=2)
 # Keep a clean syllabus inventory; evidence/claims remain in repository docs.

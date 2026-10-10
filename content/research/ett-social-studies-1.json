@@ -1,0 +1,185 @@
+[
+  {
+    "id": "ett-sst-punjab-geography",
+    "subject": "SST",
+    "unit": "Geography — Punjab",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "पंजाब का भूगोल: नदियाँ, मिट्टी, फसलें और खनिज",
+      "pa": "ਪੰਜਾਬ ਦਾ ਭੂਗੋਲ: ਦਰਿਆ, ਮਿੱਟੀ, ਫਸਲਾਂ ਅਤੇ ਕੁਦਰਤੀ ਸੋਮੇ",
+      "en": "Geography of Punjab: Rivers, Soils, Crops and Natural Resources"
+    },
+    "level": "ETT Paper B — Social Studies (Class 6-8 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Social Studies Class 6-8 — Punjab Geography chapters",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "Official PSEB SST textbooks. Statistical data (area, population) should be verified against latest census."
+      },
+      {
+        "title": "Punjab Government — Key Facts",
+        "url": "https://punjab.gov.in",
+        "note": "Official Punjab state portal. Source for administrative geography."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "पंजाब का परिचय और नदियाँ", "pa": "ਪੰਜਾਬ ਦੀ ਜਾਣ-ਪਛਾਣ ਅਤੇ ਦਰਿਆ", "en": "Introduction to Punjab and its Rivers"},
+        "text": {
+          "hi": "**ਪੰਜਾਬ** ਭਾਰਤ ਦੇ ਉੱਤਰ-ਪੱਛਮ ਵਿੱਚ ਸਥਿਤ ਹੈ। 'ਪੰਜਾਬ' ਫ਼ਾਰਸੀ ਭਾਸ਼ਾ ਦਾ ਸ਼ਬਦ ਹੈ ਜਿਸ ਦਾ ਅਰਥ ਹੈ 'ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ' — ਸਤਲੁਜ, ਬਿਆਸ, ਰਾਵੀ, ਚਨਾਬ ਅਤੇ ਜੇਹਲਮ।\n\n**ਮੌਜੂਦਾ ਪੰਜਾਬ ਦੇ ਪ੍ਰਮੁੱਖ ਦਰਿਆ** (ਭਾਰਤੀ ਪੱਖ):\n- **ਸਤਲੁਜ**: ਪੰਜਾਬ ਦਾ ਸਭ ਤੋਂ ਲੰਮਾ ਦਰਿਆ ਜੋ ਤਿੱਬਤ ਤੋਂ ਨਿਕਲਦਾ ਹੈ। ਰੋਪੜ ਤੋਂ ਪੰਜਾਬ ਵਿੱਚ ਦਾਖ਼ਲ ਹੁੰਦਾ ਹੈ।\n- **ਬਿਆਸ**: ਕੁੱਲੂ ਤੋਂ ਨਿਕਲਦਾ ਹੈ। ਹਾਰੀਕੇ ਪੱਤਣ ਉੱਤੇ ਸਤਲੁਜ ਨਾਲ ਮਿਲਦਾ ਹੈ।\n- **ਰਾਵੀ**: ਰੋਹਤਾਂਗ ਤੋਂ ਨਿਕਲਦਾ ਹੈ; ਪਾਕਿਸਤਾਨ ਵਿੱਚ ਦਾਖ਼ਲ ਹੁੰਦਾ ਹੈ।\n\n**ਨਹਿਰਾਂ**: ਸਰਹੰਦ ਨਹਿਰ, ਭਾਖੜਾ ਨਹਿਰ। ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਸਤਲੁਜ ਤੇ ਬਣਿਆ ਹੈ।",
+          "pa": "ਪੰਜਾਬ = ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ। ਸਤਲੁਜ, ਬਿਆਸ, ਰਾਵੀ, ਚਨਾਬ, ਜੇਹਲਮ। ਹੁਣ ਭਾਰਤੀ ਪੰਜਾਬ ਵਿੱਚ: ਸਤਲੁਜ, ਬਿਆਸ, ਰਾਵੀ। ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਸਤਲੁਜ ਉੱਤੇ।",
+          "en": "**Punjab** = 'Land of Five Rivers' (Persian: Panj=five, Aab=water) — Sutlej, Beas, Ravi, Chenab, Jhelum. Present Indian Punjab's main rivers: **Sutlej** (longest, enters at Ropar), **Beas** (originates in Kullu, meets Sutlej at Harike), **Ravi** (originates at Rohtang). **Bhakra-Nangal Dam** is on the Sutlej."
+        }
+      },
+      {
+        "heading": {"hi": "मिट्टी और कृषि", "pa": "ਮਿੱਟੀ ਅਤੇ ਖੇਤੀਬਾੜੀ", "en": "Soils and Agriculture"},
+        "text": {
+          "hi": "**ਮਿੱਟੀ ਦੀਆਂ ਕਿਸਮਾਂ**:\n- **ਦੋਮਟ ਮਿੱਟੀ (Loamy soil)**: ਬਹੁਤੇ ਹਿੱਸੇ ਵਿੱਚ, ਖੇਤੀ ਲਈ ਸਭ ਤੋਂ ਉਚਿਤ\n- **ਕੱਲਰ ਮਿੱਟੀ (Saline/alkaline)**: ਕੁਝ ਹਿੱਸਿਆਂ ਵਿੱਚ, ਖੇਤੀ ਲਈ ਘੱਟ ਉਚਿਤ\n- **ਰੇਤਲੀ ਮਿੱਟੀ**: ਫ਼ਿਰੋਜ਼ਪੁਰ ਅਤੇ ਸ੍ਰੀ ਮੁਕਤਸਰ ਸਾਹਿਬ ਜ਼ਿਲ੍ਹੇ\n\n**ਖ਼ਰੀਫ਼ ਫ਼ਸਲਾਂ** (ਗਰਮੀਆਂ): ਝੋਨਾ (Rice), ਮੱਕੀ, ਕਪਾਹ, ਗੰਨਾ\n**ਰਬੀ ਫ਼ਸਲਾਂ** (ਸਰਦੀਆਂ): ਕਣਕ (Wheat), ਸਰ੍ਹੋਂ, ਛੋਲੇ, ਜੌਂ\n\n**ਮੁੱਖ ਫ਼ਸਲਾਂ**: ਕਣਕ ਅਤੇ ਝੋਨਾ — ਪੰਜਾਬ ਭਾਰਤ ਦੇ ਅੰਨ ਭੰਡਾਰ ਵਜੋਂ ਜਾਣਿਆ ਜਾਂਦਾ ਹੈ।\n\n**ਹਰੀ ਕ੍ਰਾਂਤੀ (Green Revolution)**: 1960-70 ਦੇ ਦਹਾਕੇ ਵਿੱਚ HYV ਬੀਜਾਂ, ਖਾਦਾਂ ਅਤੇ ਸਿੰਚਾਈ ਦੀ ਵਰਤੋਂ ਨਾਲ ਅਨਾਜ ਉਤਪਾਦਨ ਵਧਿਆ।",
+          "pa": "ਦੋਮਟ ਮਿੱਟੀ = ਖੇਤੀ ਲਈ ਵਧੀਆ। ਖ਼ਰੀਫ਼=ਝੋਨਾ, ਕਪਾਹ। ਰਬੀ=ਕਣਕ, ਸਰ੍ਹੋਂ। ਪੰਜਾਬ = ਭਾਰਤ ਦਾ ਅੰਨ ਭੰਡਾਰ।",
+          "en": "**Soil types**: Loamy (most of Punjab — best for farming); Saline/alkaline (limited areas); Sandy (Ferozepur/Muktsar districts).\n\n**Kharif crops** (summer): Rice (paddy), Maize, Cotton, Sugarcane\n**Rabi crops** (winter): Wheat, Mustard, Chickpea, Barley\n\nPunjab is called India's **Granary/Breadbasket**. The **Green Revolution** (1960s-70s) used HYV seeds, fertilizers and irrigation to boost yields."
+        }
+      },
+      {
+        "heading": {"hi": "जलवायु, उद्योग और परिवहन", "pa": "ਮੌਸਮ, ਉਦਯੋਗ ਅਤੇ ਆਵਾਜਾਈ", "en": "Climate, Industries and Transport"},
+        "text": {
+          "hi": "**ਜਲਵਾਯੂ**: ਮੌਨਸੂਨੀ ਜਲਵਾਯੂ। ਗਰਮੀਆਂ ਵਿੱਚ ਬਹੁਤ ਗਰਮ (45°C ਤੱਕ), ਸਰਦੀਆਂ ਵਿੱਚ ਬਹੁਤ ਠੰਡ। ਔਸਤ ਸਾਲਾਨਾ ਬਾਰਿਸ਼ ਲਗਭਗ 500-700 ਮਿਮੀ।\n\n**ਉਦਯੋਗ**:\n- ਲੁਧਿਆਣਾ: ਸਾਈਕਲ, ਹੌਜ਼ਰੀ, ਮਸ਼ੀਨਾਂ ਲਈ ਪ੍ਰਸਿੱਧ\n- ਅੰਮ੍ਰਿਤਸਰ: ਕੱਪੜਾ ਉਦਯੋਗ, ਪ੍ਰੋਸੈਸਡ ਫੂਡ\n- ਮੋਹਾਲੀ/ਚੰਡੀਗੜ੍ਹ: IT ਅਤੇ ਆਧੁਨਿਕ ਉਦਯੋਗ\n\n**ਆਵਾਜਾਈ**: ਪੰਜਾਬ ਵਿੱਚ ਰੇਲਵੇ, ਸੜਕ ਅਤੇ ਹਵਾਈ ਸੇਵਾਵਾਂ ਦਾ ਚੰਗਾ ਜਾਲ। ਅੰਮ੍ਰਿਤਸਰ ਵਿਖੇ ਅੰਤਰਰਾਸ਼ਟਰੀ ਹਵਾਈ ਅੱਡਾ।",
+          "pa": "ਮੌਨਸੂਨੀ ਜਲਵਾਯੂ। ਲੁਧਿਆਣਾ = ਸਾਈਕਲ, ਹੌਜ਼ਰੀ। ਅੰਮ੍ਰਿਤਸਰ = ਕੱਪੜਾ। ਅੰਮ੍ਰਿਤਸਰ ਅੰਤਰਰਾਸ਼ਟਰੀ ਹਵਾਈ ਅੱਡਾ।",
+          "en": "**Climate**: Monsoon type; summers very hot (up to 45°C), cold winters. Annual rainfall ~500-700mm.\n\n**Industries**: Ludhiana (cycles, hosiery, machine tools); Amritsar (textiles, processed food); Mohali/Chandigarh (IT).\n\n**Transport**: Good road-rail network; Amritsar has an international airport."
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "पंजाब का अर्थ क्या है?", "pa": "ਪੰਜਾਬ ਦਾ ਅਰਥ?", "en": "What does 'Punjab' mean?"}, "back": {"hi": "ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ (Land of Five Rivers)", "pa": "ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ", "en": "Land of Five Rivers (Panj=five, Aab=water)"}},
+      {"front": {"hi": "भाखड़ा-नांगल बाँध किस नदी पर है?", "pa": "ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਕਿਸ ਦਰਿਆ ਉੱਤੇ?", "en": "Bhakra-Nangal Dam is on which river?"}, "back": {"hi": "ਸਤਲੁਜ (Sutlej)", "pa": "ਸਤਲੁਜ", "en": "Sutlej river"}},
+      {"front": {"hi": "पंजाब की मुख्य रबी फसल?", "pa": "ਪੰਜਾਬ ਦੀ ਮੁੱਖ ਰਬੀ ਫ਼ਸਲ?", "en": "Main rabi crop of Punjab?"}, "back": {"hi": "ਕਣਕ (Wheat)", "pa": "ਕਣਕ", "en": "Wheat (ਕਣਕ)"}},
+      {"front": {"hi": "पंजाब को __________ कहते हैं", "pa": "ਪੰਜਾਬ ਨੂੰ ਕੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?", "en": "Punjab is called India's ___?"}, "back": {"hi": "ਭਾਰਤ ਦਾ ਅੰਨ ਭੰਡਾਰ (Granary of India)", "pa": "ਭਾਰਤ ਦਾ ਅੰਨ ਭੰਡਾਰ", "en": "Granary / Breadbasket of India"}},
+      {"front": {"hi": "हरी क्रांति कब हुई?", "pa": "ਹਰੀ ਕ੍ਰਾਂਤੀ ਕਦੋਂ ਹੋਈ?", "en": "When did the Green Revolution occur?"}, "back": {"hi": "1960-70 ਦਾ ਦਹਾਕਾ (1960s–70s)", "pa": "1960-70 ਦਾ ਦਹਾਕਾ", "en": "1960s–70s"}}
+    ],
+    "questions": [
+      {
+        "id": "ett-pg-q1",
+        "text": {"hi": "भाखड़ा-नांगल बाँध किस नदी पर बनाया गया है?", "pa": "ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਕਿਸ ਦਰਿਆ ਉੱਤੇ ਬਣਾਇਆ ਗਿਆ?", "en": "On which river is Bhakra-Nangal Dam built?"},
+        "options": {"hi": ["ਬਿਆਸ", "ਸਤਲੁਜ", "ਰਾਵੀ", "ਚਨਾਬ"], "pa": ["ਬਿਆਸ", "ਸਤਲੁਜ", "ਰਾਵੀ", "ਚਨਾਬ"], "en": ["Beas", "Sutlej", "Ravi", "Chenab"]},
+        "answer": 1,
+        "explanation": {"hi": "ਭਾਖੜਾ-ਨੰਗਲ ਡੈਮ ਸਤਲੁਜ ਦਰਿਆ ਉੱਤੇ ਬਣਿਆ ਹੈ। ਇਹ ਭਾਰਤ ਦੇ ਸਭ ਤੋਂ ਵੱਡੇ ਡੈਮਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।", "pa": "ਭਾਖੜਾ-ਨੰਗਲ = ਸਤਲੁਜ ਦਰਿਆ।", "en": "Bhakra-Nangal Dam is on the Sutlej river — one of India's largest multi-purpose dams."}
+      },
+      {
+        "id": "ett-pg-q2",
+        "text": {"hi": "पंजाब में बियास नदी किससे मिलती है?", "pa": "ਬਿਆਸ ਦਰਿਆ ਕਿਸ ਥਾਂ ਸਤਲੁਜ ਨਾਲ ਮਿਲਦਾ ਹੈ?", "en": "Where does the Beas river meet the Sutlej in Punjab?"},
+        "options": {"hi": ["ਰੋਪੜ", "ਫ਼ਿਰੋਜ਼ਪੁਰ", "ਹਾਰੀਕੇ ਪੱਤਣ", "ਲੁਧਿਆਣਾ"], "pa": ["ਰੋਪੜ", "ਫ਼ਿਰੋਜ਼ਪੁਰ", "ਹਾਰੀਕੇ ਪੱਤਣ", "ਲੁਧਿਆਣਾ"], "en": ["Ropar", "Ferozepur", "Harike Pattan", "Ludhiana"]},
+        "answer": 2,
+        "explanation": {"hi": "ਬਿਆਸ ਦਰਿਆ ਹਾਰੀਕੇ ਪੱਤਣ ਉੱਤੇ ਸਤਲੁਜ ਨਾਲ ਮਿਲਦਾ ਹੈ। ਇੱਥੇ ਇੱਕ ਪ੍ਰਮੁੱਖ ਪੰਛੀ ਅਭਿਆਰਣ ਵੀ ਹੈ।", "pa": "ਬਿਆਸ+ਸਤਲੁਜ = ਹਾਰੀਕੇ ਪੱਤਣ।", "en": "The Beas meets the Sutlej at Harike Pattan (also a major bird sanctuary)."}
+      },
+      {
+        "id": "ett-pg-q3",
+        "text": {"hi": "पंजाब की मुख्य खरीफ फसल कौन सी है?", "pa": "ਪੰਜਾਬ ਦੀ ਮੁੱਖ ਖ਼ਰੀਫ਼ ਫ਼ਸਲ?", "en": "Main kharif crop of Punjab?"},
+        "options": {"hi": ["ਕਣਕ", "ਝੋਨਾ (ਚੌਲ)", "ਸਰ੍ਹੋਂ", "ਜੌਂ"], "pa": ["ਕਣਕ", "ਝੋਨਾ", "ਸਰ੍ਹੋਂ", "ਜੌਂ"], "en": ["Wheat", "Rice (paddy)", "Mustard", "Barley"]},
+        "answer": 1,
+        "explanation": {"hi": "ਝੋਨਾ (ਚੌਲ) ਖ਼ਰੀਫ਼ ਫ਼ਸਲ ਹੈ (ਗਰਮੀਆਂ ਵਿੱਚ ਬੀਜਿਆ ਜਾਂਦਾ ਹੈ)। ਕਣਕ ਰਬੀ ਫ਼ਸਲ ਹੈ। ਸਰ੍ਹੋਂ ਅਤੇ ਜੌਂ ਵੀ ਰਬੀ ਫ਼ਸਲਾਂ ਹਨ।", "pa": "ਝੋਨਾ = ਖ਼ਰੀਫ਼। ਕਣਕ = ਰਬੀ।", "en": "Rice/paddy is a kharif crop (sown in summer). Wheat is rabi. Mustard and barley are also rabi."}
+      },
+      {
+        "id": "ett-pg-q4",
+        "text": {"hi": "'ਪੰਜਾਬ' ਸ਼ਬਦ ਕਿਸ ਭਾਸ਼ਾ ਤੋਂ ਆਇਆ ਹੈ?", "pa": "'ਪੰਜਾਬ' ਸ਼ਬਦ ਕਿੱਥੋਂ ਆਇਆ?", "en": "The word 'Punjab' comes from which language?"},
+        "options": {"hi": ["ਸੰਸਕ੍ਰਿਤ", "ਅਰਬੀ", "ਫ਼ਾਰਸੀ", "ਤੁਰਕੀ"], "pa": ["ਸੰਸਕ੍ਰਿਤ", "ਅਰਬੀ", "ਫ਼ਾਰਸੀ", "ਤੁਰਕੀ"], "en": ["Sanskrit", "Arabic", "Persian", "Turkish"]},
+        "answer": 2,
+        "explanation": {"hi": "'ਪੰਜਾਬ' ਫ਼ਾਰਸੀ ਸ਼ਬਦ ਹੈ — ਪੰਜ (ਪੰਜ) + ਆਬ (ਪਾਣੀ/ਦਰਿਆ) = ਪੰਜ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ।", "pa": "'ਪੰਜਾਬ' = ਫ਼ਾਰਸੀ। ਪੰਜ+ਆਬ।", "en": "'Punjab' is a Persian compound: Panj (five) + Aab (water/river) = Land of Five Rivers."}
+      },
+      {
+        "id": "ett-pg-q5",
+        "text": {"hi": "लुधियाना किस उद्योग के लिए प्रसिद्ध है?", "pa": "ਲੁਧਿਆਣਾ ਕਿਸ ਉਦਯੋਗ ਲਈ ਮਸ਼ਹੂਰ ਹੈ?", "en": "Ludhiana is famous for which industry?"},
+        "options": {"hi": ["ਖੰਡ ਮਿੱਲਾਂ", "ਸਾਈਕਲ ਅਤੇ ਹੌਜ਼ਰੀ", "ਕਾਗਜ਼ ਮਿੱਲਾਂ", "ਸ਼ੀਸ਼ੇ ਦਾ ਕੰਮ"], "pa": ["ਖੰਡ ਮਿੱਲਾਂ", "ਸਾਈਕਲ ਅਤੇ ਹੌਜ਼ਰੀ", "ਕਾਗਜ਼ ਮਿੱਲਾਂ", "ਸ਼ੀਸ਼ੇ ਦਾ ਕੰਮ"], "en": ["Sugar mills", "Cycle and hosiery industry", "Paper mills", "Glass work"]},
+        "answer": 1,
+        "explanation": {"hi": "ਲੁਧਿਆਣਾ ਸਾਈਕਲ, ਹੌਜ਼ਰੀ (ਉੱਨੀ ਕੱਪੜੇ/ਮੋਜ਼ੇ) ਅਤੇ ਮਸ਼ੀਨਾਂ ਲਈ ਭਾਰਤ ਭਰ ਵਿੱਚ ਮਸ਼ਹੂਰ ਹੈ।", "pa": "ਲੁਧਿਆਣਾ = ਸਾਈਕਲ, ਹੌਜ਼ਰੀ।", "en": "Ludhiana is famous for its cycle industry (world-class exporter) and hosiery/woollen textiles."}
+      }
+    ]
+  },
+  {
+    "id": "ett-sst-sikh-history",
+    "subject": "SST",
+    "unit": "History — Punjab and Sikhism",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "पंजाब का इतिहास: गुरु परंपरा, महाराजा रणजीत सिंह और अंग्रेज़ों का आगमन",
+      "pa": "ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ: ਗੁਰੂ ਪਰੰਪਰਾ, ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਅਤੇ ਅੰਗਰੇਜ਼ਾਂ ਦਾ ਆਉਣਾ",
+      "en": "History of Punjab: Guru Tradition, Maharaja Ranjit Singh and the British"
+    },
+    "level": "ETT Paper B — Social Studies (Class 6-8 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Social Studies Class 6-8 — History chapters on Punjab and Sikhism",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB SST textbooks Class 6-8. Dates and succession order should be cross-checked with PSEB textbooks for the exact level tested."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "दस गुरुओं की परंपरा", "pa": "ਦਸ ਗੁਰੂਆਂ ਦੀ ਪਰੰਪਰਾ", "en": "The Tradition of Ten Gurus"},
+        "text": {
+          "hi": "ਸਿੱਖ ਧਰਮ ਦੀ ਸਥਾਪਨਾ **ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ** (1469–1539) ਨੇ ਕੀਤੀ। ਕੁੱਲ 10 ਗੁਰੂ ਹੋਏ:\n\n| ਨੰਬਰ | ਗੁਰੂ | ਮਹੱਤਵਪੂਰਨ ਯੋਗਦਾਨ |\n|------|------|--------------------|\n| 1 | ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ | ਸਿੱਖ ਧਰਮ ਦੇ ਬਾਨੀ; ਈਕਓਂਕਾਰ, ਨਾਮ ਜਪੋ |\n| 2 | ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ | ਗੁਰਮੁਖੀ ਲਿਪੀ ਦਾ ਪ੍ਰਚਾਰ |\n| 3 | ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ | ਲੰਗਰ ਪ੍ਰਥਾ ਮਜ਼ਬੂਤ; ਸਤੀ ਪ੍ਰਥਾ ਵਿਰੁੱਧ |\n| 4 | ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ | ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ |\n| 5 | ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ | ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ; ਹਰਿਮੰਦਰ ਸਾਹਿਬ |\n| 6 | ਗੁਰੂ ਹਰਗੋਬਿੰਦ ਜੀ | ਮੀਰੀ-ਪੀਰੀ; ਅਕਾਲ ਤਖ਼ਤ |\n| 7 | ਗੁਰੂ ਹਰ ਰਾਇ ਜੀ | — |\n| 8 | ਗੁਰੂ ਹਰਕ੍ਰਿਸ਼ਨ ਜੀ | ਛੋਟੀ ਉਮਰ ਵਿੱਚ ਗੁਰੂਗੱਦੀ |\n| 9 | ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ | ਹਿੰਦ ਦੀ ਚਾਦਰ; ਕਸ਼ਮੀਰੀ ਪੰਡਿਤਾਂ ਦੀ ਰੱਖਿਆ |\n| 10 | ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ | ਖ਼ਾਲਸਾ ਪੰਥ (1699); ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਨੂੰ ਸ਼ਾਸ਼ਵਤ ਗੁਰੂ ਥਾਪਿਆ |",
+          "pa": "10 ਗੁਰੂ। ਗੁਰੂ ਨਾਨਕ = ਬਾਨੀ। ਗੁਰੂ ਅਰਜਨ = ਆਦਿ ਗ੍ਰੰਥ। ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ = ਖ਼ਾਲਸਾ 1699। ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ = ਹਿੰਦ ਦੀ ਚਾਦਰ।",
+          "en": "Sikhism was founded by **Guru Nanak Dev Ji** (1469–1539). Ten Gurus in succession. Key contributions: Guru Angad Dev — promoted Gurmukhi script; Guru Ram Das — founded Amritsar; Guru Arjan Dev — compiled Adi Granth, built Harmandir Sahib; Guru Hargobind — concept of Miri-Piri; Guru Tegh Bahadur — 'Hind di Chadar', protected Kashmiri Pandits; Guru Gobind Singh — founded Khalsa Panth (1699), declared Guru Granth Sahib as eternal Guru."
+        }
+      },
+      {
+        "heading": {"hi": "महाराजा रणजीत सिंह और सिख राज", "pa": "ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਅਤੇ ਸਿੱਖ ਰਾਜ", "en": "Maharaja Ranjit Singh and the Sikh Kingdom"},
+        "text": {
+          "hi": "**ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ** (1780–1839) ਨੇ ਪੰਜਾਬ ਵਿੱਚ ਇੱਕ ਸ਼ਕਤੀਸ਼ਾਲੀ ਸਿੱਖ ਰਾਜ ਸਥਾਪਿਤ ਕੀਤਾ।\n\n**ਮੁੱਖ ਤੱਥ**:\n- ਲਾਹੌਰ ਉੱਤੇ 1799 ਵਿੱਚ ਕਬਜ਼ਾ ਕੀਤਾ; ਲਾਹੌਰ ਰਾਜਧਾਨੀ ਬਣੀ\n- 1801 ਵਿੱਚ ਮਹਾਰਾਜਾ ਦਾ ਖਿਤਾਬ ਪ੍ਰਾਪਤ ਕੀਤਾ\n- ਅਫ਼ਗਾਨਿਸਤਾਨ ਤੋਂ **ਕੋਹਿਨੂਰ ਹੀਰਾ** ਪ੍ਰਾਪਤ ਕੀਤਾ\n- ਸੰਤੁਲਿਤ ਨੀਤੀ: ਹਿੰਦੂ, ਮੁਸਲਮਾਨ ਅਤੇ ਸਿੱਖ ਸਾਰੇ ਫ਼ੌਜ ਵਿੱਚ ਸ਼ਾਮਲ\n- ਯੂਰਪੀਅਨ ਅਫ਼ਸਰਾਂ (ਜਿਵੇਂ ਵੈਂਤੂਰਾ, ਕੋਰਟ) ਨੂੰ ਫ਼ੌਜ ਵਿੱਚ ਰੱਖਿਆ\n- 1839 ਵਿੱਚ ਦੇਹਾਂਤ ਤੋਂ ਬਾਅਦ ਰਾਜ ਕਮਜ਼ੋਰ ਹੋਇਆ\n\n**ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ**:\n- ਪਹਿਲਾ ਯੁੱਧ: 1845–46 → ਲਾਹੌਰ ਸੰਧੀ, ਕਸ਼ਮੀਰ ਅੰਗਰੇਜ਼ਾਂ ਨੂੰ ਮਿਲਿਆ\n- ਦੂਜਾ ਯੁੱਧ: 1848–49 → ਪੰਜਾਬ ਅੰਗਰੇਜ਼ੀ ਸਾਮਰਾਜ ਵਿੱਚ ਸ਼ਾਮਲ",
+          "pa": "ਰਣਜੀਤ ਸਿੰਘ (1780–1839)। ਲਾਹੌਰ 1799, ਮਹਾਰਾਜਾ 1801, ਕੋਹਿਨੂਰ। ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ 1: 1845-46। ਯੁੱਧ 2: 1848-49 → ਪੰਜਾਬ ਅੰਗਰੇਜ਼ਾਂ ਦੇ ਅਧੀਨ।",
+          "en": "**Maharaja Ranjit Singh** (1780–1839) built a powerful Sikh kingdom headquartered in Lahore (captured 1799; became Maharaja 1801). Obtained the Kohinoor diamond. Used European officers to modernize his army. After his death (1839) the kingdom weakened. **Anglo-Sikh Wars**: 1st (1845-46) — Treaty of Lahore, Kashmir transferred; 2nd (1848-49) — Punjab annexed by the British."
+        }
+      },
+      {
+        "heading": {"hi": "सारांश और मुख्य तिथियाँ", "pa": "ਸਾਰ ਅਤੇ ਮੁੱਖ ਤਾਰੀਖ਼ਾਂ", "en": "Summary and Key Dates"},
+        "text": {
+          "hi": "**ਮਹੱਤਵਪੂਰਨ ਤਾਰੀਖ਼ਾਂ**:\n- 1469: ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ ਦਾ ਜਨਮ (ਤਲਵੰਡੀ, ਹੁਣ ਨਨਕਾਣਾ ਸਾਹਿਬ)\n- 1577: ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ (ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ)\n- 1604: ਆਦਿ ਗ੍ਰੰਥ ਸੰਪਾਦਿਤ (ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ)\n- 1699: ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ (ਵੈਸਾਖੀ, ਆਨੰਦਪੁਰ ਸਾਹਿਬ)\n- 1799: ਰਣਜੀਤ ਸਿੰਘ ਨੇ ਲਾਹੌਰ ਜਿੱਤਿਆ\n- 1849: ਪੰਜਾਬ ਦਾ ਬ੍ਰਿਟਿਸ਼ ਸਾਮਰਾਜ ਵਿੱਚ ਮਿਲਾਉਣਾ",
+          "pa": "1469 ਗੁਰੂ ਨਾਨਕ। 1699 ਖ਼ਾਲਸਾ। 1799 ਲਾਹੌਰ। 1849 ਅੰਗਰੇਜ਼ੀ ਰਾਜ।",
+          "en": "Key dates: 1469 — Guru Nanak's birth (Talwandi/Nankana Sahib); 1577 — Amritsar founded by Guru Ram Das; 1604 — Adi Granth compiled; 1699 — Khalsa Panth founded (Vaisakhi, Anandpur Sahib); 1799 — Ranjit Singh captures Lahore; 1849 — Punjab annexed by British."
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਕਦੋਂ ਸਥਾਪਿਤ ਹੋਇਆ?", "pa": "ਖ਼ਾਲਸਾ ਕਦੋਂ ਸਥਾਪਿਤ ਹੋਇਆ?", "en": "When was the Khalsa Panth founded?"}, "back": {"hi": "1699, ਵੈਸਾਖੀ, ਆਨੰਦਪੁਰ ਸਾਹਿਬ (ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ)", "pa": "1699, ਵੈਸਾਖੀ, ਆਨੰਦਪੁਰ ਸਾਹਿਬ", "en": "1699, Vaisakhi, Anandpur Sahib (Guru Gobind Singh Ji)"}},
+      {"front": {"hi": "ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ ਕਿਸ ਗੁਰੂ ਨੇ ਕੀਤੀ?", "pa": "ਆਦਿ ਗ੍ਰੰਥ — ਕਿਸ ਗੁਰੂ ਨੇ?", "en": "Which Guru compiled the Adi Granth?"}, "back": {"hi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ (1604)", "pa": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ, 1604", "en": "Guru Arjan Dev Ji (1604)"}},
+      {"front": {"hi": "ਗੁਰਮੁਖੀ ਲਿਪੀ ਦਾ ਪ੍ਰਚਾਰ ਕਿਸ ਗੁਰੂ ਨੇ ਕੀਤਾ?", "pa": "ਗੁਰਮੁਖੀ ਦਾ ਪ੍ਰਚਾਰ — ਕਿਹੜੇ ਗੁਰੂ?", "en": "Which Guru promoted the Gurmukhi script?"}, "back": {"hi": "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ (2ਵੇਂ ਗੁਰੂ)", "pa": "ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ", "en": "Guru Angad Dev Ji (2nd Guru)"}},
+      {"front": {"hi": "ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਨੇ ਲਾਹੌਰ ਕਦੋਂ ਜਿੱਤਿਆ?", "pa": "ਰਣਜੀਤ ਸਿੰਘ — ਲਾਹੌਰ ਕਦੋਂ?", "en": "When did Ranjit Singh capture Lahore?"}, "back": {"hi": "1799", "pa": "1799", "en": "1799"}},
+      {"front": {"hi": "ਅੰਗਰੇਜ਼ਾਂ ਨੇ ਪੰਜਾਬ ਕਦੋਂ ਮਿਲਾਇਆ?", "pa": "ਪੰਜਾਬ ਅੰਗਰੇਜ਼ੀ ਰਾਜ ਵਿੱਚ ਕਦੋਂ?", "en": "When did the British annex Punjab?"}, "back": {"hi": "1849 (ਦੂਜਾ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ)", "pa": "1849, ਦੂਜਾ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ", "en": "1849 (Second Anglo-Sikh War)"}}
+    ],
+    "questions": [
+      {
+        "id": "ett-sh-q1",
+        "text": {"hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਗੁਰੂ ਨੇ ਕੀਤੀ ਅਤੇ ਕਦੋਂ?", "pa": "ਖ਼ਾਲਸਾ ਪੰਥ — ਕਿਸ ਗੁਰੂ ਅਤੇ ਕਦੋਂ?", "en": "Who founded the Khalsa Panth and when?"},
+        "options": {"hi": ["ਗੁਰੂ ਨਾਨਕ, 1469", "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ, 1675", "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ, 1699", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ, 1604"], "pa": ["ਗੁਰੂ ਨਾਨਕ, 1469", "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ, 1675", "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ, 1699", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ, 1604"], "en": ["Guru Nanak, 1469", "Guru Tegh Bahadur, 1675", "Guru Gobind Singh, 1699", "Guru Arjan Dev, 1604"]},
+        "answer": 2,
+        "explanation": {"hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨੇ 1699 ਵਿੱਚ ਵੈਸਾਖੀ ਵਾਲੇ ਦਿਨ ਆਨੰਦਪੁਰ ਸਾਹਿਬ ਵਿਖੇ ਕੀਤੀ।", "pa": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ, 1699।", "en": "Khalsa Panth was founded by Guru Gobind Singh Ji on Vaisakhi 1699 at Anandpur Sahib."}
+      },
+      {
+        "id": "ett-sh-q2",
+        "text": {"hi": "ਆਦਿ ਗ੍ਰੰਥ ਕਿਸ ਗੁਰੂ ਨੇ ਸੰਪਾਦਿਤ ਕੀਤਾ?", "pa": "ਆਦਿ ਗ੍ਰੰਥ ਕਿਸ ਗੁਰੂ ਦਾ ਕੰਮ?", "en": "Which Guru compiled the Adi Granth?"},
+        "options": {"hi": ["ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ", "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ", "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ"], "pa": ["ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ", "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ", "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ"], "en": ["Guru Angad Dev Ji", "Guru Ram Das Ji", "Guru Arjan Dev Ji", "Guru Gobind Singh Ji"]},
+        "answer": 2,
+        "explanation": {"hi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਨੇ 1604 ਵਿੱਚ ਆਦਿ ਗ੍ਰੰਥ ਸੰਪਾਦਿਤ ਕੀਤਾ ਅਤੇ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਵਿੱਚ ਸਥਾਪਿਤ ਕੀਤਾ।", "pa": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ, 1604।", "en": "Guru Arjan Dev Ji compiled the Adi Granth in 1604 and installed it in Harmandir Sahib."}
+      },
+      {
+        "id": "ett-sh-q3",
+        "text": {"hi": "ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਦੀ ਰਾਜਧਾਨੀ ਕਿਹੜੀ ਸੀ?", "pa": "ਰਣਜੀਤ ਸਿੰਘ ਦੀ ਰਾਜਧਾਨੀ?", "en": "What was the capital of Maharaja Ranjit Singh's kingdom?"},
+        "options": {"hi": ["ਅੰਮ੍ਰਿਤਸਰ", "ਦਿੱਲੀ", "ਲਾਹੌਰ", "ਮੁਲਤਾਨ"], "pa": ["ਅੰਮ੍ਰਿਤਸਰ", "ਦਿੱਲੀ", "ਲਾਹੌਰ", "ਮੁਲਤਾਨ"], "en": ["Amritsar", "Delhi", "Lahore", "Multan"]},
+        "answer": 2,
+        "explanation": {"hi": "ਲਾਹੌਰ ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਦੇ ਰਾਜ ਦੀ ਰਾਜਧਾਨੀ ਸੀ। ਉਨ੍ਹਾਂ ਨੇ 1799 ਵਿੱਚ ਲਾਹੌਰ ਤੇ ਕਬਜ਼ਾ ਕੀਤਾ।", "pa": "ਲਾਹੌਰ = ਰਾਜਧਾਨੀ।", "en": "Lahore was Maharaja Ranjit Singh's capital. He captured it in 1799."}
+      },
+      {
+        "id": "ett-sh-q4",
+        "text": {"hi": "ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ ਕਿਸ ਗੁਰੂ ਨੇ ਰੱਖੀ?", "pa": "ਅੰਮ੍ਰਿਤਸਰ ਦੀ ਨੀਂਹ ਕਿਸ ਗੁਰੂ ਨੇ?", "en": "Which Guru founded the city of Amritsar?"},
+        "options": {"hi": ["ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ", "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ", "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ"], "pa": ["ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ", "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ", "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ"], "en": ["Guru Angad Dev Ji", "Guru Amar Das Ji", "Guru Ram Das Ji", "Guru Arjan Dev Ji"]},
+        "answer": 2,
+        "explanation": {"hi": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ ਨੇ 1577 ਵਿੱਚ ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ ਰੱਖੀ। ਪਹਿਲਾਂ ਇਸ ਨੂੰ ਰਾਮਦਾਸਪੁਰ ਕਿਹਾ ਜਾਂਦਾ ਸੀ।", "pa": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ, 1577।", "en": "Guru Ram Das Ji founded Amritsar in 1577. It was earlier called Ramdaspura."}
+      },
+      {
+        "id": "ett-sh-q5",
+        "text": {"hi": "ਦੂਜੇ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ ਤੋਂ ਬਾਅਦ ਪੰਜਾਬ ਦਾ ਕੀ ਹੋਇਆ?", "pa": "ਦੂਜਾ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ (1849) ਤੋਂ ਬਾਅਦ?", "en": "What happened to Punjab after the 2nd Anglo-Sikh War (1849)?"},
+        "options": {"hi": ["ਪੰਜਾਬ ਆਜ਼ਾਦ ਰਿਹਾ", "ਪੰਜਾਬ ਮੁਗ਼ਲਾਂ ਦੇ ਅਧੀਨ ਗਿਆ", "ਪੰਜਾਬ ਨੂੰ ਬ੍ਰਿਟਿਸ਼ ਸਾਮਰਾਜ ਵਿੱਚ ਮਿਲਾਇਆ", "ਪੰਜਾਬ ਅਫ਼ਗ਼ਾਨਿਸਤਾਨ ਦਾ ਹਿੱਸਾ ਬਣਿਆ"], "pa": ["ਆਜ਼ਾਦ ਰਿਹਾ", "ਮੁਗ਼ਲਾਂ ਦੇ ਅਧੀਨ", "ਬ੍ਰਿਟਿਸ਼ ਸਾਮਰਾਜ ਵਿੱਚ", "ਅਫ਼ਗ਼ਾਨਿਸਤਾਨ ਵਿੱਚ"], "en": ["Punjab remained independent", "Punjab came under Mughals", "Punjab was annexed by the British Empire", "Punjab became part of Afghanistan"]},
+        "answer": 2,
+        "explanation": {"hi": "1849 ਵਿੱਚ ਦੂਜੇ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ ਤੋਂ ਬਾਅਦ ਪੰਜਾਬ ਨੂੰ ਬ੍ਰਿਟਿਸ਼ ਈਸਟ ਇੰਡੀਆ ਕੰਪਨੀ ਨੇ ਆਪਣੇ ਸਾਮਰਾਜ ਵਿੱਚ ਮਿਲਾ ਲਿਆ।", "pa": "1849 → ਪੰਜਾਬ ਬ੍ਰਿਟਿਸ਼ ਅਧੀਨ।", "en": "In 1849, after the 2nd Anglo-Sikh War, Punjab was annexed by the British East India Company."}
+      }
+    ]
+  }
+]

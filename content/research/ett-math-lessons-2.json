@@ -1,0 +1,196 @@
+[
+  {
+    "id": "ett-math-statistics",
+    "subject": "Mathematics",
+    "unit": "Statistics and Data Handling",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "सांख्यिकी: माध्य, माध्यिका, बहुलक और प्रायिकता",
+      "pa": "ਅੰਕੜਾ ਵਿਗਿਆਨ: ਔਸਤ, ਮੱਧਮਾਨ, ਬਹੁਲਕ ਅਤੇ ਸੰਭਾਵਨਾ",
+      "en": "Statistics: Mean, Median, Mode and Probability"
+    },
+    "level": "ETT Paper B — Mathematics (Class 6-10 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Mathematics Class 10 — Statistics and Probability",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB class 9-10 Mathematics textbook — Statistics chapters. Content prepared for ETT exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "माध्य (Mean)", "pa": "ਔਸਤ (ਮੀਨ)", "en": "Mean (Average)"},
+        "text": {
+          "hi": "**माध्य (Mean)** = सभी मानों का योग ÷ मानों की संख्या\n\n$$\\bar{x} = \\frac{\\sum x}{n}$$\n\n**उदाहरण**: 5 छात्रों के अंक: 40, 45, 50, 55, 60\n- योग = 40+45+50+55+60 = 250\n- माध्य = 250 ÷ 5 = **50**\n\n**समूहीकृत आंकड़ों के लिए माध्य**:\n$$\\bar{x} = \\frac{\\sum f_i x_i}{\\sum f_i}$$\nजहाँ $f_i$ = वर्ग की बारम्बारता, $x_i$ = वर्ग मध्य मान",
+          "pa": "**ਔਸਤ (Mean)** = ਸਾਰੇ ਮੁੱਲਾਂ ਦਾ ਜੋੜ ÷ ਮੁੱਲਾਂ ਦੀ ਗਿਣਤੀ\n\nਉਦਾਹਰਨ: 40, 45, 50, 55, 60 → ਜੋੜ=250 → ਔਸਤ = 250÷5 = **50**",
+          "en": "**Mean** = Sum of all values ÷ Number of values\n\n**Formula**: $\\bar{x} = \\frac{\\sum x}{n}$\n\n**Example**: Marks of 5 students: 40, 45, 50, 55, 60\n- Sum = 250; Mean = 250 ÷ 5 = **50**\n\nFor grouped data: $\\bar{x} = \\frac{\\sum f_i x_i}{\\sum f_i}$ where $f_i$ = frequency, $x_i$ = class midpoint."
+        }
+      },
+      {
+        "heading": {"hi": "माध्यिका (Median)", "pa": "ਮੱਧਮਾਨ (ਮੀਡੀਅਨ)", "en": "Median"},
+        "text": {
+          "hi": "**माध्यिका** = बीच का मान जब आंकड़े आरोही/अवरोही क्रम में हों।\n\n- **n विषम हो**: माध्यिका = $\\left(\\frac{n+1}{2}\\right)^{\\text{वाँ}}$ पद\n- **n सम हो**: माध्यिका = $\\frac{\\left(\\frac{n}{2}\\right)^{\\text{वाँ}} + \\left(\\frac{n}{2}+1\\right)^{\\text{वाँ}}}{2}$\n\n**उदाहरण (n=5, विषम)**: 10, 20, 30, 40, 50\n- माध्यिका = 3वाँ पद = **30**\n\n**उदाहरण (n=6, सम)**: 10, 20, 30, 40, 50, 60\n- माध्यिका = (30+40)/2 = **35**",
+          "pa": "**ਮੱਧਮਾਨ** = ਮੱਧ ਵਾਲਾ ਮੁੱਲ (ਕ੍ਰਮ ਵਿੱਚ ਲਾ ਕੇ)। n ਟਾਂਕ: (n+1)/2 ਵਾਂ ਪਦ। n ਜੁੱਫਟ: ਵਿਚਕਾਰਲੇ ਦੋ ਦੀ ਔਸਤ।\n\nਉਦਾਹਰਨ: 10,20,30,40,50 → ਮੱਧਮਾਨ = 30",
+          "en": "**Median** = middle value when data is arranged in order.\n\n- **Odd n**: Median = $\\left(\\frac{n+1}{2}\\right)^{th}$ term\n- **Even n**: Median = average of $\\frac{n}{2}^{th}$ and $\\left(\\frac{n}{2}+1\\right)^{th}$ terms\n\n**Example (n=5, odd)**: 10, 20, **30**, 40, 50 → Median = **30**\n**Example (n=6, even)**: 10, 20, 30, 40, 50, 60 → Median = (30+40)/2 = **35**"
+        }
+      },
+      {
+        "heading": {"hi": "बहुलक (Mode)", "pa": "ਬਹੁਲਕ (ਮੋਡ)", "en": "Mode"},
+        "text": {
+          "hi": "**बहुलक** = वह मान जो सबसे अधिक बार आए।\n\n**उदाहरण**: 2, 3, 4, 4, 4, 5, 6 → बहुलक = **4** (3 बार)\n\n**नोट**:\n- एक से अधिक बहुलक हो सकते हैं (द्वि-बहुलक/त्रि-बहुलक डेटा)\n- यदि सभी मान एक-एक बार आएं → बहुलक नहीं होता\n- **संबंध**: Mean – Mode = 3(Mean – Median) [अनुभवजन्य संबंध]",
+          "pa": "**ਬਹੁਲਕ** = ਸਭ ਤੋਂ ਵੱਧ ਵਾਰ ਆਉਣ ਵਾਲਾ ਮੁੱਲ।\n\nਉਦਾਹਰਨ: 2,3,4,4,4,5,6 → ਬਹੁਲਕ = 4\n\nਸੰਬੰਧ: Mean – Mode = 3(Mean – Median)",
+          "en": "**Mode** = the value that occurs most frequently.\n\n**Example**: 2, 3, 4, 4, 4, 5, 6 → Mode = **4** (appears 3 times)\n\n**Key relationship** (empirical): Mean – Mode = 3(Mean – Median)\nThis is an approximate relationship used when distribution is moderately skewed."
+        }
+      },
+      {
+        "heading": {"hi": "प्रायिकता (Probability)", "pa": "ਸੰਭਾਵਨਾ (Probability)", "en": "Probability"},
+        "text": {
+          "hi": "**प्रायिकता** = किसी घटना के होने की संभावना\n\n$$P(A) = \\frac{\\text{अनुकूल परिणामों की संख्या}}{\\text{कुल संभव परिणामों की संख्या}}$$\n\n**नियम**:\n- $0 \\leq P(A) \\leq 1$\n- $P(A) + P(A') = 1$ (जहाँ A' = A का पूरक)\n- असंभव घटना: P = 0; निश्चित घटना: P = 1\n\n**उदाहरण**: एक पासे में 6 आने की प्रायिकता\n- अनुकूल = 1; कुल = 6 → P(6) = **1/6**\n\n**ताश के पत्तों** (52 पत्ते):\n- P(इक्का) = 4/52 = **1/13**\n- P(लाल पत्ता) = 26/52 = **1/2**",
+          "pa": "**ਸੰਭਾਵਨਾ** = P(A) = ਅਨੁਕੂਲ / ਕੁੱਲ। ਪਾਸੇ ਵਿੱਚ 6 ਆਉਣਾ = 1/6। ਤਾਸ਼ ਵਿੱਚ ਇੱਕਾ = 4/52 = 1/13।",
+          "en": "**Probability** P(A) = Favourable outcomes / Total outcomes\n\n**Rules**: 0 ≤ P ≤ 1; P(A) + P(A') = 1\n\n**Die (Dice)**: P(getting 6) = 1/6\n**Cards (52)**: P(ace) = 4/52 = 1/13; P(red card) = 26/52 = 1/2"
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "माध्य (Mean) सूत्र?", "pa": "ਔਸਤ ਦਾ ਫਾਰਮੂਲਾ?", "en": "Formula for Mean?"}, "back": {"hi": "Mean = Σx / n (सभी मानों का योग ÷ संख्या)", "pa": "Mean = Σx / n", "en": "Mean = Σx / n (sum ÷ count)"}},
+      {"front": {"hi": "n=7 के लिए माध्यिका का पद?", "pa": "n=7 ਲਈ ਮੱਧਮਾਨ ਦਾ ਪਦ?", "en": "Which term is the median for n=7?"}, "back": {"hi": "(7+1)/2 = 4वाँ पद", "pa": "(7+1)/2 = 4ਵਾਂ ਪਦ", "en": "(7+1)/2 = 4th term"}},
+      {"front": {"hi": "Mean–Mode = ?", "pa": "Mean–Mode = ?", "en": "Mean – Mode = ?"}, "back": {"hi": "3(Mean – Median) — अनुभवजन्य संबंध", "pa": "3(Mean – Median)", "en": "3(Mean – Median) — empirical relationship"}},
+      {"front": {"hi": "एक सिक्के में हेड की प्रायिकता?", "pa": "ਸਿੱਕੇ ਵਿੱਚ ਹੈੱਡ ਦੀ ਸੰਭਾਵਨਾ?", "en": "Probability of Head in a coin toss?"}, "back": {"hi": "1/2", "pa": "1/2", "en": "1/2"}},
+      {"front": {"hi": "ताश में इक्के की प्रायिकता?", "pa": "ਤਾਸ਼ ਵਿੱਚ ਇੱਕੇ ਦੀ ਸੰਭਾਵਨਾ?", "en": "Probability of an ace in a 52-card deck?"}, "back": {"hi": "4/52 = 1/13", "pa": "4/52 = 1/13", "en": "4/52 = 1/13"}}
+    ],
+    "questions": [
+      {
+        "id": "ett-ms-q1",
+        "text": {"hi": "संख्याओं 4, 7, 8, 9, 7, 5, 7 का बहुलक क्या है?", "pa": "4, 7, 8, 9, 7, 5, 7 ਦਾ ਬਹੁਲਕ?", "en": "What is the mode of 4, 7, 8, 9, 7, 5, 7?"},
+        "options": {"hi": ["4", "7", "8", "9"], "pa": ["4", "7", "8", "9"], "en": ["4", "7", "8", "9"]},
+        "answer": 1,
+        "explanation": {"hi": "7 तीन बार आता है (7, 7, 7), बाकी सभी एक-एक बार। अतः बहुलक = 7।", "pa": "7 ਤਿੰਨ ਵਾਰ ਆਉਂਦਾ ਹੈ। ਬਹੁਲਕ = 7।", "en": "7 appears three times — more than any other value. Mode = 7."}
+      },
+      {
+        "id": "ett-ms-q2",
+        "text": {"hi": "आंकड़े 10, 20, 30, 40, 50 का माध्य क्या है?", "pa": "10, 20, 30, 40, 50 ਦੀ ਔਸਤ?", "en": "Mean of 10, 20, 30, 40, 50?"},
+        "options": {"hi": ["25", "30", "35", "20"], "pa": ["25", "30", "35", "20"], "en": ["25", "30", "35", "20"]},
+        "answer": 1,
+        "explanation": {"hi": "योग = 10+20+30+40+50 = 150; माध्य = 150 ÷ 5 = 30।", "pa": "ਜੋੜ = 150; ਔਸਤ = 150÷5 = 30।", "en": "Sum = 150; Mean = 150 ÷ 5 = 30."}
+      },
+      {
+        "id": "ett-ms-q3",
+        "text": {"hi": "क्रमबद्ध आंकड़े: 15, 20, 25, 30, 35 की माध्यिका?", "pa": "15, 20, 25, 30, 35 ਦਾ ਮੱਧਮਾਨ?", "en": "Median of 15, 20, 25, 30, 35?"},
+        "options": {"hi": ["20", "25", "30", "27.5"], "pa": ["20", "25", "30", "27.5"], "en": ["20", "25", "30", "27.5"]},
+        "answer": 1,
+        "explanation": {"hi": "n=5 (विषम), माध्यिका = (5+1)/2 = 3वाँ पद = 25।", "pa": "n=5, (5+1)/2=3ਵਾਂ ਪਦ = 25।", "en": "n=5 (odd), Median = (5+1)/2 = 3rd term = 25."}
+      },
+      {
+        "id": "ett-ms-q4",
+        "text": {"hi": "एक पासे में सम संख्या आने की प्रायिकता क्या है?", "pa": "ਪਾਸੇ ਵਿੱਚ ਜੁੱਫਟ ਸੰਖਿਆ ਦੀ ਸੰਭਾਵਨਾ?", "en": "Probability of getting an even number on a die?"},
+        "options": {"hi": ["1/6", "1/3", "1/2", "2/3"], "pa": ["1/6", "1/3", "1/2", "2/3"], "en": ["1/6", "1/3", "1/2", "2/3"]},
+        "answer": 2,
+        "explanation": {"hi": "पासे में सम संख्याएं: 2, 4, 6 — तीन अनुकूल परिणाम; कुल = 6। P = 3/6 = 1/2।", "pa": "ਜੁੱਫਟ: 2,4,6 → 3 ਅਨੁਕੂਲ; ਕੁੱਲ = 6 → P = 3/6 = 1/2।", "en": "Even numbers on a die: 2, 4, 6 → 3 favourable; total = 6 → P = 3/6 = 1/2."}
+      },
+      {
+        "id": "ett-ms-q5",
+        "text": {"hi": "यदि किसी घटना की प्रायिकता 0.3 है तो उसके न होने की प्रायिकता क्या होगी?", "pa": "ਜੇ P(A)=0.3 ਤਾਂ P(A') = ?", "en": "If P(A) = 0.3, what is P(A')?"},
+        "options": {"hi": ["0.3", "0.6", "0.7", "1.0"], "pa": ["0.3", "0.6", "0.7", "1.0"], "en": ["0.3", "0.6", "0.7", "1.0"]},
+        "answer": 2,
+        "explanation": {"hi": "P(A) + P(A') = 1, इसलिए P(A') = 1 – 0.3 = 0.7।", "pa": "P(A') = 1 – P(A) = 1 – 0.3 = 0.7।", "en": "P(A) + P(A') = 1 → P(A') = 1 – 0.3 = 0.7."}
+      }
+    ]
+  },
+  {
+    "id": "ett-math-algebra",
+    "subject": "Mathematics",
+    "unit": "Algebra and Commercial Mathematics",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "बीजगणित और वाणिज्यिक गणित: प्रतिशत, लाभ-हानि और सरल ब्याज",
+      "pa": "ਬੀਜਗਣਿਤ ਅਤੇ ਵਪਾਰਕ ਗਣਿਤ: ਫ਼ੀਸਦੀ, ਲਾਭ-ਹਾਨੀ ਅਤੇ ਸਾਦਾ ਵਿਆਜ",
+      "en": "Algebra and Commercial Maths: Percentage, Profit-Loss and Simple Interest"
+    },
+    "level": "ETT Paper B — Mathematics (Class 6-10 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Mathematics Class 7-10 — Algebra, Percentage and Commercial Maths",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB class 7-10 Mathematics textbooks. Content prepared for ETT exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "प्रतिशत (Percentage)", "pa": "ਫ਼ੀਸਦੀ (Percentage)", "en": "Percentage"},
+        "text": {
+          "hi": "**प्रतिशत** = प्रति 100 भाग\n\n**प्रमुख सूत्र**:\n- x का y% = $\\frac{x \\times y}{100}$\n- x, y का कितने % है = $\\frac{x}{y} \\times 100$\n- % वृद्धि = $\\frac{\\text{वृद्धि}}{\\text{मूल मान}} \\times 100$\n- % कमी = $\\frac{\\text{कमी}}{\\text{मूल मान}} \\times 100$\n\n**उदाहरण 1**: 500 का 20% = $\\frac{500 \\times 20}{100}$ = **100**\n\n**उदाहरण 2**: 400 से 500 हुआ; % वृद्धि = $\\frac{100}{400} \\times 100$ = **25%**\n\n**उदाहरण 3**: 80 अंक, पूर्णांक 200; प्रतिशत = $\\frac{80}{200} \\times 100$ = **40%**",
+          "pa": "ਫ਼ੀਸਦੀ = ਪ੍ਰਤੀ 100। x ਦਾ y% = (x×y)/100। 500 ਦਾ 20% = 100। % ਵਾਧਾ = (ਵਾਧਾ/ਅਸਲ)×100।",
+          "en": "**Percentage** = per 100\n\nKey formulas:\n- y% of x = (x × y) / 100\n- x as % of y = (x/y) × 100\n- % increase = (increase/original) × 100\n- % decrease = (decrease/original) × 100\n\n**Example 1**: 20% of 500 = (500×20)/100 = **100**\n**Example 2**: 400 → 500; % increase = (100/400)×100 = **25%**"
+        }
+      },
+      {
+        "heading": {"hi": "लाभ और हानि (Profit and Loss)", "pa": "ਲਾਭ ਅਤੇ ਹਾਨੀ", "en": "Profit and Loss"},
+        "text": {
+          "hi": "**परिभाषाएं**:\n- **क्रय मूल्य (CP)**: खरीदने का मूल्य\n- **विक्रय मूल्य (SP)**: बेचने का मूल्य\n- **लाभ**: SP > CP → लाभ = SP – CP\n- **हानि**: CP > SP → हानि = CP – SP\n\n**सूत्र**:\n$$\\text{लाभ%} = \\frac{SP - CP}{CP} \\times 100$$\n$$\\text{हानि%} = \\frac{CP - SP}{CP} \\times 100$$\n$$SP = CP \\times \\frac{100 + \\text{लाभ%}}{100}$$\n$$CP = SP \\times \\frac{100}{100 + \\text{लाभ%}}$$\n\n**उदाहरण**: CP = ₹400, SP = ₹500\n- लाभ = 500–400 = ₹100\n- लाभ% = (100/400)×100 = **25%**\n\n**उदाहरण 2**: CP = ₹200, लाभ% = 15%\n- SP = 200 × (100+15)/100 = 200 × 1.15 = **₹230**",
+          "pa": "ਲਾਭ = SP – CP। ਲਾਭ% = (SP–CP)/CP × 100। CP=400, SP=500 → ਲਾਭ%=25%।",
+          "en": "**Profit** = SP – CP (when SP > CP)\n**Loss** = CP – SP (when CP > SP)\n\nProfit% = [(SP–CP)/CP] × 100\nSP = CP × (100+Profit%)/100\n\n**Example**: CP=₹400, SP=₹500 → Profit=₹100, Profit%=25%"
+        }
+      },
+      {
+        "heading": {"hi": "सरल ब्याज (Simple Interest)", "pa": "ਸਾਦਾ ਵਿਆਜ (Simple Interest)", "en": "Simple Interest"},
+        "text": {
+          "hi": "**सरल ब्याज (SI)**:\n$$SI = \\frac{P \\times R \\times T}{100}$$\n\n- P = मूलधन (Principal)\n- R = वार्षिक ब्याज दर (%)\n- T = समय (वर्षों में)\n- मिश्रधन (A) = P + SI\n\n**उदाहरण**: P=₹1000, R=5% प्रति वर्ष, T=3 वर्ष\n- SI = (1000×5×3)/100 = **₹150**\n- A = 1000+150 = **₹1150**\n\n**उल्टा प्रश्न**: SI=₹240, R=4%, T=3 वर्ष → P=?\n- P = (SI×100)/(R×T) = (240×100)/(4×3) = **₹2000**",
+          "pa": "SI = (P×R×T)/100। P=1000, R=5%, T=3 → SI=150। A=P+SI=1150।",
+          "en": "**Simple Interest**: SI = (P × R × T) / 100\nAmount A = P + SI\n\n**Example**: P=₹1000, R=5%, T=3 years → SI=₹150, A=₹1150\n**Reverse**: P = (SI×100) / (R×T)"
+        }
+      },
+      {
+        "heading": {"hi": "बीजगणित — सर्वसमिकाएं (Algebraic Identities)", "pa": "ਬੀਜਗਣਿਤ ਸਰਵਸਮਿਕਾਵਾਂ", "en": "Algebraic Identities"},
+        "text": {
+          "hi": "**मुख्य सर्वसमिकाएं**:\n1. $(a+b)^2 = a^2 + 2ab + b^2$\n2. $(a-b)^2 = a^2 - 2ab + b^2$\n3. $(a+b)(a-b) = a^2 - b^2$\n4. $(a+b+c)^2 = a^2+b^2+c^2+2ab+2bc+2ca$\n5. $(a+b)^3 = a^3+3a^2b+3ab^2+b^3$\n\n**ETT स्तर उदाहरण**: $(103)^2 = (100+3)^2 = 10000+600+9 = **10609**$\n\n**गुणनखंडन**: $x^2-5x+6 = (x-2)(x-3)$",
+          "pa": "$(a+b)^2=a^2+2ab+b^2$। $(a-b)(a+b)=a^2-b^2$। $(103)^2=(100+3)^2=10609$।",
+          "en": "**Key identities**:\n1. (a+b)² = a²+2ab+b²\n2. (a–b)² = a²–2ab+b²\n3. (a+b)(a–b) = a²–b²\n\n**ETT example**: (103)² = (100+3)² = 10000+600+9 = **10609**\n**Factorization**: x²–5x+6 = (x–2)(x–3)"
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "लाभ% सूत्र?", "pa": "ਲਾਭ% ਫਾਰਮੂਲਾ?", "en": "Profit% formula?"}, "back": {"hi": "Profit% = [(SP–CP)/CP] × 100", "pa": "Profit% = [(SP–CP)/CP] × 100", "en": "Profit% = [(SP–CP)/CP] × 100"}},
+      {"front": {"hi": "SI सूत्र?", "pa": "ਸਾਦੇ ਵਿਆਜ ਦਾ ਫਾਰਮੂਲਾ?", "en": "Simple Interest formula?"}, "back": {"hi": "SI = (P×R×T)/100", "pa": "SI = (P×R×T)/100", "en": "SI = (P×R×T)/100"}},
+      {"front": {"hi": "(a+b)² = ?", "pa": "(a+b)² = ?", "en": "(a+b)² = ?"}, "back": {"hi": "a² + 2ab + b²", "pa": "a² + 2ab + b²", "en": "a² + 2ab + b²"}},
+      {"front": {"hi": "400 से 500 — % वृद्धि?", "pa": "400 ਤੋਂ 500 — % ਵਾਧਾ?", "en": "% increase from 400 to 500?"}, "back": {"hi": "(100/400)×100 = 25%", "pa": "25%", "en": "25%"}},
+      {"front": {"hi": "P=1000, R=5%, T=2 → SI=?", "pa": "P=1000, R=5%, T=2 → SI=?", "en": "P=1000, R=5%, T=2 → SI=?"}, "back": {"hi": "SI = (1000×5×2)/100 = ₹100", "pa": "₹100", "en": "₹100"}}
+    ],
+    "questions": [
+      {
+        "id": "ett-ma-q1",
+        "text": {"hi": "CP = ₹600, SP = ₹750; लाभ प्रतिशत क्या है?", "pa": "CP=₹600, SP=₹750; ਲਾਭ%?", "en": "CP=₹600, SP=₹750; Profit%?"},
+        "options": {"hi": ["20%", "25%", "15%", "30%"], "pa": ["20%", "25%", "15%", "30%"], "en": ["20%", "25%", "15%", "30%"]},
+        "answer": 1,
+        "explanation": {"hi": "लाभ = 750–600 = 150; लाभ% = (150/600)×100 = 25%।", "pa": "ਲਾਭ=150; ਲਾਭ%=(150/600)×100=25%।", "en": "Profit=750–600=150; Profit%=(150/600)×100=25%."}
+      },
+      {
+        "id": "ett-ma-q2",
+        "text": {"hi": "P=₹5000, R=8% प्रति वर्ष, T=2 वर्ष; सरल ब्याज कितना होगा?", "pa": "P=₹5000, R=8%, T=2 → SI=?", "en": "P=₹5000, R=8% per annum, T=2 years. Find SI."},
+        "options": {"hi": ["₹600", "₹700", "₹800", "₹900"], "pa": ["₹600", "₹700", "₹800", "₹900"], "en": ["₹600", "₹700", "₹800", "₹900"]},
+        "answer": 2,
+        "explanation": {"hi": "SI = (5000×8×2)/100 = 80000/100 = ₹800।", "pa": "SI=(5000×8×2)/100=800।", "en": "SI = (5000×8×2)/100 = ₹800."}
+      },
+      {
+        "id": "ett-ma-q3",
+        "text": {"hi": "240 का 15% कितना होगा?", "pa": "240 ਦਾ 15%?", "en": "What is 15% of 240?"},
+        "options": {"hi": ["36", "40", "32", "30"], "pa": ["36", "40", "32", "30"], "en": ["36", "40", "32", "30"]},
+        "answer": 0,
+        "explanation": {"hi": "15% of 240 = (240×15)/100 = 3600/100 = 36।", "pa": "(240×15)/100=36।", "en": "15% of 240 = (240×15)/100 = 36."}
+      },
+      {
+        "id": "ett-ma-q4",
+        "text": {"hi": "(a–b)² का विस्तार क्या है?", "pa": "(a–b)² ਦਾ ਵਿਸਤਾਰ?", "en": "Expansion of (a–b)²?"},
+        "options": {"hi": ["a²+2ab+b²", "a²–2ab–b²", "a²–2ab+b²", "a²+b²"], "pa": ["a²+2ab+b²", "a²–2ab–b²", "a²–2ab+b²", "a²+b²"], "en": ["a²+2ab+b²", "a²–2ab–b²", "a²–2ab+b²", "a²+b²"]},
+        "answer": 2,
+        "explanation": {"hi": "(a–b)² = a² – 2ab + b²। यह एक मानक सर्वसमिका है।", "pa": "(a–b)² = a²–2ab+b²।", "en": "(a–b)² = a²–2ab+b². This is a standard algebraic identity."}
+      },
+      {
+        "id": "ett-ma-q5",
+        "text": {"hi": "एक दुकानदार ने ₹400 में खरीदकर ₹360 में बेचा। हानि% क्या है?", "pa": "CP=₹400, SP=₹360; ਹਾਨੀ%?", "en": "Bought at ₹400, sold at ₹360. Loss%?"},
+        "options": {"hi": ["5%", "8%", "10%", "12%"], "pa": ["5%", "8%", "10%", "12%"], "en": ["5%", "8%", "10%", "12%"]},
+        "answer": 2,
+        "explanation": {"hi": "हानि = 400–360 = 40; हानि% = (40/400)×100 = 10%।", "pa": "ਹਾਨੀ=40; ਹਾਨੀ%=(40/400)×100=10%।", "en": "Loss=400–360=40; Loss%=(40/400)×100=10%."}
+      }
+    ]
+  }
+]
