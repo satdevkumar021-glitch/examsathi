@@ -32,7 +32,6 @@ import {
   VolumeX,
 } from "lucide-react";
 import catalog from "../content/catalog.json";
-import bundled from "../content/lessons.json";
 import syllabus from "../content/syllabus.json";
 import type { Lesson, Lang, Text3, Question } from "../lib/types";
 type SRCard = {
@@ -185,11 +184,12 @@ export default function StudyApp({
     }
     return empty;
   });
-  const [lessons, setLessons] = useState<Lesson[]>(bundled as Lesson[]);
+  const [lessons, setLessons] = useState<Lesson[]>([]);
   const [roadmap, setRoadmap] = useState<typeof syllabus>(syllabus);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [status, setStatus] = useState("");
+  const [contentLoading, setContentLoading] = useState(true);
   const [loaded, setLoaded] = useState(() => !identity);
   const [region, setRegion] = useState("Punjab");
   const [domain, setDomain] = useState("All");
@@ -199,6 +199,7 @@ export default function StudyApp({
   const [lessonId, setLessonId] = useState("");
   const [tab, setTab] = useState("read");
   const [noteDrafts, setNoteDrafts] = useState<Record<string, string>>({});
+  const noteAutosaveRef = useRef<Record<string, ReturnType<typeof setTimeout>>>({});
   const [cardIndex, setCardIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [practiceLesson, setPracticeLesson] = useState("all");
@@ -353,8 +354,9 @@ export default function StudyApp({
       .then((c) => {
         setLessons(c.lessons);
         setRoadmap(c.syllabus);
+        setContentLoading(false);
       })
-      .catch(() => {});
+      .catch(() => setContentLoading(false));
     if (identity) {
       request<{ user: import("./chatgpt-auth").ChatGPTUser; state: State }>("/api/state")
         .then((s) => {
@@ -545,18 +547,29 @@ export default function StudyApp({
     return () => clearInterval(interval);
   }, [focusMode, focusActive]);
 
-  // Mock exam countdown timer
+  // Mock exam countdown timer — also calls save() on auto-finish so the attempt is recorded
+  const mockAutoSubmitRef = useRef(false);
   useEffect(() => {
     if (!mock || mock.finished) {
       if (mockTimerRef.current) clearInterval(mockTimerRef.current);
       return;
     }
+    mockAutoSubmitRef.current = false;
     const startedAt = mock.startedAt;
     const timeLimitMs = mock.timeLimitMs;
     mockTimerRef.current = setInterval(() => {
       const rem = Math.max(0, Math.ceil((timeLimitMs - (Date.now() - startedAt)) / 1000));
       setMockSecsLeft(rem);
-      if (rem === 0) setMock((m) => m ? { ...m, finished: true } : null);
+      if (rem === 0 && !mockAutoSubmitRef.current) {
+        mockAutoSubmitRef.current = true;
+        setMock((m) => {
+          if (!m || m.finished) return m;
+          const answers = m.items.map(({ lessonId, q }) => ({ questionId: `${lessonId}:${q.id}`, answer: m.answers[`${lessonId}:${q.id}`] ?? -1 }));
+          const correct = m.items.filter(({ lessonId, q }) => m.answers[`${lessonId}:${q.id}`] === q.answerIndex).length;
+          if (answers.length) save({ action: "attempt", answers, correct }).catch(() => {});
+          return { ...m, finished: true };
+        });
+      }
     }, 500);
     return () => { if (mockTimerRef.current) clearInterval(mockTimerRef.current); };
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -862,11 +875,12 @@ export default function StudyApp({
           </button>
         </div>
         {revealed && (() => {
-          // Build a stable card key from lessonId + position
+          // Build a stable card key: lessonId + card's index within that lesson's flashcards array
           const srcLesson = view === "lesson" && lesson
             ? lesson
             : lessons.find(l => l.flashcards.includes(card));
-          const cardKey = srcLesson ? `${srcLesson.id}::${safeIndex}` : `unknown::${safeIndex}`;
+          const stableIdx = srcLesson ? srcLesson.flashcards.indexOf(card) : safeIndex;
+          const cardKey = srcLesson ? `${srcLesson.id}::${stableIdx}` : `unknown::${safeIndex}`;
           const srData = (state.srCards || []).find(c => c.cardKey === cardKey);
           const dueLabel = srData
             ? `(${tr(text("अगली समीक्षा", "ਅਗਲੀ ਸਮੀਖਿਆ", "Next review"))}: ${new Date(srData.due).toLocaleDateString(lang === "hi" ? "hi-IN" : lang === "pa" ? "pa-IN" : "en-IN")})`
@@ -1437,7 +1451,7 @@ export default function StudyApp({
             <BookOpen />
             <h3>{subjectName(s)}</h3>
             <p>
-              {lessons.filter((l) => l.subject === s).length}{" "}
+              {lessons.filter((l) => inExamScope(l) && l.subject === s).length}{" "}
               {tr(text("उपलब्ध पाठ", "ਉਪਲਬਧ ਪਾਠ", "available lessons"))}
             </p>
           </button>
@@ -1851,9 +1865,16 @@ export default function StudyApp({
             <textarea
               aria-label="Personal notes"
               value={noteDrafts[lesson.id] ?? state.notes[lesson.id] ?? ""}
-              onChange={(e) =>
-                setNoteDrafts({ ...noteDrafts, [lesson.id]: e.target.value })
-              }
+              onChange={(e) => {
+                const val = e.target.value;
+                const id = lesson.id;
+                setNoteDrafts((prev) => ({ ...prev, [id]: val }));
+                // Debounced autosave: 1.5 s after last keystroke
+                if (noteAutosaveRef.current[id]) clearTimeout(noteAutosaveRef.current[id]);
+                noteAutosaveRef.current[id] = setTimeout(() => {
+                  save({ action: "note", lessonId: id, text: val }).catch(() => {});
+                }, 1500);
+              }}
             />
             <button
               disabled={busy}
@@ -2025,8 +2046,17 @@ export default function StudyApp({
         .filter(([, v]) => v.trim())
         .map(([id, n]) => (
           <div className="panel saved-note" key={id}>
-            <h3>{tr(lessons.find((l) => l.id === id)?.title || id)}</h3>
-            <p className="prose">{n}</p>
+            <div className="row between" style={{ alignItems: "flex-start", gap: 8 }}>
+              <h3 style={{ margin: 0 }}>{tr(lessons.find((l) => l.id === id)?.title || id)}</h3>
+              <button
+                style={{ fontSize: 12, padding: "3px 10px", color: "#b91c1c", border: "1px solid #fecaca", background: "#fef2f2", flexShrink: 0 }}
+                title={tr(text("नोट हटाएँ", "ਨੋਟ ਮਿਟਾਓ", "Delete note"))}
+                onClick={() => save({ action: "note", lessonId: id, text: "" })}
+              >
+                {tr(text("हटाएँ", "ਮਿਟਾਓ", "Delete"))}
+              </button>
+            </div>
+            <p className="prose" style={{ marginTop: 8 }}>{n}</p>
             <button onClick={() => go("lesson", id)}>
               <NotebookPen size={17} />
               {tr(
@@ -3337,7 +3367,7 @@ export default function StudyApp({
             </div>
             <p style={{ fontSize: 14 }}>
               <strong>{tr(text("तैयार सामग्री:", "ਤਿਆਰ ਸਮੱਗਰੀ:", "Ready Material:"))}</strong>{" "}
-              29 {tr(text("पाठ", "ਪਾਠ", "lessons"))} · 290 {tr(text("प्रमाणित प्रश्न", "ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ", "reviewed Qs"))} · 258 {tr(text("फ्लैशकार्ड", "ਫਲੈਸ਼ਕਾਰਡ", "flashcards"))}
+              {(() => { const ml = lessons.filter(l => l.examIds?.includes("master")); return `${ml.length} ${tr(text("पाठ", "ਪਾਠ", "lessons"))} · ${ml.reduce((n, l) => n + l.questions.length, 0)} ${tr(text("प्रमाणित प्रश्न", "ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ", "reviewed Qs"))} · ${ml.reduce((n, l) => n + l.flashcards.length, 0)} ${tr(text("फ्लैशकार्ड", "ਫਲੈਸ਼ਕਾਰਡ", "flashcards"))}`; })()}
             </p>
             <div className="row" style={{ marginTop: 10, gap: 8 }}>
               <button onClick={() => { setExamId("master"); setSubject("SST"); go("library"); }}>
@@ -4323,6 +4353,11 @@ export default function StudyApp({
               >
                 <X size={16} />
               </button>
+            </div>
+          )}
+          {contentLoading && (
+            <div className="alert" role="status" style={{ marginBottom: 12, fontSize: 13 }}>
+              {tr(text("पाठ लोड हो रहे हैं…", "ਪਾਠ ਲੋਡ ਹੋ ਰਹੇ ਹਨ…", "Loading lessons…"))}
             </div>
           )}
           {!loaded ? (
