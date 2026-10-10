@@ -104,6 +104,18 @@ for l in json.load(open(research/'master-sst-polity-2.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add Master Cadre SST Polity batch 3 (Political Theories: Liberalism, Marxism, Gandhism)
+for l in json.load(open(research/'master-sst-polity-3.json')):
+ l['level']='Foundation / concept preparation'
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Master Cadre SST Polity batch 4 (Panchayati Raj: 73rd and 74th Amendments)
+for l in json.load(open(research/'master-sst-polity-4.json')):
+ l['level']='Foundation / concept preparation'
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add Master Cadre SST History batch 2 (Guptas+Harsha, Delhi Sultanate)
 for l in json.load(open(research/'master-sst-history-2.json')):
  l['level']='Foundation / concept preparation'

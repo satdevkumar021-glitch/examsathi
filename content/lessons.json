@@ -36056,6 +36056,971 @@
     "level": "Foundation / concept preparation"
   },
   {
+    "id": "sst-political-theories",
+    "subject": "Political Science",
+    "unit": "Political Thought",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "राजनीतिक सिद्धांत: उदारवाद, मार्क्सवाद और गांधीवाद",
+      "pa": "ਰਾਜਨੀਤਿਕ ਸਿਧਾਂਤ: ਉਦਾਰਵਾਦ, ਮਾਰਕਸਵਾਦ ਅਤੇ ਗਾਂਧੀਵਾਦ",
+      "en": "Political Theories: Liberalism, Marxism and Gandhism"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 11 Political Theory – Chapters on Freedom, Rights, Social Justice, Secularism",
+        "url": "https://ncert.nic.in/textbook/pdf/kpst101.pdf",
+        "note": "Content is author-generated for Master Cadre SST exam practice. These are standard political theory topics in the Punjab Master Cadre Political Science syllabus."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "उदारवाद: अर्थ, विशेषताएँ और आलोचना",
+          "pa": "ਉਦਾਰਵਾਦ: ਅਰਥ, ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਅਤੇ ਆਲੋਚਨਾ",
+          "en": "Liberalism: Meaning, Features and Criticism"
+        },
+        "text": {
+          "hi": "**उदारवाद (Liberalism)** पश्चिमी राजनीतिक विचार की सर्वाधिक प्रभावशाली विचारधारा है जो 17वीं-18वीं शताब्दी में पनपी।\n\n**मूल सिद्धांत**:\n1. **व्यक्ति की सर्वोच्चता**: राज्य व्यक्ति के लिए है, व्यक्ति राज्य के लिए नहीं। John Locke — 'जीवन, स्वतंत्रता और संपत्ति' के प्राकृतिक अधिकार।\n2. **स्वतंत्रता**: नकारात्मक स्वतंत्रता (बाधा की अनुपस्थिति) — J.S. Mill; सकारात्मक स्वतंत्रता (T.H. Green) — राज्य की सहायक भूमिका।\n3. **समानता**: कानून के समक्ष समानता; अवसर की समानता।\n4. **लोकतंत्र और संसदवाद**: प्रतिनिधि सरकार; अधिकारों की रक्षा।\n5. **विधि का शासन (Rule of Law)**: सभी कानून के अधीन।\n6. **सीमित सरकार**: Laissez-faire (आर्थिक उदारवाद) — Adam Smith।\n\n**उदारवाद के प्रकार**:\n- **शास्त्रीय उदारवाद** (Classical, 17–18वीं): न्यूनतम सरकार, बाजार स्वतंत्रता।\n- **सुधारवादी/आधुनिक उदारवाद** (Neo/Reform): J.S. Mill, T.H. Green — सकारात्मक स्वतंत्रता, कल्याणकारी राज्य।\n\n**प्रमुख विचारक**: John Locke, J.S. Mill, Montesquieu, Voltaire, T.H. Green, John Rawls (न्याय का सिद्धांत)।\n\n**आलोचना**: व्यक्तिवाद से समाज में असमानता; पूँजीवाद को बढ़ावा; मार्क्सवाद और समाजवाद द्वारा चुनौती।",
+          "pa": "ਉਦਾਰਵਾਦ — ਵਿਅਕਤੀ ਦੀ ਸਰਵੋਚਤਾ, ਸੁਤੰਤਰਤਾ, ਸਮਾਨਤਾ, ਕਾਨੂੰਨ ਦਾ ਰਾਜ। John Locke — ਜੀਵਨ, ਸੁਤੰਤਰਤਾ, ਸੰਪੱਤੀ। J.S. Mill — ਸਕਾਰਾਤਮਕ ਸੁਤੰਤਰਤਾ। ਸ਼ਾਸਤਰੀ (ਘੱਟੋ-ਘੱਟ ਸਰਕਾਰ) ਅਤੇ ਆਧੁਨਿਕ (ਭਲਾਈ ਰਾਜ) ਉਦਾਰਵਾਦ।",
+          "en": "**Liberalism** is the most influential Western political ideology, emerging in the 17th–18th centuries.\n\n**Core Principles**:\n1. **Individual supremacy**: State exists for the individual (Locke: natural rights — life, liberty, property).\n2. **Liberty**: Negative liberty (absence of coercion — J.S. Mill); Positive liberty (T.H. Green — state assists in realising potential).\n3. **Equality**: Equality before law; equality of opportunity.\n4. **Democracy and constitutionalism**: Representative government; protection of rights.\n5. **Rule of Law**: All are subject to law.\n6. **Limited government**: Laissez-faire (Adam Smith) — economic liberalism.\n\n**Types**:\n- **Classical Liberalism** (17th–18th c.): Minimal state, free market.\n- **Reform/Modern Liberalism**: J.S. Mill, T.H. Green — positive liberty, welfare state.\n\n**Key thinkers**: John Locke, J.S. Mill, Montesquieu, Voltaire, T.H. Green, John Rawls (Theory of Justice).\n\n**Criticism**: Individualism promotes inequality; promotes capitalism; challenged by Marxism and socialism."
+        }
+      },
+      {
+        "heading": {
+          "hi": "मार्क्सवाद: वर्ग संघर्ष, ऐतिहासिक भौतिकवाद और राज्य का विलोप",
+          "pa": "ਮਾਰਕਸਵਾਦ: ਵਰਗ ਸੰਘਰਸ਼, ਇਤਿਹਾਸਕ ਭੌਤਿਕਵਾਦ ਅਤੇ ਰਾਜ ਦਾ ਲੋਪ",
+          "en": "Marxism: Class Struggle, Historical Materialism and Withering Away of the State"
+        },
+        "text": {
+          "hi": "**मार्क्सवाद** Karl Marx (1818–1883) और Friedrich Engels की विचारधारा है। प्रमुख रचनाएँ: **कम्युनिस्ट मेनिफेस्टो** (1848), **दास कैपिटल** (1867)।\n\n**मूल अवधारणाएँ**:\n\n1. **ऐतिहासिक भौतिकवाद (Historical Materialism)**: इतिहास आर्थिक शक्तियों (उत्पादन की शक्तियाँ और उत्पादन संबंध) से निर्धारित होता है। मानवीय चेतना भौतिक परिस्थितियों का परिणाम है।\n\n2. **वर्ग संघर्ष (Class Struggle)**: सभी इतिहास वर्ग संघर्षों का इतिहास है। पूँजीवाद में — बुर्जुआ (पूँजीपति) बनाम सर्वहारा (मज़दूर)। **अधिशेष मूल्य (Surplus Value)** — श्रम से उत्पन्न मूल्य से अधिक लेकर पूँजीपति शोषण करता है।\n\n3. **उत्पादन के साधनों पर नियंत्रण**: राज्य पूँजीपति वर्ग का हथियार। जब सर्वहारा क्रांति करेगा → सर्वहारा की तानाशाही → अंततः वर्गहीन, राज्यहीन समाज (साम्यवाद)।\n\n4. **राज्य का विलोप (Withering Away of the State)**: साम्यवादी समाज में राज्य का अस्तित्व समाप्त हो जाएगा।\n\n**समाजवाद बनाम साम्यवाद**: समाजवाद (Socialism) — उत्पादन के साधनों पर सामाजिक स्वामित्व, लेकिन राज्य कायम। साम्यवाद — वर्गहीन, राज्यहीन समाज।\n\n**आलोचना**: व्यावहारिक कठिनाइयाँ; मानव प्रकृति की उपेक्षा; तानाशाही का खतरा।",
+          "pa": "ਮਾਰਕਸਵਾਦ — Karl Marx (1818–1883)। ਇਤਿਹਾਸਕ ਭੌਤਿਕਵਾਦ: ਇਤਿਹਾਸ ਆਰਥਿਕ ਸ਼ਕਤੀਆਂ ਨਾਲ ਬਣਦਾ ਹੈ। ਵਰਗ ਸੰਘਰਸ਼: ਬੁਰਜ਼ੂਆ ਬਨਾਮ ਸਰਵਹਾਰਾ। ਅਧਿਸ਼ੇਸ਼ ਮੁੱਲ = ਸ਼ੋਸ਼ਣ। ਕ੍ਰਾਂਤੀ → ਸਰਵਹਾਰਾ ਦੀ ਤਾਨਾਸ਼ਾਹੀ → ਵਰਗਹੀਣ ਸਮਾਜ (ਸਾਮਿਵਾਦ)। ਕਮਿਊਨਿਸਟ ਮੈਨੀਫੈਸਟੋ 1848, ਦਾਸ ਕੈਪੀਟਲ 1867।",
+          "en": "**Marxism** is the ideology of Karl Marx (1818–1883) and Friedrich Engels. Key works: **Communist Manifesto** (1848), **Das Kapital** (1867).\n\n**Core Concepts**:\n\n1. **Historical Materialism**: History is determined by economic forces (forces and relations of production). Consciousness is a product of material conditions.\n\n2. **Class Struggle**: 'All history is the history of class struggle.' In capitalism: bourgeoisie (owners) vs proletariat (workers). **Surplus Value** — capitalists exploit workers by appropriating surplus.\n\n3. **Control of means of production**: The state is a tool of the capitalist class. Proletarian revolution → dictatorship of the proletariat → ultimately a classless, stateless society (communism).\n\n4. **Withering Away of the State**: In communist society, the state will eventually disappear.\n\n**Socialism vs Communism**: Socialism — social ownership of production, state remains. Communism — classless, stateless society.\n\n**Criticism**: Practical difficulties; ignores human nature; risk of authoritarianism."
+        }
+      },
+      {
+        "heading": {
+          "hi": "गांधीवाद: सत्याग्रह, अहिंसा और रामराज्य",
+          "pa": "ਗਾਂਧੀਵਾਦ: ਸੱਤਿਆਗ੍ਰਹਿ, ਅਹਿੰਸਾ ਅਤੇ ਰਾਮਰਾਜ",
+          "en": "Gandhism: Satyagraha, Non-violence and Ramrajya"
+        },
+        "text": {
+          "hi": "**गांधीवाद** Mahatma Gandhi (1869–1948) की विचारधारा है। गांधीजी ने अपने विचार 'हिंद स्वराज' (1909) में रखे।\n\n**मूल सिद्धांत**:\n\n1. **सत्य (Truth)**: ईश्वर ही सत्य है; जीवन का अंतिम लक्ष्य मोक्ष।\n2. **अहिंसा (Non-violence / Ahimsa)**: केवल शरीर से नहीं, मन और वचन से भी किसी को आघात न पहुँचाना। गांधीजी के लिए अहिंसा एक सकारात्मक शक्ति थी।\n3. **सत्याग्रह**: 'Truth-force' या 'Soul-force'। अन्यायपूर्ण कानून का शांतिपूर्ण, बिना घृणा के विरोध। रूपांतरण शत्रु को भी न्यायी बनाने के लिए।\n4. **स्वराज**: आत्म-शासन — व्यक्तिगत और राजनीतिक दोनों अर्थों में।\n5. **ट्रस्टीशिप (Trusteeship)**: धनी व्यक्ति समाज के ट्रस्टी हैं — शोषण नहीं। पूँजीवाद और साम्यवाद दोनों का विकल्प।\n6. **ग्राम स्वराज (Village Self-Rule)**: विकेंद्रीकरण; आत्मनिर्भर ग्राम; चरखा और खादी — स्वदेशी।\n7. **रामराज्य**: आदर्श राज्य जहाँ नैतिकता और न्याय हो — धर्म-आधारित, किंतु सांप्रदायिक नहीं।\n\n**गांधीवादी तरीके**: असहयोग, सविनय अवज्ञा, हड़ताल, उपवास — सभी अहिंसक।\n\n**आलोचना**: आधुनिक जटिल अर्थव्यवस्था में अव्यावहारिक; अतिआदर्शवादी।",
+          "pa": "ਗਾਂਧੀਵਾਦ — ਸੱਚ, ਅਹਿੰਸਾ, ਸੱਤਿਆਗ੍ਰਹਿ (Truth-force), ਸਵਰਾਜ, ਟਰੱਸਟੀਸ਼ਿਪ, ਗ੍ਰਾਮ ਸਵਰਾਜ। ਹਿੰਦ ਸਵਰਾਜ (1909)। ਰਾਮਰਾਜ = ਆਦਰਸ਼ ਰਾਜ। ਅਸਹਿਯੋਗ, ਸਵਿਨੈ ਅਵੱਗਿਆ — ਸਾਰੇ ਅਹਿੰਸਕ।",
+          "en": "**Gandhism** is the ideology of Mahatma Gandhi (1869–1948). His ideas are outlined in 'Hind Swaraj' (1909).\n\n**Core Principles**:\n\n1. **Truth (Satya)**: God is truth; ultimate goal is moksha.\n2. **Non-violence (Ahimsa)**: Not harming anyone through thought, word or deed. Gandhi saw ahimsa as a positive force.\n3. **Satyagraha**: 'Truth-force' or 'Soul-force'. Peaceful, hatred-free resistance to injustice. Aims to convert the opponent, not defeat them.\n4. **Swaraj**: Self-rule — both individual and political.\n5. **Trusteeship**: The wealthy are trustees of society — not exploiters. An alternative to both capitalism and communism.\n6. **Village Self-Rule (Gram Swaraj)**: Decentralisation; self-sufficient villages; charkha and khadi — Swadeshi.\n7. **Ramrajya**: Ideal state based on morality and justice — not communal.\n\n**Gandhian methods**: Non-cooperation, Civil Disobedience, hartals, fasting — all non-violent.\n\n**Criticism**: Impractical for modern complex economies; excessively idealistic."
+        }
+      },
+      {
+        "heading": {
+          "hi": "तुलनात्मक विश्लेषण",
+          "pa": "ਤੁਲਨਾਤਮਕ ਵਿਸ਼ਲੇਸ਼ਣ",
+          "en": "Comparative Analysis"
+        },
+        "text": {
+          "hi": "| पहलू | उदारवाद | मार्क्सवाद | गांधीवाद |\n|---|---|---|---|\n| **राज्य** | सीमित, संवैधानिक | वर्ग उपकरण → विलोप | विकेंद्रीकृत; ग्राम पंचायत |\n| **समानता** | अवसर की | आर्थिक (संपत्ति) | सामाजिक और आर्थिक |\n| **स्वतंत्रता** | नकारात्मक/सकारात्मक | वर्गीय शोषण से मुक्ति | आत्म-अनुशासन |\n| **अर्थव्यवस्था** | बाजार/मिश्रित | सामूहिक/राष्ट्रीयकृत | विकेंद्रीकृत, ग्रामीण |\n| **परिवर्तन** | क्रमिक, संसदीय | क्रांतिकारी | अहिंसक आंदोलन |",
+          "pa": "ਤਿੰਨਾਂ ਵਿਚਾਰਧਾਰਾਵਾਂ ਦੀ ਤੁਲਨਾ: ਉਦਾਰਵਾਦ (ਸੀਮਤ ਰਾਜ, ਬਾਜ਼ਾਰ), ਮਾਰਕਸਵਾਦ (ਰਾਜ ਵਰਗ-ਸੰਦ, ਕ੍ਰਾਂਤੀ), ਗਾਂਧੀਵਾਦ (ਵਿਕੇਂਦ੍ਰਿਤ, ਅਹਿੰਸਕ)।",
+          "en": "| Aspect | Liberalism | Marxism | Gandhism |\n|---|---|---|---|\n| **State** | Limited, constitutional | Class tool → wither away | Decentralised; village panchayat |\n| **Equality** | Equality of opportunity | Economic (property) | Social and economic |\n| **Liberty** | Negative/positive | Freedom from class exploitation | Self-discipline |\n| **Economy** | Market/mixed | Collective/nationalised | Decentralised, village-based |\n| **Change** | Gradual, parliamentary | Revolutionary | Non-violent mass movement |"
+        }
+      }
+    ],
+    "summary": {
+      "hi": "उदारवाद (Locke, Mill): व्यक्ति, स्वतंत्रता, सीमित सरकार। मार्क्सवाद (Marx, Engels): वर्ग संघर्ष, ऐतिहासिक भौतिकवाद, अधिशेष मूल्य, राज्य का विलोप। गांधीवाद: सत्य, अहिंसा, सत्याग्रह, ट्रस्टीशिप, ग्राम स्वराज।",
+      "pa": "ਉਦਾਰਵਾਦ (Locke, Mill): ਵਿਅਕਤੀ, ਸੁਤੰਤਰਤਾ। ਮਾਰਕਸਵਾਦ: ਵਰਗ ਸੰਘਰਸ਼, ਅਧਿਸ਼ੇਸ਼ ਮੁੱਲ, ਰਾਜ ਦਾ ਲੋਪ। ਗਾਂਧੀਵਾਦ: ਸੱਤਿਆਗ੍ਰਹਿ, ਅਹਿੰਸਾ, ਟਰੱਸਟੀਸ਼ਿਪ।",
+      "en": "Liberalism (Locke, Mill): individual, liberty, limited government. Marxism (Marx, Engels): class struggle, historical materialism, surplus value, withering of state. Gandhism: truth, ahimsa, satyagraha, trusteeship, gram swaraj."
+    },
+    "keyPoints": [
+      {
+        "hi": "Locke के प्राकृतिक अधिकार: जीवन, स्वतंत्रता, संपत्ति; नकारात्मक स्वतंत्रता = J.S. Mill",
+        "pa": "Locke: ਜੀਵਨ, ਸੁਤੰਤਰਤਾ, ਸੰਪੱਤੀ; J.S. Mill = ਨਕਾਰਾਤਮਕ ਸੁਤੰਤਰਤਾ",
+        "en": "Locke: life, liberty, property; negative liberty = J.S. Mill"
+      },
+      {
+        "hi": "मार्क्स: 'इतिहास वर्ग संघर्षों का इतिहास'; अधिशेष मूल्य = शोषण",
+        "pa": "Marx: 'ਇਤਿਹਾਸ ਵਰਗ ਸੰਘਰਸ਼ਾਂ ਦਾ ਇਤਿਹਾਸ'; ਅਧਿਸ਼ੇਸ਼ ਮੁੱਲ",
+        "en": "Marx: 'History of all hitherto existing society is history of class struggle'; surplus value = exploitation"
+      },
+      {
+        "hi": "सत्याग्रह = Truth-force; ट्रस्टीशिप = पूँजीवाद/साम्यवाद का विकल्प; हिंद स्वराज 1909",
+        "pa": "ਸੱਤਿਆਗ੍ਰਹਿ = Truth-force; ਟਰੱਸਟੀਸ਼ਿਪ = ਬਦਲ; ਹਿੰਦ ਸਵਰਾਜ 1909",
+        "en": "Satyagraha = Truth-force; Trusteeship = alternative to capitalism/communism; Hind Swaraj 1909"
+      },
+      {
+        "hi": "Communist Manifesto 1848; Das Kapital 1867",
+        "pa": "Communist Manifesto 1848; Das Kapital 1867",
+        "en": "Communist Manifesto 1848; Das Kapital 1867"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "John Locke के तीन प्राकृतिक अधिकार कौन से हैं?",
+          "pa": "John Locke ਦੇ ਤਿੰਨ ਕੁਦਰਤੀ ਅਧਿਕਾਰ ਕਿਹੜੇ ਹਨ?",
+          "en": "What are John Locke's three natural rights?"
+        },
+        "back": {
+          "hi": "ਜੀਵਨ (Life), ਸੁਤੰਤਰਤਾ (Liberty), ਸੰਪੱਤੀ (Property)",
+          "pa": "ਜੀਵਨ, ਸੁਤੰਤਰਤਾ, ਸੰਪੱਤੀ",
+          "en": "Life, Liberty, Property"
+        }
+      },
+      {
+        "front": {
+          "hi": "नकारात्मक और सकारात्मक स्वतंत्रता में क्या अंतर है?",
+          "pa": "ਨਕਾਰਾਤਮਕ ਅਤੇ ਸਕਾਰਾਤਮਕ ਸੁਤੰਤਰਤਾ ਵਿੱਚ ਫਰਕ?",
+          "en": "Difference between negative and positive liberty?"
+        },
+        "back": {
+          "hi": "ਨਕਾਰਾਤਮਕ (J.S. Mill) = ਰੁਕਾਵਟ ਦੀ ਗੈਰ-ਮੌਜੂਦਗੀ; ਸਕਾਰਾਤਮਕ (T.H. Green) = ਰਾਜ ਦੀ ਮਦਦ ਨਾਲ ਸਮਰੱਥਾ ਵਿਕਾਸ",
+          "pa": "ਨਕਾਰਾਤਮਕ = ਰੁਕਾਵਟ ਨਾ ਹੋਵੇ; ਸਕਾਰਾਤਮਕ = ਰਾਜ ਮਦਦ ਕਰੇ",
+          "en": "Negative (J.S. Mill) = absence of interference; Positive (T.H. Green) = state enables development of potential"
+        }
+      },
+      {
+        "front": {
+          "hi": "Marx की 'अधिशेष मूल्य' अवधारणा क्या है?",
+          "pa": "Marx ਦੀ 'ਅਧਿਸ਼ੇਸ਼ ਮੁੱਲ' ਧਾਰਨਾ ਕੀ ਹੈ?",
+          "en": "What is Marx's concept of 'Surplus Value'?"
+        },
+        "back": {
+          "hi": "ਮਜ਼ਦੂਰ ਆਪਣੀ ਮਜ਼ਦੂਰੀ ਤੋਂ ਵੱਧ ਮੁੱਲ ਪੈਦਾ ਕਰਦਾ ਹੈ; ਵਾਧੂ ਮੁੱਲ ਪੂੰਜੀਪਤੀ ਰੱਖਦਾ ਹੈ = ਸ਼ੋਸ਼ਣ",
+          "pa": "ਮਜ਼ਦੂਰ ਦੀ ਕਿਰਤ ਤੋਂ ਵੱਧ ਮੁੱਲ = ਪੂੰਜੀਪਤੀ ਦਾ ਮੁਨਾਫਾ = ਸ਼ੋਸ਼ਣ",
+          "en": "Worker produces more value than their wages; the surplus is appropriated by the capitalist = exploitation"
+        }
+      },
+      {
+        "front": {
+          "hi": "गांधी की 'ट्रस्टीशिप' अवधारणा क्या है?",
+          "pa": "ਗਾਂਧੀ ਦੀ 'ਟਰੱਸਟੀਸ਼ਿਪ' ਧਾਰਨਾ ਕੀ ਹੈ?",
+          "en": "What is Gandhi's concept of 'Trusteeship'?"
+        },
+        "back": {
+          "hi": "ਅਮੀਰ ਲੋਕ ਆਪਣੀ ਦੌਲਤ ਨੂੰ ਸਮਾਜ ਦੀ ਅਮਾਨਤ ਸਮਝਣ; ਪੂੰਜੀਵਾਦ ਅਤੇ ਸਾਮਿਵਾਦ ਦੋਵਾਂ ਦਾ ਬਦਲ",
+          "pa": "ਅਮੀਰ = ਸਮਾਜ ਦੇ ਟਰੱਸਟੀ, ਸ਼ੋਸ਼ਕ ਨਹੀਂ",
+          "en": "Wealthy people are trustees of society, not exploiters; alternative to both capitalism and communism"
+        }
+      },
+      {
+        "front": {
+          "hi": "Marx की दो प्रमुख रचनाएँ और उनका वर्ष?",
+          "pa": "Marx ਦੀਆਂ ਦੋ ਮੁੱਖ ਰਚਨਾਵਾਂ ਅਤੇ ਉਨ੍ਹਾਂ ਦਾ ਸਾਲ?",
+          "en": "Two major works of Marx and their years?"
+        },
+        "back": {
+          "hi": "Communist Manifesto (1848, Engels ਨਾਲ); Das Kapital (1867)",
+          "pa": "Communist Manifesto (1848); Das Kapital (1867)",
+          "en": "Communist Manifesto (1848, with Engels); Das Kapital (1867)"
+        }
+      },
+      {
+        "front": {
+          "hi": "सत्याग्रह का अर्थ क्या है?",
+          "pa": "ਸੱਤਿਆਗ੍ਰਹਿ ਦਾ ਅਰਥ ਕੀ ਹੈ?",
+          "en": "What does Satyagraha mean?"
+        },
+        "back": {
+          "hi": "'Truth-force' ਜਾਂ 'Soul-force' — ਅਹਿੰਸਕ ਤਰੀਕੇ ਨਾਲ ਅਨਿਆਂ ਦਾ ਵਿਰੋਧ, ਵਿਰੋਧੀ ਨੂੰ ਬਦਲਣ ਲਈ",
+          "pa": "Truth-force ਜਾਂ Soul-force — ਅਹਿੰਸਕ ਅਨਿਆਂ-ਵਿਰੋਧ",
+          "en": "'Truth-force' or 'Soul-force' — non-violent resistance to injustice, aiming to convert the opponent"
+        }
+      },
+      {
+        "front": {
+          "hi": "ऐतिहासिक भौतिकवाद (Historical Materialism) क्या है?",
+          "pa": "ਇਤਿਹਾਸਕ ਭੌਤਿਕਵਾਦ ਕੀ ਹੈ?",
+          "en": "What is Historical Materialism?"
+        },
+        "back": {
+          "hi": "Marx ਦਾ ਵਿਚਾਰ: ਇਤਿਹਾਸ ਆਰਥਿਕ/ਭੌਤਿਕ ਸ਼ਕਤੀਆਂ ਨਾਲ ਬਣਦਾ ਹੈ, ਵਿਚਾਰਾਂ ਨਾਲ ਨਹੀਂ; ਚੇਤਨਾ ਭੌਤਿਕ ਹਾਲਤਾਂ ਦਾ ਨਤੀਜਾ ਹੈ",
+          "pa": "ਇਤਿਹਾਸ ਆਰਥਿਕ ਸ਼ਕਤੀਆਂ ਨਾਲ ਬਣਦਾ ਹੈ",
+          "en": "Marx's theory: history is shaped by economic/material forces (not ideas); consciousness is a product of material conditions"
+        }
+      },
+      {
+        "front": {
+          "hi": "गांधी की 'हिंद स्वराज' कब लिखी गई?",
+          "pa": "ਗਾਂਧੀ ਦੀ 'ਹਿੰਦ ਸਵਰਾਜ' ਕਦੋਂ ਲਿਖੀ ਗਈ?",
+          "en": "When was Gandhi's 'Hind Swaraj' written?"
+        },
+        "back": {
+          "hi": "1909 ਈ., ਇੰਗਲੈਂਡ ਤੋਂ ਦੱਖਣ ਅਫਰੀਕਾ ਜਾਂਦੇ ਸਮੇਂ ਜਹਾਜ਼ ਵਿੱਚ ਲਿਖੀ",
+          "pa": "1909, ਜਹਾਜ਼ ਵਿੱਚ ਲਿਖੀ",
+          "en": "1909, written on the ship travelling from England to South Africa"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-poltheory-q1",
+        "text": {
+          "hi": "John Locke ने कौन से तीन प्राकृतिक अधिकार बताए?",
+          "pa": "John Locke ਨੇ ਕਿਹੜੇ ਤਿੰਨ ਕੁਦਰਤੀ ਅਧਿਕਾਰ ਦੱਸੇ?",
+          "en": "What three natural rights did John Locke identify?"
+        },
+        "options": {
+          "hi": [
+            "जीवन, समानता, संपत्ति",
+            "जीवन, स्वतंत्रता, संपत्ति",
+            "स्वतंत्रता, समानता, बंधुत्व",
+            "जीवन, शिक्षा, स्वास्थ्य"
+          ],
+          "pa": [
+            "ਜੀਵਨ, ਸਮਾਨਤਾ, ਸੰਪੱਤੀ",
+            "ਜੀਵਨ, ਸੁਤੰਤਰਤਾ, ਸੰਪੱਤੀ",
+            "ਸੁਤੰਤਰਤਾ, ਸਮਾਨਤਾ, ਭਾਈਚਾਰਾ",
+            "ਜੀਵਨ, ਸਿੱਖਿਆ, ਸਿਹਤ"
+          ],
+          "en": [
+            "Life, Equality, Property",
+            "Life, Liberty, Property",
+            "Liberty, Equality, Fraternity",
+            "Life, Education, Health"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "John Locke ने जीवन, स्वतंत्रता और संपत्ति को प्राकृतिक अधिकार बताया। Thomas Jefferson ने इसे 'Life, Liberty and Pursuit of Happiness' में बदला।",
+          "en": "John Locke identified Life, Liberty and Property as natural rights. Jefferson modified this to 'Life, Liberty and Pursuit of Happiness' in the American Declaration of Independence."
+        }
+      },
+      {
+        "id": "sst-poltheory-q2",
+        "text": {
+          "hi": "'दास कैपिटल' किसने लिखी और कब?",
+          "pa": "'ਦਾਸ ਕੈਪੀਟਲ' ਕਿਸਨੇ ਲਿਖੀ ਅਤੇ ਕਦੋਂ?",
+          "en": "Who wrote 'Das Kapital' and when?"
+        },
+        "options": {
+          "hi": [
+            "Friedrich Engels, 1848",
+            "Karl Marx, 1867",
+            "V.I. Lenin, 1902",
+            "Karl Marx, 1848"
+          ],
+          "pa": [
+            "Friedrich Engels, 1848",
+            "Karl Marx, 1867",
+            "V.I. Lenin, 1902",
+            "Karl Marx, 1848"
+          ],
+          "en": [
+            "Friedrich Engels, 1848",
+            "Karl Marx, 1867",
+            "V.I. Lenin, 1902",
+            "Karl Marx, 1848"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "दास कैपिटल Karl Marx ने 1867 में लिखी। 1848 में Marx और Engels ने मिलकर 'Communist Manifesto' लिखी।",
+          "en": "Das Kapital was written by Karl Marx in 1867. The Communist Manifesto (1848) was co-written with Friedrich Engels."
+        }
+      },
+      {
+        "id": "sst-poltheory-q3",
+        "text": {
+          "hi": "गांधीजी की 'ट्रस्टीशिप' अवधारणा किसका विकल्प है?",
+          "pa": "ਗਾਂਧੀ ਦੀ 'ਟਰੱਸਟੀਸ਼ਿਪ' ਕਿਸ ਦਾ ਬਦਲ ਹੈ?",
+          "en": "Gandhi's 'Trusteeship' concept is an alternative to:"
+        },
+        "options": {
+          "hi": [
+            "केवल पूँजीवाद",
+            "केवल समाजवाद",
+            "पूँजीवाद और साम्यवाद दोनों",
+            "गांधीवाद का कोई विकल्प नहीं"
+          ],
+          "pa": [
+            "ਸਿਰਫ਼ ਪੂੰਜੀਵਾਦ",
+            "ਸਿਰਫ਼ ਸਮਾਜਵਾਦ",
+            "ਪੂੰਜੀਵਾਦ ਅਤੇ ਸਾਮਿਵਾਦ ਦੋਵੇਂ",
+            "ਕੋਈ ਬਦਲ ਨਹੀਂ"
+          ],
+          "en": [
+            "Only capitalism",
+            "Only socialism",
+            "Both capitalism and communism",
+            "No alternative"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "गांधी की ट्रस्टीशिप पूँजीवाद की शोषण प्रवृत्ति और साम्यवाद की हिंसक क्रांति दोनों से बचते हुए एक मध्य मार्ग थी।",
+          "en": "Gandhi's Trusteeship was a middle path avoiding capitalism's exploitation and communism's violent revolution."
+        }
+      },
+      {
+        "id": "sst-poltheory-q4",
+        "text": {
+          "hi": "Marx के अनुसार 'राज्य' क्या है?",
+          "pa": "Marx ਦੇ ਅਨੁਸਾਰ 'ਰਾਜ' ਕੀ ਹੈ?",
+          "en": "According to Marx, what is the 'State'?"
+        },
+        "options": {
+          "hi": [
+            "एक तटस्थ संस्था",
+            "पूँजीपति वर्ग का हथियार",
+            "लोगों की सेवा करने वाला",
+            "अपरिवर्तनीय संस्था"
+          ],
+          "pa": [
+            "ਇੱਕ ਨਿਰਪੱਖ ਸੰਸਥਾ",
+            "ਪੂੰਜੀਪਤੀ ਵਰਗ ਦਾ ਹਥਿਆਰ",
+            "ਲੋਕਾਂ ਦੀ ਸੇਵਾ ਕਰਨ ਵਾਲੀ",
+            "ਅਪਰਿਵਰਤਨਯੋਗ ਸੰਸਥਾ"
+          ],
+          "en": [
+            "A neutral institution",
+            "A tool of the capitalist class",
+            "A servant of the people",
+            "An unchangeable institution"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Marx के अनुसार राज्य पूँजीपति वर्ग का हथियार है जो सर्वहारा के शोषण को बनाए रखता है। साम्यवादी समाज में राज्य का विलोप हो जाएगा।",
+          "en": "According to Marx, the state is a tool of the capitalist class that perpetuates exploitation. In communist society, the state will wither away."
+        }
+      },
+      {
+        "id": "sst-poltheory-q5",
+        "text": {
+          "hi": "उदारवाद में 'लेसे-फेयर' (Laissez-faire) का क्या अर्थ है?",
+          "pa": "'Laissez-faire' ਦਾ ਕੀ ਅਰਥ ਹੈ?",
+          "en": "What does 'Laissez-faire' mean in liberalism?"
+        },
+        "options": {
+          "hi": [
+            "सरकार का अधिक हस्तक्षेप",
+            "बाजार को स्वतंत्र छोड़ना, न्यूनतम सरकारी हस्तक्षेप",
+            "समाजवादी आर्थिक नीति",
+            "केंद्रीय नियोजन"
+          ],
+          "pa": [
+            "ਸਰਕਾਰ ਦਾ ਵੱਧ ਦਖਲ",
+            "ਬਾਜ਼ਾਰ ਨੂੰ ਆਜ਼ਾਦ ਛੱਡਣਾ, ਘੱਟੋ-ਘੱਟ ਸਰਕਾਰੀ ਦਖਲ",
+            "ਸਮਾਜਵਾਦੀ ਨੀਤੀ",
+            "ਕੇਂਦਰੀ ਯੋਜਨਾਬੰਦੀ"
+          ],
+          "en": [
+            "More government intervention",
+            "Leave the market free, minimal government intervention",
+            "Socialist economic policy",
+            "Central planning"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Laissez-faire (फ्रेंच) का अर्थ है 'करने दो'। आर्थिक उदारवाद में सरकार का न्यूनतम हस्तक्षेप और बाजार को स्वतंत्र छोड़ना (Adam Smith)।",
+          "en": "Laissez-faire (French) means 'let it be'. In economic liberalism (Adam Smith), it means minimal government intervention and a free market."
+        }
+      },
+      {
+        "id": "sst-poltheory-q6",
+        "text": {
+          "hi": "ऐतिहासिक भौतिकवाद का संबंध किससे है?",
+          "pa": "ਇਤਿਹਾਸਕ ਭੌਤਿਕਵਾਦ ਦਾ ਸੰਬੰਧ ਕਿਸ ਨਾਲ ਹੈ?",
+          "en": "Historical Materialism is associated with:"
+        },
+        "options": {
+          "hi": [
+            "गांधीजी",
+            "Adam Smith",
+            "Karl Marx",
+            "John Locke"
+          ],
+          "pa": [
+            "ਗਾਂਧੀਜੀ",
+            "Adam Smith",
+            "Karl Marx",
+            "John Locke"
+          ],
+          "en": [
+            "Mahatma Gandhi",
+            "Adam Smith",
+            "Karl Marx",
+            "John Locke"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ऐतिहासिक भौतिकवाद Karl Marx की अवधारणा है जो बताती है कि इतिहास आर्थिक/भौतिक शक्तियों से निर्धारित होता है।",
+          "en": "Historical Materialism is Karl Marx's concept explaining that history is determined by economic/material forces, not ideas."
+        }
+      },
+      {
+        "id": "sst-poltheory-q7",
+        "text": {
+          "hi": "गांधीजी का 'हिंद स्वराज' कब प्रकाशित हुआ?",
+          "pa": "ਗਾਂਧੀਜੀ ਦੀ 'ਹਿੰਦ ਸਵਰਾਜ' ਕਦੋਂ ਪ੍ਰਕਾਸ਼ਿਤ ਹੋਈ?",
+          "en": "When was Gandhi's 'Hind Swaraj' published?"
+        },
+        "options": {
+          "hi": [
+            "1905",
+            "1907",
+            "1909",
+            "1920"
+          ],
+          "pa": [
+            "1905",
+            "1907",
+            "1909",
+            "1920"
+          ],
+          "en": [
+            "1905",
+            "1907",
+            "1909",
+            "1920"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "गांधीजी ने 'हिंद स्वराज' 1909 में इंग्लैंड से दक्षिण अफ्रीका जाते समय जहाज में लिखी। इसमें उन्होंने आधुनिक सभ्यता और भारत के स्वराज की अवधारणा रखी।",
+          "en": "Gandhi wrote 'Hind Swaraj' in 1909 on the ship from England to South Africa. It contains his critique of modern civilization and concept of Swaraj."
+        }
+      },
+      {
+        "id": "sst-poltheory-q8",
+        "text": {
+          "hi": "सकारात्मक स्वतंत्रता (Positive Liberty) की अवधारणा किसने दी?",
+          "pa": "ਸਕਾਰਾਤਮਕ ਸੁਤੰਤਰਤਾ (Positive Liberty) ਦੀ ਧਾਰਨਾ ਕਿਸਨੇ ਦਿੱਤੀ?",
+          "en": "Who gave the concept of Positive Liberty?"
+        },
+        "options": {
+          "hi": [
+            "John Locke",
+            "John Stuart Mill",
+            "T.H. Green",
+            "Karl Marx"
+          ],
+          "pa": [
+            "John Locke",
+            "John Stuart Mill",
+            "T.H. Green",
+            "Karl Marx"
+          ],
+          "en": [
+            "John Locke",
+            "John Stuart Mill",
+            "T.H. Green",
+            "Karl Marx"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "T.H. Green ने सकारात्मक स्वतंत्रता की अवधारणा दी — राज्य को व्यक्ति की क्षमता विकसित करने में सहायता करनी चाहिए।",
+          "en": "T.H. Green gave the concept of Positive Liberty — the state should actively help individuals develop their potential."
+        }
+      },
+      {
+        "id": "sst-poltheory-q9",
+        "text": {
+          "hi": "'Communist Manifesto' किस वर्ष प्रकाशित हुआ?",
+          "pa": "'Communist Manifesto' ਕਿਸ ਸਾਲ ਪ੍ਰਕਾਸ਼ਿਤ ਹੋਇਆ?",
+          "en": "In which year was the 'Communist Manifesto' published?"
+        },
+        "options": {
+          "hi": [
+            "1830",
+            "1848",
+            "1867",
+            "1871"
+          ],
+          "pa": [
+            "1830",
+            "1848",
+            "1867",
+            "1871"
+          ],
+          "en": [
+            "1830",
+            "1848",
+            "1867",
+            "1871"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Communist Manifesto 1848 में Karl Marx और Friedrich Engels ने मिलकर प्रकाशित किया। Das Kapital 1867 में आई।",
+          "en": "The Communist Manifesto was published in 1848 by Karl Marx and Friedrich Engels. Das Kapital came out in 1867."
+        }
+      },
+      {
+        "id": "sst-poltheory-q10",
+        "text": {
+          "hi": "गांधीवाद के अनुसार परिवर्तन का तरीका क्या है?",
+          "pa": "ਗਾਂਧੀਵਾਦ ਅਨੁਸਾਰ ਤਬਦੀਲੀ ਦਾ ਤਰੀਕਾ ਕੀ ਹੈ?",
+          "en": "According to Gandhism, what is the method of social change?"
+        },
+        "options": {
+          "hi": [
+            "सशस्त्र क्रांति",
+            "संसदीय लोकतंत्र",
+            "अहिंसक जन-आंदोलन",
+            "सैनिक तख्तापलट"
+          ],
+          "pa": [
+            "ਹਥਿਆਰਬੰਦ ਕ੍ਰਾਂਤੀ",
+            "ਸੰਸਦੀ ਲੋਕਤੰਤਰ",
+            "ਅਹਿੰਸਕ ਜਨ-ਅੰਦੋਲਨ",
+            "ਫੌਜੀ ਤਖ਼ਤਾਪਲਟ"
+          ],
+          "en": [
+            "Armed revolution",
+            "Parliamentary democracy",
+            "Non-violent mass movement",
+            "Military coup"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "गांधीवाद में अहिंसक जन-आंदोलन (सत्याग्रह, असहयोग, सविनय अवज्ञा) परिवर्तन का मुख्य तरीका है। यह मार्क्सवादी सशस्त्र क्रांति से मूलभूत रूप से अलग है।",
+          "en": "In Gandhism, non-violent mass movement (satyagraha, non-cooperation, civil disobedience) is the primary method of change. This is fundamentally different from Marxist armed revolution."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sst-panchayati-raj",
+    "subject": "Political Science",
+    "unit": "Constitution of India",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "पंचायती राज: 73वाँ और 74वाँ संविधान संशोधन",
+      "pa": "ਪੰਚਾਇਤੀ ਰਾਜ: 73ਵੀਂ ਅਤੇ 74ਵੀਂ ਸੰਵਿਧਾਨਕ ਸੋਧ",
+      "en": "Panchayati Raj: 73rd and 74th Constitutional Amendments"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 9 Democratic Politics I – Chapter 4: Working of Institutions",
+        "url": "https://ncert.nic.in/textbook/pdf/iess209.pdf",
+        "note": "Content is author-generated for Master Cadre SST exam practice based on the 73rd and 74th Amendments to the Constitution of India (official text publicly available)."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "पंचायती राज का ऐतिहासिक विकास और बलवंत राय मेहता समिति",
+          "pa": "ਪੰਚਾਇਤੀ ਰਾਜ ਦਾ ਇਤਿਹਾਸਕ ਵਿਕਾਸ ਅਤੇ ਬਲਵੰਤ ਰਾਏ ਮਹਿਤਾ ਕਮੇਟੀ",
+          "en": "Historical Development and Balwant Rai Mehta Committee"
+        },
+        "text": {
+          "hi": "**ਪੰਚਾਇਤੀ ਰਾਜ** ਭਾਰਤ ਵਿੱਚ ਪੇਂਡੂ ਸ਼ਾਸਨ ਦੀ ਤਿੰਨ-ਪੱਧਰੀ ਵਿਕੇਂਦ੍ਰਿਤ ਪ੍ਰਣਾਲੀ ਹੈ।\n\n**ਸੰਵਿਧਾਨ ਵਿੱਚ ਮੂਲ ਸਥਾਨ**: ਧਾਰਾ 40 (ਰਾਜ ਨੀਤੀ ਦੇ ਨਿਰਦੇਸ਼ਕ ਸਿਧਾਂਤ) — ਰਾਜ, ਗ੍ਰਾਮ ਪੰਚਾਇਤਾਂ ਨੂੰ ਸ਼ਕਤੀਆਂ ਦੇਵੇਗਾ। ਪਰ ਇਹ ਨਿਰਦੇਸ਼ਕ ਸੀ, ਕਾਨੂੰਨੀ ਤੌਰ 'ਤੇ ਲਾਜ਼ਮੀ ਨਹੀਂ।\n\n**ਬਲਵੰਤ ਰਾਏ ਮਹਿਤਾ ਕਮੇਟੀ (1957)**: ਤਿੰਨ ਪੱਧਰੀ ਪ੍ਰਣਾਲੀ ਸੁਝਾਈ:\n- ਗ੍ਰਾਮ ਪੰਚਾਇਤ (ਪਿੰਡ)\n- ਪੰਚਾਇਤ ਸਮਿਤੀ (ਬਲਾਕ)\n- ਜ਼ਿਲ੍ਹਾ ਪ੍ਰੀਸ਼ਦ (ਜ਼ਿਲ੍ਹਾ)\nਰਾਜਸਥਾਨ ਨੇ 1959 ਵਿੱਚ ਪਹਿਲਾ ਪੰਚਾਇਤੀ ਰਾਜ ਲਾਗੂ ਕੀਤਾ।\n\n**ਅਸ਼ੋਕ ਮਹਿਤਾ ਕਮੇਟੀ (1977)**: ਦੋ-ਪੱਧਰੀ ਪ੍ਰਣਾਲੀ ਸੁਝਾਈ।\n\n**ਸਮੱਸਿਆ**: ਪੰਚਾਇਤੀ ਰਾਜ ਸੰਸਥਾਵਾਂ ਕਮਜ਼ੋਰ ਰਹੀਆਂ — ਫੰਡ, ਕਰਮਚਾਰੀ ਅਤੇ ਕਾਰਜ (3Fs: Funds, Functionaries, Functions) ਦੀ ਕਮੀ।\n\nਇਸ ਸਮੱਸਿਆ ਹੱਲ ਕਰਨ ਲਈ 73ਵੀਂ ਸੋਧ (1992) ਆਈ।",
+          "pa": "ਧਾਰਾ 40 (DPSP): ਰਾਜ ਪੰਚਾਇਤਾਂ ਨੂੰ ਸ਼ਕਤੀ ਦੇਵੇਗਾ। ਬਲਵੰਤ ਰਾਏ ਮਹਿਤਾ (1957): ਤਿੰਨ-ਪੱਧਰੀ। ਰਾਜਸਥਾਨ ਨੇ 1959 ਵਿੱਚ ਪਹਿਲਾਂ ਲਾਗੂ ਕੀਤਾ।",
+          "en": "**Panchayati Raj** is the three-tier decentralised system of rural governance in India.\n\n**Original constitutional position**: Article 40 (DPSP) — state shall organise village panchayats and endow them with powers. But it was directive, not legally enforceable.\n\n**Balwant Rai Mehta Committee (1957)**: Recommended three-tier system:\n- Gram Panchayat (village)\n- Panchayat Samiti (block)\n- Zila Parishad (district)\nRajasthan became the first state to implement Panchayati Raj in 1959.\n\n**Ashok Mehta Committee (1977)**: Recommended two-tier system.\n\n**Problem**: Panchayati Raj institutions remained weak — lack of 3Fs: Funds, Functionaries, Functions.\n\nThe 73rd Amendment (1992) addressed this."
+        }
+      },
+      {
+        "heading": {
+          "hi": "73वाँ संविधान संशोधन (1992): ग्रामीण लोकतंत्र",
+          "pa": "73ਵੀਂ ਸੰਵਿਧਾਨਕ ਸੋਧ (1992): ਪੇਂਡੂ ਲੋਕਤੰਤਰ",
+          "en": "73rd Constitutional Amendment (1992): Rural Democracy"
+        },
+        "text": {
+          "hi": "**73ਵੀਂ ਸੰਵਿਧਾਨਕ ਸੋਧ (1992)** — 24 ਅਪ੍ਰੈਲ 1993 ਤੋਂ ਲਾਗੂ। ਇਸ ਨਾਲ ਨਵੀਂ **ਭਾਗ IX** ਸ਼ਾਮਲ ਕੀਤੀ (ਧਾਰਾ 243 ਤੋਂ 243O) ਅਤੇ **11ਵੀਂ ਅਨੁਸੂਚੀ** (29 ਵਿਸ਼ੇ) ਜੋੜੀ।\n\n**ਮੁੱਖ ਵਿਵਸਥਾਵਾਂ**:\n1. **ਤਿੰਨ-ਪੱਧਰੀ ਢਾਂਚਾ** (20 ਲੱਖ+ ਜਨਸੰਖਿਆ ਵਾਲੇ ਰਾਜਾਂ ਲਈ ਲਾਜ਼ਮੀ): ਗ੍ਰਾਮ ਪੰਚਾਇਤ, ਮੱਧ ਪੱਧਰ, ਜ਼ਿਲ੍ਹਾ ਪੰਚਾਇਤ।\n2. **ਗ੍ਰਾਮ ਸਭਾ**: ਹਰ ਪਿੰਡ ਵਿੱਚ ਵੋਟਰਾਂ ਦੀ ਸਭਾ — ਲੋਕਤੰਤਰ ਦੀ ਬੁਨਿਆਦ।\n3. **ਚੋਣਾਂ**: ਹਰ 5 ਸਾਲ ਵਿੱਚ ਸਿੱਧੀਆਂ ਚੋਣਾਂ; ਰਾਜ ਚੋਣ ਕਮਿਸ਼ਨ ਦੀ ਨਿਗਰਾਨੀ।\n4. **ਰਾਖਵਾਂਕਰਨ**: SC/ST ਲਈ ਉਨ੍ਹਾਂ ਦੀ ਅਬਾਦੀ ਅਨੁਸਾਰ; ਔਰਤਾਂ ਲਈ **ਘੱਟੋ-ਘੱਟ 1/3** (ਬਾਅਦ ਵਿੱਚ ਕਈ ਰਾਜਾਂ ਵਿੱਚ 50%)।\n5. **ਰਾਜ ਚੋਣ ਕਮਿਸ਼ਨ**: ਪੰਚਾਇਤ ਚੋਣਾਂ ਦੀ ਨਿਗਰਾਨੀ।\n6. **ਰਾਜ ਵਿੱਤ ਕਮਿਸ਼ਨ**: ਰਾਜ ਸਰਕਾਰ ਤੋਂ ਪੰਚਾਇਤਾਂ ਨੂੰ ਫੰਡ ਵੰਡ।\n7. **11ਵੀਂ ਅਨੁਸੂਚੀ** (29 ਵਿਸ਼ੇ): ਖੇਤੀਬਾੜੀ, ਭੂਮੀ ਸੁਧਾਰ, ਸਿੱਖਿਆ, ਸਿਹਤ, ਗਰੀਬੀ ਉਪਾਅ, ਸੜਕਾਂ ਆਦਿ।",
+          "pa": "73ਵੀਂ ਸੋਧ 1992 (ਲਾਗੂ 24 ਅਪ੍ਰੈਲ 1993): ਭਾਗ IX, ਧਾਰਾ 243–243O, 11ਵੀਂ ਅਨੁਸੂਚੀ। ਤਿੰਨ-ਪੱਧਰੀ, ਗ੍ਰਾਮ ਸਭਾ, 5-ਸਾਲਾ ਚੋਣਾਂ, SC/ST+ਔਰਤਾਂ ਰਾਖਵਾਂਕਰਨ (1/3), ਰਾਜ ਚੋਣ ਕਮਿਸ਼ਨ, ਰਾਜ ਵਿੱਤ ਕਮਿਸ਼ਨ।",
+          "en": "**73rd Constitutional Amendment (1992)** — effective 24 April 1993. Added **Part IX** (Articles 243–243O) and the **11th Schedule** (29 subjects).\n\n**Key Provisions**:\n1. **Three-tier structure** (mandatory for states with population 20 lakh+): Gram Panchayat, Intermediate level, District Panchayat.\n2. **Gram Sabha**: Assembly of voters in each village — foundation of grassroots democracy.\n3. **Elections**: Direct elections every 5 years; supervised by State Election Commission.\n4. **Reservations**: For SC/ST proportional to population; for women — minimum **1/3** (later increased to 50% in many states).\n5. **State Election Commission**: Superintendence of panchayat elections.\n6. **State Finance Commission**: Distribution of funds from state to panchayats.\n7. **11th Schedule** (29 subjects): Agriculture, land reform, education, health, poverty alleviation, rural roads, etc."
+        }
+      },
+      {
+        "heading": {
+          "hi": "74वाँ संविधान संशोधन (1992): शहरी स्थानीय निकाय",
+          "pa": "74ਵੀਂ ਸੰਵਿਧਾਨਕ ਸੋਧ (1992): ਸ਼ਹਿਰੀ ਸਥਾਨਕ ਸੰਸਥਾਵਾਂ",
+          "en": "74th Constitutional Amendment (1992): Urban Local Bodies"
+        },
+        "text": {
+          "hi": "**74ਵੀਂ ਸੰਵਿਧਾਨਕ ਸੋਧ (1992)** — ਉਹੀ ਸਾਲ; **ਭਾਗ IX-A** (ਧਾਰਾ 243P–243ZG) ਅਤੇ **12ਵੀਂ ਅਨੁਸੂਚੀ** (18 ਵਿਸ਼ੇ) ਸ਼ਾਮਲ ਕੀਤੀ।\n\n**ਸ਼ਹਿਰੀ ਸਥਾਨਕ ਸੰਸਥਾਵਾਂ ਦੀਆਂ ਕਿਸਮਾਂ**:\n1. **ਨਗਰ ਪੰਚਾਇਤ** (Nagar Panchayat): ਪੇਂਡੂ ਤੋਂ ਸ਼ਹਿਰੀ ਵੱਲ ਬਦਲ ਰਹੇ ਖੇਤਰ।\n2. **ਨਗਰ ਪਾਲਿਕਾ ਪ੍ਰੀਸ਼ਦ** (Municipal Council): ਛੋਟੇ ਸ਼ਹਿਰ।\n3. **ਨਗਰ ਨਿਗਮ** (Municipal Corporation): ਵੱਡੇ ਸ਼ਹਿਰ।\n\n**ਮੁੱਖ ਵਿਵਸਥਾਵਾਂ**:\n- ਸਿੱਧੀਆਂ ਚੋਣਾਂ ਹਰ 5 ਸਾਲ ਵਿੱਚ।\n- SC/ST ਅਤੇ ਔਰਤਾਂ (1/3) ਲਈ ਰਾਖਵਾਂਕਰਨ।\n- **ਵਾਰਡ ਕਮੇਟੀਆਂ** (Ward Committees): 3 ਲੱਖ+ ਜਨਸੰਖਿਆ ਵਾਲੇ ਸ਼ਹਿਰਾਂ ਵਿੱਚ ਲਾਜ਼ਮੀ।\n- **12ਵੀਂ ਅਨੁਸੂਚੀ** (18 ਵਿਸ਼ੇ): ਸ਼ਹਿਰੀ ਯੋਜਨਾਬੰਦੀ, ਸੜਕਾਂ, ਜਨਤਕ ਸਿਹਤ, ਝੁੱਗੀਆਂ, ਬੱਸਾਂ ਆਦਿ।\n\n**73ਵੀਂ ਅਤੇ 74ਵੀਂ ਵਿੱਚ ਅੰਤਰ**:\n| ਪਹਿਲੂ | 73ਵੀਂ | 74ਵੀਂ |\n|---|---|---|\n| ਖੇਤਰ | ਪੇਂਡੂ | ਸ਼ਹਿਰੀ |\n| ਭਾਗ | IX | IX-A |\n| ਅਨੁਸੂਚੀ | 11ਵੀਂ (29 ਵਿਸ਼ੇ) | 12ਵੀਂ (18 ਵਿਸ਼ੇ) |\n| ਸੰਸਥਾਵਾਂ | ਗ੍ਰਾਮ ਪੰਚਾਇਤ, ਜ਼ਿਲ੍ਹਾ ਪੰਚਾਇਤ | ਨਗਰ ਨਿਗਮ, ਨਗਰ ਪਾਲਿਕਾ |",
+          "pa": "74ਵੀਂ ਸੋਧ 1992: ਭਾਗ IX-A, 12ਵੀਂ ਅਨੁਸੂਚੀ (18 ਵਿਸ਼ੇ)। ਨਗਰ ਪੰਚਾਇਤ, ਨਗਰ ਪਾਲਿਕਾ, ਨਗਰ ਨਿਗਮ। ਵਾਰਡ ਕਮੇਟੀਆਂ (3 ਲੱਖ+)। 1/3 ਔਰਤਾਂ ਰਾਖਵਾਂਕਰਨ।",
+          "en": "**74th Constitutional Amendment (1992)** — same year as 73rd. Added **Part IX-A** (Articles 243P–243ZG) and the **12th Schedule** (18 subjects).\n\n**Types of Urban Local Bodies**:\n1. **Nagar Panchayat**: Transitional rural-to-urban areas.\n2. **Municipal Council**: Smaller urban areas.\n3. **Municipal Corporation**: Larger urban areas.\n\n**Key Provisions**:\n- Direct elections every 5 years.\n- SC/ST and women (1/3) reservations.\n- **Ward Committees**: Mandatory in cities with population 3 lakh+.\n- **12th Schedule** (18 subjects): Urban planning, roads, public health, slums, buses, etc.\n\n**Comparison: 73rd vs 74th**:\n| Aspect | 73rd | 74th |\n|---|---|---|\n| Area | Rural | Urban |\n| Part | IX | IX-A |\n| Schedule | 11th (29 subjects) | 12th (18 subjects) |\n| Bodies | Gram Panchayat, Zila Parishad | Municipal Corporation, Council |"
+        }
+      }
+    ],
+    "summary": {
+      "hi": "73वाँ संशोधन (1992): भाग IX, धारा 243–243O, 11वीं अनुसूची (29 विषय), ग्रामीण; ग्राम पंचायत-मध्य स्तर-जिला पंचायत; SC/ST+1/3 महिला आरक्षण; राज्य चुनाव आयोग; राज्य वित्त आयोग। 74वाँ: भाग IX-A, 12वीं अनुसूची (18 विषय), शहरी; नगर पंचायत-नगरपालिका-नगर निगम।",
+      "pa": "73ਵੀਂ: ਭਾਗ IX, 11ਵੀਂ ਅਨੁਸੂਚੀ (29 ਵਿਸ਼ੇ), ਪੇਂਡੂ; 1/3 ਔਰਤਾਂ। 74ਵੀਂ: ਭਾਗ IX-A, 12ਵੀਂ ਅਨੁਸੂਚੀ (18 ਵਿਸ਼ੇ), ਸ਼ਹਿਰੀ।",
+      "en": "73rd (1992): Part IX, Articles 243–243O, 11th Schedule (29 subjects), rural; gram panchayat-intermediate-zila; SC/ST+1/3 women reservation; State Election Commission; State Finance Commission. 74th: Part IX-A, 12th Schedule (18 subjects), urban; Nagar Panchayat-Municipal Council-Corporation."
+    },
+    "keyPoints": [
+      {
+        "hi": "73वाँ = भाग IX, धारा 243–243O, 11वीं अनुसूची (29 विषय) = ग्रामीण",
+        "pa": "73ਵੀਂ = ਭਾਗ IX, 11ਵੀਂ ਅਨੁਸੂਚੀ (29 ਵਿਸ਼ੇ) = ਪੇਂਡੂ",
+        "en": "73rd = Part IX, Articles 243–243O, 11th Schedule (29 subjects) = Rural"
+      },
+      {
+        "hi": "74वाँ = भाग IX-A, 12वीं अनुसूची (18 विषय) = शहरी",
+        "pa": "74ਵੀਂ = ਭਾਗ IX-A, 12ਵੀਂ ਅਨੁਸੂਚੀ (18 ਵਿਸ਼ੇ) = ਸ਼ਹਿਰੀ",
+        "en": "74th = Part IX-A, 12th Schedule (18 subjects) = Urban"
+      },
+      {
+        "hi": "महिलाओं के लिए न्यूनतम 1/3 आरक्षण (दोनों 73वाँ और 74वाँ में)",
+        "pa": "ਔਰਤਾਂ ਲਈ ਘੱਟੋ-ਘੱਟ 1/3 ਰਾਖਵਾਂਕਰਨ",
+        "en": "Minimum 1/3 reservation for women (in both 73rd and 74th amendments)"
+      },
+      {
+        "hi": "राजस्थान = प्रथम राज्य जिसने 1959 में पंचायती राज लागू किया",
+        "pa": "ਰਾਜਸਥਾਨ = ਪਹਿਲਾ ਰਾਜ ਜਿਸਨੇ 1959 ਵਿੱਚ ਪੰਚਾਇਤੀ ਰਾਜ ਲਾਗੂ ਕੀਤਾ",
+        "en": "Rajasthan = first state to implement Panchayati Raj in 1959"
+      },
+      {
+        "hi": "ग्राम सभा = पंचायत क्षेत्र के सभी वयस्क मतदाताओं की सभा",
+        "pa": "ਗ੍ਰਾਮ ਸਭਾ = ਸਾਰੇ ਬਾਲਗ ਵੋਟਰਾਂ ਦੀ ਸਭਾ",
+        "en": "Gram Sabha = assembly of all adult voters in a panchayat area"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "73वाँ संशोधन किस भाग और किन धाराओं को जोड़ता है?",
+          "pa": "73ਵੀਂ ਸੋਧ ਕਿਹੜਾ ਭਾਗ ਅਤੇ ਕਿਹੜੀਆਂ ਧਾਰਾਵਾਂ ਜੋੜਦੀ ਹੈ?",
+          "en": "Which Part and Articles did the 73rd Amendment add?"
+        },
+        "back": {
+          "hi": "ਭਾਗ IX, ਧਾਰਾ 243 ਤੋਂ 243O (ਅਤੇ 11ਵੀਂ ਅਨੁਸੂਚੀ — 29 ਵਿਸ਼ੇ)",
+          "pa": "ਭਾਗ IX, 243–243O, 11ਵੀਂ ਅਨੁਸੂਚੀ",
+          "en": "Part IX, Articles 243–243O (and 11th Schedule — 29 subjects)"
+        }
+      },
+      {
+        "front": {
+          "hi": "11वीं अनुसूची में कितने विषय हैं?",
+          "pa": "11ਵੀਂ ਅਨੁਸੂਚੀ ਵਿੱਚ ਕਿੰਨੇ ਵਿਸ਼ੇ ਹਨ?",
+          "en": "How many subjects are in the 11th Schedule?"
+        },
+        "back": {
+          "hi": "29 ਵਿਸ਼ੇ (73ਵੀਂ ਸੋਧ ਦੁਆਰਾ ਜੋੜੀ ਗਈ)",
+          "pa": "29 ਵਿਸ਼ੇ",
+          "en": "29 subjects (added by the 73rd Amendment)"
+        }
+      },
+      {
+        "front": {
+          "hi": "74वाँ संशोधन किस भाग और अनुसूची को जोड़ता है?",
+          "pa": "74ਵੀਂ ਸੋਧ ਕਿਹੜਾ ਭਾਗ ਅਤੇ ਅਨੁਸੂਚੀ ਜੋੜਦੀ ਹੈ?",
+          "en": "Which Part and Schedule did the 74th Amendment add?"
+        },
+        "back": {
+          "hi": "ਭਾਗ IX-A (ਧਾਰਾ 243P–243ZG) ਅਤੇ 12ਵੀਂ ਅਨੁਸੂਚੀ (18 ਵਿਸ਼ੇ)",
+          "pa": "ਭਾਗ IX-A, 12ਵੀਂ ਅਨੁਸੂਚੀ (18 ਵਿਸ਼ੇ)",
+          "en": "Part IX-A (Articles 243P–243ZG) and 12th Schedule (18 subjects)"
+        }
+      },
+      {
+        "front": {
+          "hi": "राजस्थान ने पहली बार पंचायती राज कब लागू किया?",
+          "pa": "ਰਾਜਸਥਾਨ ਨੇ ਪੰਚਾਇਤੀ ਰਾਜ ਪਹਿਲੀ ਵਾਰ ਕਦੋਂ ਲਾਗੂ ਕੀਤਾ?",
+          "en": "When did Rajasthan first implement Panchayati Raj?"
+        },
+        "back": {
+          "hi": "2 ਅਕਤੂਬਰ 1959 (ਨਾਗੌਰ ਜ਼ਿਲ੍ਹੇ ਵਿੱਚ)",
+          "pa": "2 ਅਕਤੂਬਰ 1959",
+          "en": "2 October 1959 (in Nagaur district)"
+        }
+      },
+      {
+        "front": {
+          "hi": "बलवंत राय मेहता समिति ने क्या सुझाया?",
+          "pa": "ਬਲਵੰਤ ਰਾਏ ਮਹਿਤਾ ਕਮੇਟੀ ਨੇ ਕੀ ਸੁਝਾਇਆ?",
+          "en": "What did the Balwant Rai Mehta Committee recommend?"
+        },
+        "back": {
+          "hi": "ਤਿੰਨ-ਪੱਧਰੀ ਪੰਚਾਇਤੀ ਰਾਜ: ਗ੍ਰਾਮ ਪੰਚਾਇਤ + ਪੰਚਾਇਤ ਸਮਿਤੀ + ਜ਼ਿਲ੍ਹਾ ਪ੍ਰੀਸ਼ਦ (1957)",
+          "pa": "ਤਿੰਨ-ਪੱਧਰੀ ਢਾਂਚਾ (1957)",
+          "en": "Three-tier structure: Gram Panchayat + Panchayat Samiti + Zila Parishad (1957)"
+        }
+      },
+      {
+        "front": {
+          "hi": "73वाँ संशोधन किस तारीख से लागू हुआ?",
+          "pa": "73ਵੀਂ ਸੋਧ ਕਿਸ ਤਾਰੀਖ਼ ਤੋਂ ਲਾਗੂ ਹੋਈ?",
+          "en": "From which date did the 73rd Amendment come into effect?"
+        },
+        "back": {
+          "hi": "24 ਅਪ੍ਰੈਲ 1993 (ਰਾਸ਼ਟਰੀ ਪੰਚਾਇਤੀ ਰਾਜ ਦਿਵਸ ਵਜੋਂ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ)",
+          "pa": "24 ਅਪ੍ਰੈਲ 1993",
+          "en": "24 April 1993 (observed as National Panchayati Raj Day)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-panchayat-q1",
+        "text": {
+          "hi": "73वाँ संविधान संशोधन किससे संबंधित है?",
+          "pa": "73ਵੀਂ ਸੰਵਿਧਾਨਕ ਸੋਧ ਕਿਸ ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ?",
+          "en": "The 73rd Constitutional Amendment deals with:"
+        },
+        "options": {
+          "hi": [
+            "शहरी स्थानीय निकाय",
+            "ग्रामीण पंचायती राज",
+            "बुनियादी अधिकार",
+            "नागरिकता"
+          ],
+          "pa": [
+            "ਸ਼ਹਿਰੀ ਸਥਾਨਕ ਸੰਸਥਾਵਾਂ",
+            "ਪੇਂਡੂ ਪੰਚਾਇਤੀ ਰਾਜ",
+            "ਮੌਲਿਕ ਅਧਿਕਾਰ",
+            "ਨਾਗਰਿਕਤਾ"
+          ],
+          "en": [
+            "Urban Local Bodies",
+            "Rural Panchayati Raj",
+            "Fundamental Rights",
+            "Citizenship"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "73वाँ संशोधन ग्रामीण पंचायती राज से संबंधित है। 74वाँ शहरी स्थानीय निकायों से संबंधित है।",
+          "en": "The 73rd Amendment deals with rural Panchayati Raj. The 74th Amendment deals with Urban Local Bodies."
+        }
+      },
+      {
+        "id": "sst-panchayat-q2",
+        "text": {
+          "hi": "11वीं अनुसूची (73वाँ संशोधन) में कितने विषय हैं?",
+          "pa": "11ਵੀਂ ਅਨੁਸੂਚੀ ਵਿੱਚ ਕਿੰਨੇ ਵਿਸ਼ੇ ਹਨ?",
+          "en": "How many subjects are listed in the 11th Schedule (73rd Amendment)?"
+        },
+        "options": {
+          "hi": [
+            "18",
+            "22",
+            "29",
+            "40"
+          ],
+          "pa": [
+            "18",
+            "22",
+            "29",
+            "40"
+          ],
+          "en": [
+            "18",
+            "22",
+            "29",
+            "40"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "11वीं अनुसूची में 29 विषय हैं जो पंचायती राज संस्थाओं को हस्तांतरित किए जा सकते हैं।",
+          "en": "The 11th Schedule contains 29 subjects that can be transferred to Panchayati Raj institutions."
+        }
+      },
+      {
+        "id": "sst-panchayat-q3",
+        "text": {
+          "hi": "पंचायती राज में महिलाओं के लिए न्यूनतम आरक्षण कितना है?",
+          "pa": "ਪੰਚਾਇਤੀ ਰਾਜ ਵਿੱਚ ਔਰਤਾਂ ਲਈ ਘੱਟੋ-ਘੱਟ ਰਾਖਵਾਂਕਰਨ ਕਿੰਨਾ ਹੈ?",
+          "en": "What is the minimum reservation for women in Panchayati Raj bodies?"
+        },
+        "options": {
+          "hi": [
+            "1/4 (25%)",
+            "1/3 (33%)",
+            "1/2 (50%)",
+            "2/3 (67%)"
+          ],
+          "pa": [
+            "1/4 (25%)",
+            "1/3 (33%)",
+            "1/2 (50%)",
+            "2/3 (67%)"
+          ],
+          "en": [
+            "1/4 (25%)",
+            "1/3 (33%)",
+            "1/2 (50%)",
+            "2/3 (67%)"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "73वाँ संशोधन पंचायती राज में महिलाओं के लिए न्यूनतम 1/3 (33%) आरक्षण देता है। कई राज्यों ने इसे 50% तक बढ़ाया है।",
+          "en": "The 73rd Amendment provides a minimum 1/3 (33%) reservation for women in Panchayati Raj bodies. Many states have increased this to 50%."
+        }
+      },
+      {
+        "id": "sst-panchayat-q4",
+        "text": {
+          "hi": "74वाँ संशोधन किस भाग को जोड़ता है?",
+          "pa": "74ਵੀਂ ਸੋਧ ਕਿਹੜਾ ਭਾਗ ਜੋੜਦੀ ਹੈ?",
+          "en": "Which Part did the 74th Amendment add to the Constitution?"
+        },
+        "options": {
+          "hi": [
+            "Part IX",
+            "Part IX-A",
+            "Part X",
+            "Part XI"
+          ],
+          "pa": [
+            "Part IX",
+            "Part IX-A",
+            "Part X",
+            "Part XI"
+          ],
+          "en": [
+            "Part IX",
+            "Part IX-A",
+            "Part X",
+            "Part XI"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "74वाँ संशोधन भाग IX-A (नगरपालिकाएँ, Articles 243P–243ZG) और 12वीं अनुसूची जोड़ता है।",
+          "en": "The 74th Amendment added Part IX-A (Municipalities, Articles 243P–243ZG) and the 12th Schedule."
+        }
+      },
+      {
+        "id": "sst-panchayat-q5",
+        "text": {
+          "hi": "ग्राम सभा क्या है?",
+          "pa": "ਗ੍ਰਾਮ ਸਭਾ ਕੀ ਹੈ?",
+          "en": "What is a Gram Sabha?"
+        },
+        "options": {
+          "hi": [
+            "ग्राम पंचायत का चुना हुआ निकाय",
+            "पंचायत क्षेत्र के सभी वयस्क मतदाताओं की सभा",
+            "जिला परिषद की उपसमिति",
+            "ग्राम पंचायत का ही दूसरा नाम"
+          ],
+          "pa": [
+            "ਗ੍ਰਾਮ ਪੰਚਾਇਤ ਦੀ ਚੁਣੀ ਸੰਸਥਾ",
+            "ਸਾਰੇ ਬਾਲਗ ਵੋਟਰਾਂ ਦੀ ਸਭਾ",
+            "ਜ਼ਿਲ੍ਹਾ ਪ੍ਰੀਸ਼ਦ ਦੀ ਉਪ-ਕਮੇਟੀ",
+            "ਗ੍ਰਾਮ ਪੰਚਾਇਤ ਦਾ ਦੂਸਰਾ ਨਾਮ"
+          ],
+          "en": [
+            "The elected body of the Gram Panchayat",
+            "Assembly of all adult voters in a panchayat area",
+            "Sub-committee of the Zila Parishad",
+            "Another name for Gram Panchayat"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ग्राम सभा एक पंचायत क्षेत्र के सभी पंजीकृत वयस्क मतदाताओं की सभा है। यह ग्रामीण लोकतंत्र का आधार है।",
+          "en": "Gram Sabha is the assembly of all registered adult voters in a panchayat area. It is the foundation of grassroots rural democracy."
+        }
+      },
+      {
+        "id": "sst-panchayat-q6",
+        "text": {
+          "hi": "12वीं अनुसूची (74वाँ संशोधन) में कितने विषय हैं?",
+          "pa": "12ਵੀਂ ਅਨੁਸੂਚੀ ਵਿੱਚ ਕਿੰਨੇ ਵਿਸ਼ੇ ਹਨ?",
+          "en": "How many subjects are in the 12th Schedule (74th Amendment)?"
+        },
+        "options": {
+          "hi": [
+            "12",
+            "18",
+            "29",
+            "35"
+          ],
+          "pa": [
+            "12",
+            "18",
+            "29",
+            "35"
+          ],
+          "en": [
+            "12",
+            "18",
+            "29",
+            "35"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "12वीं अनुसूची में 18 विषय हैं जो नगरपालिकाओं को हस्तांतरित किए जा सकते हैं।",
+          "en": "The 12th Schedule contains 18 subjects that can be transferred to Municipal bodies."
+        }
+      },
+      {
+        "id": "sst-panchayat-q7",
+        "text": {
+          "hi": "राजस्थान ने पंचायती राज कब लागू किया?",
+          "pa": "ਰਾਜਸਥਾਨ ਨੇ ਪੰਚਾਇਤੀ ਰਾਜ ਕਦੋਂ ਲਾਗੂ ਕੀਤਾ?",
+          "en": "When did Rajasthan implement Panchayati Raj?"
+        },
+        "options": {
+          "hi": [
+            "1950",
+            "1955",
+            "1959",
+            "1965"
+          ],
+          "pa": [
+            "1950",
+            "1955",
+            "1959",
+            "1965"
+          ],
+          "en": [
+            "1950",
+            "1955",
+            "1959",
+            "1965"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "राजस्थान ने 2 अक्टूबर 1959 को नागौर जिले में पहली बार पंचायती राज लागू किया। यह भारत में पंचायती राज का शुभारंभ था।",
+          "en": "Rajasthan implemented Panchayati Raj for the first time in Nagaur district on 2 October 1959 — the launch of Panchayati Raj in India."
+        }
+      },
+      {
+        "id": "sst-panchayat-q8",
+        "text": {
+          "hi": "संविधान की कौन सी धारा पंचायतों के आयोजन के लिए निर्देशक सिद्धांत देती है?",
+          "pa": "ਸੰਵਿਧਾਨ ਦੀ ਕਿਹੜੀ ਧਾਰਾ ਪੰਚਾਇਤਾਂ ਦੇ ਸੰਗਠਨ ਦਾ ਨਿਰਦੇਸ਼ਕ ਸਿਧਾਂਤ ਦਿੰਦੀ ਹੈ?",
+          "en": "Which Article of the Constitution provides the DPSP for organising panchayats?"
+        },
+        "options": {
+          "hi": [
+            "Article 32",
+            "Article 40",
+            "Article 51A",
+            "Article 243"
+          ],
+          "pa": [
+            "Article 32",
+            "Article 40",
+            "Article 51A",
+            "Article 243"
+          ],
+          "en": [
+            "Article 32",
+            "Article 40",
+            "Article 51A",
+            "Article 243"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "संविधान का Article 40 (DPSP) कहता है — राज्य ग्राम पंचायतों का आयोजन करेगा और उन्हें स्व-शासन की इकाइयाँ बनाने की क्षमता देगा।",
+          "en": "Article 40 (DPSP) states that the state shall organise village panchayats and endow them with powers as units of self-government."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
     "id": "sst-guptas-harsha",
     "subject": "History",
     "unit": "History of India",
