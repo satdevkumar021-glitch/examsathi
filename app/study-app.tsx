@@ -73,6 +73,7 @@ const labels = {
   typing: text("टाइपिंग अभ्यास", "ਟਾਈਪਿੰਗ ਅਭਿਆਸ", "Typing practice"),
   focus: text("लाइब्रेरी फोकस व ध्यान", "ਲਾਇਬ੍ਰੇਰੀ ਫੋਕਸ ਤੇ ਧਿਆਨ", "Library Focus & Calm"),
   physical: text("शारीरिक परीक्षा तैयारी", "ਸਰੀਰਕ ਪ੍ਰੀਖਿਆ ਤਿਆਰੀ", "Physical Readiness"),
+  coverage: text("सिलेबस कवरेज व सत्यापन", "ਸਿਲੇਬਸ ਕਵਰੇਜ ਤੇ ਤਸਦੀਕ", "Syllabus Coverage & Audit"),
   admin: text("शिक्षक स्टूडियो", "ਅਧਿਆਪਕ ਸਟੂਡੀਓ", "Teacher studio"),
   account: text("मेरा अकाउंट", "ਮੇਰਾ ਅਕਾਊਂਟ", "My account"),
   read: text("पढ़ें", "ਪੜ੍ਹੋ", "Read"),
@@ -248,6 +249,10 @@ export default function StudyApp({
   const [physLongJump, setPhysLongJump] = useState(3.85);
   const [physHighJump, setPhysHighJump] = useState(1.20);
   const [physTab, setPhysTab] = useState<"calculator" | "roadmap" | "standards">("calculator");
+  // Coverage & Planner State
+  const [coverageTab, setCoverageTab] = useState<"audit" | "planner">("audit");
+  const [planDailyHours, setPlanDailyHours] = useState(2);
+  const [planTargetDays, setPlanTargetDays] = useState(60);
   const tr = (a: Text3 | string) =>
       typeof a === "string" ? a : a[lang] || a.en,
     lab = (k: keyof typeof labels) => tr(labels[k]);
@@ -397,7 +402,7 @@ export default function StudyApp({
       setSubject(h[2] || "SST");
       setView("library");
     } else if (
-      ["home","library","exam","practice","typing","focus","physical","notes","saved","resources","account","admin"].includes(h[0])
+      ["home","library","exam","practice","mock","typing","focus","physical","coverage","notes","saved","resources","account","admin"].includes(h[0])
     )
       setView(h[0] === "resources" ? "saved" : h[0]);
     else if (h[0]) setView("home");
@@ -3086,6 +3091,319 @@ export default function StudyApp({
     </>
   );
 
+  const coverageView = (
+    <>
+      <div className="intro">
+        <span className="eyebrow">OFFICIAL PROVENANCE & SYLLABUS AUDIT</span>
+        <h1>{tr(text("सिलेबस कवरेज व सत्यापन रजिस्टर", "ਸਿਲੇਬਸ ਕਵਰੇਜ ਤੇ ਤਸਦੀਕ ਰਜਿਸਟਰ", "Official Syllabus Coverage & Audit"))}</h1>
+        <p>
+          {tr(
+            text(
+              "सरकारी भर्ती बोर्डों (ERB, PSSSB, RBSE) के आधिकारिक विज्ञापनों के विरुद्ध वास्तविक सामग्री कवरेज। कोई भी अप्रमाणित दावा नहीं।",
+              "ਸਰਕਾਰੀ ਭਰਤੀ ਬੋਰਡਾਂ (ERB, PSSSB, RBSE) ਦੇ ਅਧਿਕਾਰਤ ਇਸ਼ਤਿਹਾਰਾਂ ਦੇ ਵਿਰੁੱਧ ਅਸਲ ਸਮੱਗਰੀ ਕਵਰੇਜ। ਕੋਈ ਵੀ ਬਿਨਾਂ-ਸਬੂਤ ਦਾਅਵਾ ਨਹੀਂ।",
+              "Transparent content audit certified against official government recruitment notices (ERB, PSSSB, RBSE). No unverified claims.",
+            ),
+          )}
+        </p>
+      </div>
+
+      <div className="pill-row" style={{ margin: "16px 0 20px" }}>
+        <button
+          className={coverageTab === "audit" ? "active" : ""}
+          onClick={() => setCoverageTab("audit")}
+        >
+          {tr(text("आधिकारिक सिलेबस ऑडिट", "ਅਧਿਕਾਰਤ ਸਿਲੇਬਸ ਆਡਿਟ", "Official Syllabus Audit"))}
+        </button>
+        <button
+          className={coverageTab === "planner" ? "active" : ""}
+          onClick={() => setCoverageTab("planner")}
+        >
+          {tr(text("अध्ययन योजना और रोडमैप", "ਅਧਿਐਨ ਯੋਜਨਾ ਤੇ ਰੋਡਮੈਪ", "Study Plan & Roadmap"))}
+        </button>
+      </div>
+
+      {coverageTab === "audit" && (
+        <>
+          <div className="account-stats" style={{ flexWrap: "wrap", gap: 16, marginBottom: 24 }}>
+            <div>
+              <strong>{lessons.length}</strong>
+              {tr(text("सत्यापित पाठ", "ਤਸਦੀਕਸ਼ੁਦਾ ਪਾਠ", "Verified lessons"))}
+            </div>
+            <div>
+              <strong>{lessons.reduce((n, l) => n + l.questions.length, 0)}</strong>
+              {tr(text("कुल प्रश्न (प्रमाणित)", "ਕੁੱਲ ਸਵਾਲ (ਪ੍ਰਮਾਣਿਤ)", "Reviewed questions"))}
+            </div>
+            <div>
+              <strong>{lessons.reduce((n, l) => n + l.flashcards.length, 0)}</strong>
+              {tr(text("रिवीजन फ्लैशकार्ड", "ਰਿਵੀਜ਼ਨ ਫਲੈਸ਼ਕਾਰਡ", "Recall flashcards"))}
+            </div>
+            <div>
+              <strong style={{ color: "var(--blue)" }}>4</strong>
+              {tr(text("प्राथमिक भर्ती ट्रैक", "ਮੁੱਖ ਭਰਤੀ ਟਰੈਕ", "Priority tracks certified"))}
+            </div>
+          </div>
+
+          {/* Track 1: Punjab ETT Paper B */}
+          <div className="panel" style={{ marginBottom: 20 }}>
+            <div className="row between" style={{ alignItems: "flex-start", flexWrap: "wrap", gap: 10 }}>
+              <div>
+                <span className="badge" style={{ background: "rgba(3,105,161,0.12)", color: "#0369a1" }}>
+                  ERB Punjab · Advt. 13-08-2021 (6635 Posts)
+                </span>
+                <h3 style={{ margin: "8px 0 4px" }}>Punjab ETT (Paper B - 100 Marks)</h3>
+                <small className="muted">
+                  {tr(text("6 अनिवार्य विषय: पंजाबी (15), अंग्रेजी (15), हिंदी (15), गणित (20), विज्ञान (20), सामाजिक विज्ञान (15)", "6 ਲਾਜ਼ਮੀ ਵਿਸ਼ੇ: ਪੰਜਾਬੀ (15), ਅੰਗਰੇਜ਼ੀ (15), ਹਿੰਦੀ (15), ਗਣਿਤ (20), ਵਿਗਿਆਨ (20), ਸਮਾਜਿਕ ਵਿਗਿਆਨ (15)", "6 Scored subjects: Punjabi (15), English (15), Hindi (15), Math (20), Science (20), SST (15)"))}
+                </small>
+              </div>
+              <a
+                href="https://educationrecruitmentboard.com/ETT6635/Docs/ETT6635Syllabus13_08_2021.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-button"
+                style={{ fontSize: 13 }}
+              >
+                {tr(text("मूल PDF देखें", "ਅਸਲ PDF ਵੇਖੋ", "View Board PDF"))}
+              </a>
+            </div>
+            <div className="alert" style={{ margin: "12px 0 14px", fontSize: 13 }}>
+              <strong>{tr(text("अंतर (Conflation Guard):", "ਅੰਤਰ (Conflation Guard):", "Conflation Guard:"))}</strong>{" "}
+              {tr(text("ईटीटी पेपर-बी भर्ती लिखित परीक्षा है। इसे पीएसटीईटी पेपर-1 पात्रता या डी.एल.एड प्रवेश से भ्रमित न करें।", "ਈਟੀਟੀ ਪੇਪਰ-ਬੀ ਭਰਤੀ ਲਿਖਤੀ ਪ੍ਰੀਖਿਆ ਹੈ। ਇਸ ਨੂੰ ਪੀਐੱਸਟੀਈਟੀ ਪੇਪਰ-1 ਯੋਗਤਾ ਜਾਂ ਡੀ.ਐੱਲ.ਐੱਡ ਦਾਖਲੇ ਨਾਲ ਨਾ ਰਲਾਓ।", "ETT Paper B is the scored recruitment exam (100 marks), strictly separate from PSTET Paper 1 eligibility."))}
+            </div>
+            <p style={{ fontSize: 14 }}>
+              <strong>{tr(text("तैयार उच्च-प्राथमिकता पैकेज:", "ਤਿਆਰ ਮੁੱਖ ਪੈਕੇਜ:", "Ready Priority Packages:"))}</strong>
+            </p>
+            <ul style={{ margin: "6px 0 14px 20px", fontSize: 13, lineHeight: 1.6 }}>
+              <li>
+                <strong>ett-punjab-history-geography</strong> (SST 15m) — {tr(text("पंजाब के भौतिक विभाग, 5 दोआब, दर्रे, 23 जिले (>500 शब्द, 8 कार्ड, 20 प्रमाणित प्रश्न)", "ਪੰਜਾਬ ਦੇ ਭੌਤਿਕ ਭਾਗ, 5 ਦੋਆਬ, ਦੱਰੇ, 23 ਜ਼ਿਲ੍ਹੇ (>500 ਸ਼ਬਦ, 8 ਕਾਰਡ, 20 ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ)", "Physical divisions, 5 historic doabs, passes, 23 districts (>500 words, 8 cards, 20 verified Qs)"))}
+              </li>
+              <li>
+                <strong>ett-science-light</strong> (Science 20m) — {tr(text("प्रकाश परावर्तन व अपवर्तन, दर्पण व लेंस सूत्र, लेंस की क्षमता (P=1/f) (8 कार्ड, 20 प्रमाणित प्रश्न)", "ਪ੍ਰਕਾਸ਼ ਪਰਵਰਤਨ ਤੇ ਅਪਵਰਤਨ, ਦਰਪਣ ਤੇ ਲੈਂਜ਼ ਸੂਤਰ, ਲੈਂਜ਼ ਦੀ ਸਮਰੱਥਾ (P=1/f) (8 ਕਾਰਡ, 20 ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ)", "Reflection, refraction, mirror & lens formulas, power in dioptres (8 cards, 20 verified Qs)"))}
+              </li>
+            </ul>
+            <div className="row" style={{ gap: 8 }}>
+              <button onClick={() => { setExamId("ett"); setSubject("SST"); go("library", "ett-punjab-history-geography"); }}>
+                {tr(text("इतिहास-भूगोल पढ़ें", "ਇਤਿਹਾਸ-ਭੂਗੋਲ ਪੜ੍ਹੋ", "Read SST Lesson"))}
+              </button>
+              <button onClick={() => { setExamId("ett"); setSubject("Science"); go("library", "ett-science-light"); }}>
+                {tr(text("विज्ञान पढ़ें", "ਵਿਗਿਆਨ ਪੜ੍ਹੋ", "Read Science Lesson"))}
+              </button>
+            </div>
+          </div>
+
+          {/* Track 2: PSSSB Clerk Advt. 15/2022 */}
+          <div className="panel" style={{ marginBottom: 20 }}>
+            <div className="row between" style={{ alignItems: "flex-start", flexWrap: "wrap", gap: 10 }}>
+              <div>
+                <span className="badge" style={{ background: "rgba(3,105,161,0.12)", color: "#0369a1" }}>
+                  PSSSB · Advt. No. 15/2022 Scheme
+                </span>
+                <h3 style={{ margin: "8px 0 4px" }}>PSSSB Clerk (Advt. 15/2022)</h3>
+                <small className="muted">
+                  {tr(text("3-चरणीय संरचना: पेपर-ए अनिवार्य पंजाबी (50 अंक / 50% कटऑफ) + पेपर-बी मेरिट (100 अंक) + 30 WPM टाइपिंग", "3-ਪੜਾਵੀ ਢਾਂਚਾ: ਪੇਪਰ-ਏ ਲਾਜ਼ਮੀ ਪੰਜਾਬੀ (50 ਅੰਕ / 50% ਕੱਟਆਫ) + ਪੇਪਰ-ਬੀ ਮੈਰਿਟ (100 ਅੰਕ) + 30 ਸ਼ਬਦ/ਮਿੰਟ ਟਾਈਪਿੰਗ", "3-Tier: Paper A Qualifying Punjabi (50m, 50% cutoff) + Paper B Merit (100m) + 30 WPM Raavi typing"))}
+                </small>
+              </div>
+              <a href="https://sssb.punjab.gov.in/" target="_blank" rel="noopener noreferrer" className="text-button" style={{ fontSize: 13 }}>
+                {tr(text("PSSSB पोर्टल", "PSSSB ਪੋਰਟਲ", "PSSSB Portal"))}
+              </a>
+            </div>
+            <div className="alert" style={{ margin: "12px 0 14px", fontSize: 13 }}>
+              <strong>{tr(text("अंतर (Conflation Guard):", "ਅੰਤਰ (Conflation Guard):", "Conflation Guard:"))}</strong>{" "}
+              {tr(text("पेपर-ए अर्हक है (न्यूनतम 25 अंक अनिवार्य)। पेपर-बी के 100 अंक अंतिम चयन निर्धारित करते हैं। टाइपिंग परीक्षा 'ਰਾਵੀ' (Raavi InScript) में होती है।", "ਪੇਪਰ-ਏ ਯੋਗਤਾ ਪੇਪਰ ਹੈ (ਘੱਟੋ-ਘੱਟ 25 ਅੰਕ ਲਾਜ਼ਮੀ)। ਪੇਪਰ-ਬੀ ਦੇ 100 ਅੰਕ ਅੰਤਿਮ ਮੈਰਿਟ ਤੈਅ ਕਰਦੇ ਹਨ। ਟਾਈਪਿੰਗ 'ਰਾਵੀ' (Raavi InScript) ਵਿੱਚ ਹੁੰਦੀ ਹੈ।", "Paper A requires min 50% (25 marks) to qualify for Paper B evaluation. Stage 3 typing mandates 30 WPM in Raavi InScript."))}
+            </div>
+            <p style={{ fontSize: 14 }}>
+              <strong>{tr(text("तैयार उच्च-प्राथमिकता पैकेज:", "ਤਿਆਰ ਮੁੱਖ ਪੈਕੇਜ:", "Ready Priority Packages:"))}</strong>
+            </p>
+            <ul style={{ margin: "6px 0 14px 20px", fontSize: 13, lineHeight: 1.6 }}>
+              <li>
+                <strong>clerk-punjabi-paper-a</strong> (Paper A 50m) — {tr(text("गुरमुखी वर्णमाला (41 अक्षर), स्वर वाहक, लगाखर, 'ह' वर्तनी नियम, मुहावरे (8 कार्ड, 20 प्रमाणित PSSSB प्रश्न)", "ਗੁਰਮੁਖੀ ਵਰਣਮਾਲਾ (41 ਅੱਖਰ), ਸਵਰ ਵਾਹਕ, ਲਗਾਖਰ, 'ਹ' ਸ਼ਬਦ-ਜੋੜ ਨਿਯਮ, ਮੁਹਾਵਰੇ (8 ਕਾਰਡ, 20 ਪ੍ਰਮਾਣਿਤ PSSSB ਸਵਾਲ)", "41 Gurmukhi letters, 3 vowel bearers, lagakhar, 'h' phonetic rules, idioms (8 cards, 20 verified PSSSB Qs)"))}
+              </li>
+              <li>
+                <strong>clerk-computer-it</strong> (Paper B 20m) — {tr(text("हार्डवेयर, रैम/रॉम, एमएस वर्ड शॉर्टकट, एक्सेल $A$1 एब्सोल्यूट रेफरेंसिंग, टीसीपी/आईपी, एचटीटीपीएस (8 कार्ड, 20 प्रमाणित प्रश्न)", "ਹਾਰਡਵੇਅਰ, ਰੈਮ/ਰੋਮ, ਐਮ.ਐਸ. ਵਰਡ ਸ਼ਾਰਟਕੱਟ, ਐਕਸਲ $A$1 ਐਬਸੋਲਿਊਟ ਰੈਫਰੈਂਸਿੰਗ, TCP/IP, HTTPS (8 ਕਾਰਡ, 20 ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ)", "Hardware, RAM/ROM, MS Word shortcuts, Excel $A$1 absolute references, TCP/IP, HTTPS (8 cards, 20 verified Qs)"))}
+              </li>
+            </ul>
+            <div className="row" style={{ gap: 8 }}>
+              <button onClick={() => { setExamId("clerk"); setSubject("Punjabi"); go("library", "clerk-punjabi-paper-a"); }}>
+                {tr(text("पेपर-ए पंजाबी पढ़ें", "ਪੇਪਰ-ਏ ਪੰਜਾਬੀ ਪੜ੍ਹੋ", "Read Paper A Punjabi"))}
+              </button>
+              <button onClick={() => { setExamId("clerk"); setSubject("General"); go("library", "clerk-computer-it"); }}>
+                {tr(text("कंप्यूटर आईटी पढ़ें", "ਕੰਪਿਊਟਰ ਆਈ.ਟੀ. ਪੜ੍ਹੋ", "Read IT Lesson"))}
+              </button>
+              <button onClick={() => go("typing")}>
+                {tr(text("रावी टाइपिंग टेस्ट", "ਰਾਵੀ ਟਾਈਪਿੰਗ ਟੈਸਟ", "Raavi Typing Test"))}
+              </button>
+            </div>
+          </div>
+
+          {/* Track 3: Rajasthan REET Level 1 & Level 2 */}
+          <div className="panel" style={{ marginBottom: 20 }}>
+            <div className="row between" style={{ alignItems: "flex-start", flexWrap: "wrap", gap: 10 }}>
+              <div>
+                <span className="badge" style={{ background: "rgba(3,105,161,0.12)", color: "#0369a1" }}>
+                  RBSE Ajmer · Bulletin 2022/2024
+                </span>
+                <h3 style={{ margin: "8px 0 4px" }}>Rajasthan REET (Level 1 & Level 2)</h3>
+                <small className="muted">
+                  {tr(text("अध्यापक पात्रता परीक्षा (150 अंक) · लेवल 1 (कक्षा 1-5) और लेवल 2 (कक्षा 6-8)", "ਅਧਿਆਪਕ ਯੋਗਤਾ ਪ੍ਰੀਖਿਆ (150 ਅੰਕ) · ਲੈਵਲ 1 (ਜਮਾਤ 1-5) ਅਤੇ ਲੈਵਲ 2 (ਜਮਾਤ 6-8)", "Teacher Eligibility Test (150 Marks) · Level 1 (Classes I–V) & Level 2 (Classes VI–VIII)"))}
+                </small>
+              </div>
+              <a href="https://rajeduboard.rajasthan.gov.in/" target="_blank" rel="noopener noreferrer" className="text-button" style={{ fontSize: 13 }}>
+                {tr(text("RBSE पोर्टल", "RBSE ਪੋਰਟਲ", "RBSE Portal"))}
+              </a>
+            </div>
+            <div className="alert" style={{ margin: "12px 0 14px", fontSize: 13 }}>
+              <strong>{tr(text("अंतर (Conflation Guard):", "ਅੰਤਰ (Conflation Guard):", "Conflation Guard:"))}</strong>{" "}
+              {tr(text("रीट केवल पात्रता परीक्षा है। तृतीय श्रेणी शिक्षक भर्ती मुख्य परीक्षा (RSMSSB) अलग से आयोजित होती है।", "ਰੀਟ ਸਿਰਫ਼ ਯੋਗਤਾ ਪ੍ਰੀਖਿਆ ਹੈ। ਤੀਜੇ ਗ੍ਰੇਡ ਅਧਿਆਪਕ ਭਰਤੀ ਮੁੱਖ ਪ੍ਰੀਖਿਆ (RSMSSB) ਵੱਖਰੀ ਹੁੰਦੀ ਹੈ।", "REET is an eligibility test (RBSE). 3rd Grade Teacher recruitment mains is conducted separately by RSMSSB."))}
+            </div>
+            <p style={{ fontSize: 14 }}>
+              <strong>{tr(text("तैयार उच्च-प्राथमिकता पैकेज:", "ਤਿਆਰ ਮੁੱਖ ਪੈਕੇਜ:", "Ready Priority Packages:"))}</strong>
+            </p>
+            <ul style={{ margin: "6px 0 14px 20px", fontSize: 13, lineHeight: 1.6 }}>
+              <li>
+                <strong>reet-cdp-theories</strong> (CDP 30m) — {tr(text("पियाजे 4 अवस्थाएं, वाइगोत्स्की ZPD/पाड़, कोहलबर्ग नैतिक तर्कणा, डिस्लेक्सिया, आरटीई 2009 (8 कार्ड, 20 प्रमाणित प्रश्न)", "ਪਿਆਜੇ 4 ਪੜਾਅ, ਵਾਈਗੋਤਸਕੀ ZPD/ਪਾੜ, ਕੋਹਲਬਰਗ, ਡਿਸਲੈਕਸੀਆ, RTE 2009 (8 ਕਾਰਡ, 20 ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ)", "Piaget 4 stages, Vygotsky ZPD/Scaffolding, Kohlberg, Dyslexia, RTE 2009 (8 cards, 20 verified Qs)"))}
+              </li>
+              <li>
+                <strong>reet-evs-rajasthan</strong> (EVS 30m) — {tr(text("रामदेव जी मेला, तेरहताली नृत्य, टांका/खड़ीन/जोहड़ जल संरक्षण, 1730 खेजड़ली बलिदान, गोडावण (8 कार्ड, 20 प्रमाणित प्रश्न)", "ਰਾਮਦੇਵ ਜੀ ਮੇਲਾ, ਤੇਰਾਂਤਾਲੀ ਨਾਚ, ਟਾਂਕਾ/ਖੜੀਨ ਜਲ ਸੰਭਾਲ, 1730 ਖੇਜੜਲੀ ਸ਼ਹੀਦੀ, ਗੋਡਾਵਣ (8 ਕਾਰਡ, 20 ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ)", "Ramdevji fair, Terah Taali, Tanka/Khadin water harvesting, 1730 Khejarli martyrdom, Godawan (8 cards, 20 verified Qs)"))}
+              </li>
+            </ul>
+            <div className="row" style={{ gap: 8 }}>
+              <button onClick={() => { setExamId("reet"); setSubject("Teaching"); go("library", "reet-cdp-theories"); }}>
+                {tr(text("बाल विकास पढ़ें", "ਬਾਲ ਵਿਕਾਸ ਪੜ੍ਹੋ", "Read CDP Lesson"))}
+              </button>
+              <button onClick={() => { setExamId("reet"); setSubject("General"); go("library", "reet-evs-rajasthan"); }}>
+                {tr(text("पर्यावरण अध्ययन पढ़ें", "ਵਾਤਾਵਰਣ ਅਧਿਐਨ ਪੜ੍ਹੋ", "Read EVS Lesson"))}
+              </button>
+            </div>
+          </div>
+
+          {/* Track 4: Punjab Master Cadre Advt. 4161/2022 */}
+          <div className="panel" style={{ marginBottom: 20 }}>
+            <div className="row between" style={{ alignItems: "flex-start", flexWrap: "wrap", gap: 10 }}>
+              <div>
+                <span className="badge" style={{ background: "rgba(3,105,161,0.12)", color: "#0369a1" }}>
+                  ERB Punjab · Advt. 4161 Posts (2022)
+                </span>
+                <h3 style={{ margin: "8px 0 4px" }}>Punjab Master Cadre (Advt. 4161/2022)</h3>
+                <small className="muted">
+                  {tr(text("विषयवार शिक्षक भर्ती (150 अंक प्रति विषय) · सामाजिक विज्ञान (2 विषयों का चयन 75+75 अंक), गणित, विज्ञान, भाषाएँ", "ਵਿਸ਼ੇਵਾਰ ਅਧਿਆਪਕ ਭਰਤੀ (150 ਅੰਕ ਪ੍ਰਤੀ ਵਿਸ਼ਾ) · ਸਮਾਜਿਕ ਵਿਗਿਆਨ (2 ਵਿਸ਼ਿਆਂ ਦੀ ਚੋਣ 75+75 ਅੰਕ), ਗਣਿਤ, ਵਿਗਿਆਨ, ਭਾਸ਼ਾਵਾਂ", "Subject teacher recruitment (150m per subject) · Social Science (choice of 2: 75+75m), Math, Science, Languages"))}
+                </small>
+              </div>
+              <a href="https://educationrecruitmentboard.com/master2022/" target="_blank" rel="noopener noreferrer" className="text-button" style={{ fontSize: 13 }}>
+                {tr(text("Master Cadre पोर्टल", "Master Cadre ਪੋਰਟਲ", "Master Cadre Portal"))}
+              </a>
+            </div>
+            <div className="alert" style={{ margin: "12px 0 14px", fontSize: 13 }}>
+              <strong>{tr(text("अंतर (Conflation Guard):", "ਅੰਤਰ (Conflation Guard):", "Conflation Guard:"))}</strong>{" "}
+              {tr(text("कॉमर्स (Commerce) मास्टर काडर में नहीं है (केवल लेक्चरर काडर 11-12वीं में है)। एसएसटी में 4 में से 2 विषय चुने जाते हैं।", "ਕਾਮਰਸ (Commerce) ਮਾਸਟਰ ਕਾਡਰ ਵਿੱਚ ਨਹੀਂ ਹੈ (ਸਿਰਫ਼ ਲੈਕਚਰਾਰ ਕਾਡਰ 11-12ਵੀਂ ਵਿੱਚ ਹੈ)। SST ਵਿੱਚ 4 ਵਿੱਚੋਂ 2 ਵਿਸ਼ੇ ਚੁਣੇ ਜਾਂਦੇ ਹਨ।", "Commerce is NOT a Master Cadre subject (Lecturer Cadre only). SST candidates choose 2 out of 4 subjects (75+75 marks)."))}
+            </div>
+            <p style={{ fontSize: 14 }}>
+              <strong>{tr(text("तैयार सामग्री:", "ਤਿਆਰ ਸਮੱਗਰੀ:", "Ready Material:"))}</strong>{" "}
+              29 {tr(text("पाठ", "ਪਾਠ", "lessons"))} · 290 {tr(text("प्रमाणित प्रश्न", "ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ", "reviewed Qs"))} · 258 {tr(text("फ्लैशकार्ड", "ਫਲੈਸ਼ਕਾਰਡ", "flashcards"))}
+            </p>
+            <div className="row" style={{ marginTop: 10, gap: 8 }}>
+              <button onClick={() => { setExamId("master"); setSubject("SST"); go("library"); }}>
+                {tr(text("मास्टर काडर SST लाइब्रेरी खोलें", "ਮਾਸਟਰ ਕਾਡਰ SST ਲਾਇਬ੍ਰੇਰੀ ਖੋਲ੍ਹੋ", "Open Master Cadre SST"))}
+              </button>
+            </div>
+          </div>
+        </>
+      )}
+
+      {coverageTab === "planner" && (
+        <div className="panel">
+          <h3>{tr(text("व्यक्तिगत परीक्षा तैयारी योजना (Study Planner)", "ਨਿੱਜੀ ਇਮਤਿਹਾਨ ਤਿਆਰੀ ਯੋਜਨਾ (Study Planner)", "Personalized Study Roadmap Planner"))}</h3>
+          <p className="muted" style={{ fontSize: 13, margin: "4px 0 16px" }}>
+            {tr(text("अपने उपलब्ध समय और परीक्षा तिथि के अनुसार साप्ताहिक लक्ष्य, रिवीजन बफर और टेस्ट शेड्यूल बनाएं।", "ਆਪਣੇ ਉਪਲਬਧ ਸਮੇਂ ਅਤੇ ਇਮਤਿਹਾਨ ਦੀ ਮਿਤੀ ਅਨੁਸਾਰ ਹਫ਼ਤਾਵਾਰੀ ਟੀਚੇ, ਰਿਵੀਜ਼ਨ ਬਫਰ ਅਤੇ ਟੈਸਟ ਸ਼ਡਿਊਲ ਬਣਾਓ।", "Customize weekly study goals, revision buffers, and mock testing schedules based on your available time."))}
+          </p>
+          <div className="calc-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>
+            <label>
+              {tr(text("लक्षित परीक्षा", "ਲਕਸ਼ਿਤ ਇਮਤਿਹਾਨ", "Target Exam"))}
+              <select value={examId} onChange={e => { setExamId(e.target.value); const ex = catalog.exams.find(x => x.id === e.target.value); if (ex) setSubject(ex.subjects[0]); }}>
+                {catalog.exams.map(e => (
+                  <option key={e.id} value={e.id}>{e.name} ({e.state})</option>
+                ))}
+              </select>
+            </label>
+            <label>
+              {tr(text("दैनिक अध्ययन समय", "ਰੋਜ਼ਾਨਾ ਪੜ੍ਹਾਈ ਦਾ ਸਮਾਂ", "Daily Study Time"))}
+              <select value={planDailyHours} onChange={e => setPlanDailyHours(Number(e.target.value))}>
+                <option value={1}>1 {tr(text("घंटा / दिन", "ਘੰਟਾ / ਦਿਨ", "hour / day"))}</option>
+                <option value={2}>2 {tr(text("घंटे / दिन", "ਘੰਟੇ / ਦਿਨ", "hours / day"))}</option>
+                <option value={3}>3 {tr(text("घंटे / दिन", "ਘੰਟੇ / ਦਿਨ", "hours / day"))}</option>
+                <option value={4}>4+ {tr(text("घंटे / दिन (गहन)", "ਘੰਟੇ / ਦਿਨ (ਡੂੰਘਾ)", "hours / day (Intensive)"))}</option>
+              </select>
+            </label>
+            <label>
+              {tr(text("परीक्षा तक शेष दिन", "ਇਮਤਿਹਾਨ ਤੱਕ ਬਾਕੀ ਦਿਨ", "Days Until Exam"))}
+              <select value={planTargetDays} onChange={e => setPlanTargetDays(Number(e.target.value))}>
+                <option value={30}>30 {tr(text("दिन (क्रैश रिवीजन)", "ਦਿਨ (ਕ੍ਰੈਸ਼ ਰਿਵੀਜ਼ਨ)", "Days (Crash Review)"))}</option>
+                <option value={60}>60 {tr(text("दिन (संतुलित)", "ਦਿਨ (ਸੰਤੁਲਿਤ)", "Days (Balanced)"))}</option>
+                <option value={90}>90 {tr(text("दिन (विस्तृत)", "ਦਿਨ (ਵਿਸਤ੍ਰਿਤ)", "Days (Comprehensive)"))}</option>
+                <option value={120}>120 {tr(text("दिन (फाउंडेशन)", "ਦਿਨ (ਫਾਊਂਡੇਸ਼ਨ)", "Days (Foundation)"))}</option>
+              </select>
+            </label>
+          </div>
+
+          <div className="account-stats" style={{ margin: "20px 0 16px", flexWrap: "wrap", gap: 16 }}>
+            <div>
+              <strong>{planDailyHours * planTargetDays}</strong>
+              {tr(text("कुल अध्ययन घंटे", "ਕੁੱਲ ਪੜ੍ਹਾਈ ਘੰਟੇ", "Total study hours budgeted"))}
+            </div>
+            <div>
+              <strong>{Math.ceil(planTargetDays / 7)}</strong>
+              {tr(text("तैयारी सप्ताह", "ਤਿਆਰੀ ਹਫ਼ਤੇ", "Preparation weeks"))}
+            </div>
+            <div>
+              <strong>{Math.round((planDailyHours * 7) * 0.75)}</strong>
+              {tr(text("घंटे/सप्ताह नए पाठ", "ਘੰਟੇ/ਹਫ਼ਤਾ ਨਵੇਂ ਪਾਠ", "Hrs/wk new concepts"))}
+            </div>
+            <div>
+              <strong>{Math.round((planDailyHours * 7) * 0.25)}</strong>
+              {tr(text("घंटे/सप्ताह रिवीजन व टेस्ट", "ਘੰਟੇ/ਹਫ਼ਤਾ ਰਿਵੀਜ਼ਨ ਤੇ ਟੈਸਟ", "Hrs/wk revision & tests"))}
+            </div>
+          </div>
+
+          <div style={{ marginTop: 20 }}>
+            <h4>{tr(text("4-चरणीय प्रगतिशील अध्ययन रोडमैप", "4-ਪੜਾਵੀ ਪ੍ਰਗਤੀਸ਼ੀਲ ਅਧਿਐਨ ਰੋਡਮੈਪ", "4-Phase Progressive Preparation Roadmap"))}</h4>
+            <div style={{ display: "flex", flexDirection: "column", gap: 14, marginTop: 12 }}>
+              <div className="roadmap-step" style={{ borderLeft: "4px solid var(--blue)", paddingLeft: 14 }}>
+                <strong>{tr(text("चरण 1: आधिकारिक सिलेबस व मूल संकल्पनाएँ (सप्ताह 1-3)", "ਪੜਾਅ 1: ਅਧਿਕਾਰਤ ਸਿਲੇਬਸ ਤੇ ਮੂਲ ਸੰਕਲਪ (ਹਫ਼ਤਾ 1-3)", "Phase 1: Official Syllabus & Core Concepts (Weeks 1–3)"))}</strong>
+                <p className="muted" style={{ fontSize: 13, margin: "4px 0" }}>
+                  {tr(text("प्रतिदिन 1 पाठ गहराई से पढ़ें। मुख्य बिंदुओं और सूत्रों के नोट्स बनाएं। रविवार को कोई नया पाठ न पढ़ें, केवल पिछले 6 दिनों का रिवीजन करें।", "ਰੋਜ਼ਾਨਾ 1 ਪਾਠ ਡੂੰਘਾਈ ਨਾਲ ਪੜ੍ਹੋ। ਮੁੱਖ ਬਿੰਦੂਆਂ ਤੇ ਸੂਤਰਾਂ ਦੇ ਨੋਟਸ ਬਣਾਓ। ਐਤਵਾਰ ਨੂੰ ਨਵਾਂ ਪਾਠ ਨਾ ਪੜ੍ਹੋ, ਸਿਰਫ਼ ਪਿਛਲੇ 6 ਦਿਨਾਂ ਦੀ ਰਿਵੀਜ਼ਨ ਕਰੋ।", "Study 1 in-depth lesson daily. Take structured notes on formulas and keypoints. Keep Sundays as strict catch-up days without new topics."))}
+                </p>
+              </div>
+              <div className="roadmap-step" style={{ borderLeft: "4px solid #10b981", paddingLeft: 14 }}>
+                <strong>{tr(text("चरण 2: सक्रिय स्मरण व टॉपिक मिनी-मॉक (सप्ताह 4-5)", "ਪੜਾਅ 2: ਸਰਗਰਮ ਯਾਦ ਤੇ ਟੌਪਿਕ ਮਿਨੀ-ਮੌਕ (ਹਫ਼ਤਾ 4-5)", "Phase 2: Active Recall & Topic Mini-Mocks (Weeks 4–5)"))}</strong>
+                <p className="muted" style={{ fontSize: 13, margin: "4px 0" }}>
+                  {tr(text("लाइब्रेरी फोकस मोड (25/5 पोमोडोरो) में फ्लैशकार्ड दोहराएं। प्रत्येक पूरे हुए विषय पर 10-20 प्रश्नों का मिनी-मॉक टेस्ट दें।", "ਲਾਇਬ੍ਰੇਰੀ ਫੋਕਸ ਮੋਡ (25/5 ਪੋਮੋਡੋਰੋ) ਵਿੱਚ ਫਲੈਸ਼ਕਾਰਡ ਦੁਹਰਾਓ। ਹਰ ਮੁਕੰਮਲ ਵਿਸ਼ੇ 'ਤੇ 10-20 ਸਵਾਲਾਂ ਦਾ ਮਿਨੀ-ਮੌਕ ਟੈਸਟ ਦਿਓ।", "Utilize the Library Focus Room (25/5 Pomodoro) to flip through recall flashcards. Take 10–20 question mini-mocks on completed topics."))}
+                </p>
+              </div>
+              <div className="roadmap-step" style={{ borderLeft: "4px solid #f59e0b", paddingLeft: 14 }}>
+                <strong>{tr(text("चरण 3: ग़लती विश्लेषण व कमज़ोर विषयों का पुनराभ्यास (सप्ताह 6-7)", "ਪੜਾਅ 3: ਗ਼ਲਤੀ ਵਿਸ਼ਲੇਸ਼ਣ ਤੇ ਕਮਜ਼ੋਰ ਵਿਸ਼ਿਆਂ ਦਾ ਮੁੜ-ਅਭਿਆਸ (ਹਫ਼ਤਾ 6-7)", "Phase 3: Mistake Isolation & Weak Area Remediation (Weeks 6–7)"))}</strong>
+                <p className="muted" style={{ fontSize: 13, margin: "4px 0" }}>
+                  {tr(text("'ग़लत प्रश्न (Mistakes Only)' फ़िल्टर का उपयोग करके अपनी कमज़ोरियों को पहचानें। 'ग़लत प्रश्नों का पुनराभ्यास' बटन से केवल छूटे प्रश्नों का अभ्यास करें।", "'ਗ਼ਲਤ ਸਵਾਲ (Mistakes Only)' ਫਿਲਟਰ ਰਾਹੀਂ ਆਪਣੀਆਂ ਕਮਜ਼ੋਰੀਆਂ ਪਛਾਣੋ। 'ਗ਼ਲਤ ਸਵਾਲਾਂ ਦਾ ਮੁੜ-ਅਭਿਆਸ' ਬਟਨ ਨਾਲ ਸਿਰਫ਼ ਗ਼ਲਤ ਹੋਏ ਸਵਾਲਾਂ ਦਾ ਅਭਿਆਸ ਕਰੋ।", "Use the 'Mistakes Only' filter to audit errors. Launch the one-click re-attempt drill to turn weak concepts into strengths."))}
+                </p>
+              </div>
+              <div className="roadmap-step" style={{ borderLeft: "4px solid #8b5cf6", paddingLeft: 14 }}>
+                <strong>{tr(text("चरण 4: समय-सीमित पूर्ण मॉक टेस्ट व मानसिक एकाग्रता (अंतिम सप्ताह)", "ਪੜਾਅ 4: ਸਮਾਂ-ਸੀਮਿਤ ਪੂਰੇ ਮੌਕ ਟੈਸਟ ਤੇ ਮਾਨਸਿਕ ਸ਼ਾਂਤੀ (ਅੰਤਿਮ ਹਫ਼ਤੇ)", "Phase 4: Full Timed Mocks & Calm Conditioning (Final Weeks)"))}</strong>
+                <p className="muted" style={{ fontSize: 13, margin: "4px 0" }}>
+                  {tr(text("100-150 प्रश्नों के समय-सीमित मॉक टेस्ट दें। परीक्षा से पूर्व तनाव कम करने के लिए 4-4-4-4 बॉक्स ब्रीदिंग (प्राणायाम) का अभ्यास करें।", "100-150 ਸਵਾਲਾਂ ਦੇ ਸਮੇਂ-ਸੀਮਿਤ ਮੌਕ ਟੈਸਟ ਦਿਓ। ਇਮਤਿਹਾਨ ਤੋਂ ਪਹਿਲਾਂ ਘਬਰਾਹਟ ਦੂਰ ਕਰਨ ਲਈ 4-4-4-4 ਬਾਕਸ ਬ੍ਰੀਦਿੰਗ ਦਾ ਅਭਿਆਸ ਕਰੋ।", "Simulate authentic exam conditions with 100–150 question timed mocks. Practice 4-4-4-4 Box Breathing to regulate pre-exam nervous tension."))}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row" style={{ marginTop: 20, gap: 10 }}>
+            <button className="primary" onClick={() => go("library")}>
+              {tr(text("सिलेबस लाइब्रेरी खोलें", "ਸਿਲੇਬਸ ਲਾਇਬ੍ਰੇਰੀ ਖੋਲ੍ਹੋ", "Open Syllabus Library"))}
+            </button>
+            <button onClick={() => go("focus")}>
+              {tr(text("फोकस रूम में पढ़ाई करें", "ਫੋਕਸ ਰੂਮ ਵਿੱਚ ਪੜ੍ਹੋ", "Go to Focus Room"))}
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+
   const account = (
     <>
       <div className="intro">
@@ -3793,6 +4111,7 @@ export default function StudyApp({
   const nav = [
     ["home", LayoutDashboard],
     ["library", BookOpen],
+    ["coverage", FileText],
     ["practice", ClipboardCheck],
     ["mock", ClipboardCheck],
     ["focus", Clock],
@@ -3984,6 +4303,8 @@ export default function StudyApp({
             library
           ) : view === "lesson" ? (
             lessonView
+          ) : view === "coverage" ? (
+            coverageView
           ) : view === "practice" ? (
             practice
           ) : view === "mock" ? (
