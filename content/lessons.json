@@ -44022,6 +44022,1495 @@
     ]
   },
   {
+    "id": "sst-producer-markets",
+    "subject": "Economics",
+    "unit": "Microeconomics — Production and Markets",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "उत्पादन, लागत और बाज़ार के स्वरूप",
+      "pa": "ਉਤਪਾਦਨ, ਲਾਗਤ ਅਤੇ ਬਾਜ਼ਾਰ ਦੇ ਰੂਪ",
+      "en": "Production, Costs and Market Forms"
+    },
+    "level": "Master Cadre Economics — Class 11-12 PSEB/NCERT level",
+    "sources": [
+      {
+        "title": "NCERT Introductory Microeconomics Class 12 — Chapter 3 (Production), Chapter 4 (Cost), Chapter 5-6 (Market)",
+        "url": "https://ncert.nic.in/textbook.php?leco1=0-6",
+        "note": "NCERT Class 12 Microeconomics. Standard reference for Master Cadre Economics."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "उत्पादन फलन (Production Function)",
+          "pa": "ਉਤਪਾਦਨ ਫੰਕਸ਼ਨ",
+          "en": "Production Function"
+        },
+        "text": {
+          "hi": "**उत्पादन फलन** = निवेश (inputs) और उत्पाद (output) के बीच का तकनीकी संबंध\n\n$$Q = f(L, K)$$\n\nजहाँ L = श्रम (Labour), K = पूँजी (Capital)\n\n**अल्पकाल (Short Run)**: कम से कम एक निवेश स्थिर (जैसे K स्थिर)\n**दीर्घकाल (Long Run)**: सभी निवेश परिवर्तनीय\n\n**परिवर्ती अनुपात का नियम (Law of Variable Proportions)**:\n- **चरण I**: कुल उत्पाद (TP) बढ़ता है; सीमांत उत्पाद (MP) > 0, पहले बढ़ता है\n- **चरण II**: TP बढ़ता है पर घटती दर से; MP > 0 पर घट रहा है ← **कुशल उत्पादन का चरण**\n- **चरण III**: TP घटता है; MP < 0\n\n**पैमाने का प्रतिफल (Returns to Scale)** — दीर्घकाल:\n- वर्धमान प्रतिफल (IRS): सभी inputs 1% बढ़ने पर output > 1% बढ़े\n- स्थिर प्रतिफल (CRS): output भी 1% बढ़े\n- ह्रासमान प्रतिफल (DRS): output < 1% बढ़े",
+          "pa": "ਉਤਪਾਦਨ ਫੰਕਸ਼ਨ: Q=f(L,K)। ਅਲਪਕਾਲ: ਇੱਕ ਨਿਵੇਸ਼ ਸਥਿਰ। ਪਰਿਵਰਤੀ ਅਨੁਪਾਤ ਦਾ ਨਿਯਮ: TP ਵੱਧਦਾ → ਫਿਰ ਘੱਟਦਾ। MP ਪਹਿਲਾਂ ਵੱਧਦਾ ਫਿਰ ਘੱਟਦਾ ਫਿਰ ਨੈਗੇਟਿਵ।",
+          "en": "**Production Function** = technical relationship between inputs (L, K) and output Q = f(L,K).\n\n**Short run**: at least one input fixed. **Long run**: all inputs variable.\n\n**Law of Variable Proportions** (short run):\n- Stage I: TP rises; MP > 0 and rising\n- Stage II: TP rises at diminishing rate; MP > 0 but falling ← **rational production zone**\n- Stage III: TP falls; MP < 0\n\n**Returns to Scale** (long run): IRS (>1% output rise), CRS (=1%), DRS (<1%)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "लागत अवधारणाएं (Cost Concepts)",
+          "pa": "ਲਾਗਤ ਦੀਆਂ ਧਾਰਨਾਵਾਂ",
+          "en": "Cost Concepts"
+        },
+        "text": {
+          "hi": "**प्रमुख लागत अवधारणाएं**:\n\n| लागत | परिभाषा |\n|------|----------|\n| स्थिर लागत (FC) | उत्पाद के साथ नहीं बदलती (किराया, बीमा) |\n| परिवर्ती लागत (VC) | उत्पाद के साथ बदलती है (कच्चा माल, मज़दूरी) |\n| कुल लागत (TC) | TC = FC + VC |\n| सीमांत लागत (MC) | एक अतिरिक्त इकाई उत्पादन की लागत: $MC = \\frac{\\Delta TC}{\\Delta Q}$ |\n| औसत लागत (AC) | $AC = \\frac{TC}{Q}$ |\n\n**MC और AC का संबंध**:\n- जब MC < AC → AC गिर रही है\n- जब MC = AC → AC का न्यूनतम बिंदु\n- जब MC > AC → AC बढ़ रही है\n\n**दीर्घकाल में**: LRAC (Long Run Average Cost) U-आकार की होती है",
+          "pa": "FC: ਸਥਿਰ ਲਾਗਤ। VC: ਪਰਿਵਰਤੀ ਲਾਗਤ। TC=FC+VC। MC=ΔTC/ΔQ। MC<AC → AC ਡਿੱਗਦੀ; MC=AC → AC ਘੱਟੋ-ਘੱਟ; MC>AC → AC ਵੱਧਦੀ।",
+          "en": "**Key cost concepts**: FC (fixed, independent of output); VC (variable with output); TC=FC+VC; MC=ΔTC/ΔQ (cost of one more unit); AC=TC/Q.\n\n**MC-AC relationship**: When MC<AC, AC falling; when MC=AC, AC at minimum; when MC>AC, AC rising. **LRAC** is U-shaped in the long run."
+        }
+      },
+      {
+        "heading": {
+          "hi": "बाज़ार के स्वरूप (Market Structures)",
+          "pa": "ਬਾਜ਼ਾਰ ਦੇ ਰੂਪ",
+          "en": "Market Forms / Structures"
+        },
+        "text": {
+          "hi": "**पूर्ण प्रतियोगिता (Perfect Competition)**:\n- अनेक क्रेता-विक्रेता; एकसमान उत्पाद\n- मूल्य = सीमांत लागत (P = MC)\n- AR = MR = P = MC (संतुलन में)\n\n**एकाधिकार (Monopoly)**:\n- एक ही विक्रेता; कोई निकट प्रतिस्थापन नहीं\n- MR < AR; मूल्य विवेकाधिकार (price discrimination संभव)\n- P > MC (संतुलन)\n\n**अल्पाधिकार (Oligopoly)**:\n- कुछ बड़े विक्रेता; परस्पर निर्भरता\n- उदाहरण: भारत में दूरसंचार, सीमेंट उद्योग\n\n**एकाधिकारी प्रतियोगिता (Monopolistic Competition)**:\n- अनेक विक्रेता; विभेदित उत्पाद\n- दीर्घकाल में AR = AC (शून्य असामान्य लाभ)",
+          "pa": "ਪੂਰਨ ਪ੍ਰਤੀਯੋਗਿਤਾ: ਬਹੁਤ ਵਿਕ੍ਰੇਤਾ, P=MC। ਏਕਾਧਿਕਾਰ: ਇੱਕ ਵਿਕ੍ਰੇਤਾ, P>MC। ਅਲਪਾਧਿਕਾਰ: ਕੁਝ ਵੱਡੇ ਫ਼ਰਮ। ਏਕਾਧਿਕਾਰੀ ਪ੍ਰਤੀਯੋਗਿਤਾ: ਭਿੰਨ ਉਤਪਾਦ।",
+          "en": "**Perfect Competition**: many buyers/sellers, homogeneous product; P=MR=MC (equilibrium).\n**Monopoly**: single seller, no close substitute; MR<AR; P>MC.\n**Oligopoly**: few large sellers, interdependence; examples: telecom, cement.\n**Monopolistic Competition**: many sellers, differentiated product; in long run AR=AC (zero abnormal profit)."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "Law of Variable Proportions के चरण II में MP क्या होता है?",
+          "pa": "ਚਰਣ II ਵਿੱਚ MP?",
+          "en": "What is MP in Stage II of Law of Variable Proportions?"
+        },
+        "back": {
+          "hi": "MP > 0 लेकिन घट रहा है (ह्रासमान मार्जिनल उत्पाद)",
+          "pa": "MP>0 ਪਰ ਘੱਟਦਾ ਹੈ",
+          "en": "MP > 0 but falling (diminishing marginal product)"
+        }
+      },
+      {
+        "front": {
+          "hi": "TC = ?",
+          "pa": "TC = ?",
+          "en": "TC = ?"
+        },
+        "back": {
+          "hi": "TC = FC + VC",
+          "pa": "TC = FC + VC",
+          "en": "TC = FC + VC"
+        }
+      },
+      {
+        "front": {
+          "hi": "MC = AC होने पर AC क्या हो रही है?",
+          "pa": "MC=AC ਹੋਣ ਤੇ?",
+          "en": "When MC = AC, what is AC doing?"
+        },
+        "back": {
+          "hi": "AC अपने न्यूनतम पर है",
+          "pa": "AC ਘੱਟੋ-ਘੱਟ",
+          "en": "AC is at its minimum point"
+        }
+      },
+      {
+        "front": {
+          "hi": "पूर्ण प्रतियोगिता में संतुलन शर्त?",
+          "pa": "ਪੂਰਨ ਪ੍ਰਤੀਯੋਗਿਤਾ ਸੰਤੁਲਨ?",
+          "en": "Equilibrium condition in perfect competition?"
+        },
+        "back": {
+          "hi": "P = MR = MC = AR",
+          "pa": "P = MR = MC = AR",
+          "en": "P = MR = MC = AR"
+        }
+      },
+      {
+        "front": {
+          "hi": "IRS क्या है?",
+          "pa": "IRS ਕੀ ਹੈ?",
+          "en": "What is IRS (Returns to Scale)?"
+        },
+        "back": {
+          "hi": "सभी inputs 1% बढ़ाने पर output 1% से अधिक बढ़े — Increasing Returns to Scale",
+          "pa": "ਸਾਰੇ inputs 1% → output >1%",
+          "en": "Increasing Returns to Scale: 1% increase in all inputs leads to >1% increase in output"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-pm-q1",
+        "text": {
+          "hi": "उत्पादन के किस चरण में कुल उत्पाद अधिकतम होता है?",
+          "pa": "ਕਿਸ ਚਰਣ ਵਿੱਚ TP ਵੱਧ ਤੋਂ ਵੱਧ?",
+          "en": "At which stage of production is Total Product (TP) at its maximum?"
+        },
+        "options": {
+          "hi": [
+            "चरण I अंत पर",
+            "चरण II अंत पर",
+            "चरण III में",
+            "चरण I के मध्य में"
+          ],
+          "pa": [
+            "ਚਰਣ I ਅੰਤ",
+            "ਚਰਣ II ਅੰਤ",
+            "ਚਰਣ III",
+            "ਚਰਣ I ਮੱਧ"
+          ],
+          "en": [
+            "End of Stage I",
+            "End of Stage II",
+            "Stage III",
+            "Middle of Stage I"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "TP चरण II के अंत में अधिकतम होता है, जब MP = 0। चरण III में TP घटता है।",
+          "pa": "TP ਵੱਧ ਤੋਂ ਵੱਧ ਜਦੋਂ MP=0 (ਚਰਣ II ਦੇ ਅੰਤ ਵਿੱਚ)।",
+          "en": "TP is maximum at the end of Stage II when MP = 0. In Stage III, TP falls as MP becomes negative."
+        }
+      },
+      {
+        "id": "sst-pm-q2",
+        "text": {
+          "hi": "यदि MC < AC है तो AC पर क्या प्रभाव पड़ेगा?",
+          "pa": "ਜੇ MC < AC ਤਾਂ AC?",
+          "en": "If MC < AC, what happens to AC?"
+        },
+        "options": {
+          "hi": [
+            "AC बढ़ेगी",
+            "AC घटेगी",
+            "AC स्थिर रहेगी",
+            "AC शून्य हो जाएगी"
+          ],
+          "pa": [
+            "AC ਵੱਧੇਗੀ",
+            "AC ਘੱਟੇਗੀ",
+            "AC ਸਥਿਰ",
+            "AC ਜ਼ੀਰੋ"
+          ],
+          "en": [
+            "AC will rise",
+            "AC will fall",
+            "AC will stay constant",
+            "AC becomes zero"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "जब MC < AC, तो AC घटती है। जैसे एक छात्र का औसत स्कोर — अगर नया अंक औसत से कम है तो औसत गिरेगा।",
+          "pa": "MC < AC → AC ਘੱਟਦੀ।",
+          "en": "When MC < AC, AC falls. Intuition: if the marginal unit costs less than average, average is pulled down."
+        }
+      },
+      {
+        "id": "sst-pm-q3",
+        "text": {
+          "hi": "एकाधिकार में संतुलन पर किसका संबंध सही है?",
+          "pa": "ਏਕਾਧਿਕਾਰ ਵਿੱਚ ਸੰਤੁਲਨ?",
+          "en": "Which relationship holds at monopoly equilibrium?"
+        },
+        "options": {
+          "hi": [
+            "P = MC",
+            "P = MR",
+            "P > MC",
+            "MR > MC"
+          ],
+          "pa": [
+            "P=MC",
+            "P=MR",
+            "P>MC",
+            "MR>MC"
+          ],
+          "en": [
+            "P = MC",
+            "P = MR",
+            "P > MC",
+            "MR > MC"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "एकाधिकार में MR = MC (उत्पादन शर्त), लेकिन P > MR = MC। इसलिए P > MC। यह एकाधिकारी लाभ का स्रोत है।",
+          "pa": "ਏਕਾਧਿਕਾਰ: P>MC ਕਿਉਂਕਿ MR<P।",
+          "en": "In monopoly, equilibrium requires MR=MC, but since MR < P (downward demand), P > MC. This is the source of monopoly profit."
+        }
+      },
+      {
+        "id": "sst-pm-q4",
+        "text": {
+          "hi": "निम्न में से कौन सा स्थिर लागत (Fixed Cost) का उदाहरण है?",
+          "pa": "ਸਥਿਰ ਲਾਗਤ ਦੀ ਉਦਾਹਰਨ?",
+          "en": "Which of the following is an example of Fixed Cost?"
+        },
+        "options": {
+          "hi": [
+            "कच्चे माल की लागत",
+            "मज़दूरी",
+            "किराया",
+            "बिजली बिल (उत्पादन पर निर्भर)"
+          ],
+          "pa": [
+            "ਕੱਚਾ ਮਾਲ",
+            "ਮਜ਼ਦੂਰੀ",
+            "ਕਿਰਾਇਆ",
+            "ਬਿਜਲੀ ਬਿੱਲ"
+          ],
+          "en": [
+            "Raw material cost",
+            "Wages (per unit produced)",
+            "Rent",
+            "Electricity bill (usage-based)"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "किराया एक स्थिर लागत है — यह उत्पादन की मात्रा के साथ नहीं बदलता। कच्चा माल, मज़दूरी (प्रति यूनिट) और बिजली परिवर्ती लागतें हैं।",
+          "pa": "ਕਿਰਾਇਆ = ਸਥਿਰ ਲਾਗਤ।",
+          "en": "Rent is a fixed cost — it does not change with output. Raw materials, wages per unit, and usage-based electricity are variable costs."
+        }
+      },
+      {
+        "id": "sst-pm-q5",
+        "text": {
+          "hi": "दीर्घकाल में एकाधिकारी प्रतियोगिता (Monopolistic Competition) का परिणाम?",
+          "pa": "ਦੀਰਘਕਾਲ ਵਿੱਚ ਏਕਾਧਿਕਾਰੀ ਪ੍ਰਤੀਯੋਗਿਤਾ?",
+          "en": "Long-run result in Monopolistic Competition?"
+        },
+        "options": {
+          "hi": [
+            "AR > AC (असामान्य लाभ)",
+            "AR = AC (शून्य असामान्य लाभ)",
+            "AR < AC (हानि)",
+            "P = MC (पूर्ण प्रतियोगिता)"
+          ],
+          "pa": [
+            "AR>AC",
+            "AR=AC (ਸ਼ੂਨਯ ਅਸਾਧਾਰਨ ਲਾਭ)",
+            "AR<AC",
+            "P=MC"
+          ],
+          "en": [
+            "AR > AC (abnormal profit)",
+            "AR = AC (zero abnormal profit)",
+            "AR < AC (loss)",
+            "P = MC"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "दीर्घकाल में नई फर्मों के प्रवेश से असामान्य लाभ समाप्त हो जाता है और AR = AC (शून्य असामान्य लाभ) बनता है।",
+          "pa": "ਦੀਰਘਕਾਲ ਵਿੱਚ AR=AC।",
+          "en": "In the long run, free entry eliminates abnormal profit → AR = AC (zero abnormal profit) is the equilibrium."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sst-govt-budget-multiplier",
+    "subject": "Economics",
+    "unit": "Macroeconomics — Fiscal Policy and National Income",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "सरकारी बजट, राजकोषीय नीति और निवेश गुणक",
+      "pa": "ਸਰਕਾਰੀ ਬਜਟ, ਵਿੱਤੀ ਨੀਤੀ ਅਤੇ ਨਿਵੇਸ਼ ਗੁਣਕ",
+      "en": "Government Budget, Fiscal Policy and the Investment Multiplier"
+    },
+    "level": "Master Cadre Economics — Class 12 PSEB/NCERT Macroeconomics level",
+    "sources": [
+      {
+        "title": "NCERT Macroeconomics Class 12 — Chapter 5 (Government Budget) and Chapter 4 (Determination of Income)",
+        "url": "https://ncert.nic.in/textbook.php?leco2=0-6",
+        "note": "NCERT Class 12 Macroeconomics."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "सरकारी बजट के घटक",
+          "pa": "ਸਰਕਾਰੀ ਬਜਟ ਦੇ ਹਿੱਸੇ",
+          "en": "Components of Government Budget"
+        },
+        "text": {
+          "hi": "**ਸਰਕਾਰੀ ਬਜਟ** = ਸਰਕਾਰ ਦੀ ਸਾਲਾਨਾ ਵਿੱਤੀ ਯੋਜਨਾ\n\n**ਆਮਦਨੀ (Revenue)** ਦੇ ਸ੍ਰੋਤ:\n- ਟੈਕਸ ਆਮਦਨੀ: ਪ੍ਰਤੱਖ ਟੈਕਸ (income tax, corporate tax) + ਅਪ੍ਰਤੱਖ ਟੈਕਸ (GST, customs)\n- ਗੈਰ-ਟੈਕਸ ਆਮਦਨੀ: ਵਿਆਜ਼, ਲਾਭਅੰਸ਼, ਫ਼ੀਸ\n\n**ਖ਼ਰਚਾ (Expenditure)**:\n- ਮਾਲੀਆ ਖ਼ਰਚਾ (Revenue Expenditure): ਤਨਖਾਹਾਂ, ਵਿਆਜ਼ ਭੁਗਤਾਨ, ਸਬਸਿਡੀਆਂ\n- ਪੂੰਜੀ ਖ਼ਰਚਾ (Capital Expenditure): ਬੁਨਿਆਦੀ ਢਾਂਚਾ, ਕਰਜ਼ਾ ਅਦਾਇਗੀ\n\n**ਘਾਟਾ ਦੀਆਂ ਕਿਸਮਾਂ**:\n- **ਮਾਲੀਆ ਘਾਟਾ** = ਮਾਲੀਆ ਖ਼ਰਚਾ – ਮਾਲੀਆ ਪ੍ਰਾਪਤੀਆਂ\n- **ਕੁੱਲ ਘਾਟਾ (Fiscal Deficit)** = ਕੁੱਲ ਖ਼ਰਚਾ – (ਟੈਕਸ + ਗੈਰ-ਟੈਕਸ ਆਮਦਨੀ)\n- **ਮੁੱਢਲਾ ਘਾਟਾ (Primary Deficit)** = Fiscal Deficit – ਵਿਆਜ਼ ਭੁਗਤਾਨ",
+          "pa": "ਬਜਟ = ਸਾਲਾਨਾ ਵਿੱਤੀ ਯੋਜਨਾ। ਮਾਲੀਆ ਘਾਟਾ = ਆਮਦਨੀ<ਖ਼ਰਚਾ। Fiscal Deficit = ਕੁੱਲ ਖ਼ਰਚਾ – ਕੁੱਲ ਆਮਦਨੀ। Primary Deficit = FD – ਵਿਆਜ਼।",
+          "en": "**Government Budget** = annual financial plan.\n\n**Revenue**: Tax (direct: income/corporate tax; indirect: GST/customs) + Non-tax (interest, dividends, fees).\n**Expenditure**: Revenue expenditure (salaries, interest payments, subsidies) + Capital expenditure (infrastructure, loan repayments).\n\n**Deficits**: Revenue Deficit = Revenue Exp – Revenue Receipts; Fiscal Deficit = Total Exp – Total Receipts (excl. borrowings); Primary Deficit = Fiscal Deficit – Interest Payments."
+        }
+      },
+      {
+        "heading": {
+          "hi": "राजकोषीय नीति (Fiscal Policy)",
+          "pa": "ਵਿੱਤੀ ਨੀਤੀ (Fiscal Policy)",
+          "en": "Fiscal Policy"
+        },
+        "text": {
+          "hi": "**ਵਿੱਤੀ ਨੀਤੀ** = ਸਰਕਾਰੀ ਖ਼ਰਚੇ ਅਤੇ ਟੈਕਸਾਂ ਰਾਹੀਂ ਆਰਥਿਕਤਾ ਨੂੰ ਪ੍ਰਭਾਵਿਤ ਕਰਨਾ\n\n**ਵਿਸਤਾਰਵਾਦੀ ਨੀਤੀ (Expansionary)**: ਮੰਦੀ ਸਮੇਂ:\n- ਸਰਕਾਰੀ ਖ਼ਰਚਾ ਵਧਾਉਣਾ ਜਾਂ ਟੈਕਸ ਘਟਾਉਣਾ\n- ਕੁੱਲ ਮੰਗ (AD) ਵੱਧਦੀ → ਰੁਜ਼ਗਾਰ ਅਤੇ ਆਮਦਨ ਵੱਧਦੀ\n\n**ਸੰਕੁਚਨਵਾਦੀ ਨੀਤੀ (Contractionary)**: ਮਹਿੰਗਾਈ ਸਮੇਂ:\n- ਸਰਕਾਰੀ ਖ਼ਰਚਾ ਘਟਾਉਣਾ ਜਾਂ ਟੈਕਸ ਵਧਾਉਣਾ\n- AD ਘੱਟਦੀ → ਮਹਿੰਗਾਈ ਕਾਬੂ ਵਿੱਚ ਆਉਂਦੀ\n\n**ਕੀਨਜ਼ੀਅਨ ਦ੍ਰਿਸ਼ਟੀਕੋਣ**: ਮੰਦੀ ਵਿੱਚ ਸਰਕਾਰੀ ਖ਼ਰਚਾ ਵਧਾਉਣਾ ਜ਼ਰੂਰੀ (ਬਾਜ਼ਾਰ ਖ਼ੁਦ ਠੀਕ ਨਹੀਂ ਹੁੰਦਾ)",
+          "pa": "Expansionary: ਮੰਦੀ ਸਮੇਂ ਖ਼ਰਚਾ ਵਧਾਓ/ਟੈਕਸ ਘਟਾਓ। Contractionary: ਮਹਿੰਗਾਈ ਸਮੇਂ ਉਲਟ।",
+          "en": "**Fiscal Policy** uses government spending and taxation to influence the economy.\n\n**Expansionary** (during recession): increase spending or cut taxes → AD rises → income and employment increase.\n**Contractionary** (during inflation): cut spending or raise taxes → AD falls → inflation controlled.\n**Keynesian view**: Government intervention is necessary during a recession — markets do not self-correct quickly."
+        }
+      },
+      {
+        "heading": {
+          "hi": "निवेश गुणक (Investment Multiplier)",
+          "pa": "ਨਿਵੇਸ਼ ਗੁਣਕ (Investment Multiplier)",
+          "en": "Investment Multiplier"
+        },
+        "text": {
+          "hi": "**ਨਿਵੇਸ਼ ਗੁਣਕ (k)** = ਨਿਵੇਸ਼ ਵਿੱਚ ਇੱਕ ਰੁਪਏ ਦੀ ਵਾਧੇ ਨਾਲ ਆਮਦਨ ਵਿੱਚ ਕਿੰਨੇ ਗੁਣਾ ਵਾਧਾ ਹੁੰਦਾ ਹੈ\n\n$$k = \\frac{1}{1-MPC} = \\frac{1}{MPS}$$\n\nਜਿੱਥੇ MPC = ਸੀਮਾਂਤ ਖਪਤ ਝੁਕਾਅ, MPS = ਸੀਮਾਂਤ ਬੱਚਤ ਝੁਕਾਅ, MPC + MPS = 1\n\n**ਆਮਦਨ ਵਿੱਚ ਕੁੱਲ ਬਦਲਾਅ**:\n$$\\Delta Y = k \\times \\Delta I$$\n\n**ਉਦਾਹਰਨ**: MPC = 0.8 → MPS = 0.2\n- k = 1/0.2 = **5**\n- ਜੇ ΔI = ₹100 Cr → ΔY = 5 × 100 = **₹500 Cr**\n\n**ਸੀਮਾਵਾਂ**: ਗੁਣਕ ਦੀ ਧਾਰਨਾ ਬੰਦ ਅਰਥਵਿਵਸਥਾ ਵਿੱਚ ਕੰਮ ਕਰਦੀ ਹੈ; ਖੁੱਲ੍ਹੀ ਅਰਥਵਿਵਸਥਾ ਵਿੱਚ ਆਯਾਤ ਦੀ ਸੀਮਾਂਤ ਝੁਕਾਅ ਵੀ ਪ੍ਰਭਾਵਿਤ ਕਰਦਾ ਹੈ।",
+          "pa": "k = 1/(1-MPC) = 1/MPS। MPC=0.8 → k=5। ΔY = k×ΔI।",
+          "en": "**Investment Multiplier (k)** = ratio by which an increase in investment raises national income.\n\n$$k = \\frac{1}{1-MPC} = \\frac{1}{MPS}; \\quad \\Delta Y = k \\times \\Delta I$$\n\n**Example**: MPC=0.8, MPS=0.2 → k=5. If ΔI=₹100Cr → ΔY=₹500Cr.\n\n**MPC and MPS**: MPC + MPS = 1. Higher MPC → higher multiplier → greater income amplification."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "Fiscal Deficit = ?",
+          "pa": "Fiscal Deficit = ?",
+          "en": "Fiscal Deficit = ?"
+        },
+        "back": {
+          "hi": "Total Expenditure – (Tax + Non-Tax Receipts)",
+          "pa": "ਕੁੱਲ ਖ਼ਰਚਾ – ਕੁੱਲ ਆਮਦਨੀ (ਕਰਜ਼ ਛੱਡ)",
+          "en": "Total Expenditure – Total Receipts (excluding borrowings)"
+        }
+      },
+      {
+        "front": {
+          "hi": "Primary Deficit = ?",
+          "pa": "Primary Deficit = ?",
+          "en": "Primary Deficit = ?"
+        },
+        "back": {
+          "hi": "Fiscal Deficit – Interest Payments",
+          "pa": "Fiscal Deficit – ਵਿਆਜ਼ ਭੁਗਤਾਨ",
+          "en": "Fiscal Deficit – Interest Payments"
+        }
+      },
+      {
+        "front": {
+          "hi": "MPC = 0.75 → गुणक (k) = ?",
+          "pa": "MPC=0.75 → k=?",
+          "en": "MPC=0.75 → Multiplier k=?"
+        },
+        "back": {
+          "hi": "k = 1/(1–0.75) = 1/0.25 = 4",
+          "pa": "k = 1/0.25 = 4",
+          "en": "k = 1/0.25 = 4"
+        }
+      },
+      {
+        "front": {
+          "hi": "मंदी में विस्तारवादी राजकोषीय नीति क्या करती है?",
+          "pa": "ਮੰਦੀ ਵਿੱਚ Expansionary Fiscal Policy?",
+          "en": "Expansionary fiscal policy during recession does what?"
+        },
+        "back": {
+          "hi": "सरकारी खर्च बढ़ाती है / कर घटाती है → AD बढ़ता है",
+          "pa": "ਖ਼ਰਚਾ ↑, ਟੈਕਸ ↓ → AD ↑",
+          "en": "Increases government spending / reduces taxes → raises Aggregate Demand"
+        }
+      },
+      {
+        "front": {
+          "hi": "MPC + MPS = ?",
+          "pa": "MPC + MPS = ?",
+          "en": "MPC + MPS = ?"
+        },
+        "back": {
+          "hi": "1 (MPC + MPS = 1 हमेशा)",
+          "pa": "1",
+          "en": "1 (always)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-gb-q1",
+        "text": {
+          "hi": "यदि MPC = 0.8 है तो निवेश गुणक (k) क्या होगा?",
+          "pa": "MPC=0.8 → k=?",
+          "en": "If MPC = 0.8, what is the investment multiplier k?"
+        },
+        "options": {
+          "hi": [
+            "2",
+            "4",
+            "5",
+            "8"
+          ],
+          "pa": [
+            "2",
+            "4",
+            "5",
+            "8"
+          ],
+          "en": [
+            "2",
+            "4",
+            "5",
+            "8"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "k = 1/(1–MPC) = 1/(1–0.8) = 1/0.2 = 5।",
+          "pa": "k = 1/(1-0.8) = 1/0.2 = 5।",
+          "en": "k = 1/(1–MPC) = 1/0.2 = 5."
+        }
+      },
+      {
+        "id": "sst-gb-q2",
+        "text": {
+          "hi": "Primary Deficit = Fiscal Deficit – ?",
+          "pa": "Primary Deficit = Fiscal Deficit – ?",
+          "en": "Primary Deficit = Fiscal Deficit – ?"
+        },
+        "options": {
+          "hi": [
+            "Revenue Deficit",
+            "Interest Payments",
+            "Capital Expenditure",
+            "Tax Revenue"
+          ],
+          "pa": [
+            "Revenue Deficit",
+            "ਵਿਆਜ਼ ਭੁਗਤਾਨ",
+            "Capital Expenditure",
+            "Tax Revenue"
+          ],
+          "en": [
+            "Revenue Deficit",
+            "Interest Payments",
+            "Capital Expenditure",
+            "Tax Revenue"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Primary Deficit = Fiscal Deficit – Interest Payments। यह दर्शाता है कि बिना ब्याज के कितना घाटा है।",
+          "pa": "Primary Deficit = FD – ਵਿਆਜ਼ ਭੁਗਤਾਨ।",
+          "en": "Primary Deficit = Fiscal Deficit – Interest Payments. It shows the deficit excluding debt servicing."
+        }
+      },
+      {
+        "id": "sst-gb-q3",
+        "text": {
+          "hi": "मंदी के दौरान कौन सी राजकोषीय नीति उचित है?",
+          "pa": "ਮੰਦੀ ਸਮੇਂ ਕਿਹੜੀ ਵਿੱਤੀ ਨੀਤੀ?",
+          "en": "Which fiscal policy is appropriate during a recession?"
+        },
+        "options": {
+          "hi": [
+            "संकुचनवादी (taxes बढ़ाओ)",
+            "विस्तारवादी (खर्च बढ़ाओ)",
+            "तटस्थ",
+            "मौद्रिक नीति"
+          ],
+          "pa": [
+            "Contractionary",
+            "Expansionary",
+            "Neutral",
+            "Monetary"
+          ],
+          "en": [
+            "Contractionary (raise taxes)",
+            "Expansionary (increase spending)",
+            "Neutral",
+            "Monetary policy"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "मंदी में विस्तारवादी राजकोषीय नीति अपनाई जाती है — सरकारी खर्च बढ़ाना और/या कर घटाना, जिससे AD बढ़ती है।",
+          "pa": "ਮੰਦੀ ਵਿੱਚ Expansionary: ਖ਼ਰਚਾ ↑।",
+          "en": "Expansionary fiscal policy is used in recessions — increase government spending and/or reduce taxes to boost Aggregate Demand."
+        }
+      },
+      {
+        "id": "sst-gb-q4",
+        "text": {
+          "hi": "निम्न में से कौन सा प्रत्यक्ष कर (Direct Tax) का उदाहरण है?",
+          "pa": "ਪ੍ਰਤੱਖ ਟੈਕਸ ਦੀ ਉਦਾਹਰਨ?",
+          "en": "Which is an example of a Direct Tax?"
+        },
+        "options": {
+          "hi": [
+            "GST",
+            "Custom Duty",
+            "Income Tax",
+            "Excise Duty"
+          ],
+          "pa": [
+            "GST",
+            "ਕਸਟਮ ਡਿਊਟੀ",
+            "ਆਮਦਨ ਕਰ",
+            "ਐਕਸਾਈਜ਼ ਡਿਊਟੀ"
+          ],
+          "en": [
+            "GST",
+            "Custom Duty",
+            "Income Tax",
+            "Excise Duty"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "Income Tax प्रत्यक्ष कर है — यह सीधे व्यक्ति की आय पर लगता है। GST, Custom और Excise अप्रत्यक्ष कर हैं।",
+          "pa": "ਆਮਦਨ ਕਰ = ਪ੍ਰਤੱਖ ਟੈਕਸ।",
+          "en": "Income Tax is a direct tax — levied directly on the person's income. GST, customs, excise are indirect taxes."
+        }
+      },
+      {
+        "id": "sst-gb-q5",
+        "text": {
+          "hi": "यदि MPC = 0.6, ΔI = ₹200 Cr तो राष्ट्रीय आय में कितना बदलाव होगा?",
+          "pa": "MPC=0.6, ΔI=₹200Cr → ΔY=?",
+          "en": "If MPC=0.6 and ΔI=₹200Cr, what is ΔY?"
+        },
+        "options": {
+          "hi": [
+            "₹300 Cr",
+            "₹400 Cr",
+            "₹500 Cr",
+            "₹600 Cr"
+          ],
+          "pa": [
+            "₹300Cr",
+            "₹400Cr",
+            "₹500Cr",
+            "₹600Cr"
+          ],
+          "en": [
+            "₹300 Cr",
+            "₹400 Cr",
+            "₹500 Cr",
+            "₹600 Cr"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "k = 1/(1-0.6) = 1/0.4 = 2.5; ΔY = 2.5 × 200 = ₹500 Cr।",
+          "pa": "k=1/0.4=2.5; ΔY=2.5×200=500।",
+          "en": "k = 1/(1–0.6) = 2.5; ΔY = 2.5 × ₹200Cr = ₹500Cr."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sst-climate-regions-biomes",
+    "subject": "Geography",
+    "unit": "Physical Geography — Climatic Regions and Biomes",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "जलवायु क्षेत्र, प्राकृतिक वनस्पति और जीव मंडल",
+      "pa": "ਜਲਵਾਯੂ ਖੇਤਰ, ਕੁਦਰਤੀ ਬਨਸਪਤੀ ਅਤੇ ਜੀਵਮੰਡਲ",
+      "en": "Climatic Regions, Natural Vegetation and Biomes"
+    },
+    "level": "Master Cadre Geography — Class 11-12 PSEB/NCERT level",
+    "sources": [
+      {
+        "title": "NCERT Fundamentals of Physical Geography Class 11 — Chapter 15 (Biomes)",
+        "url": "https://ncert.nic.in/textbook.php?keph1=0-8",
+        "note": "NCERT Class 11 Physical Geography."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "कोपेन का जलवायु वर्गीकरण",
+          "pa": "ਕੋਪੇਨ ਦਾ ਜਲਵਾਯੂ ਵਰਗੀਕਰਨ",
+          "en": "Köppen Climate Classification"
+        },
+        "text": {
+          "hi": "**ਕੋਪੇਨ ਦਾ ਵਰਗੀਕਰਨ** (1918) ਤਾਪਮਾਨ ਅਤੇ ਵਰਖਾ ਦੇ ਆਧਾਰ ਤੇ ਜਲਵਾਯੂ ਵੰਡਦਾ ਹੈ:\n\n| ਕੋਡ | ਜਲਵਾਯੂ ਕਿਸਮ | ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ | ਉਦਾਹਰਨ ਖੇਤਰ |\n|-----|------------|-------------|---------------|\n| **A** | ਟ੍ਰੌਪੀਕਲ ਨਮੀ | ਸਾਲਾਨਾ ਵਰਖਾ >1500mm; ਸਭ ਤੋਂ ਠੰਡੇ ਮਹੀਨੇ >18°C | ਅਮੇਜ਼ਨ, ਕਾਂਗੋ, ਕੇਰਲਾ |\n| **B** | ਰੁੱਖਾ ਅਤੇ ਅਰਧ-ਰੁੱਖਾ | ਵਰਖਾ < ਵਾਸ਼ਪੀਕਰਨ | ਰਾਜਸਥਾਨ, ਸਹਾਰਾ, ਅਰੇਬੀਆ |\n| **C** | ਨਮੀ ਉਪ-ਉਸ਼ਣ | ਸਰਦ ਸਰਦੀਆਂ; ਕੋਈ ਸੁੱਕਾ ਮੌਸਮ ਨਹੀਂ | ਭੂਮੱਧ-ਸਾਗਰ ਖੇਤਰ, ਦੱਖਣ ਭਾਰਤ |\n| **D** | ਮਹਾਂਦੀਪੀ | ਠੰਡੀਆਂ ਸਰਦੀਆਂ; ਘੱਟੋ-ਘੱਟ 4 ਮਹੀਨੇ <0°C | ਸਾਇਬੇਰੀਆ, ਕੈਨੇਡਾ |\n| **E** | ਧਰੁਵੀ | ਕੋਈ ਵੀ ਮਹੀਨਾ >10°C ਨਹੀਂ | ਟੁੰਡਰਾ, ਬਰਫ਼ ਢੱਕੇ ਖੇਤਰ |",
+          "pa": "ਕੋਪੇਨ: A=ਟ੍ਰੌਪੀਕਲ, B=ਰੁੱਖਾ, C=ਉਪ-ਉਸ਼ਣ, D=ਮਹਾਂਦੀਪੀ, E=ਧਰੁਵੀ।",
+          "en": "**Köppen Classification** (1918) based on temperature and precipitation:\n- **A** — Tropical humid (warmest month >18°C, annual rainfall >1500mm): Amazon, Kerala\n- **B** — Dry/arid (rainfall < evapotranspiration): Rajasthan, Sahara\n- **C** — Humid subtropical (cold winters): Mediterranean, S India\n- **D** — Continental (at least 4 months <0°C): Siberia, Canada\n- **E** — Polar (no month >10°C): Tundra, ice caps"
+        }
+      },
+      {
+        "heading": {
+          "hi": "प्रमुख जीव मंडल/बायोम (Major Biomes)",
+          "pa": "ਪ੍ਰਮੁੱਖ ਜੀਵਮੰਡਲ (Biomes)",
+          "en": "Major Biomes of the World"
+        },
+        "text": {
+          "hi": "**ਟ੍ਰੌਪੀਕਲ ਵਰਖਾ ਜੰਗਲ (Tropical Rainforest)**:\n- ਖੱਤੇ ਤੇ ਸਥਿਤ; ਸਾਲਾਨਾ ਵਰਖਾ 200+ ਸੈਮੀ\n- ਵੱਧ ਤੋਂ ਵੱਧ ਜੈਵ ਵਿਭਿੰਨਤਾ (Biodiversity hotspot)\n- ਉਦਾਹਰਨ: ਅਮੇਜ਼ਨ (ਬ੍ਰਾਜ਼ੀਲ), ਕਾਂਗੋ ਬੇਸਿਨ, ਦੱਖਣ-ਪੂਰਬੀ ਏਸ਼ੀਆ\n\n**ਸਵਾਨਾ (Tropical Grassland)**:\n- ਘਾਹ ਦੇ ਮੈਦਾਨ + ਖਿਲਰੇ ਰੁੱਖ\n- ਅਫ਼ਰੀਕਾ (ਸੇਰੇਂਗੇਟੀ), ਬ੍ਰਾਜ਼ੀਲ (ਸੇਰਾਡੋ)\n\n**ਮਾਰੂਥਲ (Desert Biome)**:\n- ਵਰਖਾ < 25 ਸੈਮੀ ਸਾਲਾਨਾ\n- ਗਰਮ ਮਾਰੂਥਲ: ਸਹਾਰਾ, ਥਾਰ; ਠੰਡੇ ਮਾਰੂਥਲ: ਲੱਦਾਖ, ਗੋਬੀ\n\n**ਮੈਡੀਟੇਰੀਅਨ (Mediterranean Scrub/Chaparral)**:\n- ਗਰਮੀਆਂ ਵਿੱਚ ਸੁੱਕਾ + ਸਰਦੀਆਂ ਵਿੱਚ ਵਰਖਾ\n- ਕਠੋਰ ਪੱਤੇ ਵਾਲੀਆਂ ਝਾੜੀਆਂ (Xerophytic)\n\n**ਟੈਂਪਰੇਟ ਘਾਹ ਦੇ ਮੈਦਾਨ**:\n- ਪ੍ਰੇਅਰੀ (ਉੱਤਰੀ ਅਮਰੀਕਾ), ਸਟੈੱਪ (ਯੂਰੇਸ਼ੀਆ)\n- ਕਾਲੀ ਮਿੱਟੀ (Chernozem) — ਖੇਤੀ ਲਈ ਉਚਿਤ\n\n**ਟੁੰਡਰਾ (Polar/Tundra)**:\n- ਦਰੱਖਤ ਨਹੀਂ; ਕਾਈ, ਲਾਈਕੇਨ; Permafrost\n- ਆਰਕਟਿਕ ਕੈਨੇਡਾ, ਸਾਇਬੇਰੀਆ, ਅਲਾਸਕਾ",
+          "pa": "ਟ੍ਰੌਪੀਕਲ ਜੰਗਲ: ਜ਼ਿਆਦਾ ਜੈਵ ਵਿਭਿੰਨਤਾ। ਸਵਾਨਾ: ਘਾਹ+ਰੁੱਖ। ਮਾਰੂਥਲ: <25cm ਵਰਖਾ। ਮੈਡੀਟੇਰੀਅਨ: ਗਰਮੀਆਂ-ਸੁੱਕਾ। ਟੁੰਡਰਾ: ਦਰੱਖਤ ਨਹੀਂ।",
+          "en": "**Tropical Rainforest**: highest biodiversity, >200cm rainfall; Amazon, Congo.\n**Savanna**: grassland + scattered trees; Africa (Serengeti), Brazil.\n**Desert**: <25cm rainfall; Sahara/Thar (hot), Ladakh/Gobi (cold).\n**Mediterranean**: dry summer, wet winter; xerophytic shrubs (chaparral).\n**Temperate Grassland**: Prairie (N.America), Steppe (Eurasia); fertile Chernozem soils.\n**Tundra**: no trees, moss/lichen, permafrost; Arctic Canada, Siberia."
+        }
+      },
+      {
+        "heading": {
+          "hi": "भारत की जलवायु और वनस्पति",
+          "pa": "ਭਾਰਤ ਦੀ ਜਲਵਾਯੂ ਅਤੇ ਬਨਸਪਤੀ",
+          "en": "India's Climate and Vegetation Zones"
+        },
+        "text": {
+          "hi": "**ਭਾਰਤ ਦੀਆਂ ਮੁੱਖ ਜਲਵਾਯੂ ਕਿਸਮਾਂ** (ਕੋਪੇਨ ਅਨੁਸਾਰ):\n- **Aw** (Tropical Wet-Dry): ਦੱਖਣ ਭਾਰਤ\n- **BSh** (Semi-Arid): ਰਾਜਸਥਾਨ, ਗੁਜਰਾਤ\n- **BWh** (Hot Desert): ਥਾਰ ਮਾਰੂਥਲ\n- **Cwa/Cwg** (Humid Subtropical): ਉੱਤਰ ਭਾਰਤ ਦਾ ਜ਼ਿਆਦਾ ਭਾਗ (ਪੰਜਾਬ ਸਮੇਤ)\n\n**ਭਾਰਤ ਦੇ ਜੰਗਲ**:\n- **ਉਸ਼ਣ ਨਮ ਸਦਾਬਹਾਰ** (Tropical Wet Evergreen): ਅੰਡੇਮਾਨ, ਪੱਛਮੀ ਘਾਟ, ਮੇਘਾਲਿਆ\n- **ਉਸ਼ਣ ਪਤਝੜੀ** (Tropical Deciduous): ਉੱਤਰ-ਪ੍ਰਦੇਸ਼, ਮੱਧ ਪ੍ਰਦੇਸ਼ — ਸਾਗ, ਸਾਲ ਦੇ ਰੁੱਖ\n- **ਕੰਡੇਦਾਰ ਝਾੜੀਆਂ** (Thorny Scrub): ਰਾਜਸਥਾਨ — ਬਾਬਲ, ਕੈਕਟਸ\n- **ਪਰਬਤੀ ਜੰਗਲ** (Montane): ਕਾਨੀਫ਼ਰ, ਬਰੱਚ — ਹਿਮਾਲਿਆ",
+          "pa": "ਭਾਰਤ: Cwa = ਪੰਜਾਬ, ਉੱਤਰ ਭਾਰਤ। BWh = ਥਾਰ। ਸਦਾਬਹਾਰ = ਪੱਛਮੀ ਘਾਟ। ਪਤਝੜੀ = ਮੱਧ ਭਾਰਤ।",
+          "en": "**India's climate zones** (Köppen): Cwa/Cwg (Humid Subtropical) — Punjab and north India; BWh (Hot Desert) — Thar; BSh (Semi-arid) — Rajasthan; Aw — peninsular India.\n\n**Forest types**: Tropical Wet Evergreen (W.Ghats, Andaman); Tropical Deciduous (UP, MP — teak, sal); Thorny Scrub (Rajasthan — acacia, cactus); Montane (Himalayas — conifers, birch)."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "Köppen type 'A' जलवायु की पहचान?",
+          "pa": "Köppen A ਜਲਵਾਯੂ?",
+          "en": "Characteristic of Köppen type 'A' climate?"
+        },
+        "back": {
+          "hi": "Tropical — सबसे ठंडा महीना > 18°C; >1500mm वार्षिक वर्षा",
+          "pa": "Tropical: ਸਭ ਤੋਂ ਠੰਡਾ ਮਹੀਨਾ >18°C",
+          "en": "Tropical Humid — coldest month >18°C, annual rainfall >1500mm"
+        }
+      },
+      {
+        "front": {
+          "hi": "Chernozem मिट्टी किस बायोम में मिलती है?",
+          "pa": "Chernozem ਮਿੱਟੀ ਕਿੱਥੇ?",
+          "en": "Chernozem soil is found in which biome?"
+        },
+        "back": {
+          "hi": "Temperate Grassland (Prairie/Steppe)",
+          "pa": "ਟੈਂਪਰੇਟ ਘਾਹ ਦੇ ਮੈਦਾਨ",
+          "en": "Temperate Grassland (Prairie/Steppe)"
+        }
+      },
+      {
+        "front": {
+          "hi": "भारत में Tropical Deciduous forest में मुख्य वृक्ष?",
+          "pa": "ਭਾਰਤੀ ਪਤਝੜੀ ਜੰਗਲਾਂ ਵਿੱਚ?",
+          "en": "Main trees in India's Tropical Deciduous forests?"
+        },
+        "back": {
+          "hi": "ਸਾਗ (Teak) ਅਤੇ ਸਾਲ (Sal)",
+          "pa": "ਸਾਗ ਅਤੇ ਸਾਲ",
+          "en": "Teak (Tectona grandis) and Sal (Shorea robusta)"
+        }
+      },
+      {
+        "front": {
+          "hi": "टुंड्रा बायोम की विशेषता?",
+          "pa": "ਟੁੰਡਰਾ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ?",
+          "en": "Key feature of Tundra biome?"
+        },
+        "back": {
+          "hi": "कोई वृक्ष नहीं; काई/लाइकेन; Permafrost (स्थायी जमी ज़मीन)",
+          "pa": "ਦਰੱਖਤ ਨਹੀਂ, Permafrost",
+          "en": "No trees, only moss/lichen; Permafrost (permanently frozen ground)"
+        }
+      },
+      {
+        "front": {
+          "hi": "पंजाब की जलवायु कोपेन में कौन से वर्ग में?",
+          "pa": "ਪੰਜਾਬ ਦੀ ਜਲਵਾਯੂ — ਕੋਪੇਨ?",
+          "en": "Punjab's climate class in Köppen?"
+        },
+        "back": {
+          "hi": "Cwa/Cwg — Humid Subtropical (मॉनसून प्रभावित)",
+          "pa": "Cwa/Cwg — Humid Subtropical",
+          "en": "Cwa/Cwg — Humid Subtropical (monsoon-influenced)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-cr-q1",
+        "text": {
+          "hi": "कोपेन वर्गीकरण में 'B' प्रकार की जलवायु किस क्षेत्र को दर्शाती है?",
+          "pa": "ਕੋਪੇਨ 'B' ਜਲਵਾਯੂ?",
+          "en": "Köppen type 'B' climate represents which region type?"
+        },
+        "options": {
+          "hi": [
+            "ਧਰੁਵੀ ਖੇਤਰ",
+            "ਰੁੱਖਾ/ਅਰਧ-ਰੁੱਖਾ (Arid/Semi-arid)",
+            "ਟ੍ਰੌਪੀਕਲ ਨਮੀ",
+            "ਮਹਾਂਦੀਪੀ ਠੰਡਾ"
+          ],
+          "pa": [
+            "ਧਰੁਵੀ",
+            "ਰੁੱਖਾ/ਅਰਧ-ਰੁੱਖਾ",
+            "ਟ੍ਰੌਪੀਕਲ",
+            "ਮਹਾਂਦੀਪੀ"
+          ],
+          "en": [
+            "Polar",
+            "Arid/Semi-arid",
+            "Tropical Humid",
+            "Continental Cold"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "कोपेन 'B' = शुष्क/अर्धशुष्क जलवायु — वर्षा < वाष्पोत्सर्जन। उदाहरण: राजस्थान, सहारा मरुस्थल।",
+          "pa": "B = ਰੁੱਖਾ ਖੇਤਰ — ਵਰਖਾ < ਵਾਸ਼ਪੀਕਰਨ।",
+          "en": "Köppen 'B' = Dry/Arid — rainfall < evapotranspiration. Examples: Rajasthan, Sahara."
+        }
+      },
+      {
+        "id": "sst-cr-q2",
+        "text": {
+          "hi": "ਸਭ ਤੋਂ ਵੱਧ ਜੈਵ ਵਿਭਿੰਨਤਾ ਕਿਹੜੇ ਬਾਇਓਮ ਵਿੱਚ ਮਿਲਦੀ ਹੈ?",
+          "pa": "ਸਭ ਤੋਂ ਵੱਧ ਜੈਵ ਵਿਭਿੰਨਤਾ?",
+          "en": "Which biome has the highest biodiversity?"
+        },
+        "options": {
+          "hi": [
+            "ਟੁੰਡਰਾ",
+            "ਟੈਂਪਰੇਟ ਘਾਹ ਮੈਦਾਨ",
+            "ਟ੍ਰੌਪੀਕਲ ਵਰਖਾ ਜੰਗਲ",
+            "ਮਾਰੂਥਲ"
+          ],
+          "pa": [
+            "ਟੁੰਡਰਾ",
+            "ਟੈਂਪਰੇਟ ਘਾਹ",
+            "ਟ੍ਰੌਪੀਕਲ ਜੰਗਲ",
+            "ਮਾਰੂਥਲ"
+          ],
+          "en": [
+            "Tundra",
+            "Temperate Grassland",
+            "Tropical Rainforest",
+            "Desert"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਟ੍ਰੌਪੀਕਲ ਵਰਖਾ ਜੰਗਲਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਜੈਵ ਵਿਭਿੰਨਤਾ ਮਿਲਦੀ ਹੈ। ਦੁਨੀਆ ਦੀਆਂ ਲਗਭਗ 50% ਪ੍ਰਜਾਤੀਆਂ ਇੱਥੇ ਮਿਲਦੀਆਂ ਹਨ।",
+          "pa": "ਟ੍ਰੌਪੀਕਲ ਜੰਗਲ = ਸਭ ਤੋਂ ਵੱਧ ਜੈਵ ਵਿਭਿੰਨਤਾ।",
+          "en": "Tropical Rainforests contain about 50% of all species on Earth — the highest biodiversity of any biome."
+        }
+      },
+      {
+        "id": "sst-cr-q3",
+        "text": {
+          "hi": "ਭਾਰਤ ਦੇ ਉੱਤਰ ਭਾਰਤ (ਪੰਜਾਬ ਸਮੇਤ) ਦੀ ਜਲਵਾਯੂ ਕੋਪੇਨ ਵਿੱਚ ਕਿਹੜੀ ਹੈ?",
+          "pa": "ਪੰਜਾਬ ਦੀ ਜਲਵਾਯੂ — ਕੋਪੇਨ?",
+          "en": "North India (including Punjab) falls under which Köppen climate class?"
+        },
+        "options": {
+          "hi": [
+            "A — Tropical",
+            "B — Arid",
+            "C — Humid Subtropical (Cwa)",
+            "E — Polar"
+          ],
+          "pa": [
+            "A",
+            "B",
+            "C — Cwa",
+            "E"
+          ],
+          "en": [
+            "A — Tropical",
+            "B — Arid",
+            "C — Humid Subtropical (Cwa)",
+            "E — Polar"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਉੱਤਰ ਭਾਰਤ (ਪੰਜਾਬ ਸਮੇਤ) Cwa ਜਲਵਾਯੂ ਵਿੱਚ ਆਉਂਦਾ ਹੈ — ਗਰਮ ਅਤੇ ਨਮ ਗਰਮੀਆਂ, ਠੰਡੀਆਂ ਸਰਦੀਆਂ, ਮੌਨਸੂਨ ਵਰਖਾ।",
+          "pa": "ਪੰਜਾਬ = Cwa (Humid Subtropical)।",
+          "en": "North India including Punjab falls under Cwa — Humid Subtropical with hot wet summers, cool dry winters, monsoon rainfall."
+        }
+      },
+      {
+        "id": "sst-cr-q4",
+        "text": {
+          "hi": "मध्यसागरीय (Mediterranean) जलवायु की प्रमुख विशेषता क्या है?",
+          "pa": "ਮੈਡੀਟੇਰੀਅਨ ਜਲਵਾਯੂ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ?",
+          "en": "Main characteristic of Mediterranean climate?"
+        },
+        "options": {
+          "hi": [
+            "ਸਾਲ ਭਰ ਵਰਖਾ",
+            "ਗਰਮੀਆਂ ਵਿੱਚ ਵਰਖਾ, ਸਰਦੀਆਂ ਵਿੱਚ ਸੁੱਕਾ",
+            "ਗਰਮੀਆਂ ਵਿੱਚ ਸੁੱਕਾ, ਸਰਦੀਆਂ ਵਿੱਚ ਵਰਖਾ",
+            "ਕੋਈ ਵਰਖਾ ਨਹੀਂ"
+          ],
+          "pa": [
+            "ਸਾਲ ਭਰ ਵਰਖਾ",
+            "ਗਰਮੀਆਂ ਵਿੱਚ ਵਰਖਾ",
+            "ਗਰਮੀਆਂ ਵਿੱਚ ਸੁੱਕਾ",
+            "ਕੋਈ ਵਰਖਾ ਨਹੀਂ"
+          ],
+          "en": [
+            "Rain throughout year",
+            "Wet summer, dry winter",
+            "Dry summer, wet winter",
+            "No rainfall at all"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਮੈਡੀਟੇਰੀਅਨ ਜਲਵਾਯੂ ਦੀ ਖ਼ਾਸੀਅਤ ਹੈ ਗਰਮੀਆਂ ਵਿੱਚ ਖੁਸ਼ਕ ਅਤੇ ਸਰਦੀਆਂ ਵਿੱਚ ਵਰਖਾ। ਇਸ ਲਈ ਇੱਥੇ ਕਠੋਰ ਪੱਤਿਆਂ ਵਾਲੀਆਂ ਝਾੜੀਆਂ ਮਿਲਦੀਆਂ ਹਨ।",
+          "pa": "Mediterranean = ਗਰਮੀਆਂ-ਸੁੱਕਾ, ਸਰਦੀਆਂ-ਵਰਖਾ।",
+          "en": "Mediterranean climate has dry summers and wet winters. This leads to xerophytic (drought-resistant) vegetation like chaparral/maquis."
+        }
+      },
+      {
+        "id": "sst-cr-q5",
+        "text": {
+          "hi": "भारत में उष्णकटिबंधीय पर्णपाती वनों में मुख्यतः कौन से वृक्ष मिलते हैं?",
+          "pa": "ਭਾਰਤੀ ਪਤਝੜੀ ਜੰਗਲਾਂ ਵਿੱਚ ਮੁੱਖ ਰੁੱਖ?",
+          "en": "Main trees in India's tropical deciduous forests?"
+        },
+        "options": {
+          "hi": [
+            "ਪਾਈਨ ਅਤੇ ਦੇਵਦਾਰ",
+            "ਸਾਗ ਅਤੇ ਸਾਲ",
+            "ਬਾਬਲ ਅਤੇ ਕੈਕਟਸ",
+            "ਮੈਂਗਰੋਵ ਅਤੇ ਨਾਰੀਅਲ"
+          ],
+          "pa": [
+            "ਪਾਈਨ ਅਤੇ ਦੇਵਦਾਰ",
+            "ਸਾਗ ਅਤੇ ਸਾਲ",
+            "ਬਾਬਲ ਅਤੇ ਕੈਕਟਸ",
+            "ਮੈਂਗਰੋਵ"
+          ],
+          "en": [
+            "Pine and Deodar",
+            "Teak and Sal",
+            "Acacia and Cactus",
+            "Mangrove and Coconut"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਭਾਰਤੀ ਪਤਝੜੀ ਜੰਗਲਾਂ (ਮੱਧ ਭਾਰਤ ਅਤੇ ਉੱਤਰ-ਪ੍ਰਦੇਸ਼) ਵਿੱਚ ਸਾਗ ਅਤੇ ਸਾਲ ਮੁੱਖ ਰੁੱਖ ਹਨ। ਪਾਈਨ/ਦੇਵਦਾਰ ਪਰਬਤੀ ਜੰਗਲਾਂ ਵਿੱਚ ਮਿਲਦੇ ਹਨ।",
+          "pa": "ਪਤਝੜੀ = ਸਾਗ ਅਤੇ ਸਾਲ।",
+          "en": "Teak (Tectona grandis) and Sal (Shorea robusta) dominate India's tropical deciduous forests. Pine/Deodar are montane; Acacia/Cactus are in thorny scrub zones."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "science-physics-heat-thermodynamics",
+    "subject": "Science",
+    "unit": "Physics — Heat and Thermodynamics",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "level": "Master Cadre Science — Class 9-12 + B.Sc. foundation",
+    "depth_verified": false,
+    "title": {
+      "hi": "ऊष्मा और ऊष्मागतिकी: तापमान, ऊष्मा स्थानांतरण और ऊष्मागतिकी के नियम",
+      "pa": "ਤਾਪ ਅਤੇ ਤਾਪਗਤੀ ਵਿਗਿਆਨ: ਤਾਪਮਾਨ, ਤਾਪ-ਤਬਾਦਲਾ ਅਤੇ ਤਾਪਗਤੀ ਦੇ ਨਿਯਮ",
+      "en": "Heat and Thermodynamics: Temperature, Heat Transfer and Laws of Thermodynamics"
+    },
+    "review_note": "depth_verified: false — M.Sc.-level content (Carnot cycle, entropy calculations) requires verification against official ERB Master Cadre Science notification and past papers before teaching at that depth.",
+    "sources": [
+      {
+        "title": "NCERT Physics Class 11 — Chapter 11 (Thermal Properties of Matter)",
+        "url": "https://ncert.nic.in/textbook.php?keph1=0-15",
+        "note": "NCERT Class 11 Physics. Standard reference for class 9-12 level content."
+      },
+      {
+        "title": "NCERT Physics Class 11 — Chapter 12 (Thermodynamics)",
+        "url": "https://ncert.nic.in/textbook.php?keph1=0-15",
+        "note": "NCERT Class 11 Physics Chapter 12."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "तापमान और ताप (Temperature and Heat)",
+          "pa": "ਤਾਪਮਾਨ ਅਤੇ ਤਾਪ",
+          "en": "Temperature and Heat"
+        },
+        "text": {
+          "hi": "**ਤਾਪ (Heat)**: ਊਰਜਾ ਦਾ ਉਹ ਰੂਪ ਜੋ ਦੋ ਵਸਤੂਆਂ ਵਿੱਚ ਤਾਪਮਾਨ ਦੇ ਫ਼ਰਕ ਕਾਰਨ ਤਬਦੀਲ ਹੁੰਦਾ ਹੈ। ਮਾਪ: ਜੂਲ (SI)\n\n**ਤਾਪਮਾਨ (Temperature)**: ਕਿਸੇ ਵਸਤੂ ਦੇ ਗਰਮ ਜਾਂ ਠੰਡੇ ਹੋਣ ਦੀ ਡਿਗਰੀ। ਮਾਪ: ਕੈਲਵਿਨ (SI), ਸੈਲਸੀਅਸ (°C)\n\n**ਤਾਪਮਾਨ ਸਕੇਲ ਬਦਲਾਅ**:\n$$K = °C + 273.15$$\n$$°F = \\frac{9}{5}(°C) + 32$$\n\n**ਵਿਸ਼ੇਸ਼ ਤਾਪ (Specific Heat Capacity, c)**:\n$$Q = mc\\Delta T$$\nਜਿੱਥੇ m = ਪੁੰਜ, ΔT = ਤਾਪਮਾਨ ਬਦਲਾਅ\n\n**ਪਾਣੀ ਦੀ ਵਿਸ਼ੇਸ਼ ਤਾਪ ਸਮਰੱਥਾ = 4200 J kg⁻¹ K⁻¹** (ਜ਼ਿਆਦਾਤਰ ਪਦਾਰਥਾਂ ਤੋਂ ਵੱਧ)\n\n**ਅਵਸਥਾ ਬਦਲਾਅ (Latent Heat)**:\n- ਗਲਣ ਦੀ ਲੁਕਵੀਂ ਤਾਪ (Lf): ਬਰਫ਼ → ਪਾਣੀ = **3.36 × 10⁵ J/kg**\n- ਵਾਸ਼ਪੀਕਰਨ ਦੀ ਲੁਕਵੀਂ ਤਾਪ (Lv): ਪਾਣੀ → ਭਾਫ਼ = **22.6 × 10⁵ J/kg**",
+          "pa": "ਤਾਪ = ਊਰਜਾ ਤਬਦੀਲੀ। ਤਾਪਮਾਨ = ਗਰਮਾਈ ਦੀ ਡਿਗਰੀ। K=°C+273। Q=mcΔT। ਪਾਣੀ c=4200 J/kg·K।",
+          "en": "**Heat**: energy transferred due to temperature difference (unit: Joule). **Temperature**: degree of hotness (unit: Kelvin in SI).\n\n**Conversions**: K = °C + 273.15; °F = (9/5)°C + 32\n\n**Specific Heat Capacity**: Q = mcΔT\nWater's specific heat = 4200 J kg⁻¹K⁻¹ (very high — explains moderating climate effect).\n\n**Latent Heat**: Lf (ice→water) = 3.36×10⁵ J/kg; Lv (water→steam) = 22.6×10⁵ J/kg"
+        }
+      },
+      {
+        "heading": {
+          "hi": "ऊष्मा स्थानांतरण के तरीके",
+          "pa": "ਤਾਪ-ਤਬਾਦਲੇ ਦੇ ਢੰਗ",
+          "en": "Modes of Heat Transfer"
+        },
+        "text": {
+          "hi": "**ਚਾਲਣ (Conduction)**: ਠੋਸ ਪਦਾਰਥਾਂ ਵਿੱਚ; ਅਣੂ ਟਕਰਾਉਣ ਨਾਲ ਊਰਜਾ ਤਬਦੀਲੀ\n- ਚੰਗੇ ਚਾਲਕ: ਧਾਤਾਂ (ਚਾਂਦੀ, ਤਾਂਬਾ)\n- ਮਾੜੇ ਚਾਲਕ (ਇੰਸੁਲੇਟਰ): ਕੱਚ, ਲੱਕੜ, ਹਵਾ\n- **ਫੂਰੀਅਰ ਦਾ ਨਿਯਮ**: $Q/t = kA\\Delta T/d$\n\n**ਸੰਵਹਨ (Convection)**: ਤਰਲ ਪਦਾਰਥਾਂ (ਤਰਲ/ਗੈਸ) ਵਿੱਚ; ਪਦਾਰਥ ਦੀ ਗਤੀ ਨਾਲ ਊਰਜਾ ਤਬਦੀਲੀ\n- ਉਦਾਹਰਨ: ਸਮੁੰਦਰੀ ਹਵਾਵਾਂ, ਘਰ ਦੀ ਓਵਨ ਵਿੱਚ ਗਰਮ ਹਵਾ\n\n**ਵਿਕਿਰਨ (Radiation)**: ਕੋਈ ਮਾਧਿਅਮ ਜ਼ਰੂਰੀ ਨਹੀਂ; ਇਲੈਕਟ੍ਰੋਮੈਗਨੈਟਿਕ ਤਰੰਗਾਂ ਰਾਹੀਂ\n- ਉਦਾਹਰਨ: ਸੂਰਜ ਤੋਂ ਊਰਜਾ\n- **ਸਟੀਫਨ-ਬੋਲਟਜ਼ਮਾਨ ਦਾ ਨਿਯਮ**: $E = \\sigma T^4$\n- ਕਾਲੇ ਰੰਗ ਦੀਆਂ ਵਸਤੂਆਂ ਵਿਕਿਰਨ ਵਧੀਆ ਛੱਡਦੀਆਂ ਅਤੇ ਜਜ਼ਬ ਕਰਦੀਆਂ ਹਨ",
+          "pa": "ਚਾਲਣ = ਠੋਸ ਵਿੱਚ। ਸੰਵਹਨ = ਤਰਲ ਵਿੱਚ। ਵਿਕਿਰਨ = ਬਿਨਾਂ ਮਾਧਿਅਮ।",
+          "en": "**Conduction**: solids; energy via molecular collision. Conductors: metals (silver, copper); Insulators: glass, wood, air. Fourier's law: Q/t = kAΔT/d.\n\n**Convection**: fluids (liquid/gas); energy via bulk movement. Examples: sea breeze, oven heating.\n\n**Radiation**: no medium needed; electromagnetic waves. Example: solar energy. Stefan-Boltzmann: E = σT⁴. Black bodies are perfect absorbers and emitters."
+        }
+      },
+      {
+        "heading": {
+          "hi": "ऊष्मागतिकी के नियम (Laws of Thermodynamics)",
+          "pa": "ਤਾਪਗਤੀ ਦੇ ਨਿਯਮ",
+          "en": "Laws of Thermodynamics"
+        },
+        "text": {
+          "hi": "**ਜ਼ੀਰੋਵਾਂ ਨਿਯਮ (Zeroth Law)**: ਜੇ A ਅਤੇ B ਦੋਵੇਂ C ਨਾਲ ਤਾਪ ਸੰਤੁਲਨ ਵਿੱਚ ਹਨ, ਤਾਂ A ਅਤੇ B ਵੀ ਤਾਪ ਸੰਤੁਲਨ ਵਿੱਚ ਹਨ। (ਥਰਮਾਮੀਟਰ ਦਾ ਆਧਾਰ)\n\n**ਪਹਿਲਾ ਨਿਯਮ (First Law — ਊਰਜਾ ਸੰਰੱਖਣ)**:\n$$\\Delta U = Q - W$$\nਜਿੱਥੇ ΔU = ਅੰਦਰੂਨੀ ਊਰਜਾ ਵਿੱਚ ਬਦਲਾਅ, Q = ਸਿਸਟਮ ਨੂੰ ਦਿੱਤੀ ਤਾਪ, W = ਸਿਸਟਮ ਦੁਆਰਾ ਕੀਤਾ ਕੰਮ\n\n**ਦੂਜਾ ਨਿਯਮ (Second Law)**:\n- ਤਾਪ ਆਪਣੇ-ਆਪ ਠੰਡੀ ਵਸਤੂ ਤੋਂ ਗਰਮ ਵਸਤੂ ਵੱਲ ਨਹੀਂ ਵਹਿੰਦੀ\n- ਕਿਸੇ ਵੀ ਤਾਪ ਇੰਜਣ ਦੀ ਕਾਰਜਕੁਸ਼ਲਤਾ 100% ਨਹੀਂ ਹੋ ਸਕਦੀ\n- **ਕਾਰਨੋ ਚੱਕਰ (Carnot Cycle)** — ਆਦਰਸ਼ ਤਾਪ ਇੰਜਣ:\n$$\\eta = 1 - \\frac{T_2}{T_1}$$\nਜਿੱਥੇ T₁ = source temperature, T₂ = sink temperature (ਕੈਲਵਿਨ ਵਿੱਚ)\n\n**ਐਂਟ੍ਰੋਪੀ (Entropy)**: ਅਵਿਵਸਥਾ ਦੀ ਮਾਪ; ਅਲੱਗ ਸਿਸਟਮ ਵਿੱਚ ਸਦਾ ਵੱਧਦੀ ਹੈ",
+          "pa": "1ਲਾ ਨਿਯਮ: ΔU=Q-W। 2ਜਾ ਨਿਯਮ: ਤਾਪ ਗਰਮ ਤੋਂ ਠੰਡੇ ਵੱਲ। ਕਾਰਨੋ: η=1-T₂/T₁।",
+          "en": "**Zeroth Law**: basis of thermometry. **First Law** (energy conservation): ΔU = Q – W.\n\n**Second Law**: heat flows spontaneously only from hot to cold; no engine is 100% efficient.\n\n**Carnot Efficiency**: η = 1 – T₂/T₁ (T in Kelvin). This is the maximum possible efficiency.\n\n**Entropy**: measure of disorder; always increases in an isolated system (2nd law consequence)."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "Q = ? (ऊष्मा सूत्र)",
+          "pa": "Q = ?",
+          "en": "Formula for heat absorbed?"
+        },
+        "back": {
+          "hi": "Q = mcΔT (m=mass, c=specific heat, ΔT=temp change)",
+          "pa": "Q = mcΔT",
+          "en": "Q = mcΔT"
+        }
+      },
+      {
+        "front": {
+          "hi": "ऊष्मागतिकी का पहला नियम?",
+          "pa": "1ਲਾ ਤਾਪਗਤੀ ਨਿਯਮ?",
+          "en": "First Law of Thermodynamics?"
+        },
+        "back": {
+          "hi": "ΔU = Q – W (ऊर्जा संरक्षण)",
+          "pa": "ΔU = Q – W",
+          "en": "ΔU = Q – W (law of conservation of energy)"
+        }
+      },
+      {
+        "front": {
+          "hi": "कार्नो दक्षता सूत्र?",
+          "pa": "ਕਾਰਨੋ ਕੁਸ਼ਲਤਾ?",
+          "en": "Carnot efficiency formula?"
+        },
+        "back": {
+          "hi": "η = 1 – T₂/T₁ (T in Kelvin)",
+          "pa": "η = 1 – T₂/T₁",
+          "en": "η = 1 – T₂/T₁ (temperatures in Kelvin)"
+        }
+      },
+      {
+        "front": {
+          "hi": "°C को Kelvin में बदलें?",
+          "pa": "°C → Kelvin?",
+          "en": "Convert °C to Kelvin?"
+        },
+        "back": {
+          "hi": "K = °C + 273.15",
+          "pa": "K = °C + 273.15",
+          "en": "K = °C + 273.15"
+        }
+      },
+      {
+        "front": {
+          "hi": "पानी की विशिष्ट ऊष्मा?",
+          "pa": "ਪਾਣੀ ਦੀ ਵਿਸ਼ੇਸ਼ ਤਾਪ?",
+          "en": "Specific heat of water?"
+        },
+        "back": {
+          "hi": "4200 J kg⁻¹K⁻¹",
+          "pa": "4200 J/kg·K",
+          "en": "4200 J kg⁻¹K⁻¹"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sc-ht-q1",
+        "text": {
+          "hi": "100°C को Kelvin में बदलें।",
+          "pa": "100°C = ? Kelvin",
+          "en": "Convert 100°C to Kelvin."
+        },
+        "options": {
+          "hi": [
+            "273 K",
+            "373 K",
+            "100 K",
+            "473 K"
+          ],
+          "pa": [
+            "273 K",
+            "373 K",
+            "100 K",
+            "473 K"
+          ],
+          "en": [
+            "273 K",
+            "373 K",
+            "100 K",
+            "473 K"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "K = °C + 273 = 100 + 273 = 373 K।",
+          "pa": "100+273=373 K।",
+          "en": "K = 100 + 273 = 373 K."
+        }
+      },
+      {
+        "id": "sc-ht-q2",
+        "text": {
+          "hi": "ऊष्मागतिकी के पहले नियम में ΔU = Q – W — यहाँ W किसे दर्शाता है?",
+          "pa": "ΔU=Q-W ਵਿੱਚ W?",
+          "en": "In ΔU = Q – W, what does W represent?"
+        },
+        "options": {
+          "hi": [
+            "System द्वारा अवशोषित ऊष्मा",
+            "System की आंतरिक ऊर्जा",
+            "System द्वारा किया गया कार्य",
+            "तापमान में परिवर्तन"
+          ],
+          "pa": [
+            "ਜਜ਼ਬ ਤਾਪ",
+            "ਅੰਦਰੂਨੀ ਊਰਜਾ",
+            "ਕੀਤਾ ਕੰਮ",
+            "ਤਾਪਮਾਨ ਬਦਲਾਅ"
+          ],
+          "en": [
+            "Heat absorbed",
+            "Internal energy",
+            "Work done by the system",
+            "Temperature change"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "W = System द्वारा किया गया कार्य (work done by the system)। Q = System को दी गई ऊष्मा।",
+          "pa": "W = ਸਿਸਟਮ ਦੁਆਰਾ ਕੀਤਾ ਕੰਮ।",
+          "en": "W = work done by the system. Q = heat added to the system. ΔU = change in internal energy."
+        }
+      },
+      {
+        "id": "sc-ht-q3",
+        "text": {
+          "hi": "कौन सी ऊष्मा स्थानांतरण विधि बिना माध्यम के काम कर सकती है?",
+          "pa": "ਬਿਨਾਂ ਮਾਧਿਅਮ ਕਿਹੜੀ ਤਾਪ-ਤਬਦੀਲੀ ਵਿਧੀ?",
+          "en": "Which mode of heat transfer works without a medium?"
+        },
+        "options": {
+          "hi": [
+            "ਚਾਲਣ (Conduction)",
+            "ਸੰਵਹਨ (Convection)",
+            "ਵਿਕਿਰਨ (Radiation)",
+            "ਸਾਰੇ ਤਿੰਨੇ"
+          ],
+          "pa": [
+            "ਚਾਲਣ",
+            "ਸੰਵਹਨ",
+            "ਵਿਕਿਰਨ",
+            "ਸਾਰੇ"
+          ],
+          "en": [
+            "Conduction",
+            "Convection",
+            "Radiation",
+            "All three"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "Radiation (विकिरण) बिना किसी माध्यम के काम कर सकती है। सूर्य की ऊर्जा निर्वात में Radiation से आती है।",
+          "pa": "ਵਿਕਿਰਨ = ਬਿਨਾਂ ਮਾਧਿਅਮ।",
+          "en": "Radiation uses electromagnetic waves and needs no medium. Solar energy reaches Earth through the vacuum of space by radiation."
+        }
+      },
+      {
+        "id": "sc-ht-q4",
+        "text": {
+          "hi": "यदि कार्नो इंजन में source T₁ = 500 K और sink T₂ = 300 K हो तो दक्षता कितनी है?",
+          "pa": "T₁=500K, T₂=300K → ਕਾਰਨੋ ਕੁਸ਼ਲਤਾ?",
+          "en": "Carnot engine: T₁=500K, T₂=300K. Find efficiency."
+        },
+        "options": {
+          "hi": [
+            "40%",
+            "50%",
+            "60%",
+            "30%"
+          ],
+          "pa": [
+            "40%",
+            "50%",
+            "60%",
+            "30%"
+          ],
+          "en": [
+            "40%",
+            "50%",
+            "60%",
+            "30%"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "η = 1 – T₂/T₁ = 1 – 300/500 = 1 – 0.6 = 0.4 = 40%।",
+          "pa": "η=1-300/500=0.4=40%।",
+          "en": "η = 1 – 300/500 = 1 – 0.6 = 0.4 → 40%."
+        }
+      },
+      {
+        "id": "sc-ht-q5",
+        "text": {
+          "hi": "5 kg पानी को 20°C से 70°C तक गर्म करने के लिए कितनी ऊष्मा चाहिए? (c = 4200 J/kg·K)",
+          "pa": "5kg ਪਾਣੀ 20°C ਤੋਂ 70°C → Q=? (c=4200)",
+          "en": "Heat needed to raise 5 kg water from 20°C to 70°C? (c=4200 J/kg·K)"
+        },
+        "options": {
+          "hi": [
+            "630 kJ",
+            "1050 kJ",
+            "420 kJ",
+            "210 kJ"
+          ],
+          "pa": [
+            "630 kJ",
+            "1050 kJ",
+            "420 kJ",
+            "210 kJ"
+          ],
+          "en": [
+            "630 kJ",
+            "1050 kJ",
+            "420 kJ",
+            "210 kJ"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Q = mcΔT = 5 × 4200 × (70–20) = 5 × 4200 × 50 = 1,050,000 J = 1050 kJ।",
+          "pa": "Q=5×4200×50=1,050,000 J=1050 kJ।",
+          "en": "Q = mcΔT = 5 × 4200 × 50 = 1,050,000 J = 1050 kJ."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "science-physics-waves-sound",
+    "subject": "Science",
+    "unit": "Physics — Waves and Sound",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "level": "Master Cadre Science — Class 9-12 + B.Sc. foundation",
+    "depth_verified": false,
+    "title": {
+      "hi": "तरंगें और ध्वनि: तरंग गति, ध्वनि के गुण और डॉप्लर प्रभाव",
+      "pa": "ਤਰੰਗਾਂ ਅਤੇ ਧੁਨੀ: ਤਰੰਗ ਗਤੀ, ਧੁਨੀ ਦੇ ਗੁਣ ਅਤੇ ਡੌਪਲਰ ਪ੍ਰਭਾਵ",
+      "en": "Waves and Sound: Wave Motion, Properties of Sound and Doppler Effect"
+    },
+    "review_note": "depth_verified: false — advanced wave topics (interference, diffraction patterns) require verification against official ERB notification before using at post-graduation depth.",
+    "sources": [
+      {
+        "title": "NCERT Physics Class 11 — Chapter 15 (Waves)",
+        "url": "https://ncert.nic.in/textbook.php?keph1=0-15",
+        "note": "NCERT Class 11 Physics Chapter 15."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "तरंग गति के मूल सिद्धांत",
+          "pa": "ਤਰੰਗ ਗਤੀ ਦੇ ਮੂਲ ਸਿਧਾਂਤ",
+          "en": "Fundamentals of Wave Motion"
+        },
+        "text": {
+          "hi": "**ਤਰੰਗ (Wave)**: ਊਰਜਾ ਦਾ ਤਬਾਦਲਾ ਬਿਨਾਂ ਪਦਾਰਥ ਦੇ ਅਸਲ ਤਬਾਦਲੇ ਤੋਂ\n\n**ਤਰੰਗਾਂ ਦੀਆਂ ਕਿਸਮਾਂ**:\n- **ਅਨੁਦੈਰਘਯ (Transverse)**: ਕਣਾਂ ਦੀ ਗਤੀ ⊥ ਤਰੰਗ ਦੀ ਦਿਸ਼ਾ। ਉਦਾਹਰਨ: ਰੌਸ਼ਨੀ, ਰੱਸੀ ਤਰੰਗ\n- **ਅਨੁਦੈਰਘਯ (Longitudinal)**: ਕਣਾਂ ਦੀ ਗਤੀ || ਤਰੰਗ ਦੀ ਦਿਸ਼ਾ। ਉਦਾਹਰਨ: ਧੁਨੀ ਤਰੰਗਾਂ\n\n**ਮੁੱਖ ਮਾਪਦੰਡ**:\n| ਮਾਪਦੰਡ | ਚਿੰਨ੍ਹ | SI ਇਕਾਈ |\n|---------|--------|----------|\n| ਬਾਰੰਬਾਰਤਾ (Frequency) | f | Hz |\n| ਤਰੰਗ ਲੰਬਾਈ (Wavelength) | λ | m |\n| ਅਵਧੀ (Time Period) | T | s |\n| ਤਰੰਗ ਗਤੀ (Speed) | v | m/s |\n\n**ਸੰਬੰਧ**:\n$$v = f\\lambda = \\frac{\\lambda}{T}$$\n\n**ਦਾਬ ਭਿੰਨਤਾ (Amplitude)**: ਤਰੰਗ ਦਾ ਵੱਧ ਤੋਂ ਵੱਧ ਵਿਸਥਾਪਨ\nਤੀਬਰਤਾ (Intensity) ∝ (Amplitude)²",
+          "pa": "ਤਰੰਗ = ਊਰਜਾ ਤਬਾਦਲਾ। ਟ੍ਰਾਂਸਵਰਸ: ਰੌਸ਼ਨੀ। ਲੌਂਗੀਚੂਡੀਨਲ: ਧੁਨੀ। v=fλ।",
+          "en": "**Wave**: energy transfer without net material transport.\n\n**Types**: Transverse (particle motion ⊥ wave direction — light, rope waves); Longitudinal (particle motion ∥ wave direction — sound).\n\n**Key parameters**: frequency f (Hz), wavelength λ (m), time period T (s), speed v (m/s).\n\n**Relationship**: v = fλ = λ/T\n\n**Intensity ∝ Amplitude²**"
+        }
+      },
+      {
+        "heading": {
+          "hi": "ध्वनि और उसके गुण",
+          "pa": "ਧੁਨੀ ਅਤੇ ਇਸਦੇ ਗੁਣ",
+          "en": "Sound and its Properties"
+        },
+        "text": {
+          "hi": "**ਧੁਨੀ (Sound)**: ਅਨੁਦੈਰਘਯ ਮਕੈਨੀਕਲ ਤਰੰਗ; ਮਾਧਿਅਮ ਜ਼ਰੂਰੀ ਹੈ\n\n**ਵੱਖ-ਵੱਖ ਮਾਧਿਅਮਾਂ ਵਿੱਚ ਧੁਨੀ ਦੀ ਗਤੀ**:\n- ਹਵਾ (25°C): ~346 m/s\n- ਪਾਣੀ: ~1500 m/s\n- ਸਟੀਲ: ~5100 m/s\n→ ਠੋਸ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼; ਗੈਸ ਵਿੱਚ ਸਭ ਤੋਂ ਹੌਲੀ\n\n**ਧੁਨੀ ਦੀ ਬਾਰੰਬਾਰਤਾ ਸੀਮਾਵਾਂ**:\n- ਸ਼੍ਰਵਣਯੋਗ ਧੁਨੀ: 20 Hz – 20,000 Hz\n- ਅਲਟ੍ਰਾਸੋਨਿਕ: >20,000 Hz (ਚਮਗਾਦੜ, ਅਲਟ੍ਰਾਸਾਊਂਡ ਮਸ਼ੀਨ)\n- ਇਨਫ੍ਰਾਸੋਨਿਕ: <20 Hz (ਭੂਚਾਲ ਤਰੰਗਾਂ)\n\n**ਧੁਨੀ ਦੀ ਤੀਬਰਤਾ ਦੀ ਇਕਾਈ**: ਡੈਸੀਬਲ (dB)\n- ਮਾਮੂਲੀ ਕੁਸਫ਼ੁਸਫ਼: 30 dB; ਆਮ ਗੱਲਬਾਤ: 60 dB; ਦਰਦ ਦੀ ਹੱਦ: 120 dB\n\n**ਪ੍ਰਤੀਧੁਨੀ (Echo)**: ਧੁਨੀ ਦਾ ਪਰਾਵਰਤਨ। Echo ਸੁਣਾਈ ਦੇਣ ਲਈ ਘੱਟੋ-ਘੱਟ ਦੂਰੀ: ≈ 17 ਮੀਟਰ (ਕਮਰੇ ਦੇ ਤਾਪਮਾਨ ਤੇ)",
+          "pa": "ਧੁਨੀ = ਲੌਂਗੀਚੂਡੀਨਲ ਤਰੰਗ। ਹਵਾ: 346 m/s। ਸ਼੍ਰਵਣਯੋਗ: 20-20,000 Hz। ਅਲਟ੍ਰਾਸੋਨਿਕ: >20,000 Hz।",
+          "en": "**Sound**: longitudinal mechanical wave; needs a medium.\n\nSpeed: air (~346 m/s at 25°C), water (~1500 m/s), steel (~5100 m/s) — fastest in solids.\n\n**Frequency ranges**: Audible 20–20,000 Hz; Ultrasonic >20,000 Hz (bats, ultrasound); Infrasonic <20 Hz (earthquakes).\n\n**Intensity unit**: decibel (dB). Whisper ~30 dB; conversation ~60 dB; pain threshold ~120 dB.\n\n**Echo**: reflection of sound; minimum distance ≈ 17 m at room temperature."
+        }
+      },
+      {
+        "heading": {
+          "hi": "डॉप्लर प्रभाव (Doppler Effect)",
+          "pa": "ਡੌਪਲਰ ਪ੍ਰਭਾਵ",
+          "en": "Doppler Effect"
+        },
+        "text": {
+          "hi": "**ਡੌਪਲਰ ਪ੍ਰਭਾਵ**: ਧੁਨੀ ਸ੍ਰੋਤ ਅਤੇ ਸੁਣਨ ਵਾਲੇ ਵਿੱਚ ਸਾਪੇਖ ਗਤੀ ਕਾਰਨ ਸੁਣਾਈ ਦੇਣ ਵਾਲੀ ਬਾਰੰਬਾਰਤਾ ਵਿੱਚ ਬਦਲਾਅ\n\n**ਫਾਰਮੂਲਾ**:\n$$f' = f_0 \\left(\\frac{v + v_0}{v - v_s}\\right)$$\nਜਿੱਥੇ:\n- f₀ = ਅਸਲ ਬਾਰੰਬਾਰਤਾ\n- v = ਧੁਨੀ ਦੀ ਗਤੀ\n- v₀ = ਸੁਣਨ ਵਾਲੇ ਦੀ ਗਤੀ (ਸ੍ਰੋਤ ਵੱਲ +)\n- v_s = ਸ੍ਰੋਤ ਦੀ ਗਤੀ (ਸੁਣਨ ਵਾਲੇ ਵੱਲ +)\n\n**ਰੋਜ਼ਾਨਾ ਜ਼ਿੰਦਗੀ ਵਿੱਚ ਉਦਾਹਰਨਾਂ**:\n- ਆਉਂਦੀ ਅੰਬੂਲੈਂਸ ਦੀ ਸੀਟੀ ਉੱਚੀ; ਜਾਂਦੀ ਦੀ ਘੱਟ\n- ਰੈੱਡ ਸ਼ਿਫਟ (Red Shift): ਦੂਰ ਜਾਂਦੀ ਗੈਲੇਕਸੀ ਵਿੱਚ ਰੌਸ਼ਨੀ ਦੀ ਬਾਰੰਬਾਰਤਾ ਘੱਟਦੀ — ਬ੍ਰਹਿਮੰਡ ਫੈਲਾਅ ਦਾ ਸਬੂਤ",
+          "pa": "ਡੌਪਲਰ: ਨੇੜੇ ਆਉਂਦੇ ਸ੍ਰੋਤ = ਉੱਚੀ f; ਦੂਰ ਜਾਂਦੇ = ਘੱਟ f। ਅੰਬੂਲੈਂਸ ਉਦਾਹਰਨ।",
+          "en": "**Doppler Effect**: apparent change in frequency due to relative motion between source and observer.\n\nFormula: f' = f₀(v ± v₀)/(v ∓ vₛ)\n\n**Daily examples**: Approaching ambulance siren sounds higher pitched; receding sounds lower.\n**Red shift**: light from receding galaxies shifts to lower frequency — evidence of expanding universe."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "v = ? (तरंग सूत्र)",
+          "pa": "ਤਰੰਗ ਗਤੀ ਫਾਰਮੂਲਾ?",
+          "en": "Wave speed formula?"
+        },
+        "back": {
+          "hi": "v = fλ (frequency × wavelength)",
+          "pa": "v = fλ",
+          "en": "v = fλ (frequency × wavelength)"
+        }
+      },
+      {
+        "front": {
+          "hi": "ध्वनि तरंग अनुप्रस्थ है या अनुदैर्ध्य?",
+          "pa": "ਧੁਨੀ ਤਰੰਗ — ਕਿਸ ਕਿਸਮ ਦੀ?",
+          "en": "Sound waves are transverse or longitudinal?"
+        },
+        "back": {
+          "hi": "ਅਨੁਦੈਰਘਯ (Longitudinal) ਮਕੈਨੀਕਲ ਤਰੰਗ",
+          "pa": "ਲੌਂਗੀਚੂਡੀਨਲ",
+          "en": "Longitudinal mechanical wave"
+        }
+      },
+      {
+        "front": {
+          "hi": "मानव श्रव्य आवृत्ति सीमा?",
+          "pa": "ਮਨੁੱਖੀ ਸ਼੍ਰਵਣਯੋਗ ਸੀਮਾ?",
+          "en": "Human audible frequency range?"
+        },
+        "back": {
+          "hi": "20 Hz ਤੋਂ 20,000 Hz",
+          "pa": "20 Hz – 20,000 Hz",
+          "en": "20 Hz to 20,000 Hz"
+        }
+      },
+      {
+        "front": {
+          "hi": "डॉप्लर प्रभाव में आती हुई आपातगाड़ी की आवाज?",
+          "pa": "ਆਉਂਦੀ ਅੰਬੂਲੈਂਸ ਦੀ ਸੀਟੀ?",
+          "en": "Doppler: sound of an approaching ambulance?"
+        },
+        "back": {
+          "hi": "ਉੱਚੀ ਲੱਗਦੀ ਹੈ (apparent frequency ↑)",
+          "pa": "ਉੱਚੀ ਲੱਗਦੀ ਹੈ",
+          "en": "Sounds higher pitched (apparent frequency increases)"
+        }
+      },
+      {
+        "front": {
+          "hi": "Ultrasonic frequency range?",
+          "pa": "Ultrasonic ਬਾਰੰਬਾਰਤਾ?",
+          "en": "Ultrasonic frequency range?"
+        },
+        "back": {
+          "hi": "> 20,000 Hz (20 kHz ਤੋਂ ਵੱਧ)",
+          "pa": ">20,000 Hz",
+          "en": "Above 20,000 Hz (> 20 kHz)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sc-ws-q1",
+        "text": {
+          "hi": "ध्वनि सबसे तेज़ किस माध्यम में चलती है?",
+          "pa": "ਧੁਨੀ ਸਭ ਤੋਂ ਤੇਜ਼ ਕਿੱਥੇ?",
+          "en": "In which medium does sound travel fastest?"
+        },
+        "options": {
+          "hi": [
+            "ਹਵਾ",
+            "ਪਾਣੀ",
+            "ਠੋਸ (ਲੋਹਾ/ਸਟੀਲ)",
+            "ਖਲਾਅ"
+          ],
+          "pa": [
+            "ਹਵਾ",
+            "ਪਾਣੀ",
+            "ਠੋਸ",
+            "ਖਲਾਅ"
+          ],
+          "en": [
+            "Air",
+            "Water",
+            "Solid (steel/iron)",
+            "Vacuum"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਧੁਨੀ ਠੋਸ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼ ਚੱਲਦੀ ਹੈ (ਸਟੀਲ ~5100 m/s) ਕਿਉਂਕਿ ਅਣੂ ਨੇੜੇ-ਨੇੜੇ ਹਨ। ਖਲਾਅ ਵਿੱਚ ਧੁਨੀ ਨਹੀਂ ਚੱਲਦੀ।",
+          "pa": "ਠੋਸ ਵਿੱਚ ਸਭ ਤੋਂ ਤੇਜ਼।",
+          "en": "Sound travels fastest in solids (~5100 m/s in steel) because molecules are closely packed. Sound cannot travel in vacuum."
+        }
+      },
+      {
+        "id": "sc-ws-q2",
+        "text": {
+          "hi": "ਅਲਟ੍ਰਾਸੋਨਿਕ ਤਰੰਗਾਂ ਦੀ ਬਾਰੰਬਾਰਤਾ ਕਿੰਨੀ ਹੁੰਦੀ ਹੈ?",
+          "pa": "ਅਲਟ੍ਰਾਸੋਨਿਕ ਦੀ ਬਾਰੰਬਾਰਤਾ?",
+          "en": "What is the frequency range of ultrasonic waves?"
+        },
+        "options": {
+          "hi": [
+            "20 Hz ਤੋਂ ਘੱਟ",
+            "20 Hz – 20,000 Hz",
+            "20,000 Hz ਤੋਂ ਵੱਧ",
+            "1 Hz ਤੋਂ ਘੱਟ"
+          ],
+          "pa": [
+            "<20 Hz",
+            "20-20000 Hz",
+            ">20000 Hz",
+            "<1 Hz"
+          ],
+          "en": [
+            "Below 20 Hz",
+            "20 Hz – 20,000 Hz",
+            "Above 20,000 Hz",
+            "Below 1 Hz"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਅਲਟ੍ਰਾਸੋਨਿਕ ਤਰੰਗਾਂ ਦੀ ਬਾਰੰਬਾਰਤਾ 20,000 Hz ਤੋਂ ਵੱਧ ਹੁੰਦੀ ਹੈ। ਇਹ ਚਮਗਾਦੜ ਅਤੇ ਅਲਟ੍ਰਾਸਾਊਂਡ ਮਸ਼ੀਨਾਂ ਵਿੱਚ ਵਰਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ।",
+          "pa": "ਅਲਟ੍ਰਾਸੋਨਿਕ >20,000 Hz।",
+          "en": "Ultrasonic waves have frequency > 20,000 Hz. Used by bats (echolocation) and medical ultrasound machines."
+        }
+      },
+      {
+        "id": "sc-ws-q3",
+        "text": {
+          "hi": "ਡੌਪਲਰ ਪ੍ਰਭਾਵ ਵਿੱਚ ਜਦੋਂ ਸ੍ਰੋਤ ਦੂਰ ਜਾਂਦਾ ਹੈ ਤਾਂ ਕੀ ਹੁੰਦਾ ਹੈ?",
+          "pa": "ਸ੍ਰੋਤ ਦੂਰ ਜਾਵੇ → ਡੌਪਲਰ?",
+          "en": "Doppler effect: source moving away from observer — what happens to apparent frequency?"
+        },
+        "options": {
+          "hi": [
+            "ਬਾਰੰਬਾਰਤਾ ਵੱਧਦੀ ਹੈ",
+            "ਬਾਰੰਬਾਰਤਾ ਘੱਟਦੀ ਹੈ",
+            "ਬਾਰੰਬਾਰਤਾ ਨਹੀਂ ਬਦਲਦੀ",
+            "ਧੁਨੀ ਬੰਦ ਹੋ ਜਾਂਦੀ ਹੈ"
+          ],
+          "pa": [
+            "ਵੱਧਦੀ",
+            "ਘੱਟਦੀ",
+            "ਨਹੀਂ ਬਦਲਦੀ",
+            "ਬੰਦ"
+          ],
+          "en": [
+            "Frequency increases",
+            "Frequency decreases",
+            "Frequency unchanged",
+            "Sound stops"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਜਦੋਂ ਸ੍ਰੋਤ ਦੂਰ ਜਾਂਦਾ ਹੈ, ਸੁਣਾਈ ਦੇਣ ਵਾਲੀ ਬਾਰੰਬਾਰਤਾ ਘੱਟਦੀ ਹੈ (ਘੱਟ ਪਿੱਚ)। ਉਦਾਹਰਨ: ਜਾਂਦੀ ਅੰਬੂਲੈਂਸ।",
+          "pa": "ਦੂਰ ਜਾਂਦਾ ਸ੍ਰੋਤ → f ਘੱਟਦੀ।",
+          "en": "When source moves away, apparent frequency decreases (lower pitch). Example: departing ambulance sounds lower."
+        }
+      },
+      {
+        "id": "sc-ws-q4",
+        "text": {
+          "hi": "ਤਰੰਗ ਲੰਬਾਈ λ = 0.5 m ਅਤੇ ਗਤੀ v = 340 m/s ਹੋਵੇ ਤਾਂ ਬਾਰੰਬਾਰਤਾ f = ?",
+          "pa": "λ=0.5m, v=340m/s → f=?",
+          "en": "Wave: λ=0.5m, v=340m/s. Find frequency f."
+        },
+        "options": {
+          "hi": [
+            "340 Hz",
+            "680 Hz",
+            "170 Hz",
+            "510 Hz"
+          ],
+          "pa": [
+            "340 Hz",
+            "680 Hz",
+            "170 Hz",
+            "510 Hz"
+          ],
+          "en": [
+            "340 Hz",
+            "680 Hz",
+            "170 Hz",
+            "510 Hz"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "v = fλ → f = v/λ = 340/0.5 = 680 Hz।",
+          "pa": "f = 340/0.5 = 680 Hz।",
+          "en": "f = v/λ = 340/0.5 = 680 Hz."
+        }
+      },
+      {
+        "id": "sc-ws-q5",
+        "text": {
+          "hi": "ਰੈੱਡ ਸ਼ਿਫਟ (Red Shift) ਕੀ ਦੱਸਦੀ ਹੈ?",
+          "pa": "Red Shift ਕੀ ਦੱਸਦੀ ਹੈ?",
+          "en": "What does Red Shift indicate?"
+        },
+        "options": {
+          "hi": [
+            "ਬ੍ਰਹਿਮੰਡ ਸੁੰਗੜ ਰਿਹਾ ਹੈ",
+            "ਬ੍ਰਹਿਮੰਡ ਫੈਲ ਰਿਹਾ ਹੈ",
+            "ਤਾਰੇ ਲਾਲ ਰੰਗ ਦੇ ਹਨ",
+            "ਧੁਨੀ ਤਰੰਗਾਂ ਦਾ ਵਰਤਾਰਾ"
+          ],
+          "pa": [
+            "ਸੁੰਗੜਦਾ",
+            "ਫੈਲਦਾ",
+            "ਲਾਲ ਤਾਰੇ",
+            "ਧੁਨੀ ਤਰੰਗ"
+          ],
+          "en": [
+            "Universe is contracting",
+            "Universe is expanding",
+            "Stars are red-coloured",
+            "A sound wave phenomenon"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਦੂਰ ਜਾਂਦੀਆਂ ਗੈਲੇਕਸੀਆਂ ਤੋਂ ਆਉਣ ਵਾਲੀ ਰੌਸ਼ਨੀ ਦੀ ਬਾਰੰਬਾਰਤਾ ਘੱਟਦੀ ਹੈ (ਡੌਪਲਰ ਪ੍ਰਭਾਵ) — ਲਾਲ ਵੱਲ ਖਿਸਕਦੀ ਹੈ। ਇਹ ਬ੍ਰਹਿਮੰਡ ਦੇ ਫੈਲਾਅ ਦਾ ਸਬੂਤ ਹੈ।",
+          "pa": "ਰੈੱਡ ਸ਼ਿਫਟ = ਬ੍ਰਹਿਮੰਡ ਫੈਲ ਰਿਹਾ ਹੈ।",
+          "en": "Red shift (decrease in frequency of light from receding galaxies due to Doppler effect) indicates the universe is expanding — foundational evidence for the Big Bang theory."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
     "id": "ett-punjabi-vocabulary",
     "subject": "Punjabi",
     "unit": "ਸ਼ਬਦ ਭੰਡਾਰ ਅਤੇ ਅਰਥ-ਵਿਗਿਆਨ",

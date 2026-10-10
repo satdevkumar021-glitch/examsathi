@@ -162,6 +162,18 @@ for l in json.load(open(research/'biology-lessons.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add Master Cadre SST Economics batch 3 (Producer+Markets, Govt Budget+Multiplier, Climate Biomes)
+for l in json.load(open(research/'master-sst-economics-3.json')):
+ l['level']=l.get('level','Foundation / concept preparation')
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Master Cadre Science batch 2 (Heat+Thermodynamics, Waves+Sound)
+for l in json.load(open(research/'master-science-lessons-2.json')):
+ l['level']=l.get('level','Master Cadre Science — Class 9-12 + Graduation foundation')
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add ETT Paper A Punjabi batch 2 (Vocabulary synonyms/antonyms, Idioms/Proverbs)
 for l in json.load(open(research/'ett-punjabi-paper-a-2.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
