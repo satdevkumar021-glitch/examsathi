@@ -44022,6 +44022,306 @@
     ]
   },
   {
+    "id": "ett-science-chemistry",
+    "subject": "Science",
+    "unit": "Chemistry — ETT Paper B",
+    "examIds": [
+      "ett"
+    ],
+    "title": {
+      "hi": "रासायनिक अभिक्रियाएं, अम्ल, क्षार और लवण",
+      "pa": "ਰਸਾਇਣਕ ਕਿਰਿਆਵਾਂ, ਤੇਜ਼ਾਬ, ਖਾਰ ਅਤੇ ਲੂਣ",
+      "en": "Chemical Reactions, Acids, Bases and Salts"
+    },
+    "level": "ETT Paper B — Science (Class 8-10 PSEB level)",
+    "sources": [
+      {
+        "title": "PSEB Science Class 10 — Chapter 1 (Chemical Reactions) and Chapter 2 (Acids, Bases and Salts)",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB Class 10 Science textbook. Content prepared for ETT Paper B Science section."
+      },
+      {
+        "title": "NCERT Science Class 10 — Chapter 1 and Chapter 2",
+        "url": "https://ncert.nic.in/textbook.php?jesc1=0-16",
+        "note": "NCERT Class 10 Science — reference for content accuracy."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "रासायनिक अभिक्रियाएं और समीकरण",
+          "pa": "ਰਸਾਇਣਕ ਕਿਰਿਆਵਾਂ ਅਤੇ ਸਮੀਕਰਨ",
+          "en": "Chemical Reactions and Equations"
+        },
+        "text": {
+          "hi": "**ਰਸਾਇਣਕ ਕਿਰਿਆ**: ਉਹ ਪ੍ਰਕਿਰਿਆ ਜਿਸ ਵਿੱਚ ਪਦਾਰਥਾਂ ਦੀ ਰਸਾਇਣਕ ਰਚਨਾ ਵਿੱਚ ਬਦਲਾਅ ਆਉਂਦਾ ਹੈ।\n\n**ਰਸਾਇਣਕ ਕਿਰਿਆ ਦੇ ਸੰਕੇਤ**:\n- ਰੰਗ ਵਿੱਚ ਬਦਲਾਅ\n- ਗੈਸ ਬਾਹਰ ਨਿਕਲਣੀ (ਬੁਲਬੁਲੇ)\n- ਤਲਛਟ (Precipitate) ਬਣਨੀ\n- ਤਾਪਮਾਨ ਵਿੱਚ ਬਦਲਾਅ\n- ਰੌਸ਼ਨੀ ਪੈਦਾ ਹੋਣੀ\n\n**ਕਿਰਿਆਵਾਂ ਦੀਆਂ ਕਿਸਮਾਂ**:\n1. **ਸੰਯੋਗ ਕਿਰਿਆ** (Combination): A + B → AB\n   ਉਦਾਹਰਨ: CaO + H₂O → Ca(OH)₂\n2. **ਵਿਘਟਨ ਕਿਰਿਆ** (Decomposition): AB → A + B\n   ਉਦਾਹਰਨ: 2H₂O → 2H₂ + O₂ (ਬਿਜਲੀ ਨਾਲ)\n3. **ਵਿਸਥਾਪਨ ਕਿਰਿਆ** (Displacement): A + BC → AC + B\n   ਉਦਾਹਰਨ: Fe + CuSO₄ → FeSO₄ + Cu\n4. **ਦੋਹਰਾ ਵਿਸਥਾਪਨ** (Double Displacement): AB + CD → AD + CB\n   ਉਦਾਹਰਨ: Na₂SO₄ + BaCl₂ → BaSO₄↓ + 2NaCl\n5. **ਆਕਸੀਕਰਨ-ਅਪਚਯਨ** (Redox): ਆਕਸੀਕਰਨ ਅਤੇ ਅਪਚਯਨ ਇਕੱਠੇ ਹੁੰਦੇ ਹਨ",
+          "pa": "ਰਸਾਇਣਕ ਕਿਰਿਆ: ਸੰਯੋਗ, ਵਿਘਟਨ, ਵਿਸਥਾਪਨ, ਦੋਹਰਾ ਵਿਸਥਾਪਨ, Redox। ਸੰਕੇਤ: ਰੰਗ, ਗੈਸ, ਤਲਛਟ, ਤਾਪਮਾਨ।",
+          "en": "**Chemical Reaction**: a process where substances undergo a change in chemical composition.\n\n**Signs of a chemical reaction**: change in colour, gas evolution (bubbles), precipitate formation, temperature change, light emission.\n\n**Types of reactions**:\n1. **Combination**: A+B→AB (CaO+H₂O→Ca(OH)₂)\n2. **Decomposition**: AB→A+B (2H₂O→2H₂+O₂ by electrolysis)\n3. **Displacement**: A+BC→AC+B (Fe+CuSO₄→FeSO₄+Cu)\n4. **Double displacement**: AB+CD→AD+CB (Na₂SO₄+BaCl₂→BaSO₄↓+2NaCl)\n5. **Redox**: simultaneous oxidation and reduction"
+        }
+      },
+      {
+        "heading": {
+          "hi": "अम्ल, क्षार और pH पैमाना",
+          "pa": "ਤੇਜ਼ਾਬ, ਖਾਰ ਅਤੇ pH ਮਾਪਦੰਡ",
+          "en": "Acids, Bases and the pH Scale"
+        },
+        "text": {
+          "hi": "**ਤੇਜ਼ਾਬ (Acid)**:\n- H⁺ ਆਇਨ ਦਿੰਦੇ ਹਨ (Arrhenius theory)\n- ਖੱਟੇ ਸੁਆਦ ਦੇ; ਲਾਲ ਲਿਟਮਸ ਪੇਪਰ ਨੂੰ ਨੀਲਾ ਨਹੀਂ ਕਰਦੇ\n- ਉਦਾਹਰਨ: HCl (ਹਾਈਡ੍ਰੋਕਲੋਰਿਕ ਐਸਿਡ), H₂SO₄ (ਗੰਧਕ ਐਸਿਡ), CH₃COOH (ਸਿਰਕਾ)\n- ਕੁਦਰਤੀ: ਨਿੰਬੂ ਵਿੱਚ citric acid, ਦਹੀਂ ਵਿੱਚ lactic acid\n\n**ਖਾਰ (Base/Alkali)**:\n- OH⁻ ਆਇਨ ਦਿੰਦੇ ਹਨ\n- ਕੌੜੇ ਸੁਆਦ ਦੇ; ਛੂਹਣ ਤੇ ਸਾਬਣ ਵਰਗੇ\n- ਨੀਲੇ ਲਿਟਮਸ ਨੂੰ ਲਾਲ ਨਹੀਂ ਕਰਦੇ\n- ਉਦਾਹਰਨ: NaOH (ਕਾਸਟਿਕ ਸੋਡਾ), Ca(OH)₂ (ਚੂਨਾ ਪਾਣੀ), NH₄OH\n\n**pH ਮਾਪਦੰਡ**:\n- pH < 7: ਤੇਜ਼ਾਬੀ\n- pH = 7: ਨਿਰਪੱਖ (ਸ਼ੁੱਧ ਪਾਣੀ)\n- pH > 7: ਖਾਰੀ (Alkaline)\n\n| ਪਦਾਰਥ | ਲਗਭਗ pH |\n|--------|----------|\n| ਪੇਟ ਦਾ ਐਸਿਡ (HCl) | 1-2 |\n| ਨਿੰਬੂ ਦਾ ਰਸ | 2-3 |\n| ਸ਼ੁੱਧ ਪਾਣੀ | 7 |\n| ਖੂਨ | 7.4 |\n| ਬੇਕਿੰਗ ਸੋਡਾ | 8-9 |\n| ਕਾਸਟਿਕ ਸੋਡਾ | 13-14 |",
+          "pa": "ਤੇਜ਼ਾਬ: H⁺ ਦਿੰਦਾ, pH<7, ਖੱਟਾ। ਖਾਰ: OH⁻ ਦਿੰਦਾ, pH>7, ਕੌੜਾ। ਨਿਰਪੱਖ: pH=7।",
+          "en": "**Acid**: produces H⁺ ions; sour taste; pH < 7. Examples: HCl, H₂SO₄, CH₃COOH (vinegar), citric acid (lemon), lactic acid (yogurt).\n\n**Base**: produces OH⁻ ions; bitter taste, soapy feel; pH > 7. Examples: NaOH, Ca(OH)₂, NH₄OH.\n\n**pH scale** (0–14): Acid < 7; Neutral = 7; Alkaline > 7.\nStomach acid ~1-2; pure water = 7; blood = 7.4; caustic soda ~13-14."
+        }
+      },
+      {
+        "heading": {
+          "hi": "उदासीनीकरण और लवण",
+          "pa": "ਉਦਾਸੀਨੀਕਰਨ ਅਤੇ ਲੂਣ",
+          "en": "Neutralisation and Salts"
+        },
+        "text": {
+          "hi": "**ਉਦਾਸੀਨੀਕਰਨ (Neutralisation)**:\nਤੇਜ਼ਾਬ + ਖਾਰ → ਲੂਣ + ਪਾਣੀ + ਤਾਪ\n$$\\text{HCl} + \\text{NaOH} \\rightarrow \\text{NaCl} + \\text{H}_2\\text{O}$$\n\n**ਮਹੱਤਵਪੂਰਨ ਲੂਣ**:\n| ਲੂਣ | ਰਸਾਇਣਕ ਫਾਰਮੂਲਾ | ਉਪਯੋਗ |\n|-----|-----------------|-------|\n| ਖਾਣ ਵਾਲਾ ਲੂਣ | NaCl | ਖਾਣੇ ਵਿੱਚ; ਅਚਾਰ ਆਦਿ |\n| ਬੇਕਿੰਗ ਸੋਡਾ | NaHCO₃ | ਖਾਣੇ ਵਿੱਚ ਫੁਲਾਉਣ ਲਈ |\n| ਵਾਸ਼ਿੰਗ ਸੋਡਾ | Na₂CO₃·10H₂O | ਕੱਪੜੇ ਧੋਣਾ, ਕੱਚ ਬਣਾਉਣਾ |\n| ਪਲਾਸਟਰ ਆਫ਼ ਪੈਰਿਸ | CaSO₄·½H₂O | ਮੂਰਤੀਆਂ, ਡਾਕਟਰੀ plaster |\n| ਬਲੀਚਿੰਗ ਪਾਊਡਰ | Ca(OCl)Cl | ਕੀਟਾਣੂਨਾਸ਼ਕ, ਕੱਪੜਾ |\n\n**ਰਸਾਇਣਕ ਕਿਰਿਆਵਾਂ ਵਿੱਚ ਊਰਜਾ**:\n- ਊਰਜਾ ਦੇਣ ਵਾਲੀਆਂ (Exothermic): NaOH + H₂O → ਤਾਪ ਨਿਕਲਦੀ\n- ਊਰਜਾ ਲੈਣ ਵਾਲੀਆਂ (Endothermic): ਪ੍ਰਕਾਸ਼-ਸੰਸ਼ਲੇਸ਼ਣ, ਭੋਜਨ ਪਕਾਉਣਾ",
+          "pa": "Acid+Base→Salt+Water (ਉਦਾਸੀਨੀਕਰਨ)। NaCl=ਖਾਣ ਵਾਲਾ ਲੂਣ। NaHCO₃=ਬੇਕਿੰਗ ਸੋਡਾ। Na₂CO₃=ਵਾਸ਼ਿੰਗ ਸੋਡਾ। ਊਰਜਾ ਦੇਣ=Exothermic। ਊਰਜਾ ਲੈਣ=Endothermic।",
+          "en": "**Neutralisation**: Acid + Base → Salt + Water + Heat. HCl + NaOH → NaCl + H₂O.\n\n**Important salts**: NaCl (common salt); NaHCO₃ (baking soda — used as leavening); Na₂CO₃ (washing soda — laundry, glass); CaSO₄·½H₂O (Plaster of Paris — moulds, medical casts); Ca(OCl)Cl (bleaching powder — disinfectant).\n\n**Energy in reactions**: Exothermic (releases heat: NaOH+H₂O); Endothermic (absorbs heat: photosynthesis, cooking)."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "Fe + CuSO₄ → ? (किस प्रकार की अभिक्रिया?)",
+          "pa": "Fe + CuSO₄ → ? (ਕਿਹੜੀ ਕਿਰਿਆ?)",
+          "en": "Fe + CuSO₄ → ? (type of reaction?)"
+        },
+        "back": {
+          "hi": "FeSO₄ + Cu — ਵਿਸਥਾਪਨ ਕਿਰਿਆ (Displacement reaction)",
+          "pa": "FeSO₄ + Cu — ਵਿਸਥਾਪਨ ਕਿਰਿਆ",
+          "en": "FeSO₄ + Cu — Displacement reaction (Fe displaces Cu from CuSO₄)"
+        }
+      },
+      {
+        "front": {
+          "hi": "pH < 7 का मतलब?",
+          "pa": "pH < 7 ਦਾ ਮਤਲਬ?",
+          "en": "What does pH < 7 indicate?"
+        },
+        "back": {
+          "hi": "ਤੇਜ਼ਾਬੀ (Acidic)",
+          "pa": "ਤੇਜ਼ਾਬੀ (Acidic)",
+          "en": "Acidic"
+        }
+      },
+      {
+        "front": {
+          "hi": "बेकिंग सोडा का रासायनिक सूत्र?",
+          "pa": "ਬੇਕਿੰਗ ਸੋਡਾ ਦਾ ਫਾਰਮੂਲਾ?",
+          "en": "Chemical formula of Baking Soda?"
+        },
+        "back": {
+          "hi": "NaHCO₃ (ਸੋਡੀਅਮ ਬਾਈਕਾਰਬੋਨੇਟ)",
+          "pa": "NaHCO₃",
+          "en": "NaHCO₃ (Sodium Bicarbonate)"
+        }
+      },
+      {
+        "front": {
+          "hi": "उदासीनीकरण अभिक्रिया का सामान्य सूत्र?",
+          "pa": "ਉਦਾਸੀਨੀਕਰਨ ਦਾ ਫਾਰਮੂਲਾ?",
+          "en": "General equation for neutralisation?"
+        },
+        "back": {
+          "hi": "Acid + Base → Salt + Water (+ Heat)",
+          "pa": "ਤੇਜ਼ਾਬ + ਖਾਰ → ਲੂਣ + ਪਾਣੀ",
+          "en": "Acid + Base → Salt + Water (+ Heat)"
+        }
+      },
+      {
+        "front": {
+          "hi": "Plaster of Paris का सूत्र?",
+          "pa": "Plaster of Paris ਦਾ ਫਾਰਮੂਲਾ?",
+          "en": "Formula of Plaster of Paris?"
+        },
+        "back": {
+          "hi": "CaSO₄·½H₂O",
+          "pa": "CaSO₄·½H₂O",
+          "en": "CaSO₄·½H₂O (Calcium sulphate hemihydrate)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "ett-sc-ch-q1",
+        "text": {
+          "hi": "Fe + CuSO₄ → FeSO₄ + Cu — यह किस प्रकार की रासायनिक अभिक्रिया है?",
+          "pa": "Fe + CuSO₄ → FeSO₄ + Cu — ਕਿਹੜੀ ਕਿਰਿਆ?",
+          "en": "Fe + CuSO₄ → FeSO₄ + Cu — What type of reaction?"
+        },
+        "options": {
+          "hi": [
+            "ਸੰਯੋਗ ਕਿਰਿਆ",
+            "ਵਿਘਟਨ ਕਿਰਿਆ",
+            "ਵਿਸਥਾਪਨ ਕਿਰਿਆ",
+            "ਦੋਹਰਾ ਵਿਸਥਾਪਨ"
+          ],
+          "pa": [
+            "ਸੰਯੋਗ",
+            "ਵਿਘਟਨ",
+            "ਵਿਸਥਾਪਨ",
+            "ਦੋਹਰਾ ਵਿਸਥਾਪਨ"
+          ],
+          "en": [
+            "Combination",
+            "Decomposition",
+            "Displacement",
+            "Double Displacement"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਲੋਹਾ (Fe) ਤਾਂਬੇ (Cu) ਨੂੰ CuSO₄ ਵਿੱਚੋਂ ਵਿਸਥਾਪਿਤ ਕਰਦਾ ਹੈ — ਇਹ ਇੱਕ-ਵਿਸਥਾਪਨ ਕਿਰਿਆ ਹੈ। Fe ਵਧੇਰੇ ਕਿਰਿਆਸ਼ੀਲ ਹੈ।",
+          "pa": "Fe → Cu ਨੂੰ ਵਿਸਥਾਪਿਤ ਕਰਦਾ। ਵਿਸਥਾਪਨ ਕਿਰਿਆ।",
+          "en": "Iron (Fe) displaces copper (Cu) from CuSO₄ because Fe is more reactive. This is a single displacement reaction."
+        }
+      },
+      {
+        "id": "ett-sc-ch-q2",
+        "text": {
+          "hi": "नींबू के रस की pH लगभग कितनी होती है?",
+          "pa": "ਨਿੰਬੂ ਦੇ ਰਸ ਦੀ pH?",
+          "en": "Approximate pH of lemon juice?"
+        },
+        "options": {
+          "hi": [
+            "1",
+            "2-3",
+            "7",
+            "9-10"
+          ],
+          "pa": [
+            "1",
+            "2-3",
+            "7",
+            "9-10"
+          ],
+          "en": [
+            "1",
+            "2-3",
+            "7",
+            "9-10"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਨਿੰਬੂ ਦੇ ਰਸ ਵਿੱਚ citric acid ਹੁੰਦਾ ਹੈ; ਇਸਦੀ pH ਲਗਭਗ 2-3 ਹੁੰਦੀ ਹੈ — ਤੇਜ਼ਾਬੀ। pH=1 ਬਹੁਤ ਜ਼ਿਆਦਾ ਤੇਜ਼ ਤੇਜ਼ਾਬ ਲਈ (ਜਿਵੇਂ HCl) ਹੁੰਦਾ ਹੈ।",
+          "pa": "ਨਿੰਬੂ = citric acid; pH≈2-3।",
+          "en": "Lemon juice contains citric acid; its pH is approximately 2-3 — acidic. pH=1 is for strong acids like HCl."
+        }
+      },
+      {
+        "id": "ett-sc-ch-q3",
+        "text": {
+          "hi": "बेकिंग सोडे का रासायनिक सूत्र क्या है?",
+          "pa": "ਬੇਕਿੰਗ ਸੋਡੇ ਦਾ ਫਾਰਮੂਲਾ?",
+          "en": "Chemical formula of Baking Soda?"
+        },
+        "options": {
+          "hi": [
+            "NaCl",
+            "Na₂CO₃",
+            "NaHCO₃",
+            "NaOH"
+          ],
+          "pa": [
+            "NaCl",
+            "Na₂CO₃",
+            "NaHCO₃",
+            "NaOH"
+          ],
+          "en": [
+            "NaCl",
+            "Na₂CO₃",
+            "NaHCO₃",
+            "NaOH"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਬੇਕਿੰਗ ਸੋਡਾ = NaHCO₃ (ਸੋਡੀਅਮ ਬਾਈਕਾਰਬੋਨੇਟ)। Na₂CO₃=ਵਾਸ਼ਿੰਗ ਸੋਡਾ; NaCl=ਖਾਣ ਵਾਲਾ ਲੂਣ; NaOH=ਕਾਸਟਿਕ ਸੋਡਾ।",
+          "pa": "ਬੇਕਿੰਗ ਸੋਡਾ=NaHCO₃।",
+          "en": "Baking Soda = NaHCO₃ (Sodium bicarbonate). Na₂CO₃=washing soda; NaCl=common salt; NaOH=caustic soda."
+        }
+      },
+      {
+        "id": "ett-sc-ch-q4",
+        "text": {
+          "hi": "अम्ल और क्षार के बीच क्या अभिक्रिया होती है?",
+          "pa": "ਤੇਜ਼ਾਬ ਅਤੇ ਖਾਰ ਵਿੱਚਕਾਰ ਕਿਹੜੀ ਕਿਰਿਆ?",
+          "en": "What type of reaction occurs between an acid and a base?"
+        },
+        "options": {
+          "hi": [
+            "ਵਿਘਟਨ",
+            "ਉਦਾਸੀਨੀਕਰਨ",
+            "ਆਕਸੀਕਰਨ",
+            "ਵਿਸਥਾਪਨ"
+          ],
+          "pa": [
+            "ਵਿਘਟਨ",
+            "ਉਦਾਸੀਨੀਕਰਨ",
+            "ਆਕਸੀਕਰਨ",
+            "ਵਿਸਥਾਪਨ"
+          ],
+          "en": [
+            "Decomposition",
+            "Neutralisation",
+            "Oxidation",
+            "Displacement"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਤੇਜ਼ਾਬ + ਖਾਰ → ਲੂਣ + ਪਾਣੀ — ਇਸ ਨੂੰ ਉਦਾਸੀਨੀਕਰਨ ਕਿਰਿਆ ਕਿਹਾ ਜਾਂਦਾ ਹੈ। HCl + NaOH → NaCl + H₂O।",
+          "pa": "Acid+Base=ਉਦਾਸੀਨੀਕਰਨ।",
+          "en": "Acid + Base → Salt + Water is called a Neutralisation reaction. HCl + NaOH → NaCl + H₂O."
+        }
+      },
+      {
+        "id": "ett-sc-ch-q5",
+        "text": {
+          "hi": "निम्न में से कौन सी अभिक्रिया Exothermic है?",
+          "pa": "Exothermic ਕਿਰਿਆ ਕਿਹੜੀ ਹੈ?",
+          "en": "Which of the following is an Exothermic reaction?"
+        },
+        "options": {
+          "hi": [
+            "ਪ੍ਰਕਾਸ਼-ਸੰਸ਼ਲੇਸ਼ਣ",
+            "ਭੋਜਨ ਪਕਾਉਣਾ",
+            "CaO + H₂O → Ca(OH)₂",
+            "ਬਰਫ਼ ਪਿਘਲਣੀ"
+          ],
+          "pa": [
+            "ਪ੍ਰਕਾਸ਼-ਸੰਸ਼ਲੇਸ਼ਣ",
+            "ਭੋਜਨ ਪਕਾਉਣਾ",
+            "CaO + H₂O → Ca(OH)₂",
+            "ਬਰਫ਼ ਪਿਘਲਣੀ"
+          ],
+          "en": [
+            "Photosynthesis",
+            "Cooking food",
+            "CaO + H₂O → Ca(OH)₂",
+            "Melting of ice"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "CaO + H₂O → Ca(OH)₂ — ਇਸ ਕਿਰਿਆ ਵਿੱਚ ਤਾਪ ਬਾਹਰ ਨਿਕਲਦੀ ਹੈ (Exothermic)। ਫੋਟੋਸਿੰਥੇਸਿਸ ਅਤੇ ਭੋਜਨ ਪਕਾਉਣਾ Endothermic ਹਨ।",
+          "pa": "CaO+H₂O → ਤਾਪ ਨਿਕਲਦੀ। Exothermic।",
+          "en": "CaO + H₂O → Ca(OH)₂ releases heat (Exothermic). Photosynthesis and cooking are endothermic (absorb energy)."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
     "id": "sst-producer-markets",
     "subject": "Economics",
     "unit": "Microeconomics — Production and Markets",

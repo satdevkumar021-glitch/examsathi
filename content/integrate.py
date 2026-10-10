@@ -162,6 +162,11 @@ for l in json.load(open(research/'biology-lessons.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add ETT Science — Chemistry (Chemical reactions, Acids/Bases, Salts) — ETT Paper B
+for l in json.load(open(research/'ett-science-chemistry.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add Master Cadre SST Economics batch 3 (Producer+Markets, Govt Budget+Multiplier, Climate Biomes)
 for l in json.load(open(research/'master-sst-economics-3.json')):
  l['level']=l.get('level','Foundation / concept preparation')
