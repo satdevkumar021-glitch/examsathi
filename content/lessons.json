@@ -34409,6 +34409,4166 @@
     "documents": []
   },
   {
+    "id": "sst-citizenship",
+    "subject": "Political Science",
+    "unit": "Constitution of India",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "नागरिकता: अर्थ, अर्जन और समाप्ति",
+      "pa": "ਨਾਗਰਿਕਤਾ: ਅਰਥ, ਪ੍ਰਾਪਤੀ ਅਤੇ ਸਮਾਪਤੀ",
+      "en": "Citizenship: Meaning, Acquisition and Termination"
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "नागरिकता का अर्थ और संवैधानिक प्रावधान",
+          "pa": "ਨਾਗਰਿਕਤਾ ਦਾ ਅਰਥ ਅਤੇ ਸੰਵਿਧਾਨਕ ਪ੍ਰਬੰਧ",
+          "en": "Meaning of Citizenship and Constitutional Provisions"
+        },
+        "text": {
+          "hi": "नागरिकता किसी राज्य की पूर्ण सदस्यता है जो व्यक्ति को राजनीतिक और नागरिक अधिकार प्रदान करती है। भारतीय संविधान के भाग II (अनुच्छेद 5–11) में नागरिकता का प्रावधान है। अनुच्छेद 5 के अनुसार संविधान लागू होने पर जो व्यक्ति भारत में जन्मा, या जिसके माता-पिता में से कोई एक भारत में जन्मा हो, या जो 5 वर्ष से अधिक समय से भारत में साधारणतः निवासी हो—वह भारत का नागरिक है। अनुच्छेद 11 संसद को नागरिकता संबंधी कानून बनाने का अधिकार देता है। इसी के अंतर्गत नागरिकता अधिनियम 1955 बना।\n\nनागरिक बनाम विदेशी: नागरिकों को मौलिक अधिकार (जैसे अनुच्छेद 19—स्वतंत्रता के अधिकार) मिलते हैं जो विदेशियों को नहीं मिलते। केवल नागरिक ही मत दे सकते हैं, सांसद/विधायक बन सकते हैं, और कुछ सरकारी पदों पर नियुक्त हो सकते हैं।",
+          "pa": "ਨਾਗਰਿਕਤਾ ਕਿਸੇ ਰਾਜ ਦੀ ਪੂਰੀ ਮੈਂਬਰਸ਼ਿਪ ਹੈ ਜੋ ਵਿਅਕਤੀ ਨੂੰ ਰਾਜਨੀਤਿਕ ਅਤੇ ਨਾਗਰਿਕ ਅਧਿਕਾਰ ਦਿੰਦੀ ਹੈ। ਭਾਰਤੀ ਸੰਵਿਧਾਨ ਦੇ ਭਾਗ II (ਧਾਰਾ 5–11) ਵਿੱਚ ਨਾਗਰਿਕਤਾ ਦਾ ਪ੍ਰਬੰਧ ਹੈ। ਧਾਰਾ 11 ਸੰਸਦ ਨੂੰ ਨਾਗਰਿਕਤਾ ਬਾਰੇ ਕਾਨੂੰਨ ਬਣਾਉਣ ਦਾ ਅਧਿਕਾਰ ਦਿੰਦੀ ਹੈ। ਇਸੇ ਤਹਿਤ ਨਾਗਰਿਕਤਾ ਕਾਨੂੰਨ 1955 ਬਣਿਆ।",
+          "en": "Citizenship is full membership of a state that grants political and civil rights. Part II (Articles 5–11) of the Constitution deals with citizenship at commencement. Article 5 recognised as citizens those born in India, or whose parents were born in India, or who had been ordinarily resident for 5+ years. Article 11 empowers Parliament to enact citizenship laws — hence the Citizenship Act 1955.\n\nCitizens vs aliens: Only citizens get Article 19 freedoms; only citizens can vote, become MPs/MLAs, and hold certain constitutional offices."
+        }
+      },
+      {
+        "heading": {
+          "hi": "नागरिकता अधिनियम 1955: अर्जन के तरीके",
+          "pa": "ਨਾਗਰਿਕਤਾ ਕਾਨੂੰਨ 1955: ਪ੍ਰਾਪਤੀ ਦੇ ਤਰੀਕੇ",
+          "en": "Citizenship Act 1955: Methods of Acquisition"
+        },
+        "text": {
+          "hi": "नागरिकता अधिनियम 1955 के अनुसार भारतीय नागरिकता पाँच तरीकों से अर्जित की जा सकती है:\n\n1. **जन्म द्वारा (By birth)**: 26 जनवरी 1950 से 1 जुलाई 1987 के बीच जन्मा कोई भी व्यक्ति। 1 जुलाई 1987 के बाद जन्म के लिए माता या पिता में से कम-से-कम एक का भारतीय नागरिक होना आवश्यक है। 3 दिसंबर 2004 के बाद: माता-पिता दोनों में से एक भारतीय नागरिक और दूसरा अवैध प्रवासी नहीं होना चाहिए।\n\n2. **वंश द्वारा (By descent)**: 26 जनवरी 1950 के बाद विदेश में जन्मा व्यक्ति यदि उसके माता या पिता (बाद में: माता-पिता में से एक) उस समय भारतीय नागरिक हों।\n\n3. **पंजीकरण द्वारा (By registration)**: भारतीय मूल के व्यक्ति जो 7 वर्ष से भारत में रह रहे हों; भारतीय नागरिक के विदेशी पति/पत्नी; NRI; विदेश में भारत के नागरिक के अवयस्क बच्चे।\n\n4. **देशीकरण द्वारा (By naturalisation)**: विदेशी नागरिक जो 11 वर्ष (जिसमें से 12 महीने आवेदन से ठीक पहले) भारत में रहा हो, सदाचारी हो, संविधान के प्रति निष्ठावान हो।\n\n5. **राज्यक्षेत्र समावेश द्वारा (By incorporation of territory)**: जब कोई नया क्षेत्र भारत में मिलाया जाए (जैसे गोवा 1961)।",
+          "pa": "ਨਾਗਰਿਕਤਾ ਕਾਨੂੰਨ 1955 ਅਨੁਸਾਰ ਭਾਰਤੀ ਨਾਗਰਿਕਤਾ ਪੰਜ ਤਰੀਕਿਆਂ ਨਾਲ ਮਿਲ ਸਕਦੀ ਹੈ:\n1. ਜਨਮ ਰਾਹੀਂ (By birth)\n2. ਵੰਸ਼ ਰਾਹੀਂ (By descent)\n3. ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਰਾਹੀਂ (By registration)\n4. ਦੇਸ਼ੀਕਰਨ ਰਾਹੀਂ (By naturalisation) — 11 ਸਾਲ ਦਾ ਨਿਵਾਸ\n5. ਖੇਤਰ ਸ਼ਾਮਲ ਕਰਨ ਰਾਹੀਂ (By incorporation of territory)",
+          "en": "The Citizenship Act 1955 provides five methods of acquiring Indian citizenship:\n1. **By birth**: Anyone born in India between 26 Jan 1950 – 1 Jul 1987. After 1987 at least one parent must be a citizen; after 3 Dec 2004 one parent must be a citizen and neither an illegal migrant.\n2. **By descent**: Born abroad after 26 Jan 1950 to an Indian citizen parent (rules tightened over time).\n3. **By registration**: Persons of Indian origin resident for 7 years; foreign spouse of a citizen; NRIs; minors born abroad to citizens.\n4. **By naturalisation**: Foreign national resident for 11 years (last 12 months continuous), of good character, gives up previous citizenship.\n5. **By incorporation of territory**: When new territory merges with India (e.g. Goa 1961)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "नागरिकता की समाप्ति और OCI",
+          "pa": "ਨਾਗਰਿਕਤਾ ਦੀ ਸਮਾਪਤੀ ਅਤੇ OCI",
+          "en": "Termination of Citizenship and OCI"
+        },
+        "text": {
+          "hi": "नागरिकता तीन प्रकार से समाप्त होती है:\n1. **त्याग (Renunciation)**: नागरिक स्वेच्छा से लिखित में नागरिकता छोड़ दे (युद्ध के समय 18 वर्ष से कम आयु को तब तक छोड़ने की अनुमति नहीं)।\n2. **समापन (Termination)**: जब भारतीय नागरिक स्वेच्छा से किसी अन्य देश की नागरिकता ले ले।\n3. **वंचन (Deprivation)**: सरकार द्वारा निम्न आधारों पर—धोखाधड़ी से नागरिकता ली, देशद्रोह, युद्ध में दुश्मन की मदद, 7 वर्ष में किसी अन्य देश में 2+ वर्ष कारावास।\n\n**OCI (Overseas Citizen of India)**: 2005 में Citizenship Act में संशोधन से OCI कार्ड शुरू हुआ। OCI धारक भारत में बिना वीजा के रह सकते हैं, मतदान नहीं कर सकते, सरकारी नौकरी नहीं ले सकते, कृषि भूमि नहीं खरीद सकते। PIO कार्ड 2015 में OCI में विलय हो गया।\n\n**एकल नागरिकता**: भारत पूरे देश के लिए एकल नागरिकता प्रदान करता है (राज्य-वार दोहरी नागरिकता नहीं, जैसा अमेरिका में है)।",
+          "pa": "ਨਾਗਰਿਕਤਾ ਤਿੰਨ ਤਰੀਕਿਆਂ ਨਾਲ ਖਤਮ ਹੁੰਦੀ ਹੈ:\n1. ਤਿਆਗ (Renunciation)\n2. ਸਮਾਪਤੀ (Termination) — ਕਿਸੇ ਹੋਰ ਦੇਸ਼ ਦੀ ਨਾਗਰਿਕਤਾ ਲੈਣ 'ਤੇ\n3. ਵੰਚਨ (Deprivation) — ਸਰਕਾਰ ਵੱਲੋਂ: ਧੋਖਾਧੜੀ, ਦੇਸ਼ਧ੍ਰੋਹ, ਆਦਿ\n\nOCI: 2005 ਤੋਂ ਸ਼ੁਰੂ; ਵੀਜ਼ਾ-ਮੁਕਤ ਪ੍ਰਵੇਸ਼ ਪਰ ਵੋਟ ਨਹੀਂ, ਸਰਕਾਰੀ ਨੌਕਰੀ ਨਹੀਂ।\nਭਾਰਤ ਵਿੱਚ ਇੱਕਲੀ ਨਾਗਰਿਕਤਾ ਹੈ (ਰਾਜ-ਵਾਰ ਦੋਹਰੀ ਨਹੀਂ)।",
+          "en": "Citizenship terminates in three ways:\n1. **Renunciation**: Voluntary written renunciation (not permitted during wartime for those under 18).\n2. **Termination**: Automatically ends on voluntarily acquiring another country's citizenship.\n3. **Deprivation**: By government on grounds of fraud, disloyalty/treason, aiding enemy in war, imprisonment abroad for 2+ years within 5 years of registration.\n\n**OCI (Overseas Citizen of India)**: Introduced 2005; OCI holders get visa-free entry, can work and own property (not agricultural land), but cannot vote or hold constitutional offices. PIO card merged into OCI in 2015.\n\n**Single citizenship**: India grants a single uniform citizenship (unlike the US dual federal-state citizenship)."
+        }
+      }
+    ],
+    "keypoints": [
+      {
+        "hi": "Part II, Arts 5–11 — संविधान में नागरिकता; Art 11 → Parliament को कानून बनाने का अधिकार",
+        "pa": "ਭਾਗ II, ਧਾਰਾ 5–11 — ਸੰਵਿਧਾਨ ਵਿੱਚ ਨਾਗਰਿਕਤਾ; ਧਾਰਾ 11 → ਸੰਸਦ ਕਾਨੂੰਨ ਬਣਾ ਸਕਦੀ ਹੈ",
+        "en": "Part II Arts 5–11 — citizenship in Constitution; Art 11 → Parliament may legislate"
+      },
+      {
+        "hi": "5 तरीके: जन्म, वंश, पंजीकरण, देशीकरण (11 वर्ष), राज्यक्षेत्र",
+        "pa": "5 ਤਰੀਕੇ: ਜਨਮ, ਵੰਸ਼, ਰਜਿਸਟ੍ਰੇਸ਼ਨ, ਦੇਸ਼ੀਕਰਨ (11 ਸਾਲ), ਖੇਤਰ",
+        "en": "5 methods: birth, descent, registration, naturalisation (11 yrs), territory incorporation"
+      },
+      {
+        "hi": "3 तरीकों से समाप्त: त्याग, समापन, वंचन",
+        "pa": "3 ਤਰੀਕਿਆਂ ਨਾਲ ਖਤਮ: ਤਿਆਗ, ਸਮਾਪਤੀ, ਵੰਚਨ",
+        "en": "3 ways to lose: renunciation, termination, deprivation"
+      },
+      {
+        "hi": "OCI = visa-free entry; no vote, no govt job, no agri land purchase",
+        "pa": "OCI = ਵੀਜ਼ਾ-ਮੁਕਤ ਪ੍ਰਵੇਸ਼; ਵੋਟ ਨਹੀਂ, ਸਰਕਾਰੀ ਨੌਕਰੀ ਨਹੀਂ",
+        "en": "OCI = visa-free entry; cannot vote, hold public office, or buy agri land"
+      },
+      {
+        "hi": "भारत = एकल नागरिकता; राज्य-वार अलग नागरिकता नहीं",
+        "pa": "ਭਾਰਤ = ਇੱਕਲੀ ਨਾਗਰਿਕਤਾ; ਰਾਜ ਦੀ ਵੱਖਰੀ ਨਹੀਂ",
+        "en": "India = single citizenship; no separate state citizenship"
+      }
+    ],
+    "summary": {
+      "hi": "भारत Part II (अनुच्छेद 5-11) और नागरिकता अधिनियम 1955 के अंतर्गत एकल नागरिकता देता है। अर्जन के 5 तरीके (जन्म, वंश, पंजीकरण, देशीकरण, राज्यक्षेत्र) और समाप्ति के 3 तरीके (त्याग, समापन, वंचन) हैं। OCI धारक वीज़ा-मुक्त प्रवेश पाते हैं पर मत नहीं दे सकते। यह Punjab Master Cadre Polity का अनिवार्य टॉपिक है।",
+      "pa": "ਭਾਰਤ ਭਾਗ II (ਧਾਰਾ 5-11) ਅਤੇ ਨਾਗਰਿਕਤਾ ਕਾਨੂੰਨ 1955 ਅਧੀਨ ਇੱਕਲੀ ਨਾਗਰਿਕਤਾ ਦਿੰਦਾ ਹੈ। 5 ਤਰੀਕੇ ਪ੍ਰਾਪਤੀ ਦੇ ਅਤੇ 3 ਤਰੀਕੇ ਸਮਾਪਤੀ ਦੇ। OCI ਧਾਰਕ ਵੀਜ਼ਾ-ਮੁਕਤ ਪਰ ਵੋਟ ਨਹੀਂ।",
+      "en": "India grants single citizenship under Part II (Arts 5–11) and the Citizenship Act 1955. Five methods of acquisition (birth, descent, registration, naturalisation, territory) and three of termination (renunciation, termination, deprivation). OCI provides visa-free access but no voting rights. Essential Punjab Master Cadre Polity topic."
+    },
+    "flashcards": [
+      {
+        "question": {
+          "hi": "संविधान में नागरिकता किस भाग में है?",
+          "pa": "ਸੰਵਿਧਾਨ ਵਿੱਚ ਨਾਗਰਿਕਤਾ ਕਿਸ ਭਾਗ ਵਿੱਚ ਹੈ?",
+          "en": "In which Part of the Constitution is citizenship dealt with?"
+        },
+        "answer": {
+          "hi": "Part II (Articles 5–11).",
+          "pa": "ਭਾਗ II (ਧਾਰਾ 5–11).",
+          "en": "Part II (Articles 5–11)."
+        }
+      },
+      {
+        "question": {
+          "hi": "देशीकरण द्वारा नागरिकता के लिए न्यूनतम निवास कितना है?",
+          "pa": "ਦੇਸ਼ੀਕਰਨ ਲਈ ਘੱਟੋ-ਘੱਟ ਨਿਵਾਸ ਕਿੰਨਾ ਹੈ?",
+          "en": "Minimum residence for citizenship by naturalisation?"
+        },
+        "answer": {
+          "hi": "11 वर्ष (जिसमें से अंतिम 12 महीने निरंतर)।",
+          "pa": "11 ਸਾਲ (ਜਿਸ ਵਿੱਚੋਂ ਆਖਰੀ 12 ਮਹੀਨੇ ਲਗਾਤਾਰ)।",
+          "en": "11 years (last 12 months continuous)."
+        }
+      },
+      {
+        "question": {
+          "hi": "OCI धारक क्या नहीं कर सकते?",
+          "pa": "OCI ਧਾਰਕ ਕੀ ਨਹੀਂ ਕਰ ਸਕਦੇ?",
+          "en": "What can OCI holders NOT do?"
+        },
+        "answer": {
+          "hi": "मतदान नहीं, सरकारी नौकरी नहीं, कृषि भूमि नहीं खरीद सकते।",
+          "pa": "ਵੋਟ ਨਹੀਂ, ਸਰਕਾਰੀ ਨੌਕਰੀ ਨਹੀਂ, ਖੇਤੀ ਜ਼ਮੀਨ ਨਹੀਂ ਖਰੀਦ ਸਕਦੇ।",
+          "en": "Cannot vote, hold public office, or purchase agricultural land."
+        }
+      },
+      {
+        "question": {
+          "hi": "नागरिकता अधिनियम किस वर्ष बना?",
+          "pa": "ਨਾਗਰਿਕਤਾ ਕਾਨੂੰਨ ਕਿਸ ਸਾਲ ਬਣਿਆ?",
+          "en": "In which year was the Citizenship Act enacted?"
+        },
+        "answer": {
+          "hi": "1955.",
+          "pa": "1955.",
+          "en": "1955."
+        }
+      },
+      {
+        "question": {
+          "hi": "भारत किस प्रकार की नागरिकता देता है?",
+          "pa": "ਭਾਰਤ ਕਿਸ ਤਰ੍ਹਾਂ ਦੀ ਨਾਗਰਿਕਤਾ ਦਿੰਦਾ ਹੈ?",
+          "en": "What type of citizenship does India provide?"
+        },
+        "answer": {
+          "hi": "एकल (Single) नागरिकता — पूरे भारत के लिए एक।",
+          "pa": "ਇੱਕਲੀ (Single) ਨਾਗਰਿਕਤਾ — ਸਾਰੇ ਭਾਰਤ ਲਈ ਇੱਕ।",
+          "en": "Single citizenship — one for the whole country (no separate state citizenship)."
+        }
+      },
+      {
+        "question": {
+          "hi": "PIO कार्ड OCI में कब मिलाया गया?",
+          "pa": "PIO ਕਾਰਡ OCI ਵਿੱਚ ਕਦੋਂ ਮਿਲਾਇਆ ਗਿਆ?",
+          "en": "When was the PIO card merged into OCI?"
+        },
+        "answer": {
+          "hi": "2015 में।",
+          "pa": "2015 ਵਿੱਚ।",
+          "en": "In 2015."
+        }
+      },
+      {
+        "question": {
+          "hi": "नागरिकता की समाप्ति के 3 तरीके कौन-से हैं?",
+          "pa": "ਨਾਗਰਿਕਤਾ ਦੀ ਸਮਾਪਤੀ ਦੇ 3 ਤਰੀਕੇ ਕਿਹੜੇ ਹਨ?",
+          "en": "Name the three ways citizenship can end."
+        },
+        "answer": {
+          "hi": "त्याग (Renunciation), समापन (Termination), वंचन (Deprivation)।",
+          "pa": "ਤਿਆਗ, ਸਮਾਪਤੀ, ਵੰਚਨ।",
+          "en": "Renunciation (voluntary), Termination (acquiring foreign citizenship), Deprivation (by government)."
+        }
+      },
+      {
+        "question": {
+          "hi": "अनुच्छेद 11 क्या कहता है?",
+          "pa": "ਧਾਰਾ 11 ਕੀ ਕਹਿੰਦੀ ਹੈ?",
+          "en": "What does Article 11 state?"
+        },
+        "answer": {
+          "hi": "संसद को नागरिकता के बारे में कानून बनाने का अधिकार।",
+          "pa": "ਸੰਸਦ ਨੂੰ ਨਾਗਰਿਕਤਾ ਬਾਰੇ ਕਾਨੂੰਨ ਬਣਾਉਣ ਦਾ ਅਧਿਕਾਰ।",
+          "en": "Parliament has the power to regulate citizenship by law."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "cit-q1",
+        "prompt": {
+          "hi": "भारतीय संविधान में नागरिकता किस भाग में वर्णित है?",
+          "pa": "ਭਾਰਤੀ ਸੰਵਿਧਾਨ ਵਿੱਚ ਨਾਗਰਿਕਤਾ ਕਿਸ ਭਾਗ ਵਿੱਚ ਦੱਸੀ ਗਈ ਹੈ?",
+          "en": "In which Part of the Indian Constitution is citizenship described?"
+        },
+        "options": [
+          {
+            "hi": "Part I",
+            "pa": "ਭਾਗ I",
+            "en": "Part I"
+          },
+          {
+            "hi": "Part II",
+            "pa": "ਭਾਗ II",
+            "en": "Part II"
+          },
+          {
+            "hi": "Part III",
+            "pa": "ਭਾਗ III",
+            "en": "Part III"
+          },
+          {
+            "hi": "Part IV",
+            "pa": "ਭਾਗ IV",
+            "en": "Part IV"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "संविधान का Part II (अनुच्छेद 5-11) नागरिकता से संबंधित है।",
+          "pa": "ਸੰਵਿਧਾਨ ਦਾ ਭਾਗ II (ਧਾਰਾ 5-11) ਨਾਗਰਿਕਤਾ ਨਾਲ ਸੰਬੰਧਤ ਹੈ।",
+          "en": "Part II (Articles 5–11) of the Constitution deals with citizenship."
+        }
+      },
+      {
+        "id": "cit-q2",
+        "prompt": {
+          "hi": "देशीकरण द्वारा भारतीय नागरिकता पाने के लिए न्यूनतम निवास कितने वर्ष है?",
+          "pa": "ਦੇਸ਼ੀਕਰਨ ਰਾਹੀਂ ਭਾਰਤੀ ਨਾਗਰਿਕਤਾ ਲਈ ਘੱਟੋ-ਘੱਟ ਕਿੰਨੇ ਸਾਲ ਦਾ ਨਿਵਾਸ ਚਾਹੀਦਾ ਹੈ?",
+          "en": "Minimum years of residence required for citizenship by naturalisation?"
+        },
+        "options": [
+          {
+            "hi": "5 वर्ष",
+            "pa": "5 ਸਾਲ",
+            "en": "5 years"
+          },
+          {
+            "hi": "7 वर्ष",
+            "pa": "7 ਸਾਲ",
+            "en": "7 years"
+          },
+          {
+            "hi": "11 वर्ष",
+            "pa": "11 ਸਾਲ",
+            "en": "11 years"
+          },
+          {
+            "hi": "15 वर्ष",
+            "pa": "15 ਸਾਲ",
+            "en": "15 years"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "देशीकरण के लिए कुल 11 वर्ष का निवास, जिसमें आवेदन से ठीक पहले के 12 महीने निरंतर होने चाहिए।",
+          "pa": "ਦੇਸ਼ੀਕਰਨ ਲਈ ਕੁੱਲ 11 ਸਾਲ ਦਾ ਨਿਵਾਸ, ਜਿਸ ਵਿੱਚ ਅਰਜ਼ੀ ਤੋਂ ਪਹਿਲਾਂ ਦੇ 12 ਮਹੀਨੇ ਲਗਾਤਾਰ।",
+          "en": "11 years total (last 12 months immediately preceding application must be continuous)."
+        }
+      },
+      {
+        "id": "cit-q3",
+        "prompt": {
+          "hi": "नागरिकता अधिनियम 1955 के अनुसार नागरिकता अर्जन के कितने तरीके हैं?",
+          "pa": "ਨਾਗਰਿਕਤਾ ਕਾਨੂੰਨ 1955 ਅਨੁਸਾਰ ਨਾਗਰਿਕਤਾ ਪ੍ਰਾਪਤੀ ਦੇ ਕਿੰਨੇ ਤਰੀਕੇ ਹਨ?",
+          "en": "How many methods of acquiring citizenship are prescribed under the Citizenship Act 1955?"
+        },
+        "options": [
+          {
+            "hi": "3",
+            "pa": "3",
+            "en": "3"
+          },
+          {
+            "hi": "4",
+            "pa": "4",
+            "en": "4"
+          },
+          {
+            "hi": "5",
+            "pa": "5",
+            "en": "5"
+          },
+          {
+            "hi": "6",
+            "pa": "6",
+            "en": "6"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "जन्म, वंश, पंजीकरण, देशीकरण और राज्यक्षेत्र समावेश — कुल 5 तरीके।",
+          "pa": "ਜਨਮ, ਵੰਸ਼, ਰਜਿਸਟ੍ਰੇਸ਼ਨ, ਦੇਸ਼ੀਕਰਨ ਅਤੇ ਖੇਤਰ ਸ਼ਾਮਲ — ਕੁੱਲ 5 ਤਰੀਕੇ।",
+          "en": "Birth, descent, registration, naturalisation and territory incorporation — 5 methods."
+        }
+      },
+      {
+        "id": "cit-q4",
+        "prompt": {
+          "hi": "OCI कार्ड किस वर्ष शुरू किया गया?",
+          "pa": "OCI ਕਾਰਡ ਕਿਸ ਸਾਲ ਸ਼ੁਰੂ ਹੋਇਆ?",
+          "en": "OCI (Overseas Citizen of India) card was introduced in which year?"
+        },
+        "options": [
+          {
+            "hi": "1955",
+            "pa": "1955",
+            "en": "1955"
+          },
+          {
+            "hi": "2000",
+            "pa": "2000",
+            "en": "2000"
+          },
+          {
+            "hi": "2005",
+            "pa": "2005",
+            "en": "2005"
+          },
+          {
+            "hi": "2015",
+            "pa": "2015",
+            "en": "2015"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "2005 में नागरिकता अधिनियम में संशोधन करके OCI कार्ड शुरू किया गया।",
+          "pa": "2005 ਵਿੱਚ ਨਾਗਰਿਕਤਾ ਕਾਨੂੰਨ ਵਿੱਚ ਸੋਧ ਕਰਕੇ OCI ਕਾਰਡ ਸ਼ੁਰੂ ਹੋਇਆ।",
+          "en": "OCI was introduced through an amendment to the Citizenship Act in 2005."
+        }
+      },
+      {
+        "id": "cit-q5",
+        "prompt": {
+          "hi": "OCI धारक निम्न में से क्या कर सकते हैं?",
+          "pa": "OCI ਧਾਰਕ ਹੇਠ ਲਿਖੇ ਵਿੱਚੋਂ ਕੀ ਕਰ ਸਕਦੇ ਹਨ?",
+          "en": "Which of the following can an OCI holder do?"
+        },
+        "options": [
+          {
+            "hi": "मतदान करना",
+            "pa": "ਵੋਟ ਕਰਨਾ",
+            "en": "Vote in elections"
+          },
+          {
+            "hi": "बिना वीज़ा भारत आना",
+            "pa": "ਬਿਨਾਂ ਵੀਜ਼ੇ ਭਾਰਤ ਆਉਣਾ",
+            "en": "Enter India without a visa"
+          },
+          {
+            "hi": "सरकारी पद धारण करना",
+            "pa": "ਸਰਕਾਰੀ ਅਹੁਦਾ ਧਾਰਨ ਕਰਨਾ",
+            "en": "Hold government office"
+          },
+          {
+            "hi": "कृषि भूमि खरीदना",
+            "pa": "ਖੇਤੀ ਜ਼ਮੀਨ ਖਰੀਦਣਾ",
+            "en": "Purchase agricultural land"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "OCI धारक बिना वीज़ा भारत आ सकते हैं, काम कर सकते हैं (कुछ प्रतिबंधों के साथ), पर मतदान, सरकारी पद और कृषि भूमि नहीं।",
+          "pa": "OCI ਧਾਰਕ ਬਿਨਾਂ ਵੀਜ਼ੇ ਭਾਰਤ ਆ ਸਕਦੇ ਹਨ ਪਰ ਵੋਟ, ਸਰਕਾਰੀ ਅਹੁਦਾ ਅਤੇ ਖੇਤੀ ਜ਼ਮੀਨ ਨਹੀਂ।",
+          "en": "OCI holders may enter India without a visa but cannot vote, hold constitutional office, or buy agricultural land."
+        }
+      },
+      {
+        "id": "cit-q6",
+        "prompt": {
+          "hi": "नागरिकता की 'वंचन' (Deprivation) में किस आधार पर सरकार नागरिकता छीन सकती है?",
+          "pa": "ਵੰਚਨ (Deprivation) ਵਿੱਚ ਕਿਸ ਆਧਾਰ 'ਤੇ ਸਰਕਾਰ ਨਾਗਰਿਕਤਾ ਖੋਹ ਸਕਦੀ ਹੈ?",
+          "en": "On which ground can the government deprive a person of citizenship?"
+        },
+        "options": [
+          {
+            "hi": "ਦੂਜੇ ਰਾਜ ਵਿੱਚ ਜਾਣ 'ਤੇ",
+            "pa": "ਦੂਜੇ ਰਾਜ ਵਿੱਚ ਜਾਣ 'ਤੇ",
+            "en": "Moving to another state of India"
+          },
+          {
+            "hi": "धोखाधड़ी से नागरिकता लेना",
+            "pa": "ਧੋਖਾਧੜੀ ਨਾਲ ਨਾਗਰਿਕਤਾ ਲੈਣਾ",
+            "en": "Obtaining citizenship by fraud"
+          },
+          {
+            "hi": "विदेश में नौकरी करना",
+            "pa": "ਵਿਦੇਸ਼ ਵਿੱਚ ਨੌਕਰੀ ਕਰਨਾ",
+            "en": "Taking employment abroad"
+          },
+          {
+            "hi": "किसी राजनीतिक दल में शामिल होना",
+            "pa": "ਕਿਸੇ ਰਾਜਨੀਤਿਕ ਪਾਰਟੀ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣਾ",
+            "en": "Joining a political party"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "वंचन के मुख्य आधार: धोखाधड़ी, देशद्रोह, युद्ध में दुश्मन की मदद, विदेश में 5 वर्षों में 2+ वर्ष कारावास।",
+          "pa": "ਵੰਚਨ ਦੇ ਮੁੱਖ ਆਧਾਰ: ਧੋਖਾਧੜੀ, ਦੇਸ਼ਧ੍ਰੋਹ, ਦੁਸ਼ਮਣ ਦੀ ਮਦਦ, ਵਿਦੇਸ਼ ਵਿੱਚ 5 ਸਾਲਾਂ ਵਿੱਚ 2+ ਸਾਲ ਕੈਦ।",
+          "en": "Deprivation grounds: fraud in acquiring citizenship, disloyalty/treason, aiding enemy in wartime, imprisonment abroad."
+        }
+      },
+      {
+        "id": "cit-q7",
+        "prompt": {
+          "hi": "भारत में 'एकल नागरिकता' का तात्पर्य है:",
+          "pa": "ਭਾਰਤ ਵਿੱਚ 'ਇੱਕਲੀ ਨਾਗਰਿਕਤਾ' ਦਾ ਭਾਵ ਹੈ:",
+          "en": "Single citizenship in India means:"
+        },
+        "options": [
+          {
+            "hi": "प्रत्येक राज्य की अलग नागरिकता",
+            "pa": "ਹਰੇਕ ਰਾਜ ਦੀ ਵੱਖਰੀ ਨਾਗਰਿਕਤਾ",
+            "en": "Each state has its own citizenship"
+          },
+          {
+            "hi": "केवल एक व्यक्ति को नागरिकता मिलती है",
+            "pa": "ਸਿਰਫ਼ ਇੱਕ ਵਿਅਕਤੀ ਨੂੰ ਨਾਗਰਿਕਤਾ ਮਿਲਦੀ ਹੈ",
+            "en": "Only one person can be a citizen"
+          },
+          {
+            "hi": "पूरे देश के लिए एक समान नागरिकता",
+            "pa": "ਸਾਰੇ ਦੇਸ਼ ਲਈ ਇੱਕੋ ਸਮਾਨ ਨਾਗਰਿਕਤਾ",
+            "en": "One uniform citizenship for the whole country"
+          },
+          {
+            "hi": "एकल-बच्चे परिवारों को नागरिकता",
+            "pa": "ਇੱਕ-ਬੱਚੇ ਪਰਿਵਾਰਾਂ ਨੂੰ ਨਾਗਰਿਕਤਾ",
+            "en": "Citizenship for single-child families"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "भारत में सभी नागरिकों को पूरे देश के लिए एक समान नागरिकता मिलती है, राज्यवार अलग नागरिकता नहीं।",
+          "pa": "ਭਾਰਤ ਵਿੱਚ ਸਾਰੇ ਨਾਗਰਿਕਾਂ ਨੂੰ ਸਾਰੇ ਦੇਸ਼ ਲਈ ਇੱਕੋ ਨਾਗਰਿਕਤਾ ਮਿਲਦੀ ਹੈ।",
+          "en": "All citizens have a single citizenship for the entire country — no separate state citizenships (unlike USA)."
+        }
+      },
+      {
+        "id": "cit-q8",
+        "prompt": {
+          "hi": "नागरिकता की 'समापन' (Termination) कब होती है?",
+          "pa": "ਨਾਗਰਿਕਤਾ ਦੀ 'ਸਮਾਪਤੀ' ਕਦੋਂ ਹੁੰਦੀ ਹੈ?",
+          "en": "Termination of citizenship occurs when:"
+        },
+        "options": [
+          {
+            "hi": "नागरिक विदेश जाता है",
+            "pa": "ਨਾਗਰਿਕ ਵਿਦੇਸ਼ ਜਾਂਦਾ ਹੈ",
+            "en": "A citizen travels abroad"
+          },
+          {
+            "hi": "नागरिक विदेशी नागरिकता स्वीकार करता है",
+            "pa": "ਨਾਗਰਿਕ ਵਿਦੇਸ਼ੀ ਨਾਗਰਿਕਤਾ ਕਬੂਲਦਾ ਹੈ",
+            "en": "A citizen voluntarily acquires another country's citizenship"
+          },
+          {
+            "hi": "नागरिक अदालत में दोषी पाया जाता है",
+            "pa": "ਨਾਗਰਿਕ ਅਦਾਲਤ ਵਿੱਚ ਦੋਸ਼ੀ ਪਾਇਆ ਜਾਂਦਾ ਹੈ",
+            "en": "A citizen is convicted by a court"
+          },
+          {
+            "hi": "नागरिक दूसरे राज्य में बस जाता है",
+            "pa": "ਨਾਗਰਿਕ ਦੂਜੇ ਰਾਜ ਵਿੱਚ ਵੱਸ ਜਾਂਦਾ ਹੈ",
+            "en": "A citizen settles in another state"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "जब कोई भारतीय नागरिक स्वेच्छा से किसी अन्य देश की नागरिकता ले लेता है, तो स्वतः भारतीय नागरिकता समाप्त हो जाती है।",
+          "pa": "ਜਦੋਂ ਕੋਈ ਭਾਰਤੀ ਨਾਗਰਿਕ ਆਪਣੀ ਮਰਜ਼ੀ ਨਾਲ ਕਿਸੇ ਹੋਰ ਦੇਸ਼ ਦੀ ਨਾਗਰਿਕਤਾ ਲੈਂਦਾ ਹੈ, ਤਾਂ ਭਾਰਤੀ ਨਾਗਰਿਕਤਾ ਆਪਣੇ ਆਪ ਖਤਮ ਹੋ ਜਾਂਦੀ ਹੈ।",
+          "en": "When an Indian citizen voluntarily acquires the citizenship of another country, Indian citizenship automatically terminates."
+        }
+      },
+      {
+        "id": "cit-q9",
+        "prompt": {
+          "hi": "पंजीकरण द्वारा नागरिकता के लिए भारत में न्यूनतम निवास (Indian-origin persons) कितना है?",
+          "pa": "ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਰਾਹੀਂ ਨਾਗਰਿਕਤਾ ਲਈ ਭਾਰਤੀ ਮੂਲ ਦੇ ਵਿਅਕਤੀਆਂ ਲਈ ਘੱਟੋ-ਘੱਟ ਨਿਵਾਸ ਕਿੰਨਾ ਹੈ?",
+          "en": "Minimum residence in India for citizenship by registration (persons of Indian origin)?"
+        },
+        "options": [
+          {
+            "hi": "5 वर्ष",
+            "pa": "5 ਸਾਲ",
+            "en": "5 years"
+          },
+          {
+            "hi": "7 वर्ष",
+            "pa": "7 ਸਾਲ",
+            "en": "7 years"
+          },
+          {
+            "hi": "10 वर्ष",
+            "pa": "10 ਸਾਲ",
+            "en": "10 years"
+          },
+          {
+            "hi": "11 वर्ष",
+            "pa": "11 ਸਾਲ",
+            "en": "11 years"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "भारतीय मूल के व्यक्तियों को पंजीकरण द्वारा नागरिकता के लिए 7 वर्ष का निवास आवश्यक है।",
+          "pa": "ਭਾਰਤੀ ਮੂਲ ਦੇ ਵਿਅਕਤੀਆਂ ਲਈ ਰਜਿਸਟ੍ਰੇਸ਼ਨ ਰਾਹੀਂ ਨਾਗਰਿਕਤਾ ਲਈ 7 ਸਾਲ ਦਾ ਨਿਵਾਸ ਚਾਹੀਦਾ ਹੈ।",
+          "en": "Persons of Indian origin must be resident in India for 7 years to acquire citizenship by registration."
+        }
+      },
+      {
+        "id": "cit-q10",
+        "prompt": {
+          "hi": "संविधान का कौन-सा अनुच्छेद संसद को नागरिकता के बारे में कानून बनाने का अधिकार देता है?",
+          "pa": "ਸੰਵਿਧਾਨ ਦੀ ਕਿਹੜੀ ਧਾਰਾ ਸੰਸਦ ਨੂੰ ਨਾਗਰਿਕਤਾ ਬਾਰੇ ਕਾਨੂੰਨ ਬਣਾਉਣ ਦਾ ਅਧਿਕਾਰ ਦਿੰਦੀ ਹੈ?",
+          "en": "Which Article empowers Parliament to enact laws on citizenship?"
+        },
+        "options": [
+          {
+            "hi": "Article 5",
+            "pa": "ਧਾਰਾ 5",
+            "en": "Article 5"
+          },
+          {
+            "hi": "Article 8",
+            "pa": "ਧਾਰਾ 8",
+            "en": "Article 8"
+          },
+          {
+            "hi": "Article 11",
+            "pa": "ਧਾਰਾ 11",
+            "en": "Article 11"
+          },
+          {
+            "hi": "Article 21",
+            "pa": "ਧਾਰਾ 21",
+            "en": "Article 21"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "अनुच्छेद 11 संसद को नागरिकता से संबंधित कानून बनाने का अधिकार देता है।",
+          "pa": "ਧਾਰਾ 11 ਸੰਸਦ ਨੂੰ ਨਾਗਰਿਕਤਾ ਬਾਰੇ ਕਾਨੂੰਨ ਬਣਾਉਣ ਦਾ ਅਧਿਕਾਰ ਦਿੰਦੀ ਹੈ।",
+          "en": "Article 11 empowers Parliament to make any provision with respect to acquisition and termination of citizenship."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "Citizenship Act 1955 (as amended) — Ministry of Home Affairs",
+        "url": "https://www.mha.gov.in/sites/default/files/Citizenship_act_1955.pdf"
+      },
+      {
+        "title": "Punjab Master Cadre SST Polity Syllabus — ERB Punjab 2022",
+        "url": "https://educationrecruitmentboard.com/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      }
+    ],
+    "videos": [],
+    "documents": [],
+    "level": "Foundation / concept preparation"
+  },
+  {
+    "id": "sst-foreign-policy-uno",
+    "subject": "Political Science",
+    "unit": "Indian Government",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "भारत की विदेश नीति और संयुक्त राष्ट्र संघ",
+      "pa": "ਭਾਰਤ ਦੀ ਵਿਦੇਸ਼ ਨੀਤੀ ਅਤੇ ਸੰਯੁਕਤ ਰਾਸ਼ਟਰ ਸੰਘ",
+      "en": "India's Foreign Policy and the United Nations"
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "भारत की विदेश नीति के सिद्धांत",
+          "pa": "ਭਾਰਤ ਦੀ ਵਿਦੇਸ਼ ਨੀਤੀ ਦੇ ਸਿਧਾਂਤ",
+          "en": "Principles of India's Foreign Policy"
+        },
+        "text": {
+          "hi": "भारत की विदेश नीति के मूल सिद्धांत स्वाधीनता के समय से ही स्थापित हैं:\n\n**पंचशील (1954)**: जवाहरलाल नेहरू और चाउ एन-लाई (चीन) के बीच 29 अप्रैल 1954 को हस्ताक्षरित। पाँच सिद्धांत: (1) एक-दूसरे की क्षेत्रीय अखंडता और संप्रभुता का सम्मान, (2) गैर-आक्रामकता, (3) एक-दूसरे के आंतरिक मामलों में हस्तक्षेप नहीं, (4) समानता और पारस्परिक लाभ, (5) शांतिपूर्ण सह-अस्तित्व।\n\n**गुटनिरपेक्षता / NAM**: नेहरू, टीटो (यूगोस्लाविया) और नासर (मिस्र) की पहल पर 1961 में बेलग्रेड में पहला सम्मेलन। USA और USSR दोनों गुटों से अलग रहना। भारत NAM का संस्थापक सदस्य। वर्तमान में 120+ सदस्य।\n\n**अन्य सिद्धांत**: उपनिवेशवाद और रंगभेद का विरोध, निःशस्त्रीकरण, अंतरराष्ट्रीय कानून का पालन, संयुक्त राष्ट्र के प्रति समर्थन।\n\n**हालिया नीति**: 'पड़ोसी पहले' (Neighbourhood First), 'एक्ट ईस्ट' (Act East — पूर्वी एशिया), G-20 की अध्यक्षता 2023, शंघाई सहयोग संगठन (SCO) सदस्य।",
+          "pa": "ਭਾਰਤ ਦੀ ਵਿਦੇਸ਼ ਨੀਤੀ ਦੇ ਮੁੱਖ ਸਿਧਾਂਤ:\n\nਪੰਚਸ਼ੀਲ (1954): ਨਹਿਰੂ ਅਤੇ ਚਾਊ ਏਨ-ਲਾਈ ਵਿਚਕਾਰ। ਪੰਜ ਸਿਧਾਂਤ: ਖੇਤਰੀ ਅਖੰਡਤਾ ਦਾ ਸਤਿਕਾਰ, ਗੈਰ-ਹਮਲਾਵਰਤਾ, ਅੰਦਰੂਨੀ ਮਾਮਲਿਆਂ ਵਿੱਚ ਦਖਲ ਨਹੀਂ, ਬਰਾਬਰੀ ਅਤੇ ਆਪਸੀ ਲਾਭ, ਸ਼ਾਂਤੀਪੂਰਨ ਸਹਿ-ਹੋਂਦ।\n\nNAM: 1961 ਬੈਲਗ੍ਰੇਡ ਸੰਮੇਲਨ। ਭਾਰਤ ਸੰਸਥਾਪਕ ਮੈਂਬਰ।",
+          "en": "India's foreign policy is guided by core principles established at independence:\n\n**Panchsheel (1954)**: Signed 29 April 1954 by Nehru and Zhou Enlai (China). Five principles: (1) mutual respect for territorial integrity and sovereignty, (2) non-aggression, (3) non-interference in each other's internal affairs, (4) equality and mutual benefit, (5) peaceful coexistence.\n\n**Non-Alignment / NAM**: First conference Belgrade 1961, initiative of Nehru, Tito (Yugoslavia) and Nasser (Egypt). India stayed outside both Cold War blocs. Founding member; 120+ members today.\n\n**Other principles**: Opposition to colonialism and apartheid, disarmament, respect for international law, support for UN.\n\n**Recent policy directions**: Neighbourhood First, Act East (South-East Asia), G-20 Presidency 2023, SCO membership."
+        }
+      },
+      {
+        "heading": {
+          "hi": "संयुक्त राष्ट्र संघ (UNO): संरचना और अंग",
+          "pa": "ਸੰਯੁਕਤ ਰਾਸ਼ਟਰ ਸੰਘ (UNO): ਢਾਂਚਾ ਅਤੇ ਅੰਗ",
+          "en": "United Nations Organisation (UNO): Structure and Principal Organs"
+        },
+        "text": {
+          "hi": "UNO की स्थापना 24 अक्टूबर 1945 को हुई (संयुक्त राष्ट्र दिवस = 24 अक्टूबर)। 1945 में 51 संस्थापक सदस्य; वर्तमान में 193 सदस्य। मुख्यालय: न्यूयॉर्क, USA। भारत संस्थापक सदस्य है।\n\n**6 प्रमुख अंग:**\n1. **महासभा (General Assembly)**: सभी 193 सदस्यों का प्रतिनिधित्व; प्रत्येक सदस्य को एक वोट; वार्षिक सत्र सितंबर में। चर्चा और सिफारिशें करती है।\n2. **सुरक्षा परिषद (Security Council)**: 15 सदस्य — 5 स्थायी (P5: USA, UK, France, Russia, China) + 10 अस्थायी (2 वर्ष के लिए चुने); स्थायी सदस्यों को वीटो। शांति और सुरक्षा की प्राथमिक जिम्मेदारी।\n3. **आर्थिक और सामाजिक परिषद (ECOSOC)**: 54 सदस्य; सामाजिक-आर्थिक विकास समन्वय।\n4. **ट्रस्टीशिप परिषद (Trusteeship Council)**: 1994 से निलंबित (सभी न्यास क्षेत्र स्वतंत्र हो गए)।\n5. **अंतरराष्ट्रीय न्यायालय (ICJ)**: हेग, नीदरलैंड्स; 15 न्यायाधीश।\n6. **सचिवालय (Secretariat)**: महासचिव — वर्तमान António Guterres (Portugal, 2017–)।",
+          "pa": "UNO ਦੀ ਸਥਾਪਨਾ 24 ਅਕਤੂਬਰ 1945 ਨੂੰ ਹੋਈ। 51 ਸੰਸਥਾਪਕ ਮੈਂਬਰ; ਹੁਣ 193. ਮੁੱਖ ਦਫ਼ਤਰ ਨਿਊਯਾਰਕ।\n\n6 ਮੁੱਖ ਅੰਗ:\n1. ਮਹਾਸਭਾ — 193 ਮੈਂਬਰ, ਹਰੇਕ ਨੂੰ 1 ਵੋਟ\n2. ਸੁਰੱਖਿਆ ਪਰਿਸ਼ਦ — 5 ਸਥਾਈ (ਵੀਟੋ) + 10 ਅਸਥਾਈ\n3. ECOSOC — 54 ਮੈਂਬਰ\n4. ਟ੍ਰੱਸਟੀਸ਼ਿਪ ਪਰਿਸ਼ਦ — 1994 ਤੋਂ ਮੁਅੱਤਲ\n5. ICJ — ਹੇਗ, 15 ਜੱਜ\n6. ਸਕੱਤਰੇਤ — ਮਹਾਸਕੱਤਰ António Guterres",
+          "en": "UNO established 24 October 1945 (UN Day). 51 founding members; 193 today. HQ: New York. India is a founding member.\n\n**6 principal organs:**\n1. **General Assembly**: All 193 members; 1 vote each; annual session in September. Discusses and recommends.\n2. **Security Council**: 15 members — 5 permanent (P5: USA, UK, France, Russia, China) with veto + 10 elected for 2 years. Primary responsibility for peace and security.\n3. **ECOSOC**: 54 members; coordinates economic and social work.\n4. **Trusteeship Council**: Suspended since 1994 (all trust territories became independent).\n5. **International Court of Justice (ICJ)**: The Hague; 15 judges.\n6. **Secretariat**: Secretary-General — António Guterres (Portugal, 2017–)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "UNO की विशेष एजेंसियाँ और भारत की भूमिका",
+          "pa": "UNO ਦੀਆਂ ਵਿਸ਼ੇਸ਼ ਏਜੰਸੀਆਂ ਅਤੇ ਭਾਰਤ ਦੀ ਭੂਮਿਕਾ",
+          "en": "UN Specialised Agencies and India's Role"
+        },
+        "text": {
+          "hi": "**प्रमुख विशेष एजेंसियाँ:**\n- WHO (विश्व स्वास्थ्य संगठन, Geneva)\n- UNESCO (शिक्षा, विज्ञान, संस्कृति — Paris)\n- ILO (अंतरराष्ट्रीय श्रम संगठन — Geneva)\n- FAO (खाद्य और कृषि संगठन — Rome)\n- IMF (अंतरराष्ट्रीय मुद्रा कोष — Washington DC)\n- World Bank Group — Washington DC\n- UNICEF (यूनिसेफ — बाल निधि — New York)\n- UNHCR (शरणार्थी उच्चायुक्त — Geneva)\n- WTO (विश्व व्यापार संगठन — Geneva, अब UN से संबद्ध नहीं पर महत्वपूर्ण)\n\n**भारत की UNO में भूमिका:**\n- 1945 से संस्थापक सदस्य\n- सुरक्षा परिषद में अनेक बार अस्थायी सदस्य (2021-22 सहित)\n- भारत सबसे अधिक शांति रक्षा सैनिक (UN Peacekeeping) भेजने वाले देशों में शामिल\n- भारत स्थायी सीट (P6) का दावेदार — G-4 समूह (भारत, जर्मनी, जापान, ब्राजील)\n- SDGs (सतत विकास लक्ष्य 2030) का समर्थन",
+          "pa": "ਮੁੱਖ ਵਿਸ਼ੇਸ਼ ਏਜੰਸੀਆਂ:\n- WHO (ਜਿਨੀਵਾ), UNESCO (ਪੈਰਿਸ), ILO (ਜਿਨੀਵਾ)\n- FAO (ਰੋਮ), IMF (ਵਾਸ਼ਿੰਗਟਨ), World Bank (ਵਾਸ਼ਿੰਗਟਨ)\n- UNICEF (ਨਿਊਯਾਰਕ), UNHCR (ਜਿਨੀਵਾ)\n\nਭਾਰਤ ਦੀ ਭੂਮਿਕਾ:\n- 1945 ਤੋਂ ਸੰਸਥਾਪਕ ਮੈਂਬਰ\n- ਅਨੇਕ ਵਾਰ ਸੁਰੱਖਿਆ ਪਰਿਸ਼ਦ ਅਸਥਾਈ ਮੈਂਬਰ\n- UN Peacekeeping ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਸੈਨਿਕ ਭੇਜਣ ਵਾਲੇ ਦੇਸ਼ਾਂ ਵਿੱਚ",
+          "en": "**Key specialised agencies:**\n- WHO (health, Geneva), UNESCO (education/culture, Paris), ILO (labour, Geneva)\n- FAO (food/agriculture, Rome), IMF (monetary, Washington DC), World Bank (Washington DC)\n- UNICEF (children, New York), UNHCR (refugees, Geneva)\n- WTO (trade, Geneva — technically not a UN specialised agency but closely linked)\n\n**India's UN role:**\n- Founding member (1945)\n- Elected to Security Council multiple times including 2021–22\n- Among top contributors of UN peacekeeping troops\n- Seeks permanent UNSC seat (P6) as part of G-4 (India, Germany, Japan, Brazil)\n- Committed to SDGs (Sustainable Development Goals 2030)"
+        }
+      }
+    ],
+    "keypoints": [
+      {
+        "hi": "पंचशील = 5 सिद्धांत; 29 अप्रैल 1954; नेहरू + चाउ एन-लाई",
+        "pa": "ਪੰਚਸ਼ੀਲ = 5 ਸਿਧਾਂਤ; 29 ਅਪ੍ਰੈਲ 1954; ਨਹਿਰੂ + ਚਾਊ ਏਨ-ਲਾਈ",
+        "en": "Panchsheel = 5 principles; 29 April 1954; Nehru + Zhou Enlai"
+      },
+      {
+        "hi": "NAM: 1961, Belgrade; Nehru + Tito + Nasser; भारत संस्थापक; 120+ सदस्य",
+        "pa": "NAM: 1961, ਬੈਲਗ੍ਰੇਡ; ਨਹਿਰੂ + ਟੀਟੋ + ਨਾਸਰ; ਭਾਰਤ ਸੰਸਥਾਪਕ; 120+ ਮੈਂਬਰ",
+        "en": "NAM: 1961 Belgrade; Nehru + Tito + Nasser; India founding; 120+ members"
+      },
+      {
+        "hi": "UN स्थापना: 24 Oct 1945; 51 → 193 सदस्य; HQ New York; भारत संस्थापक",
+        "pa": "UN ਸਥਾਪਨਾ: 24 ਅਕਤੂਬਰ 1945; 51 → 193 ਮੈਂਬਰ; HQ ਨਿਊਯਾਰਕ",
+        "en": "UN founded 24 Oct 1945; 51 → 193 members; HQ New York; India founding"
+      },
+      {
+        "hi": "UNSC: 15 (5 P5 + veto + 10 elected); P5 = USA, UK, France, Russia, China",
+        "pa": "UNSC: 15 (5 ਸਥਾਈ + ਵੀਟੋ + 10 ਚੁਣੇ); P5 = USA, UK, France, Russia, China",
+        "en": "UNSC: 15 (5 permanent+veto + 10 elected); P5 = USA, UK, France, Russia, China"
+      },
+      {
+        "hi": "ICJ = The Hague; WHO = Geneva; UNESCO = Paris; FAO = Rome; IMF/World Bank = DC",
+        "pa": "ICJ = ਹੇਗ; WHO = ਜਿਨੀਵਾ; UNESCO = ਪੈਰਿਸ; FAO = ਰੋਮ; IMF/World Bank = DC",
+        "en": "ICJ = The Hague; WHO = Geneva; UNESCO = Paris; FAO = Rome; IMF/World Bank = DC"
+      }
+    ],
+    "summary": {
+      "hi": "भारत की विदेश नीति पंचशील (1954), गुटनिरपेक्षता (1961) और संयुक्त राष्ट्र समर्थन पर आधारित है। UNO (1945) के 6 प्रमुख अंग और प्रमुख एजेंसियों की मुख्यालय जानकारी तथा भारत की UN में भूमिका Punjab Master Cadre Polity के लिए अत्यंत महत्वपूर्ण है।",
+      "pa": "ਭਾਰਤ ਦੀ ਵਿਦੇਸ਼ ਨੀਤੀ ਪੰਚਸ਼ੀਲ (1954), NAM (1961) ਅਤੇ UN ਸਹਾਇਤਾ 'ਤੇ ਅਧਾਰਤ ਹੈ। UN ਦੇ 6 ਅੰਗ ਅਤੇ ਏਜੰਸੀਆਂ ਦੇ ਹੈੱਡਕੁਆਰਟਰ Punjab Master Cadre Polity ਲਈ ਜ਼ਰੂਰੀ ਹਨ।",
+      "en": "India's foreign policy rests on Panchsheel (1954), Non-Alignment (1961) and UN support. The 6 UN organs, specialised agency headquarters and India's UN role are critical Punjab Master Cadre Polity topics."
+    },
+    "flashcards": [
+      {
+        "question": {
+          "hi": "पंचशील कब और किसके बीच हस्ताक्षरित हुआ?",
+          "pa": "ਪੰਚਸ਼ੀਲ ਕਦੋਂ ਅਤੇ ਕਿਸ ਵਿਚਕਾਰ ਦਸਤਖਤ ਹੋਇਆ?",
+          "en": "When was Panchsheel signed and between whom?"
+        },
+        "answer": {
+          "hi": "29 अप्रैल 1954; नेहरू (भारत) और चाउ एन-लाई (चीन)।",
+          "pa": "29 ਅਪ੍ਰੈਲ 1954; ਨਹਿਰੂ (ਭਾਰਤ) ਅਤੇ ਚਾਊ ਏਨ-ਲਾਈ (ਚੀਨ)।",
+          "en": "29 April 1954; Nehru (India) and Zhou Enlai (China)."
+        }
+      },
+      {
+        "question": {
+          "hi": "NAM का पहला सम्मेलन कब और कहाँ हुआ?",
+          "pa": "NAM ਦਾ ਪਹਿਲਾ ਸੰਮੇਲਨ ਕਦੋਂ ਅਤੇ ਕਿੱਥੇ ਹੋਇਆ?",
+          "en": "When and where was the first NAM summit?"
+        },
+        "answer": {
+          "hi": "1961, Belgrade (यूगोस्लाविया)।",
+          "pa": "1961, ਬੈਲਗ੍ਰੇਡ (ਯੂਗੋਸਲਾਵੀਆ)।",
+          "en": "1961, Belgrade, Yugoslavia."
+        }
+      },
+      {
+        "question": {
+          "hi": "UNSC में स्थायी सदस्य (P5) कौन हैं?",
+          "pa": "UNSC ਵਿੱਚ ਸਥਾਈ ਮੈਂਬਰ (P5) ਕੌਣ ਹਨ?",
+          "en": "Who are the permanent members (P5) of the UNSC?"
+        },
+        "answer": {
+          "hi": "USA, UK, France, Russia, China।",
+          "pa": "USA, UK, France, Russia, China।",
+          "en": "USA, UK, France, Russia, China."
+        }
+      },
+      {
+        "question": {
+          "hi": "UN की स्थापना कब हुई?",
+          "pa": "UN ਦੀ ਸਥਾਪਨਾ ਕਦੋਂ ਹੋਈ?",
+          "en": "When was the United Nations established?"
+        },
+        "answer": {
+          "hi": "24 अक्टूबर 1945।",
+          "pa": "24 ਅਕਤੂਬਰ 1945।",
+          "en": "24 October 1945."
+        }
+      },
+      {
+        "question": {
+          "hi": "ICJ कहाँ स्थित है?",
+          "pa": "ICJ ਕਿੱਥੇ ਸਥਿਤ ਹੈ?",
+          "en": "Where is the International Court of Justice (ICJ) located?"
+        },
+        "answer": {
+          "hi": "The Hague (हेग), नीदरलैंड्स।",
+          "pa": "ਹੇਗ, ਨੀਦਰਲੈਂਡਜ਼।",
+          "en": "The Hague, Netherlands."
+        }
+      },
+      {
+        "question": {
+          "hi": "UNESCO का मुख्यालय कहाँ है?",
+          "pa": "UNESCO ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਕਿੱਥੇ ਹੈ?",
+          "en": "Where is UNESCO headquartered?"
+        },
+        "answer": {
+          "hi": "Paris, France।",
+          "pa": "ਪੈਰਿਸ, ਫਰਾਂਸ।",
+          "en": "Paris, France."
+        }
+      },
+      {
+        "question": {
+          "hi": "UN Peacekeeping में भारत की क्या भूमिका है?",
+          "pa": "UN Peacekeeping ਵਿੱਚ ਭਾਰਤ ਦੀ ਕੀ ਭੂਮਿਕਾ ਹੈ?",
+          "en": "What is India's role in UN Peacekeeping?"
+        },
+        "answer": {
+          "hi": "भारत सबसे अधिक शांति रक्षा सैनिक भेजने वाले देशों में से एक है।",
+          "pa": "ਭਾਰਤ ਸਭ ਤੋਂ ਵੱਧ ਸ਼ਾਂਤੀ ਰੱਖਿਅਕ ਸੈਨਿਕ ਭੇਜਣ ਵਾਲੇ ਦੇਸ਼ਾਂ ਵਿੱਚੋਂ ਇੱਕ ਹੈ।",
+          "en": "India is among the top contributors of UN peacekeeping troops."
+        }
+      },
+      {
+        "question": {
+          "hi": "WHO का मुख्यालय कहाँ है?",
+          "pa": "WHO ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਕਿੱਥੇ ਹੈ?",
+          "en": "Where is WHO headquartered?"
+        },
+        "answer": {
+          "hi": "Geneva, Switzerland।",
+          "pa": "ਜਿਨੀਵਾ, ਸਵਿੱਟਜ਼ਰਲੈਂਡ।",
+          "en": "Geneva, Switzerland."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "fp-q1",
+        "prompt": {
+          "hi": "पंचशील समझौता किस वर्ष हस्ताक्षरित हुआ?",
+          "pa": "ਪੰਚਸ਼ੀਲ ਸਮਝੌਤਾ ਕਿਸ ਸਾਲ ਦਸਤਖਤ ਹੋਇਆ?",
+          "en": "In which year was the Panchsheel Agreement signed?"
+        },
+        "options": [
+          {
+            "hi": "1950",
+            "pa": "1950",
+            "en": "1950"
+          },
+          {
+            "hi": "1954",
+            "pa": "1954",
+            "en": "1954"
+          },
+          {
+            "hi": "1961",
+            "pa": "1961",
+            "en": "1961"
+          },
+          {
+            "hi": "1947",
+            "pa": "1947",
+            "en": "1947"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "पंचशील समझौता 29 अप्रैल 1954 को भारत के प्रधानमंत्री नेहरू और चीन के प्रधानमंत्री चाउ एन-लाई के बीच हुआ।",
+          "pa": "ਪੰਚਸ਼ੀਲ ਸਮਝੌਤਾ 29 ਅਪ੍ਰੈਲ 1954 ਨੂੰ ਨਹਿਰੂ ਅਤੇ ਚਾਊ ਏਨ-ਲਾਈ ਵਿਚਕਾਰ ਹੋਇਆ।",
+          "en": "The Panchsheel Agreement was signed on 29 April 1954 between Nehru and Zhou Enlai."
+        }
+      },
+      {
+        "id": "fp-q2",
+        "prompt": {
+          "hi": "गुटनिरपेक्ष आंदोलन (NAM) का पहला सम्मेलन कहाँ हुआ?",
+          "pa": "NAM ਦਾ ਪਹਿਲਾ ਸੰਮੇਲਨ ਕਿੱਥੇ ਹੋਇਆ?",
+          "en": "Where was the first Non-Aligned Movement (NAM) summit held?"
+        },
+        "options": [
+          {
+            "hi": "Cairo, Egypt",
+            "pa": "ਕਾਹਿਰਾ, ਮਿਸਰ",
+            "en": "Cairo, Egypt"
+          },
+          {
+            "hi": "Belgrade, Yugoslavia",
+            "pa": "ਬੈਲਗ੍ਰੇਡ, ਯੂਗੋਸਲਾਵੀਆ",
+            "en": "Belgrade, Yugoslavia"
+          },
+          {
+            "hi": "New Delhi, India",
+            "pa": "ਨਵੀਂ ਦਿੱਲੀ, ਭਾਰਤ",
+            "en": "New Delhi, India"
+          },
+          {
+            "hi": "Colombo, Sri Lanka",
+            "pa": "ਕੋਲੰਬੋ, ਸ਼੍ਰੀਲੰਕਾ",
+            "en": "Colombo, Sri Lanka"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "NAM का पहला सम्मेलन 1961 में Belgrade में हुआ; आयोजकों में Nehru (India), Tito (Yugoslavia), Nasser (Egypt) शामिल थे।",
+          "pa": "NAM ਦਾ ਪਹਿਲਾ ਸੰਮੇਲਨ 1961 ਵਿੱਚ Belgrade ਵਿੱਚ ਹੋਇਆ।",
+          "en": "The first NAM summit was held in Belgrade, 1961; organized by Nehru (India), Tito (Yugoslavia) and Nasser (Egypt)."
+        }
+      },
+      {
+        "id": "fp-q3",
+        "prompt": {
+          "hi": "UNO की स्थापना किस तिथि को हुई?",
+          "pa": "UNO ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਮਿਤੀ ਨੂੰ ਹੋਈ?",
+          "en": "On which date was the UNO established?"
+        },
+        "options": [
+          {
+            "hi": "1 January 1945",
+            "pa": "1 ਜਨਵਰੀ 1945",
+            "en": "1 January 1945"
+          },
+          {
+            "hi": "24 October 1945",
+            "pa": "24 ਅਕਤੂਬਰ 1945",
+            "en": "24 October 1945"
+          },
+          {
+            "hi": "26 June 1945",
+            "pa": "26 ਜੂਨ 1945",
+            "en": "26 June 1945"
+          },
+          {
+            "hi": "15 August 1947",
+            "pa": "15 ਅਗਸਤ 1947",
+            "en": "15 August 1947"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "UNO की स्थापना 24 अक्टूबर 1945 को हुई, इसलिए इसे 'संयुक्त राष्ट्र दिवस' (UN Day) कहते हैं।",
+          "pa": "UNO ਦੀ ਸਥਾਪਨਾ 24 ਅਕਤੂਬਰ 1945 ਨੂੰ ਹੋਈ।",
+          "en": "The UNO was established on 24 October 1945 — hence UN Day is observed on 24 October."
+        }
+      },
+      {
+        "id": "fp-q4",
+        "prompt": {
+          "hi": "सुरक्षा परिषद में कितने स्थायी सदस्य हैं?",
+          "pa": "ਸੁਰੱਖਿਆ ਪਰਿਸ਼ਦ ਵਿੱਚ ਕਿੰਨੇ ਸਥਾਈ ਮੈਂਬਰ ਹਨ?",
+          "en": "How many permanent members are there in the UN Security Council?"
+        },
+        "options": [
+          {
+            "hi": "3",
+            "pa": "3",
+            "en": "3"
+          },
+          {
+            "hi": "5",
+            "pa": "5",
+            "en": "5"
+          },
+          {
+            "hi": "7",
+            "pa": "7",
+            "en": "7"
+          },
+          {
+            "hi": "15",
+            "pa": "15",
+            "en": "15"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "5 स्थायी (P5: USA, UK, France, Russia, China) सदस्य हैं जिनके पास वीटो अधिकार है। UNSC में कुल 15 सदस्य होते हैं।",
+          "pa": "5 ਸਥਾਈ (P5) ਮੈਂਬਰ ਹਨ ਜਿਨ੍ਹਾਂ ਕੋਲ ਵੀਟੋ ਦਾ ਅਧਿਕਾਰ ਹੈ। UNSC ਵਿੱਚ ਕੁੱਲ 15 ਮੈਂਬਰ।",
+          "en": "5 permanent (P5) members with veto power. UNSC total = 15 members."
+        }
+      },
+      {
+        "id": "fp-q5",
+        "prompt": {
+          "hi": "ICJ का मुख्यालय कहाँ है?",
+          "pa": "ICJ ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਕਿੱਥੇ ਹੈ?",
+          "en": "Where is the headquarters of the International Court of Justice (ICJ)?"
+        },
+        "options": [
+          {
+            "hi": "New York",
+            "pa": "ਨਿਊਯਾਰਕ",
+            "en": "New York"
+          },
+          {
+            "hi": "Geneva",
+            "pa": "ਜਿਨੀਵਾ",
+            "en": "Geneva"
+          },
+          {
+            "hi": "The Hague (Hague)",
+            "pa": "ਹੇਗ",
+            "en": "The Hague"
+          },
+          {
+            "hi": "Paris",
+            "pa": "ਪੈਰਿਸ",
+            "en": "Paris"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "ICJ (अंतरराष्ट्रीय न्यायालय) का मुख्यालय The Hague (हेग), नीदरलैंड्स में है।",
+          "pa": "ICJ ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਹੇਗ, ਨੀਦਰਲੈਂਡਜ਼ ਵਿੱਚ ਹੈ।",
+          "en": "The ICJ (International Court of Justice) is headquartered in The Hague, Netherlands."
+        }
+      },
+      {
+        "id": "fp-q6",
+        "prompt": {
+          "hi": "WHO का मुख्यालय कहाँ है?",
+          "pa": "WHO ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਕਿੱਥੇ ਹੈ?",
+          "en": "Where is WHO (World Health Organisation) headquartered?"
+        },
+        "options": [
+          {
+            "hi": "New York",
+            "pa": "ਨਿਊਯਾਰਕ",
+            "en": "New York"
+          },
+          {
+            "hi": "Rome",
+            "pa": "ਰੋਮ",
+            "en": "Rome"
+          },
+          {
+            "hi": "Geneva",
+            "pa": "ਜਿਨੀਵਾ",
+            "en": "Geneva"
+          },
+          {
+            "hi": "Paris",
+            "pa": "ਪੈਰਿਸ",
+            "en": "Paris"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "WHO का मुख्यालय Geneva, Switzerland में है।",
+          "pa": "WHO ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਜਿਨੀਵਾ, ਸਵਿੱਟਜ਼ਰਲੈਂਡ ਵਿੱਚ ਹੈ।",
+          "en": "WHO is headquartered in Geneva, Switzerland."
+        }
+      },
+      {
+        "id": "fp-q7",
+        "prompt": {
+          "hi": "FAO (खाद्य और कृषि संगठन) का मुख्यालय कहाँ है?",
+          "pa": "FAO (ਭੋਜਨ ਅਤੇ ਖੇਤੀਬਾੜੀ ਸੰਗਠਨ) ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਕਿੱਥੇ ਹੈ?",
+          "en": "Where is FAO (Food and Agriculture Organisation) headquartered?"
+        },
+        "options": [
+          {
+            "hi": "Geneva",
+            "pa": "ਜਿਨੀਵਾ",
+            "en": "Geneva"
+          },
+          {
+            "hi": "Paris",
+            "pa": "ਪੈਰਿਸ",
+            "en": "Paris"
+          },
+          {
+            "hi": "Rome",
+            "pa": "ਰੋਮ",
+            "en": "Rome"
+          },
+          {
+            "hi": "Washington DC",
+            "pa": "ਵਾਸ਼ਿੰਗਟਨ DC",
+            "en": "Washington DC"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "FAO का मुख्यालय Rome, Italy में है।",
+          "pa": "FAO ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਰੋਮ, ਇਟਲੀ ਵਿੱਚ ਹੈ।",
+          "en": "FAO is headquartered in Rome, Italy."
+        }
+      },
+      {
+        "id": "fp-q8",
+        "prompt": {
+          "hi": "पंचशील के 5 सिद्धांतों में से कौन-सा एक नहीं है?",
+          "pa": "ਪੰਚਸ਼ੀਲ ਦੇ 5 ਸਿਧਾਂਤਾਂ ਵਿੱਚੋਂ ਕਿਹੜਾ ਇੱਕ ਨਹੀਂ ਹੈ?",
+          "en": "Which of the following is NOT one of the five principles of Panchsheel?"
+        },
+        "options": [
+          {
+            "hi": "गैर-आक्रामकता",
+            "pa": "ਗੈਰ-ਹਮਲਾਵਰਤਾ",
+            "en": "Non-aggression"
+          },
+          {
+            "hi": "शांतिपूर्ण सह-अस्तित्व",
+            "pa": "ਸ਼ਾਂਤੀਪੂਰਨ ਸਹਿ-ਹੋਂਦ",
+            "en": "Peaceful coexistence"
+          },
+          {
+            "hi": "सैन्य गठबंधन में शामिल होना",
+            "pa": "ਫੌਜੀ ਗੱਠਜੋੜ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣਾ",
+            "en": "Joining military alliances"
+          },
+          {
+            "hi": "आंतरिक मामलों में हस्तक्षेप नहीं",
+            "pa": "ਅੰਦਰੂਨੀ ਮਾਮਲਿਆਂ ਵਿੱਚ ਦਖਲ ਨਹੀਂ",
+            "en": "Non-interference in internal affairs"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "पंचशील के 5 सिद्धांतों में 'सैन्य गठबंधन में शामिल होना' शामिल नहीं है। यह NAM के विपरीत होगा।",
+          "pa": "ਪੰਚਸ਼ੀਲ ਵਿੱਚ 'ਫੌਜੀ ਗੱਠਜੋੜ' ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ।",
+          "en": "Joining military alliances is not a Panchsheel principle — it would contradict NAM's very purpose."
+        }
+      },
+      {
+        "id": "fp-q9",
+        "prompt": {
+          "hi": "UN में वर्तमान में कितने सदस्य देश हैं?",
+          "pa": "UN ਵਿੱਚ ਇਸ ਵੇਲੇ ਕਿੰਨੇ ਮੈਂਬਰ ਦੇਸ਼ ਹਨ?",
+          "en": "How many member states does the UN currently have?"
+        },
+        "options": [
+          {
+            "hi": "51",
+            "pa": "51",
+            "en": "51"
+          },
+          {
+            "hi": "150",
+            "pa": "150",
+            "en": "150"
+          },
+          {
+            "hi": "193",
+            "pa": "193",
+            "en": "193"
+          },
+          {
+            "hi": "200",
+            "pa": "200",
+            "en": "200"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "UN के वर्तमान में 193 सदस्य देश हैं। 1945 में संस्थापना के समय 51 सदस्य थे।",
+          "pa": "UN ਦੇ ਇਸ ਵੇਲੇ 193 ਮੈਂਬਰ ਦੇਸ਼ ਹਨ। 1945 ਵਿੱਚ 51 ਮੈਂਬਰ ਸਨ।",
+          "en": "The UN currently has 193 member states. There were 51 founding members in 1945."
+        }
+      },
+      {
+        "id": "fp-q10",
+        "prompt": {
+          "hi": "UNESCO का मुख्यालय कहाँ है?",
+          "pa": "UNESCO ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਕਿੱਥੇ ਹੈ?",
+          "en": "Where is UNESCO headquartered?"
+        },
+        "options": [
+          {
+            "hi": "Geneva",
+            "pa": "ਜਿਨੀਵਾ",
+            "en": "Geneva"
+          },
+          {
+            "hi": "New York",
+            "pa": "ਨਿਊਯਾਰਕ",
+            "en": "New York"
+          },
+          {
+            "hi": "Rome",
+            "pa": "ਰੋਮ",
+            "en": "Rome"
+          },
+          {
+            "hi": "Paris",
+            "pa": "ਪੈਰਿਸ",
+            "en": "Paris"
+          }
+        ],
+        "answerIndex": 3,
+        "explanation": {
+          "hi": "UNESCO (United Nations Educational, Scientific and Cultural Organization) का मुख्यालय Paris, France में है।",
+          "pa": "UNESCO ਦਾ ਮੁੱਖ ਦਫ਼ਤਰ ਪੈਰਿਸ, ਫਰਾਂਸ ਵਿੱਚ ਹੈ।",
+          "en": "UNESCO (UN Educational, Scientific and Cultural Organisation) is headquartered in Paris, France."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "Punjab Master Cadre SST Polity Syllabus — ERB Punjab 2022",
+        "url": "https://educationrecruitmentboard.com/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      },
+      {
+        "title": "United Nations — Official Website",
+        "url": "https://www.un.org/en/about-us/main-bodies"
+      }
+    ],
+    "videos": [],
+    "documents": [],
+    "level": "Foundation / concept preparation"
+  },
+  {
+    "id": "sst-election-party",
+    "subject": "Political Science",
+    "unit": "Indian Government",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "चुनाव प्रक्रिया और दलीय व्यवस्था",
+      "pa": "ਚੋਣ ਪ੍ਰਕਿਰਿਆ ਅਤੇ ਪਾਰਟੀ ਪ੍ਰਣਾਲੀ",
+      "en": "Election Procedure and Party System in India"
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "भारतीय चुनाव प्रक्रिया",
+          "pa": "ਭਾਰਤੀ ਚੋਣ ਪ੍ਰਕਿਰਿਆ",
+          "en": "Indian Election Procedure"
+        },
+        "text": {
+          "hi": "**चुनाव आयोग (Election Commission of India — ECI):**\nECI एक संवैधानिक संस्था है (अनुच्छेद 324)। इसके अध्यक्ष को मुख्य चुनाव आयुक्त (CEC) कहते हैं। ECI लोकसभा, राज्यसभा, विधानसभा और राष्ट्रपति/उपराष्ट्रपति के चुनाव कराती है।\n\n**मतदान पात्रता**: अनुच्छेद 326 — 18 वर्ष या अधिक आयु के प्रत्येक भारतीय नागरिक को मतदान का अधिकार। मतदाता सूची में नाम आवश्यक। EVM (Electronic Voting Machine) 1982 से; VVPAT (Voter Verifiable Paper Audit Trail) 2013 से।\n\n**आदर्श आचार संहिता (MCC)**: चुनाव की घोषणा से परिणाम तक लागू; सत्तारूढ़ दल के दुरुपयोग को रोकती है।\n\n**दल-बदल विरोध कानून (Anti-Defection Law)**: संविधान की 10वीं अनुसूची; 52वें संशोधन (1985) द्वारा। दल छोड़ने पर सदस्यता जाती है।\n\n**FPTP प्रणाली**: Lok Sabha में 'सबसे अधिक वोट' विजेता (First-Past-The-Post). Rajya Sabha में proportional representation by single transferable vote.",
+          "pa": "ਚੋਣ ਆਯੋਗ (ECI) — ਸੰਵਿਧਾਨਕ ਸੰਸਥਾ (ਧਾਰਾ 324)। ਮੁੱਖ ਚੋਣ ਕਮਿਸ਼ਨਰ (CEC) ਮੁਖੀ ਹੁੰਦਾ ਹੈ।\n\nਵੋਟ ਪਾਉਣ ਦਾ ਅਧਿਕਾਰ (ਧਾਰਾ 326): 18 ਸਾਲ ਜਾਂ ਵੱਧ ਉਮਰ ਦੇ ਹਰ ਭਾਰਤੀ ਨਾਗਰਿਕ ਨੂੰ। EVM 1982 ਤੋਂ; VVPAT 2013 ਤੋਂ।\n\nਆਦਰਸ਼ ਚੋਣ ਜ਼ਾਬਤਾ (MCC): ਚੋਣਾਂ ਦੌਰਾਨ ਲਾਗੂ।\nਦਲ-ਬਦਲ ਵਿਰੋਧੀ ਕਾਨੂੰਨ: 10ਵੀਂ ਅਨੁਸੂਚੀ; 52ਵੀਂ ਸੋਧ (1985)।",
+          "en": "**Election Commission of India (ECI):**\nConstitutional body under Article 324. Headed by the Chief Election Commissioner (CEC). Conducts Lok Sabha, Rajya Sabha, state assembly, and President/VP elections.\n\n**Voting eligibility**: Article 326 — every Indian citizen 18+ years has the right to vote. Registration on electoral roll required. EVM introduced 1982; VVPAT from 2013.\n\n**Model Code of Conduct (MCC)**: Operative from announcement to results; prevents misuse of government machinery by ruling parties.\n\n**Anti-Defection Law**: 10th Schedule of Constitution; added by 52nd Amendment (1985). Legislators lose seat if they defect from their party.\n\n**FPTP system**: Lok Sabha uses First-Past-The-Post. Rajya Sabha uses Proportional Representation by Single Transferable Vote."
+        }
+      },
+      {
+        "heading": {
+          "hi": "भारत में दलीय व्यवस्था",
+          "pa": "ਭਾਰਤ ਵਿੱਚ ਪਾਰਟੀ ਪ੍ਰਣਾਲੀ",
+          "en": "Party System in India"
+        },
+        "text": {
+          "hi": "**राष्ट्रीय दल की मान्यता (2023 के नियम):**\nECI के अनुसार राष्ट्रीय दल बनने के लिए: (1) आम चुनाव या विधानसभा चुनाव में 4+ राज्यों में कम-से-कम 6% वोट, और (2) लोकसभा में 4 सीटें; या (3) कम से कम 3 राज्यों से लोकसभा में 2% सीटें; या (4) 4 राज्यों में राज्य दल की मान्यता।\n\n**राज्य दल**: किसी एक राज्य में 6% वोट + 2 विधानसभा सीटें, या 3% सीटें (न्यूनतम 3)।\n\n**बहुदलीय व्यवस्था**: भारत में बहुदलीय प्रणाली है — कोई एक दल स्थायी बहुमत में नहीं रहता। गठबंधन सरकारें (Coalition) सामान्य हो गई हैं (1989 से)।\n\n**दबाव समूह (Pressure Groups)**: ट्रेड यूनियन, किसान संगठन, धार्मिक संगठन, व्यापार मंडल आदि। ये दल नहीं बनते पर नीतियाँ प्रभावित करते हैं।",
+          "pa": "ਰਾਸ਼ਟਰੀ ਪਾਰਟੀ ਮਾਨਤਾ: 4+ ਰਾਜਾਂ ਵਿੱਚ 6% ਵੋਟ + ਲੋਕ ਸਭਾ ਵਿੱਚ 4 ਸੀਟਾਂ; ਜਾਂ 3 ਰਾਜਾਂ ਤੋਂ ਲੋਕ ਸਭਾ ਵਿੱਚ 2% ਸੀਟਾਂ।\n\nਭਾਰਤ ਵਿੱਚ ਬਹੁ-ਪਾਰਟੀ ਪ੍ਰਣਾਲੀ। 1989 ਤੋਂ ਗੱਠਜੋੜ ਸਰਕਾਰਾਂ ਆਮ।\n\nਦਬਾਅ ਸਮੂਹ: ਟ੍ਰੇਡ ਯੂਨੀਅਨ, ਕਿਸਾਨ ਸੰਗਠਨ, ਧਾਰਮਿਕ ਸੰਗਠਨ।",
+          "en": "**Recognition as National Party (2023 rules):**\n(1) Wins 6%+ votes in 4+ states in Lok Sabha / assembly elections + 4 Lok Sabha seats; or (2) wins 2% of Lok Sabha seats from at least 3 states; or (3) recognised as state party in 4 states.\n\n**State party**: 6% votes + 2 assembly seats, or 3% of seats (minimum 3) in one state.\n\n**Multi-party system**: India has a multi-party system; coalition governments have been common since 1989.\n\n**Pressure groups**: Trade unions, farmer organisations, religious bodies, business associations — they influence policy without contesting elections."
+        }
+      }
+    ],
+    "keypoints": [
+      {
+        "hi": "ECI — Art 324; CEC नेतृत्व; Lok Sabha + Vidhan Sabha + President/VP elections",
+        "pa": "ECI — ਧਾਰਾ 324; CEC ਅਗਵਾਈ; ਲੋਕ ਸਭਾ + ਵਿਧਾਨ ਸਭਾ + ਰਾਸ਼ਟਰਪਤੀ ਚੋਣਾਂ",
+        "en": "ECI — Art 324; headed by CEC; conducts LS + assembly + President/VP elections"
+      },
+      {
+        "hi": "Art 326: 18+ आयु = मतदान अधिकार; EVM 1982; VVPAT 2013",
+        "pa": "ਧਾਰਾ 326: 18+ ਉਮਰ = ਵੋਟ ਦਾ ਅਧਿਕਾਰ; EVM 1982; VVPAT 2013",
+        "en": "Art 326: 18+ = right to vote; EVM 1982; VVPAT 2013"
+      },
+      {
+        "hi": "Anti-Defection = 10th Schedule; 52nd Amendment 1985",
+        "pa": "ਦਲ-ਬਦਲ ਵਿਰੋਧੀ = 10ਵੀਂ ਅਨੁਸੂਚੀ; 52ਵੀਂ ਸੋਧ 1985",
+        "en": "Anti-Defection = 10th Schedule; 52nd Amendment 1985"
+      },
+      {
+        "hi": "Lok Sabha = FPTP; Rajya Sabha = PR-STV",
+        "pa": "ਲੋਕ ਸਭਾ = FPTP; ਰਾਜ ਸਭਾ = PR-STV",
+        "en": "Lok Sabha = FPTP; Rajya Sabha = PR-STV"
+      },
+      {
+        "hi": "National party: 4+ states में 6% vote + 4 LS seats",
+        "pa": "ਰਾਸ਼ਟਰੀ ਪਾਰਟੀ: 4+ ਰਾਜ ਵਿੱਚ 6% ਵੋਟ + 4 LS ਸੀਟਾਂ",
+        "en": "National party: 6% votes in 4+ states + 4 LS seats (one criterion)"
+      }
+    ],
+    "summary": {
+      "hi": "चुनाव आयोग (Art 324) चुनाव संचालन करता है। Art 326 के अनुसार 18+ को मताधिकार। EVM 1982, VVPAT 2013। Anti-Defection Law 10वीं अनुसूची (1985)। भारत में बहुदलीय व्यवस्था और 1989 से गठबंधन सरकारें। Punjab Master Cadre Polity परीक्षा के लिए महत्वपूर्ण।",
+      "pa": "ਚੋਣ ਆਯੋਗ (ਧਾਰਾ 324), 18+ ਵੋਟ ਅਧਿਕਾਰ (ਧਾਰਾ 326), EVM 1982, VVPAT 2013, ਦਲ-ਬਦਲ ਕਾਨੂੰਨ 1985, ਬਹੁ-ਪਾਰਟੀ ਪ੍ਰਣਾਲੀ — Punjab Master Cadre ਲਈ ਜ਼ਰੂਰੀ।",
+      "en": "ECI (Art 324) conducts elections. Art 326: 18+ citizens vote. EVM 1982, VVPAT 2013. Anti-Defection Law: 10th Schedule (1985). India has a multi-party system; coalitions common since 1989. Essential Punjab Master Cadre Polity content."
+    },
+    "flashcards": [
+      {
+        "question": {
+          "hi": "चुनाव आयोग किस अनुच्छेद के तहत है?",
+          "pa": "ਚੋਣ ਆਯੋਗ ਕਿਸ ਧਾਰਾ ਅਧੀਨ ਹੈ?",
+          "en": "Under which Article is the Election Commission established?"
+        },
+        "answer": {
+          "hi": "अनुच्छेद 324।",
+          "pa": "ਧਾਰਾ 324।",
+          "en": "Article 324."
+        }
+      },
+      {
+        "question": {
+          "hi": "EVM किस वर्ष से भारत में प्रयोग में है?",
+          "pa": "EVM ਭਾਰਤ ਵਿੱਚ ਕਿਸ ਸਾਲ ਤੋਂ ਵਰਤੀ ਜਾ ਰਹੀ ਹੈ?",
+          "en": "Since which year has EVM been used in India?"
+        },
+        "answer": {
+          "hi": "1982 (पहला प्रयोग); व्यापक उपयोग 1998-2004 से।",
+          "pa": "1982 ਤੋਂ (ਪਹਿਲੀ ਵਰਤੋਂ)।",
+          "en": "1982 (first use in a by-election); widespread from 1998–2004."
+        }
+      },
+      {
+        "question": {
+          "hi": "दल-बदल विरोध कानून संविधान की कौन-सी अनुसूची में है?",
+          "pa": "ਦਲ-ਬਦਲ ਵਿਰੋਧੀ ਕਾਨੂੰਨ ਸੰਵਿਧਾਨ ਦੀ ਕਿਹੜੀ ਅਨੁਸੂਚੀ ਵਿੱਚ ਹੈ?",
+          "en": "In which Schedule of the Constitution is the Anti-Defection Law?"
+        },
+        "answer": {
+          "hi": "10वीं अनुसूची (52वाँ संशोधन, 1985)।",
+          "pa": "10ਵੀਂ ਅਨੁਸੂਚੀ (52ਵੀਂ ਸੋਧ, 1985)।",
+          "en": "10th Schedule (52nd Amendment, 1985)."
+        }
+      },
+      {
+        "question": {
+          "hi": "Lok Sabha में कौन-सी चुनाव प्रणाली है?",
+          "pa": "ਲੋਕ ਸਭਾ ਵਿੱਚ ਕਿਹੜੀ ਚੋਣ ਪ੍ਰਣਾਲੀ ਹੈ?",
+          "en": "What electoral system is used for Lok Sabha?"
+        },
+        "answer": {
+          "hi": "FPTP (First-Past-The-Post) — जो सर्वाधिक वोट पाए वह जीतता है।",
+          "pa": "FPTP (First-Past-The-Post)।",
+          "en": "FPTP (First-Past-The-Post) — highest vote-getter wins."
+        }
+      },
+      {
+        "question": {
+          "hi": "भारत में मतदान की न्यूनतम आयु क्या है?",
+          "pa": "ਭਾਰਤ ਵਿੱਚ ਵੋਟ ਪਾਉਣ ਦੀ ਘੱਟੋ-ਘੱਟ ਉਮਰ ਕੀ ਹੈ?",
+          "en": "What is the minimum voting age in India?"
+        },
+        "answer": {
+          "hi": "18 वर्ष (अनुच्छेद 326; 61वाँ संशोधन 1988 ने 21 से घटाकर 18 किया)।",
+          "pa": "18 ਸਾਲ (ਧਾਰਾ 326; 61ਵੀਂ ਸੋਧ 1988 ਵੱਲੋਂ 21 ਤੋਂ ਘਟਾ ਕੇ 18)।",
+          "en": "18 years (Article 326; reduced from 21 to 18 by 61st Amendment 1988)."
+        }
+      },
+      {
+        "question": {
+          "hi": "VVPAT किस वर्ष शुरू हुआ?",
+          "pa": "VVPAT ਕਿਸ ਸਾਲ ਸ਼ੁਰੂ ਹੋਇਆ?",
+          "en": "In which year was VVPAT introduced?"
+        },
+        "answer": {
+          "hi": "2013 (नागालैंड उपचुनाव में पहली बार)।",
+          "pa": "2013 (ਨਾਗਾਲੈਂਡ ਉਪ-ਚੋਣ ਵਿੱਚ ਪਹਿਲੀ ਵਾਰ)।",
+          "en": "2013 (first used in a Nagaland by-election)."
+        }
+      },
+      {
+        "question": {
+          "hi": "MCC (Model Code of Conduct) कब लागू होती है?",
+          "pa": "MCC ਕਦੋਂ ਲਾਗੂ ਹੁੰਦੀ ਹੈ?",
+          "en": "When does the Model Code of Conduct come into effect?"
+        },
+        "answer": {
+          "hi": "चुनाव की घोषणा से लेकर परिणाम की तिथि तक।",
+          "pa": "ਚੋਣਾਂ ਦੀ ਘੋਸ਼ਣਾ ਤੋਂ ਨਤੀਜੇ ਦੀ ਮਿਤੀ ਤੱਕ।",
+          "en": "From the date of election announcement until results are declared."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "ep-q1",
+        "prompt": {
+          "hi": "भारत का चुनाव आयोग किस संवैधानिक अनुच्छेद के तहत स्थापित है?",
+          "pa": "ਭਾਰਤ ਦਾ ਚੋਣ ਆਯੋਗ ਕਿਸ ਸੰਵਿਧਾਨਕ ਧਾਰਾ ਅਧੀਨ ਸਥਾਪਿਤ ਹੈ?",
+          "en": "Under which Constitutional Article is the Election Commission of India established?"
+        },
+        "options": [
+          {
+            "hi": "Art 314",
+            "pa": "ਧਾਰਾ 314",
+            "en": "Art 314"
+          },
+          {
+            "hi": "Art 324",
+            "pa": "ਧਾਰਾ 324",
+            "en": "Art 324"
+          },
+          {
+            "hi": "Art 326",
+            "pa": "ਧਾਰਾ 326",
+            "en": "Art 326"
+          },
+          {
+            "hi": "Art 329",
+            "pa": "ਧਾਰਾ 329",
+            "en": "Art 329"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "अनुच्छेद 324 चुनाव आयोग की स्थापना करता है।",
+          "pa": "ਧਾਰਾ 324 ਚੋਣ ਆਯੋਗ ਦੀ ਸਥਾਪਨਾ ਕਰਦੀ ਹੈ।",
+          "en": "Article 324 establishes the Election Commission of India."
+        }
+      },
+      {
+        "id": "ep-q2",
+        "prompt": {
+          "hi": "भारत में EVM का उपयोग पहली बार किस वर्ष किया गया?",
+          "pa": "ਭਾਰਤ ਵਿੱਚ EVM ਦੀ ਵਰਤੋਂ ਪਹਿਲੀ ਵਾਰ ਕਿਸ ਸਾਲ ਹੋਈ?",
+          "en": "In which year was EVM first used in India?"
+        },
+        "options": [
+          {
+            "hi": "1975",
+            "pa": "1975",
+            "en": "1975"
+          },
+          {
+            "hi": "1982",
+            "pa": "1982",
+            "en": "1982"
+          },
+          {
+            "hi": "1991",
+            "pa": "1991",
+            "en": "1991"
+          },
+          {
+            "hi": "2004",
+            "pa": "2004",
+            "en": "2004"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "EVM का पहला प्रायोगिक उपयोग 1982 के केरल विधानसभा उपचुनाव में हुआ।",
+          "pa": "EVM ਦੀ ਪਹਿਲੀ ਵਾਰ ਵਰਤੋਂ 1982 ਦੀ ਕੇਰਲਾ ਵਿਧਾਨ ਸਭਾ ਉਪ-ਚੋਣ ਵਿੱਚ ਹੋਈ।",
+          "en": "EVM was first used experimentally in the 1982 Kerala assembly by-election."
+        }
+      },
+      {
+        "id": "ep-q3",
+        "prompt": {
+          "hi": "Anti-Defection Law (दल-बदल विरोध कानून) कब लागू हुआ?",
+          "pa": "ਦਲ-ਬਦਲ ਵਿਰੋਧੀ ਕਾਨੂੰਨ ਕਦੋਂ ਲਾਗੂ ਹੋਇਆ?",
+          "en": "When was the Anti-Defection Law enacted?"
+        },
+        "options": [
+          {
+            "hi": "1977",
+            "pa": "1977",
+            "en": "1977"
+          },
+          {
+            "hi": "1985 (52nd Amendment)",
+            "pa": "1985 (52ਵੀਂ ਸੋਧ)",
+            "en": "1985 (52nd Amendment)"
+          },
+          {
+            "hi": "1991",
+            "pa": "1991",
+            "en": "1991"
+          },
+          {
+            "hi": "2000",
+            "pa": "2000",
+            "en": "2000"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "52वें संवैधानिक संशोधन (1985) ने 10वीं अनुसूची जोड़कर दल-बदल विरोध कानून लागू किया।",
+          "pa": "52ਵੀਂ ਸੋਧ (1985) ਨੇ 10ਵੀਂ ਅਨੁਸੂਚੀ ਜੋੜ ਕੇ ਦਲ-ਬਦਲ ਵਿਰੋਧੀ ਕਾਨੂੰਨ ਲਾਗੂ ਕੀਤਾ।",
+          "en": "The 52nd Amendment (1985) added the 10th Schedule introducing the Anti-Defection Law."
+        }
+      },
+      {
+        "id": "ep-q4",
+        "prompt": {
+          "hi": "मतदान की आयु 21 से घटाकर 18 वर्ष करने वाला संशोधन कौन-सा था?",
+          "pa": "ਵੋਟਿੰਗ ਦੀ ਉਮਰ 21 ਤੋਂ 18 ਸਾਲ ਕਰਨ ਵਾਲੀ ਸੋਧ ਕਿਹੜੀ ਸੀ?",
+          "en": "Which amendment reduced the voting age from 21 to 18 years?"
+        },
+        "options": [
+          {
+            "hi": "44th Amendment",
+            "pa": "44ਵੀਂ ਸੋਧ",
+            "en": "44th Amendment"
+          },
+          {
+            "hi": "52nd Amendment",
+            "pa": "52ਵੀਂ ਸੋਧ",
+            "en": "52nd Amendment"
+          },
+          {
+            "hi": "61st Amendment",
+            "pa": "61ਵੀਂ ਸੋਧ",
+            "en": "61st Amendment"
+          },
+          {
+            "hi": "73rd Amendment",
+            "pa": "73ਵੀਂ ਸੋਧ",
+            "en": "73rd Amendment"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "61वें संवैधानिक संशोधन (1988) ने मतदान की आयु 21 से घटाकर 18 वर्ष की।",
+          "pa": "61ਵੀਂ ਸੋਧ (1988) ਨੇ ਵੋਟਿੰਗ ਉਮਰ 21 ਤੋਂ 18 ਸਾਲ ਕੀਤੀ।",
+          "en": "The 61st Amendment (1988) reduced the voting age from 21 to 18 years."
+        }
+      },
+      {
+        "id": "ep-q5",
+        "prompt": {
+          "hi": "Rajya Sabha के सदस्य किस प्रणाली से चुने जाते हैं?",
+          "pa": "ਰਾਜ ਸਭਾ ਦੇ ਮੈਂਬਰ ਕਿਸ ਪ੍ਰਣਾਲੀ ਨਾਲ ਚੁਣੇ ਜਾਂਦੇ ਹਨ?",
+          "en": "By what system are Rajya Sabha members elected?"
+        },
+        "options": [
+          {
+            "hi": "FPTP (First Past The Post)",
+            "pa": "FPTP",
+            "en": "FPTP (First Past The Post)"
+          },
+          {
+            "hi": "PR-STV (Proportional Representation by Single Transferable Vote)",
+            "pa": "PR-STV",
+            "en": "PR-STV (Proportional Representation by Single Transferable Vote)"
+          },
+          {
+            "hi": "Block voting",
+            "pa": "ਬਲਾਕ ਵੋਟਿੰਗ",
+            "en": "Block voting"
+          },
+          {
+            "hi": "ਸਿੱਧੇ ਜਨ-ਵੋਟ ਰਾਹੀਂ",
+            "pa": "ਸਿੱਧੇ ਜਨ-ਵੋਟ ਰਾਹੀਂ",
+            "en": "Direct popular vote"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "Rajya Sabha के सदस्य राज्य विधानसभाओं द्वारा एकल हस्तांतरणीय वोट (PR-STV) से चुने जाते हैं।",
+          "pa": "ਰਾਜ ਸਭਾ ਮੈਂਬਰ ਰਾਜ ਵਿਧਾਨ ਸਭਾਵਾਂ ਵੱਲੋਂ PR-STV ਨਾਲ ਚੁਣੇ ਜਾਂਦੇ ਹਨ।",
+          "en": "Rajya Sabha members are elected by state legislative assemblies using PR-STV."
+        }
+      },
+      {
+        "id": "ep-q6",
+        "prompt": {
+          "hi": "भारत में 'बहुदलीय व्यवस्था' का मुख्य कारण कौन-सा है?",
+          "pa": "ਭਾਰਤ ਵਿੱਚ 'ਬਹੁ-ਪਾਰਟੀ ਪ੍ਰਣਾਲੀ' ਦਾ ਮੁੱਖ ਕਾਰਨ ਕਿਹੜਾ ਹੈ?",
+          "en": "Which is the main reason for the multi-party system in India?"
+        },
+        "options": [
+          {
+            "hi": "संघीय ढाँचा और क्षेत्रीय विविधता",
+            "pa": "ਸੰਘੀ ਢਾਂਚਾ ਅਤੇ ਖੇਤਰੀ ਵਿਭਿੰਨਤਾ",
+            "en": "Federal structure and regional diversity"
+          },
+          {
+            "hi": "एकल पार्टी आदेश",
+            "pa": "ਇੱਕਲੀ ਪਾਰਟੀ ਆਦੇਸ਼",
+            "en": "Single party mandate"
+          },
+          {
+            "hi": "राज्यों की कम संख्या",
+            "pa": "ਰਾਜਾਂ ਦੀ ਘੱਟ ਗਿਣਤੀ",
+            "en": "Small number of states"
+          },
+          {
+            "hi": "EVM का उपयोग",
+            "pa": "EVM ਦੀ ਵਰਤੋਂ",
+            "en": "Use of EVM"
+          }
+        ],
+        "answerIndex": 0,
+        "explanation": {
+          "hi": "भारत की भाषाई, धार्मिक, जातीय और क्षेत्रीय विविधता तथा संघीय ढाँचा बहुदलीय व्यवस्था को बढ़ावा देता है।",
+          "pa": "ਭਾਰਤ ਦੀ ਭਾਸ਼ਾਈ, ਧਾਰਮਿਕ ਅਤੇ ਖੇਤਰੀ ਵਿਭਿੰਨਤਾ ਅਤੇ ਸੰਘੀ ਢਾਂਚਾ ਬਹੁ-ਪਾਰਟੀ ਪ੍ਰਣਾਲੀ ਨੂੰ ਹੱਲਾਸ਼ੇਰੀ ਦਿੰਦਾ ਹੈ।",
+          "en": "India's linguistic, religious, caste-based and regional diversity, combined with its federal structure, naturally supports a multi-party system."
+        }
+      },
+      {
+        "id": "ep-q7",
+        "prompt": {
+          "hi": "VVPAT किस वर्ष भारत में पहली बार प्रयोग में आया?",
+          "pa": "VVPAT ਭਾਰਤ ਵਿੱਚ ਪਹਿਲੀ ਵਾਰ ਕਿਸ ਸਾਲ ਵਰਤਿਆ ਗਿਆ?",
+          "en": "In which year was VVPAT first used in India?"
+        },
+        "options": [
+          {
+            "hi": "2007",
+            "pa": "2007",
+            "en": "2007"
+          },
+          {
+            "hi": "2010",
+            "pa": "2010",
+            "en": "2010"
+          },
+          {
+            "hi": "2013",
+            "pa": "2013",
+            "en": "2013"
+          },
+          {
+            "hi": "2014",
+            "pa": "2014",
+            "en": "2014"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "VVPAT का पहला प्रयोग 2013 के नागालैंड विधानसभा उपचुनाव में हुआ।",
+          "pa": "VVPAT ਦੀ ਪਹਿਲੀ ਵਾਰ ਵਰਤੋਂ 2013 ਦੀ ਨਾਗਾਲੈਂਡ ਵਿਧਾਨ ਸਭਾ ਉਪ-ਚੋਣ ਵਿੱਚ ਹੋਈ।",
+          "en": "VVPAT was first used in a 2013 Nagaland assembly by-election."
+        }
+      },
+      {
+        "id": "ep-q8",
+        "prompt": {
+          "hi": "ECI (भारत का चुनाव आयोग) निम्न में से कौन-सा चुनाव नहीं कराता?",
+          "pa": "ECI ਹੇਠ ਲਿਖੇ ਵਿੱਚੋਂ ਕਿਹੜੀ ਚੋਣ ਨਹੀਂ ਕਰਾਉਂਦੀ?",
+          "en": "Which of the following elections does ECI NOT conduct?"
+        },
+        "options": [
+          {
+            "hi": "Lok Sabha",
+            "pa": "ਲੋਕ ਸਭਾ",
+            "en": "Lok Sabha"
+          },
+          {
+            "hi": "State Assembly",
+            "pa": "ਵਿਧਾਨ ਸਭਾ",
+            "en": "State Assembly"
+          },
+          {
+            "hi": "Gram Panchayat",
+            "pa": "ਗ੍ਰਾਮ ਪੰਚਾਇਤ",
+            "en": "Gram Panchayat"
+          },
+          {
+            "hi": "President of India",
+            "pa": "ਭਾਰਤ ਦੇ ਰਾਸ਼ਟਰਪਤੀ",
+            "en": "President of India"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "ग्राम पंचायत चुनाव राज्य चुनाव आयोग (State Election Commission) द्वारा कराए जाते हैं, ECI द्वारा नहीं।",
+          "pa": "ਗ੍ਰਾਮ ਪੰਚਾਇਤ ਚੋਣਾਂ ਰਾਜ ਚੋਣ ਆਯੋਗ ਵੱਲੋਂ ਕਰਾਈਆਂ ਜਾਂਦੀਆਂ ਹਨ, ECI ਵੱਲੋਂ ਨਹੀਂ।",
+          "en": "Gram Panchayat elections are conducted by State Election Commissions, not by the ECI."
+        }
+      },
+      {
+        "id": "ep-q9",
+        "prompt": {
+          "hi": "दल-बदल विरोध कानून के तहत सदस्य को सदन की सदस्यता से कब वंचित किया जाता है?",
+          "pa": "ਦਲ-ਬਦਲ ਵਿਰੋਧੀ ਕਾਨੂੰਨ ਅਧੀਨ ਮੈਂਬਰ ਨੂੰ ਕਦੋਂ ਸੀਟ ਤੋਂ ਵਾਂਝਾ ਕੀਤਾ ਜਾਂਦਾ ਹੈ?",
+          "en": "Under Anti-Defection Law, when is a member disqualified from the House?"
+        },
+        "options": [
+          {
+            "hi": "जब वे मतदान में अनुपस्थित रहें",
+            "pa": "ਜਦੋਂ ਉਹ ਵੋਟਿੰਗ ਵਿੱਚ ਗੈਰ-ਹਾਜ਼ਰ ਹੋਣ",
+            "en": "When absent during voting"
+          },
+          {
+            "hi": "जब वे दूसरे दल में शामिल हों या पार्टी व्हिप का उल्लंघन करें",
+            "pa": "ਜਦੋਂ ਉਹ ਕਿਸੇ ਹੋਰ ਪਾਰਟੀ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਣ ਜਾਂ ਵ੍ਹਿਪ ਦੀ ਉਲੰਘਣਾ ਕਰਨ",
+            "en": "When they join another party or violate party whip"
+          },
+          {
+            "hi": "जब वे संसद में नहीं जाते",
+            "pa": "ਜਦੋਂ ਉਹ ਸੰਸਦ ਵਿੱਚ ਨਹੀਂ ਜਾਂਦੇ",
+            "en": "When they don't attend Parliament"
+          },
+          {
+            "hi": "जब वे 2 सत्र छोड़ दें",
+            "pa": "ਜਦੋਂ ਉਹ 2 ਸੈਸ਼ਨ ਖੁੰਝਾ ਦੇਣ",
+            "en": "When they miss 2 sessions"
+          }
+        ],
+        "answerIndex": 1,
+        "explanation": {
+          "hi": "10वीं अनुसूची के तहत सदस्य को अयोग्य ठहराया जाता है यदि वे दल छोड़ें, दूसरे दल में शामिल हों या पार्टी व्हिप का उल्लंघन करें।",
+          "pa": "10ਵੀਂ ਅਨੁਸੂਚੀ ਅਧੀਨ ਮੈਂਬਰ ਨੂੰ ਅਯੋਗ ਕੀਤਾ ਜਾਂਦਾ ਹੈ ਜੇ ਉਹ ਪਾਰਟੀ ਛੱਡੇ ਜਾਂ ਵ੍ਹਿਪ ਦੀ ਉਲੰਘਣਾ ਕਰੇ।",
+          "en": "Under the 10th Schedule, a member is disqualified if they voluntarily give up party membership or vote against the party whip (without condonment)."
+        }
+      },
+      {
+        "id": "ep-q10",
+        "prompt": {
+          "hi": "चुनाव आयोग में मुख्य चुनाव आयुक्त (CEC) की नियुक्ति कौन करता है?",
+          "pa": "ਚੋਣ ਆਯੋਗ ਵਿੱਚ ਮੁੱਖ ਚੋਣ ਕਮਿਸ਼ਨਰ (CEC) ਦੀ ਨਿਯੁਕਤੀ ਕੌਣ ਕਰਦਾ ਹੈ?",
+          "en": "Who appoints the Chief Election Commissioner (CEC) of India?"
+        },
+        "options": [
+          {
+            "hi": "Prime Minister",
+            "pa": "ਪ੍ਰਧਾਨ ਮੰਤਰੀ",
+            "en": "Prime Minister"
+          },
+          {
+            "hi": "Parliament",
+            "pa": "ਸੰਸਦ",
+            "en": "Parliament"
+          },
+          {
+            "hi": "President of India",
+            "pa": "ਭਾਰਤ ਦੇ ਰਾਸ਼ਟਰਪਤੀ",
+            "en": "President of India"
+          },
+          {
+            "hi": "Supreme Court",
+            "pa": "ਸੁਪਰੀਮ ਕੋਰਟ",
+            "en": "Supreme Court"
+          }
+        ],
+        "answerIndex": 2,
+        "explanation": {
+          "hi": "CEC की नियुक्ति भारत के राष्ट्रपति द्वारा की जाती है। (2023 के अधिनियम के बाद चयन समिति में PM, Leader of Opposition और एक Cabinet Minister शामिल हैं।)",
+          "pa": "CEC ਦੀ ਨਿਯੁਕਤੀ ਭਾਰਤ ਦੇ ਰਾਸ਼ਟਰਪਤੀ ਵੱਲੋਂ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+          "en": "The CEC is appointed by the President of India (on advice of a 3-member selection committee under the 2023 Act: PM, Leader of Opposition, Cabinet Minister)."
+        }
+      }
+    ],
+    "sources": [
+      {
+        "title": "Punjab Master Cadre SST Polity Syllabus — ERB Punjab 2022",
+        "url": "https://educationrecruitmentboard.com/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf"
+      },
+      {
+        "title": "Election Commission of India — Official Website",
+        "url": "https://www.eci.gov.in/"
+      }
+    ],
+    "videos": [],
+    "documents": [],
+    "level": "Foundation / concept preparation"
+  },
+  {
+    "id": "sst-guptas-harsha",
+    "subject": "History",
+    "unit": "History of India",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "गुप्त साम्राज्य और हर्षवर्धन",
+      "pa": "ਗੁਪਤ ਸਾਮਰਾਜ ਅਤੇ ਹਰਸ਼ਵਰਧਨ",
+      "en": "Gupta Empire and Harsha Vardhana"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 6 – Our Pasts I (Kingdoms, Kings and an Early Republic; New Empires and Kingdoms)",
+        "url": "https://ncert.nic.in/textbook/pdf/foss106.pdf",
+        "note": "Standard school reference; content is author-generated for Master Cadre practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "गुप्त वंश की स्थापना और प्रमुख शासक",
+          "pa": "ਗੁਪਤ ਵੰਸ਼ ਦੀ ਸਥਾਪਨਾ ਅਤੇ ਮੁੱਖ ਸ਼ਾਸਕ",
+          "en": "Foundation and Key Rulers of the Gupta Dynasty"
+        },
+        "text": {
+          "hi": "गुप्त साम्राज्य की स्थापना श्रीगुप्त ने लगभग 240 ई. में की। चंद्रगुप्त I (320–335 ई.) ने 'महाराजाधिराज' की उपाधि धारण की और प्रयाग प्रशस्ति की नींव रखी। समुद्रगुप्त (335–380 ई.) को 'भारत का नेपोलियन' कहा जाता है; इनकी विजय-नीति का विवरण प्रयाग प्रशस्ति (हरिषेण द्वारा रचित) में मिलता है। उन्होंने 'अश्वमेध यज्ञ' किया और चक्रवर्ती सम्राट बने।\n\nचंद्रगुप्त II (विक्रमादित्य, 380–415 ई.) ने शकों पर विजय प्राप्त की और 'विक्रमादित्य' की उपाधि ली। उनके दरबार में नवरत्न थे जिनमें कालिदास, आर्यभट्ट (खगोल), वराहमिहिर (ज्योतिष) और धन्वंतरि (आयुर्वेद) शामिल थे। चीनी यात्री फाह्यान (399–414 ई.) ने इनके शासन में भारत की यात्रा की।",
+          "pa": "ਗੁਪਤ ਸਾਮਰਾਜ ਦੀ ਸਥਾਪਨਾ ਸ੍ਰੀਗੁਪਤ ਨੇ ਲਗਭਗ 240 ਈ. ਵਿੱਚ ਕੀਤੀ। ਚੰਦਰਗੁਪਤ I ਨੇ 'ਮਹਾਰਾਜਾਧਿਰਾਜ' ਦੀ ਉਪਾਧੀ ਲਈ। ਸਮੁਦਰਗੁਪਤ ਨੂੰ 'ਭਾਰਤ ਦਾ ਨੇਪੋਲੀਅਨ' ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਚੰਦਰਗੁਪਤ II (ਵਿਕ੍ਰਮਾਦਿੱਤਯ) ਦੇ ਦਰਬਾਰ ਵਿੱਚ ਨੌਰਤਨ ਸਨ — ਕਾਲਿਦਾਸ, ਆਰਿਆਭੱਟ ਆਦਿ। ਫਾਹਿਆਨ ਨੇ ਇਸੇ ਕਾਲ ਵਿੱਚ ਭਾਰਤ ਦੀ ਯਾਤਰਾ ਕੀਤੀ।",
+          "en": "The Gupta dynasty was founded by Sri Gupta (~240 CE). Chandragupta I (320–335 CE) assumed the title Maharajadhiraja. Samudragupta (335–380 CE) is called 'Napoleon of India'; his conquests are recorded in the Allahabad Pillar Inscription (Prayag Prashasti) composed by Harishena.\n\nChandragupta II (Vikramaditya, 380–415 CE) defeated the Shakas and took the title Vikramaditya. His court included the Navaratnas: Kalidasa (literature), Aryabhata (astronomy), Varahamihira (astrology), Dhanvantari (medicine). The Chinese pilgrim Fa-Hien visited India during his reign (399–414 CE)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "गुप्त काल की उपलब्धियाँ: स्वर्ण युग",
+          "pa": "ਗੁਪਤ ਕਾਲ ਦੀਆਂ ਪ੍ਰਾਪਤੀਆਂ: ਸੁਨਹਿਰੀ ਯੁੱਗ",
+          "en": "Achievements of the Gupta Age: Golden Age"
+        },
+        "text": {
+          "hi": "गुप्त काल को 'स्वर्ण युग' कहते हैं क्योंकि इस काल में कला, साहित्य, विज्ञान और व्यापार सभी समृद्ध हुए:\n\n**साहित्य**: कालिदास की रचनाएँ — मेघदूत, अभिज्ञानशाकुंतलम, रघुवंश। पंचतंत्र (विष्णुशर्मा), कामसूत्र (वात्स्यायन)।\n\n**विज्ञान**: आर्यभट्ट ने शून्य, दशमलव प्रणाली, पृथ्वी की परिधि और सूर्यग्रहण का कारण बताया (आर्यभटीय, 499 ई.)। वराहमिहिर की बृहत्संहिता।\n\n**कला-स्थापत्य**: अजंता की चित्रकारी, गुप्तकालीन मंदिर (देवगढ़), सोने और चाँदी के सिक्के।\n\n**व्यापार**: रोम, दक्षिण-पूर्व एशिया से व्यापार; नालंदा और उच्च शिक्षा केंद्र।\n\n**गुप्त साम्राज्य का पतन**: स्कंदगुप्त (455–467 ई.) के बाद हूण आक्रमण और आंतरिक कमजोरी से साम्राज्य बिखर गया।",
+          "pa": "ਗੁਪਤ ਕਾਲ ਨੂੰ 'ਸੁਨਹਿਰੀ ਯੁੱਗ' ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਆਰਿਆਭੱਟ ਨੇ ਸ਼ੂਨਯ ਅਤੇ ਦਸ਼ਮਲਵ ਪ੍ਰਣਾਲੀ ਦਿੱਤੀ। ਕਾਲਿਦਾਸ ਦੀਆਂ ਰਚਨਾਵਾਂ ਮਸ਼ਹੂਰ ਹਨ। ਅਜੰਤਾ ਦੀਆਂ ਤਸਵੀਰਾਂ ਇਸੇ ਕਾਲ ਦੀਆਂ ਹਨ। ਹੂਣਾਂ ਦੇ ਹਮਲੇ ਅਤੇ ਅੰਦਰੂਨੀ ਕਮਜ਼ੋਰੀ ਨਾਲ ਸਾਮਰਾਜ ਖਤਮ ਹੋਇਆ।",
+          "en": "The Gupta period is termed the 'Golden Age' of India:\n\n**Literature**: Kalidasa — Meghaduta, Abhijñānaśākuntalam, Raghuvamsha. Panchatantra (Vishnusharma), Kamasutra (Vatsyayana).\n\n**Science**: Aryabhata — zero, decimal system, Earth's circumference, explanation of solar/lunar eclipses (Aryabhatiya, 499 CE). Varahamihira's Brihatsamhita.\n\n**Art & Architecture**: Ajanta paintings, Gupta temples (Deogarh), gold and silver coins.\n\n**Trade**: Commerce with Rome and South-East Asia; Nalanda as a centre of learning.\n\n**Decline**: After Skandagupta (455–467 CE), Huna invasions and internal fragmentation ended the empire."
+        }
+      },
+      {
+        "heading": {
+          "hi": "हर्षवर्धन (606–647 ई.)",
+          "pa": "ਹਰਸ਼ਵਰਧਨ (606–647 ਈ.)",
+          "en": "Harsha Vardhana (606–647 CE)"
+        },
+        "text": {
+          "hi": "हर्षवर्धन पुष्यभूति वंश (थानेश्वर/कन्नौज) के शासक थे। वे सम्राट प्रभाकरवर्धन के पुत्र थे और मात्र 16 वर्ष की आयु में गद्दी पर बैठे। उन्होंने उत्तर भारत के अधिकांश भाग को एकजुट किया किंतु दक्षिण में नर्मदा के किनारे चालुक्य राजा पुलकेशी II ने उन्हें रोक दिया।\n\n**बाणभट्ट** ने हर्षचरित और कादम्बरी में हर्ष का वर्णन किया। हर्ष स्वयं कवि थे — नागानंद, रत्नावली, प्रियदर्शिका उनकी रचनाएँ हैं।\n\nचीनी यात्री **ह्वेनसांग** (युआन ज्वांग, 629–645 ई.) ने हर्ष के दरबार में समय बिताया और 'सी-यू-की' में विस्तृत विवरण दिया। प्रयाग (इलाहाबाद) में हर्ष ने हर पाँच वर्ष में महामोक्षपरिषद (महाकुंभ) का आयोजन किया जहाँ वे अपनी संपत्ति दान करते थे।\n\nहर्ष की मृत्यु (647 ई.) के बाद कोई उत्तराधिकारी नहीं था और उनका साम्राज्य विखंडित हो गया।",
+          "pa": "ਹਰਸ਼ਵਰਧਨ ਪੁਸ਼ਯਭੂਤੀ ਵੰਸ਼ (ਥਾਨੇਸ਼ਵਰ/ਕਨੌਜ) ਦੇ ਸ਼ਾਸਕ ਸਨ। ਉਨ੍ਹਾਂ ਨੇ ਉੱਤਰ ਭਾਰਤ ਨੂੰ ਇਕੱਠਾ ਕੀਤਾ ਪਰ ਦੱਖਣ ਵਿੱਚ ਪੁਲਕੇਸ਼ੀ II ਨੇ ਰੋਕਿਆ। ਬਾਣਭੱਟ ਨੇ ਹਰਸ਼ਚਰਿਤ ਲਿਖੀ। ਹਵੇਨਸਾਂਗ ਨੇ ਹਰਸ਼ ਦੇ ਰਾਜ ਵਿੱਚ ਭਾਰਤ ਦੀ ਯਾਤਰਾ ਕੀਤੀ।",
+          "en": "Harsha Vardhana of the Pushyabhuti dynasty (Thaneshwar/Kannauj) became king at 16. He unified much of North India but was stopped at the Narmada by Chalukya king Pulakesi II.\n\n**Banabhatta** described Harsha in Harshacharita and Kadambari. Harsha himself wrote Nagananda, Ratnavali and Priyadarshika.\n\nChinese pilgrim **Xuanzang (Hiuen Tsang)** (629–645 CE) spent time at Harsha's court and described his empire in detail in Si-Yu-Ki. Harsha organised Mahamoksha Parishad at Prayag every five years, donating all his wealth.\n\nAfter Harsha's death (647 CE) his empire fragmented with no successor."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "गुप्त साम्राज्य (240–550 ई.) भारत का स्वर्ण युग था। समुद्रगुप्त महान विजेता; चंद्रगुप्त II (विक्रमादित्य) के काल में कालिदास, आर्यभट्ट, फाह्यान। हर्षवर्धन (606–647 ई.) उत्तर भारत के अंतिम महान हिंदू सम्राट; ह्वेनसांग का विवरण; पुलकेशी II ने नर्मदा पर रोका।",
+      "pa": "ਗੁਪਤ ਸਾਮਰਾਜ (240–550 ਈ.) ਭਾਰਤ ਦਾ ਸੁਨਹਿਰੀ ਯੁੱਗ। ਸਮੁਦਰਗੁਪਤ = ਭਾਰਤ ਦਾ ਨੇਪੋਲੀਅਨ। ਚੰਦਰਗੁਪਤ II = ਵਿਕ੍ਰਮਾਦਿੱਤਯ। ਹਰਸ਼ਵਰਧਨ (606–647 ਈ.) ਉੱਤਰ ਭਾਰਤ ਦੇ ਆਖਰੀ ਮਹਾਨ ਸ਼ਾਸਕ।",
+      "en": "Gupta Empire (240–550 CE) = India's Golden Age. Samudragupta = Napoleon of India. Chandragupta II (Vikramaditya): Kalidasa, Aryabhata, Fa-Hien. Harsha Vardhana (606–647 CE): last great Hindu emperor of North India; Xuanzang's account; stopped at Narmada by Pulakesi II."
+    },
+    "keyPoints": [
+      {
+        "hi": "समुद्रगुप्त = भारत का नेपोलियन; प्रयाग प्रशस्ति — हरिषेण कृत",
+        "pa": "ਸਮੁਦਰਗੁਪਤ = ਭਾਰਤ ਦਾ ਨੇਪੋਲੀਅਨ",
+        "en": "Samudragupta = Napoleon of India; Prayag Prashasti by Harishena"
+      },
+      {
+        "hi": "चंद्रगुप्त II = विक्रमादित्य; नवरत्न; फाह्यान की यात्रा",
+        "pa": "ਚੰਦਰਗੁਪਤ II = ਵਿਕ੍ਰਮਾਦਿੱਤਯ; ਨੌਰਤਨ; ਫਾਹਿਆਨ",
+        "en": "Chandragupta II = Vikramaditya; Navaratnas; Fa-Hien's visit"
+      },
+      {
+        "hi": "आर्यभट्ट — शून्य, दशमलव, आर्यभटीय (499 ई.)",
+        "pa": "ਆਰਿਆਭੱਟ — ਸ਼ੂਨਯ, ਦਸ਼ਮਲਵ, ਆਰਿਆਭਟੀਯ (499 ਈ.)",
+        "en": "Aryabhata — zero, decimal system, Aryabhatiya (499 CE)"
+      },
+      {
+        "hi": "हर्षवर्धन — बाणभट्ट का हर्षचरित; ह्वेनसांग; पुलकेशी II ने नर्मदा पर रोका",
+        "pa": "ਹਰਸ਼ਵਰਧਨ — ਬਾਣਭੱਟ; ਹਵੇਨਸਾਂਗ; ਪੁਲਕੇਸ਼ੀ II",
+        "en": "Harsha — Banabhatta's Harshacharita; Xuanzang; stopped by Pulakesi II at Narmada"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "समुद्रगुप्त को किसने 'भारत का नेपोलियन' कहा?",
+          "pa": "ਸਮੁਦਰਗੁਪਤ ਨੂੰ 'ਭਾਰਤ ਦਾ ਨੇਪੋਲੀਅਨ' ਕਿਸਨੇ ਕਿਹਾ?",
+          "en": "Who called Samudragupta 'Napoleon of India'?"
+        },
+        "back": {
+          "hi": "ਬ੍ਰਿਟਿਸ਼ इतिहासकार V.A. स्मिथ",
+          "pa": "ਬ੍ਰਿਟਿਸ਼ ਇਤਿਹਾਸਕਾਰ V.A. ਸਮਿੱਥ",
+          "en": "British historian V.A. Smith"
+        }
+      },
+      {
+        "front": {
+          "hi": "प्रयाग प्रशस्ति किसने लिखी?",
+          "pa": "ਪ੍ਰਯਾਗ ਪ੍ਰਸ਼ਸਤੀ ਕਿਸਨੇ ਲਿਖੀ?",
+          "en": "Who composed the Prayag Prashasti?"
+        },
+        "back": {
+          "hi": "हरिषेण (समुद्रगुप्त का दरबारी कवि)",
+          "pa": "ਹਰਿਸ਼ੇਣ (ਸਮੁਦਰਗੁਪਤ ਦਾ ਦਰਬਾਰੀ ਕਵੀ)",
+          "en": "Harishena (court poet of Samudragupta)"
+        }
+      },
+      {
+        "front": {
+          "hi": "फाह्यान ने किस गुप्त शासक के काल में भारत की यात्रा की?",
+          "pa": "ਫਾਹਿਆਨ ਨੇ ਕਿਸ ਗੁਪਤ ਸ਼ਾਸਕ ਦੇ ਕਾਲ ਵਿੱਚ ਭਾਰਤ ਦੀ ਯਾਤਰਾ ਕੀਤੀ?",
+          "en": "During which Gupta ruler's reign did Fa-Hien visit India?"
+        },
+        "back": {
+          "hi": "चंद्रगुप्त II (विक्रमादित्य), 399–414 ई.",
+          "pa": "ਚੰਦਰਗੁਪਤ II (ਵਿਕ੍ਰਮਾਦਿੱਤਯ), 399–414 ਈ.",
+          "en": "Chandragupta II (Vikramaditya), 399–414 CE"
+        }
+      },
+      {
+        "front": {
+          "hi": "आर्यभट्ट की प्रमुख रचना कौन सी है?",
+          "pa": "ਆਰਿਆਭੱਟ ਦੀ ਮੁੱਖ ਰਚਨਾ ਕਿਹੜੀ ਹੈ?",
+          "en": "What is Aryabhata's major work?"
+        },
+        "back": {
+          "hi": "आर्यभटीय (499 ई.) — गणित और खगोल पर",
+          "pa": "ਆਰਿਆਭਟੀਯ (499 ਈ.) — ਗਣਿਤ ਅਤੇ ਖਗੋਲ ਬਾਰੇ",
+          "en": "Aryabhatiya (499 CE) — mathematics and astronomy"
+        }
+      },
+      {
+        "front": {
+          "hi": "हर्षवर्धन को किस चालुक्य राजा ने रोका?",
+          "pa": "ਹਰਸ਼ਵਰਧਨ ਨੂੰ ਕਿਸ ਚਾਲੁਕਯ ਰਾਜੇ ਨੇ ਰੋਕਿਆ?",
+          "en": "Which Chalukya king stopped Harsha Vardhana?"
+        },
+        "back": {
+          "hi": "ਪੁਲਕੇਸ਼ੀ II, ਨਰਮਦਾ ਦਰਿਆ 'ਤੇ",
+          "pa": "ਪੁਲਕੇਸ਼ੀ II, ਨਰਮਦਾ ਦਰਿਆ 'ਤੇ",
+          "en": "Pulakesi II, at the Narmada river"
+        }
+      },
+      {
+        "front": {
+          "hi": "ह्वेनसांग किसके दरबार में आया और उसकी पुस्तक क्या है?",
+          "pa": "ਹਵੇਨਸਾਂਗ ਕਿਸ ਦੇ ਦਰਬਾਰ ਵਿੱਚ ਆਇਆ ਅਤੇ ਉਸਦੀ ਕਿਤਾਬ?",
+          "en": "Xuanzang visited whose court and wrote which book?"
+        },
+        "back": {
+          "hi": "हर्षवर्धन; पुस्तक — सी-यू-की (Si-Yu-Ki)",
+          "pa": "ਹਰਸ਼ਵਰਧਨ; ਕਿਤਾਬ — ਸੀ-ਯੂ-ਕੀ (Si-Yu-Ki)",
+          "en": "Harsha Vardhana; book — Si-Yu-Ki (Records of the Western World)"
+        }
+      },
+      {
+        "front": {
+          "hi": "बाणभट्ट ने हर्ष के बारे में कौन सी दो रचनाएँ लिखीं?",
+          "pa": "ਬਾਣਭੱਟ ਨੇ ਹਰਸ਼ ਬਾਰੇ ਕਿਹੜੀਆਂ ਦੋ ਰਚਨਾਵਾਂ ਲਿਖੀਆਂ?",
+          "en": "Name two works of Banabhatta about Harsha."
+        },
+        "back": {
+          "hi": "हर्षचरित और कादम्बरी",
+          "pa": "ਹਰਸ਼ਚਰਿਤ ਅਤੇ ਕਾਦੰਬਰੀ",
+          "en": "Harshacharita and Kadambari"
+        }
+      },
+      {
+        "front": {
+          "hi": "गुप्त साम्राज्य का पतन किस कारण हुआ?",
+          "pa": "ਗੁਪਤ ਸਾਮਰਾਜ ਦਾ ਪਤਨ ਕਿਉਂ ਹੋਇਆ?",
+          "en": "What caused the decline of the Gupta Empire?"
+        },
+        "back": {
+          "hi": "हूण आक्रमण + उत्तराधिकार संघर्ष + आंतरिक विखंडन (स्कंदगुप्त के बाद)",
+          "pa": "ਹੂਣਾਂ ਦੇ ਹਮਲੇ + ਉੱਤਰਾਧਿਕਾਰ ਸੰਘਰਸ਼ + ਅੰਦਰੂਨੀ ਵਿਭਾਜਨ",
+          "en": "Huna invasions + succession struggles + internal fragmentation (after Skandagupta)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-guptas-q1",
+        "text": {
+          "hi": "समुद्रगुप्त को किसने 'भारत का नेपोलियन' कहा?",
+          "pa": "ਸਮੁਦਰਗੁਪਤ ਨੂੰ 'ਭਾਰਤ ਦਾ ਨੇਪੋਲੀਅਨ' ਕਿਸਨੇ ਕਿਹਾ?",
+          "en": "Who called Samudragupta the 'Napoleon of India'?"
+        },
+        "options": {
+          "hi": [
+            "V.A. स्मिथ",
+            "R.C. मजूमदार",
+            "A.L. बाशम",
+            "ह्वेनसांग"
+          ],
+          "pa": [
+            "V.A. ਸਮਿੱਥ",
+            "R.C. ਮਜੂਮਦਾਰ",
+            "A.L. ਬਾਸ਼ਮ",
+            "ਹਵੇਨਸਾਂਗ"
+          ],
+          "en": [
+            "V.A. Smith",
+            "R.C. Majumdar",
+            "A.L. Basham",
+            "Xuanzang"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "ब्रिटिश इतिहासकार V.A. स्मिथ ने समुद्रगुप्त की विजय नीति की तुलना नेपोलियन से की।",
+          "en": "British historian V.A. Smith compared Samudragupta's military conquests with Napoleon."
+        }
+      },
+      {
+        "id": "sst-guptas-q2",
+        "text": {
+          "hi": "प्रयाग प्रशस्ति किसने रची, और यह किससे संबंधित है?",
+          "pa": "ਪ੍ਰਯਾਗ ਪ੍ਰਸ਼ਸਤੀ ਕਿਸਨੇ ਲਿਖੀ?",
+          "en": "Who composed the Prayag Prashasti, and for whom?"
+        },
+        "options": {
+          "hi": [
+            "बाणभट्ट — हर्षवर्धन",
+            "हरिषेण — समुद्रगुप्त",
+            "कालिदास — चंद्रगुप्त II",
+            "वाक्पति — यशोवर्मन"
+          ],
+          "pa": [
+            "ਬਾਣਭੱਟ — ਹਰਸ਼ਵਰਧਨ",
+            "ਹਰਿਸ਼ੇਣ — ਸਮੁਦਰਗੁਪਤ",
+            "ਕਾਲਿਦਾਸ — ਚੰਦਰਗੁਪਤ II",
+            "ਵਾਕਪਤੀ — ਯਸ਼ੋਵਰਮਨ"
+          ],
+          "en": [
+            "Banabhatta — Harsha Vardhana",
+            "Harishena — Samudragupta",
+            "Kalidasa — Chandragupta II",
+            "Vakpati — Yashovarman"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "प्रयाग प्रशस्ति हरिषेण द्वारा समुद्रगुप्त के लिए रची गई एक प्रशस्तिकाव्य है।",
+          "en": "Prayag Prashasti is a eulogistic poem by Harishena, court poet of Samudragupta."
+        }
+      },
+      {
+        "id": "sst-guptas-q3",
+        "text": {
+          "hi": "आर्यभट्ट ने कब आर्यभटीय की रचना की?",
+          "pa": "ਆਰਿਆਭੱਟ ਨੇ ਆਰਿਆਭਟੀਯ ਕਦੋਂ ਲਿਖੀ?",
+          "en": "When did Aryabhata write the Aryabhatiya?"
+        },
+        "options": {
+          "hi": [
+            "320 ई.",
+            "399 ई.",
+            "499 ई.",
+            "550 ई."
+          ],
+          "pa": [
+            "320 ਈ.",
+            "399 ਈ.",
+            "499 ਈ.",
+            "550 ਈ."
+          ],
+          "en": [
+            "320 CE",
+            "399 CE",
+            "499 CE",
+            "550 CE"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "आर्यभट्ट ने 499 ई. में आर्यभटीय की रचना की। इसमें शून्य, दशमलव, पृथ्वी का परिक्रमण और सूर्यग्रहण का उल्लेख है।",
+          "en": "Aryabhata composed the Aryabhatiya in 499 CE, covering zero, decimal system, Earth's rotation, and eclipses."
+        }
+      },
+      {
+        "id": "sst-guptas-q4",
+        "text": {
+          "hi": "हर्षवर्धन की मृत्यु के समय उनकी आयु कितनी थी और वे कब तक शासक रहे?",
+          "pa": "ਹਰਸ਼ਵਰਧਨ ਕਦੋਂ ਤੱਕ ਸ਼ਾਸਕ ਰਹੇ?",
+          "en": "When did Harsha Vardhana rule India?"
+        },
+        "options": {
+          "hi": [
+            "540–606 ई.",
+            "606–647 ई.",
+            "647–700 ई.",
+            "580–647 ई."
+          ],
+          "pa": [
+            "540–606 ਈ.",
+            "606–647 ਈ.",
+            "647–700 ਈ.",
+            "580–647 ਈ."
+          ],
+          "en": [
+            "540–606 CE",
+            "606–647 CE",
+            "647–700 CE",
+            "580–647 CE"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "हर्षवर्धन ने 606 से 647 ई. तक शासन किया। उनकी मृत्यु 647 ई. में हुई।",
+          "en": "Harsha Vardhana ruled from 606 to 647 CE. He became king at age 16."
+        }
+      },
+      {
+        "id": "sst-guptas-q5",
+        "text": {
+          "hi": "किस चीनी यात्री ने गुप्त काल में भारत की यात्रा की?",
+          "pa": "ਕਿਸ ਚੀਨੀ ਯਾਤਰੀ ਨੇ ਗੁਪਤ ਕਾਲ ਵਿੱਚ ਭਾਰਤ ਦੀ ਯਾਤਰਾ ਕੀਤੀ?",
+          "en": "Which Chinese traveller visited India during the Gupta period?"
+        },
+        "options": {
+          "hi": [
+            "ह्वेनसांग",
+            "फाह्यान",
+            "इत्सिंग",
+            "मार्को पोलो"
+          ],
+          "pa": [
+            "ਹਵੇਨਸਾਂਗ",
+            "ਫਾਹਿਆਨ",
+            "ਇਤਸਿੰਗ",
+            "ਮਾਰਕੋ ਪੋਲੋ"
+          ],
+          "en": [
+            "Xuanzang",
+            "Fa-Hien",
+            "Yijing",
+            "Marco Polo"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "फाह्यान ने चंद्रगुप्त II के शासनकाल (399–414 ई.) में भारत की यात्रा की। ह्वेनसांग हर्षवर्धन के काल में आए।",
+          "en": "Fa-Hien visited India during Chandragupta II's reign (399–414 CE). Xuanzang came during Harsha's reign."
+        }
+      },
+      {
+        "id": "sst-guptas-q6",
+        "text": {
+          "hi": "किस गुप्त शासक ने शकों को पराजित कर 'विक्रमादित्य' की उपाधि धारण की?",
+          "pa": "ਕਿਸ ਗੁਪਤ ਸ਼ਾਸਕ ਨੇ ਸ਼ਕਾਂ ਨੂੰ ਹਰਾ ਕੇ 'ਵਿਕ੍ਰਮਾਦਿੱਤਯ' ਦੀ ਉਪਾਧੀ ਲਈ?",
+          "en": "Which Gupta ruler defeated the Shakas and took the title Vikramaditya?"
+        },
+        "options": {
+          "hi": [
+            "चंद्रगुप्त I",
+            "समुद्रगुप्त",
+            "चंद्रगुप्त II",
+            "स्कंदगुप्त"
+          ],
+          "pa": [
+            "ਚੰਦਰਗੁਪਤ I",
+            "ਸਮੁਦਰਗੁਪਤ",
+            "ਚੰਦਰਗੁਪਤ II",
+            "ਸਕੰਦਗੁਪਤ"
+          ],
+          "en": [
+            "Chandragupta I",
+            "Samudragupta",
+            "Chandragupta II",
+            "Skandagupta"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "चंद्रगुप्त II ने पश्चिमी शकों को पराजित किया और विक्रमादित्य की उपाधि धारण की।",
+          "en": "Chandragupta II defeated the Western Shakas and assumed the title Vikramaditya."
+        }
+      },
+      {
+        "id": "sst-guptas-q7",
+        "text": {
+          "hi": "गुप्त काल में 'अजंता की चित्रकारी' किस धर्म से संबंधित है?",
+          "pa": "ਗੁਪਤ ਕਾਲ ਵਿੱਚ 'ਅਜੰਤਾ ਦੀਆਂ ਤਸਵੀਰਾਂ' ਕਿਸ ਧਰਮ ਨਾਲ ਸੰਬੰਧਿਤ ਹਨ?",
+          "en": "The Ajanta paintings from the Gupta period are primarily related to which religion?"
+        },
+        "options": {
+          "hi": [
+            "हिंदू धर्म",
+            "बौद्ध धर्म",
+            "जैन धर्म",
+            "ब्राह्मण धर्म"
+          ],
+          "pa": [
+            "ਹਿੰਦੂ ਧਰਮ",
+            "ਬੌਧ ਧਰਮ",
+            "ਜੈਨ ਧਰਮ",
+            "ਬ੍ਰਾਹਮਣ ਧਰਮ"
+          ],
+          "en": [
+            "Hinduism",
+            "Buddhism",
+            "Jainism",
+            "Brahmanism"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "अजंता की गुफाओं और चित्रकारी में बुद्ध के जीवन (जातक कथाएँ) दर्शाए गए हैं; ये बौद्ध कला के श्रेष्ठ उदाहरण हैं।",
+          "en": "Ajanta cave paintings depict Jataka stories (Buddha's previous lives) and are masterpieces of Buddhist art."
+        }
+      },
+      {
+        "id": "sst-guptas-q8",
+        "text": {
+          "hi": "हर्षवर्धन ने प्रयाग में हर पाँच वर्ष में कौन सा आयोजन किया?",
+          "pa": "ਹਰਸ਼ਵਰਧਨ ਨੇ ਪ੍ਰਯਾਗ ਵਿੱਚ ਕੀ ਆਯੋਜਿਤ ਕੀਤਾ?",
+          "en": "What assembly did Harsha organise at Prayag every five years?"
+        },
+        "options": {
+          "hi": [
+            "महाकुंभ",
+            "महामोक्षपरिषद",
+            "धर्मसभा",
+            "राजसूय यज्ञ"
+          ],
+          "pa": [
+            "ਮਹਾਕੁੰਭ",
+            "ਮਹਾਮੋਕਸ਼ਪਰਿਸ਼ਦ",
+            "ਧਰਮਸਭਾ",
+            "ਰਾਜਸੂਯ ਯੱਗ"
+          ],
+          "en": [
+            "Mahakumbha",
+            "Mahamoksha Parishad",
+            "Dharmasabha",
+            "Rajasuya Yajna"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "हर्ष ने हर पाँच वर्ष में प्रयाग में महामोक्षपरिषद का आयोजन किया और अपनी समस्त संपत्ति दान दी।",
+          "en": "Harsha organised the Mahamoksha Parishad (great moksha assembly) at Prayag every five years and donated all his wealth."
+        }
+      },
+      {
+        "id": "sst-guptas-q9",
+        "text": {
+          "hi": "चंद्रगुप्त I ने कौन सी उपाधि धारण की?",
+          "pa": "ਚੰਦਰਗੁਪਤ I ਨੇ ਕਿਹੜੀ ਉਪਾਧੀ ਲਈ?",
+          "en": "What title did Chandragupta I assume?"
+        },
+        "options": {
+          "hi": [
+            "राजाधिराज",
+            "महाराजाधिराज",
+            "सम्राट",
+            "चक्रवर्ती"
+          ],
+          "pa": [
+            "ਰਾਜਾਧਿਰਾਜ",
+            "ਮਹਾਰਾਜਾਧਿਰਾਜ",
+            "ਸਮਰਾਟ",
+            "ਚੱਕਰਵਰਤੀ"
+          ],
+          "en": [
+            "Rajadhiraja",
+            "Maharajadhiraja",
+            "Samrat",
+            "Chakravarti"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "चंद्रगुप्त I ने 'महाराजाधिराज' (राजाओं का महाराज) की उपाधि धारण की; इसी से गुप्त साम्राज्य की औपचारिक शुरुआत मानी जाती है।",
+          "en": "Chandragupta I assumed the title Maharajadhiraja (Great King of Kings), marking the formal beginning of the Gupta Empire."
+        }
+      },
+      {
+        "id": "sst-guptas-q10",
+        "text": {
+          "hi": "गुप्त साम्राज्य के पतन का प्रमुख बाहरी कारण क्या था?",
+          "pa": "ਗੁਪਤ ਸਾਮਰਾਜ ਦੇ ਪਤਨ ਦਾ ਮੁੱਖ ਬਾਹਰੀ ਕਾਰਨ ਕੀ ਸੀ?",
+          "en": "What was the major external cause of the Gupta Empire's decline?"
+        },
+        "options": {
+          "hi": [
+            "अरब आक्रमण",
+            "हूण आक्रमण",
+            "मुगल आक्रमण",
+            "मराठा विद्रोह"
+          ],
+          "pa": [
+            "ਅਰਬ ਹਮਲਾ",
+            "ਹੂਣਾਂ ਦਾ ਹਮਲਾ",
+            "ਮੁਗਲ ਹਮਲਾ",
+            "ਮਰਾਠਾ ਵਿਦਰੋਹ"
+          ],
+          "en": [
+            "Arab invasions",
+            "Huna invasions",
+            "Mughal invasions",
+            "Maratha rebellion"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "हूण (White Huns) आक्रमण ने गुप्त साम्राज्य को भीतर से कमजोर कर दिया। स्कंदगुप्त ने इन्हें रोका पर उनके बाद साम्राज्य बिखर गया।",
+          "en": "Huna (White Huns) invasions severely weakened the Gupta Empire. Skandagupta repulsed them but the empire fragmented after his reign."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sst-delhi-sultanate",
+    "subject": "History",
+    "unit": "History of India",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "दिल्ली सल्तनत: पाँच वंश और प्रमुख सुल्तान",
+      "pa": "ਦਿੱਲੀ ਸਲਤਨਤ: ਪੰਜ ਵੰਸ਼ ਅਤੇ ਮੁੱਖ ਸੁਲਤਾਨ",
+      "en": "Delhi Sultanate: Five Dynasties and Key Sultans"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 7 – Our Pasts II (The Delhi Sultans)",
+        "url": "https://ncert.nic.in/textbook/pdf/gess207.pdf",
+        "note": "Standard school reference; content is author-generated for Master Cadre practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "दिल्ली सल्तनत की स्थापना और गुलाम वंश",
+          "pa": "ਦਿੱਲੀ ਸਲਤਨਤ ਦੀ ਸਥਾਪਨਾ ਅਤੇ ਗੁਲਾਮ ਵੰਸ਼",
+          "en": "Establishment and the Slave (Mamluk) Dynasty"
+        },
+        "text": {
+          "hi": "1206 ई. में मुहम्मद गोरी की मृत्यु के बाद उसके दास कुतुबुद्दीन ऐबक ने दिल्ली सल्तनत की नींव रखी। पाँच राजवंशों ने 1206–1526 ई. तक शासन किया:\n\n1. **गुलाम वंश (मामलूक, 1206–1290)**: कुतुबुद्दीन ऐबक ने कुतुबमीनार की नींव रखी। इल्तुतमिश (1210–1236) ने इसे पूरा किया। रज़िया सुल्तान (1236–1240) — पहली महिला सुल्तान। बलबन (1266–1286) — कठोर शासन, 'नसब' (वंश) और 'बरक्कत' (आशीर्वाद)। लो-इज़्ज़त और इल्लत को दंडित किया।\n\nप्रमुख तथ्य: कुतुबुद्दीन ऐबक को 'लाखबख्श' (दानवीर) कहते हैं; उन्होंने 'कुव्वत-उल-इस्लाम' मस्जिद बनाई — भारत की पहली मस्जिद।",
+          "pa": "1206 ਈ. ਵਿੱਚ ਮੁਹੰਮਦ ਗੋਰੀ ਦੀ ਮੌਤ ਤੋਂ ਬਾਅਦ ਕੁਤਬੁੱਦੀਨ ਐਬਕ ਨੇ ਦਿੱਲੀ ਸਲਤਨਤ ਦੀ ਨੀਂਹ ਰੱਖੀ। ਇਲਤੁਤਮਿਸ਼ ਨੇ ਕੁਤਬਮੀਨਾਰ ਪੂਰਾ ਕੀਤਾ। ਰਜ਼ੀਆ ਸੁਲਤਾਨਾ — ਪਹਿਲੀ ਮਹਿਲਾ ਸੁਲਤਾਨ। ਬਲਬਨ ਨੇ ਕਠੋਰ ਸ਼ਾਸਨ ਕੀਤਾ।",
+          "en": "After Muhammad Ghori's death in 1206 CE, his slave Qutb-ud-din Aibak founded the Delhi Sultanate. Five dynasties ruled 1206–1526 CE:\n\n1. **Slave (Mamluk) Dynasty (1206–1290)**: Qutb-ud-din Aibak laid the foundation of Qutb Minar and built Quwwat-ul-Islam mosque — India's first mosque. Iltutmish (1210–1236) completed Qutb Minar; first Delhi sultan to receive investiture from the Caliph of Baghdad. Razia Sultan (1236–1240) — first female Muslim ruler of Delhi. Balban (1266–1286) — established 'theory of kingship', strict court discipline.\n\nNote: Qutb-ud-din called 'Lakh Bakhsh' (giver of lakhs) for his generosity."
+        }
+      },
+      {
+        "heading": {
+          "hi": "खिलजी वंश और अलाउद्दीन खिलजी",
+          "pa": "ਖਿਲਜੀ ਵੰਸ਼ ਅਤੇ ਅਲਾਉੱਦੀਨ ਖਿਲਜੀ",
+          "en": "Khalji Dynasty and Alauddin Khalji"
+        },
+        "text": {
+          "hi": "**खिलजी वंश (1290–1320)**: जलालुद्दीन खिलजी ने गुलाम वंश को उखाड़ा। अलाउद्दीन खिलजी (1296–1316) सबसे महत्वपूर्ण सुल्तान थे:\n- **बाजार नीति**: चार बाजार नियंत्रण (अनाज, कपड़ा, पशु, सामान्य वस्तुएँ)। कीमत तय की और निगरानी अधिकारी नियुक्त किए।\n- **सेना सुधार**: घोड़ों की दागने की प्रथा (branding), सैनिकों का हुलिया (descriptive roll) रखना।\n- **मंगोल आक्रमण**: 1299–1306 के बीच मंगोलों को कई बार परास्त किया।\n- **दक्षिण भारत अभियान**: मलिक काफूर को भेजा — देवगिरि, वारंगल, द्वारसमुद्र और मदुरई पर हमला।\n- **निर्माण**: अलाई दरवाजा (कुतुब परिसर में); हजार खंबा महल।",
+          "pa": "ਅਲਾਉੱਦੀਨ ਖਿਲਜੀ (1296–1316) ਸਭ ਤੋਂ ਮਹੱਤਵਪੂਰਨ ਸੁਲਤਾਨ ਸਨ। ਬਾਜ਼ਾਰ ਨੀਤੀ — ਚਾਰ ਬਾਜ਼ਾਰਾਂ ਵਿੱਚ ਕੀਮਤਾਂ ਤੈਅ ਕੀਤੀਆਂ। ਮੰਗੋਲਾਂ ਨੂੰ ਕਈ ਵਾਰ ਹਰਾਇਆ। ਮਲਿਕ ਕਾਫੂਰ ਰਾਹੀਂ ਦੱਖਣ ਭਾਰਤ ਵਿੱਚ ਮੁਹਿੰਮਾਂ।",
+          "en": "**Khalji Dynasty (1290–1320)**: Jalal-ud-din Khalji overthrew the Slave dynasty. Alauddin Khalji (1296–1316) was the most powerful Sultan:\n- **Market reforms**: Four separate markets (grain, cloth, cattle, general goods) with fixed prices and inspectors (shahna).\n- **Military**: Horse branding, descriptive rolls of soldiers.\n- **Repelled Mongols**: Defeated Mongol invasions (1299–1306) multiple times.\n- **Deccan campaigns**: Sent Malik Kafur against Devagiri, Warangal, Dwarasamudra and Madurai.\n- **Construction**: Alai Darwaza (Qutb complex); Hauz-i-Khas water tank."
+        }
+      },
+      {
+        "heading": {
+          "hi": "तुगलक, सैयद और लोदी वंश",
+          "pa": "ਤੁਗ਼ਲਕ, ਸੱਯਦ ਅਤੇ ਲੋਧੀ ਵੰਸ਼",
+          "en": "Tughlaq, Sayyid and Lodi Dynasties"
+        },
+        "text": {
+          "hi": "**तुगलक वंश (1320–1414)**: गयासुद्दीन तुगलक ने स्थापित किया। **मुहम्मद बिन तुगलक** (1325–1351) अपने विलक्षण प्रयोगों के लिए प्रसिद्ध:\n1. राजधानी दिल्ली से दौलताबाद (देवगिरि) स्थानांतरण — विफल।\n2. सांकेतिक मुद्रा (Token Currency) — तांबे के सिक्के — विफल।\n3. खुरासान और कराचिल अभियान — विफल।\n\nइब्न बतूता (मोरक्को यात्री) मुहम्मद बिन तुगलक के दरबार में आए; रेहला (Rihla) में विवरण दिया। **फिरोजशाह तुगलक** (1351–1388) ने नहर प्रणाली बनाई (यमुना-सतलुज)।\n\n**सैयद वंश (1414–1451)**: खिज्र खान ने स्थापित किया। कमज़ोर शासन; तैमूर आक्रमण के बाद दिल्ली सल्तनत कमजोर।\n\n**लोदी वंश (1451–1526)**: बहलोल लोदी (अफगान) ने स्थापित किया। **इब्राहीम लोदी** (1517–1526) — 1526 में पानीपत की प्रथम लड़ाई में बाबर द्वारा पराजित; दिल्ली सल्तनत का अंत, मुगल साम्राज्य की शुरुआत।",
+          "pa": "ਤੁਗ਼ਲਕ ਵੰਸ਼ (1320–1414): ਮੁਹੰਮਦ ਬਿਨ ਤੁਗ਼ਲਕ ਆਪਣੇ ਪ੍ਰਯੋਗਾਂ ਲਈ ਮਸ਼ਹੂਰ — ਰਾਜਧਾਨੀ ਦੌਲਤਾਬਾਦ, ਸੰਕੇਤਕ ਮੁਦਰਾ। ਇਬਨ ਬਤੂਤਾ ਉਸਦੇ ਦਰਬਾਰ ਵਿੱਚ ਆਇਆ। ਲੋਧੀ ਵੰਸ਼ (1451–1526) ਦਾ ਅੰਤ 1526 ਵਿੱਚ ਪਾਣੀਪਤ ਦੀ ਪਹਿਲੀ ਲੜਾਈ ਵਿੱਚ ਹੋਇਆ।",
+          "en": "**Tughlaq Dynasty (1320–1414)**: Founded by Ghiyasuddin Tughlaq. **Muhammad bin Tughlaq** (1325–1351) known for bold but failed experiments:\n1. Shifting capital from Delhi to Daulatabad (Devagiri) — failed.\n2. Token currency (copper coins) — failed.\n3. Khorasan and Qarachil campaigns — failed.\n\nIbn Battuta (Moroccan traveller) visited his court; described India in Rihla. **Firoz Shah Tughlaq** (1351–1388) built an extensive canal system.\n\n**Sayyid Dynasty (1414–1451)**: Founded by Khizr Khan after Timur's 1398 invasion weakened Delhi.\n\n**Lodi Dynasty (1451–1526)**: Founded by Bahlul Lodi (Afghan). **Ibrahim Lodi** (1517–1526) was defeated by Babur at the First Battle of Panipat (1526), ending the Delhi Sultanate and beginning the Mughal Empire."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "दिल्ली सल्तनत (1206–1526): 5 वंश — गुलाम, खिलजी, तुगलक, सैयद, लोदी। कुतुब ऐबक → इल्तुतमिश → रज़िया → बलबन → अलाउद्दीन (बाजार नीति, मंगोल) → मुहम्मद बिन तुगलक (दौलताबाद, टोकन मुद्रा) → फिरोजशाह → इब्राहीम लोदी — पानीपत 1526 — मुगल साम्राज्य।",
+      "pa": "ਦਿੱਲੀ ਸਲਤਨਤ (1206–1526): 5 ਵੰਸ਼। ਕੁਤਬੁੱਦੀਨ → ਇਲਤੁਤਮਿਸ਼ → ਰਜ਼ੀਆ → ਅਲਾਉੱਦੀਨ (ਬਾਜ਼ਾਰ ਨੀਤੀ) → ਮੁਹੰਮਦ ਬਿਨ ਤੁਗ਼ਲਕ → ਇਬਰਾਹੀਮ ਲੋਧੀ — ਪਾਣੀਪਤ 1526।",
+      "en": "Delhi Sultanate (1206–1526): 5 dynasties — Slave, Khalji, Tughlaq, Sayyid, Lodi. Qutb Aibak → Iltutmish → Razia → Balban → Alauddin (market reforms, Mongols) → Muhammad bin Tughlaq (Daulatabad, token currency) → Firoz Shah → Ibrahim Lodi — Panipat 1526 — Mughal Empire begins."
+    },
+    "keyPoints": [
+      {
+        "hi": "गुलाम वंश: कुतुबमीनार — ऐबक ने शुरू, इल्तुतमिश ने पूरा किया",
+        "pa": "ਗੁਲਾਮ ਵੰਸ਼: ਕੁਤਬਮੀਨਾਰ — ਐਬਕ ਨੇ ਸ਼ੁਰੂ, ਇਲਤੁਤਮਿਸ਼ ਨੇ ਪੂਰਾ ਕੀਤਾ",
+        "en": "Slave Dynasty: Qutb Minar — Aibak started, Iltutmish completed"
+      },
+      {
+        "hi": "रज़िया सुल्तान — दिल्ली की पहली और एकमात्र महिला सुल्तान",
+        "pa": "ਰਜ਼ੀਆ ਸੁਲਤਾਨਾ — ਦਿੱਲੀ ਦੀ ਪਹਿਲੀ ਅਤੇ ਇਕਲੌਤੀ ਮਹਿਲਾ ਸੁਲਤਾਨ",
+        "en": "Razia Sultan — first and only female sultan of Delhi"
+      },
+      {
+        "hi": "अलाउद्दीन खिलजी — बाजार नीति, मंगोल पराजय, मलिक काफूर दक्षिण अभियान",
+        "pa": "ਅਲਾਉੱਦੀਨ ਖਿਲਜੀ — ਬਾਜ਼ਾਰ ਨੀਤੀ, ਮੰਗੋਲ ਹਾਰ, ਮਲਿਕ ਕਾਫੂਰ",
+        "en": "Alauddin Khalji — market reforms, Mongol defeats, Malik Kafur Deccan campaigns"
+      },
+      {
+        "hi": "मुहम्मद बिन तुगलक — दौलताबाद + टोकन मुद्रा (दोनों विफल); इब्न बतूता का विवरण",
+        "pa": "ਮੁਹੰਮਦ ਬਿਨ ਤੁਗ਼ਲਕ — ਦੌਲਤਾਬਾਦ + ਟੋਕਨ ਮੁਦਰਾ (ਦੋਵੇਂ ਅਸਫਲ)",
+        "en": "Muhammad bin Tughlaq — Daulatabad + token currency (both failed); Ibn Battuta's account"
+      },
+      {
+        "hi": "1526 — पानीपत प्रथम युद्ध — बाबर बनाम इब्राहीम लोदी — मुगल साम्राज्य का आरंभ",
+        "pa": "1526 — ਪਾਣੀਪਤ ਪਹਿਲੀ ਲੜਾਈ — ਬਾਬਰ ਬਨਾਮ ਇਬਰਾਹੀਮ ਲੋਧੀ",
+        "en": "1526 — First Battle of Panipat — Babur vs Ibrahim Lodi — Mughal Empire begins"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "दिल्ली सल्तनत की पाँच वंश क्रम में बताइए।",
+          "pa": "ਦਿੱਲੀ ਸਲਤਨਤ ਦੇ ਪੰਜ ਵੰਸ਼ ਕ੍ਰਮ ਵਿੱਚ ਦੱਸੋ।",
+          "en": "Name the five dynasties of the Delhi Sultanate in order."
+        },
+        "back": {
+          "hi": "ਗੁਲਾਮ (1206) → ਖਿਲਜੀ (1290) → ਤੁਗਲਕ (1320) → ਸੱਯਦ (1414) → ਲੋਧੀ (1451–1526)",
+          "pa": "ਗੁਲਾਮ (1206) → ਖਿਲਜੀ (1290) → ਤੁਗਲਕ (1320) → ਸੱਯਦ (1414) → ਲੋਧੀ (1451–1526)",
+          "en": "Slave (1206) → Khalji (1290) → Tughlaq (1320) → Sayyid (1414) → Lodi (1451–1526)"
+        }
+      },
+      {
+        "front": {
+          "hi": "दिल्ली की एकमात्र महिला सुल्तान कौन थी?",
+          "pa": "ਦਿੱਲੀ ਦੀ ਇਕਲੌਤੀ ਮਹਿਲਾ ਸੁਲਤਾਨ ਕੌਣ ਸੀ?",
+          "en": "Who was the only female sultan of Delhi?"
+        },
+        "back": {
+          "hi": "ਰਜ਼ੀਆ ਸੁਲਤਾਨਾ (1236–1240), ਗੁਲਾਮ ਵੰਸ਼",
+          "pa": "ਰਜ਼ੀਆ ਸੁਲਤਾਨਾ (1236–1240), ਗੁਲਾਮ ਵੰਸ਼",
+          "en": "Razia Sultan (1236–1240), Slave Dynasty"
+        }
+      },
+      {
+        "front": {
+          "hi": "अलाउद्दीन खिलजी की बाजार नीति क्या थी?",
+          "pa": "ਅਲਾਉੱਦੀਨ ਖਿਲਜੀ ਦੀ ਬਾਜ਼ਾਰ ਨੀਤੀ ਕੀ ਸੀ?",
+          "en": "What was Alauddin Khalji's market reform policy?"
+        },
+        "back": {
+          "hi": "ਚਾਰ ਵੱਖ-ਵੱਖ ਬਾਜ਼ਾਰਾਂ (ਅਨਾਜ, ਕੱਪੜਾ, ਪਸ਼ੂ, ਆਮ ਸਮਾਨ) ਵਿੱਚ ਨਿਸ਼ਚਿਤ ਕੀਮਤਾਂ ਅਤੇ ਨਿਗਰਾਨ ਅਧਿਕਾਰੀ",
+          "pa": "ਚਾਰ ਵੱਖ-ਵੱਖ ਬਾਜ਼ਾਰਾਂ ਵਿੱਚ ਨਿਸ਼ਚਿਤ ਕੀਮਤਾਂ ਅਤੇ ਸ਼ਾਹਨਾ (ਨਿਗਰਾਨ)",
+          "en": "Four separate markets (grain, cloth, cattle, general goods) with fixed prices and inspectors (shahna)"
+        }
+      },
+      {
+        "front": {
+          "hi": "मुहम्मद बिन तुगलक के विफल प्रयोग कौन से थे?",
+          "pa": "ਮੁਹੰਮਦ ਬਿਨ ਤੁਗ਼ਲਕ ਦੇ ਅਸਫਲ ਪ੍ਰਯੋਗ ਕਿਹੜੇ ਸਨ?",
+          "en": "What were Muhammad bin Tughlaq's failed experiments?"
+        },
+        "back": {
+          "hi": "1. ਰਾਜਧਾਨੀ ਦੌਲਤਾਬਾਦ ਤਬਦੀਲ 2. ਤਾਂਬੇ ਦੀ ਟੋਕਨ ਮੁਦਰਾ 3. ਖੁਰਾਸਾਨ ਅਤੇ ਕਰਾਚਿਲ ਮੁਹਿੰਮਾਂ",
+          "pa": "1. ਰਾਜਧਾਨੀ ਦੌਲਤਾਬਾਦ ਤਬਦੀਲ 2. ਟੋਕਨ ਮੁਦਰਾ 3. ਖੁਰਾਸਾਨ ਮੁਹਿੰਮ",
+          "en": "1. Capital transfer to Daulatabad 2. Token copper currency 3. Khorasan and Qarachil campaigns"
+        }
+      },
+      {
+        "front": {
+          "hi": "पानीपत की पहली लड़ाई कब और किनके बीच हुई?",
+          "pa": "ਪਾਣੀਪਤ ਦੀ ਪਹਿਲੀ ਲੜਾਈ ਕਦੋਂ ਅਤੇ ਕਿਨ੍ਹਾਂ ਵਿਚਕਾਰ ਹੋਈ?",
+          "en": "When was the First Battle of Panipat and between whom?"
+        },
+        "back": {
+          "hi": "1526 ਈ. — ਬਾਬਰ ਬਨਾਮ ਇਬਰਾਹੀਮ ਲੋਧੀ; ਬਾਬਰ ਦੀ ਜਿੱਤ → ਮੁਗਲ ਸਾਮਰਾਜ",
+          "pa": "1526 ਈ. — ਬਾਬਰ ਬਨਾਮ ਇਬਰਾਹੀਮ ਲੋਧੀ; ਬਾਬਰ ਜਿੱਤਿਆ → ਮੁਗਲ ਸਾਮਰਾਜ",
+          "en": "1526 CE — Babur vs Ibrahim Lodi; Babur's victory → Mughal Empire"
+        }
+      },
+      {
+        "front": {
+          "hi": "इब्न बतूता किस सुल्तान के दरबार में आया और उसकी पुस्तक?",
+          "pa": "ਇਬਨ ਬਤੂਤਾ ਕਿਸ ਸੁਲਤਾਨ ਦੇ ਦਰਬਾਰ ਵਿੱਚ ਆਇਆ?",
+          "en": "Ibn Battuta visited which Sultan's court and wrote which book?"
+        },
+        "back": {
+          "hi": "ਮੁਹੰਮਦ ਬਿਨ ਤੁਗ਼ਲਕ; ਕਿਤਾਬ — ਰਿਹਲਾ (Rihla)",
+          "pa": "ਮੁਹੰਮਦ ਬਿਨ ਤੁਗ਼ਲਕ; ਰਿਹਲਾ",
+          "en": "Muhammad bin Tughlaq; book — Rihla (Travels)"
+        }
+      },
+      {
+        "front": {
+          "hi": "कुतुबमीनार किसने शुरू किया और किसने पूरा किया?",
+          "pa": "ਕੁਤਬਮੀਨਾਰ ਕਿਸਨੇ ਸ਼ੁਰੂ ਕੀਤਾ ਅਤੇ ਕਿਸਨੇ ਪੂਰਾ ਕੀਤਾ?",
+          "en": "Who started and who completed the Qutb Minar?"
+        },
+        "back": {
+          "hi": "ਕੁਤਬੁੱਦੀਨ ਐਬਕ ਨੇ ਸ਼ੁਰੂ, ਇਲਤੁਤਮਿਸ਼ ਨੇ ਪੂਰਾ (ਬਾਅਦ ਵਿੱਚ ਫਿਰੋਜ਼ਸ਼ਾਹ ਤੁਗ਼ਲਕ ਨੇ ਵਿਸਥਾਰ ਕੀਤਾ)",
+          "pa": "ਕੁਤਬੁੱਦੀਨ ਐਬਕ ਨੇ ਸ਼ੁਰੂ, ਇਲਤੁਤਮਿਸ਼ ਨੇ ਪੂਰਾ",
+          "en": "Qutb-ud-din Aibak started, Iltutmish completed (later extended by Firoz Shah Tughlaq)"
+        }
+      },
+      {
+        "front": {
+          "hi": "फिरोजशाह तुगलक की किस उपलब्धि के लिए जाना जाता है?",
+          "pa": "ਫਿਰੋਜ਼ਸ਼ਾਹ ਤੁਗ਼ਲਕ ਕਿਸ ਉਪਲੱਬਧੀ ਲਈ ਜਾਣਿਆ ਜਾਂਦਾ ਹੈ?",
+          "en": "What is Firoz Shah Tughlaq particularly known for?"
+        },
+        "back": {
+          "hi": "ਨਹਿਰ ਪ੍ਰਣਾਲੀ (ਯਮੁਨਾ-ਸਤਲੁਜ), ਲੋਕ ਭਲਾਈ ਕੰਮ, ਵੱਡੀ ਗਿਣਤੀ ਵਿੱਚ ਦਾਸਾਂ ਦਾ ਰੱਖਣਾ",
+          "pa": "ਨਹਿਰ ਪ੍ਰਣਾਲੀ, ਲੋਕ ਭਲਾਈ ਕੰਮ",
+          "en": "Canal system (Yamuna-Sutlej), public works, welfare projects"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-sultanate-q1",
+        "text": {
+          "hi": "दिल्ली सल्तनत की स्थापना किसने की?",
+          "pa": "ਦਿੱਲੀ ਸਲਤਨਤ ਦੀ ਸਥਾਪਨਾ ਕਿਸਨੇ ਕੀਤੀ?",
+          "en": "Who founded the Delhi Sultanate?"
+        },
+        "options": {
+          "hi": [
+            "मुहम्मद गोरी",
+            "कुतुबुद्दीन ऐबक",
+            "इल्तुतमिश",
+            "बलबन"
+          ],
+          "pa": [
+            "ਮੁਹੰਮਦ ਗੋਰੀ",
+            "ਕੁਤਬੁੱਦੀਨ ਐਬਕ",
+            "ਇਲਤੁਤਮਿਸ਼",
+            "ਬਲਬਨ"
+          ],
+          "en": [
+            "Muhammad Ghori",
+            "Qutb-ud-din Aibak",
+            "Iltutmish",
+            "Balban"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "मुहम्मद गोरी के दास कुतुबुद्दीन ऐबक ने 1206 ई. में दिल्ली सल्तनत की नींव रखी।",
+          "en": "Qutb-ud-din Aibak, slave of Muhammad Ghori, founded the Delhi Sultanate in 1206 CE."
+        }
+      },
+      {
+        "id": "sst-sultanate-q2",
+        "text": {
+          "hi": "अलाउद्दीन खिलजी की बाजार नियंत्रण नीति का मुख्य उद्देश्य क्या था?",
+          "pa": "ਅਲਾਉੱਦੀਨ ਦੀ ਬਾਜ਼ਾਰ ਨੀਤੀ ਦਾ ਮੁੱਖ ਮਕਸਦ ਕੀ ਸੀ?",
+          "en": "What was the main objective of Alauddin Khalji's market control policy?"
+        },
+        "options": {
+          "hi": [
+            "व्यापारियों की मदद करना",
+            "सेना के लिए सस्ती आपूर्ति सुनिश्चित करना",
+            "कर बढ़ाना",
+            "व्यापार बढ़ावा देना"
+          ],
+          "pa": [
+            "ਵਪਾਰੀਆਂ ਦੀ ਮਦਦ ਕਰਨਾ",
+            "ਫੌਜ ਲਈ ਸਸਤੀ ਸਪਲਾਈ ਯਕੀਨੀ ਕਰਨਾ",
+            "ਕਰ ਵਧਾਉਣਾ",
+            "ਵਪਾਰ ਵਧਾਉਣਾ"
+          ],
+          "en": [
+            "To help traders",
+            "To ensure cheap supplies for the army",
+            "To increase taxation",
+            "To promote trade"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "अलाउद्दीन ने बड़ी सेना बनाए रखने के लिए सस्ती कीमतों पर आपूर्ति सुनिश्चित करने हेतु बाजार नीति लागू की।",
+          "en": "Alauddin implemented market reforms to maintain a large standing army cheaply by controlling commodity prices."
+        }
+      },
+      {
+        "id": "sst-sultanate-q3",
+        "text": {
+          "hi": "मुहम्मद बिन तुगलक ने राजधानी दिल्ली से कहाँ स्थानांतरित की?",
+          "pa": "ਮੁਹੰਮਦ ਬਿਨ ਤੁਗ਼ਲਕ ਨੇ ਰਾਜਧਾਨੀ ਕਿੱਥੇ ਤਬਦੀਲ ਕੀਤੀ?",
+          "en": "Where did Muhammad bin Tughlaq transfer the capital from Delhi?"
+        },
+        "options": {
+          "hi": [
+            "आगरा",
+            "लाहौर",
+            "दौलताबाद",
+            "फतेहपुर सीकरी"
+          ],
+          "pa": [
+            "ਆਗਰਾ",
+            "ਲਾਹੌਰ",
+            "ਦੌਲਤਾਬਾਦ",
+            "ਫਤਿਹਪੁਰ ਸੀਕਰੀ"
+          ],
+          "en": [
+            "Agra",
+            "Lahore",
+            "Daulatabad",
+            "Fatehpur Sikri"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "मुहम्मद बिन तुगलक ने राजधानी को दिल्ली से दौलताबाद (पहले का देवगिरि, महाराष्ट्र) स्थानांतरित किया, लेकिन यह प्रयोग विफल रहा।",
+          "en": "Muhammad bin Tughlaq transferred the capital to Daulatabad (formerly Devagiri, Maharashtra) — the experiment failed."
+        }
+      },
+      {
+        "id": "sst-sultanate-q4",
+        "text": {
+          "hi": "पानीपत की पहली लड़ाई (1526) में बाबर ने किसे हराया?",
+          "pa": "ਪਾਣੀਪਤ ਦੀ ਪਹਿਲੀ ਲੜਾਈ (1526) ਵਿੱਚ ਬਾਬਰ ਨੇ ਕਿਸਨੂੰ ਹਰਾਇਆ?",
+          "en": "Whom did Babur defeat in the First Battle of Panipat (1526)?"
+        },
+        "options": {
+          "hi": [
+            "अलाउद्दीन खिलजी",
+            "बहलोल लोदी",
+            "इब्राहीम लोदी",
+            "सिकंदर लोदी"
+          ],
+          "pa": [
+            "ਅਲਾਉੱਦੀਨ ਖਿਲਜੀ",
+            "ਬਹਿਲੋਲ ਲੋਧੀ",
+            "ਇਬਰਾਹੀਮ ਲੋਧੀ",
+            "ਸਿਕੰਦਰ ਲੋਧੀ"
+          ],
+          "en": [
+            "Alauddin Khalji",
+            "Bahlul Lodi",
+            "Ibrahim Lodi",
+            "Sikandar Lodi"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "1526 में बाबर ने इब्राहीम लोदी को हराया जिससे लोदी वंश और दिल्ली सल्तनत का अंत हुआ।",
+          "en": "Babur defeated Ibrahim Lodi in 1526, ending the Lodi dynasty and the Delhi Sultanate."
+        }
+      },
+      {
+        "id": "sst-sultanate-q5",
+        "text": {
+          "hi": "दिल्ली की पहली मस्जिद 'कुव्वत-उल-इस्लाम' किसने बनवाई?",
+          "pa": "ਦਿੱਲੀ ਦੀ ਪਹਿਲੀ ਮਸਜਿਦ 'ਕੁਵਵਤ-ਉਲ-ਇਸਲਾਮ' ਕਿਸਨੇ ਬਣਵਾਈ?",
+          "en": "Who built Quwwat-ul-Islam mosque, the first mosque in Delhi?"
+        },
+        "options": {
+          "hi": [
+            "इल्तुतमिश",
+            "कुतुबुद्दीन ऐबक",
+            "बलबन",
+            "अलाउद्दीन खिलजी"
+          ],
+          "pa": [
+            "ਇਲਤੁਤਮਿਸ਼",
+            "ਕੁਤਬੁੱਦੀਨ ਐਬਕ",
+            "ਬਲਬਨ",
+            "ਅਲਾਉੱਦੀਨ ਖਿਲਜੀ"
+          ],
+          "en": [
+            "Iltutmish",
+            "Qutb-ud-din Aibak",
+            "Balban",
+            "Alauddin Khalji"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "कुतुबुद्दीन ऐबक ने 1193 ई. में कुव्वत-उल-इस्लाम मस्जिद बनवाई — यह दिल्ली की और भारत की पहली मस्जिद थी।",
+          "en": "Qutb-ud-din Aibak built Quwwat-ul-Islam mosque in 1193 CE — first mosque in Delhi and India."
+        }
+      },
+      {
+        "id": "sst-sultanate-q6",
+        "text": {
+          "hi": "इब्न बतूता ने किस पुस्तक में अपनी भारत यात्रा का विवरण दिया?",
+          "pa": "ਇਬਨ ਬਤੂਤਾ ਨੇ ਕਿਹੜੀ ਕਿਤਾਬ ਵਿੱਚ ਭਾਰਤ ਯਾਤਰਾ ਦਾ ਵਿਵਰਨ ਦਿੱਤਾ?",
+          "en": "In which book did Ibn Battuta describe his journey to India?"
+        },
+        "options": {
+          "hi": [
+            "तारीख-ए-फिरोजशाही",
+            "रेहला",
+            "किताब-उल-हिंद",
+            "फुतुहात-ए-फिरोजशाही"
+          ],
+          "pa": [
+            "ਤਾਰੀਖ਼-ਏ-ਫ਼ਿਰੋਜ਼ਸ਼ਾਹੀ",
+            "ਰਿਹਲਾ",
+            "ਕਿਤਾਬ-ਉਲ-ਹਿੰਦ",
+            "ਫ਼ੁਤੂਹਾਤ-ਏ-ਫ਼ਿਰੋਜ਼ਸ਼ਾਹੀ"
+          ],
+          "en": [
+            "Tarikh-i-Firozshahi",
+            "Rihla",
+            "Kitab-ul-Hind",
+            "Futuhaat-e-Firozshahi"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "मोरक्को के यात्री इब्न बतूता ने 'रेहला' (Rihla / Travels) में अपनी भारत यात्रा का विवरण दिया।",
+          "en": "Moroccan traveller Ibn Battuta described his India journey in the Rihla (Travels)."
+        }
+      },
+      {
+        "id": "sst-sultanate-q7",
+        "text": {
+          "hi": "अलाई दरवाजा किस सुल्तान ने बनवाया?",
+          "pa": "ਅਲਾਈ ਦਰਵਾਜ਼ਾ ਕਿਸ ਸੁਲਤਾਨ ਨੇ ਬਣਵਾਇਆ?",
+          "en": "Which Sultan built the Alai Darwaza?"
+        },
+        "options": {
+          "hi": [
+            "इल्तुतमिश",
+            "बलबन",
+            "अलाउद्दीन खिलजी",
+            "फिरोजशाह तुगलक"
+          ],
+          "pa": [
+            "ਇਲਤੁਤਮਿਸ਼",
+            "ਬਲਬਨ",
+            "ਅਲਾਉੱਦੀਨ ਖਿਲਜੀ",
+            "ਫਿਰੋਜ਼ਸ਼ਾਹ ਤੁਗ਼ਲਕ"
+          ],
+          "en": [
+            "Iltutmish",
+            "Balban",
+            "Alauddin Khalji",
+            "Firoz Shah Tughlaq"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "अलाउद्दीन खिलजी ने कुतुब परिसर में अलाई दरवाजा बनवाया; यह भारत-इस्लामी स्थापत्य का उत्कृष्ट उदाहरण है।",
+          "en": "Alauddin Khalji built the Alai Darwaza as the main gateway to the Qutb complex — a masterpiece of Indo-Islamic architecture."
+        }
+      },
+      {
+        "id": "sst-sultanate-q8",
+        "text": {
+          "hi": "सैयद वंश की स्थापना किसने की?",
+          "pa": "ਸੱਯਦ ਵੰਸ਼ ਦੀ ਸਥਾਪਨਾ ਕਿਸਨੇ ਕੀਤੀ?",
+          "en": "Who founded the Sayyid dynasty?"
+        },
+        "options": {
+          "hi": [
+            "तैमूर",
+            "खिज्र खान",
+            "मुबारक शाह",
+            "आलम शाह"
+          ],
+          "pa": [
+            "ਤੈਮੂਰ",
+            "ਖਿਜ਼ਰ ਖਾਨ",
+            "ਮੁਬਾਰਕ ਸ਼ਾਹ",
+            "ਆਲਮ ਸ਼ਾਹ"
+          ],
+          "en": [
+            "Timur",
+            "Khizr Khan",
+            "Mubarak Shah",
+            "Alam Shah"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "खिज्र खान ने 1414 ई. में सैयद वंश की स्थापना की। वह तैमूर के नामज़द था।",
+          "en": "Khizr Khan founded the Sayyid dynasty in 1414 CE as a nominee of Timur."
+        }
+      },
+      {
+        "id": "sst-sultanate-q9",
+        "text": {
+          "hi": "दिल्ली सल्तनत में टोकन मुद्रा किस धातु से बनाई गई थी?",
+          "pa": "ਦਿੱਲੀ ਸਲਤਨਤ ਵਿੱਚ ਟੋਕਨ ਮੁਦਰਾ ਕਿਹੜੀ ਧਾਤ ਤੋਂ ਬਣਾਈ ਗਈ ਸੀ?",
+          "en": "In what metal was the token currency of the Delhi Sultanate issued?"
+        },
+        "options": {
+          "hi": [
+            "चाँदी",
+            "सोना",
+            "ताँबा",
+            "लोहा"
+          ],
+          "pa": [
+            "ਚਾਂਦੀ",
+            "ਸੋਨਾ",
+            "ਤਾਂਬਾ",
+            "ਲੋਹਾ"
+          ],
+          "en": [
+            "Silver",
+            "Gold",
+            "Copper",
+            "Iron"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "मुहम्मद बिन तुगलक ने चाँदी के बदले ताँबे के सिक्के (टोकन मुद्रा) जारी किए। लोगों ने नकली सिक्के बनाए और यह नीति विफल रही।",
+          "en": "Muhammad bin Tughlaq issued copper token coins instead of silver. People forged them extensively and the policy collapsed."
+        }
+      },
+      {
+        "id": "sst-sultanate-q10",
+        "text": {
+          "hi": "अलाउद्दीन खिलजी ने मंगोल आक्रमणों को कितनी बार सफलतापूर्वक रोका?",
+          "pa": "ਅਲਾਉੱਦੀਨ ਖਿਲਜੀ ਨੇ ਮੰਗੋਲ ਹਮਲਿਆਂ ਨੂੰ ਕਿੰਨੀ ਵਾਰ ਰੋਕਿਆ?",
+          "en": "How many times did Alauddin Khalji successfully repel Mongol invasions?"
+        },
+        "options": {
+          "hi": [
+            "दो बार",
+            "तीन बार",
+            "पाँच बार से अधिक",
+            "कभी नहीं"
+          ],
+          "pa": [
+            "ਦੋ ਵਾਰ",
+            "ਤਿੰਨ ਵਾਰ",
+            "ਪੰਜ ਵਾਰ ਤੋਂ ਵੱਧ",
+            "ਕਦੇ ਨਹੀਂ"
+          ],
+          "en": [
+            "Twice",
+            "Three times",
+            "More than five times",
+            "Never"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "अलाउद्दीन ने 1299 से 1306 के बीच मंगोल आक्रमणों को पाँच से अधिक बार रोका; उन्होंने जालंधर, किली, अमरोहा और रावी की लड़ाइयाँ जीतीं।",
+          "en": "Alauddin repelled Mongol invasions more than five times between 1299–1306, winning battles at Jaran-Manjur, Kili, Amroha and Ravi."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sst-punjab-colonial-partition",
+    "subject": "History",
+    "unit": "History of Punjab",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "औपनिवेशिक पंजाब: 1857 से विभाजन तक",
+      "pa": "ਬਸਤੀਵਾਦੀ ਪੰਜਾਬ: 1857 ਤੋਂ ਵੰਡ ਤੱਕ",
+      "en": "Colonial Punjab: From 1857 to Partition"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 8 – Our Pasts III (From Trade to Territory; Ruling the Countryside; Tribals, Dikus and the Vision of a Golden Age; When People Rebel)",
+        "url": "https://ncert.nic.in/textbook/pdf/hess308.pdf",
+        "note": "Standard school reference for 1857 background. Punjab-specific Ghadar/Partition details are author-generated for Master Cadre exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "1857 का विद्रोह और पंजाब",
+          "pa": "1857 ਦਾ ਵਿਦਰੋਹ ਅਤੇ ਪੰਜਾਬ",
+          "en": "The 1857 Uprising and Punjab"
+        },
+        "text": {
+          "hi": "1857 का विद्रोह ('भारत का प्रथम स्वतंत्रता संग्राम') मेरठ (10 मई 1857) से आरंभ हुआ। मुख्य कारण: चर्बी वाले कारतूस, धार्मिक भावनाओं पर चोट, डलहौजी की हड़प नीति, आर्थिक शोषण।\n\n**पंजाब में 1857**: पंजाब 1849 में ही अंग्रेज़ों के अधीन आ चुका था — दूसरे सिख युद्ध के बाद। इसलिए पंजाब में विद्रोह अपेक्षाकृत कम था। हालाँकि मुल्तान, झेलम और लुधियाना में कुछ विद्रोह हुए। **अंग्रेजों** ने पंजाब के सिख और पठान सैनिकों का उपयोग दिल्ली पर पुनः नियंत्रण के लिए किया।\n\n**1857 के परिणाम**: ईस्ट इंडिया कंपनी का शासन समाप्त; 1858 में 'भारत सरकार अधिनियम' — ब्रिटिश क्राउन का सीधा नियंत्रण। भारत का पहला वायसराय — लॉर्ड कैनिंग।",
+          "pa": "1857 ਦਾ ਵਿਦਰੋਹ ਮੇਰਠ (10 ਮਈ 1857) ਤੋਂ ਸ਼ੁਰੂ ਹੋਇਆ। ਪੰਜਾਬ 1849 ਵਿੱਚ ਅੰਗਰੇਜ਼ਾਂ ਅਧੀਨ ਆ ਗਿਆ ਸੀ, ਇਸ ਲਈ ਇੱਥੇ ਵਿਦਰੋਹ ਘੱਟ ਸੀ। ਅੰਗਰੇਜ਼ਾਂ ਨੇ ਪੰਜਾਬੀ ਫ਼ੌਜੀਆਂ ਦੀ ਵਰਤੋਂ ਦਿੱਲੀ ਮੁੜ ਕਾਬੂ ਕਰਨ ਲਈ ਕੀਤੀ। 1858 ਵਿੱਚ ਕੰਪਨੀ ਰਾਜ ਖਤਮ, ਬ੍ਰਿਟਿਸ਼ ਕ੍ਰਾਊਨ ਦਾ ਸਿੱਧਾ ਰਾਜ।",
+          "en": "The 1857 uprising (First War of Independence) began at Meerut (10 May 1857). Causes: greased cartridges, land annexations (Doctrine of Lapse), economic exploitation.\n\n**Punjab and 1857**: Punjab had been annexed in 1849 after the Second Anglo-Sikh War, so revolt was limited here. Minor outbreaks at Multan, Jhelum and Ludhiana. British used Sikh and Pathan soldiers from Punjab to recapture Delhi.\n\n**Aftermath**: East India Company's rule ended; Government of India Act 1858 transferred power to British Crown. First Viceroy of India — Lord Canning."
+        }
+      },
+      {
+        "heading": {
+          "hi": "गदर आंदोलन और जलियाँवाला बाग हत्याकांड",
+          "pa": "ਗਦਰ ਲਹਿਰ ਅਤੇ ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਾਂਡ",
+          "en": "Ghadar Movement and Jallianwala Bagh Massacre"
+        },
+        "text": {
+          "hi": "**ਗਦਰ ਪਾਰਟੀ (1913)**: ਲਾਲਾ ਹਰਦਿਆਲ ਨੇ ਸੈਨ ਫਰਾਂਸਿਸਕੋ (ਅਮਰੀਕਾ) ਵਿੱਚ ਗਦਰ ਪਾਰਟੀ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ। ਇਸ ਵਿੱਚ ਜ਼ਿਆਦਾਤਰ ਪੰਜਾਬੀ (ਸਿੱਖ, ਮੁਸਲਿਮ, ਹਿੰਦੂ) ਪ੍ਰਵਾਸੀ ਸ਼ਾਮਲ ਸਨ। 'ਗਦਰ' ਅਖ਼ਬਾਰ ਪੰਜਾਬੀ ਅਤੇ ਉਰਦੂ ਵਿੱਚ ਛਪਦਾ ਸੀ। 1914 ਵਿੱਚ ਕੋਮਾਗਾਟਾ ਮਾਰੂ ਸਮੁੰਦਰੀ ਜਹਾਜ਼ ਕਾਂਡ ਤੋਂ ਬਾਅਦ ਗਦਰੀਆਂ ਨੇ ਭਾਰਤ ਵਾਪਸ ਆ ਕੇ ਬਗ਼ਾਵਤ ਦੀ ਕੋਸ਼ਿਸ਼ ਕੀਤੀ — ਪਰ ਅੰਗਰੇਜ਼ਾਂ ਨੇ ਦਬਾ ਦਿੱਤਾ।\n\n**जलियाँवाला बाग हत्याकांड (13 अप्रैल 1919, बैसाखी)**: रॉलट एक्ट (काले कानून) के विरोध में अमृतसर में सभा। ब्रिगेडियर जनरल डायर ने निहत्थे भीड़ पर गोलियाँ चलवाईं। सरकारी आँकड़े: 379 मृत; अनौपचारिक: 1,000 से अधिक। हंटर आयोग की रिपोर्ट। रवींद्रनाथ टैगोर ने 'नाइटहुड' की उपाधि वापस की। उधम सिंह ने 1940 में लंदन में डायर के समर्थक माइकल ओ'डायर को गोली मारी।",
+          "pa": "ਗਦਰ ਪਾਰਟੀ (1913): ਲਾਲਾ ਹਰਦਿਆਲ ਨੇ ਸੈਨ ਫਰਾਂਸਿਸਕੋ ਵਿੱਚ ਸਥਾਪਨਾ ਕੀਤੀ। ਜ਼ਿਆਦਾਤਰ ਪੰਜਾਬੀ ਪ੍ਰਵਾਸੀ। ਕੋਮਾਗਾਟਾ ਮਾਰੂ ਕਾਂਡ 1914।\n\nਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਾਂਡ (13 ਅਪ੍ਰੈਲ 1919, ਵੈਸਾਖੀ): ਜਨਰਲ ਡਾਇਰ ਨੇ ਨਿਹੱਥੀ ਭੀੜ 'ਤੇ ਗੋਲੀਆਂ ਚਲਾਈਆਂ। 379 ਸਰਕਾਰੀ, 1000+ ਅਸਲ ਮੌਤਾਂ। ਉਧਮ ਸਿੰਘ ਨੇ 1940 ਵਿੱਚ ਮਾਈਕਲ ਓ'ਡਾਇਰ ਨੂੰ ਮਾਰਿਆ।",
+          "en": "**Ghadar Party (1913)**: Founded by Lala Hardayal in San Francisco. Mostly Punjabi diaspora (Sikh, Muslim, Hindu). Published Ghadar newspaper in Punjabi and Urdu. After Komagata Maru incident (1914), Ghadaris returned to India attempting an uprising — suppressed by British.\n\n**Jallianwala Bagh Massacre (13 April 1919, Baisakhi)**: Meeting in Amritsar protesting the Rowlatt Act (Black Act). Brigadier-General Dyer ordered firing on unarmed crowd. Official: 379 killed; unofficial estimates: 1,000+. Hunter Commission report. Rabindranath Tagore returned his knighthood. Udham Singh shot Michael O'Dwyer (Lt. Governor who endorsed Dyer) in London in 1940."
+        }
+      },
+      {
+        "heading": {
+          "hi": "भगत सिंह और पंजाब में राष्ट्रीय आंदोलन",
+          "pa": "ਭਗਤ ਸਿੰਘ ਅਤੇ ਪੰਜਾਬ ਵਿੱਚ ਰਾਸ਼ਟਰੀ ਲਹਿਰ",
+          "en": "Bhagat Singh and the National Movement in Punjab"
+        },
+        "text": {
+          "hi": "**ਭਗਤ ਸਿੰਘ** (28 ਸਤੰਬਰ 1907 – 23 ਮਾਰਚ 1931): ਲਾਇਲਪੁਰ (ਹੁਣ ਫੈਸਲਾਬਾਦ, ਪਾਕਿਸਤਾਨ) ਵਿੱਚ ਜਨਮੇ। ਗਦਰੀ ਪਰਿਵਾਰ ਤੋਂ। 1926 ਵਿੱਚ ਨੌਜਵਾਨ ਭਾਰਤ ਸਭਾ ਬਣਾਈ। ਸਾਂਡਰਸ ਦੀ ਹੱਤਿਆ (1928, ਲਾਲਾ ਲਾਜਪਤ ਰਾਏ ਦੇ ਬਦਲੇ ਵਜੋਂ)। ਅਸੈਂਬਲੀ ਵਿੱਚ ਬੰਬ ਸੁੱਟਿਆ (8 ਅਪ੍ਰੈਲ 1929, ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ ਨਾਲ) — 'ਬੋਲੇ ਕੰਨਾਂ ਨੂੰ ਸੁਣਾਉਣ ਲਈ'। ਹਿੰਦੁਸਤਾਨ ਸੋਸ਼ਲਿਸਟ ਰਿਪਬਲੀਕਨ ਐਸੋਸੀਏਸ਼ਨ (HSRA) ਦੇ ਮੈਂਬਰ। 23 ਮਾਰਚ 1931 ਨੂੰ ਲਾਹੌਰ ਜੇਲ੍ਹ ਵਿੱਚ ਰਾਜਗੁਰੂ ਅਤੇ ਸੁਖਦੇਵ ਨਾਲ ਫਾਂਸੀ।\n\nਲਾਲਾ ਲਾਜਪਤ ਰਾਏ ('ਪੰਜਾਬ ਦਾ ਸ਼ੇਰ'): ਲਾਲ-ਬਾਲ-ਪਾਲ ਤਿਕੜੀ ਵਿੱਚੋਂ ਇੱਕ। 1928 ਵਿੱਚ ਸਾਈਮਨ ਕਮਿਸ਼ਨ ਵਿਰੋਧ ਵਿੱਚ ਲਾਠੀਚਾਰਜ ਤੋਂ ਬਾਅਦ ਮੌਤ।",
+          "pa": "ਭਗਤ ਸਿੰਘ (1907–1931): ਲਾਇਲਪੁਰ ਵਿੱਚ ਜਨਮ। 1929 ਵਿੱਚ ਅਸੈਂਬਲੀ ਬੰਬ ਕਾਂਡ। HSRA ਮੈਂਬਰ। 23 ਮਾਰਚ 1931 ਨੂੰ ਫਾਂਸੀ — ਰਾਜਗੁਰੂ ਅਤੇ ਸੁਖਦੇਵ ਨਾਲ।\nਲਾਲਾ ਲਾਜਪਤ ਰਾਏ — 'ਪੰਜਾਬ ਦਾ ਸ਼ੇਰ', 1928 ਵਿੱਚ ਸਾਈਮਨ ਕਮਿਸ਼ਨ ਵਿਰੋਧ ਵਿੱਚ ਮੌਤ।",
+          "en": "**Bhagat Singh** (28 Sep 1907 – 23 Mar 1931): Born in Lyallpur (now Faisalabad, Pakistan). From a Ghadari family. Founded Naujawan Bharat Sabha (1926). Killed Saunders (1928, in revenge for Lala Lajpat Rai). Threw bomb in Central Legislative Assembly (8 Apr 1929, with Batukeshwar Dutt) — 'to make the deaf hear'. Member of HSRA. Hanged on 23 March 1931 in Lahore jail along with Rajguru and Sukhdev.\n\nLala Lajpat Rai ('Lion of Punjab'): One of the Lal-Bal-Pal trio. Died 1928 after lathi-charge during Simon Commission protests."
+        }
+      },
+      {
+        "heading": {
+          "hi": "पंजाब का विभाजन 1947",
+          "pa": "ਪੰਜਾਬ ਦੀ ਵੰਡ 1947",
+          "en": "Partition of Punjab 1947"
+        },
+        "text": {
+          "hi": "**माउंटबेटन योजना (3 जून 1947)**: भारत और पाकिस्तान के रूप में दो डोमिनियन के निर्माण का प्रावधान। **ਸਾਈਰਿਲ ਰੈਡਕਲਿਫ਼** ਨੇ ਪੰਜਾਬ ਅਤੇ ਬੰਗਾਲ ਦੀਆਂ ਸੀਮਾਵਾਂ ਤੈਅ ਕੀਤੀਆਂ (ਰੈਡਕਲਿਫ਼ ਲਾਈਨ)। 14–15 ਅਗਸਤ 1947 ਨੂੰ ਵੰਡ ਅਮਲ ਵਿੱਚ ਆਈ।\n\nਪੰਜਾਬ ਦੀ ਵੰਡ ਇਤਿਹਾਸ ਦੇ ਸਭ ਤੋਂ ਵੱਡੇ ਜਨ-ਅੰਦੋਲਨਾਂ ਵਿੱਚੋਂ ਇੱਕ: ਅਨੁਮਾਨਿਤ 1–2 ਕਰੋੜ ਲੋਕ ਬੇਘਰ ਹੋਏ; 2–5 ਲੱਖ ਮੌਤਾਂ (ਅਨੁਮਾਨਿਤ)। ਪੱਛਮੀ ਪੰਜਾਬ ਪਾਕਿਸਤਾਨ ਨੂੰ; ਪੂਰਬੀ ਪੰਜਾਬ ਭਾਰਤ ਨੂੰ। ਸਿੱਖਾਂ ਨੂੰ ਵੱਡੇ ਪੱਧਰ ਉੱਤੇ ਉਜਾੜਾ ਝੱਲਣਾ ਪਿਆ।\n\nਭਾਰਤੀ ਪੰਜਾਬ ਦੀ ਰਾਜਧਾਨੀ: ਸ਼ਿਮਲਾ (ਅਸਥਾਈ) → 1966 ਵਿੱਚ ਪੰਜਾਬੀ ਸੂਬਾ ਅੰਦੋਲਨ ਤੋਂ ਬਾਅਦ ਚੰਡੀਗੜ੍ਹ। 1966: ਪੰਜਾਬ ਪੁਨਰਗਠਨ ਐਕਟ — ਹਰਿਆਣਾ ਅਤੇ ਹਿਮਾਚਲ ਪ੍ਰਦੇਸ਼ ਵੱਖਰੇ ਹੋਏ।",
+          "pa": "ਮਾਊਂਟਬੈਟਨ ਯੋਜਨਾ (3 ਜੂਨ 1947): ਭਾਰਤ ਅਤੇ ਪਾਕਿਸਤਾਨ ਦੋ ਡੋਮਿਨੀਅਨ। ਸਾਈਰਿਲ ਰੈਡਕਲਿਫ਼ ਨੇ ਸੀਮਾਵਾਂ ਤੈਅ ਕੀਤੀਆਂ। 14–15 ਅਗਸਤ 1947 ਨੂੰ ਵੰਡ। 1–2 ਕਰੋੜ ਬੇਘਰ; ਲੱਖਾਂ ਮੌਤਾਂ। 1966: ਪੰਜਾਬ, ਹਰਿਆਣਾ, ਹਿਮਾਚਲ ਵੱਖਰੇ।",
+          "en": "**Mountbatten Plan (3 June 1947)**: Two dominions — India and Pakistan. **Cyril Radcliffe** drew the Punjab and Bengal boundaries (Radcliffe Line). Partition effective 14–15 August 1947.\n\nPunjab's partition was one of history's largest mass migrations: ~10–20 million displaced; 200,000–500,000 estimated deaths. West Punjab went to Pakistan; East Punjab to India. Sikhs suffered massive displacement.\n\nCapital of Indian Punjab: Shimla (temporary) → Chandigarh after 1966 Punjabi Suba movement. 1966 Punjab Reorganisation Act separated Haryana and Himachal Pradesh."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "1857 — पंजाब में सीमित विद्रोह (1849 से अंग्रेज़ी राज)। 1913 — गदर पार्टी (लाला हरदयाल, सैन फ्रांसिस्को)। 13 अप्रैल 1919 — जलियाँवाला बाग (डायर, 379+ मृत)। भगत सिंह (HSRA), 23 मार्च 1931 फाँसी। 1947 — रेडक्लिफ रेखा, विभाजन, 1–2 करोड़ विस्थापित। 1966 — पंजाब पुनर्गठन।",
+      "pa": "1857 — ਪੰਜਾਬ ਵਿੱਚ ਘੱਟ ਵਿਦਰੋਹ। 1913 — ਗਦਰ ਪਾਰਟੀ (ਲਾਲਾ ਹਰਦਿਆਲ)। 1919 — ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ (379+)। ਭਗਤ ਸਿੰਘ 1931। 1947 — ਵੰਡ (ਰੈਡਕਲਿਫ਼ ਲਾਈਨ)। 1966 — ਪੁਨਰਗਠਨ।",
+      "en": "1857 — limited revolt in Punjab (British rule since 1849). 1913 — Ghadar Party (Lala Hardayal, San Francisco). 13 Apr 1919 — Jallianwala Bagh (Dyer, 379+ dead). Bhagat Singh (HSRA), hanged 23 Mar 1931. 1947 — Radcliffe Line, Partition, 10–20 million displaced. 1966 — Punjab Reorganisation Act."
+    },
+    "keyPoints": [
+      {
+        "hi": "गदर पार्टी 1913 — लाला हरदयाल — सैन फ्रांसिस्को — पंजाबी प्रवासी",
+        "pa": "ਗਦਰ ਪਾਰਟੀ 1913 — ਲਾਲਾ ਹਰਦਿਆਲ — ਸੈਨ ਫਰਾਂਸਿਸਕੋ",
+        "en": "Ghadar Party 1913 — Lala Hardayal — San Francisco — Punjabi diaspora"
+      },
+      {
+        "hi": "जलियाँवाला बाग 13 अप्रैल 1919 — डायर — रॉलट एक्ट विरोध — 379+ मृत",
+        "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ 13 ਅਪ੍ਰੈਲ 1919 — ਡਾਇਰ — 379+",
+        "en": "Jallianwala Bagh 13 April 1919 — Dyer — Rowlatt Act protest — 379+ killed"
+      },
+      {
+        "hi": "भगत सिंह — 23 मार्च 1931 — लाहौर — HSRA — राजगुरु और सुखदेव के साथ",
+        "pa": "ਭਗਤ ਸਿੰਘ — 23 ਮਾਰਚ 1931 — ਲਾਹੌਰ — HSRA",
+        "en": "Bhagat Singh — 23 March 1931 — Lahore — HSRA — with Rajguru and Sukhdev"
+      },
+      {
+        "hi": "विभाजन 1947 — रेडक्लिफ रेखा — 1–2 करोड़ विस्थापित — 1966 पंजाब पुनर्गठन",
+        "pa": "ਵੰਡ 1947 — ਰੈਡਕਲਿਫ਼ ਲਾਈਨ — 1966 ਪੁਨਰਗਠਨ",
+        "en": "Partition 1947 — Radcliffe Line — 10–20 million displaced — 1966 Punjab Reorganisation"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "गदर पार्टी की स्थापना किसने, कब और कहाँ की?",
+          "pa": "ਗਦਰ ਪਾਰਟੀ ਕਿਸਨੇ, ਕਦੋਂ ਅਤੇ ਕਿੱਥੇ ਸਥਾਪਿਤ ਕੀਤੀ?",
+          "en": "Who founded the Ghadar Party, when and where?"
+        },
+        "back": {
+          "hi": "ਲਾਲਾ ਹਰਦਿਆਲ, 1913, ਸੈਨ ਫਰਾਂਸਿਸਕੋ (ਅਮਰੀਕਾ)",
+          "pa": "ਲਾਲਾ ਹਰਦਿਆਲ, 1913, ਸੈਨ ਫਰਾਂਸਿਸਕੋ",
+          "en": "Lala Hardayal, 1913, San Francisco, USA"
+        }
+      },
+      {
+        "front": {
+          "hi": "जलियाँवाला बाग हत्याकांड कब हुआ?",
+          "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਾਂਡ ਕਦੋਂ ਹੋਇਆ?",
+          "en": "When did the Jallianwala Bagh massacre occur?"
+        },
+        "back": {
+          "hi": "13 ਅਪ੍ਰੈਲ 1919 (ਵੈਸਾਖੀ), ਅੰਮ੍ਰਿਤਸਰ",
+          "pa": "13 ਅਪ੍ਰੈਲ 1919 (ਵੈਸਾਖੀ), ਅੰਮ੍ਰਿਤਸਰ",
+          "en": "13 April 1919 (Baisakhi), Amritsar"
+        }
+      },
+      {
+        "front": {
+          "hi": "किसने जलियाँवाला बाग में गोलियाँ चलाने का आदेश दिया?",
+          "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਵਿੱਚ ਗੋਲੀ ਚਲਾਉਣ ਦਾ ਹੁਕਮ ਕਿਸਨੇ ਦਿੱਤਾ?",
+          "en": "Who ordered firing at Jallianwala Bagh?"
+        },
+        "back": {
+          "hi": "ਬ੍ਰਿਗੇਡੀਅਰ ਜਨਰਲ ਰੇਜੀਨਾਲਡ ਡਾਇਰ",
+          "pa": "ਬ੍ਰਿਗੇਡੀਅਰ ਜਨਰਲ ਰੇਜੀਨਾਲਡ ਡਾਇਰ",
+          "en": "Brigadier-General Reginald Dyer"
+        }
+      },
+      {
+        "front": {
+          "hi": "भगत सिंह को किस संगठन का सदस्य थे?",
+          "pa": "ਭਗਤ ਸਿੰਘ ਕਿਸ ਸੰਗਠਨ ਦੇ ਮੈਂਬਰ ਸਨ?",
+          "en": "Which organisation did Bhagat Singh belong to?"
+        },
+        "back": {
+          "hi": "HSRA — ਹਿੰਦੁਸਤਾਨ ਸੋਸ਼ਲਿਸਟ ਰਿਪਬਲੀਕਨ ਐਸੋਸੀਏਸ਼ਨ",
+          "pa": "HSRA — ਹਿੰਦੁਸਤਾਨ ਸੋਸ਼ਲਿਸਟ ਰਿਪਬਲੀਕਨ ਐਸੋਸੀਏਸ਼ਨ",
+          "en": "HSRA — Hindustan Socialist Republican Association"
+        }
+      },
+      {
+        "front": {
+          "hi": "भगत सिंह को कब और किनके साथ फाँसी दी गई?",
+          "pa": "ਭਗਤ ਸਿੰਘ ਨੂੰ ਕਦੋਂ ਅਤੇ ਕਿਨ੍ਹਾਂ ਨਾਲ ਫਾਂਸੀ ਦਿੱਤੀ ਗਈ?",
+          "en": "When was Bhagat Singh executed and with whom?"
+        },
+        "back": {
+          "hi": "23 ਮਾਰਚ 1931, ਲਾਹੌਰ ਜੇਲ੍ਹ, ਰਾਜਗੁਰੂ ਅਤੇ ਸੁਖਦੇਵ ਨਾਲ",
+          "pa": "23 ਮਾਰਚ 1931, ਲਾਹੌਰ ਜੇਲ੍ਹ, ਰਾਜਗੁਰੂ ਅਤੇ ਸੁਖਦੇਵ ਨਾਲ",
+          "en": "23 March 1931, Lahore jail, with Rajguru and Sukhdev"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਰੈਡਕਲਿਫ਼ ਲਾਈਨ ਕਿਸਨੇ ਖਿੱਚੀ?",
+          "pa": "ਰੈਡਕਲਿਫ਼ ਲਾਈਨ ਕਿਸਨੇ ਖਿੱਚੀ?",
+          "en": "Who drew the Radcliffe Line in 1947?"
+        },
+        "back": {
+          "hi": "ਸਾਈਰਿਲ ਰੈਡਕਲਿਫ਼ (ਪੰਜਾਬ ਅਤੇ ਬੰਗਾਲ ਦੋਵੇਂ)",
+          "pa": "ਸਾਈਰਿਲ ਰੈਡਕਲਿਫ਼",
+          "en": "Cyril Radcliffe (for both Punjab and Bengal)"
+        }
+      },
+      {
+        "front": {
+          "hi": "लाला लाजपत राय की मौत किस घटना के बाद हुई?",
+          "pa": "ਲਾਲਾ ਲਾਜਪਤ ਰਾਏ ਦੀ ਮੌਤ ਕਿਸ ਘਟਨਾ ਤੋਂ ਬਾਅਦ ਹੋਈ?",
+          "en": "After which event did Lala Lajpat Rai die?"
+        },
+        "back": {
+          "hi": "ਸਾਈਮਨ ਕਮਿਸ਼ਨ ਵਿਰੁੱਧ ਪ੍ਰਦਰਸ਼ਨ (1928) ਵਿੱਚ ਲਾਠੀਚਾਰਜ",
+          "pa": "ਸਾਈਮਨ ਕਮਿਸ਼ਨ ਵਿਰੁੱਧ ਪ੍ਰਦਰਸ਼ਨ 1928 ਵਿੱਚ ਲਾਠੀਚਾਰਜ",
+          "en": "Lathi-charge during Simon Commission protest (1928)"
+        }
+      },
+      {
+        "front": {
+          "hi": "1966 पंजाब पुनर्गठन अधिनियम से क्या हुआ?",
+          "pa": "1966 ਪੰਜਾਬ ਪੁਨਰਗਠਨ ਐਕਟ ਨਾਲ ਕੀ ਹੋਇਆ?",
+          "en": "What happened under the 1966 Punjab Reorganisation Act?"
+        },
+        "back": {
+          "hi": "ਪੰਜਾਬ ਨੂੰ ਤਿੰਨ ਹਿੱਸਿਆਂ ਵਿੱਚ ਵੰਡਿਆ: ਪੰਜਾਬ (ਪੰਜਾਬੀ ਬੋਲਣ ਵਾਲਾ), ਹਰਿਆਣਾ, ਹਿਮਾਚਲ ਪ੍ਰਦੇਸ਼; ਚੰਡੀਗੜ੍ਹ ਸਾਂਝੀ ਰਾਜਧਾਨੀ (ਕੇਂਦਰ ਸ਼ਾਸਿਤ ਪ੍ਰਦੇਸ਼)",
+          "pa": "ਪੰਜਾਬ, ਹਰਿਆਣਾ, ਹਿਮਾਚਲ — ਚੰਡੀਗੜ੍ਹ ਸਾਂਝੀ ਰਾਜਧਾਨੀ",
+          "en": "Punjab split into Punjab (Punjabi-speaking), Haryana, and Himachal Pradesh; Chandigarh as shared capital (Union Territory)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-colonial-q1",
+        "text": {
+          "hi": "गदर पार्टी की स्थापना कब और कहाँ हुई?",
+          "pa": "ਗਦਰ ਪਾਰਟੀ ਦੀ ਸਥਾਪਨਾ ਕਦੋਂ ਅਤੇ ਕਿੱਥੇ ਹੋਈ?",
+          "en": "When and where was the Ghadar Party founded?"
+        },
+        "options": {
+          "hi": [
+            "1905, लंदन",
+            "1906, लाहौर",
+            "1913, सैन फ्रांसिस्को",
+            "1919, अमृतसर"
+          ],
+          "pa": [
+            "1905, ਲੰਡਨ",
+            "1906, ਲਾਹੌਰ",
+            "1913, ਸੈਨ ਫਰਾਂਸਿਸਕੋ",
+            "1919, ਅੰਮ੍ਰਿਤਸਰ"
+          ],
+          "en": [
+            "1905, London",
+            "1906, Lahore",
+            "1913, San Francisco",
+            "1919, Amritsar"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "गदर पार्टी 1913 में लाला हरदयाल ने सैन फ्रांसिस्को में पंजाबी प्रवासियों के साथ मिलकर स्थापित की।",
+          "en": "The Ghadar Party was founded in 1913 by Lala Hardayal in San Francisco with Punjabi diaspora workers."
+        }
+      },
+      {
+        "id": "sst-colonial-q2",
+        "text": {
+          "hi": "जलियाँवाला बाग हत्याकांड के विरोध में किस भारतीय ने 'नाइटहुड' उपाधि वापस की?",
+          "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਾਂਡ ਦੇ ਵਿਰੋਧ ਵਿੱਚ ਕਿਸ ਭਾਰਤੀ ਨੇ 'ਨਾਈਟਹੁੱਡ' ਵਾਪਸ ਕੀਤੀ?",
+          "en": "Which Indian returned his knighthood in protest against the Jallianwala Bagh massacre?"
+        },
+        "options": {
+          "hi": [
+            "महात्मा गांधी",
+            "बाल गंगाधर तिलक",
+            "रवींद्रनाथ टैगोर",
+            "गोपाल कृष्ण गोखले"
+          ],
+          "pa": [
+            "ਮਹਾਤਮਾ ਗਾਂਧੀ",
+            "ਬਾਲ ਗੰਗਾਧਰ ਤਿਲਕ",
+            "ਰਵਿੰਦਰਨਾਥ ਟੈਗੋਰ",
+            "ਗੋਪਾਲ ਕ੍ਰਿਸ਼ਨ ਗੋਖਲੇ"
+          ],
+          "en": [
+            "Mahatma Gandhi",
+            "Bal Gangadhar Tilak",
+            "Rabindranath Tagore",
+            "Gopal Krishna Gokhale"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "रवींद्रनाथ टैगोर ने जलियाँवाला बाग नरसंहार के विरोध में अपनी 'सर' (नाइटहुड) की उपाधि ब्रिटिश सरकार को लौटा दी।",
+          "en": "Rabindranath Tagore returned his knighthood ('Sir') to the British government in protest against the Jallianwala Bagh massacre."
+        }
+      },
+      {
+        "id": "sst-colonial-q3",
+        "text": {
+          "hi": "भगत सिंह और उनके साथियों को फाँसी किस जेल में दी गई?",
+          "pa": "ਭਗਤ ਸਿੰਘ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਸਾਥੀਆਂ ਨੂੰ ਕਿਸ ਜੇਲ੍ਹ ਵਿੱਚ ਫਾਂਸੀ ਦਿੱਤੀ?",
+          "en": "In which jail was Bhagat Singh executed?"
+        },
+        "options": {
+          "hi": [
+            "अंडमान सेलुलर जेल",
+            "दिल्ली सेंट्रल जेल",
+            "लाहौर सेंट्रल जेल",
+            "अमृतसर जेल"
+          ],
+          "pa": [
+            "ਅੰਡੇਮਾਨ ਸੈਲੂਲਰ ਜੇਲ੍ਹ",
+            "ਦਿੱਲੀ ਸੈਂਟਰਲ ਜੇਲ੍ਹ",
+            "ਲਾਹੌਰ ਸੈਂਟਰਲ ਜੇਲ੍ਹ",
+            "ਅੰਮ੍ਰਿਤਸਰ ਜੇਲ੍ਹ"
+          ],
+          "en": [
+            "Andaman Cellular Jail",
+            "Delhi Central Jail",
+            "Lahore Central Jail",
+            "Amritsar Jail"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "भगत सिंह, राजगुरु और सुखदेव को 23 मार्च 1931 को लाहौर सेंट्रल जेल में फाँसी दी गई।",
+          "en": "Bhagat Singh, Rajguru and Sukhdev were executed at Lahore Central Jail on 23 March 1931."
+        }
+      },
+      {
+        "id": "sst-colonial-q4",
+        "text": {
+          "hi": "पंजाब की 1947 की विभाजन रेखा किसने खींची?",
+          "pa": "ਪੰਜਾਬ ਦੀ 1947 ਦੀ ਵੰਡ ਰੇਖਾ ਕਿਸਨੇ ਖਿੱਚੀ?",
+          "en": "Who drew the partition line for Punjab in 1947?"
+        },
+        "options": {
+          "hi": [
+            "लॉर्ड माउंटबेटन",
+            "क्लेमेंट एटली",
+            "साइरिल रेडक्लिफ",
+            "लॉर्ड वेवेल"
+          ],
+          "pa": [
+            "ਲਾਰਡ ਮਾਊਂਟਬੈਟਨ",
+            "ਕਲੀਮੈਂਟ ਐਟਲੀ",
+            "ਸਾਈਰਿਲ ਰੈਡਕਲਿਫ਼",
+            "ਲਾਰਡ ਵੇਵਲ"
+          ],
+          "en": [
+            "Lord Mountbatten",
+            "Clement Attlee",
+            "Cyril Radcliffe",
+            "Lord Wavell"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "साइरिल रेडक्लिफ ने पंजाब और बंगाल की विभाजन रेखा (रेडक्लिफ लाइन) खींची।",
+          "en": "Cyril Radcliffe drew the partition boundaries for both Punjab and Bengal (Radcliffe Line)."
+        }
+      },
+      {
+        "id": "sst-colonial-q5",
+        "text": {
+          "hi": "1857 के विद्रोह के बाद भारत का प्रथम वायसराय कौन बना?",
+          "pa": "1857 ਦੇ ਵਿਦਰੋਹ ਤੋਂ ਬਾਅਦ ਭਾਰਤ ਦਾ ਪਹਿਲਾ ਵਾਇਸਰਾਏ ਕੌਣ ਬਣਿਆ?",
+          "en": "Who became the first Viceroy of India after the 1857 uprising?"
+        },
+        "options": {
+          "hi": [
+            "लॉर्ड डलहौजी",
+            "लॉर्ड कैनिंग",
+            "लॉर्ड रिपन",
+            "लॉर्ड कर्जन"
+          ],
+          "pa": [
+            "ਲਾਰਡ ਡਲਹੌਜ਼ੀ",
+            "ਲਾਰਡ ਕੈਨਿੰਗ",
+            "ਲਾਰਡ ਰਿਪਨ",
+            "ਲਾਰਡ ਕਰਜ਼ਨ"
+          ],
+          "en": [
+            "Lord Dalhousie",
+            "Lord Canning",
+            "Lord Ripon",
+            "Lord Curzon"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "1858 के भारत सरकार अधिनियम के बाद लॉर्ड कैनिंग भारत के प्रथम वायसराय बने।",
+          "en": "After the Government of India Act 1858, Lord Canning became the first Viceroy of India."
+        }
+      },
+      {
+        "id": "sst-colonial-q6",
+        "text": {
+          "hi": "उधम सिंह ने 1940 में किसे गोली मारी?",
+          "pa": "ਉਧਮ ਸਿੰਘ ਨੇ 1940 ਵਿੱਚ ਕਿਸਨੂੰ ਗੋਲੀ ਮਾਰੀ?",
+          "en": "Whom did Udham Singh shoot in 1940?"
+        },
+        "options": {
+          "hi": [
+            "जनरल डायर",
+            "माइकल ओ'डायर",
+            "लॉर्ड माउंटबेटन",
+            "लॉर्ड इर्विन"
+          ],
+          "pa": [
+            "ਜਨਰਲ ਡਾਇਰ",
+            "ਮਾਈਕਲ ਓ'ਡਾਇਰ",
+            "ਲਾਰਡ ਮਾਊਂਟਬੈਟਨ",
+            "ਲਾਰਡ ਇਰਵਿਨ"
+          ],
+          "en": [
+            "General Dyer",
+            "Michael O'Dwyer",
+            "Lord Mountbatten",
+            "Lord Irwin"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "उधम सिंह ने लंदन में 1940 में माइकल ओ'डायर (पंजाब के पूर्व लेफ्टिनेंट गवर्नर जिन्होंने जलियाँवाला बाग की कार्रवाई का समर्थन किया) को गोली मारी।",
+          "en": "Udham Singh shot Michael O'Dwyer in London in 1940 — O'Dwyer was the Lt. Governor of Punjab who had endorsed Dyer's action."
+        }
+      },
+      {
+        "id": "sst-colonial-q7",
+        "text": {
+          "hi": "भगत सिंह ने 8 अप्रैल 1929 को केंद्रीय विधान सभा में बम किसके साथ मिलकर फेंका?",
+          "pa": "ਭਗਤ ਸਿੰਘ ਨੇ 8 ਅਪ੍ਰੈਲ 1929 ਨੂੰ ਕਿਸਦੇ ਨਾਲ ਮਿਲ ਕੇ ਬੰਬ ਸੁੱਟਿਆ?",
+          "en": "With whom did Bhagat Singh throw bombs in the Central Legislative Assembly on 8 April 1929?"
+        },
+        "options": {
+          "hi": [
+            "सुखदेव",
+            "राजगुरु",
+            "बटुकेश्वर दत्त",
+            "चंद्रशेखर आजाद"
+          ],
+          "pa": [
+            "ਸੁਖਦੇਵ",
+            "ਰਾਜਗੁਰੂ",
+            "ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ",
+            "ਚੰਦਰਸ਼ੇਖਰ ਆਜ਼ਾਦ"
+          ],
+          "en": [
+            "Sukhdev",
+            "Rajguru",
+            "Batukeshwar Dutt",
+            "Chandrashekhar Azad"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "भगत सिंह और बटुकेश्वर दत्त ने 8 अप्रैल 1929 को केंद्रीय विधान सभा में बम फेंके — इरादा मारने का नहीं बल्कि ध्यान आकर्षित करने का था।",
+          "en": "Bhagat Singh and Batukeshwar Dutt threw bombs in the Central Legislative Assembly on 8 April 1929 — to make noise, not to kill."
+        }
+      },
+      {
+        "id": "sst-colonial-q8",
+        "text": {
+          "hi": "1966 के पंजाब पुनर्गठन अधिनियम के बाद चंडीगढ़ की स्थिति क्या बनी?",
+          "pa": "1966 ਤੋਂ ਬਾਅਦ ਚੰਡੀਗੜ੍ਹ ਦੀ ਦਰਜਾ ਕੀ ਬਣੀ?",
+          "en": "What status did Chandigarh get after the 1966 Punjab Reorganisation Act?"
+        },
+        "options": {
+          "hi": [
+            "हरियाणा की राजधानी",
+            "पंजाब की अलग राजधानी",
+            "केंद्र शासित प्रदेश और साझा राजधानी",
+            "हिमाचल प्रदेश की राजधानी"
+          ],
+          "pa": [
+            "ਹਰਿਆਣਾ ਦੀ ਰਾਜਧਾਨੀ",
+            "ਪੰਜਾਬ ਦੀ ਵੱਖਰੀ ਰਾਜਧਾਨੀ",
+            "ਕੇਂਦਰ ਸ਼ਾਸਿਤ ਪ੍ਰਦੇਸ਼ ਅਤੇ ਸਾਂਝੀ ਰਾਜਧਾਨੀ",
+            "ਹਿਮਾਚਲ ਪ੍ਰਦੇਸ਼ ਦੀ ਰਾਜਧਾਨੀ"
+          ],
+          "en": [
+            "Capital of Haryana",
+            "Separate capital of Punjab",
+            "Union Territory and shared capital",
+            "Capital of Himachal Pradesh"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "चंडीगढ़ केंद्र शासित प्रदेश बना और पंजाब तथा हरियाणा दोनों की साझा राजधानी।",
+          "en": "Chandigarh became a Union Territory and the shared capital of both Punjab and Haryana."
+        }
+      },
+      {
+        "id": "sst-colonial-q9",
+        "text": {
+          "hi": "जलियाँवाला बाग हत्याकांड किस कानून के विरोध में हुई सभा में हुआ?",
+          "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਿਸ ਕਾਨੂੰਨ ਦੇ ਵਿਰੋਧ ਵਿੱਚ ਹੋਈ ਸਭਾ ਵਿੱਚ ਵਾਪਰਿਆ?",
+          "en": "The Jallianwala Bagh massacre happened during a protest against which law?"
+        },
+        "options": {
+          "hi": [
+            "भारत सरकार अधिनियम 1919",
+            "रॉलट एक्ट 1919",
+            "इंडियन प्रेस एक्ट 1910",
+            "सेडिशन एक्ट 1870"
+          ],
+          "pa": [
+            "ਭਾਰਤ ਸਰਕਾਰ ਐਕਟ 1919",
+            "ਰੋਲਟ ਐਕਟ 1919",
+            "ਭਾਰਤੀ ਪ੍ਰੈਸ ਐਕਟ 1910",
+            "ਰਾਜਦ੍ਰੋਹ ਐਕਟ 1870"
+          ],
+          "en": [
+            "Government of India Act 1919",
+            "Rowlatt Act 1919",
+            "Indian Press Act 1910",
+            "Sedition Act 1870"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "रॉलट एक्ट (1919) ने बिना मुकदमे के गिरफ्तारी की अनुमति दी — इसे 'काला कानून' कहा गया। इसके विरोध में अमृतसर में सभा हुई जहाँ जलियाँवाला बाग कांड हुआ।",
+          "en": "The Rowlatt Act (1919) allowed detention without trial — called the 'Black Act'. Protest against it in Amritsar led to the Jallianwala Bagh massacre."
+        }
+      },
+      {
+        "id": "sst-colonial-q10",
+        "text": {
+          "hi": "1857 के बाद पंजाब में सबसे सक्रिय विद्रोह कहाँ हुआ?",
+          "pa": "1857 ਤੋਂ ਬਾਅਦ ਪੰਜਾਬ ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ ਵਿਦਰੋਹ ਕਿੱਥੇ ਹੋਇਆ?",
+          "en": "Where did the most significant 1857 revolt activity in Punjab occur?"
+        },
+        "options": {
+          "hi": [
+            "अमृतसर",
+            "झेलम और मुल्तान",
+            "लाहौर",
+            "रावलपिंडी"
+          ],
+          "pa": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਝੇਲਮ ਅਤੇ ਮੁਲਤਾਨ",
+            "ਲਾਹੌਰ",
+            "ਰਾਵਲਪਿੰਡੀ"
+          ],
+          "en": [
+            "Amritsar",
+            "Jhelum and Multan",
+            "Lahore",
+            "Rawalpindi"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "पंजाब में 1857 का विद्रोह झेलम और मुल्तान में सबसे अधिक था। अधिकांश पंजाब शांत रहा क्योंकि पंजाब 1849 में ही अंग्रेज़ी राज में आ गया था।",
+          "en": "In Punjab, the most notable 1857 revolt activities were at Jhelum and Multan. Most of Punjab remained calm as it had been under British rule since 1849."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sst-consumer-equilibrium",
+    "subject": "Economics",
+    "unit": "Economics",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "उपभोक्ता संतुलन: उपयोगिता और उदासीनता वक्र",
+      "pa": "ਖਪਤਕਾਰ ਸੰਤੁਲਨ: ਉਪਯੋਗਿਤਾ ਅਤੇ ਉਦਾਸੀਨਤਾ ਵਕਰ",
+      "en": "Consumer Equilibrium: Utility and Indifference Curves"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 11 Introductory Microeconomics – Chapter 2: Theory of Consumer Behaviour",
+        "url": "https://ncert.nic.in/textbook/pdf/keec101.pdf",
+        "note": "Content is author-generated for Master Cadre SST exam practice based on standard syllabus topics."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "उपयोगिता: अर्थ, प्रकार और ह्रासमान सीमांत उपयोगिता नियम",
+          "pa": "ਉਪਯੋਗਿਤਾ: ਅਰਥ, ਕਿਸਮਾਂ ਅਤੇ ਘਟਦੀ ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਕਾਨੂੰਨ",
+          "en": "Utility: Meaning, Types and Law of Diminishing Marginal Utility"
+        },
+        "text": {
+          "hi": "**उपयोगिता (Utility)**: किसी वस्तु या सेवा की इच्छा को संतुष्ट करने की शक्ति। उपयोगिता व्यक्तिपरक है — यह नैतिकता पर निर्भर नहीं करती (जैसे सिगरेट में भी उपयोगिता हो सकती है)।\n\n**कुल उपयोगिता (Total Utility - TU)**: किसी वस्तु की सभी इकाइयों की उपयोगिता का योग।\n**सीमांत उपयोगिता (Marginal Utility - MU)**: एक अतिरिक्त इकाई उपभोग करने से कुल उपयोगिता में होने वाला परिवर्तन। MU = ΔTU/ΔQ\n\n**ह्रासमान सीमांत उपयोगिता का नियम** (Gossen का प्रथम नियम): जैसे-जैसे उपभोक्ता किसी वस्तु की अधिक इकाइयाँ उपभोग करता है, सीमांत उपयोगिता क्रमशः घटती जाती है।\n\n**TU और MU का संबंध**:\n- जब MU > 0 → TU बढ़ती है\n- जब MU = 0 → TU अधिकतम (संतृप्ति बिंदु)\n- जब MU < 0 → TU घटती है\n\n**उपभोक्ता अधिशेष (Consumer Surplus)**: जो अधिकतम मूल्य देने को तैयार था, उससे वास्तव में जो कम भुगतान किया — उसका अंतर। Alfred Marshall का संकल्पना।",
+          "pa": "ਉਪਯੋਗਿਤਾ — ਕਿਸੇ ਵਸਤੂ ਦੀ ਇੱਛਾ ਪੂਰੀ ਕਰਨ ਦੀ ਸ਼ਕਤੀ। MU = ΔTU/ΔQ। ਘਟਦੀ ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਕਾਨੂੰਨ (Gossen): ਹਰ ਵਾਧੂ ਇਕਾਈ ਨਾਲ MU ਘਟਦੀ ਹੈ। TU ਅਧਿਕਤਮ ਜਦੋਂ MU=0।",
+          "en": "**Utility**: The want-satisfying power of a good or service. It is subjective and not moral (e.g. cigarettes can have utility).\n\n**Total Utility (TU)**: Sum of utilities from all units consumed.\n**Marginal Utility (MU)**: Change in TU from consuming one additional unit. MU = ΔTU/ΔQ\n\n**Law of Diminishing Marginal Utility** (Gossen's First Law): As a consumer consumes more units of a good, MU decreases with each additional unit (ceteris paribus).\n\n**TU-MU Relationship**:\n- MU > 0 → TU rising\n- MU = 0 → TU maximum (saturation point)\n- MU < 0 → TU falling\n\n**Consumer Surplus**: Difference between maximum price willing to pay and actual price paid (Alfred Marshall's concept)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "उपभोक्ता संतुलन: कार्डिनल और ऑर्डिनल उपयोगिता",
+          "pa": "ਖਪਤਕਾਰ ਸੰਤੁਲਨ: ਕਾਰਡੀਨਲ ਅਤੇ ਓਰਡੀਨਲ ਉਪਯੋਗਿਤਾ",
+          "en": "Consumer Equilibrium: Cardinal and Ordinal Utility"
+        },
+        "text": {
+          "hi": "**कार्डिनल उपयोगिता दृष्टिकोण (Marshall)**: उपयोगिता को संख्यात्मक रूप (utils) में मापा जा सकता है। एक वस्तु के लिए संतुलन: MU = P (कीमत) या MU/P = 1। दो वस्तुओं के लिए: MUx/Px = MUy/Py = MU of money।\n\n**ऑर्डिनल उपयोगिता दृष्टिकोण (Hicks-Allen)**: उपयोगिता को केवल क्रम से व्यक्त किया जा सकता है, संख्या से नहीं। **उदासीनता वक्र (Indifference Curve - IC)**: दो वस्तुओं के उन सभी संयोजनों का वक्र जो उपभोक्ता को समान संतुष्टि देते हैं।\n\nIC की विशेषताएँ:\n1. बाएँ से दाएँ नीचे झुकती है (ऋणात्मक ढाल)\n2. मूलबिंदु की ओर उत्तल (convex)\n3. दो IC कभी नहीं काटती\n4. ऊपरी IC अधिक पसंदीदा\n\n**बजट रेखा (Budget Line)**: दो वस्तुओं के उन संयोजनों को दर्शाती है जो उपभोक्ता अपनी आय में खरीद सकता है। ढाल = −Px/Py।\n\n**उपभोक्ता संतुलन (IC दृष्टिकोण)**: IC और बजट रेखा के स्पर्शबिंदु पर — MRS = Px/Py।\n\n**MRS (Marginal Rate of Substitution)**: X की एक अतिरिक्त इकाई के लिए Y की कितनी इकाइयाँ छोड़ी जाएँ। IC पर नीचे जाने पर MRS घटती है।",
+          "pa": "ਕਾਰਡੀਨਲ: Marshall — MU ਨੂੰ ਸੰਖਿਆ (utils) ਵਿੱਚ ਮਾਪ ਸਕਦੇ ਹਾਂ। ਸੰਤੁਲਨ: MU=P।\nਓਰਡੀਨਲ: Hicks-Allen — IC ਵਕਰ। IC ਦੀਆਂ 4 ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ। ਬਜਟ ਰੇਖਾ ਢਲਾਣ = −Px/Py। ਸੰਤੁਲਨ: IC ਅਤੇ ਬਜਟ ਰੇਖਾ ਦਾ ਸਪਰਸ਼ ਬਿੰਦੂ। MRS = Px/Py।",
+          "en": "**Cardinal Utility (Marshall)**: Utility measurable in utils. Single good equilibrium: MU = P. Two goods: MUx/Px = MUy/Py = MU of money.\n\n**Ordinal Utility (Hicks-Allen)**: Utility can only be ranked, not measured. **Indifference Curve (IC)**: Locus of all combinations of two goods giving equal satisfaction.\n\nIC properties:\n1. Slopes downward left to right (negative slope)\n2. Convex to origin\n3. Two ICs never intersect\n4. Higher IC = higher satisfaction\n\n**Budget Line**: All combinations of two goods purchasable at given income and prices. Slope = −Px/Py.\n\n**Consumer equilibrium (IC approach)**: At tangency of IC and budget line — MRS = Px/Py.\n\n**MRS (Marginal Rate of Substitution)**: Units of Y sacrificed for one more unit of X. MRS diminishes along the IC (convexity)."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "उपयोगिता = इच्छा पूर्ति शक्ति। MU=ΔTU/ΔQ। ह्रासमान MU नियम। TU अधिकतम जब MU=0। कार्डिनल (Marshall): MUx/Px=MUy/Py। ऑर्डिनल (Hicks): IC+बजट रेखा स्पर्श → MRS=Px/Py।",
+      "pa": "MU=ΔTU/ΔQ। ਘਟਦੀ MU ਕਾਨੂੰਨ। TU ਅਧਿਕਤਮ ਜਦੋਂ MU=0। IC ਵਕਰ + ਬਜਟ ਰੇਖਾ → MRS=Px/Py।",
+      "en": "Utility = want-satisfying power. MU = ΔTU/ΔQ. Law of DMU. TU maximum when MU=0. Cardinal (Marshall): MUx/Px = MUy/Py. Ordinal (Hicks): IC tangent to budget line → MRS = Px/Py."
+    },
+    "keyPoints": [
+      {
+        "hi": "MU = ΔTU/ΔQ; MU=0 पर TU अधिकतम",
+        "pa": "MU = ΔTU/ΔQ; MU=0 ਤੇ TU ਅਧਿਕਤਮ",
+        "en": "MU = ΔTU/ΔQ; TU is maximum when MU = 0"
+      },
+      {
+        "hi": "IC ढाल ऋणात्मक, मूलबिंदु की ओर उत्तल, दो IC नहीं काटतीं",
+        "pa": "IC ਢਲਾਣ ਨਕਾਰਾਤਮਕ, ਮੂਲ ਵੱਲ ਉਤਲ, ਦੋ IC ਕਦੇ ਨਹੀਂ ਕੱਟਦੀਆਂ",
+        "en": "IC: negative slope, convex to origin, two ICs never intersect"
+      },
+      {
+        "hi": "उपभोक्ता संतुलन: MRS = Px/Py (IC विश्लेषण)",
+        "pa": "ਖਪਤਕਾਰ ਸੰਤੁਲਨ: MRS = Px/Py",
+        "en": "Consumer equilibrium: MRS = Px/Py (IC analysis)"
+      },
+      {
+        "hi": "उपभोक्ता अधिशेष = अधिकतम इच्छित मूल्य − वास्तविक मूल्य (Marshall)",
+        "pa": "ਖਪਤਕਾਰ ਸਰਪਲੱਸ = ਵੱਧ ਤੋਂ ਵੱਧ ਮੁੱਲ − ਅਸਲ ਮੁੱਲ",
+        "en": "Consumer surplus = max willing to pay − actual price (Marshall)"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "ह्रासमान सीमांत उपयोगिता का नियम किसने दिया?",
+          "pa": "ਘਟਦੀ ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਕਾਨੂੰਨ ਕਿਸਨੇ ਦਿੱਤਾ?",
+          "en": "Who gave the Law of Diminishing Marginal Utility?"
+        },
+        "back": {
+          "hi": "Gossen (Gossen's First Law); Marshall ने इसे लोकप्रिय बनाया",
+          "pa": "Gossen (Gossen ਦਾ ਪਹਿਲਾ ਕਾਨੂੰਨ); Marshall ਨੇ ਪ੍ਰਚਲਿਤ ਕੀਤਾ",
+          "en": "Gossen (Gossen's First Law); popularised by Alfred Marshall"
+        }
+      },
+      {
+        "front": {
+          "hi": "TU अधिकतम कब होती है?",
+          "pa": "TU ਕਦੋਂ ਅਧਿਕਤਮ ਹੁੰਦੀ ਹੈ?",
+          "en": "When is TU at its maximum?"
+        },
+        "back": {
+          "hi": "जब MU = 0 (संतृप्ति बिंदु)",
+          "pa": "ਜਦੋਂ MU = 0 (ਸੰਤ੍ਰਿਪਤੀ ਬਿੰਦੂ)",
+          "en": "When MU = 0 (saturation point)"
+        }
+      },
+      {
+        "front": {
+          "hi": "IC की चार मुख्य विशेषताएँ क्या हैं?",
+          "pa": "IC ਦੀਆਂ ਚਾਰ ਮੁੱਖ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਕੀ ਹਨ?",
+          "en": "What are the four main properties of an Indifference Curve?"
+        },
+        "back": {
+          "hi": "1) ਨਕਾਰਾਤਮਕ ਢਲਾਣ 2) ਮੂਲ ਵੱਲ ਉਤਲ 3) ਦੋ IC ਕਦੇ ਨਹੀਂ ਕੱਟਦੀਆਂ 4) ਉੱਚੀ IC ਵੱਧ ਪਸੰਦ",
+          "pa": "1) ਨਕਾਰਾਤਮਕ ਢਲਾਣ 2) ਉਤਲ 3) ਕਦੇ ਨਹੀਂ ਕੱਟਦੀਆਂ 4) ਉੱਚੀ IC ਵੱਧ ਪਸੰਦ",
+          "en": "1) Negative slope 2) Convex to origin 3) Never intersect 4) Higher IC preferred"
+        }
+      },
+      {
+        "front": {
+          "hi": "IC विश्लेषण में उपभोक्ता संतुलन की शर्त?",
+          "pa": "IC ਵਿਸ਼ਲੇਸ਼ਣ ਵਿੱਚ ਸੰਤੁਲਨ ਸ਼ਰਤ?",
+          "en": "Condition for consumer equilibrium in IC analysis?"
+        },
+        "back": {
+          "hi": "MRS = Px/Py (IC और बजट रेखा का स्पर्शबिंदु)",
+          "pa": "MRS = Px/Py (IC ਅਤੇ ਬਜਟ ਰੇਖਾ ਦਾ ਸਪਰਸ਼ ਬਿੰਦੂ)",
+          "en": "MRS = Px/Py (tangency of IC and budget line)"
+        }
+      },
+      {
+        "front": {
+          "hi": "बजट रेखा का ढाल क्या होता है?",
+          "pa": "ਬਜਟ ਰੇਖਾ ਦੀ ਢਲਾਣ ਕੀ ਹੁੰਦੀ ਹੈ?",
+          "en": "What is the slope of the budget line?"
+        },
+        "back": {
+          "hi": "−Px/Py (X की कीमत ÷ Y की कीमत, ऋणात्मक)",
+          "pa": "−Px/Py",
+          "en": "−Px/Py (negative ratio of prices)"
+        }
+      },
+      {
+        "front": {
+          "hi": "उपभोक्ता अधिशेष किसकी अवधारणा है?",
+          "pa": "ਖਪਤਕਾਰ ਸਰਪਲੱਸ ਕਿਸਦੀ ਸੰਕਲਪਨਾ ਹੈ?",
+          "en": "Whose concept is Consumer Surplus?"
+        },
+        "back": {
+          "hi": "Alfred Marshall",
+          "pa": "Alfred Marshall",
+          "en": "Alfred Marshall"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-consumer-q1",
+        "text": {
+          "hi": "ह्रासमान सीमांत उपयोगिता के नियम के अनुसार क्या होता है?",
+          "pa": "ਘਟਦੀ ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਕਾਨੂੰਨ ਅਨੁਸਾਰ ਕੀ ਹੁੰਦਾ ਹੈ?",
+          "en": "According to the Law of Diminishing Marginal Utility, what happens?"
+        },
+        "options": {
+          "hi": [
+            "सीमांत उपयोगिता बढ़ती है",
+            "कुल उपयोगिता घटती है",
+            "सीमांत उपयोगिता घटती जाती है",
+            "कुल उपयोगिता स्थिर रहती है"
+          ],
+          "pa": [
+            "ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਵਧਦੀ ਹੈ",
+            "ਕੁੱਲ ਉਪਯੋਗਿਤਾ ਘਟਦੀ ਹੈ",
+            "ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਘਟਦੀ ਜਾਂਦੀ ਹੈ",
+            "ਕੁੱਲ ਉਪਯੋਗਿਤਾ ਸਥਿਰ ਰਹਿੰਦੀ ਹੈ"
+          ],
+          "en": [
+            "Marginal utility increases",
+            "Total utility decreases",
+            "Marginal utility successively decreases",
+            "Total utility remains constant"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ह्रासमान सीमांत उपयोगिता के नियम के अनुसार जैसे-जैसे उपभोक्ता अधिक इकाइयाँ उपभोग करता है, प्रत्येक अतिरिक्त इकाई की सीमांत उपयोगिता घटती जाती है।",
+          "en": "The Law of DMU states that as more units of a good are consumed, each additional unit's marginal utility successively decreases."
+        }
+      },
+      {
+        "id": "sst-consumer-q2",
+        "text": {
+          "hi": "TU अधिकतम कब होती है?",
+          "pa": "TU ਕਦੋਂ ਅਧਿਕਤਮ ਹੁੰਦੀ ਹੈ?",
+          "en": "Total Utility is at its maximum when:"
+        },
+        "options": {
+          "hi": [
+            "MU = 1",
+            "MU > 0",
+            "MU = 0",
+            "MU < 0"
+          ],
+          "pa": [
+            "MU = 1",
+            "MU > 0",
+            "MU = 0",
+            "MU < 0"
+          ],
+          "en": [
+            "MU = 1",
+            "MU > 0",
+            "MU = 0",
+            "MU < 0"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "TU तब अधिकतम होती है जब MU = 0। इसके बाद यदि उपभोग जारी रहे तो MU ऋणात्मक हो जाती है और TU घटने लगती है।",
+          "en": "TU is maximum when MU = 0. Beyond this saturation point, MU turns negative and TU falls."
+        }
+      },
+      {
+        "id": "sst-consumer-q3",
+        "text": {
+          "hi": "उदासीनता वक्र (IC) की कौन सी विशेषता गलत है?",
+          "pa": "IC ਵਕਰ ਦੀ ਕਿਹੜੀ ਵਿਸ਼ੇਸ਼ਤਾ ਗਲਤ ਹੈ?",
+          "en": "Which property of Indifference Curve is INCORRECT?"
+        },
+        "options": {
+          "hi": [
+            "ढाल ऋणात्मक होती है",
+            "मूलबिंदु की ओर उत्तल होती है",
+            "दो IC एक-दूसरे को काट सकती हैं",
+            "ऊपरी IC अधिक संतुष्टि देती है"
+          ],
+          "pa": [
+            "ਢਲਾਣ ਨਕਾਰਾਤਮਕ ਹੁੰਦੀ ਹੈ",
+            "ਮੂਲ ਵੱਲ ਉਤਲ ਹੁੰਦੀ ਹੈ",
+            "ਦੋ IC ਇੱਕ-ਦੂਜੇ ਨੂੰ ਕੱਟ ਸਕਦੀਆਂ ਹਨ",
+            "ਉੱਚੀ IC ਵੱਧ ਸੰਤੁਸ਼ਟੀ ਦਿੰਦੀ ਹੈ"
+          ],
+          "en": [
+            "Slope is negative",
+            "Convex to origin",
+            "Two ICs can intersect each other",
+            "Higher IC gives more satisfaction"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "दो उदासीनता वक्र कभी एक-दूसरे को नहीं काटते। यह IC विश्लेषण की मूल शर्त है।",
+          "en": "Two indifference curves can never intersect — this is a fundamental property of IC analysis."
+        }
+      },
+      {
+        "id": "sst-consumer-q4",
+        "text": {
+          "hi": "IC विश्लेषण में उपभोक्ता संतुलन की शर्त क्या है?",
+          "pa": "IC ਵਿਸ਼ਲੇਸ਼ਣ ਵਿੱਚ ਖਪਤਕਾਰ ਸੰਤੁਲਨ ਦੀ ਸ਼ਰਤ ਕੀ ਹੈ?",
+          "en": "What is the condition for consumer equilibrium in IC analysis?"
+        },
+        "options": {
+          "hi": [
+            "MRS < Px/Py",
+            "MRS = Px/Py",
+            "MRS > Px/Py",
+            "MRS = 0"
+          ],
+          "pa": [
+            "MRS < Px/Py",
+            "MRS = Px/Py",
+            "MRS > Px/Py",
+            "MRS = 0"
+          ],
+          "en": [
+            "MRS < Px/Py",
+            "MRS = Px/Py",
+            "MRS > Px/Py",
+            "MRS = 0"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "IC और बजट रेखा के स्पर्शबिंदु पर MRS = Px/Py। यह अधिकतम संतुष्टि बिंदु है।",
+          "en": "At the tangency of IC and budget line, MRS = Px/Py. This is the utility-maximising point."
+        }
+      },
+      {
+        "id": "sst-consumer-q5",
+        "text": {
+          "hi": "उपभोक्ता अधिशेष की अवधारणा किसने दी?",
+          "pa": "ਖਪਤਕਾਰ ਸਰਪਲੱਸ ਦੀ ਸੰਕਲਪਨਾ ਕਿਸਨੇ ਦਿੱਤੀ?",
+          "en": "Who introduced the concept of Consumer Surplus?"
+        },
+        "options": {
+          "hi": [
+            "J.R. Hicks",
+            "Alfred Marshall",
+            "Paul Samuelson",
+            "Leon Walras"
+          ],
+          "pa": [
+            "J.R. Hicks",
+            "Alfred Marshall",
+            "Paul Samuelson",
+            "Leon Walras"
+          ],
+          "en": [
+            "J.R. Hicks",
+            "Alfred Marshall",
+            "Paul Samuelson",
+            "Leon Walras"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Alfred Marshall ने उपभोक्ता अधिशेष की अवधारणा दी — अधिकतम इच्छित मूल्य और वास्तविक मूल्य का अंतर।",
+          "en": "Alfred Marshall introduced consumer surplus — the difference between the maximum price willing to pay and the actual market price."
+        }
+      },
+      {
+        "id": "sst-consumer-q6",
+        "text": {
+          "hi": "IC विश्लेषण किस अर्थशास्त्री ने विकसित किया?",
+          "pa": "IC ਵਿਸ਼ਲੇਸ਼ਣ ਕਿਸ ਅਰਥਸ਼ਾਸਤਰੀ ਨੇ ਵਿਕਸਿਤ ਕੀਤਾ?",
+          "en": "Who developed the Indifference Curve analysis?"
+        },
+        "options": {
+          "hi": [
+            "Alfred Marshall",
+            "J.R. Hicks और R.G.D. Allen",
+            "Adam Smith",
+            "Karl Marx"
+          ],
+          "pa": [
+            "Alfred Marshall",
+            "J.R. Hicks ਅਤੇ R.G.D. Allen",
+            "Adam Smith",
+            "Karl Marx"
+          ],
+          "en": [
+            "Alfred Marshall",
+            "J.R. Hicks and R.G.D. Allen",
+            "Adam Smith",
+            "Karl Marx"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "J.R. Hicks और R.G.D. Allen ने ordinal utility approach में IC analysis विकसित की।",
+          "en": "J.R. Hicks and R.G.D. Allen developed Indifference Curve analysis under the ordinal utility approach."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sst-money-banking",
+    "subject": "Economics",
+    "unit": "Economics",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "मुद्रा और बैंकिंग",
+      "pa": "ਮੁਦਰਾ ਅਤੇ ਬੈਂਕਿੰਗ",
+      "en": "Money and Banking"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 12 Macroeconomics – Chapter 3: Money and Banking",
+        "url": "https://ncert.nic.in/textbook/pdf/leec102.pdf",
+        "note": "Content is author-generated for Master Cadre SST exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "मुद्रा: अर्थ और कार्य",
+          "pa": "ਮੁਦਰਾ: ਅਰਥ ਅਤੇ ਕੰਮ",
+          "en": "Money: Meaning and Functions"
+        },
+        "text": {
+          "hi": "**मुद्रा**: वह वस्तु जो विनिमय माध्यम के रूप में सर्वत्र स्वीकृत हो।\n\n**मुद्रा के चार प्रमुख कार्य** (Crowther):\n1. **विनिमय का माध्यम (Medium of Exchange)**: वस्तु-विनिमय की दोहरी आवश्यकता समस्या हल करती है।\n2. **मूल्य का मापक (Measure of Value)**: सभी वस्तुओं का मूल्य मुद्रा में व्यक्त होता है।\n3. **मूल्य का संचय (Store of Value)**: भविष्य के लिए बचत।\n4. **स्थगित भुगतान का मानक (Standard of Deferred Payment)**: उधार लेन-देन में।\n\n**मुद्रा के प्रकार**:\n- वस्तु मुद्रा (Commodity money) — सोना, चाँदी\n- पत्र मुद्रा (Paper money) — नोट\n- साख मुद्रा (Credit money) — चेक, DD\n- डिजिटल मुद्रा — UPI, CBDC\n\n**मुद्रा आपूर्ति के मापक (RBI)**:\n- M1 = सिक्के+नोट + बैंक माँग जमाएँ\n- M2 = M1 + डाकघर बचत\n- M3 = M1 + बैंक मियादी जमाएँ (Broad Money)\n- M4 = M3 + डाकघर जमाएँ",
+          "pa": "ਮੁਦਰਾ ਦੇ 4 ਕੰਮ (Crowther): 1) ਵਟਾਂਦਰੇ ਦਾ ਮਾਧਿਅਮ 2) ਮੁੱਲ ਦਾ ਮਾਪਕ 3) ਮੁੱਲ ਦਾ ਭੰਡਾਰ 4) ਮੁਲਤਵੀ ਭੁਗਤਾਨ ਦਾ ਮਿਆਰ। M1, M2, M3, M4 — RBI ਮਾਪਕ।",
+          "en": "**Money**: Anything universally accepted as a medium of exchange.\n\n**Four Primary Functions of Money** (Crowther):\n1. **Medium of Exchange**: Solves the double coincidence of wants problem.\n2. **Measure of Value**: All goods priced in money.\n3. **Store of Value**: Savings for future.\n4. **Standard of Deferred Payment**: For credit transactions.\n\n**Types of Money**: Commodity money (gold), paper money (notes), credit money (cheques), digital money (UPI, CBDC).\n\n**Money Supply Measures (RBI)**:\n- M1 = Currency + Demand deposits with banks\n- M2 = M1 + Post office savings\n- M3 = M1 + Time deposits (Broad Money)\n- M4 = M3 + Post office deposits"
+        }
+      },
+      {
+        "heading": {
+          "hi": "बैंकिंग: RBI और वाणिज्यिक बैंक",
+          "pa": "ਬੈਂਕਿੰਗ: RBI ਅਤੇ ਵਪਾਰਕ ਬੈਂਕ",
+          "en": "Banking: RBI and Commercial Banks"
+        },
+        "text": {
+          "hi": "**भारतीय रिज़र्व बैंक (RBI)**: 1 अप्रैल 1935 को स्थापित; 1 जनवरी 1949 को राष्ट्रीयकृत। RBI के कार्य:\n1. नोट जारी करना (एकाधिकार)\n2. सरकार के बैंकर\n3. बैंकों के बैंकर (Banker of Banks)\n4. अंतिम ऋणदाता (Lender of Last Resort)\n5. विदेशी मुद्रा भंडार रखना\n6. साख नियंत्रण\n\n**साख नियंत्रण के उपाय**:\nमात्रात्मक उपाय:\n- CRR (Cash Reserve Ratio): बैंकों को RBI के पास रखनी होती है।\n- SLR (Statutory Liquidity Ratio): तरल संपत्ति के रूप में।\n- रेपो दर (Repo Rate): जिस दर पर RBI बैंकों को ऋण देता है।\n- रिवर्स रेपो दर: जिस दर पर RBI बैंकों से ऋण लेता है।\n- बैंक दर (Bank Rate)\n\nगुणात्मक उपाय: मार्जिन आवश्यकताएँ, साख राशनिंग, प्रत्यक्ष कार्रवाई।\n\n**साख निर्माण (Credit Creation)**: वाणिज्यिक बैंक जमाओं पर आंशिक आरक्षित रखकर साख का गुणक विस्तार करते हैं। साख गुणक = 1/CRR।",
+          "pa": "RBI (1 ਅਪ੍ਰੈਲ 1935, ਰਾਸ਼ਟਰੀਕਰਨ 1949): ਨੋਟ ਜਾਰੀ, ਸਰਕਾਰ ਦਾ ਬੈਂਕਰ, ਅੰਤਮ ਕਰਜ਼ਦਾਤਾ। CRR, SLR, ਰੈਪੋ ਦਰ, ਰਿਵਰਸ ਰੈਪੋ। ਸਾਖ਼ ਗੁਣਕ = 1/CRR।",
+          "en": "**Reserve Bank of India (RBI)**: Established 1 April 1935; nationalised 1 January 1949. RBI functions:\n1. Note issue monopoly\n2. Banker to government\n3. Banker's bank\n4. Lender of Last Resort\n5. Manages foreign exchange reserves\n6. Credit control\n\n**Credit Control Instruments**:\nQuantitative: CRR (held with RBI), SLR (liquid assets), Repo Rate (RBI lends to banks), Reverse Repo Rate (RBI borrows from banks), Bank Rate.\n\nQualitative: Margin requirements, credit rationing, direct action.\n\n**Credit Creation**: Commercial banks create credit through fractional reserve banking. Credit multiplier = 1/CRR."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "मुद्रा के 4 कार्य। M1→M4। RBI (1935, 1949 राष्ट्रीयकृत): नोट जारी, सरकारी बैंक, अंतिम ऋणदाता। CRR+SLR+रेपो दर = साख नियंत्रण। साख गुणक = 1/CRR।",
+      "pa": "ਮੁਦਰਾ ਦੇ 4 ਕੰਮ। M1→M4। RBI 1935, 1949 ਰਾਸ਼ਟਰੀਕਰਨ। CRR+SLR+ਰੈਪੋ। ਸਾਖ਼ ਗੁਣਕ = 1/CRR।",
+      "en": "4 functions of money. M1→M4. RBI (1935, nationalised 1949): note issue, govt banker, lender of last resort. CRR+SLR+Repo = credit control. Credit multiplier = 1/CRR."
+    },
+    "keyPoints": [
+      {
+        "hi": "मुद्रा के 4 कार्य: विनिमय माध्यम, मूल्य मापक, मूल्य संचय, स्थगित भुगतान",
+        "pa": "ਮੁਦਰਾ ਦੇ 4 ਕੰਮ: ਵਟਾਂਦਰਾ, ਮੁੱਲ ਮਾਪਕ, ਭੰਡਾਰ, ਮੁਲਤਵੀ ਭੁਗਤਾਨ",
+        "en": "4 functions: medium of exchange, measure of value, store of value, deferred payment"
+      },
+      {
+        "hi": "M3 = Broad Money = M1 + मियादी जमाएँ (सर्वाधिक प्रयुक्त)",
+        "pa": "M3 = Broad Money = M1 + ਮਿਆਦੀ ਜਮਾਂ",
+        "en": "M3 = Broad Money = M1 + time deposits (most commonly used)"
+      },
+      {
+        "hi": "RBI की स्थापना: 1 अप्रैल 1935; राष्ट्रीयकरण: 1 जनवरी 1949",
+        "pa": "RBI: 1 ਅਪ੍ਰੈਲ 1935; ਰਾਸ਼ਟਰੀਕਰਨ: 1 ਜਨਵਰੀ 1949",
+        "en": "RBI established: 1 April 1935; nationalised: 1 January 1949"
+      },
+      {
+        "hi": "साख गुणक = 1/CRR; रेपो दर बढ़ने से साख महंगी, माँग घटती है",
+        "pa": "ਸਾਖ਼ ਗੁਣਕ = 1/CRR; ਰੈਪੋ ਦਰ ਵਧਣ ਨਾਲ ਸਾਖ਼ ਮਹਿੰਗੀ",
+        "en": "Credit multiplier = 1/CRR; higher repo rate → costlier credit → lower demand"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "RBI की स्थापना कब हुई और कब राष्ट्रीयकृत हुआ?",
+          "pa": "RBI ਦੀ ਸਥਾਪਨਾ ਕਦੋਂ ਅਤੇ ਰਾਸ਼ਟਰੀਕਰਨ ਕਦੋਂ?",
+          "en": "When was RBI established and when was it nationalised?"
+        },
+        "back": {
+          "hi": "ਸਥਾਪਨਾ: 1 ਅਪ੍ਰੈਲ 1935; ਰਾਸ਼ਟਰੀਕਰਨ: 1 ਜਨਵਰੀ 1949",
+          "pa": "ਸਥਾਪਨਾ: 1 ਅਪ੍ਰੈਲ 1935; ਰਾਸ਼ਟਰੀਕਰਨ: 1 ਜਨਵਰੀ 1949",
+          "en": "Established: 1 April 1935; Nationalised: 1 January 1949"
+        }
+      },
+      {
+        "front": {
+          "hi": "रेपो दर और रिवर्स रेपो दर में अंतर?",
+          "pa": "ਰੈਪੋ ਦਰ ਅਤੇ ਰਿਵਰਸ ਰੈਪੋ ਦਰ ਵਿੱਚ ਫਰਕ?",
+          "en": "Difference between Repo Rate and Reverse Repo Rate?"
+        },
+        "back": {
+          "hi": "ਰੈਪੋ = ਜਿਸ ਦਰ 'ਤੇ RBI ਬੈਂਕਾਂ ਨੂੰ ਕਰਜ਼ਾ ਦਿੰਦਾ ਹੈ; ਰਿਵਰਸ ਰੈਪੋ = ਜਿਸ ਦਰ 'ਤੇ RBI ਬੈਂਕਾਂ ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦਾ ਹੈ",
+          "pa": "ਰੈਪੋ = RBI ਬੈਂਕਾਂ ਨੂੰ ਕਰਜ਼ਾ; ਰਿਵਰਸ ਰੈਪੋ = RBI ਬੈਂਕਾਂ ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦਾ",
+          "en": "Repo = rate at which RBI lends to banks; Reverse Repo = rate at which RBI borrows from banks"
+        }
+      },
+      {
+        "front": {
+          "hi": "M3 किसे कहते हैं?",
+          "pa": "M3 ਕੀ ਹੈ?",
+          "en": "What is M3?"
+        },
+        "back": {
+          "hi": "M3 = M1 + बैंकों की मियादी जमाएँ। इसे Broad Money कहते हैं।",
+          "pa": "M3 = M1 + ਮਿਆਦੀ ਜਮਾਂ = Broad Money",
+          "en": "M3 = M1 + time deposits of banks = Broad Money"
+        }
+      },
+      {
+        "front": {
+          "hi": "साख गुणक क्या है?",
+          "pa": "ਸਾਖ਼ ਗੁਣਕ ਕੀ ਹੈ?",
+          "en": "What is the credit multiplier?"
+        },
+        "back": {
+          "hi": "ਸਾਖ਼ ਗੁਣਕ = 1/CRR। ਜੇ CRR 10% ਹੈ → ਹਰ ₹100 ਜਮ੍ਹਾਂ ਤੋਂ ₹1000 ਸਾਖ਼ ਬਣਦੀ ਹੈ।",
+          "pa": "1/CRR. CRR=10% → ਗੁਣਕ=10",
+          "en": "Credit multiplier = 1/CRR. If CRR = 10% → multiplier = 10; ₹100 deposit creates ₹1000 credit."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-money-q1",
+        "text": {
+          "hi": "मुद्रा के कितने प्राथमिक कार्य हैं?",
+          "pa": "ਮੁਦਰਾ ਦੇ ਕਿੰਨੇ ਪ੍ਰਮੁੱਖ ਕੰਮ ਹਨ?",
+          "en": "How many primary functions does money have?"
+        },
+        "options": {
+          "hi": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "pa": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "en": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "मुद्रा के चार प्रमुख कार्य हैं: विनिमय माध्यम, मूल्य मापक, मूल्य संचय, स्थगित भुगतान मानक।",
+          "en": "Money has four primary functions: medium of exchange, measure of value, store of value, standard of deferred payment."
+        }
+      },
+      {
+        "id": "sst-money-q2",
+        "text": {
+          "hi": "RBI का राष्ट्रीयकरण कब हुआ?",
+          "pa": "RBI ਦਾ ਰਾਸ਼ਟਰੀਕਰਨ ਕਦੋਂ ਹੋਇਆ?",
+          "en": "When was RBI nationalised?"
+        },
+        "options": {
+          "hi": [
+            "1 अप्रैल 1935",
+            "15 अगस्त 1947",
+            "1 जनवरी 1949",
+            "26 जनवरी 1950"
+          ],
+          "pa": [
+            "1 ਅਪ੍ਰੈਲ 1935",
+            "15 ਅਗਸਤ 1947",
+            "1 ਜਨਵਰੀ 1949",
+            "26 ਜਨਵਰੀ 1950"
+          ],
+          "en": [
+            "1 April 1935",
+            "15 August 1947",
+            "1 January 1949",
+            "26 January 1950"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "RBI की स्थापना 1 अप्रैल 1935 को हुई और इसका राष्ट्रीयकरण 1 जनवरी 1949 को हुआ।",
+          "en": "RBI was established on 1 April 1935 and was nationalised on 1 January 1949."
+        }
+      },
+      {
+        "id": "sst-money-q3",
+        "text": {
+          "hi": "यदि CRR 20% है तो साख गुणक क्या होगा?",
+          "pa": "ਜੇ CRR 20% ਹੈ ਤਾਂ ਸਾਖ਼ ਗੁਣਕ ਕੀ ਹੋਵੇਗਾ?",
+          "en": "If CRR is 20%, what is the credit multiplier?"
+        },
+        "options": {
+          "hi": [
+            "2",
+            "4",
+            "5",
+            "20"
+          ],
+          "pa": [
+            "2",
+            "4",
+            "5",
+            "20"
+          ],
+          "en": [
+            "2",
+            "4",
+            "5",
+            "20"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "साख गुणक = 1/CRR = 1/0.20 = 5। अर्थात् ₹100 जमा से ₹500 की साख बनेगी।",
+          "en": "Credit multiplier = 1/CRR = 1/0.20 = 5. So ₹100 deposit creates ₹500 of credit."
+        }
+      },
+      {
+        "id": "sst-money-q4",
+        "text": {
+          "hi": "M3 (Broad Money) की परिभाषा क्या है?",
+          "pa": "M3 (Broad Money) ਦੀ ਪਰਿਭਾਸ਼ਾ ਕੀ ਹੈ?",
+          "en": "What is M3 (Broad Money)?"
+        },
+        "options": {
+          "hi": [
+            "M1 + डाकघर बचत",
+            "सिक्के + नोट",
+            "M1 + बैंकों की मियादी जमाएँ",
+            "M3 + डाकघर जमाएँ"
+          ],
+          "pa": [
+            "M1 + ਡਾਕਘਰ ਬੱਚਤ",
+            "ਸਿੱਕੇ + ਨੋਟ",
+            "M1 + ਮਿਆਦੀ ਜਮਾਂ",
+            "M3 + ਡਾਕਘਰ ਜਮਾਂ"
+          ],
+          "en": [
+            "M1 + post office savings",
+            "Coins + notes",
+            "M1 + time deposits of banks",
+            "M3 + post office deposits"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "M3 = M1 + बैंकों की मियादी जमाएँ। इसे 'Broad Money' या व्यापक मुद्रा कहते हैं और यह सबसे अधिक प्रयुक्त मापक है।",
+          "en": "M3 = M1 + time deposits of banks. Called 'Broad Money' — the most widely used monetary aggregate."
+        }
+      },
+      {
+        "id": "sst-money-q5",
+        "text": {
+          "hi": "रेपो दर वह दर है जिस पर:",
+          "pa": "ਰੈਪੋ ਦਰ ਉਹ ਦਰ ਹੈ ਜਿਸ 'ਤੇ:",
+          "en": "Repo rate is the rate at which:"
+        },
+        "options": {
+          "hi": [
+            "बैंक RBI से उधार लेते हैं",
+            "RBI बैंकों से उधार लेता है",
+            "बैंक जनता को उधार देते हैं",
+            "सरकार RBI से उधार लेती है"
+          ],
+          "pa": [
+            "ਬੈਂਕ RBI ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦੇ ਹਨ",
+            "RBI ਬੈਂਕਾਂ ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦਾ ਹੈ",
+            "ਬੈਂਕ ਲੋਕਾਂ ਨੂੰ ਕਰਜ਼ਾ ਦਿੰਦੇ ਹਨ",
+            "ਸਰਕਾਰ RBI ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦੀ ਹੈ"
+          ],
+          "en": [
+            "Banks borrow from RBI",
+            "RBI borrows from banks",
+            "Banks lend to the public",
+            "Government borrows from RBI"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "रेपो दर वह ब्याज दर है जिस पर वाणिज्यिक बैंक अल्पकाल के लिए RBI से ऋण लेते हैं।",
+          "en": "Repo rate is the interest rate at which commercial banks borrow short-term funds from the RBI."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sst-economic-planning",
+    "subject": "Economics",
+    "unit": "Economics",
+    "examIds": [
+      "master",
+      "ett"
+    ],
+    "title": {
+      "hi": "भारत में आर्थिक नियोजन और 1991 के सुधार",
+      "pa": "ਭਾਰਤ ਵਿੱਚ ਆਰਥਿਕ ਯੋਜਨਾਬੰਦੀ ਅਤੇ 1991 ਦੇ ਸੁਧਾਰ",
+      "en": "Economic Planning in India and 1991 Reforms"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 11 Indian Economic Development – Chapter 2: Indian Economy 1950–1990",
+        "url": "https://ncert.nic.in/textbook/pdf/keip101.pdf",
+        "note": "Content is author-generated for Master Cadre SST exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "पंचवर्षीय योजनाएँ और योजना आयोग",
+          "pa": "ਪੰਜ-ਸਾਲਾ ਯੋਜਨਾਵਾਂ ਅਤੇ ਯੋਜਨਾ ਕਮਿਸ਼ਨ",
+          "en": "Five-Year Plans and Planning Commission"
+        },
+        "text": {
+          "hi": "भारत ने 1950 में **मिश्रित अर्थव्यवस्था** (Mixed Economy) मॉडल अपनाया — सरकारी और निजी क्षेत्र दोनों।\n\n**योजना आयोग**: 1950 में स्थापित; प्रधानमंत्री इसके अध्यक्ष। 2015 में **नीति आयोग** (NITI Aayog - National Institution for Transforming India) ने प्रतिस्थापित किया।\n\n**महत्वपूर्ण पंचवर्षीय योजनाएँ**:\n- **प्रथम (1951–56)**: कृषि और बुनियादी ढाँचे पर जोर; लक्ष्य से अधिक विकास।\n- **द्वितीय (1956–61)**: हेरोड-डोमर मॉडल; भारी उद्योग (Mahalanobis मॉडल)।\n- **तृतीय (1961–66)**: असफल — युद्ध (1962, 1965) और सूखे से।\n- **चतुर्थ (1969–74)**: 'ग़रीबी हटाओ' (इंदिरा गांधी); बैंकों का राष्ट्रीयकरण 1969।\n- **पाँचवीं (1974–79)**: न्यूनतम आवश्यकताएँ।\n- **आठवीं (1992–97)**: उदारीकरण के बाद का पहला; मानव विकास।\n- **बारहवीं (2012–17)**: अंतिम योजना।\n\n2017 के बाद **15 वर्षीय दृष्टि दस्तावेज़** और **7 वर्षीय रणनीति** (NITI Aayog)।",
+          "pa": "ਭਾਰਤ ਨੇ 1950 ਵਿੱਚ ਮਿਸ਼ਰਤ ਅਰਥਵਿਵਸਥਾ ਮਾਡਲ ਅਪਣਾਇਆ। ਯੋਜਨਾ ਕਮਿਸ਼ਨ (1950) → NITI Aayog (2015)। 12 ਪੰਜ-ਸਾਲਾ ਯੋਜਨਾਵਾਂ (1951–2017)। ਦੂਜੀ ਯੋਜਨਾ = Mahalanobis ਮਾਡਲ (ਭਾਰੀ ਉਦਯੋਗ)।",
+          "en": "India adopted a **Mixed Economy** model in 1950 — both public and private sectors.\n\n**Planning Commission**: Established 1950; PM as Chairman. Replaced by **NITI Aayog** (National Institution for Transforming India) in 2015.\n\n**Key Five-Year Plans**:\n- **1st (1951–56)**: Focus on agriculture and infrastructure; exceeded targets.\n- **2nd (1956–61)**: Harrod-Domar model; heavy industry (Mahalanobis model).\n- **3rd (1961–66)**: Failed due to wars (1962, 1965) and droughts.\n- **4th (1969–74)**: 'Garibi Hatao'; bank nationalisation 1969.\n- **5th (1974–79)**: Minimum needs programme.\n- **8th (1992–97)**: First post-liberalisation; human development.\n- **12th (2012–17)**: Last Five-Year Plan.\n\nPost-2017: 15-year Vision Document + 7-year Strategy (NITI Aayog)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "1991 के आर्थिक सुधार: LPG",
+          "pa": "1991 ਦੇ ਆਰਥਿਕ ਸੁਧਾਰ: LPG",
+          "en": "1991 Economic Reforms: LPG"
+        },
+        "text": {
+          "hi": "1991 में भारत गंभीर भुगतान संतुलन संकट में था। प्रधानमंत्री **P.V. Narasimha Rao** और वित्त मंत्री **Dr. Manmohan Singh** ने ऐतिहासिक सुधार लागू किए — **LPG**:\n\n1. **उदारीकरण (Liberalisation)**: लाइसेंस राज समाप्त; उद्योगों को स्वतंत्र करना। औद्योगिक लाइसेंसिंग नीति को 6 उद्योगों को छोड़कर समाप्त किया।\n\n2. **निजीकरण (Privatisation)**: सार्वजनिक क्षेत्र का भार कम करना। विनिवेश (Disinvestment) नीति।\n\n3. **वैश्वीकरण (Globalisation)**: विदेशी व्यापार और पूँजी प्रवाह के लिए अर्थव्यवस्था खोलना। FDI की अनुमति; रुपये को आंशिक परिवर्तनीय बनाया।\n\n**परिणाम**: GDP वृद्धि 6–8%; विदेशी मुद्रा भंडार बढ़ा; मध्यम वर्ग का विस्तार; लेकिन असमानता और कृषि संकट की चिंताएँ भी।\n\n**SEZ (Special Economic Zones)**: 2005 में SEZ अधिनियम; निर्यात उत्पादन के लिए विशेष क्षेत्र।\n\n**GST (Goods and Services Tax)**: 1 जुलाई 2017 को लागू। 'एक राष्ट्र, एक कर, एक बाजार।' अप्रत्यक्ष करों का एकीकरण।",
+          "pa": "1991 ਵਿੱਚ P.V. ਨਰਸਿਮ੍ਹਾ ਰਾਓ ਅਤੇ ਡਾ. ਮਨਮੋਹਨ ਸਿੰਘ ਨੇ LPG ਸੁਧਾਰ ਲਾਗੂ ਕੀਤੇ: 1) ਉਦਾਰੀਕਰਨ (ਲਾਇਸੈਂਸ ਰਾਜ ਖਤਮ) 2) ਨਿੱਜੀਕਰਨ 3) ਵਿਸ਼ਵੀਕਰਨ (FDI)। GST: 1 ਜੁਲਾਈ 2017।",
+          "en": "India faced a severe balance of payments crisis in 1991. PM **P.V. Narasimha Rao** and Finance Minister **Dr. Manmohan Singh** introduced the landmark **LPG reforms**:\n\n1. **Liberalisation**: End of Licence Raj; industrial licensing abolished except 6 industries.\n\n2. **Privatisation**: Disinvestment from public sector enterprises.\n\n3. **Globalisation**: Opening to foreign trade and capital. FDI permitted; rupee made partially convertible.\n\n**Results**: GDP growth 6–8%; forex reserves grew; middle class expanded; but concerns about inequality and agricultural distress.\n\n**SEZ (Special Economic Zones)**: SEZ Act 2005; export production zones.\n\n**GST (Goods and Services Tax)**: Launched 1 July 2017. 'One nation, one tax, one market.' Unified indirect taxes."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "योजना आयोग 1950 → NITI आयोग 2015। 12 पंचवर्षीय योजनाएँ (1951–2017)। द्वितीय योजना = Mahalanobis मॉडल। 1991 LPG सुधार — Narasimha Rao + Manmohan Singh। GST 1 जुलाई 2017।",
+      "pa": "ਯੋਜਨਾ ਕਮਿਸ਼ਨ 1950 → NITI Aayog 2015। 12 ਯੋਜਨਾਵਾਂ। 1991 LPG — ਨਰਸਿਮ੍ਹਾ ਰਾਓ + ਮਨਮੋਹਨ ਸਿੰਘ। GST 1 ਜੁਲਾਈ 2017।",
+      "en": "Planning Commission 1950 → NITI Aayog 2015. 12 Five-Year Plans (1951–2017). 2nd Plan = Mahalanobis model. 1991 LPG reforms — Narasimha Rao + Manmohan Singh. GST 1 July 2017."
+    },
+    "keyPoints": [
+      {
+        "hi": "NITI Aayog ने 2015 में योजना आयोग का स्थान लिया",
+        "pa": "NITI Aayog ਨੇ 2015 ਵਿੱਚ ਯੋਜਨਾ ਕਮਿਸ਼ਨ ਦੀ ਥਾਂ ਲਈ",
+        "en": "NITI Aayog replaced Planning Commission in 2015"
+      },
+      {
+        "hi": "द्वितीय पंचवर्षीय योजना = Mahalanobis मॉडल = भारी उद्योग",
+        "pa": "ਦੂਜੀ ਯੋਜਨਾ = Mahalanobis ਮਾਡਲ = ਭਾਰੀ ਉਦਯੋਗ",
+        "en": "2nd Five-Year Plan = Mahalanobis model = heavy industries"
+      },
+      {
+        "hi": "1991 LPG = Liberalisation + Privatisation + Globalisation (Narasimha Rao + Manmohan Singh)",
+        "pa": "1991 LPG = ਉਦਾਰੀਕਰਨ + ਨਿੱਜੀਕਰਨ + ਵਿਸ਼ਵੀਕਰਨ",
+        "en": "1991 LPG = Liberalisation + Privatisation + Globalisation (Rao + Manmohan Singh)"
+      },
+      {
+        "hi": "GST = 1 जुलाई 2017 = 'एक राष्ट्र, एक कर'",
+        "pa": "GST = 1 ਜੁਲਾਈ 2017 = 'ਇੱਕ ਰਾਸ਼ਟਰ, ਇੱਕ ਕਰ'",
+        "en": "GST = 1 July 2017 = 'One nation, one tax'"
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "NITI Aayog की स्थापना कब हुई और इसने किसका स्थान लिया?",
+          "pa": "NITI Aayog ਕਦੋਂ ਸਥਾਪਿਤ ਹੋਇਆ?",
+          "en": "When was NITI Aayog established and what did it replace?"
+        },
+        "back": {
+          "hi": "ਜਨਵਰੀ 2015; ਯੋਜਨਾ ਕਮਿਸ਼ਨ (1950) ਦੀ ਥਾਂ ਲਈ",
+          "pa": "ਜਨਵਰੀ 2015; ਯੋਜਨਾ ਕਮਿਸ਼ਨ ਦੀ ਥਾਂ ਲਈ",
+          "en": "January 2015; replaced the Planning Commission (est. 1950)"
+        }
+      },
+      {
+        "front": {
+          "hi": "द्वितीय पंचवर्षीय योजना किस मॉडल पर आधारित थी?",
+          "pa": "ਦੂਜੀ ਯੋਜਨਾ ਕਿਸ ਮਾਡਲ 'ਤੇ ਆਧਾਰਿਤ ਸੀ?",
+          "en": "Which model was the 2nd Five-Year Plan based on?"
+        },
+        "back": {
+          "hi": "Mahalanobis ਮਾਡਲ — ਭਾਰੀ ਉਦਯੋਗਾਂ ਅਤੇ ਜਨਤਕ ਖੇਤਰ 'ਤੇ ਜ਼ੋਰ",
+          "pa": "Mahalanobis ਮਾਡਲ — ਭਾਰੀ ਉਦਯੋਗ",
+          "en": "Mahalanobis model — emphasis on heavy industries and public sector"
+        }
+      },
+      {
+        "front": {
+          "hi": "1991 के LPG सुधारों में L, P, G का क्या अर्थ है?",
+          "pa": "1991 LPG ਵਿੱਚ L, P, G ਦਾ ਕੀ ਅਰਥ ਹੈ?",
+          "en": "What do L, P, G stand for in the 1991 LPG reforms?"
+        },
+        "back": {
+          "hi": "L = ਉਦਾਰੀਕਰਨ, P = ਨਿੱਜੀਕਰਨ, G = ਵਿਸ਼ਵੀਕਰਨ",
+          "pa": "L = Liberalisation, P = Privatisation, G = Globalisation",
+          "en": "L = Liberalisation, P = Privatisation, G = Globalisation"
+        }
+      },
+      {
+        "front": {
+          "hi": "GST कब लागू हुआ और इसका पूरा नाम?",
+          "pa": "GST ਕਦੋਂ ਲਾਗੂ ਹੋਇਆ?",
+          "en": "When was GST implemented and what is its full form?"
+        },
+        "back": {
+          "hi": "1 ਜੁਲਾਈ 2017; Goods and Services Tax; 'ਇੱਕ ਰਾਸ਼ਟਰ, ਇੱਕ ਕਰ, ਇੱਕ ਬਾਜ਼ਾਰ'",
+          "pa": "1 ਜੁਲਾਈ 2017; Goods and Services Tax",
+          "en": "1 July 2017; Goods and Services Tax; 'One nation, one tax, one market'"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "sst-planning-q1",
+        "text": {
+          "hi": "योजना आयोग का स्थान किसने लिया?",
+          "pa": "ਯੋਜਨਾ ਕਮਿਸ਼ਨ ਦੀ ਥਾਂ ਕਿਸਨੇ ਲਈ?",
+          "en": "What replaced the Planning Commission?"
+        },
+        "options": {
+          "hi": [
+            "RBI",
+            "NITI Aayog",
+            "SEBI",
+            "Finance Commission"
+          ],
+          "pa": [
+            "RBI",
+            "NITI Aayog",
+            "SEBI",
+            "Finance Commission"
+          ],
+          "en": [
+            "RBI",
+            "NITI Aayog",
+            "SEBI",
+            "Finance Commission"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "2015 में NITI Aayog (National Institution for Transforming India) ने 1950 में स्थापित योजना आयोग का स्थान लिया।",
+          "en": "NITI Aayog (National Institution for Transforming India) replaced the Planning Commission in 2015."
+        }
+      },
+      {
+        "id": "sst-planning-q2",
+        "text": {
+          "hi": "1991 के LPG सुधारों के समय भारत के वित्त मंत्री कौन थे?",
+          "pa": "1991 ਦੇ LPG ਸੁਧਾਰਾਂ ਵੇਲੇ ਵਿੱਤ ਮੰਤਰੀ ਕੌਣ ਸੀ?",
+          "en": "Who was India's Finance Minister during the 1991 LPG reforms?"
+        },
+        "options": {
+          "hi": [
+            "P.V. Narasimha Rao",
+            "Dr. Manmohan Singh",
+            "Pranab Mukherjee",
+            "Yashwant Sinha"
+          ],
+          "pa": [
+            "P.V. ਨਰਸਿਮ੍ਹਾ ਰਾਓ",
+            "ਡਾ. ਮਨਮੋਹਨ ਸਿੰਘ",
+            "ਪ੍ਰਣਬ ਮੁਖਰਜੀ",
+            "ਯਸ਼ਵੰਤ ਸਿਨਹਾ"
+          ],
+          "en": [
+            "P.V. Narasimha Rao",
+            "Dr. Manmohan Singh",
+            "Pranab Mukherjee",
+            "Yashwant Sinha"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "P.V. Narasimha Rao प्रधानमंत्री थे और Dr. Manmohan Singh वित्त मंत्री थे जिन्होंने 1991 में LPG सुधार लागू किए।",
+          "en": "P.V. Narasimha Rao was PM and Dr. Manmohan Singh was Finance Minister who implemented the 1991 LPG reforms."
+        }
+      },
+      {
+        "id": "sst-planning-q3",
+        "text": {
+          "hi": "GST भारत में कब लागू हुआ?",
+          "pa": "GST ਭਾਰਤ ਵਿੱਚ ਕਦੋਂ ਲਾਗੂ ਹੋਇਆ?",
+          "en": "When was GST implemented in India?"
+        },
+        "options": {
+          "hi": [
+            "1 अप्रैल 2016",
+            "1 जनवरी 2017",
+            "1 जुलाई 2017",
+            "1 अप्रैल 2018"
+          ],
+          "pa": [
+            "1 ਅਪ੍ਰੈਲ 2016",
+            "1 ਜਨਵਰੀ 2017",
+            "1 ਜੁਲਾਈ 2017",
+            "1 ਅਪ੍ਰੈਲ 2018"
+          ],
+          "en": [
+            "1 April 2016",
+            "1 January 2017",
+            "1 July 2017",
+            "1 April 2018"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "GST 1 जुलाई 2017 को लागू हुआ। यह 'एक राष्ट्र, एक कर' की अवधारणा पर आधारित है।",
+          "en": "GST was implemented on 1 July 2017. It is based on the 'One nation, one tax' concept."
+        }
+      },
+      {
+        "id": "sst-planning-q4",
+        "text": {
+          "hi": "भारत की द्वितीय पंचवर्षीय योजना किस मॉडल पर आधारित थी?",
+          "pa": "ਭਾਰਤ ਦੀ ਦੂਜੀ ਪੰਜ-ਸਾਲਾ ਯੋਜਨਾ ਕਿਸ ਮਾਡਲ 'ਤੇ ਆਧਾਰਿਤ ਸੀ?",
+          "en": "India's Second Five-Year Plan was based on which model?"
+        },
+        "options": {
+          "hi": [
+            "Harrod-Domar Model",
+            "Mahalanobis Model",
+            "Solow Growth Model",
+            "Lewis Model"
+          ],
+          "pa": [
+            "Harrod-Domar ਮਾਡਲ",
+            "Mahalanobis ਮਾਡਲ",
+            "Solow ਮਾਡਲ",
+            "Lewis ਮਾਡਲ"
+          ],
+          "en": [
+            "Harrod-Domar Model",
+            "Mahalanobis Model",
+            "Solow Growth Model",
+            "Lewis Model"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "द्वितीय पंचवर्षीय योजना P.C. Mahalanobis मॉडल पर आधारित थी जो भारी उद्योगों और सार्वजनिक क्षेत्र को प्राथमिकता देता था।",
+          "en": "The Second Five-Year Plan was based on the Mahalanobis model, prioritising heavy industries and the public sector."
+        }
+      },
+      {
+        "id": "sst-planning-q5",
+        "text": {
+          "hi": "भारत में बैंकों का पहली बार राष्ट्रीयकरण किस वर्ष हुआ?",
+          "pa": "ਭਾਰਤ ਵਿੱਚ ਬੈਂਕਾਂ ਦਾ ਪਹਿਲੀ ਵਾਰ ਰਾਸ਼ਟਰੀਕਰਨ ਕਿਸ ਸਾਲ ਹੋਇਆ?",
+          "en": "In which year were banks first nationalised in India?"
+        },
+        "options": {
+          "hi": [
+            "1955",
+            "1962",
+            "1969",
+            "1980"
+          ],
+          "pa": [
+            "1955",
+            "1962",
+            "1969",
+            "1980"
+          ],
+          "en": [
+            "1955",
+            "1962",
+            "1969",
+            "1980"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "इंदिरा गांधी सरकार ने 1969 में 14 प्रमुख बैंकों का राष्ट्रीयकरण किया — 'गरीबी हटाओ' नीति के अंतर्गत।",
+          "en": "The Indira Gandhi government nationalised 14 major banks in 1969 as part of the 'Garibi Hatao' policy."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
     "id": "commerce-accounting-basics",
     "subject": "Commerce",
     "unit": "Accountancy",

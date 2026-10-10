@@ -1,0 +1,188 @@
+[
+  {
+    "id": "sst-consumer-equilibrium",
+    "subject": "Economics",
+    "unit": "Economics",
+    "examIds": ["master"],
+    "title": {
+      "hi": "उपभोक्ता संतुलन: उपयोगिता और उदासीनता वक्र",
+      "pa": "ਖਪਤਕਾਰ ਸੰਤੁਲਨ: ਉਪਯੋਗਿਤਾ ਅਤੇ ਉਦਾਸੀਨਤਾ ਵਕਰ",
+      "en": "Consumer Equilibrium: Utility and Indifference Curves"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 11 Introductory Microeconomics – Chapter 2: Theory of Consumer Behaviour",
+        "url": "https://ncert.nic.in/textbook/pdf/keec101.pdf",
+        "note": "Content is author-generated for Master Cadre SST exam practice based on standard syllabus topics."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "उपयोगिता: अर्थ, प्रकार और ह्रासमान सीमांत उपयोगिता नियम", "pa": "ਉਪਯੋਗਿਤਾ: ਅਰਥ, ਕਿਸਮਾਂ ਅਤੇ ਘਟਦੀ ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਕਾਨੂੰਨ", "en": "Utility: Meaning, Types and Law of Diminishing Marginal Utility"},
+        "text": {
+          "hi": "**उपयोगिता (Utility)**: किसी वस्तु या सेवा की इच्छा को संतुष्ट करने की शक्ति। उपयोगिता व्यक्तिपरक है — यह नैतिकता पर निर्भर नहीं करती (जैसे सिगरेट में भी उपयोगिता हो सकती है)।\n\n**कुल उपयोगिता (Total Utility - TU)**: किसी वस्तु की सभी इकाइयों की उपयोगिता का योग।\n**सीमांत उपयोगिता (Marginal Utility - MU)**: एक अतिरिक्त इकाई उपभोग करने से कुल उपयोगिता में होने वाला परिवर्तन। MU = ΔTU/ΔQ\n\n**ह्रासमान सीमांत उपयोगिता का नियम** (Gossen का प्रथम नियम): जैसे-जैसे उपभोक्ता किसी वस्तु की अधिक इकाइयाँ उपभोग करता है, सीमांत उपयोगिता क्रमशः घटती जाती है।\n\n**TU और MU का संबंध**:\n- जब MU > 0 → TU बढ़ती है\n- जब MU = 0 → TU अधिकतम (संतृप्ति बिंदु)\n- जब MU < 0 → TU घटती है\n\n**उपभोक्ता अधिशेष (Consumer Surplus)**: जो अधिकतम मूल्य देने को तैयार था, उससे वास्तव में जो कम भुगतान किया — उसका अंतर। Alfred Marshall का संकल्पना।",
+          "pa": "ਉਪਯੋਗਿਤਾ — ਕਿਸੇ ਵਸਤੂ ਦੀ ਇੱਛਾ ਪੂਰੀ ਕਰਨ ਦੀ ਸ਼ਕਤੀ। MU = ΔTU/ΔQ। ਘਟਦੀ ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਕਾਨੂੰਨ (Gossen): ਹਰ ਵਾਧੂ ਇਕਾਈ ਨਾਲ MU ਘਟਦੀ ਹੈ। TU ਅਧਿਕਤਮ ਜਦੋਂ MU=0।",
+          "en": "**Utility**: The want-satisfying power of a good or service. It is subjective and not moral (e.g. cigarettes can have utility).\n\n**Total Utility (TU)**: Sum of utilities from all units consumed.\n**Marginal Utility (MU)**: Change in TU from consuming one additional unit. MU = ΔTU/ΔQ\n\n**Law of Diminishing Marginal Utility** (Gossen's First Law): As a consumer consumes more units of a good, MU decreases with each additional unit (ceteris paribus).\n\n**TU-MU Relationship**:\n- MU > 0 → TU rising\n- MU = 0 → TU maximum (saturation point)\n- MU < 0 → TU falling\n\n**Consumer Surplus**: Difference between maximum price willing to pay and actual price paid (Alfred Marshall's concept)."
+        }
+      },
+      {
+        "heading": {"hi": "उपभोक्ता संतुलन: कार्डिनल और ऑर्डिनल उपयोगिता", "pa": "ਖਪਤਕਾਰ ਸੰਤੁਲਨ: ਕਾਰਡੀਨਲ ਅਤੇ ਓਰਡੀਨਲ ਉਪਯੋਗਿਤਾ", "en": "Consumer Equilibrium: Cardinal and Ordinal Utility"},
+        "text": {
+          "hi": "**कार्डिनल उपयोगिता दृष्टिकोण (Marshall)**: उपयोगिता को संख्यात्मक रूप (utils) में मापा जा सकता है। एक वस्तु के लिए संतुलन: MU = P (कीमत) या MU/P = 1। दो वस्तुओं के लिए: MUx/Px = MUy/Py = MU of money।\n\n**ऑर्डिनल उपयोगिता दृष्टिकोण (Hicks-Allen)**: उपयोगिता को केवल क्रम से व्यक्त किया जा सकता है, संख्या से नहीं। **उदासीनता वक्र (Indifference Curve - IC)**: दो वस्तुओं के उन सभी संयोजनों का वक्र जो उपभोक्ता को समान संतुष्टि देते हैं।\n\nIC की विशेषताएँ:\n1. बाएँ से दाएँ नीचे झुकती है (ऋणात्मक ढाल)\n2. मूलबिंदु की ओर उत्तल (convex)\n3. दो IC कभी नहीं काटती\n4. ऊपरी IC अधिक पसंदीदा\n\n**बजट रेखा (Budget Line)**: दो वस्तुओं के उन संयोजनों को दर्शाती है जो उपभोक्ता अपनी आय में खरीद सकता है। ढाल = −Px/Py।\n\n**उपभोक्ता संतुलन (IC दृष्टिकोण)**: IC और बजट रेखा के स्पर्शबिंदु पर — MRS = Px/Py।\n\n**MRS (Marginal Rate of Substitution)**: X की एक अतिरिक्त इकाई के लिए Y की कितनी इकाइयाँ छोड़ी जाएँ। IC पर नीचे जाने पर MRS घटती है।",
+          "pa": "ਕਾਰਡੀਨਲ: Marshall — MU ਨੂੰ ਸੰਖਿਆ (utils) ਵਿੱਚ ਮਾਪ ਸਕਦੇ ਹਾਂ। ਸੰਤੁਲਨ: MU=P।\nਓਰਡੀਨਲ: Hicks-Allen — IC ਵਕਰ। IC ਦੀਆਂ 4 ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ। ਬਜਟ ਰੇਖਾ ਢਲਾਣ = −Px/Py। ਸੰਤੁਲਨ: IC ਅਤੇ ਬਜਟ ਰੇਖਾ ਦਾ ਸਪਰਸ਼ ਬਿੰਦੂ। MRS = Px/Py।",
+          "en": "**Cardinal Utility (Marshall)**: Utility measurable in utils. Single good equilibrium: MU = P. Two goods: MUx/Px = MUy/Py = MU of money.\n\n**Ordinal Utility (Hicks-Allen)**: Utility can only be ranked, not measured. **Indifference Curve (IC)**: Locus of all combinations of two goods giving equal satisfaction.\n\nIC properties:\n1. Slopes downward left to right (negative slope)\n2. Convex to origin\n3. Two ICs never intersect\n4. Higher IC = higher satisfaction\n\n**Budget Line**: All combinations of two goods purchasable at given income and prices. Slope = −Px/Py.\n\n**Consumer equilibrium (IC approach)**: At tangency of IC and budget line — MRS = Px/Py.\n\n**MRS (Marginal Rate of Substitution)**: Units of Y sacrificed for one more unit of X. MRS diminishes along the IC (convexity)."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "उपयोगिता = इच्छा पूर्ति शक्ति। MU=ΔTU/ΔQ। ह्रासमान MU नियम। TU अधिकतम जब MU=0। कार्डिनल (Marshall): MUx/Px=MUy/Py। ऑर्डिनल (Hicks): IC+बजट रेखा स्पर्श → MRS=Px/Py।",
+      "pa": "MU=ΔTU/ΔQ। ਘਟਦੀ MU ਕਾਨੂੰਨ। TU ਅਧਿਕਤਮ ਜਦੋਂ MU=0। IC ਵਕਰ + ਬਜਟ ਰੇਖਾ → MRS=Px/Py।",
+      "en": "Utility = want-satisfying power. MU = ΔTU/ΔQ. Law of DMU. TU maximum when MU=0. Cardinal (Marshall): MUx/Px = MUy/Py. Ordinal (Hicks): IC tangent to budget line → MRS = Px/Py."
+    },
+    "keyPoints": [
+      {"hi": "MU = ΔTU/ΔQ; MU=0 पर TU अधिकतम", "pa": "MU = ΔTU/ΔQ; MU=0 ਤੇ TU ਅਧਿਕਤਮ", "en": "MU = ΔTU/ΔQ; TU is maximum when MU = 0"},
+      {"hi": "IC ढाल ऋणात्मक, मूलबिंदु की ओर उत्तल, दो IC नहीं काटतीं", "pa": "IC ਢਲਾਣ ਨਕਾਰਾਤਮਕ, ਮੂਲ ਵੱਲ ਉਤਲ, ਦੋ IC ਕਦੇ ਨਹੀਂ ਕੱਟਦੀਆਂ", "en": "IC: negative slope, convex to origin, two ICs never intersect"},
+      {"hi": "उपभोक्ता संतुलन: MRS = Px/Py (IC विश्लेषण)", "pa": "ਖਪਤਕਾਰ ਸੰਤੁਲਨ: MRS = Px/Py", "en": "Consumer equilibrium: MRS = Px/Py (IC analysis)"},
+      {"hi": "उपभोक्ता अधिशेष = अधिकतम इच्छित मूल्य − वास्तविक मूल्य (Marshall)", "pa": "ਖਪਤਕਾਰ ਸਰਪਲੱਸ = ਵੱਧ ਤੋਂ ਵੱਧ ਮੁੱਲ − ਅਸਲ ਮੁੱਲ", "en": "Consumer surplus = max willing to pay − actual price (Marshall)"}
+    ],
+    "flashcards": [
+      {"front": {"hi": "ह्रासमान सीमांत उपयोगिता का नियम किसने दिया?", "pa": "ਘਟਦੀ ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਕਾਨੂੰਨ ਕਿਸਨੇ ਦਿੱਤਾ?", "en": "Who gave the Law of Diminishing Marginal Utility?"}, "back": {"hi": "Gossen (Gossen's First Law); Marshall ने इसे लोकप्रिय बनाया", "pa": "Gossen (Gossen ਦਾ ਪਹਿਲਾ ਕਾਨੂੰਨ); Marshall ਨੇ ਪ੍ਰਚਲਿਤ ਕੀਤਾ", "en": "Gossen (Gossen's First Law); popularised by Alfred Marshall"}},
+      {"front": {"hi": "TU अधिकतम कब होती है?", "pa": "TU ਕਦੋਂ ਅਧਿਕਤਮ ਹੁੰਦੀ ਹੈ?", "en": "When is TU at its maximum?"}, "back": {"hi": "जब MU = 0 (संतृप्ति बिंदु)", "pa": "ਜਦੋਂ MU = 0 (ਸੰਤ੍ਰਿਪਤੀ ਬਿੰਦੂ)", "en": "When MU = 0 (saturation point)"}},
+      {"front": {"hi": "IC की चार मुख्य विशेषताएँ क्या हैं?", "pa": "IC ਦੀਆਂ ਚਾਰ ਮੁੱਖ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਕੀ ਹਨ?", "en": "What are the four main properties of an Indifference Curve?"}, "back": {"hi": "1) ਨਕਾਰਾਤਮਕ ਢਲਾਣ 2) ਮੂਲ ਵੱਲ ਉਤਲ 3) ਦੋ IC ਕਦੇ ਨਹੀਂ ਕੱਟਦੀਆਂ 4) ਉੱਚੀ IC ਵੱਧ ਪਸੰਦ", "pa": "1) ਨਕਾਰਾਤਮਕ ਢਲਾਣ 2) ਉਤਲ 3) ਕਦੇ ਨਹੀਂ ਕੱਟਦੀਆਂ 4) ਉੱਚੀ IC ਵੱਧ ਪਸੰਦ", "en": "1) Negative slope 2) Convex to origin 3) Never intersect 4) Higher IC preferred"}},
+      {"front": {"hi": "IC विश्लेषण में उपभोक्ता संतुलन की शर्त?", "pa": "IC ਵਿਸ਼ਲੇਸ਼ਣ ਵਿੱਚ ਸੰਤੁਲਨ ਸ਼ਰਤ?", "en": "Condition for consumer equilibrium in IC analysis?"}, "back": {"hi": "MRS = Px/Py (IC और बजट रेखा का स्पर्शबिंदु)", "pa": "MRS = Px/Py (IC ਅਤੇ ਬਜਟ ਰੇਖਾ ਦਾ ਸਪਰਸ਼ ਬਿੰਦੂ)", "en": "MRS = Px/Py (tangency of IC and budget line)"}},
+      {"front": {"hi": "बजट रेखा का ढाल क्या होता है?", "pa": "ਬਜਟ ਰੇਖਾ ਦੀ ਢਲਾਣ ਕੀ ਹੁੰਦੀ ਹੈ?", "en": "What is the slope of the budget line?"}, "back": {"hi": "−Px/Py (X की कीमत ÷ Y की कीमत, ऋणात्मक)", "pa": "−Px/Py", "en": "−Px/Py (negative ratio of prices)"}},
+      {"front": {"hi": "उपभोक्ता अधिशेष किसकी अवधारणा है?", "pa": "ਖਪਤਕਾਰ ਸਰਪਲੱਸ ਕਿਸਦੀ ਸੰਕਲਪਨਾ ਹੈ?", "en": "Whose concept is Consumer Surplus?"}, "back": {"hi": "Alfred Marshall", "pa": "Alfred Marshall", "en": "Alfred Marshall"}}
+    ],
+    "questions": [
+      {"id": "sst-consumer-q1", "text": {"hi": "ह्रासमान सीमांत उपयोगिता के नियम के अनुसार क्या होता है?", "pa": "ਘਟਦੀ ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਕਾਨੂੰਨ ਅਨੁਸਾਰ ਕੀ ਹੁੰਦਾ ਹੈ?", "en": "According to the Law of Diminishing Marginal Utility, what happens?"}, "options": {"hi": ["सीमांत उपयोगिता बढ़ती है", "कुल उपयोगिता घटती है", "सीमांत उपयोगिता घटती जाती है", "कुल उपयोगिता स्थिर रहती है"], "pa": ["ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਵਧਦੀ ਹੈ", "ਕੁੱਲ ਉਪਯੋਗਿਤਾ ਘਟਦੀ ਹੈ", "ਸੀਮਾਂਤ ਉਪਯੋਗਿਤਾ ਘਟਦੀ ਜਾਂਦੀ ਹੈ", "ਕੁੱਲ ਉਪਯੋਗਿਤਾ ਸਥਿਰ ਰਹਿੰਦੀ ਹੈ"], "en": ["Marginal utility increases", "Total utility decreases", "Marginal utility successively decreases", "Total utility remains constant"]}, "answer": 2, "explanation": {"hi": "ह्रासमान सीमांत उपयोगिता के नियम के अनुसार जैसे-जैसे उपभोक्ता अधिक इकाइयाँ उपभोग करता है, प्रत्येक अतिरिक्त इकाई की सीमांत उपयोगिता घटती जाती है।", "en": "The Law of DMU states that as more units of a good are consumed, each additional unit's marginal utility successively decreases."}},
+      {"id": "sst-consumer-q2", "text": {"hi": "TU अधिकतम कब होती है?", "pa": "TU ਕਦੋਂ ਅਧਿਕਤਮ ਹੁੰਦੀ ਹੈ?", "en": "Total Utility is at its maximum when:"}, "options": {"hi": ["MU = 1", "MU > 0", "MU = 0", "MU < 0"], "pa": ["MU = 1", "MU > 0", "MU = 0", "MU < 0"], "en": ["MU = 1", "MU > 0", "MU = 0", "MU < 0"]}, "answer": 2, "explanation": {"hi": "TU तब अधिकतम होती है जब MU = 0। इसके बाद यदि उपभोग जारी रहे तो MU ऋणात्मक हो जाती है और TU घटने लगती है।", "en": "TU is maximum when MU = 0. Beyond this saturation point, MU turns negative and TU falls."}},
+      {"id": "sst-consumer-q3", "text": {"hi": "उदासीनता वक्र (IC) की कौन सी विशेषता गलत है?", "pa": "IC ਵਕਰ ਦੀ ਕਿਹੜੀ ਵਿਸ਼ੇਸ਼ਤਾ ਗਲਤ ਹੈ?", "en": "Which property of Indifference Curve is INCORRECT?"}, "options": {"hi": ["ढाल ऋणात्मक होती है", "मूलबिंदु की ओर उत्तल होती है", "दो IC एक-दूसरे को काट सकती हैं", "ऊपरी IC अधिक संतुष्टि देती है"], "pa": ["ਢਲਾਣ ਨਕਾਰਾਤਮਕ ਹੁੰਦੀ ਹੈ", "ਮੂਲ ਵੱਲ ਉਤਲ ਹੁੰਦੀ ਹੈ", "ਦੋ IC ਇੱਕ-ਦੂਜੇ ਨੂੰ ਕੱਟ ਸਕਦੀਆਂ ਹਨ", "ਉੱਚੀ IC ਵੱਧ ਸੰਤੁਸ਼ਟੀ ਦਿੰਦੀ ਹੈ"], "en": ["Slope is negative", "Convex to origin", "Two ICs can intersect each other", "Higher IC gives more satisfaction"]}, "answer": 2, "explanation": {"hi": "दो उदासीनता वक्र कभी एक-दूसरे को नहीं काटते। यह IC विश्लेषण की मूल शर्त है।", "en": "Two indifference curves can never intersect — this is a fundamental property of IC analysis."}},
+      {"id": "sst-consumer-q4", "text": {"hi": "IC विश्लेषण में उपभोक्ता संतुलन की शर्त क्या है?", "pa": "IC ਵਿਸ਼ਲੇਸ਼ਣ ਵਿੱਚ ਖਪਤਕਾਰ ਸੰਤੁਲਨ ਦੀ ਸ਼ਰਤ ਕੀ ਹੈ?", "en": "What is the condition for consumer equilibrium in IC analysis?"}, "options": {"hi": ["MRS < Px/Py", "MRS = Px/Py", "MRS > Px/Py", "MRS = 0"], "pa": ["MRS < Px/Py", "MRS = Px/Py", "MRS > Px/Py", "MRS = 0"], "en": ["MRS < Px/Py", "MRS = Px/Py", "MRS > Px/Py", "MRS = 0"]}, "answer": 1, "explanation": {"hi": "IC और बजट रेखा के स्पर्शबिंदु पर MRS = Px/Py। यह अधिकतम संतुष्टि बिंदु है।", "en": "At the tangency of IC and budget line, MRS = Px/Py. This is the utility-maximising point."}},
+      {"id": "sst-consumer-q5", "text": {"hi": "उपभोक्ता अधिशेष की अवधारणा किसने दी?", "pa": "ਖਪਤਕਾਰ ਸਰਪਲੱਸ ਦੀ ਸੰਕਲਪਨਾ ਕਿਸਨੇ ਦਿੱਤੀ?", "en": "Who introduced the concept of Consumer Surplus?"}, "options": {"hi": ["J.R. Hicks", "Alfred Marshall", "Paul Samuelson", "Leon Walras"], "pa": ["J.R. Hicks", "Alfred Marshall", "Paul Samuelson", "Leon Walras"], "en": ["J.R. Hicks", "Alfred Marshall", "Paul Samuelson", "Leon Walras"]}, "answer": 1, "explanation": {"hi": "Alfred Marshall ने उपभोक्ता अधिशेष की अवधारणा दी — अधिकतम इच्छित मूल्य और वास्तविक मूल्य का अंतर।", "en": "Alfred Marshall introduced consumer surplus — the difference between the maximum price willing to pay and the actual market price."}},
+      {"id": "sst-consumer-q6", "text": {"hi": "IC विश्लेषण किस अर्थशास्त्री ने विकसित किया?", "pa": "IC ਵਿਸ਼ਲੇਸ਼ਣ ਕਿਸ ਅਰਥਸ਼ਾਸਤਰੀ ਨੇ ਵਿਕਸਿਤ ਕੀਤਾ?", "en": "Who developed the Indifference Curve analysis?"}, "options": {"hi": ["Alfred Marshall", "J.R. Hicks और R.G.D. Allen", "Adam Smith", "Karl Marx"], "pa": ["Alfred Marshall", "J.R. Hicks ਅਤੇ R.G.D. Allen", "Adam Smith", "Karl Marx"], "en": ["Alfred Marshall", "J.R. Hicks and R.G.D. Allen", "Adam Smith", "Karl Marx"]}, "answer": 1, "explanation": {"hi": "J.R. Hicks और R.G.D. Allen ने ordinal utility approach में IC analysis विकसित की।", "en": "J.R. Hicks and R.G.D. Allen developed Indifference Curve analysis under the ordinal utility approach."}}
+    ]
+  },
+  {
+    "id": "sst-money-banking",
+    "subject": "Economics",
+    "unit": "Economics",
+    "examIds": ["master"],
+    "title": {
+      "hi": "मुद्रा और बैंकिंग",
+      "pa": "ਮੁਦਰਾ ਅਤੇ ਬੈਂਕਿੰਗ",
+      "en": "Money and Banking"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 12 Macroeconomics – Chapter 3: Money and Banking",
+        "url": "https://ncert.nic.in/textbook/pdf/leec102.pdf",
+        "note": "Content is author-generated for Master Cadre SST exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "मुद्रा: अर्थ और कार्य", "pa": "ਮੁਦਰਾ: ਅਰਥ ਅਤੇ ਕੰਮ", "en": "Money: Meaning and Functions"},
+        "text": {
+          "hi": "**मुद्रा**: वह वस्तु जो विनिमय माध्यम के रूप में सर्वत्र स्वीकृत हो।\n\n**मुद्रा के चार प्रमुख कार्य** (Crowther):\n1. **विनिमय का माध्यम (Medium of Exchange)**: वस्तु-विनिमय की दोहरी आवश्यकता समस्या हल करती है।\n2. **मूल्य का मापक (Measure of Value)**: सभी वस्तुओं का मूल्य मुद्रा में व्यक्त होता है।\n3. **मूल्य का संचय (Store of Value)**: भविष्य के लिए बचत।\n4. **स्थगित भुगतान का मानक (Standard of Deferred Payment)**: उधार लेन-देन में।\n\n**मुद्रा के प्रकार**:\n- वस्तु मुद्रा (Commodity money) — सोना, चाँदी\n- पत्र मुद्रा (Paper money) — नोट\n- साख मुद्रा (Credit money) — चेक, DD\n- डिजिटल मुद्रा — UPI, CBDC\n\n**मुद्रा आपूर्ति के मापक (RBI)**:\n- M1 = सिक्के+नोट + बैंक माँग जमाएँ\n- M2 = M1 + डाकघर बचत\n- M3 = M1 + बैंक मियादी जमाएँ (Broad Money)\n- M4 = M3 + डाकघर जमाएँ",
+          "pa": "ਮੁਦਰਾ ਦੇ 4 ਕੰਮ (Crowther): 1) ਵਟਾਂਦਰੇ ਦਾ ਮਾਧਿਅਮ 2) ਮੁੱਲ ਦਾ ਮਾਪਕ 3) ਮੁੱਲ ਦਾ ਭੰਡਾਰ 4) ਮੁਲਤਵੀ ਭੁਗਤਾਨ ਦਾ ਮਿਆਰ। M1, M2, M3, M4 — RBI ਮਾਪਕ।",
+          "en": "**Money**: Anything universally accepted as a medium of exchange.\n\n**Four Primary Functions of Money** (Crowther):\n1. **Medium of Exchange**: Solves the double coincidence of wants problem.\n2. **Measure of Value**: All goods priced in money.\n3. **Store of Value**: Savings for future.\n4. **Standard of Deferred Payment**: For credit transactions.\n\n**Types of Money**: Commodity money (gold), paper money (notes), credit money (cheques), digital money (UPI, CBDC).\n\n**Money Supply Measures (RBI)**:\n- M1 = Currency + Demand deposits with banks\n- M2 = M1 + Post office savings\n- M3 = M1 + Time deposits (Broad Money)\n- M4 = M3 + Post office deposits"
+        }
+      },
+      {
+        "heading": {"hi": "बैंकिंग: RBI और वाणिज्यिक बैंक", "pa": "ਬੈਂਕਿੰਗ: RBI ਅਤੇ ਵਪਾਰਕ ਬੈਂਕ", "en": "Banking: RBI and Commercial Banks"},
+        "text": {
+          "hi": "**भारतीय रिज़र्व बैंक (RBI)**: 1 अप्रैल 1935 को स्थापित; 1 जनवरी 1949 को राष्ट्रीयकृत। RBI के कार्य:\n1. नोट जारी करना (एकाधिकार)\n2. सरकार के बैंकर\n3. बैंकों के बैंकर (Banker of Banks)\n4. अंतिम ऋणदाता (Lender of Last Resort)\n5. विदेशी मुद्रा भंडार रखना\n6. साख नियंत्रण\n\n**साख नियंत्रण के उपाय**:\nमात्रात्मक उपाय:\n- CRR (Cash Reserve Ratio): बैंकों को RBI के पास रखनी होती है।\n- SLR (Statutory Liquidity Ratio): तरल संपत्ति के रूप में।\n- रेपो दर (Repo Rate): जिस दर पर RBI बैंकों को ऋण देता है।\n- रिवर्स रेपो दर: जिस दर पर RBI बैंकों से ऋण लेता है।\n- बैंक दर (Bank Rate)\n\nगुणात्मक उपाय: मार्जिन आवश्यकताएँ, साख राशनिंग, प्रत्यक्ष कार्रवाई।\n\n**साख निर्माण (Credit Creation)**: वाणिज्यिक बैंक जमाओं पर आंशिक आरक्षित रखकर साख का गुणक विस्तार करते हैं। साख गुणक = 1/CRR।",
+          "pa": "RBI (1 ਅਪ੍ਰੈਲ 1935, ਰਾਸ਼ਟਰੀਕਰਨ 1949): ਨੋਟ ਜਾਰੀ, ਸਰਕਾਰ ਦਾ ਬੈਂਕਰ, ਅੰਤਮ ਕਰਜ਼ਦਾਤਾ। CRR, SLR, ਰੈਪੋ ਦਰ, ਰਿਵਰਸ ਰੈਪੋ। ਸਾਖ਼ ਗੁਣਕ = 1/CRR।",
+          "en": "**Reserve Bank of India (RBI)**: Established 1 April 1935; nationalised 1 January 1949. RBI functions:\n1. Note issue monopoly\n2. Banker to government\n3. Banker's bank\n4. Lender of Last Resort\n5. Manages foreign exchange reserves\n6. Credit control\n\n**Credit Control Instruments**:\nQuantitative: CRR (held with RBI), SLR (liquid assets), Repo Rate (RBI lends to banks), Reverse Repo Rate (RBI borrows from banks), Bank Rate.\n\nQualitative: Margin requirements, credit rationing, direct action.\n\n**Credit Creation**: Commercial banks create credit through fractional reserve banking. Credit multiplier = 1/CRR."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "मुद्रा के 4 कार्य। M1→M4। RBI (1935, 1949 राष्ट्रीयकृत): नोट जारी, सरकारी बैंक, अंतिम ऋणदाता। CRR+SLR+रेपो दर = साख नियंत्रण। साख गुणक = 1/CRR।",
+      "pa": "ਮੁਦਰਾ ਦੇ 4 ਕੰਮ। M1→M4। RBI 1935, 1949 ਰਾਸ਼ਟਰੀਕਰਨ। CRR+SLR+ਰੈਪੋ। ਸਾਖ਼ ਗੁਣਕ = 1/CRR।",
+      "en": "4 functions of money. M1→M4. RBI (1935, nationalised 1949): note issue, govt banker, lender of last resort. CRR+SLR+Repo = credit control. Credit multiplier = 1/CRR."
+    },
+    "keyPoints": [
+      {"hi": "मुद्रा के 4 कार्य: विनिमय माध्यम, मूल्य मापक, मूल्य संचय, स्थगित भुगतान", "pa": "ਮੁਦਰਾ ਦੇ 4 ਕੰਮ: ਵਟਾਂਦਰਾ, ਮੁੱਲ ਮਾਪਕ, ਭੰਡਾਰ, ਮੁਲਤਵੀ ਭੁਗਤਾਨ", "en": "4 functions: medium of exchange, measure of value, store of value, deferred payment"},
+      {"hi": "M3 = Broad Money = M1 + मियादी जमाएँ (सर्वाधिक प्रयुक्त)", "pa": "M3 = Broad Money = M1 + ਮਿਆਦੀ ਜਮਾਂ", "en": "M3 = Broad Money = M1 + time deposits (most commonly used)"},
+      {"hi": "RBI की स्थापना: 1 अप्रैल 1935; राष्ट्रीयकरण: 1 जनवरी 1949", "pa": "RBI: 1 ਅਪ੍ਰੈਲ 1935; ਰਾਸ਼ਟਰੀਕਰਨ: 1 ਜਨਵਰੀ 1949", "en": "RBI established: 1 April 1935; nationalised: 1 January 1949"},
+      {"hi": "साख गुणक = 1/CRR; रेपो दर बढ़ने से साख महंगी, माँग घटती है", "pa": "ਸਾਖ਼ ਗੁਣਕ = 1/CRR; ਰੈਪੋ ਦਰ ਵਧਣ ਨਾਲ ਸਾਖ਼ ਮਹਿੰਗੀ", "en": "Credit multiplier = 1/CRR; higher repo rate → costlier credit → lower demand"}
+    ],
+    "flashcards": [
+      {"front": {"hi": "RBI की स्थापना कब हुई और कब राष्ट्रीयकृत हुआ?", "pa": "RBI ਦੀ ਸਥਾਪਨਾ ਕਦੋਂ ਅਤੇ ਰਾਸ਼ਟਰੀਕਰਨ ਕਦੋਂ?", "en": "When was RBI established and when was it nationalised?"}, "back": {"hi": "ਸਥਾਪਨਾ: 1 ਅਪ੍ਰੈਲ 1935; ਰਾਸ਼ਟਰੀਕਰਨ: 1 ਜਨਵਰੀ 1949", "pa": "ਸਥਾਪਨਾ: 1 ਅਪ੍ਰੈਲ 1935; ਰਾਸ਼ਟਰੀਕਰਨ: 1 ਜਨਵਰੀ 1949", "en": "Established: 1 April 1935; Nationalised: 1 January 1949"}},
+      {"front": {"hi": "रेपो दर और रिवर्स रेपो दर में अंतर?", "pa": "ਰੈਪੋ ਦਰ ਅਤੇ ਰਿਵਰਸ ਰੈਪੋ ਦਰ ਵਿੱਚ ਫਰਕ?", "en": "Difference between Repo Rate and Reverse Repo Rate?"}, "back": {"hi": "ਰੈਪੋ = ਜਿਸ ਦਰ 'ਤੇ RBI ਬੈਂਕਾਂ ਨੂੰ ਕਰਜ਼ਾ ਦਿੰਦਾ ਹੈ; ਰਿਵਰਸ ਰੈਪੋ = ਜਿਸ ਦਰ 'ਤੇ RBI ਬੈਂਕਾਂ ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦਾ ਹੈ", "pa": "ਰੈਪੋ = RBI ਬੈਂਕਾਂ ਨੂੰ ਕਰਜ਼ਾ; ਰਿਵਰਸ ਰੈਪੋ = RBI ਬੈਂਕਾਂ ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦਾ", "en": "Repo = rate at which RBI lends to banks; Reverse Repo = rate at which RBI borrows from banks"}},
+      {"front": {"hi": "M3 किसे कहते हैं?", "pa": "M3 ਕੀ ਹੈ?", "en": "What is M3?"}, "back": {"hi": "M3 = M1 + बैंकों की मियादी जमाएँ। इसे Broad Money कहते हैं।", "pa": "M3 = M1 + ਮਿਆਦੀ ਜਮਾਂ = Broad Money", "en": "M3 = M1 + time deposits of banks = Broad Money"}},
+      {"front": {"hi": "साख गुणक क्या है?", "pa": "ਸਾਖ਼ ਗੁਣਕ ਕੀ ਹੈ?", "en": "What is the credit multiplier?"}, "back": {"hi": "ਸਾਖ਼ ਗੁਣਕ = 1/CRR। ਜੇ CRR 10% ਹੈ → ਹਰ ₹100 ਜਮ੍ਹਾਂ ਤੋਂ ₹1000 ਸਾਖ਼ ਬਣਦੀ ਹੈ।", "pa": "1/CRR. CRR=10% → ਗੁਣਕ=10", "en": "Credit multiplier = 1/CRR. If CRR = 10% → multiplier = 10; ₹100 deposit creates ₹1000 credit."}}
+    ],
+    "questions": [
+      {"id": "sst-money-q1", "text": {"hi": "मुद्रा के कितने प्राथमिक कार्य हैं?", "pa": "ਮੁਦਰਾ ਦੇ ਕਿੰਨੇ ਪ੍ਰਮੁੱਖ ਕੰਮ ਹਨ?", "en": "How many primary functions does money have?"}, "options": {"hi": ["2", "3", "4", "5"], "pa": ["2", "3", "4", "5"], "en": ["2", "3", "4", "5"]}, "answer": 2, "explanation": {"hi": "मुद्रा के चार प्रमुख कार्य हैं: विनिमय माध्यम, मूल्य मापक, मूल्य संचय, स्थगित भुगतान मानक।", "en": "Money has four primary functions: medium of exchange, measure of value, store of value, standard of deferred payment."}},
+      {"id": "sst-money-q2", "text": {"hi": "RBI का राष्ट्रीयकरण कब हुआ?", "pa": "RBI ਦਾ ਰਾਸ਼ਟਰੀਕਰਨ ਕਦੋਂ ਹੋਇਆ?", "en": "When was RBI nationalised?"}, "options": {"hi": ["1 अप्रैल 1935", "15 अगस्त 1947", "1 जनवरी 1949", "26 जनवरी 1950"], "pa": ["1 ਅਪ੍ਰੈਲ 1935", "15 ਅਗਸਤ 1947", "1 ਜਨਵਰੀ 1949", "26 ਜਨਵਰੀ 1950"], "en": ["1 April 1935", "15 August 1947", "1 January 1949", "26 January 1950"]}, "answer": 2, "explanation": {"hi": "RBI की स्थापना 1 अप्रैल 1935 को हुई और इसका राष्ट्रीयकरण 1 जनवरी 1949 को हुआ।", "en": "RBI was established on 1 April 1935 and was nationalised on 1 January 1949."}},
+      {"id": "sst-money-q3", "text": {"hi": "यदि CRR 20% है तो साख गुणक क्या होगा?", "pa": "ਜੇ CRR 20% ਹੈ ਤਾਂ ਸਾਖ਼ ਗੁਣਕ ਕੀ ਹੋਵੇਗਾ?", "en": "If CRR is 20%, what is the credit multiplier?"}, "options": {"hi": ["2", "4", "5", "20"], "pa": ["2", "4", "5", "20"], "en": ["2", "4", "5", "20"]}, "answer": 2, "explanation": {"hi": "साख गुणक = 1/CRR = 1/0.20 = 5। अर्थात् ₹100 जमा से ₹500 की साख बनेगी।", "en": "Credit multiplier = 1/CRR = 1/0.20 = 5. So ₹100 deposit creates ₹500 of credit."}},
+      {"id": "sst-money-q4", "text": {"hi": "M3 (Broad Money) की परिभाषा क्या है?", "pa": "M3 (Broad Money) ਦੀ ਪਰਿਭਾਸ਼ਾ ਕੀ ਹੈ?", "en": "What is M3 (Broad Money)?"}, "options": {"hi": ["M1 + डाकघर बचत", "सिक्के + नोट", "M1 + बैंकों की मियादी जमाएँ", "M3 + डाकघर जमाएँ"], "pa": ["M1 + ਡਾਕਘਰ ਬੱਚਤ", "ਸਿੱਕੇ + ਨੋਟ", "M1 + ਮਿਆਦੀ ਜਮਾਂ", "M3 + ਡਾਕਘਰ ਜਮਾਂ"], "en": ["M1 + post office savings", "Coins + notes", "M1 + time deposits of banks", "M3 + post office deposits"]}, "answer": 2, "explanation": {"hi": "M3 = M1 + बैंकों की मियादी जमाएँ। इसे 'Broad Money' या व्यापक मुद्रा कहते हैं और यह सबसे अधिक प्रयुक्त मापक है।", "en": "M3 = M1 + time deposits of banks. Called 'Broad Money' — the most widely used monetary aggregate."}},
+      {"id": "sst-money-q5", "text": {"hi": "रेपो दर वह दर है जिस पर:", "pa": "ਰੈਪੋ ਦਰ ਉਹ ਦਰ ਹੈ ਜਿਸ 'ਤੇ:", "en": "Repo rate is the rate at which:"}, "options": {"hi": ["बैंक RBI से उधार लेते हैं", "RBI बैंकों से उधार लेता है", "बैंक जनता को उधार देते हैं", "सरकार RBI से उधार लेती है"], "pa": ["ਬੈਂਕ RBI ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦੇ ਹਨ", "RBI ਬੈਂਕਾਂ ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦਾ ਹੈ", "ਬੈਂਕ ਲੋਕਾਂ ਨੂੰ ਕਰਜ਼ਾ ਦਿੰਦੇ ਹਨ", "ਸਰਕਾਰ RBI ਤੋਂ ਕਰਜ਼ਾ ਲੈਂਦੀ ਹੈ"], "en": ["Banks borrow from RBI", "RBI borrows from banks", "Banks lend to the public", "Government borrows from RBI"]}, "answer": 0, "explanation": {"hi": "रेपो दर वह ब्याज दर है जिस पर वाणिज्यिक बैंक अल्पकाल के लिए RBI से ऋण लेते हैं।", "en": "Repo rate is the interest rate at which commercial banks borrow short-term funds from the RBI."}}
+    ]
+  },
+  {
+    "id": "sst-economic-planning",
+    "subject": "Economics",
+    "unit": "Economics",
+    "examIds": ["master"],
+    "title": {
+      "hi": "भारत में आर्थिक नियोजन और 1991 के सुधार",
+      "pa": "ਭਾਰਤ ਵਿੱਚ ਆਰਥਿਕ ਯੋਜਨਾਬੰਦੀ ਅਤੇ 1991 ਦੇ ਸੁਧਾਰ",
+      "en": "Economic Planning in India and 1991 Reforms"
+    },
+    "level": "Foundation / concept preparation",
+    "sources": [
+      {
+        "title": "NCERT Class 11 Indian Economic Development – Chapter 2: Indian Economy 1950–1990",
+        "url": "https://ncert.nic.in/textbook/pdf/keip101.pdf",
+        "note": "Content is author-generated for Master Cadre SST exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "पंचवर्षीय योजनाएँ और योजना आयोग", "pa": "ਪੰਜ-ਸਾਲਾ ਯੋਜਨਾਵਾਂ ਅਤੇ ਯੋਜਨਾ ਕਮਿਸ਼ਨ", "en": "Five-Year Plans and Planning Commission"},
+        "text": {
+          "hi": "भारत ने 1950 में **मिश्रित अर्थव्यवस्था** (Mixed Economy) मॉडल अपनाया — सरकारी और निजी क्षेत्र दोनों।\n\n**योजना आयोग**: 1950 में स्थापित; प्रधानमंत्री इसके अध्यक्ष। 2015 में **नीति आयोग** (NITI Aayog - National Institution for Transforming India) ने प्रतिस्थापित किया।\n\n**महत्वपूर्ण पंचवर्षीय योजनाएँ**:\n- **प्रथम (1951–56)**: कृषि और बुनियादी ढाँचे पर जोर; लक्ष्य से अधिक विकास।\n- **द्वितीय (1956–61)**: हेरोड-डोमर मॉडल; भारी उद्योग (Mahalanobis मॉडल)।\n- **तृतीय (1961–66)**: असफल — युद्ध (1962, 1965) और सूखे से।\n- **चतुर्थ (1969–74)**: 'ग़रीबी हटाओ' (इंदिरा गांधी); बैंकों का राष्ट्रीयकरण 1969।\n- **पाँचवीं (1974–79)**: न्यूनतम आवश्यकताएँ।\n- **आठवीं (1992–97)**: उदारीकरण के बाद का पहला; मानव विकास।\n- **बारहवीं (2012–17)**: अंतिम योजना।\n\n2017 के बाद **15 वर्षीय दृष्टि दस्तावेज़** और **7 वर्षीय रणनीति** (NITI Aayog)।",
+          "pa": "ਭਾਰਤ ਨੇ 1950 ਵਿੱਚ ਮਿਸ਼ਰਤ ਅਰਥਵਿਵਸਥਾ ਮਾਡਲ ਅਪਣਾਇਆ। ਯੋਜਨਾ ਕਮਿਸ਼ਨ (1950) → NITI Aayog (2015)। 12 ਪੰਜ-ਸਾਲਾ ਯੋਜਨਾਵਾਂ (1951–2017)। ਦੂਜੀ ਯੋਜਨਾ = Mahalanobis ਮਾਡਲ (ਭਾਰੀ ਉਦਯੋਗ)।",
+          "en": "India adopted a **Mixed Economy** model in 1950 — both public and private sectors.\n\n**Planning Commission**: Established 1950; PM as Chairman. Replaced by **NITI Aayog** (National Institution for Transforming India) in 2015.\n\n**Key Five-Year Plans**:\n- **1st (1951–56)**: Focus on agriculture and infrastructure; exceeded targets.\n- **2nd (1956–61)**: Harrod-Domar model; heavy industry (Mahalanobis model).\n- **3rd (1961–66)**: Failed due to wars (1962, 1965) and droughts.\n- **4th (1969–74)**: 'Garibi Hatao'; bank nationalisation 1969.\n- **5th (1974–79)**: Minimum needs programme.\n- **8th (1992–97)**: First post-liberalisation; human development.\n- **12th (2012–17)**: Last Five-Year Plan.\n\nPost-2017: 15-year Vision Document + 7-year Strategy (NITI Aayog)."
+        }
+      },
+      {
+        "heading": {"hi": "1991 के आर्थिक सुधार: LPG", "pa": "1991 ਦੇ ਆਰਥਿਕ ਸੁਧਾਰ: LPG", "en": "1991 Economic Reforms: LPG"},
+        "text": {
+          "hi": "1991 में भारत गंभीर भुगतान संतुलन संकट में था। प्रधानमंत्री **P.V. Narasimha Rao** और वित्त मंत्री **Dr. Manmohan Singh** ने ऐतिहासिक सुधार लागू किए — **LPG**:\n\n1. **उदारीकरण (Liberalisation)**: लाइसेंस राज समाप्त; उद्योगों को स्वतंत्र करना। औद्योगिक लाइसेंसिंग नीति को 6 उद्योगों को छोड़कर समाप्त किया।\n\n2. **निजीकरण (Privatisation)**: सार्वजनिक क्षेत्र का भार कम करना। विनिवेश (Disinvestment) नीति।\n\n3. **वैश्वीकरण (Globalisation)**: विदेशी व्यापार और पूँजी प्रवाह के लिए अर्थव्यवस्था खोलना। FDI की अनुमति; रुपये को आंशिक परिवर्तनीय बनाया।\n\n**परिणाम**: GDP वृद्धि 6–8%; विदेशी मुद्रा भंडार बढ़ा; मध्यम वर्ग का विस्तार; लेकिन असमानता और कृषि संकट की चिंताएँ भी।\n\n**SEZ (Special Economic Zones)**: 2005 में SEZ अधिनियम; निर्यात उत्पादन के लिए विशेष क्षेत्र।\n\n**GST (Goods and Services Tax)**: 1 जुलाई 2017 को लागू। 'एक राष्ट्र, एक कर, एक बाजार।' अप्रत्यक्ष करों का एकीकरण।",
+          "pa": "1991 ਵਿੱਚ P.V. ਨਰਸਿਮ੍ਹਾ ਰਾਓ ਅਤੇ ਡਾ. ਮਨਮੋਹਨ ਸਿੰਘ ਨੇ LPG ਸੁਧਾਰ ਲਾਗੂ ਕੀਤੇ: 1) ਉਦਾਰੀਕਰਨ (ਲਾਇਸੈਂਸ ਰਾਜ ਖਤਮ) 2) ਨਿੱਜੀਕਰਨ 3) ਵਿਸ਼ਵੀਕਰਨ (FDI)। GST: 1 ਜੁਲਾਈ 2017।",
+          "en": "India faced a severe balance of payments crisis in 1991. PM **P.V. Narasimha Rao** and Finance Minister **Dr. Manmohan Singh** introduced the landmark **LPG reforms**:\n\n1. **Liberalisation**: End of Licence Raj; industrial licensing abolished except 6 industries.\n\n2. **Privatisation**: Disinvestment from public sector enterprises.\n\n3. **Globalisation**: Opening to foreign trade and capital. FDI permitted; rupee made partially convertible.\n\n**Results**: GDP growth 6–8%; forex reserves grew; middle class expanded; but concerns about inequality and agricultural distress.\n\n**SEZ (Special Economic Zones)**: SEZ Act 2005; export production zones.\n\n**GST (Goods and Services Tax)**: Launched 1 July 2017. 'One nation, one tax, one market.' Unified indirect taxes."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "योजना आयोग 1950 → NITI आयोग 2015। 12 पंचवर्षीय योजनाएँ (1951–2017)। द्वितीय योजना = Mahalanobis मॉडल। 1991 LPG सुधार — Narasimha Rao + Manmohan Singh। GST 1 जुलाई 2017।",
+      "pa": "ਯੋਜਨਾ ਕਮਿਸ਼ਨ 1950 → NITI Aayog 2015। 12 ਯੋਜਨਾਵਾਂ। 1991 LPG — ਨਰਸਿਮ੍ਹਾ ਰਾਓ + ਮਨਮੋਹਨ ਸਿੰਘ। GST 1 ਜੁਲਾਈ 2017।",
+      "en": "Planning Commission 1950 → NITI Aayog 2015. 12 Five-Year Plans (1951–2017). 2nd Plan = Mahalanobis model. 1991 LPG reforms — Narasimha Rao + Manmohan Singh. GST 1 July 2017."
+    },
+    "keyPoints": [
+      {"hi": "NITI Aayog ने 2015 में योजना आयोग का स्थान लिया", "pa": "NITI Aayog ਨੇ 2015 ਵਿੱਚ ਯੋਜਨਾ ਕਮਿਸ਼ਨ ਦੀ ਥਾਂ ਲਈ", "en": "NITI Aayog replaced Planning Commission in 2015"},
+      {"hi": "द्वितीय पंचवर्षीय योजना = Mahalanobis मॉडल = भारी उद्योग", "pa": "ਦੂਜੀ ਯੋਜਨਾ = Mahalanobis ਮਾਡਲ = ਭਾਰੀ ਉਦਯੋਗ", "en": "2nd Five-Year Plan = Mahalanobis model = heavy industries"},
+      {"hi": "1991 LPG = Liberalisation + Privatisation + Globalisation (Narasimha Rao + Manmohan Singh)", "pa": "1991 LPG = ਉਦਾਰੀਕਰਨ + ਨਿੱਜੀਕਰਨ + ਵਿਸ਼ਵੀਕਰਨ", "en": "1991 LPG = Liberalisation + Privatisation + Globalisation (Rao + Manmohan Singh)"},
+      {"hi": "GST = 1 जुलाई 2017 = 'एक राष्ट्र, एक कर'", "pa": "GST = 1 ਜੁਲਾਈ 2017 = 'ਇੱਕ ਰਾਸ਼ਟਰ, ਇੱਕ ਕਰ'", "en": "GST = 1 July 2017 = 'One nation, one tax'"}
+    ],
+    "flashcards": [
+      {"front": {"hi": "NITI Aayog की स्थापना कब हुई और इसने किसका स्थान लिया?", "pa": "NITI Aayog ਕਦੋਂ ਸਥਾਪਿਤ ਹੋਇਆ?", "en": "When was NITI Aayog established and what did it replace?"}, "back": {"hi": "ਜਨਵਰੀ 2015; ਯੋਜਨਾ ਕਮਿਸ਼ਨ (1950) ਦੀ ਥਾਂ ਲਈ", "pa": "ਜਨਵਰੀ 2015; ਯੋਜਨਾ ਕਮਿਸ਼ਨ ਦੀ ਥਾਂ ਲਈ", "en": "January 2015; replaced the Planning Commission (est. 1950)"}},
+      {"front": {"hi": "द्वितीय पंचवर्षीय योजना किस मॉडल पर आधारित थी?", "pa": "ਦੂਜੀ ਯੋਜਨਾ ਕਿਸ ਮਾਡਲ 'ਤੇ ਆਧਾਰਿਤ ਸੀ?", "en": "Which model was the 2nd Five-Year Plan based on?"}, "back": {"hi": "Mahalanobis ਮਾਡਲ — ਭਾਰੀ ਉਦਯੋਗਾਂ ਅਤੇ ਜਨਤਕ ਖੇਤਰ 'ਤੇ ਜ਼ੋਰ", "pa": "Mahalanobis ਮਾਡਲ — ਭਾਰੀ ਉਦਯੋਗ", "en": "Mahalanobis model — emphasis on heavy industries and public sector"}},
+      {"front": {"hi": "1991 के LPG सुधारों में L, P, G का क्या अर्थ है?", "pa": "1991 LPG ਵਿੱਚ L, P, G ਦਾ ਕੀ ਅਰਥ ਹੈ?", "en": "What do L, P, G stand for in the 1991 LPG reforms?"}, "back": {"hi": "L = ਉਦਾਰੀਕਰਨ, P = ਨਿੱਜੀਕਰਨ, G = ਵਿਸ਼ਵੀਕਰਨ", "pa": "L = Liberalisation, P = Privatisation, G = Globalisation", "en": "L = Liberalisation, P = Privatisation, G = Globalisation"}},
+      {"front": {"hi": "GST कब लागू हुआ और इसका पूरा नाम?", "pa": "GST ਕਦੋਂ ਲਾਗੂ ਹੋਇਆ?", "en": "When was GST implemented and what is its full form?"}, "back": {"hi": "1 ਜੁਲਾਈ 2017; Goods and Services Tax; 'ਇੱਕ ਰਾਸ਼ਟਰ, ਇੱਕ ਕਰ, ਇੱਕ ਬਾਜ਼ਾਰ'", "pa": "1 ਜੁਲਾਈ 2017; Goods and Services Tax", "en": "1 July 2017; Goods and Services Tax; 'One nation, one tax, one market'"}}
+    ],
+    "questions": [
+      {"id": "sst-planning-q1", "text": {"hi": "योजना आयोग का स्थान किसने लिया?", "pa": "ਯੋਜਨਾ ਕਮਿਸ਼ਨ ਦੀ ਥਾਂ ਕਿਸਨੇ ਲਈ?", "en": "What replaced the Planning Commission?"}, "options": {"hi": ["RBI", "NITI Aayog", "SEBI", "Finance Commission"], "pa": ["RBI", "NITI Aayog", "SEBI", "Finance Commission"], "en": ["RBI", "NITI Aayog", "SEBI", "Finance Commission"]}, "answer": 1, "explanation": {"hi": "2015 में NITI Aayog (National Institution for Transforming India) ने 1950 में स्थापित योजना आयोग का स्थान लिया।", "en": "NITI Aayog (National Institution for Transforming India) replaced the Planning Commission in 2015."}},
+      {"id": "sst-planning-q2", "text": {"hi": "1991 के LPG सुधारों के समय भारत के वित्त मंत्री कौन थे?", "pa": "1991 ਦੇ LPG ਸੁਧਾਰਾਂ ਵੇਲੇ ਵਿੱਤ ਮੰਤਰੀ ਕੌਣ ਸੀ?", "en": "Who was India's Finance Minister during the 1991 LPG reforms?"}, "options": {"hi": ["P.V. Narasimha Rao", "Dr. Manmohan Singh", "Pranab Mukherjee", "Yashwant Sinha"], "pa": ["P.V. ਨਰਸਿਮ੍ਹਾ ਰਾਓ", "ਡਾ. ਮਨਮੋਹਨ ਸਿੰਘ", "ਪ੍ਰਣਬ ਮੁਖਰਜੀ", "ਯਸ਼ਵੰਤ ਸਿਨਹਾ"], "en": ["P.V. Narasimha Rao", "Dr. Manmohan Singh", "Pranab Mukherjee", "Yashwant Sinha"]}, "answer": 1, "explanation": {"hi": "P.V. Narasimha Rao प्रधानमंत्री थे और Dr. Manmohan Singh वित्त मंत्री थे जिन्होंने 1991 में LPG सुधार लागू किए।", "en": "P.V. Narasimha Rao was PM and Dr. Manmohan Singh was Finance Minister who implemented the 1991 LPG reforms."}},
+      {"id": "sst-planning-q3", "text": {"hi": "GST भारत में कब लागू हुआ?", "pa": "GST ਭਾਰਤ ਵਿੱਚ ਕਦੋਂ ਲਾਗੂ ਹੋਇਆ?", "en": "When was GST implemented in India?"}, "options": {"hi": ["1 अप्रैल 2016", "1 जनवरी 2017", "1 जुलाई 2017", "1 अप्रैल 2018"], "pa": ["1 ਅਪ੍ਰੈਲ 2016", "1 ਜਨਵਰੀ 2017", "1 ਜੁਲਾਈ 2017", "1 ਅਪ੍ਰੈਲ 2018"], "en": ["1 April 2016", "1 January 2017", "1 July 2017", "1 April 2018"]}, "answer": 2, "explanation": {"hi": "GST 1 जुलाई 2017 को लागू हुआ। यह 'एक राष्ट्र, एक कर' की अवधारणा पर आधारित है।", "en": "GST was implemented on 1 July 2017. It is based on the 'One nation, one tax' concept."}},
+      {"id": "sst-planning-q4", "text": {"hi": "भारत की द्वितीय पंचवर्षीय योजना किस मॉडल पर आधारित थी?", "pa": "ਭਾਰਤ ਦੀ ਦੂਜੀ ਪੰਜ-ਸਾਲਾ ਯੋਜਨਾ ਕਿਸ ਮਾਡਲ 'ਤੇ ਆਧਾਰਿਤ ਸੀ?", "en": "India's Second Five-Year Plan was based on which model?"}, "options": {"hi": ["Harrod-Domar Model", "Mahalanobis Model", "Solow Growth Model", "Lewis Model"], "pa": ["Harrod-Domar ਮਾਡਲ", "Mahalanobis ਮਾਡਲ", "Solow ਮਾਡਲ", "Lewis ਮਾਡਲ"], "en": ["Harrod-Domar Model", "Mahalanobis Model", "Solow Growth Model", "Lewis Model"]}, "answer": 1, "explanation": {"hi": "द्वितीय पंचवर्षीय योजना P.C. Mahalanobis मॉडल पर आधारित थी जो भारी उद्योगों और सार्वजनिक क्षेत्र को प्राथमिकता देता था।", "en": "The Second Five-Year Plan was based on the Mahalanobis model, prioritising heavy industries and the public sector."}},
+      {"id": "sst-planning-q5", "text": {"hi": "भारत में बैंकों का पहली बार राष्ट्रीयकरण किस वर्ष हुआ?", "pa": "ਭਾਰਤ ਵਿੱਚ ਬੈਂਕਾਂ ਦਾ ਪਹਿਲੀ ਵਾਰ ਰਾਸ਼ਟਰੀਕਰਨ ਕਿਸ ਸਾਲ ਹੋਇਆ?", "en": "In which year were banks first nationalised in India?"}, "options": {"hi": ["1955", "1962", "1969", "1980"], "pa": ["1955", "1962", "1969", "1980"], "en": ["1955", "1962", "1969", "1980"]}, "answer": 2, "explanation": {"hi": "इंदिरा गांधी सरकार ने 1969 में 14 प्रमुख बैंकों का राष्ट्रीयकरण किया — 'गरीबी हटाओ' नीति के अंतर्गत।", "en": "The Indira Gandhi government nationalised 14 major banks in 1969 as part of the 'Garibi Hatao' policy."}}
+    ]
+  }
+]

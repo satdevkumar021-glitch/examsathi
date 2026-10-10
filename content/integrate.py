@@ -98,6 +98,30 @@ for l in json.load(open(research/'ett-science-2.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add Master Cadre SST Polity batch 2 (Citizenship, Foreign Policy/UNO, Election+Party)
+for l in json.load(open(research/'master-sst-polity-2.json')):
+ l['level']='Foundation / concept preparation'
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Master Cadre SST History batch 2 (Guptas+Harsha, Delhi Sultanate)
+for l in json.load(open(research/'master-sst-history-2.json')):
+ l['level']='Foundation / concept preparation'
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Master Cadre SST History batch 3 (Colonial Punjab, Ghadar, Partition)
+for l in json.load(open(research/'master-sst-history-3.json')):
+ l['level']='Foundation / concept preparation'
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Master Cadre SST Economics batch 2 (Consumer Equilibrium, Money+Banking, Economic Planning)
+for l in json.load(open(research/'master-sst-economics-2.json')):
+ l['level']='Foundation / concept preparation'
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add Commerce lessons (Lecturer Cadre)
 for l in json.load(open(research/'commerce-lessons.json')):
  l['level']='Foundation / concept preparation'
