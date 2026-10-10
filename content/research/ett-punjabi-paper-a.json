@@ -1,0 +1,125 @@
+[
+  {
+    "id": "ett-punjabi-gurmukhi-script",
+    "subject": "Punjabi",
+    "unit": "ਗੁਰਮੁਖੀ ਲਿਪੀ ਅਤੇ ਵਰਣ ਬੋਧ",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "गुरमुखी लिपि: अक्षर, स्वर, व्यंजन और विशेष चिह्न",
+      "pa": "ਗੁਰਮੁਖੀ ਲਿਪੀ: ਅੱਖਰ, ਸਵਰ, ਵਿਅੰਜਨ ਅਤੇ ਵਿਸ਼ੇਸ਼ ਚਿੰਨ੍ਹ",
+      "en": "Gurmukhi Script: Letters, Vowels, Consonants and Special Characters"
+    },
+    "level": "ETT Paper A — Punjabi qualifying (Class 6-10 PSEB level)",
+    "review_note": "Language content in Gurmukhi. Must be reviewed by a native Punjabi-speaking teacher before publishing. Items marked [VERIFY] need cross-check with PSEB Punjabi textbooks.",
+    "sources": [
+      {
+        "title": "PSEB Punjabi textbook — Gurmukhi Vyakaran (Class 6-10)",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "Official PSEB textbooks. Content is author-generated for ETT exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "गुरमुखी लिपि: परिचय और वर्णमाला", "pa": "ਗੁਰਮੁਖੀ ਲਿਪੀ: ਜਾਣ-ਪਛਾਣ ਅਤੇ ਵਰਣਮਾਲਾ", "en": "Gurmukhi Script: Introduction and Alphabet"},
+        "text": {
+          "hi": "ਗੁਰਮੁਖੀ ਲਿਪੀ ਵਿੱਚ ਕੁੱਲ **35 ਅੱਖਰ** ਹਨ ਜਿਨ੍ਹਾਂ ਨੂੰ **ਪੈਂਤੀ** ਕਿਹਾ ਜਾਂਦਾ ਹੈ।\n\n**ਵਰਣਮਾਲਾ ਦੇ ਵਰਗ** (ਉਚਾਰਨ ਸਥਾਨ ਅਨੁਸਾਰ):\n- ਕੰਠ: ੳ ਅ ੲ ਸ ਹ\n- ਕਵਰਗ (ਕੰਠ): ਕ ਖ ਗ ਘ ਙ\n- ਚਵਰਗ (ਤਾਲੂ): ਚ ਛ ਜ ਝ ਞ\n- ਟਵਰਗ (ਮੂਰਧਨ): ਟ ਠ ਡ ਢ ਣ\n- ਤਵਰਗ (ਦੰਤ): ਤ ਥ ਦ ਧ ਨ\n- ਪਵਰਗ (ਓਠ): ਪ ਫ ਬ ਭ ਮ\n- ਅਰਧ ਸਵਰ: ਯ ਰ ਲ ਵ\n- ਸ਼ੁਸ਼ਮ ਵਰਗ: ੜ ਹ (ਵਿਸ਼ੇਸ਼)\n\n**ਮੂਲ ਅੱਖਰ (ਤਿੰਨ ਮੂਲ)**: ੳ, ਅ, ੲ — ਇਨ੍ਹਾਂ ਨੂੰ **ਮੂਲ ਅੱਖਰ** ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਇਹ ਆਪ ਸ਼ਬਦ ਨਹੀਂ ਬਣਦੇ; ਲਗਾਂ-ਮਾਤਰਾਂ ਨਾਲ ਵਰਤੀਏ ਜਾਂਦੇ ਹਨ।\n\n**ਸਵਰ ਅਤੇ ਵਿਅੰਜਨ**:\n- **ਸਵਰ (Vowels)**: ਉਹ ਧੁਨੀਆਂ ਜੋ ਆਪ ਹੀ ਬੋਲੀਆਂ ਜਾਂਦੀਆਂ ਹਨ, ਬਿਨਾਂ ਕਿਸੇ ਹੋਰ ਧੁਨੀ ਦੀ ਸਹਾਇਤਾ ਦੇ। ਗੁਰਮੁਖੀ ਵਿੱਚ ਮੂਲ ਸਵਰ: ਅ, ਆ, ਇ, ਈ, ਉ, ਊ, ਏ, ਐ, ਓ, ਔ।\n- **ਵਿਅੰਜਨ (Consonants)**: ਉਹ ਧੁਨੀਆਂ ਜਿਨ੍ਹਾਂ ਲਈ ਸਵਰ ਦੀ ਲੋੜ ਪੈਂਦੀ ਹੈ।",
+          "pa": "ਗੁਰਮੁਖੀ ਵਿੱਚ 35 ਅੱਖਰ (ਪੈਂਤੀ)। ਤਿੰਨ ਮੂਲ: ੳ, ਅ, ੲ। 5 ਵਰਗ: ਕ-ਚ-ਟ-ਤ-ਪ। ਸਵਰ = ਆਪ ਬੋਲੀਆਂ ਜਾਂਦੀਆਂ ਧੁਨੀਆਂ। ਵਿਅੰਜਨ = ਸਵਰ ਨਾਲ ਬੋਲੀਆਂ।",
+          "en": "Gurmukhi has **35 letters** called **Paintii** (ਪੈਂਤੀ). Three foundational characters (ਮੂਲ ਅੱਖਰ): ੳ, ਅ, ੲ — cannot form words on their own. Arranged in five classes (varg) by place of articulation: k-varg, ch-varg, tt-varg, t-varg, p-varg. Vowels (ਸਵਰ) are independent sounds; Consonants (ਵਿਅੰਜਨ) need a vowel to be pronounced."
+        }
+      },
+      {
+        "heading": {"hi": "लगाँ-मात्राँ (Vowel Signs) और विशेष चिह्न", "pa": "ਲਗਾਂ-ਮਾਤਰਾਂ ਅਤੇ ਵਿਸ਼ੇਸ਼ ਚਿੰਨ੍ਹ", "en": "Vowel Signs (Lagaan-Maatraan) and Special Characters"},
+        "text": {
+          "hi": "**ਲਗਾਂ-ਮਾਤਰਾਂ** — ਵਿਅੰਜਨਾਂ ਨਾਲ ਜੋੜ ਕੇ ਸਵਰ ਧੁਨੀਆਂ ਪ੍ਰਗਟ ਕਰਨ ਦੇ ਚਿੰਨ੍ਹ:\n\n| ਲਗਾ/ਮਾਤਰਾ | ਨਾਂ | ਉਦਾਹਰਨ |\n|---|---|---|\n| ਾ | ਆ ਦੀ ਲਗਾ | ਕਾ, ਗਾ |\n| ਿ | ਸਿਹਾਰੀ | ਕਿ, ਗਿ |\n| ੀ | ਬਿਹਾਰੀ | ਕੀ, ਗੀ |\n| ੁ | ਔਂਕੜ | ਕੁ, ਗੁ |\n| ੂ | ਦੁਲੈਂਵਾਂ | ਕੂ, ਗੂ |\n| ੇ | ਲਾਵਾਂ | ਕੇ, ਗੇ |\n| ੈ | ਦੁਲਾਵਾਂ | ਕੈ, ਗੈ |\n| ੋ | ਹੋੜਾ | ਕੋ, ਗੋ |\n| ੌ | ਕਨੌੜਾ | ਕੌ, ਗੌ |\n\n**ਵਿਸ਼ੇਸ਼ ਚਿੰਨ੍ਹ**:\n- **ਬਿੰਦੀ (ੰ)**: ਅਨੁਨਾਸਿਕ ਧੁਨੀ; ਸ਼ਬਦ ਦੇ ਅੰਤ ਵਿੱਚ ਜਾਂ ਮੱਧ ਵਿੱਚ। ਜਿਵੇਂ: ਪੰਜਾਬ, ਵੰਡ\n- **ਟਿੱਪੀ (ੱ੍ਹ ਵਰਗੀ ਟਿੱਪੀ ੱ)**: ਸਵਰ ਧੁਨੀ ਤੋਂ ਪਹਿਲਾਂ ਵਾਲੇ ਵਿਅੰਜਨ ਨਾਲ। ਜਿਵੇਂ: ਸੰਞ/ਸੱਤ [VERIFY exact placement rules]\n- **ਅੱਧਕ (੍ਹ)**: ਵਿਅੰਜਨ ਨੂੰ ਦੁਗਣਾ ਕਰਦਾ ਹੈ। ਜਿਵੇਂ: ਪੱਕਾ, ਸੱਚ\n\n**ਦੁੱਤ ਅੱਖਰ** (Dutt Akhar — Sub-consonants): ਹ, ਰ, ਵ ਕੁਝ ਅੱਖਰਾਂ ਨਾਲ ਜੁੜ ਕੇ ਦੁੱਤ ਬਣਦੇ ਹਨ। ਜਿਵੇਂ: ਪ੍ਰ (ਪ+ਰ), ਗ੍ਰ (ਗ+ਰ), ਕ੍ਰ (ਕ+ਰ)।",
+          "pa": "ਲਗਾਂ-ਮਾਤਰਾਂ: ਆ-ਲਗਾ, ਸਿਹਾਰੀ, ਬਿਹਾਰੀ, ਔਂਕੜ, ਦੁਲੈਂਵਾਂ, ਲਾਵਾਂ, ਦੁਲਾਵਾਂ, ਹੋੜਾ, ਕਨੌੜਾ। ਬਿੰਦੀ (ੰ) = ਅਨੁਨਾਸਿਕ। ਅੱਧਕ = ਦੁਗਣਾ ਵਿਅੰਜਨ (ਪੱਕਾ)। ਦੁੱਤ: ਪ੍ਰ, ਗ੍ਰ।",
+          "en": "Lagaan-Maatraan (vowel diacritics) are attached to consonants to show vowel sounds — 9 signs in Gurmukhi. Special characters: **Bindi** (ੰ) = nasalisation (ਪੰਜਾਬ); **Tippi** = nasalisation before vowel; **Addak** (੍ਹ) = geminates/doubles the consonant (ਪੱਕਾ = hard/ripe). Dutt Akhar: ਹ, ਰ, ਵ join as sub-consonants (ਪ੍ਰ, ਗ੍ਰ)."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "ਗੁਰਮੁਖੀ = 35 ਅੱਖਰ (ਪੈਂਤੀ)। ਤਿੰਨ ਮੂਲ: ੳ, ਅ, ੲ। 5 ਵਰਗ। 9 ਲਗਾਂ-ਮਾਤਰਾਂ। ਬਿੰਦੀ (ਅਨੁਨਾਸਿਕ), ਅੱਧਕ (ਦੁਗਣਾ), ਦੁੱਤ ਅੱਖਰ (ਪ੍ਰ, ਗ੍ਰ)।",
+      "pa": "ਪੈਂਤੀ = 35 ਅੱਖਰ। ੳ ਅ ੲ ਮੂਲ। 9 ਲਗਾਂ-ਮਾਤਰਾਂ। ਅੱਧਕ = ਦੁਗਣਾ।",
+      "en": "Gurmukhi = 35 letters (Paintii). Three roots: ੳ, ਅ, ੲ. 5 varg groups. 9 vowel signs. Bindi = nasalisation. Addak = consonant doubling. Dutt = sub-consonant joins."
+    },
+    "keyPoints": [
+      {"hi": "ਗੁਰਮੁਖੀ ਵਿੱਚ 35 ਅੱਖਰ — ਪੈਂਤੀ", "pa": "ਗੁਰਮੁਖੀ ਵਿੱਚ 35 ਅੱਖਰ — ਪੈਂਤੀ", "en": "Gurmukhi has 35 letters — called Paintii"},
+      {"hi": "ਤਿੰਨ ਮੂਲ ਅੱਖਰ: ੳ, ਅ, ੲ (ਆਪ ਸ਼ਬਦ ਨਹੀਂ ਬਣਦੇ)", "pa": "ਤਿੰਨ ਮੂਲ: ੳ, ਅ, ੲ", "en": "Three root characters: ੳ, ਅ, ੲ (cannot form words alone)"},
+      {"hi": "ਅੱਧਕ = ਵਿਅੰਜਨ ਦੁਗਣਾ ਕਰਦਾ ਹੈ (ਪੱਕਾ, ਸੱਚ)", "pa": "ਅੱਧਕ = ਦੁਗਣਾ ਵਿਅੰਜਨ (ਪੱਕਾ)", "en": "Addak doubles the consonant that follows it (ਪੱਕਾ = hard/ripe)"},
+      {"hi": "ਬਿੰਦੀ (ੰ) = ਅਨੁਨਾਸਿਕ ਧੁਨੀ (ਪੰਜਾਬ, ਵੰਡ)", "pa": "ਬਿੰਦੀ = ਅਨੁਨਾਸਿਕ (ਪੰਜਾਬ)", "en": "Bindi = nasalisation marker (ਪੰਜਾਬ, ਵੰਡ)"}
+    ],
+    "flashcards": [
+      {"front": {"hi": "ਗੁਰਮੁਖੀ ਵਿੱਚ ਕਿੰਨੇ ਅੱਖਰ ਹਨ?", "pa": "ਗੁਰਮੁਖੀ ਵਿੱਚ ਕਿੰਨੇ ਅੱਖਰ ਹਨ?", "en": "How many letters in Gurmukhi?"}, "back": {"hi": "35 ਅੱਖਰ — ਪੈਂਤੀ", "pa": "35 ਅੱਖਰ — ਪੈਂਤੀ", "en": "35 letters — called Paintii (ਪੈਂਤੀ)"}},
+      {"front": {"hi": "ਗੁਰਮੁਖੀ ਦੇ ਤਿੰਨ ਮੂਲ ਅੱਖਰ ਕਿਹੜੇ ਹਨ?", "pa": "ਤਿੰਨ ਮੂਲ ਅੱਖਰ?", "en": "Three root characters of Gurmukhi?"}, "back": {"hi": "ੳ, ਅ, ੲ (ਇਹ ਆਪ ਸ਼ਬਦ ਨਹੀਂ ਬਣਦੇ)", "pa": "ੳ, ਅ, ੲ", "en": "ੳ, ਅ, ੲ (they cannot form words on their own)"}},
+      {"front": {"hi": "ਅੱਧਕ ਦਾ ਕੰਮ ਕੀ ਹੈ?", "pa": "ਅੱਧਕ ਦਾ ਕੰਮ?", "en": "What does Addak (੍ਹ) do?"}, "back": {"hi": "ਬਾਅਦ ਵਾਲੇ ਵਿਅੰਜਨ ਨੂੰ ਦੁਗਣਾ ਕਰਦਾ ਹੈ। ਜਿਵੇਂ: ਪੱਕਾ, ਸੱਚ", "pa": "ਵਿਅੰਜਨ ਦੁਗਣਾ — ਪੱਕਾ, ਸੱਚ", "en": "Doubles the consonant that follows. E.g. ਪੱਕਾ (ripe/hard), ਸੱਚ (truth)"}},
+      {"front": {"hi": "ਸਿਹਾਰੀ ਕਿਹੜੀ ਲਗਾ ਹੈ ਅਤੇ ਇਹ ਕਿੱਥੇ ਲੱਗਦੀ ਹੈ?", "pa": "ਸਿਹਾਰੀ ਕਿੱਥੇ ਲੱਗਦੀ ਹੈ?", "en": "Where is Sihaari placed?"}, "back": {"hi": "ਸਿਹਾਰੀ (ਿ) — ਛੋਟੀ ਇ ਦੀ ਆਵਾਜ਼; ਅੱਖਰ ਤੋਂ ਪਹਿਲਾਂ ਲਿਖੀ ਜਾਂਦੀ ਹੈ ਪਰ ਅੱਖਰ ਤੋਂ ਬਾਅਦ ਪੜ੍ਹੀ ਜਾਂਦੀ ਹੈ। ਜਿਵੇਂ: ਕਿ", "pa": "ਸਿਹਾਰੀ (ਿ) — ਖੱਬੇ ਪਾਸੇ ਲਿਖੋ, ਸੱਜੇ ਪੜ੍ਹੋ", "en": "Sihaari (ਿ) — short 'i' vowel sign; written before the letter but read after it"}},
+      {"front": {"hi": "ਬਿੰਦੀ ਅਤੇ ਟਿੱਪੀ ਵਿੱਚ ਕੀ ਫਰਕ ਹੈ?", "pa": "ਬਿੰਦੀ ਬਨਾਮ ਟਿੱਪੀ?", "en": "Difference between Bindi and Tippi?"}, "back": {"hi": "ਬਿੰਦੀ (ੰ): ਸਵਰ ਲਗਾਂ ਉੱਤੇ ਜਾਂ ਸ਼ਬਦ ਅੰਤ। ਟਿੱਪੀ: ਸਵਰ ਰਹਿਤ ਅੱਖਰ ਉੱਤੇ। [VERIFY exact rule with PSEB textbook]", "pa": "ਬਿੰਦੀ: ਲਗਾਂ ਉੱਤੇ। ਟਿੱਪੀ: ਬਿਨਾਂ ਲਗਾ ਅੱਖਰ ਉੱਤੇ। [VERIFY]", "en": "Bindi (ੰ): used on vowel-bearing letters. Tippi: used on consonants without vowel diacritics. [VERIFY exact placement rules with PSEB textbook]"}},
+      {"front": {"hi": "ਦੁੱਤ ਅੱਖਰ ਕਿਹੜੇ ਹਨ?", "pa": "ਦੁੱਤ ਅੱਖਰ?", "en": "Which are Dutt Akhar (sub-consonants)?"}, "back": {"hi": "ਹ, ਰ, ਵ — ਇਹ ਹੋਰ ਅੱਖਰਾਂ ਹੇਠ ਜੁੜ ਕੇ ਦੁੱਤ ਬਣਦੇ ਹਨ। ਜਿਵੇਂ: ਪ੍ਰ (ਪ+ਰ), ਗ੍ਰ, ਕ੍ਰ", "pa": "ਹ, ਰ, ਵ — ਪ੍ਰ, ਗ੍ਰ, ਕ੍ਰ", "en": "ਹ, ਰ, ਵ — they join below other letters. E.g. ਪ੍ਰ (p+r), ਗ੍ਰ, ਕ੍ਰ"}}
+    ],
+    "questions": [
+      {"id": "ett-pa-script-q1", "text": {"hi": "ਗੁਰਮੁਖੀ ਵਿੱਚ ਕੁੱਲ ਕਿੰਨੇ ਅੱਖਰ ਹਨ?", "pa": "ਗੁਰਮੁਖੀ ਵਿੱਚ ਕੁੱਲ ਕਿੰਨੇ ਅੱਖਰ ਹਨ?", "en": "How many letters are there in Gurmukhi?"}, "options": {"hi": ["32", "33", "35", "36"], "pa": ["32", "33", "35", "36"], "en": ["32", "33", "35", "36"]}, "answer": 2, "explanation": {"hi": "ਗੁਰਮੁਖੀ ਲਿਪੀ ਵਿੱਚ 35 ਅੱਖਰ ਹਨ ਜਿਨ੍ਹਾਂ ਨੂੰ 'ਪੈਂਤੀ' ਕਿਹਾ ਜਾਂਦਾ ਹੈ।", "en": "Gurmukhi has 35 letters known as Paintii (ਪੈਂਤੀ)."}},
+      {"id": "ett-pa-script-q2", "text": {"hi": "ਗੁਰਮੁਖੀ ਦੇ ਤਿੰਨ ਮੂਲ ਅੱਖਰ ਕਿਹੜੇ ਹਨ?", "pa": "ਗੁਰਮੁਖੀ ਦੇ ਤਿੰਨ ਮੂਲ ਅੱਖਰ?", "en": "Three root characters of Gurmukhi?"}, "options": {"hi": ["ਕ, ਚ, ਟ", "ੳ, ਅ, ੲ", "ਅ, ਆ, ਇ", "ਹ, ਰ, ਵ"], "pa": ["ਕ, ਚ, ਟ", "ੳ, ਅ, ੲ", "ਅ, ਆ, ਇ", "ਹ, ਰ, ਵ"], "en": ["ਕ, ਚ, ਟ", "ੳ, ਅ, ੲ", "ਅ, ਆ, ਇ", "ਹ, ਰ, ਵ"]}, "answer": 1, "explanation": {"hi": "ਗੁਰਮੁਖੀ ਦੇ ਤਿੰਨ ਮੂਲ ਅੱਖਰ ੳ, ਅ, ੲ ਹਨ।", "en": "The three root characters of Gurmukhi are ੳ, ਅ, ੲ."}},
+      {"id": "ett-pa-script-q3", "text": {"hi": "ਅੱਧਕ ਦਾ ਕੰਮ ਕੀ ਹੈ?", "pa": "ਅੱਧਕ ਦਾ ਕੰਮ ਕੀ ਹੈ?", "en": "What is the function of Addak in Gurmukhi?"}, "options": {"hi": ["ਅਨੁਨਾਸਿਕ ਧੁਨੀ ਪ੍ਰਗਟ ਕਰਨਾ", "ਵਿਅੰਜਨ ਨੂੰ ਦੁਗਣਾ ਕਰਨਾ", "ਸਵਰ ਧੁਨੀ ਛੋਟੀ ਕਰਨਾ", "ਦੁੱਤ ਅੱਖਰ ਬਣਾਉਣਾ"], "pa": ["ਅਨੁਨਾਸਿਕ", "ਦੁਗਣਾ ਵਿਅੰਜਨ", "ਛੋਟੀ ਸਵਰ", "ਦੁੱਤ"], "en": ["Nasalisation", "Double the following consonant", "Shorten a vowel", "Form sub-consonant"]}, "answer": 1, "explanation": {"hi": "ਅੱਧਕ ਬਾਅਦ ਵਾਲੇ ਵਿਅੰਜਨ ਨੂੰ ਦੁਗਣਾ ਕਰਦਾ ਹੈ। ਜਿਵੇਂ: ਪੱਕਾ ਵਿੱਚ ਕ ਦੁਗਣਾ ਹੈ।", "en": "Addak doubles the consonant that follows it. E.g. ਪੱਕਾ (the 'k' is doubled)."}},
+      {"id": "ett-pa-script-q4", "text": {"hi": "ਸਿਹਾਰੀ (ਿ) ਅੱਖਰ ਦੇ ਕਿੱਥੇ ਲਿਖੀ ਜਾਂਦੀ ਹੈ?", "pa": "ਸਿਹਾਰੀ ਕਿੱਥੇ ਲਿਖੀ ਜਾਂਦੀ ਹੈ?", "en": "Where is Sihaari written relative to its consonant?"}, "options": {"hi": ["ਅੱਖਰ ਤੋਂ ਬਾਅਦ", "ਅੱਖਰ ਤੋਂ ਪਹਿਲਾਂ", "ਅੱਖਰ ਦੇ ਉੱਪਰ", "ਅੱਖਰ ਦੇ ਹੇਠਾਂ"], "pa": ["ਬਾਅਦ", "ਪਹਿਲਾਂ", "ਉੱਪਰ", "ਹੇਠਾਂ"], "en": ["After the consonant", "Before the consonant", "Above the consonant", "Below the consonant"]}, "answer": 1, "explanation": {"hi": "ਸਿਹਾਰੀ (ਿ) ਅੱਖਰ ਤੋਂ ਪਹਿਲਾਂ ਲਿਖੀ ਜਾਂਦੀ ਹੈ ਪਰ ਪੜ੍ਹਨ ਵੇਲੇ ਅੱਖਰ ਤੋਂ ਬਾਅਦ ਆਉਂਦੀ ਹੈ। ਜਿਵੇਂ: ਕਿ = ਕ + ਿ।", "en": "Sihaari is written to the left of its consonant but is pronounced after it. Example: ਕਿ = ਕ + ਿ."}},
+      {"id": "ett-pa-script-q5", "text": {"hi": "ਕ-ਵਰਗ ਵਿੱਚ ਕਿਹੜੇ ਅੱਖਰ ਆਉਂਦੇ ਹਨ?", "pa": "ਕ-ਵਰਗ ਵਿੱਚ ਕਿਹੜੇ ਅੱਖਰ?", "en": "Which letters are in the K-varg (k-class)?"}, "options": {"hi": ["ਚ ਛ ਜ ਝ ਞ", "ਕ ਖ ਗ ਘ ਙ", "ਟ ਠ ਡ ਢ ਣ", "ਪ ਫ ਬ ਭ ਮ"], "pa": ["ਚ ਛ ਜ ਝ ਞ", "ਕ ਖ ਗ ਘ ਙ", "ਟ ਠ ਡ ਢ ਣ", "ਪ ਫ ਬ ਭ ਮ"], "en": ["ਚ ਛ ਜ ਝ ਞ", "ਕ ਖ ਗ ਘ ਙ", "ਟ ਠ ਡ ਢ ਣ", "ਪ ਫ ਬ ਭ ਮ"]}, "answer": 1, "explanation": {"hi": "ਕ-ਵਰਗ (ਕੰਠ ਵਰਗ): ਕ ਖ ਗ ਘ ਙ। ਇਹ ਕੰਠ (ਗਲੇ) ਤੋਂ ਬੋਲੇ ਜਾਂਦੇ ਹਨ।", "en": "K-varg (guttural class): ਕ ਖ ਗ ਘ ਙ — produced from the throat (kaṇṭha)."}},
+      {"id": "ett-pa-script-q6", "text": {"hi": "ਗੁਰਮੁਖੀ ਵਿੱਚ ਕਿੰਨੀਆਂ ਲਗਾਂ-ਮਾਤਰਾਂ ਹਨ?", "pa": "ਗੁਰਮੁਖੀ ਵਿੱਚ ਕਿੰਨੀਆਂ ਲਗਾਂ-ਮਾਤਰਾਂ ਹਨ?", "en": "How many vowel signs (lagaan-maatraan) are there in Gurmukhi?"}, "options": {"hi": ["7", "8", "9", "10"], "pa": ["7", "8", "9", "10"], "en": ["7", "8", "9", "10"]}, "answer": 2, "explanation": {"hi": "ਗੁਰਮੁਖੀ ਵਿੱਚ 9 ਲਗਾਂ-ਮਾਤਰਾਂ ਹਨ: ਆ-ਲਗਾ, ਸਿਹਾਰੀ, ਬਿਹਾਰੀ, ਔਂਕੜ, ਦੁਲੈਂਵਾਂ, ਲਾਵਾਂ, ਦੁਲਾਵਾਂ, ਹੋੜਾ, ਕਨੌੜਾ।", "en": "There are 9 vowel signs in Gurmukhi: aa-lagaa, sihaari, bihaari, aunkad, dulaivaan, laavaan, dulaavaan, hoda, kanoura."}},
+      {"id": "ett-pa-script-q7", "text": {"hi": "ਦੁੱਤ ਅੱਖਰ ਕਿਹੜੇ ਤਿੰਨ ਵਿਅੰਜਨ ਹਨ?", "pa": "ਦੁੱਤ ਅੱਖਰ ਕਿਹੜੇ ਤਿੰਨ?", "en": "Which three consonants form Dutt Akhar (sub-consonants)?"}, "options": {"hi": ["ਕ, ਗ, ਚ", "ਹ, ਰ, ਵ", "ਨ, ਮ, ਲ", "ਯ, ਰ, ਲ"], "pa": ["ਕ, ਗ, ਚ", "ਹ, ਰ, ਵ", "ਨ, ਮ, ਲ", "ਯ, ਰ, ਲ"], "en": ["ਕ, ਗ, ਚ", "ਹ, ਰ, ਵ", "ਨ, ਮ, ਲ", "ਯ, ਰ, ਲ"]}, "answer": 1, "explanation": {"hi": "ਦੁੱਤ ਅੱਖਰ ਹ, ਰ, ਵ ਹਨ। ਇਹ ਹੋਰ ਅੱਖਰਾਂ ਹੇਠ ਜੁੜ ਕੇ ਦੁੱਤ ਬਣਦੇ ਹਨ। ਜਿਵੇਂ: ਪ੍ਰ (ਪ+ਰ)।", "en": "The three Dutt Akhar are ਹ, ਰ, ਵ — they join below other consonants. E.g. ਪ੍ਰ = ਪ + ਰ."}}
+    ]
+  },
+  {
+    "id": "ett-punjabi-grammar-word-classes",
+    "subject": "Punjabi",
+    "unit": "ਸ਼ਬਦ ਬੋਧ ਅਤੇ ਵਿਆਕਰਨ",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "पंजाबी व्याकरण: शब्द श्रेणियाँ, लिंग, वचन और उपसर्ग-प्रत्यय",
+      "pa": "ਪੰਜਾਬੀ ਵਿਆਕਰਨ: ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ, ਲਿੰਗ, ਵਚਨ ਅਤੇ ਅਗੇਤਰ-ਪਿਛੇਤਰ",
+      "en": "Punjabi Grammar: Word Classes, Gender, Number and Affixes"
+    },
+    "level": "ETT Paper A — Punjabi qualifying",
+    "review_note": "Gurmukhi content. Must be reviewed by a native Punjabi speaker before publishing.",
+    "sources": [
+      { "title": "PSEB Punjabi Vyakaran Class 8-10", "url": "https://www.pseb.ac.in/public/books", "note": "Author-generated for ETT exam practice." }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ (Parts of Speech)", "pa": "ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ", "en": "Parts of Speech (Shabd Shreniaan)"},
+        "text": {
+          "hi": "ਪੰਜਾਬੀ ਵਿੱਚ ਸ਼ਬਦਾਂ ਨੂੰ ਮੁੱਖ ਤੌਰ 'ਤੇ ਹੇਠ ਲਿਖੀਆਂ ਸ਼੍ਰੇਣੀਆਂ ਵਿੱਚ ਵੰਡਿਆ ਜਾਂਦਾ ਹੈ:\n\n1. **ਨਾਂਵ (Noun)**: ਕਿਸੇ ਵਿਅਕਤੀ, ਵਸਤੂ, ਸਥਾਨ ਜਾਂ ਭਾਵਨਾ ਦਾ ਨਾਂ। ਜਿਵੇਂ: ਗੁਰੂ, ਕਿਤਾਬ, ਪੰਜਾਬ, ਖੁਸ਼ੀ।\n   - ਸਾਧਾਰਨ ਨਾਂਵ (Common): ਮੁੰਡਾ, ਕੁੜੀ\n   - ਵਿਸ਼ੇਸ਼ ਨਾਂਵ (Proper): ਗੁਰੂ ਨਾਨਕ, ਲੁਧਿਆਣਾ\n   - ਭਾਵਵਾਚਕ ਨਾਂਵ (Abstract): ਪਿਆਰ, ਸੱਚ\n   - ਵਸਤੂਵਾਚਕ (Collective): ਦਲ, ਝੁੰਡ\n\n2. **ਪੜਨਾਂਵ (Pronoun)**: ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਸ਼ਬਦ। ਜਿਵੇਂ: ਮੈਂ, ਤੂੰ, ਉਹ, ਅਸੀਂ, ਤੁਸੀਂ।\n\n3. **ਵਿਸ਼ੇਸ਼ਣ (Adjective)**: ਨਾਂਵ ਜਾਂ ਪੜਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ। ਜਿਵੇਂ: ਲੰਬਾ ਮੁੰਡਾ, ਚੰਗਾ ਕੰਮ।\n\n4. **ਕਿਰਿਆ (Verb)**: ਕੰਮ, ਅਵਸਥਾ ਜਾਂ ਵਾਪਰਨ ਦਾ ਬੋਧ ਕਰਾਉਂਦਾ ਹੈ। ਜਿਵੇਂ: ਪੜ੍ਹਨਾ, ਖੇਡਣਾ, ਆਉਣਾ।\n\n5. **ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ (Adverb)**: ਕਿਰਿਆ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ। ਜਿਵੇਂ: ਹੌਲੀ ਚੱਲਣਾ, ਬਹੁਤ ਖਾਣਾ।\n\n6. **ਸੰਬੰਧਕ (Postposition)**: ਸੰਬੰਧ ਦੱਸਦਾ ਹੈ। ਜਿਵੇਂ: ਦਾ, ਦੇ, ਦੀ, ਨੂੰ, ਤੋਂ, ਵਿੱਚ, ਉੱਤੇ।\n\n7. **ਯੋਜਕ (Conjunction)**: ਸ਼ਬਦ ਜਾਂ ਵਾਕ ਜੋੜਦਾ ਹੈ। ਜਿਵੇਂ: ਅਤੇ, ਪਰ, ਕਿਉਂਕਿ, ਇਸ ਲਈ।\n\n8. **ਵਿਸਮਿਕ (Interjection)**: ਭਾਵਨਾ ਪ੍ਰਗਟ ਕਰਦਾ ਹੈ। ਜਿਵੇਂ: ਵਾਹ!, ਹਾਏ!, ਅਰੇ!",
+          "pa": "ਨਾਂਵ (ਵਿਅਕਤੀ/ਵਸਤੂ/ਸਥਾਨ), ਪੜਨਾਂਵ (ਮੈਂ, ਤੂੰ), ਵਿਸ਼ੇਸ਼ਣ (ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ), ਕਿਰਿਆ (ਕੰਮ), ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ (ਕਿਰਿਆ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ), ਸੰਬੰਧਕ (ਦਾ/ਦੇ/ਨੂੰ), ਯੋਜਕ (ਅਤੇ/ਪਰ), ਵਿਸਮਿਕ (ਵਾਹ!)।",
+          "en": "8 parts of speech in Punjabi: Noun (ਨਾਂਵ), Pronoun (ਪੜਨਾਂਵ), Adjective (ਵਿਸ਼ੇਸ਼ਣ), Verb (ਕਿਰਿਆ), Adverb (ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ), Postposition (ਸੰਬੰਧਕ), Conjunction (ਯੋਜਕ), Interjection (ਵਿਸਮਿਕ)."
+        }
+      },
+      {
+        "heading": {"hi": "ਲਿੰਗ, ਵਚਨ ਅਤੇ ਅਗੇਤਰ-ਪਿਛੇਤਰ", "pa": "ਲਿੰਗ, ਵਚਨ ਅਤੇ ਅਗੇਤਰ-ਪਿਛੇਤਰ", "en": "Gender, Number and Affixes"},
+        "text": {
+          "hi": "**ਲਿੰਗ (Gender)**:\n- **ਪੁਲਿੰਗ (Masculine)**: ਮੁੰਡਾ, ਘੋੜਾ, ਦਰਵਾਜ਼ਾ\n- **ਇਸਤਰੀ ਲਿੰਗ (Feminine)**: ਕੁੜੀ, ਘੋੜੀ, ਖਿੜਕੀ\n- ਲਿੰਗ ਬਦਲਣ ਦੇ ਆਮ ਤਰੀਕੇ: ਅ → ੀ (ਮੁੰਡਾ → ਮੁੰਡੀ), ਾ → ਣ (ਦੁਕਾਨਦਾਰ → ਦੁਕਾਨਦਾਰਨ [VERIFY])\n\n**ਵਚਨ (Number)**:\n- **ਇਕਵਚਨ (Singular)**: ਕਿਤਾਬ, ਮੁੰਡਾ\n- **ਬਹੁਵਚਨ (Plural)**: ਕਿਤਾਬਾਂ, ਮੁੰਡੇ\n- ਪੁਲਿੰਗ ਇਕਵਚਨ ਾ → ਬਹੁਵਚਨ ੇ (ਮੁੰਡਾ → ਮੁੰਡੇ)\n- ਇਸਤਰੀ ਲਿੰਗ ਬਹੁਵਚਨ ਆਮ ਤੌਰ 'ਤੇ ਾਂ ਜੋੜ ਕੇ (ਕੁੜੀ → ਕੁੜੀਆਂ)\n\n**ਅਗੇਤਰ (Prefixes)** — ਸ਼ਬਦ ਦੇ ਸ਼ੁਰੂ ਵਿੱਚ ਜੋੜੇ ਜਾਂਦੇ ਹਨ:\n- ਬੇ- (ਬੇਕਾਰ, ਬੇਕਸੂਰ)\n- ਅਨ- (ਅਨਜਾਣ, ਅਨਪੜ੍ਹ)\n- ਸੁ- (ਸੁਭਾਗ, ਸੁਨਾਮ)\n- ਦੁ- (ਦੁਭਾਗ, ਦੁਰਭਾਗ)\n\n**ਪਿਛੇਤਰ (Suffixes)** — ਸ਼ਬਦ ਦੇ ਅੰਤ ਵਿੱਚ ਜੋੜੇ ਜਾਂਦੇ ਹਨ:\n- -ਤਾ (ਮਹਾਨਤਾ, ਸੁੰਦਰਤਾ)\n- -ਵਾਨ (ਧਨਵਾਨ, ਗੁਣਵਾਨ)\n- -ਕਾਰ (ਦੁਕਾਨਦਾਰ, ਚਿੱਤਰਕਾਰ)\n- -ਈ (ਪੜ੍ਹਾਈ, ਲਿਖਾਈ)",
+          "pa": "ਲਿੰਗ: ਪੁਲਿੰਗ/ਇਸਤਰੀ ਲਿੰਗ (ਮੁੰਡਾ→ਕੁੜੀ)। ਵਚਨ: ਮੁੰਡਾ→ਮੁੰਡੇ, ਕੁੜੀ→ਕੁੜੀਆਂ। ਅਗੇਤਰ: ਬੇ-, ਅਨ-, ਸੁ-। ਪਿਛੇਤਰ: -ਤਾ, -ਵਾਨ, -ਕਾਰ।",
+          "en": "**Gender (Ling)**: Masculine (ਪੁਲਿੰਗ) and Feminine (ਇਸਤਰੀ ਲਿੰਗ). Common change: ਾ → ੀ.\n**Number (Vachan)**: Singular ਮੁੰਡਾ → Plural ਮੁੰਡੇ; ਕੁੜੀ → ਕੁੜੀਆਂ.\n**Prefixes (Ageetar)**: ਬੇ- (worthless), ਅਨ- (un-), ਸੁ- (good-).\n**Suffixes (Pichheetar)**: -ਤਾ (abstract nouns), -ਵਾਨ (having quality), -ਕਾਰ (doer)."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "ਪੰਜਾਬੀ ਵਿੱਚ 8 ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ: ਨਾਂਵ, ਪੜਨਾਂਵ, ਵਿਸ਼ੇਸ਼ਣ, ਕਿਰਿਆ, ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ, ਸੰਬੰਧਕ, ਯੋਜਕ, ਵਿਸਮਿਕ। ਲਿੰਗ (ਪੁ/ਇਸਤਰੀ), ਵਚਨ (ਇਕ/ਬਹੁ), ਅਗੇਤਰ (ਬੇ-, ਅਨ-), ਪਿਛੇਤਰ (-ਤਾ, -ਵਾਨ)।",
+      "pa": "8 ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ। ਲਿੰਗ: ਪੁ/ਇਸਤਰੀ। ਵਚਨ: ਇਕ/ਬਹੁ। ਅਗੇਤਰ-ਪਿਛੇਤਰ।",
+      "en": "8 word classes in Punjabi. Gender: masculine/feminine. Number: singular/plural. Prefixes: ਬੇ-, ਅਨ-, ਸੁ-. Suffixes: -ਤਾ, -ਵਾਨ, -ਕਾਰ."
+    },
+    "keyPoints": [
+      {"hi": "ਸੰਬੰਧਕ (Postposition) ਸ਼ਬਦ ਤੋਂ ਬਾਅਦ ਆਉਂਦਾ ਹੈ: ਦਾ, ਦੇ, ਦੀ, ਨੂੰ, ਤੋਂ, ਵਿੱਚ", "pa": "ਸੰਬੰਧਕ ਬਾਅਦ ਵਿੱਚ: ਦਾ, ਦੇ, ਨੂੰ, ਤੋਂ", "en": "Postposition comes after the noun: ਦਾ, ਦੇ, ਦੀ, ਨੂੰ, ਤੋਂ, ਵਿੱਚ"},
+      {"hi": "ਭਾਵਵਾਚਕ ਨਾਂਵ = ਅਮੂਰਤ ਭਾਵਨਾ (ਪਿਆਰ, ਸੱਚ, ਖੁਸ਼ੀ)", "pa": "ਭਾਵਵਾਚਕ ਨਾਂਵ = ਅਮੂਰਤ (ਪਿਆਰ, ਖੁਸ਼ੀ)", "en": "Abstract noun = intangible quality (ਪਿਆਰ = love, ਸੱਚ = truth)"},
+      {"hi": "ਅਗੇਤਰ ਬੇ- = ਨਕਾਰਾਤਮਕ (ਬੇਕਾਰ, ਬੇਕਸੂਰ)", "pa": "ਅਗੇਤਰ ਬੇ- = ਨਕਾਰਾਤਮਕ", "en": "Prefix ਬੇ- = negative meaning (ਬੇਕਾਰ = useless, ਬੇਕਸੂਰ = innocent)"}
+    ],
+    "flashcards": [
+      {"front": {"hi": "ਪੰਜਾਬੀ ਵਿੱਚ ਕਿੰਨੀਆਂ ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ ਹਨ?", "pa": "ਪੰਜਾਬੀ ਵਿੱਚ ਕਿੰਨੀਆਂ ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ?", "en": "How many parts of speech in Punjabi?"}, "back": {"hi": "8: ਨਾਂਵ, ਪੜਨਾਂਵ, ਵਿਸ਼ੇਸ਼ਣ, ਕਿਰਿਆ, ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ, ਸੰਬੰਧਕ, ਯੋਜਕ, ਵਿਸਮਿਕ", "pa": "8 ਸ਼੍ਰੇਣੀਆਂ", "en": "8: Noun, Pronoun, Adjective, Verb, Adverb, Postposition, Conjunction, Interjection"}},
+      {"front": {"hi": "'ਪੰਜਾਬ' ਕਿਹੜੀ ਕਿਸਮ ਦਾ ਨਾਂਵ ਹੈ?", "pa": "'ਪੰਜਾਬ' ਕਿਹੜੀ ਕਿਸਮ ਦਾ ਨਾਂਵ?", "en": "What type of noun is 'ਪੰਜਾਬ'?"}, "back": {"hi": "ਵਿਸ਼ੇਸ਼ ਨਾਂਵ (Proper Noun) — ਕਿਸੇ ਖ਼ਾਸ ਸਥਾਨ ਦਾ ਨਾਂ", "pa": "ਵਿਸ਼ੇਸ਼ ਨਾਂਵ (Proper Noun)", "en": "Proper Noun (ਵਿਸ਼ੇਸ਼ ਨਾਂਵ) — name of a specific place"}},
+      {"front": {"hi": "'ਬੇਕਾਰ' ਵਿੱਚ ਅਗੇਤਰ ਕਿਹੜਾ ਹੈ?", "pa": "'ਬੇਕਾਰ' ਵਿੱਚ ਅਗੇਤਰ?", "en": "What prefix is in 'ਬੇਕਾਰ'?"}, "back": {"hi": "ਬੇ- (ਅਰਥ: ਬਿਨਾਂ / ਨਕਾਰਾਤਮਕ); ਕਾਰ = ਕੰਮ", "pa": "ਬੇ- (ਅਰਥ: ਬਿਨਾਂ)", "en": "ਬੇ- (meaning: without/negative); ਬੇਕਾਰ = without work/useless"}},
+      {"front": {"hi": "'ਮੁੰਡਾ' ਦਾ ਬਹੁਵਚਨ ਕੀ ਹੈ?", "pa": "'ਮੁੰਡਾ' ਦਾ ਬਹੁਵਚਨ?", "en": "Plural of 'ਮੁੰਡਾ'?"}, "back": {"hi": "ਮੁੰਡੇ (ਾ → ੇ, ਪੁਲਿੰਗ ਬਹੁਵਚਨ)", "pa": "ਮੁੰਡੇ (ਾ → ੇ)", "en": "ਮੁੰਡੇ (ਾ → ੇ, masculine plural)"}}
+    ],
+    "questions": [
+      {"id": "ett-pa-grammar-q1", "text": {"hi": "'ਉਹ ਬਹੁਤ ਤੇਜ਼ ਦੌੜਦਾ ਹੈ' ਵਿੱਚ 'ਬਹੁਤ' ਕਿਹੜੀ ਸ਼ਬਦ ਸ਼੍ਰੇਣੀ ਹੈ?", "pa": "'ਬਹੁਤ' ਕਿਹੜੀ ਸ਼੍ਰੇਣੀ?", "en": "In 'ਉਹ ਬਹੁਤ ਤੇਜ਼ ਦੌੜਦਾ ਹੈ', what part of speech is 'ਬਹੁਤ'?"}, "options": {"hi": ["ਵਿਸ਼ੇਸ਼ਣ", "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ", "ਯੋਜਕ", "ਸੰਬੰਧਕ"], "pa": ["ਵਿਸ਼ੇਸ਼ਣ", "ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ", "ਯੋਜਕ", "ਸੰਬੰਧਕ"], "en": ["Adjective", "Adverb", "Conjunction", "Postposition"]}, "answer": 1, "explanation": {"hi": "'ਬਹੁਤ' ਕਿਰਿਆ 'ਦੌੜਦਾ' ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਹੈ।", "en": "'ਬਹੁਤ' modifies the verb 'ਦੌੜਦਾ' (runs), so it is an adverb (ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ)."}},
+      {"id": "ett-pa-grammar-q2", "text": {"hi": "'ਧਨਵਾਨ' ਵਿੱਚ ਪਿਛੇਤਰ ਕਿਹੜਾ ਹੈ?", "pa": "'ਧਨਵਾਨ' ਵਿੱਚ ਪਿਛੇਤਰ?", "en": "What suffix is in 'ਧਨਵਾਨ' (wealthy)?"}, "options": {"hi": ["-ਧਨ", "-ਵਾਨ", "-ਆਨ", "-ਨਵ"], "pa": ["-ਧਨ", "-ਵਾਨ", "-ਆਨ", "-ਨਵ"], "en": ["-ਧਨ", "-ਵਾਨ", "-ਆਨ", "-ਨਵ"]}, "answer": 1, "explanation": {"hi": "'ਧਨਵਾਨ' = ਧਨ + ਵਾਨ। '-ਵਾਨ' ਪਿਛੇਤਰ ਦਾ ਅਰਥ ਹੈ 'ਜਿਸ ਕੋਲ ਹੈ'। ਜਿਵੇਂ: ਗੁਣਵਾਨ, ਬਲਵਾਨ।", "en": "'ਧਨਵਾਨ' = ਧਨ (wealth) + ਵਾਨ (having). Suffix -ਵਾਨ means 'having/possessing'. Also: ਗੁਣਵਾਨ, ਬਲਵਾਨ."}},
+      {"id": "ett-pa-grammar-q3", "text": {"hi": "ਹੇਠ ਲਿਖੇ ਵਿੱਚੋਂ ਕਿਹੜਾ ਭਾਵਵਾਚਕ ਨਾਂਵ ਹੈ?", "pa": "ਭਾਵਵਾਚਕ ਨਾਂਵ ਕਿਹੜਾ?", "en": "Which of the following is an Abstract Noun?"}, "options": {"hi": ["ਕਿਤਾਬ", "ਗੁਰੂ ਨਾਨਕ", "ਖੁਸ਼ੀ", "ਦਲ"], "pa": ["ਕਿਤਾਬ", "ਗੁਰੂ ਨਾਨਕ", "ਖੁਸ਼ੀ", "ਦਲ"], "en": ["ਕਿਤਾਬ (book)", "ਗੁਰੂ ਨਾਨਕ", "ਖੁਸ਼ੀ (happiness)", "ਦਲ (team)"]}, "answer": 2, "explanation": {"hi": "'ਖੁਸ਼ੀ' ਇੱਕ ਭਾਵਨਾ ਹੈ ਜੋ ਅਮੂਰਤ ਹੈ — ਇਹ ਭਾਵਵਾਚਕ ਨਾਂਵ ਹੈ। 'ਕਿਤਾਬ' ਸਾਧਾਰਨ, 'ਗੁਰੂ ਨਾਨਕ' ਵਿਸ਼ੇਸ਼, 'ਦਲ' ਵਸਤੂਵਾਚਕ ਨਾਂਵ ਹੈ।", "en": "'ਖੁਸ਼ੀ' (happiness) is abstract — cannot be touched. 'ਕਿਤਾਬ' = common, 'ਗੁਰੂ ਨਾਨਕ' = proper, 'ਦਲ' = collective noun."}},
+      {"id": "ett-pa-grammar-q4", "text": {"hi": "'ਕੁੜੀ' ਦਾ ਬਹੁਵਚਨ ਕੀ ਹੋਵੇਗਾ?", "pa": "'ਕੁੜੀ' ਦਾ ਬਹੁਵਚਨ?", "en": "Plural form of 'ਕੁੜੀ' (girl)?"}, "options": {"hi": ["ਕੁੜੀਆ", "ਕੁੜੀਆਂ", "ਕੁੜੇ", "ਕੁੜੀਆਣ"], "pa": ["ਕੁੜੀਆ", "ਕੁੜੀਆਂ", "ਕੁੜੇ", "ਕੁੜੀਆਣ"], "en": ["ਕੁੜੀਆ", "ਕੁੜੀਆਂ", "ਕੁੜੇ", "ਕੁੜੀਆਣ"]}, "answer": 1, "explanation": {"hi": "ਇਸਤਰੀ ਲਿੰਗ ਦਾ ਬਹੁਵਚਨ ਆਮ ਤੌਰ 'ਤੇ ਾਂ ਜੋੜ ਕੇ ਬਣਦਾ ਹੈ। ਕੁੜੀ → ਕੁੜੀਆਂ।", "en": "Feminine nouns usually form plural by adding -ਆਂ. ਕੁੜੀ → ਕੁੜੀਆਂ."}},
+      {"id": "ett-pa-grammar-q5", "text": {"hi": "'ਅਤੇ' ਕਿਹੜੀ ਸ਼ਬਦ ਸ਼੍ਰੇਣੀ ਨਾਲ ਸੰਬੰਧਿਤ ਹੈ?", "pa": "'ਅਤੇ' ਕਿਹੜੀ ਸ਼੍ਰੇਣੀ?", "en": "Which part of speech is 'ਅਤੇ' (and)?"}, "options": {"hi": ["ਵਿਸ਼ੇਸ਼ਣ", "ਸੰਬੰਧਕ", "ਯੋਜਕ", "ਵਿਸਮਿਕ"], "pa": ["ਵਿਸ਼ੇਸ਼ਣ", "ਸੰਬੰਧਕ", "ਯੋਜਕ", "ਵਿਸਮਿਕ"], "en": ["Adjective", "Postposition", "Conjunction", "Interjection"]}, "answer": 2, "explanation": {"hi": "'ਅਤੇ' ਦੋ ਸ਼ਬਦਾਂ ਜਾਂ ਵਾਕਾਂ ਨੂੰ ਜੋੜਦਾ ਹੈ — ਇਹ ਯੋਜਕ (Conjunction) ਹੈ।", "en": "'ਅਤੇ' joins two words or clauses — it is a Conjunction (ਯੋਜਕ)."}}
+    ]
+  }
+]

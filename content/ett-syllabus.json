@@ -1,0 +1,111 @@
+{
+  "exam": "Punjab ETT Recruitment — Paper B",
+  "exam_id": "ett",
+  "board": "Education Recruitment Board (ERB), Department of School Education, Punjab",
+  "conflation_guard": "ETT recruitment exam (Paper B scored, Paper A qualifying Punjabi). Distinct from PSTET Paper 1 (eligibility test) and D.El.Ed CET (course admission). Candidates must have passed PSTET-1 to be eligible for ETT recruitment.",
+  "archival_2021_record": {
+    "notification_identifier": "Advt. No. 6635 ETT Teachers / 2021",
+    "year": 2021,
+    "posts": 6635,
+    "total_marks_paper_b": 100,
+    "duration_minutes": 100,
+    "negative_marking": 0,
+    "official_source_url": "https://educationrecruitmentboard.com/ETT6635/Docs/ETT6635Syllabus13_08_2021.pdf",
+    "verification_status": "verified_against_official_pdf",
+    "paper_b_breakdown": [
+      { "subject": "Punjabi", "marks": 15, "questions": 15 },
+      { "subject": "English", "marks": 15, "questions": 15 },
+      { "subject": "Hindi", "marks": 15, "questions": 15 },
+      { "subject": "Mathematics", "marks": 20, "questions": 20 },
+      { "subject": "General Science", "marks": 20, "questions": 20 },
+      { "subject": "Social Science", "marks": 15, "questions": 15 }
+    ],
+    "paper_a": {
+      "subject": "Punjabi",
+      "nature": "Qualifying only — marks do not count in merit list",
+      "qualifying_marks": "to be confirmed from official notification"
+    }
+  },
+  "pending_2026_notification": {
+    "posts_reported": 5994,
+    "source": "CareerPower coaching article, June 2026 update",
+    "source_trust": "coaching summary only — NOT verified against official ERB notification or syllabus PDF",
+    "verification_status": "UNVERIFIED",
+    "open_discrepancies": [
+      "Coaching article claims Paper B = 100 questions / 200 marks (2 marks per question) — conflicts with 2021 verified PDF (1 mark per question). Check official 2026 notification.",
+      "Social Studies listed in coaching pattern with 20 questions but NOT in coaching syllabus text. Social Studies topics confirmed in syllabi-ett.json from 2021 archival (verified). Confirm 2026 pattern retains Social Studies and with what topic coverage.",
+      "Qualifying marks for Paper A (Punjabi) not stated in coaching article. Confirm from official.",
+      "Negative marking not mentioned in coaching article. 2021 had none. Confirm for 2026.",
+      "Whether Paper A and B are held on the same day is not stated. Confirm from official.",
+      "Machine-translated corruptions in coaching syllabus text (e.g. 'Uptasha', 'Metter', 'Two Exponential Equations'). Use official PDF text only for exact syllabus wording."
+    ],
+    "pattern_per_coaching_article": {
+      "paper_a": { "subject": "Punjabi", "questions": 100, "marks_reported": 100, "nature": "qualifying" },
+      "paper_b_sections": [
+        { "subject": "Punjabi", "questions": 20, "marks_reported": 40 },
+        { "subject": "English", "questions": 10, "marks_reported": 20 },
+        { "subject": "Hindi", "questions": 10, "marks_reported": 20 },
+        { "subject": "General Science", "questions": 20, "marks_reported": 40 },
+        { "subject": "Social Studies", "questions": 20, "marks_reported": 40 },
+        { "subject": "Mathematics", "questions": 20, "marks_reported": 40 }
+      ],
+      "total_paper_b_marks_reported": 200,
+      "inconsistency_note": "Total marks 200 ≠ the '100 marks per paper' also stated in the same source. Do NOT use 200 marks or 2-marks-per-question for any strategy or time guidance until the official notification is read."
+    }
+  },
+  "content_strategy_note": "Build content at Class 9-10 NCERT/PSEB level for Science, Mathematics and Social Science. Punjabi Paper A is the gate exam — prioritise. All lessons should use examIds: ['ett']. Science and SST lessons shared with master examId continue to serve ETT. New ETT-specific Punjabi lessons must be reviewed by a native Gurmukhi speaker before publishing.",
+  "topic_tree_source": "content/syllabi-ett.json (validated from 2021 official PDF)",
+  "subjects": {
+    "Paper_A_Punjabi": {
+      "nature": "qualifying",
+      "topics": [
+        { "id": "ett-pa-gurmukhi-script", "title": "Gurmukhi Script & Phonology: letters, vowels, consonants, lagaan-maatraan, dutt-akhar", "lesson_status": "pending" },
+        { "id": "ett-pa-word-grammar", "title": "Word Classes & Grammar: noun, pronoun, adjective, verb, adverb; gender, number; prefixes/suffixes", "lesson_status": "pending" },
+        { "id": "ett-pa-vocabulary", "title": "Vocabulary: synonyms, antonyms, one-word substitution, idioms and proverbs, correct spelling", "lesson_status": "pending" },
+        { "id": "ett-pa-sentence-syntax", "title": "Sentence Types: simple, compound, complex; punctuation; sentence conversion", "lesson_status": "pending" }
+      ]
+    },
+    "Paper_B_Punjabi": {
+      "topics": [
+        { "id": "ett-pb-punjabi-culture", "title": "Punjabi Culture, Folklore, Folk Songs, Folk Arts, Festivals", "lesson_status": "pending" },
+        { "id": "ett-pb-idioms-proverbs", "title": "Punjabi Idioms (ਮੁਹਾਵਰੇ) and Proverbs (ਅਖਾਣ) — 30 key items", "lesson_status": "pending" },
+        { "id": "ett-pb-translation", "title": "English↔Punjabi and Hindi↔Punjabi translation practice", "lesson_status": "pending" }
+      ]
+    },
+    "Paper_B_Mathematics": {
+      "topics": [
+        { "id": "ett-math-number-system", "title": "Number System: rational/irrational, HCF/LCM, exponents, real numbers", "lesson_status": "pending" },
+        { "id": "ett-math-algebra-arith", "title": "Algebra & Arithmetic: linear equations, ratio/proportion, %, profit/loss, SI/CI, AP", "lesson_status": "pending" },
+        { "id": "ett-math-geometry", "title": "Geometry & Mensuration: lines/angles/triangles, quadrilaterals/circles, area, volume", "lesson_status": "pending" },
+        { "id": "ett-math-statistics", "title": "Statistics & Probability: mean/median/mode, basic probability", "lesson_status": "pending" }
+      ]
+    },
+    "Paper_B_Science": {
+      "note": "Covered by existing sci-* and science-* lessons with examId ett. Gaps: sound, light (ett-science-light exists), chemical reactions, acids/bases, carbon compounds, human eye.",
+      "gap_lessons": [
+        { "id": "ett-science-chemistry", "title": "Atoms+Molecules, Chemical Reactions, Acids/Bases/Salts", "lesson_status": "pending" },
+        { "id": "ett-science-biology-env", "title": "Reproduction, Heredity, Natural Resources, Environment", "lesson_status": "pending" }
+      ]
+    },
+    "Paper_B_Social_Studies": {
+      "note": "Partially covered by master+ett SST lessons. ETT-specific framing at Class 6-10 level needed.",
+      "topics": [
+        { "id": "ett-sst-punjab-geo", "title": "Punjab Geography: rivers, physical features, climate, soils, crops", "lesson_status": "pending" },
+        { "id": "ett-sst-sikh-history", "title": "Sikh History: Guru period, Banda Singh Bahadur, Maharaja Ranjit Singh", "lesson_status": "pending" },
+        { "id": "ett-sst-civics-economy", "title": "Civics & Economy: Constitution, Parliament, Rights, Indian Economy basics", "lesson_status": "pending" }
+      ]
+    },
+    "Paper_B_English": {
+      "note": "Partially covered by eng-grammar lesson. Gaps: unseen passage, tenses, voice, narration.",
+      "gap_lessons": [
+        { "id": "ett-eng-grammar-2", "title": "Tenses, Active/Passive Voice, Direct/Indirect Speech", "lesson_status": "pending" }
+      ]
+    },
+    "Paper_B_Hindi": {
+      "note": "Partially covered by hindi-sandhi lesson. Gaps: tadbhav/tatsam, idioms, antonyms.",
+      "gap_lessons": [
+        { "id": "ett-hindi-vocabulary", "title": "Tatsam/Tadbhav, Synonyms/Antonyms, Idioms, Hindi→Punjabi", "lesson_status": "pending" }
+      ]
+    }
+  }
+}

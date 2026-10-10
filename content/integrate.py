@@ -98,6 +98,16 @@ for l in json.load(open(research/'ett-science-2.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add ETT Paper A Punjabi batch 1 (Gurmukhi Script, Word Classes & Grammar)
+for l in json.load(open(research/'ett-punjabi-paper-a.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add ETT Mathematics batch 1 (Number System+HCF/LCM+Exponents, Geometry+Mensuration)
+for l in json.load(open(research/'ett-math-lessons.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add Master Cadre SST Polity batch 2 (Citizenship, Foreign Policy/UNO, Election+Party)
 for l in json.load(open(research/'master-sst-polity-2.json')):
  l['level']='Foundation / concept preparation'

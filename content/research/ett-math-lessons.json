@@ -1,0 +1,127 @@
+[
+  {
+    "id": "ett-math-number-system",
+    "subject": "Mathematics",
+    "unit": "ਸੰਖਿਆ ਪ੍ਰਣਾਲੀ",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "संख्या प्रणाली: परिमेय/अपरिमेय संख्याएँ, HCF/LCM और घातांक",
+      "pa": "ਸੰਖਿਆ ਪ੍ਰਣਾਲੀ: ਪਰਿਮੇਯ/ਅਪਰਿਮੇਯ ਸੰਖਿਆਵਾਂ, HCF/LCM ਅਤੇ ਘਾਤ-ਅੰਕ",
+      "en": "Number System: Rational/Irrational Numbers, HCF/LCM and Exponents"
+    },
+    "level": "ETT Paper B — Mathematics (Class 9-10 NCERT/PSEB level)",
+    "sources": [
+      {
+        "title": "NCERT Class 10 Mathematics – Real Numbers (Chapter 1)",
+        "url": "https://ncert.nic.in/textbook/pdf/jemh1.pdf",
+        "note": "Standard reference. Content is author-generated for ETT exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "संख्या प्रणाली और वास्तविक संख्याएँ", "pa": "ਸੰਖਿਆ ਪ੍ਰਣਾਲੀ ਅਤੇ ਅਸਲ ਸੰਖਿਆਵਾਂ", "en": "Number System and Real Numbers"},
+        "text": {
+          "hi": "**ਸੰਖਿਆਵਾਂ ਦੀ ਸ਼੍ਰੇਣੀ**:\n\n- **ਕੁਦਰਤੀ ਸੰਖਿਆਵਾਂ (N)**: 1, 2, 3, 4... (0 ਸ਼ਾਮਲ ਨਹੀਂ)\n- **ਪੂਰਨ ਸੰਖਿਆਵਾਂ (W)**: 0, 1, 2, 3...\n- **ਪੂਰਨਾਂਕ (Z)**: ...-2, -1, 0, 1, 2... (ਨਕਾਰਾਤਮਕ ਵੀ)\n- **ਪਰਿਮੇਯ ਸੰਖਿਆਵਾਂ (Q)**: p/q ਰੂਪ ਵਿੱਚ ਜਿੱਥੇ p, q ਪੂਰਨਾਂਕ ਅਤੇ q≠0। ਉਦਾਹਰਨ: ½, 0.5, 0.333...\n- **ਅਪਰਿਮੇਯ ਸੰਖਿਆਵਾਂ**: p/q ਰੂਪ ਵਿੱਚ ਨਹੀਂ ਲਿਖੀਆਂ ਜਾ ਸਕਦੀਆਂ। ਉਦਾਹਰਨ: √2, √3, π, e\n- **ਅਸਲ ਸੰਖਿਆਵਾਂ (R)**: ਪਰਿਮੇਯ + ਅਪਰਿਮੇਯ = ਸਾਰੀਆਂ ਅਸਲ ਸੰਖਿਆਵਾਂ\n\n**ਕੀ √2 ਅਪਰਿਮੇਯ ਹੈ?** ਹਾਂ — ਇਸਨੂੰ p/q ਰੂਪ ਵਿੱਚ ਨਹੀਂ ਲਿਖਿਆ ਜਾ ਸਕਦਾ। ਇਸ ਦੀ ਦਸ਼ਮਲਵ ਪਸਾਰ ਖ਼ਤਮ ਨਹੀਂ ਹੁੰਦੀ: √2 = 1.41421356...\n\n**ਯੁਕਲਿਡ ਦਾ ਵੰਡ ਪ੍ਰਮੇਯ (Euclid's Division Lemma)**:\nਕਿਸੇ ਵੀ ਦੋ ਧਨਾਤਮਕ ਪੂਰਨਾਂਕਾਂ a ਅਤੇ b ਲਈ: **a = bq + r** ਜਿੱਥੇ 0 ≤ r < b।\nHCF ਲੱਭਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।\n\n**ਮੌਲਿਕ ਗੁਣਨਖੰਡ ਥਿਊਰਮ (Fundamental Theorem of Arithmetic)**:\nਹਰ ਮਿਸ਼ਰਤ ਸੰਖਿਆ ਨੂੰ ਮੌਲਿਕ ਸੰਖਿਆਵਾਂ ਦੇ ਗੁਣਨਫਲ ਵਜੋਂ ਵਿਲੱਖਣ ਰੂਪ ਵਿੱਚ ਲਿਖਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
+          "pa": "N ⊂ W ⊂ Z ⊂ Q ⊂ R। ਅਪਰਿਮੇਯ: √2, √3, π (p/q ਰੂਪ ਸੰਭਵ ਨਹੀਂ)। Euclid: a=bq+r। ਮੌਲਿਕ ਗੁਣਨਖੰਡ ਥਿਊਰਮ।",
+          "en": "**Number hierarchy**: N ⊂ W ⊂ Z ⊂ Q ⊂ R. **Irrational numbers** cannot be written as p/q (e.g. √2, √3, π). **Euclid's Division Lemma**: a = bq + r (0 ≤ r < b) — used to find HCF. **Fundamental Theorem of Arithmetic**: Every composite number has a unique prime factorisation."
+        }
+      },
+      {
+        "heading": {"hi": "HCF, LCM और घातांक", "pa": "HCF, LCM ਅਤੇ ਘਾਤ-ਅੰਕ", "en": "HCF, LCM and Exponents"},
+        "text": {
+          "hi": "**HCF (Highest Common Factor / ਮ.ਸ.ਵ.)**:\nਦੋ ਜਾਂ ਵੱਧ ਸੰਖਿਆਵਾਂ ਦਾ ਸਭ ਤੋਂ ਵੱਡਾ ਸਾਂਝਾ ਭਾਜਕ।\n\nਵਿਧੀ: ਮੌਲਿਕ ਗੁਣਨਖੰਡ — HCF = ਸਾਂਝੀਆਂ ਮੌਲਿਕ ਸੰਖਿਆਵਾਂ ਦਾ ਗੁਣਨਫਲ (ਘੱਟ ਘਾਤ)।\n\nਉਦਾਹਰਨ: HCF(12, 18):\n12 = 2² × 3; 18 = 2 × 3²\nHCF = 2¹ × 3¹ = **6**\n\n**LCM (Least Common Multiple / ਲ.ਸ.ਵ.)**:\nਦੋ ਜਾਂ ਵੱਧ ਸੰਖਿਆਵਾਂ ਦਾ ਸਭ ਤੋਂ ਛੋਟਾ ਸਾਂਝਾ ਗੁਣਜ।\n\nLCM = ਸਾਰੀਆਂ ਮੌਲਿਕ ਸੰਖਿਆਵਾਂ ਦਾ ਗੁਣਨਫਲ (ਵੱਧ ਘਾਤ)।\n\nਉਦਾਹਰਨ: LCM(12, 18) = 2² × 3² = **36**\n\n**ਸੰਬੰਧ**: HCF × LCM = ਦੋਵੇਂ ਸੰਖਿਆਵਾਂ ਦਾ ਗੁਣਨਫਲ\n→ HCF(12,18) × LCM(12,18) = 6 × 36 = 216 = 12 × 18 ✓\n\n**ਘਾਤ-ਅੰਕ ਦੇ ਨਿਯਮ (Laws of Exponents)**:\n- aᵐ × aⁿ = aᵐ⁺ⁿ\n- aᵐ ÷ aⁿ = aᵐ⁻ⁿ\n- (aᵐ)ⁿ = aᵐⁿ\n- a⁰ = 1 (a ≠ 0)\n- a⁻ⁿ = 1/aⁿ\n- (ab)ⁿ = aⁿbⁿ\n\n**ਉਦਾਹਰਨ**: 2³ × 2⁴ = 2⁷ = 128; (3²)³ = 3⁶ = 729",
+          "pa": "HCF = ਸਾਂਝੇ ਮੌਲਿਕ ਕਾਰਕ (ਘੱਟ ਘਾਤ)। LCM = ਸਾਰੇ ਕਾਰਕ (ਵੱਧ ਘਾਤ)। HCF×LCM = ਸੰਖਿਆਵਾਂ ਦਾ ਗੁਣਨਫਲ। ਘਾਤ ਨਿਯਮ: aᵐ×aⁿ=aᵐ⁺ⁿ; a⁰=1।",
+          "en": "**HCF** = product of common prime factors (lower powers). HCF(12,18) = 2¹×3¹ = 6.\n**LCM** = product of all prime factors (higher powers). LCM(12,18) = 2²×3² = 36.\n**Key relation**: HCF × LCM = product of the two numbers.\n**Laws of Exponents**: aᵐ×aⁿ=aᵐ⁺ⁿ; aᵐ÷aⁿ=aᵐ⁻ⁿ; (aᵐ)ⁿ=aᵐⁿ; a⁰=1; a⁻ⁿ=1/aⁿ."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "N⊂W⊂Z⊂Q⊂R। √2, √3, π = ਅਪਰਿਮੇਯ। Euclid: a=bq+r। HCF = ਘੱਟ ਘਾਤ; LCM = ਵੱਧ ਘਾਤ; HCF×LCM = a×b। ਘਾਤ: aᵐ×aⁿ=aᵐ⁺ⁿ; a⁰=1।",
+      "pa": "ਅਪਰਿਮੇਯ: √2, π। HCF×LCM = a×b। aᵐ×aⁿ=aᵐ⁺ⁿ; a⁰=1।",
+      "en": "N⊂W⊂Z⊂Q⊂R. √2, √3, π irrational. Euclid: a=bq+r. HCF×LCM = product. Laws: aᵐ×aⁿ=aᵐ⁺ⁿ; a⁰=1."
+    },
+    "keyPoints": [
+      {"hi": "ਪਰਿਮੇਯ ਸੰਖਿਆ = p/q ਰੂਪ (q≠0); ਅਪਰਿਮੇਯ = p/q ਸੰਭਵ ਨਹੀਂ (√2, π)", "pa": "ਪਰਿਮੇਯ = p/q; ਅਪਰਿਮੇਯ = √2, π", "en": "Rational = p/q form (q≠0); Irrational = cannot be p/q (√2, π)"},
+      {"hi": "HCF × LCM = ਦੋਵੇਂ ਸੰਖਿਆਵਾਂ ਦਾ ਗੁਣਨਫਲ", "pa": "HCF × LCM = a × b", "en": "HCF × LCM = product of the two numbers"},
+      {"hi": "a⁰ = 1 (ਸਿਫ਼ਰ ਘਾਤ); aᵐ × aⁿ = aᵐ⁺ⁿ", "pa": "a⁰ = 1; aᵐ × aⁿ = aᵐ⁺ⁿ", "en": "a⁰ = 1 (zero exponent); aᵐ × aⁿ = aᵐ⁺ⁿ"}
+    ],
+    "flashcards": [
+      {"front": {"hi": "√2 ਅਪਰਿਮੇਯ ਕਿਉਂ ਹੈ?", "pa": "√2 ਅਪਰਿਮੇਯ ਕਿਉਂ?", "en": "Why is √2 irrational?"}, "back": {"hi": "ਕਿਉਂਕਿ ਇਸਨੂੰ p/q ਰੂਪ ਵਿੱਚ ਨਹੀਂ ਲਿਖਿਆ ਜਾ ਸਕਦਾ; 1.41421356... (ਦਸ਼ਮਲਵ ਖ਼ਤਮ ਨਹੀਂ ਹੁੰਦੀ ਅਤੇ ਦੁਹਰਾਉਂਦੀ ਨਹੀਂ)", "pa": "p/q ਰੂਪ ਸੰਭਵ ਨਹੀਂ; 1.41421...", "en": "Cannot be expressed as p/q; its decimal is non-terminating and non-repeating: 1.41421356..."}},
+      {"front": {"hi": "HCF(24, 36) ਕੀ ਹੈ?", "pa": "HCF(24, 36)?", "en": "HCF(24, 36)?"}, "back": {"hi": "24=2³×3; 36=2²×3²; HCF=2²×3=**12**", "pa": "24=2³×3; 36=2²×3²; HCF=12", "en": "24=2³×3; 36=2²×3²; HCF=2²×3=**12**"}},
+      {"front": {"hi": "LCM(4, 6) ਕੀ ਹੈ?", "pa": "LCM(4, 6)?", "en": "LCM(4, 6)?"}, "back": {"hi": "4=2²; 6=2×3; LCM=2²×3=**12**. Check: 12/4=3✓, 12/6=2✓", "pa": "4=2²; 6=2×3; LCM=12", "en": "4=2²; 6=2×3; LCM=2²×3=**12**. Verify: 12÷4=3✓, 12÷6=2✓"}},
+      {"front": {"hi": "(2³)² ਦਾ ਮੁੱਲ ਕੀ ਹੈ?", "pa": "(2³)² = ?", "en": "Value of (2³)²?"}, "back": {"hi": "(2³)² = 2³×² = 2⁶ = **64**", "pa": "2⁶ = 64", "en": "(2³)² = 2⁶ = **64**"}},
+      {"front": {"hi": "ਕੋਈ ਵੀ ਸੰਖਿਆ ਦੀ 0 ਵਾਰ ਘਾਤ?", "pa": "a⁰ = ?", "en": "Any number to the power 0?"}, "back": {"hi": "a⁰ = 1 (ਜਿੱਥੇ a ≠ 0). ਉਦਾਹਰਨ: 5⁰=1, 100⁰=1", "pa": "a⁰ = 1 (a≠0)", "en": "a⁰ = 1 (where a ≠ 0). Examples: 5⁰=1, 100⁰=1"}}
+    ],
+    "questions": [
+      {"id": "ett-math-ns-q1", "text": {"hi": "HCF(12, 18) ਕੀ ਹੈ?", "pa": "HCF(12, 18)?", "en": "What is HCF(12, 18)?"}, "options": {"hi": ["3", "6", "9", "36"], "pa": ["3", "6", "9", "36"], "en": ["3", "6", "9", "36"]}, "answer": 1, "explanation": {"hi": "12=2²×3; 18=2×3²; HCF=2¹×3¹=**6** (ਸਾਂਝੇ ਕਾਰਕ, ਘੱਟ ਘਾਤ)।", "en": "12=2²×3; 18=2×3²; HCF=2¹×3¹=**6** (common factors, lower powers)."}},
+      {"id": "ett-math-ns-q2", "text": {"hi": "LCM(4, 6) ਕੀ ਹੈ?", "pa": "LCM(4, 6)?", "en": "What is LCM(4, 6)?"}, "options": {"hi": ["12", "24", "6", "18"], "pa": ["12", "24", "6", "18"], "en": ["12", "24", "6", "18"]}, "answer": 0, "explanation": {"hi": "4=2²; 6=2×3; LCM=2²×3=**12**. Verify: 12÷4=3✓, 12÷6=2✓", "en": "4=2²; 6=2×3; LCM=2²×3=**12**. Check: 12÷4=3✓, 12÷6=2✓"}},
+      {"id": "ett-math-ns-q3", "text": {"hi": "2³ × 2⁴ ਦਾ ਮੁੱਲ ਕੀ ਹੈ?", "pa": "2³ × 2⁴ = ?", "en": "Value of 2³ × 2⁴?"}, "options": {"hi": ["2⁷ = 128", "2¹² = 4096", "4⁷", "2¹ = 2"], "pa": ["2⁷ = 128", "2¹² = 4096", "4⁷", "2¹ = 2"], "en": ["2⁷ = 128", "2¹² = 4096", "4⁷", "2¹ = 2"]}, "answer": 0, "explanation": {"hi": "aᵐ × aⁿ = aᵐ⁺ⁿ; 2³ × 2⁴ = 2⁷ = **128**।", "en": "aᵐ × aⁿ = aᵐ⁺ⁿ; 2³ × 2⁴ = 2⁷ = **128**."}},
+      {"id": "ett-math-ns-q4", "text": {"hi": "ਹੇਠ ਲਿਖੇ ਵਿੱਚੋਂ ਕਿਹੜੀ ਅਪਰਿਮੇਯ ਸੰਖਿਆ ਹੈ?", "pa": "ਅਪਰਿਮੇਯ ਸੰਖਿਆ ਕਿਹੜੀ?", "en": "Which is an irrational number?"}, "options": {"hi": ["0.5", "¾", "√4", "√3"], "pa": ["0.5", "¾", "√4", "√3"], "en": ["0.5", "¾", "√4", "√3"]}, "answer": 3, "explanation": {"hi": "0.5=½ (ਪਰਿਮੇਯ); ¾ (ਪਰਿਮੇਯ); √4=2 (ਪਰਿਮੇਯ); √3=1.732... (ਅਪਰਿਮੇਯ — ਖ਼ਤਮ ਨਹੀਂ ਹੁੰਦੀ)।", "en": "0.5=½ (rational); ¾ (rational); √4=2 (rational). Only √3=1.73205... is irrational (non-terminating, non-repeating)."}},
+      {"id": "ett-math-ns-q5", "text": {"hi": "ਜੇ HCF(a,b)=4 ਅਤੇ LCM(a,b)=60 ਹੈ, ਤਾਂ a×b ਕੀ ਹੋਵੇਗਾ?", "pa": "HCF=4, LCM=60 ਤਾਂ a×b?", "en": "If HCF(a,b)=4 and LCM(a,b)=60, find a×b."}, "options": {"hi": ["64", "240", "120", "24"], "pa": ["64", "240", "120", "24"], "en": ["64", "240", "120", "24"]}, "answer": 1, "explanation": {"hi": "HCF × LCM = a × b; 4 × 60 = **240**।", "en": "HCF × LCM = a × b; 4 × 60 = **240**."}},
+      {"id": "ett-math-ns-q6", "text": {"hi": "(3⁰ + 4⁰) × 5⁰ ਦਾ ਮੁੱਲ?", "pa": "(3⁰ + 4⁰) × 5⁰ = ?", "en": "Value of (3⁰ + 4⁰) × 5⁰?"}, "options": {"hi": ["0", "1", "2", "5"], "pa": ["0", "1", "2", "5"], "en": ["0", "1", "2", "5"]}, "answer": 2, "explanation": {"hi": "3⁰=1; 4⁰=1; 5⁰=1; (1+1)×1 = **2**।", "en": "3⁰=1; 4⁰=1; 5⁰=1; (1+1)×1 = **2**."}},
+      {"id": "ett-math-ns-q7", "text": {"hi": "Euclid's Division Lemma: a = bq + r ਵਿੱਚ r ਦੀ ਸ਼ਰਤ?", "pa": "Euclid: a=bq+r ਵਿੱਚ r ਦੀ ਸ਼ਰਤ?", "en": "In Euclid's Division Lemma a = bq + r, what is the condition on r?"}, "options": {"hi": ["0 < r < b", "0 ≤ r < b", "r > 0", "r = 0"], "pa": ["0 < r < b", "0 ≤ r < b", "r > 0", "r = 0"], "en": ["0 < r < b", "0 ≤ r < b", "r > 0", "r = 0"]}, "answer": 1, "explanation": {"hi": "Euclid's Division Lemma: a = bq + r, ਜਿੱਥੇ **0 ≤ r < b** (r ਜ਼ੀਰੋ ਹੋ ਸਕਦਾ ਹੈ — ਜੇ b, a ਨੂੰ ਪੂਰਾ ਵੰਡਦਾ ਹੈ)।", "en": "Euclid's Division Lemma: a = bq + r where **0 ≤ r < b** (r can be zero if b divides a exactly)."}}
+    ]
+  },
+  {
+    "id": "ett-math-geometry-mensuration",
+    "subject": "Mathematics",
+    "unit": "ਰੇਖਾਗਣਿਤ ਅਤੇ ਖੇਤਰਮਿਤੀ",
+    "examIds": ["ett"],
+    "title": {
+      "hi": "ज्यामिति और क्षेत्रमिति: त्रिभुज, चतुर्भुज, वृत्त और क्षेत्रफल-आयतन",
+      "pa": "ਰੇਖਾਗਣਿਤ ਅਤੇ ਖੇਤਰਮਿਤੀ: ਤ੍ਰਿਭੁਜ, ਚਤੁਰਭੁਜ, ਚੱਕਰ ਅਤੇ ਖੇਤਰਫਲ-ਆਇਤਨ",
+      "en": "Geometry and Mensuration: Triangles, Quadrilaterals, Circles and Area-Volume"
+    },
+    "level": "ETT Paper B — Mathematics (Class 9-10 NCERT/PSEB level)",
+    "sources": [
+      {
+        "title": "NCERT Class 9 Mathematics – Lines and Angles, Triangles, Circles (Chapters 6–10)",
+        "url": "https://ncert.nic.in/textbook/pdf/iemh1.pdf",
+        "note": "Author-generated for ETT exam practice."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "ਰੇਖਾਵਾਂ, ਕੋਣ ਅਤੇ ਤ੍ਰਿਭੁਜ", "pa": "ਰੇਖਾਵਾਂ, ਕੋਣ ਅਤੇ ਤ੍ਰਿਭੁਜ", "en": "Lines, Angles and Triangles"},
+        "text": {
+          "hi": "**ਕੋਣਾਂ ਦੇ ਪ੍ਰਕਾਰ**: ਤੀਬਰ (0°-90°), ਸਮਕੋਣ (90°), ਅਧਿਕ (90°-180°), ਸਰਲ (180°), ਵਾਪਸੀ (180°-360°)।\n\n**ਸਮਾਂਤਰ ਰੇਖਾਵਾਂ ਅਤੇ ਟ੍ਰਾਂਸਵਰਸਲ**:\n- ਸੰਗਤ ਕੋਣ (Corresponding) = ਬਰਾਬਰ\n- ਅਕਾਬਲ ਅੰਦਰੂਨੀ ਕੋਣ (Alternate Interior) = ਬਰਾਬਰ\n- ਸਹਿ-ਅੰਤਰੀ ਕੋਣ (Co-interior / Same-side) = 180°\n\n**ਤ੍ਰਿਭੁਜ ਦੇ ਮਹੱਤਵਪੂਰਨ ਸਿਧਾਂਤ**:\n- ਤ੍ਰਿਭੁਜ ਦੇ ਸਾਰੇ ਕੋਣਾਂ ਦਾ ਜੋੜ = **180°**\n- ਬਾਹਰੀ ਕੋਣ = ਦੋ ਅੰਦਰੂਨੀ ਕੋਣਾਂ ਦਾ ਜੋੜ\n- **ਪਾਈਥਾਗੋਰਸ ਥਿਊਰਮ**: a² + b² = c² (ਸਮਕੋਣ ਤ੍ਰਿਭੁਜ ਵਿੱਚ, c = ਕਰਣ)\n  - ਮਸ਼ਹੂਰ ਜੋੜੇ: 3-4-5; 5-12-13; 8-15-17\n\n**ਤ੍ਰਿਭੁਜਾਂ ਦੀ ਸਰਵੰਗਸਮਤਾ (Congruence)**:\n- SSS: ਤਿੰਨੇ ਭੁਜਾਵਾਂ ਬਰਾਬਰ\n- SAS: ਦੋ ਭੁਜਾਵਾਂ ਅਤੇ ਸ਼ਾਮਲ ਕੋਣ ਬਰਾਬਰ\n- ASA: ਦੋ ਕੋਣ ਅਤੇ ਸ਼ਾਮਲ ਭੁਜਾ ਬਰਾਬਰ\n- RHS: ਸਮਕੋਣ, ਕਰਣ, ਇੱਕ ਭੁਜਾ\n\n**ਸਮਾਨਤਾ (Similarity)**: AA, SSS, SAS ਸ਼ਰਤਾਂ।\n**ਬੇਸਿਕ ਪ੍ਰੋਪੋਰਸ਼ਨੈਲਿਟੀ ਥਿਊਰਮ (BPT)**: ਜੇ ਕੋਈ ਰੇਖਾ ਤ੍ਰਿਭੁਜ ਦੀਆਂ ਦੋ ਭੁਜਾਵਾਂ ਨੂੰ ਸਮਾਨ ਅਨੁਪਾਤ ਵਿੱਚ ਕੱਟਦੀ ਹੈ ਤਾਂ ਉਹ ਤੀਜੀ ਭੁਜਾ ਦੇ ਸਮਾਂਤਰ ਹੈ।",
+          "pa": "ਤ੍ਰਿਭੁਜ ਕੋਣਾਂ ਦਾ ਜੋੜ = 180°। ਪਾਈਥਾਗੋਰਸ: a²+b²=c²। ਜੋੜੇ: 3-4-5, 5-12-13। ਸਰਵੰਗਸਮਤਾ: SSS, SAS, ASA, RHS।",
+          "en": "**Triangle angle sum = 180°**. **Exterior angle** = sum of two non-adjacent interior angles. **Pythagoras**: a² + b² = c² (right triangle, c = hypotenuse). Triplets: 3-4-5; 5-12-13. **Congruence**: SSS, SAS, ASA, RHS. **Similarity**: AA, SSS, SAS. **BPT**: Line parallel to one side divides other two sides proportionally."
+        }
+      },
+      {
+        "heading": {"hi": "ਚੱਕਰ, ਖੇਤਰਫਲ ਅਤੇ ਆਇਤਨ", "pa": "ਚੱਕਰ, ਖੇਤਰਫਲ ਅਤੇ ਆਇਤਨ", "en": "Circles, Area and Volume"},
+        "text": {
+          "hi": "**ਚੱਕਰ ਦੇ ਮਹੱਤਵਪੂਰਨ ਸਿਧਾਂਤ**:\n- ਵਿਆਸ ਦੁਆਰਾ ਬਣਿਆ ਕੋਣ ਅਰਧ-ਚੱਕਰ ਵਿੱਚ = 90°\n- ਬਰਾਬਰ ਜੀਵਾਵਾਂ ਕੇਂਦਰ ਤੋਂ ਬਰਾਬਰ ਦੂਰੀ 'ਤੇ ਹੁੰਦੀਆਂ ਹਨ\n- ਸਪਰਸ਼ ਰੇਖਾ ਕੇਂਦਰ ਤੋਂ ਖਿੱਚੀ ਰੇਖਾ 'ਤੇ ਲੰਬ ਹੁੰਦੀ ਹੈ\n\n**ਮਹੱਤਵਪੂਰਨ ਖੇਤਰਫਲ ਫਾਰਮੂਲੇ**:\n\n| ਆਕਾਰ | ਖੇਤਰਫਲ |\n|---|---|\n| ਵਰਗ | a² |\n| ਆਇਤ | l × b |\n| ਤ੍ਰਿਭੁਜ | ½ × ਅਧਾਰ × ਉਚਾਈ |\n| ਚੱਕਰ | πr² |\n| ਪਰਿਧੀ ਚੱਕਰ | 2πr |\n| ਟ੍ਰੇਪੇਜ਼ੀਅਮ | ½ × (a+b) × h |\n\n**ਮਹੱਤਵਪੂਰਨ ਆਇਤਨ ਅਤੇ ਸਤਹਾ ਫਾਰਮੂਲੇ**:\n\n| ਆਕਾਰ | ਆਇਤਨ | TSA |\n|---|---|---|\n| ਘਣ (Cube) | a³ | 6a² |\n| ਘਣਾਕਾਰ (Cuboid) | l×b×h | 2(lb+bh+hl) |\n| ਸਿਲੰਡਰ | πr²h | 2πr(r+h) |\n| ਕੋਨ | ⅓πr²h | πr(l+r), l=√(h²+r²) |\n| ਗੋਲਾ (Sphere) | 4/3 πr³ | 4πr² |\n| ਅਰਧਗੋਲਾ | 2/3 πr³ | 3πr² |\n\nਕੀਮਤੀ ਟਿੱਪਣੀ: **π ≈ 22/7 ≈ 3.14**।\n\n**ਉਦਾਹਰਨ**: ਇੱਕ ਸਿਲੰਡਰ r=7 cm, h=10 cm। ਆਇਤਨ = πr²h = (22/7)×49×10 = **1540 cm³**।",
+          "pa": "ਖੇਤਰਫਲ: ਤ੍ਰਿਭੁਜ=½bh; ਚੱਕਰ=πr²; ਆਇਤ=l×b। ਆਇਤਨ: ਸਿਲੰਡਰ=πr²h; ਗੋਲਾ=4/3πr³; ਕੋਨ=⅓πr²h। π≈22/7।",
+          "en": "**Key area formulas**: Triangle=½bh; Circle=πr²; Rectangle=l×b; Trapezium=½(a+b)h.\n**Volume formulas**: Cylinder=πr²h; Sphere=4/3πr³; Cone=⅓πr²h; Cube=a³; Cuboid=lbh.\n**Circle properties**: Angle in semicircle=90°; tangent ⊥ radius at point of contact. π≈22/7≈3.14."
+        }
+      }
+    ],
+    "summary": {
+      "hi": "a²+b²=c² (Pythagoras); 3-4-5, 5-12-13। ਤ੍ਰਿਭੁਜ ਕੋਣ=180°। ਸਰਵੰਗਸਮਤਾ: SSS/SAS/ASA/RHS। ਚੱਕਰ=πr²; ਸਿਲੰਡਰ=πr²h; ਗੋਲਾ=4/3πr³; ਕੋਨ=⅓πr²h। π≈22/7।",
+      "pa": "Pythagoras: a²+b²=c²। 3-4-5। ਕੋਣ ਜੋੜ 180°। πr²; πr²h; 4/3πr³।",
+      "en": "Pythagoras: a²+b²=c²; 3-4-5, 5-12-13. Triangle angles=180°. Congruence: SSS/SAS/ASA/RHS. Area: πr²; Volume: πr²h (cylinder), 4/3πr³ (sphere), ⅓πr²h (cone). π≈22/7."
+    },
+    "keyPoints": [
+      {"hi": "Pythagoras: a² + b² = c² (c = ਕਰਣ); ਮਸ਼ਹੂਰ ਜੋੜੇ: 3-4-5, 5-12-13", "pa": "a²+b²=c²; 3-4-5; 5-12-13", "en": "Pythagoras: a²+b²=c² (c=hypotenuse); famous triplets: 3-4-5, 5-12-13"},
+      {"hi": "ਗੋਲੇ ਦਾ ਆਇਤਨ = 4/3 πr³; ਸਤਹਾ = 4πr²", "pa": "ਗੋਲਾ: V=4/3πr³; A=4πr²", "en": "Sphere: Volume=4/3πr³; Surface Area=4πr²"},
+      {"hi": "ਕੋਨ: ਆਇਤਨ = ⅓πr²h; ਤਿਰਛੀ ਉਚਾਈ l = √(h²+r²)", "pa": "ਕੋਨ: ⅓πr²h; l=√(h²+r²)", "en": "Cone: Volume=⅓πr²h; slant height l=√(h²+r²)"},
+      {"hi": "ਸੈਮੀਸਰਕਲ ਵਿੱਚ ਕੋਣ = 90° (ਥੇਲਸ ਥਿਊਰਮ)", "pa": "ਸੈਮੀਸਰਕਲ ਕੋਣ = 90°", "en": "Angle in semicircle = 90° (Thales' theorem)"}
+    ],
+    "flashcards": [
+      {"front": {"hi": "ਤ੍ਰਿਭੁਜ ਦੇ ਤਿੰਨੇ ਕੋਣਾਂ ਦਾ ਜੋੜ?", "pa": "ਤ੍ਰਿਭੁਜ ਦੇ ਕੋਣਾਂ ਦਾ ਜੋੜ?", "en": "Sum of angles of a triangle?"}, "back": {"hi": "180°", "pa": "180°", "en": "180°"}},
+      {"front": {"hi": "ਸਿਲੰਡਰ ਦਾ ਆਇਤਨ ਫਾਰਮੂਲਾ?", "pa": "ਸਿਲੰਡਰ ਦਾ ਆਇਤਨ?", "en": "Volume of a cylinder?"}, "back": {"hi": "V = πr²h", "pa": "V = πr²h", "en": "V = πr²h"}},
+      {"front": {"hi": "ਕੋਨ ਦਾ ਆਇਤਨ?", "pa": "ਕੋਨ ਦਾ ਆਇਤਨ?", "en": "Volume of a cone?"}, "back": {"hi": "V = ⅓πr²h", "pa": "V = ⅓πr²h", "en": "V = ⅓πr²h (one-third of cylinder)"}},
+      {"front": {"hi": "ਗੋਲੇ ਦਾ ਸਤਹਾ ਫਾਰਮੂਲਾ?", "pa": "ਗੋਲੇ ਦੀ ਸਤਹਾ?", "en": "Surface area of a sphere?"}, "back": {"hi": "4πr²", "pa": "4πr²", "en": "4πr²"}},
+      {"front": {"hi": "ਕਿਹੜੇ ਸਮਕੋਣ ਤ੍ਰਿਭੁਜ ਦੇ ਤਿੰਨੇ ਪਾਸੇ ਪੂਰਨਾਂਕ ਹਨ? (ਛੋਟਾ ਜੋੜਾ)", "pa": "ਛੋਟਾ ਪਾਈਥਾਗੋਰਸ ਜੋੜਾ?", "en": "Smallest Pythagorean triplet?"}, "back": {"hi": "3, 4, 5 (3²+4²=9+16=25=5²)", "pa": "3-4-5", "en": "3, 4, 5 (3²+4²=9+16=25=5²)"}}
+    ],
+    "questions": [
+      {"id": "ett-math-geo-q1", "text": {"hi": "ਇੱਕ ਤ੍ਰਿਭੁਜ ਦੇ ਦੋ ਕੋਣ 60° ਅਤੇ 70° ਹਨ। ਤੀਜਾ ਕੋਣ?", "pa": "ਦੋ ਕੋਣ 60° ਅਤੇ 70°, ਤੀਜਾ?", "en": "Two angles of a triangle are 60° and 70°. Third angle?"}, "options": {"hi": ["40°", "50°", "60°", "70°"], "pa": ["40°", "50°", "60°", "70°"], "en": ["40°", "50°", "60°", "70°"]}, "answer": 1, "explanation": {"hi": "ਤਿੰਨੇ ਕੋਣਾਂ ਦਾ ਜੋੜ = 180°; ਤੀਜਾ = 180 - 60 - 70 = **50°**।", "en": "Sum of angles = 180°; third angle = 180 - 60 - 70 = **50°**."}},
+      {"id": "ett-math-geo-q2", "text": {"hi": "ਸਿਲੰਡਰ r=7 cm, h=10 cm। ਆਇਤਨ? (π=22/7)", "pa": "r=7, h=10. ਆਇਤਨ?", "en": "Cylinder r=7 cm, h=10 cm. Volume? (π=22/7)"}, "options": {"hi": ["1540 cm³", "1540 m³", "770 cm³", "2200 cm³"], "pa": ["1540 cm³", "1540 m³", "770 cm³", "2200 cm³"], "en": ["1540 cm³", "1540 m³", "770 cm³", "2200 cm³"]}, "answer": 0, "explanation": {"hi": "V = πr²h = (22/7) × 49 × 10 = 22 × 7 × 10 = **1540 cm³**।", "en": "V = πr²h = (22/7) × 49 × 10 = 22 × 7 × 10 = **1540 cm³**."}},
+      {"id": "ett-math-geo-q3", "text": {"hi": "ਤ੍ਰਿਭੁਜ ਦੇ ਅਧਾਰ 8 cm ਅਤੇ ਉਚਾਈ 5 cm ਹੈ। ਖੇਤਰਫਲ?", "pa": "ਅਧਾਰ 8 cm, ਉਚਾਈ 5 cm. ਖੇਤਰਫਲ?", "en": "Triangle base=8 cm, height=5 cm. Area?"}, "options": {"hi": ["40 cm²", "20 cm²", "13 cm²", "80 cm²"], "pa": ["40 cm²", "20 cm²", "13 cm²", "80 cm²"], "en": ["40 cm²", "20 cm²", "13 cm²", "80 cm²"]}, "answer": 1, "explanation": {"hi": "ਖੇਤਰਫਲ = ½ × b × h = ½ × 8 × 5 = **20 cm²**।", "en": "Area = ½ × b × h = ½ × 8 × 5 = **20 cm²**."}},
+      {"id": "ett-math-geo-q4", "text": {"hi": "ਗੋਲੇ ਦਾ ਆਇਤਨ (r=3 cm, π=22/7)?", "pa": "ਗੋਲਾ r=3 cm. ਆਇਤਨ?", "en": "Sphere volume r=3 cm (π=22/7)?"}, "options": {"hi": ["113.14 cm³", "56.57 cm³", "38 cm³", "198 cm³"], "pa": ["113.14 cm³", "56.57 cm³", "38 cm³", "198 cm³"], "en": ["≈113.14 cm³", "≈56.57 cm³", "38 cm³", "198 cm³"]}, "answer": 0, "explanation": {"hi": "V = 4/3πr³ = 4/3 × (22/7) × 27 = 4/3 × 22/7 × 27 ≈ **113.14 cm³**।", "en": "V = 4/3πr³ = 4/3 × (22/7) × 27 ≈ **113.14 cm³**."}},
+      {"id": "ett-math-geo-q5", "text": {"hi": "ਇੱਕ ਸਮਕੋਣ ਤ੍ਰਿਭੁਜ ਦੇ ਛੋਟੇ ਪਾਸੇ 3 cm ਅਤੇ 4 cm ਹਨ। ਕਰਣ?", "pa": "3 cm ਅਤੇ 4 cm। ਕਰਣ?", "en": "Right triangle legs 3 cm and 4 cm. Hypotenuse?"}, "options": {"hi": ["7 cm", "5 cm", "6 cm", "√7 cm"], "pa": ["7 cm", "5 cm", "6 cm", "√7 cm"], "en": ["7 cm", "5 cm", "6 cm", "√7 cm"]}, "answer": 1, "explanation": {"hi": "c² = a² + b² = 9 + 16 = 25; c = **5 cm**। (3-4-5 ਮਸ਼ਹੂਰ ਜੋੜਾ)", "en": "c² = 3² + 4² = 9 + 16 = 25; c = **5 cm**. (Famous 3-4-5 triplet)"}}
+    ]
+  }
+]
