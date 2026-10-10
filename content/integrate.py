@@ -167,6 +167,26 @@ for l in json.load(open(research/'ett-science-chemistry.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add Clerk Part A Punjabi batch 2 (Guru biographies, Punjab fairs/festivals/culture)
+for l in json.load(open(research/'clerk-punjabi-gurus-culture.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Clerk Part B Punjab History & Culture (ancient, Sikh empire, freedom movements)
+for l in json.load(open(research/'clerk-punjab-history-culture.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Clerk Part B Reasoning (series, analogy, coding-decoding, blood relations, direction)
+for l in json.load(open(research/'clerk-reasoning-batch1.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Clerk Part B English (active/passive voice, direct/indirect speech, articles, prepositions)
+for l in json.load(open(research/'clerk-english-grammar.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add Master Cadre SST Economics batch 3 (Producer+Markets, Govt Budget+Multiplier, Climate Biomes)
 for l in json.load(open(research/'master-sst-economics-3.json')):
  l['level']=l.get('level','Foundation / concept preparation')

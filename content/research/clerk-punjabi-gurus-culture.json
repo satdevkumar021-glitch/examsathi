@@ -1,0 +1,107 @@
+[
+  {
+    "id": "clerk-punjabi-gurus-culture",
+    "subject": "Punjabi",
+    "unit": "PSSSB Clerk Part A — Guru Biographies and Punjab Culture",
+    "examIds": ["clerk"],
+    "title": {
+      "hi": "गुरुओं का जीवन और पंजाब की लोक-संस्कृति",
+      "pa": "ਗੁਰੂਆਂ ਦਾ ਜੀਵਨ ਅਤੇ ਪੰਜਾਬ ਦੀ ਲੋਕ-ਸੰਸਕ੍ਰਿਤੀ",
+      "en": "Life of the Gurus and Punjab Folk Culture"
+    },
+    "level": "PSSSB Clerk Part A — Punjabi qualifying (Advt. 02/2026 as reported; verify official PDF)",
+    "review_note": "Gurmukhi content must be reviewed by a native Punjabi-speaking teacher. Guru biographies from well-established sources; any uncertainty flagged [VERIFY]. Advt. 02/2026 Part A names 7 Gurus (Nanak, Angad, Amar Das, Ram Das, Arjan, Tegh Bahadur, Gobind Singh) — verify whether others are excluded in the official PDF.",
+    "sources": [
+      {
+        "title": "PSSSB Clerk Advt. 02/2026 Syllabus — Part A Punjabi (as reported by secondary sources)",
+        "url": "https://sssb.punjab.gov.in/",
+        "note": "Secondary source (Adda247 Aug 2026 summary). UNVERIFIED against official PDF. Verify at sssb.punjab.gov.in before treating as authoritative."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "7 गुरुओं का संक्षिप्त परिचय (जैसा पाठ्यक्रम में उल्लिखित)", "pa": "7 ਗੁਰੂਆਂ ਦੀ ਸੰਖੇਪ ਜਾਣ-ਪਛਾਣ", "en": "Brief Lives of the 7 Named Gurus (as listed in syllabus)"},
+        "text": {
+          "hi": "**ਨੋਟ**: ਪਾਠ-ਕ੍ਰਮ ਵਿੱਚ 7 ਗੁਰੂਆਂ ਦਾ ਜ਼ਿਕਰ ਹੈ — ਅਸਲ ਅਧਿਕਾਰਤ PDF ਵਿੱਚ ਸੂਚੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ।\n\n| ਨੰਬਰ | ਗੁਰੂ | ਜਨਮ | ਮੁੱਖ ਯੋਗਦਾਨ |\n|------|------|------|---------------|\n| 1 | ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ | 1469, ਤਲਵੰਡੀ | ਸਿੱਖ ਧਰਮ ਦੀ ਨੀਂਹ; ਈਕੋਂਕਾਰ; 4 ਉਦਾਸੀਆਂ |\n| 2 | ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ | 1504, ਮੱਤੇ ਦੀ ਸਰਾਂ | ਗੁਰਮੁਖੀ ਲਿਪੀ ਦਾ ਪ੍ਰਚਾਰ; ਮਲ ਅਖਾੜਾ |\n| 3 | ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ | 1479, ਬਾਸਰਕੇ | ਲੰਗਰ ਅਤੇ ਪੰਗਤ; ਸਤੀ-ਪਰਥਾ ਵਿਰੋਧ; 22 ਮੰਜੀਆਂ |\n| 4 | ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ | 1534, ਲਾਹੌਰ | ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ (1577); ਆਨੰਦ ਸਾਹਿਬ |\n| 5 | ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ | 1563, ਗੋਇੰਦਵਾਲ | ਆਦਿ ਗ੍ਰੰਥ (1604); ਹਰਿਮੰਦਰ ਸਾਹਿਬ; ਪਹਿਲਾ ਸ਼ਹੀਦ |\n| 6 | ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ | 1621, ਅੰਮ੍ਰਿਤਸਰ | ਹਿੰਦ ਦੀ ਚਾਦਰ; ਕਸ਼ਮੀਰੀ ਪੰਡਿਤਾਂ ਦੀ ਰੱਖਿਆ (1675) |\n| 7 | ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ | 1666, ਪਟਨਾ ਸਾਹਿਬ | ਖ਼ਾਲਸਾ ਪੰਥ (1699 ਵੈਸਾਖੀ); ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਸ਼ਾਸ਼ਵਤ ਗੁਰੂ |\n\n**ਮੁੱਖ ਸਿਧਾਂਤ**: ਨਾਮ ਜਪਣਾ, ਕਿਰਤ ਕਰਨੀ, ਵੰਡ ਛਕਣਾ",
+          "pa": "7 ਗੁਰੂ: ਨਾਨਕ (1469), ਅੰਗਦ (1504), ਅਮਰਦਾਸ (1479), ਰਾਮਦਾਸ (1534), ਅਰਜਨ (1563), ਤੇਗ਼ ਬਹਾਦਰ (1621), ਗੋਬਿੰਦ ਸਿੰਘ (1666)। ਨਾਮ ਜਪੋ, ਕਿਰਤ ਕਰੋ, ਵੰਡ ਛਕੋ।",
+          "en": "The 7 Gurus named in the reported syllabus (verify official list): Guru Nanak Dev Ji (1469, Talwandi) — founded Sikhism; Guru Angad Dev Ji (1504) — promoted Gurmukhi; Guru Amar Das Ji (1479) — langar/pangat, opposed sati; Guru Ram Das Ji (1534) — founded Amritsar (1577); Guru Arjan Dev Ji (1563) — compiled Adi Granth (1604), Harmandir Sahib, first martyr; Guru Tegh Bahadur Ji (1621) — 'Hind di Chadar', protected Kashmiri Pandits (1675); Guru Gobind Singh Ji (1666, Patna Sahib) — Khalsa Panth (Vaisakhi 1699), declared Guru Granth Sahib eternal Guru. Core teaching: Naam Japo, Kirat Karo, Vand Chako."
+        }
+      },
+      {
+        "heading": {"hi": "पंजाब के प्रमुख मेले और त्योहार", "pa": "ਪੰਜਾਬ ਦੇ ਮੁੱਖ ਮੇਲੇ ਅਤੇ ਤਿਉਹਾਰ", "en": "Major Fairs and Festivals of Punjab"},
+        "text": {
+          "hi": "**ਧਾਰਮਿਕ ਅਤੇ ਸੱਭਿਆਚਾਰਕ ਤਿਉਹਾਰ**:\n\n| ਤਿਉਹਾਰ / ਮੇਲਾ | ਮੌਸਮ / ਮਹੀਨਾ | ਮਹੱਤਤਾ |\n|-----------------|----------------|----------|\n| **ਵਿਸਾਖੀ** | ਅਪ੍ਰੈਲ 13/14 | ਫਸਲ ਕੱਟਣ ਦਾ ਤਿਉਹਾਰ; ਖ਼ਾਲਸਾ ਸਾਜਨਾ (1699) |\n| **ਲੋਹੜੀ** | ਜਨਵਰੀ 13 | ਰੁੱਤ ਬਦਲਾਅ; ਅੱਗ ਬਾਲ ਕੇ ਮਨਾਉਣਾ |\n| **ਤੀਆਂ** | ਸਾਵਣ (ਜੁਲਾਈ-ਅਗਸਤ) | ਕੁੜੀਆਂ ਦਾ ਤਿਉਹਾਰ; ਝੂਟਣਾ, ਗਿੱਧਾ |\n| **ਦੀਵਾਲੀ** | ਅਕਤੂਬਰ/ਨਵੰਬਰ | ਰੌਸ਼ਨੀ ਦਾ ਤਿਉਹਾਰ; ਗੁਰੂ ਹਰਗੋਬਿੰਦ ਰਿਹਾਈ |\n| **ਮਾਘੀ** | ਜਨਵਰੀ 14 | ਮੁਕਤਸਰ ਦੀ ਲੜਾਈ; ਮੇਲਾ ਮਾਘੀ (ਮੁਕਤਸਰ) |\n| **ਹੋਲਾ ਮਹੱਲਾ** | ਹੋਲੀ ਤੋਂ ਅਗਲੇ ਦਿਨ | ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ; ਆਨੰਦਪੁਰ ਸਾਹਿਬ |\n| **ਬਸੰਤ ਪੰਚਮੀ** | ਮਾਘ (ਜਨਵਰੀ-ਫਰਵਰੀ) | ਬਸੰਤ ਰੁੱਤ ਦਾ ਆਗਮਨ; ਪਤੰਗਬਾਜ਼ੀ |\n\n**ਲੋਕ ਨ੍ਰਿਤ ਅਤੇ ਸੰਗੀਤ**:\n- **ਭੰਗੜਾ**: ਪੁਰਸ਼ਾਂ ਦਾ ਲੋਕ ਨ੍ਰਿਤ; ਵਿਸਾਖੀ ਨਾਲ ਸੰਬੰਧਿਤ; ਢੋਲ ਦੀ ਤਾਲ\n- **ਗਿੱਧਾ**: ਔਰਤਾਂ ਦਾ ਲੋਕ ਨ੍ਰਿਤ; ਬੋਲੀਆਂ\n- **ਸੰਗੀਤ ਸਾਜ਼**: ਢੋਲ, ਤੂੰਬੀ, ਅਲਗੋਜ਼ੇ, ਸਾਰੰਗੀ",
+          "pa": "ਵਿਸਾਖੀ (ਅਪ੍ਰੈਲ) = ਫਸਲ+ਖ਼ਾਲਸਾ। ਲੋਹੜੀ (ਜਨਵਰੀ 13) = ਅੱਗ। ਤੀਆਂ = ਕੁੜੀਆਂ। ਮਾਘੀ = ਮੁਕਤਸਰ। ਭੰਗੜਾ = ਮਰਦਾਂ ਦਾ ਨਾਚ। ਗਿੱਧਾ = ਔਰਤਾਂ ਦਾ ਨਾਚ।",
+          "en": "Key festivals: Vaisakhi (Apr 13/14, harvest + Khalsa founding 1699); Lohri (Jan 13, bonfire, season change); Teeyan (Savan, girls' swing festival); Diwali (Oct/Nov, Guru Hargobind's release); Maghi (Jan 14, Battle of Muktsar, Muktsar fair); Hola Mahalla (day after Holi, Anandpur Sahib); Basant Panchami (kite-flying, spring arrival).\n\nFolk dances: Bhangra (men, dhol, Vaisakhi); Gidda (women, bolia poetry). Instruments: Dhol, Tumbi, Algoze, Sarangi."
+        }
+      },
+      {
+        "heading": {"hi": "पंजाब की लोक-विरासत और भाषा", "pa": "ਪੰਜਾਬ ਦੀ ਲੋਕ-ਵਿਰਾਸਤ ਅਤੇ ਭਾਸ਼ਾ", "en": "Punjab's Folk Heritage and Language"},
+        "text": {
+          "hi": "**ਲੋਕ ਸਾਹਿਤ**:\n- **ਲੋਕ ਗੀਤ**: ਸੁਹਾਗ (ਵਿਆਹ), ਘੋੜੀਆਂ (ਵਰ ਲਈ), ਅਲਾਹੁਣੀਆਂ (ਸੋਗ)\n- **ਲੋਕ ਕਹਾਣੀਆਂ**: ਹੀਰ-ਰਾਂਝਾ, ਸੱਸੀ-ਪੁੰਨੂੰ, ਮਿਰਜ਼ਾ-ਸਾਹਿਬਾਂ, ਸੋਹਣੀ-ਮਹੀਂਵਾਲ — ਇਹ ਪੰਜਾਬ ਦੀਆਂ ਚਾਰ ਮਸ਼ਹੂਰ ਕਿੱਸੇ-ਪ੍ਰੇਮ ਕਹਾਣੀਆਂ ਹਨ\n\n**ਪੰਜਾਬੀ ਭਾਸ਼ਾ**:\n- ਗੁਰਮੁਖੀ ਲਿਪੀ ਵਿੱਚ ਲਿਖੀ ਜਾਂਦੀ ਹੈ\n- ਪੰਜਾਬ ਦੀ ਅਧਿਕਾਰਤ ਭਾਸ਼ਾ\n- ਸ਼ਾਹਮੁਖੀ (Shahmukhi) ਲਿਪੀ ਵਿੱਚ ਵੀ ਲਿਖੀ ਜਾਂਦੀ ਹੈ (ਪਾਕਿਸਤਾਨ)\n\n**ਪ੍ਰਮੁੱਖ ਕਵੀ ਅਤੇ ਸਾਹਿਤਕਾਰ**:\n- ਵਾਰਿਸ ਸ਼ਾਹ — ਹੀਰ (18ਵੀਂ ਸਦੀ)\n- ਭੱਟ ਸਿੱਖ — ਆਦਿ ਗ੍ਰੰਥ ਵਿੱਚ ਸਵੱਈਏ\n- ਬਾਬਾ ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ — ਸੂਫ਼ੀ ਕਵਿਤਾ\n- ਸ਼ਿਵ ਕੁਮਾਰ ਬਟਾਲਵੀ — ਆਧੁਨਿਕ ਕਵਿਤਾ; ਸਾਹਿਤ ਅਕਾਦਮੀ ਪੁਰਸਕਾਰ",
+          "pa": "ਹੀਰ-ਰਾਂਝਾ, ਸੱਸੀ-ਪੁੰਨੂੰ, ਮਿਰਜ਼ਾ-ਸਾਹਿਬਾਂ, ਸੋਹਣੀ-ਮਹੀਂਵਾਲ = ਚਾਰ ਕਿੱਸੇ। ਵਾਰਿਸ ਸ਼ਾਹ = ਹੀਰ। ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ = ਸੂਫ਼ੀ।",
+          "en": "Folk literature: Suhag (wedding songs), Ghorian (bridegroom), Alahunia (mourning). Four great romantic legends (Kisses): Heer-Ranjha, Sassi-Punnun, Mirza-Sahiban, Sohni-Mahiwal. Major poets: Waris Shah (Heer, 18th c.); Bulleh Shah (Sufi poetry); Shiv Kumar Batalvi (modern poetry, Sahitya Akademi)."
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਦਾ ਮੁੱਖ ਯੋਗਦਾਨ?", "pa": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ?", "en": "Main contribution of Guru Arjan Dev Ji?"}, "back": {"hi": "ਆਦਿ ਗ੍ਰੰਥ ਸੰਪਾਦਨਾ (1604) + ਹਰਿਮੰਦਰ ਸਾਹਿਬ + ਪਹਿਲੇ ਸ਼ਹੀਦ", "pa": "ਆਦਿ ਗ੍ਰੰਥ 1604, ਹਰਿਮੰਦਰ ਸਾਹਿਬ, ਪਹਿਲੇ ਸ਼ਹੀਦ", "en": "Compiled Adi Granth (1604), built Harmandir Sahib, first Sikh martyr"}},
+      {"front": {"hi": "ਲੋਹੜੀ ਕਦੋਂ ਮਨਾਈ ਜਾਂਦੀ ਹੈ?", "pa": "ਲੋਹੜੀ ਕਦੋਂ?", "en": "When is Lohri celebrated?"}, "back": {"hi": "ਜਨਵਰੀ 13 — ਰੁੱਤ ਬਦਲਾਅ ਦਾ ਤਿਉਹਾਰ", "pa": "ਜਨਵਰੀ 13", "en": "January 13 — marks the change of season"}},
+      {"front": {"hi": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਦਾ ਜਨਮ ਕਦੋਂ ਅਤੇ ਕਿੱਥੇ?", "pa": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ — ਜਨਮ?", "en": "Birth of Guru Gobind Singh Ji?"}, "back": {"hi": "1666, ਪਟਨਾ ਸਾਹਿਬ (ਬਿਹਾਰ)", "pa": "1666, ਪਟਨਾ ਸਾਹਿਬ", "en": "1666, Patna Sahib (Bihar)"}},
+      {"front": {"hi": "'ਹਿੰਦ ਦੀ ਚਾਦਰ' ਕਿਹੜੇ ਗੁਰੂ ਨੂੰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?", "pa": "'ਹਿੰਦ ਦੀ ਚਾਦਰ' — ਕਿਹੜੇ ਗੁਰੂ?", "en": "Which Guru is called 'Hind di Chadar'?"}, "back": {"hi": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ (9ਵੇਂ ਗੁਰੂ)", "pa": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ", "en": "Guru Tegh Bahadur Ji (9th Guru)"}},
+      {"front": {"hi": "ਵਿਸਾਖੀ ਦਾ ਸਿੱਖ ਧਰਮ ਵਿੱਚ ਮਹੱਤਵ?", "pa": "ਵਿਸਾਖੀ ਦਾ ਸਿੱਖ ਮਹੱਤਵ?", "en": "Significance of Vaisakhi in Sikhism?"}, "back": {"hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ (1699) — ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਦੁਆਰਾ", "pa": "ਖ਼ਾਲਸਾ ਪੰਥ 1699", "en": "Founding of the Khalsa Panth (1699) by Guru Gobind Singh Ji"}},
+      {"front": {"hi": "ਹੀਰ-ਰਾਂਝਾ ਦੇ ਕਿੱਸੇ ਦੀ ਰਚਨਾ ਕਿਸ ਨੇ ਕੀਤੀ?", "pa": "ਹੀਰ-ਰਾਂਝਾ — ਕਿਸ ਨੇ ਲਿਖਿਆ?", "en": "Who wrote the legend of Heer-Ranjha?"}, "back": {"hi": "ਵਾਰਿਸ ਸ਼ਾਹ (18ਵੀਂ ਸਦੀ)", "pa": "ਵਾਰਿਸ ਸ਼ਾਹ", "en": "Waris Shah (18th century)"}}
+    ],
+    "questions": [
+      {
+        "id": "clerk-pgc-q1",
+        "text": {"hi": "ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ ਕਿਸ ਗੁਰੂ ਨੇ ਕੀਤੀ?", "pa": "ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ — ਕਿਹੜੇ ਗੁਰੂ?", "en": "Which Guru compiled the Adi Granth?"},
+        "options": {"hi": ["ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ", "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ", "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ"], "pa": ["ਗੁਰੂ ਨਾਨਕ", "ਗੁਰੂ ਅਰਜਨ", "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ", "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ"], "en": ["Guru Nanak Dev Ji", "Guru Arjan Dev Ji", "Guru Tegh Bahadur Ji", "Guru Gobind Singh Ji"]},
+        "answer": 1,
+        "explanation": {"hi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ (5ਵੇਂ ਗੁਰੂ) ਨੇ 1604 ਵਿੱਚ ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ ਕੀਤੀ ਅਤੇ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਵਿੱਚ ਸਥਾਪਿਤ ਕੀਤਾ।", "pa": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ, 1604।", "en": "Guru Arjan Dev Ji (5th Guru) compiled the Adi Granth in 1604 and installed it in Harmandir Sahib, Amritsar."}
+      },
+      {
+        "id": "clerk-pgc-q2",
+        "text": {"hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਦਿਨ ਹੋਈ?", "pa": "ਖ਼ਾਲਸਾ ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਤਿਉਹਾਰ ਤੇ?", "en": "On which festival was the Khalsa Panth founded?"},
+        "options": {"hi": ["ਲੋਹੜੀ", "ਦੀਵਾਲੀ", "ਵਿਸਾਖੀ", "ਹੋਲਾ ਮਹੱਲਾ"], "pa": ["ਲੋਹੜੀ", "ਦੀਵਾਲੀ", "ਵਿਸਾਖੀ", "ਹੋਲਾ ਮਹੱਲਾ"], "en": ["Lohri", "Diwali", "Vaisakhi", "Hola Mahalla"]},
+        "answer": 2,
+        "explanation": {"hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ 1699 ਦੀ ਵਿਸਾਖੀ ਤੇ ਆਨੰਦਪੁਰ ਸਾਹਿਬ ਵਿੱਚ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨੇ ਕੀਤੀ।", "pa": "ਵਿਸਾਖੀ 1699, ਆਨੰਦਪੁਰ ਸਾਹਿਬ।", "en": "The Khalsa Panth was founded on Vaisakhi 1699 at Anandpur Sahib by Guru Gobind Singh Ji."}
+      },
+      {
+        "id": "clerk-pgc-q3",
+        "text": {"hi": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ ਨੇ ਕਿਹੜੇ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ ਰੱਖੀ?", "pa": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ — ਕਿਹੜਾ ਸ਼ਹਿਰ?", "en": "Which city did Guru Ram Das Ji found?"},
+        "options": {"hi": ["ਅੰਮ੍ਰਿਤਸਰ", "ਲਾਹੌਰ", "ਆਨੰਦਪੁਰ ਸਾਹਿਬ", "ਪਟਿਆਲਾ"], "pa": ["ਅੰਮ੍ਰਿਤਸਰ", "ਲਾਹੌਰ", "ਆਨੰਦਪੁਰ", "ਪਟਿਆਲਾ"], "en": ["Amritsar", "Lahore", "Anandpur Sahib", "Patiala"]},
+        "answer": 0,
+        "explanation": {"hi": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ (4ਵੇਂ ਗੁਰੂ) ਨੇ 1577 ਵਿੱਚ ਅੰਮ੍ਰਿਤਸਰ ਦੀ ਨੀਂਹ ਰੱਖੀ। ਪਹਿਲਾਂ ਇਸ ਨੂੰ ਰਾਮਦਾਸਪੁਰ ਕਿਹਾ ਜਾਂਦਾ ਸੀ।", "pa": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ, ਅੰਮ੍ਰਿਤਸਰ, 1577।", "en": "Guru Ram Das Ji (4th Guru) founded Amritsar in 1577. It was initially called Ramdaspura."}
+      },
+      {
+        "id": "clerk-pgc-q4",
+        "text": {"hi": "'ਹਿੰਦ ਦੀ ਚਾਦਰ' ਕਿਹੜੇ ਗੁਰੂ ਨੂੰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?", "pa": "'ਹਿੰਦ ਦੀ ਚਾਦਰ'?", "en": "Which Guru is called 'Hind di Chadar' (Shield of India)?"},
+        "options": {"hi": ["ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ", "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ", "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ"], "pa": ["ਗੁਰੂ ਅਮਰਦਾਸ", "ਗੁਰੂ ਅਰਜਨ ਦੇਵ", "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ", "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ"], "en": ["Guru Amar Das Ji", "Guru Arjan Dev Ji", "Guru Tegh Bahadur Ji", "Guru Gobind Singh Ji"]},
+        "answer": 2,
+        "explanation": {"hi": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ ਨੂੰ 'ਹਿੰਦ ਦੀ ਚਾਦਰ' ਕਿਹਾ ਜਾਂਦਾ ਹੈ — ਉਨ੍ਹਾਂ ਨੇ 1675 ਵਿੱਚ ਕਸ਼ਮੀਰੀ ਪੰਡਿਤਾਂ ਦੀ ਰੱਖਿਆ ਲਈ ਸ਼ਹੀਦੀ ਦਿੱਤੀ।", "pa": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ = ਹਿੰਦ ਦੀ ਚਾਦਰ।", "en": "Guru Tegh Bahadur Ji — he sacrificed his life in 1675 to protect the rights of Kashmiri Pandits (to practise their religion), earning the title 'Shield of India'."}
+      },
+      {
+        "id": "clerk-pgc-q5",
+        "text": {"hi": "ਭੰਗੜਾ ਕਿਸ ਤਿਉਹਾਰ ਨਾਲ ਮੁੱਖ ਤੌਰ ਤੇ ਸੰਬੰਧਿਤ ਹੈ?", "pa": "ਭੰਗੜਾ — ਕਿਸ ਤਿਉਹਾਰ ਨਾਲ?", "en": "Bhangra dance is mainly associated with which festival?"},
+        "options": {"hi": ["ਲੋਹੜੀ", "ਵਿਸਾਖੀ", "ਤੀਆਂ", "ਮਾਘੀ"], "pa": ["ਲੋਹੜੀ", "ਵਿਸਾਖੀ", "ਤੀਆਂ", "ਮਾਘੀ"], "en": ["Lohri", "Vaisakhi", "Teeyan", "Maghi"]},
+        "answer": 1,
+        "explanation": {"hi": "ਭੰਗੜਾ ਵਿਸਾਖੀ ਦੇ ਤਿਉਹਾਰ ਨਾਲ ਮੁੱਖ ਤੌਰ ਤੇ ਸੰਬੰਧਿਤ ਹੈ — ਇਹ ਫਸਲ ਕੱਟਣ ਦੀ ਖੁਸ਼ੀ ਵਿੱਚ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਗਿੱਧਾ ਤੀਆਂ ਨਾਲ ਜ਼ਿਆਦਾ ਸੰਬੰਧਿਤ ਹੈ।", "pa": "ਭੰਗੜਾ = ਵਿਸਾਖੀ। ਗਿੱਧਾ = ਤੀਆਂ।", "en": "Bhangra is primarily associated with Vaisakhi — performed to celebrate the harvest. Gidda is more associated with Teeyan (girls' festival)."}
+      },
+      {
+        "id": "clerk-pgc-q6",
+        "text": {"hi": "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਕਿਹੜੀ ਸਮਾਜਿਕ ਬੁਰਾਈ ਦਾ ਵਿਰੋਧ ਕੀਤਾ?", "pa": "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ — ਕਿਹੜੀ ਬੁਰਾਈ?", "en": "Which social evil did Guru Amar Das Ji oppose?"},
+        "options": {"hi": ["ਬਾਲ ਵਿਆਹ", "ਸਤੀ ਪ੍ਰਥਾ", "ਜਾਤੀਵਾਦ", "ਦਹੇਜ ਪ੍ਰਥਾ"], "pa": ["ਬਾਲ ਵਿਆਹ", "ਸਤੀ ਪ੍ਰਥਾ", "ਜਾਤੀਵਾਦ", "ਦਹੇਜ"], "en": ["Child marriage", "Sati Pratha (widow burning)", "Casteism", "Dowry system"]},
+        "answer": 1,
+        "explanation": {"hi": "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ (3ਵੇਂ ਗੁਰੂ) ਨੇ ਸਤੀ ਪ੍ਰਥਾ ਦਾ ਡਟ ਕੇ ਵਿਰੋਧ ਕੀਤਾ ਅਤੇ ਲੰਗਰ-ਪੰਗਤ ਰਾਹੀਂ ਜਾਤੀ ਵਿਤਕਰੇ ਨੂੰ ਵੀ ਚੁਣੌਤੀ ਦਿੱਤੀ।", "pa": "ਗੁਰੂ ਅਮਰਦਾਸ = ਸਤੀ ਪ੍ਰਥਾ ਵਿਰੋਧ।", "en": "Guru Amar Das Ji (3rd Guru) actively opposed Sati Pratha (widow immolation) and also challenged caste discrimination through the langar-pangat system."}
+      },
+      {
+        "id": "clerk-pgc-q7",
+        "text": {"hi": "ਹੋਲਾ ਮਹੱਲਾ ਕਿੱਥੇ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ?", "pa": "ਹੋਲਾ ਮਹੱਲਾ ਕਿੱਥੇ?", "en": "Where is Hola Mahalla celebrated?"},
+        "options": {"hi": ["ਅੰਮ੍ਰਿਤਸਰ", "ਆਨੰਦਪੁਰ ਸਾਹਿਬ", "ਪਟਿਆਲਾ", "ਲੁਧਿਆਣਾ"], "pa": ["ਅੰਮ੍ਰਿਤਸਰ", "ਆਨੰਦਪੁਰ ਸਾਹਿਬ", "ਪਟਿਆਲਾ", "ਲੁਧਿਆਣਾ"], "en": ["Amritsar", "Anandpur Sahib", "Patiala", "Ludhiana"]},
+        "answer": 1,
+        "explanation": {"hi": "ਹੋਲਾ ਮਹੱਲਾ ਆਨੰਦਪੁਰ ਸਾਹਿਬ ਵਿੱਚ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ। ਇਸ ਦੀ ਸ਼ੁਰੂਆਤ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨੇ ਕੀਤੀ ਸੀ।", "pa": "ਹੋਲਾ ਮਹੱਲਾ = ਆਨੰਦਪੁਰ ਸਾਹਿਬ।", "en": "Hola Mahalla is celebrated at Anandpur Sahib. It was started by Guru Gobind Singh Ji as a day of martial arts and military demonstrations, the day after Holi."}
+      }
+    ]
+  }
+]

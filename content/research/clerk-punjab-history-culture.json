@@ -1,0 +1,96 @@
+[
+  {
+    "id": "clerk-punjab-history-culture",
+    "subject": "General",
+    "unit": "PSSSB Clerk Part B — Punjab History and Culture (17 marks)",
+    "examIds": ["clerk"],
+    "title": {
+      "hi": "पंजाब का इतिहास और संस्कृति: प्राचीन काल से स्वतंत्रता संग्राम तक",
+      "pa": "ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ ਅਤੇ ਸੱਭਿਆਚਾਰ: ਪ੍ਰਾਚੀਨ ਕਾਲ ਤੋਂ ਆਜ਼ਾਦੀ ਸੰਗਰਾਮ ਤੱਕ",
+      "en": "Punjab History and Culture: Ancient Times to the Freedom Struggle"
+    },
+    "level": "PSSSB Clerk Part B — Punjab History & Culture (17 marks, negative marking 0.25 — as reported)",
+    "sources": [
+      {
+        "title": "PSSSB Clerk Advt. 02/2026 — Part B Punjab History syllabus (secondary source)",
+        "url": "https://sssb.punjab.gov.in/",
+        "note": "Pattern as reported. Verify against official PDF. Content drawn from standard Punjab history sources (PSEB/NCERT)."
+      },
+      {
+        "title": "PSEB Social Studies Class 8-10 — Punjab History chapters",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB textbooks — verified source for Punjab history at this level."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "प्राचीन पंजाब: सिंधु सभ्यता से मुगलों तक", "pa": "ਪ੍ਰਾਚੀਨ ਪੰਜਾਬ: ਸਿੰਧੂ ਸੱਭਿਅਤਾ ਤੋਂ ਮੁਗ਼ਲਾਂ ਤੱਕ", "en": "Ancient Punjab: Indus Civilisation to the Mughals"},
+        "text": {
+          "hi": "**ਭੌਤਿਕ ਭੂਗੋਲ**: ਪੰਜਾਬ ਦੀਆਂ ਮੁੱਖ ਭੂਮੀਆਂ — ਮੈਦਾਨੀ ਖੇਤਰ (ਸਤਲੁਜ-ਰਾਵੀ-ਬਿਆਸ ਵਿੱਚਕਾਰ), ਸ਼ਿਵਾਲਿਕ ਪਹਾੜੀਆਂ (ਉੱਤਰ-ਪੂਰਬ), ਰੇਤਲੀ ਭੂਮੀ (ਦੱਖਣ-ਪੱਛਮ)\n\n**ਸਿੰਧੂ ਸੱਭਿਅਤਾ (2500-1900 BCE)**:\n- ਰੋਪੜ (ਰੁਪਨਗਰ), ਸੰਘੋਲ — ਪੰਜਾਬ ਵਿੱਚ ਪ੍ਰਮੁੱਖ ਸਥਾਨ\n- ਹੜੱਪਾ ਸ਼ਹਿਰ ਮੌਂਟਗੋਮਰੀ ਜ਼ਿਲ੍ਹੇ ਵਿੱਚ (ਹੁਣ ਪਾਕਿਸਤਾਨ)\n\n**ਵੈਦਿਕ ਕਾਲ**: ਰਿਗਵੇਦ ਵਿੱਚ ਸਪਤ-ਸਿੰਧੂ (ਸੱਤ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ) ਵਜੋਂ ਜ਼ਿਕਰ\n\n**ਅਫ਼ਗਾਨ ਅਤੇ ਮੁਗ਼ਲ ਰਾਜ**:\n- ਮਹਿਮੂਦ ਗਜ਼ਨਵੀ ਦੇ 17 ਹਮਲੇ (997-1027 CE); ਸੋਮਨਾਥ ਲੁੱਟ\n- ਬਾਬਰ 1526 ਵਿੱਚ ਪਾਣੀਪਤ; ਅਕਬਰ ਦੇ ਰਾਜ ਵਿੱਚ ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ\n- ਔਰੰਗਜ਼ੇਬ ਦੇ ਸਮੇਂ ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ ਦੀ ਸ਼ਹੀਦੀ (1675)\n\n**ਭਗਤੀ ਅਤੇ ਸੂਫ਼ੀ ਲਹਿਰ**:\n- **ਭਗਤੀ**: ਕਬੀਰ, ਰਵਿਦਾਸ, ਨਾਮਦੇਵ — ਜਾਤ-ਪਾਤ ਵਿਰੁੱਧ\n- **ਸੂਫ਼ੀ**: ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ (ਕਸੂਰ), ਸ਼ਾਹ ਹੁਸੈਨ (ਲਾਹੌਰ), ਵਾਰਿਸ ਸ਼ਾਹ — ਪਿਆਰ ਅਤੇ ਭਾਈਚਾਰੇ ਦੀ ਸਿੱਖਿਆ",
+          "pa": "ਸਿੰਧੂ ਸੱਭਿਅਤਾ: ਰੋਪੜ, ਹੜੱਪਾ। ਮੁਗ਼ਲ: ਬਾਬਰ 1526। ਭਗਤੀ: ਕਬੀਰ, ਰਵਿਦਾਸ। ਸੂਫ਼ੀ: ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ।",
+          "en": "Physical geography: plains between Sutlej-Ravi-Beas; Shivalik Hills (NE); sandy terrain (SW).\n\nIndus Civilisation (2500-1900 BCE): Ropar (Rupnagar) and Sanghol in Punjab. Harappa in present Pakistan.\n\nVedic Age: Punjab mentioned as Sapta-Sindhu (land of seven rivers) in Rigveda.\n\nAfghan/Mughal rule: Mahmud Ghazni's raids (997-1027 CE). Babur — first Battle of Panipat 1526. Aurangzeb — execution of Guru Tegh Bahadur 1675.\n\nBhakti movement: Kabir, Ravidas, Namdev — opposed caste discrimination. Sufi saints: Bulleh Shah (Kasur), Shah Hussain (Lahore), Waris Shah — universal love and brotherhood."
+        }
+      },
+      {
+        "heading": {"hi": "सिख मिसलें, महाराजा रणजीत सिंह और एंग्लो-सिख युद्ध", "pa": "ਸਿੱਖ ਮਿਸਲਾਂ, ਰਣਜੀਤ ਸਿੰਘ ਅਤੇ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ", "en": "Sikh Misls, Maharaja Ranjit Singh and Anglo-Sikh Wars"},
+        "text": {
+          "hi": "**ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ** (1670-1716): ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਦੇ ਹੁਕਮ ਤੇ ਪੰਜਾਬ ਵਿੱਚ ਮੁਗ਼ਲ ਤਾਕਤ ਵਿਰੁੱਧ ਲੜਿਆ; ਸਰਹੰਦ ਫਤਿਹ ਕੀਤਾ (1710)\n\n**ਸਿੱਖ ਮਿਸਲਾਂ** (1700s): ਮੁਗ਼ਲ ਸੱਤਾ ਦੇ ਕਮਜ਼ੋਰ ਹੋਣ ਤੋਂ ਬਾਅਦ 12 ਮਿਸਲਾਂ ਬਣੀਆਂ; ਸ਼ੁਕਰਚੱਕੀਆ ਮਿਸਲ (ਰਣਜੀਤ ਸਿੰਘ ਦੀ) ਸਭ ਤੋਂ ਸ਼ਕਤੀਸ਼ਾਲੀ ਬਣੀ\n\n**ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ** (1780-1839):\n- 1799: ਲਾਹੌਰ ਫਤਿਹ; 1801: ਮਹਾਰਾਜਾ ਦਾ ਖਿਤਾਬ\n- ਇਲਾਕਾ: ਕਾਬੁਲ ਤੋਂ ਤਿੱਬਤ ਤੱਕ\n- ਕੋਹਿਨੂਰ ਹੀਰਾ ਪ੍ਰਾਪਤ ਕੀਤਾ\n- 1839 ਵਿੱਚ ਮੌਤ ਤੋਂ ਬਾਅਦ ਰਾਜ ਕਮਜ਼ੋਰ\n\n**ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ**:\n- ਪਹਿਲਾ (1845-46): ਲਾਹੌਰ ਸੰਧੀ → ਕਸ਼ਮੀਰ ਅੰਗਰੇਜ਼ਾਂ ਨੂੰ; ਦੋ-ਲੱਖ ਰੁਪਏ ਮੁਆਵਜ਼ਾ\n- ਦੂਜਾ (1848-49): ਪੰਜਾਬ ਅੰਗਰੇਜ਼ੀ ਸਾਮਰਾਜ ਵਿੱਚ ਮਿਲਾਇਆ",
+          "pa": "ਬੰਦਾ ਸਿੰਘ: ਸਰਹੰਦ 1710। ਰਣਜੀਤ ਸਿੰਘ: ਲਾਹੌਰ 1799, ਮਹਾਰਾਜਾ 1801। ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ 1845, 1849।",
+          "en": "Banda Singh Bahadur (1670-1716): fought Mughal power in Punjab on Guru Gobind Singh Ji's instruction; captured Sirhind (1710).\n\nSikh Misls (12 confederacies, 1700s): Shukarcharkhia Misl (Ranjit Singh's) became dominant.\n\nMaharaja Ranjit Singh (1780-1839): captured Lahore (1799), became Maharaja (1801); controlled territory from Kabul to Tibet; obtained Kohinoor diamond. Kingdom weakened after 1839.\n\nAnglo-Sikh Wars: 1st (1845-46) → Treaty of Lahore, Kashmir transferred; 2nd (1848-49) → Punjab annexed by British East India Company."
+        }
+      },
+      {
+        "heading": {"hi": "पंजाब के स्वतंत्रता संग्राम", "pa": "ਪੰਜਾਬ ਦੇ ਆਜ਼ਾਦੀ ਸੰਗਰਾਮ", "en": "Punjab's Freedom Movements"},
+        "text": {
+          "hi": "**ਕੂਕਾ ਲਹਿਰ (Namdhari Movement)**: ਬਾਲਕ ਸਿੰਘ ਅਤੇ ਰਾਮ ਸਿੰਘ; ਅੰਗਰੇਜ਼ੀ ਮਾਲ ਬਾਈਕਾਟ; ਗਊ-ਰੱਖਿਆ\n\n**ਗ਼ਦਰ ਪਾਰਟੀ (1913)**: ਲਾਲਾ ਹਰਦਿਆਲ ਵੱਲੋਂ ਸੈਨ ਫਰਾਂਸਿਸਕੋ ਵਿੱਚ ਸਥਾਪਿਤ; ਪ੍ਰਵਾਸੀ ਪੰਜਾਬੀਆਂ ਦੀ ਲਹਿਰ; ਭਾਰਤ ਵਿੱਚ ਕ੍ਰਾਂਤੀ ਲਿਆਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ (1915 ਅਸਫਲ)\n\n**ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਤਲੇਆਮ (13 ਅਪ੍ਰੈਲ 1919)**:\n- ਜਨਰਲ ਡਾਇਰ ਦਾ ਹੁਕਮ; ਵਿਸਾਖੀ ਵਾਲੇ ਦਿਨ ਅੰਮ੍ਰਿਤਸਰ\n- ਰਾਓਲਟ ਐਕਟ ਵਿਰੁੱਧ ਰੋਸ ਵਜੋਂ\n- ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ ਨੇ 1940 ਵਿੱਚ ਮਾਈਕਲ ਓ'ਡਵਾਇਰ ਨੂੰ ਲੰਡਨ ਵਿੱਚ ਗੋਲੀ ਮਾਰੀ\n\n**ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ (1920s)**: ਅਕਾਲੀ ਦਲ; SGPC ਦੀ ਸਥਾਪਨਾ 1920\n\n**ਬੱਬਰ ਅਕਾਲੀ ਲਹਿਰ**: ਮਸਤ ਸਿੰਘ ਦੀ ਅਗਵਾਈ; ਸ਼ਹੀਦੀ\n\n**ਭਗਤ ਸਿੰਘ** (1907-1931): ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਤੋਂ ਪ੍ਰੇਰਿਤ; ਅਸੈਂਬਲੀ ਬੰਬ ਧਮਾਕਾ (1929); 23 ਮਾਰਚ 1931 ਨੂੰ ਸ਼ਹੀਦੀ",
+          "pa": "ਕੂਕਾ ਲਹਿਰ: ਰਾਮ ਸਿੰਘ। ਗ਼ਦਰ 1913: ਲਾਲਾ ਹਰਦਿਆਲ। ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼: 13 ਅਪ੍ਰੈਲ 1919, ਜਨਰਲ ਡਾਇਰ। ਭਗਤ ਸਿੰਘ: 23 ਮਾਰਚ 1931।",
+          "en": "Kuka (Namdhari) Movement: Ram Singh; boycott of British goods; cow protection.\n\nGhadar Party (1913): founded in San Francisco by Lala Har Dayal; diaspora Punjabis; attempted armed revolt 1915 (failed).\n\nJallianwala Bagh massacre (13 April 1919): General Dyer's order; Vaisakhi crowd protesting Rowlatt Act; hundreds killed. Shaheed Udham Singh avenged it by shooting Michael O'Dwyer in London (1940).\n\nGurdwara Reform Movement (1920s): Akali Dal; SGPC founded 1920. Babbar Akali movement: armed resistance.\n\nBhagat Singh (1907-1931): inspired by Jallianwala Bagh; Assembly bombing 1929; hanged 23 March 1931."
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਤਲੇਆਮ ਕਦੋਂ ਹੋਇਆ?", "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਦੋਂ?", "en": "When was the Jallianwala Bagh massacre?"}, "back": {"hi": "13 ਅਪ੍ਰੈਲ 1919 (ਵਿਸਾਖੀ), ਜਨਰਲ ਡਾਇਰ", "pa": "13 ਅਪ੍ਰੈਲ 1919, ਜਨਰਲ ਡਾਇਰ", "en": "13 April 1919 (Vaisakhi), ordered by General Dyer"}},
+      {"front": {"hi": "ਗ਼ਦਰ ਪਾਰਟੀ ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਨੇ ਅਤੇ ਕਿੱਥੇ ਕੀਤੀ?", "pa": "ਗ਼ਦਰ ਪਾਰਟੀ?", "en": "Who founded the Ghadar Party and where?"}, "back": {"hi": "ਲਾਲਾ ਹਰਦਿਆਲ, ਸੈਨ ਫਰਾਂਸਿਸਕੋ (1913)", "pa": "ਲਾਲਾ ਹਰਦਿਆਲ, ਸੈਨ ਫਰਾਂਸਿਸਕੋ, 1913", "en": "Lala Har Dayal, San Francisco, 1913"}},
+      {"front": {"hi": "ਭਗਤ ਸਿੰਘ ਦੀ ਸ਼ਹੀਦੀ ਕਦੋਂ ਹੋਈ?", "pa": "ਭਗਤ ਸਿੰਘ ਦੀ ਸ਼ਹੀਦੀ?", "en": "When was Bhagat Singh martyred?"}, "back": {"hi": "23 ਮਾਰਚ 1931", "pa": "23 ਮਾਰਚ 1931", "en": "23 March 1931"}},
+      {"front": {"hi": "ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਨੇ ਕਿਹੜਾ ਸ਼ਹਿਰ ਫਤਿਹ ਕੀਤਾ?", "pa": "ਬੰਦਾ ਸਿੰਘ — ਕਿਹੜਾ ਸ਼ਹਿਰ?", "en": "Which city did Banda Singh Bahadur capture?"}, "back": {"hi": "ਸਰਹੰਦ (1710)", "pa": "ਸਰਹੰਦ, 1710", "en": "Sirhind/Sarhind (1710)"}},
+      {"front": {"hi": "SGPC ਦੀ ਸਥਾਪਨਾ ਕਦੋਂ ਹੋਈ?", "pa": "SGPC ਕਦੋਂ?", "en": "When was SGPC founded?"}, "back": {"hi": "1920 (ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ ਦੌਰਾਨ)", "pa": "1920", "en": "1920 (during Gurdwara Reform Movement)"}}
+    ],
+    "questions": [
+      {
+        "id": "clerk-phc-q1",
+        "text": {"hi": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਤਲੇਆਮ ਕਿਸ ਐਕਟ ਦੇ ਵਿਰੋਧ ਵਿੱਚ ਹੋਈਆਂ ਇਕੱਤਰਤਾ ਤੇ ਹੋਇਆ?", "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ — ਕਿਸ ਐਕਟ ਵਿਰੁੱਧ?", "en": "The Jallianwala Bagh massacre occurred at a protest against which Act?"},
+        "options": {"hi": ["ਇਲਬਰਟ ਬਿੱਲ", "ਰਾਓਲਟ ਐਕਟ", "ਮਿੰਟੋ-ਮਾਰਲੇ ਸੁਧਾਰ", "ਭਾਰਤ ਸਰਕਾਰ ਐਕਟ 1919"], "pa": ["ਇਲਬਰਟ ਬਿੱਲ", "ਰਾਓਲਟ ਐਕਟ", "ਮਿੰਟੋ-ਮਾਰਲੇ", "ਭਾਰਤ ਸਰਕਾਰ ਐਕਟ"], "en": ["Ilbert Bill", "Rowlatt Act", "Minto-Morley Reforms", "Government of India Act 1919"]},
+        "answer": 1,
+        "explanation": {"hi": "ਰਾਓਲਟ ਐਕਟ (1919) ਵਿਰੁੱਧ ਰੋਸ ਵਿੱਚ 13 ਅਪ੍ਰੈਲ 1919 ਨੂੰ ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਵਿੱਚ ਇਕੱਤਰਤਾ ਹੋਈ। ਜਨਰਲ ਡਾਇਰ ਨੇ ਗੋਲੀਬਾਰੀ ਦਾ ਹੁਕਮ ਦਿੱਤਾ।", "pa": "ਰਾਓਲਟ ਐਕਟ ਵਿਰੁੱਧ।", "en": "The gathering on 13 April 1919 was protesting the Rowlatt Act. General Dyer ordered the firing without warning."}
+      },
+      {
+        "id": "clerk-phc-q2",
+        "text": {"hi": "ਗ਼ਦਰ ਪਾਰਟੀ ਦੀ ਸਥਾਪਨਾ ਕਿੱਥੇ ਹੋਈ?", "pa": "ਗ਼ਦਰ ਪਾਰਟੀ ਕਿੱਥੇ?", "en": "Where was the Ghadar Party founded?"},
+        "options": {"hi": ["ਲੰਡਨ", "ਕਲਕੱਤਾ", "ਸੈਨ ਫਰਾਂਸਿਸਕੋ", "ਲਾਹੌਰ"], "pa": ["ਲੰਡਨ", "ਕਲਕੱਤਾ", "ਸੈਨ ਫਰਾਂਸਿਸਕੋ", "ਲਾਹੌਰ"], "en": ["London", "Calcutta", "San Francisco", "Lahore"]},
+        "answer": 2,
+        "explanation": {"hi": "ਗ਼ਦਰ ਪਾਰਟੀ ਦੀ ਸਥਾਪਨਾ 1913 ਵਿੱਚ ਅਮਰੀਕਾ ਦੇ ਸੈਨ ਫਰਾਂਸਿਸਕੋ ਵਿੱਚ ਲਾਲਾ ਹਰਦਿਆਲ ਨੇ ਕੀਤੀ।", "pa": "ਸੈਨ ਫਰਾਂਸਿਸਕੋ, ਲਾਲਾ ਹਰਦਿਆਲ, 1913।", "en": "Ghadar Party was founded in San Francisco, USA in 1913 by Lala Har Dayal, primarily mobilising diaspora Punjabi workers."}
+      },
+      {
+        "id": "clerk-phc-q3",
+        "text": {"hi": "ਭਗਤ ਸਿੰਘ ਨੇ ਕਿਸਦੇ ਨਾਲ 1929 ਵਿੱਚ ਅਸੈਂਬਲੀ ਵਿੱਚ ਬੰਬ ਸੁੱਟਿਆ?", "pa": "ਭਗਤ ਸਿੰਘ ਨਾਲ ਅਸੈਂਬਲੀ ਬੰਬ?", "en": "Who threw the bomb in the Assembly along with Bhagat Singh in 1929?"},
+        "options": {"hi": ["ਸੁਖਦੇਵ", "ਰਾਜਗੁਰੂ", "ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ", "ਚੰਦਰਸ਼ੇਖਰ ਆਜ਼ਾਦ"], "pa": ["ਸੁਖਦੇਵ", "ਰਾਜਗੁਰੂ", "ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ", "ਚੰਦਰਸ਼ੇਖਰ ਆਜ਼ਾਦ"], "en": ["Sukhdev", "Rajguru", "Batukeshwar Dutt", "Chandrashekhar Azad"]},
+        "answer": 2,
+        "explanation": {"hi": "8 ਅਪ੍ਰੈਲ 1929 ਨੂੰ ਭਗਤ ਸਿੰਘ ਅਤੇ ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ ਨੇ ਕੇਂਦਰੀ ਅਸੈਂਬਲੀ ਵਿੱਚ ਬੰਬ ਸੁੱਟਿਆ। ਕਿਸੇ ਨੂੰ ਮਾਰਨਾ ਮਕਸਦ ਨਹੀਂ ਸੀ — 'ਬਹਿਰਿਆਂ ਨੂੰ ਸੁਣਾਉਣ' ਲਈ।", "pa": "ਭਗਤ ਸਿੰਘ + ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ, 8 ਅਪ੍ਰੈਲ 1929।", "en": "On 8 April 1929, Bhagat Singh and Batukeshwar Dutt threw bombs in the Central Assembly. The purpose was symbolic — 'to make the deaf hear' — not to kill."}
+      },
+      {
+        "id": "clerk-phc-q4",
+        "text": {"hi": "ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ ਕਿਹੜੇ ਸ਼ਹਿਰ ਨਾਲ ਸੰਬੰਧਿਤ ਸਨ?", "pa": "ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ ਕਿੱਥੋਂ?", "en": "With which city is Bulleh Shah associated?"},
+        "options": {"hi": ["ਅੰਮ੍ਰਿਤਸਰ", "ਕਸੂਰ", "ਲਾਹੌਰ", "ਮੁਲਤਾਨ"], "pa": ["ਅੰਮ੍ਰਿਤਸਰ", "ਕਸੂਰ", "ਲਾਹੌਰ", "ਮੁਲਤਾਨ"], "en": ["Amritsar", "Kasur", "Lahore", "Multan"]},
+        "answer": 1,
+        "explanation": {"hi": "ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ (1680-1757) ਕਸੂਰ (ਹੁਣ ਪਾਕਿਸਤਾਨ) ਨਾਲ ਸੰਬੰਧਿਤ ਸਨ। ਉਹ ਪੰਜਾਬ ਦੇ ਮਸ਼ਹੂਰ ਸੂਫ਼ੀ ਕਵੀ ਸਨ।", "pa": "ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ = ਕਸੂਰ।", "en": "Bulleh Shah (1680-1757) is associated with Kasur (present-day Pakistan). He is one of Punjab's greatest Sufi poets, writing in Punjabi on love, spirituality and social equality."}
+      },
+      {
+        "id": "clerk-phc-q5",
+        "text": {"hi": "SGPC ਦੀ ਸਥਾਪਨਾ ਕਿਹੜੀ ਲਹਿਰ ਦੌਰਾਨ ਹੋਈ?", "pa": "SGPC ਕਿਹੜੀ ਲਹਿਰ ਵਿੱਚ?", "en": "SGPC was established during which movement?"},
+        "options": {"hi": ["ਗ਼ਦਰ ਲਹਿਰ", "ਕੂਕਾ ਲਹਿਰ", "ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ", "ਅਸਹਿਯੋਗ ਲਹਿਰ"], "pa": ["ਗ਼ਦਰ", "ਕੂਕਾ", "ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ", "ਅਸਹਿਯੋਗ"], "en": ["Ghadar Movement", "Kuka Movement", "Gurdwara Reform Movement", "Non-Cooperation Movement"]},
+        "answer": 2,
+        "explanation": {"hi": "SGPC (Shiromani Gurdwara Parbandhak Committee) ਦੀ ਸਥਾਪਨਾ 1920 ਵਿੱਚ ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ ਦੌਰਾਨ ਹੋਈ।", "pa": "SGPC 1920, ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ।", "en": "SGPC (Shiromani Gurdwara Parbandhak Committee) was established in 1920 during the Gurdwara Reform Movement to manage historical Sikh shrines taken back from Mahants."}
+      }
+    ]
+  }
+]

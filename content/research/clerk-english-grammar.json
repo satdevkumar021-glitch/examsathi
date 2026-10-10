@@ -1,0 +1,136 @@
+[
+  {
+    "id": "clerk-english-grammar",
+    "subject": "English",
+    "unit": "PSSSB Clerk Part B — English Language (12 marks)",
+    "examIds": ["clerk"],
+    "title": {
+      "hi": "अंग्रेजी व्याकरण: वाच्य, कथन, काल और सामान्य त्रुटियाँ",
+      "pa": "ਅੰਗਰੇਜ਼ੀ ਵਿਆਕਰਨ: ਵਾਚ, ਕਥਨ, ਕਾਲ ਅਤੇ ਆਮ ਗ਼ਲਤੀਆਂ",
+      "en": "English Grammar: Voice, Narration, Tenses and Common Errors"
+    },
+    "level": "PSSSB Clerk Part B — English (12 marks, negative marking 0.25 — as reported)",
+    "sources": [
+      {
+        "title": "PSSSB Clerk Advt. 02/2026 — Part B English syllabus (secondary source)",
+        "url": "https://sssb.punjab.gov.in/",
+        "note": "Secondary source. Topics are standard English grammar as covered in competitive exams (SSC/PSSSB pattern)."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "वाच्य परिवर्तन (Active and Passive Voice)", "pa": "ਵਾਚ ਬਦਲਾਅ (Active and Passive Voice)", "en": "Active and Passive Voice"},
+        "text": {
+          "hi": "**ਸਕਿਰਿਆ (Active)**: ਕਰਤਾ ਕੰਮ ਕਰਦਾ ਹੈ → **ਨਿਸਕਿਰਿਆ (Passive)**: ਕਰਤਾ ਤੇ ਕੰਮ ਹੁੰਦਾ ਹੈ\n\n**ਬਣਾਉਣ ਦਾ ਨਿਯਮ**:\n- Object → Subject\n- Subject → by + Object\n- Verb → be + past participle\n\n**Tense-wise structure**:\n| Tense | Active | Passive |\n|-------|--------|----------|\n| Simple Present | She writes | is/am/are + written |\n| Simple Past | She wrote | was/were + written |\n| Simple Future | She will write | will be + written |\n| Present Continuous | She is writing | is/am/are + being + written |\n| Present Perfect | She has written | has/have + been + written |\n\n**ਉਦਾਹਰਨਾਂ**:\n- Active: Ram writes a letter. → Passive: **A letter is written by Ram.**\n- Active: They built this house. → Passive: **This house was built by them.**\n- Active: She is cooking food. → Passive: **Food is being cooked by her.**",
+          "pa": "Active → Passive: Object→Subject, Subject→by+Object, Verb→be+PP। Ram writes→Letter is written by Ram।",
+          "en": "**Active**: subject performs action. **Passive**: subject receives action.\n\nRule: Object → Subject; Subject → 'by' phrase; Verb → be + past participle.\n\nExamples:\n- Ram writes a letter → **A letter is written by Ram.**\n- They built this house → **This house was built by them.**\n- She is cooking food → **Food is being cooked by her.**\n\nNote: Imperative voice uses 'Let' in passive: 'Close the door' → **'Let the door be closed.'**"
+        }
+      },
+      {
+        "heading": {"hi": "कथन परिवर्तन (Direct to Indirect Speech)", "pa": "ਕਥਨ ਬਦਲਾਅ (Direct/Indirect Speech)", "en": "Direct and Indirect Speech"},
+        "text": {
+          "hi": "**ਨਿਯਮ** (Direct → Indirect):\n1. Inverted commas ਹਟਾਓ; conjunction ਜੋੜੋ (that/if/to)\n2. Reporting verb ਅਤੇ tense ਦੇ ਹਿਸਾਬ ਨਾਲ tense ਬਦਲੋ (backshift)\n3. Pronouns ਬਦਲੋ\n4. 'This/here/now' → 'that/there/then'\n\n**Tense Backshift**:\n| Direct | Indirect |\n|--------|----------|\n| Present Simple | Past Simple |\n| Past Simple | Past Perfect |\n| Present Perfect | Past Perfect |\n| will | would |\n| can | could |\n| is/are | was/were |\n\n**ਉਦਾਹਰਨਾਂ**:\n- He said, **\"I am happy.\"** → He said that **he was happy.**\n- She said, **\"I will come.\"** → She said that **she would come.**\n- He asked, **\"Are you tired?\"** → He asked **if I was tired.**\n\n**ਹੁਕਮੀ ਵਾਕ** (Imperative): reporting verb → told/asked/ordered; verb → infinitive\n- He said, **\"Close the window.\"** → He told me **to close the window.**",
+          "pa": "Direct→Indirect: inverted commas ਹਟਾਓ; tense ਪਿੱਛੇ ਖਿਸਕੋ; pronoun ਬਦਲੋ। I am→he was। will→would।",
+          "en": "**Rules** for Direct → Indirect:\n1. Remove inverted commas; add conjunction (that/if/to)\n2. Backshift tenses (present→past, will→would, can→could)\n3. Change pronouns (I→he/she, we→they)\n4. Change time/place words (now→then, here→there, today→that day)\n\n**Examples**:\n- He said, \"I am happy.\" → He said that **he was happy.**\n- She asked, \"Will you help?\" → She asked **if I would help.**\n- He said, \"Close the door.\" → He **told me to close** the door."
+        }
+      },
+      {
+        "heading": {"hi": "विशेषण और क्रियाविशेषण; अनुच्छेद; पूर्वसर्ग", "pa": "ਵਿਸ਼ੇਸ਼ਣ ਅਤੇ ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ; Articles; Prepositions", "en": "Adjectives/Adverbs, Articles and Prepositions"},
+        "text": {
+          "hi": "**Articles — a / an / the**:\n- **a**: consonant ਧੁਨੀ ਤੋਂ ਸ਼ੁਰੂ (a book, a university — /j/ sound)\n- **an**: vowel ਧੁਨੀ ਤੋਂ ਸ਼ੁਰੂ (an apple, an hour — 'h' silent)\n- **the**: specific; already known; superlatives; rivers, mountains, oceans\n\n**Common Preposition Usage**:\n- In: enclosed spaces, months, years — in the box, in July\n- On: surfaces, days — on the table, on Monday\n- At: specific time/place — at 5 pm, at the door\n- Since: point of time — since 2020\n- For: period of time — for 3 years\n- By: deadline — by Friday\n\n**Adjective vs Adverb**:\n- Adjective modifies a noun: He is a **quick** worker.\n- Adverb modifies a verb/adjective: He works **quickly**.\n- Common error: 'He runs quick.' ✗ → 'He runs **quickly**.' ✓\n\n**Synonyms/Antonyms** (frequently tested):\n| Word | Synonym | Antonym |\n|------|---------|----------|\n| Brave | Courageous | Cowardly |\n| Ancient | Old | Modern |\n| Expand | Enlarge | Contract/Shrink |\n| Genuine | Authentic | Fake |",
+          "pa": "a = ਵਿਅੰਜਨ; an = ਸਵਰ; the = ਖ਼ਾਸ। In=ਮਹੀਨਾ; On=ਦਿਨ; At=ਸਮੇਂ ਤੇ। Adjective=ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ; Adverb=-ly।",
+          "en": "**Articles**: 'a' before consonant sound; 'an' before vowel sound (an hour — 'h' silent; a university — /j/ sound); 'the' for specific/known nouns, rivers, superlatives.\n\n**Prepositions**: in (months/years/enclosed); on (surfaces/days); at (time/specific place); since (point); for (duration); by (deadline).\n\n**Adjective vs Adverb**: quick (adj) → quickly (adv). 'He runs quickly' ✓ not 'quick'.\n\n**Synonyms/Antonyms**: Brave↔Courageous/Cowardly; Ancient↔Old/Modern; Genuine↔Authentic/Fake."
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "'They built this house.' → Passive Voice?", "pa": "'They built this house.' → Passive?", "en": "'They built this house.' → Passive?"}, "back": {"hi": "'This house was built by them.'", "pa": "'This house was built by them.'", "en": "'This house was built by them.'"}},
+      {"front": {"hi": "'She said, I will come.' → Indirect Speech?", "pa": "Indirect: 'She said, I will come.'", "en": "Indirect: 'She said, I will come.'"}, "back": {"hi": "'She said that she would come.'", "pa": "'She said that she would come.'", "en": "'She said that she would come.'"}},
+      {"front": {"hi": "'an hour' या 'a hour'?", "pa": "'an hour' ਜਾਂ 'a hour'?", "en": "'an hour' or 'a hour'?"}, "back": {"hi": "'an hour' — h ਮੂਕ ਹੈ, vowel ਧੁਨੀ ਤੋਂ ਸ਼ੁਰੂ", "pa": "'an hour' — h ਮੂਕ", "en": "'an hour' — 'h' is silent, so vowel sound; use 'an'"}},
+      {"front": {"hi": "'Since' ਅਤੇ 'For' ਵਿੱਚ ਫ਼ਰਕ?", "pa": "'Since' ਅਤੇ 'For' ਦਾ ਫ਼ਰਕ?", "en": "Difference between 'since' and 'for'?"}, "back": {"hi": "Since = ਸਮੇਂ ਦਾ ਬਿੰਦੂ (since 2020); For = ਸਮੇਂ ਦੀ ਮਿਆਦ (for 3 years)", "pa": "Since=ਬਿੰਦੂ; For=ਅਰਸਾ", "en": "Since = point in time (since 2020); For = period/duration (for 3 years)"}},
+      {"front": {"hi": "Antonym of 'Ancient'?", "pa": "'Ancient' ਦਾ ਵਿਰੋਧਾਰਥੀ?", "en": "Antonym of 'Ancient'?"}, "back": {"hi": "Modern", "pa": "Modern", "en": "Modern"}}
+    ],
+    "questions": [
+      {
+        "id": "clerk-eg-q1",
+        "text": {"hi": "Change to Passive: 'The teacher teaches the students.'", "pa": "Passive: 'The teacher teaches the students.'", "en": "Change to Passive: 'The teacher teaches the students.'"},
+        "options": {"hi": [
+          "The students were taught by the teacher.",
+          "The students are taught by the teacher.",
+          "The students have been taught by the teacher.",
+          "The students taught the teacher."
+        ], "pa": [
+          "were taught",
+          "are taught",
+          "have been taught",
+          "taught the teacher"
+        ], "en": [
+          "The students were taught by the teacher.",
+          "The students are taught by the teacher.",
+          "The students have been taught by the teacher.",
+          "The students taught the teacher."
+        ]},
+        "answer": 1,
+        "explanation": {"hi": "Simple Present tense ਵਿੱਚ passive: is/am/are + past participle। Teacher→by teacher; students→subject। 'are taught' ਸਹੀ ਹੈ।", "pa": "Simple Present passive = are taught।", "en": "Simple Present Active → Passive: Object becomes subject + is/am/are + past participle + by + agent. 'The students are taught by the teacher.'"}
+      },
+      {
+        "id": "clerk-eg-q2",
+        "text": {"hi": "She said, \"I am reading a book.\" — Indirect Speech?", "pa": "Indirect: 'She said, I am reading a book.'", "en": "She said, 'I am reading a book.' — Indirect Speech?"},
+        "options": {"hi": [
+          "She said that she is reading a book.",
+          "She said that she was reading a book.",
+          "She said that I was reading a book.",
+          "She told she was reading a book."
+        ], "pa": [
+          "is reading",
+          "was reading",
+          "I was reading",
+          "told she was reading"
+        ], "en": [
+          "She said that she is reading a book.",
+          "She said that she was reading a book.",
+          "She said that I was reading a book.",
+          "She told she was reading a book."
+        ]},
+        "answer": 1,
+        "explanation": {"hi": "Present Continuous → Past Continuous (backshift)। 'am reading' → 'was reading'। 'I' → 'she' (pronoun change)। 'said that' ਵਰਤਣਾ ਸਹੀ ਹੈ।", "pa": "am reading→was reading; I→she।", "en": "Backshift: Present Continuous → Past Continuous. 'I am' → 'she was'; 'I' → 'she'. Correct: 'She said that she **was reading** a book.'"}
+      },
+      {
+        "id": "clerk-eg-q3",
+        "text": {"hi": "Choose the correct article: 'She is __ honest person.'", "pa": "'She is __ honest person.' — ਸਹੀ article?", "en": "Choose the correct article: 'She is ___ honest person.'"},
+        "options": {"hi": ["a", "an", "the", "no article"], "pa": ["a", "an", "the", "no article"], "en": ["a", "an", "the", "no article"]},
+        "answer": 1,
+        "explanation": {"hi": "'honest' ਦੀ ਸ਼ੁਰੂਆਤੀ ਧੁਨੀ vowel /ɒ/ ਹੈ (h ਮੂਕ)। ਇਸ ਲਈ 'an honest person' ਸਹੀ ਹੈ।", "pa": "'honest' ਵਿੱਚ h ਮੂਕ → vowel ਧੁਨੀ → 'an'।", "en": "'Honest' begins with a vowel sound /ɒ/ (the 'h' is silent). Therefore use 'an' → 'an honest person'."}
+      },
+      {
+        "id": "clerk-eg-q4",
+        "text": {"hi": "He said to me, 'Please help me.' — Indirect Speech?", "pa": "'Please help me.' → Indirect?", "en": "He said to me, 'Please help me.' — Indirect Speech?"},
+        "options": {"hi": [
+          "He said to me that please help him.",
+          "He requested me to help him.",
+          "He told me please to help him.",
+          "He asked me help him."
+        ], "pa": [
+          "please help him",
+          "requested me to help him",
+          "told me please",
+          "asked help him"
+        ], "en": [
+          "He said to me that please help him.",
+          "He requested me to help him.",
+          "He told me please to help him.",
+          "He asked me help him."
+        ]},
+        "answer": 1,
+        "explanation": {"hi": "Polite request (please) ਲਈ reporting verb 'requested' ਵਰਤਦੇ ਹਾਂ। Structure: requested + person + to + infinitive। → 'He **requested me to help him**.'", "pa": "please = request → 'requested me to help him'।", "en": "For polite requests with 'please', use reporting verb 'requested' + to-infinitive. → 'He requested me to help him.'"}
+      },
+      {
+        "id": "clerk-eg-q5",
+        "text": {"hi": "Choose the synonym of 'Genuine': ", "pa": "'Genuine' ਦਾ ਸਮਾਨਾਰਥੀ?", "en": "Synonym of 'Genuine'?"},
+        "options": {"hi": ["Fake", "Authentic", "Ancient", "Artificial"], "pa": ["Fake", "Authentic", "Ancient", "Artificial"], "en": ["Fake", "Authentic", "Ancient", "Artificial"]},
+        "answer": 1,
+        "explanation": {"hi": "'Genuine' ਦਾ ਅਰਥ ਹੈ ਅਸਲੀ/ਸੱਚਾ। 'Authentic' ਸਮਾਨਾਰਥੀ ਹੈ। 'Fake' ਵਿਰੋਧਾਰਥੀ ਹੈ।", "pa": "Genuine=ਅਸਲੀ=Authentic।", "en": "'Genuine' means real/true. Its synonym is 'Authentic'. 'Fake' is its antonym."}
+      }
+    ]
+  }
+]

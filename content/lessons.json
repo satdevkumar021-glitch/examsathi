@@ -44322,6 +44322,1284 @@
     "documents": []
   },
   {
+    "id": "clerk-punjabi-gurus-culture",
+    "subject": "Punjabi",
+    "unit": "PSSSB Clerk Part A — Guru Biographies and Punjab Culture",
+    "examIds": [
+      "clerk"
+    ],
+    "title": {
+      "hi": "गुरुओं का जीवन और पंजाब की लोक-संस्कृति",
+      "pa": "ਗੁਰੂਆਂ ਦਾ ਜੀਵਨ ਅਤੇ ਪੰਜਾਬ ਦੀ ਲੋਕ-ਸੰਸਕ੍ਰਿਤੀ",
+      "en": "Life of the Gurus and Punjab Folk Culture"
+    },
+    "level": "PSSSB Clerk Part A — Punjabi qualifying (Advt. 02/2026 as reported; verify official PDF)",
+    "review_note": "Gurmukhi content must be reviewed by a native Punjabi-speaking teacher. Guru biographies from well-established sources; any uncertainty flagged [VERIFY]. Advt. 02/2026 Part A names 7 Gurus (Nanak, Angad, Amar Das, Ram Das, Arjan, Tegh Bahadur, Gobind Singh) — verify whether others are excluded in the official PDF.",
+    "sources": [
+      {
+        "title": "PSSSB Clerk Advt. 02/2026 Syllabus — Part A Punjabi (as reported by secondary sources)",
+        "url": "https://sssb.punjab.gov.in/",
+        "note": "Secondary source (Adda247 Aug 2026 summary). UNVERIFIED against official PDF. Verify at sssb.punjab.gov.in before treating as authoritative."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "7 गुरुओं का संक्षिप्त परिचय (जैसा पाठ्यक्रम में उल्लिखित)",
+          "pa": "7 ਗੁਰੂਆਂ ਦੀ ਸੰਖੇਪ ਜਾਣ-ਪਛਾਣ",
+          "en": "Brief Lives of the 7 Named Gurus (as listed in syllabus)"
+        },
+        "text": {
+          "hi": "**ਨੋਟ**: ਪਾਠ-ਕ੍ਰਮ ਵਿੱਚ 7 ਗੁਰੂਆਂ ਦਾ ਜ਼ਿਕਰ ਹੈ — ਅਸਲ ਅਧਿਕਾਰਤ PDF ਵਿੱਚ ਸੂਚੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ।\n\n| ਨੰਬਰ | ਗੁਰੂ | ਜਨਮ | ਮੁੱਖ ਯੋਗਦਾਨ |\n|------|------|------|---------------|\n| 1 | ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ | 1469, ਤਲਵੰਡੀ | ਸਿੱਖ ਧਰਮ ਦੀ ਨੀਂਹ; ਈਕੋਂਕਾਰ; 4 ਉਦਾਸੀਆਂ |\n| 2 | ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ | 1504, ਮੱਤੇ ਦੀ ਸਰਾਂ | ਗੁਰਮੁਖੀ ਲਿਪੀ ਦਾ ਪ੍ਰਚਾਰ; ਮਲ ਅਖਾੜਾ |\n| 3 | ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ | 1479, ਬਾਸਰਕੇ | ਲੰਗਰ ਅਤੇ ਪੰਗਤ; ਸਤੀ-ਪਰਥਾ ਵਿਰੋਧ; 22 ਮੰਜੀਆਂ |\n| 4 | ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ | 1534, ਲਾਹੌਰ | ਅੰਮ੍ਰਿਤਸਰ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ (1577); ਆਨੰਦ ਸਾਹਿਬ |\n| 5 | ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ | 1563, ਗੋਇੰਦਵਾਲ | ਆਦਿ ਗ੍ਰੰਥ (1604); ਹਰਿਮੰਦਰ ਸਾਹਿਬ; ਪਹਿਲਾ ਸ਼ਹੀਦ |\n| 6 | ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ | 1621, ਅੰਮ੍ਰਿਤਸਰ | ਹਿੰਦ ਦੀ ਚਾਦਰ; ਕਸ਼ਮੀਰੀ ਪੰਡਿਤਾਂ ਦੀ ਰੱਖਿਆ (1675) |\n| 7 | ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ | 1666, ਪਟਨਾ ਸਾਹਿਬ | ਖ਼ਾਲਸਾ ਪੰਥ (1699 ਵੈਸਾਖੀ); ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਸ਼ਾਸ਼ਵਤ ਗੁਰੂ |\n\n**ਮੁੱਖ ਸਿਧਾਂਤ**: ਨਾਮ ਜਪਣਾ, ਕਿਰਤ ਕਰਨੀ, ਵੰਡ ਛਕਣਾ",
+          "pa": "7 ਗੁਰੂ: ਨਾਨਕ (1469), ਅੰਗਦ (1504), ਅਮਰਦਾਸ (1479), ਰਾਮਦਾਸ (1534), ਅਰਜਨ (1563), ਤੇਗ਼ ਬਹਾਦਰ (1621), ਗੋਬਿੰਦ ਸਿੰਘ (1666)। ਨਾਮ ਜਪੋ, ਕਿਰਤ ਕਰੋ, ਵੰਡ ਛਕੋ।",
+          "en": "The 7 Gurus named in the reported syllabus (verify official list): Guru Nanak Dev Ji (1469, Talwandi) — founded Sikhism; Guru Angad Dev Ji (1504) — promoted Gurmukhi; Guru Amar Das Ji (1479) — langar/pangat, opposed sati; Guru Ram Das Ji (1534) — founded Amritsar (1577); Guru Arjan Dev Ji (1563) — compiled Adi Granth (1604), Harmandir Sahib, first martyr; Guru Tegh Bahadur Ji (1621) — 'Hind di Chadar', protected Kashmiri Pandits (1675); Guru Gobind Singh Ji (1666, Patna Sahib) — Khalsa Panth (Vaisakhi 1699), declared Guru Granth Sahib eternal Guru. Core teaching: Naam Japo, Kirat Karo, Vand Chako."
+        }
+      },
+      {
+        "heading": {
+          "hi": "पंजाब के प्रमुख मेले और त्योहार",
+          "pa": "ਪੰਜਾਬ ਦੇ ਮੁੱਖ ਮੇਲੇ ਅਤੇ ਤਿਉਹਾਰ",
+          "en": "Major Fairs and Festivals of Punjab"
+        },
+        "text": {
+          "hi": "**ਧਾਰਮਿਕ ਅਤੇ ਸੱਭਿਆਚਾਰਕ ਤਿਉਹਾਰ**:\n\n| ਤਿਉਹਾਰ / ਮੇਲਾ | ਮੌਸਮ / ਮਹੀਨਾ | ਮਹੱਤਤਾ |\n|-----------------|----------------|----------|\n| **ਵਿਸਾਖੀ** | ਅਪ੍ਰੈਲ 13/14 | ਫਸਲ ਕੱਟਣ ਦਾ ਤਿਉਹਾਰ; ਖ਼ਾਲਸਾ ਸਾਜਨਾ (1699) |\n| **ਲੋਹੜੀ** | ਜਨਵਰੀ 13 | ਰੁੱਤ ਬਦਲਾਅ; ਅੱਗ ਬਾਲ ਕੇ ਮਨਾਉਣਾ |\n| **ਤੀਆਂ** | ਸਾਵਣ (ਜੁਲਾਈ-ਅਗਸਤ) | ਕੁੜੀਆਂ ਦਾ ਤਿਉਹਾਰ; ਝੂਟਣਾ, ਗਿੱਧਾ |\n| **ਦੀਵਾਲੀ** | ਅਕਤੂਬਰ/ਨਵੰਬਰ | ਰੌਸ਼ਨੀ ਦਾ ਤਿਉਹਾਰ; ਗੁਰੂ ਹਰਗੋਬਿੰਦ ਰਿਹਾਈ |\n| **ਮਾਘੀ** | ਜਨਵਰੀ 14 | ਮੁਕਤਸਰ ਦੀ ਲੜਾਈ; ਮੇਲਾ ਮਾਘੀ (ਮੁਕਤਸਰ) |\n| **ਹੋਲਾ ਮਹੱਲਾ** | ਹੋਲੀ ਤੋਂ ਅਗਲੇ ਦਿਨ | ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ; ਆਨੰਦਪੁਰ ਸਾਹਿਬ |\n| **ਬਸੰਤ ਪੰਚਮੀ** | ਮਾਘ (ਜਨਵਰੀ-ਫਰਵਰੀ) | ਬਸੰਤ ਰੁੱਤ ਦਾ ਆਗਮਨ; ਪਤੰਗਬਾਜ਼ੀ |\n\n**ਲੋਕ ਨ੍ਰਿਤ ਅਤੇ ਸੰਗੀਤ**:\n- **ਭੰਗੜਾ**: ਪੁਰਸ਼ਾਂ ਦਾ ਲੋਕ ਨ੍ਰਿਤ; ਵਿਸਾਖੀ ਨਾਲ ਸੰਬੰਧਿਤ; ਢੋਲ ਦੀ ਤਾਲ\n- **ਗਿੱਧਾ**: ਔਰਤਾਂ ਦਾ ਲੋਕ ਨ੍ਰਿਤ; ਬੋਲੀਆਂ\n- **ਸੰਗੀਤ ਸਾਜ਼**: ਢੋਲ, ਤੂੰਬੀ, ਅਲਗੋਜ਼ੇ, ਸਾਰੰਗੀ",
+          "pa": "ਵਿਸਾਖੀ (ਅਪ੍ਰੈਲ) = ਫਸਲ+ਖ਼ਾਲਸਾ। ਲੋਹੜੀ (ਜਨਵਰੀ 13) = ਅੱਗ। ਤੀਆਂ = ਕੁੜੀਆਂ। ਮਾਘੀ = ਮੁਕਤਸਰ। ਭੰਗੜਾ = ਮਰਦਾਂ ਦਾ ਨਾਚ। ਗਿੱਧਾ = ਔਰਤਾਂ ਦਾ ਨਾਚ।",
+          "en": "Key festivals: Vaisakhi (Apr 13/14, harvest + Khalsa founding 1699); Lohri (Jan 13, bonfire, season change); Teeyan (Savan, girls' swing festival); Diwali (Oct/Nov, Guru Hargobind's release); Maghi (Jan 14, Battle of Muktsar, Muktsar fair); Hola Mahalla (day after Holi, Anandpur Sahib); Basant Panchami (kite-flying, spring arrival).\n\nFolk dances: Bhangra (men, dhol, Vaisakhi); Gidda (women, bolia poetry). Instruments: Dhol, Tumbi, Algoze, Sarangi."
+        }
+      },
+      {
+        "heading": {
+          "hi": "पंजाब की लोक-विरासत और भाषा",
+          "pa": "ਪੰਜਾਬ ਦੀ ਲੋਕ-ਵਿਰਾਸਤ ਅਤੇ ਭਾਸ਼ਾ",
+          "en": "Punjab's Folk Heritage and Language"
+        },
+        "text": {
+          "hi": "**ਲੋਕ ਸਾਹਿਤ**:\n- **ਲੋਕ ਗੀਤ**: ਸੁਹਾਗ (ਵਿਆਹ), ਘੋੜੀਆਂ (ਵਰ ਲਈ), ਅਲਾਹੁਣੀਆਂ (ਸੋਗ)\n- **ਲੋਕ ਕਹਾਣੀਆਂ**: ਹੀਰ-ਰਾਂਝਾ, ਸੱਸੀ-ਪੁੰਨੂੰ, ਮਿਰਜ਼ਾ-ਸਾਹਿਬਾਂ, ਸੋਹਣੀ-ਮਹੀਂਵਾਲ — ਇਹ ਪੰਜਾਬ ਦੀਆਂ ਚਾਰ ਮਸ਼ਹੂਰ ਕਿੱਸੇ-ਪ੍ਰੇਮ ਕਹਾਣੀਆਂ ਹਨ\n\n**ਪੰਜਾਬੀ ਭਾਸ਼ਾ**:\n- ਗੁਰਮੁਖੀ ਲਿਪੀ ਵਿੱਚ ਲਿਖੀ ਜਾਂਦੀ ਹੈ\n- ਪੰਜਾਬ ਦੀ ਅਧਿਕਾਰਤ ਭਾਸ਼ਾ\n- ਸ਼ਾਹਮੁਖੀ (Shahmukhi) ਲਿਪੀ ਵਿੱਚ ਵੀ ਲਿਖੀ ਜਾਂਦੀ ਹੈ (ਪਾਕਿਸਤਾਨ)\n\n**ਪ੍ਰਮੁੱਖ ਕਵੀ ਅਤੇ ਸਾਹਿਤਕਾਰ**:\n- ਵਾਰਿਸ ਸ਼ਾਹ — ਹੀਰ (18ਵੀਂ ਸਦੀ)\n- ਭੱਟ ਸਿੱਖ — ਆਦਿ ਗ੍ਰੰਥ ਵਿੱਚ ਸਵੱਈਏ\n- ਬਾਬਾ ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ — ਸੂਫ਼ੀ ਕਵਿਤਾ\n- ਸ਼ਿਵ ਕੁਮਾਰ ਬਟਾਲਵੀ — ਆਧੁਨਿਕ ਕਵਿਤਾ; ਸਾਹਿਤ ਅਕਾਦਮੀ ਪੁਰਸਕਾਰ",
+          "pa": "ਹੀਰ-ਰਾਂਝਾ, ਸੱਸੀ-ਪੁੰਨੂੰ, ਮਿਰਜ਼ਾ-ਸਾਹਿਬਾਂ, ਸੋਹਣੀ-ਮਹੀਂਵਾਲ = ਚਾਰ ਕਿੱਸੇ। ਵਾਰਿਸ ਸ਼ਾਹ = ਹੀਰ। ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ = ਸੂਫ਼ੀ।",
+          "en": "Folk literature: Suhag (wedding songs), Ghorian (bridegroom), Alahunia (mourning). Four great romantic legends (Kisses): Heer-Ranjha, Sassi-Punnun, Mirza-Sahiban, Sohni-Mahiwal. Major poets: Waris Shah (Heer, 18th c.); Bulleh Shah (Sufi poetry); Shiv Kumar Batalvi (modern poetry, Sahitya Akademi)."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ ਦਾ ਮੁੱਖ ਯੋਗਦਾਨ?",
+          "pa": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ?",
+          "en": "Main contribution of Guru Arjan Dev Ji?"
+        },
+        "back": {
+          "hi": "ਆਦਿ ਗ੍ਰੰਥ ਸੰਪਾਦਨਾ (1604) + ਹਰਿਮੰਦਰ ਸਾਹਿਬ + ਪਹਿਲੇ ਸ਼ਹੀਦ",
+          "pa": "ਆਦਿ ਗ੍ਰੰਥ 1604, ਹਰਿਮੰਦਰ ਸਾਹਿਬ, ਪਹਿਲੇ ਸ਼ਹੀਦ",
+          "en": "Compiled Adi Granth (1604), built Harmandir Sahib, first Sikh martyr"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਲੋਹੜੀ ਕਦੋਂ ਮਨਾਈ ਜਾਂਦੀ ਹੈ?",
+          "pa": "ਲੋਹੜੀ ਕਦੋਂ?",
+          "en": "When is Lohri celebrated?"
+        },
+        "back": {
+          "hi": "ਜਨਵਰੀ 13 — ਰੁੱਤ ਬਦਲਾਅ ਦਾ ਤਿਉਹਾਰ",
+          "pa": "ਜਨਵਰੀ 13",
+          "en": "January 13 — marks the change of season"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਦਾ ਜਨਮ ਕਦੋਂ ਅਤੇ ਕਿੱਥੇ?",
+          "pa": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ — ਜਨਮ?",
+          "en": "Birth of Guru Gobind Singh Ji?"
+        },
+        "back": {
+          "hi": "1666, ਪਟਨਾ ਸਾਹਿਬ (ਬਿਹਾਰ)",
+          "pa": "1666, ਪਟਨਾ ਸਾਹਿਬ",
+          "en": "1666, Patna Sahib (Bihar)"
+        }
+      },
+      {
+        "front": {
+          "hi": "'ਹਿੰਦ ਦੀ ਚਾਦਰ' ਕਿਹੜੇ ਗੁਰੂ ਨੂੰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "pa": "'ਹਿੰਦ ਦੀ ਚਾਦਰ' — ਕਿਹੜੇ ਗੁਰੂ?",
+          "en": "Which Guru is called 'Hind di Chadar'?"
+        },
+        "back": {
+          "hi": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ (9ਵੇਂ ਗੁਰੂ)",
+          "pa": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ",
+          "en": "Guru Tegh Bahadur Ji (9th Guru)"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਵਿਸਾਖੀ ਦਾ ਸਿੱਖ ਧਰਮ ਵਿੱਚ ਮਹੱਤਵ?",
+          "pa": "ਵਿਸਾਖੀ ਦਾ ਸਿੱਖ ਮਹੱਤਵ?",
+          "en": "Significance of Vaisakhi in Sikhism?"
+        },
+        "back": {
+          "hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ (1699) — ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਦੁਆਰਾ",
+          "pa": "ਖ਼ਾਲਸਾ ਪੰਥ 1699",
+          "en": "Founding of the Khalsa Panth (1699) by Guru Gobind Singh Ji"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਹੀਰ-ਰਾਂਝਾ ਦੇ ਕਿੱਸੇ ਦੀ ਰਚਨਾ ਕਿਸ ਨੇ ਕੀਤੀ?",
+          "pa": "ਹੀਰ-ਰਾਂਝਾ — ਕਿਸ ਨੇ ਲਿਖਿਆ?",
+          "en": "Who wrote the legend of Heer-Ranjha?"
+        },
+        "back": {
+          "hi": "ਵਾਰਿਸ ਸ਼ਾਹ (18ਵੀਂ ਸਦੀ)",
+          "pa": "ਵਾਰਿਸ ਸ਼ਾਹ",
+          "en": "Waris Shah (18th century)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "clerk-pgc-q1",
+        "text": {
+          "hi": "ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ ਕਿਸ ਗੁਰੂ ਨੇ ਕੀਤੀ?",
+          "pa": "ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ — ਕਿਹੜੇ ਗੁਰੂ?",
+          "en": "Which Guru compiled the Adi Granth?"
+        },
+        "options": {
+          "hi": [
+            "ਗੁਰੂ ਨਾਨਕ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ",
+            "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ"
+          ],
+          "pa": [
+            "ਗੁਰੂ ਨਾਨਕ",
+            "ਗੁਰੂ ਅਰਜਨ",
+            "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ",
+            "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ"
+          ],
+          "en": [
+            "Guru Nanak Dev Ji",
+            "Guru Arjan Dev Ji",
+            "Guru Tegh Bahadur Ji",
+            "Guru Gobind Singh Ji"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ (5ਵੇਂ ਗੁਰੂ) ਨੇ 1604 ਵਿੱਚ ਆਦਿ ਗ੍ਰੰਥ ਦੀ ਸੰਪਾਦਨਾ ਕੀਤੀ ਅਤੇ ਹਰਿਮੰਦਰ ਸਾਹਿਬ ਵਿੱਚ ਸਥਾਪਿਤ ਕੀਤਾ।",
+          "pa": "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ, 1604।",
+          "en": "Guru Arjan Dev Ji (5th Guru) compiled the Adi Granth in 1604 and installed it in Harmandir Sahib, Amritsar."
+        }
+      },
+      {
+        "id": "clerk-pgc-q2",
+        "text": {
+          "hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਦਿਨ ਹੋਈ?",
+          "pa": "ਖ਼ਾਲਸਾ ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਤਿਉਹਾਰ ਤੇ?",
+          "en": "On which festival was the Khalsa Panth founded?"
+        },
+        "options": {
+          "hi": [
+            "ਲੋਹੜੀ",
+            "ਦੀਵਾਲੀ",
+            "ਵਿਸਾਖੀ",
+            "ਹੋਲਾ ਮਹੱਲਾ"
+          ],
+          "pa": [
+            "ਲੋਹੜੀ",
+            "ਦੀਵਾਲੀ",
+            "ਵਿਸਾਖੀ",
+            "ਹੋਲਾ ਮਹੱਲਾ"
+          ],
+          "en": [
+            "Lohri",
+            "Diwali",
+            "Vaisakhi",
+            "Hola Mahalla"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਖ਼ਾਲਸਾ ਪੰਥ ਦੀ ਸਥਾਪਨਾ 1699 ਦੀ ਵਿਸਾਖੀ ਤੇ ਆਨੰਦਪੁਰ ਸਾਹਿਬ ਵਿੱਚ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨੇ ਕੀਤੀ।",
+          "pa": "ਵਿਸਾਖੀ 1699, ਆਨੰਦਪੁਰ ਸਾਹਿਬ।",
+          "en": "The Khalsa Panth was founded on Vaisakhi 1699 at Anandpur Sahib by Guru Gobind Singh Ji."
+        }
+      },
+      {
+        "id": "clerk-pgc-q3",
+        "text": {
+          "hi": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ ਨੇ ਕਿਹੜੇ ਸ਼ਹਿਰ ਦੀ ਨੀਂਹ ਰੱਖੀ?",
+          "pa": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ — ਕਿਹੜਾ ਸ਼ਹਿਰ?",
+          "en": "Which city did Guru Ram Das Ji found?"
+        },
+        "options": {
+          "hi": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਲਾਹੌਰ",
+            "ਆਨੰਦਪੁਰ ਸਾਹਿਬ",
+            "ਪਟਿਆਲਾ"
+          ],
+          "pa": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਲਾਹੌਰ",
+            "ਆਨੰਦਪੁਰ",
+            "ਪਟਿਆਲਾ"
+          ],
+          "en": [
+            "Amritsar",
+            "Lahore",
+            "Anandpur Sahib",
+            "Patiala"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ (4ਵੇਂ ਗੁਰੂ) ਨੇ 1577 ਵਿੱਚ ਅੰਮ੍ਰਿਤਸਰ ਦੀ ਨੀਂਹ ਰੱਖੀ। ਪਹਿਲਾਂ ਇਸ ਨੂੰ ਰਾਮਦਾਸਪੁਰ ਕਿਹਾ ਜਾਂਦਾ ਸੀ।",
+          "pa": "ਗੁਰੂ ਰਾਮਦਾਸ ਜੀ, ਅੰਮ੍ਰਿਤਸਰ, 1577।",
+          "en": "Guru Ram Das Ji (4th Guru) founded Amritsar in 1577. It was initially called Ramdaspura."
+        }
+      },
+      {
+        "id": "clerk-pgc-q4",
+        "text": {
+          "hi": "'ਹਿੰਦ ਦੀ ਚਾਦਰ' ਕਿਹੜੇ ਗੁਰੂ ਨੂੰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "pa": "'ਹਿੰਦ ਦੀ ਚਾਦਰ'?",
+          "en": "Which Guru is called 'Hind di Chadar' (Shield of India)?"
+        },
+        "options": {
+          "hi": [
+            "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ",
+            "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ",
+            "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ"
+          ],
+          "pa": [
+            "ਗੁਰੂ ਅਮਰਦਾਸ",
+            "ਗੁਰੂ ਅਰਜਨ ਦੇਵ",
+            "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ",
+            "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ"
+          ],
+          "en": [
+            "Guru Amar Das Ji",
+            "Guru Arjan Dev Ji",
+            "Guru Tegh Bahadur Ji",
+            "Guru Gobind Singh Ji"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ ਨੂੰ 'ਹਿੰਦ ਦੀ ਚਾਦਰ' ਕਿਹਾ ਜਾਂਦਾ ਹੈ — ਉਨ੍ਹਾਂ ਨੇ 1675 ਵਿੱਚ ਕਸ਼ਮੀਰੀ ਪੰਡਿਤਾਂ ਦੀ ਰੱਖਿਆ ਲਈ ਸ਼ਹੀਦੀ ਦਿੱਤੀ।",
+          "pa": "ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ = ਹਿੰਦ ਦੀ ਚਾਦਰ।",
+          "en": "Guru Tegh Bahadur Ji — he sacrificed his life in 1675 to protect the rights of Kashmiri Pandits (to practise their religion), earning the title 'Shield of India'."
+        }
+      },
+      {
+        "id": "clerk-pgc-q5",
+        "text": {
+          "hi": "ਭੰਗੜਾ ਕਿਸ ਤਿਉਹਾਰ ਨਾਲ ਮੁੱਖ ਤੌਰ ਤੇ ਸੰਬੰਧਿਤ ਹੈ?",
+          "pa": "ਭੰਗੜਾ — ਕਿਸ ਤਿਉਹਾਰ ਨਾਲ?",
+          "en": "Bhangra dance is mainly associated with which festival?"
+        },
+        "options": {
+          "hi": [
+            "ਲੋਹੜੀ",
+            "ਵਿਸਾਖੀ",
+            "ਤੀਆਂ",
+            "ਮਾਘੀ"
+          ],
+          "pa": [
+            "ਲੋਹੜੀ",
+            "ਵਿਸਾਖੀ",
+            "ਤੀਆਂ",
+            "ਮਾਘੀ"
+          ],
+          "en": [
+            "Lohri",
+            "Vaisakhi",
+            "Teeyan",
+            "Maghi"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਭੰਗੜਾ ਵਿਸਾਖੀ ਦੇ ਤਿਉਹਾਰ ਨਾਲ ਮੁੱਖ ਤੌਰ ਤੇ ਸੰਬੰਧਿਤ ਹੈ — ਇਹ ਫਸਲ ਕੱਟਣ ਦੀ ਖੁਸ਼ੀ ਵਿੱਚ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। ਗਿੱਧਾ ਤੀਆਂ ਨਾਲ ਜ਼ਿਆਦਾ ਸੰਬੰਧਿਤ ਹੈ।",
+          "pa": "ਭੰਗੜਾ = ਵਿਸਾਖੀ। ਗਿੱਧਾ = ਤੀਆਂ।",
+          "en": "Bhangra is primarily associated with Vaisakhi — performed to celebrate the harvest. Gidda is more associated with Teeyan (girls' festival)."
+        }
+      },
+      {
+        "id": "clerk-pgc-q6",
+        "text": {
+          "hi": "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਕਿਹੜੀ ਸਮਾਜਿਕ ਬੁਰਾਈ ਦਾ ਵਿਰੋਧ ਕੀਤਾ?",
+          "pa": "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ — ਕਿਹੜੀ ਬੁਰਾਈ?",
+          "en": "Which social evil did Guru Amar Das Ji oppose?"
+        },
+        "options": {
+          "hi": [
+            "ਬਾਲ ਵਿਆਹ",
+            "ਸਤੀ ਪ੍ਰਥਾ",
+            "ਜਾਤੀਵਾਦ",
+            "ਦਹੇਜ ਪ੍ਰਥਾ"
+          ],
+          "pa": [
+            "ਬਾਲ ਵਿਆਹ",
+            "ਸਤੀ ਪ੍ਰਥਾ",
+            "ਜਾਤੀਵਾਦ",
+            "ਦਹੇਜ"
+          ],
+          "en": [
+            "Child marriage",
+            "Sati Pratha (widow burning)",
+            "Casteism",
+            "Dowry system"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ (3ਵੇਂ ਗੁਰੂ) ਨੇ ਸਤੀ ਪ੍ਰਥਾ ਦਾ ਡਟ ਕੇ ਵਿਰੋਧ ਕੀਤਾ ਅਤੇ ਲੰਗਰ-ਪੰਗਤ ਰਾਹੀਂ ਜਾਤੀ ਵਿਤਕਰੇ ਨੂੰ ਵੀ ਚੁਣੌਤੀ ਦਿੱਤੀ।",
+          "pa": "ਗੁਰੂ ਅਮਰਦਾਸ = ਸਤੀ ਪ੍ਰਥਾ ਵਿਰੋਧ।",
+          "en": "Guru Amar Das Ji (3rd Guru) actively opposed Sati Pratha (widow immolation) and also challenged caste discrimination through the langar-pangat system."
+        }
+      },
+      {
+        "id": "clerk-pgc-q7",
+        "text": {
+          "hi": "ਹੋਲਾ ਮਹੱਲਾ ਕਿੱਥੇ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ?",
+          "pa": "ਹੋਲਾ ਮਹੱਲਾ ਕਿੱਥੇ?",
+          "en": "Where is Hola Mahalla celebrated?"
+        },
+        "options": {
+          "hi": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਆਨੰਦਪੁਰ ਸਾਹਿਬ",
+            "ਪਟਿਆਲਾ",
+            "ਲੁਧਿਆਣਾ"
+          ],
+          "pa": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਆਨੰਦਪੁਰ ਸਾਹਿਬ",
+            "ਪਟਿਆਲਾ",
+            "ਲੁਧਿਆਣਾ"
+          ],
+          "en": [
+            "Amritsar",
+            "Anandpur Sahib",
+            "Patiala",
+            "Ludhiana"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਹੋਲਾ ਮਹੱਲਾ ਆਨੰਦਪੁਰ ਸਾਹਿਬ ਵਿੱਚ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ। ਇਸ ਦੀ ਸ਼ੁਰੂਆਤ ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨੇ ਕੀਤੀ ਸੀ।",
+          "pa": "ਹੋਲਾ ਮਹੱਲਾ = ਆਨੰਦਪੁਰ ਸਾਹਿਬ।",
+          "en": "Hola Mahalla is celebrated at Anandpur Sahib. It was started by Guru Gobind Singh Ji as a day of martial arts and military demonstrations, the day after Holi."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "clerk-punjab-history-culture",
+    "subject": "General",
+    "unit": "PSSSB Clerk Part B — Punjab History and Culture (17 marks)",
+    "examIds": [
+      "clerk"
+    ],
+    "title": {
+      "hi": "पंजाब का इतिहास और संस्कृति: प्राचीन काल से स्वतंत्रता संग्राम तक",
+      "pa": "ਪੰਜਾਬ ਦਾ ਇਤਿਹਾਸ ਅਤੇ ਸੱਭਿਆਚਾਰ: ਪ੍ਰਾਚੀਨ ਕਾਲ ਤੋਂ ਆਜ਼ਾਦੀ ਸੰਗਰਾਮ ਤੱਕ",
+      "en": "Punjab History and Culture: Ancient Times to the Freedom Struggle"
+    },
+    "level": "PSSSB Clerk Part B — Punjab History & Culture (17 marks, negative marking 0.25 — as reported)",
+    "sources": [
+      {
+        "title": "PSSSB Clerk Advt. 02/2026 — Part B Punjab History syllabus (secondary source)",
+        "url": "https://sssb.punjab.gov.in/",
+        "note": "Pattern as reported. Verify against official PDF. Content drawn from standard Punjab history sources (PSEB/NCERT)."
+      },
+      {
+        "title": "PSEB Social Studies Class 8-10 — Punjab History chapters",
+        "url": "https://www.pseb.ac.in/public/books",
+        "note": "PSEB textbooks — verified source for Punjab history at this level."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "प्राचीन पंजाब: सिंधु सभ्यता से मुगलों तक",
+          "pa": "ਪ੍ਰਾਚੀਨ ਪੰਜਾਬ: ਸਿੰਧੂ ਸੱਭਿਅਤਾ ਤੋਂ ਮੁਗ਼ਲਾਂ ਤੱਕ",
+          "en": "Ancient Punjab: Indus Civilisation to the Mughals"
+        },
+        "text": {
+          "hi": "**ਭੌਤਿਕ ਭੂਗੋਲ**: ਪੰਜਾਬ ਦੀਆਂ ਮੁੱਖ ਭੂਮੀਆਂ — ਮੈਦਾਨੀ ਖੇਤਰ (ਸਤਲੁਜ-ਰਾਵੀ-ਬਿਆਸ ਵਿੱਚਕਾਰ), ਸ਼ਿਵਾਲਿਕ ਪਹਾੜੀਆਂ (ਉੱਤਰ-ਪੂਰਬ), ਰੇਤਲੀ ਭੂਮੀ (ਦੱਖਣ-ਪੱਛਮ)\n\n**ਸਿੰਧੂ ਸੱਭਿਅਤਾ (2500-1900 BCE)**:\n- ਰੋਪੜ (ਰੁਪਨਗਰ), ਸੰਘੋਲ — ਪੰਜਾਬ ਵਿੱਚ ਪ੍ਰਮੁੱਖ ਸਥਾਨ\n- ਹੜੱਪਾ ਸ਼ਹਿਰ ਮੌਂਟਗੋਮਰੀ ਜ਼ਿਲ੍ਹੇ ਵਿੱਚ (ਹੁਣ ਪਾਕਿਸਤਾਨ)\n\n**ਵੈਦਿਕ ਕਾਲ**: ਰਿਗਵੇਦ ਵਿੱਚ ਸਪਤ-ਸਿੰਧੂ (ਸੱਤ ਦਰਿਆਵਾਂ ਦੀ ਧਰਤੀ) ਵਜੋਂ ਜ਼ਿਕਰ\n\n**ਅਫ਼ਗਾਨ ਅਤੇ ਮੁਗ਼ਲ ਰਾਜ**:\n- ਮਹਿਮੂਦ ਗਜ਼ਨਵੀ ਦੇ 17 ਹਮਲੇ (997-1027 CE); ਸੋਮਨਾਥ ਲੁੱਟ\n- ਬਾਬਰ 1526 ਵਿੱਚ ਪਾਣੀਪਤ; ਅਕਬਰ ਦੇ ਰਾਜ ਵਿੱਚ ਗੁਰੂ ਅਰਜਨ ਦੇਵ ਜੀ\n- ਔਰੰਗਜ਼ੇਬ ਦੇ ਸਮੇਂ ਗੁਰੂ ਤੇਗ਼ ਬਹਾਦਰ ਜੀ ਦੀ ਸ਼ਹੀਦੀ (1675)\n\n**ਭਗਤੀ ਅਤੇ ਸੂਫ਼ੀ ਲਹਿਰ**:\n- **ਭਗਤੀ**: ਕਬੀਰ, ਰਵਿਦਾਸ, ਨਾਮਦੇਵ — ਜਾਤ-ਪਾਤ ਵਿਰੁੱਧ\n- **ਸੂਫ਼ੀ**: ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ (ਕਸੂਰ), ਸ਼ਾਹ ਹੁਸੈਨ (ਲਾਹੌਰ), ਵਾਰਿਸ ਸ਼ਾਹ — ਪਿਆਰ ਅਤੇ ਭਾਈਚਾਰੇ ਦੀ ਸਿੱਖਿਆ",
+          "pa": "ਸਿੰਧੂ ਸੱਭਿਅਤਾ: ਰੋਪੜ, ਹੜੱਪਾ। ਮੁਗ਼ਲ: ਬਾਬਰ 1526। ਭਗਤੀ: ਕਬੀਰ, ਰਵਿਦਾਸ। ਸੂਫ਼ੀ: ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ।",
+          "en": "Physical geography: plains between Sutlej-Ravi-Beas; Shivalik Hills (NE); sandy terrain (SW).\n\nIndus Civilisation (2500-1900 BCE): Ropar (Rupnagar) and Sanghol in Punjab. Harappa in present Pakistan.\n\nVedic Age: Punjab mentioned as Sapta-Sindhu (land of seven rivers) in Rigveda.\n\nAfghan/Mughal rule: Mahmud Ghazni's raids (997-1027 CE). Babur — first Battle of Panipat 1526. Aurangzeb — execution of Guru Tegh Bahadur 1675.\n\nBhakti movement: Kabir, Ravidas, Namdev — opposed caste discrimination. Sufi saints: Bulleh Shah (Kasur), Shah Hussain (Lahore), Waris Shah — universal love and brotherhood."
+        }
+      },
+      {
+        "heading": {
+          "hi": "सिख मिसलें, महाराजा रणजीत सिंह और एंग्लो-सिख युद्ध",
+          "pa": "ਸਿੱਖ ਮਿਸਲਾਂ, ਰਣਜੀਤ ਸਿੰਘ ਅਤੇ ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ",
+          "en": "Sikh Misls, Maharaja Ranjit Singh and Anglo-Sikh Wars"
+        },
+        "text": {
+          "hi": "**ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ** (1670-1716): ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਦੇ ਹੁਕਮ ਤੇ ਪੰਜਾਬ ਵਿੱਚ ਮੁਗ਼ਲ ਤਾਕਤ ਵਿਰੁੱਧ ਲੜਿਆ; ਸਰਹੰਦ ਫਤਿਹ ਕੀਤਾ (1710)\n\n**ਸਿੱਖ ਮਿਸਲਾਂ** (1700s): ਮੁਗ਼ਲ ਸੱਤਾ ਦੇ ਕਮਜ਼ੋਰ ਹੋਣ ਤੋਂ ਬਾਅਦ 12 ਮਿਸਲਾਂ ਬਣੀਆਂ; ਸ਼ੁਕਰਚੱਕੀਆ ਮਿਸਲ (ਰਣਜੀਤ ਸਿੰਘ ਦੀ) ਸਭ ਤੋਂ ਸ਼ਕਤੀਸ਼ਾਲੀ ਬਣੀ\n\n**ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ** (1780-1839):\n- 1799: ਲਾਹੌਰ ਫਤਿਹ; 1801: ਮਹਾਰਾਜਾ ਦਾ ਖਿਤਾਬ\n- ਇਲਾਕਾ: ਕਾਬੁਲ ਤੋਂ ਤਿੱਬਤ ਤੱਕ\n- ਕੋਹਿਨੂਰ ਹੀਰਾ ਪ੍ਰਾਪਤ ਕੀਤਾ\n- 1839 ਵਿੱਚ ਮੌਤ ਤੋਂ ਬਾਅਦ ਰਾਜ ਕਮਜ਼ੋਰ\n\n**ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ**:\n- ਪਹਿਲਾ (1845-46): ਲਾਹੌਰ ਸੰਧੀ → ਕਸ਼ਮੀਰ ਅੰਗਰੇਜ਼ਾਂ ਨੂੰ; ਦੋ-ਲੱਖ ਰੁਪਏ ਮੁਆਵਜ਼ਾ\n- ਦੂਜਾ (1848-49): ਪੰਜਾਬ ਅੰਗਰੇਜ਼ੀ ਸਾਮਰਾਜ ਵਿੱਚ ਮਿਲਾਇਆ",
+          "pa": "ਬੰਦਾ ਸਿੰਘ: ਸਰਹੰਦ 1710। ਰਣਜੀਤ ਸਿੰਘ: ਲਾਹੌਰ 1799, ਮਹਾਰਾਜਾ 1801। ਐਂਗਲੋ-ਸਿੱਖ ਯੁੱਧ 1845, 1849।",
+          "en": "Banda Singh Bahadur (1670-1716): fought Mughal power in Punjab on Guru Gobind Singh Ji's instruction; captured Sirhind (1710).\n\nSikh Misls (12 confederacies, 1700s): Shukarcharkhia Misl (Ranjit Singh's) became dominant.\n\nMaharaja Ranjit Singh (1780-1839): captured Lahore (1799), became Maharaja (1801); controlled territory from Kabul to Tibet; obtained Kohinoor diamond. Kingdom weakened after 1839.\n\nAnglo-Sikh Wars: 1st (1845-46) → Treaty of Lahore, Kashmir transferred; 2nd (1848-49) → Punjab annexed by British East India Company."
+        }
+      },
+      {
+        "heading": {
+          "hi": "पंजाब के स्वतंत्रता संग्राम",
+          "pa": "ਪੰਜਾਬ ਦੇ ਆਜ਼ਾਦੀ ਸੰਗਰਾਮ",
+          "en": "Punjab's Freedom Movements"
+        },
+        "text": {
+          "hi": "**ਕੂਕਾ ਲਹਿਰ (Namdhari Movement)**: ਬਾਲਕ ਸਿੰਘ ਅਤੇ ਰਾਮ ਸਿੰਘ; ਅੰਗਰੇਜ਼ੀ ਮਾਲ ਬਾਈਕਾਟ; ਗਊ-ਰੱਖਿਆ\n\n**ਗ਼ਦਰ ਪਾਰਟੀ (1913)**: ਲਾਲਾ ਹਰਦਿਆਲ ਵੱਲੋਂ ਸੈਨ ਫਰਾਂਸਿਸਕੋ ਵਿੱਚ ਸਥਾਪਿਤ; ਪ੍ਰਵਾਸੀ ਪੰਜਾਬੀਆਂ ਦੀ ਲਹਿਰ; ਭਾਰਤ ਵਿੱਚ ਕ੍ਰਾਂਤੀ ਲਿਆਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ (1915 ਅਸਫਲ)\n\n**ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਤਲੇਆਮ (13 ਅਪ੍ਰੈਲ 1919)**:\n- ਜਨਰਲ ਡਾਇਰ ਦਾ ਹੁਕਮ; ਵਿਸਾਖੀ ਵਾਲੇ ਦਿਨ ਅੰਮ੍ਰਿਤਸਰ\n- ਰਾਓਲਟ ਐਕਟ ਵਿਰੁੱਧ ਰੋਸ ਵਜੋਂ\n- ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ ਨੇ 1940 ਵਿੱਚ ਮਾਈਕਲ ਓ'ਡਵਾਇਰ ਨੂੰ ਲੰਡਨ ਵਿੱਚ ਗੋਲੀ ਮਾਰੀ\n\n**ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ (1920s)**: ਅਕਾਲੀ ਦਲ; SGPC ਦੀ ਸਥਾਪਨਾ 1920\n\n**ਬੱਬਰ ਅਕਾਲੀ ਲਹਿਰ**: ਮਸਤ ਸਿੰਘ ਦੀ ਅਗਵਾਈ; ਸ਼ਹੀਦੀ\n\n**ਭਗਤ ਸਿੰਘ** (1907-1931): ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਤੋਂ ਪ੍ਰੇਰਿਤ; ਅਸੈਂਬਲੀ ਬੰਬ ਧਮਾਕਾ (1929); 23 ਮਾਰਚ 1931 ਨੂੰ ਸ਼ਹੀਦੀ",
+          "pa": "ਕੂਕਾ ਲਹਿਰ: ਰਾਮ ਸਿੰਘ। ਗ਼ਦਰ 1913: ਲਾਲਾ ਹਰਦਿਆਲ। ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼: 13 ਅਪ੍ਰੈਲ 1919, ਜਨਰਲ ਡਾਇਰ। ਭਗਤ ਸਿੰਘ: 23 ਮਾਰਚ 1931।",
+          "en": "Kuka (Namdhari) Movement: Ram Singh; boycott of British goods; cow protection.\n\nGhadar Party (1913): founded in San Francisco by Lala Har Dayal; diaspora Punjabis; attempted armed revolt 1915 (failed).\n\nJallianwala Bagh massacre (13 April 1919): General Dyer's order; Vaisakhi crowd protesting Rowlatt Act; hundreds killed. Shaheed Udham Singh avenged it by shooting Michael O'Dwyer in London (1940).\n\nGurdwara Reform Movement (1920s): Akali Dal; SGPC founded 1920. Babbar Akali movement: armed resistance.\n\nBhagat Singh (1907-1931): inspired by Jallianwala Bagh; Assembly bombing 1929; hanged 23 March 1931."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਤਲੇਆਮ ਕਦੋਂ ਹੋਇਆ?",
+          "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਦੋਂ?",
+          "en": "When was the Jallianwala Bagh massacre?"
+        },
+        "back": {
+          "hi": "13 ਅਪ੍ਰੈਲ 1919 (ਵਿਸਾਖੀ), ਜਨਰਲ ਡਾਇਰ",
+          "pa": "13 ਅਪ੍ਰੈਲ 1919, ਜਨਰਲ ਡਾਇਰ",
+          "en": "13 April 1919 (Vaisakhi), ordered by General Dyer"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਗ਼ਦਰ ਪਾਰਟੀ ਦੀ ਸਥਾਪਨਾ ਕਿਸ ਨੇ ਅਤੇ ਕਿੱਥੇ ਕੀਤੀ?",
+          "pa": "ਗ਼ਦਰ ਪਾਰਟੀ?",
+          "en": "Who founded the Ghadar Party and where?"
+        },
+        "back": {
+          "hi": "ਲਾਲਾ ਹਰਦਿਆਲ, ਸੈਨ ਫਰਾਂਸਿਸਕੋ (1913)",
+          "pa": "ਲਾਲਾ ਹਰਦਿਆਲ, ਸੈਨ ਫਰਾਂਸਿਸਕੋ, 1913",
+          "en": "Lala Har Dayal, San Francisco, 1913"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਭਗਤ ਸਿੰਘ ਦੀ ਸ਼ਹੀਦੀ ਕਦੋਂ ਹੋਈ?",
+          "pa": "ਭਗਤ ਸਿੰਘ ਦੀ ਸ਼ਹੀਦੀ?",
+          "en": "When was Bhagat Singh martyred?"
+        },
+        "back": {
+          "hi": "23 ਮਾਰਚ 1931",
+          "pa": "23 ਮਾਰਚ 1931",
+          "en": "23 March 1931"
+        }
+      },
+      {
+        "front": {
+          "hi": "ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਨੇ ਕਿਹੜਾ ਸ਼ਹਿਰ ਫਤਿਹ ਕੀਤਾ?",
+          "pa": "ਬੰਦਾ ਸਿੰਘ — ਕਿਹੜਾ ਸ਼ਹਿਰ?",
+          "en": "Which city did Banda Singh Bahadur capture?"
+        },
+        "back": {
+          "hi": "ਸਰਹੰਦ (1710)",
+          "pa": "ਸਰਹੰਦ, 1710",
+          "en": "Sirhind/Sarhind (1710)"
+        }
+      },
+      {
+        "front": {
+          "hi": "SGPC ਦੀ ਸਥਾਪਨਾ ਕਦੋਂ ਹੋਈ?",
+          "pa": "SGPC ਕਦੋਂ?",
+          "en": "When was SGPC founded?"
+        },
+        "back": {
+          "hi": "1920 (ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ ਦੌਰਾਨ)",
+          "pa": "1920",
+          "en": "1920 (during Gurdwara Reform Movement)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "clerk-phc-q1",
+        "text": {
+          "hi": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਕਤਲੇਆਮ ਕਿਸ ਐਕਟ ਦੇ ਵਿਰੋਧ ਵਿੱਚ ਹੋਈਆਂ ਇਕੱਤਰਤਾ ਤੇ ਹੋਇਆ?",
+          "pa": "ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ — ਕਿਸ ਐਕਟ ਵਿਰੁੱਧ?",
+          "en": "The Jallianwala Bagh massacre occurred at a protest against which Act?"
+        },
+        "options": {
+          "hi": [
+            "ਇਲਬਰਟ ਬਿੱਲ",
+            "ਰਾਓਲਟ ਐਕਟ",
+            "ਮਿੰਟੋ-ਮਾਰਲੇ ਸੁਧਾਰ",
+            "ਭਾਰਤ ਸਰਕਾਰ ਐਕਟ 1919"
+          ],
+          "pa": [
+            "ਇਲਬਰਟ ਬਿੱਲ",
+            "ਰਾਓਲਟ ਐਕਟ",
+            "ਮਿੰਟੋ-ਮਾਰਲੇ",
+            "ਭਾਰਤ ਸਰਕਾਰ ਐਕਟ"
+          ],
+          "en": [
+            "Ilbert Bill",
+            "Rowlatt Act",
+            "Minto-Morley Reforms",
+            "Government of India Act 1919"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਰਾਓਲਟ ਐਕਟ (1919) ਵਿਰੁੱਧ ਰੋਸ ਵਿੱਚ 13 ਅਪ੍ਰੈਲ 1919 ਨੂੰ ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਵਿੱਚ ਇਕੱਤਰਤਾ ਹੋਈ। ਜਨਰਲ ਡਾਇਰ ਨੇ ਗੋਲੀਬਾਰੀ ਦਾ ਹੁਕਮ ਦਿੱਤਾ।",
+          "pa": "ਰਾਓਲਟ ਐਕਟ ਵਿਰੁੱਧ।",
+          "en": "The gathering on 13 April 1919 was protesting the Rowlatt Act. General Dyer ordered the firing without warning."
+        }
+      },
+      {
+        "id": "clerk-phc-q2",
+        "text": {
+          "hi": "ਗ਼ਦਰ ਪਾਰਟੀ ਦੀ ਸਥਾਪਨਾ ਕਿੱਥੇ ਹੋਈ?",
+          "pa": "ਗ਼ਦਰ ਪਾਰਟੀ ਕਿੱਥੇ?",
+          "en": "Where was the Ghadar Party founded?"
+        },
+        "options": {
+          "hi": [
+            "ਲੰਡਨ",
+            "ਕਲਕੱਤਾ",
+            "ਸੈਨ ਫਰਾਂਸਿਸਕੋ",
+            "ਲਾਹੌਰ"
+          ],
+          "pa": [
+            "ਲੰਡਨ",
+            "ਕਲਕੱਤਾ",
+            "ਸੈਨ ਫਰਾਂਸਿਸਕੋ",
+            "ਲਾਹੌਰ"
+          ],
+          "en": [
+            "London",
+            "Calcutta",
+            "San Francisco",
+            "Lahore"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "ਗ਼ਦਰ ਪਾਰਟੀ ਦੀ ਸਥਾਪਨਾ 1913 ਵਿੱਚ ਅਮਰੀਕਾ ਦੇ ਸੈਨ ਫਰਾਂਸਿਸਕੋ ਵਿੱਚ ਲਾਲਾ ਹਰਦਿਆਲ ਨੇ ਕੀਤੀ।",
+          "pa": "ਸੈਨ ਫਰਾਂਸਿਸਕੋ, ਲਾਲਾ ਹਰਦਿਆਲ, 1913।",
+          "en": "Ghadar Party was founded in San Francisco, USA in 1913 by Lala Har Dayal, primarily mobilising diaspora Punjabi workers."
+        }
+      },
+      {
+        "id": "clerk-phc-q3",
+        "text": {
+          "hi": "ਭਗਤ ਸਿੰਘ ਨੇ ਕਿਸਦੇ ਨਾਲ 1929 ਵਿੱਚ ਅਸੈਂਬਲੀ ਵਿੱਚ ਬੰਬ ਸੁੱਟਿਆ?",
+          "pa": "ਭਗਤ ਸਿੰਘ ਨਾਲ ਅਸੈਂਬਲੀ ਬੰਬ?",
+          "en": "Who threw the bomb in the Assembly along with Bhagat Singh in 1929?"
+        },
+        "options": {
+          "hi": [
+            "ਸੁਖਦੇਵ",
+            "ਰਾਜਗੁਰੂ",
+            "ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ",
+            "ਚੰਦਰਸ਼ੇਖਰ ਆਜ਼ਾਦ"
+          ],
+          "pa": [
+            "ਸੁਖਦੇਵ",
+            "ਰਾਜਗੁਰੂ",
+            "ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ",
+            "ਚੰਦਰਸ਼ੇਖਰ ਆਜ਼ਾਦ"
+          ],
+          "en": [
+            "Sukhdev",
+            "Rajguru",
+            "Batukeshwar Dutt",
+            "Chandrashekhar Azad"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "8 ਅਪ੍ਰੈਲ 1929 ਨੂੰ ਭਗਤ ਸਿੰਘ ਅਤੇ ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ ਨੇ ਕੇਂਦਰੀ ਅਸੈਂਬਲੀ ਵਿੱਚ ਬੰਬ ਸੁੱਟਿਆ। ਕਿਸੇ ਨੂੰ ਮਾਰਨਾ ਮਕਸਦ ਨਹੀਂ ਸੀ — 'ਬਹਿਰਿਆਂ ਨੂੰ ਸੁਣਾਉਣ' ਲਈ।",
+          "pa": "ਭਗਤ ਸਿੰਘ + ਬਟੁਕੇਸ਼ਵਰ ਦੱਤ, 8 ਅਪ੍ਰੈਲ 1929।",
+          "en": "On 8 April 1929, Bhagat Singh and Batukeshwar Dutt threw bombs in the Central Assembly. The purpose was symbolic — 'to make the deaf hear' — not to kill."
+        }
+      },
+      {
+        "id": "clerk-phc-q4",
+        "text": {
+          "hi": "ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ ਕਿਹੜੇ ਸ਼ਹਿਰ ਨਾਲ ਸੰਬੰਧਿਤ ਸਨ?",
+          "pa": "ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ ਕਿੱਥੋਂ?",
+          "en": "With which city is Bulleh Shah associated?"
+        },
+        "options": {
+          "hi": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਕਸੂਰ",
+            "ਲਾਹੌਰ",
+            "ਮੁਲਤਾਨ"
+          ],
+          "pa": [
+            "ਅੰਮ੍ਰਿਤਸਰ",
+            "ਕਸੂਰ",
+            "ਲਾਹੌਰ",
+            "ਮੁਲਤਾਨ"
+          ],
+          "en": [
+            "Amritsar",
+            "Kasur",
+            "Lahore",
+            "Multan"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ (1680-1757) ਕਸੂਰ (ਹੁਣ ਪਾਕਿਸਤਾਨ) ਨਾਲ ਸੰਬੰਧਿਤ ਸਨ। ਉਹ ਪੰਜਾਬ ਦੇ ਮਸ਼ਹੂਰ ਸੂਫ਼ੀ ਕਵੀ ਸਨ।",
+          "pa": "ਬੁੱਲ੍ਹੇ ਸ਼ਾਹ = ਕਸੂਰ।",
+          "en": "Bulleh Shah (1680-1757) is associated with Kasur (present-day Pakistan). He is one of Punjab's greatest Sufi poets, writing in Punjabi on love, spirituality and social equality."
+        }
+      },
+      {
+        "id": "clerk-phc-q5",
+        "text": {
+          "hi": "SGPC ਦੀ ਸਥਾਪਨਾ ਕਿਹੜੀ ਲਹਿਰ ਦੌਰਾਨ ਹੋਈ?",
+          "pa": "SGPC ਕਿਹੜੀ ਲਹਿਰ ਵਿੱਚ?",
+          "en": "SGPC was established during which movement?"
+        },
+        "options": {
+          "hi": [
+            "ਗ਼ਦਰ ਲਹਿਰ",
+            "ਕੂਕਾ ਲਹਿਰ",
+            "ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ",
+            "ਅਸਹਿਯੋਗ ਲਹਿਰ"
+          ],
+          "pa": [
+            "ਗ਼ਦਰ",
+            "ਕੂਕਾ",
+            "ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ",
+            "ਅਸਹਿਯੋਗ"
+          ],
+          "en": [
+            "Ghadar Movement",
+            "Kuka Movement",
+            "Gurdwara Reform Movement",
+            "Non-Cooperation Movement"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "SGPC (Shiromani Gurdwara Parbandhak Committee) ਦੀ ਸਥਾਪਨਾ 1920 ਵਿੱਚ ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ ਦੌਰਾਨ ਹੋਈ।",
+          "pa": "SGPC 1920, ਗੁਰਦੁਆਰਾ ਸੁਧਾਰ ਲਹਿਰ।",
+          "en": "SGPC (Shiromani Gurdwara Parbandhak Committee) was established in 1920 during the Gurdwara Reform Movement to manage historical Sikh shrines taken back from Mahants."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "clerk-reasoning-batch1",
+    "subject": "General",
+    "unit": "PSSSB Clerk Part B — Logical Reasoning and Mental Ability",
+    "examIds": [
+      "clerk"
+    ],
+    "title": {
+      "hi": "लॉजिकल रीज़निंग: श्रेणी, सादृश्य, कोडिंग-डिकोडिंग, रक्त संबंध और दिशाबोध",
+      "pa": "ਲੌਜੀਕਲ ਰੀਜ਼ਨਿੰਗ: ਲੜੀ, ਸਮਾਨਤਾ, ਕੋਡਿੰਗ-ਡੀਕੋਡਿੰਗ, ਖ਼ੂਨ ਦੇ ਰਿਸ਼ਤੇ ਅਤੇ ਦਿਸ਼ਾ-ਬੋਧ",
+      "en": "Logical Reasoning: Series, Analogy, Coding-Decoding, Blood Relations and Direction Sense"
+    },
+    "level": "PSSSB Clerk Part B — Reasoning/Mental Ability (25 marks, negative marking 0.25)",
+    "sources": [
+      {
+        "title": "PSSSB Clerk Advt. 02/2026 Syllabus — Part B Reasoning (secondary source)",
+        "url": "https://sssb.punjab.gov.in/",
+        "note": "Pattern as reported. Verify against official PDF. Reasoning topics are standard across PSSSB/SSC patterns."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "संख्या और अक्षर श्रेणी (Number and Letter Series)",
+          "pa": "ਸੰਖਿਆ ਅਤੇ ਅੱਖਰ ਲੜੀ",
+          "en": "Number and Letter Series"
+        },
+        "text": {
+          "hi": "**श्रेणी** में एक नियम के अनुसार संख्याएं या अक्षर आते हैं। लुप्त पद ढूंढना है।\n\n**प्रकार**:\n- **अंकगणितीय श्रेणी**: अंतर स्थिर हो — 2, 5, 8, 11, ? → अंतर=3 → **14**\n- **गुणोत्तर श्रेणी**: अनुपात स्थिर — 3, 6, 12, 24, ? → ×2 → **48**\n- **मिश्रित**: +2, +3, +4, +5 — 1, 3, 6, 10, 15, ? → **21**\n- **अक्षर श्रेणी**: A, C, F, J, ? → +2,+3,+4,+5 → **O**\n\n**युक्ति**: पहले अंतर निकालें, फिर अंतरों का अंतर देखें। यदि दूसरा अंतर स्थिर है → द्विघात श्रेणी।\n\n**अभ्यास**: 4, 9, 16, 25, 36, ? → पूर्ण वर्ग: 2², 3², 4², 5², 6² → **49** (7²)",
+          "pa": "ਸੰਖਿਆ ਲੜੀ: 2,5,8,11 → ਅੰਤਰ=3 → ਅਗਲਾ=14। ਗੁਣਾ ਲੜੀ: 3,6,12,24 → ×2 → 48। ਪੂਰੇ ਵਰਗ: 4,9,16,25,36 → 49।",
+          "en": "**Series** items follow a rule — find the missing term.\n- Arithmetic: 2,5,8,11,? → diff=3 → **14**\n- Geometric: 3,6,12,24,? → ×2 → **48**\n- Perfect squares: 4,9,16,25,36,? → 2²,3²,4²,5²,6² → **49**\n- Letter series: A,C,F,J,? → +2,+3,+4,+5 → **O**\n\nTip: Find 1st differences, then 2nd differences. If 2nd difference is constant → quadratic series."
+        }
+      },
+      {
+        "heading": {
+          "hi": "सादृश्य (Analogy)",
+          "pa": "ਸਮਾਨਤਾ (Analogy)",
+          "en": "Analogy"
+        },
+        "text": {
+          "hi": "**सादृश्य**: जोड़े के बीच संबंध पहचानें, फिर दूसरे जोड़े में वही संबंध लागू करें।\n\n**प्रकार**:\n- **शब्द**: Pen : Write :: Knife : **Cut** (pen से लिखते हैं; knife से काटते हैं)\n- **संख्या**: 4 : 16 :: 5 : **25** (वर्ग)\n- **अक्षर**: AB : YZ :: CD : **WX** (वर्णमाला में उलटा))\n\n**सामान्य संबंध**:\n- औज़ार और उपयोग: Pen→Write, Saw→Cut\n- जन्म स्थान: Puppy→Dog, Calf→Cow\n- विपरीत: Day→Night, Hot→Cold\n- भाग और पूरा: Finger→Hand, Chapter→Book",
+          "pa": "Pen:Write :: Knife:Cut। 4:16 :: 5:25 (ਵਰਗ)। ਸੰਬੰਧ ਪਛਾਣੋ ਅਤੇ ਉਹੀ ਲਾਗੂ ਕਰੋ।",
+          "en": "**Analogy**: identify the relationship in the first pair; apply it to find the missing word.\n\n- Tool-use: Pen:Write :: Knife:**Cut**\n- Squares: 4:16 :: 5:**25**\n- Letter reverse: AB:YZ :: CD:**WX**\n- Part-whole: Finger:Hand :: Chapter:**Book**\n\nCommon relationships: tool→action, young→adult animal, opposite pairs, part→whole."
+        }
+      },
+      {
+        "heading": {
+          "hi": "कोडिंग-डिकोडिंग (Coding-Decoding)",
+          "pa": "ਕੋਡਿੰਗ-ਡੀਕੋਡਿੰਗ",
+          "en": "Coding-Decoding"
+        },
+        "text": {
+          "hi": "**कोडिंग-डिकोडिंग**: अक्षरों को बदले गए रूप में लिखने का नियम पहचानें।\n\n**सामान्य प्रकार**:\n1. **वर्णमाला में +/- स्थान**: APPLE → BQQMF (+1 हर अक्षर)\n2. **उलटी वर्णमाला**: A=Z, B=Y (A↔Z, B↔Y pattern)\n3. **स्वर/व्यंजन बदलाव**: स्वर +1 स्थान\n4. **संख्या-अक्षर**: A=1, B=2 ... CAT = 3+1+20 = 24\n\n**उदाहरण**: यदि BOOK को CPPL कोड किया जाए (हर अक्षर +1), तो DESK का कोड होगा?\n- D+1=E, E+1=F, S+1=T, K+1=L → **EFTL**\n\n**युक्ति**: पहले पैटर्न में कितने स्थान बदले हैं, यह गिनें।",
+          "pa": "BOOK→CPPL (हर ਅੱਖਰ+1)। ਨਿਯਮ ਲੱਭੋ ਅਤੇ ਲਾਗੂ ਕਰੋ।",
+          "en": "**Coding-Decoding**: identify the rule used to encode words.\n\nCommon patterns:\n1. Alphabet shift: APPLE→BQQMF (each letter +1)\n2. Reverse alphabet: A↔Z, B↔Y\n3. Number-letter: A=1, B=2... CAT=3+1+20=24\n\n**Example**: If BOOK→CPPL (+1 each), then DESK=? → E,F,T,L → **EFTL**\n\nTip: Count the shift for one letter first, then apply consistently."
+        }
+      },
+      {
+        "heading": {
+          "hi": "रक्त संबंध और दिशाबोध",
+          "pa": "ਖ਼ੂਨ ਦੇ ਰਿਸ਼ਤੇ ਅਤੇ ਦਿਸ਼ਾ-ਬੋਧ",
+          "en": "Blood Relations and Direction Sense"
+        },
+        "text": {
+          "hi": "**ਰਕਤ ਸੰਬੰਧ**: ਵੰਸ਼ਾਵਲੀ ਬਣਾਓ ਅਤੇ ਰਿਸ਼ਤਾ ਲੱਭੋ।\n\nਕੁਝ ਮਹੱਤਵਪੂਰਨ ਰਿਸ਼ਤੇ:\n- Grandfather = Father's Father; Maternal uncle = Mother's brother\n- Brother's wife = Sister-in-law; Father's sister = Aunt (Bhua)\n\n**ਉਦਾਹਰਨ**: 'A ਦੀ ਮਾਂ B ਦੀ ਧੀ ਹੈ। ਤਾਂ A ਦਾ B ਨਾਲ ਕੀ ਰਿਸ਼ਤਾ ਹੈ?'\n- A ਦੀ ਮਾਂ = B ਦੀ ਧੀ → B, A ਦੀ ਨਾਨੀ/ਦਾਦੀ ਹੈ → A ਨੂੰ B ਦੀ ਨਾਤਿਨ/ਪੋਤਰੀ → **Granddaughter**\n\n---\n\n**ਦਿਸ਼ਾ-ਬੋਧ**: ਸ਼ੁਰੂਆਤੀ ਦਿਸ਼ਾ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ; ਹਰ ਮੋੜ ਬਾਅਦ ਅਪਡੇਟ ਕਰੋ।\n\nਯਾਦ ਕਰੋ:\n- ਸੂਰਜ ਚੜ੍ਹਦਾ = ਪੂਰਬ; ਢਲਦਾ = ਪੱਛਮ\n- ਖੱਬੇ ਮੁੜਨਾ = ਐਂਟੀ-ਕਲਾਕਵਾਈਜ਼; ਸੱਜੇ = ਕਲਾਕਵਾਈਜ਼\n\n**ਉਦਾਹਰਨ**: ਰਾਮ ਉੱਤਰ ਵੱਲ 5 km ਗਿਆ, ਫਿਰ ਸੱਜੇ 3 km। ਉਹ ਕਿੱਥੇ ਹੈ?\n- ਉੱਤਰ ਤੋਂ ਸੱਜੇ = ਪੂਰਬ\n- ਉੱਤਰ 5km + ਪੂਰਬ 3km → ਸ਼ੁਰੂਆਤ ਤੋਂ ਉੱਤਰ-ਪੂਰਬ ਵਿੱਚ √(25+9) = **√34 km**",
+          "pa": "ਖ਼ੂਨ ਦੇ ਰਿਸ਼ਤੇ: ਵੰਸ਼ਾਵਲੀ ਬਣਾਓ। ਦਿਸ਼ਾ: ਉੱਤਰ/ਦੱਖਣ/ਪੂਰਬ/ਪੱਛਮ — ਸੱਜੇ ਮੋੜ = ਕਲਾਕਵਾਈਜ਼।",
+          "en": "**Blood Relations**: draw a family tree to track relationships.\nKey: Grandfather = father's father; Maternal uncle = mother's brother; Aunt (Bhua) = father's sister.\n\n**Direction Sense**: start from the initial direction; update after each turn.\n- Right turn from North → East; Left turn → West\n- Sun rises East, sets West\n\nShortest distance: use Pythagoras if two movements are perpendicular. Example: 5km N + 3km E → distance = √(25+9) = **√34 km**"
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "4, 9, 16, 25, 36, ? → अगला पद?",
+          "pa": "4,9,16,25,36 → ਅਗਲਾ?",
+          "en": "4, 9, 16, 25, 36, ? → Next term?"
+        },
+        "back": {
+          "hi": "49 (7² — ਪੂਰੇ ਵਰਗਾਂ ਦੀ ਲੜੀ)",
+          "pa": "49 (7²)",
+          "en": "49 (7² — perfect squares series)"
+        }
+      },
+      {
+        "front": {
+          "hi": "Pen : Write :: Knife : ?",
+          "pa": "Pen:Write :: Knife:?",
+          "en": "Pen : Write :: Knife : ?"
+        },
+        "back": {
+          "hi": "Cut (ਸੰਦ ਅਤੇ ਕੰਮ ਦਾ ਸੰਬੰਧ)",
+          "pa": "Cut",
+          "en": "Cut (tool-action analogy)"
+        }
+      },
+      {
+        "front": {
+          "hi": "BOOK → CPPL (सभी +1) तो DOOR → ?",
+          "pa": "BOOK→CPPL (+1) → DOOR=?",
+          "en": "BOOK→CPPL (each +1), then DOOR→?"
+        },
+        "back": {
+          "hi": "EPPS (D→E, O→P, O→P, R→S)",
+          "pa": "EPPS",
+          "en": "EPPS (D+1=E, O+1=P, O+1=P, R+1=S)"
+        }
+      },
+      {
+        "front": {
+          "hi": "North से Right मुड़ने पर कौन सी दिशा?",
+          "pa": "ਉੱਤਰ ਤੋਂ ਸੱਜੇ ਮੋੜ?",
+          "en": "Right turn from North → which direction?"
+        },
+        "back": {
+          "hi": "East (ਪੂਰਬ)",
+          "pa": "ਪੂਰਬ (East)",
+          "en": "East"
+        }
+      },
+      {
+        "front": {
+          "hi": "2, 5, 8, 11, ? → नियम और अगला पद?",
+          "pa": "2,5,8,11 → ਅਗਲਾ?",
+          "en": "2, 5, 8, 11, ? → rule and next term?"
+        },
+        "back": {
+          "hi": "नियम: +3; अगला = 14",
+          "pa": "+3; ਅਗਲਾ=14",
+          "en": "Rule: +3; next = 14"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "clerk-rs-q1",
+        "text": {
+          "hi": "2, 6, 12, 20, 30, ? — अगला पद क्या है?",
+          "pa": "2,6,12,20,30 → ਅਗਲਾ ਪਦ?",
+          "en": "2, 6, 12, 20, 30, ? — What is the next term?"
+        },
+        "options": {
+          "hi": [
+            "40",
+            "42",
+            "44",
+            "36"
+          ],
+          "pa": [
+            "40",
+            "42",
+            "44",
+            "36"
+          ],
+          "en": [
+            "40",
+            "42",
+            "44",
+            "36"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "ਅੰਤਰ: 4,6,8,10,12 (ਹਰ ਵਾਰ +2)। ਅਗਲਾ ਅੰਤਰ=12 → 30+12=**42**।",
+          "pa": "ਅੰਤਰ 4,6,8,10,12 → +2 ਵੱਧਦਾ। 30+12=42।",
+          "en": "Differences: 4,6,8,10,12 (increasing by 2). Next difference=12 → 30+12=**42**."
+        }
+      },
+      {
+        "id": "clerk-rs-q2",
+        "text": {
+          "hi": "Doctor : Hospital :: Teacher : ?",
+          "pa": "Doctor:Hospital :: Teacher:?",
+          "en": "Doctor : Hospital :: Teacher : ?"
+        },
+        "options": {
+          "hi": [
+            "School",
+            "Library",
+            "Office",
+            "University"
+          ],
+          "pa": [
+            "School",
+            "Library",
+            "Office",
+            "University"
+          ],
+          "en": [
+            "School",
+            "Library",
+            "Office",
+            "University"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "ਡਾਕਟਰ ਹਸਪਤਾਲ ਵਿੱਚ ਕੰਮ ਕਰਦਾ ਹੈ; ਅਧਿਆਪਕ ਸਕੂਲ ਵਿੱਚ — ਇਹੀ ਸੰਬੰਧ ਹੈ।",
+          "pa": "Doctor:Hospital = ਪੇਸ਼ਾ:ਕੰਮ ਦੀ ਥਾਂ। Teacher:School।",
+          "en": "Doctor works at a Hospital; similarly Teacher works at a **School** (workplace analogy)."
+        }
+      },
+      {
+        "id": "clerk-rs-q3",
+        "text": {
+          "hi": "If MANGO is coded as NBOIP, what is the code for APPLE?",
+          "pa": "MANGO→NBOIP ਤਾਂ APPLE=?",
+          "en": "If MANGO is coded as NBOIP, what is the code for APPLE?"
+        },
+        "options": {
+          "hi": [
+            "BQQMF",
+            "CRRNG",
+            "BQQMF",
+            "APPLD"
+          ],
+          "pa": [
+            "BQQMF",
+            "CRRNG",
+            "BQQMF",
+            "APPLD"
+          ],
+          "en": [
+            "BQQMF",
+            "CRRNG",
+            "BQQMG",
+            "APPLD"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "ਹਰ ਅੱਖਰ +1 ਹੋਇਆ: M→N, A→B, N→O, G→H, O→P → NBOIP ✓। ਇਸੇ ਤਰ੍ਹਾਂ APPLE: A→B, P→Q, P→Q, L→M, E→F → **BQQMF**।",
+          "pa": "ਹਰ ਅੱਖਰ +1: A→B,P→Q,P→Q,L→M,E→F = BQQMF।",
+          "en": "Each letter +1: M→N,A→B,N→O,G→H,O→P=NBOIP ✓. APPLE: A→B,P→Q,P→Q,L→M,E→F=**BQQMF**."
+        }
+      },
+      {
+        "id": "clerk-rs-q4",
+        "text": {
+          "hi": "A, B की माँ है। C, A का पुत्र है। D, B का भाई है। C का D से क्या संबंध है?",
+          "pa": "A, B ਦੀ ਮਾਂ। C, A ਦਾ ਪੁੱਤਰ। D, B ਦਾ ਭਰਾ। C ਅਤੇ D ਦਾ ਰਿਸ਼ਤਾ?",
+          "en": "A is B's mother. C is A's son. D is B's brother. What is C's relation to D?"
+        },
+        "options": {
+          "hi": [
+            "Uncle",
+            "Brother",
+            "Nephew",
+            "Cousin"
+          ],
+          "pa": [
+            "Uncle",
+            "ਭਰਾ",
+            "Nephew",
+            "Cousin"
+          ],
+          "en": [
+            "Uncle",
+            "Brother",
+            "Nephew",
+            "Cousin"
+          ]
+        },
+        "answer": 2,
+        "explanation": {
+          "hi": "A=B ਦੀ ਮਾਂ; D=B ਦਾ ਭਰਾ (ਯਾਨਿ D ਵੀ A ਦਾ ਪੁੱਤਰ)। C=A ਦਾ ਪੁੱਤਰ → C ਅਤੇ D ਦੋਵੇਂ A ਦੇ ਪੁੱਤਰ → ਭਰਾ ਨਹੀਂ? ਉਡੀਕ ਕਰੋ — D=B ਦਾ ਭਰਾ। A=B ਦੀ ਮਾਂ। D ਕੀ A ਦਾ ਭਰਾ ਹੈ? ਜਾਂ A ਦਾ ਪੁੱਤਰ? B ਦਾ ਭਰਾ = A ਦਾ ਪੁੱਤਰ ਵੀ ਹੋ ਸਕਦਾ ਹੈ। ਜੇ D=A ਦਾ ਪੁੱਤਰ, ਤਾਂ C ਅਤੇ D ਭਰਾ। ਪਰ ਜੇ D=A ਦਾ ਭਰਾ, ਤਾਂ C ਦਾ ਚਾਚਾ। ਪ੍ਰਸ਼ਨ ਵਿੱਚ D=B ਦਾ ਭਰਾ, B=A ਦੀ ਧੀ → D=A ਦਾ ਪੁੱਤਰ। C ਵੀ A ਦਾ ਪੁੱਤਰ → C ਅਤੇ D ਭਰਾ। ਪਰ ਵਿਕਲਪ ਵਿੱਚ Nephew ਦਿੱਤਾ ਹੈ — ਜੇ D=A ਦਾ ਭਰਾ (ਵੱਖਰੀ ਵਿਆਖਿਆ) ਤਾਂ C=D ਦਾ Nephew। [VERIFY this question — ambiguity in 'D is B's brother' interpretation]",
+          "pa": "[VERIFY] ਇਸ ਸਵਾਲ ਵਿੱਚ ਅਸਪਸ਼ਟਤਾ ਹੈ — D ਦਾ A ਨਾਲ ਰਿਸ਼ਤਾ ਸਪੱਸ਼ਟ ਕਰੋ।",
+          "en": "[VERIFY] This question has an ambiguity: 'D is B's brother' can mean D is A's son (sibling of B) OR D is A's own brother (B's uncle). If D is A's son → C and D are brothers. If D is A's brother → C is D's nephew. The answer key says Nephew, implying D is A's brother (B's maternal/paternal uncle). Review for clarity before publishing."
+        }
+      },
+      {
+        "id": "clerk-rs-q5",
+        "text": {
+          "hi": "राम पूर्व की ओर 4 km चला, फिर बाएं मुड़कर 3 km चला। अब वह प्रारंभिक बिंदु से कितनी दूर है?",
+          "pa": "ਰਾਮ ਪੂਰਬ 4km, ਫਿਰ ਖੱਬੇ 3km। ਸ਼ੁਰੂ ਤੋਂ ਕਿੰਨੀ ਦੂਰ?",
+          "en": "Ram walks 4 km East, then turns left and walks 3 km. How far is he from the starting point?"
+        },
+        "options": {
+          "hi": [
+            "5 km",
+            "7 km",
+            "3 km",
+            "4 km"
+          ],
+          "pa": [
+            "5 km",
+            "7 km",
+            "3 km",
+            "4 km"
+          ],
+          "en": [
+            "5 km",
+            "7 km",
+            "3 km",
+            "4 km"
+          ]
+        },
+        "answer": 0,
+        "explanation": {
+          "hi": "ਪੂਰਬ ਤੋਂ ਖੱਬੇ ਮੋੜ = ਉੱਤਰ। 4km ਪੂਰਬ + 3km ਉੱਤਰ → ਸਿੱਧੀ ਦੂਰੀ = √(4²+3²) = √(16+9) = √25 = **5 km**।",
+          "pa": "ਪੂਰਬ ਤੋਂ ਖੱਬੇ=ਉੱਤਰ। √(4²+3²)=5km।",
+          "en": "East, then left (turns North). 4km E + 3km N → straight-line distance = √(4²+3²) = √25 = **5 km** (Pythagoras)."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "clerk-english-grammar",
+    "subject": "English",
+    "unit": "PSSSB Clerk Part B — English Language (12 marks)",
+    "examIds": [
+      "clerk"
+    ],
+    "title": {
+      "hi": "अंग्रेजी व्याकरण: वाच्य, कथन, काल और सामान्य त्रुटियाँ",
+      "pa": "ਅੰਗਰੇਜ਼ੀ ਵਿਆਕਰਨ: ਵਾਚ, ਕਥਨ, ਕਾਲ ਅਤੇ ਆਮ ਗ਼ਲਤੀਆਂ",
+      "en": "English Grammar: Voice, Narration, Tenses and Common Errors"
+    },
+    "level": "PSSSB Clerk Part B — English (12 marks, negative marking 0.25 — as reported)",
+    "sources": [
+      {
+        "title": "PSSSB Clerk Advt. 02/2026 — Part B English syllabus (secondary source)",
+        "url": "https://sssb.punjab.gov.in/",
+        "note": "Secondary source. Topics are standard English grammar as covered in competitive exams (SSC/PSSSB pattern)."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {
+          "hi": "वाच्य परिवर्तन (Active and Passive Voice)",
+          "pa": "ਵਾਚ ਬਦਲਾਅ (Active and Passive Voice)",
+          "en": "Active and Passive Voice"
+        },
+        "text": {
+          "hi": "**ਸਕਿਰਿਆ (Active)**: ਕਰਤਾ ਕੰਮ ਕਰਦਾ ਹੈ → **ਨਿਸਕਿਰਿਆ (Passive)**: ਕਰਤਾ ਤੇ ਕੰਮ ਹੁੰਦਾ ਹੈ\n\n**ਬਣਾਉਣ ਦਾ ਨਿਯਮ**:\n- Object → Subject\n- Subject → by + Object\n- Verb → be + past participle\n\n**Tense-wise structure**:\n| Tense | Active | Passive |\n|-------|--------|----------|\n| Simple Present | She writes | is/am/are + written |\n| Simple Past | She wrote | was/were + written |\n| Simple Future | She will write | will be + written |\n| Present Continuous | She is writing | is/am/are + being + written |\n| Present Perfect | She has written | has/have + been + written |\n\n**ਉਦਾਹਰਨਾਂ**:\n- Active: Ram writes a letter. → Passive: **A letter is written by Ram.**\n- Active: They built this house. → Passive: **This house was built by them.**\n- Active: She is cooking food. → Passive: **Food is being cooked by her.**",
+          "pa": "Active → Passive: Object→Subject, Subject→by+Object, Verb→be+PP। Ram writes→Letter is written by Ram।",
+          "en": "**Active**: subject performs action. **Passive**: subject receives action.\n\nRule: Object → Subject; Subject → 'by' phrase; Verb → be + past participle.\n\nExamples:\n- Ram writes a letter → **A letter is written by Ram.**\n- They built this house → **This house was built by them.**\n- She is cooking food → **Food is being cooked by her.**\n\nNote: Imperative voice uses 'Let' in passive: 'Close the door' → **'Let the door be closed.'**"
+        }
+      },
+      {
+        "heading": {
+          "hi": "कथन परिवर्तन (Direct to Indirect Speech)",
+          "pa": "ਕਥਨ ਬਦਲਾਅ (Direct/Indirect Speech)",
+          "en": "Direct and Indirect Speech"
+        },
+        "text": {
+          "hi": "**ਨਿਯਮ** (Direct → Indirect):\n1. Inverted commas ਹਟਾਓ; conjunction ਜੋੜੋ (that/if/to)\n2. Reporting verb ਅਤੇ tense ਦੇ ਹਿਸਾਬ ਨਾਲ tense ਬਦਲੋ (backshift)\n3. Pronouns ਬਦਲੋ\n4. 'This/here/now' → 'that/there/then'\n\n**Tense Backshift**:\n| Direct | Indirect |\n|--------|----------|\n| Present Simple | Past Simple |\n| Past Simple | Past Perfect |\n| Present Perfect | Past Perfect |\n| will | would |\n| can | could |\n| is/are | was/were |\n\n**ਉਦਾਹਰਨਾਂ**:\n- He said, **\"I am happy.\"** → He said that **he was happy.**\n- She said, **\"I will come.\"** → She said that **she would come.**\n- He asked, **\"Are you tired?\"** → He asked **if I was tired.**\n\n**ਹੁਕਮੀ ਵਾਕ** (Imperative): reporting verb → told/asked/ordered; verb → infinitive\n- He said, **\"Close the window.\"** → He told me **to close the window.**",
+          "pa": "Direct→Indirect: inverted commas ਹਟਾਓ; tense ਪਿੱਛੇ ਖਿਸਕੋ; pronoun ਬਦਲੋ। I am→he was। will→would।",
+          "en": "**Rules** for Direct → Indirect:\n1. Remove inverted commas; add conjunction (that/if/to)\n2. Backshift tenses (present→past, will→would, can→could)\n3. Change pronouns (I→he/she, we→they)\n4. Change time/place words (now→then, here→there, today→that day)\n\n**Examples**:\n- He said, \"I am happy.\" → He said that **he was happy.**\n- She asked, \"Will you help?\" → She asked **if I would help.**\n- He said, \"Close the door.\" → He **told me to close** the door."
+        }
+      },
+      {
+        "heading": {
+          "hi": "विशेषण और क्रियाविशेषण; अनुच्छेद; पूर्वसर्ग",
+          "pa": "ਵਿਸ਼ੇਸ਼ਣ ਅਤੇ ਕਿਰਿਆ-ਵਿਸ਼ੇਸ਼ਣ; Articles; Prepositions",
+          "en": "Adjectives/Adverbs, Articles and Prepositions"
+        },
+        "text": {
+          "hi": "**Articles — a / an / the**:\n- **a**: consonant ਧੁਨੀ ਤੋਂ ਸ਼ੁਰੂ (a book, a university — /j/ sound)\n- **an**: vowel ਧੁਨੀ ਤੋਂ ਸ਼ੁਰੂ (an apple, an hour — 'h' silent)\n- **the**: specific; already known; superlatives; rivers, mountains, oceans\n\n**Common Preposition Usage**:\n- In: enclosed spaces, months, years — in the box, in July\n- On: surfaces, days — on the table, on Monday\n- At: specific time/place — at 5 pm, at the door\n- Since: point of time — since 2020\n- For: period of time — for 3 years\n- By: deadline — by Friday\n\n**Adjective vs Adverb**:\n- Adjective modifies a noun: He is a **quick** worker.\n- Adverb modifies a verb/adjective: He works **quickly**.\n- Common error: 'He runs quick.' ✗ → 'He runs **quickly**.' ✓\n\n**Synonyms/Antonyms** (frequently tested):\n| Word | Synonym | Antonym |\n|------|---------|----------|\n| Brave | Courageous | Cowardly |\n| Ancient | Old | Modern |\n| Expand | Enlarge | Contract/Shrink |\n| Genuine | Authentic | Fake |",
+          "pa": "a = ਵਿਅੰਜਨ; an = ਸਵਰ; the = ਖ਼ਾਸ। In=ਮਹੀਨਾ; On=ਦਿਨ; At=ਸਮੇਂ ਤੇ। Adjective=ਨਾਂਵ ਤੋਂ ਪਹਿਲਾਂ; Adverb=-ly।",
+          "en": "**Articles**: 'a' before consonant sound; 'an' before vowel sound (an hour — 'h' silent; a university — /j/ sound); 'the' for specific/known nouns, rivers, superlatives.\n\n**Prepositions**: in (months/years/enclosed); on (surfaces/days); at (time/specific place); since (point); for (duration); by (deadline).\n\n**Adjective vs Adverb**: quick (adj) → quickly (adv). 'He runs quickly' ✓ not 'quick'.\n\n**Synonyms/Antonyms**: Brave↔Courageous/Cowardly; Ancient↔Old/Modern; Genuine↔Authentic/Fake."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "front": {
+          "hi": "'They built this house.' → Passive Voice?",
+          "pa": "'They built this house.' → Passive?",
+          "en": "'They built this house.' → Passive?"
+        },
+        "back": {
+          "hi": "'This house was built by them.'",
+          "pa": "'This house was built by them.'",
+          "en": "'This house was built by them.'"
+        }
+      },
+      {
+        "front": {
+          "hi": "'She said, I will come.' → Indirect Speech?",
+          "pa": "Indirect: 'She said, I will come.'",
+          "en": "Indirect: 'She said, I will come.'"
+        },
+        "back": {
+          "hi": "'She said that she would come.'",
+          "pa": "'She said that she would come.'",
+          "en": "'She said that she would come.'"
+        }
+      },
+      {
+        "front": {
+          "hi": "'an hour' या 'a hour'?",
+          "pa": "'an hour' ਜਾਂ 'a hour'?",
+          "en": "'an hour' or 'a hour'?"
+        },
+        "back": {
+          "hi": "'an hour' — h ਮੂਕ ਹੈ, vowel ਧੁਨੀ ਤੋਂ ਸ਼ੁਰੂ",
+          "pa": "'an hour' — h ਮੂਕ",
+          "en": "'an hour' — 'h' is silent, so vowel sound; use 'an'"
+        }
+      },
+      {
+        "front": {
+          "hi": "'Since' ਅਤੇ 'For' ਵਿੱਚ ਫ਼ਰਕ?",
+          "pa": "'Since' ਅਤੇ 'For' ਦਾ ਫ਼ਰਕ?",
+          "en": "Difference between 'since' and 'for'?"
+        },
+        "back": {
+          "hi": "Since = ਸਮੇਂ ਦਾ ਬਿੰਦੂ (since 2020); For = ਸਮੇਂ ਦੀ ਮਿਆਦ (for 3 years)",
+          "pa": "Since=ਬਿੰਦੂ; For=ਅਰਸਾ",
+          "en": "Since = point in time (since 2020); For = period/duration (for 3 years)"
+        }
+      },
+      {
+        "front": {
+          "hi": "Antonym of 'Ancient'?",
+          "pa": "'Ancient' ਦਾ ਵਿਰੋਧਾਰਥੀ?",
+          "en": "Antonym of 'Ancient'?"
+        },
+        "back": {
+          "hi": "Modern",
+          "pa": "Modern",
+          "en": "Modern"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "clerk-eg-q1",
+        "text": {
+          "hi": "Change to Passive: 'The teacher teaches the students.'",
+          "pa": "Passive: 'The teacher teaches the students.'",
+          "en": "Change to Passive: 'The teacher teaches the students.'"
+        },
+        "options": {
+          "hi": [
+            "The students were taught by the teacher.",
+            "The students are taught by the teacher.",
+            "The students have been taught by the teacher.",
+            "The students taught the teacher."
+          ],
+          "pa": [
+            "were taught",
+            "are taught",
+            "have been taught",
+            "taught the teacher"
+          ],
+          "en": [
+            "The students were taught by the teacher.",
+            "The students are taught by the teacher.",
+            "The students have been taught by the teacher.",
+            "The students taught the teacher."
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Simple Present tense ਵਿੱਚ passive: is/am/are + past participle। Teacher→by teacher; students→subject। 'are taught' ਸਹੀ ਹੈ।",
+          "pa": "Simple Present passive = are taught।",
+          "en": "Simple Present Active → Passive: Object becomes subject + is/am/are + past participle + by + agent. 'The students are taught by the teacher.'"
+        }
+      },
+      {
+        "id": "clerk-eg-q2",
+        "text": {
+          "hi": "She said, \"I am reading a book.\" — Indirect Speech?",
+          "pa": "Indirect: 'She said, I am reading a book.'",
+          "en": "She said, 'I am reading a book.' — Indirect Speech?"
+        },
+        "options": {
+          "hi": [
+            "She said that she is reading a book.",
+            "She said that she was reading a book.",
+            "She said that I was reading a book.",
+            "She told she was reading a book."
+          ],
+          "pa": [
+            "is reading",
+            "was reading",
+            "I was reading",
+            "told she was reading"
+          ],
+          "en": [
+            "She said that she is reading a book.",
+            "She said that she was reading a book.",
+            "She said that I was reading a book.",
+            "She told she was reading a book."
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Present Continuous → Past Continuous (backshift)। 'am reading' → 'was reading'। 'I' → 'she' (pronoun change)। 'said that' ਵਰਤਣਾ ਸਹੀ ਹੈ।",
+          "pa": "am reading→was reading; I→she।",
+          "en": "Backshift: Present Continuous → Past Continuous. 'I am' → 'she was'; 'I' → 'she'. Correct: 'She said that she **was reading** a book.'"
+        }
+      },
+      {
+        "id": "clerk-eg-q3",
+        "text": {
+          "hi": "Choose the correct article: 'She is __ honest person.'",
+          "pa": "'She is __ honest person.' — ਸਹੀ article?",
+          "en": "Choose the correct article: 'She is ___ honest person.'"
+        },
+        "options": {
+          "hi": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ],
+          "pa": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ],
+          "en": [
+            "a",
+            "an",
+            "the",
+            "no article"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "'honest' ਦੀ ਸ਼ੁਰੂਆਤੀ ਧੁਨੀ vowel /ɒ/ ਹੈ (h ਮੂਕ)। ਇਸ ਲਈ 'an honest person' ਸਹੀ ਹੈ।",
+          "pa": "'honest' ਵਿੱਚ h ਮੂਕ → vowel ਧੁਨੀ → 'an'।",
+          "en": "'Honest' begins with a vowel sound /ɒ/ (the 'h' is silent). Therefore use 'an' → 'an honest person'."
+        }
+      },
+      {
+        "id": "clerk-eg-q4",
+        "text": {
+          "hi": "He said to me, 'Please help me.' — Indirect Speech?",
+          "pa": "'Please help me.' → Indirect?",
+          "en": "He said to me, 'Please help me.' — Indirect Speech?"
+        },
+        "options": {
+          "hi": [
+            "He said to me that please help him.",
+            "He requested me to help him.",
+            "He told me please to help him.",
+            "He asked me help him."
+          ],
+          "pa": [
+            "please help him",
+            "requested me to help him",
+            "told me please",
+            "asked help him"
+          ],
+          "en": [
+            "He said to me that please help him.",
+            "He requested me to help him.",
+            "He told me please to help him.",
+            "He asked me help him."
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "Polite request (please) ਲਈ reporting verb 'requested' ਵਰਤਦੇ ਹਾਂ। Structure: requested + person + to + infinitive। → 'He **requested me to help him**.'",
+          "pa": "please = request → 'requested me to help him'।",
+          "en": "For polite requests with 'please', use reporting verb 'requested' + to-infinitive. → 'He requested me to help him.'"
+        }
+      },
+      {
+        "id": "clerk-eg-q5",
+        "text": {
+          "hi": "Choose the synonym of 'Genuine': ",
+          "pa": "'Genuine' ਦਾ ਸਮਾਨਾਰਥੀ?",
+          "en": "Synonym of 'Genuine'?"
+        },
+        "options": {
+          "hi": [
+            "Fake",
+            "Authentic",
+            "Ancient",
+            "Artificial"
+          ],
+          "pa": [
+            "Fake",
+            "Authentic",
+            "Ancient",
+            "Artificial"
+          ],
+          "en": [
+            "Fake",
+            "Authentic",
+            "Ancient",
+            "Artificial"
+          ]
+        },
+        "answer": 1,
+        "explanation": {
+          "hi": "'Genuine' ਦਾ ਅਰਥ ਹੈ ਅਸਲੀ/ਸੱਚਾ। 'Authentic' ਸਮਾਨਾਰਥੀ ਹੈ। 'Fake' ਵਿਰੋਧਾਰਥੀ ਹੈ।",
+          "pa": "Genuine=ਅਸਲੀ=Authentic।",
+          "en": "'Genuine' means real/true. Its synonym is 'Authentic'. 'Fake' is its antonym."
+        }
+      }
+    ],
+    "videos": [],
+    "documents": []
+  },
+  {
     "id": "sst-producer-markets",
     "subject": "Economics",
     "unit": "Microeconomics — Production and Markets",

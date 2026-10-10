@@ -79,6 +79,74 @@
         { "subject": "Punjabi Language (Paper B Scored)", "marks": 10, "weight_pct": 10 }
       ]
     },
+    "clerk-02-2026": {
+      "exam_id": "clerk",
+      "advt_id": "02/2026",
+      "exam_name": {
+        "en": "PSSSB Clerk Advt. 02/2026",
+        "pa": "ਪੀ.ਐਸ.ਐਸ.ਐਸ.ਬੀ. ਕਲਰਕ ਇਸ਼ਤਿਹਾਰ 02/2026",
+        "hi": "पीएसएसएसबी क्लर्क विज्ञापन 02/2026"
+      },
+      "board": "Punjab Subordinate Services Selection Board (PSSSB), SAS Nagar",
+      "state": "Punjab",
+      "notification_identifier": "Advertisement No. 02/2026",
+      "year": 2026,
+      "recruitment_status": "draft_unverified",
+      "conflation_guard": "This is a SEPARATE advertisement from Advt. 15/2022. Do NOT mix patterns. Clerk (IT) and Group D have different syllabi — never conflate. Vacancy count conflicts across sources (531 vs 1,824 reported); link users to official notice only.",
+      "official_source_url": "https://sssb.punjab.gov.in/",
+      "verification_status": "UNVERIFIED — source is Adda247 summary of PSSSB syllabus for Advt. 02/2026 (Aug 2026). Must be verified against official PDF at sssb.punjab.gov.in before publishing as authoritative.",
+      "unresolved_gaps": [
+        "Q1: Questions per part not stated. Only marks given (Part A 50, Part B 100). If 1 mark each = 150 Q in 150 min; UNCONFIRMED.",
+        "Q2: Qualifying marks for Part A not stated in available sources. CONFIRM cut-off.",
+        "Q3: Vacancy count conflicts (531 vs 1,824 reported). Exam date reported as postponed/rescheduled. DO NOT hard-code.",
+        "Q4: Typing rules (30 WPM English+Punjabi, Raavi Unicode, qualifying) from secondary sites only. Font, layout, duration, passage length UNCONFIRMED.",
+        "Q5: Pattern differs by advertisement. Adv. 15/2022 had different section split. Store per-advt.",
+        "Q6: Part A Gurus list names 7 Gurus (Nanak, Angad, Amar Das, Ram Das, Arjan, Tegh Bahadur, Gobind Singh). Check official PDF whether others are excluded."
+      ],
+      "pattern_as_reported": {
+        "source": "Adda247 summary Aug 2026 — secondary source",
+        "mode": "OMR-based MCQ",
+        "duration_minutes_reported": 150,
+        "questions_per_part": "unknown — verify against official PDF",
+        "parts": [
+          {
+            "id": "A",
+            "label": "Punjabi (Qualifying)",
+            "marks": 50,
+            "qualifying": true,
+            "negative_marking": 0,
+            "merit_counted": false,
+            "subject": "Punjabi",
+            "note": "Qualifying cut-off unknown — verify"
+          },
+          {
+            "id": "B",
+            "label": "Merit Paper",
+            "marks": 100,
+            "qualifying": false,
+            "negative_marking": 0.25,
+            "merit_counted": true,
+            "sections": [
+              { "subject": "General Knowledge and Current Affairs", "marks": 25 },
+              { "subject": "Logical Reasoning, Mental Ability and Quantitative Aptitude", "marks": 25, "split_note": "Logical reasoning 17, basic numerical skills 4, data analysis 4 (as reported)" },
+              { "subject": "Punjab History and Culture", "marks": 17 },
+              { "subject": "Punjabi", "marks": 13 },
+              { "subject": "English", "marks": 12 },
+              { "subject": "ICT (Information and Communication Technology)", "marks": 8 }
+            ]
+          }
+        ],
+        "post_written": "Typing test (30 WPM English and Punjabi as reported, qualifying) then document verification"
+      },
+      "typing_rules_reported": {
+        "english_wpm": 30,
+        "punjabi_wpm": 30,
+        "font_reported": "Raavi Unicode",
+        "layout_reported": "Not confirmed in available sources",
+        "qualifying": true,
+        "verified": false
+      }
+    },
     "master-sst": {
       "exam_id": "master-sst",
       "exam_name": {

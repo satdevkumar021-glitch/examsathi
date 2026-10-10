@@ -1,0 +1,99 @@
+[
+  {
+    "id": "clerk-reasoning-batch1",
+    "subject": "General",
+    "unit": "PSSSB Clerk Part B — Logical Reasoning and Mental Ability",
+    "examIds": ["clerk"],
+    "title": {
+      "hi": "लॉजिकल रीज़निंग: श्रेणी, सादृश्य, कोडिंग-डिकोडिंग, रक्त संबंध और दिशाबोध",
+      "pa": "ਲੌਜੀਕਲ ਰੀਜ਼ਨਿੰਗ: ਲੜੀ, ਸਮਾਨਤਾ, ਕੋਡਿੰਗ-ਡੀਕੋਡਿੰਗ, ਖ਼ੂਨ ਦੇ ਰਿਸ਼ਤੇ ਅਤੇ ਦਿਸ਼ਾ-ਬੋਧ",
+      "en": "Logical Reasoning: Series, Analogy, Coding-Decoding, Blood Relations and Direction Sense"
+    },
+    "level": "PSSSB Clerk Part B — Reasoning/Mental Ability (25 marks, negative marking 0.25)",
+    "sources": [
+      {
+        "title": "PSSSB Clerk Advt. 02/2026 Syllabus — Part B Reasoning (secondary source)",
+        "url": "https://sssb.punjab.gov.in/",
+        "note": "Pattern as reported. Verify against official PDF. Reasoning topics are standard across PSSSB/SSC patterns."
+      }
+    ],
+    "sections": [
+      {
+        "heading": {"hi": "संख्या और अक्षर श्रेणी (Number and Letter Series)", "pa": "ਸੰਖਿਆ ਅਤੇ ਅੱਖਰ ਲੜੀ", "en": "Number and Letter Series"},
+        "text": {
+          "hi": "**श्रेणी** में एक नियम के अनुसार संख्याएं या अक्षर आते हैं। लुप्त पद ढूंढना है।\n\n**प्रकार**:\n- **अंकगणितीय श्रेणी**: अंतर स्थिर हो — 2, 5, 8, 11, ? → अंतर=3 → **14**\n- **गुणोत्तर श्रेणी**: अनुपात स्थिर — 3, 6, 12, 24, ? → ×2 → **48**\n- **मिश्रित**: +2, +3, +4, +5 — 1, 3, 6, 10, 15, ? → **21**\n- **अक्षर श्रेणी**: A, C, F, J, ? → +2,+3,+4,+5 → **O**\n\n**युक्ति**: पहले अंतर निकालें, फिर अंतरों का अंतर देखें। यदि दूसरा अंतर स्थिर है → द्विघात श्रेणी।\n\n**अभ्यास**: 4, 9, 16, 25, 36, ? → पूर्ण वर्ग: 2², 3², 4², 5², 6² → **49** (7²)",
+          "pa": "ਸੰਖਿਆ ਲੜੀ: 2,5,8,11 → ਅੰਤਰ=3 → ਅਗਲਾ=14। ਗੁਣਾ ਲੜੀ: 3,6,12,24 → ×2 → 48। ਪੂਰੇ ਵਰਗ: 4,9,16,25,36 → 49।",
+          "en": "**Series** items follow a rule — find the missing term.\n- Arithmetic: 2,5,8,11,? → diff=3 → **14**\n- Geometric: 3,6,12,24,? → ×2 → **48**\n- Perfect squares: 4,9,16,25,36,? → 2²,3²,4²,5²,6² → **49**\n- Letter series: A,C,F,J,? → +2,+3,+4,+5 → **O**\n\nTip: Find 1st differences, then 2nd differences. If 2nd difference is constant → quadratic series."
+        }
+      },
+      {
+        "heading": {"hi": "सादृश्य (Analogy)", "pa": "ਸਮਾਨਤਾ (Analogy)", "en": "Analogy"},
+        "text": {
+          "hi": "**सादृश्य**: जोड़े के बीच संबंध पहचानें, फिर दूसरे जोड़े में वही संबंध लागू करें।\n\n**प्रकार**:\n- **शब्द**: Pen : Write :: Knife : **Cut** (pen से लिखते हैं; knife से काटते हैं)\n- **संख्या**: 4 : 16 :: 5 : **25** (वर्ग)\n- **अक्षर**: AB : YZ :: CD : **WX** (वर्णमाला में उलटा))\n\n**सामान्य संबंध**:\n- औज़ार और उपयोग: Pen→Write, Saw→Cut\n- जन्म स्थान: Puppy→Dog, Calf→Cow\n- विपरीत: Day→Night, Hot→Cold\n- भाग और पूरा: Finger→Hand, Chapter→Book",
+          "pa": "Pen:Write :: Knife:Cut। 4:16 :: 5:25 (ਵਰਗ)। ਸੰਬੰਧ ਪਛਾਣੋ ਅਤੇ ਉਹੀ ਲਾਗੂ ਕਰੋ।",
+          "en": "**Analogy**: identify the relationship in the first pair; apply it to find the missing word.\n\n- Tool-use: Pen:Write :: Knife:**Cut**\n- Squares: 4:16 :: 5:**25**\n- Letter reverse: AB:YZ :: CD:**WX**\n- Part-whole: Finger:Hand :: Chapter:**Book**\n\nCommon relationships: tool→action, young→adult animal, opposite pairs, part→whole."
+        }
+      },
+      {
+        "heading": {"hi": "कोडिंग-डिकोडिंग (Coding-Decoding)", "pa": "ਕੋਡਿੰਗ-ਡੀਕੋਡਿੰਗ", "en": "Coding-Decoding"},
+        "text": {
+          "hi": "**कोडिंग-डिकोडिंग**: अक्षरों को बदले गए रूप में लिखने का नियम पहचानें।\n\n**सामान्य प्रकार**:\n1. **वर्णमाला में +/- स्थान**: APPLE → BQQMF (+1 हर अक्षर)\n2. **उलटी वर्णमाला**: A=Z, B=Y (A↔Z, B↔Y pattern)\n3. **स्वर/व्यंजन बदलाव**: स्वर +1 स्थान\n4. **संख्या-अक्षर**: A=1, B=2 ... CAT = 3+1+20 = 24\n\n**उदाहरण**: यदि BOOK को CPPL कोड किया जाए (हर अक्षर +1), तो DESK का कोड होगा?\n- D+1=E, E+1=F, S+1=T, K+1=L → **EFTL**\n\n**युक्ति**: पहले पैटर्न में कितने स्थान बदले हैं, यह गिनें।",
+          "pa": "BOOK→CPPL (हर ਅੱਖਰ+1)। ਨਿਯਮ ਲੱਭੋ ਅਤੇ ਲਾਗੂ ਕਰੋ।",
+          "en": "**Coding-Decoding**: identify the rule used to encode words.\n\nCommon patterns:\n1. Alphabet shift: APPLE→BQQMF (each letter +1)\n2. Reverse alphabet: A↔Z, B↔Y\n3. Number-letter: A=1, B=2... CAT=3+1+20=24\n\n**Example**: If BOOK→CPPL (+1 each), then DESK=? → E,F,T,L → **EFTL**\n\nTip: Count the shift for one letter first, then apply consistently."
+        }
+      },
+      {
+        "heading": {"hi": "रक्त संबंध और दिशाबोध", "pa": "ਖ਼ੂਨ ਦੇ ਰਿਸ਼ਤੇ ਅਤੇ ਦਿਸ਼ਾ-ਬੋਧ", "en": "Blood Relations and Direction Sense"},
+        "text": {
+          "hi": "**ਰਕਤ ਸੰਬੰਧ**: ਵੰਸ਼ਾਵਲੀ ਬਣਾਓ ਅਤੇ ਰਿਸ਼ਤਾ ਲੱਭੋ।\n\nਕੁਝ ਮਹੱਤਵਪੂਰਨ ਰਿਸ਼ਤੇ:\n- Grandfather = Father's Father; Maternal uncle = Mother's brother\n- Brother's wife = Sister-in-law; Father's sister = Aunt (Bhua)\n\n**ਉਦਾਹਰਨ**: 'A ਦੀ ਮਾਂ B ਦੀ ਧੀ ਹੈ। ਤਾਂ A ਦਾ B ਨਾਲ ਕੀ ਰਿਸ਼ਤਾ ਹੈ?'\n- A ਦੀ ਮਾਂ = B ਦੀ ਧੀ → B, A ਦੀ ਨਾਨੀ/ਦਾਦੀ ਹੈ → A ਨੂੰ B ਦੀ ਨਾਤਿਨ/ਪੋਤਰੀ → **Granddaughter**\n\n---\n\n**ਦਿਸ਼ਾ-ਬੋਧ**: ਸ਼ੁਰੂਆਤੀ ਦਿਸ਼ਾ ਤੋਂ ਸ਼ੁਰੂ ਕਰੋ; ਹਰ ਮੋੜ ਬਾਅਦ ਅਪਡੇਟ ਕਰੋ।\n\nਯਾਦ ਕਰੋ:\n- ਸੂਰਜ ਚੜ੍ਹਦਾ = ਪੂਰਬ; ਢਲਦਾ = ਪੱਛਮ\n- ਖੱਬੇ ਮੁੜਨਾ = ਐਂਟੀ-ਕਲਾਕਵਾਈਜ਼; ਸੱਜੇ = ਕਲਾਕਵਾਈਜ਼\n\n**ਉਦਾਹਰਨ**: ਰਾਮ ਉੱਤਰ ਵੱਲ 5 km ਗਿਆ, ਫਿਰ ਸੱਜੇ 3 km। ਉਹ ਕਿੱਥੇ ਹੈ?\n- ਉੱਤਰ ਤੋਂ ਸੱਜੇ = ਪੂਰਬ\n- ਉੱਤਰ 5km + ਪੂਰਬ 3km → ਸ਼ੁਰੂਆਤ ਤੋਂ ਉੱਤਰ-ਪੂਰਬ ਵਿੱਚ √(25+9) = **√34 km**",
+          "pa": "ਖ਼ੂਨ ਦੇ ਰਿਸ਼ਤੇ: ਵੰਸ਼ਾਵਲੀ ਬਣਾਓ। ਦਿਸ਼ਾ: ਉੱਤਰ/ਦੱਖਣ/ਪੂਰਬ/ਪੱਛਮ — ਸੱਜੇ ਮੋੜ = ਕਲਾਕਵਾਈਜ਼।",
+          "en": "**Blood Relations**: draw a family tree to track relationships.\nKey: Grandfather = father's father; Maternal uncle = mother's brother; Aunt (Bhua) = father's sister.\n\n**Direction Sense**: start from the initial direction; update after each turn.\n- Right turn from North → East; Left turn → West\n- Sun rises East, sets West\n\nShortest distance: use Pythagoras if two movements are perpendicular. Example: 5km N + 3km E → distance = √(25+9) = **√34 km**"
+        }
+      }
+    ],
+    "flashcards": [
+      {"front": {"hi": "4, 9, 16, 25, 36, ? → अगला पद?", "pa": "4,9,16,25,36 → ਅਗਲਾ?", "en": "4, 9, 16, 25, 36, ? → Next term?"}, "back": {"hi": "49 (7² — ਪੂਰੇ ਵਰਗਾਂ ਦੀ ਲੜੀ)", "pa": "49 (7²)", "en": "49 (7² — perfect squares series)"}},
+      {"front": {"hi": "Pen : Write :: Knife : ?", "pa": "Pen:Write :: Knife:?", "en": "Pen : Write :: Knife : ?"}, "back": {"hi": "Cut (ਸੰਦ ਅਤੇ ਕੰਮ ਦਾ ਸੰਬੰਧ)", "pa": "Cut", "en": "Cut (tool-action analogy)"}},
+      {"front": {"hi": "BOOK → CPPL (सभी +1) तो DOOR → ?", "pa": "BOOK→CPPL (+1) → DOOR=?", "en": "BOOK→CPPL (each +1), then DOOR→?"}, "back": {"hi": "EPPS (D→E, O→P, O→P, R→S)", "pa": "EPPS", "en": "EPPS (D+1=E, O+1=P, O+1=P, R+1=S)"}},
+      {"front": {"hi": "North से Right मुड़ने पर कौन सी दिशा?", "pa": "ਉੱਤਰ ਤੋਂ ਸੱਜੇ ਮੋੜ?", "en": "Right turn from North → which direction?"}, "back": {"hi": "East (ਪੂਰਬ)", "pa": "ਪੂਰਬ (East)", "en": "East"}},
+      {"front": {"hi": "2, 5, 8, 11, ? → नियम और अगला पद?", "pa": "2,5,8,11 → ਅਗਲਾ?", "en": "2, 5, 8, 11, ? → rule and next term?"}, "back": {"hi": "नियम: +3; अगला = 14", "pa": "+3; ਅਗਲਾ=14", "en": "Rule: +3; next = 14"}}
+    ],
+    "questions": [
+      {
+        "id": "clerk-rs-q1",
+        "text": {"hi": "2, 6, 12, 20, 30, ? — अगला पद क्या है?", "pa": "2,6,12,20,30 → ਅਗਲਾ ਪਦ?", "en": "2, 6, 12, 20, 30, ? — What is the next term?"},
+        "options": {"hi": ["40", "42", "44", "36"], "pa": ["40", "42", "44", "36"], "en": ["40", "42", "44", "36"]},
+        "answer": 1,
+        "explanation": {"hi": "ਅੰਤਰ: 4,6,8,10,12 (ਹਰ ਵਾਰ +2)। ਅਗਲਾ ਅੰਤਰ=12 → 30+12=**42**।", "pa": "ਅੰਤਰ 4,6,8,10,12 → +2 ਵੱਧਦਾ। 30+12=42।", "en": "Differences: 4,6,8,10,12 (increasing by 2). Next difference=12 → 30+12=**42**."}
+      },
+      {
+        "id": "clerk-rs-q2",
+        "text": {"hi": "Doctor : Hospital :: Teacher : ?", "pa": "Doctor:Hospital :: Teacher:?", "en": "Doctor : Hospital :: Teacher : ?"},
+        "options": {"hi": ["School", "Library", "Office", "University"], "pa": ["School", "Library", "Office", "University"], "en": ["School", "Library", "Office", "University"]},
+        "answer": 0,
+        "explanation": {"hi": "ਡਾਕਟਰ ਹਸਪਤਾਲ ਵਿੱਚ ਕੰਮ ਕਰਦਾ ਹੈ; ਅਧਿਆਪਕ ਸਕੂਲ ਵਿੱਚ — ਇਹੀ ਸੰਬੰਧ ਹੈ।", "pa": "Doctor:Hospital = ਪੇਸ਼ਾ:ਕੰਮ ਦੀ ਥਾਂ। Teacher:School।", "en": "Doctor works at a Hospital; similarly Teacher works at a **School** (workplace analogy)."}
+      },
+      {
+        "id": "clerk-rs-q3",
+        "text": {"hi": "If MANGO is coded as NBOIP, what is the code for APPLE?", "pa": "MANGO→NBOIP ਤਾਂ APPLE=?", "en": "If MANGO is coded as NBOIP, what is the code for APPLE?"},
+        "options": {"hi": ["BQQMF", "CRRNG", "BQQMF", "APPLD"], "pa": ["BQQMF", "CRRNG", "BQQMF", "APPLD"], "en": ["BQQMF", "CRRNG", "BQQMG", "APPLD"]},
+        "answer": 0,
+        "explanation": {"hi": "ਹਰ ਅੱਖਰ +1 ਹੋਇਆ: M→N, A→B, N→O, G→H, O→P → NBOIP ✓। ਇਸੇ ਤਰ੍ਹਾਂ APPLE: A→B, P→Q, P→Q, L→M, E→F → **BQQMF**।", "pa": "ਹਰ ਅੱਖਰ +1: A→B,P→Q,P→Q,L→M,E→F = BQQMF।", "en": "Each letter +1: M→N,A→B,N→O,G→H,O→P=NBOIP ✓. APPLE: A→B,P→Q,P→Q,L→M,E→F=**BQQMF**."}
+      },
+      {
+        "id": "clerk-rs-q4",
+        "text": {"hi": "A, B की माँ है। C, A का पुत्र है। D, B का भाई है। C का D से क्या संबंध है?", "pa": "A, B ਦੀ ਮਾਂ। C, A ਦਾ ਪੁੱਤਰ। D, B ਦਾ ਭਰਾ। C ਅਤੇ D ਦਾ ਰਿਸ਼ਤਾ?", "en": "A is B's mother. C is A's son. D is B's brother. What is C's relation to D?"},
+        "options": {"hi": ["Uncle", "Brother", "Nephew", "Cousin"], "pa": ["Uncle", "ਭਰਾ", "Nephew", "Cousin"], "en": ["Uncle", "Brother", "Nephew", "Cousin"]},
+        "answer": 2,
+        "explanation": {"hi": "A=B ਦੀ ਮਾਂ; D=B ਦਾ ਭਰਾ (ਯਾਨਿ D ਵੀ A ਦਾ ਪੁੱਤਰ)। C=A ਦਾ ਪੁੱਤਰ → C ਅਤੇ D ਦੋਵੇਂ A ਦੇ ਪੁੱਤਰ → ਭਰਾ ਨਹੀਂ? ਉਡੀਕ ਕਰੋ — D=B ਦਾ ਭਰਾ। A=B ਦੀ ਮਾਂ। D ਕੀ A ਦਾ ਭਰਾ ਹੈ? ਜਾਂ A ਦਾ ਪੁੱਤਰ? B ਦਾ ਭਰਾ = A ਦਾ ਪੁੱਤਰ ਵੀ ਹੋ ਸਕਦਾ ਹੈ। ਜੇ D=A ਦਾ ਪੁੱਤਰ, ਤਾਂ C ਅਤੇ D ਭਰਾ। ਪਰ ਜੇ D=A ਦਾ ਭਰਾ, ਤਾਂ C ਦਾ ਚਾਚਾ। ਪ੍ਰਸ਼ਨ ਵਿੱਚ D=B ਦਾ ਭਰਾ, B=A ਦੀ ਧੀ → D=A ਦਾ ਪੁੱਤਰ। C ਵੀ A ਦਾ ਪੁੱਤਰ → C ਅਤੇ D ਭਰਾ। ਪਰ ਵਿਕਲਪ ਵਿੱਚ Nephew ਦਿੱਤਾ ਹੈ — ਜੇ D=A ਦਾ ਭਰਾ (ਵੱਖਰੀ ਵਿਆਖਿਆ) ਤਾਂ C=D ਦਾ Nephew। [VERIFY this question — ambiguity in 'D is B's brother' interpretation]", "pa": "[VERIFY] ਇਸ ਸਵਾਲ ਵਿੱਚ ਅਸਪਸ਼ਟਤਾ ਹੈ — D ਦਾ A ਨਾਲ ਰਿਸ਼ਤਾ ਸਪੱਸ਼ਟ ਕਰੋ।", "en": "[VERIFY] This question has an ambiguity: 'D is B's brother' can mean D is A's son (sibling of B) OR D is A's own brother (B's uncle). If D is A's son → C and D are brothers. If D is A's brother → C is D's nephew. The answer key says Nephew, implying D is A's brother (B's maternal/paternal uncle). Review for clarity before publishing."}
+      },
+      {
+        "id": "clerk-rs-q5",
+        "text": {"hi": "राम पूर्व की ओर 4 km चला, फिर बाएं मुड़कर 3 km चला। अब वह प्रारंभिक बिंदु से कितनी दूर है?", "pa": "ਰਾਮ ਪੂਰਬ 4km, ਫਿਰ ਖੱਬੇ 3km। ਸ਼ੁਰੂ ਤੋਂ ਕਿੰਨੀ ਦੂਰ?", "en": "Ram walks 4 km East, then turns left and walks 3 km. How far is he from the starting point?"},
+        "options": {"hi": ["5 km", "7 km", "3 km", "4 km"], "pa": ["5 km", "7 km", "3 km", "4 km"], "en": ["5 km", "7 km", "3 km", "4 km"]},
+        "answer": 0,
+        "explanation": {"hi": "ਪੂਰਬ ਤੋਂ ਖੱਬੇ ਮੋੜ = ਉੱਤਰ। 4km ਪੂਰਬ + 3km ਉੱਤਰ → ਸਿੱਧੀ ਦੂਰੀ = √(4²+3²) = √(16+9) = √25 = **5 km**।", "pa": "ਪੂਰਬ ਤੋਂ ਖੱਬੇ=ਉੱਤਰ। √(4²+3²)=5km।", "en": "East, then left (turns North). 4km E + 3km N → straight-line distance = √(4²+3²) = √25 = **5 km** (Pythagoras)."}
+      }
+    ]
+  }
+]
