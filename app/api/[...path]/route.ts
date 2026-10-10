@@ -6,10 +6,16 @@ type SRCard = { cardKey: string; due: number; interval: number; ease: number };
 export const dynamic = "force-dynamic";
 const response = (data: unknown, status = 200) =>
   Response.json(data, { status, headers: { "Cache-Control": "no-store" } });
+// Public lesson content is identical for every user — safe to cache for 5 minutes.
+const publicResponse = (data: unknown) =>
+  Response.json(data, {
+    status: 200,
+    headers: { "Cache-Control": "public, max-age=300, stale-while-revalidate=600" },
+  });
 export async function GET(request: Request) {
   try {
     const p = new URL(request.url).pathname;
-    if (p === "/api/content") return response(await readContent());
+    if (p === "/api/content") return publicResponse(await readContent());
     const u = await currentUser();
     if (!u) return response({ error: "Sign in to continue." }, 401);
     const db = database();
