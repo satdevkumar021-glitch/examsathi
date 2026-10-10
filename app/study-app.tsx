@@ -655,9 +655,15 @@ export default function StudyApp({
       : (labels[view in labels ? (view as keyof typeof labels) : "home"][lang] || labels[view in labels ? (view as keyof typeof labels) : "home"].en);
     document.title = `${pageTitle} | Exam Saathi`;
   }, [lesson, view, lang]);
+  // A lesson is "in scope" for the current exam when:
+  // - its examIds array includes the selected examId, OR
+  // - it has no examIds yet (defensive fallback so un-stamped lessons don't vanish)
+  const inExamScope = (l: Lesson) =>
+    !l.examIds || l.examIds.length === 0 || l.examIds.includes(examId);
   const related = useMemo(
-    () => lessons.filter((l) => l.subject === subject),
-    [lessons, subject],
+    () => lessons.filter((l) => inExamScope(l) && l.subject === subject),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [lessons, subject, examId],
   );
   const activeSyllabus = useMemo<{
     exam?: string;
@@ -689,10 +695,13 @@ export default function StudyApp({
     () =>
       lessons
         .filter((l) =>
-          practiceLesson === "all" ? l.subject === practiceSubject : l.id === practiceLesson,
+          practiceLesson === "all"
+            ? inExamScope(l) && l.subject === practiceSubject
+            : l.id === practiceLesson,
         )
         .flatMap((l) => l.questions.map((q) => ({ lessonId: l.id, q }))),
-    [lessons, practiceLesson, practiceSubject],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [lessons, practiceLesson, practiceSubject, examId],
   );
   const cardBank = useMemo(
     () =>
@@ -701,11 +710,12 @@ export default function StudyApp({
         : lessons
             .filter((l) =>
               practiceLesson === "all"
-                ? l.subject === practiceSubject
+                ? inExamScope(l) && l.subject === practiceSubject
                 : l.id === practiceLesson,
             )
             .flatMap((l) => l.flashcards),
-    [view, lesson, lessons, practiceLesson, practiceSubject],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [view, lesson, lessons, practiceLesson, practiceSubject, examId],
   );
   const startQuiz = (items: { lessonId: string; q: Question }[]) => {
     const shuffled = shuffleItems(items);
@@ -1932,7 +1942,7 @@ export default function StudyApp({
               setCardIndex(0);
             }}
           >
-            {[...new Set(lessons.map((l) => l.subject))].map((s) => (
+            {[...new Set(lessons.filter(inExamScope).map((l) => l.subject))].map((s) => (
               <option key={s} value={s}>{subjectName(s)}</option>
             ))}
           </select>
@@ -1950,7 +1960,7 @@ export default function StudyApp({
             <option value="all">
               {tr(text("सभी पाठ", "ਸਾਰੇ ਪਾਠ", "All lessons"))}
             </option>
-            {lessons.filter(l => l.subject === practiceSubject).map((l) => (
+            {lessons.filter(l => inExamScope(l) && l.subject === practiceSubject).map((l) => (
               <option key={l.id} value={l.id}>
                 {tr(l.title)}
               </option>
@@ -2958,7 +2968,7 @@ export default function StudyApp({
   // ── Phase 2C: Timed Mock Exam Engine ────────────────────────────────────────
   const startMock = (subject: string, count: number, minutesLimit: number) => {
     const bank = lessons
-      .filter(l => subject === "All" ? true : l.subject === subject)
+      .filter(l => inExamScope(l) && (subject === "All" ? true : l.subject === subject))
       .flatMap(l => l.questions.map(q => ({ lessonId: l.id, q })));
     if (!bank.length) { setError(tr(text("इस विषय में प्रश्न उपलब्ध नहीं।", "ਇਸ ਵਿਸ਼ੇ ਵਿੱਚ ਸਵਾਲ ਉਪਲਬਧ ਨਹੀਂ।", "No questions available for this subject."))); return; }
     const items = shuffleItems(bank).slice(0, count);
@@ -2983,27 +2993,59 @@ export default function StudyApp({
               {tr(text("विषय", "ਵਿਸ਼ਾ", "Subject"))}
               <select value={mockSubject} onChange={e => setMockSubject(e.target.value)}>
                 <option value="All">{tr(text("सभी विषय (मिश्रित)", "ਸਾਰੇ ਵਿਸ਼ੇ (ਮਿਲੇ-ਜੁਲੇ)", "All subjects (mixed)"))}</option>
-                {[...new Set(lessons.map(l => l.subject))].map(s => (
+                {[...new Set(lessons.filter(inExamScope).map(l => l.subject))].map(s => (
                   <option key={s} value={s}>{s}</option>
                 ))}
               </select>
             </label>
           </div>
-          <div style={{ marginTop: 20 }}>
-            <p className="muted" style={{ fontSize: 13, margin: "0 0 14px" }}>{tr(text("परीक्षा प्रारूप चुनें:", "ਇਮਤਿਹਾਨ ਦਾ ਪ੍ਰਾਰੂਪ ਚੁਣੋ:", "Choose exam format:"))}</p>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              {[
-                { label: text("15 प्रश्न · 20 मिनट (त्वरित)", "15 ਸਵਾਲ · 20 ਮਿੰਟ (ਤੇਜ਼)", "15 Q · 20 min (Quick)"), q: 15, m: 20 },
-                { label: text("30 प्रश्न · 40 मिनट (मध्यम)", "30 ਸਵਾਲ · 40 ਮਿੰਟ (ਦਰਮਿਆਨਾ)", "30 Q · 40 min (Medium)"), q: 30, m: 40 },
-                { label: text("100 प्रश्न · 120 मिनट (पूर्ण)", "100 ਸਵਾਲ · 120 ਮਿੰਟ (ਪੂਰਾ)", "100 Q · 120 min (Full)"), q: 100, m: 120 },
-                { label: text("150 प्रश्न · 150 मिनट (Master Cadre)", "150 ਸਵਾਲ · 150 ਮਿੰਟ (Master Cadre)", "150 Q · 150 min (Master Cadre)"), q: 150, m: 150 },
-              ].map(({ label, q, m }) => (
-                <button key={q} className="primary" style={{ minWidth: 160 }} onClick={() => startMock(mockSubject, q, m)}>
-                  {tr(label)}
-                </button>
-              ))}
-            </div>
-          </div>
+          {(() => {
+            const mockBank = lessons
+              .filter(l => inExamScope(l) && (mockSubject === "All" ? true : l.subject === mockSubject))
+              .flatMap(l => l.questions.map(q => ({ lessonId: l.id, q })));
+            const poolSize = mockBank.length;
+            return (
+              <>
+                <p className="muted" style={{ fontSize: 13, margin: "16px 0 6px" }}>
+                  {tr(text("उपलब्ध प्रश्न:", "ਉਪਲਬਧ ਸਵਾਲ:", "Available questions:"))} <strong>{poolSize}</strong>
+                </p>
+                {poolSize === 0 && (
+                  <p className="muted" style={{ fontSize: 13, marginBottom: 14 }}>
+                    {tr(text("इस विषय में अभी प्रश्न उपलब्ध नहीं हैं।", "ਇਸ ਵਿਸ਼ੇ ਵਿੱਚ ਹਾਲੇ ਸਵਾਲ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।", "No questions are available for this subject yet."))}
+                  </p>
+                )}
+                <div style={{ marginTop: 10 }}>
+                  <p className="muted" style={{ fontSize: 13, margin: "0 0 14px" }}>{tr(text("परीक्षा प्रारूप चुनें:", "ਇਮਤਿਹਾਨ ਦਾ ਪ੍ਰਾਰੂਪ ਚੁਣੋ:", "Choose exam format:"))}</p>
+                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                    {[
+                      { label: text("15 प्रश्न · 20 मिनट (त्वरित)", "15 ਸਵਾਲ · 20 ਮਿੰਟ (ਤੇਜ਼)", "15 Q · 20 min (Quick)"), q: 15, m: 20 },
+                      { label: text("30 प्रश्न · 40 मिनट (मध्यम)", "30 ਸਵਾਲ · 40 ਮਿੰਟ (ਦਰਮਿਆਨਾ)", "30 Q · 40 min (Medium)"), q: 30, m: 40 },
+                      { label: text("100 प्रश्न · 120 मिनट (पूर्ण)", "100 ਸਵਾਲ · 120 ਮਿੰਟ (ਪੂਰਾ)", "100 Q · 120 min (Full)"), q: 100, m: 120 },
+                      { label: text("150 प्रश्न · 150 मिनट (Master Cadre)", "150 ਸਵਾਲ · 150 ਮਿੰਟ (Master Cadre)", "150 Q · 150 min (Master Cadre)"), q: 150, m: 150 },
+                    ].map(({ label, q, m }) => {
+                      const available = Math.min(q, poolSize);
+                      const disabled = poolSize < 1;
+                      const capped = poolSize < q;
+                      return (
+                        <button
+                          key={q}
+                          className="primary"
+                          style={{ minWidth: 160, opacity: disabled ? 0.45 : 1 }}
+                          disabled={disabled}
+                          title={capped && !disabled ? tr(text(`केवल ${poolSize} प्रश्न उपलब्ध`, `ਸਿਰਫ਼ ${poolSize} ਸਵਾਲ ਉਪਲਬਧ`, `Only ${poolSize} questions available`)) : undefined}
+                          onClick={() => startMock(mockSubject, available, m)}
+                        >
+                          {capped
+                            ? tr(text(`${available} प्रश्न · ${m} मिनट`, `${available} ਸਵਾਲ · ${m} ਮਿੰਟ`, `${available} Q · ${m} min`))
+                            : tr(label)}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              </>
+            );
+          })()}
           <p className="muted" style={{ fontSize: 12, marginTop: 16 }}>
             {tr(text("नोट: ये अभ्यास प्रश्न हैं, पिछले वर्षों के प्रश्न नहीं। समय समाप्त होने पर टेस्ट स्वयं समाप्त हो जाएगा।", "ਨੋਟ: ਇਹ ਅਭਿਆਸ ਸਵਾਲ ਹਨ, ਪਿਛਲੇ ਸਾਲਾਂ ਦੇ ਸਵਾਲ ਨਹੀਂ। ਸਮਾਂ ਖਤਮ ਹੋਣ 'ਤੇ ਟੈਸਟ ਆਪਣੇ-ਆਪ ਖਤਮ ਹੋ ਜਾਵੇਗਾ।", "Note: These are practice questions, not previous-year papers. The test auto-submits when time runs out."))}
           </p>
@@ -3170,23 +3212,21 @@ export default function StudyApp({
               {tr(text("ईटीटी पेपर-बी भर्ती लिखित परीक्षा है। इसे पीएसटीईटी पेपर-1 पात्रता या डी.एल.एड प्रवेश से भ्रमित न करें।", "ਈਟੀਟੀ ਪੇਪਰ-ਬੀ ਭਰਤੀ ਲਿਖਤੀ ਪ੍ਰੀਖਿਆ ਹੈ। ਇਸ ਨੂੰ ਪੀਐੱਸਟੀਈਟੀ ਪੇਪਰ-1 ਯੋਗਤਾ ਜਾਂ ਡੀ.ਐੱਲ.ਐੱਡ ਦਾਖਲੇ ਨਾਲ ਨਾ ਰਲਾਓ।", "ETT Paper B is the scored recruitment exam (100 marks), strictly separate from PSTET Paper 1 eligibility."))}
             </div>
             <p style={{ fontSize: 14 }}>
-              <strong>{tr(text("तैयार उच्च-प्राथमिकता पैकेज:", "ਤਿਆਰ ਮੁੱਖ ਪੈਕੇਜ:", "Ready Priority Packages:"))}</strong>
+              <strong>{tr(text("सामग्री की स्थिति:", "ਸਮੱਗਰੀ ਦੀ ਸਥਿਤੀ:", "Content Status:"))}</strong>
             </p>
-            <ul style={{ margin: "6px 0 14px 20px", fontSize: 13, lineHeight: 1.6 }}>
-              <li>
-                <strong>ett-punjab-history-geography</strong> (SST 15m) — {tr(text("पंजाब के भौतिक विभाग, 5 दोआब, दर्रे, 23 जिले (>500 शब्द, 8 कार्ड, 20 प्रमाणित प्रश्न)", "ਪੰਜਾਬ ਦੇ ਭੌਤਿਕ ਭਾਗ, 5 ਦੋਆਬ, ਦੱਰੇ, 23 ਜ਼ਿਲ੍ਹੇ (>500 ਸ਼ਬਦ, 8 ਕਾਰਡ, 20 ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ)", "Physical divisions, 5 historic doabs, passes, 23 districts (>500 words, 8 cards, 20 verified Qs)"))}
-              </li>
-              <li>
-                <strong>ett-science-light</strong> (Science 20m) — {tr(text("प्रकाश परावर्तन व अपवर्तन, दर्पण व लेंस सूत्र, लेंस की क्षमता (P=1/f) (8 कार्ड, 20 प्रमाणित प्रश्न)", "ਪ੍ਰਕਾਸ਼ ਪਰਵਰਤਨ ਤੇ ਅਪਵਰਤਨ, ਦਰਪਣ ਤੇ ਲੈਂਜ਼ ਸੂਤਰ, ਲੈਂਜ਼ ਦੀ ਸਮਰੱਥਾ (P=1/f) (8 ਕਾਰਡ, 20 ਪ੍ਰਮਾਣਿਤ ਸਵਾਲ)", "Reflection, refraction, mirror & lens formulas, power in dioptres (8 cards, 20 verified Qs)"))}
-              </li>
-            </ul>
-            <div className="row" style={{ gap: 8 }}>
-              <button onClick={() => { setExamId("ett"); setSubject("SST"); go("library", "ett-punjab-history-geography"); }}>
-                {tr(text("इतिहास-भूगोल पढ़ें", "ਇਤਿਹਾਸ-ਭੂਗੋਲ ਪੜ੍ਹੋ", "Read SST Lesson"))}
-              </button>
-              <button onClick={() => { setExamId("ett"); setSubject("Science"); go("library", "ett-science-light"); }}>
-                {tr(text("विज्ञान पढ़ें", "ਵਿਗਿਆਨ ਪੜ੍ਹੋ", "Read Science Lesson"))}
-              </button>
+            <div className="alert" style={{ margin: "6px 0 14px", fontSize: 13 }}>
+              {tr(text(
+                "ETT पेपर-बी के पाठ अभी तैयार नहीं हैं। 6 विषयों (पंजाबी, अंग्रेजी, हिंदी, गणित, विज्ञान, सामाजिक विज्ञान) के पाठ बनाए जा रहे हैं। नीचे दिए गए विषय पर क्लिक करके आधिकारिक सिलेबस देखें।",
+                "ETT ਪੇਪਰ-ਬੀ ਦੇ ਪਾਠ ਹਾਲੇ ਤਿਆਰ ਨਹੀਂ ਹਨ। 6 ਵਿਸ਼ਿਆਂ (ਪੰਜਾਬੀ, ਅੰਗਰੇਜ਼ੀ, ਹਿੰਦੀ, ਗਣਿਤ, ਵਿਗਿਆਨ, ਸਮਾਜਿਕ ਵਿਗਿਆਨ) ਦੇ ਪਾਠ ਬਣਾਏ ਜਾ ਰਹੇ ਹਨ। ਹੇਠਾਂ ਦਿੱਤੇ ਵਿਸ਼ੇ ਉੱਤੇ ਕਲਿੱਕ ਕਰਕੇ ਅਧਿਕਾਰਤ ਸਿਲੇਬਸ ਵੇਖੋ।",
+                "ETT Paper B lessons are not yet authored. Lessons for all 6 subjects (Punjabi, English, Hindi, Mathematics, Science, Social Science) are in progress. Use the subject links below to view the official syllabus.",
+              ))}
+            </div>
+            <div className="row" style={{ gap: 8, flexWrap: "wrap" }}>
+              {(["SST", "Science", "Mathematics", "Punjabi", "Hindi", "English"] as const).map((s) => (
+                <button key={s} onClick={() => { setExamId("ett"); setSubject(s); go("library"); }}>
+                  {subjectName(s)}
+                </button>
+              ))}
             </div>
           </div>
 

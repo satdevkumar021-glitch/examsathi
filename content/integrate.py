@@ -70,6 +70,11 @@ for l in json.load(open(research/'teaching-lessons.json')):
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)
 
+# Add clerk/REET priority lessons (PSSSB Clerk Advt.15/2022, REET CDP & EVS)
+for l in json.load(open(research/'teaching-lessons-3.json')):
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
 # Add Chemistry lessons (Lecturer Cadre)
 for l in json.load(open(research/'chemistry-lessons.json')):
  l['level']='Foundation / concept preparation'
@@ -78,6 +83,12 @@ for l in json.load(open(research/'chemistry-lessons.json')):
 
 # Add Political Science lessons (Lecturer Cadre / RPSC)
 for l in json.load(open(research/'polsci-lessons.json')):
+ l['level']='Foundation / concept preparation'
+ l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
+ result.append(l)
+
+# Add Political Science lessons batch 2 (Parliament, Judiciary — Master Cadre / RPSC)
+for l in json.load(open(research/'polsci-lessons-2.json')):
  l['level']='Foundation / concept preparation'
  l['videos']=l.get('videos',[]);l['documents']=l.get('documents',[]);l['sources']=l.get('sources',[])
  result.append(l)

@@ -16,6 +16,8 @@ export type Lesson = {
   id: string;
   subject: string;
   unit: string;
+  /** Exam catalogue IDs this lesson belongs to. Used to scope library/practice views. */
+  examIds?: string[];
   title: Text3;
   sections: { heading: Text3; text: Text3 }[];
   keypoints: Text3[];
