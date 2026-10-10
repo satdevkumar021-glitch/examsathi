@@ -1,0 +1,518 @@
+{
+  "exam": "Punjab Master Cadre Social Sciences",
+  "version": "Historical 2022 recruitment, official file dated 04-05-2022",
+  "currentVersionVerified": false,
+  "officialSource": "https://educationrecruitmentboard.com/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+  "hierarchy": {
+    "polity": [
+      {
+        "number": 1,
+        "title": "Centre government",
+        "subtopics": [
+          "Parliament: Lok Sabha and Rajya Sabha",
+          "President: appointment, functions, emergency powers at basic level",
+          "Prime Minister and Council of Ministers: appointment and functions at basic level"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "State government",
+        "subtopics": [
+          "Governor: appointment; agent of Centre",
+          "Chief Minister: appointment and functions"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Foreign policy",
+        "subtopics": [
+          "Non-Aligned Movement at basic level",
+          "Panchsheel",
+          "Disarmament",
+          "UNO and SAARC"
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Citizenship",
+        "subtopics": [
+          "Meaning of citizen/citizenship",
+          "Basic principles",
+          "Acquisition and loss of citizenship"
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Organs of government",
+        "subtopics": [
+          "Legislature",
+          "Executive",
+          "Judiciary"
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Courts",
+        "subtopics": [
+          "Supreme Court: functions, jurisdiction, appointment, removal, salaries, composition, judicial review",
+          "High Court: composition, appointment, functions and jurisdiction",
+          "Local courts",
+          "FIR",
+          "Writs"
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Fundamental rights",
+        "subtopics": [
+          "Articles 14 to 32 in detail",
+          "Right to education",
+          "Right to information",
+          "Fundamental duties to some extent"
+        ]
+      },
+      {
+        "number": 8,
+        "title": "United Nations",
+        "subtopics": [
+          "Organs",
+          "Agencies",
+          "India role",
+          "Important recent work"
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Indian federal system",
+        "subtopics": [
+          "Federal and unitary features",
+          "Centre-state legislative, financial and administrative relations"
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Election procedure",
+        "subtopics": [
+          "Meaning and process",
+          "Factors influencing elections",
+          "Electoral behaviour in India and other countries",
+          "Election Commission"
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Constitution",
+        "subtopics": [
+          "Features",
+          "Preamble"
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Concepts",
+        "subtopics": [
+          "Law",
+          "Liberty",
+          "Justice",
+          "Equality"
+        ]
+      },
+      {
+        "number": 13,
+        "title": "Party system",
+        "subtopics": [
+          "Features of Indian party system",
+          "National parties",
+          "Regional parties of your state: origin, performance, elections, manifesto and principles"
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Rural and urban democracy",
+        "subtopics": [
+          "Panchayati Raj: organisations, functions, composition",
+          "Municipalities at different levels: composition, functions, appointment and grassroots special posts"
+        ]
+      },
+      {
+        "number": 15,
+        "title": "Theories",
+        "subtopics": [
+          "Liberalism",
+          "Marxism",
+          "Gandhism"
+        ]
+      }
+    ],
+    "geography": [
+      {
+        "number": 1,
+        "title": "Physical geography: nature and scope",
+        "subtopics": []
+      },
+      {
+        "number": 2,
+        "title": "Earth and origin",
+        "subtopics": [
+          "Universe and solar system",
+          "Earth origin, shape and size",
+          "Rotation and revolution",
+          "Composition and structure",
+          "Distribution of land and water",
+          "Geological history; origin and evolution of life"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Atmosphere",
+        "subtopics": [
+          "Composition and structure",
+          "Temperature and pressure",
+          "Winds and global circulation",
+          "Air masses and fronts",
+          "Humidity and precipitation"
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Lithosphere",
+        "subtopics": [
+          "Internal structure",
+          "Rocks: origin, formation, types",
+          "Plate tectonics and mountain building",
+          "Earthquakes",
+          "Volcanic activity",
+          "Internal and external geomorphic processes",
+          "Weathering, erosion, deposition and cycle of erosion",
+          "Landforms from surface water, groundwater, wind and glaciers",
+          "Formation and types of soils"
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Hydrosphere",
+        "subtopics": [
+          "Ocean floor configuration",
+          "Ocean temperature and salinity",
+          "Waves",
+          "Currents",
+          "Tides"
+        ]
+      },
+      {
+        "number": 6,
+        "title": "India geography with special reference to Punjab",
+        "subtopics": [
+          "Location and size",
+          "Relief",
+          "Drainage",
+          "Natural vegetation",
+          "Soils",
+          "Minerals: iron ore, manganese, mica, copper, gold",
+          "Power resources",
+          "Agriculture: characteristics, problems, irrigation, land use, crops",
+          "Industries: location factors",
+          "Major trade",
+          "Population: number, distribution, density, growth, religious composition, urbanisation",
+          "Rail, road and air transport",
+          "Environmental issues"
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Resources and environment",
+        "subtopics": [
+          "Meaning, nature and components of environment",
+          "Resources: nature, definition and types",
+          "Forests: types, distribution, economic/environment significance, sustainability",
+          "Major soils: types, distribution, significance, sustainability, erosion and conservation",
+          "Fisheries: types and major regions",
+          "Minerals and power resources: distribution and conservation",
+          "Agriculture: crops, distribution and trade",
+          "Industry: localisation, distribution and trade",
+          "Population-resource relationship",
+          "Natural and human environment relationships: determinism and possibilism",
+          "Ecology and biodiversity",
+          "Pollution",
+          "Population explosion",
+          "Food security",
+          "Deforestation",
+          "Wildlife conservation"
+        ]
+      }
+    ],
+    "economics": [
+      {
+        "number": 1,
+        "title": "Consumer equilibrium",
+        "subtopics": [
+          "Meaning",
+          "Attainment"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Demand",
+        "subtopics": [
+          "Individual and market demand",
+          "Determinants and curves",
+          "Price elasticity"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "National income and aggregates",
+        "subtopics": []
+      },
+      {
+        "number": 4,
+        "title": "Income and employment",
+        "subtopics": [
+          "AD, AS and components",
+          "MPS, APS, MPC, APC"
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Balance of trade and payments",
+        "subtopics": []
+      },
+      {
+        "number": 6,
+        "title": "Micro and macro",
+        "subtopics": [
+          "Differences",
+          "Working"
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Producer behaviour",
+        "subtopics": [
+          "Production functions",
+          "Supply and supply curve",
+          "Cost and revenue",
+          "Producer equilibrium"
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Market forms",
+        "subtopics": [
+          "Perfect competition",
+          "Monopoly",
+          "Monopolistic competition: meaning and features"
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Price determination",
+        "subtopics": [
+          "Equilibrium under perfect competition"
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Money and banking",
+        "subtopics": []
+      },
+      {
+        "number": 11,
+        "title": "Government budget",
+        "subtopics": [
+          "Meaning",
+          "Objectives",
+          "Balanced budget"
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Income and employment: investment multiplier",
+        "subtopics": [
+          "Investment",
+          "Multiplier and working"
+        ]
+      },
+      {
+        "number": 13,
+        "title": "National income aggregates",
+        "subtopics": [
+          "GDP",
+          "GNP",
+          "NDP",
+          "NNP"
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Types of economics and infrastructure",
+        "subtopics": []
+      },
+      {
+        "number": 15,
+        "title": "Indian and Punjab economy",
+        "subtopics": []
+      },
+      {
+        "number": 16,
+        "title": "Economic planning in India",
+        "subtopics": []
+      }
+    ],
+    "history": {
+      "Punjab": [
+        {
+          "number": 1,
+          "title": "Physical features and influence on history",
+          "subtopics": []
+        },
+        {
+          "number": 2,
+          "title": "Development of Sikhism during ten Gurus",
+          "subtopics": []
+        },
+        {
+          "number": 3,
+          "title": "Banda Singh Bahadur and achievements",
+          "subtopics": []
+        },
+        {
+          "number": 4,
+          "title": "Origin and growth of Sikh Misals",
+          "subtopics": []
+        },
+        {
+          "number": 5,
+          "title": "Maharaja Ranjit Singh",
+          "subtopics": [
+            "Early life",
+            "Achievements",
+            "Anglo-Sikh relations up to 1839"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Anglo-Sikh wars and annexation",
+          "subtopics": []
+        }
+      ],
+      "India": [
+        {
+          "number": 1,
+          "title": "Harappan civilisation",
+          "subtopics": [
+            "Origin",
+            "Date",
+            "Extent",
+            "Features",
+            "Decline"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Rig Vedic civilisation",
+          "subtopics": [
+            "Original home of Aryans: historiography rather than a settled modern fact",
+            "Social, political, economic and religious life"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Jainism and Buddhism",
+          "subtopics": []
+        },
+        {
+          "number": 4,
+          "title": "Mauryas",
+          "subtopics": [
+            "Chandragupta Maurya",
+            "Ashoka"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Guptas",
+          "subtopics": [
+            "Samudragupta",
+            "Chandragupta II"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Harsha Vardhana",
+          "subtopics": [
+            "Campaigns and political relations",
+            "Literature and education"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "New kings and kingdoms, AD 700-1200",
+          "subtopics": []
+        },
+        {
+          "number": 8,
+          "title": "Delhi Sultanate",
+          "subtopics": [
+            "Slave/Mamluk",
+            "Khalji",
+            "Tughlaq",
+            "Sayyid",
+            "Lodi"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Mughal empire",
+          "subtopics": []
+        },
+        {
+          "number": 10,
+          "title": "East India Company rise",
+          "subtopics": [
+            "Plassey",
+            "Buxar"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Revolt of 1857",
+          "subtopics": [
+            "Causes",
+            "Events",
+            "Effects",
+            "Failure"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Education under British rule",
+          "subtopics": []
+        },
+        {
+          "number": 13,
+          "title": "National movement, 1885-1947",
+          "subtopics": []
+        }
+      ],
+      "World": [
+        {
+          "number": 1,
+          "title": "Beginning of modern age",
+          "subtopics": [
+            "Renaissance",
+            "Reformation"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "World wars",
+          "subtopics": [
+            "First World War",
+            "Second World War"
+          ]
+        }
+      ]
+    }
+  }
+}

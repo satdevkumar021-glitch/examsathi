@@ -1,0 +1,207 @@
+{
+  "exam": "Punjab ETT Recruitment Paper B (6635 Posts)",
+  "version": "Archival 2021 notification dated 13-08-2021",
+  "board": "Education Recruitment Board (ERB), Punjab",
+  "notification": "6635 ETT Recruitment / 2021",
+  "totalMarks": 100,
+  "officialSource": "https://educationrecruitmentboard.com/ETT6635/Docs/ETT6635Syllabus13_08_2021.pdf",
+  "conflationGuard": "Paper B scored test for recruitment. PSTET Paper 1 is a separate qualifying eligibility exam.",
+  "hierarchy": {
+    "punjabi": [
+      {
+        "number": 1,
+        "title": "ਗੁਰਮੁਖੀ ਲਿਪੀ ਅਤੇ ਵਰਣ ਬੋਧ (Gurmukhi Script & Phonology)",
+        "subtopics": [
+          "ਗੁਰਮੁਖੀ ਅੱਖਰ ਅਤੇ ਵਰਣਮਾਲਾ",
+          "ਸਵਰ ਅਤੇ ਵਿਅੰਜਨ ਧੁਨੀਆਂ",
+          "ਲਗਾਂ-ਮਾਤਰਾਂ ਅਤੇ ਲਗਾਖਰ (ਬਿੰਦੀ, ਟਿੱਪੀ, ਅੱਧਕ)",
+          "ਦੁੱਤ ਅੱਖਰ (ਹ, ਰ, ਵ)"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "ਸ਼ਬਦ ਬੋਧ ਅਤੇ ਵਿਆਕਰਨ (Morphology & Grammar)",
+        "subtopics": [
+          "ਸ਼ਬਦ ਸ਼੍ਰੇਣੀਆਂ: ਨਾਵ, ਪੜਨਾਂਵ, ਵਿਸ਼ੇਸ਼ਣ, ਕਿਰਿਆ, ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ",
+          "ਸੰਬੰਧਕ ਅਤੇ ਯੋਜਕ",
+          "ਲਿੰਗ ਅਤੇ ਵਚਨ ਬਦਲੋ",
+          "ਅਗੇਤਰ ਅਤੇ ਪਿਛੇਤਰ"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "ਵਾਕ ਬੋਧ ਅਤੇ ਸ਼ਬਦ ਭੰਡਾਰ (Syntax & Vocabulary)",
+        "subtopics": [
+          "ਸਧਾਰਨ, ਸੰਯੁਕਤ ਅਤੇ ਮਿਸ਼ਰਤ ਵਾਕ",
+          "ਵਿਸ਼ਰਾਮ ਚਿੰਨ੍ਹ (Punctuation)",
+          "ਸ਼ੁੱਧ-ਅਸ਼ੁੱਧ ਸ਼ਬਦ ਜੋੜ",
+          "ਮੁਹਾਵਰੇ ਅਤੇ ਅਖਾਣ",
+          "ਵਿਰੋਧੀ ਅਤੇ ਸਮਾਨਾਰਥਕ ਸ਼ਬਦ"
+        ]
+      }
+    ],
+    "english": [
+      {
+        "number": 1,
+        "title": "Grammar and Parts of Speech",
+        "subtopics": [
+          "Nouns, Pronouns, Adjectives, Adverbs",
+          "Prepositions and Conjunctions",
+          "Articles and Determiners",
+          "Subject-Verb Agreement"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Tenses, Voice and Sentence Structure",
+        "subtopics": [
+          "Present, Past and Future Tenses",
+          "Active and Passive Voice",
+          "Direct and Indirect Speech (Narration)",
+          "Sentence transformation (Simple, Compound, Complex)"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Vocabulary and Comprehension",
+        "subtopics": [
+          "Synonyms and Antonyms",
+          "One-word substitution",
+          "Idioms and Phrases",
+          "Unseen Passage Comprehension"
+        ]
+      }
+    ],
+    "hindi": [
+      {
+        "number": 1,
+        "title": "वर्ण विचार और वर्तनी (Phonetics and Spelling)",
+        "subtopics": [
+          "स्वर और व्यंजन के भेद",
+          "उच्चारण स्थान",
+          "शुद्ध वर्तनी और शब्द शुद्धि"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "शब्द भेद और व्याकरण (Grammar & Morphology)",
+        "subtopics": [
+          "संज्ञा, सर्वनाम, विशेषण, क्रिया, क्रिया-विशेषण",
+          "लिंग, वचन, कारक",
+          "उपसर्ग और प्रत्यय",
+          "संधि और समास के मूल नियम"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "वाक्य रचना और मुहावरे (Syntax & Idioms)",
+        "subtopics": [
+          "वाक्य के अंग (उद्देश्य और विधेय)",
+          "सरल, संयुक्त, मिश्र वाक्य",
+          "मुहावरे और लोकोक्तियाँ",
+          "अपठित गद्यांश"
+        ]
+      }
+    ],
+    "mathematics": [
+      {
+        "number": 1,
+        "title": "ਸੰਖਿਆ ਪ੍ਰਣਾਲੀ (Number System)",
+        "subtopics": [
+          "ਪੂਰਨ ਸੰਖਿਆਵਾਂ, ਪਰਿਮੇਯ ਅਤੇ ਅਪਰਿਮੇਯ ਸੰਖਿਆਵਾਂ",
+          "ਮ.ਸ.ਵ. ਅਤੇ ਲ.ਸ.ਵ. (HCF & LCM)",
+          "ਘਾਤ ਅਤੇ ਘਾਤ-ਅੰਕ (Exponents & Powers)"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "ਬੀਜਗਣਿਤ ਅਤੇ ਅੰਕਗਣਿਤ (Algebra & Arithmetic)",
+        "subtopics": [
+          "ਇੱਕ ਅਤੇ ਦੋ ਚਲਾਂ ਵਾਲੇ ਰੇਖੀ ਸਮੀਕਰਨ",
+          "ਅਨੁਪਾਤ ਅਤੇ ਸਮਾਨੁਪਾਤ (Ratio & Proportion)",
+          "ਪ੍ਰਤੀਸ਼ਤਤਾ, ਲਾਭ-ਹਾਨੀ ਅਤੇ ਸਾਧਾਰਨ ਵਿਆਜ",
+          "ਔਸਤ (Average) ਅਤੇ ਕੰਮ-ਸਮਾਂ (Work & Time)"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "ਰੇਖਾਗਣਿਤ ਅਤੇ ਖੇਤਰਮਿਤੀ (Geometry & Mensuration)",
+        "subtopics": [
+          "ਰੇਖਾਵਾਂ, ਕੋਣ ਅਤੇ ਤ੍ਰਿਭੁਜ ਦੇ ਗੁਣ",
+          "ਚਤੁਰਭੁਜ ਅਤੇ ਚੱਕਰ (Quadrilaterals & Circles)",
+          "2D ਅਤੇ 3D ਆਕਾਰਾਂ ਦਾ ਖੇਤਰਫਲ ਅਤੇ ਆਇਤਨ (Area & Volume)"
+        ]
+      },
+      {
+        "number": 4,
+        "title": "ਅੰਕੜਾ ਵਿਗਿਆਨ (Statistics)",
+        "subtopics": [
+          "ਮੱਧਮਾਨ, ਮੱਧਿਕਾ, ਬਹੁਲਕ (Mean, Median, Mode)",
+          "ਸੰਭਾਵਨਾ (Basic Probability)"
+        ]
+      }
+    ],
+    "science": [
+      {
+        "number": 1,
+        "title": "ਭੌਤਿਕ ਵਿਗਿਆਨ (Physics)",
+        "subtopics": [
+          "ਗਤੀ ਅਤੇ ਨਿਊਟਨ ਦੇ ਗਤੀ ਨਿਯਮ (Motion & Laws of Motion)",
+          "ਗੁਰੂਤਾਕਰਸ਼ਣ (Gravitation)",
+          "ਕਾਰਜ ਅਤੇ ਊਰਜਾ (Work & Energy)",
+          "ਪ੍ਰਕਾਸ਼: ਪਰਿਵਰਤਨ ਅਤੇ ਅਪਵਰਤਨ (Light: Reflection & Refraction)",
+          "ਬਿਜਲੀ ਅਤੇ ਚੁੰਬਕੀ ਪ੍ਰਭਾਵ (Electricity & Magnetism)"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "ਰਸਾਇਣ ਵਿਗਿਆਨ (Chemistry)",
+        "subtopics": [
+          "ਪਦਾਰਥ ਦੀ ਪ੍ਰਕਿਰਤੀ: ਤੱਤ, ਯੌਗਿਕ ਅਤੇ ਮਿਸ਼ਰਣ",
+          "ਪ੍ਰਮਾਣੂ ਅਤੇ ਅਣੂ (Atoms & Molecules)",
+          "ਰਸਾਇਣਕ ਕਿਰਿਆਵਾਂ ਅਤੇ ਸਮੀਕਰਨਾਂ (Chemical Reactions)",
+          "ਤੇਜ਼ਾਬ, ਖਾਰ ਅਤੇ ਲੂਣ (Acids, Bases & Salts)"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "ਜੀਵ ਵਿਗਿਆਨ (Biology)",
+        "subtopics": [
+          "ਸੈੱਲ: ਜੀਵਨ ਦੀ ਮੁੱਢਲੀ ਇਕਾਈ (The Fundamental Unit of Life: Cell)",
+          "ਜੀਵਨ ਦੀਆਂ ਕਿਰਿਆਵਾਂ: ਪੋਸ਼ਣ, ਸਾਹ ਕਿਰਿਆ, ਸੰਚਾਰ, ਮਲ-ਤਿਆਗ",
+          "ਜੀਵਾਂ ਵਿੱਚ ਪ੍ਰਜਣਨ ਅਤੇ ਅਨੁਵੰਸ਼ਕਤਾ",
+          "ਸਾਡਾ ਵਾਤਾਵਰਨ ਅਤੇ ਕੁਦਰਤੀ ਸਰੋਤ"
+        ]
+      }
+    ],
+    "social_science": [
+      {
+        "number": 1,
+        "title": "ਪੰਜਾਬ ਅਤੇ ਭਾਰਤ ਦਾ ਭੂਗੋਲ (Geography)",
+        "subtopics": [
+          "ਪੰਜਾਬ ਦੀ ਭੂਗੋਲਿਕ ਸਥਿਤੀ ਅਤੇ ਦਰਿਆ",
+          "ਭਾਰਤ ਦੇ ਭੌਤਿਕ ਭਾਗ, ਜਲਵਾਯੂ ਅਤੇ ਮਿੱਟੀਆਂ",
+          "ਖੇਤੀਬਾੜੀ ਅਤੇ ਮੁੱਖ ਫ਼ਸਲਾਂ"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "ਪੰਜਾਬ ਅਤੇ ਭਾਰਤ ਦਾ ਇਤਿਹਾਸ (History)",
+        "subtopics": [
+          "ਸਿੱਖ ਧਰਮ ਦਾ ਵਿਕਾਸ ਅਤੇ ਗੁਰੂ ਕਾਲ",
+          "ਬੰਦਾ ਸਿੰਘ ਬਹਾਦਰ ਅਤੇ ਮਹਾਰਾਜਾ ਰਣਜੀਤ ਸਿੰਘ ਦਾ ਕਾਲ",
+          "ਭਾਰਤ ਦਾ ਸੁਤੰਤਰਤਾ ਸੰਗਰਾਮ (1857 ਤੋਂ 1947 ਤੱਕ)"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "ਨਾਗਰਿਕ ਸ਼ਾਸਤਰ ਅਤੇ ਆਰਥਿਕਤਾ (Civics & Economics)",
+        "subtopics": [
+          "ਭਾਰਤੀ ਸੰਵਿਧਾਨ: ਪ੍ਰਸਤਾਵਨਾ, ਮੌਲਿਕ ਅਧਿਕਾਰ ਅਤੇ ਕਰਤੱਵ",
+          "ਸੰਸਦ, ਰਾਸ਼ਟਰਪਤੀ ਅਤੇ ਸੁਪਰੀਮ ਕੋਰਟ",
+          "ਭਾਰਤੀ ਆਰਥਿਕਤਾ ਦੀਆਂ ਮੁੱਖ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
+        ]
+      }
+    ]
+  }
+}

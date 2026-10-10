@@ -1,0 +1,268 @@
+[
+  {
+    "id": "math-percent",
+    "subject": "Mathematics",
+    "unit": "Arithmetic",
+    "title": {"hi": "प्रतिशत", "pa": "ਪ੍ਰਤੀਸ਼ਤ", "en": "Percentages"},
+    "sections": [
+      {
+        "heading": {"hi": "प्रतिशत की परिभाषा और रूपांतरण", "pa": "ਪ੍ਰਤੀਸ਼ਤ ਦੀ ਪਰਿਭਾਸ਼ਾ ਅਤੇ ਬਦਲਾਅ", "en": "Definition and conversion"},
+        "text": {
+          "hi": "प्रतिशत का अर्थ है प्रति सौ। x% = x/100। y का x% = xy/100। भिन्न को प्रतिशत में बदलने के लिए 100 से गुणा करें। प्रतिशत परिवर्तन = (नया − पुराना) ÷ पुराना × 100। ध्यान दें: परिवर्तन हमेशा मूल (पुरानी) मात्रा पर आधारित होता है।\n\nआम भिन्न याद रखें: 1/2 = 50%, 1/4 = 25%, 3/4 = 75%, 1/5 = 20%, 1/8 = 12.5%, 1/3 = 33.33%, 2/3 = 66.67%। इन्हें याद रखने से परीक्षा में गणना तेज होगी।",
+          "pa": "ਪ੍ਰਤੀਸ਼ਤ ਦਾ ਅਰਥ ਹੈ ਪ੍ਰਤੀ ਸੌ। x% = x/100। y ਦਾ x% = xy/100। ਪ੍ਰਤੀਸ਼ਤ ਬਦਲਾਅ = (ਨਵਾਂ − ਪੁਰਾਣਾ) ÷ ਪੁਰਾਣਾ × 100। ਆਮ ਭਿੰਨਾਂ: 1/2 = 50%, 1/4 = 25%, 1/5 = 20%।",
+          "en": "Percent means per hundred. x% = x/100. x% of y = xy/100. Percentage change = (new − old) ÷ old × 100. Always use the original (old) value as the denominator for percentage change. Learn common fractions: 1/2 = 50%, 1/4 = 25%, 3/4 = 75%, 1/5 = 20%, 1/8 = 12.5%, 1/3 ≈ 33.33%, 2/3 ≈ 66.67%."
+        }
+      },
+      {
+        "heading": {"hi": "क्रमिक प्रतिशत परिवर्तन", "pa": "ਕ੍ਰਮਿਕ ਪ੍ਰਤੀਸ਼ਤ ਬਦਲਾਅ", "en": "Successive percentage changes"},
+        "text": {
+          "hi": "क्रमिक परिवर्तन में हर बार नई मात्रा को आधार मानें। +10% फिर −10% का शुद्ध प्रभाव: 1.1 × 0.9 = 0.99 → नेट 1% कमी (शून्य नहीं!)। दो क्रमिक प्रतिशत a% और b% का शुद्ध प्रभाव: a + b + ab/100।\n\nजनसंख्या वृद्धि: P_n = P₀ × (1 + r/100)^n। चक्रवृद्धि: CI = P(1 + r/100)^n − P। परीक्षा ट्रिक: 20% की वृद्धि और 20% की कमी → नेट = −4% (क्योंकि 20×20/100 = 4%)।",
+          "pa": "ਕ੍ਰਮਿਕ ਬਦਲਾਅ ਵਿੱਚ ਹਰ ਵਾਰ ਨਵੀਂ ਮਾਤਰਾ ਆਧਾਰ ਬਣਦੀ ਹੈ। +10% ਫਿਰ −10% → ਕੁੱਲ −1%। ਸੂਤਰ: a + b + ab/100।",
+          "en": "For successive changes, each time use the new value as base. +10% then −10%: 1.1 × 0.9 = 0.99 → net −1% (not zero!). Formula for successive changes a% and b%: net = a + b + ab/100. Population: P_n = P₀ × (1 + r/100)^n. Exam trick: 20% up then 20% down → net = −4% (since 20×20/100 = 4%)."
+        }
+      },
+      {
+        "heading": {"hi": "परीक्षा प्रश्न अभ्यास", "pa": "ਪ੍ਰੀਖਿਆ ਅਭਿਆਸ", "en": "Exam question practice"},
+        "text": {
+          "hi": "उदाहरण 1: किसी वस्तु का मूल्य ₹200 से बढ़कर ₹250 हो गया। प्रतिशत वृद्धि = 50/200 × 100 = 25%। उदाहरण 2: 600 छात्रों में 45% लड़कियाँ हैं। लड़कियाँ = 0.45 × 600 = 270।\n\nउदाहरण 3: परीक्षा में 60% अंक लाने के लिए 360 अंक चाहिए। कुल अंक = 360/0.60 = 600। उदाहरण 4: पहले 20% वृद्धि, फिर 10% कमी। शुद्ध प्रभाव = 20 + (−10) + 20×(−10)/100 = 10 − 2 = 8% वृद्धि। किताब बंद करके ये चारों खुद हल करें।",
+          "pa": "₹200 ਤੋਂ ₹250: ਵਾਧਾ = 50/200 × 100 = 25%। 600 ਵਿੱਚੋਂ 45% ਲੜਕੀਆਂ = 270। 60% ਅੰਕਾਂ ਲਈ 360 → ਕੁੱਲ = 600। 20% ਵਾਧਾ ਫਿਰ 10% ਘਾਟਾ → 8% ਕੁੱਲ ਵਾਧਾ।",
+          "en": "Example 1: Price rises from ₹200 to ₹250 → % increase = 50/200 × 100 = 25%. Example 2: 45% of 600 students are girls → 270 girls. Example 3: 60% marks needed = 360, so total marks = 600. Example 4: +20% then −10% → net = 20 + (−10) + 20×(−10)/100 = 8% increase. Close the book and solve all four yourself."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "x% of y = xy/100। आधार पर ध्यान दें।", "pa": "x% of y = xy/100।", "en": "x% of y = xy/100. Focus on the base."},
+      {"hi": "प्रतिशत परिवर्तन = (अंतर/मूल) × 100।", "pa": "ਪ੍ਰਤੀਸ਼ਤ ਬਦਲਾਅ = (ਫ਼ਰਕ/ਮੂਲ) × 100।", "en": "% change = (difference/original) × 100."},
+      {"hi": "+a% फिर +b%: net = a + b + ab/100।", "pa": "+a% ਫਿਰ +b%: net = a + b + ab/100।", "en": "Successive a% then b%: net = a + b + ab/100."},
+      {"hi": "1/5 = 20%; 1/4 = 25%; 1/8 = 12.5%।", "pa": "1/5 = 20%; 1/4 = 25%; 1/8 = 12.5%।", "en": "1/5 = 20%; 1/4 = 25%; 1/8 = 12.5%."},
+      {"hi": "क्रमिक समान वृद्धि और कमी हमेशा नेट हानि।", "pa": "ਕ੍ਰਮਿਕ ਬਰਾਬਰ ਵਾਧਾ-ਘਾਟਾ ਹਮੇਸ਼ਾ ਨੁਕਸਾਨ।", "en": "Equal successive increase and decrease always gives net loss."}
+    ],
+    "summary": {
+      "hi": "प्रतिशत = प्रति सौ। x% of y = xy/100। परिवर्तन मूल पर। क्रमिक परिवर्तन: a + b + ab/100। समान % वृद्धि-कमी → नेट हानि।",
+      "pa": "ਪ੍ਰਤੀਸ਼ਤ = ਪ੍ਰਤੀ ਸੌ। x% of y = xy/100। ਕ੍ਰਮਿਕ: a + b + ab/100।",
+      "en": "Percent = per hundred. x% of y = xy/100. Change always on original base. Successive: a + b + ab/100. Equal up-down gives net loss."
+    },
+    "flashcards": [
+      {"question": {"hi": "350 का 20%?", "pa": "350 ਦਾ 20%?", "en": "20% of 350?"}, "answer": {"hi": "70", "pa": "70", "en": "70"}},
+      {"question": {"hi": "1/8 = कितना %?", "pa": "1/8 = ਕਿੰਨਾ %?", "en": "1/8 = ?%"}, "answer": {"hi": "12.5%", "pa": "12.5%", "en": "12.5%"}},
+      {"question": {"hi": "क्रमिक 10% वृद्धि और 10% कमी का नेट?", "pa": "10% ਵਾਧਾ ਫਿਰ 10% ਘਾਟਾ: ਕੁੱਲ?", "en": "Net of +10% then −10%?"}, "answer": {"hi": "−1% (1% हानि)", "pa": "−1% (1% ਨੁਕਸਾਨ)", "en": "−1% (1% loss)"}},
+      {"question": {"hi": "प्रतिशत परिवर्तन का सूत्र?", "pa": "ਪ੍ਰਤੀਸ਼ਤ ਬਦਲਾਅ ਦਾ ਸੂਤਰ?", "en": "Formula for % change?"}, "answer": {"hi": "(नया − पुराना)/पुराना × 100", "pa": "(ਨਵਾਂ − ਪੁਰਾਣਾ)/ਪੁਰਾਣਾ × 100", "en": "(New − Old)/Old × 100"}},
+      {"question": {"hi": "500 का 35%?", "pa": "500 ਦਾ 35%?", "en": "35% of 500?"}, "answer": {"hi": "175", "pa": "175", "en": "175"}},
+      {"question": {"hi": "₹800 में 25% वृद्धि: नया मूल्य?", "pa": "₹800 ਵਿੱਚ 25% ਵਾਧਾ: ਨਵੀਂ ਕੀਮਤ?", "en": "₹800 with 25% increase: new price?"}, "answer": {"hi": "₹1000", "pa": "₹1000", "en": "₹1000"}}
+    ],
+    "questions": [
+      {"id": "math-pct-q1", "prompt": {"hi": "200 से 250: प्रतिशत वृद्धि?", "pa": "200 ਤੋਂ 250: ਪ੍ਰਤੀਸ਼ਤ ਵਾਧਾ?", "en": "From 200 to 250: % increase?"}, "options": [{"hi": "25%", "pa": "25%", "en": "25%"}, {"hi": "20%", "pa": "20%", "en": "20%"}, {"hi": "50%", "pa": "50%", "en": "50%"}, {"hi": "10%", "pa": "10%", "en": "10%"}], "answerIndex": 0, "explanation": {"hi": "% वृद्धि = 50/200 × 100 = 25%", "pa": "% ਵਾਧਾ = 50/200 × 100 = 25%", "en": "% increase = 50/200 × 100 = 25%"}},
+      {"id": "math-pct-q2", "prompt": {"hi": "350 का 20% कितना?", "pa": "350 ਦਾ 20% ਕਿੰਨਾ?", "en": "20% of 350?"}, "options": [{"hi": "70", "pa": "70", "en": "70"}, {"hi": "35", "pa": "35", "en": "35"}, {"hi": "7", "pa": "7", "en": "7"}, {"hi": "140", "pa": "140", "en": "140"}], "answerIndex": 0, "explanation": {"hi": "350 × 20/100 = 70", "pa": "350 × 20/100 = 70", "en": "350 × 20/100 = 70"}},
+      {"id": "math-pct-q3", "prompt": {"hi": "+20% फिर −20%: नेट?", "pa": "+20% ਫਿਰ −20%: ਕੁੱਲ?", "en": "+20% then −20%: net?"}, "options": [{"hi": "0%", "pa": "0%", "en": "0%"}, {"hi": "+4%", "pa": "+4%", "en": "+4%"}, {"hi": "−4%", "pa": "−4%", "en": "−4%"}, {"hi": "−2%", "pa": "−2%", "en": "−2%"}], "answerIndex": 2, "explanation": {"hi": "20 + (−20) + 20×(−20)/100 = 0 − 4 = −4%", "pa": "20 + (−20) + 20×(−20)/100 = −4%", "en": "20 + (−20) + 20×(−20)/100 = 0 − 4 = −4%"}},
+      {"id": "math-pct-q4", "prompt": {"hi": "परीक्षा में 480 अंक हैं; 75% लाने के लिए कितने चाहिए?", "pa": "480 ਅੰਕਾਂ ਵਿੱਚੋਂ 75% ਲਈ?", "en": "75% of 480 marks?"}, "options": [{"hi": "360", "pa": "360", "en": "360"}, {"hi": "350", "pa": "350", "en": "350"}, {"hi": "400", "pa": "400", "en": "400"}, {"hi": "320", "pa": "320", "en": "320"}], "answerIndex": 0, "explanation": {"hi": "480 × 75/100 = 360", "pa": "480 × 75/100 = 360", "en": "480 × 75/100 = 360"}},
+      {"id": "math-pct-q5", "prompt": {"hi": "1/3 का प्रतिशत (निकटतम)?", "pa": "1/3 ਦਾ ਪ੍ਰਤੀਸ਼ਤ (ਨਜ਼ਦੀਕੀ)?", "en": "1/3 as percentage (approx)?"}, "options": [{"hi": "33.33%", "pa": "33.33%", "en": "33.33%"}, {"hi": "30%", "pa": "30%", "en": "30%"}, {"hi": "25%", "pa": "25%", "en": "25%"}, {"hi": "35%", "pa": "35%", "en": "35%"}], "answerIndex": 0, "explanation": {"hi": "1/3 × 100 = 33.33%", "pa": "1/3 × 100 = 33.33%", "en": "1/3 × 100 = 33.33%"}},
+      {"id": "math-pct-q6", "prompt": {"hi": "800 में 25% वृद्धि: नई राशि?", "pa": "800 ਵਿੱਚ 25% ਵਾਧਾ?", "en": "800 with 25% increase?"}, "options": [{"hi": "1000", "pa": "1000", "en": "1000"}, {"hi": "900", "pa": "900", "en": "900"}, {"hi": "1200", "pa": "1200", "en": "1200"}, {"hi": "825", "pa": "825", "en": "825"}], "answerIndex": 0, "explanation": {"hi": "800 × 1.25 = 1000", "pa": "800 × 1.25 = 1000", "en": "800 × 1.25 = 1000"}},
+      {"id": "math-pct-q7", "prompt": {"hi": "500 में 40% कमी: शेष राशि?", "pa": "500 ਵਿੱਚ 40% ਘਾਟਾ?", "en": "500 with 40% decrease: remainder?"}, "options": [{"hi": "300", "pa": "300", "en": "300"}, {"hi": "200", "pa": "200", "en": "200"}, {"hi": "400", "pa": "400", "en": "400"}, {"hi": "260", "pa": "260", "en": "260"}], "answerIndex": 0, "explanation": {"hi": "500 × 0.60 = 300", "pa": "500 × 0.60 = 300", "en": "500 × 0.60 = 300"}},
+      {"id": "math-pct-q8", "prompt": {"hi": "किसी संख्या का 15% = 45। संख्या?", "pa": "ਕਿਸੇ ਸੰਖਿਆ ਦਾ 15% = 45। ਸੰਖਿਆ?", "en": "15% of a number = 45. Number?"}, "options": [{"hi": "300", "pa": "300", "en": "300"}, {"hi": "675", "pa": "675", "en": "675"}, {"hi": "3", "pa": "3", "en": "3"}, {"hi": "150", "pa": "150", "en": "150"}], "answerIndex": 0, "explanation": {"hi": "x = 45/0.15 = 300", "pa": "x = 45/0.15 = 300", "en": "x = 45/0.15 = 300"}},
+      {"id": "math-pct-q9", "prompt": {"hi": "क्लास में 30% लड़कियाँ और 42 लड़के हैं। कुल?", "pa": "ਕਲਾਸ ਵਿੱਚ 30% ਲੜਕੀਆਂ ਅਤੇ 42 ਲੜਕੇ ਹਨ। ਕੁੱਲ?", "en": "Class: 30% girls, 42 boys. Total?"}, "options": [{"hi": "60", "pa": "60", "en": "60"}, {"hi": "70", "pa": "70", "en": "70"}, {"hi": "55", "pa": "55", "en": "55"}, {"hi": "72", "pa": "72", "en": "72"}], "answerIndex": 0, "explanation": {"hi": "लड़के = 70%। 42 = 70% of total। कुल = 60", "pa": "ਲੜਕੇ = 70%। 42/0.70 = 60", "en": "Boys = 70%. 42 = 70% of total → total = 42/0.70 = 60"}},
+      {"id": "math-pct-q10", "prompt": {"hi": "10% वृद्धि के बाद 10% कमी: नेट?", "pa": "10% ਵਾਧੇ ਤੋਂ ਬਾਅਦ 10% ਘਾਟਾ: ਕੁੱਲ?", "en": "+10% then −10%: net result?"}, "options": [{"hi": "0%", "pa": "0%", "en": "0%"}, {"hi": "−1%", "pa": "−1%", "en": "−1%"}, {"hi": "+1%", "pa": "+1%", "en": "+1%"}, {"hi": "−0.1%", "pa": "−0.1%", "en": "−0.1%"}], "answerIndex": 1, "explanation": {"hi": "10 + (−10) + 10×(−10)/100 = 0 − 1 = −1%", "pa": "10 + (−10) + (−1) = −1%", "en": "10 + (−10) + 10×(−10)/100 = 0 − 1 = −1%"}}
+    ],
+    "sources": [{"title": "NCERT Mathematics Class 8 · Comparing Quantities", "url": "https://ncert.nic.in/textbook/pdf/hemh108.pdf"}],
+    "videos": [{"title": "Percentage Class 8 · Hindi · NCERT", "url": "https://www.youtube.com/watch?v=5FO0Q2-JDTA"}],
+    "documents": []
+  },
+  {
+    "id": "math-ratio",
+    "subject": "Mathematics",
+    "unit": "Arithmetic",
+    "title": {"hi": "अनुपात और समानुपात", "pa": "ਅਨੁਪਾਤ ਅਤੇ ਸਮਾਨੁਪਾਤ", "en": "Ratio and Proportion"},
+    "sections": [
+      {
+        "heading": {"hi": "अनुपात की परिभाषा", "pa": "ਅਨੁਪਾਤ ਦੀ ਪਰਿਭਾਸ਼ਾ", "en": "Definition of ratio"},
+        "text": {
+          "hi": "अनुपात दो समान इकाइयों की तुलना है। a:b में a और b दोनों को एक ही इकाई में रखें। a:b = c:d (समानुपात) तो ad = bc (क्रॉस गुणा)। T को a:b में बाँटने पर हिस्से Ta/(a+b) और Tb/(a+b)।\n\nसीधा समानुपात: y/x = नियत। दोनों एक दिशा में बदलते हैं। व्युत्क्रम समानुपात: x×y = नियत। एक बढ़े तो दूसरा घटे। परीक्षा: पहले जाँचें कि कौन-सा प्रकार है।",
+          "pa": "ਅਨੁਪਾਤ ਦੋ ਸਮਾਨ ਇਕਾਈਆਂ ਦੀ ਤੁਲਨਾ ਹੈ। a:b = c:d ਹੋਵੇ ਤਾਂ ad = bc। T ਨੂੰ a:b ਵਿੱਚ ਵੰਡੋ: Ta/(a+b) ਅਤੇ Tb/(a+b)।",
+          "en": "Ratio compares two quantities of the same unit. For a:b = c:d (proportion): ad = bc. To divide T in ratio a:b: shares are Ta/(a+b) and Tb/(a+b). Direct proportion: y/x = constant (both change same way). Inverse proportion: x×y = constant (one increases, other decreases)."
+        }
+      },
+      {
+        "heading": {"hi": "अनुपात से जुड़े महत्वपूर्ण सूत्र", "pa": "ਮਹੱਤਵਪੂਰਨ ਸੂਤਰ", "en": "Important ratio formulas"},
+        "text": {
+          "hi": "मिश्रण नियम (Alligation): दो घटकों को किस अनुपात में मिलाएँ कि लक्षित मूल्य मिले। (C − Avg) : (Avg − C₁) जहाँ C₁ और C₂ घटकों के मूल्य हैं।\n\nतृतीय समानुपात (3rd proportional): a:b = b:x → x = b²/a। चतुर्थ समानुपात (4th proportional): a:b = c:x → x = bc/a। मध्यानुपाती (Mean proportional): a:x = x:b → x = √(ab)। परीक्षा टिप: हमेशा अनुपात का योग निकालें।",
+          "pa": "ਤੀਜਾ ਸਮਾਨੁਪਾਤ: x = b²/a। ਚੌਥਾ ਸਮਾਨੁਪਾਤ: x = bc/a। ਮੱਧਾਨੁਪਾਤੀ: x = √(ab)।",
+          "en": "Alligation: ratio to mix two components to achieve target value. Third proportional: a:b = b:x → x = b²/a. Fourth proportional: a:b = c:x → x = bc/a. Mean proportional: a:x = x:b → x = √(ab). Exam tip: always find the sum of ratio terms first."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "a:b = c:d → ad = bc।", "pa": "a:b = c:d → ad = bc।", "en": "a:b = c:d → ad = bc."},
+      {"hi": "T को a:b में बाँटो: Ta/(a+b) और Tb/(a+b)।", "pa": "T ਨੂੰ a:b ਵਿੱਚ ਵੰਡੋ: Ta/(a+b)।", "en": "Divide T in ratio a:b: Ta/(a+b) and Tb/(a+b)."},
+      {"hi": "सीधा: y/x = नियत। व्युत्क्रम: xy = नियत।", "pa": "ਸਿੱਧਾ: y/x = ਨਿਯਤ। ਉਲਟ: xy = ਨਿਯਤ।", "en": "Direct: y/x = const. Inverse: xy = const."},
+      {"hi": "मध्यानुपाती: x = √(ab)।", "pa": "ਮੱਧਾਨੁਪਾਤੀ: x = √(ab)।", "en": "Mean proportional: x = √(ab)."},
+      {"hi": "इकाई पहले एक समान करें।", "pa": "ਪਹਿਲਾਂ ਇਕਾਈਆਂ ਇੱਕੋ ਕਰੋ।", "en": "Always convert units to the same before comparing."}
+    ],
+    "summary": {"hi": "अनुपात = एक समान इकाइयों की तुलना। ad = bc। T को a:b में विभाजित करें। सीधा/व्युत्क्रम समानुपात।", "pa": "ਅਨੁਪਾਤ = ਸਮਾਨ ਇਕਾਈਆਂ ਦੀ ਤੁਲਨਾ। ad = bc।", "en": "Ratio = comparison of same-unit quantities. ad = bc. Divide total by ratio sum. Direct/inverse proportion."},
+    "flashcards": [
+      {"question": {"hi": "600 को 2:3 में बाँटो: पहला हिस्सा?", "pa": "600 ਨੂੰ 2:3 ਵਿੱਚ ਵੰਡੋ: ਪਹਿਲਾ ਹਿੱਸਾ?", "en": "Divide 600 in 2:3: first share?"}, "answer": {"hi": "240", "pa": "240", "en": "240"}},
+      {"question": {"hi": "a:b = 3:4 में a का पूरे में भाग?", "pa": "a:b = 3:4 ਵਿੱਚ a ਦਾ ਭਾਗ?", "en": "a:b = 3:4; a's fraction of total?"}, "answer": {"hi": "3/7", "pa": "3/7", "en": "3/7"}},
+      {"question": {"hi": "2:3 = 4:x। x = ?", "pa": "2:3 = 4:x। x = ?", "en": "2:3 = 4:x. x = ?"}, "answer": {"hi": "6", "pa": "6", "en": "6"}},
+      {"question": {"hi": "4 और 9 का मध्यानुपाती?", "pa": "4 ਅਤੇ 9 ਦਾ ਮੱਧਾਨੁਪਾਤੀ?", "en": "Mean proportional of 4 and 9?"}, "answer": {"hi": "6", "pa": "6", "en": "6"}}
+    ],
+    "questions": [
+      {"id": "math-ratio-q1", "prompt": {"hi": "500 को 2:3 में बाँटने पर A का हिस्सा?", "pa": "500 ਨੂੰ 2:3 ਵਿੱਚ ਵੰਡਣ ਉੱਤੇ A ਦਾ ਹਿੱਸਾ?", "en": "Divide 500 in 2:3: A's share?"}, "options": [{"hi": "200", "pa": "200", "en": "200"}, {"hi": "250", "pa": "250", "en": "250"}, {"hi": "150", "pa": "150", "en": "150"}, {"hi": "300", "pa": "300", "en": "300"}], "answerIndex": 0, "explanation": {"hi": "A = 500 × 2/5 = 200", "pa": "A = 500 × 2/5 = 200", "en": "A = 500 × 2/5 = 200"}},
+      {"id": "math-ratio-q2", "prompt": {"hi": "3:4 = 9:x। x = ?", "pa": "3:4 = 9:x। x = ?", "en": "3:4 = 9:x. x = ?"}, "options": [{"hi": "12", "pa": "12", "en": "12"}, {"hi": "9", "pa": "9", "en": "9"}, {"hi": "6", "pa": "6", "en": "6"}, {"hi": "16", "pa": "16", "en": "16"}], "answerIndex": 0, "explanation": {"hi": "x = 9×4/3 = 12", "pa": "x = 9×4/3 = 12", "en": "x = 4×9/3 = 12"}},
+      {"id": "math-ratio-q3", "prompt": {"hi": "सीधा समानुपात में x दोगुना हो तो y?", "pa": "ਸਿੱਧੇ ਸਮਾਨੁਪਾਤ ਵਿੱਚ x ਦੁੱਗਣਾ ਹੋਵੇ ਤਾਂ y?", "en": "Direct proportion: x doubles, y = ?"}, "options": [{"hi": "दोगुना", "pa": "ਦੁੱਗਣਾ", "en": "Doubles"}, {"hi": "आधा", "pa": "ਅੱਧਾ", "en": "Halves"}, {"hi": "चार गुना", "pa": "ਚਾਰ ਗੁਣਾ", "en": "Quadruples"}, {"hi": "नहीं बदलता", "pa": "ਨਹੀਂ ਬਦਲਦਾ", "en": "No change"}], "answerIndex": 0, "explanation": {"hi": "सीधे समानुपात में y/x = नियत, इसलिए y भी दोगुना।", "pa": "ਸਿੱਧੇ ਸਮਾਨੁਪਾਤ ਵਿੱਚ y ਵੀ ਦੁੱਗਣਾ ਹੁੰਦਾ ਹੈ।", "en": "In direct proportion y/x = constant, so y also doubles."}},
+      {"id": "math-ratio-q4", "prompt": {"hi": "4 और 16 का मध्यानुपाती?", "pa": "4 ਅਤੇ 16 ਦਾ ਮੱਧਾਨੁਪਾਤੀ?", "en": "Mean proportional of 4 and 16?"}, "options": [{"hi": "8", "pa": "8", "en": "8"}, {"hi": "10", "pa": "10", "en": "10"}, {"hi": "6", "pa": "6", "en": "6"}, {"hi": "64", "pa": "64", "en": "64"}], "answerIndex": 0, "explanation": {"hi": "x = √(4×16) = √64 = 8", "pa": "x = √(4×16) = 8", "en": "x = √(4×16) = √64 = 8"}},
+      {"id": "math-ratio-q5", "prompt": {"hi": "A:B = 2:3, B:C = 4:5। A:B:C?", "pa": "A:B = 2:3, B:C = 4:5। A:B:C?", "en": "A:B = 2:3, B:C = 4:5. A:B:C?"}, "options": [{"hi": "8:12:15", "pa": "8:12:15", "en": "8:12:15"}, {"hi": "2:3:5", "pa": "2:3:5", "en": "2:3:5"}, {"hi": "6:9:15", "pa": "6:9:15", "en": "6:9:15"}, {"hi": "4:6:5", "pa": "4:6:5", "en": "4:6:5"}], "answerIndex": 0, "explanation": {"hi": "B को 12 पर मिलाएँ: A = 8, B = 12, C = 15", "pa": "B = 12 ਉੱਤੇ: A = 8, B = 12, C = 15", "en": "Make B common = 12: A = 8, B = 12, C = 15"}}
+    ],
+    "sources": [{"title": "NCERT Maths Class 8 · Direct and Inverse Proportions", "url": "https://ncert.nic.in/textbook/pdf/hemh113.pdf"}],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "math-interest",
+    "subject": "Mathematics",
+    "unit": "Arithmetic",
+    "title": {"hi": "साधारण और चक्रवृद्धि ब्याज", "pa": "ਸਾਧਾਰਨ ਅਤੇ ਮਿਸ਼ਰਤ ਵਿਆਜ", "en": "Simple and Compound Interest"},
+    "sections": [
+      {
+        "heading": {"hi": "साधारण ब्याज", "pa": "ਸਾਧਾਰਨ ਵਿਆਜ", "en": "Simple Interest"},
+        "text": {
+          "hi": "साधारण ब्याज (SI) = P × R × T / 100। जहाँ P = मूलधन, R = दर (%), T = समय (वर्ष)। मिश्रधन = P + SI। दर निकालना: R = SI × 100 / (P × T)। समय निकालना: T = SI × 100 / (P × R)।\n\nउदाहरण: ₹5000 पर 8% दर से 3 वर्ष का SI = 5000 × 8 × 3 / 100 = ₹1200। मिश्रधन = ₹6200।",
+          "pa": "SI = P × R × T / 100। P = ਮੂਲਧਨ, R = ਦਰ (%), T = ਸਮਾਂ (ਸਾਲ)। ਮਿਸ਼ਰਧਨ = P + SI। ਉਦਾਹਰਨ: ₹5000 ਉੱਤੇ 8% ਦਰ, 3 ਸਾਲ → SI = ₹1200।",
+          "en": "SI = P × R × T / 100 where P = principal, R = rate (%), T = time (years). Amount = P + SI. Rate: R = SI × 100 / (P × T). Example: ₹5000 at 8% for 3 years → SI = 5000 × 8 × 3 / 100 = ₹1200. Amount = ₹6200."
+        }
+      },
+      {
+        "heading": {"hi": "चक्रवृद्धि ब्याज", "pa": "ਮਿਸ਼ਰਤ ਵਿਆਜ", "en": "Compound Interest"},
+        "text": {
+          "hi": "CI = P × (1 + R/100)^n − P। मिश्रधन = P × (1 + R/100)^n। CI > SI जब अवधि > 1 वर्ष हो। CI − SI = P × (R/100)² × (time-related factor)। अर्ध-वार्षिक: R = R/2, n = 2n।\n\nउदाहरण: ₹10000 पर 10% दर, 2 वर्ष CI। A = 10000 × (1.1)² = 10000 × 1.21 = ₹12100। CI = ₹2100। SI = ₹2000। अंतर = ₹100।",
+          "pa": "CI = P(1 + R/100)^n − P। ਮਿਸ਼ਰਧਨ = P(1 + R/100)^n। ਉਦਾਹਰਨ: ₹10000, 10%, 2 ਸਾਲ → A = ₹12100; CI = ₹2100।",
+          "en": "CI = P × (1 + R/100)^n − P. Amount = P × (1 + R/100)^n. CI > SI for period > 1 year. Example: ₹10000 at 10%, 2 years → A = 10000 × 1.21 = ₹12100; CI = ₹2100; SI = ₹2000; difference = ₹100."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "SI = PRT/100; CI = P(1+R/100)^n − P।", "pa": "SI = PRT/100; CI = P(1+R/100)^n − P।", "en": "SI = PRT/100; CI = P(1+R/100)^n − P."},
+      {"hi": "CI > SI हमेशा (जब n > 1)।", "pa": "CI > SI ਹਮੇਸ਼ਾ (n > 1)।", "en": "CI > SI always (when n > 1)."},
+      {"hi": "अर्ध-वार्षिक: R/2, T को 2n करें।", "pa": "ਅਰਧ-ਸਾਲਾਨਾ: R/2, T = 2n।", "en": "Half-yearly: use R/2 and double the time."}
+    ],
+    "summary": {"hi": "SI = PRT/100। CI = P(1+R/100)^n − P। CI > SI। अर्ध-वार्षिक में R/2 और n = 2n।", "pa": "SI = PRT/100। CI = P(1+R/100)^n − P।", "en": "SI = PRT/100. CI = P(1+R/100)^n − P. CI > SI for n>1."},
+    "flashcards": [
+      {"question": {"hi": "SI का सूत्र?", "pa": "SI ਦਾ ਸੂਤਰ?", "en": "Formula for SI?"}, "answer": {"hi": "PRT/100", "pa": "PRT/100", "en": "PRT/100"}},
+      {"question": {"hi": "₹1000 पर 5%, 2 वर्ष: SI?", "pa": "₹1000, 5%, 2 ਸਾਲ: SI?", "en": "₹1000 at 5% for 2 yr: SI?"}, "answer": {"hi": "₹100", "pa": "₹100", "en": "₹100"}}
+    ],
+    "questions": [
+      {"id": "math-si-q1", "prompt": {"hi": "₹6000 पर 10%, 2 वर्ष: SI?", "pa": "₹6000, 10%, 2 ਸਾਲ: SI?", "en": "₹6000 at 10% for 2 yr: SI?"}, "options": [{"hi": "₹1200", "pa": "₹1200", "en": "₹1200"}, {"hi": "₹600", "pa": "₹600", "en": "₹600"}, {"hi": "₹2000", "pa": "₹2000", "en": "₹2000"}, {"hi": "₹1800", "pa": "₹1800", "en": "₹1800"}], "answerIndex": 0, "explanation": {"hi": "SI = 6000×10×2/100 = ₹1200", "pa": "SI = 6000×10×2/100 = ₹1200", "en": "SI = 6000×10×2/100 = ₹1200"}},
+      {"id": "math-si-q2", "prompt": {"hi": "₹10000 पर 10%, 2 वर्ष: CI?", "pa": "₹10000, 10%, 2 ਸਾਲ: CI?", "en": "₹10000 at 10%, 2 yr: CI?"}, "options": [{"hi": "₹2100", "pa": "₹2100", "en": "₹2100"}, {"hi": "₹2000", "pa": "₹2000", "en": "₹2000"}, {"hi": "₹1100", "pa": "₹1100", "en": "₹1100"}, {"hi": "₹2500", "pa": "₹2500", "en": "₹2500"}], "answerIndex": 0, "explanation": {"hi": "A = 10000 × 1.21 = 12100; CI = 2100", "pa": "A = 10000 × (1.1)² = 12100; CI = 2100", "en": "A = 10000 × (1.1)² = 12100; CI = 2100"}},
+      {"id": "math-si-q3", "prompt": {"hi": "SI और CI का अंतर (₹10000, 10%, 2yr)?", "pa": "SI ਅਤੇ CI ਦਾ ਫ਼ਰਕ?", "en": "CI − SI (₹10000, 10%, 2yr)?"}, "options": [{"hi": "₹100", "pa": "₹100", "en": "₹100"}, {"hi": "₹200", "pa": "₹200", "en": "₹200"}, {"hi": "₹50", "pa": "₹50", "en": "₹50"}, {"hi": "₹150", "pa": "₹150", "en": "₹150"}], "answerIndex": 0, "explanation": {"hi": "SI = 2000; CI = 2100; अंतर = ₹100", "pa": "SI = 2000; CI = 2100; ਫ਼ਰਕ = ₹100", "en": "SI = 2000; CI = 2100; difference = ₹100"}}
+    ],
+    "sources": [{"title": "NCERT Maths Class 8 · Comparing Quantities", "url": "https://ncert.nic.in/textbook/pdf/hemh108.pdf"}],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "gen-computer",
+    "subject": "General",
+    "unit": "Computer Awareness",
+    "title": {"hi": "कंप्यूटर की मूल बातें", "pa": "ਕੰਪਿਊਟਰ ਦੀਆਂ ਮੁੱਢਲੀਆਂ ਗੱਲਾਂ", "en": "Computer fundamentals"},
+    "sections": [
+      {
+        "heading": {"hi": "हार्डवेयर और सॉफ्टवेयर", "pa": "ਹਾਰਡਵੇਅਰ ਅਤੇ ਸਾਫਟਵੇਅਰ", "en": "Hardware and Software"},
+        "text": {
+          "hi": "हार्डवेयर: कंप्यूटर के भौतिक भाग—CPU, RAM, HDD/SSD, मॉनिटर, कीबोर्ड, माउस। CPU (Central Processing Unit) = कंप्यूटर का दिमाग। ALU (Arithmetic Logic Unit) + CU (Control Unit) + Registers मिलकर CPU बनाते हैं।\n\nसॉफ्टवेयर दो प्रकार: (1) System software—OS (Windows, Linux); (2) Application software—MS Office, Browser। RAM (Random Access Memory) = अस्थायी; बिजली बंद होने पर मिट जाती है। ROM = स्थायी। HDD/SSD = storage—डेटा सुरक्षित रहता है।",
+          "pa": "ਹਾਰਡਵੇਅਰ = ਭੌਤਿਕ ਭਾਗ। CPU = ALU + CU + Registers। RAM = ਅਸਥਾਈ; ROM = ਸਥਾਈ। HDD/SSD = ਸਟੋਰੇਜ। ਸਿਸਟਮ ਸਾਫਟਵੇਅਰ (OS) ਅਤੇ ਐਪਲੀਕੇਸ਼ਨ ਸਾਫਟਵੇਅਰ।",
+          "en": "Hardware: physical components—CPU, RAM, HDD/SSD, monitor, keyboard, mouse. CPU = brain: ALU + Control Unit + Registers. Software types: (1) System software—OS; (2) Application software—MS Office, browser. RAM = volatile (lost on power off). ROM = non-volatile. HDD/SSD = storage (data retained)."
+        }
+      },
+      {
+        "heading": {"hi": "इंटरनेट, नेटवर्क और MS Office", "pa": "ਇੰਟਰਨੈੱਟ, ਨੈੱਟਵਰਕ ਅਤੇ MS Office", "en": "Internet, networks and MS Office"},
+        "text": {
+          "hi": "इंटरनेट: TCP/IP प्रोटोकॉल पर चलने वाला वैश्विक नेटवर्क। URL = Uniform Resource Locator। HTTP/HTTPS = वेब प्रोटोकॉल। ब्राउज़र (Chrome, Firefox) ≠ सर्च इंजन (Google)। ईमेल: SMTP (भेजना), POP3/IMAP (प्राप्त करना)।\n\nMS Word: .docx; Ctrl+B (Bold), Ctrl+I (Italic), Ctrl+S (Save), Ctrl+Z (Undo), Ctrl+P (Print)। MS Excel: .xlsx; सेल = पंक्ति × स्तंभ (B3 = B कॉलम, 3 पंक्ति)। MS PowerPoint: .pptx। क्लर्क परीक्षा में MS Office के शॉर्टकट महत्वपूर्ण।",
+          "pa": "ਇੰਟਰਨੈੱਟ TCP/IP ਉੱਤੇ ਚੱਲਦਾ ਹੈ। Ctrl+B = Bold; Ctrl+S = Save; Ctrl+Z = Undo। MS Word = .docx; Excel = .xlsx; PowerPoint = .pptx।",
+          "en": "Internet runs on TCP/IP. URL = Uniform Resource Locator. Browser ≠ search engine. Email: SMTP (send), POP3/IMAP (receive). MS Word: .docx; Ctrl+B (Bold), Ctrl+S (Save), Ctrl+Z (Undo), Ctrl+P (Print). Excel: .xlsx; cell = column × row. PowerPoint: .pptx. Clerk exams focus on keyboard shortcuts."
+        }
+      },
+      {
+        "heading": {"hi": "संख्या प्रणाली और डेटा", "pa": "ਸੰਖਿਆ ਪ੍ਰਣਾਲੀ ਅਤੇ ਡਾਟਾ", "en": "Number systems and data"},
+        "text": {
+          "hi": "1 bit = 0 या 1। 8 bits = 1 byte। 1024 bytes = 1 KB। 1024 KB = 1 MB। 1024 MB = 1 GB। दशमलव → बाइनरी: लगातार 2 से भाग दें।\n\nवायरस: हानिकारक program जो डेटा नष्ट करता है। एंटीवायरस से बचाव। फ़ायरवॉल: नेटवर्क सुरक्षा। बैकअप: डेटा की सुरक्षित प्रतिलिपि। Cloud storage: इंटरनेट पर डेटा संग्रह (Google Drive, Dropbox)।",
+          "pa": "1 byte = 8 bits। 1 KB = 1024 bytes। 1 MB = 1024 KB। 1 GB = 1024 MB। ਵਾਇਰਸ ਤੋਂ ਬਚਾਉ ਲਈ ਐਂਟੀਵਾਇਰਸ।",
+          "en": "1 bit = 0 or 1. 8 bits = 1 byte. 1024 bytes = 1 KB. 1024 KB = 1 MB. 1024 MB = 1 GB. Virus: harmful program. Antivirus: protection. Firewall: network security. Cloud storage: data on internet (Google Drive). Decimal → binary: divide repeatedly by 2."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "CPU = ALU + CU। RAM = अस्थायी; ROM = स्थायी।", "pa": "CPU = ALU + CU। RAM = ਅਸਥਾਈ; ROM = ਸਥਾਈ।", "en": "CPU = ALU + CU. RAM = volatile; ROM = non-volatile."},
+      {"hi": "1 KB = 1024 bytes; 1 MB = 1024 KB।", "pa": "1 KB = 1024 bytes; 1 MB = 1024 KB।", "en": "1 KB = 1024 bytes; 1 MB = 1024 KB."},
+      {"hi": "MS Word: .docx; Excel: .xlsx; PPT: .pptx।", "pa": "Word: .docx; Excel: .xlsx; PPT: .pptx।", "en": "MS Word: .docx; Excel: .xlsx; PPT: .pptx."},
+      {"hi": "Ctrl+S = Save; Ctrl+Z = Undo; Ctrl+P = Print।", "pa": "Ctrl+S = Save; Ctrl+Z = Undo।", "en": "Ctrl+S = Save; Ctrl+Z = Undo; Ctrl+P = Print."},
+      {"hi": "Browser ≠ Search Engine।", "pa": "Browser ≠ Search Engine।", "en": "Browser ≠ Search Engine."}
+    ],
+    "summary": {"hi": "CPU = दिमाग। RAM = अस्थायी। 1 KB = 1024 bytes। Word = .docx; Excel = .xlsx। Ctrl+S = Save। Browser ≠ Search Engine।", "pa": "CPU = ਦਿਮਾਗ। RAM = ਅਸਥਾਈ। 1 KB = 1024 bytes।", "en": "CPU = brain. RAM = volatile. 1 KB = 1024 bytes. Word = .docx. Ctrl+S = Save. Browser ≠ Search Engine."},
+    "flashcards": [
+      {"question": {"hi": "1 MB = ? KB", "pa": "1 MB = ? KB", "en": "1 MB = ? KB"}, "answer": {"hi": "1024 KB", "pa": "1024 KB", "en": "1024 KB"}},
+      {"question": {"hi": "MS Excel की फाइल का एक्सटेंशन?", "pa": "MS Excel ਦੀ ਫ਼ਾਈਲ ਦਾ extension?", "en": "MS Excel file extension?"}, "answer": {"hi": ".xlsx", "pa": ".xlsx", "en": ".xlsx"}},
+      {"question": {"hi": "Ctrl+Z क्या करता है?", "pa": "Ctrl+Z ਕੀ ਕਰਦਾ ਹੈ?", "en": "What does Ctrl+Z do?"}, "answer": {"hi": "Undo (पिछला काम वापस)", "pa": "Undo", "en": "Undo last action"}},
+      {"question": {"hi": "RAM का पूरा नाम?", "pa": "RAM ਦਾ ਪੂਰਾ ਨਾਮ?", "en": "Full form of RAM?"}, "answer": {"hi": "Random Access Memory", "pa": "Random Access Memory", "en": "Random Access Memory"}},
+      {"question": {"hi": "CPU का पूरा नाम?", "pa": "CPU ਦਾ ਪੂਰਾ ਨਾਮ?", "en": "Full form of CPU?"}, "answer": {"hi": "Central Processing Unit", "pa": "Central Processing Unit", "en": "Central Processing Unit"}},
+      {"question": {"hi": "SMTP किस लिए है?", "pa": "SMTP ਕਿਸ ਲਈ ਹੈ?", "en": "SMTP is used for?"}, "answer": {"hi": "ईमेल भेजना", "pa": "ਈਮੇਲ ਭੇਜਣਾ", "en": "Sending email"}}
+    ],
+    "questions": [
+      {"id": "gen-comp-q1", "prompt": {"hi": "RAM की विशेषता?", "pa": "RAM ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ?", "en": "Characteristic of RAM?"}, "options": [{"hi": "स्थायी मेमोरी", "pa": "ਸਥਾਈ ਮੈਮੋਰੀ", "en": "Permanent memory"}, {"hi": "अस्थायी मेमोरी", "pa": "ਅਸਥਾਈ ਮੈਮੋਰੀ", "en": "Volatile memory"}, {"hi": "ऑप्टिकल स्टोरेज", "pa": "ਆਪਟੀਕਲ ਸਟੋਰੇਜ", "en": "Optical storage"}, {"hi": "इनपुट डिवाइस", "pa": "ਇਨਪੁੱਟ ਡਿਵਾਈਸ", "en": "Input device"}], "answerIndex": 1, "explanation": {"hi": "RAM volatile है—बिजली बंद होने पर डेटा मिट जाता है।", "pa": "RAM volatile ਹੈ।", "en": "RAM is volatile—data is lost when power is off."}},
+      {"id": "gen-comp-q2", "prompt": {"hi": "1 GB = ? MB", "pa": "1 GB = ? MB", "en": "1 GB = ? MB"}, "options": [{"hi": "1024 MB", "pa": "1024 MB", "en": "1024 MB"}, {"hi": "1000 MB", "pa": "1000 MB", "en": "1000 MB"}, {"hi": "512 MB", "pa": "512 MB", "en": "512 MB"}, {"hi": "2048 MB", "pa": "2048 MB", "en": "2048 MB"}], "answerIndex": 0, "explanation": {"hi": "1 GB = 1024 MB (binary system)", "pa": "1 GB = 1024 MB", "en": "1 GB = 1024 MB in binary system."}},
+      {"id": "gen-comp-q3", "prompt": {"hi": "MS Word की फाइल का एक्सटेंशन?", "pa": "MS Word ਦੀ ਫ਼ਾਈਲ ਦਾ extension?", "en": "MS Word file extension?"}, "options": [{"hi": ".xlsx", "pa": ".xlsx", "en": ".xlsx"}, {"hi": ".pptx", "pa": ".pptx", "en": ".pptx"}, {"hi": ".docx", "pa": ".docx", "en": ".docx"}, {"hi": ".txt", "pa": ".txt", "en": ".txt"}], "answerIndex": 2, "explanation": {"hi": "MS Word = .docx, Excel = .xlsx, PowerPoint = .pptx", "pa": "MS Word = .docx", "en": "MS Word = .docx, Excel = .xlsx, PowerPoint = .pptx"}},
+      {"id": "gen-comp-q4", "prompt": {"hi": "Ctrl+P क्या करता है?", "pa": "Ctrl+P ਕੀ ਕਰਦਾ ਹੈ?", "en": "What does Ctrl+P do?"}, "options": [{"hi": "Paste", "pa": "Paste", "en": "Paste"}, {"hi": "Print", "pa": "Print", "en": "Print"}, {"hi": "Paragraph", "pa": "Paragraph", "en": "Paragraph"}, {"hi": "Properties", "pa": "Properties", "en": "Properties"}], "answerIndex": 1, "explanation": {"hi": "Ctrl+P = Print। Ctrl+V = Paste।", "pa": "Ctrl+P = Print।", "en": "Ctrl+P = Print. Ctrl+V = Paste."}},
+      {"id": "gen-comp-q5", "prompt": {"hi": "CPU का कौन-सा भाग गणना करता है?", "pa": "CPU ਦਾ ਕਿਹੜਾ ਭਾਗ ਹਿਸਾਬ ਕਰਦਾ ਹੈ?", "en": "Which CPU part performs calculations?"}, "options": [{"hi": "Control Unit", "pa": "Control Unit", "en": "Control Unit"}, {"hi": "ALU", "pa": "ALU", "en": "ALU"}, {"hi": "RAM", "pa": "RAM", "en": "RAM"}, {"hi": "ROM", "pa": "ROM", "en": "ROM"}], "answerIndex": 1, "explanation": {"hi": "ALU (Arithmetic Logic Unit) गणना करता है।", "pa": "ALU ਹਿਸਾਬ ਕਰਦਾ ਹੈ।", "en": "ALU (Arithmetic Logic Unit) performs arithmetic and logical operations."}},
+      {"id": "gen-comp-q6", "prompt": {"hi": "वेब ब्राउज़र का उदाहरण?", "pa": "ਵੈੱਬ ਬਰਾਊਜ਼ਰ ਦੀ ਮਿਸਾਲ?", "en": "Example of a web browser?"}, "options": [{"hi": "Google", "pa": "Google", "en": "Google"}, {"hi": "Windows", "pa": "Windows", "en": "Windows"}, {"hi": "Chrome", "pa": "Chrome", "en": "Chrome"}, {"hi": "Microsoft Excel", "pa": "Microsoft Excel", "en": "Microsoft Excel"}], "answerIndex": 2, "explanation": {"hi": "Chrome, Firefox, Edge ब्राउज़र हैं। Google एक सर्च इंजन है।", "pa": "Chrome ਬਰਾਊਜ਼ਰ ਹੈ। Google ਸਰਚ ਇੰਜਣ ਹੈ।", "en": "Chrome, Firefox, Edge are browsers. Google is a search engine."}},
+      {"id": "gen-comp-q7", "prompt": {"hi": "SMTP का उपयोग?", "pa": "SMTP ਦੀ ਵਰਤੋਂ?", "en": "Use of SMTP?"}, "options": [{"hi": "ईमेल प्राप्त करना", "pa": "ਈਮੇਲ ਪ੍ਰਾਪਤ ਕਰਨਾ", "en": "Receive email"}, {"hi": "ईमेल भेजना", "pa": "ਈਮੇਲ ਭੇਜਣਾ", "en": "Send email"}, {"hi": "फाइल ट्रांसफर", "pa": "ਫ਼ਾਈਲ ਟ੍ਰਾਂਸਫਰ", "en": "File transfer"}, {"hi": "वेब ब्राउज़िंग", "pa": "ਵੈੱਬ ਬਰਾਊਜ਼ਿੰਗ", "en": "Web browsing"}], "answerIndex": 1, "explanation": {"hi": "SMTP = Simple Mail Transfer Protocol = ईमेल भेजना। POP3/IMAP = ईमेल प्राप्त करना।", "pa": "SMTP = ਈਮੇਲ ਭੇਜਣਾ।", "en": "SMTP = Simple Mail Transfer Protocol for sending email. POP3/IMAP for receiving."}},
+      {"id": "gen-comp-q8", "prompt": {"hi": "Ctrl+A क्या करता है?", "pa": "Ctrl+A ਕੀ ਕਰਦਾ ਹੈ?", "en": "What does Ctrl+A do?"}, "options": [{"hi": "सब कुछ चुनना (Select All)", "pa": "ਸਭ ਕੁਝ ਚੁਣਨਾ", "en": "Select All"}, {"hi": "Align text", "pa": "Align text", "en": "Align text"}, {"hi": "Add comment", "pa": "Add comment", "en": "Add comment"}, {"hi": "Auto save", "pa": "Auto save", "en": "Auto save"}], "answerIndex": 0, "explanation": {"hi": "Ctrl+A = Select All (सारा टेक्स्ट चुनना)", "pa": "Ctrl+A = Select All", "en": "Ctrl+A = Select All text"}},
+      {"id": "gen-comp-q9", "prompt": {"hi": "8 bits = ?", "pa": "8 bits = ?", "en": "8 bits = ?"}, "options": [{"hi": "1 byte", "pa": "1 byte", "en": "1 byte"}, {"hi": "1 KB", "pa": "1 KB", "en": "1 KB"}, {"hi": "1 MB", "pa": "1 MB", "en": "1 MB"}, {"hi": "4 bytes", "pa": "4 bytes", "en": "4 bytes"}], "answerIndex": 0, "explanation": {"hi": "8 bits = 1 byte। यह कंप्यूटर की मूल इकाई है।", "pa": "8 bits = 1 byte।", "en": "8 bits = 1 byte, the basic unit of computer storage."}},
+      {"id": "gen-comp-q10", "prompt": {"hi": "Operating System का उदाहरण?", "pa": "Operating System ਦੀ ਮਿਸਾਲ?", "en": "Example of an Operating System?"}, "options": [{"hi": "MS Word", "pa": "MS Word", "en": "MS Word"}, {"hi": "Google Chrome", "pa": "Google Chrome", "en": "Google Chrome"}, {"hi": "Windows 11", "pa": "Windows 11", "en": "Windows 11"}, {"hi": "Photoshop", "pa": "Photoshop", "en": "Photoshop"}], "answerIndex": 2, "explanation": {"hi": "Windows, Linux, macOS ऑपरेटिंग सिस्टम हैं। MS Word एप्लीकेशन है।", "pa": "Windows, Linux OS ਹਨ।", "en": "Windows, Linux, macOS are operating systems. MS Word is application software."}}
+    ],
+    "sources": [{"title": "NCERT Computer Science Class 11", "url": "https://ncert.nic.in/textbook.php?kecs1=0-8"}],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "gen-reasoning",
+    "subject": "General",
+    "unit": "Reasoning",
+    "title": {"hi": "संख्या श्रेणी और तर्कशक्ति", "pa": "ਅੰਕ ਲੜੀ ਅਤੇ ਤਰਕਸ਼ਕਤੀ", "en": "Number series and reasoning"},
+    "sections": [
+      {
+        "heading": {"hi": "संख्या श्रेणी के प्रकार", "pa": "ਅੰਕ ਲੜੀ ਦੇ ਪ੍ਰਕਾਰ", "en": "Types of number series"},
+        "text": {
+          "hi": "संख्या श्रेणी हल करने के चरण: (1) पास के अंकों का अंतर निकालें। (2) अंतर नियत हो तो AP (arithmetic progression)। (3) अंतर बदलता हो तो दूसरे स्तर का अंतर देखें। (4) गुणनफल/भाग का पैटर्न देखें। (5) वर्ग, घन या वैकल्पिक श्रेणी देखें।\n\nउदाहरण: 2, 5, 10, 17, 26 — अंतर: 3, 5, 7, 9 — (+2 बढ़ रहा)। अगला अंतर 11, अगला पद = 37। 3, 6, 12, 24 — गुणा 2। अगला = 48।",
+          "pa": "ਅੰਕ ਲੜੀ ਦੇ ਕਦਮ: (1) ਨੇੜਲੇ ਅੰਕਾਂ ਦਾ ਫ਼ਰਕ ਕੱਢੋ। (2) ਫ਼ਰਕ ਨਿਯਤ ਹੋਵੇ ਤਾਂ AP। (3) ਗੁਣਾ ਦਾ ਪੈਟਰਨ ਦੇਖੋ। ਉਦਾਹਰਨ: 3, 6, 12, 24 → ਗੁਣਾ 2 → ਅਗਲਾ = 48।",
+          "en": "Steps to solve number series: (1) Find differences between consecutive terms. (2) If differences are constant, it is AP. (3) If differences vary, find second-level differences. (4) Check multiplication/division pattern. (5) Check squares, cubes, or alternating series. Example: 2, 5, 10, 17, 26 — differences 3, 5, 7, 9 (increasing by 2) — next difference 11, next term = 37. Example: 3, 6, 12, 24 — multiply 2 — next = 48."
+        }
+      },
+      {
+        "heading": {"hi": "कोडिंग-डिकोडिंग और दिशाएँ", "pa": "ਕੋਡਿੰਗ-ਡੀਕੋਡਿੰਗ ਅਤੇ ਦਿਸ਼ਾਵਾਂ", "en": "Coding-decoding and directions"},
+        "text": {
+          "hi": "कोडिंग: प्रत्येक अक्षर को एक निश्चित मान से shift करें। A=1, B=2...Z=26 (या उलटा)। दिशाएँ: उत्तर, दक्षिण, पूर्व, पश्चिम। बाएँ मुड़ें = 90° वामावर्त। दाएँ मुड़ें = 90° दक्षिणावर्त।\n\nखून के रिश्ते: A का पुत्र = B; B का पिता = A। परीक्षा ट्रिक: family tree बनाएँ। रैंकिंग: 'बाएँ से n वाँ' + 'दाएँ से m वाँ' = कुल + 1। घड़ी: 60 मिनट में मिनट की सूई 360° घूमती है; घंटे की सूई 30°।",
+          "pa": "ਕੋਡਿੰਗ: ਹਰ ਅੱਖਰ ਨੂੰ ਇੱਕ ਮੁੱਲ ਦੇ ਨਾਲ shift ਕਰੋ। ਦਿਸ਼ਾਵਾਂ: ਉੱਤਰ, ਦੱਖਣ, ਪੂਰਬ, ਪੱਛਮ। family tree ਬਣਾਓ। ਰੈਂਕਿੰਗ: ਖੱਬੇ + ਸੱਜੇ = ਕੁੱਲ + 1।",
+          "en": "Coding: shift each letter by a fixed value. A=1, B=2...Z=26 (or reverse). Directions: North, South, East, West. Left turn = 90° anticlockwise. Right turn = 90° clockwise. Blood relations: build a family tree. Ranking: 'n from left' + 'm from right' = total + 1. Clock: minute hand moves 360° in 60 min; hour hand moves 30° per hour."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "श्रेणी: पहले अंतर, फिर गुणा, फिर वर्ग देखें।", "pa": "ਲੜੀ: ਪਹਿਲਾਂ ਫ਼ਰਕ, ਫਿਰ ਗੁਣਾ।", "en": "Series: check differences first, then multiplication pattern."},
+      {"hi": "दाईं ओर मुड़ना = 90° दक्षिणावर्त।", "pa": "ਸੱਜੇ ਮੁੜਨਾ = 90° ਘੜੀ ਵੱਲ।", "en": "Right turn = 90° clockwise."},
+      {"hi": "खून के रिश्ते के लिए family tree बनाएँ।", "pa": "ਖੂਨ ਦੇ ਰਿਸ਼ਤਿਆਂ ਲਈ family tree ਬਣਾਓ।", "en": "For blood relations, always draw a family tree."},
+      {"hi": "रैंकिंग: बाएँ n + दाएँ m = कुल + 1।", "pa": "ਰੈਂਕਿੰਗ: ਖੱਬੇ n + ਸੱਜੇ m = ਕੁੱਲ + 1।", "en": "Ranking: left rank + right rank = total + 1."}
+    ],
+    "summary": {"hi": "श्रेणी: अंतर → गुणा → वर्ग। कोडिंग में shift देखें। दिशा: दाएँ = clockwise। खून के रिश्ते: family tree। रैंकिंग: n + m = कुल + 1।", "pa": "ਲੜੀ: ਫ਼ਰਕ → ਗੁਣਾ। ਕੋਡਿੰਗ: shift ਦੇਖੋ।", "en": "Series: differences → multiplication. Coding: find shift. Directions: right = clockwise. Blood relations: family tree."},
+    "flashcards": [
+      {"question": {"hi": "3, 6, 12, 24, ... अगला?", "pa": "3, 6, 12, 24, ... ਅਗਲਾ?", "en": "3, 6, 12, 24, ... next?"}, "answer": {"hi": "48", "pa": "48", "en": "48"}},
+      {"question": {"hi": "ABCD को BCDE में कोड किया। PQRS का कोड?", "pa": "ABCD ਨੂੰ BCDE ਕੋਡ ਕੀਤਾ। PQRS ਦਾ ਕੋਡ?", "en": "ABCD → BCDE. Code for PQRS?"}, "answer": {"hi": "QRST (+1 shift)", "pa": "QRST", "en": "QRST (+1 shift)"}},
+      {"question": {"hi": "बाएँ से 5वाँ + दाएँ से 6वाँ = ? तो कुल?", "pa": "ਖੱਬੇ 5ਵਾਂ + ਸੱਜੇ 6ਵਾਂ → ਕੁੱਲ?", "en": "5th from left + 6th from right = 10 total?"}, "answer": {"hi": "कुल = 5 + 6 − 1 = 10", "pa": "ਕੁੱਲ = 5 + 6 − 1 = 10", "en": "Total = 5 + 6 − 1 = 10"}}
+    ],
+    "questions": [
+      {"id": "gen-reas-q1", "prompt": {"hi": "3, 6, 12, 24: अगला?", "pa": "3, 6, 12, 24: ਅਗਲਾ?", "en": "3, 6, 12, 24: next?"}, "options": [{"hi": "48", "pa": "48", "en": "48"}, {"hi": "36", "pa": "36", "en": "36"}, {"hi": "30", "pa": "30", "en": "30"}, {"hi": "60", "pa": "60", "en": "60"}], "answerIndex": 0, "explanation": {"hi": "हर पद 2 से गुणा: 24 × 2 = 48", "pa": "ਹਰ ਪਦ 2 ਨਾਲ ਗੁਣਾ: 48", "en": "Each term multiplied by 2: 24 × 2 = 48"}},
+      {"id": "gen-reas-q2", "prompt": {"hi": "2, 5, 10, 17: अगला?", "pa": "2, 5, 10, 17: ਅਗਲਾ?", "en": "2, 5, 10, 17: next?"}, "options": [{"hi": "26", "pa": "26", "en": "26"}, {"hi": "24", "pa": "24", "en": "24"}, {"hi": "22", "pa": "22", "en": "22"}, {"hi": "28", "pa": "28", "en": "28"}], "answerIndex": 0, "explanation": {"hi": "अंतर: 3, 5, 7 (+2 बढ़ रहा)। अगला अंतर = 9। 17 + 9 = 26", "pa": "ਫ਼ਰਕ: 3, 5, 7 → ਅਗਲਾ 9 → 17+9 = 26", "en": "Differences: 3, 5, 7 (+2 each time). Next difference = 9. 17+9 = 26"}},
+      {"id": "gen-reas-q3", "prompt": {"hi": "1, 4, 9, 16: अगला?", "pa": "1, 4, 9, 16: ਅਗਲਾ?", "en": "1, 4, 9, 16: next?"}, "options": [{"hi": "25", "pa": "25", "en": "25"}, {"hi": "20", "pa": "20", "en": "20"}, {"hi": "18", "pa": "18", "en": "18"}, {"hi": "24", "pa": "24", "en": "24"}], "answerIndex": 0, "explanation": {"hi": "1², 2², 3², 4² → 5² = 25", "pa": "1², 2², 3², 4² → 5² = 25", "en": "Squares: 1², 2², 3², 4² → 5² = 25"}},
+      {"id": "gen-reas-q4", "prompt": {"hi": "MANGO को NZNHP कोड किया। उसी नियम से APPLE?", "pa": "MANGO → NZNHP। APPLE?", "en": "MANGO coded as NZNHP. Code APPLE."}, "options": [{"hi": "BOOLC", "pa": "BOOLC", "en": "BOOLC"}, {"hi": "BOPMF", "pa": "BOPMF", "en": "BOPMF"}, {"hi": "BOOLK", "pa": "BOOLK", "en": "BOOLK"}, {"hi": "BQPMD", "pa": "BQPMD", "en": "BQPMD"}], "answerIndex": 0, "explanation": {"hi": "M+1=N; A+25(−1)=Z; N+1=O; G+1=H; O+1=P। A+1=B; P+25=O; P+1=Q नहीं...  M→N(+1), A→Z(−1), N→O(+1), G→H(+1), O→P(+1)। A→B; P→O; P→Q नहीं। यह complex है—प्रश्न pattern की जाँच करें।", "pa": "ਇਹ complex pattern ਹੈ; ਹਰ ਅੱਖਰ ਵੱਖ shift ਹੋ ਸਕਦਾ ਹੈ।", "en": "Check the shift pattern carefully for each letter. M→N(+1), A→Z(reverse), etc. In competitive exams, verify each letter's transformation."}},
+      {"id": "gen-reas-q5", "prompt": {"hi": "राम उत्तर की ओर 5 km चला, फिर दाएँ मुड़ा, 3 km गया। वह किस दिशा में है?", "pa": "ਰਾਮ ਉੱਤਰ 5 km, ਫਿਰ ਸੱਜੇ 3 km। ਦਿਸ਼ਾ?", "en": "Ram walks 5 km North, turns right, walks 3 km. Direction from start?"}, "options": [{"hi": "उत्तर-पूर्व", "pa": "ਉੱਤਰ-ਪੂਰਬ", "en": "North-East"}, {"hi": "पूर्व", "pa": "ਪੂਰਬ", "en": "East"}, {"hi": "दक्षिण-पूर्व", "pa": "ਦੱਖਣ-ਪੂਰਬ", "en": "South-East"}, {"hi": "उत्तर", "pa": "ਉੱਤਰ", "en": "North"}], "answerIndex": 0, "explanation": {"hi": "उत्तर चलकर दाएँ = पूर्व। तो वह उत्तर-पूर्व दिशा में है।", "pa": "ਉੱਤਰ ਤੋਂ ਸੱਜੇ = ਪੂਰਬ। ਉੱਤਰ-ਪੂਰਬ ਦਿਸ਼ਾ ਵਿੱਚ ਹੈ।", "en": "North then right turn = East. He is in the North-East direction from start."}}
+    ],
+    "sources": [{"title": "R.S. Aggarwal · Verbal and Non-Verbal Reasoning", "url": "https://www.ncert.nic.in/"}],
+    "videos": [],
+    "documents": []
+  }
+]

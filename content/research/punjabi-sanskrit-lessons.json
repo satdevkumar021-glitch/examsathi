@@ -1,0 +1,167 @@
+[
+  {
+    "id": "punjabi-vyakaran-sandhi",
+    "subject": "Punjabi",
+    "unit": "ਵਿਆਕਰਨ ਦੇ ਆਧਾਰ",
+    "title": {
+      "hi": "ਪੰਜਾਬੀ ਵਿਆਕਰਨ: ਸੰਧੀ ਅਤੇ ਸ਼ਬਦ-ਜੋੜ",
+      "pa": "ਪੰਜਾਬੀ ਵਿਆਕਰਨ: ਸੰਧੀ ਅਤੇ ਸ਼ਬਦ-ਜੋੜ",
+      "en": "Punjabi Grammar: Sandhi and Word Joining"
+    },
+    "sections": [
+      {
+        "heading": { "hi": "ਸੰਧੀ ਕੀ ਹੈ?", "pa": "ਸੰਧੀ ਕੀ ਹੈ?", "en": "What is Sandhi?" },
+        "text": {
+          "hi": "ਸੰਧੀ ਸ਼ਬਦ ਦਾ ਅਰਥ ਹੈ 'ਮੇਲ' ਜਾਂ 'ਜੋੜ'। ਜਦੋਂ ਦੋ ਸ਼ਬਦ ਜਾਂ ਦੋ ਵਰਣ ਆਪਸ ਵਿੱਚ ਮਿਲਦੇ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਮੇਲ ਨਾਲ ਕੋਈ ਨਵਾਂ ਰੂਪ ਬਣਦਾ ਹੈ, ਤਾਂ ਉਸ ਨੂੰ ਸੰਧੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਉਦਾਹਰਨ ਲਈ: ਕੰਮ + ਕਾਰ = ਕੰਮਕਾਰ।\n\nਪੰਜਾਬੀ ਭਾਸ਼ਾ ਵਿੱਚ ਸੰਧੀ ਮੁੱਖ ਤੌਰ 'ਤੇ ਉਦੋਂ ਹੁੰਦੀ ਹੈ ਜਦੋਂ ਇੱਕ ਸ਼ਬਦ ਦਾ ਅੰਤਲਾ ਵਰਣ ਦੂਜੇ ਸ਼ਬਦ ਦੇ ਪਹਿਲੇ ਵਰਣ ਨਾਲ ਮਿਲਦਾ ਹੈ। ਇਸ ਮੇਲ ਕਾਰਨ ਕਦੇ ਵਰਣ ਬਦਲ ਜਾਂਦੇ ਹਨ, ਕਦੇ ਲੋਪ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਕਦੇ ਨਵੇਂ ਵਰਣ ਆ ਜਾਂਦੇ ਹਨ।\n\nਸੰਧੀ ਦੀ ਸਹੀ ਸਮਝ ਪਰੀਖਿਆ ਵਿੱਚ ਸ਼ਬਦ-ਭੰਡਾਰ, ਵਿਆਕਰਨਿਕ ਗਿਆਨ ਅਤੇ ਭਾਸ਼ਾ ਦੀ ਸ਼ੁੱਧਤਾ ਲਈ ਜ਼ਰੂਰੀ ਹੈ। ਮਾਸਟਰ ਕੇਡਰ ਅਤੇ ਲੈਕਚਰਰ ਕੇਡਰ ਦੇ ਪੇਪਰਾਂ ਵਿੱਚ ਸੰਧੀ ਸੰਬੰਧੀ ਸਵਾਲ ਅਕਸਰ ਪੁੱਛੇ ਜਾਂਦੇ ਹਨ।",
+          "pa": "ਸੰਧੀ ਸ਼ਬਦ ਦਾ ਅਰਥ ਹੈ 'ਮੇਲ' ਜਾਂ 'ਜੋੜ'। ਜਦੋਂ ਦੋ ਸ਼ਬਦ ਜਾਂ ਦੋ ਵਰਣ ਆਪਸ ਵਿੱਚ ਮਿਲਦੇ ਹਨ ਅਤੇ ਉਨ੍ਹਾਂ ਦੇ ਮੇਲ ਨਾਲ ਕੋਈ ਨਵਾਂ ਰੂਪ ਬਣਦਾ ਹੈ, ਤਾਂ ਉਸ ਨੂੰ ਸੰਧੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਉਦਾਹਰਨ ਲਈ: ਕੰਮ + ਕਾਰ = ਕੰਮਕਾਰ।\n\nਪੰਜਾਬੀ ਭਾਸ਼ਾ ਵਿੱਚ ਸੰਧੀ ਮੁੱਖ ਤੌਰ 'ਤੇ ਉਦੋਂ ਹੁੰਦੀ ਹੈ ਜਦੋਂ ਇੱਕ ਸ਼ਬਦ ਦਾ ਅੰਤਲਾ ਵਰਣ ਦੂਜੇ ਸ਼ਬਦ ਦੇ ਪਹਿਲੇ ਵਰਣ ਨਾਲ ਮਿਲਦਾ ਹੈ।\n\nਸੰਧੀ ਦੀ ਸਹੀ ਸਮਝ ਪਰੀਖਿਆ ਵਿੱਚ ਸ਼ਬਦ-ਭੰਡਾਰ, ਵਿਆਕਰਨਿਕ ਗਿਆਨ ਅਤੇ ਭਾਸ਼ਾ ਦੀ ਸ਼ੁੱਧਤਾ ਲਈ ਜ਼ਰੂਰੀ ਹੈ।",
+          "en": "Sandhi means 'joining' or 'union'. When two words or letters combine and form a new shape, it is called Sandhi. For example: ਕੰਮ + ਕਾਰ = ਕੰਮਕਾਰ (work + doer = worker).\n\nIn Punjabi language, sandhi mainly occurs when the last letter of one word meets the first letter of another word. Due to this joining, letters may change, disappear, or new letters may appear.\n\nUnderstanding sandhi correctly is essential in exams for vocabulary, grammatical knowledge and language accuracy. Questions related to sandhi are frequently asked in Master Cadre and Lecturer Cadre papers."
+        }
+      },
+      {
+        "heading": { "hi": "ਸੰਧੀ ਦੀਆਂ ਕਿਸਮਾਂ", "pa": "ਸੰਧੀ ਦੀਆਂ ਕਿਸਮਾਂ", "en": "Types of Sandhi" },
+        "text": {
+          "hi": "ਪੰਜਾਬੀ ਵਿੱਚ ਸੰਧੀ ਦੀਆਂ ਮੁੱਖ ਕਿਸਮਾਂ ਹਨ:\n\n1. ਸਵਰ ਸੰਧੀ: ਜਦੋਂ ਦੋ ਸਵਰ ਮਿਲਦੇ ਹਨ। ਉਦਾਹਰਨ: ਕਵੀ + ਈਸ਼ਵਰ = ਕਵੀਸ਼ਵਰ।\n\n2. ਵਿਅੰਜਨ ਸੰਧੀ: ਜਦੋਂ ਵਿਅੰਜਨ ਸਵਰ ਨਾਲ ਜਾਂ ਵਿਅੰਜਨ ਵਿਅੰਜਨ ਨਾਲ ਮਿਲਦਾ ਹੈ। ਉਦਾਹਰਨ: ਸਤ + ਗੁਣ = ਸਦਗੁਣ।\n\n3. ਸ਼ਬਦ-ਜੋੜ (ਸਮਾਸ): ਕਈ ਵਾਰ ਦੋ ਸ਼ਬਦ ਮਿਲ ਕੇ ਇੱਕ ਨਵਾਂ ਸ਼ਬਦ ਬਣਾਉਂਦੇ ਹਨ। ਜਿਵੇਂ: ਗੁਰੂ + ਘਰ = ਗੁਰੂਘਰ।\n\nਹਰ ਕਿਸਮ ਦੀ ਸੰਧੀ ਦੇ ਆਪਣੇ ਨਿਯਮ ਹੁੰਦੇ ਹਨ ਜੋ ਯਾਦ ਕਰਨੇ ਜ਼ਰੂਰੀ ਹਨ। ਪਰੀਖਿਆ ਵਿੱਚ ਸੰਧੀ-ਵਿੱਛੇਦ (sandhi split) ਅਤੇ ਸੰਧੀ ਜੋੜ ਦੋਵੇਂ ਤਰ੍ਹਾਂ ਦੇ ਸਵਾਲ ਆਉਂਦੇ ਹਨ।",
+          "pa": "ਪੰਜਾਬੀ ਵਿੱਚ ਸੰਧੀ ਦੀਆਂ ਮੁੱਖ ਕਿਸਮਾਂ ਹਨ:\n\n1. ਸਵਰ ਸੰਧੀ: ਜਦੋਂ ਦੋ ਸਵਰ ਮਿਲਦੇ ਹਨ। ਉਦਾਹਰਨ: ਕਵੀ + ਈਸ਼ਵਰ = ਕਵੀਸ਼ਵਰ।\n\n2. ਵਿਅੰਜਨ ਸੰਧੀ: ਜਦੋਂ ਵਿਅੰਜਨ ਸਵਰ ਨਾਲ ਜਾਂ ਵਿਅੰਜਨ ਵਿਅੰਜਨ ਨਾਲ ਮਿਲਦਾ ਹੈ। ਉਦਾਹਰਨ: ਸਤ + ਗੁਣ = ਸਦਗੁਣ।\n\n3. ਸ਼ਬਦ-ਜੋੜ: ਕਈ ਵਾਰ ਦੋ ਸ਼ਬਦ ਮਿਲ ਕੇ ਇੱਕ ਨਵਾਂ ਸ਼ਬਦ ਬਣਾਉਂਦੇ ਹਨ। ਜਿਵੇਂ: ਗੁਰੂ + ਘਰ = ਗੁਰੂਘਰ।",
+          "en": "Main types of Sandhi in Punjabi:\n\n1. Swar Sandhi (Vowel Sandhi): When two vowels combine. Example: ਕਵੀ + ਈਸ਼ਵਰ = ਕਵੀਸ਼ਵਰ.\n\n2. Vyanjan Sandhi (Consonant Sandhi): When a consonant meets a vowel or consonant. Example: ਸਤ + ਗੁਣ = ਸਦਗੁਣ.\n\n3. Shabda-Jod (Word Joining): Sometimes two words combine to form a new word. Example: ਗੁਰੂ + ਘਰ = ਗੁਰੂਘਰ.\n\nEach type of sandhi has its own rules that need to be memorized. Exam questions come both in the form of sandhi joining and sandhi splitting (viched)."
+        }
+      },
+      {
+        "heading": { "hi": "ਉਦਾਹਰਨਾਂ ਅਤੇ ਨਿਯਮ", "pa": "ਉਦਾਹਰਨਾਂ ਅਤੇ ਨਿਯਮ", "en": "Examples and Rules" },
+        "text": {
+          "hi": "ਪੰਜਾਬੀ ਸੰਧੀ ਦੀਆਂ ਕੁਝ ਮਹੱਤਵਪੂਰਨ ਉਦਾਹਰਨਾਂ:\n\nਸਵਰ ਸੰਧੀ ਦੀਆਂ ਉਦਾਹਰਨਾਂ:\n- ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ\n- ਮਹਾ + ਈਸ਼ = ਮਹੇਸ਼\n- ਸੁਰ + ਈਸ਼ਵਰ = ਸੁਰੇਸ਼ਵਰ\n\nਵਿਅੰਜਨ ਸੰਧੀ ਦੀਆਂ ਉਦਾਹਰਨਾਂ:\n- ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ\n- ਸਤ + ਕਾਰ = ਸਤਕਾਰ\n- ਦਿਗ + ਦਰਸ਼ਨ = ਦਿਗਦਰਸ਼ਨ\n\nਮਹੱਤਵਪੂਰਨ ਨਿਯਮ: ਜਦੋਂ ਦੋ ਇੱਕੋ ਜਿਹੇ ਵਿਅੰਜਨ ਮਿਲਦੇ ਹਨ ਤਾਂ ਉਹ ਦੁਹਰੇ ਵਿਅੰਜਨ ਬਣ ਜਾਂਦੇ ਹਨ। ਜਿਵੇਂ: ਕਮਲ + ਲਤਾ = ਕਮੱਲਤਾ।",
+          "pa": "ਪੰਜਾਬੀ ਸੰਧੀ ਦੀਆਂ ਕੁਝ ਮਹੱਤਵਪੂਰਨ ਉਦਾਹਰਨਾਂ:\n\nਸਵਰ ਸੰਧੀ:\n- ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ\n- ਮਹਾ + ਈਸ਼ = ਮਹੇਸ਼\n\nਵਿਅੰਜਨ ਸੰਧੀ:\n- ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ\n- ਸਤ + ਕਾਰ = ਸਤਕਾਰ",
+          "en": "Important examples of Punjabi Sandhi:\n\nSwar Sandhi examples:\n- ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ (student)\n- ਮਹਾ + ਈਸ਼ = ਮਹੇਸ਼\n\nVyanjan Sandhi examples:\n- ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ (pronunciation)\n- ਸਤ + ਕਾਰ = ਸਤਕਾਰ (respect)\n\nKey rule: When two identical consonants meet, they form a double consonant (geminate). Example: ਕਮਲ + ਲਤਾ = ਕਮੱਲਤਾ."
+        }
+      },
+      {
+        "heading": { "hi": "ਪਰੀਖਿਆ ਦੀ ਤਿਆਰੀ", "pa": "ਪਰੀਖਿਆ ਦੀ ਤਿਆਰੀ", "en": "Exam Preparation Strategy" },
+        "text": {
+          "hi": "ਸੰਧੀ ਦੇ ਸਵਾਲਾਂ ਦੀ ਤਿਆਰੀ ਲਈ ਇਹ ਤਰੀਕਾ ਅਪਣਾਓ:\n\n1. ਪਹਿਲਾਂ ਸਾਰੀਆਂ ਕਿਸਮਾਂ ਦੇ ਨਿਯਮ ਸਮਝੋ।\n2. ਹਰ ਕਿਸਮ ਦੀਆਂ 5-5 ਉਦਾਹਰਨਾਂ ਯਾਦ ਕਰੋ।\n3. ਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਅਭਿਆਸ ਕਰੋ - ਸ਼ਬਦ ਦਿੱਤਾ ਜਾਵੇਗਾ, ਤੁਹਾਨੂੰ ਵੱਖ ਕਰਨਾ ਹੈ।\n4. ਰੋਜ਼ ਅਖ਼ਬਾਰ ਪੜ੍ਹੋ ਅਤੇ ਸੰਧੀ ਦੇ ਸ਼ਬਦ ਲੱਭੋ।\n5. ਪਿਛਲੇ ਸਾਲਾਂ ਦੇ ਪੇਪਰਾਂ ਵਿੱਚੋਂ ਅਭਿਆਸ ਕਰੋ।\n\nਯਾਦ ਰੱਖੋ: ਪੰਜਾਬੀ ਵਿੱਚ ਸੰਧੀ ਦੇ ਨਿਯਮ ਸੰਸਕ੍ਰਿਤ ਤੋਂ ਵੱਖਰੇ ਹਨ। ਇਸ ਲਈ ਪੰਜਾਬੀ ਦੀਆਂ ਆਪਣੀਆਂ ਉਦਾਹਰਨਾਂ ਨਾਲ ਹੀ ਅਭਿਆਸ ਕਰੋ।",
+          "pa": "ਸੰਧੀ ਦੇ ਸਵਾਲਾਂ ਦੀ ਤਿਆਰੀ ਲਈ ਇਹ ਤਰੀਕਾ ਅਪਣਾਓ:\n\n1. ਪਹਿਲਾਂ ਸਾਰੀਆਂ ਕਿਸਮਾਂ ਦੇ ਨਿਯਮ ਸਮਝੋ।\n2. ਹਰ ਕਿਸਮ ਦੀਆਂ 5-5 ਉਦਾਹਰਨਾਂ ਯਾਦ ਕਰੋ।\n3. ਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਅਭਿਆਸ ਕਰੋ।\n4. ਰੋਜ਼ ਅਖ਼ਬਾਰ ਪੜ੍ਹੋ ਅਤੇ ਸੰਧੀ ਦੇ ਸ਼ਬਦ ਲੱਭੋ।",
+          "en": "Strategy to prepare for Sandhi questions:\n\n1. First understand the rules of all types.\n2. Memorize 5 examples of each type.\n3. Practice sandhi-viched (splitting) - you will be given a word, you need to split it.\n4. Read newspapers daily and find sandhi words.\n5. Practice from previous years' papers.\n\nRemember: Sandhi rules in Punjabi are different from Sanskrit. So practice only with Punjabi examples."
+        }
+      }
+    ],
+    "keypoints": [
+      { "hi": "ਸੰਧੀ ਦਾ ਅਰਥ ਹੈ ਦੋ ਵਰਣਾਂ ਜਾਂ ਸ਼ਬਦਾਂ ਦਾ ਮੇਲ", "pa": "ਸੰਧੀ ਦਾ ਅਰਥ ਹੈ ਦੋ ਵਰਣਾਂ ਜਾਂ ਸ਼ਬਦਾਂ ਦਾ ਮੇਲ", "en": "Sandhi means the union of two letters or words" },
+      { "hi": "ਸਵਰ ਸੰਧੀ: ਦੋ ਸਵਰਾਂ ਦਾ ਮੇਲ", "pa": "ਸਵਰ ਸੰਧੀ: ਦੋ ਸਵਰਾਂ ਦਾ ਮੇਲ", "en": "Swar Sandhi: joining of two vowels" },
+      { "hi": "ਵਿਅੰਜਨ ਸੰਧੀ: ਵਿਅੰਜਨ + ਸਵਰ ਜਾਂ ਵਿਅੰਜਨ + ਵਿਅੰਜਨ", "pa": "ਵਿਅੰਜਨ ਸੰਧੀ: ਵਿਅੰਜਨ + ਸਵਰ ਜਾਂ ਵਿਅੰਜਨ + ਵਿਅੰਜਨ", "en": "Vyanjan Sandhi: consonant + vowel or consonant + consonant" },
+      { "hi": "ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ (ਸਵਰ ਸੰਧੀ)", "pa": "ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ (ਸਵਰ ਸੰਧੀ)", "en": "ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ (Swar Sandhi)" },
+      { "hi": "ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ (ਵਿਅੰਜਨ ਸੰਧੀ)", "pa": "ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ (ਵਿਅੰਜਨ ਸੰਧੀ)", "en": "ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ (Vyanjan Sandhi)" },
+      { "hi": "ਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਅਰਥ ਹੈ ਸੰਧੀ ਸ਼ਬਦ ਨੂੰ ਵੱਖ ਕਰਨਾ", "pa": "ਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਅਰਥ ਹੈ ਸੰਧੀ ਸ਼ਬਦ ਨੂੰ ਵੱਖ ਕਰਨਾ", "en": "Sandhi-viched means splitting a sandhi word into its parts" },
+      { "hi": "ਪੰਜਾਬੀ ਸੰਧੀ ਦੇ ਨਿਯਮ ਸੰਸਕ੍ਰਿਤ ਤੋਂ ਵੱਖਰੇ ਹਨ", "pa": "ਪੰਜਾਬੀ ਸੰਧੀ ਦੇ ਨਿਯਮ ਸੰਸਕ੍ਰਿਤ ਤੋਂ ਵੱਖਰੇ ਹਨ", "en": "Punjabi sandhi rules differ from Sanskrit" }
+    ],
+    "summary": {
+      "hi": "ਸੰਧੀ ਪੰਜਾਬੀ ਵਿਆਕਰਨ ਦਾ ਮਹੱਤਵਪੂਰਨ ਭਾਗ ਹੈ। ਇਹ ਦੋ ਵਰਣਾਂ ਜਾਂ ਸ਼ਬਦਾਂ ਦੇ ਮੇਲ ਦਾ ਨਿਯਮ ਹੈ। ਮੁੱਖ ਕਿਸਮਾਂ ਹਨ: ਸਵਰ ਸੰਧੀ ਅਤੇ ਵਿਅੰਜਨ ਸੰਧੀ। ਪਰੀਖਿਆ ਵਿੱਚ ਸੰਧੀ ਜੋੜ ਅਤੇ ਸੰਧੀ-ਵਿੱਛੇਦ ਦੋਵੇਂ ਤਰ੍ਹਾਂ ਦੇ ਸਵਾਲ ਆਉਂਦੇ ਹਨ।",
+      "pa": "ਸੰਧੀ ਪੰਜਾਬੀ ਵਿਆਕਰਨ ਦਾ ਮਹੱਤਵਪੂਰਨ ਭਾਗ ਹੈ। ਮੁੱਖ ਕਿਸਮਾਂ: ਸਵਰ ਸੰਧੀ ਅਤੇ ਵਿਅੰਜਨ ਸੰਧੀ।",
+      "en": "Sandhi is an important part of Punjabi grammar. It is the rule of joining two letters or words. Main types: Swar Sandhi and Vyanjan Sandhi. Exam questions come in both joining and splitting forms."
+    },
+    "flashcards": [
+      { "question": {"hi":"ਸੰਧੀ ਕੀ ਹੈ?","pa":"ਸੰਧੀ ਕੀ ਹੈ?","en":"What is Sandhi?"}, "answer": {"hi":"ਦੋ ਵਰਣਾਂ ਜਾਂ ਸ਼ਬਦਾਂ ਦੇ ਮੇਲ ਤੋਂ ਨਵਾਂ ਰੂਪ ਬਣਨ ਦੀ ਕਿਰਿਆ ਨੂੰ ਸੰਧੀ ਕਹਿੰਦੇ ਹਨ।","pa":"ਦੋ ਵਰਣਾਂ ਜਾਂ ਸ਼ਬਦਾਂ ਦੇ ਮੇਲ ਤੋਂ ਨਵਾਂ ਰੂਪ ਬਣਨ ਦੀ ਕਿਰਿਆ ਨੂੰ ਸੰਧੀ ਕਹਿੰਦੇ ਹਨ।","en":"The process of forming a new form by joining two letters or words is called Sandhi."} },
+      { "question": {"hi":"ਸਵਰ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਦਿਓ","pa":"ਸਵਰ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਦਿਓ","en":"Give an example of Swar Sandhi"}, "answer": {"hi":"ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ","pa":"ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ","en":"ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ (student)"} },
+      { "question": {"hi":"ਵਿਅੰਜਨ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਦਿਓ","pa":"ਵਿਅੰਜਨ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਦਿਓ","en":"Give an example of Vyanjan Sandhi"}, "answer": {"hi":"ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ","pa":"ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ","en":"ਉਤ + ਚਾਰਨ = ਉੱਚਾਰਨ (pronunciation)"} },
+      { "question": {"hi":"ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","pa":"ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is Sandhi-Viched?"}, "answer": {"hi":"ਸੰਧੀ ਸ਼ਬਦ ਨੂੰ ਵੱਖ-ਵੱਖ ਕਰਨ ਦੀ ਕਿਰਿਆ ਨੂੰ ਸੰਧੀ-ਵਿੱਛੇਦ ਕਹਿੰਦੇ ਹਨ।","pa":"ਸੰਧੀ ਸ਼ਬਦ ਨੂੰ ਵੱਖ-ਵੱਖ ਕਰਨ ਦੀ ਕਿਰਿਆ ਨੂੰ ਸੰਧੀ-ਵਿੱਛੇਦ ਕਹਿੰਦੇ ਹਨ।","en":"The process of splitting a sandhi word into its original parts is called Sandhi-Viched."} },
+      { "question": {"hi":"ਸਤਕਾਰ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","pa":"ਸਤਕਾਰ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of ਸਤਕਾਰ?"}, "answer": {"hi":"ਸਤ + ਕਾਰ = ਸਤਕਾਰ","pa":"ਸਤ + ਕਾਰ = ਸਤਕਾਰ","en":"ਸਤ + ਕਾਰ = ਸਤਕਾਰ (respect/honour)"} },
+      { "question": {"hi":"ਗੁਰੂਘਰ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","pa":"ਗੁਰੂਘਰ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the sandhi-viched of ਗੁਰੂਘਰ?"}, "answer": {"hi":"ਗੁਰੂ + ਘਰ = ਗੁਰੂਘਰ","pa":"ਗੁਰੂ + ਘਰ = ਗੁਰੂਘਰ","en":"ਗੁਰੂ + ਘਰ = ਗੁਰੂਘਰ (Gurudwara/Guru's house)"} },
+      { "question": {"hi":"ਕਿਹੜੀ ਸੰਧੀ ਵਿੱਚ ਦੋ ਇੱਕੋ ਵਿਅੰਜਨ ਮਿਲਦੇ ਹਨ?","pa":"ਕਿਹੜੀ ਸੰਧੀ ਵਿੱਚ ਦੋ ਇੱਕੋ ਵਿਅੰਜਨ ਮਿਲਦੇ ਹਨ?","en":"In which sandhi do two same consonants join?"}, "answer": {"hi":"ਵਿਅੰਜਨ ਸੰਧੀ ਵਿੱਚ - ਜਿਵੇਂ ਕਮਲ + ਲਤਾ = ਕਮੱਲਤਾ","pa":"ਵਿਅੰਜਨ ਸੰਧੀ ਵਿੱਚ - ਜਿਵੇਂ ਕਮਲ + ਲਤਾ = ਕਮੱਲਤਾ","en":"In Vyanjan Sandhi - example: ਕਮਲ + ਲਤਾ = ਕਮੱਲਤਾ"} },
+      { "question": {"hi":"ਪੰਜਾਬੀ ਸੰਧੀ ਦੀਆਂ ਕਿੰਨੀਆਂ ਕਿਸਮਾਂ ਹਨ?","pa":"ਪੰਜਾਬੀ ਸੰਧੀ ਦੀਆਂ ਕਿੰਨੀਆਂ ਕਿਸਮਾਂ ਹਨ?","en":"How many types of Punjabi Sandhi are there?"}, "answer": {"hi":"ਮੁੱਖ ਤਿੰਨ: ਸਵਰ ਸੰਧੀ, ਵਿਅੰਜਨ ਸੰਧੀ, ਅਤੇ ਸ਼ਬਦ-ਜੋੜ","pa":"ਮੁੱਖ ਤਿੰਨ: ਸਵਰ ਸੰਧੀ, ਵਿਅੰਜਨ ਸੰਧੀ, ਅਤੇ ਸ਼ਬਦ-ਜੋੜ","en":"Main three: Swar Sandhi, Vyanjan Sandhi, and Shabda-Jod"} }
+    ],
+    "questions": [
+      { "id": "q-pa-s-01", "prompt": {"hi":"'ਵਿਦਿਆਰਥੀ' ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","pa":"'ਵਿਦਿਆਰਥੀ' ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of 'ਵਿਦਿਆਰਥੀ'?"}, "options": [{"hi":"ਵਿਦ + ਿਆਰਥੀ","pa":"ਵਿਦ + ਿਆਰਥੀ","en":"ਵਿਦ + ਿਆਰਥੀ"},{"hi":"ਵਿਦਿਆ + ਅਰਥੀ","pa":"ਵਿਦਿਆ + ਅਰਥੀ","en":"ਵਿਦਿਆ + ਅਰਥੀ"},{"hi":"ਵਿਦਿਆਰ + ਥੀ","pa":"ਵਿਦਿਆਰ + ਥੀ","en":"ਵਿਦਿਆਰ + ਥੀ"},{"hi":"ਵਿਦਿ + ਆਰਥੀ","pa":"ਵਿਦਿ + ਆਰਥੀ","en":"ਵਿਦਿ + ਆਰਥੀ"}], "answerIndex": 1, "explanation": {"hi":"ਵਿਦਿਆਰਥੀ = ਵਿਦਿਆ + ਅਰਥੀ। ਇੱਥੇ ਦੋ 'ਅ' ਸਵਰ ਮਿਲ ਕੇ ਇੱਕ 'ਆ' ਬਣਦੇ ਹਨ।","pa":"ਵਿਦਿਆਰਥੀ = ਵਿਦਿਆ + ਅਰਥੀ। ਇੱਥੇ ਦੋ 'ਅ' ਸਵਰ ਮਿਲ ਕੇ ਇੱਕ 'ਆ' ਬਣਦੇ ਹਨ।","en":"ਵਿਦਿਆਰਥੀ = ਵਿਦਿਆ + ਅਰਥੀ. Here two 'a' vowels combine to form 'aa'."} },
+      { "id": "q-pa-s-02", "prompt": {"hi":"'ਉੱਚਾਰਨ' ਕਿਸ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਹੈ?","pa":"'ਉੱਚਾਰਨ' ਕਿਸ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਹੈ?","en":"'ਉੱਚਾਰਨ' is an example of which Sandhi?"}, "options": [{"hi":"ਸਵਰ ਸੰਧੀ","pa":"ਸਵਰ ਸੰਧੀ","en":"Swar Sandhi"},{"hi":"ਵਿਅੰਜਨ ਸੰਧੀ","pa":"ਵਿਅੰਜਨ ਸੰਧੀ","en":"Vyanjan Sandhi"},{"hi":"ਵਿਸਰਗ ਸੰਧੀ","pa":"ਵਿਸਰਗ ਸੰਧੀ","en":"Visarg Sandhi"},{"hi":"ਕੋਈ ਸੰਧੀ ਨਹੀਂ","pa":"ਕੋਈ ਸੰਧੀ ਨਹੀਂ","en":"No Sandhi"}], "answerIndex": 1, "explanation": {"hi":"ਉੱਚਾਰਨ = ਉਤ + ਚਾਰਨ। ਇੱਥੇ ਵਿਅੰਜਨ 'ਤ' ਅਤੇ 'ਚ' ਮਿਲ ਕੇ 'ੱਚ' ਬਣਦੇ ਹਨ। ਇਹ ਵਿਅੰਜਨ ਸੰਧੀ ਹੈ।","pa":"ਉੱਚਾਰਨ = ਉਤ + ਚਾਰਨ। ਵਿਅੰਜਨ 'ਤ' ਅਤੇ 'ਚ' ਮਿਲ ਕੇ 'ੱਚ' ਬਣਦੇ ਹਨ।","en":"ਉੱਚਾਰਨ = ਉਤ + ਚਾਰਨ. Consonant 'ਤ' and 'ਚ' join to form 'ੱਚ'. This is Vyanjan Sandhi."} },
+      { "id": "q-pa-s-03", "prompt": {"hi":"ਸੰਧੀ ਦਾ ਅਰਥ ਕੀ ਹੈ?","pa":"ਸੰਧੀ ਦਾ ਅਰਥ ਕੀ ਹੈ?","en":"What is the meaning of Sandhi?"}, "options": [{"hi":"ਵੱਖ ਕਰਨਾ","pa":"ਵੱਖ ਕਰਨਾ","en":"To separate"},{"hi":"ਮੇਲ ਜਾਂ ਜੋੜ","pa":"ਮੇਲ ਜਾਂ ਜੋੜ","en":"Union or joining"},{"hi":"ਅਨੁਵਾਦ","pa":"ਅਨੁਵਾਦ","en":"Translation"},{"hi":"ਵਿਆਕਰਨ","pa":"ਵਿਆਕਰਨ","en":"Grammar"}], "answerIndex": 1, "explanation": {"hi":"ਸੰਧੀ ਦਾ ਅਰਥ ਹੈ 'ਮੇਲ' ਜਾਂ 'ਜੋੜ'। ਜਦੋਂ ਦੋ ਵਰਣ ਜਾਂ ਸ਼ਬਦ ਮਿਲਦੇ ਹਨ ਤਾਂ ਨਵਾਂ ਰੂਪ ਬਣਦਾ ਹੈ।","pa":"ਸੰਧੀ ਦਾ ਅਰਥ ਹੈ 'ਮੇਲ' ਜਾਂ 'ਜੋੜ'।","en":"Sandhi means 'union' or 'joining'. When two letters or words combine, a new form is created."} },
+      { "id": "q-pa-s-04", "prompt": {"hi":"ਸਤ + ਕਾਰ ਦੀ ਸੰਧੀ ਕੀ ਹੋਵੇਗੀ?","pa":"ਸਤ + ਕਾਰ ਦੀ ਸੰਧੀ ਕੀ ਹੋਵੇਗੀ?","en":"What is the Sandhi of ਸਤ + ਕਾਰ?"}, "options": [{"hi":"ਸਤਕਾਰ","pa":"ਸਤਕਾਰ","en":"ਸਤਕਾਰ"},{"hi":"ਸੱਤਕਾਰ","pa":"ਸੱਤਕਾਰ","en":"ਸੱਤਕਾਰ"},{"hi":"ਸਤਾਕਾਰ","pa":"ਸਤਾਕਾਰ","en":"ਸਤਾਕਾਰ"},{"hi":"ਸਦਕਾਰ","pa":"ਸਦਕਾਰ","en":"ਸਦਕਾਰ"}], "answerIndex": 0, "explanation": {"hi":"ਸਤ + ਕਾਰ = ਸਤਕਾਰ। ਇਹ ਵਿਅੰਜਨ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਹੈ। ਸਤਕਾਰ ਦਾ ਅਰਥ ਹੈ ਸਤਿਕਾਰ।","pa":"ਸਤ + ਕਾਰ = ਸਤਕਾਰ। ਇਹ ਵਿਅੰਜਨ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਹੈ।","en":"ਸਤ + ਕਾਰ = ਸਤਕਾਰ (respect/honour). This is an example of Vyanjan Sandhi."} },
+      { "id": "q-pa-s-05", "prompt": {"hi":"ਕਿਸ ਕਿਸਮ ਦੀ ਸੰਧੀ ਵਿੱਚ ਦੋ ਸਵਰ ਮਿਲਦੇ ਹਨ?","pa":"ਕਿਸ ਕਿਸਮ ਦੀ ਸੰਧੀ ਵਿੱਚ ਦੋ ਸਵਰ ਮਿਲਦੇ ਹਨ?","en":"In which type of Sandhi do two vowels combine?"}, "options": [{"hi":"ਵਿਅੰਜਨ ਸੰਧੀ","pa":"ਵਿਅੰਜਨ ਸੰਧੀ","en":"Vyanjan Sandhi"},{"hi":"ਸਵਰ ਸੰਧੀ","pa":"ਸਵਰ ਸੰਧੀ","en":"Swar Sandhi"},{"hi":"ਵਿਸਰਗ ਸੰਧੀ","pa":"ਵਿਸਰਗ ਸੰਧੀ","en":"Visarg Sandhi"},{"hi":"ਕੋਈ ਵੀ ਨਹੀਂ","pa":"ਕੋਈ ਵੀ ਨਹੀਂ","en":"None of these"}], "answerIndex": 1, "explanation": {"hi":"ਸਵਰ ਸੰਧੀ ਵਿੱਚ ਦੋ ਸਵਰ ਮਿਲਦੇ ਹਨ। ਜਿਵੇਂ ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ।","pa":"ਸਵਰ ਸੰਧੀ ਵਿੱਚ ਦੋ ਸਵਰ ਮਿਲਦੇ ਹਨ।","en":"In Swar Sandhi, two vowels combine. Example: ਵਿਦਿਆ + ਅਰਥੀ = ਵਿਦਿਆਰਥੀ."} },
+      { "id": "q-pa-s-06", "prompt": {"hi":"'ਗੁਰੂਘਰ' ਕਿਸ ਤਰ੍ਹਾਂ ਬਣਿਆ ਹੈ?","pa":"'ਗੁਰੂਘਰ' ਕਿਸ ਤਰ੍ਹਾਂ ਬਣਿਆ ਹੈ?","en":"How is 'ਗੁਰੂਘਰ' formed?"}, "options": [{"hi":"ਗੁਰ + ਊਘਰ","pa":"ਗੁਰ + ਊਘਰ","en":"ਗੁਰ + ਊਘਰ"},{"hi":"ਗੁਰੂ + ਘਰ","pa":"ਗੁਰੂ + ਘਰ","en":"ਗੁਰੂ + ਘਰ"},{"hi":"ਗੁਰੂਘ + ਰ","pa":"ਗੁਰੂਘ + ਰ","en":"ਗੁਰੂਘ + ਰ"},{"hi":"ਗੁ + ਰੂਘਰ","pa":"ਗੁ + ਰੂਘਰ","en":"ਗੁ + ਰੂਘਰ"}], "answerIndex": 1, "explanation": {"hi":"ਗੁਰੂਘਰ = ਗੁਰੂ + ਘਰ। ਇਹ ਸ਼ਬਦ-ਜੋੜ (ਸਮਾਸ) ਦੀ ਉਦਾਹਰਨ ਹੈ। ਦੋ ਸ਼ਬਦ ਮਿਲ ਕੇ ਇੱਕ ਨਵਾਂ ਸ਼ਬਦ ਬਣਾਉਂਦੇ ਹਨ।","pa":"ਗੁਰੂਘਰ = ਗੁਰੂ + ਘਰ। ਸ਼ਬਦ-ਜੋੜ ਦੀ ਉਦਾਹਰਨ।","en":"ਗੁਰੂਘਰ = ਗੁਰੂ + ਘਰ. This is an example of Shabda-Jod (compound word)."} },
+      { "id": "q-pa-s-07", "prompt": {"hi":"ਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਕੀ ਅਰਥ ਹੈ?","pa":"ਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਕੀ ਅਰਥ ਹੈ?","en":"What does Sandhi-Viched mean?"}, "options": [{"hi":"ਸ਼ਬਦਾਂ ਨੂੰ ਜੋੜਨਾ","pa":"ਸ਼ਬਦਾਂ ਨੂੰ ਜੋੜਨਾ","en":"To join words"},{"hi":"ਸੰਧੀ ਸ਼ਬਦ ਨੂੰ ਵੱਖ ਕਰਨਾ","pa":"ਸੰਧੀ ਸ਼ਬਦ ਨੂੰ ਵੱਖ ਕਰਨਾ","en":"To split a sandhi word"},{"hi":"ਅਨੁਵਾਦ ਕਰਨਾ","pa":"ਅਨੁਵਾਦ ਕਰਨਾ","en":"To translate"},{"hi":"ਅਰਥ ਦੱਸਣਾ","pa":"ਅਰਥ ਦੱਸਣਾ","en":"To explain meaning"}], "answerIndex": 1, "explanation": {"hi":"ਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਅਰਥ ਹੈ ਸੰਧੀ ਸ਼ਬਦ ਨੂੰ ਉਸਦੇ ਮੂਲ ਰੂਪਾਂ ਵਿੱਚ ਵੱਖ ਕਰਨਾ।","pa":"ਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਅਰਥ ਹੈ ਸੰਧੀ ਸ਼ਬਦ ਨੂੰ ਵੱਖ ਕਰਨਾ।","en":"Sandhi-Viched means to split a sandhi word into its original parts."} },
+      { "id": "q-pa-s-08", "prompt": {"hi":"'ਕੰਮਕਾਰ' ਕਿਸ ਦੀ ਉਦਾਹਰਨ ਹੈ?","pa":"'ਕੰਮਕਾਰ' ਕਿਸ ਦੀ ਉਦਾਹਰਨ ਹੈ?","en":"'ਕੰਮਕਾਰ' is an example of what?"}, "options": [{"hi":"ਸਵਰ ਸੰਧੀ","pa":"ਸਵਰ ਸੰਧੀ","en":"Swar Sandhi"},{"hi":"ਸ਼ਬਦ-ਜੋੜ","pa":"ਸ਼ਬਦ-ਜੋੜ","en":"Shabda-Jod (Word joining)"},{"hi":"ਵਿਅੰਜਨ ਸੰਧੀ","pa":"ਵਿਅੰਜਨ ਸੰਧੀ","en":"Vyanjan Sandhi"},{"hi":"ਵਿਸਰਗ ਸੰਧੀ","pa":"ਵਿਸਰਗ ਸੰਧੀ","en":"Visarg Sandhi"}], "answerIndex": 1, "explanation": {"hi":"ਕੰਮਕਾਰ = ਕੰਮ + ਕਾਰ। ਇਹ ਦੋ ਸ਼ਬਦਾਂ ਦਾ ਜੋੜ ਹੈ, ਇਸ ਲਈ ਸ਼ਬਦ-ਜੋੜ ਦੀ ਉਦਾਹਰਨ ਹੈ।","pa":"ਕੰਮਕਾਰ = ਕੰਮ + ਕਾਰ। ਸ਼ਬਦ-ਜੋੜ ਦੀ ਉਦਾਹਰਨ।","en":"ਕੰਮਕਾਰ = ਕੰਮ + ਕਾਰ. This is a joining of two words, so it is an example of Shabda-Jod."} },
+      { "id": "q-pa-s-09", "prompt": {"hi":"ਪੰਜਾਬੀ ਵਿੱਚ ਸੰਧੀ ਦੀਆਂ ਮੁੱਖ ਕਿੰਨੀਆਂ ਕਿਸਮਾਂ ਹਨ?","pa":"ਪੰਜਾਬੀ ਵਿੱਚ ਸੰਧੀ ਦੀਆਂ ਮੁੱਖ ਕਿੰਨੀਆਂ ਕਿਸਮਾਂ ਹਨ?","en":"How many main types of Sandhi are there in Punjabi?"}, "options": [{"hi":"ਇੱਕ","pa":"ਇੱਕ","en":"One"},{"hi":"ਦੋ","pa":"ਦੋ","en":"Two"},{"hi":"ਤਿੰਨ","pa":"ਤਿੰਨ","en":"Three"},{"hi":"ਚਾਰ","pa":"ਚਾਰ","en":"Four"}], "answerIndex": 2, "explanation": {"hi":"ਪੰਜਾਬੀ ਵਿੱਚ ਮੁੱਖ ਤਿੰਨ ਕਿਸਮਾਂ ਹਨ: 1. ਸਵਰ ਸੰਧੀ, 2. ਵਿਅੰਜਨ ਸੰਧੀ, 3. ਸ਼ਬਦ-ਜੋੜ।","pa":"ਮੁੱਖ ਤਿੰਨ: ਸਵਰ ਸੰਧੀ, ਵਿਅੰਜਨ ਸੰਧੀ, ਸ਼ਬਦ-ਜੋੜ।","en":"Main three types: 1. Swar Sandhi, 2. Vyanjan Sandhi, 3. Shabda-Jod."} },
+      { "id": "q-pa-s-10", "prompt": {"hi":"'ਸਦਗੁਣ' ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","pa":"'ਸਦਗੁਣ' ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of 'ਸਦਗੁਣ'?"}, "options": [{"hi":"ਸਦ + ਗੁਣ","pa":"ਸਦ + ਗੁਣ","en":"ਸਦ + ਗੁਣ"},{"hi":"ਸਤ + ਗੁਣ","pa":"ਸਤ + ਗੁਣ","en":"ਸਤ + ਗੁਣ"},{"hi":"ਸਾਦ + ਗੁਣ","pa":"ਸਾਦ + ਗੁਣ","en":"ਸਾਦ + ਗੁਣ"},{"hi":"ਸੱਦ + ਗੁਣ","pa":"ਸੱਦ + ਗੁਣ","en":"ਸੱਦ + ਗੁਣ"}], "answerIndex": 1, "explanation": {"hi":"ਸਦਗੁਣ = ਸਤ + ਗੁਣ। ਇੱਥੇ 'ਤ' ਵਿਅੰਜਨ ਦੇ ਅੱਗੇ 'ਗ' ਆਉਣ ਕਾਰਨ 'ਤ' ਬਦਲ ਕੇ 'ਦ' ਬਣ ਜਾਂਦਾ ਹੈ।","pa":"ਸਦਗੁਣ = ਸਤ + ਗੁਣ। 'ਤ' ਦੇ ਅੱਗੇ 'ਗ' ਆਉਣ ਕਾਰਨ 'ਤ' → 'ਦ' ਬਣ ਗਿਆ।","en":"ਸਦਗੁਣ = ਸਤ + ਗੁਣ. Here 'ਤ' changes to 'ਦ' because 'ਗ' follows it (voiced consonant rule)."} }
+    ],
+    "sources": [{"title": "PSEB Punjabi Textbooks", "url": "https://www.pseb.ac.in/public/books"}],
+    "videos": [],
+    "documents": []
+  },
+  {
+    "id": "sanskrit-sandhi-viched",
+    "subject": "Sanskrit",
+    "unit": "व्याकरण",
+    "title": {
+      "hi": "संस्कृत व्याकरण: संधि और संधि-विच्छेद",
+      "pa": "ਸੰਸਕ੍ਰਿਤ ਵਿਆਕਰਨ: ਸੰਧੀ ਅਤੇ ਸੰਧੀ-ਵਿੱਛੇਦ",
+      "en": "Sanskrit Grammar: Sandhi and Sandhi Analysis"
+    },
+    "sections": [
+      {
+        "heading": { "hi": "संधि क्या है?", "pa": "ਸੰਧੀ ਕੀ ਹੈ?", "en": "What is Sandhi?" },
+        "text": {
+          "hi": "संधि का अर्थ है 'मेल' या 'जोड़'। जब दो वर्ण पास-पास आते हैं तो उनमें जो परिवर्तन होता है, उसे संधि कहते हैं। संस्कृत व्याकरण में संधि एक अत्यंत महत्वपूर्ण विषय है।\n\nसंधि की परिभाषा: दो समीपवर्ती वर्णों के मेल से जो विकार (परिवर्तन) होता है, उसे संधि कहते हैं। उदाहरण: राम + अयन = रामायण।\n\nसंधि-विच्छेद का अर्थ है संधि पद को उसके मूल अवयवों में अलग-अलग करना। परीक्षा में संधि करना और संधि-विच्छेद करना दोनों प्रकार के प्रश्न पूछे जाते हैं।\n\nसंस्कृत में संधि के तीन मुख्य प्रकार हैं: (1) स्वर संधि, (2) व्यंजन संधि, और (3) विसर्ग संधि। इन तीनों के अपने-अपने उप-प्रकार और नियम हैं।",
+          "pa": "ਸੰਧੀ ਦਾ ਅਰਥ ਹੈ 'ਮੇਲ' ਜਾਂ 'ਜੋੜ'। ਜਦੋਂ ਦੋ ਵਰਣ ਕੋਲ-ਕੋਲ ਆਉਂਦੇ ਹਨ ਤਾਂ ਉਨ੍ਹਾਂ ਵਿੱਚ ਜੋ ਬਦਲਾਅ ਹੁੰਦਾ ਹੈ, ਉਸ ਨੂੰ ਸੰਧੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ। ਉਦਾਹਰਨ: ਰਾਮ + ਅਯਨ = ਰਾਮਾਯਣ।\n\nਸੰਧੀ-ਵਿੱਛੇਦ ਦਾ ਅਰਥ ਹੈ ਸੰਧੀ ਪਦ ਨੂੰ ਉਸਦੇ ਮੂਲ ਰੂਪਾਂ ਵਿੱਚ ਵੱਖ ਕਰਨਾ।",
+          "en": "Sandhi means 'union' or 'joining'. When two letters come close together, the change that occurs is called Sandhi. Example: Ram + Ayan = Ramayana.\n\nSandhi-Viched means separating a sandhi word into its original components. Both joining and splitting are asked in exams.\n\nThere are three main types of Sandhi in Sanskrit: (1) Swar Sandhi (vowel), (2) Vyanjan Sandhi (consonant), and (3) Visarg Sandhi. Each has its own sub-types and rules."
+        }
+      },
+      {
+        "heading": { "hi": "स्वर संधि (अच् संधि)", "pa": "ਸਵਰ ਸੰਧੀ", "en": "Swar Sandhi (Vowel Sandhi)" },
+        "text": {
+          "hi": "स्वर संधि: जब दो स्वरों का मेल होता है। इसके प्रमुख प्रकार:\n\n1. दीर्घ संधि: अ/आ + अ/आ = आ। उदाहरण: रमा + ईश = रमेश (नहीं), राम + आत्मा = रामात्मा। सूत्र: अक: सवर्णे दीर्घः।\n\n2. गुण संधि: अ/आ + इ/ई = ए; अ/आ + उ/ऊ = ओ; अ/आ + ऋ = अर्। उदाहरण: देव + इंद्र = देवेंद्र; सूर्य + उदय = सूर्योदय।\n\n3. वृद्धि संधि: अ/आ + ए/ऐ = ऐ; अ/आ + ओ/औ = औ। उदाहरण: महा + ऐश्वर्य = महैश्वर्य।\n\n4. यण संधि: इ/ई + अन्य स्वर = य्; उ/ऊ + अन्य स्वर = व्। उदाहरण: यदि + अपि = यद्यपि।\n\n5. अयादि संधि: ए + स्वर = अय्; ओ + स्वर = अव्। उदाहरण: ने + अन = नयन।",
+          "pa": "ਸਵਰ ਸੰਧੀ: ਜਦੋਂ ਦੋ ਸਵਰਾਂ ਦਾ ਮੇਲ ਹੁੰਦਾ ਹੈ।\n\n1. ਦੀਰਘ ਸੰਧੀ: ਅ/ਆ + ਅ/ਆ = ਆ\n2. ਗੁਣ ਸੰਧੀ: ਅ/ਆ + ਇ/ਈ = ਏ; ਅ/ਆ + ਉ/ਊ = ਓ\n3. ਵ੍ਰਿੱਧੀ ਸੰਧੀ: ਅ/ਆ + ਏ/ਐ = ਐ\n4. ਯਣ ਸੰਧੀ: ਇ/ਈ + ਹੋਰ ਸਵਰ = ਯ੍\n5. ਅਯਾਦਿ ਸੰਧੀ: ਏ + ਸਵਰ = ਅਯ੍",
+          "en": "Swar Sandhi: When two vowels combine. Main types:\n\n1. Dirgha Sandhi: a/aa + a/aa = aa. Example: ਰਾਮਾਤਮਾ\n2. Gun Sandhi: a/aa + i/ee = e; a/aa + u/oo = o. Example: ਦੇਵੇਂਦਰ, ਸੂਰਯੋਦਯ\n3. Vriddhi Sandhi: a/aa + e/ai = ai. Example: ਮਹੈਸ਼ਵਰਯ\n4. Yan Sandhi: i/ee + other vowel = y. Example: ਯਦਯਪਿ\n5. Ayadi Sandhi: e + vowel = ay. Example: ਨਯਨ"
+        }
+      },
+      {
+        "heading": { "hi": "व्यंजन संधि और विसर्ग संधि", "pa": "ਵਿਅੰਜਨ ਸੰਧੀ ਅਤੇ ਵਿਸਰਗ ਸੰਧੀ", "en": "Vyanjan Sandhi and Visarg Sandhi" },
+        "text": {
+          "hi": "व्यंजन संधि: जब व्यंजन के बाद व्यंजन या स्वर आता है।\n\nमुख्य नियम:\n1. 'क्, च्, ट्, त्, प्' के बाद स्वर, ग, ज, ड, द, ब या कोई नासिक्य आए तो ये सघोष/नासिक्य हो जाते हैं। जैसे: वाक् + ईश = वागीश।\n2. 'त्' के बाद 'ज' या 'झ' आए तो 'त्' → 'ज्' हो जाता है। जैसे: सत् + जन = सज्जन।\n3. 'त्' के बाद 'च' या 'छ' आए तो 'त्' → 'च्' हो जाता है। जैसे: उत् + चाटन = उच्चाटन।\n\nविसर्ग संधि: जब विसर्ग (:) के बाद कोई वर्ण आता है।\n\nमुख्य नियम:\n1. विसर्ग + 'र' → विसर्ग लोप और पूर्व स्वर दीर्घ: निः + रोग = नीरोग।\n2. विसर्ग + सघोष → 'ओ': मनः + हर = मनोहर।\n3. विसर्ग + 'श, ष, स' → श/ष/स: दुः + शासन = दुश्शासन।",
+          "pa": "ਵਿਅੰਜਨ ਸੰਧੀ: ਜਦੋਂ ਵਿਅੰਜਨ ਤੋਂ ਬਾਅਦ ਵਿਅੰਜਨ ਜਾਂ ਸਵਰ ਆਉਂਦਾ ਹੈ।\n\nਮੁੱਖ ਉਦਾਹਰਨਾਂ:\n- ਵਾਕ੍ + ਈਸ਼ = ਵਾਗੀਸ਼\n- ਸਤ੍ + ਜਨ = ਸੱਜਨ\n- ਉਤ੍ + ਚਾਟਨ = ਉੱਚਾਟਨ\n\nਵਿਸਰਗ ਸੰਧੀ:\n- ਮਨਃ + ਹਰ = ਮਨੋਹਰ\n- ਨਿਃ + ਰੋਗ = ਨੀਰੋਗ",
+          "en": "Vyanjan Sandhi: When a consonant is followed by another consonant or vowel.\n\nKey examples:\n- ਵਾਕ੍ + ਈਸ਼ = ਵਾਗੀਸ਼ (voice + lord = lord of speech)\n- ਸਤ੍ + ਜਨ = ਸੱਜਨ (good + person = good person)\n- ਉਤ੍ + ਚਾਟਨ = ਉੱਚਾਟਨ\n\nVisarg Sandhi: When visarg (:) is followed by a letter.\n- ਮਨਃ + ਹਰ = ਮਨੋਹਰ (enchanting)\n- ਨਿਃ + ਰੋਗ = ਨੀਰੋਗ (disease-free)"
+        }
+      },
+      {
+        "heading": { "hi": "परीक्षा में कैसे हल करें", "pa": "ਪਰੀਖਿਆ ਵਿੱਚ ਕਿਵੇਂ ਹੱਲ ਕਰੀਏ", "en": "How to solve in exams" },
+        "text": {
+          "hi": "संधि के प्रश्न हल करने के लिए:\n\nचरण 1: देखो कि दोनों वर्ण स्वर हैं, व्यंजन हैं, या विसर्ग है।\nचरण 2: उसी प्रकार की संधि के नियम लगाओ।\nचरण 3: उदाहरण से मिलान करो।\n\nसंधि-विच्छेद के लिए:\n- शब्द को ध्यान से देखो।\n- जहाँ परिवर्तन हुआ है वहाँ सही जोड़ खोजो।\n- नियम से जाँचो।\n\nयाद रखें: 'सूर्योदय' = सूर्य + उदय (गुण संधि: अ + उ = ओ)। 'देवेंद्र' = देव + इंद्र (गुण संधि: अ + इ = ए)।\n\nमहत्वपूर्ण संधियाँ जो बार-बार पूछी जाती हैं:\n- रामायण = राम + अयन\n- सत्याग्रह = सत्य + आग्रह\n- हिमालय = हिम + आलय\n- नयन = ने + अन\n- सज्जन = सत् + जन",
+          "pa": "ਸੰਧੀ ਦੇ ਸਵਾਲ ਹੱਲ ਕਰਨ ਲਈ:\n\n1. ਦੇਖੋ ਕਿ ਦੋਵੇਂ ਵਰਣ ਸਵਰ ਹਨ, ਵਿਅੰਜਨ ਹਨ, ਜਾਂ ਵਿਸਰਗ ਹੈ।\n2. ਉਸੇ ਕਿਸਮ ਦੀ ਸੰਧੀ ਦੇ ਨਿਯਮ ਲਗਾਓ।\n3. ਉਦਾਹਰਨ ਨਾਲ ਮੇਲ ਕਰੋ।\n\nਮਹੱਤਵਪੂਰਨ ਸੰਧੀਆਂ: ਰਾਮਾਯਣ, ਸਤਯਾਗ੍ਰਹ, ਹਿਮਾਲਯ।",
+          "en": "To solve sandhi questions:\n\nStep 1: See if both letters are vowels, consonants, or visarg.\nStep 2: Apply the rules of that type of sandhi.\nStep 3: Match with examples.\n\nFrequently asked sandhi:\n- Ramayana = Ram + Ayan\n- Satyagraha = Satya + Agraha\n- Himalaya = Hima + Alaya\n- Nayan = Ne + An\n- Sajjan = Sat + Jan"
+        }
+      }
+    ],
+    "keypoints": [
+      { "hi": "संधि का अर्थ है दो वर्णों का मेल और उससे होने वाला परिवर्तन", "pa": "ਸੰਧੀ ਦਾ ਅਰਥ ਹੈ ਦੋ ਵਰਣਾਂ ਦਾ ਮੇਲ", "en": "Sandhi means the union of two letters and the change that results" },
+      { "hi": "तीन प्रकार: स्वर संधि, व्यंजन संधि, विसर्ग संधि", "pa": "ਤਿੰਨ ਕਿਸਮਾਂ: ਸਵਰ, ਵਿਅੰਜਨ, ਵਿਸਰਗ ਸੰਧੀ", "en": "Three types: Swar, Vyanjan, and Visarg Sandhi" },
+      { "hi": "गुण संधि: अ + इ = ए (देव + इंद्र = देवेंद्र)", "pa": "ਗੁਣ ਸੰਧੀ: ਅ + ਇ = ਏ (ਦੇਵੇਂਦਰ)", "en": "Gun Sandhi: a + i = e (Devendra)" },
+      { "hi": "दीर्घ संधि: अ + अ = आ (राम + आत्मा = रामात्मा)", "pa": "ਦੀਰਘ ਸੰਧੀ: ਅ + ਅ = ਆ", "en": "Dirgha Sandhi: a + a = aa (Ramaatma)" },
+      { "hi": "मनः + हर = मनोहर (विसर्ग संधि)", "pa": "ਮਨਃ + ਹਰ = ਮਨੋਹਰ (ਵਿਸਰਗ ਸੰਧੀ)", "en": "ਮਨਃ + ਹਰ = ਮਨੋਹਰ (Visarg Sandhi)" },
+      { "hi": "सत् + जन = सज्जन (व्यंजन संधि)", "pa": "ਸਤ੍ + ਜਨ = ਸੱਜਨ (ਵਿਅੰਜਨ ਸੰਧੀ)", "en": "ਸਤ੍ + ਜਨ = ਸੱਜਨ (Vyanjan Sandhi)" }
+    ],
+    "summary": {
+      "hi": "संस्कृत में संधि तीन प्रकार की होती है: स्वर, व्यंजन और विसर्ग। स्वर संधि में दीर्घ, गुण, वृद्धि, यण, अयादि प्रमुख हैं। संधि-विच्छेद में पद को मूल रूपों में अलग करते हैं। बार-बार पूछे जाने वाले शब्द: रामायण, देवेंद्र, सूर्योदय, मनोहर, सज्जन।",
+      "pa": "ਸੰਸਕ੍ਰਿਤ ਵਿੱਚ ਸੰਧੀ ਤਿੰਨ ਕਿਸਮਾਂ ਦੀ ਹੈ: ਸਵਰ, ਵਿਅੰਜਨ ਅਤੇ ਵਿਸਰਗ। ਸੰਧੀ-ਵਿੱਛੇਦ ਵਿੱਚ ਪਦ ਨੂੰ ਮੂਲ ਰੂਪਾਂ ਵਿੱਚ ਵੱਖ ਕਰਦੇ ਹਾਂ।",
+      "en": "Sanskrit Sandhi has three types: Swar, Vyanjan, and Visarg. In Swar sandhi, Dirgha, Gun, Vriddhi, Yan, Ayadi are main. In Sandhi-Viched, words are separated into original parts. Frequently asked: Ramayana, Devendra, Suryodaya, Manohar, Sajjan."
+    },
+    "flashcards": [
+      { "question": {"hi":"रामायण का संधि-विच्छेद क्या है?","pa":"ਰਾਮਾਯਣ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of Ramayana?"}, "answer": {"hi":"राम + अयन = रामायण (दीर्घ संधि)","pa":"ਰਾਮ + ਅਯਨ = ਰਾਮਾਯਣ (ਦੀਰਘ ਸੰਧੀ)","en":"Ram + Ayan = Ramayana (Dirgha Sandhi: a + a = aa)"} },
+      { "question": {"hi":"देवेंद्र का संधि-विच्छेद क्या है?","pa":"ਦੇਵੇਂਦਰ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of Devendra?"}, "answer": {"hi":"देव + इंद्र = देवेंद्र (गुण संधि: अ + इ = ए)","pa":"ਦੇਵ + ਇੰਦਰ = ਦੇਵੇਂਦਰ (ਗੁਣ ਸੰਧੀ: ਅ + ਇ = ਏ)","en":"Dev + Indra = Devendra (Gun Sandhi: a + i = e)"} },
+      { "question": {"hi":"सूर्योदय का संधि-विच्छेद क्या है?","pa":"ਸੂਰਯੋਦਯ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of Suryodaya?"}, "answer": {"hi":"सूर्य + उदय = सूर्योदय (गुण संधि: अ + उ = ओ)","pa":"ਸੂਰਯ + ਉਦਯ = ਸੂਰਯੋਦਯ (ਗੁਣ ਸੰਧੀ: ਅ + ਉ = ਓ)","en":"Surya + Uday = Suryodaya (Gun Sandhi: a + u = o)"} },
+      { "question": {"hi":"मनोहर का संधि-विच्छेद क्या है?","pa":"ਮਨੋਹਰ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of Manohar?"}, "answer": {"hi":"मनः + हर = मनोहर (विसर्ग संधि)","pa":"ਮਨਃ + ਹਰ = ਮਨੋਹਰ (ਵਿਸਰਗ ਸੰਧੀ)","en":"Manah + Har = Manohar (Visarg Sandhi)"} },
+      { "question": {"hi":"सज्जन का संधि-विच्छेद क्या है?","pa":"ਸੱਜਨ ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of Sajjan?"}, "answer": {"hi":"सत् + जन = सज्जन (व्यंजन संधि)","pa":"ਸਤ੍ + ਜਨ = ਸੱਜਨ (ਵਿਅੰਜਨ ਸੰਧੀ)","en":"Sat + Jan = Sajjan (Vyanjan Sandhi)"} },
+      { "question": {"hi":"गुण संधि का नियम क्या है?","pa":"ਗੁਣ ਸੰਧੀ ਦਾ ਨਿਯਮ ਕੀ ਹੈ?","en":"What is the rule of Gun Sandhi?"}, "answer": {"hi":"अ/आ के बाद इ/ई = ए; अ/आ के बाद उ/ऊ = ओ; अ/आ के बाद ऋ = अर्","pa":"ਅ/ਆ + ਇ/ਈ = ਏ; ਅ/ਆ + ਉ/ਊ = ਓ; ਅ/ਆ + ਰਿ = ਅਰ੍","en":"a/aa + i/ee = e; a/aa + u/oo = o; a/aa + ri = ar"} },
+      { "question": {"hi":"दीर्घ संधि की उदाहरण दो","pa":"ਦੀਰਘ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਦਿਓ","en":"Give an example of Dirgha Sandhi"}, "answer": {"hi":"राम + आत्मा = रामात्मा (अ + आ = आ)","pa":"ਰਾਮ + ਆਤਮਾ = ਰਾਮਾਤਮਾ (ਅ + ਆ = ਆ)","en":"Ram + Aatma = Ramaatma (a + aa = aa)"} },
+      { "question": {"hi":"यण संधि में क्या होता है?","pa":"ਯਣ ਸੰਧੀ ਵਿੱਚ ਕੀ ਹੁੰਦਾ ਹੈ?","en":"What happens in Yan Sandhi?"}, "answer": {"hi":"इ/ई के बाद कोई दूसरा स्वर आए तो इ/ई → य् हो जाता है। जैसे: यदि + अपि = यद्यपि","pa":"ਇ/ਈ + ਹੋਰ ਸਵਰ → ਯ੍ ਹੋ ਜਾਂਦਾ ਹੈ। ਜਿਵੇਂ: ਯਦਿ + ਅਪਿ = ਯਦਯਪਿ","en":"If i/ee is followed by another vowel, i/ee becomes y. Example: ਯਦਿ + ਅਪਿ = ਯਦਯਪਿ"} }
+    ],
+    "questions": [
+      { "id": "q-sk-s-01", "prompt": {"hi":"'देवेंद्र' में कौन सी संधि है?","pa":"'ਦੇਵੇਂਦਰ' ਵਿੱਚ ਕਿਹੜੀ ਸੰਧੀ ਹੈ?","en":"Which Sandhi is in 'Devendra'?"}, "options": [{"hi":"दीर्घ संधि","pa":"ਦੀਰਘ ਸੰਧੀ","en":"Dirgha Sandhi"},{"hi":"गुण संधि","pa":"ਗੁਣ ਸੰਧੀ","en":"Gun Sandhi"},{"hi":"वृद्धि संधि","pa":"ਵ੍ਰਿੱਧੀ ਸੰਧੀ","en":"Vriddhi Sandhi"},{"hi":"यण संधि","pa":"ਯਣ ਸੰਧੀ","en":"Yan Sandhi"}], "answerIndex": 1, "explanation": {"hi":"देव + इंद्र = देवेंद्र। यहाँ अ + इ = ए (गुण संधि)।","pa":"ਦੇਵ + ਇੰਦਰ = ਦੇਵੇਂਦਰ। ਇੱਥੇ ਅ + ਇ = ਏ (ਗੁਣ ਸੰਧੀ)।","en":"Dev + Indra = Devendra. Here a + i = e (Gun Sandhi)."} },
+      { "id": "q-sk-s-02", "prompt": {"hi":"'रामायण' का संधि-विच्छेद क्या है?","pa":"'ਰਾਮਾਯਣ' ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of 'Ramayana'?"}, "options": [{"hi":"राम + आयण","pa":"ਰਾਮ + ਆਯਣ","en":"Ram + Aayan"},{"hi":"राम + अयन","pa":"ਰਾਮ + ਅਯਨ","en":"Ram + Ayan"},{"hi":"रा + मायण","pa":"ਰਾ + ਮਾਯਣ","en":"Ra + Mayan"},{"hi":"रामा + यण","pa":"ਰਾਮਾ + ਯਣ","en":"Rama + Yan"}], "answerIndex": 1, "explanation": {"hi":"रामायण = राम + अयन। अ + अ = आ (दीर्घ संधि)।","pa":"ਰਾਮਾਯਣ = ਰਾਮ + ਅਯਨ। ਅ + ਅ = ਆ (ਦੀਰਘ ਸੰਧੀ)।","en":"Ramayana = Ram + Ayan. a + a = aa (Dirgha Sandhi)."} },
+      { "id": "q-sk-s-03", "prompt": {"hi":"'मनोहर' में कौन सी संधि है?","pa":"'ਮਨੋਹਰ' ਵਿੱਚ ਕਿਹੜੀ ਸੰਧੀ ਹੈ?","en":"Which Sandhi is in 'Manohar'?"}, "options": [{"hi":"स्वर संधि","pa":"ਸਵਰ ਸੰਧੀ","en":"Swar Sandhi"},{"hi":"व्यंजन संधि","pa":"ਵਿਅੰਜਨ ਸੰਧੀ","en":"Vyanjan Sandhi"},{"hi":"विसर्ग संधि","pa":"ਵਿਸਰਗ ਸੰਧੀ","en":"Visarg Sandhi"},{"hi":"दीर्घ संधि","pa":"ਦੀਰਘ ਸੰਧੀ","en":"Dirgha Sandhi"}], "answerIndex": 2, "explanation": {"hi":"मनः + हर = मनोहर। यहाँ विसर्ग (:) के बाद ह आने पर 'ओ' बनता है।","pa":"ਮਨਃ + ਹਰ = ਮਨੋਹਰ। ਵਿਸਰਗ ਸੰਧੀ।","en":"ਮਨਃ + ਹਰ = ਮਨੋਹਰ. Visarg (:) + h = o. This is Visarg Sandhi."} },
+      { "id": "q-sk-s-04", "prompt": {"hi":"गुण संधि में 'अ + उ' से क्या बनता है?","pa":"ਗੁਣ ਸੰਧੀ ਵਿੱਚ 'ਅ + ਉ' ਤੋਂ ਕੀ ਬਣਦਾ ਹੈ?","en":"In Gun Sandhi, 'a + u' forms what?"}, "options": [{"hi":"आ","pa":"ਆ","en":"aa"},{"hi":"ए","pa":"ਏ","en":"e"},{"hi":"ओ","pa":"ਓ","en":"o"},{"hi":"औ","pa":"ਔ","en":"au"}], "answerIndex": 2, "explanation": {"hi":"गुण संधि नियम: अ/आ + उ/ऊ = ओ। जैसे: सूर्य + उदय = सूर्योदय।","pa":"ਅ/ਆ + ਉ/ਊ = ਓ। ਜਿਵੇਂ: ਸੂਰਯੋਦਯ।","en":"Gun Sandhi rule: a/aa + u/oo = o. Example: Surya + Uday = Suryodaya."} },
+      { "id": "q-sk-s-05", "prompt": {"hi":"'सज्जन' किस प्रकार की संधि का उदाहरण है?","pa":"'ਸੱਜਨ' ਕਿਸ ਕਿਸਮ ਦੀ ਸੰਧੀ ਦੀ ਉਦਾਹਰਨ ਹੈ?","en":"'Sajjan' is an example of which type of Sandhi?"}, "options": [{"hi":"स्वर संधि","pa":"ਸਵਰ ਸੰਧੀ","en":"Swar Sandhi"},{"hi":"विसर्ग संधि","pa":"ਵਿਸਰਗ ਸੰਧੀ","en":"Visarg Sandhi"},{"hi":"व्यंजन संधि","pa":"ਵਿਅੰਜਨ ਸੰਧੀ","en":"Vyanjan Sandhi"},{"hi":"दीर्घ संधि","pa":"ਦੀਰਘ ਸੰਧੀ","en":"Dirgha Sandhi"}], "answerIndex": 2, "explanation": {"hi":"सत् + जन = सज्जन। यहाँ त् के बाद ज आने से त् → ज् हो गया। यह व्यंजन संधि है।","pa":"ਸਤ੍ + ਜਨ = ਸੱਜਨ। ਵਿਅੰਜਨ ਸੰਧੀ।","en":"Sat + Jan = Sajjan. Here t + j = jj. This is Vyanjan Sandhi."} },
+      { "id": "q-sk-s-06", "prompt": {"hi":"संधि की परिभाषा के अनुसार संधि क्या है?","pa":"ਸੰਧੀ ਦੀ ਪਰਿਭਾਸ਼ਾ ਅਨੁਸਾਰ ਸੰਧੀ ਕੀ ਹੈ?","en":"According to definition, what is Sandhi?"}, "options": [{"hi":"शब्द का अर्थ बदलना","pa":"ਸ਼ਬਦ ਦਾ ਅਰਥ ਬਦਲਣਾ","en":"Changing word meaning"},{"hi":"दो वर्णों के मेल से होने वाला विकार","pa":"ਦੋ ਵਰਣਾਂ ਦੇ ਮੇਲ ਤੋਂ ਹੋਣ ਵਾਲਾ ਬਦਲਾਅ","en":"Change caused by joining two letters"},{"hi":"वाक्य बनाने की क्रिया","pa":"ਵਾਕ ਬਣਾਉਣ ਦੀ ਕਿਰਿਆ","en":"Process of making sentences"},{"hi":"अर्थ बताना","pa":"ਅਰਥ ਦੱਸਣਾ","en":"Explaining meaning"}], "answerIndex": 1, "explanation": {"hi":"दो समीपवर्ती वर्णों के मेल से जो विकार उत्पन्न होता है उसे संधि कहते हैं।","pa":"ਦੋ ਨੇੜੇ ਵਰਣਾਂ ਦੇ ਮੇਲ ਤੋਂ ਜੋ ਬਦਲਾਅ ਹੁੰਦਾ ਹੈ ਉਸ ਨੂੰ ਸੰਧੀ ਕਹਿੰਦੇ ਹਨ।","en":"The change that occurs when two adjacent letters combine is called Sandhi."} },
+      { "id": "q-sk-s-07", "prompt": {"hi":"'हिमालय' का संधि-विच्छेद है?","pa":"'ਹਿਮਾਲਯ' ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of 'Himalaya'?"}, "options": [{"hi":"हिम + आलय","pa":"ਹਿਮ + ਆਲਯ","en":"Him + Aalay"},{"hi":"हिमा + लय","pa":"ਹਿਮਾ + ਲਯ","en":"Hima + Lay"},{"hi":"हि + मालय","pa":"ਹਿ + ਮਾਲਯ","en":"Hi + Malay"},{"hi":"हिमाल + य","pa":"ਹਿਮਾਲ + ਯ","en":"Himal + Ya"}], "answerIndex": 0, "explanation": {"hi":"हिमालय = हिम + आलय। अ + आ = आ (दीर्घ संधि)। हिमालय का अर्थ है 'बर्फ का घर'।","pa":"ਹਿਮਾਲਯ = ਹਿਮ + ਆਲਯ। ਅ + ਆ = ਆ (ਦੀਰਘ ਸੰਧੀ)।","en":"Himalaya = Him + Aalay. a + aa = aa (Dirgha Sandhi). Himalaya means 'abode of snow'."} },
+      { "id": "q-sk-s-08", "prompt": {"hi":"संस्कृत संधि के कितने मुख्य प्रकार हैं?","pa":"ਸੰਸਕ੍ਰਿਤ ਸੰਧੀ ਦੀਆਂ ਕਿੰਨੀਆਂ ਮੁੱਖ ਕਿਸਮਾਂ ਹਨ?","en":"How many main types of Sanskrit Sandhi are there?"}, "options": [{"hi":"दो","pa":"ਦੋ","en":"Two"},{"hi":"तीन","pa":"ਤਿੰਨ","en":"Three"},{"hi":"चार","pa":"ਚਾਰ","en":"Four"},{"hi":"पाँच","pa":"ਪੰਜ","en":"Five"}], "answerIndex": 1, "explanation": {"hi":"संस्कृत में तीन मुख्य प्रकार हैं: (1) स्वर संधि, (2) व्यंजन संधि, (3) विसर्ग संधि।","pa":"ਸੰਸਕ੍ਰਿਤ ਵਿੱਚ ਤਿੰਨ ਮੁੱਖ ਕਿਸਮਾਂ: ਸਵਰ, ਵਿਅੰਜਨ, ਵਿਸਰਗ ਸੰਧੀ।","en":"Sanskrit has three main types: (1) Swar Sandhi, (2) Vyanjan Sandhi, (3) Visarg Sandhi."} },
+      { "id": "q-sk-s-09", "prompt": {"hi":"'नीरोग' में कौन सी संधि है?","pa":"'ਨੀਰੋਗ' ਵਿੱਚ ਕਿਹੜੀ ਸੰਧੀ ਹੈ?","en":"Which Sandhi is in 'Niroga'?"}, "options": [{"hi":"दीर्घ संधि","pa":"ਦੀਰਘ ਸੰਧੀ","en":"Dirgha Sandhi"},{"hi":"गुण संधि","pa":"ਗੁਣ ਸੰਧੀ","en":"Gun Sandhi"},{"hi":"विसर्ग संधि","pa":"ਵਿਸਰਗ ਸੰਧੀ","en":"Visarg Sandhi"},{"hi":"व्यंजन संधि","pa":"ਵਿਅੰਜਨ ਸੰਧੀ","en":"Vyanjan Sandhi"}], "answerIndex": 2, "explanation": {"hi":"निः + रोग = नीरोग। यहाँ विसर्ग के बाद 'र' आने से विसर्ग लोप होता है और पूर्व स्वर दीर्घ हो जाता है।","pa":"ਨਿਃ + ਰੋਗ = ਨੀਰੋਗ। ਵਿਸਰਗ ਤੋਂ ਬਾਅਦ 'ਰ' ਆਉਣ ਨਾਲ ਵਿਸਰਗ ਲੋਪ ਹੁੰਦਾ ਹੈ।","en":"ਨਿਃ + ਰੋਗ = ਨੀਰੋਗ (disease-free). Visarg drops when followed by 'r' and the preceding vowel becomes long."} },
+      { "id": "q-sk-s-10", "prompt": {"hi":"'यद्यपि' का संधि-विच्छेद क्या है?","pa":"'ਯਦਯਪਿ' ਦਾ ਸੰਧੀ-ਵਿੱਛੇਦ ਕੀ ਹੈ?","en":"What is the Sandhi-Viched of 'Yadyapi'?"}, "options": [{"hi":"यद + यपि","pa":"ਯਦ + ਯਪਿ","en":"Yad + Yapi"},{"hi":"यदि + अपि","pa":"ਯਦਿ + ਅਪਿ","en":"Yadi + Api"},{"hi":"य + द्यपि","pa":"ਯ + ਦਯਪਿ","en":"Ya + Dyapi"},{"hi":"यद + अपि","pa":"ਯਦ + ਅਪਿ","en":"Yad + Api"}], "answerIndex": 1, "explanation": {"hi":"यद्यपि = यदि + अपि। यहाँ यण संधि है - इ के बाद अ आने पर इ → य् हो जाता है।","pa":"ਯਦਯਪਿ = ਯਦਿ + ਅਪਿ। ਯਣ ਸੰਧੀ - ਇ ਤੋਂ ਬਾਅਦ ਅ ਆਉਣ 'ਤੇ ਇ → ਯ੍ ਹੋ ਜਾਂਦਾ ਹੈ।","en":"ਯਦਯਪਿ = ਯਦਿ + ਅਪਿ. Yan Sandhi: i followed by a vowel becomes y."} }
+    ],
+    "sources": [{"title": "NCERT Sanskrit eBooks", "url": "https://ncert.nic.in/ebooks.php"}],
+    "videos": [],
+    "documents": []
+  }
+]

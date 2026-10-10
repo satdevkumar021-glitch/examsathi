@@ -1,0 +1,3480 @@
+{
+  "verifiedAt": "2026-10-04",
+  "exam": "Punjab Master Cadre Social Sciences",
+  "syllabusVersion": "Historical 2022 recruitment, official file dated 04-05-2022",
+  "currentSyllabusVerified": false,
+  "officialSource": "https://educationrecruitmentboard.com/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+  "sourceVerification": "Downloaded official-domain PDF, visually inspected all four scanned pages. TLS certificate chain failed locally; read-only curl -k used. Web renderer failed. Embedded OCR inaccurate; inventory manually read from page images.",
+  "claimsNotSupported": [
+    "75 marks per subject: not stated in this PDF",
+    "Current 2026 replacement has not been verified",
+    "Resource embeds/video audio quality not playback-tested"
+  ],
+  "hierarchy": {
+    "polity": [
+      {
+        "number": 1,
+        "title": "Centre government",
+        "subtopics": [
+          "Parliament: Lok Sabha and Rajya Sabha",
+          "President: appointment, functions, emergency powers at basic level",
+          "Prime Minister and Council of Ministers: appointment and functions at basic level"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "State government",
+        "subtopics": [
+          "Governor: appointment; agent of Centre",
+          "Chief Minister: appointment and functions"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Foreign policy",
+        "subtopics": [
+          "Non-Aligned Movement at basic level",
+          "Panchsheel",
+          "Disarmament",
+          "UNO and SAARC"
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Citizenship",
+        "subtopics": [
+          "Meaning of citizen/citizenship",
+          "Basic principles",
+          "Acquisition and loss of citizenship"
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Organs of government",
+        "subtopics": [
+          "Legislature",
+          "Executive",
+          "Judiciary"
+        ]
+      },
+      {
+        "number": 6,
+        "title": "Courts",
+        "subtopics": [
+          "Supreme Court: functions, jurisdiction, appointment, removal, salaries, composition, judicial review",
+          "High Court: composition, appointment, functions and jurisdiction",
+          "Local courts",
+          "FIR",
+          "Writs"
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Fundamental rights",
+        "subtopics": [
+          "Articles 14 to 32 in detail",
+          "Right to education",
+          "Right to information",
+          "Fundamental duties to some extent"
+        ]
+      },
+      {
+        "number": 8,
+        "title": "United Nations",
+        "subtopics": [
+          "Organs",
+          "Agencies",
+          "India role",
+          "Important recent work"
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Indian federal system",
+        "subtopics": [
+          "Federal and unitary features",
+          "Centre-state legislative, financial and administrative relations"
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Election procedure",
+        "subtopics": [
+          "Meaning and process",
+          "Factors influencing elections",
+          "Electoral behaviour in India and other countries",
+          "Election Commission"
+        ]
+      },
+      {
+        "number": 11,
+        "title": "Constitution",
+        "subtopics": [
+          "Features",
+          "Preamble"
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Concepts",
+        "subtopics": [
+          "Law",
+          "Liberty",
+          "Justice",
+          "Equality"
+        ]
+      },
+      {
+        "number": 13,
+        "title": "Party system",
+        "subtopics": [
+          "Features of Indian party system",
+          "National parties",
+          "Regional parties of your state: origin, performance, elections, manifesto and principles"
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Rural and urban democracy",
+        "subtopics": [
+          "Panchayati Raj: organisations, functions, composition",
+          "Municipalities at different levels: composition, functions, appointment and grassroots special posts"
+        ]
+      },
+      {
+        "number": 15,
+        "title": "Theories",
+        "subtopics": [
+          "Liberalism",
+          "Marxism",
+          "Gandhism"
+        ]
+      }
+    ],
+    "geography": [
+      {
+        "number": 1,
+        "title": "Physical geography: nature and scope",
+        "subtopics": []
+      },
+      {
+        "number": 2,
+        "title": "Earth and origin",
+        "subtopics": [
+          "Universe and solar system",
+          "Earth origin, shape and size",
+          "Rotation and revolution",
+          "Composition and structure",
+          "Distribution of land and water",
+          "Geological history; origin and evolution of life"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "Atmosphere",
+        "subtopics": [
+          "Composition and structure",
+          "Temperature and pressure",
+          "Winds and global circulation",
+          "Air masses and fronts",
+          "Humidity and precipitation"
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Lithosphere",
+        "subtopics": [
+          "Internal structure",
+          "Rocks: origin, formation, types",
+          "Plate tectonics and mountain building",
+          "Earthquakes",
+          "Volcanic activity",
+          "Internal and external geomorphic processes",
+          "Weathering, erosion, deposition and cycle of erosion",
+          "Landforms from surface water, groundwater, wind and glaciers",
+          "Formation and types of soils"
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Hydrosphere",
+        "subtopics": [
+          "Ocean floor configuration",
+          "Ocean temperature and salinity",
+          "Waves",
+          "Currents",
+          "Tides"
+        ]
+      },
+      {
+        "number": 6,
+        "title": "India geography with special reference to Punjab",
+        "subtopics": [
+          "Location and size",
+          "Relief",
+          "Drainage",
+          "Natural vegetation",
+          "Soils",
+          "Minerals: iron ore, manganese, mica, copper, gold",
+          "Power resources",
+          "Agriculture: characteristics, problems, irrigation, land use, crops",
+          "Industries: location factors",
+          "Major trade",
+          "Population: number, distribution, density, growth, religious composition, urbanisation",
+          "Rail, road and air transport",
+          "Environmental issues"
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Resources and environment",
+        "subtopics": [
+          "Meaning, nature and components of environment",
+          "Resources: nature, definition and types",
+          "Forests: types, distribution, economic/environment significance, sustainability",
+          "Major soils: types, distribution, significance, sustainability, erosion and conservation",
+          "Fisheries: types and major regions",
+          "Minerals and power resources: distribution and conservation",
+          "Agriculture: crops, distribution and trade",
+          "Industry: localisation, distribution and trade",
+          "Population-resource relationship",
+          "Natural and human environment relationships: determinism and possibilism",
+          "Ecology and biodiversity",
+          "Pollution",
+          "Population explosion",
+          "Food security",
+          "Deforestation",
+          "Wildlife conservation"
+        ]
+      }
+    ],
+    "economics": [
+      {
+        "number": 1,
+        "title": "Consumer equilibrium",
+        "subtopics": [
+          "Meaning",
+          "Attainment"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Demand",
+        "subtopics": [
+          "Individual and market demand",
+          "Determinants and curves",
+          "Price elasticity"
+        ]
+      },
+      {
+        "number": 3,
+        "title": "National income and aggregates",
+        "subtopics": []
+      },
+      {
+        "number": 4,
+        "title": "Income and employment",
+        "subtopics": [
+          "AD, AS and components",
+          "MPS, APS, MPC, APC"
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Balance of trade and payments",
+        "subtopics": []
+      },
+      {
+        "number": 6,
+        "title": "Micro and macro",
+        "subtopics": [
+          "Differences",
+          "Working"
+        ]
+      },
+      {
+        "number": 7,
+        "title": "Producer behaviour",
+        "subtopics": [
+          "Production functions",
+          "Supply and supply curve",
+          "Cost and revenue",
+          "Producer equilibrium"
+        ]
+      },
+      {
+        "number": 8,
+        "title": "Market forms",
+        "subtopics": [
+          "Perfect competition",
+          "Monopoly",
+          "Monopolistic competition: meaning and features"
+        ]
+      },
+      {
+        "number": 9,
+        "title": "Price determination",
+        "subtopics": [
+          "Equilibrium under perfect competition"
+        ]
+      },
+      {
+        "number": 10,
+        "title": "Money and banking",
+        "subtopics": []
+      },
+      {
+        "number": 11,
+        "title": "Government budget",
+        "subtopics": [
+          "Meaning",
+          "Objectives",
+          "Balanced budget"
+        ]
+      },
+      {
+        "number": 12,
+        "title": "Income and employment: investment multiplier",
+        "subtopics": [
+          "Investment",
+          "Multiplier and working"
+        ]
+      },
+      {
+        "number": 13,
+        "title": "National income aggregates",
+        "subtopics": [
+          "GDP",
+          "GNP",
+          "NDP",
+          "NNP"
+        ]
+      },
+      {
+        "number": 14,
+        "title": "Types of economics and infrastructure",
+        "subtopics": []
+      },
+      {
+        "number": 15,
+        "title": "Indian and Punjab economy",
+        "subtopics": []
+      },
+      {
+        "number": 16,
+        "title": "Economic planning in India",
+        "subtopics": []
+      }
+    ],
+    "history": {
+      "Punjab": [
+        {
+          "number": 1,
+          "title": "Physical features and influence on history",
+          "subtopics": []
+        },
+        {
+          "number": 2,
+          "title": "Development of Sikhism during ten Gurus",
+          "subtopics": []
+        },
+        {
+          "number": 3,
+          "title": "Banda Singh Bahadur and achievements",
+          "subtopics": []
+        },
+        {
+          "number": 4,
+          "title": "Origin and growth of Sikh Misals",
+          "subtopics": []
+        },
+        {
+          "number": 5,
+          "title": "Maharaja Ranjit Singh",
+          "subtopics": [
+            "Early life",
+            "Achievements",
+            "Anglo-Sikh relations up to 1839"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Anglo-Sikh wars and annexation",
+          "subtopics": []
+        }
+      ],
+      "India": [
+        {
+          "number": 1,
+          "title": "Harappan civilisation",
+          "subtopics": [
+            "Origin",
+            "Date",
+            "Extent",
+            "Features",
+            "Decline"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Rig Vedic civilisation",
+          "subtopics": [
+            "Original home of Aryans: historiography rather than a settled modern fact",
+            "Social, political, economic and religious life"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Jainism and Buddhism",
+          "subtopics": []
+        },
+        {
+          "number": 4,
+          "title": "Mauryas",
+          "subtopics": [
+            "Chandragupta Maurya",
+            "Ashoka"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Guptas",
+          "subtopics": [
+            "Samudragupta",
+            "Chandragupta II"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Harsha Vardhana",
+          "subtopics": [
+            "Campaigns and political relations",
+            "Literature and education"
+          ]
+        },
+        {
+          "number": 7,
+          "title": "New kings and kingdoms, AD 700-1200",
+          "subtopics": []
+        },
+        {
+          "number": 8,
+          "title": "Delhi Sultanate",
+          "subtopics": [
+            "Slave/Mamluk",
+            "Khalji",
+            "Tughlaq",
+            "Sayyid",
+            "Lodi"
+          ]
+        },
+        {
+          "number": 9,
+          "title": "Mughal empire",
+          "subtopics": []
+        },
+        {
+          "number": 10,
+          "title": "East India Company rise",
+          "subtopics": [
+            "Plassey",
+            "Buxar"
+          ]
+        },
+        {
+          "number": 11,
+          "title": "Revolt of 1857",
+          "subtopics": [
+            "Causes",
+            "Events",
+            "Effects",
+            "Failure"
+          ]
+        },
+        {
+          "number": 12,
+          "title": "Education under British rule",
+          "subtopics": []
+        },
+        {
+          "number": 13,
+          "title": "National movement, 1885-1947",
+          "subtopics": []
+        }
+      ],
+      "World": [
+        {
+          "number": 1,
+          "title": "Beginning of modern age",
+          "subtopics": [
+            "Renaissance",
+            "Reformation"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "World wars",
+          "subtopics": [
+            "First World War",
+            "Second World War"
+          ]
+        }
+      ]
+    }
+  },
+  "resources": [
+    {
+      "title": "Learner Guide (6079 KB)",
+      "url": "https://nios.ac.in/media/documents/213_learnerguide_english.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "Learner Guide in Hindi (6289 KB)",
+      "url": "https://nios.ac.in/media/documents/213_learnerguide_hindi.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "General Instructions for Worksheet",
+      "url": "https://nios.ac.in/media/documents/Worksheet_Senior_Secondary/Instructions_for_Worksheet-ed.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "INTRODUCTION TO SOCIAL SCIENCE (147 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-00.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-00.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L 0 PART 01 INTRODUCTION TO SOCIAL SCIENCE",
+      "url": "https://www.youtube.com/watch?v=7EfzdX5vRXA",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-00(1)",
+      "url": "https://youtu.be/7r0bfVc4Sqk?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-00(2",
+      "url": "https://youtu.be/a87LUGhwyGY?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-00(3)",
+      "url": "https://youtu.be/tPv1RMlnoO4?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-00",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_title_page.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-00",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson00.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-00",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-0.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-00",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_0.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "First Page",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/213_first_page.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/soc_sc_ws_H_1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "ANCIENT WORLD (157 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-01.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 1",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-01.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "Lesson 1, Ancient World Part 1",
+      "url": "https://www.youtube.com/watch?v=UDyj1iXKgD0",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-01(1)",
+      "url": "https://youtu.be/Efy73S_XuxQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-01(2)",
+      "url": "https://youtu.be/ZtuAMno7z-g?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-01(3)",
+      "url": "https://youtu.be/w5R4tUqFDAs?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-01(4)",
+      "url": "https://youtu.be/jv5xyFexNk4?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-1",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 1",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 1",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -1",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/soc_sc_ws_H_1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-1",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_1.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "MEDIEVAL WORLD",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-02.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 2",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-02.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L 2 Medieval India, Part 2 Video",
+      "url": "https://www.youtube.com/watch?v=sYp0NccF0WY",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L 2 part 1, Europe In Medieval Times",
+      "url": "https://www.youtube.com/watch?v=87rlS3hcBpg",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-02(1)",
+      "url": "https://youtu.be/9o7l9qbNgG4?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-02(2)",
+      "url": "https://youtu.be/F10ERq3FsMI?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-02(3)",
+      "url": "https://youtu.be/31D_m2TGgqs?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-2",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L2.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 2",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_2.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-2",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-2.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -2",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/soc_sc_ws_H_2.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-2",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_2.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "MODERN WORLD - I (258 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-03.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 3",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-03.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L 3 MODERN WORLD - I , Part 1 Video",
+      "url": "https://www.youtube.com/watch?v=aTUmK-qtQW8",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L 3 ,MODERN WORLD - I , part 2 Video",
+      "url": "https://www.youtube.com/watch?v=yN_Bh4hz9H0",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-03(1)",
+      "url": "https://youtu.be/GX1ui5oXoLs?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-03(2)",
+      "url": "https://youtu.be/C_VD7-PjP-I?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-03(3)",
+      "url": "https://youtu.be/XE-Ry6W7ErI?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-03(4)",
+      "url": "https://youtu.be/63zmGYJWKiw?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-03(5)",
+      "url": "https://youtu.be/yyn1ODrt_zU?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-03(6)",
+      "url": "https://youtu.be/mRCseVxoIrg?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-03(7)",
+      "url": "https://youtu.be/hDuvScHKZ2A?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-03(8)",
+      "url": "https://youtu.be/8CJSKiOUQ40?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-3",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L3.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-3",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_3.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 3",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-3.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -3",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/soc_sc_ws_H_3.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-3",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_3.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "MODERN WORLD - Ii (389 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-04.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 4",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-04.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 4 part 1 industrial revalution Video",
+      "url": "https://www.youtube.com/watch?v=L6yJFszqn_A",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 4, World War 1 Video",
+      "url": "https://www.youtube.com/watch?v=Y-5jE_JIS2o",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 4, World War II Video",
+      "url": "https://www.youtube.com/watch?v=qbi-UHvX2bY",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-04(1)",
+      "url": "https://youtu.be/gGqgLd6ynJU?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-04(2)",
+      "url": "https://youtu.be/5Kf1pSK6oQk?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-04(3)",
+      "url": "https://youtu.be/aHK017G4JhE?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-04(4)",
+      "url": "https://youtu.be/SlU4rhSoeO4?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-04(5)",
+      "url": "https://youtu.be/8qFZ1z4Ry7I?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-4",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L4.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 4",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_4.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 4",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-4.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -4",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_4.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-4",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_4.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "IMPACT OF BRITISH RULE ON INDIA: ECONOMIC, SOCIAL AND CULTURAL (1757-1857) (389 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-05.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 5",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-05.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-05(1)",
+      "url": "https://youtu.be/9i7RAQIY51k?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-05(2)",
+      "url": "https://youtu.be/iM3LqpFX3y4?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-05(3)",
+      "url": "https://youtu.be/GrYBlZ0Sc64?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-05(4)",
+      "url": "https://youtu.be/fL8TUhRwWbU?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-05(5)",
+      "url": "https://youtu.be/ZSViIBlrHgA?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-05(6)",
+      "url": "https://youtu.be/H0wRK348WgU?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-5",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L5.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 5",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_5.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 5",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-5.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -5",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_5.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-5",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_5.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "RELIGIOUS AND SOCIAL AWKENING IN COLONIAL INDIA (398 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-06.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 6",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-06.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-06(0)",
+      "url": "https://youtu.be/z5I740UQKYw?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-06(1)",
+      "url": "https://youtu.be/8VxJvN9zKHc?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-06(2)",
+      "url": "https://youtu.be/oAjJ8vHb_2k?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-6",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L6.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-6",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_6.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 6",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-6.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -6",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_6.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-6",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_6.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "POPULAR RESISTANCE TO THE BRITISH RULE (298 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-07.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 7",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-07.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 7 POPULAR RESISTANCE TO BRITISH RULE Video",
+      "url": "https://www.youtube.com/watch?v=_WbLzIecZFE",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-07(1)",
+      "url": "https://youtu.be/0hjTKf94ShI?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-07(2)",
+      "url": "https://youtu.be/64MtU26v2g4?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-07(3)",
+      "url": "https://youtu.be/Vpx2ZJDAaPU?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-07(4)",
+      "url": "https://youtu.be/tQrDYN1vvFU?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-07(5)",
+      "url": "https://youtu.be/ryJHzYjMZRc?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-07(6)",
+      "url": "https://youtu.be/eXHR7J34yGQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-07(0)",
+      "url": "https://youtu.be/AcMBiVFcV3Q?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-7",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L7.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 7",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_7.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 7",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-7.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-7",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_7.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "INDIAN NATIONAL MOVEMENT (254 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-08.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 8",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-08.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 8 part 2 Video",
+      "url": "https://www.youtube.com/watch?v=g9Qu1l6Qx_A",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-08(1)",
+      "url": "https://youtu.be/l09-4ju-MMo?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-08(2)",
+      "url": "https://youtu.be/ReMUbHdJ6X4?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-08(3)",
+      "url": "https://youtu.be/Qn8msaE8rhE?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-08(4)",
+      "url": "https://youtu.be/dt8V3A7D6gQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-08(5)",
+      "url": "https://youtu.be/QA8x2CC0Yfo?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-08(6)",
+      "url": "https://youtu.be/m-HNbHhix4w?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-08(7)",
+      "url": "https://youtu.be/pBZLAAFQKTQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-8",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L8.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-8",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_8.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 8",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-8.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -8",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_8.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-8",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_8.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "PHYSIOGRAPHY OF INDIA (354 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-09.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 9",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-09.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(1)",
+      "url": "https://youtu.be/W38slH2olLQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(2)",
+      "url": "https://youtu.be/dgZrNS3j2XE?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(3)",
+      "url": "https://youtu.be/ljWMEDxRtuM?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(4)",
+      "url": "https://youtu.be/_Ab9jj9JXQA?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(5)",
+      "url": "https://youtu.be/Qwh7yXGaVY0?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(6)",
+      "url": "https://youtu.be/hSsI0xPVOIw?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(7)",
+      "url": "https://youtu.be/VWiTx9GQo9U?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(8)",
+      "url": "https://youtu.be/H78_ZniTDZQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-09(0)",
+      "url": "https://youtu.be/hEMGgtRy2fY?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-9",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L9.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 9",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_9.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 9",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-9.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -9",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_9.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "CLIMATE (218 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-10.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 10",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-10.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 10 Climate Final Geography Video",
+      "url": "https://www.youtube.com/watch?v=bx54GZsEFeo",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-10(1)",
+      "url": "https://youtu.be/aqN2y2fO60g?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-10(2)",
+      "url": "https://youtu.be/5R0tx1POwhE?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-10(3)",
+      "url": "https://youtu.be/OmO5H2WAkUU?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-10",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L10.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 10",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_10.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-L- 10",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-10.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "BIO-DIVERSITY (2151 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-11.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 11",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-11.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-11(1)",
+      "url": "https://youtu.be/BOBTwRchNDc?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-11(2)",
+      "url": "https://youtu.be/qsnehlIq5mI?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-11",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L11.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 11",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_11.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-L- 11",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-11.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "AGRICULTURE IN INDIA(424 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-12.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 12",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-12.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "Lesson 12 Agriculture in India",
+      "url": "https://www.youtube.com/watch?v=OUCB7XD0nao",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-12(1)",
+      "url": "https://youtu.be/XBj6xiIlWYQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-12",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L12.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 12",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_12.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 12",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-12.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "TRANSPORT AND COMMUNICATION(594 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-13.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 13",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-13.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 13 TRANSPORT AND COMMUNICATION Video",
+      "url": "https://www.youtube.com/watch?v=nXZNqTBOdNw",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-13(1)",
+      "url": "https://youtu.be/lav6w-bfdPY?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-13",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L13.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 13",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_13.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 13",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-13.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "POPULATION: OUR GREATEST RESOURCE(600 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-14.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 14",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-14.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 14,Population Video",
+      "url": "https://www.youtube.com/watch?v=yRHTa6Dvd3Y",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-14(1)",
+      "url": "https://youtu.be/h5WLLbRJkBU?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-14(2)",
+      "url": "https://youtu.be/HCiqWIFhCKk?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-14",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L14.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 14",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_14.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 14",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-14.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "CONSTITUTIONAL VALUES AND POLITICAL SYSTEM IN INDIA(284 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-15.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 15",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-15.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 15,CONSTITUTION VALUES & POLITICAL SYSTEM IN INDIA Video",
+      "url": "https://www.youtube.com/watch?v=gnpW1TEI8lg",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-15(1)",
+      "url": "https://youtu.be/oSvL7kbwqho?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-15(2)",
+      "url": "https://youtu.be/S_eLznaOhsQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-15(3)",
+      "url": "https://youtu.be/vXot0mP9yfg?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-15",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L15.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 15",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_15.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 15",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-15.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -15",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_15.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS 15",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_15.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "FUNDAMENTAL RIGHTS AND FUNDAMENTAL DUTIES(477 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-16.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 16",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-16.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 16 FUNDAMENTAL RIGHT & FUNDAMENTAL DUTIES Pol Sc Video",
+      "url": "https://www.youtube.com/watch?v=DP0RN8MDzxM",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-16(1)",
+      "url": "https://youtu.be/0ZrNSGVr5C8?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-16",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L16.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-L- 16",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_16.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 16",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-16.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -16",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_16.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-16",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_16.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "INDIA - A WELFARE STATE(347 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-17.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 17",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-17.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 17, INDIA A WELFARE STATE Video",
+      "url": "https://www.youtube.com/watch?v=g4w6TU2L15E",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-17(1)",
+      "url": "https://youtu.be/9u6kCwvn_eM?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-17",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L17.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-L- 17",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_17.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 17",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-17.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -17",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_17.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-17",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_17.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "LOCAL GOVERNMENTS AND FIELD ADMINISTRATION(625 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-18.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 18",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-18.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST Local Goverment and Field Administration Video",
+      "url": "https://www.youtube.com/watch?v=KWY1axdMPvM",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-18(1)",
+      "url": "https://youtu.be/IRRdMzhL-Lg?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-18(2)",
+      "url": "https://youtu.be/xtVR1NzhFIQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-18",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L18.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-L- 18",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_18.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 18",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-18.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -18",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_18.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-18",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_18.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "GOVERNANCE AT THE STATE LEVEL(468 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-19.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 19",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-19.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "Lesson-19 GOVERNANCE AT THE STATE LEVEL",
+      "url": "https://www.youtube.com/watch?v=OJD95vMBGVs",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-19(1)",
+      "url": "https://youtu.be/QOTnnIGZj40?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-19",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L19.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 19",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_19.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 19",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-19.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -19",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_19.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-19",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_19.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "GOVERNANCE AT THE UNION LEVEL(944 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-20.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 20",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-20.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-20(1)",
+      "url": "https://youtu.be/zijaPAcSUXA?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-20",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L20.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "-L- 20",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_20.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 20",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-20.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -20",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_20.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-20",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_20.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "POLITICAL PARTIES AND PRESSURE GROUPS(1562 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-21.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 21",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-21.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 21,POLITICAL PARTIES & PRESSURE GROUPS Video",
+      "url": "https://www.youtube.com/watch?v=qIA7R48ZJZs",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-21(1)",
+      "url": "https://youtu.be/rvotPS8o0aA?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-21(2)",
+      "url": "https://youtu.be/u7bXfySftg4?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-21",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L21.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 21",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_21.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 21",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-21.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -21",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_21.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-21",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_21.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "PEOPLE'S PARTICIPATION IN THE DEMOCRATIC PROCESS(499 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-22.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 22",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-22.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-22(1)",
+      "url": "https://youtu.be/F4fV1WNsfSM?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-22(2)",
+      "url": "https://youtu.be/Am2dYKpuGhQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-22",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L22.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 22",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_22.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 22",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-22.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -22",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_22.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-22",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_22.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "CHALLENGES TO INDIAN DEMOCRACY(5580 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-23.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 23",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-23.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 23",
+      "url": "https://www.youtube.com/watch?v=7ktYR5TWS_g",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-23(1)",
+      "url": "https://youtu.be/I58MvpvCRQA?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-23(2)",
+      "url": "https://youtu.be/0m9drsX4cJQ?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-23(3)",
+      "url": "https://youtu.be/IIy6v-QZ2Ck?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-23(0)",
+      "url": "https://youtu.be/9WNcM173-Og?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-23",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L23.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-23",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_23.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 23",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-23.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -23",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_23.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-23",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_23.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "NATIONAL INTEGRATION AND SECULARISM(525 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-24.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 24",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-24.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 24,National Integration and Secularism Video",
+      "url": "https://www.youtube.com/watch?v=JryX_3jFneo",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-24(1)",
+      "url": "https://youtu.be/4SXoipGDa_g?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-24(2)",
+      "url": "https://youtu.be/pTb5oGxpSGE?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-24(0)",
+      "url": "https://youtu.be/qiNW_I5-0xE?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-24",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L24.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 24",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_24.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 24",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-24.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -24",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_24.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-24",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_24.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SOCIO-ECONOMIC DEVELOPMENT AND EMPOWERMENT OF DISADVANTAGED GROUPS(825 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-25.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 25",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-25.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-25(1)",
+      "url": "https://youtu.be/-pPrQfEpYcc?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-25(2)",
+      "url": "https://youtu.be/1kICbp3OEKI?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-25(3)",
+      "url": "https://youtu.be/dMpiZ6VED8I?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-25(0)",
+      "url": "https://youtu.be/_kM1NYRiQNw?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-25",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L25.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 25",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_25.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 25",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-25.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -25",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_25.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS- 25",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_25.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "ENVIRONMENTAL DEGRADATION AND DISASTER MANAGEMENT(426 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-26.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 26",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-26.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-26(0)",
+      "url": "https://youtu.be/OcrsAt51H2A?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-26(1)",
+      "url": "https://youtu.be/2YYIKMOh8ag?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-26",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L26.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 26",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_26.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 26",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-26.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -26",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_26.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-26",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_26.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "PEACE AND SECURITY(526 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-27.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "पाठ 27",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-27.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "SST L 27,PEACE & SECURITY Video",
+      "url": "https://www.youtube.com/watch?v=m9-oXPD7ptM",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-27(1)",
+      "url": "https://youtu.be/SbwaRm06l78?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-27(2)",
+      "url": "https://youtu.be/4LfILBs89K0?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-27(0)",
+      "url": "https://youtu.be/nU2GQOPYHFY?list=PLUuOqp8QaNB1-E-qEm7UVXHMii9P8g5mp",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-27",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_L27.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L-27",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_English_Medium/Lesson_27.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "L- 27",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_213_Hindi_Medium/L-27.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपत्रक -27",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/soc_sci_worksheet_hindi/213_ws_H_27.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "WS-27",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/social_science_worksheet/Social_sci_worksheet_213_E_27.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "Sample Paper(573 KB)",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Sample Paper.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "QP",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/213_LG_URDU/213_LG_URDU_QP.pdf",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "",
+      "url": "https://www.youtube.com/channel/UCXBn5q8Zv4Bz-LZXWWD7Jxw",
+      "publisher": "NIOS",
+      "source": "https://rcpatna.nios.ac.in/social-science-213.html",
+      "language": "verify audio; Hindi PDF identifiable by /Hindi/",
+      "level": "secondary foundation",
+      "embedVerified": false
+    },
+    {
+      "title": "Samajik Sikhya class 10 Punjabi part I",
+      "url": "https://static.pseb.ac.in/media/1670561302_Samajik%20Sikhya-10%28Punjabi%29%20Bhag-I.pdf",
+      "publisher": "PSEB",
+      "language": "pa",
+      "source": "https://www.pseb.ac.in/books?catid=2",
+      "verification": "Official index link verified; PDF web rendering denied or exceeded size limit; browser embed not tested",
+      "embedVerified": false
+    },
+    {
+      "title": "Samajik Sikhya class 10 Punjabi part II",
+      "url": "https://static.pseb.ac.in/media/1670561501_Smajik%20Sikhya-Part-10%28Punjabi%29%20Bhag-II.pdf",
+      "publisher": "PSEB",
+      "language": "pa",
+      "source": "https://www.pseb.ac.in/books?catid=2",
+      "verification": "Official index link verified; PDF web rendering denied or exceeded size limit; browser embed not tested",
+      "embedVerified": false
+    },
+    {
+      "title": "Bhugol class 12 Punjabi",
+      "url": "https://static.pseb.ac.in/media/1670582676_Bhugol-12%28Punjabi%29.pdf",
+      "publisher": "PSEB",
+      "language": "pa",
+      "source": "https://www.pseb.ac.in/books?catid=2",
+      "verification": "Official index link verified; PDF web rendering denied or exceeded size limit; browser embed not tested",
+      "embedVerified": false
+    },
+    {
+      "title": "Social Science class 9 Punjabi part I",
+      "url": "https://static.pseb.ac.in/media/1670479632_Samajik%20Vigyaan-9%28Punjabi%29%20Bhag-1.pdf",
+      "publisher": "PSEB",
+      "language": "pa",
+      "source": "https://www.pseb.ac.in/books?catid=2",
+      "verification": "Official index link verified; PDF web rendering denied or exceeded size limit; browser embed not tested",
+      "embedVerified": false
+    },
+    {
+      "title": "Social Science class 9 Punjabi part II",
+      "url": "https://static.pseb.ac.in/media/1670479698_Samajik%20Vigyaan-9%28Punjabi%29Bhag-2.pdf",
+      "publisher": "PSEB",
+      "language": "pa",
+      "source": "https://www.pseb.ac.in/books?catid=2",
+      "verification": "Official index link verified; PDF web rendering denied or exceeded size limit; browser embed not tested",
+      "embedVerified": false
+    },
+    {
+      "title": "Social Science class 7 Hindi",
+      "url": "https://static.pseb.ac.in/media/1669091019_Samajik%20Vighyaan-7%28Hindi%29.pdf",
+      "publisher": "PSEB",
+      "language": "hi",
+      "source": "https://www.pseb.ac.in/books?catid=2",
+      "verification": "Official index link verified; PDF web rendering denied or exceeded size limit; browser embed not tested",
+      "embedVerified": false
+    },
+    {
+      "title": "संविधान: क्यों और कैसे?",
+      "url": "https://ncert.nic.in/textbook/pdf/khps201.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "भारतीय संविधान में अधिकार",
+      "url": "https://ncert.nic.in/textbook/pdf/khps202.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "चुनाव और प्रतिनिधित्व",
+      "url": "https://ncert.nic.in/textbook/pdf/khps203.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "कार्यपालिका",
+      "url": "https://ncert.nic.in/textbook/pdf/khps204.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "विधायिका",
+      "url": "https://ncert.nic.in/textbook/pdf/khps205.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "न्यायपालिका",
+      "url": "https://ncert.nic.in/textbook/pdf/khps206.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "संघवाद",
+      "url": "https://ncert.nic.in/textbook/pdf/khps207.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "स्थानीय शासन",
+      "url": "https://ncert.nic.in/textbook/pdf/khps208.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "संविधान: एक जीवंत दस्तावेज",
+      "url": "https://ncert.nic.in/textbook/pdf/khps209.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    },
+    {
+      "title": "संविधान का राजनीतिक दर्शन",
+      "url": "https://ncert.nic.in/textbook/pdf/khps210.pdf",
+      "publisher": "NCERT",
+      "language": "hi",
+      "source": "https://ncert.nic.in/textbook.php?khps2=0-10",
+      "verification": "Official book index with 10 chapter links; chapters mapped to book table of contents",
+      "embedVerified": false
+    }
+  ],
+  "copyright": "Use links/official embeds with attribution; do not copy/rehost full NCERT or PSEB copyrighted textbooks. In-house original notes may summarize facts, cite references, and label as original preparation material."
+}

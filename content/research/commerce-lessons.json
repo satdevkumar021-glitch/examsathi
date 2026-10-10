@@ -1,0 +1,944 @@
+[
+  {
+    "id": "commerce-accounting-basics",
+    "subject": "Commerce",
+    "unit": "Accountancy",
+    "title": {
+      "hi": "लेखांकन के मूल सिद्धांत",
+      "pa": "ਲੇਖਾਕਾਰੀ ਦੇ ਮੂਲ ਸਿਧਾਂਤ",
+      "en": "Fundamentals of Accounting"
+    },
+    "summary": {
+      "hi": "लेखांकन की अवधारणाएँ, जर्नल, खाता-बही, तलपट और वित्तीय विवरण।",
+      "pa": "ਲੇਖਾਕਾਰੀ ਦੀਆਂ ਧਾਰਨਾਵਾਂ, ਜਰਨਲ, ਖਾਤਾ-ਬਹੀ, ਟ੍ਰਾਇਲ ਬੈਲੇਂਸ ਅਤੇ ਵਿੱਤੀ ਬਿਆਨ।",
+      "en": "Accounting concepts, journal entries, ledger, trial balance, and financial statements."
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "लेखांकन की अवधारणाएँ और परंपराएँ",
+          "pa": "ਲੇਖਾਕਾਰੀ ਦੀਆਂ ਧਾਰਨਾਵਾਂ ਅਤੇ ਪਰੰਪਰਾਵਾਂ",
+          "en": "Accounting Concepts and Conventions"
+        },
+        "text": {
+          "hi": "लेखांकन की प्रमुख अवधारणाएँ: (1) व्यवसाय इकाई अवधारणा — व्यवसाय और स्वामी अलग-अलग माने जाते हैं। (2) चालू व्यवसाय अवधारणा — व्यवसाय अनिश्चित काल तक चलता रहेगा। (3) मौद्रिक अवधारणा — केवल मौद्रिक लेनदेन दर्ज होते हैं। (4) लागत अवधारणा — संपत्तियाँ लागत मूल्य पर दर्ज की जाती हैं। (5) मिलान अवधारणा — एक अवधि की आय और व्यय को एक साथ दर्शाया जाता है। (6) रूढ़िवाद परंपरा — संभावित हानि को पहचानें, लाभ नहीं। (7) भौतिकता परंपरा — केवल महत्वपूर्ण मदें अलग से दर्ज की जाती हैं। (8) एकरूपता परंपरा — एक ही लेखांकन नीति वर्ष-दर-वर्ष अपनाई जाती है। डबल एंट्री प्रणाली: प्रत्येक लेनदेन में दो पक्ष होते हैं — डेबिट और क्रेडिट। GAAP (सामान्य स्वीकृत लेखांकन सिद्धांत) इन्हीं अवधारणाओं पर आधारित है।",
+          "pa": "ਲੇਖਾਕਾਰੀ ਦੀਆਂ ਮੁੱਖ ਧਾਰਨਾਵਾਂ: (1) ਵਪਾਰਕ ਇਕਾਈ ਧਾਰਨਾ — ਵਪਾਰ ਅਤੇ ਮਾਲਕ ਵੱਖਰੇ ਮੰਨੇ ਜਾਂਦੇ ਹਨ। (2) ਚੱਲਦੇ ਵਪਾਰ ਦੀ ਧਾਰਨਾ — ਵਪਾਰ ਅਣਮਿੱਥੇ ਸਮੇਂ ਤੱਕ ਚੱਲਦਾ ਰਹੇਗਾ। (3) ਮੁਦਰਾ ਧਾਰਨਾ — ਕੇਵਲ ਮੁਦਰਾ ਲੈਣ-ਦੇਣ ਦਰਜ ਹੁੰਦੇ ਹਨ। (4) ਲਾਗਤ ਧਾਰਨਾ — ਸੰਪਤੀਆਂ ਲਾਗਤ ਮੁੱਲ 'ਤੇ ਦਰਜ ਕੀਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ। (5) ਮੇਲ ਧਾਰਨਾ — ਇੱਕ ਮਿਆਦ ਦੀ ਆਮਦਨ ਅਤੇ ਖਰਚੇ ਇਕੱਠੇ ਦਿਖਾਏ ਜਾਂਦੇ ਹਨ। ਡਬਲ ਐਂਟਰੀ ਪ੍ਰਣਾਲੀ: ਹਰ ਲੈਣ-ਦੇਣ ਵਿੱਚ ਦੋ ਪੱਖ ਹੁੰਦੇ ਹਨ — ਡੈਬਿਟ ਅਤੇ ਕ੍ਰੈਡਿਟ। GAAP ਇਨ੍ਹਾਂ ਧਾਰਨਾਵਾਂ 'ਤੇ ਆਧਾਰਿਤ ਹੈ।",
+          "en": "Key accounting concepts: (1) Business Entity — business and owner are separate. (2) Going Concern — business will continue indefinitely. (3) Money Measurement — only monetary transactions recorded. (4) Cost Concept — assets recorded at cost. (5) Matching Concept — revenues and expenses matched to the same period. (6) Conservatism — anticipate losses, not profits. (7) Materiality — only significant items shown separately. (8) Consistency — same accounting policy used year to year. Double Entry System: every transaction has two sides — debit and credit. GAAP (Generally Accepted Accounting Principles) is based on these concepts."
+        }
+      },
+      {
+        "heading": {
+          "hi": "जर्नल, खाता-बही और तलपट",
+          "pa": "ਜਰਨਲ, ਖਾਤਾ-ਬਹੀ ਅਤੇ ਟ੍ਰਾਇਲ ਬੈਲੇਂਸ",
+          "en": "Journal, Ledger and Trial Balance"
+        },
+        "text": {
+          "hi": "जर्नल (मूल प्रविष्टि की पुस्तक): लेनदेन को तारीख-वार दर्ज किया जाता है। प्रत्येक प्रविष्टि में खाता नाम, डेबिट/क्रेडिट राशि और नरेशन होती है। खाता-बही (Ledger): जर्नल प्रविष्टियों को खातेवार स्थानांतरित किया जाता है। T-खाते का बायाँ भाग डेबिट और दायाँ भाग क्रेडिट होता है। तलपट (Trial Balance): सभी खातों के डेबिट और क्रेडिट शेषों की सूची। यदि डेबिट = क्रेडिट, तो गणितीय सटीकता सिद्ध होती है। त्रुटियाँ जो तलपट नहीं पकड़ती: चूक की त्रुटि, क्षतिपूरक त्रुटि, सिद्धांत की त्रुटि। नकद पुस्तक (Cash Book): नकद और बैंक लेनदेन का विशेष जर्नल।",
+          "pa": "ਜਰਨਲ (ਮੂਲ ਐਂਟਰੀ ਦੀ ਕਿਤਾਬ): ਲੈਣ-ਦੇਣ ਤਾਰੀਖ਼ ਅਨੁਸਾਰ ਦਰਜ ਕੀਤੇ ਜਾਂਦੇ ਹਨ। ਖਾਤਾ-ਬਹੀ (Ledger): ਜਰਨਲ ਐਂਟਰੀਆਂ ਨੂੰ ਖਾਤੇਵਾਰ ਤਬਦੀਲ ਕੀਤਾ ਜਾਂਦਾ ਹੈ। T-ਖਾਤੇ ਦਾ ਖੱਬਾ ਪਾਸਾ ਡੈਬਿਟ ਅਤੇ ਸੱਜਾ ਪਾਸਾ ਕ੍ਰੈਡਿਟ ਹੁੰਦਾ ਹੈ। ਟ੍ਰਾਇਲ ਬੈਲੇਂਸ: ਸਾਰੇ ਖਾਤਿਆਂ ਦੇ ਡੈਬਿਟ ਅਤੇ ਕ੍ਰੈਡਿਟ ਸ਼ੇਸ਼ਾਂ ਦੀ ਸੂਚੀ। ਜੇ ਡੈਬਿਟ = ਕ੍ਰੈਡਿਟ, ਤਾਂ ਗਣਿਤਕ ਸ਼ੁੱਧਤਾ ਸਿੱਧ ਹੁੰਦੀ ਹੈ।",
+          "en": "Journal (Book of Original Entry): transactions recorded date-wise. Each entry has account names, debit/credit amounts, and narration. Ledger: journal entries posted account-wise; T-account left side = debit, right = credit. Trial Balance: list of all account balances; if Debit total = Credit total, arithmetical accuracy is proved. Errors not revealed by trial balance: error of omission, compensating error, error of principle. Cash Book: special journal for cash and bank transactions."
+        }
+      },
+      {
+        "heading": {
+          "hi": "वित्तीय विवरण",
+          "pa": "ਵਿੱਤੀ ਬਿਆਨ",
+          "en": "Financial Statements"
+        },
+        "text": {
+          "hi": "व्यापार खाता (Trading Account): सकल लाभ/हानि निकाली जाती है। सूत्र: सकल लाभ = विक्रय − बेचे गए माल की लागत। लाभ-हानि खाता (Profit & Loss Account): शुद्ध लाभ/हानि निकाली जाती है। तुलन-पत्र (Balance Sheet): एक निश्चित तिथि पर संपत्तियों और देनदारियों का विवरण। संपत्ति के प्रकार: स्थायी संपत्ति (Fixed Assets), चालू संपत्ति (Current Assets)। देनदारियों के प्रकार: दीर्घकालिक देनदारियाँ, चालू देनदारियाँ। मूल्यह्रास (Depreciation): स्थायी संपत्ति के मूल्य में कमी। विधियाँ: सीधी रेखा विधि (SLM), लिखित-मूल्य विधि (WDV)।",
+          "pa": "ਵਪਾਰ ਖਾਤਾ (Trading Account): ਕੁੱਲ ਲਾਭ/ਨੁਕਸਾਨ ਕੱਢਿਆ ਜਾਂਦਾ ਹੈ। ਲਾਭ-ਹਾਨੀ ਖਾਤਾ: ਸ਼ੁੱਧ ਲਾਭ/ਨੁਕਸਾਨ ਕੱਢਿਆ ਜਾਂਦਾ ਹੈ। ਤੁਲਨ-ਪੱਤਰ (Balance Sheet): ਇੱਕ ਨਿਸ਼ਚਿਤ ਤਾਰੀਖ਼ 'ਤੇ ਸੰਪਤੀਆਂ ਅਤੇ ਦੇਣਦਾਰੀਆਂ ਦਾ ਵੇਰਵਾ। ਮੁੱਲ ਹ੍ਰਾਸ (Depreciation): ਸਥਾਈ ਸੰਪਤੀ ਦੇ ਮੁੱਲ ਵਿੱਚ ਕਮੀ। ਵਿਧੀਆਂ: ਸਿੱਧੀ ਰੇਖਾ ਵਿਧੀ (SLM), ਲਿਖਤ-ਮੁੱਲ ਵਿਧੀ (WDV)।",
+          "en": "Trading Account: gross profit/loss computed. Formula: Gross Profit = Sales − Cost of Goods Sold. Profit & Loss Account: net profit/loss computed. Balance Sheet: assets and liabilities on a specific date. Asset types: Fixed Assets, Current Assets. Liability types: Long-term, Current. Depreciation: reduction in fixed asset value. Methods: Straight Line Method (SLM), Written Down Value (WDV)."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "question": {
+          "hi": "व्यवसाय इकाई अवधारणा क्या है?",
+          "pa": "ਵਪਾਰਕ ਇਕਾਈ ਧਾਰਨਾ ਕੀ ਹੈ?",
+          "en": "What is the Business Entity Concept?"
+        },
+        "answer": {
+          "hi": "व्यवसाय और स्वामी को अलग-अलग इकाइयाँ माना जाता है।",
+          "pa": "ਵਪਾਰ ਅਤੇ ਮਾਲਕ ਨੂੰ ਵੱਖਰੀਆਂ ਇਕਾਈਆਂ ਮੰਨਿਆ ਜਾਂਦਾ ਹੈ।",
+          "en": "The business and the owner are treated as separate entities."
+        }
+      },
+      {
+        "question": {
+          "hi": "डबल एंट्री प्रणाली का नियम क्या है?",
+          "pa": "ਡਬਲ ਐਂਟਰੀ ਪ੍ਰਣਾਲੀ ਦਾ ਨਿਯਮ ਕੀ ਹੈ?",
+          "en": "What is the rule of Double Entry System?"
+        },
+        "answer": {
+          "hi": "प्रत्येक लेनदेन में डेबिट = क्रेडिट होता है।",
+          "pa": "ਹਰ ਲੈਣ-ਦੇਣ ਵਿੱਚ ਡੈਬਿਟ = ਕ੍ਰੈਡਿਟ ਹੁੰਦਾ ਹੈ।",
+          "en": "Every transaction has equal debit and credit."
+        }
+      },
+      {
+        "question": {
+          "hi": "तलपट क्या सिद्ध करता है?",
+          "pa": "ਟ੍ਰਾਇਲ ਬੈਲੇਂਸ ਕੀ ਸਿੱਧ ਕਰਦਾ ਹੈ?",
+          "en": "What does a Trial Balance prove?"
+        },
+        "answer": {
+          "hi": "गणितीय सटीकता — डेबिट जोड़ = क्रेडिट जोड़।",
+          "pa": "ਗਣਿਤਕ ਸ਼ੁੱਧਤਾ — ਡੈਬਿਟ ਜੋੜ = ਕ੍ਰੈਡਿਟ ਜੋੜ।",
+          "en": "Arithmetical accuracy — total debits equal total credits."
+        }
+      },
+      {
+        "question": {
+          "hi": "मिलान अवधारणा क्या है?",
+          "pa": "ਮੇਲ ਧਾਰਨਾ ਕੀ ਹੈ?",
+          "en": "What is the Matching Concept?"
+        },
+        "answer": {
+          "hi": "एक लेखांकन अवधि की आय और उससे संबंधित व्यय को एक साथ दर्ज करना।",
+          "pa": "ਇੱਕ ਲੇਖਾਕਾਰੀ ਮਿਆਦ ਦੀ ਆਮਦਨ ਅਤੇ ਸੰਬੰਧਿਤ ਖਰਚੇ ਇਕੱਠੇ ਦਰਜ ਕਰਨਾ।",
+          "en": "Expenses incurred to earn revenue must be recorded in the same accounting period."
+        }
+      },
+      {
+        "question": {
+          "hi": "सकल लाभ का सूत्र क्या है?",
+          "pa": "ਕੁੱਲ ਲਾਭ ਦਾ ਫਾਰਮੂਲਾ ਕੀ ਹੈ?",
+          "en": "What is the formula for Gross Profit?"
+        },
+        "answer": {
+          "hi": "सकल लाभ = विक्रय − बेचे गए माल की लागत",
+          "pa": "ਕੁੱਲ ਲਾਭ = ਵਿਕਰੀ − ਵੇਚੇ ਗਏ ਮਾਲ ਦੀ ਲਾਗਤ",
+          "en": "Gross Profit = Sales − Cost of Goods Sold"
+        }
+      },
+      {
+        "question": {
+          "hi": "SLM (सीधी रेखा विधि) क्या है?",
+          "pa": "SLM (ਸਿੱਧੀ ਰੇਖਾ ਵਿਧੀ) ਕੀ ਹੈ?",
+          "en": "What is the Straight Line Method (SLM) of depreciation?"
+        },
+        "answer": {
+          "hi": "मूल्यह्रास = (लागत − अवशिष्ट मूल्य) / उपयोगी जीवन। राशि हर वर्ष समान रहती है।",
+          "pa": "ਮੁੱਲ ਹ੍ਰਾਸ = (ਲਾਗਤ − ਅਵਸ਼ਿਸ਼ਟ ਮੁੱਲ) / ਉਪਯੋਗੀ ਜੀਵਨ। ਰਾਸ਼ੀ ਹਰ ਸਾਲ ਇੱਕੋ ਜਿਹੀ ਰਹਿੰਦੀ ਹੈ।",
+          "en": "Depreciation = (Cost − Residual Value) / Useful Life. The amount is equal each year."
+        }
+      },
+      {
+        "question": {
+          "hi": "चालू व्यवसाय अवधारणा क्या मानती है?",
+          "pa": "ਚੱਲਦੇ ਵਪਾਰ ਦੀ ਧਾਰਨਾ ਕੀ ਮੰਨਦੀ ਹੈ?",
+          "en": "What does the Going Concern Concept assume?"
+        },
+        "answer": {
+          "hi": "व्यवसाय निकट भविष्य में बंद नहीं होगा और अनिश्चित काल तक चलता रहेगा।",
+          "pa": "ਵਪਾਰ ਨੇੜੇ ਭਵਿੱਖ ਵਿੱਚ ਬੰਦ ਨਹੀਂ ਹੋਵੇਗਾ ਅਤੇ ਅਣਮਿੱਥੇ ਸਮੇਂ ਤੱਕ ਚੱਲਦਾ ਰਹੇਗਾ।",
+          "en": "The business will not be liquidated in the near future and will continue indefinitely."
+        }
+      },
+      {
+        "question": {
+          "hi": "रूढ़िवाद परंपरा क्या कहती है?",
+          "pa": "ਰੂੜ੍ਹੀਵਾਦ ਦੀ ਪਰੰਪਰਾ ਕੀ ਕਹਿੰਦੀ ਹੈ?",
+          "en": "What does the Convention of Conservatism state?"
+        },
+        "answer": {
+          "hi": "सभी संभावित हानियों को दर्ज करो, लेकिन अनिश्चित लाभों को नहीं।",
+          "pa": "ਸਾਰੇ ਸੰਭਾਵਿਤ ਨੁਕਸਾਨਾਂ ਨੂੰ ਦਰਜ ਕਰੋ, ਪਰ ਅਨਿਸ਼ਚਿਤ ਲਾਭਾਂ ਨੂੰ ਨਹੀਂ।",
+          "en": "Anticipate all possible losses but do not anticipate uncertain profits."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "com-acc-q-1",
+        "options": [
+          {
+            "hi": "व्यवसाय और स्वामी एक ही हैं",
+            "pa": "ਵਪਾਰ ਅਤੇ ਮਾਲਕ ਇੱਕੋ ਹਨ",
+            "en": "Business and owner are the same"
+          },
+          {
+            "hi": "व्यवसाय और स्वामी अलग-अलग इकाइयाँ हैं",
+            "pa": "ਵਪਾਰ ਅਤੇ ਮਾਲਕ ਵੱਖਰੀਆਂ ਇਕਾਈਆਂ ਹਨ",
+            "en": "Business and owner are separate entities"
+          },
+          {
+            "hi": "केवल स्वामी की संपत्ति दर्ज होती है",
+            "pa": "ਕੇਵਲ ਮਾਲਕ ਦੀ ਸੰਪਤੀ ਦਰਜ ਹੁੰਦੀ ਹੈ",
+            "en": "Only owner's property is recorded"
+          },
+          {
+            "hi": "व्यवसाय सरकारी स्वामित्व में है",
+            "pa": "ਵਪਾਰ ਸਰਕਾਰੀ ਮਾਲਕੀ ਵਿੱਚ ਹੈ",
+            "en": "Business is government-owned"
+          }
+        ],
+        "explanation": {
+          "hi": "व्यवसाय और स्वामी अलग-अलग लेखांकन इकाइयाँ मानी जाती हैं।",
+          "pa": "ਵਪਾਰ ਅਤੇ ਮਾਲਕ ਵੱਖਰੀਆਂ ਲੇਖਾਕਾਰੀ ਇਕਾਈਆਂ ਮੰਨੀਆਂ ਜਾਂਦੀਆਂ ਹਨ।",
+          "en": "Business and owner are treated as separate accounting entities."
+        },
+        "prompt": {
+          "hi": "व्यवसाय इकाई अवधारणा के अनुसार:",
+          "pa": "ਵਪਾਰਕ ਇਕਾਈ ਧਾਰਨਾ ਅਨੁਸਾਰ:",
+          "en": "According to the Business Entity Concept:"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-acc-q-2",
+        "options": [
+          {
+            "hi": "एक",
+            "pa": "ਇੱਕ",
+            "en": "One"
+          },
+          {
+            "hi": "दो",
+            "pa": "ਦੋ",
+            "en": "Two"
+          },
+          {
+            "hi": "तीन",
+            "pa": "ਤਿੰਨ",
+            "en": "Three"
+          },
+          {
+            "hi": "चार",
+            "pa": "ਚਾਰ",
+            "en": "Four"
+          }
+        ],
+        "explanation": {
+          "hi": "डबल एंट्री प्रणाली में हर लेनदेन के दो पक्ष होते हैं — डेबिट और क्रेडिट।",
+          "pa": "ਡਬਲ ਐਂਟਰੀ ਪ੍ਰਣਾਲੀ ਵਿੱਚ ਹਰ ਲੈਣ-ਦੇਣ ਦੇ ਦੋ ਪੱਖ ਹੁੰਦੇ ਹਨ — ਡੈਬਿਟ ਅਤੇ ਕ੍ਰੈਡਿਟ।",
+          "en": "In Double Entry System, every transaction has two aspects — debit and credit."
+        },
+        "prompt": {
+          "hi": "डबल एंट्री प्रणाली में प्रत्येक लेनदेन के कितने पक्ष होते हैं?",
+          "pa": "ਡਬਲ ਐਂਟਰੀ ਪ੍ਰਣਾਲੀ ਵਿੱਚ ਹਰ ਲੈਣ-ਦੇਣ ਦੇ ਕਿੰਨੇ ਪੱਖ ਹੁੰਦੇ ਹਨ?",
+          "en": "How many aspects does every transaction have in Double Entry System?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-acc-q-3",
+        "options": [
+          {
+            "hi": "व्यवसाय की लाभप्रदता",
+            "pa": "ਵਪਾਰ ਦੀ ਲਾਭਦਾਇਕਤਾ",
+            "en": "Profitability of the business"
+          },
+          {
+            "hi": "खातों की गणितीय सटीकता",
+            "pa": "ਖਾਤਿਆਂ ਦੀ ਗਣਿਤਕ ਸ਼ੁੱਧਤਾ",
+            "en": "Arithmetical accuracy of accounts"
+          },
+          {
+            "hi": "स्वामी की पूँजी",
+            "pa": "ਮਾਲਕ ਦੀ ਪੂੰਜੀ",
+            "en": "Owner's capital"
+          },
+          {
+            "hi": "माल की खरीद-बिक्री",
+            "pa": "ਮਾਲ ਦੀ ਖਰੀਦ-ਵੇਚ",
+            "en": "Purchase and sale of goods"
+          }
+        ],
+        "explanation": {
+          "hi": "तलपट में डेबिट जोड़ = क्रेडिट जोड़ होना गणितीय सटीकता सिद्ध करता है।",
+          "pa": "ਟ੍ਰਾਇਲ ਬੈਲੇਂਸ ਵਿੱਚ ਡੈਬਿਟ ਜੋੜ = ਕ੍ਰੈਡਿਟ ਜੋੜ ਗਣਿਤਕ ਸ਼ੁੱਧਤਾ ਸਿੱਧ ਕਰਦਾ ਹੈ।",
+          "en": "Trial Balance proves arithmetical accuracy when total debits equal total credits."
+        },
+        "prompt": {
+          "hi": "तलपट किसे सिद्ध करता है?",
+          "pa": "ਟ੍ਰਾਇਲ ਬੈਲੇਂਸ ਕੀ ਸਿੱਧ ਕਰਦਾ ਹੈ?",
+          "en": "What does a Trial Balance prove?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-acc-q-4",
+        "options": [
+          {
+            "hi": "विक्रय − परिचालन व्यय",
+            "pa": "ਵਿਕਰੀ − ਸੰਚਾਲਨ ਖਰਚੇ",
+            "en": "Sales − Operating Expenses"
+          },
+          {
+            "hi": "विक्रय − बेचे गए माल की लागत",
+            "pa": "ਵਿਕਰੀ − ਵੇਚੇ ਗਏ ਮਾਲ ਦੀ ਲਾਗਤ",
+            "en": "Sales − Cost of Goods Sold"
+          },
+          {
+            "hi": "विक्रय − कर",
+            "pa": "ਵਿਕਰੀ − ਟੈਕਸ",
+            "en": "Sales − Tax"
+          },
+          {
+            "hi": "विक्रय + खरीद",
+            "pa": "ਵਿਕਰੀ + ਖਰੀਦ",
+            "en": "Sales + Purchases"
+          }
+        ],
+        "explanation": {
+          "hi": "Gross Profit = Sales − COGS; यह व्यापार खाते में निकाला जाता है।",
+          "pa": "Gross Profit = Sales − COGS; ਇਹ ਵਪਾਰ ਖਾਤੇ ਵਿੱਚ ਕੱਢਿਆ ਜਾਂਦਾ ਹੈ।",
+          "en": "Gross Profit = Sales − COGS; this is computed in the Trading Account."
+        },
+        "prompt": {
+          "hi": "सकल लाभ का सूत्र है:",
+          "pa": "ਕੁੱਲ ਲਾਭ ਦਾ ਫਾਰਮੂਲਾ ਹੈ:",
+          "en": "The formula for Gross Profit is:"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-acc-q-5",
+        "options": [
+          {
+            "hi": "हर वर्ष घटती है",
+            "pa": "ਹਰ ਸਾਲ ਘੱਟਦੀ ਹੈ",
+            "en": "Decreases every year"
+          },
+          {
+            "hi": "हर वर्ष बढ़ती है",
+            "pa": "ਹਰ ਸਾਲ ਵਧਦੀ ਹੈ",
+            "en": "Increases every year"
+          },
+          {
+            "hi": "हर वर्ष समान रहती है",
+            "pa": "ਹਰ ਸਾਲ ਇੱਕੋ ਜਿਹੀ ਰਹਿੰਦੀ ਹੈ",
+            "en": "Remains equal every year"
+          },
+          {
+            "hi": "पहले वर्ष शून्य होती है",
+            "pa": "ਪਹਿਲੇ ਸਾਲ ਜ਼ੀਰੋ ਹੁੰਦੀ ਹੈ",
+            "en": "Is zero in the first year"
+          }
+        ],
+        "explanation": {
+          "hi": "SLM में मूल्यह्रास की राशि हर वर्ष समान होती है।",
+          "pa": "SLM ਵਿੱਚ ਮੁੱਲ ਹ੍ਰਾਸ ਦੀ ਰਾਸ਼ੀ ਹਰ ਸਾਲ ਬਰਾਬਰ ਹੁੰਦੀ ਹੈ।",
+          "en": "In SLM, the depreciation charge is equal every year."
+        },
+        "prompt": {
+          "hi": "SLM में मूल्यह्रास की राशि:",
+          "pa": "SLM ਵਿੱਚ ਮੁੱਲ ਹ੍ਰਾਸ ਦੀ ਰਾਸ਼ੀ:",
+          "en": "In SLM, the depreciation amount:"
+        },
+        "answerIndex": 2
+      },
+      {
+        "id": "com-acc-q-6",
+        "options": [
+          {
+            "hi": "केवल मौद्रिक लेनदेन",
+            "pa": "ਕੇਵਲ ਮੁਦਰਾ ਲੈਣ-ਦੇਣ",
+            "en": "Only monetary transactions"
+          },
+          {
+            "hi": "सभी व्यावसायिक घटनाएँ",
+            "pa": "ਸਾਰੀਆਂ ਵਪਾਰਕ ਘਟਨਾਵਾਂ",
+            "en": "All business events"
+          },
+          {
+            "hi": "केवल खरीद-बिक्री",
+            "pa": "ਕੇਵਲ ਖਰੀਦ-ਵੇਚ",
+            "en": "Only purchases and sales"
+          },
+          {
+            "hi": "केवल बैंक लेनदेन",
+            "pa": "ਕੇਵਲ ਬੈਂਕ ਲੈਣ-ਦੇਣ",
+            "en": "Only bank transactions"
+          }
+        ],
+        "explanation": {
+          "hi": "मौद्रिक अवधारणा में केवल वे लेनदेन दर्ज होते हैं जिन्हें मुद्रा में मापा जा सके।",
+          "pa": "ਮੁਦਰਾ ਧਾਰਨਾ ਵਿੱਚ ਕੇਵਲ ਉਹ ਲੈਣ-ਦੇਣ ਦਰਜ ਹੁੰਦੇ ਹਨ ਜਿਨ੍ਹਾਂ ਨੂੰ ਮੁਦਰਾ ਵਿੱਚ ਮਾਪਿਆ ਜਾ ਸਕੇ।",
+          "en": "Only transactions expressible in monetary terms are recorded under Money Measurement Concept."
+        },
+        "prompt": {
+          "hi": "मौद्रिक अवधारणा के अनुसार लेखांकन में क्या दर्ज होता है?",
+          "pa": "ਮੁਦਰਾ ਧਾਰਨਾ ਅਨੁਸਾਰ ਲੇਖਾਕਾਰੀ ਵਿੱਚ ਕੀ ਦਰਜ ਹੁੰਦਾ ਹੈ?",
+          "en": "According to the Money Measurement Concept, what is recorded in accounting?"
+        },
+        "answerIndex": 0
+      },
+      {
+        "id": "com-acc-q-7",
+        "options": [
+          {
+            "hi": "एक अवधि का लाभ-हानि",
+            "pa": "ਇੱਕ ਮਿਆਦ ਦਾ ਲਾਭ-ਨੁਕਸਾਨ",
+            "en": "Profit and loss for a period"
+          },
+          {
+            "hi": "एक निश्चित तिथि पर संपत्तियाँ और देनदारियाँ",
+            "pa": "ਇੱਕ ਨਿਸ਼ਚਿਤ ਤਾਰੀਖ਼ 'ਤੇ ਸੰਪਤੀਆਂ ਅਤੇ ਦੇਣਦਾਰੀਆਂ",
+            "en": "Assets and liabilities on a specific date"
+          },
+          {
+            "hi": "केवल नकद प्राप्तियाँ",
+            "pa": "ਕੇਵਲ ਨਕਦ ਪ੍ਰਾਪਤੀਆਂ",
+            "en": "Only cash receipts"
+          },
+          {
+            "hi": "माल का स्टॉक",
+            "pa": "ਮਾਲ ਦਾ ਸਟਾਕ",
+            "en": "Stock of goods only"
+          }
+        ],
+        "explanation": {
+          "hi": "तुलन-पत्र एक निश्चित तिथि पर संपत्तियों और देनदारियों का विवरण है।",
+          "pa": "ਤੁਲਨ-ਪੱਤਰ ਇੱਕ ਨਿਸ਼ਚਿਤ ਤਾਰੀਖ਼ 'ਤੇ ਸੰਪਤੀਆਂ ਅਤੇ ਦੇਣਦਾਰੀਆਂ ਦਾ ਵੇਰਵਾ ਹੈ।",
+          "en": "Balance Sheet is a statement of assets and liabilities on a specific date."
+        },
+        "prompt": {
+          "hi": "तुलन-पत्र में क्या दिखाया जाता है?",
+          "pa": "ਤੁਲਨ-ਪੱਤਰ ਵਿੱਚ ਕੀ ਦਿਖਾਇਆ ਜਾਂਦਾ ਹੈ?",
+          "en": "What does a Balance Sheet show?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-acc-q-8",
+        "options": [
+          {
+            "hi": "सभी संभावित लाभ दर्ज करता है",
+            "pa": "ਸਾਰੇ ਸੰਭਾਵਿਤ ਲਾਭ ਦਰਜ ਕਰਦਾ ਹੈ",
+            "en": "Records all possible profits"
+          },
+          {
+            "hi": "सभी संभावित हानियाँ दर्ज करता है, अनिश्चित लाभ नहीं",
+            "pa": "ਸਾਰੇ ਸੰਭਾਵਿਤ ਨੁਕਸਾਨ ਦਰਜ ਕਰਦਾ ਹੈ, ਅਨਿਸ਼ਚਿਤ ਲਾਭ ਨਹੀਂ",
+            "en": "Records all probable losses but not uncertain profits"
+          },
+          {
+            "hi": "केवल नकद लेनदेन दर्ज करता है",
+            "pa": "ਕੇਵਲ ਨਕਦ ਲੈਣ-ਦੇਣ ਦਰਜ ਕਰਦਾ ਹੈ",
+            "en": "Records only cash transactions"
+          },
+          {
+            "hi": "हानियों को नजरअंदाज करता है",
+            "pa": "ਨੁਕਸਾਨਾਂ ਨੂੰ ਨਜ਼ਰਅੰਦਾਜ਼ ਕਰਦਾ ਹੈ",
+            "en": "Ignores losses"
+          }
+        ],
+        "explanation": {
+          "hi": "रूढ़िवाद: सभी संभावित हानियाँ तुरंत दर्ज करें, लेकिन अनिश्चित लाभों की प्रतीक्षा करें।",
+          "pa": "ਰੂੜ੍ਹੀਵਾਦ: ਸਾਰੇ ਸੰਭਾਵਿਤ ਨੁਕਸਾਨ ਤੁਰੰਤ ਦਰਜ ਕਰੋ, ਅਨਿਸ਼ਚਿਤ ਲਾਭਾਂ ਦੀ ਉਡੀਕ ਕਰੋ।",
+          "en": "Conservatism: record all probable losses immediately but wait for certainty of profits."
+        },
+        "prompt": {
+          "hi": "रूढ़िवाद परंपरा का पालन करते हुए लेखाकार:",
+          "pa": "ਰੂੜ੍ਹੀਵਾਦ ਦੀ ਪਰੰਪਰਾ ਦਾ ਪਾਲਣ ਕਰਦੇ ਹੋਏ ਲੇਖਾਕਾਰ:",
+          "en": "Following the Convention of Conservatism, an accountant:"
+        },
+        "answerIndex": 1
+      }
+    ],
+    "sources": [],
+    "videos": [],
+    "documents": [],
+    "keypoints": [
+      {
+        "hi": "व्यवसाय इकाई अवधारणा: व्यवसाय और स्वामी अलग-अलग इकाइयाँ।",
+        "pa": "ਵਪਾਰਕ ਇਕਾਈ ਧਾਰਨਾ: ਵਪਾਰ ਅਤੇ ਮਾਲਕ ਵੱਖਰੀਆਂ ਇਕਾਈਆਂ।",
+        "en": "Business Entity Concept: business and owner are separate entities."
+      },
+      {
+        "hi": "डबल एंट्री: हर लेनदेन में डेबिट = क्रेडिट।",
+        "pa": "ਡਬਲ ਐਂਟਰੀ: ਹਰ ਲੈਣ-ਦੇਣ ਵਿੱਚ ਡੈਬਿਟ = ਕ੍ਰੈਡਿਟ।",
+        "en": "Double Entry: every transaction has equal debit and credit."
+      },
+      {
+        "hi": "तलपट = डेबिट जोड़ = क्रेडिट जोड़ (गणितीय सटीकता)।",
+        "pa": "ਟ੍ਰਾਇਲ ਬੈਲੇਂਸ = ਡੈਬਿਟ ਜੋੜ = ਕ੍ਰੈਡਿਟ ਜੋੜ।",
+        "en": "Trial Balance = Debit total = Credit total (arithmetical accuracy)."
+      },
+      {
+        "hi": "SLM: मूल्यह्रास = (लागत − अवशिष्ट मूल्य) / उपयोगी जीवन।",
+        "pa": "SLM: ਮੁੱਲ ਹ੍ਰਾਸ = (ਲਾਗਤ − ਅਵਸ਼ਿਸ਼ਟ ਮੁੱਲ) / ਉਪਯੋਗੀ ਜੀਵਨ।",
+        "en": "SLM: Depreciation = (Cost - Residual Value) / Useful Life."
+      },
+      {
+        "hi": "रूढ़िवाद: हानियाँ पहचानें, अनिश्चित लाभ नहीं।",
+        "pa": "ਰੂੜ੍ਹੀਵਾਦ: ਨੁਕਸਾਨ ਦਰਜ ਕਰੋ, ਅਨਿਸ਼ਚਿਤ ਲਾਭ ਨਹੀਂ।",
+        "en": "Conservatism: anticipate losses, not uncertain profits."
+      }
+    ]
+  },
+  {
+    "id": "commerce-business-studies",
+    "subject": "Commerce",
+    "unit": "Business Studies",
+    "title": {
+      "hi": "व्यावसायिक संगठन और प्रबंधन",
+      "pa": "ਵਪਾਰਕ ਸੰਗਠਨ ਅਤੇ ਪ੍ਰਬੰਧਨ",
+      "en": "Business Organisation and Management"
+    },
+    "summary": {
+      "hi": "व्यावसायिक संगठन के प्रकार, प्रबंधन के सिद्धांत, विपणन, और उपभोक्ता संरक्षण।",
+      "pa": "ਵਪਾਰਕ ਸੰਗਠਨ ਦੇ ਪ੍ਰਕਾਰ, ਪ੍ਰਬੰਧਨ ਦੇ ਸਿਧਾਂਤ, ਮਾਰਕੀਟਿੰਗ, ਅਤੇ ਉਪਭੋਗਤਾ ਸੁਰੱਖਿਆ।",
+      "en": "Types of business organisation, principles of management, marketing, and consumer protection."
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "व्यावसायिक संगठन के प्रकार",
+          "pa": "ਵਪਾਰਕ ਸੰਗਠਨ ਦੇ ਪ੍ਰਕਾਰ",
+          "en": "Forms of Business Organisation"
+        },
+        "text": {
+          "hi": "एकल स्वामित्व (Sole Proprietorship): एक व्यक्ति द्वारा स्वामित्व और प्रबंधन; असीमित दायित्व। साझेदारी (Partnership): भारतीय साझेदारी अधिनियम 1932 द्वारा शासित; अधिकतम 50 साझेदार (बैंकिंग में 10)। संयुक्त हिन्दू परिवार (HUF): कर्ता द्वारा प्रबंधित; सह-स्वामी (coparceners)। सहकारी समिति (Cooperative): स्वेच्छिक सदस्यता, एक सदस्य एक वोट। कंपनी: कंपनी अधिनियम 2013 द्वारा शासित। निजी कंपनी: न्यूनतम 2 सदस्य, अधिकतम 200। सार्वजनिक कंपनी: न्यूनतम 7 सदस्य, असीमित। सीमित दायित्व भागीदारी (LLP): LLP अधिनियम 2008।",
+          "pa": "ਇਕੱਲੇ ਮਾਲਕੀ: ਇੱਕ ਵਿਅਕਤੀ ਦੁਆਰਾ ਮਾਲਕੀ ਅਤੇ ਪ੍ਰਬੰਧਨ; ਅਸੀਮਿਤ ਜ਼ਿੰਮੇਵਾਰੀ। ਭਾਈਵਾਲੀ: ਭਾਰਤੀ ਭਾਈਵਾਲੀ ਐਕਟ 1932 ਦੁਆਰਾ ਸੰਚਾਲਿਤ; ਵੱਧ ਤੋਂ ਵੱਧ 50 ਭਾਈਵਾਲ। ਸਹਿਕਾਰੀ ਸਭਾ: ਸਵੈ-ਇੱਛਤ ਸਦੱਸਤਾ, ਇੱਕ ਸਦੱਸ ਇੱਕ ਵੋਟ। ਕੰਪਨੀ: ਕੰਪਨੀ ਐਕਟ 2013 ਦੁਆਰਾ ਸੰਚਾਲਿਤ।",
+          "en": "Sole Proprietorship: owned and managed by one person; unlimited liability. Partnership: governed by Indian Partnership Act 1932; max 50 partners (10 in banking). HUF: managed by Karta; co-owners are coparceners. Cooperative: voluntary membership, one member one vote. Company: governed by Companies Act 2013. Private company: min 2, max 200 members. Public company: min 7, unlimited. LLP: Limited Liability Partnership Act 2008."
+        }
+      },
+      {
+        "heading": {
+          "hi": "प्रबंधन के सिद्धांत — Fayol और Taylor",
+          "pa": "ਪ੍ਰਬੰਧਨ ਦੇ ਸਿਧਾਂਤ — Fayol ਅਤੇ Taylor",
+          "en": "Principles of Management — Fayol and Taylor"
+        },
+        "text": {
+          "hi": "हेनरी फेयोल के 14 प्रबंधन सिद्धांत: (1) कार्य-विभाजन, (2) अधिकार और उत्तरदायित्व, (3) अनुशासन, (4) आदेश की एकता, (5) दिशा की एकता, (6) सामान्य हित को व्यक्तिगत हित से ऊपर, (7) कर्मचारी पारिश्रमिक, (8) केंद्रीकरण, (9) स्केलर श्रृंखला, (10) व्यवस्था, (11) समानता, (12) कर्मचारी कार्यकाल की स्थिरता, (13) पहल, (14) टीम भावना (Esprit de corps)। F.W. Taylor के वैज्ञानिक प्रबंधन के सिद्धांत: विज्ञान, नियम का प्रयोग; सद्भाव; सहयोग; कर्मचारियों का अधिकतम उत्पादन; प्रत्येक व्यक्ति के लिए उत्पाद का विकास। कार्यात्मक फोरमैनशिप; समय और गति अध्ययन।",
+          "pa": "ਹੈਨਰੀ ਫੇਯੋਲ ਦੇ 14 ਪ੍ਰਬੰਧਨ ਸਿਧਾਂਤ: ਕਾਰਜ-ਵੰਡ, ਅਧਿਕਾਰ ਅਤੇ ਜ਼ਿੰਮੇਵਾਰੀ, ਅਨੁਸ਼ਾਸਨ, ਹੁਕਮ ਦੀ ਏਕਤਾ, ਦਿਸ਼ਾ ਦੀ ਏਕਤਾ, ਸਾਮੂਹਿਕ ਹਿੱਤ, ਤਨਖਾਹ, ਕੇਂਦਰੀਕਰਨ, ਸਕੇਲਰ ਚੇਨ, ਵਿਵਸਥਾ, ਸਮਾਨਤਾ, ਕਾਰਜਕਾਲ ਸਥਿਰਤਾ, ਪਹਿਲ, ਟੀਮ ਭਾਵਨਾ। FW ਟੇਲਰ ਦੇ ਵਿਗਿਆਨਕ ਪ੍ਰਬੰਧਨ ਸਿਧਾਂਤ।",
+          "en": "Henri Fayol's 14 Principles of Management: division of work, authority & responsibility, discipline, unity of command, unity of direction, subordination of individual interest, remuneration, centralisation, scalar chain, order, equity, stability of tenure, initiative, esprit de corps. F.W. Taylor's Scientific Management: science not rule of thumb; harmony; cooperation; maximum output; development of each person. Functional foremanship; time and motion study."
+        }
+      },
+      {
+        "heading": {
+          "hi": "विपणन और उपभोक्ता संरक्षण",
+          "pa": "ਮਾਰਕੀਟਿੰਗ ਅਤੇ ਉਪਭੋਗਤਾ ਸੁਰੱਖਿਆ",
+          "en": "Marketing and Consumer Protection"
+        },
+        "text": {
+          "hi": "विपणन मिश्रण के 4P: उत्पाद (Product), मूल्य (Price), स्थान (Place), संवर्धन (Promotion)। उत्पाद जीवन चक्र: परिचय → वृद्धि → परिपक्वता → पतन। ब्रांडिंग, पैकेजिंग और लेबलिंग। उपभोक्ता संरक्षण अधिनियम 2019: उपभोक्ता आयोग — जिला (50 लाख तक), राज्य (50 लाख−2 करोड़), राष्ट्रीय (2 करोड़ से ऊपर)। उपभोक्ता अधिकार: सुरक्षा, सूचना, चुनाव, सुनवाई, निवारण, उपभोक्ता शिक्षा। COPRA 1986 की जगह 2019 का नया अधिनियम आया।",
+          "pa": "ਮਾਰਕੀਟਿੰਗ ਮਿਕਸ ਦੇ 4P: ਉਤਪਾਦ, ਕੀਮਤ, ਥਾਂ, ਪ੍ਰਚਾਰ। ਉਤਪਾਦ ਜੀਵਨ ਚੱਕਰ: ਜਾਣ-ਪਛਾਣ → ਵਾਧਾ → ਪਰਿਪੱਕਤਾ → ਗਿਰਾਵਟ। ਉਪਭੋਗਤਾ ਸੁਰੱਖਿਆ ਐਕਟ 2019: ਜ਼ਿਲ੍ਹਾ ਕਮਿਸ਼ਨ (50 ਲੱਖ ਤੱਕ), ਰਾਜ ਕਮਿਸ਼ਨ (50 ਲੱਖ−2 ਕਰੋੜ), ਰਾਸ਼ਟਰੀ ਕਮਿਸ਼ਨ (2 ਕਰੋੜ ਤੋਂ ਉੱਪਰ)।",
+          "en": "Marketing Mix 4Ps: Product, Price, Place, Promotion. Product Life Cycle: Introduction → Growth → Maturity → Decline. Branding, packaging, labelling. Consumer Protection Act 2019: District Commission (up to ₹50 lakh), State Commission (₹50 lakh−₹2 crore), National Commission (above ₹2 crore). Consumer rights: safety, information, choice, heard, redress, consumer education. Replaced COPRA 1986."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "question": {
+          "hi": "साझेदारी अधिनियम कब बना?",
+          "pa": "ਭਾਈਵਾਲੀ ਐਕਟ ਕਦੋਂ ਬਣਿਆ?",
+          "en": "When was the Indian Partnership Act passed?"
+        },
+        "answer": {
+          "hi": "1932",
+          "pa": "1932",
+          "en": "1932"
+        }
+      },
+      {
+        "question": {
+          "hi": "फेयोल के प्रबंधन सिद्धांतों की संख्या?",
+          "pa": "ਫੇਯੋਲ ਦੇ ਪ੍ਰਬੰਧਨ ਸਿਧਾਂਤਾਂ ਦੀ ਗਿਣਤੀ?",
+          "en": "How many principles did Fayol give?"
+        },
+        "answer": {
+          "hi": "14",
+          "pa": "14",
+          "en": "14"
+        }
+      },
+      {
+        "question": {
+          "hi": "विपणन मिश्रण के 4P क्या हैं?",
+          "pa": "ਮਾਰਕੀਟਿੰਗ ਮਿਕਸ ਦੇ 4P ਕੀ ਹਨ?",
+          "en": "What are the 4Ps of Marketing Mix?"
+        },
+        "answer": {
+          "hi": "उत्पाद, मूल्य, स्थान, संवर्धन",
+          "pa": "ਉਤਪਾਦ, ਕੀਮਤ, ਥਾਂ, ਪ੍ਰਚਾਰ",
+          "en": "Product, Price, Place, Promotion"
+        }
+      },
+      {
+        "question": {
+          "hi": "उपभोक्ता संरक्षण अधिनियम 2019 में राष्ट्रीय आयोग की सीमा?",
+          "pa": "ਉਪਭੋਗਤਾ ਸੁਰੱਖਿਆ ਐਕਟ 2019 ਵਿੱਚ ਰਾਸ਼ਟਰੀ ਕਮਿਸ਼ਨ ਦੀ ਸੀਮਾ?",
+          "en": "Jurisdiction of National Commission under CPA 2019?"
+        },
+        "answer": {
+          "hi": "₹2 करोड़ से ऊपर के मामले",
+          "pa": "₹2 ਕਰੋੜ ਤੋਂ ਉੱਪਰ ਦੇ ਮਾਮਲੇ",
+          "en": "Cases above ₹2 crore"
+        }
+      },
+      {
+        "question": {
+          "hi": "निजी कंपनी में अधिकतम सदस्य कितने होते हैं?",
+          "pa": "ਪ੍ਰਾਈਵੇਟ ਕੰਪਨੀ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ ਸਦੱਸ ਕਿੰਨੇ ਹੁੰਦੇ ਹਨ?",
+          "en": "Maximum members in a Private Company?"
+        },
+        "answer": {
+          "hi": "200",
+          "pa": "200",
+          "en": "200"
+        }
+      },
+      {
+        "question": {
+          "hi": "Taylor का 'कार्यात्मक फोरमैनशिप' क्या है?",
+          "pa": "Taylor ਦੀ 'ਕਾਰਜਾਤਮਕ ਫੋਰਮੈਨਸ਼ਿਪ' ਕੀ ਹੈ?",
+          "en": "What is Taylor's Functional Foremanship?"
+        },
+        "answer": {
+          "hi": "एक श्रमिक को एक विशेषज्ञ फोरमैन की बजाय 8 विशेषज्ञ फोरमैन के तहत काम करना।",
+          "pa": "ਇੱਕ ਕਾਮੇ ਨੂੰ ਇੱਕ ਮਾਹਰ ਫੋਰਮੈਨ ਦੀ ਥਾਂ 8 ਮਾਹਰ ਫੋਰਮੈਨਾਂ ਦੇ ਅਧੀਨ ਕੰਮ ਕਰਨਾ।",
+          "en": "A worker works under 8 specialist foremen instead of one general foreman."
+        }
+      },
+      {
+        "question": {
+          "hi": "LLP अधिनियम कब बना?",
+          "pa": "LLP ਐਕਟ ਕਦੋਂ ਬਣਿਆ?",
+          "en": "When was the LLP Act passed?"
+        },
+        "answer": {
+          "hi": "2008",
+          "pa": "2008",
+          "en": "2008"
+        }
+      },
+      {
+        "question": {
+          "hi": "उत्पाद जीवन चक्र की चार अवस्थाएँ?",
+          "pa": "ਉਤਪਾਦ ਜੀਵਨ ਚੱਕਰ ਦੀਆਂ ਚਾਰ ਅਵਸਥਾਵਾਂ?",
+          "en": "Four stages of Product Life Cycle?"
+        },
+        "answer": {
+          "hi": "परिचय, वृद्धि, परिपक्वता, पतन",
+          "pa": "ਜਾਣ-ਪਛਾਣ, ਵਾਧਾ, ਪਰਿਪੱਕਤਾ, ਗਿਰਾਵਟ",
+          "en": "Introduction, Growth, Maturity, Decline"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "com-bs-q-1",
+        "options": [
+          {
+            "hi": "1956",
+            "pa": "1956",
+            "en": "1956"
+          },
+          {
+            "hi": "1932",
+            "pa": "1932",
+            "en": "1932"
+          },
+          {
+            "hi": "2013",
+            "pa": "2013",
+            "en": "2013"
+          },
+          {
+            "hi": "1948",
+            "pa": "1948",
+            "en": "1948"
+          }
+        ],
+        "explanation": {
+          "hi": "भारतीय साझेदारी अधिनियम 1932 में बना।",
+          "pa": "ਭਾਰਤੀ ਭਾਈਵਾਲੀ ਐਕਟ 1932 ਵਿੱਚ ਬਣਿਆ।",
+          "en": "Indian Partnership Act was enacted in 1932."
+        },
+        "prompt": {
+          "hi": "भारतीय साझेदारी अधिनियम कब बना?",
+          "pa": "ਭਾਰਤੀ ਭਾਈਵਾਲੀ ਐਕਟ ਕਦੋਂ ਬਣਿਆ?",
+          "en": "When was the Indian Partnership Act enacted?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-bs-q-2",
+        "options": [
+          {
+            "hi": "10",
+            "pa": "10",
+            "en": "10"
+          },
+          {
+            "hi": "12",
+            "pa": "12",
+            "en": "12"
+          },
+          {
+            "hi": "14",
+            "pa": "14",
+            "en": "14"
+          },
+          {
+            "hi": "16",
+            "pa": "16",
+            "en": "16"
+          }
+        ],
+        "explanation": {
+          "hi": "हेनरी फेयोल ने प्रबंधन के 14 सिद्धांत दिए।",
+          "pa": "ਹੈਨਰੀ ਫੇਯੋਲ ਨੇ ਪ੍ਰਬੰਧਨ ਦੇ 14 ਸਿਧਾਂਤ ਦਿੱਤੇ।",
+          "en": "Henri Fayol gave 14 principles of management."
+        },
+        "prompt": {
+          "hi": "फेयोल के कितने प्रबंधन सिद्धांत हैं?",
+          "pa": "ਫੇਯੋਲ ਦੇ ਕਿੰਨੇ ਪ੍ਰਬੰਧਨ ਸਿਧਾਂਤ ਹਨ?",
+          "en": "How many principles of management did Fayol give?"
+        },
+        "answerIndex": 2
+      },
+      {
+        "id": "com-bs-q-3",
+        "options": [
+          {
+            "hi": "50",
+            "pa": "50",
+            "en": "50"
+          },
+          {
+            "hi": "100",
+            "pa": "100",
+            "en": "100"
+          },
+          {
+            "hi": "200",
+            "pa": "200",
+            "en": "200"
+          },
+          {
+            "hi": "500",
+            "pa": "500",
+            "en": "500"
+          }
+        ],
+        "explanation": {
+          "hi": "कंपनी अधिनियम 2013 के अनुसार निजी कंपनी में अधिकतम 200 सदस्य हो सकते हैं।",
+          "pa": "ਕੰਪਨੀ ਐਕਟ 2013 ਅਨੁਸਾਰ ਪ੍ਰਾਈਵੇਟ ਕੰਪਨੀ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ 200 ਸਦੱਸ ਹੋ ਸਕਦੇ ਹਨ।",
+          "en": "Under Companies Act 2013, a Private Company can have a maximum of 200 members."
+        },
+        "prompt": {
+          "hi": "निजी कंपनी में अधिकतम कितने सदस्य हो सकते हैं?",
+          "pa": "ਪ੍ਰਾਈਵੇਟ ਕੰਪਨੀ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ ਕਿੰਨੇ ਸਦੱਸ ਹੋ ਸਕਦੇ ਹਨ?",
+          "en": "Maximum number of members in a Private Company?"
+        },
+        "answerIndex": 2
+      },
+      {
+        "id": "com-bs-q-4",
+        "options": [
+          {
+            "hi": "उत्पाद (Product)",
+            "pa": "ਉਤਪਾਦ (Product)",
+            "en": "Product"
+          },
+          {
+            "hi": "मूल्य (Price)",
+            "pa": "ਕੀਮਤ (Price)",
+            "en": "Price"
+          },
+          {
+            "hi": "लाभ (Profit)",
+            "pa": "ਲਾਭ (Profit)",
+            "en": "Profit"
+          },
+          {
+            "hi": "संवर्धन (Promotion)",
+            "pa": "ਪ੍ਰਚਾਰ (Promotion)",
+            "en": "Promotion"
+          }
+        ],
+        "explanation": {
+          "hi": "4P: Product, Price, Place, Promotion। 'Profit' इसका हिस्सा नहीं है।",
+          "pa": "4P: Product, Price, Place, Promotion। 'Profit' ਇਸ ਦਾ ਹਿੱਸਾ ਨਹੀਂ ਹੈ।",
+          "en": "The 4Ps are Product, Price, Place, Promotion. Profit is not one of them."
+        },
+        "prompt": {
+          "hi": "विपणन मिश्रण के '4P' में कौन-सा शामिल नहीं है?",
+          "pa": "ਮਾਰਕੀਟਿੰਗ ਮਿਕਸ ਦੇ '4P' ਵਿੱਚ ਕਿਹੜਾ ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ?",
+          "en": "Which of the following is NOT part of the 4Ps of Marketing Mix?"
+        },
+        "answerIndex": 2
+      },
+      {
+        "id": "com-bs-q-5",
+        "options": [
+          {
+            "hi": "₹20 लाख",
+            "pa": "₹20 ਲੱਖ",
+            "en": "₹20 lakh"
+          },
+          {
+            "hi": "₹50 लाख",
+            "pa": "₹50 ਲੱਖ",
+            "en": "₹50 lakh"
+          },
+          {
+            "hi": "₹1 करोड़",
+            "pa": "₹1 ਕਰੋੜ",
+            "en": "₹1 crore"
+          },
+          {
+            "hi": "₹2 करोड़",
+            "pa": "₹2 ਕਰੋੜ",
+            "en": "₹2 crore"
+          }
+        ],
+        "explanation": {
+          "hi": "CPA 2019 के अनुसार जिला आयोग ₹50 लाख तक के मामले सुनता है।",
+          "pa": "CPA 2019 ਅਨੁਸਾਰ ਜ਼ਿਲ੍ਹਾ ਕਮਿਸ਼ਨ ₹50 ਲੱਖ ਤੱਕ ਦੇ ਮਾਮਲੇ ਸੁਣਦਾ ਹੈ।",
+          "en": "Under CPA 2019, District Commission handles cases up to ₹50 lakh."
+        },
+        "prompt": {
+          "hi": "उपभोक्ता संरक्षण अधिनियम 2019 में जिला आयोग की अधिकतम सीमा क्या है?",
+          "pa": "ਉਪਭੋਗਤਾ ਸੁਰੱਖਿਆ ਐਕਟ 2019 ਵਿੱਚ ਜ਼ਿਲ੍ਹਾ ਕਮਿਸ਼ਨ ਦੀ ਵੱਧ ਤੋਂ ਵੱਧ ਸੀਮਾ ਕੀ ਹੈ?",
+          "en": "What is the pecuniary jurisdiction of District Commission under CPA 2019?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-bs-q-6",
+        "options": [
+          {
+            "hi": "समय अध्ययन",
+            "pa": "ਸਮਾਂ ਅਧਿਐਨ",
+            "en": "Time Study"
+          },
+          {
+            "hi": "कार्यात्मक फोरमैनशिप",
+            "pa": "ਕਾਰਜਾਤਮਕ ਫੋਰਮੈਨਸ਼ਿਪ",
+            "en": "Functional Foremanship"
+          },
+          {
+            "hi": "गति अध्ययन",
+            "pa": "ਗਤੀ ਅਧਿਐਨ",
+            "en": "Motion Study"
+          },
+          {
+            "hi": "थकान अध्ययन",
+            "pa": "ਥਕਾਵਟ ਅਧਿਐਨ",
+            "en": "Fatigue Study"
+          }
+        ],
+        "explanation": {
+          "hi": "Functional Foremanship में Taylor ने 8 विशेषज्ञ फोरमैन की अवधारणा दी।",
+          "pa": "Functional Foremanship ਵਿੱਚ Taylor ਨੇ 8 ਮਾਹਰ ਫੋਰਮੈਨਾਂ ਦੀ ਧਾਰਨਾ ਦਿੱਤੀ।",
+          "en": "Functional Foremanship involves Taylor's concept of 8 specialist foremen."
+        },
+        "prompt": {
+          "hi": "Taylor की 'वैज्ञानिक प्रबंधन' के किस सिद्धांत में 8 फोरमैन की अवधारणा है?",
+          "pa": "Taylor ਦੀ 'ਵਿਗਿਆਨਕ ਪ੍ਰਬੰਧਨ' ਦੇ ਕਿਹੜੇ ਸਿਧਾਂਤ ਵਿੱਚ 8 ਫੋਰਮੈਨਾਂ ਦੀ ਧਾਰਨਾ ਹੈ?",
+          "en": "Which principle of Taylor's Scientific Management involves 8 foremen?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-bs-q-7",
+        "options": [
+          {
+            "hi": "सभी आदेश ऊपर से नीचे जाते हैं",
+            "pa": "ਸਾਰੇ ਹੁਕਮ ਉੱਪਰ ਤੋਂ ਹੇਠਾਂ ਜਾਂਦੇ ਹਨ",
+            "en": "All orders flow from top to bottom"
+          },
+          {
+            "hi": "प्रत्येक कर्मचारी को केवल एक वरिष्ठ से आदेश मिलना चाहिए",
+            "pa": "ਹਰ ਕਰਮਚਾਰੀ ਨੂੰ ਕੇਵਲ ਇੱਕ ਉੱਚ ਅਧਿਕਾਰੀ ਤੋਂ ਹੁਕਮ ਮਿਲਣਾ ਚਾਹੀਦਾ ਹੈ",
+            "en": "Each employee should receive orders from only one superior"
+          },
+          {
+            "hi": "सभी कर्मचारी एक साथ काम करते हैं",
+            "pa": "ਸਾਰੇ ਕਰਮਚਾਰੀ ਇਕੱਠੇ ਕੰਮ ਕਰਦੇ ਹਨ",
+            "en": "All employees work together"
+          },
+          {
+            "hi": "एक लक्ष्य के लिए एक योजना होनी चाहिए",
+            "pa": "ਇੱਕ ਟੀਚੇ ਲਈ ਇੱਕ ਯੋਜਨਾ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ",
+            "en": "One plan for one objective"
+          }
+        ],
+        "explanation": {
+          "hi": "Unity of Command: एक कर्मचारी को केवल एक वरिष्ठ से आदेश मिलना चाहिए।",
+          "pa": "Unity of Command: ਹਰ ਕਰਮਚਾਰੀ ਨੂੰ ਕੇਵਲ ਇੱਕ ਉੱਚ ਅਧਿਕਾਰੀ ਤੋਂ ਹੁਕਮ ਮਿਲਣਾ ਚਾਹੀਦਾ ਹੈ।",
+          "en": "Unity of Command: each employee should receive orders from one superior only."
+        },
+        "prompt": {
+          "hi": "Fayol के 'आदेश की एकता' (Unity of Command) सिद्धांत का अर्थ है:",
+          "pa": "Fayol ਦੇ 'ਹੁਕਮ ਦੀ ਏਕਤਾ' ਸਿਧਾਂਤ ਦਾ ਅਰਥ ਹੈ:",
+          "en": "Fayol's principle of Unity of Command means:"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "com-bs-q-8",
+        "options": [
+          {
+            "hi": "वृद्धि → परिचय → परिपक्वता → पतन",
+            "pa": "ਵਾਧਾ → ਜਾਣ-ਪਛਾਣ → ਪਰਿਪੱਕਤਾ → ਗਿਰਾਵਟ",
+            "en": "Growth → Introduction → Maturity → Decline"
+          },
+          {
+            "hi": "परिचय → वृद्धि → परिपक्वता → पतन",
+            "pa": "ਜਾਣ-ਪਛਾਣ → ਵਾਧਾ → ਪਰਿਪੱਕਤਾ → ਗਿਰਾਵਟ",
+            "en": "Introduction → Growth → Maturity → Decline"
+          },
+          {
+            "hi": "परिचय → परिपक्वता → वृद्धि → पतन",
+            "pa": "ਜਾਣ-ਪਛਾਣ → ਪਰਿਪੱਕਤਾ → ਵਾਧਾ → ਗਿਰਾਵਟ",
+            "en": "Introduction → Maturity → Growth → Decline"
+          },
+          {
+            "hi": "पतन → परिचय → वृद्धि → परिपक्वता",
+            "pa": "ਗਿਰਾਵਟ → ਜਾਣ-ਪਛਾਣ → ਵਾਧਾ → ਪਰਿਪੱਕਤਾ",
+            "en": "Decline → Introduction → Growth → Maturity"
+          }
+        ],
+        "explanation": {
+          "hi": "उत्पाद जीवन चक्र: परिचय → वृद्धि → परिपक्वता → पतन।",
+          "pa": "ਉਤਪਾਦ ਜੀਵਨ ਚੱਕਰ: ਜਾਣ-ਪਛਾਣ → ਵਾਧਾ → ਪਰਿਪੱਕਤਾ → ਗਿਰਾਵਟ।",
+          "en": "Product Life Cycle: Introduction → Growth → Maturity → Decline."
+        },
+        "prompt": {
+          "hi": "उत्पाद जीवन चक्र की सही क्रम है:",
+          "pa": "ਉਤਪਾਦ ਜੀਵਨ ਚੱਕਰ ਦਾ ਸਹੀ ਕ੍ਰਮ ਹੈ:",
+          "en": "The correct sequence of Product Life Cycle is:"
+        },
+        "answerIndex": 1
+      }
+    ],
+    "sources": [],
+    "videos": [],
+    "documents": [],
+    "keypoints": [
+      {
+        "hi": "भारतीय साझेदारी अधिनियम 1932; अधिकतम 50 साझेदार।",
+        "pa": "ਭਾਰਤੀ ਭਾਈਵਾਲੀ ਐਕਟ 1932; ਵੱਧ ਤੋਂ ਵੱਧ 50 ਭਾਈਵਾਲ।",
+        "en": "Indian Partnership Act 1932; max 50 partners."
+      },
+      {
+        "hi": "निजी कंपनी: 2–200 सदस्य; कंपनी अधिनियम 2013।",
+        "pa": "ਪ੍ਰਾਈਵੇਟ ਕੰਪਨੀ: 2–200 ਸਦੱਸ; ਕੰਪਨੀ ਐਕਟ 2013।",
+        "en": "Private Company: 2-200 members; Companies Act 2013."
+      },
+      {
+        "hi": "फेयोल के 14 प्रबंधन सिद्धांत; टेलर का वैज्ञानिक प्रबंधन।",
+        "pa": "ਫੇਯੋਲ ਦੇ 14 ਪ੍ਰਬੰਧਨ ਸਿਧਾਂਤ; ਟੇਲਰ ਦਾ ਵਿਗਿਆਨਕ ਪ੍ਰਬੰਧਨ।",
+        "en": "Fayol's 14 management principles; Taylor's Scientific Management."
+      },
+      {
+        "hi": "CPA 2019: जिला ≤₹50L, राज्य ₹50L–₹2Cr, राष्ट्रीय >₹2Cr।",
+        "pa": "CPA 2019: ਜ਼ਿਲ੍ਹਾ ≤₹50L, ਰਾਜ ₹50L–₹2Cr, ਰਾਸ਼ਟਰੀ >₹2Cr।",
+        "en": "CPA 2019: District ≤₹50L, State ₹50L-₹2Cr, National >₹2Cr."
+      },
+      {
+        "hi": "विपणन 4P: Product, Price, Place, Promotion।",
+        "pa": "ਮਾਰਕੀਟਿੰਗ 4P: Product, Price, Place, Promotion।",
+        "en": "Marketing 4Ps: Product, Price, Place, Promotion."
+      }
+    ]
+  }
+]

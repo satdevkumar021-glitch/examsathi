@@ -1,0 +1,128 @@
+[
+  {
+    "id": "hindi-sandhi",
+    "subject": "Hindi",
+    "unit": "व्याकरण",
+    "title": {"hi": "हिन्दी: स्वर संधि", "pa": "ਹਿੰਦੀ: ਸਵਰ ਸੰਧੀ", "en": "Hindi: Vowel Sandhi"},
+    "sections": [
+      {
+        "heading": {"hi": "संधि की परिभाषा और प्रकार", "pa": "ਸੰਧੀ ਦੀ ਪਰਿਭਾਸ਼ਾ ਅਤੇ ਪ੍ਰਕਾਰ", "en": "Definition and types of sandhi"},
+        "text": {
+          "hi": "संधि का अर्थ है दो ध्वनियों का मेल। जब दो वर्ण निकट आते हैं तो उनके मेल से जो परिवर्तन होता है वह संधि है। संधि तीन प्रकार की होती है: (1) स्वर संधि (दो स्वरों का मेल), (2) व्यंजन संधि (व्यंजन + स्वर/व्यंजन), (3) विसर्ग संधि (विसर्ग + स्वर/व्यंजन)।\n\nस्वर संधि के पाँच भेद: दीर्घ, गुण, वृद्धि, यण, अयादि। संधि-विच्छेद = संधि के पद को अलग करना। उदाहरण: विद्यालय = विद्या + आलय (दीर्घ संधि)।",
+          "pa": "ਸੰਧੀ = ਦੋ ਧੁਨੀਆਂ ਦਾ ਮੇਲ। ਤਿੰਨ ਪ੍ਰਕਾਰ: ਸਵਰ ਸੰਧੀ, ਵਿਅੰਜਨ ਸੰਧੀ, ਵਿਸਰਗ ਸੰਧੀ। ਸਵਰ ਸੰਧੀ ਦੇ 5 ਭੇਦ: ਦੀਰਘ, ਗੁਣ, ਵ੍ਰਿੱਧੀ, ਯਣ, ਅਯਾਦਿ।",
+          "en": "Sandhi means the merging of two sounds. When two letters come together, the change that occurs is called sandhi. Three types: (1) Vowel sandhi (two vowels merge), (2) Consonant sandhi, (3) Visarga sandhi. Five sub-types of vowel sandhi: Dirgha, Guna, Vriddhi, Yan, Ayadi."
+        }
+      },
+      {
+        "heading": {"hi": "स्वर संधि के नियम", "pa": "ਸਵਰ ਸੰਧੀ ਦੇ ਨਿਯਮ", "en": "Rules of vowel sandhi"},
+        "text": {
+          "hi": "1. दीर्घ संधि: अ/आ + अ/आ → आ। उदाहरण: देव + आलय = देवालय; विद्या + आलय = विद्यालय। 2. गुण संधि: अ/आ + इ/ई → ए; अ/आ + उ/ऊ → ओ; अ/आ + ऋ → अर्। उदाहरण: देव + इंद्र = देवेंद्र; महा + उत्सव = महोत्सव। 3. वृद्धि संधि: अ/आ + ए/ऐ → ऐ; अ/आ + ओ/औ → औ। उदाहरण: एक + एक = एकैक।\n\n4. यण संधि: इ/ई + अन्य स्वर → य्; उ/ऊ + अन्य स्वर → व्; ऋ + अन्य स्वर → र्। उदाहरण: यदि + अपि = यद्यपि; अनु + एषण = अन्वेषण। 5. अयादि संधि: ए/ऐ + स्वर → अय्/आय्। उदाहरण: ने + अन = नयन।",
+          "pa": "1. ਦੀਰਘ: अ/आ + अ/आ → आ। ਉਦਾਹਰਨ: देव + आलय = देवालय। 2. ਗੁਣ: अ/आ + इ/ई → ए; अ/आ + उ/ऊ → ओ। ਉਦਾਹਰਨ: देव + इंद्र = देवेंद्र। 3. ਵ੍ਰਿੱਧੀ: अ/आ + ए/ऐ → ऐ। 4. ਯਣ: इ + ਹੋਰ ਸਵਰ → य्। 5. ਅਯਾਦਿ: ए + ਸਵਰ → अय्।",
+          "en": "1. Dirgha: a/aa + a/aa → aa. Example: devalaya. 2. Guna: a/aa + i/ii → e; a/aa + u/uu → o; a/aa + ri → ar. Example: devendra, mahotsav. 3. Vriddhi: a/aa + e/ai → ai; a/aa + o/au → au. Example: ekaikah. 4. Yan: i/ii + vowel → y; u/uu + vowel → v. Example: yad-yapi, anveshana. 5. Ayadi: e/ai + vowel → ay/aay. Example: nayan."
+        }
+      },
+      {
+        "heading": {"hi": "समास और संधि में अंतर तथा परीक्षा अभ्यास", "pa": "ਸਮਾਸ ਅਤੇ ਸੰਧੀ ਵਿੱਚ ਫ਼ਰਕ", "en": "Sandhi vs Samas and exam practice"},
+        "text": {
+          "hi": "संधि ध्वनि मेल है (वर्ण स्तर पर); समास अर्थ मेल है (शब्द स्तर पर)। संधि में विच्छेद करने पर मूल ध्वनियाँ मिलती हैं; समास में विग्रह करने पर शब्द मिलते हैं।\n\nपरीक्षा अभ्यास: (1) देवेश = देव + ईश (गुण: अ+ई→ए)। (2) सदैव = सदा + एव (वृद्धि: आ+ए→ऐ)। (3) स्वागत = सु + आगत (यण: उ+आ→व्)। (4) महर्षि = महा + ऋषि (गुण: आ+ऋ→अर्)। किताब बंद करके पाँच उदाहरण खुद लिखें और संधि-विच्छेद करें।",
+          "pa": "ਸੰਧੀ = ਧੁਨੀ ਮੇਲ; ਸਮਾਸ = ਅਰਥ ਮੇਲ। ਅਭਿਆਸ: देवेश = देव + ईश (ਗੁਣ); सदैव = सदा + एव (ਵ੍ਰਿੱਧੀ)।",
+          "en": "Sandhi is sound-level merging; Samas is word-level compounding. Practice: (1) devesh = deva + isha (Guna: a+i→e). (2) sadaiva = sada + eva (Vriddhi: aa+e→ai). (3) svagat = su + agat (Yan: u+a→v). (4) maharshi = maha + rishi (Guna: aa+ri→ar). Close notes and write 5 examples yourself."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "दीर्घ: अ/आ + अ/आ → आ। विद्यालय, देवालय।", "pa": "ਦੀਰਘ: अ + अ → आ। ਉਦਾਹਰਨ: विद्यालय।", "en": "Dirgha: a/aa + a/aa → aa. E.g., vidyalay."},
+      {"hi": "गुण: अ/आ + इ/ई → ए। देव + इंद्र = देवेंद्र।", "pa": "ਗੁਣ: अ + इ → ए। देवेंद्र।", "en": "Guna: a + i → e. E.g., devendra."},
+      {"hi": "वृद्धि: अ/आ + ए/ऐ → ऐ। सदा + एव = सदैव।", "pa": "ਵ੍ਰਿੱਧੀ: आ + ए → ऐ। सदैव।", "en": "Vriddhi: aa + e → ai. E.g., sadaiva."},
+      {"hi": "यण: इ + स्वर → य्। अनु + एषण = अन्वेषण।", "pa": "ਯਣ: इ + ਸਵਰ → य्।", "en": "Yan: i + vowel → y."},
+      {"hi": "संधि = ध्वनि मेल; समास = अर्थ मेल।", "pa": "ਸੰਧੀ = ਧੁਨੀ ਮੇਲ; ਸਮਾਸ = ਅਰਥ ਮੇਲ।", "en": "Sandhi = sound merger; Samas = meaning compound."}
+    ],
+    "summary": {
+      "hi": "संधि = ध्वनि मेल। स्वर संधि 5 प्रकार: दीर्घ, गुण, वृद्धि, यण, अयादि। विद्यालय = दीर्घ; देवेंद्र = गुण; सदैव = वृद्धि; यद्यपि = यण।",
+      "pa": "ਸੰਧੀ = ਧੁਨੀ ਮੇਲ। 5 ਪ੍ਰਕਾਰ: ਦੀਰਘ, ਗੁਣ, ਵ੍ਰਿੱਧੀ, ਯਣ, ਅਯਾਦਿ।",
+      "en": "Sandhi = sound merger. 5 types: Dirgha, Guna, Vriddhi, Yan, Ayadi. Key examples: vidyalay (Dirgha), devendra (Guna), sadaiva (Vriddhi)."
+    },
+    "flashcards": [
+      {"question": {"hi": "विद्यालय में कौन-सी संधि है?", "pa": "विद्यालय ਵਿੱਚ ਕਿਹੜੀ ਸੰਧੀ ਹੈ?", "en": "Sandhi in vidyalay?"}, "answer": {"hi": "दीर्घ संधि (विद्या + आलय: आ+आ→आ)", "pa": "ਦੀਰਘ ਸੰਧੀ", "en": "Dirgha sandhi (aa + aa → aa)"}},
+      {"question": {"hi": "देवेंद्र में कौन-सी संधि?", "pa": "देवेंद्र ਵਿੱਚ ਕਿਹੜੀ ਸੰਧੀ?", "en": "Sandhi in devendra?"}, "answer": {"hi": "गुण संधि (अ+इ→ए)", "pa": "ਗੁਣ ਸੰਧੀ", "en": "Guna sandhi (a+i→e)"}},
+      {"question": {"hi": "सदैव = सदा + ?", "pa": "सदैव = सदा + ?", "en": "Sadaiva = sada + ?"}, "answer": {"hi": "एव (वृद्धि: आ+ए→ऐ)", "pa": "एव (ਵ੍ਰਿੱਧੀ)", "en": "eva (Vriddhi: aa+e→ai)"}},
+      {"question": {"hi": "महोत्सव में संधि-विच्छेद?", "pa": "महोत्सव ਵਿੱਚ ਸੰਧੀ-ਵਿਛੇਦ?", "en": "Split mahootsav:"}, "answer": {"hi": "महा + उत्सव (गुण: आ+उ→ओ)", "pa": "महा + उत्सव (ਗੁਣ)", "en": "maha + utsav (Guna: aa+u→o)"}},
+      {"question": {"hi": "स्वागत में संधि-विच्छेद?", "pa": "स्वागत ਵਿੱਚ ਸੰਧੀ-ਵਿਛੇਦ?", "en": "Split svagat:"}, "answer": {"hi": "सु + आगत (यण: उ+आ→व्)", "pa": "सु + आगत (ਯਣ)", "en": "su + agat (Yan: u+aa→v)"}},
+      {"question": {"hi": "यण संधि में इ + स्वर = ?", "pa": "ਯਣ ਸੰਧੀ ਵਿੱਚ इ + ਸਵਰ = ?", "en": "Yan sandhi: i + vowel = ?"}, "answer": {"hi": "य् + स्वर", "pa": "य् + ਸਵਰ", "en": "y + vowel"}},
+      {"question": {"hi": "संधि और समास में क्या अंतर है?", "pa": "ਸੰਧੀ ਅਤੇ ਸਮਾਸ ਵਿੱਚ ਫ਼ਰਕ?", "en": "Difference: sandhi vs samas?"}, "answer": {"hi": "संधि = ध्वनि मेल; समास = अर्थ/शब्द मेल", "pa": "ਸੰਧੀ = ਧੁਨੀ ਮੇਲ; ਸਮਾਸ = ਅਰਥ ਮੇਲ", "en": "Sandhi = sound merger; Samas = word/meaning compound"}}
+    ],
+    "questions": [
+      {"id": "hindi-sandhi-q1", "prompt": {"hi": "विद्यालय = विद्या + आलय। यह कौन-सी संधि है?", "pa": "विद्यालय = विद्या + आलय। ਕਿਹੜੀ ਸੰਧੀ?", "en": "vidyalay = vidya + alay. Which sandhi?"}, "options": [{"hi": "गुण", "pa": "ਗੁਣ", "en": "Guna"}, {"hi": "दीर्घ", "pa": "ਦੀਰਘ", "en": "Dirgha"}, {"hi": "वृद्धि", "pa": "ਵ੍ਰਿੱਧੀ", "en": "Vriddhi"}, {"hi": "यण", "pa": "ਯਣ", "en": "Yan"}], "answerIndex": 1, "explanation": {"hi": "आ + आ → आ: यह दीर्घ संधि है।", "pa": "आ + आ → आ: ਦੀਰਘ ਸੰਧੀ।", "en": "aa + aa → aa: this is Dirgha sandhi."}},
+      {"id": "hindi-sandhi-q2", "prompt": {"hi": "देवेंद्र में कौन-सी संधि है?", "pa": "देवेंद्र ਵਿੱਚ ਕਿਹੜੀ ਸੰਧੀ?", "en": "Sandhi in devendra?"}, "options": [{"hi": "दीर्घ", "pa": "ਦੀਰਘ", "en": "Dirgha"}, {"hi": "गुण", "pa": "ਗੁਣ", "en": "Guna"}, {"hi": "वृद्धि", "pa": "ਵ੍ਰਿੱਧੀ", "en": "Vriddhi"}, {"hi": "अयादि", "pa": "ਅਯਾਦਿ", "en": "Ayadi"}], "answerIndex": 1, "explanation": {"hi": "देव + इंद्र: अ + इ → ए। यह गुण संधि है।", "pa": "अ + इ → ए: ਗੁਣ ਸੰਧੀ।", "en": "a + i → e: Guna sandhi."}},
+      {"id": "hindi-sandhi-q3", "prompt": {"hi": "गुण संधि में अ/आ + उ/ऊ = ?", "pa": "ਗੁਣ ਸੰਧੀ ਵਿੱਚ अ + उ = ?", "en": "Guna sandhi: a + u = ?"}, "options": [{"hi": "आ", "pa": "आ", "en": "aa"}, {"hi": "ओ", "pa": "ओ", "en": "o"}, {"hi": "ऐ", "pa": "ऐ", "en": "ai"}, {"hi": "औ", "pa": "औ", "en": "au"}], "answerIndex": 1, "explanation": {"hi": "गुण संधि: अ/आ + उ/ऊ → ओ। महा + उत्सव = महोत्सव।", "pa": "ਗੁਣ: अ + उ → ओ।", "en": "Guna: a/aa + u/uu → o. Example: mahotsav."}},
+      {"id": "hindi-sandhi-q4", "prompt": {"hi": "सदैव में कौन-सी संधि?", "pa": "सदैव ਵਿੱਚ ਕਿਹੜੀ ਸੰਧੀ?", "en": "Sandhi in sadaiva?"}, "options": [{"hi": "गुण", "pa": "ਗੁਣ", "en": "Guna"}, {"hi": "दीर्घ", "pa": "ਦੀਰਘ", "en": "Dirgha"}, {"hi": "वृद्धि", "pa": "ਵ੍ਰਿੱਧੀ", "en": "Vriddhi"}, {"hi": "यण", "pa": "ਯਣ", "en": "Yan"}], "answerIndex": 2, "explanation": {"hi": "सदा + एव: आ + ए → ऐ (वृद्धि संधि)।", "pa": "सदा + एव: आ + ए → ऐ: ਵ੍ਰਿੱਧੀ।", "en": "sada + eva: aa + e → ai: Vriddhi sandhi."}},
+      {"id": "hindi-sandhi-q5", "prompt": {"hi": "यण संधि में उ + स्वर = ?", "pa": "ਯਣ ਸੰਧੀ ਵਿੱਚ उ + ਸਵਰ = ?", "en": "Yan sandhi: u + vowel = ?"}, "options": [{"hi": "य्", "pa": "य्", "en": "y"}, {"hi": "व्", "pa": "व्", "en": "v"}, {"hi": "र्", "pa": "र्", "en": "r"}, {"hi": "ए", "pa": "ए", "en": "e"}], "answerIndex": 1, "explanation": {"hi": "यण संधि में उ/ऊ + स्वर → व्। सु + आगत = स्वागत।", "pa": "उ + ਸਵਰ → व्। स्वागत।", "en": "Yan: u/uu + vowel → v. svagat."}},
+      {"id": "hindi-sandhi-q6", "prompt": {"hi": "संधि और समास में अंतर?", "pa": "ਸੰਧੀ ਅਤੇ ਸਮਾਸ ਵਿੱਚ ਫ਼ਰਕ?", "en": "Difference between sandhi and samas?"}, "options": [{"hi": "कोई अंतर नहीं", "pa": "ਕੋਈ ਫ਼ਰਕ ਨਹੀਂ", "en": "No difference"}, {"hi": "संधि = ध्वनि मेल; समास = अर्थ मेल", "pa": "ਸੰਧੀ = ਧੁਨੀ ਮੇਲ; ਸਮਾਸ = ਅਰਥ ਮੇਲ", "en": "Sandhi = sound; Samas = meaning"}, {"hi": "संधि = शब्द; समास = वाक्य", "pa": "ਸੰਧੀ = ਸ਼ਬਦ", "en": "Sandhi = word"}, {"hi": "दोनों एक ही हैं", "pa": "ਦੋਵੇਂ ਇੱਕੋ ਹਨ", "en": "Both are same"}], "answerIndex": 1, "explanation": {"hi": "संधि वर्ण (ध्वनि) स्तर पर होती है; समास शब्द (अर्थ) स्तर पर।", "pa": "ਸੰਧੀ ਵਰਣ ਪੱਧਰ ਉੱਤੇ; ਸਮਾਸ ਸ਼ਬਦ ਪੱਧਰ ਉੱਤੇ।", "en": "Sandhi is at the sound/letter level; Samas is at the word/meaning level."}},
+      {"id": "hindi-sandhi-q7", "prompt": {"hi": "महर्षि में कौन-सी संधि?", "pa": "महर्षि ਵਿੱਚ ਕਿਹੜੀ ਸੰਧੀ?", "en": "Sandhi in maharshi?"}, "options": [{"hi": "दीर्घ", "pa": "ਦੀਰਘ", "en": "Dirgha"}, {"hi": "यण", "pa": "ਯਣ", "en": "Yan"}, {"hi": "गुण", "pa": "ਗੁਣ", "en": "Guna"}, {"hi": "वृद्धि", "pa": "ਵ੍ਰਿੱਧੀ", "en": "Vriddhi"}], "answerIndex": 2, "explanation": {"hi": "महा + ऋषि: आ + ऋ → अर् (गुण संधि)।", "pa": "महा + ऋषि: आ + ऋ → अर्: ਗੁਣ।", "en": "maha + rishi: aa + ri → ar (Guna sandhi)."}},
+      {"id": "hindi-sandhi-q8", "prompt": {"hi": "संधि के कुल कितने प्रकार हैं?", "pa": "ਸੰਧੀ ਦੇ ਕੁੱਲ ਕਿੰਨੇ ਪ੍ਰਕਾਰ ਹਨ?", "en": "How many types of sandhi are there?"}, "options": [{"hi": "2", "pa": "2", "en": "2"}, {"hi": "3", "pa": "3", "en": "3"}, {"hi": "5", "pa": "5", "en": "5"}, {"hi": "4", "pa": "4", "en": "4"}], "answerIndex": 1, "explanation": {"hi": "संधि तीन प्रकार की होती है: स्वर, व्यंजन और विसर्ग संधि।", "pa": "ਸੰਧੀ ਤਿੰਨ ਪ੍ਰਕਾਰ ਦੀ ਹੁੰਦੀ ਹੈ।", "en": "Three types of sandhi: vowel, consonant, and visarga sandhi."}},
+      {"id": "hindi-sandhi-q9", "prompt": {"hi": "नयन = ने + अन। यह कौन-सी संधि?", "pa": "नयन = ने + अन। ਕਿਹੜੀ ਸੰਧੀ?", "en": "nayan = ne + an. Which sandhi?"}, "options": [{"hi": "गुण", "pa": "ਗੁਣ", "en": "Guna"}, {"hi": "वृद्धि", "pa": "ਵ੍ਰਿੱਧੀ", "en": "Vriddhi"}, {"hi": "अयादि", "pa": "ਅਯਾਦਿ", "en": "Ayadi"}, {"hi": "दीर्घ", "pa": "ਦੀਰਘ", "en": "Dirgha"}], "answerIndex": 2, "explanation": {"hi": "ने + अन: ए + अ → अय् (अयादि संधि)। नयन।", "pa": "ए + अ → अय्: ਅਯਾਦਿ ਸੰਧੀ।", "en": "e + a → ay (Ayadi sandhi). nayan."}},
+      {"id": "hindi-sandhi-q10", "prompt": {"hi": "वृद्धि संधि में अ/आ + ओ/औ = ?", "pa": "ਵ੍ਰਿੱਧੀ ਸੰਧੀ ਵਿੱਚ अ + ओ = ?", "en": "Vriddhi sandhi: a + o = ?"}, "options": [{"hi": "ओ", "pa": "ओ", "en": "o"}, {"hi": "औ", "pa": "औ", "en": "au"}, {"hi": "ऐ", "pa": "ऐ", "en": "ai"}, {"hi": "अव्", "pa": "अव्", "en": "av"}], "answerIndex": 1, "explanation": {"hi": "वृद्धि संधि: अ/आ + ओ/औ → औ।", "pa": "ਵ੍ਰਿੱਧੀ: अ + ओ → औ।", "en": "Vriddhi: a/aa + o/au → au."}}
+    ],
+    "sources": [{"title": "PSEB Hindi Grammar · Class 9-10", "url": "https://www.pseb.ac.in/public/books"}],
+    "videos": [{"title": "Sandhi in Hindi · NCERT · Class 10", "url": "https://www.youtube.com/watch?v=7wHzrX6Qo0I"}],
+    "documents": []
+  },
+  {
+    "id": "eng-grammar",
+    "subject": "English",
+    "unit": "Grammar",
+    "title": {"hi": "अंग्रेज़ी: कर्ता–क्रिया सामंजस्य", "pa": "ਅੰਗਰੇਜ਼ੀ: ਕਰਤਾ–ਕਿਰਿਆ ਇਕਸਾਰਤਾ", "en": "English: Subject-Verb Agreement"},
+    "sections": [
+      {
+        "heading": {"hi": "Subject-Verb Agreement के नियम", "pa": "Subject-Verb Agreement ਦੇ ਨਿਯਮ", "en": "Rules of Subject-Verb Agreement"},
+        "text": {
+          "hi": "1. एकवचन कर्ता + एकवचन क्रिया। 2. बहुवचन कर्ता + बहुवचन क्रिया। 3. He/She/It/Singular + V+s/es। 4. Each/Every + Singular verb। 5. Either/Neither (अकेले) + Singular verb।\n\nजटिल नियम: 'The team' (collective noun) — वाक्य के अर्थ पर निर्भर। 'A number of' + plural verb; 'The number of' + singular verb। Intervening phrase नज़रअंदाज़ करें: 'The list of books is long' (list = subject, books नहीं)।",
+          "pa": "1. ਇਕਵਚਨ ਕਰਤਾ + ਇਕਵਚਨ ਕਿਰਿਆ। 2. Each/Every + singular verb। 3. Either/Neither + singular verb। 'A number of' + plural; 'The number of' + singular।",
+          "en": "1. Singular subject + singular verb. 2. Plural subject + plural verb. 3. He/She/It + V+s/es. 4. Each/Every + singular verb. 5. Either/Neither (alone) + singular verb. Complex: collective nouns depend on context. 'A number of' + plural; 'The number of' + singular. Ignore intervening phrase: 'The list of books is long' (subject = list, not books)."
+        }
+      },
+      {
+        "heading": {"hi": "Articles, Tenses और Prepositions", "pa": "Articles, Tenses ਅਤੇ Prepositions", "en": "Articles, Tenses and Prepositions"},
+        "text": {
+          "hi": "Articles: 'a' (consonant sound से पहले), 'an' (vowel sound से पहले), 'the' (specific)। 'An hour' (h silent), 'A university' (y sound)।\n\nTenses याद रखने का तरीका: Present simple (I go), Continuous (I am going), Perfect (I have gone), Perfect Continuous (I have been going)। Past: went, was going, had gone, had been going। Future: will go, will be going, will have gone।\n\nमहत्वपूर्ण Prepositions: at (time), in (month/year), on (day/date)। 'at 5 PM', 'in March', 'on Monday'।",
+          "pa": "'a' + consonant sound; 'an' + vowel sound। 'An hour' (h silent)। Present Simple: I go; Continuous: I am going; Perfect: I have gone। at (time), in (month), on (day)।",
+          "en": "Articles: 'a' before consonant sound, 'an' before vowel sound. 'An hour' (h silent), 'a university' (y sound). Prepositions of time: 'at 5 PM', 'in March', 'on Monday'. Tenses: Present Simple / Continuous / Perfect / Perfect Continuous; same pattern for Past and Future."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "He/She/It → V+s: He goes. I/We/They → V base: They go.", "pa": "He/She/It → V+s। They → V base।", "en": "He/She/It → V+s. I/We/They → V base."},
+      {"hi": "Each/Every → Singular verb।", "pa": "Each/Every → Singular verb।", "en": "Each/Every → Singular verb."},
+      {"hi": "'A number of' + plural; 'The number of' + singular।", "pa": "'A number of' + plural; 'The number of' + singular।", "en": "'A number of' + plural verb; 'The number of' + singular verb."},
+      {"hi": "'an' vowel sound से पहले: an hour, an umbrella, a university।", "pa": "'an' + vowel sound: an hour, a university।", "en": "'an' before vowel sound: an hour, an umbrella; 'a' before consonant sound: a university."},
+      {"hi": "Prepositions: at (time), in (month), on (day)।", "pa": "at (ਸਮਾਂ), in (ਮਹੀਨਾ), on (ਦਿਨ)।", "en": "at (time), in (month/year), on (day/date)."}
+    ],
+    "summary": {
+      "hi": "He/She/It + V+s। Each/Every + Singular। 'A number of' + plural। 'an' vowel sound से पहले। at/in/on time prepositions।",
+      "pa": "He → V+s। Each → singular। 'an' + vowel sound।",
+      "en": "He/She/It + V+s. Each/Every + singular. 'A number of' + plural. 'an' before vowel sound. at/in/on time prepositions."
+    },
+    "flashcards": [
+      {"question": {"hi": "Each of the boys ___ (is/are) ready.", "pa": "Each of the boys ___ ready.", "en": "Each of the boys ___ (is/are) ready."}, "answer": {"hi": "is", "pa": "is", "en": "is"}},
+      {"question": {"hi": "'an' किस sound से पहले?", "pa": "'an' ਕਿਹੜੀ sound ਤੋਂ ਪਹਿਲਾਂ?", "en": "'an' before which sound?"}, "answer": {"hi": "vowel sound (an hour, an umbrella)", "pa": "vowel sound", "en": "vowel sound (an hour, an umbrella)"}},
+      {"question": {"hi": "She ___ (go/goes) to school daily.", "pa": "She ___ school daily.", "en": "She ___ (go/goes) to school daily."}, "answer": {"hi": "goes (She + V+s)", "pa": "goes", "en": "goes (She + V+s)"}},
+      {"question": {"hi": "on/in/at में से: '5 o'clock'?", "pa": "5 o'clock ਨਾਲ?", "en": "at/in/on before '5 o'clock'?"}, "answer": {"hi": "at 5 o'clock", "pa": "at 5 o'clock", "en": "at 5 o'clock"}},
+      {"question": {"hi": "A number of students ___ (is/are) present.", "pa": "A number of students ___ present.", "en": "A number of students ___ (is/are) present."}, "answer": {"hi": "are (A number of + plural)", "pa": "are", "en": "are (A number of + plural verb)"}}
+    ],
+    "questions": [
+      {"id": "eng-gram-q1", "prompt": {"hi": "Each of the teachers ___ present.", "pa": "Each of the teachers ___ present.", "en": "Each of the teachers ___ present."}, "options": [{"hi": "are", "pa": "are", "en": "are"}, {"hi": "is", "pa": "is", "en": "is"}, {"hi": "were", "pa": "were", "en": "were"}, {"hi": "have", "pa": "have", "en": "have"}], "answerIndex": 1, "explanation": {"hi": "Each के साथ singular verb: is।", "pa": "Each ਨਾਲ is।", "en": "Each takes singular verb: is."}},
+      {"id": "eng-gram-q2", "prompt": {"hi": "Neither of them ___ wrong.", "pa": "Neither of them ___ wrong.", "en": "Neither of them ___ wrong."}, "options": [{"hi": "are", "pa": "are", "en": "are"}, {"hi": "were", "pa": "were", "en": "were"}, {"hi": "is", "pa": "is", "en": "is"}, {"hi": "have", "pa": "have", "en": "have"}], "answerIndex": 2, "explanation": {"hi": "Neither (अकेला) + singular verb: is।", "pa": "Neither + singular: is।", "en": "Neither (alone) takes singular verb: is."}},
+      {"id": "eng-gram-q3", "prompt": {"hi": "She ___ to school every day.", "pa": "She ___ school every day.", "en": "She ___ to school every day."}, "options": [{"hi": "go", "pa": "go", "en": "go"}, {"hi": "goes", "pa": "goes", "en": "goes"}, {"hi": "gone", "pa": "gone", "en": "gone"}, {"hi": "going", "pa": "going", "en": "going"}], "answerIndex": 1, "explanation": {"hi": "She + V+s: goes।", "pa": "She + V+s: goes।", "en": "She (singular) + V+s: goes."}},
+      {"id": "eng-gram-q4", "prompt": {"hi": "___ you come here yesterday?", "pa": "___ you come here yesterday?", "en": "___ you come here yesterday?"}, "options": [{"hi": "Do", "pa": "Do", "en": "Do"}, {"hi": "Did", "pa": "Did", "en": "Did"}, {"hi": "Have", "pa": "Have", "en": "Have"}, {"hi": "Will", "pa": "Will", "en": "Will"}], "answerIndex": 1, "explanation": {"hi": "'yesterday' past tense → Did।", "pa": "'yesterday' → Did।", "en": "'Yesterday' indicates past tense → Did."}},
+      {"id": "eng-gram-q5", "prompt": {"hi": "___ honest man always speaks truth.", "pa": "___ honest man always speaks truth.", "en": "___ honest man always speaks truth."}, "options": [{"hi": "A", "pa": "A", "en": "A"}, {"hi": "An", "pa": "An", "en": "An"}, {"hi": "The", "pa": "The", "en": "The"}, {"hi": "No article", "pa": "No article", "en": "No article"}], "answerIndex": 1, "explanation": {"hi": "'honest' h silent → vowel sound → 'An'।", "pa": "'honest' ਵਿੱਚ h silent → vowel sound → An।", "en": "'honest' has silent h → vowel sound → 'An'."}},
+      {"id": "eng-gram-q6", "prompt": {"hi": "A number of students ___ absent.", "pa": "A number of students ___ absent.", "en": "A number of students ___ absent."}, "options": [{"hi": "is", "pa": "is", "en": "is"}, {"hi": "was", "pa": "was", "en": "was"}, {"hi": "are", "pa": "are", "en": "are"}, {"hi": "has", "pa": "has", "en": "has"}], "answerIndex": 2, "explanation": {"hi": "'A number of' = many → plural verb: are।", "pa": "'A number of' = ਬਹੁਤ → plural: are।", "en": "'A number of' means 'many' → plural verb: are."}},
+      {"id": "eng-gram-q7", "prompt": {"hi": "He ___ his homework since morning.", "pa": "He ___ his homework since morning.", "en": "He ___ his homework since morning."}, "options": [{"hi": "does", "pa": "does", "en": "does"}, {"hi": "did", "pa": "did", "en": "did"}, {"hi": "has been doing", "pa": "has been doing", "en": "has been doing"}, {"hi": "will do", "pa": "will do", "en": "will do"}], "answerIndex": 2, "explanation": {"hi": "'Since morning' → Present Perfect Continuous: has been doing।", "pa": "'since morning' → Present Perfect Continuous।", "en": "'Since morning' + ongoing action → Present Perfect Continuous: has been doing."}},
+      {"id": "eng-gram-q8", "prompt": {"hi": "The news ___ good today.", "pa": "The news ___ good today.", "en": "The news ___ good today."}, "options": [{"hi": "are", "pa": "are", "en": "are"}, {"hi": "is", "pa": "is", "en": "is"}, {"hi": "were", "pa": "were", "en": "were"}, {"hi": "have", "pa": "have", "en": "have"}], "answerIndex": 1, "explanation": {"hi": "'News' uncountable → singular verb: is।", "pa": "'news' uncountable → is।", "en": "'News' is uncountable (singular) → is."}},
+      {"id": "eng-gram-q9", "prompt": {"hi": "My friend along with his brothers ___ arrived.", "pa": "My friend along with his brothers ___ arrived.", "en": "My friend along with his brothers ___ arrived."}, "options": [{"hi": "have", "pa": "have", "en": "have"}, {"hi": "has", "pa": "has", "en": "has"}, {"hi": "had", "pa": "had", "en": "had"}, {"hi": "are", "pa": "are", "en": "are"}], "answerIndex": 1, "explanation": {"hi": "Subject = 'friend' (singular); 'along with brothers' intervening phrase → has।", "pa": "Subject = friend (singular) → has।", "en": "Subject is 'friend' (singular); 'along with' is not part of the subject → has."}},
+      {"id": "eng-gram-q10", "prompt": {"hi": "I met him ___ Sunday.", "pa": "I met him ___ Sunday.", "en": "I met him ___ Sunday."}, "options": [{"hi": "at", "pa": "at", "en": "at"}, {"hi": "in", "pa": "in", "en": "in"}, {"hi": "on", "pa": "on", "en": "on"}, {"hi": "by", "pa": "by", "en": "by"}], "answerIndex": 2, "explanation": {"hi": "Days of the week → 'on': on Sunday।", "pa": "ਹਫ਼ਤੇ ਦੇ ਦਿਨਾਂ ਲਈ 'on'।", "en": "Days of the week take 'on': on Sunday."}}
+    ],
+    "sources": [{"title": "PSEB English Grammar Class 10", "url": "https://www.pseb.ac.in/public/books"}],
+    "videos": [],
+    "documents": []
+  }
+]

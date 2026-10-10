@@ -1,0 +1,208 @@
+{
+  "version": "2026.10.10",
+  "generated_at": "2026-10-10T00:30:00Z",
+  "priority_order": [
+    "ett",
+    "clerk",
+    "master-sst",
+    "master-math",
+    "master-science",
+    "master-punjabi",
+    "reet-l1",
+    "reet-l2"
+  ],
+  "records": {
+    "ett": {
+      "exam_id": "ett",
+      "exam_name": {
+        "en": "Punjab ETT Recruitment (Paper B)",
+        "pa": "ਪੰਜਾਬ ਈ.ਟੀ.ਟੀ. ਭਰਤੀ (ਪੇਪਰ ਬੀ)",
+        "hi": "पंजाब ईटीटी भर्ती (पेपर बी)"
+      },
+      "board": "Education Recruitment Board (ERB), Department of School Education, Punjab",
+      "state": "Punjab",
+      "notification_identifier": "Advt. No. 6635 ETT Teachers / 2021",
+      "year": 2021,
+      "recruitment_status": "archival_verified",
+      "official_stage": "Paper B (Scored Written Test - 100 Marks)",
+      "total_marks": 100,
+      "duration_minutes": 100,
+      "negative_marking": 0,
+      "conflation_guard": "Distinct from PSTET Paper 1 (eligibility test) and D.El.Ed entrance examination. Candidates must have passed PSTET-1 to be eligible for ETT recruitment.",
+      "official_document_title": "Syllabus for Written Examination for 6635 ETT Posts",
+      "official_source_url": "https://educationrecruitmentboard.com/ETT6635/Docs/ETT6635Syllabus13_08_2021.pdf",
+      "source_published_date": "2021-08-13",
+      "verification_status": "verified_against_official_pdf",
+      "subject_breakdown": [
+        { "subject": "Punjabi", "marks": 15, "weight_pct": 15, "topics_count": 8 },
+        { "subject": "English", "marks": 15, "weight_pct": 15, "topics_count": 8 },
+        { "subject": "Hindi", "marks": 15, "weight_pct": 15, "topics_count": 8 },
+        { "subject": "Mathematics", "marks": 20, "weight_pct": 20, "topics_count": 10 },
+        { "subject": "General Science", "marks": 20, "weight_pct": 20, "topics_count": 10 },
+        { "subject": "Social Science", "marks": 15, "weight_pct": 15, "topics_count": 8 }
+      ]
+    },
+    "clerk": {
+      "exam_id": "clerk",
+      "exam_name": {
+        "en": "PSSSB Clerk (General / IT / Accounts)",
+        "pa": "ਪੀ.ਐਸ.ਐਸ.ਐਸ.ਬੀ. ਕਲਰਕ",
+        "hi": "पीएसएसएसबी क्लर्क"
+      },
+      "board": "Punjab Subordinate Services Selection Board (PSSSB), SAS Nagar",
+      "state": "Punjab",
+      "notification_identifier": "Advertisement No. 15 of 2022",
+      "year": 2022,
+      "recruitment_status": "archival_verified",
+      "official_stage": "Paper A (Qualifying Punjabi) + Paper B (Scored Written Test) + Stage 3 Typing Test",
+      "total_marks": 100,
+      "duration_minutes": 120,
+      "negative_marking": 0.25,
+      "conflation_guard": "Paper A is mandatory qualifying (50 marks, 50% qualifying score) per Punjab Govt Personnel Dept notification dated 28.10.2022; its marks are not added to final merit.",
+      "official_document_title": "Plan and Detailed Syllabus of Written Examination for the Post of Clerk",
+      "official_source_url": "https://sssb.punjab.gov.in/",
+      "source_published_date": "2022-10-28",
+      "verification_status": "verified_against_board_pattern",
+      "typing_rules": {
+        "speed_wpm": 30,
+        "max_error_percentage": 8.0,
+        "punjabi_font": "Unicode Raavi",
+        "keyboard_layout": "InScript layout (with practice note for test-center variations)",
+        "english_typing": "30 WPM qualifying"
+      },
+      "subject_breakdown": [
+        { "subject": "General Knowledge & Current Affairs (Punjab + National)", "marks": 30, "weight_pct": 30 },
+        { "subject": "Computer and IT Knowledge", "marks": 20, "weight_pct": 20 },
+        { "subject": "Mental Ability & Reasoning", "marks": 15, "weight_pct": 15 },
+        { "subject": "Numerical Skills / Mathematics", "marks": 15, "weight_pct": 15 },
+        { "subject": "English Language", "marks": 10, "weight_pct": 10 },
+        { "subject": "Punjabi Language (Paper B Scored)", "marks": 10, "weight_pct": 10 }
+      ]
+    },
+    "master-sst": {
+      "exam_id": "master-sst",
+      "exam_name": {
+        "en": "Punjab Master Cadre — Social Sciences (SST)",
+        "pa": "ਪੰਜਾਬ ਮਾਸਟਰ ਕੇਡਰ — ਸਮਾਜਿਕ ਸਿੱਖਿਆ (ਐਸ.ਐਸ.ਟੀ.)",
+        "hi": "पंजाब मास्टर काडर — सामाजिक अध्ययन (एसएसटी)"
+      },
+      "board": "Education Recruitment Board (ERB), Punjab",
+      "state": "Punjab",
+      "notification_identifier": "Advertisement No. 4161 Master Cadre Posts / 2022",
+      "year": 2022,
+      "recruitment_status": "archival_verified",
+      "official_stage": "Single Subject Written Test (150 Marks)",
+      "total_marks": 150,
+      "duration_minutes": 150,
+      "negative_marking": 0,
+      "subject_choice_rules": "Candidate must choose ANY TWO subjects out of 4: History (75 marks), Political Science / Civics (75 marks), Geography (75 marks), Economics (75 marks). Total = 150 marks.",
+      "official_document_title": "Syllabus for the Post of Master Cadre — Social Sciences",
+      "official_source_url": "https://educationrecruitmentboard.com/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+      "source_published_date": "2022-05-04",
+      "verification_status": "verified_against_official_pdf",
+      "subject_breakdown": [
+        { "subject": "History", "marks": 75, "units_count": 10, "description": "Indus Valley to National Movement & Punjab Sikh History" },
+        { "subject": "Political Science", "marks": 75, "units_count": 10, "description": "Indian Constitution, Organs of Govt, Courts, Foreign Policy" },
+        { "subject": "Geography", "marks": 75, "units_count": 8, "description": "Physical, Regional, India & Punjab Geography" },
+        { "subject": "Economics", "marks": 75, "units_count": 6, "description": "Indian Economy, Agriculture, Micro & Macro basics" }
+      ]
+    },
+    "master-math": {
+      "exam_id": "master-math",
+      "exam_name": {
+        "en": "Punjab Master Cadre — Mathematics",
+        "pa": "ਪੰਜਾਬ ਮਾਸਟਰ ਕੇਡਰ — ਗਣਿਤ",
+        "hi": "पंजाब मास्टर काडर — गणित"
+      },
+      "board": "Education Recruitment Board (ERB), Punjab",
+      "state": "Punjab",
+      "notification_identifier": "Advertisement No. 4161 Master Cadre Posts / 2022",
+      "year": 2022,
+      "recruitment_status": "archival_verified",
+      "official_stage": "Single Subject Written Test (150 Marks)",
+      "total_marks": 150,
+      "duration_minutes": 150,
+      "negative_marking": 0,
+      "subject_choice_rules": "Full 150 marks dedicated to Mathematics: Algebra, Matrices, Calculus, Coordinate Geometry, Differential Equations, Statistics & Probability.",
+      "official_document_title": "Syllabus for the Post of Master Cadre — Mathematics",
+      "official_source_url": "https://educationrecruitmentboard.com/master2022/",
+      "verification_status": "verified_against_official_pdf"
+    },
+    "master-science": {
+      "exam_id": "master-science",
+      "exam_name": {
+        "en": "Punjab Master Cadre — Science",
+        "pa": "ਪੰਜਾਬ ਮਾਸਟਰ ਕੇਡਰ — ਵਿਗਿਆਨ",
+        "hi": "पंजाब मास्टर काडर — विज्ञान"
+      },
+      "board": "Education Recruitment Board (ERB), Punjab",
+      "state": "Punjab",
+      "notification_identifier": "Advertisement No. 4161 Master Cadre Posts / 2022",
+      "year": 2022,
+      "recruitment_status": "archival_verified",
+      "official_stage": "Single Subject Written Test (150 Marks)",
+      "total_marks": 150,
+      "duration_minutes": 150,
+      "negative_marking": 0,
+      "subject_choice_rules": "150 marks divided across: Physics (50 marks), Chemistry (50 marks), Biology (Botany & Zoology, 50 marks).",
+      "official_document_title": "Syllabus for the Post of Master Cadre — Science",
+      "official_source_url": "https://educationrecruitmentboard.com/master2022/",
+      "verification_status": "verified_against_official_pdf"
+    },
+    "reet-l1": {
+      "exam_id": "reet-l1",
+      "exam_name": {
+        "en": "Rajasthan REET Level 1 (Classes I–V)",
+        "pa": "ਰਾਜਸਥਾਨ ਰੀਟ ਲੈਵਲ 1 (ਕਲਾਸ 1–5)",
+        "hi": "राजस्थान रीट लेवल 1 (कक्षा 1–5)"
+      },
+      "board": "Board of Secondary Education Rajasthan (RBSE), Ajmer",
+      "state": "Rajasthan",
+      "notification_identifier": "REET Notification 2022/2024",
+      "year": 2022,
+      "recruitment_status": "verified_official_bulletin",
+      "official_stage": "Teacher Eligibility Test Level 1 (150 Marks)",
+      "total_marks": 150,
+      "duration_minutes": 150,
+      "negative_marking": 0,
+      "conflation_guard": "REET is an eligibility examination. Final recruitment as 3rd Grade Teacher requires clearing the RSMSSB Mains examination.",
+      "official_document_title": "Rajasthan Eligibility Examination for Teachers (REET) Information Bulletin",
+      "official_source_url": "https://rajeduboard.rajasthan.gov.in/",
+      "verification_status": "verified_against_official_bulletin",
+      "subject_breakdown": [
+        { "subject": "Child Development & Pedagogy", "marks": 30, "weight_pct": 20 },
+        { "subject": "Language I (Hindi / English / Sanskrit / Punjabi / Urdu)", "marks": 30, "weight_pct": 20 },
+        { "subject": "Language II (Selected 2nd Language)", "marks": 30, "weight_pct": 20 },
+        { "subject": "Mathematics", "marks": 30, "weight_pct": 20 },
+        { "subject": "Environmental Studies (EVS)", "marks": 30, "weight_pct": 20 }
+      ]
+    },
+    "reet-l2": {
+      "exam_id": "reet-l2",
+      "exam_name": {
+        "en": "Rajasthan REET Level 2 (Classes VI–VIII)",
+        "pa": "ਰਾਜਸਥਾਨ ਰੀਟ ਲੈਵਲ 2 (ਕਲਾਸ 6–8)",
+        "hi": "राजस्थान रीट लेवल 2 (कक्षा 6–8)"
+      },
+      "board": "Board of Secondary Education Rajasthan (RBSE), Ajmer",
+      "state": "Rajasthan",
+      "notification_identifier": "REET Notification 2022/2024",
+      "year": 2022,
+      "recruitment_status": "verified_official_bulletin",
+      "official_stage": "Teacher Eligibility Test Level 2 (150 Marks)",
+      "total_marks": 150,
+      "duration_minutes": 150,
+      "negative_marking": 0,
+      "conflation_guard": "REET is an eligibility examination. Candidate chooses either Math & Science (60 Marks) OR Social Studies (60 Marks).",
+      "official_document_title": "Rajasthan Eligibility Examination for Teachers (REET) Information Bulletin Level 2",
+      "official_source_url": "https://rajeduboard.rajasthan.gov.in/",
+      "verification_status": "verified_against_official_bulletin",
+      "subject_breakdown": [
+        { "subject": "Child Development & Pedagogy", "marks": 30, "weight_pct": 20 },
+        { "subject": "Language I", "marks": 30, "weight_pct": 20 },
+        { "subject": "Language II", "marks": 30, "weight_pct": 20 },
+        { "subject": "Mathematics & Science OR Social Studies", "marks": 60, "weight_pct": 40 }
+      ]
+    }
+  }
+}

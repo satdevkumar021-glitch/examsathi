@@ -1,0 +1,93 @@
+{
+  "exam": "Rajasthan REET (Level 1 & Level 2)",
+  "version": "Board of Secondary Education Rajasthan (RBSE) Bulletin 2022/2024",
+  "board": "Board of Secondary Education Rajasthan (RBSE), Ajmer",
+  "notification": "REET 2022/2024 Bulletin",
+  "totalMarks": 150,
+  "negativeMarking": 0,
+  "officialSource": "https://rajeduboard.rajasthan.gov.in/",
+  "conflationGuard": "REET is a Teacher Eligibility Test. Recruitment for 3rd Grade Teacher posts is conducted separately by RSMSSB (Rajasthan Staff Selection Board).",
+  "levels": {
+    "level_1": {
+      "name": "Level 1 (Classes I–V Primary Teachers)",
+      "total_questions": 150,
+      "total_marks": 150,
+      "sections": [
+        {
+          "name": "Child Development & Pedagogy (30 Marks)",
+          "topics": [
+            "Concept of Growth and Development, Principles of Development",
+            "Theories of Learning (Thorndike, Pavlov, Skinner, Kohler, Piaget, Vygotsky)",
+            "Individual Differences, Personality and Intelligence",
+            "Understanding Diverse Learners (CWSN, Gifted, Backward, Learning Disabled)",
+            "Teaching-Learning Process, Action Research, RTE Act 2009"
+          ]
+        },
+        {
+          "name": "Language I (Hindi / English / Sanskrit / Punjabi / Urdu - 30 Marks)",
+          "topics": [
+            "Unseen Prose Passage, Grammar, Vocabulary",
+            "Principles of Language Teaching, Challenges of Language Teaching",
+            "Language Skills (LSRW), Teaching-Learning Materials, Remedial Teaching"
+          ]
+        },
+        {
+          "name": "Language II (Selected 2nd Language - 30 Marks)",
+          "topics": [
+            "Unseen Poetry/Prose Passage, Grammar, Literary Terms",
+            "Pedagogy of Second Language, Communicative Language Teaching, Evaluation"
+          ]
+        },
+        {
+          "name": "Mathematics (30 Marks)",
+          "topics": [
+            "Numbers up to 1 Crore, Place Value, Basic Operations",
+            "Fractions, Prime & Composite Numbers, LCM & HCF",
+            "Unitary Method, Average, Profit & Loss, Simple Interest",
+            "Plane & Curved Surfaces, Angles, Triangles, Mensuration",
+            "Pedagogical Issues of Mathematics, Diagnostic and Remedial Teaching"
+          ]
+        },
+        {
+          "name": "Environmental Studies / EVS (30 Marks)",
+          "topics": [
+            "Family and Relations, Social Evils (Child marriage, Dowry, Child labour)",
+            "Clothes, Habitats and Cleanliness",
+            "Professions, Public Places and Public Property",
+            "Our Culture and Civilization (Fair and festivals, National symbols)",
+            "Transport and Communication, Plants and Animals",
+            "Pedagogy of EVS, Concept and Scope, Activities, CCE"
+          ]
+        }
+      ]
+    },
+    "level_2": {
+      "name": "Level 2 (Classes VI–VIII Upper Primary Teachers)",
+      "total_questions": 150,
+      "total_marks": 150,
+      "sections": [
+        {
+          "name": "Child Development & Pedagogy (30 Marks)",
+          "topics": [
+            "Development of Child, Learning Process, Diverse Learners, Assessment & Evaluation"
+          ]
+        },
+        {
+          "name": "Language I (30 Marks)",
+          "topics": ["Grammar, Unseen Passages, Pedagogy of Language"]
+        },
+        {
+          "name": "Language II (30 Marks)",
+          "topics": ["Grammar, Unseen Passages, Pedagogy of Second Language"]
+        },
+        {
+          "name": "Mathematics & Science (60 Marks) OR Social Studies (60 Marks)",
+          "topics": [
+            "For Math/Science candidates: Algebra, Geometry, Mensuration, Statistics; Physics, Chemistry, Biology; Pedagogy of Math & Science",
+            "For SST candidates: Indian Civilization (Indus Valley, Vedic, Mauryan, Gupta), Bhakti & Sufi, Mughal Empire, British Rule; Indian Constitution & Democracy; Geography and Resources of India & Rajasthan; History and Art & Culture of Rajasthan; Pedagogical Issues of Social Science"
+          ]
+        }
+      ]
+    }
+  }
+}

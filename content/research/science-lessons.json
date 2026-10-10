@@ -1,0 +1,209 @@
+[
+  {
+    "id": "sci-motion",
+    "subject": "Science",
+    "unit": "Physics",
+    "title": {"hi": "गति और न्यूटन के नियम", "pa": "ਗਤੀ ਅਤੇ ਨਿਊਟਨ ਦੇ ਨਿਯਮ", "en": "Motion and Newton's Laws"},
+    "sections": [
+      {
+        "heading": {"hi": "गति क्या है?", "pa": "ਗਤੀ ਕੀ ਹੈ?", "en": "What is motion?"},
+        "text": {
+          "hi": "किसी वस्तु की स्थिति जब समय के साथ किसी संदर्भ बिंदु के सापेक्ष बदलती है, उसे गति कहते हैं। दूरी वह कुल रास्ता है जो वस्तु ने तय किया; यह सदा धनात्मक होती है। विस्थापन आरंभिक और अंतिम स्थिति के बीच सीधा सदिश है; यह ऋणात्मक, शून्य या धनात्मक हो सकता है। औसत चाल = दूरी ÷ समय; औसत वेग = विस्थापन ÷ समय।\n\nत्वरण वेग में परिवर्तन की दर है: a = (v − u) ÷ t। समान त्वरण के लिए गति के तीन समीकरण हैं: v = u + at; s = ut + ½at²; v² = u² + 2as। परीक्षा में पहले तय करें कि कौन-सी राशि अज्ञात है, फिर उसी समीकरण का उपयोग करें।",
+          "pa": "ਕਿਸੇ ਵਸਤੂ ਦੀ ਸਥਿਤੀ ਜਦੋਂ ਕਿਸੇ ਸੰਦਰਭ ਬਿੰਦੂ ਦੇ ਮੁਕਾਬਲੇ ਸਮੇਂ ਨਾਲ ਬਦਲਦੀ ਹੈ, ਉਸ ਨੂੰ ਗਤੀ ਕਹਿੰਦੇ ਹਨ। ਦੂਰੀ ਕੁੱਲ ਰਸਤਾ ਹੈ; ਵਿਸਥਾਪਨ ਸਿੱਧੀ ਦਿਸ਼ਾ ਵਿੱਚ ਬਦਲਾਅ ਹੈ। ਔਸਤ ਚਾਲ = ਦੂਰੀ ÷ ਸਮਾਂ; ਔਸਤ ਵੇਗ = ਵਿਸਥਾਪਨ ÷ ਸਮਾਂ। ਤਿੰਨ ਗਤੀ ਸਮੀਕਰਣ: v = u + at; s = ut + ½at²; v² = u² + 2as।",
+          "en": "Motion is the change in position of an object relative to a reference point over time. Distance is the total path length (always positive); displacement is the directed change from initial to final position (can be negative or zero). Average speed = distance ÷ time; average velocity = displacement ÷ time. Acceleration is the rate of change of velocity: a = (v − u) ÷ t. For uniform acceleration: v = u + at; s = ut + ½at²; v² = u² + 2as."
+        }
+      },
+      {
+        "heading": {"hi": "न्यूटन के तीन नियम", "pa": "ਨਿਊਟਨ ਦੇ ਤਿੰਨ ਨਿਯਮ", "en": "Newton's three laws"},
+        "text": {
+          "hi": "पहला नियम (जड़त्व का नियम): कोई वस्तु तब तक अपनी अवस्था नहीं बदलती जब तक उस पर कोई बाहरी बल न लगे। जड़त्व द्रव्यमान का गुण है। दूसरा नियम: परिणामी बल F = ma। SI इकाई newton (N) = kg·m/s²। तीसरा नियम: हर क्रिया के लिए एक बराबर और विपरीत प्रतिक्रिया होती है, लेकिन ये दोनों बल अलग-अलग वस्तुओं पर लगते हैं।\n\nजड़त्व का उदाहरण: गाड़ी रुकने पर यात्री आगे झुकते हैं। तीसरे नियम का उदाहरण: रॉकेट में गैस पीछे निकलती है, रॉकेट आगे बढ़ता है। परीक्षा भ्रांति: क्रिया-प्रतिक्रिया एक ही वस्तु पर नहीं लगते, इसलिए वे एक-दूसरे को रद्द नहीं करते।",
+          "pa": "ਪਹਿਲਾ ਨਿਯਮ (ਜੜਤ ਦਾ ਨਿਯਮ): ਕੋਈ ਵਸਤੂ ਉਦੋਂ ਤੱਕ ਆਪਣੀ ਅਵਸਥਾ ਨਹੀਂ ਬਦਲਦੀ ਜਦੋਂ ਤੱਕ ਬਾਹਰੀ ਬਲ ਨਾ ਲੱਗੇ। ਦੂਜਾ ਨਿਯਮ: F = ma। ਤੀਜਾ ਨਿਯਮ: ਹਰ ਕਿਰਿਆ ਦੀ ਬਰਾਬਰ ਅਤੇ ਉਲਟ ਪ੍ਰਤੀਕਿਰਿਆ ਹੁੰਦੀ ਹੈ, ਅਤੇ ਇਹ ਦੋਵੇਂ ਬਲ ਵੱਖ-ਵੱਖ ਵਸਤੂਆਂ ਉੱਤੇ ਲੱਗਦੇ ਹਨ।",
+          "en": "First law (Inertia): an object remains at rest or in uniform motion unless acted upon by an external net force. Inertia is proportional to mass. Second law: net force F = ma; SI unit is the newton (N = kg·m/s²). Third law: every action has an equal and opposite reaction, but the two forces act on different objects (so they cannot cancel each other on a single body). Exam trap: action-reaction pairs act on different objects."
+        }
+      },
+      {
+        "heading": {"hi": "परीक्षा अभ्यास", "pa": "ਪ੍ਰੀਖਿਆ ਅਭਿਆਸ", "en": "Exam practice"},
+        "text": {
+          "hi": "एक कार 10 m/s से शुरू होती है और 2 m/s² के त्वरण से चलती है। 5 s में वेग = 10 + 2×5 = 20 m/s। दूरी = 10×5 + ½×2×25 = 75 m। 5 kg की वस्तु पर 20 N का बल लगे तो त्वरण = 20÷5 = 4 m/s²।\n\nग्राफ परीक्षा: दूरी-समय ग्राफ का ढलान चाल देता है। वेग-समय ग्राफ का ढलान त्वरण देता है और क्षेत्रफल विस्थापन देता है। यदि ग्राफ सीधी रेखा है तो त्वरण नियत है। किताब बंद करके यह दो उदाहरण खुद बनाकर हल करें।",
+          "pa": "ਇੱਕ ਕਾਰ 10 m/s ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦੀ ਹੈ, 2 m/s² ਪ੍ਰਵੇਗ। 5 s ਵਿੱਚ ਵੇਗ = 20 m/s। ਦੂਰੀ = 75 m। 5 kg ਦੀ ਵਸਤੂ ਉੱਤੇ 20 N ਬਲ ਲੱਗੇ ਤਾਂ a = 4 m/s²। v-t ਗ੍ਰਾਫ ਦਾ ਢਲਾਣ ਪ੍ਰਵੇਗ ਦਿੰਦਾ ਹੈ; ਖੇਤਰਫਲ ਵਿਸਥਾਪਨ ਦਿੰਦਾ ਹੈ।",
+          "en": "A car starts at 10 m/s with acceleration 2 m/s². After 5 s: v = 10 + 2×5 = 20 m/s; distance = 10×5 + ½×2×25 = 75 m. A 5 kg object with 20 N force: a = 20÷5 = 4 m/s². Graph test: slope of distance-time graph gives speed; slope of velocity-time graph gives acceleration; area under velocity-time graph gives displacement. Practice: close notes, write two numerical examples and solve them from scratch."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "दूरी सदा धनात्मक; विस्थापन दिशा सहित सदिश।", "pa": "ਦੂਰੀ ਹਮੇਸ਼ਾ ਧਨਾਤਮਕ; ਵਿਸਥਾਪਨ ਦਿਸ਼ਾ ਸਮੇਤ ਸਦਿਸ਼।", "en": "Distance always positive; displacement is a vector."},
+      {"hi": "F = ma; SI इकाई newton = kg·m/s²।", "pa": "F = ma; SI ਇਕਾਈ newton = kg·m/s²।", "en": "F = ma; SI unit newton = kg·m/s²."},
+      {"hi": "क्रिया-प्रतिक्रिया अलग वस्तुओं पर लगते हैं।", "pa": "ਕਿਰਿਆ-ਪ੍ਰਤੀਕਿਰਿਆ ਵੱਖ ਵਸਤੂਆਂ ਉੱਤੇ ਲੱਗਦੇ ਹਨ।", "en": "Action-reaction act on different objects."},
+      {"hi": "v-t ग्राफ का क्षेत्रफल = विस्थापन।", "pa": "v-t ਗ੍ਰਾਫ ਦਾ ਖੇਤਰਫਲ = ਵਿਸਥਾਪਨ।", "en": "Area under v-t graph = displacement."},
+      {"hi": "तीन गति समीकरण केवल नियत त्वरण पर लागू।", "pa": "ਤਿੰਨ ਗਤੀ ਸਮੀਕਰਣ ਕੇਵਲ ਨਿਯਤ ਪ੍ਰਵੇਗ ਲਈ।", "en": "Three equations of motion apply only for uniform acceleration."}
+    ],
+    "summary": {
+      "hi": "गति में दूरी और विस्थापन का अंतर समझें। न्यूटन के तीन नियम: जड़त्व, F=ma, क्रिया-प्रतिक्रिया। तीन गति समीकरण नियत त्वरण के लिए। v-t ग्राफ का ढलान = त्वरण, क्षेत्रफल = विस्थापन।",
+      "pa": "ਦੂਰੀ ਅਤੇ ਵਿਸਥਾਪਨ ਦਾ ਫ਼ਰਕ ਸਮਝੋ। ਨਿਊਟਨ ਦੇ ਤਿੰਨ ਨਿਯਮ। v = u + at; s = ut + ½at²; v² = u² + 2as। v-t ਗ੍ਰਾਫ ਦਾ ਢਲਾਣ ਪ੍ਰਵੇਗ ਦਿੰਦਾ ਹੈ।",
+      "en": "Distinguish distance from displacement. Newton's three laws: inertia, F=ma, action-reaction. Three motion equations for uniform acceleration. Slope of v-t graph = acceleration; area = displacement."
+    },
+    "flashcards": [
+      {"question": {"hi": "औसत वेग की परिभाषा?", "pa": "ਔਸਤ ਵੇਗ ਦੀ ਪਰਿਭਾਸ਼ਾ?", "en": "Definition of average velocity?"}, "answer": {"hi": "विस्थापन ÷ समय", "pa": "ਵਿਸਥਾਪਨ ÷ ਸਮਾਂ", "en": "Displacement ÷ time"}},
+      {"question": {"hi": "न्यूटन का दूसरा नियम क्या कहता है?", "pa": "ਨਿਊਟਨ ਦਾ ਦੂਜਾ ਨਿਯਮ ਕੀ ਕਹਿੰਦਾ ਹੈ?", "en": "State Newton's second law."}, "answer": {"hi": "F = ma; परिणामी बल = द्रव्यमान × त्वरण", "pa": "F = ma; ਕੁੱਲ ਬਲ = ਪੁੰਜ × ਪ੍ਰਵੇਗ", "en": "F = ma; net force = mass × acceleration"}},
+      {"question": {"hi": "1 newton = ?", "pa": "1 newton = ?", "en": "1 newton = ?"}, "answer": {"hi": "1 kg·m/s²", "pa": "1 kg·m/s²", "en": "1 kg·m/s²"}},
+      {"question": {"hi": "v-t ग्राफ का क्षेत्रफल क्या देता है?", "pa": "v-t ਗ੍ਰਾਫ ਦਾ ਖੇਤਰਫਲ ਕੀ ਦਿੰਦਾ ਹੈ?", "en": "What does area under v-t graph give?"}, "answer": {"hi": "विस्थापन", "pa": "ਵਿਸਥਾਪਨ", "en": "Displacement"}},
+      {"question": {"hi": "जड़त्व किस पर निर्भर है?", "pa": "ਜੜਤ ਕਿਸ ਉੱਤੇ ਨਿਰਭਰ ਹੈ?", "en": "On what does inertia depend?"}, "answer": {"hi": "द्रव्यमान पर", "pa": "ਪੁੰਜ ਉੱਤੇ", "en": "On mass"}},
+      {"question": {"hi": "तीसरा गति समीकरण?", "pa": "ਤੀਜਾ ਗਤੀ ਸਮੀਕਰਣ?", "en": "Third equation of motion?"}, "answer": {"hi": "v² = u² + 2as", "pa": "v² = u² + 2as", "en": "v² = u² + 2as"}},
+      {"question": {"hi": "रॉकेट किस नियम पर काम करता है?", "pa": "ਰਾਕੇਟ ਕਿਸ ਨਿਯਮ ਉੱਤੇ ਕੰਮ ਕਰਦਾ ਹੈ?", "en": "On which law does a rocket work?"}, "answer": {"hi": "तीसरे नियम पर (क्रिया-प्रतिक्रिया)", "pa": "ਤੀਜੇ ਨਿਯਮ ਉੱਤੇ", "en": "Third law (action-reaction)"}},
+      {"question": {"hi": "नियत वेग पर त्वरण कितना?", "pa": "ਨਿਯਤ ਵੇਗ ਉੱਤੇ ਪ੍ਰਵੇਗ ਕਿੰਨਾ?", "en": "Acceleration at constant velocity?"}, "answer": {"hi": "शून्य", "pa": "ਸਿਫ਼ਰ", "en": "Zero"}}
+    ],
+    "questions": [
+      {"id": "sci-motion-q1", "prompt": {"hi": "10 m/s से चलती कार 2 m/s² से रुकती है। 5 s में तय दूरी?", "pa": "10 m/s ਤੋਂ ਕਾਰ 2 m/s² ਨਾਲ ਰੁਕਦੀ ਹੈ। 5 s ਵਿੱਚ ਦੂਰੀ?", "en": "Car at 10 m/s decelerates at 2 m/s². Distance in 5 s?"}, "options": [{"hi": "75 m", "pa": "75 m", "en": "75 m"}, {"hi": "50 m", "pa": "50 m", "en": "50 m"}, {"hi": "100 m", "pa": "100 m", "en": "100 m"}, {"hi": "25 m", "pa": "25 m", "en": "25 m"}], "answerIndex": 0, "explanation": {"hi": "s = ut + ½at² = 10×5 + ½×(−2)×25 = 50 − 25 = 25 m। लेकिन acceleration 2 m/s² है तो s = 10×5 + ½×2×25 = 75 m।", "pa": "s = ut + ½at² = 10×5 + ½×2×25 = 50 + 25 = 75 m", "en": "s = ut + ½at² = 10×5 + ½×2×25 = 50 + 25 = 75 m"}},
+      {"id": "sci-motion-q2", "prompt": {"hi": "5 kg वस्तु पर 20 N बल लगे तो त्वरण?", "pa": "5 kg ਵਸਤੂ ਉੱਤੇ 20 N ਬਲ ਲੱਗੇ ਤਾਂ ਪ੍ਰਵੇਗ?", "en": "5 kg object with 20 N force: acceleration?"}, "options": [{"hi": "4 m/s²", "pa": "4 m/s²", "en": "4 m/s²"}, {"hi": "100 m/s²", "pa": "100 m/s²", "en": "100 m/s²"}, {"hi": "0.25 m/s²", "pa": "0.25 m/s²", "en": "0.25 m/s²"}, {"hi": "2 m/s²", "pa": "2 m/s²", "en": "2 m/s²"}], "answerIndex": 0, "explanation": {"hi": "a = F/m = 20/5 = 4 m/s²", "pa": "a = F/m = 20/5 = 4 m/s²", "en": "a = F/m = 20/5 = 4 m/s²"}},
+      {"id": "sci-motion-q3", "prompt": {"hi": "किस नियम में F = ma है?", "pa": "ਕਿਸ ਨਿਯਮ ਵਿੱਚ F = ma ਹੈ?", "en": "Which law states F = ma?"}, "options": [{"hi": "पहले नियम", "pa": "ਪਹਿਲੇ ਨਿਯਮ", "en": "First law"}, {"hi": "दूसरे नियम", "pa": "ਦੂਜੇ ਨਿਯਮ", "en": "Second law"}, {"hi": "तीसरे नियम", "pa": "ਤੀਜੇ ਨਿਯਮ", "en": "Third law"}, {"hi": "गुरुत्वाकर्षण नियम", "pa": "ਗੁਰੂਤਾਕਰਸ਼ਣ ਨਿਯਮ", "en": "Law of gravitation"}], "answerIndex": 1, "explanation": {"hi": "F = ma न्यूटन के दूसरे नियम का गणितीय रूप है।", "pa": "F = ma ਨਿਊਟਨ ਦੇ ਦੂਜੇ ਨਿਯਮ ਦਾ ਗਣਿਤਕ ਰੂਪ ਹੈ।", "en": "F = ma is the mathematical form of Newton's second law."}},
+      {"id": "sci-motion-q4", "prompt": {"hi": "क्रिया-प्रतिक्रिया बल कहाँ लगते हैं?", "pa": "ਕਿਰਿਆ-ਪ੍ਰਤੀਕਿਰਿਆ ਬਲ ਕਿੱਥੇ ਲੱਗਦੇ ਹਨ?", "en": "Where do action-reaction forces act?"}, "options": [{"hi": "एक ही वस्तु पर", "pa": "ਇੱਕੋ ਵਸਤੂ ਉੱਤੇ", "en": "On the same object"}, {"hi": "अलग-अलग वस्तुओं पर", "pa": "ਵੱਖ-ਵੱਖ ਵਸਤੂਆਂ ਉੱਤੇ", "en": "On different objects"}, {"hi": "कहीं नहीं", "pa": "ਕਿਤੇ ਨਹੀਂ", "en": "Nowhere"}, {"hi": "केवल जमीन पर", "pa": "ਕੇਵਲ ਜ਼ਮੀਨ ਉੱਤੇ", "en": "Only on the ground"}], "answerIndex": 1, "explanation": {"hi": "तीसरे नियम के अनुसार क्रिया-प्रतिक्रिया बल हमेशा अलग-अलग वस्तुओं पर लगते हैं।", "pa": "ਤੀਜੇ ਨਿਯਮ ਅਨੁਸਾਰ ਕਿਰਿਆ-ਪ੍ਰਤੀਕਿਰਿਆ ਹਮੇਸ਼ਾ ਵੱਖ-ਵੱਖ ਵਸਤੂਆਂ ਉੱਤੇ ਲੱਗਦੇ ਹਨ।", "en": "Action-reaction pairs always act on different objects per Newton's third law."}},
+      {"id": "sci-motion-q5", "prompt": {"hi": "v-t ग्राफ में ढलान क्या देता है?", "pa": "v-t ਗ੍ਰਾਫ ਵਿੱਚ ਢਲਾਣ ਕੀ ਦਿੰਦਾ ਹੈ?", "en": "What does slope of v-t graph give?"}, "options": [{"hi": "विस्थापन", "pa": "ਵਿਸਥਾਪਨ", "en": "Displacement"}, {"hi": "त्वरण", "pa": "ਪ੍ਰਵੇਗ", "en": "Acceleration"}, {"hi": "बल", "pa": "ਬਲ", "en": "Force"}, {"hi": "दूरी", "pa": "ਦੂਰੀ", "en": "Distance"}], "answerIndex": 1, "explanation": {"hi": "v-t ग्राफ का ढलान त्वरण देता है और क्षेत्रफल विस्थापन देता है।", "pa": "v-t ਗ੍ਰਾਫ ਦਾ ਢਲਾਣ ਪ੍ਰਵੇਗ ਦਿੰਦਾ ਹੈ; ਖੇਤਰਫਲ ਵਿਸਥਾਪਨ।", "en": "Slope of v-t graph gives acceleration; area gives displacement."}},
+      {"id": "sci-motion-q6", "prompt": {"hi": "जड़त्व का कारण क्या है?", "pa": "ਜੜਤ ਦਾ ਕਾਰਨ ਕੀ ਹੈ?", "en": "What causes inertia?"}, "options": [{"hi": "वेग", "pa": "ਵੇਗ", "en": "Velocity"}, {"hi": "द्रव्यमान", "pa": "ਪੁੰਜ", "en": "Mass"}, {"hi": "बल", "pa": "ਬਲ", "en": "Force"}, {"hi": "त्वरण", "pa": "ਪ੍ਰਵੇਗ", "en": "Acceleration"}], "answerIndex": 1, "explanation": {"hi": "जड़त्व द्रव्यमान का गुण है। अधिक द्रव्यमान = अधिक जड़त्व।", "pa": "ਜੜਤ ਪੁੰਜ ਦਾ ਗੁਣ ਹੈ। ਵੱਧ ਪੁੰਜ = ਵੱਧ ਜੜਤ।", "en": "Inertia is a property of mass. More mass = more inertia."}},
+      {"id": "sci-motion-q7", "prompt": {"hi": "एक चक्कर लगाने पर विस्थापन कितना?", "pa": "ਇੱਕ ਚੱਕਰ ਲਾਉਣ ਉੱਤੇ ਵਿਸਥਾਪਨ ਕਿੰਨਾ?", "en": "Displacement after one complete revolution?"}, "options": [{"hi": "2πr", "pa": "2πr", "en": "2πr"}, {"hi": "πr²", "pa": "πr²", "en": "πr²"}, {"hi": "শূন্য (zero)", "pa": "ਸਿਫ਼ਰ", "en": "Zero"}, {"hi": "4r", "pa": "4r", "en": "4r"}], "answerIndex": 2, "explanation": {"hi": "एक पूरे चक्कर में आरंभिक और अंतिम स्थिति एक ही है, इसलिए विस्थापन शून्य।", "pa": "ਪੂਰਾ ਚੱਕਰ ਲਾਉਣ ਨਾਲ ਸ਼ੁਰੂਆਤ ਅਤੇ ਅੰਤ ਦੀ ਥਾਂ ਇੱਕੋ ਹੈ, ਇਸ ਲਈ ਵਿਸਥਾਪਨ ਸਿਫ਼ਰ।", "en": "After one complete revolution, initial and final positions are the same, so displacement is zero."}},
+      {"id": "sci-motion-q8", "prompt": {"hi": "कार 0 से 30 m/s तक 10 s में। त्वरण?", "pa": "ਕਾਰ 0 ਤੋਂ 30 m/s, 10 s ਵਿੱਚ। ਪ੍ਰਵੇਗ?", "en": "Car: 0 to 30 m/s in 10 s. Acceleration?"}, "options": [{"hi": "3 m/s²", "pa": "3 m/s²", "en": "3 m/s²"}, {"hi": "30 m/s²", "pa": "30 m/s²", "en": "30 m/s²"}, {"hi": "0.3 m/s²", "pa": "0.3 m/s²", "en": "0.3 m/s²"}, {"hi": "300 m/s²", "pa": "300 m/s²", "en": "300 m/s²"}], "answerIndex": 0, "explanation": {"hi": "a = (v-u)/t = (30-0)/10 = 3 m/s²", "pa": "a = (v-u)/t = (30-0)/10 = 3 m/s²", "en": "a = (v-u)/t = (30-0)/10 = 3 m/s²"}},
+      {"id": "sci-motion-q9", "prompt": {"hi": "कौन-सा राशि अदिश है?", "pa": "ਕਿਹੜੀ ਰਾਸ਼ੀ ਅਦਿਸ਼ ਹੈ?", "en": "Which is a scalar quantity?"}, "options": [{"hi": "वेग", "pa": "ਵੇਗ", "en": "Velocity"}, {"hi": "बल", "pa": "ਬਲ", "en": "Force"}, {"hi": "चाल", "pa": "ਚਾਲ", "en": "Speed"}, {"hi": "विस्थापन", "pa": "ਵਿਸਥਾਪਨ", "en": "Displacement"}], "answerIndex": 2, "explanation": {"hi": "चाल केवल परिमाण रखती है (दिशा नहीं), इसलिए अदिश है।", "pa": "ਚਾਲ ਕੇਵਲ ਮਾਤਰਾ ਰੱਖਦੀ ਹੈ, ਇਸ ਲਈ ਅਦਿਸ਼ ਹੈ।", "en": "Speed has magnitude only (no direction), so it is scalar."}},
+      {"id": "sci-motion-q10", "prompt": {"hi": "u=0, a=10 m/s², t=3s. s=?", "pa": "u=0, a=10 m/s², t=3s. s=?", "en": "u=0, a=10 m/s², t=3s. Find s."}, "options": [{"hi": "45 m", "pa": "45 m", "en": "45 m"}, {"hi": "30 m", "pa": "30 m", "en": "30 m"}, {"hi": "90 m", "pa": "90 m", "en": "90 m"}, {"hi": "15 m", "pa": "15 m", "en": "15 m"}], "answerIndex": 0, "explanation": {"hi": "s = ut + ½at² = 0 + ½×10×9 = 45 m", "pa": "s = ut + ½at² = 0 + ½×10×9 = 45 m", "en": "s = ut + ½at² = 0 + ½×10×9 = 45 m"}}
+    ],
+    "sources": [{"title": "NCERT Science Class 9 · Motion", "url": "https://ncert.nic.in/textbook/pdf/iesc108.pdf"}],
+    "videos": [{"title": "NCERT Motion Class 9 · Hindi", "url": "https://www.youtube.com/watch?v=9K7xmuCMiPQ"}],
+    "documents": [{"title": "NIOS Science Senior Secondary", "url": "https://nios.ac.in/media/documents/319courseE/Physics/Lesson_01.pdf", "language": "English"}]
+  },
+  {
+    "id": "sci-cell",
+    "subject": "Science",
+    "unit": "Biology",
+    "title": {"hi": "कोशिका: जीवन की इकाई", "pa": "ਕੋਸ਼ਿਕਾ: ਜੀਵਨ ਦੀ ਇਕਾਈ", "en": "Cell: the unit of life"},
+    "sections": [
+      {
+        "heading": {"hi": "कोशिका की मूल संरचना", "pa": "ਕੋਸ਼ਿਕਾ ਦੀ ਮੁੱਢਲੀ ਸੰਰਚਨਾ", "en": "Basic cell structure"},
+        "text": {
+          "hi": "कोशिका जीवन की मूल संरचनात्मक और कार्यात्मक इकाई है। प्लाज्मा झिल्ली कोशिका की बाहरी सीमा है और अर्धपारगम्य होती है—यह चुनकर पदार्थों को आने-जाने देती है। केंद्रक में DNA के रूप में आनुवंशिक जानकारी होती है और यह कोशिका की गतिविधियों को नियंत्रित करता है।\n\nमाइटोकॉन्ड्रिया 'कोशिका का ऊर्जागृह' है—यहाँ कोशिकीय श्वसन होता है और ATP बनती है। राइबोसोम प्रोटीन संश्लेषण का स्थान हैं। गॉल्जी काय पदार्थों की छँटाई और स्रावण करता है। एंडोप्लाज्मिक रेटिकुलम दो प्रकार का होता है: खुरदुरा (राइबोसोम सहित) और चिकना।",
+          "pa": "ਕੋਸ਼ਿਕਾ ਜੀਵਨ ਦੀ ਮੁੱਢਲੀ ਸੰਰਚਨਾਤਮਕ ਅਤੇ ਕਾਰਜਾਤਮਕ ਇਕਾਈ ਹੈ। ਪਲਾਜ਼ਮਾ ਝਿੱਲੀ ਅਰਧ-ਪਾਰਦਰਸ਼ੀ ਹੈ। ਕੇਂਦਰਕ ਵਿੱਚ DNA ਹੁੰਦਾ ਹੈ। ਮਾਈਟੋਕਾਂਡਰੀਆ 'ਕੋਸ਼ਿਕਾ ਦਾ ਊਰਜਾਘਰ' ਹੈ ਜਿੱਥੇ ATP ਬਣਦੀ ਹੈ। ਰਾਈਬੋਸੋਮ ਪ੍ਰੋਟੀਨ ਸੰਸ਼ਲੇਸ਼ਣ ਕਰਦੇ ਹਨ।",
+          "en": "The cell is the basic structural and functional unit of life. The plasma membrane is the outer boundary and is selectively permeable—it controls the entry and exit of substances. The nucleus contains genetic information as DNA and controls cell activities. Mitochondria are the 'powerhouse of the cell' where cellular respiration produces ATP. Ribosomes synthesise proteins. The Golgi apparatus sorts and secretes substances."
+        }
+      },
+      {
+        "heading": {"hi": "पादप और जंतु कोशिका में अंतर", "pa": "ਪੌਦਾ ਅਤੇ ਜੰਤੂ ਕੋਸ਼ਿਕਾ ਵਿੱਚ ਫ਼ਰਕ", "en": "Plant vs animal cell"},
+        "text": {
+          "hi": "पादप कोशिका में: सेल्यूलोज की कोशिका भित्ति (cell wall), हरितलवक (chloroplast), बड़ी केंद्रीय रसधानी (vacuole) होती है। जंतु कोशिका में: ये तीनों नहीं होते। दोनों में: प्लाज्मा झिल्ली, केंद्रक, माइटोकॉन्ड्रिया, राइबोसोम, गॉल्जी काय होते हैं।\n\nप्रोकैरियोट (जैसे बैक्टीरिया) में झिल्ली से घिरा केंद्रक नहीं होता; DNA सीधे कोशिकाद्रव्य में होता है। यूकैरियोट (पादप, जंतु, कवक) में झिल्ली से घिरा केंद्रक होता है। परीक्षा ट्रिक: 'PCV' याद रखें—P=भित्ति, C=हरितलवक, V=रसधानी, ये पादप में अतिरिक्त होते हैं।",
+          "pa": "ਪੌਦੇ ਦੀ ਕੋਸ਼ਿਕਾ ਵਿੱਚ: ਸੈਲੂਲੋਜ਼ ਦੀ ਕੋਸ਼ਿਕਾ ਭਿੱਤੀ, ਕਲੋਰੋਪਲਾਸਟ, ਵੱਡੀ ਰਸਧਾਨੀ ਹੁੰਦੀ ਹੈ। ਜੰਤੂ ਕੋਸ਼ਿਕਾ ਵਿੱਚ ਇਹ ਤਿੰਨੇ ਨਹੀਂ ਹੁੰਦੇ। ਪ੍ਰੋਕੈਰੀਓਟ ਵਿੱਚ ਝਿੱਲੀ ਨਾਲ ਘਿਰਿਆ ਕੇਂਦਰਕ ਨਹੀਂ ਹੁੰਦਾ।",
+          "en": "Plant cells have: cellulose cell wall, chloroplasts, large central vacuole. Animal cells lack all three. Both have: plasma membrane, nucleus, mitochondria, ribosomes, Golgi apparatus. Prokaryotes (bacteria) have no membrane-bound nucleus; DNA is in the cytoplasm. Eukaryotes (plants, animals, fungi) have membrane-bound nuclei. Exam trick: remember 'WCV' — Wall, Chloroplast, Vacuole — these are extra in plant cells."
+        }
+      },
+      {
+        "heading": {"hi": "परासरण और विसरण", "pa": "ਅਸਮੋਸਿਸ ਅਤੇ ਪ੍ਰਸਾਰਣ", "en": "Osmosis and diffusion"},
+        "text": {
+          "hi": "विसरण पदार्थों की अधिक सांद्रता से कम सांद्रता की ओर गति है—कोई झिल्ली नहीं चाहिए। परासरण विशेष रूप से जल के अणुओं की अर्धपारगम्य झिल्ली के पार कम सांद्रता से अधिक विलेय की ओर गति है।\n\nएन्डोसाइटोसिस में कोशिका बड़े अणुओं को घेरकर अंदर लेती है। एक्सोसाइटोसिस में पदार्थ बाहर छोड़े जाते हैं। परीक्षा: नमक पानी में रखी कोशिका सिकुड़ती है (हाइपरटोनिक)। शुद्ध पानी में रखी कोशिका फूलती है (हाइपोटोनिक)।",
+          "pa": "ਵਿਸਾਰਣ ਉੱਚ ਸੰਘਣਤਾ ਤੋਂ ਘੱਟ ਸੰਘਣਤਾ ਵੱਲ ਕਣਾਂ ਦੀ ਗਤੀ ਹੈ। ਅਸਮੋਸਿਸ ਪਾਣੀ ਦੀ ਅਰਧ-ਪਾਰਦਰਸ਼ੀ ਝਿੱਲੀ ਰਾਹੀਂ ਗਤੀ ਹੈ। ਲੂਣ ਵਾਲੇ ਪਾਣੀ ਵਿੱਚ ਕੋਸ਼ਿਕਾ ਸੁੰਗੜਦੀ ਹੈ।",
+          "en": "Diffusion is the movement of particles from high to low concentration—no membrane needed. Osmosis is the movement of water molecules across a selectively permeable membrane from low to high solute concentration. Endocytosis: cell engulfs large molecules. Exocytosis: secretes material outside. Exam: cell in salt water shrinks (hypertonic); cell in pure water swells (hypotonic)."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "कोशिका जीवन की मूल संरचनात्मक और कार्यात्मक इकाई है।", "pa": "ਕੋਸ਼ਿਕਾ ਜੀਵਨ ਦੀ ਮੁੱਢਲੀ ਇਕਾਈ ਹੈ।", "en": "Cell is the basic structural and functional unit of life."},
+      {"hi": "माइटोकॉन्ड्रिया = ऊर्जागृह; राइबोसोम = प्रोटीन संश्लेषण।", "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ = ਊਰਜਾਘਰ; ਰਾਈਬੋਸੋਮ = ਪ੍ਰੋਟੀਨ ਸੰਸ਼ਲੇਸ਼ਣ।", "en": "Mitochondria = powerhouse; Ribosomes = protein synthesis."},
+      {"hi": "पादप कोशिका में अतिरिक्त: भित्ति, हरितलवक, बड़ी रसधानी।", "pa": "ਪੌਦੇ ਵਿੱਚ ਵਾਧੂ: ਭਿੱਤੀ, ਕਲੋਰੋਪਲਾਸਟ, ਵੱਡੀ ਰਸਧਾਨੀ।", "en": "Plant cell extras: wall, chloroplast, large vacuole."},
+      {"hi": "प्रोकैरियोट में झिल्ली से घिरा केंद्रक नहीं होता।", "pa": "ਪ੍ਰੋਕੈਰੀਓਟ ਵਿੱਚ ਝਿੱਲੀ ਨਾਲ ਘਿਰਿਆ ਕੇਂਦਰਕ ਨਹੀਂ।", "en": "Prokaryotes lack a membrane-bound nucleus."},
+      {"hi": "परासरण: जल की झिल्ली पार गति; कम विलेय → अधिक विलेय।", "pa": "ਅਸਮੋਸਿਸ: ਪਾਣੀ ਦੀ ਝਿੱਲੀ ਪਾਰ ਗਤੀ।", "en": "Osmosis: water moves across membrane from low to high solute."}
+    ],
+    "summary": {
+      "hi": "कोशिका जीवन की मूल इकाई है। पादप कोशिका में भित्ति, हरितलवक और बड़ी रसधानी अतिरिक्त होती है। माइटोकॉन्ड्रिया ATP बनाता है; राइबोसोम प्रोटीन बनाते हैं। प्रोकैरियोट में झिल्ली-केंद्रक नहीं।",
+      "pa": "ਕੋਸ਼ਿਕਾ ਜੀਵਨ ਦੀ ਮੁੱਢਲੀ ਇਕਾਈ ਹੈ। ਪੌਦੇ ਵਿੱਚ ਭਿੱਤੀ, ਕਲੋਰੋਪਲਾਸਟ, ਵੱਡੀ ਰਸਧਾਨੀ ਵਾਧੂ ਹੁੰਦੀ ਹੈ।",
+      "en": "The cell is the basic unit of life. Plant cells have extra: wall, chloroplast, large vacuole. Mitochondria make ATP; ribosomes make proteins. Prokaryotes lack membrane-bound nucleus."
+    },
+    "flashcards": [
+      {"question": {"hi": "माइटोकॉन्ड्रिया को क्या कहते हैं?", "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ ਨੂੰ ਕੀ ਕਹਿੰਦੇ ਹਨ?", "en": "What is mitochondria called?"}, "answer": {"hi": "कोशिका का ऊर्जागृह (powerhouse)", "pa": "ਕੋਸ਼ਿਕਾ ਦਾ ਊਰਜਾਘਰ", "en": "Powerhouse of the cell"}},
+      {"question": {"hi": "राइबोसोम का काम?", "pa": "ਰਾਈਬੋਸੋਮ ਦਾ ਕੰਮ?", "en": "Function of ribosomes?"}, "answer": {"hi": "प्रोटीन संश्लेषण", "pa": "ਪ੍ਰੋਟੀਨ ਸੰਸ਼ਲੇਸ਼ਣ", "en": "Protein synthesis"}},
+      {"question": {"hi": "पादप कोशिका में क्या अतिरिक्त होता है?", "pa": "ਪੌਦੇ ਦੀ ਕੋਸ਼ਿਕਾ ਵਿੱਚ ਕੀ ਵਾਧੂ ਹੁੰਦਾ ਹੈ?", "en": "What extra structures are in plant cells?"}, "answer": {"hi": "भित्ति, हरितलवक, बड़ी रसधानी", "pa": "ਭਿੱਤੀ, ਕਲੋਰੋਪਲਾਸਟ, ਵੱਡੀ ਰਸਧਾਨੀ", "en": "Cell wall, chloroplasts, large vacuole"}},
+      {"question": {"hi": "प्रोकैरियोट और यूकैरियोट में मुख्य अंतर?", "pa": "ਪ੍ਰੋਕੈਰੀਓਟ ਅਤੇ ਯੂਕੈਰੀਓਟ ਵਿੱਚ ਮੁੱਖ ਫ਼ਰਕ?", "en": "Key difference: prokaryote vs eukaryote?"}, "answer": {"hi": "प्रोकैरियोट में झिल्ली-केंद्रक नहीं", "pa": "ਪ੍ਰੋਕੈਰੀਓਟ ਵਿੱਚ ਝਿੱਲੀ-ਕੇਂਦਰਕ ਨਹੀਂ", "en": "Prokaryotes lack membrane-bound nucleus"}},
+      {"question": {"hi": "परासरण में कौन-सा पदार्थ चलता है?", "pa": "ਅਸਮੋਸਿਸ ਵਿੱਚ ਕਿਹੜਾ ਪਦਾਰਥ ਚਲਦਾ ਹੈ?", "en": "Which substance moves in osmosis?"}, "answer": {"hi": "जल (पानी)", "pa": "ਪਾਣੀ", "en": "Water"}},
+      {"question": {"hi": "DNA कहाँ होता है?", "pa": "DNA ਕਿੱਥੇ ਹੁੰਦਾ ਹੈ?", "en": "Where is DNA found?"}, "answer": {"hi": "केंद्रक में", "pa": "ਕੇਂਦਰਕ ਵਿੱਚ", "en": "In the nucleus"}},
+      {"question": {"hi": "हरितलवक किस क्रिया में काम आता है?", "pa": "ਕਲੋਰੋਪਲਾਸਟ ਕਿਸ ਕਿਰਿਆ ਵਿੱਚ ਕੰਮ ਆਉਂਦਾ ਹੈ?", "en": "Chloroplast is used in which process?"}, "answer": {"hi": "प्रकाश संश्लेषण (Photosynthesis)", "pa": "ਪ੍ਰਕਾਸ਼ ਸੰਸ਼ਲੇਸ਼ਣ", "en": "Photosynthesis"}},
+      {"question": {"hi": "कोशिका की खोज किसने की?", "pa": "ਕੋਸ਼ਿਕਾ ਦੀ ਖੋਜ ਕਿਸਨੇ ਕੀਤੀ?", "en": "Who discovered the cell?"}, "answer": {"hi": "रॉबर्ट हुक (1665)", "pa": "ਰਾਬਰਟ ਹੁੱਕ (1665)", "en": "Robert Hooke (1665)"}}
+    ],
+    "questions": [
+      {"id": "sci-cell-q1", "prompt": {"hi": "माइटोकॉन्ड्रिया को क्या कहा जाता है?", "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ ਨੂੰ ਕੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?", "en": "What is mitochondria called?"}, "options": [{"hi": "कोशिका का दिमाग", "pa": "ਕੋਸ਼ਿਕਾ ਦਾ ਦਿਮਾਗ", "en": "Brain of cell"}, {"hi": "कोशिका का ऊर्जागृह", "pa": "ਕੋਸ਼ਿਕਾ ਦਾ ਊਰਜਾਘਰ", "en": "Powerhouse of cell"}, {"hi": "कोशिका की रसोई", "pa": "ਕੋਸ਼ਿਕਾ ਦੀ ਰਸੋਈ", "en": "Kitchen of cell"}, {"hi": "कोशिका का द्वारपाल", "pa": "ਕੋਸ਼ਿਕਾ ਦਾ ਦਰਬਾਨ", "en": "Gatekeeper of cell"}], "answerIndex": 1, "explanation": {"hi": "माइटोकॉन्ड्रिया कोशिकीय श्वसन कर ATP बनाता है, इसलिए इसे कोशिका का ऊर्जागृह कहते हैं।", "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ ATP ਬਣਾਉਂਦਾ ਹੈ, ਇਸ ਲਈ ਊਰਜਾਘਰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।", "en": "Mitochondria produces ATP via cellular respiration, hence called the powerhouse."}},
+      {"id": "sci-cell-q2", "prompt": {"hi": "जंतु कोशिका में क्या नहीं होता?", "pa": "ਜੰਤੂ ਕੋਸ਼ਿਕਾ ਵਿੱਚ ਕੀ ਨਹੀਂ ਹੁੰਦਾ?", "en": "What is absent in animal cells?"}, "options": [{"hi": "माइटोकॉन्ड्रिया", "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ", "en": "Mitochondria"}, {"hi": "केंद्रक", "pa": "ਕੇਂਦਰਕ", "en": "Nucleus"}, {"hi": "कोशिका भित्ति", "pa": "ਕੋਸ਼ਿਕਾ ਭਿੱਤੀ", "en": "Cell wall"}, {"hi": "राइबोसोम", "pa": "ਰਾਈਬੋਸੋਮ", "en": "Ribosomes"}], "answerIndex": 2, "explanation": {"hi": "जंतु कोशिका में कोशिका भित्ति नहीं होती।", "pa": "ਜੰਤੂ ਕੋਸ਼ਿਕਾ ਵਿੱਚ ਕੋਸ਼ਿਕਾ ਭਿੱਤੀ ਨਹੀਂ ਹੁੰਦੀ।", "en": "Animal cells lack the cell wall."}},
+      {"id": "sci-cell-q3", "prompt": {"hi": "प्रोटीन संश्लेषण कहाँ होता है?", "pa": "ਪ੍ਰੋਟੀਨ ਸੰਸ਼ਲੇਸ਼ਣ ਕਿੱਥੇ ਹੁੰਦਾ ਹੈ?", "en": "Where does protein synthesis occur?"}, "options": [{"hi": "माइटोकॉन्ड्रिया", "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ", "en": "Mitochondria"}, {"hi": "केंद्रक", "pa": "ਕੇਂਦਰਕ", "en": "Nucleus"}, {"hi": "राइबोसोम", "pa": "ਰਾਈਬੋਸੋਮ", "en": "Ribosomes"}, {"hi": "रसधानी", "pa": "ਰਸਧਾਨੀ", "en": "Vacuole"}], "answerIndex": 2, "explanation": {"hi": "राइबोसोम mRNA के साथ मिलकर प्रोटीन बनाते हैं।", "pa": "ਰਾਈਬੋਸੋਮ mRNA ਨਾਲ ਮਿਲ ਕੇ ਪ੍ਰੋਟੀਨ ਬਣਾਉਂਦੇ ਹਨ।", "en": "Ribosomes, together with mRNA, synthesise proteins."}},
+      {"id": "sci-cell-q4", "prompt": {"hi": "बैक्टीरिया किस श्रेणी में आते हैं?", "pa": "ਬੈਕਟੀਰੀਆ ਕਿਸ ਸ਼੍ਰੇਣੀ ਵਿੱਚ ਆਉਂਦੇ ਹਨ?", "en": "Bacteria belong to which category?"}, "options": [{"hi": "यूकैरियोट", "pa": "ਯੂਕੈਰੀਓਟ", "en": "Eukaryote"}, {"hi": "प्रोकैरियोट", "pa": "ਪ੍ਰੋਕੈਰੀਓਟ", "en": "Prokaryote"}, {"hi": "वायरस", "pa": "ਵਾਇਰਸ", "en": "Virus"}, {"hi": "कवक", "pa": "ਕਵਕ", "en": "Fungi"}], "answerIndex": 1, "explanation": {"hi": "बैक्टीरिया प्रोकैरियोट हैं—उनमें झिल्ली से घिरा केंद्रक नहीं होता।", "pa": "ਬੈਕਟੀਰੀਆ ਪ੍ਰੋਕੈਰੀਓਟ ਹਨ।", "en": "Bacteria are prokaryotes—they lack a membrane-bound nucleus."}},
+      {"id": "sci-cell-q5", "prompt": {"hi": "परासरण में कौन-सी झिल्ली चाहिए?", "pa": "ਅਸਮੋਸਿਸ ਲਈ ਕਿਹੜੀ ਝਿੱਲੀ ਚਾਹੀਦੀ ਹੈ?", "en": "What membrane is needed for osmosis?"}, "options": [{"hi": "पूर्णपारगम्य", "pa": "ਪੂਰੀ ਤਰ੍ਹਾਂ ਪਾਰਦਰਸ਼ੀ", "en": "Fully permeable"}, {"hi": "अर्धपारगम्य", "pa": "ਅਰਧ-ਪਾਰਦਰਸ਼ੀ", "en": "Selectively permeable"}, {"hi": "अपारगम्य", "pa": "ਅਪਾਰਦਰਸ਼ੀ", "en": "Impermeable"}, {"hi": "कोई झिल्ली नहीं", "pa": "ਕੋਈ ਝਿੱਲੀ ਨਹੀਂ", "en": "No membrane"}], "answerIndex": 1, "explanation": {"hi": "परासरण के लिए अर्धपारगम्य झिल्ली जरूरी है जो जल को पार करने दे पर विलेय को नहीं।", "pa": "ਅਸਮੋਸਿਸ ਲਈ ਅਰਧ-ਪਾਰਦਰਸ਼ੀ ਝਿੱਲੀ ਜ਼ਰੂਰੀ ਹੈ।", "en": "Osmosis requires a selectively permeable membrane that allows water but not solute to pass."}},
+      {"id": "sci-cell-q6", "prompt": {"hi": "कोशिका की खोज किसने की?", "pa": "ਕੋਸ਼ਿਕਾ ਦੀ ਖੋਜ ਕਿਸਨੇ ਕੀਤੀ?", "en": "Who discovered the cell?"}, "options": [{"hi": "ल्यूवेनहॉक", "pa": "ਲਿਊਵੇਨਹੁੱਕ", "en": "Leeuwenhoek"}, {"hi": "रॉबर्ट हुक", "pa": "ਰਾਬਰਟ ਹੁੱਕ", "en": "Robert Hooke"}, {"hi": "श्लाइडन", "pa": "ਸ਼ਲਾਇਡਨ", "en": "Schleiden"}, {"hi": "वर्चो", "pa": "ਵਰਚੋ", "en": "Virchow"}], "answerIndex": 1, "explanation": {"hi": "रॉबर्ट हुक ने 1665 में कॉर्क में कोशिकाएँ देखीं और 'cell' नाम दिया।", "pa": "ਰਾਬਰਟ ਹੁੱਕ ਨੇ 1665 ਵਿੱਚ ਕਾਰ੍ਕ ਵਿੱਚ ਕੋਸ਼ਿਕਾਵਾਂ ਦੇਖੀਆਂ।", "en": "Robert Hooke observed cells in cork in 1665 and named them 'cells'."}},
+      {"id": "sci-cell-q7", "prompt": {"hi": "कोशिका का नियंत्रण केंद्र कौन सा है?", "pa": "ਕੋਸ਼ਿਕਾ ਦਾ ਨਿਯੰਤਰਣ ਕੇਂਦਰ ਕਿਹੜਾ ਹੈ?", "en": "Which is the control center of the cell?"}, "options": [{"hi": "माइटोकॉन्ड्रिया", "pa": "ਮਾਈਟੋਕਾਂਡਰੀਆ", "en": "Mitochondria"}, {"hi": "राइबोसोम", "pa": "ਰਾਈਬੋਸੋਮ", "en": "Ribosome"}, {"hi": "केंद्रक", "pa": "ਕੇਂਦਰਕ", "en": "Nucleus"}, {"hi": "गॉल्जी काय", "pa": "ਗੋਲਗੀ ਕਾਇ", "en": "Golgi body"}], "answerIndex": 2, "explanation": {"hi": "केंद्रक में DNA होता है जो सभी कोशिकीय गतिविधियाँ नियंत्रित करता है।", "pa": "ਕੇਂਦਰਕ ਵਿੱਚ DNA ਹੁੰਦਾ ਹੈ ਜੋ ਕੋਸ਼ਿਕਾ ਦੀਆਂ ਸਾਰੀਆਂ ਗਤੀਵਿਧੀਆਂ ਨਿਯੰਤਰਿਤ ਕਰਦਾ ਹੈ।", "en": "The nucleus contains DNA which controls all cellular activities."}},
+      {"id": "sci-cell-q8", "prompt": {"hi": "हाइपरटोनिक घोल में रखी कोशिका पर क्या होगा?", "pa": "ਹਾਈਪਰਟੋਨਿਕ ਘੋਲ ਵਿੱਚ ਕੋਸ਼ਿਕਾ ਕੀ ਹੋਵੇਗੀ?", "en": "Cell in hypertonic solution:"}, "options": [{"hi": "फूल जाएगी", "pa": "ਫੁੱਲ ਜਾਵੇਗੀ", "en": "Swells up"}, {"hi": "सिकुड़ जाएगी", "pa": "ਸੁੰਗੜ ਜਾਵੇਗੀ", "en": "Shrinks"}, {"hi": "फट जाएगी", "pa": "ਫਟ ਜਾਵੇਗੀ", "en": "Bursts"}, {"hi": "कोई परिवर्तन नहीं", "pa": "ਕੋਈ ਬਦਲਾਅ ਨਹੀਂ", "en": "No change"}], "answerIndex": 1, "explanation": {"hi": "हाइपरटोनिक घोल में बाहर विलेय ज्यादा है; कोशिका से जल बाहर जाता है, कोशिका सिकुड़ती है।", "pa": "ਹਾਈਪਰਟੋਨਿਕ ਘੋਲ ਵਿੱਚ ਬਾਹਰ ਵਿਲੇਯ ਜ਼ਿਆਦਾ ਹੈ; ਕੋਸ਼ਿਕਾ ਸੁੰਗੜਦੀ ਹੈ।", "en": "In hypertonic solution, water leaves the cell by osmosis and the cell shrinks."}},
+      {"id": "sci-cell-q9", "prompt": {"hi": "कोशिका सिद्धांत किसने दिया?", "pa": "ਕੋਸ਼ਿਕਾ ਸਿਧਾਂਤ ਕਿਸਨੇ ਦਿੱਤਾ?", "en": "Who proposed cell theory?"}, "options": [{"hi": "डार्विन", "pa": "ਡਾਰਵਿਨ", "en": "Darwin"}, {"hi": "श्लाइडन और श्वान", "pa": "ਸ਼ਲਾਇਡਨ ਅਤੇ ਸ਼ਵਾਨ", "en": "Schleiden and Schwann"}, {"hi": "मेंडल", "pa": "ਮੈਂਡਲ", "en": "Mendel"}, {"hi": "पाश्चर", "pa": "ਪਾਸਚਰ", "en": "Pasteur"}], "answerIndex": 1, "explanation": {"hi": "1838-39 में श्लाइडन (पादप) और श्वान (जंतु) ने कोशिका सिद्धांत दिया।", "pa": "1838-39 ਵਿੱਚ ਸ਼ਲਾਇਡਨ ਅਤੇ ਸ਼ਵਾਨ ਨੇ ਕੋਸ਼ਿਕਾ ਸਿਧਾਂਤ ਦਿੱਤਾ।", "en": "Schleiden (plants) and Schwann (animals) proposed cell theory in 1838-39."}},
+      {"id": "sci-cell-q10", "prompt": {"hi": "प्लाज्मा झिल्ली किस प्रकार की होती है?", "pa": "ਪਲਾਜ਼ਮਾ ਝਿੱਲੀ ਕਿਸ ਕਿਸਮ ਦੀ ਹੁੰਦੀ ਹੈ?", "en": "What type is the plasma membrane?"}, "options": [{"hi": "पूर्णपारगम्य", "pa": "ਪੂਰੀ ਤਰ੍ਹਾਂ ਪਾਰਦਰਸ਼ੀ", "en": "Fully permeable"}, {"hi": "अपारगम्य", "pa": "ਅਪਾਰਦਰਸ਼ੀ", "en": "Impermeable"}, {"hi": "अर्धपारगम्य", "pa": "ਅਰਧ-ਪਾਰਦਰਸ਼ੀ", "en": "Selectively permeable"}, {"hi": "अर्धठोस", "pa": "ਅਰਧ-ਠੋਸ", "en": "Semi-solid"}], "answerIndex": 2, "explanation": {"hi": "प्लाज्मा झिल्ली अर्धपारगम्य है—चुनकर पदार्थों को पार करने देती है।", "pa": "ਪਲਾਜ਼ਮਾ ਝਿੱਲੀ ਅਰਧ-ਪਾਰਦਰਸ਼ੀ ਹੈ।", "en": "The plasma membrane is selectively permeable—it allows only certain substances to pass."}}
+    ],
+    "sources": [{"title": "NCERT Science Class 9 · The Fundamental Unit of Life", "url": "https://ncert.nic.in/textbook/pdf/iesc105.pdf"}],
+    "videos": [{"title": "Cell: Fundamental Unit of Life · NCERT Class 9", "url": "https://www.youtube.com/watch?v=8IlzKri08kU"}],
+    "documents": []
+  },
+  {
+    "id": "sci-electricity",
+    "subject": "Science",
+    "unit": "Physics",
+    "title": {"hi": "विद्युत और ओम का नियम", "pa": "ਬਿਜਲੀ ਅਤੇ ਓਮ ਦਾ ਨਿਯਮ", "en": "Electricity and Ohm's Law"},
+    "sections": [
+      {
+        "heading": {"hi": "विद्युत धारा और विभवांतर", "pa": "ਬਿਜਲੀ ਧਾਰਾ ਅਤੇ ਵਿਭਵ ਅੰਤਰ", "en": "Electric current and potential difference"},
+        "text": {
+          "hi": "विद्युत धारा I = Q/t (आवेश प्रवाह दर)। SI इकाई ampere (A)। विभवांतर V = W/Q (प्रति इकाई आवेश किया कार्य)। SI इकाई volt (V)। प्रतिरोध R = V/I। SI इकाई ohm (Ω)।\n\nओम का नियम: नियत ताप पर किसी चालक में धारा और विभवांतर का अनुपात नियत रहता है: V = IR। यह नियम धातुओं पर लागू होता है, अर्धचालकों पर नहीं। प्रतिरोधकता ρ = RA/L; यह तापमान के साथ बढ़ती है।",
+          "pa": "ਬਿਜਲੀ ਧਾਰਾ I = Q/t। SI ਇਕਾਈ ampere (A)। ਵਿਭਵ ਅੰਤਰ V = W/Q। SI ਇਕਾਈ volt (V)। ਰੋਧ R = V/I। SI ਇਕਾਈ ohm (Ω)। ਓਮ ਦਾ ਨਿਯਮ: V = IR ਨਿਯਤ ਤਾਪ ਉੱਤੇ।",
+          "en": "Current I = Q/t (rate of charge flow), SI unit ampere (A). Potential difference V = W/Q (work per unit charge), SI unit volt (V). Resistance R = V/I, SI unit ohm (Ω). Ohm's law: at constant temperature V = IR. Resistivity ρ = RA/L; it increases with temperature for metals."
+        }
+      },
+      {
+        "heading": {"hi": "श्रेणी और समानांतर परिपथ", "pa": "ਲੜੀ ਅਤੇ ਸਮਾਂਤਰ ਪਰਿਪੱਥ", "en": "Series and parallel circuits"},
+        "text": {
+          "hi": "श्रेणी (Series) परिपथ: R_कुल = R₁ + R₂ + R₃। धारा सभी जगह एक समान। विभवांतर बँटता है। समानांतर (Parallel) परिपथ: 1/R_कुल = 1/R₁ + 1/R₂। विभवांतर सभी जगह एक समान। धारा बँटती है। घरों में समानांतर परिपथ: हर उपकरण को पूरा 220 V मिलता है।\n\nविद्युत शक्ति P = VI = I²R = V²/R। इकाई watt (W)। ऊर्जा = P × t। 1 kWh = 3.6 × 10⁶ J (यूनिट)। फ्यूज: अधिक धारा पर पिघल जाता है—सर्किट तोड़ता है। अर्थिंग: रिसाव की धारा भूमि में जाती है।",
+          "pa": "ਲੜੀ: R_ਕੁੱਲ = R₁ + R₂; ਧਾਰਾ ਇੱਕੋ। ਸਮਾਂਤਰ: 1/R_ਕੁੱਲ = 1/R₁ + 1/R₂; ਵਿਭਵ ਅੰਤਰ ਇੱਕੋ। P = VI = I²R = V²/R। 1 kWh = 3.6 × 10⁶ J।",
+          "en": "Series circuit: R_total = R₁ + R₂ + R₃; current is same; voltage divides. Parallel circuit: 1/R_total = 1/R₁ + 1/R₂; voltage is same; current divides. Home wiring is parallel so each appliance gets full 220 V. Electric power P = VI = I²R = V²/R, unit watt (W). 1 kWh = 3.6 × 10⁶ J. Fuse melts at excess current; earthing routes leakage current to ground."
+        }
+      },
+      {
+        "heading": {"hi": "हीटिंग इफेक्ट और परीक्षा अभ्यास", "pa": "ਤਾਪੀ ਪ੍ਰਭਾਵ ਅਤੇ ਅਭਿਆਸ", "en": "Heating effect and exam practice"},
+        "text": {
+          "hi": "जूल का नियम: H = I²Rt। अधिक प्रतिरोध और धारा पर अधिक ऊष्मा। बल्ब, टोस्टर, हीटर में यही सिद्धांत। बल्ब की फिलामेंट टंगस्टन से बनती है (उच्च गलनांक)।\n\nसांख्यिकी अभ्यास: 6 Ω प्रतिरोधक पर 2 A धारा → P = I²R = 4×6 = 24 W। किताब बंद करके: 10 V पर 5 Ω का प्रतिरोधक—I, P, और 10 मिनट में ऊर्जा खुद निकालें। श्रेणी परिपथ में 3 Ω और 6 Ω की बैटरी 9 V—प्रत्येक पर V, I, P निकालें।",
+          "pa": "ਜੂਲ ਦਾ ਨਿਯਮ: H = I²Rt। ਬੱਲਬ ਦੀ ਫ਼ਿਲਾਮੈਂਟ ਟੰਗਸਟਨ ਦੀ ਹੁੰਦੀ ਹੈ। P = I²R = V²/R।",
+          "en": "Joule's law: H = I²Rt. The tungsten filament in bulbs has a high melting point. Exam practice: 6 Ω resistor, 2 A current → P = I²R = 4×6 = 24 W. Close book: given 10 V and 5 Ω, find I, P, and energy in 10 min. Series circuit 3 Ω and 6 Ω, 9 V battery: find V, I and P across each resistor."
+        }
+      }
+    ],
+    "keypoints": [
+      {"hi": "I = Q/t; V = W/Q; R = V/I।", "pa": "I = Q/t; V = W/Q; R = V/I।", "en": "I = Q/t; V = W/Q; R = V/I."},
+      {"hi": "श्रेणी: R जोड़ें; धारा समान।", "pa": "ਲੜੀ: R ਜੋੜੋ; ਧਾਰਾ ਇੱਕੋ।", "en": "Series: add R; current same."},
+      {"hi": "समानांतर: 1/R जोड़ें; वोल्टेज समान।", "pa": "ਸਮਾਂਤਰ: 1/R ਜੋੜੋ; ਵੋਲਟੇਜ ਇੱਕੋ।", "en": "Parallel: add 1/R; voltage same."},
+      {"hi": "P = VI = I²R = V²/R; 1 kWh = 3.6 × 10⁶ J।", "pa": "P = VI = I²R = V²/R; 1 kWh = 3.6 × 10⁶ J।", "en": "P = VI = I²R = V²/R; 1 kWh = 3.6 × 10⁶ J."},
+      {"hi": "घरों में समानांतर परिपथ: सभी उपकरणों को पूरा voltage।", "pa": "ਘਰਾਂ ਵਿੱਚ ਸਮਾਂਤਰ ਪਰਿਪੱਥ।", "en": "Home circuits are parallel: all appliances get full voltage."}
+    ],
+    "summary": {
+      "hi": "V = IR ओम का नियम। श्रेणी में R जोड़ते हैं; समानांतर में 1/R। शक्ति P = I²R। 1 kWh = 3.6 MJ। घर में समानांतर परिपथ।",
+      "pa": "V = IR ਓਮ ਦਾ ਨਿਯਮ। ਲੜੀ: R ਜੋੜੋ; ਸਮਾਂਤਰ: 1/R ਜੋੜੋ। P = I²R। 1 kWh = 3.6 MJ।",
+      "en": "V = IR is Ohm's law. Series: add R; parallel: add 1/R. Power P = I²R. 1 kWh = 3.6 MJ. Home wiring is parallel."
+    },
+    "flashcards": [
+      {"question": {"hi": "ओम के नियम का सूत्र?", "pa": "ਓਮ ਦੇ ਨਿਯਮ ਦਾ ਸੂਤਰ?", "en": "Formula for Ohm's law?"}, "answer": {"hi": "V = IR", "pa": "V = IR", "en": "V = IR"}},
+      {"question": {"hi": "शक्ति का सूत्र तीन प्रकार से?", "pa": "ਸ਼ਕਤੀ ਦਾ ਸੂਤਰ ਤਿੰਨ ਤਰੀਕਿਆਂ ਨਾਲ?", "en": "Power formula in three ways?"}, "answer": {"hi": "P = VI = I²R = V²/R", "pa": "P = VI = I²R = V²/R", "en": "P = VI = I²R = V²/R"}},
+      {"question": {"hi": "1 kWh = ? joule", "pa": "1 kWh = ? joule", "en": "1 kWh = ? joules"}, "answer": {"hi": "3.6 × 10⁶ J", "pa": "3.6 × 10⁶ J", "en": "3.6 × 10⁶ J"}},
+      {"question": {"hi": "श्रेणी में धारा कैसी?", "pa": "ਲੜੀ ਵਿੱਚ ਧਾਰਾ ਕਿਵੇਂ?", "en": "Current in series circuit?"}, "answer": {"hi": "सभी जगह समान", "pa": "ਸਭ ਥਾਂ ਇੱਕੋ", "en": "Same everywhere"}},
+      {"question": {"hi": "समानांतर में वोल्टेज कैसा?", "pa": "ਸਮਾਂਤਰ ਵਿੱਚ ਵੋਲਟੇਜ?", "en": "Voltage in parallel circuit?"}, "answer": {"hi": "सभी शाखाओं में समान", "pa": "ਸਾਰੀਆਂ ਸ਼ਾਖਾਵਾਂ ਵਿੱਚ ਇੱਕੋ", "en": "Same across all branches"}},
+      {"question": {"hi": "बल्ब की फिलामेंट किससे बनती है?", "pa": "ਬੱਲਬ ਦੀ ਫ਼ਿਲਾਮੈਂਟ ਕਿਸ ਤੋਂ ਬਣਦੀ ਹੈ?", "en": "Bulb filament is made of?"}, "answer": {"hi": "टंगस्टन", "pa": "ਟੰਗਸਟਨ", "en": "Tungsten"}},
+      {"question": {"hi": "fuse का कार्य?", "pa": "fuse ਦਾ ਕੰਮ?", "en": "Function of fuse?"}, "answer": {"hi": "अधिक धारा पर सर्किट तोड़ता है", "pa": "ਜ਼ਿਆਦਾ ਧਾਰਾ ਤੇ ਸਰਕਟ ਤੋੜਦਾ ਹੈ", "en": "Breaks circuit on excess current"}},
+      {"question": {"hi": "जूल का नियम?", "pa": "ਜੂਲ ਦਾ ਨਿਯਮ?", "en": "Joule's law formula?"}, "answer": {"hi": "H = I²Rt", "pa": "H = I²Rt", "en": "H = I²Rt"}}
+    ],
+    "questions": [
+      {"id": "sci-elec-q1", "prompt": {"hi": "10 V पर 5 Ω में धारा?", "pa": "10 V ਉੱਤੇ 5 Ω ਵਿੱਚ ਧਾਰਾ?", "en": "Current through 5 Ω at 10 V?"}, "options": [{"hi": "2 A", "pa": "2 A", "en": "2 A"}, {"hi": "50 A", "pa": "50 A", "en": "50 A"}, {"hi": "0.5 A", "pa": "0.5 A", "en": "0.5 A"}, {"hi": "5 A", "pa": "5 A", "en": "5 A"}], "answerIndex": 0, "explanation": {"hi": "I = V/R = 10/5 = 2 A", "pa": "I = V/R = 10/5 = 2 A", "en": "I = V/R = 10/5 = 2 A"}},
+      {"id": "sci-elec-q2", "prompt": {"hi": "6 Ω में 2 A धारा → शक्ति?", "pa": "6 Ω ਵਿੱਚ 2 A ਧਾਰਾ → ਸ਼ਕਤੀ?", "en": "Power: 6 Ω, 2 A current?"}, "options": [{"hi": "24 W", "pa": "24 W", "en": "24 W"}, {"hi": "12 W", "pa": "12 W", "en": "12 W"}, {"hi": "36 W", "pa": "36 W", "en": "36 W"}, {"hi": "3 W", "pa": "3 W", "en": "3 W"}], "answerIndex": 0, "explanation": {"hi": "P = I²R = 4 × 6 = 24 W", "pa": "P = I²R = 4 × 6 = 24 W", "en": "P = I²R = 4 × 6 = 24 W"}},
+      {"id": "sci-elec-q3", "prompt": {"hi": "श्रेणी में 3 Ω और 6 Ω कुल प्रतिरोध?", "pa": "ਲੜੀ ਵਿੱਚ 3 Ω ਅਤੇ 6 Ω ਕੁੱਲ ਰੋਧ?", "en": "Series: 3 Ω and 6 Ω total resistance?"}, "options": [{"hi": "9 Ω", "pa": "9 Ω", "en": "9 Ω"}, {"hi": "2 Ω", "pa": "2 Ω", "en": "2 Ω"}, {"hi": "18 Ω", "pa": "18 Ω", "en": "18 Ω"}, {"hi": "3 Ω", "pa": "3 Ω", "en": "3 Ω"}], "answerIndex": 0, "explanation": {"hi": "श्रेणी में R_कुल = R₁ + R₂ = 3 + 6 = 9 Ω", "pa": "ਲੜੀ ਵਿੱਚ R_ਕੁੱਲ = 3 + 6 = 9 Ω", "en": "Series: R_total = R₁ + R₂ = 3 + 6 = 9 Ω"}},
+      {"id": "sci-elec-q4", "prompt": {"hi": "समानांतर में 4 Ω और 4 Ω: कुल प्रतिरोध?", "pa": "ਸਮਾਂਤਰ ਵਿੱਚ 4 Ω ਅਤੇ 4 Ω: ਕੁੱਲ ਰੋਧ?", "en": "Parallel: 4 Ω and 4 Ω: total resistance?"}, "options": [{"hi": "8 Ω", "pa": "8 Ω", "en": "8 Ω"}, {"hi": "2 Ω", "pa": "2 Ω", "en": "2 Ω"}, {"hi": "4 Ω", "pa": "4 Ω", "en": "4 Ω"}, {"hi": "1 Ω", "pa": "1 Ω", "en": "1 Ω"}], "answerIndex": 1, "explanation": {"hi": "1/R = 1/4 + 1/4 = 2/4; R = 2 Ω", "pa": "1/R = 1/4 + 1/4 = 1/2; R = 2 Ω", "en": "1/R = 1/4 + 1/4 = 2/4; R = 2 Ω"}},
+      {"id": "sci-elec-q5", "prompt": {"hi": "1 kWh बराबर है?", "pa": "1 kWh ਬਰਾਬਰ ਹੈ?", "en": "1 kWh equals?"}, "options": [{"hi": "3.6 × 10⁶ J", "pa": "3.6 × 10⁶ J", "en": "3.6 × 10⁶ J"}, {"hi": "3600 J", "pa": "3600 J", "en": "3600 J"}, {"hi": "1000 J", "pa": "1000 J", "en": "1000 J"}, {"hi": "3.6 J", "pa": "3.6 J", "en": "3.6 J"}], "answerIndex": 0, "explanation": {"hi": "1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J", "pa": "1 kWh = 1000 × 3600 = 3.6 × 10⁶ J", "en": "1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J"}},
+      {"id": "sci-elec-q6", "prompt": {"hi": "घरों में किस प्रकार का परिपथ होता है?", "pa": "ਘਰਾਂ ਵਿੱਚ ਕਿਸ ਕਿਸਮ ਦਾ ਪਰਿਪੱਥ ਹੁੰਦਾ ਹੈ?", "en": "What type of circuit is used in homes?"}, "options": [{"hi": "श्रेणी", "pa": "ਲੜੀ", "en": "Series"}, {"hi": "समानांतर", "pa": "ਸਮਾਂਤਰ", "en": "Parallel"}, {"hi": "दोनों", "pa": "ਦੋਵੇਂ", "en": "Both"}, {"hi": "मिश्रित", "pa": "ਮਿਲਿਆ ਜੁਲਿਆ", "en": "Mixed"}], "answerIndex": 1, "explanation": {"hi": "घरों में समानांतर परिपथ होता है ताकि हर उपकरण को पूरा voltage मिले।", "pa": "ਘਰਾਂ ਵਿੱਚ ਸਮਾਂਤਰ ਪਰਿਪੱਥ ਹੁੰਦਾ ਹੈ।", "en": "Homes use parallel circuits so each appliance gets the full supply voltage."}},
+      {"id": "sci-elec-q7", "prompt": {"hi": "ओम के नियम की इकाई जाँच: V/I = ?", "pa": "ਓਮ ਦੇ ਨਿਯਮ ਦੀ ਇਕਾਈ ਜਾਂਚ: V/I = ?", "en": "Unit check: V/I = ?"}, "options": [{"hi": "ampere", "pa": "ampere", "en": "ampere"}, {"hi": "ohm", "pa": "ohm", "en": "ohm"}, {"hi": "watt", "pa": "watt", "en": "watt"}, {"hi": "volt", "pa": "volt", "en": "volt"}], "answerIndex": 1, "explanation": {"hi": "V/I = ohm (Ω) — यही प्रतिरोध की इकाई है।", "pa": "V/I = ohm (Ω)।", "en": "V/I = ohm (Ω) — the unit of resistance."}},
+      {"id": "sci-elec-q8", "prompt": {"hi": "100 W बल्ब 2 घंटे जले—ऊर्जा kWh में?", "pa": "100 W ਬੱਲਬ 2 ਘੰਟੇ ਜਲੇ—ਊਰਜਾ kWh?", "en": "100 W bulb for 2 hours: energy in kWh?"}, "options": [{"hi": "0.2 kWh", "pa": "0.2 kWh", "en": "0.2 kWh"}, {"hi": "200 kWh", "pa": "200 kWh", "en": "200 kWh"}, {"hi": "2 kWh", "pa": "2 kWh", "en": "2 kWh"}, {"hi": "20 kWh", "pa": "20 kWh", "en": "20 kWh"}], "answerIndex": 0, "explanation": {"hi": "E = P × t = 100 W × 2 h = 200 Wh = 0.2 kWh", "pa": "E = 100 W × 2 h = 200 Wh = 0.2 kWh", "en": "E = P × t = 100 W × 2 h = 200 Wh = 0.2 kWh"}},
+      {"id": "sci-elec-q9", "prompt": {"hi": "जूल का ऊष्मा सूत्र?", "pa": "ਜੂਲ ਦਾ ਤਾਪ ਸੂਤਰ?", "en": "Joule's heating formula?"}, "options": [{"hi": "H = I²Rt", "pa": "H = I²Rt", "en": "H = I²Rt"}, {"hi": "H = V²t/R", "pa": "H = V²t/R", "en": "H = V²t/R"}, {"hi": "H = VIt", "pa": "H = VIt", "en": "H = VIt"}, {"hi": "उपर्युक्त सभी", "pa": "ਉਪਰੋਕਤ ਸਾਰੇ", "en": "All of the above"}], "answerIndex": 3, "explanation": {"hi": "तीनों समतुल्य हैं: H = I²Rt = V²t/R = VIt।", "pa": "ਤਿੰਨੇ ਬਰਾਬਰ ਹਨ।", "en": "All three are equivalent expressions for Joule's heating."}},
+      {"id": "sci-elec-q10", "prompt": {"hi": "अर्थिंग का उद्देश्य?", "pa": "ਅਰਥਿੰਗ ਦਾ ਉਦੇਸ਼?", "en": "Purpose of earthing?"}, "options": [{"hi": "voltage बढ़ाना", "pa": "ਵੋਲਟੇਜ ਵਧਾਉਣਾ", "en": "Increase voltage"}, {"hi": "धारा बढ़ाना", "pa": "ਧਾਰਾ ਵਧਾਉਣਾ", "en": "Increase current"}, {"hi": "रिसाव धारा भूमि में भेजना", "pa": "ਲੀਕੇਜ ਧਾਰਾ ਜ਼ਮੀਨ ਵਿੱਚ ਭੇਜਣਾ", "en": "Route leakage current to ground"}, {"hi": "प्रतिरोध बढ़ाना", "pa": "ਰੋਧ ਵਧਾਉਣਾ", "en": "Increase resistance"}], "answerIndex": 2, "explanation": {"hi": "अर्थिंग रिसाव की धारा को सुरक्षित रूप से भूमि में ले जाती है।", "pa": "ਅਰਥਿੰਗ ਲੀਕੇਜ ਧਾਰਾ ਨੂੰ ਸੁਰੱਖਿਅਤ ਜ਼ਮੀਨ ਵਿੱਚ ਭੇਜਦੀ ਹੈ।", "en": "Earthing safely routes leakage current to the ground."}}
+    ],
+    "sources": [{"title": "NCERT Science Class 10 · Electricity", "url": "https://ncert.nic.in/textbook/pdf/jesc112.pdf"}],
+    "videos": [{"title": "Electricity Class 10 NCERT · Hindi", "url": "https://www.youtube.com/watch?v=gJE_JCNV8yM"}],
+    "documents": []
+  }
+]

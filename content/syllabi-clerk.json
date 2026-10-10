@@ -1,0 +1,102 @@
+{
+  "exam": "PSSSB Clerk (Advt. No. 15/2022)",
+  "version": "Advertisement No. 15 of 2022 Scheme & Pattern",
+  "board": "Punjab Subordinate Services Selection Board (PSSSB)",
+  "notification": "Advt. No. 15/2022 (Clerk / IT / Accounts)",
+  "totalMarks": 100,
+  "negativeMarking": 0.25,
+  "officialSource": "https://sssb.punjab.gov.in/",
+  "conflationGuard": "Paper A is mandatory qualifying (50 marks, 50% qualifying score). Paper B determines final merit (100 marks). Stage 3 is 30 WPM typing in Punjabi & English.",
+  "hierarchy": {
+    "qualifying_punjabi_paper_a": [
+      {
+        "number": 1,
+        "title": "ਲਾਜ਼ਮੀ ਪੰਜਾਬੀ ਯੋਗਤਾ ਪ੍ਰੀਖਿਆ (Paper A - 50 ਅੰਕ)",
+        "subtopics": [
+          "ਗੁਰਮੁਖੀ ਅੱਖਰ, ਸਵਰ, ਵਿਅੰਜਨ ਅਤੇ ਲਗਾਂ-ਮਾਤਰਾਂ",
+          "ਸ਼ੁੱਧ-ਅਸ਼ੁੱਧ ਸ਼ਬਦ ਜੋੜ",
+          "ਮੁਹਾਵਰੇ ਅਤੇ ਅਖਾਣਾਂ ਦੇ ਅਰਥ",
+          "ਸਮਾਨਾਰਥਕ ਅਤੇ ਵਿਰੋਧੀ ਸ਼ਬਦ",
+          "ਸ਼ਬਦ ਭੇਦ: ਨਾਵ, ਪੜਨਾਂਵ, ਵਿਸ਼ੇਸ਼ਣ, ਕਿਰਿਆ",
+          "ਅਗੇਤਰ ਅਤੇ ਪਿਛੇਤਰ",
+          "ਵਿਸ਼ਰਾਮ ਚਿੰਨ੍ਹਾਂ ਦੀ ਸਹੀ ਵਰਤੋਂ",
+          "ਪੰਜਾਬੀ ਸੱਭਿਆਚਾਰ, ਰੀਤੀ-ਰਿਵਾਜ ਅਤੇ ਸਾਹਿਤ"
+        ]
+      }
+    ],
+    "general_knowledge_paper_b": [
+      {
+        "number": 1,
+        "title": "General Knowledge & Current Affairs (30 Marks)",
+        "subtopics": [
+          "Current Affairs (National & International - last 6 to 12 months)",
+          "History & Culture of Punjab (Sikh Gurus, Anglo-Sikh Wars, Freedom Struggle in Punjab)",
+          "Geography of Punjab (Rivers, Climate, Soil, Crops, Districts)",
+          "Indian Polity & Constitution (Basic features, Articles, Preamble, Fundamental Rights)",
+          "Indian Economy, Agriculture and Development Schemes",
+          "General Science & Everyday Technology"
+        ]
+      }
+    ],
+    "computer_it": [
+      {
+        "number": 1,
+        "title": "Computer and IT Knowledge (20 Marks)",
+        "subtopics": [
+          "Basics of Computers (Hardware, Software, Operating Systems)",
+          "MS Word, MS Excel (Formulas, Functions, Charts) and MS PowerPoint",
+          "Internet Basics, Search Engines, Web Browsers and Email Protocols",
+          "Cyber Security, Viruses, Malware, Phishing and Firewalls",
+          "Networking Basics (LAN, WAN, IP addresses, DNS)"
+        ]
+      }
+    ],
+    "reasoning_math": [
+      {
+        "number": 1,
+        "title": "Mental Ability & Reasoning (15 Marks)",
+        "subtopics": [
+          "Number and Letter Series, Analogy, Classification",
+          "Blood Relations and Direction Sense Test",
+          "Coding-Decoding and Syllogisms",
+          "Seating Arrangements and Puzzles",
+          "Non-verbal Reasoning (Mirror images, Paper folding)"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Numerical Skills / Mathematics (15 Marks)",
+        "subtopics": [
+          "Simplification, Fractions, Decimals, BODMAS",
+          "Percentages, Profit & Loss, Discount",
+          "Simple & Compound Interest",
+          "Ratio & Proportion, Partnership",
+          "Time, Speed & Distance, Time & Work",
+          "Averages and Basic Mensuration (2D Areas & Perimeters)"
+        ]
+      }
+    ],
+    "languages_paper_b": [
+      {
+        "number": 1,
+        "title": "English Language (10 Marks)",
+        "subtopics": [
+          "Grammar: Tenses, Subject-Verb Agreement, Prepositions",
+          "Vocabulary: Synonyms, Antonyms, Idioms & Phrases",
+          "Error Spotting and Sentence Correction",
+          "Reading Comprehension Passage"
+        ]
+      },
+      {
+        "number": 2,
+        "title": "Punjabi Language Paper B (10 Marks)",
+        "subtopics": [
+          "ਵਿਆਕਰਨ (ਨਾਵ, ਪੜਨਾਂਵ, ਕਿਰਿਆ, ਵਿਸ਼ੇਸ਼ਣ)",
+          "ਸ਼ੁੱਧ-ਅਸ਼ੁੱਧ ਸ਼ਬਦ ਤੇ ਵਾਕ",
+          "ਅੰਗਰੇਜ਼ੀ ਤੋਂ ਪੰਜਾਬੀ ਅਨੁਵਾਦ (Translation)",
+          "ਮੁਹਾਵਰੇ ਅਤੇ ਅਖਾਣ"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,944 @@
+[
+  {
+    "id": "biology-cell-biology",
+    "subject": "Biology",
+    "unit": "Cell Biology",
+    "title": {
+      "hi": "कोशिका: जीवन की मूल इकाई",
+      "pa": "ਸੈੱਲ: ਜੀਵਨ ਦੀ ਮੂਲ ਇਕਾਈ",
+      "en": "Cell: The Basic Unit of Life"
+    },
+    "summary": {
+      "hi": "कोशिका सिद्धांत, कोशिका के प्रकार, कोशिकांग, कोशिका विभाजन और DNA की संरचना।",
+      "pa": "ਸੈੱਲ ਸਿਧਾਂਤ, ਸੈੱਲਾਂ ਦੇ ਪ੍ਰਕਾਰ, ਅੰਗਾਣੂ, ਸੈੱਲ ਵੰਡ ਅਤੇ DNA ਦੀ ਬਣਤਰ।",
+      "en": "Cell theory, types of cells, cell organelles, cell division and DNA structure."
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "कोशिका सिद्धांत और कोशिका के प्रकार",
+          "pa": "ਸੈੱਲ ਸਿਧਾਂਤ ਅਤੇ ਸੈੱਲਾਂ ਦੇ ਪ੍ਰਕਾਰ",
+          "en": "Cell Theory and Types of Cells"
+        },
+        "text": {
+          "hi": "कोशिका सिद्धांत (Schleiden, Schwann, Virchow): (1) सभी जीव कोशिकाओं से बने हैं। (2) कोशिका जीवन की मूल संरचनात्मक और कार्यात्मक इकाई है। (3) सभी कोशिकाएँ पूर्व-विद्यमान कोशिकाओं से उत्पन्न होती हैं (Virchow — Omnis cellula e cellula)। प्रोकैरियोटिक कोशिका: नाभिक झिल्ली नहीं; उदाहरण — जीवाणु, नीले-हरे शैवाल। यूकैरियोटिक कोशिका: झिल्ली-आवृत नाभिक; उदाहरण — कवक, पादप, जंतु। पादप कोशिका की विशेषताएँ: कोशिका भित्ति (सेलुलोज), क्लोरोप्लास्ट, बड़ी रिक्तिका। जंतु कोशिका: कोशिका भित्ति नहीं, सेंट्रिओल होता है।",
+          "pa": "ਸੈੱਲ ਸਿਧਾਂਤ (Schleiden, Schwann, Virchow): (1) ਸਾਰੇ ਜੀਵ ਸੈੱਲਾਂ ਤੋਂ ਬਣੇ ਹਨ। (2) ਸੈੱਲ ਜੀਵਨ ਦੀ ਮੂਲ ਇਕਾਈ ਹੈ। (3) ਸਾਰੇ ਸੈੱਲ ਪਹਿਲਾਂ ਤੋਂ ਮੌਜੂਦ ਸੈੱਲਾਂ ਤੋਂ ਬਣਦੇ ਹਨ। ਪ੍ਰੋਕੈਰੀਓਟਿਕ ਸੈੱਲ: ਨਿਊਕਲੀਅਸ ਝਿੱਲੀ ਨਹੀਂ; ਉਦਾਹਰਨ — ਬੈਕਟੀਰੀਆ। ਯੂਕੈਰੀਓਟਿਕ ਸੈੱਲ: ਝਿੱਲੀ-ਆਵ੍ਰਿਤ ਨਿਊਕਲੀਅਸ; ਉਦਾਹਰਨ — ਉੱਲੀ, ਪੌਦੇ, ਜਾਨਵਰ।",
+          "en": "Cell Theory (Schleiden, Schwann, Virchow): (1) All living organisms are composed of cells. (2) Cell is the basic structural and functional unit of life. (3) All cells arise from pre-existing cells (Virchow — Omnis cellula e cellula). Prokaryotic cell: no membrane-bound nucleus; e.g. bacteria, cyanobacteria. Eukaryotic cell: membrane-bound nucleus; e.g. fungi, plants, animals. Plant cell features: cell wall (cellulose), chloroplasts, large vacuole. Animal cell: no cell wall, has centrioles."
+        }
+      },
+      {
+        "heading": {
+          "hi": "कोशिकांग और उनके कार्य",
+          "pa": "ਅੰਗਾਣੂ ਅਤੇ ਉਹਨਾਂ ਦੇ ਕਾਰਜ",
+          "en": "Cell Organelles and Their Functions"
+        },
+        "text": {
+          "hi": "माइटोकॉन्ड्रिया: कोशिका का 'ऊर्जा घर'; ATP उत्पन्न करता है; स्वयं का DNA। राइबोसोम: प्रोटीन संश्लेषण; 80S (यूकैरियोट), 70S (प्रोकैरियोट)। एंडोप्लाज्मिक रेटिकुलम: खुरदरा (rER) — प्रोटीन संश्लेषण; चिकना (sER) — लिपिड संश्लेषण। गोल्जी उपकरण: प्रोटीन की पैकेजिंग और स्राव; कोशिका का 'पोस्ट ऑफिस'। लाइसोसोम: पाचक एंजाइम; कोशिका का 'आत्मघाती थैला'। क्लोरोप्लास्ट: प्रकाश-संश्लेषण; थाइलाकोइड में क्लोरोफिल। सेंट्रिओल: कोशिका विभाजन में धुरी निर्माण (जंतु कोशिका में)। नाभिक: आनुवंशिक जानकारी; DNA और RNA।",
+          "pa": "ਮਾਈਟੋਕੌਂਡਰੀਆ: ਸੈੱਲ ਦਾ 'ਊਰਜਾ ਘਰ'; ATP ਬਣਾਉਂਦਾ ਹੈ; ਆਪਣਾ DNA। ਰਾਈਬੋਸੋਮ: ਪ੍ਰੋਟੀਨ ਸੰਸ਼ਲੇਸ਼ਣ। ਗੋਲਜੀ ਉਪਕਰਣ: ਪ੍ਰੋਟੀਨ ਦੀ ਪੈਕਿੰਗ ਅਤੇ ਸ੍ਰਾਵ; ਸੈੱਲ ਦਾ 'ਡਾਕਘਰ'। ਲਾਈਸੋਸੋਮ: ਪਾਚਕ ਐਨਜ਼ਾਈਮ; ਸੈੱਲ ਦਾ 'ਆਤਮਘਾਤੀ ਥੈਲਾ'। ਕਲੋਰੋਪਲਾਸਟ: ਪ੍ਰਕਾਸ਼ ਸੰਸ਼ਲੇਸ਼ਣ।",
+          "en": "Mitochondria: 'powerhouse of the cell'; produces ATP; own DNA. Ribosome: protein synthesis; 80S (eukaryote), 70S (prokaryote). Endoplasmic Reticulum: rough (rER) — protein synthesis; smooth (sER) — lipid synthesis. Golgi apparatus: protein packaging and secretion; 'post office of the cell'. Lysosome: digestive enzymes; 'suicide bag of the cell'. Chloroplast: photosynthesis; chlorophyll in thylakoids. Centriole: spindle formation during cell division (in animal cells). Nucleus: genetic information; contains DNA and RNA."
+        }
+      },
+      {
+        "heading": {
+          "hi": "कोशिका विभाजन: समसूत्री और अर्धसूत्री",
+          "pa": "ਸੈੱਲ ਵੰਡ: ਮਾਈਟੋਸਿਸ ਅਤੇ ਮੇਓਸਿਸ",
+          "en": "Cell Division: Mitosis and Meiosis"
+        },
+        "text": {
+          "hi": "समसूत्री विभाजन (Mitosis): दैहिक कोशिकाओं में; 2 समान पुत्री कोशिकाएँ; गुणसूत्र संख्या अपरिवर्तित (2n → 2n); वृद्धि और मरम्मत के लिए। चरण: प्रोफेज → मेटाफेज → एनाफेज → टेलोफेज। अर्धसूत्री विभाजन (Meiosis): जनन कोशिकाओं में; 4 पुत्री कोशिकाएँ; गुणसूत्र संख्या आधी (2n → n); आनुवंशिक विविधता। DNA की संरचना: Watson और Crick 1953 — द्विकुंडलित संरचना। नाइट्रोजन क्षारक: प्यूरीन (एडेनिन, गुआनिन), पिरिमिडीन (थाइमिन, साइटोसिन)। A-T (2 हाइड्रोजन बंध), G-C (3 हाइड्रोजन बंध)। केन्द्रीय सिद्धांत: DNA → RNA → Protein।",
+          "pa": "ਮਾਈਟੋਸਿਸ: ਦੈਹਿਕ ਸੈੱਲਾਂ ਵਿੱਚ; 2 ਸਮਾਨ ਪੁੱਤਰੀ ਸੈੱਲ; ਕ੍ਰੋਮੋਸੋਮ ਸੰਖਿਆ ਅਪਰਿਵਰਤਿਤ (2n → 2n); ਵਾਧੇ ਅਤੇ ਮੁਰੰਮਤ ਲਈ। ਮੇਓਸਿਸ: ਜਨਨ ਸੈੱਲਾਂ ਵਿੱਚ; 4 ਪੁੱਤਰੀ ਸੈੱਲ; ਕ੍ਰੋਮੋਸੋਮ ਸੰਖਿਆ ਅੱਧੀ (2n → n)। DNA ਦੀ ਬਣਤਰ: Watson ਅਤੇ Crick 1953 — ਦੋਹਰੀ ਕੁੰਡਲੀ।",
+          "en": "Mitosis: in somatic cells; produces 2 identical daughter cells; chromosome number unchanged (2n → 2n); for growth and repair. Stages: Prophase → Metaphase → Anaphase → Telophase. Meiosis: in germ cells; produces 4 daughter cells; chromosome number halved (2n → n); generates genetic diversity. DNA Structure: Watson and Crick 1953 — double helix. Nitrogenous bases: Purines (Adenine, Guanine), Pyrimidines (Thymine, Cytosine). A-T (2 H-bonds), G-C (3 H-bonds). Central Dogma: DNA → RNA → Protein."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "question": {
+          "hi": "माइटोकॉन्ड्रिया को क्या कहते हैं?",
+          "pa": "ਮਾਈਟੋਕੌਂਡਰੀਆ ਨੂੰ ਕੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "en": "What is Mitochondria called?"
+        },
+        "answer": {
+          "hi": "कोशिका का ऊर्जा घर (Powerhouse of the cell)",
+          "pa": "ਸੈੱਲ ਦਾ ਊਰਜਾ ਘਰ (Powerhouse of the cell)",
+          "en": "Powerhouse of the cell"
+        }
+      },
+      {
+        "question": {
+          "hi": "DNA की द्विकुंडलित संरचना किसने दी?",
+          "pa": "DNA ਦੀ ਦੋਹਰੀ ਕੁੰਡਲੀ ਬਣਤਰ ਕਿਸਨੇ ਦਿੱਤੀ?",
+          "en": "Who proposed the double helix structure of DNA?"
+        },
+        "answer": {
+          "hi": "Watson और Crick (1953)",
+          "pa": "Watson ਅਤੇ Crick (1953)",
+          "en": "Watson and Crick (1953)"
+        }
+      },
+      {
+        "question": {
+          "hi": "लाइसोसोम को क्या कहते हैं?",
+          "pa": "ਲਾਈਸੋਸੋਮ ਨੂੰ ਕੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "en": "What is Lysosome called?"
+        },
+        "answer": {
+          "hi": "कोशिका का आत्मघाती थैला (Suicide bag of the cell)",
+          "pa": "ਸੈੱਲ ਦਾ ਆਤਮਘਾਤੀ ਥੈਲਾ (Suicide bag)",
+          "en": "Suicide bag of the cell"
+        }
+      },
+      {
+        "question": {
+          "hi": "समसूत्री विभाजन में कितनी पुत्री कोशिकाएँ बनती हैं?",
+          "pa": "ਮਾਈਟੋਸਿਸ ਵਿੱਚ ਕਿੰਨੀਆਂ ਪੁੱਤਰੀ ਸੈੱਲਾਂ ਬਣਦੀਆਂ ਹਨ?",
+          "en": "How many daughter cells are produced in Mitosis?"
+        },
+        "answer": {
+          "hi": "2 (समान पुत्री कोशिकाएँ)",
+          "pa": "2 (ਸਮਾਨ ਪੁੱਤਰੀ ਸੈੱਲਾਂ)",
+          "en": "2 (identical daughter cells)"
+        }
+      },
+      {
+        "question": {
+          "hi": "A-T जोड़ी में कितने हाइड्रोजन बंध होते हैं?",
+          "pa": "A-T ਜੋੜੀ ਵਿੱਚ ਕਿੰਨੇ ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ ਹੁੰਦੇ ਹਨ?",
+          "en": "How many hydrogen bonds are in an A-T base pair?"
+        },
+        "answer": {
+          "hi": "2 हाइड्रोजन बंध",
+          "pa": "2 ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ",
+          "en": "2 hydrogen bonds"
+        }
+      },
+      {
+        "question": {
+          "hi": "प्रोकैरियोटिक कोशिका का उदाहरण?",
+          "pa": "ਪ੍ਰੋਕੈਰੀਓਟਿਕ ਸੈੱਲ ਦੀ ਉਦਾਹਰਨ?",
+          "en": "Example of a prokaryotic cell?"
+        },
+        "answer": {
+          "hi": "जीवाणु (Bacteria) और नीले-हरे शैवाल (Cyanobacteria)",
+          "pa": "ਬੈਕਟੀਰੀਆ ਅਤੇ ਸਾਇਨੋਬੈਕਟੀਰੀਆ",
+          "en": "Bacteria and Cyanobacteria"
+        }
+      },
+      {
+        "question": {
+          "hi": "Virchow का कोशिका सिद्धांत में योगदान?",
+          "pa": "Virchow ਦਾ ਸੈੱਲ ਸਿਧਾਂਤ ਵਿੱਚ ਯੋਗਦਾਨ?",
+          "en": "Virchow's contribution to cell theory?"
+        },
+        "answer": {
+          "hi": "Omnis cellula e cellula — सभी कोशिकाएँ पूर्व-विद्यमान कोशिकाओं से बनती हैं।",
+          "pa": "Omnis cellula e cellula — ਸਾਰੇ ਸੈੱਲ ਪਹਿਲਾਂ ਤੋਂ ਮੌਜੂਦ ਸੈੱਲਾਂ ਤੋਂ ਬਣਦੇ ਹਨ।",
+          "en": "Omnis cellula e cellula — all cells arise from pre-existing cells."
+        }
+      },
+      {
+        "question": {
+          "hi": "अर्धसूत्री विभाजन में गुणसूत्र संख्या क्या होती है?",
+          "pa": "ਮੇਓਸਿਸ ਵਿੱਚ ਕ੍ਰੋਮੋਸੋਮ ਸੰਖਿਆ ਕੀ ਹੁੰਦੀ ਹੈ?",
+          "en": "What happens to chromosome number in Meiosis?"
+        },
+        "answer": {
+          "hi": "2n → n (आधी हो जाती है)",
+          "pa": "2n → n (ਅੱਧੀ ਹੋ ਜਾਂਦੀ ਹੈ)",
+          "en": "2n → n (halved)"
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "bio-cell-q-1",
+        "options": [
+          {
+            "hi": "यह प्रोटीन बनाता है",
+            "pa": "ਇਹ ਪ੍ਰੋਟੀਨ ਬਣਾਉਂਦਾ ਹੈ",
+            "en": "It produces proteins"
+          },
+          {
+            "hi": "यह ATP उत्पन्न करता है",
+            "pa": "ਇਹ ATP ਬਣਾਉਂਦਾ ਹੈ",
+            "en": "It produces ATP"
+          },
+          {
+            "hi": "यह DNA संग्रहीत करता है",
+            "pa": "ਇਹ DNA ਸੰਭਾਲਦਾ ਹੈ",
+            "en": "It stores DNA"
+          },
+          {
+            "hi": "यह प्रकाश-संश्लेषण करता है",
+            "pa": "ਇਹ ਪ੍ਰਕਾਸ਼ ਸੰਸ਼ਲੇਸ਼ਣ ਕਰਦਾ ਹੈ",
+            "en": "It performs photosynthesis"
+          }
+        ],
+        "explanation": {
+          "hi": "माइटोकॉन्ड्रिया ATP (ऊर्जा मुद्रा) उत्पन्न करता है इसलिए इसे ऊर्जा घर कहते हैं।",
+          "pa": "ਮਾਈਟੋਕੌਂਡਰੀਆ ATP (ਊਰਜਾ ਮੁਦਰਾ) ਬਣਾਉਂਦਾ ਹੈ ਇਸ ਲਈ ਇਸਨੂੰ ਊਰਜਾ ਘਰ ਕਿਹਾ ਜਾਂਦਾ ਹੈ।",
+          "en": "Mitochondria produces ATP (energy currency of the cell), hence called powerhouse."
+        },
+        "prompt": {
+          "hi": "माइटोकॉन्ड्रिया को 'कोशिका का ऊर्जा घर' क्यों कहते हैं?",
+          "pa": "ਮਾਈਟੋਕੌਂਡਰੀਆ ਨੂੰ 'ਸੈੱਲ ਦਾ ਊਰਜਾ ਘਰ' ਕਿਉਂ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "en": "Why is Mitochondria called the 'powerhouse of the cell'?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-cell-q-2",
+        "options": [
+          {
+            "hi": "Mendel ਅਤੇ Morgan",
+            "pa": "Mendel ਅਤੇ Morgan",
+            "en": "Mendel and Morgan"
+          },
+          {
+            "hi": "Watson ਅਤੇ Crick",
+            "pa": "Watson ਅਤੇ Crick",
+            "en": "Watson and Crick"
+          },
+          {
+            "hi": "Schleiden ਅਤੇ Schwann",
+            "pa": "Schleiden ਅਤੇ Schwann",
+            "en": "Schleiden and Schwann"
+          },
+          {
+            "hi": "Darwin ਅਤੇ Wallace",
+            "pa": "Darwin ਅਤੇ Wallace",
+            "en": "Darwin and Wallace"
+          }
+        ],
+        "explanation": {
+          "hi": "James Watson और Francis Crick ने 1953 में DNA की द्विकुंडलित संरचना प्रस्तावित की।",
+          "pa": "James Watson ਅਤੇ Francis Crick ਨੇ 1953 ਵਿੱਚ DNA ਦੀ ਦੋਹਰੀ ਕੁੰਡਲੀ ਬਣਤਰ ਪ੍ਰਸਤਾਵਿਤ ਕੀਤੀ।",
+          "en": "James Watson and Francis Crick proposed the double helix structure of DNA in 1953."
+        },
+        "prompt": {
+          "hi": "DNA की द्विकुंडलित संरचना किसने प्रस्तावित की?",
+          "pa": "DNA ਦੀ ਦੋਹਰੀ ਕੁੰਡਲੀ ਬਣਤਰ ਕਿਸਨੇ ਪ੍ਰਸਤਾਵਿਤ ਕੀਤੀ?",
+          "en": "Who proposed the double helix structure of DNA?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-cell-q-3",
+        "options": [
+          {
+            "hi": "यह ATP नष्ट करता है",
+            "pa": "ਇਹ ATP ਨਸ਼ਟ ਕਰਦਾ ਹੈ",
+            "en": "It destroys ATP"
+          },
+          {
+            "hi": "इसमें पाचक एंजाइम होते हैं जो कोशिका को नष्ट कर सकते हैं",
+            "pa": "ਇਸ ਵਿੱਚ ਪਾਚਕ ਐਨਜ਼ਾਈਮ ਹਨ ਜੋ ਸੈੱਲ ਨੂੰ ਨਸ਼ਟ ਕਰ ਸਕਦੇ ਹਨ",
+            "en": "It contains digestive enzymes that can destroy the cell"
+          },
+          {
+            "hi": "यह प्रोटीन संश्लेषण रोकता है",
+            "pa": "ਇਹ ਪ੍ਰੋਟੀਨ ਸੰਸ਼ਲੇਸ਼ਣ ਰੋਕਦਾ ਹੈ",
+            "en": "It stops protein synthesis"
+          },
+          {
+            "hi": "यह DNA को नष्ट करता है",
+            "pa": "ਇਹ DNA ਨੂੰ ਨਸ਼ਟ ਕਰਦਾ ਹੈ",
+            "en": "It destroys DNA"
+          }
+        ],
+        "explanation": {
+          "hi": "लाइसोसोम में पाचक एंजाइम होते हैं; टूटने पर ये एंजाइम कोशिका को नष्ट कर सकते हैं।",
+          "pa": "ਲਾਈਸੋਸੋਮ ਵਿੱਚ ਪਾਚਕ ਐਨਜ਼ਾਈਮ ਹਨ; ਟੁੱਟਣ 'ਤੇ ਇਹ ਐਨਜ਼ਾਈਮ ਸੈੱਲ ਨੂੰ ਨਸ਼ਟ ਕਰ ਸਕਦੇ ਹਨ।",
+          "en": "Lysosomes contain digestive enzymes; if ruptured, these enzymes can digest the entire cell."
+        },
+        "prompt": {
+          "hi": "लाइसोसोम को 'आत्मघाती थैला' क्यों कहते हैं?",
+          "pa": "ਲਾਈਸੋਸੋਮ ਨੂੰ 'ਆਤਮਘਾਤੀ ਥੈਲਾ' ਕਿਉਂ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "en": "Why is Lysosome called the 'suicide bag'?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-cell-q-4",
+        "options": [
+          {
+            "hi": "1",
+            "pa": "1",
+            "en": "1"
+          },
+          {
+            "hi": "2",
+            "pa": "2",
+            "en": "2"
+          },
+          {
+            "hi": "3",
+            "pa": "3",
+            "en": "3"
+          },
+          {
+            "hi": "4",
+            "pa": "4",
+            "en": "4"
+          }
+        ],
+        "explanation": {
+          "hi": "G-C जोड़ी में 3 हाइड्रोजन बंध होते हैं, A-T जोड़ी में 2।",
+          "pa": "G-C ਜੋੜੀ ਵਿੱਚ 3 ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ ਹਨ, A-T ਜੋੜੀ ਵਿੱਚ 2।",
+          "en": "G-C base pair has 3 hydrogen bonds, while A-T has 2."
+        },
+        "prompt": {
+          "hi": "G-C जोड़ी में कितने हाइड्रोजन बंध होते हैं?",
+          "pa": "G-C ਜੋੜੀ ਵਿੱਚ ਕਿੰਨੇ ਹਾਈਡ੍ਰੋਜਨ ਬੰਧਨ ਹੁੰਦੇ ਹਨ?",
+          "en": "How many hydrogen bonds are present in a G-C base pair?"
+        },
+        "answerIndex": 2
+      },
+      {
+        "id": "bio-cell-q-5",
+        "options": [
+          {
+            "hi": "जनन कोशिकाओं में",
+            "pa": "ਜਨਨ ਸੈੱਲਾਂ ਵਿੱਚ",
+            "en": "In germ cells"
+          },
+          {
+            "hi": "दैहिक कोशिकाओं में",
+            "pa": "ਦੈਹਿਕ ਸੈੱਲਾਂ ਵਿੱਚ",
+            "en": "In somatic cells"
+          },
+          {
+            "hi": "केवल पादप कोशिकाओं में",
+            "pa": "ਕੇਵਲ ਪੌਦੇ ਦੇ ਸੈੱਲਾਂ ਵਿੱਚ",
+            "en": "Only in plant cells"
+          },
+          {
+            "hi": "केवल बैक्टीरिया में",
+            "pa": "ਕੇਵਲ ਬੈਕਟੀਰੀਆ ਵਿੱਚ",
+            "en": "Only in bacteria"
+          }
+        ],
+        "explanation": {
+          "hi": "समसूत्री विभाजन दैहिक (शरीर की) कोशिकाओं में होता है और वृद्धि तथा मरम्मत के लिए होता है।",
+          "pa": "ਮਾਈਟੋਸਿਸ ਦੈਹਿਕ ਸੈੱਲਾਂ ਵਿੱਚ ਹੁੰਦੀ ਹੈ ਅਤੇ ਵਾਧੇ ਅਤੇ ਮੁਰੰਮਤ ਲਈ ਹੁੰਦੀ ਹੈ।",
+          "en": "Mitosis occurs in somatic (body) cells and is responsible for growth and repair."
+        },
+        "prompt": {
+          "hi": "समसूत्री विभाजन कहाँ होता है?",
+          "pa": "ਮਾਈਟੋਸਿਸ ਕਿੱਥੇ ਹੁੰਦੀ ਹੈ?",
+          "en": "Where does Mitosis occur?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-cell-q-6",
+        "options": [
+          {
+            "hi": "माइटोकॉन्ड्रिया",
+            "pa": "ਮਾਈਟੋਕੌਂਡਰੀਆ",
+            "en": "Mitochondria"
+          },
+          {
+            "hi": "राइबोसोम",
+            "pa": "ਰਾਈਬੋਸੋਮ",
+            "en": "Ribosome"
+          },
+          {
+            "hi": "क्लोरोप्लास्ट",
+            "pa": "ਕਲੋਰੋਪਲਾਸਟ",
+            "en": "Chloroplast"
+          },
+          {
+            "hi": "गोल्जी उपकरण",
+            "pa": "ਗੋਲਜੀ ਉਪਕਰਣ",
+            "en": "Golgi apparatus"
+          }
+        ],
+        "explanation": {
+          "hi": "क्लोरोप्लास्ट केवल पादप कोशिकाओं में पाया जाता है, जंतु कोशिकाओं में नहीं।",
+          "pa": "ਕਲੋਰੋਪਲਾਸਟ ਕੇਵਲ ਪੌਦੇ ਦੇ ਸੈੱਲਾਂ ਵਿੱਚ ਪਾਇਆ ਜਾਂਦਾ ਹੈ, ਜਾਨਵਰ ਦੇ ਸੈੱਲਾਂ ਵਿੱਚ ਨਹੀਂ।",
+          "en": "Chloroplast is found only in plant cells, not in animal cells."
+        },
+        "prompt": {
+          "hi": "पादप कोशिका में कौन-सा कोशिकांग जंतु कोशिका में नहीं पाया जाता?",
+          "pa": "ਪੌਦੇ ਦੇ ਸੈੱਲ ਵਿੱਚ ਕਿਹੜਾ ਅੰਗਾਣੂ ਜਾਨਵਰ ਦੇ ਸੈੱਲ ਵਿੱਚ ਨਹੀਂ ਪਾਇਆ ਜਾਂਦਾ?",
+          "en": "Which organelle is found in plant cells but NOT in animal cells?"
+        },
+        "answerIndex": 2
+      },
+      {
+        "id": "bio-cell-q-7",
+        "options": [
+          {
+            "hi": "कोशिका प्रकाश-संश्लेषण करती है",
+            "pa": "ਸੈੱਲ ਪ੍ਰਕਾਸ਼ ਸੰਸ਼ਲੇਸ਼ਣ ਕਰਦਾ ਹੈ",
+            "en": "Cells perform photosynthesis"
+          },
+          {
+            "hi": "सभी कोशिकाएँ पूर्व-विद्यमान कोशिकाओं से उत्पन्न होती हैं",
+            "pa": "ਸਾਰੇ ਸੈੱਲ ਪਹਿਲਾਂ ਤੋਂ ਮੌਜੂਦ ਸੈੱਲਾਂ ਤੋਂ ਬਣਦੇ ਹਨ",
+            "en": "All cells arise from pre-existing cells"
+          },
+          {
+            "hi": "सभी जीव एककोशिकीय हैं",
+            "pa": "ਸਾਰੇ ਜੀਵ ਇੱਕ-ਸੈੱਲੀ ਹਨ",
+            "en": "All organisms are unicellular"
+          },
+          {
+            "hi": "कोशिका में नाभिक नहीं होता",
+            "pa": "ਸੈੱਲ ਵਿੱਚ ਨਿਊਕਲੀਅਸ ਨਹੀਂ ਹੁੰਦਾ",
+            "en": "Cells have no nucleus"
+          }
+        ],
+        "explanation": {
+          "hi": "Virchow ने 'Omnis cellula e cellula' — सभी कोशिकाएँ पूर्व-विद्यमान कोशिकाओं से — जोड़ा।",
+          "pa": "Virchow ਨੇ 'Omnis cellula e cellula' — ਸਾਰੇ ਸੈੱਲ ਪਹਿਲਾਂ ਤੋਂ ਮੌਜੂਦ ਸੈੱਲਾਂ ਤੋਂ — ਜੋੜਿਆ।",
+          "en": "Virchow added 'Omnis cellula e cellula' — all cells arise from pre-existing cells."
+        },
+        "prompt": {
+          "hi": "Virchow ने कोशिका सिद्धांत में क्या जोड़ा?",
+          "pa": "Virchow ਨੇ ਸੈੱਲ ਸਿਧਾਂਤ ਵਿੱਚ ਕੀ ਜੋੜਿਆ?",
+          "en": "What did Virchow add to the Cell Theory?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-cell-q-8",
+        "options": [
+          {
+            "hi": "जीवाणु में",
+            "pa": "ਬੈਕਟੀਰੀਆ ਵਿੱਚ",
+            "en": "In bacteria"
+          },
+          {
+            "hi": "यूकैरियोटिक कोशिकाओं में",
+            "pa": "ਯੂਕੈਰੀਓਟਿਕ ਸੈੱਲਾਂ ਵਿੱਚ",
+            "en": "In eukaryotic cells"
+          },
+          {
+            "hi": "माइटोकॉन्ड्रिया में",
+            "pa": "ਮਾਈਟੋਕੌਂਡਰੀਆ ਵਿੱਚ",
+            "en": "In mitochondria"
+          },
+          {
+            "hi": "क्लोरोप्लास्ट में",
+            "pa": "ਕਲੋਰੋਪਲਾਸਟ ਵਿੱਚ",
+            "en": "In chloroplast"
+          }
+        ],
+        "explanation": {
+          "hi": "80S राइबोसोम यूकैरियोटिक कोशिकाओं में पाया जाता है; 70S प्रोकैरियोट में।",
+          "pa": "80S ਰਾਈਬੋਸੋਮ ਯੂਕੈਰੀਓਟਿਕ ਸੈੱਲਾਂ ਵਿੱਚ ਪਾਇਆ ਜਾਂਦਾ ਹੈ; 70S ਪ੍ਰੋਕੈਰੀਓਟ ਵਿੱਚ।",
+          "en": "80S ribosome is found in eukaryotic cells; 70S in prokaryotes."
+        },
+        "prompt": {
+          "hi": "80S राइबोसोम किसमें पाया जाता है?",
+          "pa": "80S ਰਾਈਬੋਸੋਮ ਕਿਸ ਵਿੱਚ ਪਾਇਆ ਜਾਂਦਾ ਹੈ?",
+          "en": "Where is 80S ribosome found?"
+        },
+        "answerIndex": 1
+      }
+    ],
+    "sources": [],
+    "videos": [],
+    "documents": [],
+    "keypoints": [
+      {
+        "hi": "माइटोकॉन्ड्रिया = ऊर्जा घर; ATP उत्पन्न करता है।",
+        "pa": "ਮਾਈਟੋਕੌਂਡਰੀਆ = ਊਰਜਾ ਘਰ; ATP ਬਣਾਉਂਦਾ ਹੈ।",
+        "en": "Mitochondria = powerhouse; produces ATP."
+      },
+      {
+        "hi": "लाइसोसोम = आत्मघाती थैला; पाचक एंजाइम।",
+        "pa": "ਲਾਈਸੋਸੋਮ = ਆਤਮਘਾਤੀ ਥੈਲਾ; ਪਾਚਕ ਐਨਜ਼ਾਈਮ।",
+        "en": "Lysosome = suicide bag; digestive enzymes."
+      },
+      {
+        "hi": "Watson–Crick 1953: DNA की द्विकुंडलित संरचना; G-C (3 H-बंध), A-T (2 H-बंध)।",
+        "pa": "Watson–Crick 1953: DNA ਦੀ ਦੋਹਰੀ ਕੁੰਡਲੀ; G-C (3 H-ਬੰਧ), A-T (2 H-ਬੰਧ)।",
+        "en": "Watson-Crick 1953: DNA double helix; G-C (3 H-bonds), A-T (2 H-bonds)."
+      },
+      {
+        "hi": "Mitosis: 2n→2n (वृद्धि/मरम्मत); Meiosis: 2n→n (जनन)।",
+        "pa": "Mitosis: 2n→2n; Meiosis: 2n→n।",
+        "en": "Mitosis: 2n→2n (growth/repair); Meiosis: 2n→n (reproduction)."
+      },
+      {
+        "hi": "Virchow: Omnis cellula e cellula — कोशिका से कोशिका।",
+        "pa": "Virchow: Omnis cellula e cellula।",
+        "en": "Virchow: Omnis cellula e cellula — cell from cell."
+      }
+    ]
+  },
+  {
+    "id": "biology-genetics-evolution",
+    "subject": "Biology",
+    "unit": "Genetics and Evolution",
+    "title": {
+      "hi": "आनुवंशिकता और विकास",
+      "pa": "ਖ਼ਾਨਦਾਨੀਅਤ ਅਤੇ ਵਿਕਾਸ",
+      "en": "Heredity and Evolution"
+    },
+    "summary": {
+      "hi": "मेंडल के नियम, DNA प्रतिकृति, उत्परिवर्तन, डार्विन का विकासवाद और प्राकृतिक चयन।",
+      "pa": "ਮੈਂਡਲ ਦੇ ਨਿਯਮ, DNA ਨਕਲ, ਪਰਿਵਰਤਨ, ਡਾਰਵਿਨ ਦਾ ਵਿਕਾਸਵਾਦ ਅਤੇ ਕੁਦਰਤੀ ਚੋਣ।",
+      "en": "Mendel's laws, DNA replication, mutation, Darwin's theory of evolution and natural selection."
+    },
+    "sections": [
+      {
+        "heading": {
+          "hi": "मेंडल के आनुवंशिकता के नियम",
+          "pa": "ਮੈਂਡਲ ਦੇ ਖ਼ਾਨਦਾਨੀਅਤ ਦੇ ਨਿਯਮ",
+          "en": "Mendel's Laws of Heredity"
+        },
+        "text": {
+          "hi": "ग्रेगर जोहान मेंडल — 'आनुवंशिकता के पिता'; मटर के पौधों पर प्रयोग। प्रभाविता का नियम: F1 पीढ़ी में केवल प्रभावी गुण दिखता है। पृथक्करण का नियम (Law of Segregation): युग्म-विकल्पी युगल गैमीट निर्माण के समय पृथक् होते हैं। स्वतंत्र अपव्यूहन का नियम (Law of Independent Assortment): दो जोड़े युग्म-विकल्पी एक-दूसरे से स्वतंत्र रूप से पृथक् होते हैं। मोनोहाइब्रिड क्रॉस: F2 में फीनोटाइपिक अनुपात 3:1; जीनोटाइपिक अनुपात 1:2:1। डाइहाइब्रिड क्रॉस: F2 में फीनोटाइपिक अनुपात 9:3:3:1। रक्त समूह: ABO — सह-प्रभाविता; AB, A, B, O (I^A I^B > I^A, I^B > i)। लिंग-निर्धारण: मानव में XY (नर), XX (मादा); मुर्गी में ZW (मादा), ZZ (नर)।",
+          "pa": "ਗ੍ਰੇਗਰ ਜੋਹਾਨ ਮੈਂਡਲ — 'ਖ਼ਾਨਦਾਨੀਅਤ ਦੇ ਪਿਤਾ'; ਮਟਰ ਦੇ ਪੌਦਿਆਂ 'ਤੇ ਪ੍ਰਯੋਗ। ਪ੍ਰਭਾਵਿਤਾ ਦਾ ਨਿਯਮ: F1 ਪੀੜ੍ਹੀ ਵਿੱਚ ਕੇਵਲ ਪ੍ਰਭਾਵੀ ਗੁਣ ਦਿੱਖਦਾ ਹੈ। ਪਾਰਦਰਸ਼ਨ ਦਾ ਨਿਯਮ: ਯੁਗਮ-ਵਿਕਲਪੀ ਗੈਮੇਟ ਬਣਨ ਸਮੇਂ ਵੱਖ ਹੁੰਦੇ ਹਨ। ਮੋਨੋਹਾਈਬ੍ਰਿਡ ਕਰਾਸ: F2 ਵਿੱਚ ਫੀਨੋਟਾਈਪਿਕ ਅਨੁਪਾਤ 3:1।",
+          "en": "Gregor Johann Mendel — 'Father of Genetics'; experiments on pea plants. Law of Dominance: F1 shows only dominant trait. Law of Segregation: alleles separate during gamete formation. Law of Independent Assortment: two pairs of alleles segregate independently. Monohybrid cross: F2 phenotypic ratio 3:1; genotypic ratio 1:2:1. Dihybrid cross: F2 phenotypic ratio 9:3:3:1. Blood groups: ABO — co-dominance. Sex determination: humans XY (male), XX (female); birds ZW (female), ZZ (male)."
+        }
+      },
+      {
+        "heading": {
+          "hi": "डार्विन का विकासवाद और प्राकृतिक चयन",
+          "pa": "ਡਾਰਵਿਨ ਦਾ ਵਿਕਾਸਵਾਦ ਅਤੇ ਕੁਦਰਤੀ ਚੋਣ",
+          "en": "Darwin's Theory of Evolution and Natural Selection"
+        },
+        "text": {
+          "hi": "चार्ल्स डार्विन — 'On the Origin of Species' (1859)। प्राकृतिक चयन के सिद्धांत: (1) अतिउत्पादन — जीव अपनी वहन क्षमता से अधिक संतान उत्पन्न करते हैं। (2) विभिन्नता — सदस्यों में भिन्नताएँ होती हैं। (3) अस्तित्व के लिए संघर्ष — संसाधनों के लिए प्रतिस्पर्धा। (4) योग्यतम की उत्तरजीविता — लाभदायक गुण वाले जीव अधिक जीते हैं। लैमार्कवाद: अर्जित गुणों की विरासत (गलत सिद्ध)। अनुकूलन के प्रकार: रूपात्मक, शारीरिक, व्यवहारात्मक। उड़ान का उदाहरण — पक्षी और चमगादड़ में पंख (समरूप अंग)। ह्वेल के अग्र पाद और मानव बाहु (समजात अंग)। जैव विकास का साक्ष्य: जीवाश्म, भ्रूण विज्ञान, तुलनात्मक शरीर रचना।",
+          "pa": "ਚਾਰਲਸ ਡਾਰਵਿਨ — 'On the Origin of Species' (1859)। ਕੁਦਰਤੀ ਚੋਣ ਦੇ ਸਿਧਾਂਤ: ਅਤਿ-ਉਤਪਾਦਨ, ਭਿੰਨਤਾ, ਹੋਂਦ ਲਈ ਸੰਘਰਸ਼, ਯੋਗਤਮ ਦੀ ਬਕਾਇਦਗੀ। ਜੈਵ ਵਿਕਾਸ ਦੇ ਸਬੂਤ: ਜੀਵਾਸ਼ਮ, ਭਰੂਣ ਵਿਗਿਆਨ, ਤੁਲਨਾਤਮਕ ਸਰੀਰ ਰਚਨਾ।",
+          "en": "Charles Darwin — 'On the Origin of Species' (1859). Natural Selection: (1) Over-production — more offspring than environment can support. (2) Variation — differences among individuals. (3) Struggle for existence — competition for resources. (4) Survival of the fittest — beneficial traits favoured. Lamarckism: inheritance of acquired characters (disproved). Types of adaptation: morphological, physiological, behavioural. Analogous organs (wings of birds and bats). Homologous organs (forelimbs of whale and human). Evidence for evolution: fossils, embryology, comparative anatomy."
+        }
+      },
+      {
+        "heading": {
+          "hi": "मानव विकास और जैव विविधता",
+          "pa": "ਮਨੁੱਖੀ ਵਿਕਾਸ ਅਤੇ ਜੈਵ ਵਿਭਿੰਨਤਾ",
+          "en": "Human Evolution and Biodiversity"
+        },
+        "text": {
+          "hi": "मानव विकास: Australopithecus → Homo habilis → Homo erectus → Homo sapiens। मस्तिष्क आयतन: Homo sapiens में सबसे अधिक (~1450 cc)। जैव विविधता: प्रजाति विविधता, आनुवंशिक विविधता, पारिस्थितिक तंत्र विविधता। जैव विविधता के हॉटस्पॉट: भारत में 4 — हिमालय, पश्चिमी घाट, इंडो-बर्मा, सुंडालैंड। प्रजातियों का संरक्षण: इन-सिटू (राष्ट्रीय उद्यान, अभयारण्य), एक्स-सिटू (चिड़ियाघर, जीन बैंक)। IUCN रेड लिस्ट श्रेणियाँ: विलुप्त, संकटग्रस्त, सुभेद्य, संकट के निकट।",
+          "pa": "ਮਨੁੱਖੀ ਵਿਕਾਸ: Australopithecus → Homo habilis → Homo erectus → Homo sapiens। ਦਿਮਾਗ ਦੀ ਮਾਤਰਾ: Homo sapiens ਵਿੱਚ ਸਭ ਤੋਂ ਵੱਧ। ਜੈਵ ਵਿਭਿੰਨਤਾ ਦੇ ਹੌਟਸਪੌਟ: ਭਾਰਤ ਵਿੱਚ 4 — ਹਿਮਾਲਿਆ, ਪੱਛਮੀ ਘਾਟ, ਇੰਡੋ-ਬਰਮਾ, ਸੁੰਡਾਲੈਂਡ।",
+          "en": "Human Evolution: Australopithecus → Homo habilis → Homo erectus → Homo sapiens. Brain volume largest in Homo sapiens (~1450 cc). Biodiversity: species, genetic, ecosystem diversity. Biodiversity hotspots in India: 4 — Himalayas, Western Ghats, Indo-Burma, Sundaland. Species conservation: in-situ (national parks, sanctuaries), ex-situ (zoos, gene banks). IUCN Red List: Extinct, Endangered, Vulnerable, Near Threatened."
+        }
+      }
+    ],
+    "flashcards": [
+      {
+        "question": {
+          "hi": "मेंडल को क्या कहते हैं?",
+          "pa": "ਮੈਂਡਲ ਨੂੰ ਕੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?",
+          "en": "What is Mendel called?"
+        },
+        "answer": {
+          "hi": "आनुवंशिकता के पिता (Father of Genetics)",
+          "pa": "ਖ਼ਾਨਦਾਨੀਅਤ ਦੇ ਪਿਤਾ (Father of Genetics)",
+          "en": "Father of Genetics"
+        }
+      },
+      {
+        "question": {
+          "hi": "मोनोहाइब्रिड क्रॉस में F2 का फीनोटाइपिक अनुपात?",
+          "pa": "ਮੋਨੋਹਾਈਬ੍ਰਿਡ ਕਰਾਸ ਵਿੱਚ F2 ਦਾ ਫੀਨੋਟਾਈਪਿਕ ਅਨੁਪਾਤ?",
+          "en": "F2 phenotypic ratio in Monohybrid cross?"
+        },
+        "answer": {
+          "hi": "3:1",
+          "pa": "3:1",
+          "en": "3:1"
+        }
+      },
+      {
+        "question": {
+          "hi": "डार्विन की पुस्तक का नाम?",
+          "pa": "ਡਾਰਵਿਨ ਦੀ ਕਿਤਾਬ ਦਾ ਨਾਮ?",
+          "en": "Name of Darwin's famous book?"
+        },
+        "answer": {
+          "hi": "On the Origin of Species (1859)",
+          "pa": "On the Origin of Species (1859)",
+          "en": "On the Origin of Species (1859)"
+        }
+      },
+      {
+        "question": {
+          "hi": "डाइहाइब्रिड क्रॉस में F2 का फीनोटाइपिक अनुपात?",
+          "pa": "ਡਾਇਹਾਈਬ੍ਰਿਡ ਕਰਾਸ ਵਿੱਚ F2 ਦਾ ਫੀਨੋਟਾਈਪਿਕ ਅਨੁਪਾਤ?",
+          "en": "F2 phenotypic ratio in Dihybrid cross?"
+        },
+        "answer": {
+          "hi": "9:3:3:1",
+          "pa": "9:3:3:1",
+          "en": "9:3:3:1"
+        }
+      },
+      {
+        "question": {
+          "hi": "भारत में जैव विविधता हॉटस्पॉट की संख्या?",
+          "pa": "ਭਾਰਤ ਵਿੱਚ ਜੈਵ ਵਿਭਿੰਨਤਾ ਹੌਟਸਪੌਟ ਦੀ ਗਿਣਤੀ?",
+          "en": "Number of biodiversity hotspots in India?"
+        },
+        "answer": {
+          "hi": "4",
+          "pa": "4",
+          "en": "4"
+        }
+      },
+      {
+        "question": {
+          "hi": "ਇਨ-ਸਿਟੂ ਸੰਰੱਖਿਅਣ ਦੇ ਉਦਾਹਰਨ?",
+          "pa": "ਇਨ-ਸਿਟੂ ਸੰਰੱਖਿਅਣ ਦੇ ਉਦਾਹਰਨ?",
+          "en": "Examples of in-situ conservation?"
+        },
+        "answer": {
+          "hi": "राष्ट्रीय उद्यान, वन्यजीव अभयारण्य, बायोस्फीयर रिजर्व",
+          "pa": "ਰਾਸ਼ਟਰੀ ਉਦਿਆਨ, ਜੰਗਲੀ ਜੀਵ ਅਭਯਾਰਣਯ, ਬਾਇਓਸਫੀਅਰ ਰਿਜ਼ਰਵ",
+          "en": "National parks, wildlife sanctuaries, biosphere reserves"
+        }
+      },
+      {
+        "question": {
+          "hi": "लैमार्कवाद में कौन-सी त्रुटि थी?",
+          "pa": "ਲੈਮਾਰਕਵਾਦ ਵਿੱਚ ਕਿਹੜੀ ਗਲਤੀ ਸੀ?",
+          "en": "What was wrong with Lamarckism?"
+        },
+        "answer": {
+          "hi": "अर्जित गुणों की विरासत नहीं होती — यह प्रयोगों द्वारा गलत सिद्ध हो गया।",
+          "pa": "ਅਰਜਿਤ ਗੁਣਾਂ ਦੀ ਵਿਰਾਸਤ ਨਹੀਂ ਹੁੰਦੀ — ਇਹ ਪ੍ਰਯੋਗਾਂ ਦੁਆਰਾ ਗਲਤ ਸਿੱਧ ਹੋ ਗਿਆ।",
+          "en": "Inheritance of acquired characters does not occur — disproved by experiments."
+        }
+      },
+      {
+        "question": {
+          "hi": "मानव में लिंग-निर्धारण कैसे होता है?",
+          "pa": "ਮਨੁੱਖ ਵਿੱਚ ਲਿੰਗ-ਨਿਰਧਾਰਨ ਕਿਵੇਂ ਹੁੰਦਾ ਹੈ?",
+          "en": "How is sex determined in humans?"
+        },
+        "answer": {
+          "hi": "XY = नर; XX = मादा। पिता के गुणसूत्र (X या Y) निर्धारित करते हैं।",
+          "pa": "XY = ਨਰ; XX = ਮਾਦਾ। ਪਿਤਾ ਦੇ ਕ੍ਰੋਮੋਸੋਮ (X ਜਾਂ Y) ਨਿਰਧਾਰਿਤ ਕਰਦੇ ਹਨ।",
+          "en": "XY = male; XX = female. Father's chromosome (X or Y) determines sex."
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "bio-gen-q-1",
+        "options": [
+          {
+            "hi": "1:2:1",
+            "pa": "1:2:1",
+            "en": "1:2:1"
+          },
+          {
+            "hi": "3:1",
+            "pa": "3:1",
+            "en": "3:1"
+          },
+          {
+            "hi": "9:3:3:1",
+            "pa": "9:3:3:1",
+            "en": "9:3:3:1"
+          },
+          {
+            "hi": "1:1",
+            "pa": "1:1",
+            "en": "1:1"
+          }
+        ],
+        "explanation": {
+          "hi": "मोनोहाइब्रिड क्रॉस में F2 का फीनोटाइपिक अनुपात 3:1 होता है।",
+          "pa": "ਮੋਨੋਹਾਈਬ੍ਰਿਡ ਕਰਾਸ ਵਿੱਚ F2 ਦਾ ਫੀਨੋਟਾਈਪਿਕ ਅਨੁਪਾਤ 3:1 ਹੁੰਦਾ ਹੈ।",
+          "en": "The phenotypic ratio in F2 of a Monohybrid cross is 3:1."
+        },
+        "prompt": {
+          "hi": "मेंडल के मोनोहाइब्रिड क्रॉस में F2 पीढ़ी का फीनोटाइपिक अनुपात क्या है?",
+          "pa": "ਮੈਂਡਲ ਦੇ ਮੋਨੋਹਾਈਬ੍ਰਿਡ ਕਰਾਸ ਵਿੱਚ F2 ਪੀੜ੍ਹੀ ਦਾ ਫੀਨੋਟਾਈਪਿਕ ਅਨੁਪਾਤ ਕੀ ਹੈ?",
+          "en": "What is the phenotypic ratio in F2 generation of Mendel's Monohybrid cross?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-gen-q-2",
+        "options": [
+          {
+            "hi": "1832",
+            "pa": "1832",
+            "en": "1832"
+          },
+          {
+            "hi": "1859",
+            "pa": "1859",
+            "en": "1859"
+          },
+          {
+            "hi": "1900",
+            "pa": "1900",
+            "en": "1900"
+          },
+          {
+            "hi": "1953",
+            "pa": "1953",
+            "en": "1953"
+          }
+        ],
+        "explanation": {
+          "hi": "डार्विन ने 1859 में 'On the Origin of Species' प्रकाशित की।",
+          "pa": "ਡਾਰਵਿਨ ਨੇ 1859 ਵਿੱਚ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ।",
+          "en": "Darwin published 'On the Origin of Species' in 1859."
+        },
+        "prompt": {
+          "hi": "डार्विन ने 'On the Origin of Species' कब प्रकाशित की?",
+          "pa": "ਡਾਰਵਿਨ ਨੇ 'On the Origin of Species' ਕਦੋਂ ਪ੍ਰਕਾਸ਼ਿਤ ਕੀਤੀ?",
+          "en": "When did Darwin publish 'On the Origin of Species'?"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-gen-q-3",
+        "options": [
+          {
+            "hi": "2",
+            "pa": "2",
+            "en": "2"
+          },
+          {
+            "hi": "3",
+            "pa": "3",
+            "en": "3"
+          },
+          {
+            "hi": "4",
+            "pa": "4",
+            "en": "4"
+          },
+          {
+            "hi": "6",
+            "pa": "6",
+            "en": "6"
+          }
+        ],
+        "explanation": {
+          "hi": "भारत में 4 जैव विविधता हॉटस्पॉट हैं: हिमालय, पश्चिमी घाट, इंडो-बर्मा, सुंडालैंड।",
+          "pa": "ਭਾਰਤ ਵਿੱਚ 4 ਜੈਵ ਵਿਭਿੰਨਤਾ ਹੌਟਸਪੌਟ ਹਨ: ਹਿਮਾਲਿਆ, ਪੱਛਮੀ ਘਾਟ, ਇੰਡੋ-ਬਰਮਾ, ਸੁੰਡਾਲੈਂਡ।",
+          "en": "India has 4 biodiversity hotspots: Himalayas, Western Ghats, Indo-Burma, Sundaland."
+        },
+        "prompt": {
+          "hi": "भारत में जैव विविधता हॉटस्पॉट की संख्या कितनी है?",
+          "pa": "ਭਾਰਤ ਵਿੱਚ ਜੈਵ ਵਿਭਿੰਨਤਾ ਹੌਟਸਪੌਟ ਦੀ ਗਿਣਤੀ ਕਿੰਨੀ ਹੈ?",
+          "en": "How many biodiversity hotspots are there in India?"
+        },
+        "answerIndex": 2
+      },
+      {
+        "id": "bio-gen-q-4",
+        "options": [
+          {
+            "hi": "दोनों एलील हमेशा साथ रहते हैं",
+            "pa": "ਦੋਵੇਂ ਐਲੀਲ ਹਮੇਸ਼ਾ ਇਕੱਠੇ ਰਹਿੰਦੇ ਹਨ",
+            "en": "Both alleles remain together always"
+          },
+          {
+            "hi": "युग्म-विकल्पी गैमीट बनाते समय अलग हो जाते हैं",
+            "pa": "ਯੁਗਮ-ਵਿਕਲਪੀ ਗੈਮੇਟ ਬਣਨ ਸਮੇਂ ਵੱਖ ਹੋ ਜਾਂਦੇ ਹਨ",
+            "en": "Alleles separate during gamete formation"
+          },
+          {
+            "hi": "F1 में दोनों लक्षण दिखते हैं",
+            "pa": "F1 ਵਿੱਚ ਦੋਵੇਂ ਲੱਛਣ ਦਿੱਖਦੇ ਹਨ",
+            "en": "Both traits appear in F1"
+          },
+          {
+            "hi": "केवल मादा में लक्षण दिखता है",
+            "pa": "ਕੇਵਲ ਮਾਦਾ ਵਿੱਚ ਲੱਛਣ ਦਿੱਖਦਾ ਹੈ",
+            "en": "Trait appears only in females"
+          }
+        ],
+        "explanation": {
+          "hi": "पृथक्करण नियम: युग्म-विकल्पी गैमीट निर्माण के समय अलग होते हैं और प्रत्येक गैमीट में एक ही एलील जाता है।",
+          "pa": "ਪਾਰਦਰਸ਼ਨ ਨਿਯਮ: ਯੁਗਮ-ਵਿਕਲਪੀ ਗੈਮੇਟ ਬਣਨ ਸਮੇਂ ਵੱਖ ਹੁੰਦੇ ਹਨ।",
+          "en": "Law of Segregation: alleles separate during gamete formation; each gamete carries only one allele."
+        },
+        "prompt": {
+          "hi": "मेंडल के 'पृथक्करण के नियम' का अर्थ है:",
+          "pa": "ਮੈਂਡਲ ਦੇ 'ਪਾਰਦਰਸ਼ਨ ਦੇ ਨਿਯਮ' ਦਾ ਅਰਥ ਹੈ:",
+          "en": "Mendel's Law of Segregation means:"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-gen-q-5",
+        "options": [
+          {
+            "hi": "लैमार्क",
+            "pa": "ਲੈਮਾਰਕ",
+            "en": "Lamarck"
+          },
+          {
+            "hi": "मेंडल",
+            "pa": "ਮੈਂਡਲ",
+            "en": "Mendel"
+          },
+          {
+            "hi": "डार्विन",
+            "pa": "ਡਾਰਵਿਨ",
+            "en": "Darwin"
+          },
+          {
+            "hi": "वाटसन",
+            "pa": "ਵਾਟਸਨ",
+            "en": "Watson"
+          }
+        ],
+        "explanation": {
+          "hi": "चार्ल्स डार्विन ने 1859 में प्राकृतिक चयन का सिद्धांत दिया।",
+          "pa": "ਚਾਰਲਸ ਡਾਰਵਿਨ ਨੇ 1859 ਵਿੱਚ ਕੁਦਰਤੀ ਚੋਣ ਦਾ ਸਿਧਾਂਤ ਦਿੱਤਾ।",
+          "en": "Charles Darwin gave the theory of Natural Selection in 1859."
+        },
+        "prompt": {
+          "hi": "प्राकृतिक चयन का सिद्धांत किसने दिया?",
+          "pa": "ਕੁਦਰਤੀ ਚੋਣ ਦਾ ਸਿਧਾਂਤ ਕਿਸਨੇ ਦਿੱਤਾ?",
+          "en": "Who gave the theory of Natural Selection?"
+        },
+        "answerIndex": 2
+      },
+      {
+        "id": "bio-gen-q-6",
+        "options": [
+          {
+            "hi": "समरूप अंग",
+            "pa": "ਸਮਰੂਪ ਅੰਗ",
+            "en": "Analogous organs"
+          },
+          {
+            "hi": "समजात अंग",
+            "pa": "ਸਮਜਾਤ ਅੰਗ",
+            "en": "Homologous organs"
+          },
+          {
+            "hi": "अवशेषी अंग",
+            "pa": "ਅਵਸ਼ੇਸ਼ੀ ਅੰਗ",
+            "en": "Vestigial organs"
+          },
+          {
+            "hi": "कोई संबंध नहीं",
+            "pa": "ਕੋਈ ਸੰਬੰਧ ਨਹੀਂ",
+            "en": "No relation"
+          }
+        ],
+        "explanation": {
+          "hi": "ह्वेल के अग्र पाद और मानव बाहु — समान मूल लेकिन अलग कार्य — समजात अंग।",
+          "pa": "ਵ੍ਹੇਲ ਦੇ ਅਗਲੇ ਪੈਰ ਅਤੇ ਮਨੁੱਖੀ ਬਾਂਹ — ਸਮਾਨ ਮੂਲ ਪਰ ਵੱਖਰੇ ਕਾਰਜ — ਸਮਜਾਤ ਅੰਗ।",
+          "en": "Whale forelimbs and human arm share common origin but different function — homologous organs."
+        },
+        "prompt": {
+          "hi": "ह्वेल के अग्र पाद और मानव बाहु किस प्रकार के अंग हैं?",
+          "pa": "ਵ੍ਹੇਲ ਦੇ ਅਗਲੇ ਪੈਰ ਅਤੇ ਮਨੁੱਖੀ ਬਾਂਹ ਕਿਸ ਤਰ੍ਹਾਂ ਦੇ ਅੰਗ ਹਨ?",
+          "en": "The forelimbs of whale and human arm are examples of:"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-gen-q-7",
+        "options": [
+          {
+            "hi": "माँ के X गुणसूत्र",
+            "pa": "ਮਾਂ ਦੇ X ਕ੍ਰੋਮੋਸੋਮ",
+            "en": "Mother's X chromosome"
+          },
+          {
+            "hi": "पिता के X या Y गुणसूत्र",
+            "pa": "ਪਿਤਾ ਦੇ X ਜਾਂ Y ਕ੍ਰੋਮੋਸੋਮ",
+            "en": "Father's X or Y chromosome"
+          },
+          {
+            "hi": "ऑटोसोम्स",
+            "pa": "ਆਟੋਸੋਮ",
+            "en": "Autosomes"
+          },
+          {
+            "hi": "माइटोकॉन्ड्रिया",
+            "pa": "ਮਾਈਟੋਕੌਂਡਰੀਆ",
+            "en": "Mitochondria"
+          }
+        ],
+        "explanation": {
+          "hi": "मानव में लिंग पिता के गुणसूत्र (X = बेटी, Y = बेटा) द्वारा निर्धारित होता है।",
+          "pa": "ਮਨੁੱਖ ਵਿੱਚ ਲਿੰਗ ਪਿਤਾ ਦੇ ਕ੍ਰੋਮੋਸੋਮ (X = ਧੀ, Y = ਪੁੱਤਰ) ਦੁਆਰਾ ਨਿਰਧਾਰਿਤ ਹੁੰਦਾ ਹੈ।",
+          "en": "In humans, sex is determined by the father's chromosome (X = daughter, Y = son)."
+        },
+        "prompt": {
+          "hi": "मानव में लिंग-निर्धारण किसके द्वारा होता है?",
+          "pa": "ਮਨੁੱਖ ਵਿੱਚ ਲਿੰਗ-ਨਿਰਧਾਰਨ ਕਿਸ ਦੁਆਰਾ ਹੁੰਦਾ ਹੈ?",
+          "en": "In humans, sex is determined by:"
+        },
+        "answerIndex": 1
+      },
+      {
+        "id": "bio-gen-q-8",
+        "options": [
+          {
+            "hi": "राष्ट्रीय उद्यान",
+            "pa": "ਰਾਸ਼ਟਰੀ ਉਦਿਆਨ",
+            "en": "National Park"
+          },
+          {
+            "hi": "अभयारण्य",
+            "pa": "ਅਭਯਾਰਣਯ",
+            "en": "Wildlife Sanctuary"
+          },
+          {
+            "hi": "जीन बैंक",
+            "pa": "ਜੀਨ ਬੈਂਕ",
+            "en": "Gene Bank"
+          },
+          {
+            "hi": "बायोस्फीयर रिजर्व",
+            "pa": "ਬਾਇਓਸਫੀਅਰ ਰਿਜ਼ਰਵ",
+            "en": "Biosphere Reserve"
+          }
+        ],
+        "explanation": {
+          "hi": "जीन बैंक एक्स-सिटू संरक्षण का उदाहरण है (जीवों को उनके प्राकृतिक आवास से बाहर संरक्षित किया जाता है)।",
+          "pa": "ਜੀਨ ਬੈਂਕ ਐਕਸ-ਸਿਟੂ ਸੰਰੱਖਿਅਣ ਦੀ ਉਦਾਹਰਨ ਹੈ।",
+          "en": "Gene Bank is an example of ex-situ conservation (species preserved outside their natural habitat)."
+        },
+        "prompt": {
+          "hi": "एक्स-सिटू संरक्षण का उदाहरण है:",
+          "pa": "ਐਕਸ-ਸਿਟੂ ਸੰਰੱਖਿਅਣ ਦੀ ਉਦਾਹਰਨ ਹੈ:",
+          "en": "An example of ex-situ conservation is:"
+        },
+        "answerIndex": 2
+      }
+    ],
+    "sources": [],
+    "videos": [],
+    "documents": [],
+    "keypoints": [
+      {
+        "hi": "मेंडल = आनुवंशिकता के पिता; मोनोहाइब्रिड F2 = 3:1।",
+        "pa": "ਮੈਂਡਲ = ਖ਼ਾਨਦਾਨੀਅਤ ਦੇ ਪਿਤਾ; ਮੋਨੋਹਾਈਬ੍ਰਿਡ F2 = 3:1।",
+        "en": "Mendel = Father of Genetics; Monohybrid F2 = 3:1."
+      },
+      {
+        "hi": "डाइहाइब्रिड F2 = 9:3:3:1।",
+        "pa": "ਡਾਇਹਾਈਬ੍ਰਿਡ F2 = 9:3:3:1।",
+        "en": "Dihybrid F2 = 9:3:3:1."
+      },
+      {
+        "hi": "डार्विन: On the Origin of Species (1859); योग्यतम की उत्तरजीविता।",
+        "pa": "ਡਾਰਵਿਨ: On the Origin of Species (1859)।",
+        "en": "Darwin: On the Origin of Species (1859); Survival of the Fittest."
+      },
+      {
+        "hi": "भारत में 4 जैव विविधता हॉटस्पॉट।",
+        "pa": "ਭਾਰਤ ਵਿੱਚ 4 ਜੈਵ ਵਿਭਿੰਨਤਾ ਹੌਟਸਪੌਟ।",
+        "en": "India has 4 biodiversity hotspots."
+      },
+      {
+        "hi": "In-situ: राष्ट्रीय उद्यान; Ex-situ: जीन बैंक, चिड़ियाघर।",
+        "pa": "In-situ: ਰਾਸ਼ਟਰੀ ਉਦਿਆਨ; Ex-situ: ਜੀਨ ਬੈਂਕ।",
+        "en": "In-situ: national parks; Ex-situ: gene banks, zoos."
+      }
+    ]
+  }
+]
