@@ -35,18 +35,39 @@ import catalog from "../content/catalog.json";
 import bundled from "../content/lessons.json";
 import syllabus from "../content/syllabus.json";
 import type { Lesson, Lang, Text3, Question } from "../lib/types";
+type SRCard = {
+  cardKey: string;   // "lessonId::cardIndex"
+  due: number;       // timestamp when next due
+  interval: number;  // days until next review
+  ease: number;      // 1=hard 3=good 7=easy
+};
+type MockExam = {
+  items: { lessonId: string; q: Question }[];
+  answers: Record<string, number>;
+  finished: boolean;
+  startedAt: number;
+  timeLimitMs: number;
+};
 type State = {
   notes: Record<string, string>;
   done: string[];
   favorites: string[];
   attempts: { id: string; at: number; total: number; correct: number }[];
+  srCards?: SRCard[];
 };
-const empty: State = { notes: {}, done: [], favorites: [], attempts: [] };
+const empty: State = { notes: {}, done: [], favorites: [], attempts: [], srCards: [] };
+// SM-2 inspired: returns next interval in days
+function srNextInterval(ease: number, prev: number): number {
+  if (ease === 1) return 1;                        // Hard → review tomorrow
+  if (ease === 3) return Math.max(3, Math.round(prev * 1.5));  // Good
+  return Math.max(7, Math.round(prev * 2.5));      // Easy
+}
 const text = (hi: string, pa: string, en: string): Text3 => ({ hi, pa, en });
 const labels = {
   home: text("मेरी तैयारी", "ਮੇਰੀ ਤਿਆਰੀ", "My preparation"),
   library: text("पाठ और सिलेबस", "ਪਾਠ ਅਤੇ ਸਿਲੇਬਸ", "Lessons & syllabus"),
   practice: text("प्रश्न अभ्यास", "ਸਵਾਲ ਅਭਿਆਸ", "Question practice"),
+  mock: text("मॉक परीक्षा", "ਮੌਕ ਇਮਤਿਹਾਨ", "Mock Exam"),
   notes: text("मेरे नोट्स", "ਮੇਰੇ ਨੋਟਸ", "My notes"),
   saved: text("सेव किए स्रोत", "ਸੇਵ ਕੀਤੇ ਸਰੋਤ", "Saved resources"),
   typing: text("टाइपिंग अभ्यास", "ਟਾਈਪਿੰਗ ਅਭਿਆਸ", "Typing practice"),
@@ -199,6 +220,10 @@ export default function StudyApp({
   const speechRef = useRef<SpeechSynthesisUtterance | null>(null);
   const [installPrompt, setInstallPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showMistakesOnly, setShowMistakesOnly] = useState(false);
+  const [mock, setMock] = useState<MockExam | null>(null);
+  const [mockSubject, setMockSubject] = useState("SST");
+  const mockTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [mockSecsLeft, setMockSecsLeft] = useState(0);
 
   // Focus Room State
   const [focusMode, setFocusMode] = useState<"pomodoro" | "deep" | "breathe">("pomodoro");
@@ -514,6 +539,41 @@ export default function StudyApp({
     }, 1000);
     return () => clearInterval(interval);
   }, [focusMode, focusActive]);
+
+  // Mock exam countdown timer
+  useEffect(() => {
+    if (!mock || mock.finished) {
+      if (mockTimerRef.current) clearInterval(mockTimerRef.current);
+      return;
+    }
+    const startedAt = mock.startedAt;
+    const timeLimitMs = mock.timeLimitMs;
+    mockTimerRef.current = setInterval(() => {
+      const rem = Math.max(0, Math.ceil((timeLimitMs - (Date.now() - startedAt)) / 1000));
+      setMockSecsLeft(rem);
+      if (rem === 0) setMock((m) => m ? { ...m, finished: true } : null);
+    }, 500);
+    return () => { if (mockTimerRef.current) clearInterval(mockTimerRef.current); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mock?.startedAt, mock?.finished]);
+
+  // SR helper: rate a flashcard and persist
+  const rateCard = (cardKey: string, ease: number) => {
+    const existing = (state.srCards || []).find(c => c.cardKey === cardKey);
+    const prevInterval = existing?.interval ?? 1;
+    const nextInterval = srNextInterval(ease, prevInterval);
+    const due = Date.now() + nextInterval * 86_400_000;
+    const updated: SRCard = { cardKey, due, interval: nextInterval, ease };
+    const newCards = [updated, ...(state.srCards || []).filter(c => c.cardKey !== cardKey)].slice(0, 1000);
+    const newState = { ...state, srCards: newCards };
+    setState(newState);
+    if (!user) {
+      try { localStorage.setItem("saathi-guest-state", JSON.stringify(newState)); } catch {}
+    } else {
+      save({ action: "sr", cardKey, ease, nextInterval, due }).catch(() => {});
+    }
+  };
+
   useEffect(() => {
     const context = (document as unknown as { modelContext?: { registerTool?: (tool: unknown, opts: { signal: AbortSignal }) => unknown } }).modelContext;
     if (!context?.registerTool) return;
@@ -786,34 +846,36 @@ export default function StudyApp({
             {tr(text("अगला कार्ड", "ਅਗਲਾ ਕਾਰਡ", "Next card"))}
           </button>
         </div>
-        {revealed && (
-          <div className="row" style={{ marginTop: 12, justifyContent: "center" }}>
-            <button
-              onClick={() => {
-                setCardIndex((cardIndex + 1) % cardBank.length);
-                setRevealed(false);
-              }}
-            >
-              🔴 {tr(text("कठिन (1 दिन)", "ਔਖਾ (1 ਦਿਨ)", "Hard (1d)"))}
-            </button>
-            <button
-              onClick={() => {
-                setCardIndex((cardIndex + 1) % cardBank.length);
-                setRevealed(false);
-              }}
-            >
-              🟡 {tr(text("सामान्य (3 दिन)", "ਠੀਕ (3 ਦਿਨ)", "Good (3d)"))}
-            </button>
-            <button
-              onClick={() => {
-                setCardIndex((cardIndex + 1) % cardBank.length);
-                setRevealed(false);
-              }}
-            >
-              🟢 {tr(text("सरल (7 दिन)", "ਸੌਖਾ (7 ਦਿਨ)", "Easy (7d)"))}
-            </button>
-          </div>
-        )}
+        {revealed && (() => {
+          // Build a stable card key from lessonId + position
+          const srcLesson = view === "lesson" && lesson
+            ? lesson
+            : lessons.find(l => l.flashcards.includes(card));
+          const cardKey = srcLesson ? `${srcLesson.id}::${safeIndex}` : `unknown::${safeIndex}`;
+          const srData = (state.srCards || []).find(c => c.cardKey === cardKey);
+          const dueLabel = srData
+            ? `(${tr(text("अगली समीक्षा", "ਅਗਲੀ ਸਮੀਖਿਆ", "Next review"))}: ${new Date(srData.due).toLocaleDateString(lang === "hi" ? "hi-IN" : lang === "pa" ? "pa-IN" : "en-IN")})`
+            : "";
+          return (
+            <div style={{ marginTop: 12 }}>
+              <div className="row" style={{ justifyContent: "center", gap: 8 }}>
+                <button style={{ borderColor: "#fca5a5", color: "#b91c1c" }}
+                  onClick={() => { rateCard(cardKey, 1); setCardIndex((cardIndex + 1) % cardBank.length); setRevealed(false); }}>
+                  🔴 {tr(text("कठिन (1 दिन)", "ਔਖਾ (1 ਦਿਨ)", "Hard (1d)"))}
+                </button>
+                <button style={{ borderColor: "#fde68a", color: "#92400e" }}
+                  onClick={() => { rateCard(cardKey, 3); setCardIndex((cardIndex + 1) % cardBank.length); setRevealed(false); }}>
+                  🟡 {tr(text("सामान्य (3 दिन)", "ਠੀਕ (3 ਦਿਨ)", "Good (3d)"))}
+                </button>
+                <button style={{ borderColor: "#86efac", color: "#166534" }}
+                  onClick={() => { rateCard(cardKey, 7); setCardIndex((cardIndex + 1) % cardBank.length); setRevealed(false); }}>
+                  🟢 {tr(text("सरल (7 दिन)", "ਸੌਖਾ (7 ਦਿਨ)", "Easy (7d)"))}
+                </button>
+              </div>
+              {dueLabel && <p className="muted" style={{ textAlign: "center", fontSize: 12, margin: "6px 0 0" }}>{dueLabel}</p>}
+            </div>
+          );
+        })()}
       </>
     ) : (
       <div className="empty">
@@ -2815,11 +2877,221 @@ export default function StudyApp({
     </>
   );
 
+  // ── Phase 2B: Analytics Dashboard ──────────────────────────────────────────
+  const analytics = (() => {
+    const attempts = state.attempts.slice(0, 20).reverse();
+    const srDue = (state.srCards || []).filter(c => c.due <= Date.now()).length;
+    const srTotal = (state.srCards || []).length;
+    const avgScore = attempts.length
+      ? Math.round(attempts.reduce((n, a) => n + (a.correct / Math.max(1, a.total)) * 100, 0) / attempts.length)
+      : null;
+    // SVG sparkline
+    const sparkW = 280, sparkH = 60;
+    const points = attempts.map((a, i) => {
+      const x = attempts.length < 2 ? sparkW / 2 : (i / (attempts.length - 1)) * sparkW;
+      const y = sparkH - (a.correct / Math.max(1, a.total)) * sparkH;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(" ");
+    return (
+      <div className="panel" style={{ marginBottom: 20 }}>
+        <h2 style={{ marginBottom: 16 }}>{tr(text("अभ्यास विश्लेषण", "ਅਭਿਆਸ ਵਿਸ਼ਲੇਸ਼ਣ", "Practice Analytics"))}</h2>
+        <div className="account-stats" style={{ flexWrap: "wrap", gap: 20 }}>
+          <div>
+            <strong>{state.done.length}</strong>
+            {tr(text("पाठ पढ़े", "ਪਾਠ ਪੜ੍ਹੇ", "lessons studied"))}
+          </div>
+          <div>
+            <strong>{state.attempts.length}</strong>
+            {tr(text("टेस्ट दिए", "ਟੈਸਟ ਦਿੱਤੇ", "tests taken"))}
+          </div>
+          <div>
+            <strong>{avgScore !== null ? `${avgScore}%` : "—"}</strong>
+            {tr(text("औसत स्कोर", "ਔਸਤ ਸਕੋਰ", "avg score"))}
+          </div>
+          <div>
+            <strong style={{ color: srDue > 0 ? "#b45309" : "#166534" }}>{srDue}</strong>
+            {tr(text("कार्ड आज दोहराएँ", "ਅੱਜ ਕਾਰਡ ਦੁਹਰਾਓ", "cards due today"))}
+            {srTotal > 0 && <span className="muted" style={{ fontSize: 12, display: "block" }}>({srTotal} {tr(text("कुल ट्रैक किए", "ਕੁੱਲ ਟ੍ਰੈਕ ਕੀਤੇ", "total tracked"))})</span>}
+          </div>
+        </div>
+        {attempts.length >= 2 && (
+          <div style={{ marginTop: 16 }}>
+            <p style={{ fontSize: 13, color: "var(--muted)", margin: "0 0 8px" }}>
+              {tr(text("अंतिम 20 टेस्ट का स्कोर ट्रेंड", "ਪਿਛਲੇ 20 ਟੈਸਟਾਂ ਦਾ ਸਕੋਰ ਟ੍ਰੈਂਡ", "Score trend — last 20 tests"))}
+            </p>
+            <svg width="100%" viewBox={`0 0 ${sparkW} ${sparkH}`} style={{ overflow: "visible", maxWidth: 400 }} aria-label="Score trend chart">
+              <polyline fill="none" stroke="var(--blue)" strokeWidth="2" points={points} />
+              {attempts.map((a, i) => {
+                const x = attempts.length < 2 ? sparkW / 2 : (i / (attempts.length - 1)) * sparkW;
+                const y = sparkH - (a.correct / Math.max(1, a.total)) * sparkH;
+                const pct = Math.round((a.correct / Math.max(1, a.total)) * 100);
+                return (
+                  <circle key={i} cx={x.toFixed(1)} cy={y.toFixed(1)} r="4"
+                    fill={pct >= 70 ? "#22c55e" : pct >= 50 ? "#f59e0b" : "#ef4444"}
+                    stroke="white" strokeWidth="1.5">
+                    <title>{pct}% ({a.correct}/{a.total}) — {new Date(a.at).toLocaleDateString()}</title>
+                  </circle>
+                );
+              })}
+              <line x1="0" y1={sparkH * 0.3} x2={sparkW} y2={sparkH * 0.3} stroke="#22c55e" strokeWidth="1" strokeDasharray="4,3" opacity="0.5" />
+              <text x="2" y={sparkH * 0.3 - 3} fontSize="9" fill="#22c55e" opacity="0.8">70%</text>
+            </svg>
+          </div>
+        )}
+        {srDue > 0 && (
+          <div className="alert" style={{ marginTop: 14, fontSize: 13 }}>
+            <strong>📅 {srDue} {tr(text("फ्लैशकार्ड आज की समीक्षा के लिए तैयार हैं।", "ਫਲੈਸ਼ਕਾਰਡ ਅੱਜ ਦੀ ਸਮੀਖਿਆ ਲਈ ਤਿਆਰ ਹਨ।", "flashcards are ready for review today."))}</strong>
+            {" "}<button style={{ fontSize: 12, padding: "3px 10px", marginLeft: 8 }} onClick={() => { setPracticeLesson("all"); setTab("flash"); go("practice"); }}>
+              {tr(text("अभी दोहराएँ", "ਹੁਣ ਦੁਹਰਾਓ", "Review now"))}
+            </button>
+          </div>
+        )}
+      </div>
+    );
+  })();
+
+  // ── Phase 2C: Timed Mock Exam Engine ────────────────────────────────────────
+  const startMock = (subject: string, count: number, minutesLimit: number) => {
+    const bank = lessons
+      .filter(l => subject === "All" ? true : l.subject === subject)
+      .flatMap(l => l.questions.map(q => ({ lessonId: l.id, q })));
+    if (!bank.length) { setError(tr(text("इस विषय में प्रश्न उपलब्ध नहीं।", "ਇਸ ਵਿਸ਼ੇ ਵਿੱਚ ਸਵਾਲ ਉਪਲਬਧ ਨਹੀਂ।", "No questions available for this subject."))); return; }
+    const items = shuffleItems(bank).slice(0, count);
+    setMock({ items, answers: {}, finished: false, startedAt: Date.now(), timeLimitMs: minutesLimit * 60_000 });
+    setMockSecsLeft(minutesLimit * 60);
+  };
+  const mockFormatTime = (secs: number) => `${String(Math.floor(secs / 60)).padStart(2, "0")}:${String(secs % 60).padStart(2, "0")}`;
+
+  const mockView = (
+    <>
+      <div className="intro">
+        <span className="eyebrow">FULL MOCK TEST</span>
+        <h1>{tr(text("मॉक परीक्षा", "ਮੌਕ ਇਮਤਿਹਾਨ", "Mock Exam"))}</h1>
+        <p>{tr(text("समय-सीमित पूर्ण-लंबाई टेस्ट। परीक्षा जैसे हालात में अभ्यास करें।", "ਸਮੇਂ-ਸੀਮਿਤ ਪੂਰੇ ਟੈਸਟ। ਇਮਤਿਹਾਨ ਵਰਗੇ ਮਾਹੌਲ ਵਿੱਚ ਅਭਿਆਸ ਕਰੋ।", "Full-length timed tests. Practice under exam-like conditions."))}</p>
+      </div>
+
+      {!mock ? (
+        <div className="panel">
+          <h3>{tr(text("मॉक परीक्षा सेटअप", "ਮੌਕ ਇਮਤਿਹਾਨ ਸੈੱਟਅੱਪ", "Mock Exam Setup"))}</h3>
+          <div className="calc-grid" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))" }}>
+            <label>
+              {tr(text("विषय", "ਵਿਸ਼ਾ", "Subject"))}
+              <select value={mockSubject} onChange={e => setMockSubject(e.target.value)}>
+                <option value="All">{tr(text("सभी विषय (मिश्रित)", "ਸਾਰੇ ਵਿਸ਼ੇ (ਮਿਲੇ-ਜੁਲੇ)", "All subjects (mixed)"))}</option>
+                {[...new Set(lessons.map(l => l.subject))].map(s => (
+                  <option key={s} value={s}>{s}</option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            <p className="muted" style={{ fontSize: 13, margin: "0 0 14px" }}>{tr(text("परीक्षा प्रारूप चुनें:", "ਇਮਤਿਹਾਨ ਦਾ ਪ੍ਰਾਰੂਪ ਚੁਣੋ:", "Choose exam format:"))}</p>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              {[
+                { label: text("15 प्रश्न · 20 मिनट (त्वरित)", "15 ਸਵਾਲ · 20 ਮਿੰਟ (ਤੇਜ਼)", "15 Q · 20 min (Quick)"), q: 15, m: 20 },
+                { label: text("30 प्रश्न · 40 मिनट (मध्यम)", "30 ਸਵਾਲ · 40 ਮਿੰਟ (ਦਰਮਿਆਨਾ)", "30 Q · 40 min (Medium)"), q: 30, m: 40 },
+                { label: text("100 प्रश्न · 120 मिनट (पूर्ण)", "100 ਸਵਾਲ · 120 ਮਿੰਟ (ਪੂਰਾ)", "100 Q · 120 min (Full)"), q: 100, m: 120 },
+                { label: text("150 प्रश्न · 150 मिनट (Master Cadre)", "150 ਸਵਾਲ · 150 ਮਿੰਟ (Master Cadre)", "150 Q · 150 min (Master Cadre)"), q: 150, m: 150 },
+              ].map(({ label, q, m }) => (
+                <button key={q} className="primary" style={{ minWidth: 160 }} onClick={() => startMock(mockSubject, q, m)}>
+                  {tr(label)}
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="muted" style={{ fontSize: 12, marginTop: 16 }}>
+            {tr(text("नोट: ये अभ्यास प्रश्न हैं, पिछले वर्षों के प्रश्न नहीं। समय समाप्त होने पर टेस्ट स्वयं समाप्त हो जाएगा।", "ਨੋਟ: ਇਹ ਅਭਿਆਸ ਸਵਾਲ ਹਨ, ਪਿਛਲੇ ਸਾਲਾਂ ਦੇ ਸਵਾਲ ਨਹੀਂ। ਸਮਾਂ ਖਤਮ ਹੋਣ 'ਤੇ ਟੈਸਟ ਆਪਣੇ-ਆਪ ਖਤਮ ਹੋ ਜਾਵੇਗਾ।", "Note: These are practice questions, not previous-year papers. The test auto-submits when time runs out."))}
+          </p>
+        </div>
+      ) : (
+        <>
+          {/* Timer bar */}
+          <div style={{ position: "sticky", top: 80, zIndex: 10, background: "var(--paper)", borderBottom: "1px solid var(--line)", padding: "10px 0 10px", marginBottom: 16 }}>
+            <div className="row between" style={{ maxWidth: 800, margin: "0 auto", padding: "0 16px" }}>
+              <span>
+                <strong>{Object.keys(mock.answers).length}</strong>/{mock.items.length} {tr(text("उत्तर", "ਉੱਤਰ", "answered"))}
+              </span>
+              <span style={{ fontWeight: 700, fontSize: 20, color: mockSecsLeft < 300 && !mock.finished ? "#ef4444" : "var(--ink)", fontVariantNumeric: "tabular-nums" }}>
+                ⏱ {mock.finished ? tr(text("समाप्त", "ਖਤਮ", "Finished")) : mockFormatTime(mockSecsLeft)}
+              </span>
+              {!mock.finished && (
+                <button className="primary" onClick={async () => {
+                  setMock(m => m ? { ...m, finished: true } : null);
+                  const answers = mock.items.map(({ lessonId, q }) => ({ questionId: `${lessonId}:${q.id}`, answer: mock.answers[`${lessonId}:${q.id}`] ?? -1 }));
+                  const correct = mock.items.filter(({ lessonId, q }) => mock.answers[`${lessonId}:${q.id}`] === q.answerIndex).length;
+                  if (answers.length) await save({ action: "attempt", answers, correct });
+                }}>
+                  {tr(text("टेस्ट जमा करें", "ਟੈਸਟ ਜਮ੍ਹਾਂ ਕਰੋ", "Submit Test"))}
+                </button>
+              )}
+            </div>
+            {!mock.finished && (
+              <div style={{ height: 4, background: "var(--line)", margin: "8px 0 0" }}>
+                <div style={{ height: "100%", width: `${(mockSecsLeft / (mock.timeLimitMs / 1000)) * 100}%`, background: mockSecsLeft < 300 ? "#ef4444" : "var(--blue)", transition: "width 1s linear" }} />
+              </div>
+            )}
+          </div>
+
+          {/* Results summary (after finish) */}
+          {mock.finished && (() => {
+            const correct = mock.items.filter(({ lessonId, q }) => mock.answers[`${lessonId}:${q.id}`] === q.answerIndex).length;
+            const pct = Math.round((correct / mock.items.length) * 100);
+            return (
+              <div className={`alert ${pct >= 70 ? "success" : ""}`} style={{ marginBottom: 16, fontSize: 15 }}>
+                <strong>{correct}/{mock.items.length} ({pct}%)</strong>
+                {" — "}
+                {pct >= 70
+                  ? tr(text("बहुत बढ़िया! आप परीक्षा के लिए तैयार हो रहे हैं।", "ਬਹੁਤ ਵਧੀਆ! ਤੁਸੀਂ ਇਮਤਿਹਾਨ ਲਈ ਤਿਆਰ ਹੋ ਰਹੇ ਹੋ।", "Excellent! You are on track for the exam."))
+                  : pct >= 50
+                    ? tr(text("अच्छा प्रयास! ग़लत प्रश्नों की समीक्षा करें।", "ਚੰਗੀ ਕੋਸ਼ਿਸ਼! ਗ਼ਲਤ ਸਵਾਲਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ।", "Good effort! Review the incorrect questions."))
+                    : tr(text("संबंधित पाठ फिर से पढ़ें और पुनः प्रयास करें।", "ਸੰਬੰਧਿਤ ਪਾਠ ਮੁੜ ਪੜ੍ਹੋ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।", "Re-read the relevant lessons and try again."))}
+                <div className="row" style={{ marginTop: 10, gap: 8 }}>
+                  <button className="primary" onClick={() => setMock(null)}>{tr(text("नया टेस्ट", "ਨਵਾਂ ਟੈਸਟ", "New Test"))}</button>
+                  <button onClick={() => go("account")}>{tr(text("प्रगति देखें", "ਪ੍ਰਗਤੀ ਵੇਖੋ", "View Progress"))}</button>
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* Question list */}
+          {mock.items.map(({ lessonId, q }, i) => {
+            const key = `${lessonId}:${q.id}`;
+            const chosen = mock.answers[key];
+            const isCorrect = chosen === q.answerIndex;
+            return (
+              <section className="question" key={key} style={{ marginBottom: 20 }}>
+                <div className="eyebrow">{tr(text("प्रश्न", "ਸਵਾਲ", "QUESTION"))} {i + 1}</div>
+                <h3>{tr(q.prompt)}</h3>
+                <div className="options">
+                  {q.options.map((o, j) => (
+                    <button key={j}
+                      disabled={mock.finished}
+                      className={(chosen === j ? "selected " : "") + (mock.finished && q.answerIndex === j ? "correct" : "")}
+                      onClick={() => !mock.finished && setMock(m => m ? { ...m, answers: { ...m.answers, [key]: j } } : null)}>
+                      <span>{String.fromCharCode(65 + j)}</span>{tr(o)}
+                    </button>
+                  ))}
+                </div>
+                {mock.finished && (
+                  <div className="answer">
+                    <strong>{isCorrect ? "✓" : "✕"} {tr(q.options[q.answerIndex])}</strong>
+                    <p>{tr(q.explanation)}</p>
+                  </div>
+                )}
+              </section>
+            );
+          })}
+        </>
+      )}
+    </>
+  );
+
   const account = (
     <>
       <div className="intro">
         <h1>{lab("account")}</h1>
       </div>
+      {analytics}
       <div className="panel">
         <h2>
           {user?.displayName ||
@@ -3522,6 +3794,7 @@ export default function StudyApp({
     ["home", LayoutDashboard],
     ["library", BookOpen],
     ["practice", ClipboardCheck],
+    ["mock", ClipboardCheck],
     ["focus", Clock],
     ["physical", Activity],
     ["typing", Keyboard],
@@ -3713,6 +3986,8 @@ export default function StudyApp({
             lessonView
           ) : view === "practice" ? (
             practice
+          ) : view === "mock" ? (
+            mockView
           ) : view === "notes" ? (
             notes
           ) : view === "saved" ? (

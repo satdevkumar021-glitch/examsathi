@@ -2,6 +2,7 @@ import { currentUser } from "../../../lib/access";
 import { database } from "../../../lib/database";
 import { readContent } from "../../../lib/content";
 import { validateLesson } from "../../../lib/validation";
+type SRCard = { cardKey: string; due: number; interval: number; ease: number };
 export const dynamic = "force-dynamic";
 const response = (data: unknown, status = 200) =>
   Response.json(data, { status, headers: { "Cache-Control": "no-store" } });
@@ -150,6 +151,22 @@ export async function POST(request: Request) {
         if (typeof b.lessonId !== "string")
           return response({ error: "Invalid lesson" }, 400);
         s.done = [...new Set([...(s.done || []), b.lessonId])];
+      } else if (b.action === "sr") {
+        // Spaced repetition card rating
+        if (
+          typeof b.cardKey !== "string" ||
+          b.cardKey.length > 200 ||
+          ![1, 3, 7].includes(b.ease) ||
+          typeof b.nextInterval !== "number" ||
+          typeof b.due !== "number"
+        )
+          return response({ error: "Invalid SR rating" }, 400);
+        const srCards: SRCard[] = s.srCards || [];
+        const idx = srCards.findIndex((c: SRCard) => c.cardKey === b.cardKey);
+        const updated: SRCard = { cardKey: b.cardKey, due: b.due, interval: b.nextInterval, ease: b.ease };
+        if (idx >= 0) srCards[idx] = updated;
+        else srCards.unshift(updated);
+        s.srCards = srCards.slice(0, 1000);
       } else if (b.action === "attempt") {
         const content = await readContent(),
           questions = new Map(
