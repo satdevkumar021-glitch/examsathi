@@ -50,11 +50,25 @@ test('Urgent GK set contains exactly 100 unique original questions across five s
  assert.equal(qs.length,100);assert.equal(new Set(qs.map(q=>q.id)).size,100);assert.equal(new Set(qs.map(questionIdentity)).size,100);
  const counts={};for(const q of qs){counts[q.subtopic.en]=(counts[q.subtopic.en]||0)+1;
  assert.equal(new Set(Object.values(q.options).map(o=>o.en)).size,4);
- assert.ok(q.options[q.correct]);assert.ok(q.explanation.en.length>25);assert.equal(q.year,undefined);assert.equal(q.editorialStatus,'authored');assert.deepEqual(Array.from(q.availableLanguages),['en']);}
+ assert.ok(q.options[q.correct]);assert.ok(q.explanation.en.length>25);assert.equal(q.year,undefined);assert.equal(q.editorialStatus,'authored');assert.deepEqual(Array.from(q.availableLanguages),['en','hi','pa']);}
  assert.deepEqual(Object.values(counts),[20,20,20,20,20]);
 });
 test('Clerk GK launches exactly its own 100-question pool; history exclusions exhaust it',()=>{
  const pool=getQuestionPool({examId:'punjab-clerk',topicId:'clerk-gk-fast-practice'});assert.equal(pool.length,100);
  assert.equal(getQuestionPool({examId:'punjab-ett',topicId:'clerk-gk-fast-practice'}).length,0);
  assert.equal(getQuestionPool({examId:'punjab-clerk',topicId:'clerk-gk-fast-practice',excludeKeys:pool.map(questionIdentity)}).length,0);
+});
+test('Five GK topic tests contain 20 disjoint questions and preserve exam scope',()=>{
+ const topics=['gk-polity-foundation','gk-history-foundation','gk-geography-foundation','gk-science-foundation','gk-punjab-foundation'];
+ const ids=[];
+ for(const topicId of topics){const pool=getQuestionPool({examId:'punjab-clerk',topicId});assert.equal(pool.length,20);assert.ok(pool.every(q=>q.topicId===topicId));ids.push(...pool.map(q=>q.id));assert.equal(getQuestionPool({examId:'punjab-ett',topicId}).length,0);}
+ assert.equal(new Set(ids).size,100);
+});
+
+test('Every GK prompt, option and explanation has real Hindi and Punjabi text',()=>{
+ for(const q of qs) for(const lang of ['hi','pa']) {
+  const script=lang==='hi'?/[\u0900-\u097f]/:/[\u0a00-\u0a7f]/;
+  for(const value of [q.question,...Object.values(q.options),q.explanation]) {assert.ok(value[lang]?.trim()); if(!/^(?:[A-Z][a-z]?\d*)+$/.test(value.en) && /[a-z]{3}/i.test(value.en))assert.match(value[lang],script);}
+  assert.equal(new Set(Object.values(q.options).map(option=>option[lang])).size,4);
+ }
 });

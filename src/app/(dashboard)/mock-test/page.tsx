@@ -3,7 +3,7 @@ import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
 import { getQuestionPool } from '@/lib/data/question_bank_engine';
 import { studyStorage } from '@/lib/storage';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Target, Clock, Layers, Award, CheckCircle2, Play, BookOpen, ChevronRight, Flame, Calendar, Sparkles, SlidersHorizontal } from 'lucide-react';
@@ -14,7 +14,7 @@ export default function MockTestHub() {
   const router = useRouter();
   const [selectedSubject, setSelectedSubject] = useState<string>('All');
   const [testMode, setTestMode] = useState<'exam' | 'flip'>('exam');
-  const [questionCount, setQuestionCount] = useState<number>(50);
+  const [questionCount, setQuestionCount] = useState<number>(20);
   const [difficultyFilter, setDifficultyFilter] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [isBottomSheetOpen, setIsBottomSheetOpen] = useState<boolean>(false);
   const [selectedExamForDrawer, setSelectedExamForDrawer] = useState<string>('master-cadre-sst');
@@ -57,9 +57,11 @@ export default function MockTestHub() {
     }
   }, []);
 
-  const examTopics = getExamTopics(selectedExamForDrawer);
+  const [topicSearch, setTopicSearch] = useState('');
+  const [showUnavailable, setShowUnavailable] = useState(false);
+  const examTopics = useMemo(() => getExamTopics(selectedExamForDrawer).map(topic => ({...topic, availableCount: getQuestionPool({examId:selectedExamForDrawer,topicId:topic.id,difficulty:difficultyFilter}).length})), [selectedExamForDrawer,difficultyFilter]);
   const subjects = ['All', ...new Set(examTopics.map(topic => topic.subject))];
-  const filteredTopics = examTopics.filter(topic => selectedSubject === 'All' || topic.subject === selectedSubject);
+  const filteredTopics = examTopics.filter(topic => (selectedSubject === 'All' || topic.subject === selectedSubject) && (showUnavailable || topic.availableCount > 0) && `${topic.name} ${topic.namePa} ${topic.subject}`.toLowerCase().includes(topicSearch.toLowerCase()));
 
   const startTopicTest = (topicId: string, customMode?: 'exam' | 'flip', isPyq = false) => {
     const mode = customMode || testMode;
@@ -97,6 +99,8 @@ export default function MockTestHub() {
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-24 text-slate-100 max-w-xl mx-auto w-full">
       
+      <h1 className="text-xl font-bold">Practice in 2 steps · अभ्यास · ਅਭਿਆਸ</h1>
+      <p className="text-sm text-slate-300">1. Choose your exam. 2. Pick a topic and press Start. / परीक्षा चुनें, फिर विषय चुनें। / ਪ੍ਰੀਖਿਆ ਚੁਣੋ, ਫਿਰ ਵਿਸ਼ਾ ਚੁਣੋ।</p>
       <label className="text-sm text-teal-200">Selected exam
         <select aria-label="Selected exam" value={selectedExamForDrawer} onChange={event => { const id = event.target.value; setSelectedExamForDrawer(id); setSelectedSubject('All'); const exam = AVAILABLE_EXAMS.find(e => e.id === id); if (exam) { const catalogue = practiceExam(id); if (catalogue) useStore.getState().setSelectedExam(catalogue.state, id); } }} className="block w-full bg-slate-800 rounded-lg p-3 mt-2">
           {AVAILABLE_EXAMS.map(exam => <option key={exam.id} value={exam.id}>{exam.name}</option>)}
@@ -106,13 +110,15 @@ export default function MockTestHub() {
       <section className="my-4 rounded-2xl border border-emerald-500 bg-emerald-950/40 p-5 space-y-3">
         <h2 className="text-lg font-bold text-emerald-200">⚡ Clerk GK — 100-question revision test</h2>
         <p className="text-sm text-slate-200">Polity, Indian History, Geography, Science and Punjab GK · 20 questions each.</p>
-        <p className="text-xs text-amber-200">English questions · Hindi/Punjabi translations pending. AI-assisted original practice; independent editorial review pending. Not a PYQ, current-affairs set, or official full-paper mock. 90-minute practice timer; +1 correct, −0.25 wrong, 0 skipped.</p>
+        <p className="text-xs text-amber-200">English · हिंदी · ਪੰਜਾਬੀ questions, options and explanations. AI-assisted original practice; independent editorial and translation review pending. Not a PYQ, current-affairs set, or official full-paper mock. 90-minute practice timer; +1 correct, −0.25 wrong, 0 skipped.</p>
         <div className="flex flex-wrap gap-3">
           <Link className="rounded-lg bg-emerald-600 px-4 py-3 font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=100&mode=exam&fresh=1">Start 100-question GK test →</Link>
           <Link className="rounded-lg border border-emerald-500 px-4 py-3 text-emerald-200" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=20&mode=exam&fresh=1">Quick 20-question practice</Link>
         </div>
+        <div className="grid grid-cols-2 gap-2">{Object.entries({Polity:'gk-polity-foundation',History:'gk-history-foundation',Geography:'gk-geography-foundation',Science:'gk-science-foundation','Punjab GK':'gk-punjab-foundation'}).map(([name,id])=><Link key={id} className="rounded-lg bg-slate-800 p-3 text-sm text-emerald-200" href={`/mock-test/topic-${id}/?exam=punjab-clerk&count=20&mode=exam&fresh=1`}>{name} · 20 questions →</Link>)}</div>
       </section>
       <Link href="/coverage" className="underline text-teal-300 text-sm">Check topic coverage & available fresh sets</Link>
+      <details className="rounded-xl border border-slate-700 p-4"><summary className="cursor-pointer font-bold">More options: difficulty, test length, AI and previous result</summary><div className="mt-4 flex flex-col gap-6">
       {/* Header Banner */}
       <div className="bg-gradient-to-br from-indigo-900/70 via-slate-800 to-teal-900/50 p-5 rounded-2xl border border-indigo-700/40 shadow-lg">
         <div className="flex items-center justify-between mb-2">
@@ -356,15 +362,21 @@ export default function MockTestHub() {
         </div>
       </div>
 
+      </div></details>
       {/* Topic Filter Chips & Topic-Wise Tests */}
       <div>
         <div className="flex items-center justify-between mb-2">
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
-            4. Topic-Wise Question Bank ({filteredTopics.length} Topics)
+            Ready topic tests ({filteredTopics.length} Topics)
           </h2>
           <span className="text-[10px] text-teal-400 font-semibold">Topic availability below</span>
         </div>
         
+        <label className="block text-sm mb-3">Find a topic / विषय खोजें / ਵਿਸ਼ਾ ਲੱਭੋ
+          <input type="search" aria-label="Find a topic" value={topicSearch} onChange={event=>setTopicSearch(event.target.value)} placeholder="History, Science, Punjab…" className="block w-full rounded-lg bg-slate-800 p-3 mt-1" />
+        </label>
+        <label className="flex gap-2 text-xs text-slate-300 mb-3"><input type="checkbox" checked={showUnavailable} onChange={event=>setShowUnavailable(event.target.checked)} />Show topics still being prepared ({examTopics.filter(topic=>!topic.availableCount).length})</label>
+        {!filteredTopics.length && <p role="status" className="p-4 text-amber-200">No ready tests match this selection. Try another subject or clear the search. Topics still being prepared have no usable questions yet.</p>}
         {/* Subject Filter Pills */}
         <div className="flex gap-1.5 overflow-x-auto pb-2 scrollbar-none">
           {subjects.map((sub) => (
@@ -395,13 +407,13 @@ export default function MockTestHub() {
                     <span className="bg-slate-700 text-slate-300 text-[9px] font-bold uppercase px-2 py-0.5 rounded">
                       {topic.subject}
                     </span>
-                    {topic.isPYQRich && (
+                    {false && topic.isPYQRich && (
                       <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
                         <Calendar size={10} /> 20-Yr Archive
                       </span>
                     )}
                     <span className="text-teal-400 text-[10px] font-semibold">
-                      Weightage: {topic.examWeightage}
+                      {topic.availableCount} available questions
                     </span>
                   </div>
                   <h3 className="text-white font-bold text-xs leading-snug">
@@ -416,21 +428,21 @@ export default function MockTestHub() {
               {/* Action Buttons */}
               <div className="flex items-center gap-2 pt-2 border-t border-slate-700/60">
                 <button
-                  disabled={!getQuestionPool({examId: selectedExamForDrawer, topicId: topic.id, difficulty: difficultyFilter}).length}
+                  disabled={!topic.availableCount}
                   onClick={() => startTopicTest(topic.id, 'exam')}
                   className="flex-1 bg-teal-500/20 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  <Play size={12} /> Practice {Math.min(questionCount, getQuestionPool({examId: selectedExamForDrawer, topicId: topic.id, difficulty: difficultyFilter}).length)} Qs
+                  <Play size={12} /> {topic.availableCount ? `Start ${Math.min(questionCount, topic.availableCount)} questions` : 'Questions coming soon'}
                 </button>
                 <button
-                  disabled={!getQuestionPool({examId: selectedExamForDrawer, topicId: topic.id, difficulty: difficultyFilter}).length}
+                  disabled={!topic.availableCount}
                   onClick={() => startTopicTest(topic.id, 'flip')}
                   className="flex-1 bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 border border-amber-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  <Layers size={12} /> 3D Flip Cards
+                  <Layers size={12} /> Flip cards
                 </button>
                 <Link
-                  href={`/lesson/${topic.id}`}
+                  href={`/lesson/${topic.id}?exam=${selectedExamForDrawer}`}
                   className="p-1.5 bg-slate-700 hover:bg-slate-600 text-slate-300 rounded-lg transition"
                   title="Study Lesson First"
                 >
