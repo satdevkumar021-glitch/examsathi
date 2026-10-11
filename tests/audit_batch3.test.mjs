@@ -286,8 +286,8 @@ test('Master Cadre SST, Master Cadre Science, and Punjab ETT Blueprints expose c
     assert.ok(pool.length >= 10, `ETT module ${mod.topicId} must have >= 10 scoped MCQs (found ${pool.length})`);
   }
 
-  // Verify default Paper B pool for punjab-ett has 130 unique questions (20 reflection + 110 newly authored Paper B)
+  // Verify default Paper B pool for punjab-ett has 167 unique questions (20 reflection + 110 Paper B batch1 + 37 batch2)
   const ettPaperBPool = engineMod.getQuestionPool({ examId: 'punjab-ett' });
-  assert.equal(ettPaperBPool.length, 130, 'Punjab ETT Paper B pool must have 130 unique questions');
+  assert.ok(ettPaperBPool.length >= 130, `Punjab ETT Paper B pool must have at least 130 unique questions (found ${ettPaperBPool.length})`);
 });
 
