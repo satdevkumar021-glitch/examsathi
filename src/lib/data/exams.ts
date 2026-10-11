@@ -2451,63 +2451,7 @@ export const CENTRAL_EXAMS: Exam[] = [
     ],
   },
 
-  // 3.6 UGC NET Paper 1
-  {
-    id: 'ugc-net',
-    state: 'central',
-    name: 'UGC NET Paper 1 (Teaching & Research Aptitude)',
-    nameHindi: 'यूजीसी नेट पेपर 1 (शिक्षण व शोध अभिवृत्ति)',
-    namePunjabi: 'ਯੂ.ਜੀ.ਸੀ. ਨੈੱਟ ਪੇਪਰ 1',
-    body: 'National Testing Agency (NTA) / University Grants Commission',
-    level: 'Assistant Professor & JRF Eligibility (Postgraduate Level)',
-    totalMarks: 100,
-    duration: '60 Minutes (Paper 1)',
-    negativeMarking: false,
-    officialWebsite: 'https://ugcnet.nta.ac.in',
-    emoji: '🎓',
-    color: '#7c3aed',
-    sections: [
-      { name: 'Teaching Aptitude', nameHindi: 'शिक्षण अभिवृत्ति', marks: 10, questions: 5 },
-      { name: 'Research Aptitude', nameHindi: 'शोध अभिवृत्ति', marks: 10, questions: 5 },
-      { name: 'Comprehension & Communication', nameHindi: 'बोध व संप्रेषण', marks: 20, questions: 10 },
-      { name: 'Mathematical Reasoning & Data Interpretation', nameHindi: 'गणितीय तर्क व डेटा व्याख्या', marks: 20, questions: 10 },
-      { name: 'ICT & Higher Education System', nameHindi: 'सूचना प्रौद्योगिकी व उच्च शिक्षा प्रणाली', marks: 20, questions: 10 },
-      { name: 'People, Development & Environment', nameHindi: 'लोग, विकास व पर्यावरण', marks: 20, questions: 10 },
-    ],
-    subjects: [
-      {
-        id: 'ugc-net-core',
-        name: 'Paper 1 General Aptitude & Higher Education',
-        nameHindi: 'पेपर 1 सामान्य योग्यता व उच्च शिक्षा',
-        emoji: '🧠',
-        chapters: [
-          {
-            id: 'net-teaching-research',
-            name: 'Teaching, Research & ICT Frameworks',
-            nameHindi: 'शिक्षण, शोध व आईसीटी संरचना',
-            topics: [
-              {
-                id: 'teaching-aptitude',
-                name: 'Teaching Aptitude, Evaluation Systems & NEP 2020',
-                nameHindi: 'शिक्षण अभिवृत्ति, मूल्यांकन प्रणालियां व एनईपी 2020',
-                subtopics: ['Levels of Teaching (Memory, Understanding, Reflective), CBCS, NEP 2020 Higher Education Provisions'],
-                examQuestions: '10',
-                difficulty: 'hard',
-              },
-              {
-                id: 'computer-awareness',
-                name: 'Information & Communication Technology (ICT) in Education',
-                nameHindi: 'शिक्षा में सूचना एवं संचार प्रौद्योगिकी (ICT)',
-                subtopics: ['Digital initiatives in higher education: SWAYAM, SWAYAMPRABHA, Digilocker, IPv4 vs IPv6, Cloud'],
-                examQuestions: '10',
-                difficulty: 'medium',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+  // 3.6 UGC NET — defined separately as UGC_NET_EXAM below; pushed via CENTRAL_EXAMS.push(...)
 
   // 3.7 UTET (Uttarakhand Teacher Eligibility Test)
   {

@@ -56,6 +56,18 @@ export const TOPIC_ALIASES: Record<string, string> = {
   'reet-rajasthan-history': 'rajasthan-gk-heritage',
   'reet-rajasthan-geography': 'rajasthan-gk-heritage',
   'reet-rajasthan-culture': 'rajasthan-gk-heritage',
+  // P2-3 orphan topic aliases — maps question topicIds that were outside any exam scope
+  'police-bns-law': 'police-law-basics',
+  'police-punjab-act': 'police-law-basics',
+  'patwari-land-revenue': 'patwari-agriculture-accounts',
+  'patwari-revenue-math': 'patwari-agriculture-accounts',
+  'economics-national-income': 'sst-national-income',
+  'constitution-basics': 'sst-constitution',
+  'ssc-general-awareness': 'general-science-concepts',
+  'ssc-reasoning': 'ssc-cgl-reasoning',
+  'punjab-gk': 'sst-geo-punjab',
+  'ett-paper-a-punjabi-script-phonetics-dialects': 'ett-punjabi-1',
+  'ett-paper-a-punjabi-grammar-vocabulary-idioms': 'ett-punjabi-3',
 };
 
 
