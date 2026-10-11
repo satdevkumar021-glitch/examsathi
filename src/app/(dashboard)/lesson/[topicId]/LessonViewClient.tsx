@@ -56,15 +56,27 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   const [contributeSubmitted, setContributeSubmitted] = useState(false);
 
   const [practiceCount, setPracticeCount] = useState(10);
-  const [topicQuestions, setTopicQuestions] = useState(() => getTestQuestions({ topicId, examId: useStore.getState().selectedExam || undefined, count: 10 }));
+  const [effectiveExamId, setEffectiveExamId] = useState<string>('all');
+  const [topicQuestions, setTopicQuestions] = useState(() => {
+    const storedExam = useStore.getState().selectedExam || undefined;
+    const scoped = getTestQuestions({ topicId, examId: storedExam, count: 10 });
+    return scoped.length > 0 ? scoped : getTestQuestions({ topicId, count: 10 });
+  });
 
   useEffect(() => {
     const requested = new URLSearchParams(window.location.search).get('exam');
     const resolved = requested ? practiceExam(requested) : undefined;
     const examId = resolved ? normalizePracticeExamId(requested!) : selectedExam || undefined;
     if (resolved && selectedExam !== examId) setSelectedExam(resolved.state, resolved.id);
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- Recompute bounded practice after preference hydration or a syllabus link changes exam context.
-    setTopicQuestions(getTestQuestions({ topicId, examId, count: practiceCount }));
+    const scoped = getTestQuestions({ topicId, examId, count: practiceCount });
+    if (scoped.length > 0) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Recompute bounded practice after preference hydration or a syllabus link changes exam context.
+      setTopicQuestions(scoped);
+      setEffectiveExamId(examId || 'all');
+    } else {
+      setTopicQuestions(getTestQuestions({ topicId, count: practiceCount }));
+      setEffectiveExamId('all');
+    }
     setSelectedAnswers({});
     setShowExplanation({});
   }, [topicId, selectedExam, setSelectedExam, practiceCount]);
@@ -768,14 +780,14 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
               <div className="grid grid-cols-2 gap-2.5">
                 <Link
-                  href={`/mock-test/topic-${topicId}?exam=${selectedExam || 'all'}`}
+                  href={`/mock-test/topic-${topicId}?exam=${effectiveExamId}`}
                   className="bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-xs py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 shadow transition"
                 >
                   <Target size={14} />
                   <span>{lang === 'pa' ? 'ਲਾਈਵ ਟੈਸਟ' : 'लाइव टेस्ट'}</span>
                 </Link>
                 <Link
-                  href={`/mock-test/topic-${topicId}?mode=flip&exam=${selectedExam || 'all'}`}
+                  href={`/mock-test/topic-${topicId}?mode=flip&exam=${effectiveExamId}`}
                   className="bg-slate-700/80 hover:bg-slate-650 border border-slate-600 text-teal-300 font-bold text-xs py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-1.5 transition"
                 >
                   <Layers size={14} />
@@ -1040,7 +1052,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </div>
               <div className="flex items-center gap-2">
                 <Link
-                  href={`/mock-test/topic-${topicId}?exam=${selectedExam || 'all'}`}
+                  href={`/mock-test/topic-${topicId}?exam=${effectiveExamId}`}
                   className="bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
                 >
                   <Target size={14} />

@@ -53,3 +53,16 @@ Status: official archival heading map audited with stated retrieval caveats; sub
 - [ ] Complete three missing lessons, 23 topic pools below 50, translations, resources and reviewed mock patterns.
 
 Evidence: [CLERK_COVERAGE_BATCH_1.md](docs/verification/CLERK_COVERAGE_BATCH_1.md). Not deployed or certified complete.
+
+## Urgent GK practice — 2026-10-11
+
+- [x] Add 100 distinct static GK questions: 20 each Polity, History, Geography, Science and Punjab GK.
+- [x] Add 100-question and quick 20-question Clerk launch links, revision sheet and flip cards.
+- [x] Validate exact pool, option uniqueness, exam scoping, deduplication/exhaustion and browser launch.
+- [ ] Independent editorial review and HI/PA translations; English-only availability explicitly labelled.
+- [ ] Complete other empty topic banks (separate from this urgent release).
+
+Release commit 4406b5c is on codex/clerk-gk-live, based on the previously deployed application. See docs/verification/GK_FAST_RELEASE_2026-10-11.md.
+
+## GK multilingual update — 2026-10-11
+100 original GK questions now have Hindi/Punjabi prompts, options and explanations; independent editorial and translation review pending. Five disjoint 20-question topic pools plus one 100-question parent pool. Ready-topic filtering, search and simpler navigation added. Does not complete other exam syllabus gaps. Release validation: 47 unit tests, lint, production build and mobile browser flows pass.

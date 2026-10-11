@@ -1,0 +1,902 @@
+[
+  {
+    "subject": "Polity",
+    "prompt": "On which date was the Constitution of India adopted?",
+    "answer": "26 November 1949",
+    "wrong1": "15 August 1947",
+    "wrong2": "26 January 1950",
+    "wrong3": "2 October 1950",
+    "explanation": "Adoption took place on 26 November 1949; commencement is a different date."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "When did the Constitution of India generally come into force?",
+    "answer": "26 January 1950",
+    "wrong1": "26 November 1949",
+    "wrong2": "15 August 1947",
+    "wrong3": "30 January 1948",
+    "explanation": "Most provisions commenced on 26 January 1950."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Who chaired the Constitution's Drafting Committee?",
+    "answer": "B. R. Ambedkar",
+    "wrong1": "Jawaharlal Nehru",
+    "wrong2": "Rajendra Prasad",
+    "wrong3": "Sardar Patel",
+    "explanation": "Ambedkar chaired the Drafting Committee; Rajendra Prasad presided over the Constituent Assembly."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which part of the Constitution contains Fundamental Rights?",
+    "answer": "Part III",
+    "wrong1": "Part I",
+    "wrong2": "Part IV",
+    "wrong3": "Part IVA",
+    "explanation": "Fundamental Rights are in Part III; Directive Principles are in Part IV."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which part contains the Directive Principles of State Policy?",
+    "answer": "Part IV",
+    "wrong1": "Part II",
+    "wrong2": "Part III",
+    "wrong3": "Part IVA",
+    "explanation": "Directive Principles guide governance and appear in Part IV."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Fundamental Duties are listed in which Article?",
+    "answer": "Article 51A",
+    "wrong1": "Article 21",
+    "wrong2": "Article 32",
+    "wrong3": "Article 110",
+    "explanation": "Article 51A lists the Fundamental Duties."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which Article protects life and personal liberty?",
+    "answer": "Article 21",
+    "wrong1": "Article 14",
+    "wrong2": "Article 19",
+    "wrong3": "Article 40",
+    "explanation": "Article 21 protects life and personal liberty subject to procedure established by law."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which Article guarantees equality before the law?",
+    "answer": "Article 14",
+    "wrong1": "Article 17",
+    "wrong2": "Article 25",
+    "wrong3": "Article 51A",
+    "explanation": "Article 14 provides equality before the law and equal protection of laws."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which Article abolishes untouchability?",
+    "answer": "Article 17",
+    "wrong1": "Article 15",
+    "wrong2": "Article 24",
+    "wrong3": "Article 32",
+    "explanation": "Article 17 abolishes untouchability and forbids its practice."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Who is the ex officio Chairman of the Rajya Sabha?",
+    "answer": "Vice-President of India",
+    "wrong1": "President of India",
+    "wrong2": "Prime Minister",
+    "wrong3": "Speaker of Lok Sabha",
+    "explanation": "The Vice-President chairs the Rajya Sabha by virtue of office."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Who presides over sittings of the Lok Sabha as its principal presiding officer?",
+    "answer": "Speaker",
+    "wrong1": "Vice-President",
+    "wrong2": "Chief Justice of India",
+    "wrong3": "Attorney General",
+    "explanation": "The Speaker is the principal presiding officer of the Lok Sabha."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "A Money Bill can be introduced only in which House of Parliament?",
+    "answer": "Lok Sabha",
+    "wrong1": "Rajya Sabha",
+    "wrong2": "Either House independently",
+    "wrong3": "A joint sitting",
+    "explanation": "A Money Bill originates only in the Lok Sabha, with the required presidential recommendation."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which institution is the apex court of India?",
+    "answer": "Supreme Court",
+    "wrong1": "Delhi High Court",
+    "wrong2": "Election Commission",
+    "wrong3": "National Green Tribunal",
+    "explanation": "The Supreme Court heads India's judicial hierarchy."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "The minimum voting age was reduced to 18 by which constitutional amendment?",
+    "answer": "61st Amendment",
+    "wrong1": "42nd Amendment",
+    "wrong2": "44th Amendment",
+    "wrong3": "73rd Amendment",
+    "explanation": "The 61st Amendment changed the voting age from 21 to 18."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which amendment gave constitutional status to Panchayati Raj institutions?",
+    "answer": "73rd Amendment",
+    "wrong1": "74th Amendment",
+    "wrong2": "86th Amendment",
+    "wrong3": "101st Amendment",
+    "explanation": "The 73rd Amendment concerns rural local government; the 74th concerns municipalities."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which amendment concerns municipalities?",
+    "answer": "74th Amendment",
+    "wrong1": "73rd Amendment",
+    "wrong2": "61st Amendment",
+    "wrong3": "52nd Amendment",
+    "explanation": "The 74th Amendment added constitutional provisions for urban local bodies."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Which constitutional body conducts elections to Parliament and state legislatures?",
+    "answer": "Election Commission of India",
+    "wrong1": "Finance Commission",
+    "wrong2": "Union Public Service Commission",
+    "wrong3": "Comptroller and Auditor General",
+    "explanation": "The Election Commission supervises these elections under Article 324."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Who audits the accounts of the Union and states under the constitutional framework?",
+    "answer": "Comptroller and Auditor General",
+    "wrong1": "Chief Election Commissioner",
+    "wrong2": "Attorney General",
+    "wrong3": "Lok Sabha Speaker",
+    "explanation": "The CAG performs constitutional public-audit functions."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Who appoints a state's Governor?",
+    "answer": "President of India",
+    "wrong1": "Chief Minister",
+    "wrong2": "Chief Justice of the High Court",
+    "wrong3": "State Assembly Speaker",
+    "explanation": "The President appoints the Governor under Article 155."
+  },
+  {
+    "subject": "Polity",
+    "prompt": "Who is the constitutional head of the Union executive?",
+    "answer": "President of India",
+    "wrong1": "Prime Minister",
+    "wrong2": "Chief Justice of India",
+    "wrong3": "Lok Sabha Speaker",
+    "explanation": "The President is the constitutional head; the Council of Ministers exercises responsible government."
+  },
+  {
+    "subject": "History",
+    "prompt": "Where was the Great Bath of the Harappan civilisation discovered?",
+    "answer": "Mohenjodaro",
+    "wrong1": "Lothal",
+    "wrong2": "Kalibangan",
+    "wrong3": "Dholavira",
+    "explanation": "The Great Bath is a prominent structure at Mohenjodaro."
+  },
+  {
+    "subject": "History",
+    "prompt": "Which Mauryan ruler is associated with the Kalinga War?",
+    "answer": "Ashoka",
+    "wrong1": "Chandragupta Maurya",
+    "wrong2": "Bindusara",
+    "wrong3": "Harshavardhana",
+    "explanation": "Ashoka's inscriptions describe the consequences of the Kalinga War."
+  },
+  {
+    "subject": "History",
+    "prompt": "Who founded the Mauryan Empire?",
+    "answer": "Chandragupta Maurya",
+    "wrong1": "Ashoka",
+    "wrong2": "Samudragupta",
+    "wrong3": "Kanishka",
+    "explanation": "Chandragupta Maurya established the Mauryan Empire."
+  },
+  {
+    "subject": "History",
+    "prompt": "Where did the Buddha deliver his first sermon according to Buddhist tradition?",
+    "answer": "Sarnath",
+    "wrong1": "Bodh Gaya",
+    "wrong2": "Lumbini",
+    "wrong3": "Kushinagar",
+    "explanation": "Sarnath is associated with the Buddha's first sermon."
+  },
+  {
+    "subject": "History",
+    "prompt": "Mahavira is traditionally counted as which Jain Tirthankara?",
+    "answer": "24th",
+    "wrong1": "1st",
+    "wrong2": "10th",
+    "wrong3": "23rd",
+    "explanation": "Mahavira is the 24th Tirthankara; Parshvanatha is the 23rd."
+  },
+  {
+    "subject": "History",
+    "prompt": "The Allahabad pillar inscription praises which Gupta ruler?",
+    "answer": "Samudragupta",
+    "wrong1": "Chandragupta Maurya",
+    "wrong2": "Harshavardhana",
+    "wrong3": "Ashoka",
+    "explanation": "Harishena's prasasti records the achievements of Samudragupta."
+  },
+  {
+    "subject": "History",
+    "prompt": "Who established the Mughal Empire after the First Battle of Panipat?",
+    "answer": "Babur",
+    "wrong1": "Akbar",
+    "wrong2": "Humayun",
+    "wrong3": "Sher Shah Suri",
+    "explanation": "Babur defeated Ibrahim Lodi in 1526."
+  },
+  {
+    "subject": "History",
+    "prompt": "In which year was the First Battle of Panipat fought?",
+    "answer": "1526",
+    "wrong1": "1556",
+    "wrong2": "1761",
+    "wrong3": "1576",
+    "explanation": "The first battle was in 1526; the second was in 1556 and the third in 1761."
+  },
+  {
+    "subject": "History",
+    "prompt": "Which Mughal ruler is associated with the policy of sulh-i kul?",
+    "answer": "Akbar",
+    "wrong1": "Babur",
+    "wrong2": "Aurangzeb",
+    "wrong3": "Bahadur Shah II",
+    "explanation": "Akbar's sulh-i kul emphasised universal peace and tolerance."
+  },
+  {
+    "subject": "History",
+    "prompt": "Who commissioned the Taj Mahal?",
+    "answer": "Shah Jahan",
+    "wrong1": "Akbar",
+    "wrong2": "Jahangir",
+    "wrong3": "Babur",
+    "explanation": "Shah Jahan commissioned the mausoleum in memory of Mumtaz Mahal."
+  },
+  {
+    "subject": "History",
+    "prompt": "In which year was the Battle of Plassey fought?",
+    "answer": "1757",
+    "wrong1": "1764",
+    "wrong2": "1857",
+    "wrong3": "1799",
+    "explanation": "Plassey was fought in 1757; Buxar followed in 1764."
+  },
+  {
+    "subject": "History",
+    "prompt": "In which year was the Battle of Buxar fought?",
+    "answer": "1764",
+    "wrong1": "1757",
+    "wrong2": "1857",
+    "wrong3": "1803",
+    "explanation": "The East India Company's victory at Buxar occurred in 1764."
+  },
+  {
+    "subject": "History",
+    "prompt": "The 1857 uprising began among sepoys at which cantonment on 10 May?",
+    "answer": "Meerut",
+    "wrong1": "Barrackpore",
+    "wrong2": "Kanpur",
+    "wrong3": "Lucknow",
+    "explanation": "The outbreak at Meerut on 10 May 1857 was followed by the march to Delhi."
+  },
+  {
+    "subject": "History",
+    "prompt": "In which year was the Indian National Congress founded?",
+    "answer": "1885",
+    "wrong1": "1905",
+    "wrong2": "1919",
+    "wrong3": "1930",
+    "explanation": "The first Congress session was held in Bombay in 1885."
+  },
+  {
+    "subject": "History",
+    "prompt": "Who presided over the first Indian National Congress session?",
+    "answer": "W. C. Bonnerjee",
+    "wrong1": "Dadabhai Naoroji",
+    "wrong2": "A. O. Hume",
+    "wrong3": "Gopal Krishna Gokhale",
+    "explanation": "W. C. Bonnerjee was the first session's president."
+  },
+  {
+    "subject": "History",
+    "prompt": "Which movement began after the 1905 partition of Bengal?",
+    "answer": "Swadeshi movement",
+    "wrong1": "Quit India movement",
+    "wrong2": "Non-Cooperation movement",
+    "wrong3": "Civil Disobedience movement",
+    "explanation": "The anti-partition agitation promoted swadeshi and boycott."
+  },
+  {
+    "subject": "History",
+    "prompt": "The Dandi March was primarily a protest against which colonial tax?",
+    "answer": "Salt tax",
+    "wrong1": "Land revenue",
+    "wrong2": "Income tax",
+    "wrong3": "Customs on cotton",
+    "explanation": "Gandhi's 1930 march challenged the colonial salt law."
+  },
+  {
+    "subject": "History",
+    "prompt": "In which year was the Quit India movement launched?",
+    "answer": "1942",
+    "wrong1": "1920",
+    "wrong2": "1930",
+    "wrong3": "1947",
+    "explanation": "The Quit India resolution was adopted in August 1942."
+  },
+  {
+    "subject": "History",
+    "prompt": "Who wrote Hind Swaraj?",
+    "answer": "Mahatma Gandhi",
+    "wrong1": "Jawaharlal Nehru",
+    "wrong2": "B. R. Ambedkar",
+    "wrong3": "Rabindranath Tagore",
+    "explanation": "Gandhi wrote Hind Swaraj in 1909."
+  },
+  {
+    "subject": "History",
+    "prompt": "Who wrote the song Vande Mataram?",
+    "answer": "Bankim Chandra Chattopadhyay",
+    "wrong1": "Rabindranath Tagore",
+    "wrong2": "Muhammad Iqbal",
+    "wrong3": "Subramania Bharati",
+    "explanation": "Bankim Chandra composed Vande Mataram, which appears in Anandamath."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which line divides Earth into the Northern and Southern Hemispheres?",
+    "answer": "Equator",
+    "wrong1": "Prime Meridian",
+    "wrong2": "Tropic of Cancer",
+    "wrong3": "Arctic Circle",
+    "explanation": "The Equator is the zero-degree latitude."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "The Prime Meridian is assigned which longitude?",
+    "answer": "0 degrees",
+    "wrong1": "90 degrees east",
+    "wrong2": "180 degrees",
+    "wrong3": "23.5 degrees north",
+    "explanation": "The Prime Meridian is the reference for zero longitude."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which movement of Earth causes day and night?",
+    "answer": "Rotation",
+    "wrong1": "Revolution around the Sun",
+    "wrong2": "Precession alone",
+    "wrong3": "Ocean circulation",
+    "explanation": "Earth rotates on its axis, creating the daily cycle of light and darkness."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which Indian longitude is used as the standard meridian for IST?",
+    "answer": "82 degrees 30 minutes east",
+    "wrong1": "68 degrees 7 minutes east",
+    "wrong2": "97 degrees 25 minutes east",
+    "wrong3": "0 degrees",
+    "explanation": "IST uses 82 degrees 30 minutes east and is UTC plus 5 hours 30 minutes."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which latitude passes through India?",
+    "answer": "Tropic of Cancer",
+    "wrong1": "Tropic of Capricorn",
+    "wrong2": "Arctic Circle",
+    "wrong3": "Antarctic Circle",
+    "explanation": "The Tropic of Cancer crosses India in the Northern Hemisphere."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which is the largest ocean by area?",
+    "answer": "Pacific Ocean",
+    "wrong1": "Atlantic Ocean",
+    "wrong2": "Indian Ocean",
+    "wrong3": "Arctic Ocean",
+    "explanation": "The Pacific has the largest surface area among the oceans."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which ocean lies to the south of mainland India?",
+    "answer": "Indian Ocean",
+    "wrong1": "Arctic Ocean",
+    "wrong2": "Southern Ocean",
+    "wrong3": "Atlantic Ocean",
+    "explanation": "India projects southward into the Indian Ocean."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which sea lies to the west of mainland India?",
+    "answer": "Arabian Sea",
+    "wrong1": "Red Sea",
+    "wrong2": "Caspian Sea",
+    "wrong3": "South China Sea",
+    "explanation": "The Arabian Sea borders India's western coast."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which bay lies to the east of mainland India?",
+    "answer": "Bay of Bengal",
+    "wrong1": "Bay of Biscay",
+    "wrong2": "Hudson Bay",
+    "wrong3": "Persian Gulf",
+    "explanation": "The Bay of Bengal lies east of the Indian peninsula."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which Indian state has the largest area?",
+    "answer": "Rajasthan",
+    "wrong1": "Madhya Pradesh",
+    "wrong2": "Maharashtra",
+    "wrong3": "Uttar Pradesh",
+    "explanation": "Rajasthan is India's largest state by area."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which soil is particularly associated with cotton cultivation in the Deccan?",
+    "answer": "Black soil",
+    "wrong1": "Laterite soil",
+    "wrong2": "Desert soil",
+    "wrong3": "Mountain soil",
+    "explanation": "Black soil retains moisture and is commonly associated with cotton cultivation."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which soil is widespread in the northern plains of India?",
+    "answer": "Alluvial soil",
+    "wrong1": "Laterite soil",
+    "wrong2": "Peaty soil",
+    "wrong3": "Desert soil",
+    "explanation": "River deposits form the extensive alluvial soils of the northern plains."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "The southwest monsoon is chiefly associated with which Indian season?",
+    "answer": "Rainy season",
+    "wrong1": "Winter season",
+    "wrong2": "Spring season",
+    "wrong3": "Autumn alone",
+    "explanation": "The southwest monsoon supplies much of India's seasonal rainfall."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which river flows westward through a rift valley?",
+    "answer": "Narmada",
+    "wrong1": "Godavari",
+    "wrong2": "Mahanadi",
+    "wrong3": "Krishna",
+    "explanation": "The Narmada flows west between the Vindhya and Satpura ranges."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which is the largest peninsular river system of India?",
+    "answer": "Godavari",
+    "wrong1": "Mahanadi",
+    "wrong2": "Tapi",
+    "wrong3": "Sabarmati",
+    "explanation": "The Godavari is the largest peninsular river system."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which river is associated with the Hirakud Dam?",
+    "answer": "Mahanadi",
+    "wrong1": "Sutlej",
+    "wrong2": "Narmada",
+    "wrong3": "Krishna",
+    "explanation": "Hirakud Dam is built across the Mahanadi."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which river is associated with the Bhakra Dam?",
+    "answer": "Sutlej",
+    "wrong1": "Ravi",
+    "wrong2": "Beas",
+    "wrong3": "Yamuna",
+    "explanation": "Bhakra Dam is built across the Sutlej."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which of these is a renewable energy resource?",
+    "answer": "Solar energy",
+    "wrong1": "Coal",
+    "wrong2": "Petroleum",
+    "wrong3": "Natural gas",
+    "explanation": "Solar energy is replenished naturally; fossil fuels are finite on human timescales."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which gas is primarily responsible for protecting Earth from much solar ultraviolet radiation in the stratosphere?",
+    "answer": "Ozone",
+    "wrong1": "Nitrogen",
+    "wrong2": "Carbon monoxide",
+    "wrong3": "Hydrogen",
+    "explanation": "Stratospheric ozone absorbs much harmful ultraviolet radiation."
+  },
+  {
+    "subject": "Geography",
+    "prompt": "Which process removes topsoil through running water or wind?",
+    "answer": "Soil erosion",
+    "wrong1": "Condensation",
+    "wrong2": "Photosynthesis",
+    "wrong3": "Sedimentation alone",
+    "explanation": "Erosion detaches and transports soil; deposition is a different process."
+  },
+  {
+    "subject": "Science",
+    "prompt": "What is the SI unit of force?",
+    "answer": "Newton",
+    "wrong1": "Joule",
+    "wrong2": "Watt",
+    "wrong3": "Pascal",
+    "explanation": "One newton is the force that gives one kilogram an acceleration of one metre per second squared."
+  },
+  {
+    "subject": "Science",
+    "prompt": "What is the SI unit of energy?",
+    "answer": "Joule",
+    "wrong1": "Newton",
+    "wrong2": "Ampere",
+    "wrong3": "Volt",
+    "explanation": "Energy and work are measured in joules."
+  },
+  {
+    "subject": "Science",
+    "prompt": "What is the SI unit of power?",
+    "answer": "Watt",
+    "wrong1": "Joule",
+    "wrong2": "Ohm",
+    "wrong3": "Coulomb",
+    "explanation": "Power is energy transferred per unit time; one watt is one joule per second."
+  },
+  {
+    "subject": "Science",
+    "prompt": "What is the SI unit of electric current?",
+    "answer": "Ampere",
+    "wrong1": "Volt",
+    "wrong2": "Ohm",
+    "wrong3": "Watt",
+    "explanation": "Electric current measures the rate of flow of charge and is measured in amperes."
+  },
+  {
+    "subject": "Science",
+    "prompt": "What is the SI unit of electrical resistance?",
+    "answer": "Ohm",
+    "wrong1": "Volt",
+    "wrong2": "Ampere",
+    "wrong3": "Tesla",
+    "explanation": "Resistance is measured in ohms."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which instrument measures electric current in a circuit?",
+    "answer": "Ammeter",
+    "wrong1": "Voltmeter",
+    "wrong2": "Barometer",
+    "wrong3": "Thermometer",
+    "explanation": "An ammeter measures current; a voltmeter measures potential difference."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which instrument measures atmospheric pressure?",
+    "answer": "Barometer",
+    "wrong1": "Ammeter",
+    "wrong2": "Hygrometer",
+    "wrong3": "Seismograph",
+    "explanation": "A barometer measures atmospheric pressure."
+  },
+  {
+    "subject": "Science",
+    "prompt": "What is the chemical formula of water?",
+    "answer": "H2O",
+    "wrong1": "CO2",
+    "wrong2": "O2",
+    "wrong3": "NaCl",
+    "explanation": "A water molecule contains two hydrogen atoms and one oxygen atom."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which gas is most abundant in dry air near Earth's surface?",
+    "answer": "Nitrogen",
+    "wrong1": "Oxygen",
+    "wrong2": "Carbon dioxide",
+    "wrong3": "Hydrogen",
+    "explanation": "Nitrogen makes up about 78 percent of dry air by volume."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which gas is released in oxygenic photosynthesis?",
+    "answer": "Oxygen",
+    "wrong1": "Nitrogen",
+    "wrong2": "Hydrogen",
+    "wrong3": "Carbon monoxide",
+    "explanation": "Plants release oxygen during oxygenic photosynthesis."
+  },
+  {
+    "subject": "Science",
+    "prompt": "At about 25 degrees Celsius, what pH describes a neutral aqueous solution?",
+    "answer": "7",
+    "wrong1": "1",
+    "wrong2": "10",
+    "wrong3": "14",
+    "explanation": "A neutral aqueous solution has pH about 7 at 25 degrees Celsius."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which substance is common table salt?",
+    "answer": "Sodium chloride",
+    "wrong1": "Sodium carbonate",
+    "wrong2": "Calcium carbonate",
+    "wrong3": "Potassium nitrate",
+    "explanation": "Table salt is sodium chloride, with formula NaCl."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which metal is liquid at ordinary room temperature of about 25 degrees Celsius?",
+    "answer": "Mercury",
+    "wrong1": "Iron",
+    "wrong2": "Aluminium",
+    "wrong3": "Copper",
+    "explanation": "Mercury is liquid at about 25 degrees Celsius; gallium melts at a somewhat higher temperature."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which cell structure contains most genetic material in a typical human body cell?",
+    "answer": "Nucleus",
+    "wrong1": "Cell membrane",
+    "wrong2": "Ribosome",
+    "wrong3": "Lysosome",
+    "explanation": "Most DNA is in the nucleus; mitochondria also contain a small amount of DNA."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which organelle is the main site of photosynthesis in green plant cells?",
+    "answer": "Chloroplast",
+    "wrong1": "Mitochondrion",
+    "wrong2": "Ribosome",
+    "wrong3": "Golgi apparatus",
+    "explanation": "Chloroplasts contain chlorophyll and carry out photosynthesis."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which component of blood is chiefly responsible for oxygen transport?",
+    "answer": "Red blood cells",
+    "wrong1": "Platelets",
+    "wrong2": "Plasma proteins alone",
+    "wrong3": "White blood cells",
+    "explanation": "Haemoglobin in red blood cells binds and transports oxygen."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which blood components are especially important for clotting?",
+    "answer": "Platelets",
+    "wrong1": "Red blood cells",
+    "wrong2": "Antibodies",
+    "wrong3": "Haemoglobin",
+    "explanation": "Platelets participate in the process that forms blood clots."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Deficiency of vitamin C can cause which disease?",
+    "answer": "Scurvy",
+    "wrong1": "Rickets",
+    "wrong2": "Night blindness",
+    "wrong3": "Beriberi",
+    "explanation": "Scurvy results from inadequate vitamin C."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Deficiency of vitamin D in children can cause which disease?",
+    "answer": "Rickets",
+    "wrong1": "Scurvy",
+    "wrong2": "Beriberi",
+    "wrong3": "Pellagra",
+    "explanation": "Vitamin D deficiency can impair bone mineralisation and cause rickets."
+  },
+  {
+    "subject": "Science",
+    "prompt": "Which part of the human eye controls the amount of light entering through the pupil?",
+    "answer": "Iris",
+    "wrong1": "Retina",
+    "wrong2": "Optic nerve",
+    "wrong3": "Cornea",
+    "explanation": "The iris changes pupil size to regulate incoming light."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "What is the capital of Punjab, India?",
+    "answer": "Chandigarh",
+    "wrong1": "Amritsar",
+    "wrong2": "Ludhiana",
+    "wrong3": "Patiala",
+    "explanation": "Chandigarh serves as the capital of Punjab and Haryana."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "The name Punjab is commonly associated with how many rivers?",
+    "answer": "Five",
+    "wrong1": "Three",
+    "wrong2": "Seven",
+    "wrong3": "Nine",
+    "explanation": "Punjab derives from words meaning five waters or rivers."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which Sikh Guru founded Sikhism?",
+    "answer": "Guru Nanak Dev Ji",
+    "wrong1": "Guru Angad Dev Ji",
+    "wrong2": "Guru Amar Das Ji",
+    "wrong3": "Guru Arjan Dev Ji",
+    "explanation": "Guru Nanak Dev Ji was the first Sikh Guru and founder of Sikhism."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Who was the second Sikh Guru?",
+    "answer": "Guru Angad Dev Ji",
+    "wrong1": "Guru Amar Das Ji",
+    "wrong2": "Guru Ram Das Ji",
+    "wrong3": "Guru Hargobind Ji",
+    "explanation": "Guru Angad Dev Ji succeeded Guru Nanak Dev Ji."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which Sikh Guru compiled the Adi Granth in 1604?",
+    "answer": "Guru Arjan Dev Ji",
+    "wrong1": "Guru Nanak Dev Ji",
+    "wrong2": "Guru Gobind Singh Ji",
+    "wrong3": "Guru Tegh Bahadur Ji",
+    "explanation": "Guru Arjan Dev Ji compiled the Adi Granth, with Bhai Gurdas serving as scribe."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which Sikh Guru is associated with the founding of the Khalsa in 1699?",
+    "answer": "Guru Gobind Singh Ji",
+    "wrong1": "Guru Arjan Dev Ji",
+    "wrong2": "Guru Amar Das Ji",
+    "wrong3": "Guru Ram Das Ji",
+    "explanation": "Guru Gobind Singh Ji founded the Khalsa at Anandpur Sahib in 1699."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Who was the tenth Sikh Guru?",
+    "answer": "Guru Gobind Singh Ji",
+    "wrong1": "Guru Tegh Bahadur Ji",
+    "wrong2": "Guru Har Rai Ji",
+    "wrong3": "Guru Hargobind Ji",
+    "explanation": "Guru Gobind Singh Ji was the tenth human Sikh Guru."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which Sikh Guru is associated with the principle of Miri-Piri?",
+    "answer": "Guru Hargobind Ji",
+    "wrong1": "Guru Nanak Dev Ji",
+    "wrong2": "Guru Angad Dev Ji",
+    "wrong3": "Guru Har Krishan Ji",
+    "explanation": "Guru Hargobind Ji represented temporal and spiritual authority through Miri-Piri."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which city is associated with Sri Harmandir Sahib, also called the Golden Temple?",
+    "answer": "Amritsar",
+    "wrong1": "Patiala",
+    "wrong2": "Bathinda",
+    "wrong3": "Jalandhar",
+    "explanation": "Sri Harmandir Sahib is located in Amritsar."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Who founded the Sikh Empire centred at Lahore?",
+    "answer": "Maharaja Ranjit Singh",
+    "wrong1": "Banda Singh Bahadur",
+    "wrong2": "Hari Singh Nalwa",
+    "wrong3": "Duleep Singh",
+    "explanation": "Maharaja Ranjit Singh consolidated the Sikh Empire with Lahore as its capital."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "In which year was Maharaja Ranjit Singh crowned Maharaja?",
+    "answer": "1801",
+    "wrong1": "1799",
+    "wrong2": "1839",
+    "wrong3": "1849",
+    "explanation": "Ranjit Singh was crowned in 1801; he had taken Lahore in 1799."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which treaty concluded the First Anglo-Sikh War in 1846?",
+    "answer": "Treaty of Lahore",
+    "wrong1": "Treaty of Allahabad",
+    "wrong2": "Treaty of Salbai",
+    "wrong3": "Treaty of Bassein",
+    "explanation": "The Treaty of Lahore was signed in March 1846 after the First Anglo-Sikh War."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "In which year did the British annex Punjab?",
+    "answer": "1849",
+    "wrong1": "1846",
+    "wrong2": "1857",
+    "wrong3": "1905",
+    "explanation": "Annexation followed the Second Anglo-Sikh War in 1849."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "On which date did the Jallianwala Bagh massacre occur?",
+    "answer": "13 April 1919",
+    "wrong1": "23 March 1931",
+    "wrong2": "15 August 1947",
+    "wrong3": "26 January 1950",
+    "explanation": "The massacre occurred at Amritsar on 13 April 1919."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which city contains Jallianwala Bagh?",
+    "answer": "Amritsar",
+    "wrong1": "Lahore",
+    "wrong2": "Ludhiana",
+    "wrong3": "Chandigarh",
+    "explanation": "Jallianwala Bagh is a historic public garden in Amritsar."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "On which date were Bhagat Singh, Rajguru and Sukhdev executed?",
+    "answer": "23 March 1931",
+    "wrong1": "13 April 1919",
+    "wrong2": "30 January 1948",
+    "wrong3": "8 April 1929",
+    "explanation": "The three revolutionaries were executed on 23 March 1931 in Lahore."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which script is used for Punjabi in official use in Indian Punjab?",
+    "answer": "Gurmukhi",
+    "wrong1": "Devanagari",
+    "wrong2": "Roman only",
+    "wrong3": "Tamil",
+    "explanation": "Gurmukhi is the script used for Punjabi in Indian Punjab's official context."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which Punjabi folk dance is traditionally associated with women?",
+    "answer": "Giddha",
+    "wrong1": "Kathakali",
+    "wrong2": "Bharatanatyam",
+    "wrong3": "Chhau",
+    "explanation": "Giddha is a traditional Punjabi folk dance commonly performed by women."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which festival is associated with the spring harvest in Punjab and the founding of the Khalsa?",
+    "answer": "Vaisakhi",
+    "wrong1": "Onam",
+    "wrong2": "Pongal",
+    "wrong3": "Bihu",
+    "explanation": "Vaisakhi marks the harvest season in Punjab and commemorates the Khalsa's founding."
+  },
+  {
+    "subject": "Punjab GK",
+    "prompt": "Which city is associated with Qila Mubarak and the former princely state ruled by the Phulkian dynasty?",
+    "answer": "Patiala",
+    "wrong1": "Amritsar",
+    "wrong2": "Chandigarh",
+    "wrong3": "Pathankot",
+    "explanation": "Qila Mubarak is a prominent historic complex in Patiala."
+  }
+]

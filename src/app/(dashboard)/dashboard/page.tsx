@@ -103,6 +103,116 @@ export default function Dashboard() {
         </div>
       </div>
 
+      {/* 🔴 TODAY'S LIVE EXAM MOCKS — 1-CLICK 50-50 SETS */}
+      <section className="rounded-2xl border-2 border-amber-500/70 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-teal-950/90 p-4 space-y-3.5 shadow-xl">
+        <div className="flex items-center justify-between gap-2 flex-wrap">
+          <div className="flex items-center gap-2">
+            <span className="bg-amber-500 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
+              🔴 LIVE EXAM SPECIAL
+            </span>
+            <h2 className="text-sm font-black text-white">
+              Start 50-Question Sets in 1 Click (ਪੰਜਾਬੀ • हिंदी • EN)
+            </h2>
+          </div>
+          <Link href="/mock-test" className="text-[11px] font-bold text-teal-300 underline">
+            All Tests →
+          </Link>
+        </div>
+
+        {/* Live Test 1: Punjab PPSC & PSSSB Clerical Full Syllabus */}
+        <div className="rounded-xl bg-slate-900/90 border border-teal-500/50 p-3 space-y-2">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-xs sm:text-sm font-black text-white">
+              💼 1. Punjab PPSC &amp; PSSSB Clerk Full Syllabus Mock (300+ Qs)
+            </h3>
+            <span className="text-[10px] font-bold text-teal-300 shrink-0">50-50 Sets</span>
+          </div>
+          <p className="text-[11px] text-slate-300">
+            All subjects: GK, Polity, History, Geography, Economy, Current Affairs, Sports, Science, Punjabi, English, Computer &amp; Reasoning.
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5 pt-0.5">
+            {[1, 2, 3, 4, 5, 6].map((setNum) => (
+              <Link
+                key={setNum}
+                href={`/mock-test/ppsc-clerk?exam=punjab-clerk&count=50&set=${setNum}&mode=exam`}
+                className={`rounded-lg py-2 px-2 text-[11px] font-extrabold text-center border transition ${
+                  setNum === 1
+                    ? 'bg-gradient-to-r from-teal-400 to-emerald-400 text-slate-950 border-teal-300 shadow'
+                    : 'bg-slate-800 hover:bg-slate-700 text-teal-200 border-teal-500/40'
+                }`}
+              >
+                Set {setNum}
+                <span className="block text-[9px] font-normal opacity-80">
+                  {(setNum - 1) * 50 + 1}–{setNum * 50}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Live Test 2: Punjab GK & Compulsory Punjabi */}
+        <div className="rounded-xl bg-slate-900/90 border border-amber-500/50 p-3 space-y-2">
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="text-xs sm:text-sm font-black text-white">
+              🪯 2. Punjab GK, 10 Sikh Gurus &amp; Compulsory Punjabi Mock (250+ Qs)
+            </h3>
+            <span className="text-[10px] font-bold text-amber-300 shrink-0">Paper A + B</span>
+          </div>
+          <p className="text-[11px] text-slate-300">
+            10 Sikh Gurus, Banda Singh Bahadur, Maharaja Ranjit Singh, Punjab Culture, Gurmukhi Script, Grammar, Idioms &amp; Vocabulary.
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-5 gap-1.5 pt-0.5">
+            {[1, 2, 3, 4, 5].map((setNum) => (
+              <Link
+                key={setNum}
+                href={`/mock-test/punjab-gk-punjabi?exam=punjab-clerk&count=50&set=${setNum}&mode=exam`}
+                className={`rounded-lg py-2 px-2 text-[11px] font-extrabold text-center border transition ${
+                  setNum === 1
+                    ? 'bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 border-amber-300 shadow'
+                    : 'bg-slate-800 hover:bg-slate-700 text-amber-200 border-amber-500/40'
+                }`}
+              >
+                Set {setNum}
+                <span className="block text-[9px] font-normal opacity-80">
+                  {(setNum - 1) * 50 + 1}–{setNum * 50}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* 1-Click Subject & Topic Tests */}
+        <div className="space-y-1.5 pt-1">
+          <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-300 block">
+            ⚡ 1-Click Subject &amp; Topic Practice (English • ਪੰਜਾਬੀ • हिंदी):
+          </span>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
+            {[
+              { label: '🏛️ Indian Polity', href: '/mock-test/topic-constitution?exam=punjab-clerk&count=50&set=1&mode=exam' },
+              { label: '📜 Modern History', href: '/mock-test/topic-modern-india?exam=punjab-clerk&count=50&set=1&mode=exam' },
+              { label: '🌍 Geography & Env', href: '/mock-test/topic-physical-geography?exam=punjab-clerk&count=50&set=1&mode=exam' },
+              { label: '💰 Indian Economy', href: '/mock-test/topic-indian-economy?exam=punjab-clerk&count=50&set=1&mode=exam' },
+              { label: '📰 Current Affairs', href: '/mock-test/topic-clerk-current-affairs?exam=punjab-clerk&count=25&set=1&mode=exam' },
+              { label: '🏆 Sports & Awards', href: '/mock-test/topic-clerk-sports?exam=punjab-clerk&count=25&set=1&mode=exam' },
+              { label: '📚 Cinema & Lit', href: '/mock-test/topic-clerk-cinema-literature?exam=punjab-clerk&count=25&set=1&mode=exam' },
+              { label: '🔬 General Science', href: '/mock-test/topic-general-science-concepts?exam=punjab-clerk&count=50&set=1&mode=exam' },
+              { label: '🪯 Punjabi Grammar', href: '/mock-test/topic-punjabi-grammar?exam=punjab-clerk&count=50&set=1&mode=exam' },
+              { label: '🔤 English Grammar', href: '/mock-test/topic-english-grammar-lit?exam=punjab-clerk&count=50&set=1&mode=exam' },
+              { label: '💻 Computer & Office', href: '/mock-test/topic-computer-awareness?exam=punjab-clerk&count=50&set=1&mode=exam' },
+              { label: '📊 Data & Reasoning', href: '/mock-test/topic-clerk-data-analysis?exam=punjab-clerk&count=50&set=1&mode=exam' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-lg bg-slate-800/90 hover:bg-slate-700 border border-slate-700 hover:border-teal-400/60 px-2.5 py-2 text-[11px] font-bold text-slate-100 transition truncate"
+              >
+                {item.label} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Daily Content Card */}
       {(() => {
         const daily = getTodayContent('hi');

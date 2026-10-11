@@ -1,3 +1,4 @@
+import { CLERK_GK_FAST_LESSONS } from './clerk-gk-fast';
 import { CLERK_DATA_LESSONS } from './lessons/clerk-data-analysis';
 import ettReflection from './lessons/ett-reflection.json';
 import { buildGapLessons } from './lessons/gap-foundations';
@@ -3167,6 +3168,7 @@ export const ALL_LESSONS: Record<string, Lesson> = {
   ...ECONOMICS_LESSONS,
   ...SCIENCE_LESSONS,
   ...SUPPLEMENTAL_LESSONS,
+  ...CLERK_GK_FAST_LESSONS,
   ...MATHEMATICS_LESSONS,
   ...PUNJABI_LESSONS,
   ...HINDI_LESSONS,

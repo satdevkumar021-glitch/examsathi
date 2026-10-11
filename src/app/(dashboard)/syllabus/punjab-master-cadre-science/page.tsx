@@ -356,7 +356,7 @@ export default function MasterCadreScienceBlueprintPage() {
                                                     📖 Read B→I→H→G Lesson
                                                 </Link>
                                                 <Link
-                                                    href={`/mock-test/custom?exam=punjab-master-cadre-science&subject=${domain.subjectRouteId}&topic=${item.topicId}`}
+                                                    href={`/mock-test/topic-${item.topicId}/?exam=punjab-master-cadre-science&count=10`}
                                                     className="text-xs bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-3 py-1.5 rounded-lg transition"
                                                 >
                                                     🎯 Topic Mini Mock

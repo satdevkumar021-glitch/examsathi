@@ -19,7 +19,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Clock, CheckCircle2, ChevronRight, ChevronLeft, AlertCircle, Layers, RotateCw, Award, Brain, ShieldAlert } from 'lucide-react';
 import { Question } from '@/lib/data/questions';
-import { getQuestionPool, getTestQuestions, evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
+import { getQuestionPool, getTestQuestions, getOrderedSetQuestions, evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
 import { computeScore, computeTopicBreakdown } from '@/lib/scoring';
 import { CardRating, reviewCard, loadSRSStates, saveSRSStates, createNewCard, getSRSSummary } from '@/lib/srs';
 import { recordQuizMistakes, updateTopicMastery } from '@/lib/mistake-notebook';
@@ -53,6 +53,9 @@ export default function MockTest({ testId }: { testId?: string }) {
   const [isRemainingSubset, setIsRemainingSubset] = useState(false);
   const [totalPoolCount, setTotalPoolCount] = useState(0);
   const [currentTopicId, setCurrentTopicId] = useState('all');
+  const [currentSetNumber, setCurrentSetNumber] = useState<number>(1);
+  const [totalSetCount, setTotalSetCount] = useState<number>(1);
+  const [instantFeedback, setInstantFeedback] = useState<boolean>(false);
 
   // Initialize test configuration and questions
   useEffect(() => {
@@ -72,6 +75,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     if (typeof window !== 'undefined') {
       const searchParams = new URLSearchParams(window.location.search);
       if (searchParams.get('exam')) examId = searchParams.get('exam')!;
+      if (searchParams.get('topic')) topicId = searchParams.get('topic')!;
       if (searchParams.get('diff')) difficulty = searchParams.get('diff') as 'easy' | 'medium' | 'hard';
       if (searchParams.get('count')) {
         const parsed = parseInt(searchParams.get('count')!, 10);
@@ -89,9 +93,12 @@ export default function MockTest({ testId }: { testId?: string }) {
     if (testId) {
       if (testId.startsWith('topic-')) {
         topicId = testId.replace('topic-', '');
-      } else if (testId === 'clerk') {
-        topicId = 'punjab-clerk-prep';
-        examId = 'clerk-psssb';
+      } else if (testId === 'clerk' || testId === 'ppsc-clerk' || testId === 'punjab-clerk') {
+        topicId = 'ppsc-clerk-mega';
+        examId = 'punjab-clerk';
+      } else if (testId === 'punjab-gk-punjabi') {
+        topicId = 'punjab-gk-punjabi-mega';
+        examId = 'all';
       } else if (testId === 'patwari') {
         topicId = 'punjab-patwari-prep';
         examId = 'patwari-punjab';
@@ -99,15 +106,24 @@ export default function MockTest({ testId }: { testId?: string }) {
         topicId = 'all';
         examId = 'punjab-master-cadre-sst';
         count = 50;
+      } else if (testId === 'punjab-master-cadre-science') {
+        topicId = 'all';
+        examId = 'punjab-master-cadre-science';
+        count = 50;
+      } else if (testId === 'punjab-ett') {
+        topicId = 'all';
+        examId = 'punjab-ett';
+        count = 50;
       }
     }
 
     // 3. Override with custom session config if present
     try {
-      const storedConfig = studyStorage.getItem('examsathi_test_config');
+      const storedConfig = studyStorage.getItem('examsathi_test_config') || (typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('examsathi_test_config') : null);
       if (storedConfig) {
         const parsed = JSON.parse(storedConfig);
         studyStorage.removeItem('examsathi_test_config');
+        try { sessionStorage.removeItem('examsathi_test_config'); } catch {}
         if (parsed.topicId && !testId?.startsWith('topic-')) topicId = parsed.topicId;
         if (Number.isFinite(parsed.timeLimitMinutes)) minutes = parsed.timeLimitMinutes;
         if (parsed.count) count = parsed.count;
@@ -122,58 +138,123 @@ export default function MockTest({ testId }: { testId?: string }) {
     }
 
     const query = new URLSearchParams(window.location.search);
+    if (query.has('topic')) topicId = query.get('topic') || topicId;
     if (query.has('mode')) requestedMode = query.get('mode') === 'flip' ? 'flip' : 'exam';
     if (query.has('exam')) examId = query.get('exam') || undefined;
     else if (!examId) examId = useStore.getState().selectedExam || undefined;
     if (examId && examId !== 'all') examId = normalizePracticeExamId(examId);
+    if (topicId === 'punjab-gk-punjabi-mega') examId = 'all';
+    if (topicId === 'ppsc-clerk-mega') examId = 'punjab-clerk';
     if (query.has('pyq')) { pyq20Years = query.get('pyq') === '20y'; pyqOnly = query.get('pyq') === 'only'; }
     if (query.has('diff')) difficulty = ['easy', 'medium', 'hard'].includes(query.get('diff') || '') ? query.get('diff') as 'easy' | 'medium' | 'hard' : 'all';
     if (query.has('count')) count = Math.max(1, Math.min(150, Number(query.get('count')) || 50));
     if (query.has('minutes')) minutes = Math.max(1, Math.min(180, Number(query.get('minutes')) || 45));
     setMode(requestedMode);
-    if (examId) setActiveExamId(examId);
+    if (examId) setActiveExamId(examId === 'all' ? 'punjab-clerk' : examId);
     setActiveDifficulty(difficulty);
 
+    const setParam = query.get('set');
+    const numericSet = setParam && /^\d+$/.test(setParam) ? parseInt(setParam, 10) : 0;
+    const isFreshRequested = query.get('fresh') === '1' || numericSet >= 1;
     const isRevision = requestedMode === 'flip' || query.get('repeat') === '1' || query.get('mode') === 'revision';
     setIsRevisionMode(isRevision);
     setCurrentTopicId(topicId);
 
-    const fullPool = getQuestionPool({ topicId, examId, difficulty, pyq20Years, pyqOnly });
-    setTotalPoolCount(fullPool.length);
+    // Resolve pool and automatic fallbacks so a mismatched stored exam or difficulty never causes 0 questions
+    let effectiveExamForPool = examId === 'all' ? undefined : examId;
+    let fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty, pyq20Years, pyqOnly });
+    if (fullPool.length === 0 && topicId !== 'all' && effectiveExamForPool) {
+      effectiveExamForPool = undefined;
+      fullPool = getQuestionPool({ topicId, difficulty, pyq20Years, pyqOnly });
+    }
+    if (fullPool.length === 0 && difficulty !== 'all') {
+      difficulty = 'all';
+      fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty: 'all', pyq20Years, pyqOnly });
+    }
+    if (fullPool.length === 0 && (pyq20Years || pyqOnly)) {
+      pyq20Years = false;
+      pyqOnly = false;
+      fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty });
+    }
 
     // 4. Derive title
     const examMeta = AVAILABLE_EXAMS.find(e => e.id === examId);
     const topicMeta = AVAILABLE_TEST_TOPICS.find(t => t.id === topicId);
-
     const diffLabel = difficulty === 'easy' ? ' (Simple)' : difficulty === 'medium' ? ' (Mid)' : difficulty === 'hard' ? ' (Hard)' : '';
 
-    if (examMeta) {
-      setTestTitle(`${examMeta.name} — ${count} Qs Set${diffLabel}`);
-    } else if (topicMeta) {
-      setTestTitle(pyqOnly || pyq20Years ? `${topicMeta.name} — Historical labels (unverified)${diffLabel}` : `${topicMeta.name}${diffLabel}`);
-    } else if (pyq20Years) {
-      setTestTitle(`Historical practice archive (provenance under review)${diffLabel}`);
-    } else {
-      setTestTitle(`Topic Practice Set${diffLabel}`);
-    }
-
     setSourceConfig({ count, pyq20Years, pyqOnly });
-    // 5. Fetch questions from Question Bank Engine
-    let loadedQuestions = getTestQuestions({ 
-      topicId, 
-      examId,
-      difficulty,
-      pyq20Years,
-      pyqOnly, 
-      count,
-      excludeKeys: isRevision ? [] : completedQuestionKeys(),
-    });
 
-    if (!isRevision && loadedQuestions.length > 0 && loadedQuestions.length < count && fullPool.length > 0) {
-      setIsRemainingSubset(true);
-    } else {
+    // 5. Fetch questions from Question Bank Engine (deterministic Set 1..N or standard pool)
+    let loadedQuestions: Question[] = [];
+    if (numericSet >= 1 || topicId === 'ppsc-clerk-mega' || topicId === 'punjab-gk-punjabi-mega') {
+      const ordered = getOrderedSetQuestions({
+        topicId,
+        examId: effectiveExamForPool,
+        difficulty,
+        pyq20Years,
+        pyqOnly,
+        count,
+        setNumber: numericSet || 1,
+      });
+      loadedQuestions = ordered.questions;
+      setCurrentSetNumber(ordered.setNumber);
+      setTotalSetCount(ordered.totalSets);
+      setTotalPoolCount(ordered.totalPoolCount);
       setIsRemainingSubset(false);
+    } else {
+      setTotalPoolCount(fullPool.length);
+      const computedTotalSets = Math.max(1, Math.ceil(fullPool.length / count));
+      setTotalSetCount(computedTotalSets);
+      setCurrentSetNumber(1);
+      loadedQuestions = getTestQuestions({ 
+        topicId, 
+        examId: effectiveExamForPool,
+        difficulty,
+        pyq20Years,
+        pyqOnly, 
+        count,
+        excludeKeys: (isRevision || isFreshRequested) ? [] : completedQuestionKeys(),
+      });
+      // Never block the user with 0 questions if the pool has questions
+      if (loadedQuestions.length === 0 && fullPool.length > 0) {
+        const orderedFallback = getOrderedSetQuestions({
+          topicId,
+          examId: effectiveExamForPool,
+          difficulty,
+          pyq20Years,
+          pyqOnly,
+          count,
+          setNumber: 1,
+        });
+        loadedQuestions = orderedFallback.questions;
+        setIsRevisionMode(true);
+      }
+      if (!isRevision && !isFreshRequested && loadedQuestions.length > 0 && loadedQuestions.length < count && fullPool.length > count) {
+        setIsRemainingSubset(true);
+      } else {
+        setIsRemainingSubset(false);
+      }
     }
+
+    const setBadge = (numericSet >= 1 || topicId === 'ppsc-clerk-mega' || topicId === 'punjab-gk-punjabi-mega')
+      ? ` • Set ${numericSet || 1}`
+      : '';
+
+    if (topicId === 'ppsc-clerk-mega') {
+      setTestTitle(`Punjab PPSC & PSSSB Clerk Live Mock${setBadge} (${loadedQuestions.length} Qs)`);
+    } else if (topicId === 'punjab-gk-punjabi-mega') {
+      setTestTitle(`Punjab GK & Punjabi Special Live Mock${setBadge} (${loadedQuestions.length} Qs)`);
+    } else if (topicMeta) {
+      setTestTitle(`${topicMeta.name}${setBadge}${diffLabel}`);
+    } else if (examMeta && topicId === 'all') {
+      setTestTitle(`${examMeta.name}${setBadge} — ${loadedQuestions.length || count} Qs${diffLabel}`);
+    } else if (topicId !== 'all') {
+      const cleanTopic = topicId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      setTestTitle(`${cleanTopic}${setBadge} (${loadedQuestions.length || count} Qs)${diffLabel}`);
+    } else {
+      setTestTitle(`Topic Practice Set${setBadge}${diffLabel}`);
+    }
+
     // Check custom AI-generated question drill from sessionStorage
     if (topicId === 'ai-custom') {
       try {
@@ -198,10 +279,9 @@ export default function MockTest({ testId }: { testId?: string }) {
       if (review.examId) setActiveExamId(review.examId);
     }
     if (loadedQuestions.length > 0) {
-      if (examMeta && !review) setTestTitle(`${examMeta.name} — ${loadedQuestions.length} questions${diffLabel}`);
       rememberQuestions(loadedQuestions);
       const learnerId = getStoredUser().id || 'usr-default';
-      const targetExamId = examId || 'master-cadre-sst';
+      const targetExamId = (examId && examId !== 'all') ? examId : 'punjab-clerk';
       recordServedQuestions(learnerId, targetExamId, loadedQuestions);
       setQuestions(loadedQuestions);
       setLoaded(true);
@@ -214,8 +294,8 @@ export default function MockTest({ testId }: { testId?: string }) {
       if (requestedMode === 'exam' && !query.has('review')) {
         try {
           const saved = JSON.parse(studyStorage.getItem(attemptKeyRef.current) || 'null');
-          const eligibleIds = new Set(getQuestionPool({ examId, topicId, difficulty, pyqOnly, pyq20Years }).map(q => q.id));
-          const validScope = saved?.questions?.every((q: Question) => topicId === 'ai-custom' || eligibleIds.has(q.id));
+          const eligibleIds = new Set(loadedQuestions.map(q => q.id));
+          const validScope = saved?.questions?.length === loadedQuestions.length && saved?.questions?.every((q: Question) => topicId === 'ai-custom' || eligibleIds.has(q.id));
           if (validScope && saved?.questions?.length && Number.isFinite(saved.deadline) && Number.isFinite(saved.totalTime)) {
             setQuestions(saved.questions);
             setUserAnswers(saved.answers || {});
@@ -341,6 +421,8 @@ export default function MockTest({ testId }: { testId?: string }) {
       testTitle,
       examId: activeExamId,
       difficulty: activeDifficulty,
+      setNumber: currentSetNumber,
+      totalSets: totalSetCount,
       total: scored.total,
       correct: scored.correct,
       wrong: scored.wrong,
@@ -549,6 +631,13 @@ export default function MockTest({ testId }: { testId?: string }) {
     return 0;
   };
 
+  const switchSet = (targetSet: number) => {
+    const search = new URLSearchParams(window.location.search);
+    search.set('set', String(targetSet));
+    search.set('count', String(sourceConfig.count || 50));
+    router.push(`${window.location.pathname}?${search.toString()}`);
+  };
+
   return (
     <div className="flex flex-col h-screen bg-slate-900 pb-safe text-slate-100">
 
@@ -581,9 +670,9 @@ export default function MockTest({ testId }: { testId?: string }) {
       )}
       {/* Exam Pattern Info Banner */}
       {loaded && questions.length > 0 && (activeExamMeta || pExam) && (
-        <div className="bg-amber-950/40 border-b border-amber-700/40 px-3 py-1.5 flex items-center gap-2 text-[10px] text-amber-200 shrink-0">
-          <ShieldAlert size={12} className="text-amber-400 shrink-0" />
-          <span>
+        <div className="bg-amber-950/40 border-b border-amber-700/40 px-3 py-1 flex items-center justify-between gap-2 text-[10px] text-amber-200 shrink-0">
+          <span className="flex items-center gap-1.5">
+            <ShieldAlert size={12} className="text-amber-400 shrink-0" />
             {displayNegativeMarking() > 0 ? (
               <><span className="font-bold text-amber-300">Negative marking:</span> -{displayNegativeMarking()} per wrong answer</>
             ) : (
@@ -592,23 +681,43 @@ export default function MockTest({ testId }: { testId?: string }) {
             {' '}|{' '}
             <span className="font-semibold">Total:</span> {questions.length} Qs
             {' '}|{' '}
-            <span className="font-semibold">{Math.round(totalTimeSeconds / 60)} minutes</span>
+            <span className="font-semibold">{Math.round(totalTimeSeconds / 60)}m</span>
           </span>
+          {totalPoolCount > 0 && (
+            <span className="text-teal-300 font-bold font-mono">
+              Bank: {totalPoolCount} Qs
+            </span>
+          )}
         </div>
       )}
 
       {/* Top Test Header Bar */}
-      <div className="bg-slate-900/95 border-b border-slate-800 p-3.5 flex justify-between items-center shrink-0">
-        <div className="min-w-0 pr-2">
-          <h1 className="text-white font-bold text-xs truncate max-w-[210px]">
+      <div className="bg-slate-900/95 border-b border-slate-800 p-2.5 flex justify-between items-center shrink-0 gap-2">
+        <div className="min-w-0 pr-1">
+          <h1 className="text-white font-bold text-xs truncate max-w-[190px] sm:max-w-xs">
             {testTitle}
           </h1>
           <p className="text-[10px] text-slate-400">
-            {questions.length} Questions • {mode === 'exam' ? 'Exam Mode (Practice scoring)' : '3D Flip Card Practice'}
+            {questions.length} Qs • {currentSetNumber > 0 ? `Set ${currentSetNumber} of ${totalSetCount}` : mode === 'exam' ? 'Exam Mode' : '3D Flip Card'}
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5">
+          {/* Instant Answer Toggle in Exam Mode */}
+          {mode === 'exam' && (
+            <button
+              onClick={() => setInstantFeedback(prev => !prev)}
+              className={`px-2 py-1 rounded-lg text-[10px] font-bold border transition ${
+                instantFeedback
+                  ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/50'
+                  : 'bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-600'
+              }`}
+              title="Show correct answer & explanation immediately after selecting an option"
+            >
+              💡 {instantFeedback ? 'Ans: ON' : 'Ans: OFF'}
+            </button>
+          )}
+
           {/* Mode Switcher */}
           <button
             onClick={() => {
@@ -620,7 +729,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                 ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
                 : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
             }`}
-            title="Switch between Exam CBT mode and 3D Flip Card mode"
+            title="Return to Mock Test Directory"
           >
             <Layers size={12} />
             {mode === 'exam' ? 'Exit CBT' : 'Exit Flip'}
@@ -651,7 +760,7 @@ export default function MockTest({ testId }: { testId?: string }) {
           {/* Timer (Exam Mode) */}
           {mode === 'exam' && (
             <div className="flex items-center gap-1 bg-slate-800 px-2 py-1 rounded-lg border border-slate-700">
-              <Clock size={13} className={secondsRemaining < 180 ? 'text-rose-400 animate-pulse' : 'text-amber-400'} />
+              <Clock size={12} className={secondsRemaining < 180 ? 'text-rose-400 animate-pulse' : 'text-amber-400'} />
               <span className={`font-mono text-xs font-bold ${secondsRemaining < 180 ? 'text-rose-400' : 'text-white'}`}>
                 {formatTimer(secondsRemaining)}
               </span>
@@ -659,6 +768,43 @@ export default function MockTest({ testId }: { testId?: string }) {
           )}
         </div>
       </div>
+
+      {/* 50-Question Set Switcher Bar (Set 1: Q1-50, Set 2: Q51-100, Set 3: Q101-150, Set 4: Q151-200...) */}
+      {totalSetCount > 1 && (
+        <div className="bg-indigo-950/60 border-b border-indigo-500/30 px-2.5 py-1.5 flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0">
+          <span className="text-[10px] font-black uppercase tracking-wider text-teal-300 shrink-0 mr-1">
+            50-Q Sets:
+          </span>
+          {Array.from({ length: Math.min(totalSetCount, 10) }, (_, idx) => {
+            const setNum = idx + 1;
+            const setSize = sourceConfig.count || 50;
+            const startQ = (setNum - 1) * setSize + 1;
+            const endQ = Math.min(setNum * setSize, totalPoolCount);
+            const isActiveSet = (currentSetNumber || 1) === setNum;
+            return (
+              <button
+                key={setNum}
+                onClick={() => switchSet(setNum)}
+                className={`px-2.5 py-1 rounded-lg text-[10px] font-bold shrink-0 border transition ${
+                  isActiveSet
+                    ? 'bg-teal-500 text-slate-950 border-teal-400 shadow'
+                    : 'bg-slate-800/90 text-slate-300 border-slate-700 hover:border-teal-500/50 hover:text-white'
+                }`}
+              >
+                Set {setNum} ({startQ}–{endQ})
+              </button>
+            );
+          })}
+          {(currentSetNumber || 1) < totalSetCount && (
+            <button
+              onClick={() => switchSet((currentSetNumber || 1) + 1)}
+              className="ml-auto px-2.5 py-1 rounded-lg text-[10px] font-black shrink-0 bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 transition"
+            >
+              Next 50 Qs (Set {(currentSetNumber || 1) + 1}) →
+            </button>
+          )}
+        </div>
+      )}
 
       {/* Question Palette Bar */}
       <div className="bg-slate-800/80 p-2 border-b border-slate-700/80 flex gap-1.5 overflow-x-auto no-scrollbar shrink-0">
@@ -700,6 +846,7 @@ export default function MockTest({ testId }: { testId?: string }) {
               <div className="flex justify-between items-center mb-2 gap-2 flex-wrap">
                 <span className="text-teal-400 font-bold text-xs">
                   Question {qIndex + 1} of {questions.length}
+                  {currentSetNumber > 0 ? ` (Set ${currentSetNumber})` : ''}
                 </span>
                 
                 <div className="flex items-center gap-1.5">
@@ -707,13 +854,13 @@ export default function MockTest({ testId }: { testId?: string }) {
                     {difficultyBadge.label}
                   </span>
                   <span className="text-[10px] bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded truncate max-w-[190px]">
-                    {currentQuestion.examTag || 'Practice question — source unverified'} {currentQuestion.year ? `(${currentQuestion.year})` : ''}
+                    {currentQuestion.examTag || 'Practice question'} {currentQuestion.year ? `(${currentQuestion.year})` : ''}
                   </span>
                 </div>
               </div>
 
               <h3 className="text-sm font-semibold text-white mb-1 leading-relaxed">
-                {currentQuestion.question[lang] || currentQuestion.question.hi || currentQuestion.question.en}
+                {currentQuestion.question[lang] || currentQuestion.question.pa || currentQuestion.question.hi || currentQuestion.question.en}
               </h3>
               {lang !== 'en' && currentQuestion.question.en && (currentQuestion.question[lang] || currentQuestion.question.hi) !== currentQuestion.question.en && (
                 <h4 className="text-xs text-slate-400 mt-1 italic">{currentQuestion.question.en}</h4>
@@ -726,31 +873,59 @@ export default function MockTest({ testId }: { testId?: string }) {
                 const opt = currentQuestion.options[key];
                 if (!opt) return null;
                 const isSelected = userAnswers[currentQuestion.id] === key;
+                const hasAnsweredCurrent = Boolean(userAnswers[currentQuestion.id]);
+                const isCorrectOption = currentQuestion.correct === key;
+
+                let optionStyle = isSelected
+                  ? 'bg-indigo-600/20 border-indigo-500 shadow-md ring-1 ring-indigo-500'
+                  : 'bg-slate-800/80 border-slate-700 hover:border-slate-600';
+
+                let badgeStyle = isSelected ? 'bg-indigo-500 text-white' : 'bg-slate-700 text-slate-300';
+
+                if (instantFeedback && hasAnsweredCurrent) {
+                  if (isCorrectOption) {
+                    optionStyle = 'bg-emerald-600/20 border-emerald-500 shadow-md ring-1 ring-emerald-500';
+                    badgeStyle = 'bg-emerald-500 text-slate-950';
+                  } else if (isSelected && !isCorrectOption) {
+                    optionStyle = 'bg-rose-600/20 border-rose-500 shadow-md ring-1 ring-rose-500';
+                    badgeStyle = 'bg-rose-500 text-white';
+                  }
+                }
 
                 return (
                   <button 
                     key={key} 
                     aria-pressed={isSelected}
                     onClick={() => handleSelectOption(key)}
-                    className={`w-full text-left p-3.5 rounded-xl border flex items-center gap-3 transition-all ${
-                      isSelected 
-                        ? 'bg-indigo-600/20 border-indigo-500 shadow-md ring-1 ring-indigo-500' 
-                        : 'bg-slate-800/80 border-slate-700 hover:border-slate-600'
-                    }`}
+                    className={`w-full text-left p-3.5 rounded-xl border flex items-center gap-3 transition-all ${optionStyle}`}
                   >
-                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
-                      isSelected ? 'bg-indigo-500 text-white' : 'bg-slate-700 text-slate-300'
-                    }`}>
+                    <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${badgeStyle}`}>
                       {key}
                     </div>
                     <div className="text-xs">
-                      <p className="text-white font-medium">{opt[lang] || opt.hi || opt.en}</p>
+                      <p className="text-white font-medium">{opt[lang] || opt.pa || opt.hi || opt.en}</p>
                       {lang !== 'en' && opt.en && (opt[lang] || opt.hi) !== opt.en && <p className="text-slate-400 text-[10px] mt-0.5">{opt.en}</p>}
                     </div>
                   </button>
                 );
               })}
             </div>
+
+            {/* Instant Answer & Trilingual Explanation Card when Ans: ON */}
+            {instantFeedback && Boolean(userAnswers[currentQuestion.id]) && (
+              <div className="mt-4 p-3.5 rounded-xl bg-slate-800/90 border border-teal-500/40 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className={`text-xs font-bold ${userAnswers[currentQuestion.id] === currentQuestion.correct ? 'text-emerald-400' : 'text-rose-400'}`}>
+                    {userAnswers[currentQuestion.id] === currentQuestion.correct
+                      ? '✅ Correct Answer! / ਸਹੀ ਉੱਤਰ! / सही उत्तर!'
+                      : `❌ Correct Option is (${currentQuestion.correct}): ${currentQuestion.options[currentQuestion.correct]?.[lang] || currentQuestion.options[currentQuestion.correct]?.en}`}
+                  </span>
+                </div>
+                <p className="text-xs text-slate-200 leading-relaxed">
+                  {currentQuestion.explanation[lang] || currentQuestion.explanation.pa || currentQuestion.explanation.hi || currentQuestion.explanation.en}
+                </p>
+              </div>
+            )}
           </div>
         ) : (
           // ==================== MODE 2: 3D FLIP CARD ====================
@@ -785,7 +960,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                 // Front: Question & Options Preview
                 <div className="my-auto py-3">
                   <h3 className="text-sm font-bold text-white mb-3 leading-relaxed">
-                    {currentQuestion.question[lang] || currentQuestion.question.hi || currentQuestion.question.en}
+                    {currentQuestion.question[lang] || currentQuestion.question.pa || currentQuestion.question.hi || currentQuestion.question.en}
                   </h3>
                   
                   <div className="space-y-1.5 opacity-80 text-xs text-slate-300">
@@ -797,7 +972,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                           <span className="w-4 h-4 bg-slate-700 rounded-full flex items-center justify-center text-[10px] font-bold">
                             {key}
                           </span>
-                          <span className="truncate">{opt[lang] || opt.hi || opt.en}</span>
+                          <span className="truncate">{opt[lang] || opt.pa || opt.hi || opt.en}</span>
                         </div>
                       );
                     })}
@@ -810,13 +985,13 @@ export default function MockTest({ testId }: { testId?: string }) {
                     <CheckCircle2 size={14} /> Correct Option: ({currentQuestion.correct})
                   </div>
                   <h4 className="text-white font-bold text-xs">
-                    {currentQuestion.options[currentQuestion.correct]?.[lang] || currentQuestion.options[currentQuestion.correct]?.hi}
+                    {currentQuestion.options[currentQuestion.correct]?.[lang] || currentQuestion.options[currentQuestion.correct]?.pa || currentQuestion.options[currentQuestion.correct]?.hi || currentQuestion.options[currentQuestion.correct]?.en}
                   </h4>
                   
                   {/* Detailed Explanation */}
                   <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700 text-xs text-slate-300 leading-relaxed">
                     <span className="text-amber-400 font-bold block mb-1">Answer explanation:</span>
-                    {currentQuestion.explanation[lang] || currentQuestion.explanation.hi || currentQuestion.explanation.en}
+                    {currentQuestion.explanation[lang] || currentQuestion.explanation.pa || currentQuestion.explanation.hi || currentQuestion.explanation.en}
                   </div>
 
                   {/* Strategic Examiner Thought */}
@@ -827,7 +1002,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                         <span>🧠 Antigravity Strategic Thought (Examiner Mindset):</span>
                       </div>
                       <p>
-                        {currentQuestion.thought[lang] || currentQuestion.thought.hi || currentQuestion.thought.en}
+                        {currentQuestion.thought[lang] || currentQuestion.thought.pa || currentQuestion.thought.hi || currentQuestion.thought.en}
                       </p>
                     </div>
                   )}
@@ -882,22 +1057,22 @@ export default function MockTest({ testId }: { testId?: string }) {
       <div className="p-3 bg-slate-900 border-t border-slate-800 shrink-0">
         <div className="max-w-xl mx-auto flex items-center justify-between gap-2">
           
-          <div className="flex gap-2">
+          <div className="flex gap-1.5">
             {mode === 'exam' && (
               <>
                 <button 
                   onClick={handleToggleReview}
-                  className={`px-3 py-2 rounded-lg text-xs font-medium border transition ${
+                  className={`px-2.5 py-2 rounded-lg text-xs font-medium border transition ${
                     markedForReview[currentQuestion.id] 
                       ? 'bg-amber-500/20 border-amber-500 text-amber-300' 
                       : 'bg-slate-800 border-slate-700 text-slate-300'
                   }`}
                 >
-                  {markedForReview[currentQuestion.id] ? 'Marked' : 'Mark Review'}
+                  {markedForReview[currentQuestion.id] ? 'Marked' : 'Review'}
                 </button>
                 <button 
                   onClick={handleClearOption}
-                  className="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-3 py-2 rounded-lg text-xs text-slate-400"
+                  className="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-2.5 py-2 rounded-lg text-xs text-slate-400"
                 >
                   Clear
                 </button>
@@ -905,36 +1080,36 @@ export default function MockTest({ testId }: { testId?: string }) {
             )}
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-1.5 items-center">
             <button 
               onClick={() => {
                 setQIndex(prev => Math.max(0, prev - 1));
                 setIsFlipped(false);
               }}
               disabled={qIndex === 0}
-              className="bg-slate-800 disabled:opacity-40 border border-slate-700 px-3 py-2 rounded-lg text-xs text-white flex items-center gap-1"
+              className="bg-slate-800 disabled:opacity-40 border border-slate-700 px-2.5 py-2 rounded-lg text-xs text-white flex items-center gap-1"
             >
-              <ChevronLeft size={16} /> Prev
+              <ChevronLeft size={15} /> Prev
             </button>
 
-            {qIndex < questions.length - 1 ? (
+            {qIndex < questions.length - 1 && (
               <button 
                 onClick={() => {
                   setQIndex(prev => prev + 1);
                   setIsFlipped(false);
                 }}
-                className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-lg text-xs flex items-center gap-1 shadow"
+                className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3.5 py-2 rounded-lg text-xs flex items-center gap-1 shadow"
               >
-                Next <ChevronRight size={16} />
-              </button>
-            ) : (
-              <button 
-                onClick={handleSubmitTest}
-                className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2 rounded-lg text-xs shadow-lg flex items-center gap-1"
-              >
-                <Award size={14} /> Submit & Check Level
+                Next <ChevronRight size={15} />
               </button>
             )}
+
+            <button 
+              onClick={handleSubmitTest}
+              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3.5 py-2 rounded-lg text-xs shadow-lg flex items-center gap-1"
+            >
+              <Award size={14} /> {qIndex < questions.length - 1 ? 'Submit ✓' : 'Submit & Check Level'}
+            </button>
           </div>
 
         </div>
