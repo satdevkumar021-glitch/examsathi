@@ -977,6 +977,8 @@ import { ETT_PAPER_B_BATCH2 } from './questions/ett_paper_b_batch2';
 import { PPSC_CLERK_POLITY_HISTORY_GEO_ECON_MCQS } from './questions/ppsc_clerk_polity_history_geo_econ_mcqs';
 import { PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS } from './questions/ppsc_clerk_current_sports_lit_science_mcqs';
 import { PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS } from './questions/ppsc_clerk_punjabi_english_computer_mcqs';
+import { ETT_SCIENCE_LIGHT_MCQs } from './questions/ett_science_light_batch';
+import { ETT_SCIENCE_CORE_MCQs } from './questions/ett_science_core_batch';
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLERK_GK_FAST_QUESTIONS,
@@ -1004,6 +1006,8 @@ export const ALL_QUESTIONS: Question[] = [
   ...PPSC_CLERK_POLITY_HISTORY_GEO_ECON_MCQS,
   ...PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS,
   ...PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS,
+  ...ETT_SCIENCE_LIGHT_MCQs,
+  ...ETT_SCIENCE_CORE_MCQs,
 ];
 
 

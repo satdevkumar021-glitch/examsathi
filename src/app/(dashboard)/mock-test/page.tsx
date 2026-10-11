@@ -270,8 +270,8 @@ export default function MockTestHub() {
               <Target size={22} />
             </span>
             <div>
-              <h1 className="text-white font-extrabold text-lg">Mock Test & PYQ Portal</h1>
-              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — Historical labels under review & topic practice</p>
+              <h1 className="text-white font-extrabold text-lg">Mock Test & Practice Portal</h1>
+              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — Year-tagged practice sets (sources under review)</p>
             </div>
           </div>
           <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">

@@ -76,7 +76,20 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
         </div>
       </div>
 
-      {exam.syllabusStatus === 'provisional-archive' && <Link href="/syllabus/punjab-ett/" className="rounded-lg border border-amber-700 p-3 text-sm text-amber-200">5994 Paper B archival reference. Upcoming notification and publisher verification pending. Qualifying Paper A is separate. Open source pages and coverage status →</Link>}
+      {exam.syllabusStatus === 'provisional-archive' && (
+        exam.id === 'punjab-ett'
+          ? <Link href="/syllabus/punjab-ett/" className="rounded-lg border border-amber-700 p-3 text-sm text-amber-200">5994 Paper B archival reference. Upcoming notification and publisher verification pending. Qualifying Paper A is separate. Open source pages and coverage status →</Link>
+          : <div className="rounded-lg border border-amber-700/70 bg-amber-950/30 p-3 text-sm text-amber-200">
+              <span className="font-semibold">⚠ Source not yet verified.</span>{' '}
+              This exam&apos;s syllabus and official notification have not been independently confirmed for the current cycle.
+              Content is provided for practice reference only.{' '}
+              {exam.officialWebsite && (
+                <a href={exam.officialWebsite} target="_blank" rel="noopener noreferrer" className="underline text-amber-300">
+                  Check official site ↗
+                </a>
+              )}
+            </div>
+      )}
 
       {/* Subject Selector Tabs (if multiple subjects exist) */}
       {availableSubjects.length > 1 && (

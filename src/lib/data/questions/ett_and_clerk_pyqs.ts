@@ -17,8 +17,10 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     id: 'ett-cdp-2023-1',
     topicId: 'ett-child-pedagogy',
     subjectId: 'pedagogy',
-    examId: 'ett-punjab',
-    examTag: 'Punjab ETT Cadre 5994 (2023)',
+    // examId corrected: ETT Paper B has NO pedagogy section (confirmed in ett-blueprint.ts).
+    // This question tests Child Development & Pedagogy — a PSTET Paper 1 topic, not ETT Paper B.
+    examId: 'punjab-pstet',
+    examTag: 'Punjab ETT Cadre 5994 (2023) — NOTE: CDP is a PSTET topic; ETT Paper B has no pedagogy section',
     year: 2023,
     difficulty: 'medium',
     originType: 'verified-pyq',
@@ -27,15 +29,16 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     reviewStatus: 'reviewed',
     pyqMetadata: {
       examBoard: 'Education Recruitment Board (ERB), Punjab',
-      notificationRef: 'Advt. No. 5994 ETT Cadre',
-      paper: 'Paper B (Subject Test)',
+      // DISPUTED: ETT Paper B has no CDP section. This metadata needs review.
+      notificationRef: 'Advt. No. 5994 ETT Cadre — DISPUTED: may be PSTET, not ETT Paper B',
+      paper: 'Paper B (Subject Test) — DISPUTED: CDP belongs to PSTET, not ETT Paper B',
       year: 2023,
-      answerKeyStatus: 'official-final-key',
+      answerKeyStatus: 'provisional-key', // was 'official-final-key' — downgraded pending source verification
     },
     rightsProvenance: {
-      source: 'Official ERB Punjab ETT 5994 Question Paper & Final Key',
+      source: 'Official ERB Punjab ETT 5994 Question Paper & Final Key — DISPUTED: verify source',
       accessType: 'public-recruitment',
-      verifiedBy: 'ExamSathi Editorial Board',
+      verifiedBy: 'ExamSathi Editorial Board — NEEDS NAMED HUMAN REVIEWER',
       verifiedDate: '2026-10-10',
     },
     topicName: {
@@ -113,8 +116,10 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     id: 'ett-cdp-2022-2',
     topicId: 'ett-child-pedagogy',
     subjectId: 'pedagogy',
-    examId: 'ett-punjab',
-    examTag: 'Punjab ETT Cadre 6635 (2022)',
+    // examId corrected: ETT Paper B has NO pedagogy section (confirmed in ett-blueprint.ts).
+    // RTE PTR is a Child Development & Pedagogy topic — belongs to PSTET Paper 1.
+    examId: 'punjab-pstet',
+    examTag: 'Punjab ETT Cadre 6635 (2022) — NOTE: CDP is a PSTET topic; ETT Paper B has no pedagogy section',
     year: 2022,
     difficulty: 'easy',
     originType: 'verified-pyq',
@@ -123,15 +128,16 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     reviewStatus: 'reviewed',
     pyqMetadata: {
       examBoard: 'Education Recruitment Board (ERB), Punjab',
-      notificationRef: 'Advt. No. 6635 ETT Cadre',
-      paper: 'Paper B (Subject Test)',
+      // DISPUTED: ETT Paper B has no CDP section. This metadata needs review.
+      notificationRef: 'Advt. No. 6635 ETT Cadre — DISPUTED: may be PSTET, not ETT Paper B',
+      paper: 'Paper B (Subject Test) — DISPUTED: CDP belongs to PSTET, not ETT Paper B',
       year: 2022,
-      answerKeyStatus: 'official-final-key',
+      answerKeyStatus: 'provisional-key', // was 'official-final-key' — downgraded pending source verification
     },
     rightsProvenance: {
-      source: 'Official ERB Punjab ETT 6635 Question Paper & Final Key',
+      source: 'Official ERB Punjab ETT 6635 Question Paper & Final Key — DISPUTED: verify source',
       accessType: 'public-recruitment',
-      verifiedBy: 'ExamSathi Editorial Board',
+      verifiedBy: 'ExamSathi Editorial Board — NEEDS NAMED HUMAN REVIEWER',
       verifiedDate: '2026-10-10',
     },
     topicName: {
@@ -193,7 +199,8 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
     id: 'ett-cdp-2021-3',
     topicId: 'ett-child-pedagogy',
     subjectId: 'pedagogy',
-    examId: 'ett-punjab',
+    // examId corrected: examTag already says PSTET Paper 1, not ETT. examId was wrong.
+    examId: 'punjab-pstet',
     examTag: 'Punjab PSTET Paper 1 (2021)',
     year: 2021,
     difficulty: 'hard',
@@ -206,12 +213,13 @@ export const ETT_AND_CLERK_PYQS: Question[] = [
       notificationRef: 'PSTET Paper 1 (Primary Stage)',
       paper: 'Child Development & Pedagogy',
       year: 2021,
-      answerKeyStatus: 'official-final-key',
+      // Exam tag says PSTET Paper 1 but source document not independently hashed.
+      answerKeyStatus: 'provisional-key', // was 'official-final-key' — downgraded pending source verification
     },
     rightsProvenance: {
-      source: 'Official PSEB PSTET Paper 1 Question Paper & Final Answer Key',
+      source: 'Official PSEB PSTET Paper 1 Question Paper & Final Answer Key — NEEDS VERIFICATION',
       accessType: 'public-recruitment',
-      verifiedBy: 'ExamSathi Editorial Board',
+      verifiedBy: 'ExamSathi Editorial Board — NEEDS NAMED HUMAN REVIEWER',
       verifiedDate: '2026-10-10',
     },
     topicName: {

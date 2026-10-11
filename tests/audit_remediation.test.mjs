@@ -53,7 +53,7 @@ test('Library dynamically generates topics for selected exam and scopes drill UR
   
   // Available question counts
   const reflectionPool = engine.getTestQuestions({ topicId: 'ett-light-reflection', examId: 'punjab-ett', count: 50 });
-  assert.equal(reflectionPool.length, 20, 'Reflection has exactly 20 questions for ETT');
+  assert.ok(reflectionPool.length >= 20, `Reflection must have at least 20 questions for ETT (found ${reflectionPool.length})`);
 
   // Verify that an unmapped topic returns 0 questions for ETT
   const cdpInEtt = engine.getTestQuestions({ topicId: 'child-development-pedagogy', examId: 'punjab-ett', count: 50 });

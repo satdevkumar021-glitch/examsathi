@@ -77,12 +77,12 @@ export default function LandingPage() {
           <div className="text-[11px] text-slate-400">Recruitments</div>
         </div>
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-teal-400">20-Yr</div>
-          <div className="text-[11px] text-slate-400">PYQ Archive</div>
+          <div className="text-xl font-bold text-teal-400">Year-Tagged</div>
+          <div className="text-[11px] text-slate-400">Practice Qs (unverified source)</div>
         </div>
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-indigo-400">600+</div>
-          <div className="text-[11px] text-slate-400">Authentic MCQs</div>
+          <div className="text-xl font-bold text-indigo-400">11,000+</div>
+          <div className="text-[11px] text-slate-400">Practice Questions</div>
         </div>
       </motion.div>
 

@@ -59,9 +59,16 @@ export default function StateExams({ state }: { state: string }) {
                     {exam.nameHindi && <p className="text-indigo-300 text-sm mt-0.5">{exam.nameHindi}</p>}
                     {exam.namePunjabi && <p className="text-emerald-300 text-xs mt-0.5">{exam.namePunjabi}</p>}
                   </div>
-                  <span className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-full font-medium whitespace-nowrap">
-                    {exam.body}
-                  </span>
+                  <div className="flex flex-col items-end gap-1.5">
+                    <span className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2.5 py-1 rounded-full font-medium whitespace-nowrap">
+                      {exam.body}
+                    </span>
+                    {exam.syllabusStatus === 'provisional-archive' && (
+                      <span className="bg-amber-950/60 border border-amber-700/50 text-amber-300 text-[10px] px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
+                        Source unverified
+                      </span>
+                    )}
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-4 text-xs text-slate-400">

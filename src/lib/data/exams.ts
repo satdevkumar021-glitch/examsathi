@@ -1623,6 +1623,7 @@ export const RAJASTHAN_EXAMS: Exam[] = [
     officialWebsite: 'https://rajeduboard.rajasthan.gov.in',
     emoji: '🏜️',
     color: '#DC2626',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Section I: Child Development & Pedagogy (CDP)', nameHindi: 'बाल विकास एवं शिक्षण विधियां', marks: 30, questions: 30 },
       { name: 'Section II: Language I (Hindi / First Language)', nameHindi: 'भाषा I (हिंदी)', marks: 30, questions: 30 },
@@ -1763,6 +1764,7 @@ export const RAJASTHAN_EXAMS: Exam[] = [
     officialWebsite: 'https://rajeduboard.rajasthan.gov.in',
     emoji: '🏜️',
     color: '#B91C1C',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Section I: Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
       { name: 'Section II: Language I', nameHindi: 'भाषा I', marks: 30, questions: 30 },
@@ -1912,6 +1914,7 @@ export const RAJASTHAN_EXAMS: Exam[] = [
     officialWebsite: 'https://rajeduboard.rajasthan.gov.in',
     emoji: '📐',
     color: '#0D9488',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Section I: Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
       { name: 'Section II: Language I', nameHindi: 'भाषा I', marks: 30, questions: 30 },
@@ -2060,6 +2063,10 @@ export const RAJASTHAN_EXAMS: Exam[] = [
 const RAJASTHAN_POLICE_EXAM: Exam = {
   id: 'rajasthan-police',
   state: 'rajasthan',
+  // NOTE: A second entry 'rajasthan-police-constable' (exams_expansion.ts) also exists.
+  // Both represent Rajasthan Police Constable recruitment but differ in sections/marks.
+  // They may correspond to different cycles or notifications. Mark as provisional-archive
+  // until an official notification PDF confirms the exact pattern for each entry.
   name: 'Rajasthan Police Constable',
   nameHindi: 'राजस्थान पुलिस कांस्टेबल',
   namePunjabi: 'ਰਾਜਸਥਾਨ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ',
@@ -2071,6 +2078,7 @@ const RAJASTHAN_POLICE_EXAM: Exam = {
   officialWebsite: 'https://police.rajasthan.gov.in',
   emoji: '👮',
   color: '#7C3AED',
+  syllabusStatus: 'provisional-archive' as const,
   sections: [
     { name: 'Rajasthan GK & History', nameHindi: 'राजस्थान सामान्य ज्ञान व इतिहास', marks: 45, questions: 45 },
     { name: 'Indian Constitution & Polity', nameHindi: 'भारतीय संविधान व राजनीति', marks: 30, questions: 30 },
@@ -2468,6 +2476,7 @@ export const CENTRAL_EXAMS: Exam[] = [
     officialWebsite: 'https://uktet.com',
     emoji: '🏔️',
     color: '#047857',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Child Development and Pedagogy', nameHindi: 'बाल विकास एवं शिक्षाशास्त्र', marks: 30, questions: 30 },
       { name: 'Language I (Hindi compulsory)', nameHindi: 'भाषा I (हिंदी)', marks: 30, questions: 30 },

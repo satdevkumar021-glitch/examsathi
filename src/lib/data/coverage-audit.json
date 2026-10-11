@@ -1,7 +1,7 @@
 {
   "summary": {
     "emptyExamPools": 0,
-    "missingLessons": 88,
+    "missingLessons": 0,
     "under50Topics": 220,
     "examsMeetingReviewedTarget": 0
   },
@@ -4372,18 +4372,24 @@
             "Customs and festivals",
             "Traditional life and cultural vocabulary"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-punjabi-1",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 20,
+          "englishWords": 1552,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Paper B Punjabi I: Folk Literature (ਲੋਕ ਸਾਹਿਤ), Cultural Traditions, Festivals, Fairs & Ornaments (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Paper%20B%20Punjabi%20I%3A%20Folk%20Literature%20(%E0%A8%B2%E0%A9%8B%E0%A8%95%20%E0%A8%B8%E0%A8%BE%E0%A8%B9%E0%A8%BF%E0%A8%A4)%2C%20Cultural%20Traditions%2C%20Festivals%2C%20Fairs%20%26%20Ornaments%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-punjabi-3",
@@ -4422,18 +4428,24 @@
             "Preserving meaning",
             "Word order and grammatical agreement"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-punjabi-1",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 20,
+          "englishWords": 1552,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Paper B Punjabi I: Folk Literature (ਲੋਕ ਸਾਹਿਤ), Cultural Traditions, Festivals, Fairs & Ornaments (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Paper%20B%20Punjabi%20I%3A%20Folk%20Literature%20(%E0%A8%B2%E0%A9%8B%E0%A8%95%20%E0%A8%B8%E0%A8%BE%E0%A8%B9%E0%A8%BF%E0%A8%A4)%2C%20Cultural%20Traditions%2C%20Festivals%2C%20Fairs%20%26%20Ornaments%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-punjabi-5",
@@ -4444,18 +4456,24 @@
             "Changing sentence structure",
             "Retaining the original meaning"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-punjabi-1",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 20,
+          "englishWords": 1552,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Paper B Punjabi I: Folk Literature (ਲੋਕ ਸਾਹਿਤ), Cultural Traditions, Festivals, Fairs & Ornaments (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Paper%20B%20Punjabi%20I%3A%20Folk%20Literature%20(%E0%A8%B2%E0%A9%8B%E0%A8%95%20%E0%A8%B8%E0%A8%BE%E0%A8%B9%E0%A8%BF%E0%A8%A4)%2C%20Cultural%20Traditions%2C%20Festivals%2C%20Fairs%20%26%20Ornaments%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-motion",
@@ -4498,18 +4516,24 @@
             "Momentum",
             "Conservation of momentum"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-motion",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1592,
+          "authoredQuestions": 15,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 15,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science I (Physics Class 9–10): Motion, Force, Gravitation, Work-Energy, Sound, Electricity, Magnetism & Human Eye (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20I%20(Physics%20Class%209%E2%80%9310)%3A%20Motion%2C%20Force%2C%20Gravitation%2C%20Work-Energy%2C%20Sound%2C%20Electricity%2C%20Magnetism%20%26%20Human%20Eye%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-gravitation",
@@ -4522,18 +4546,24 @@
             "Mass and weight",
             "Buoyancy and Archimedes’ principle"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-motion",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1592,
+          "authoredQuestions": 15,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 15,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science I (Physics Class 9–10): Motion, Force, Gravitation, Work-Energy, Sound, Electricity, Magnetism & Human Eye (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20I%20(Physics%20Class%209%E2%80%9310)%3A%20Motion%2C%20Force%2C%20Gravitation%2C%20Work-Energy%2C%20Sound%2C%20Electricity%2C%20Magnetism%20%26%20Human%20Eye%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-work-energy",
@@ -4546,18 +4576,24 @@
             "Conservation of energy",
             "Power and units"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-motion",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1592,
+          "authoredQuestions": 15,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 15,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science I (Physics Class 9–10): Motion, Force, Gravitation, Work-Energy, Sound, Electricity, Magnetism & Human Eye (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20I%20(Physics%20Class%209%E2%80%9310)%3A%20Motion%2C%20Force%2C%20Gravitation%2C%20Work-Energy%2C%20Sound%2C%20Electricity%2C%20Magnetism%20%26%20Human%20Eye%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-sound",
@@ -4570,18 +4606,24 @@
             "Amplitude and loudness",
             "Echo and ultrasound"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-motion",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1592,
+          "authoredQuestions": 15,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 15,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science I (Physics Class 9–10): Motion, Force, Gravitation, Work-Energy, Sound, Electricity, Magnetism & Human Eye (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20I%20(Physics%20Class%209%E2%80%9310)%3A%20Motion%2C%20Force%2C%20Gravitation%2C%20Work-Energy%2C%20Sound%2C%20Electricity%2C%20Magnetism%20%26%20Human%20Eye%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-light-reflection",
@@ -4617,18 +4659,27 @@
           "subject": "General Science",
           "chapter": "Light reflection and refraction",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
+          "lesson": true,
+          "lessonAlias": "ett-light-reflection",
+          "lessonStatus": "complete",
           "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "englishWords": 400,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
-          "documents": [],
-          "videos": []
+          "flashcards": 6,
+          "documents": [
+            "https://ncert.nic.in/textbook/pdf/jesc109.pdf",
+            "https://ncert.nic.in/textbook.php"
+          ],
+          "videos": [
+            {
+              "title": "प्रकाश का परावर्तन और परावर्तन के नियम",
+              "url": "https://www.youtube.com/watch?v=n6q4mFYR6o0",
+              "isSearch": false
+            }
+          ]
         },
         {
           "id": "ett-light-3",
@@ -4636,18 +4687,27 @@
           "subject": "General Science",
           "chapter": "Light reflection and refraction",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
+          "lesson": true,
+          "lessonAlias": "ett-light-reflection",
+          "lessonStatus": "complete",
           "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "englishWords": 400,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
-          "documents": [],
-          "videos": []
+          "flashcards": 6,
+          "documents": [
+            "https://ncert.nic.in/textbook/pdf/jesc109.pdf",
+            "https://ncert.nic.in/textbook.php"
+          ],
+          "videos": [
+            {
+              "title": "प्रकाश का परावर्तन और परावर्तन के नियम",
+              "url": "https://www.youtube.com/watch?v=n6q4mFYR6o0",
+              "isSearch": false
+            }
+          ]
         },
         {
           "id": "ett-light-4",
@@ -4655,18 +4715,27 @@
           "subject": "General Science",
           "chapter": "Light reflection and refraction",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
+          "lesson": true,
+          "lessonAlias": "ett-light-reflection",
+          "lessonStatus": "complete",
           "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "englishWords": 400,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
-          "documents": [],
-          "videos": []
+          "flashcards": 6,
+          "documents": [
+            "https://ncert.nic.in/textbook/pdf/jesc109.pdf",
+            "https://ncert.nic.in/textbook.php"
+          ],
+          "videos": [
+            {
+              "title": "प्रकाश का परावर्तन और परावर्तन के नियम",
+              "url": "https://www.youtube.com/watch?v=n6q4mFYR6o0",
+              "isSearch": false
+            }
+          ]
         },
         {
           "id": "ett-light-5",
@@ -4674,18 +4743,27 @@
           "subject": "General Science",
           "chapter": "Light reflection and refraction",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
+          "lesson": true,
+          "lessonAlias": "ett-light-reflection",
+          "lessonStatus": "complete",
           "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "englishWords": 400,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
-          "documents": [],
-          "videos": []
+          "flashcards": 6,
+          "documents": [
+            "https://ncert.nic.in/textbook/pdf/jesc109.pdf",
+            "https://ncert.nic.in/textbook.php"
+          ],
+          "videos": [
+            {
+              "title": "प्रकाश का परावर्तन और परावर्तन के नियम",
+              "url": "https://www.youtube.com/watch?v=n6q4mFYR6o0",
+              "isSearch": false
+            }
+          ]
         },
         {
           "id": "ett-science-electricity",
@@ -4698,18 +4776,24 @@
             "Series and parallel circuits",
             "Heating effect and electric power"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-motion",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1592,
+          "authoredQuestions": 15,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 15,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science I (Physics Class 9–10): Motion, Force, Gravitation, Work-Energy, Sound, Electricity, Magnetism & Human Eye (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20I%20(Physics%20Class%209%E2%80%9310)%3A%20Motion%2C%20Force%2C%20Gravitation%2C%20Work-Energy%2C%20Sound%2C%20Electricity%2C%20Magnetism%20%26%20Human%20Eye%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-magnetism",
@@ -4722,18 +4806,24 @@
             "Force on a conductor",
             "Domestic circuits and safety"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-motion",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1592,
+          "authoredQuestions": 15,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 15,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science I (Physics Class 9–10): Motion, Force, Gravitation, Work-Energy, Sound, Electricity, Magnetism & Human Eye (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20I%20(Physics%20Class%209%E2%80%9310)%3A%20Motion%2C%20Force%2C%20Gravitation%2C%20Work-Energy%2C%20Sound%2C%20Electricity%2C%20Magnetism%20%26%20Human%20Eye%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-energy",
@@ -4746,18 +4836,24 @@
             "Biomass and hydroelectricity",
             "Environmental trade-offs"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-motion",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1592,
+          "authoredQuestions": 15,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 15,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science I (Physics Class 9–10): Motion, Force, Gravitation, Work-Energy, Sound, Electricity, Magnetism & Human Eye (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20I%20(Physics%20Class%209%E2%80%9310)%3A%20Motion%2C%20Force%2C%20Gravitation%2C%20Work-Energy%2C%20Sound%2C%20Electricity%2C%20Magnetism%20%26%20Human%20Eye%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-matter",
@@ -4770,18 +4866,24 @@
             "Changes of state",
             "Evaporation"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-atoms",
@@ -4794,18 +4896,24 @@
             "Valency and formulae",
             "Atomic and molecular mass"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-reactions",
@@ -4818,18 +4926,24 @@
             "Oxidation and reduction",
             "Corrosion and rancidity"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-acids",
@@ -4872,18 +4986,24 @@
             "Ionic compounds",
             "Extraction and corrosion"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-carbon",
@@ -4896,18 +5016,24 @@
             "Functional groups",
             "Ethanol, ethanoic acid and soaps"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-cell",
@@ -4920,18 +5046,24 @@
             "Cell organelles",
             "Plant and animal cells"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-tissues",
@@ -4944,18 +5076,24 @@
             "Connective tissue",
             "Muscular and nervous tissue"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-diversity",
@@ -4968,18 +5106,24 @@
             "Animal groups",
             "Scientific naming"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-illness",
@@ -4992,18 +5136,24 @@
             "Transmission",
             "Prevention and treatment"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-resources",
@@ -5016,18 +5166,24 @@
             "Biogeochemical cycles",
             "Pollution"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-food",
@@ -5040,18 +5196,24 @@
             "Animal husbandry",
             "Fisheries and beekeeping"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-life",
@@ -5064,18 +5226,24 @@
             "Transportation",
             "Excretion"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-control",
@@ -5088,18 +5256,24 @@
             "Plant responses",
             "Hormones"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-reproduction",
@@ -5112,18 +5286,24 @@
             "Human reproduction",
             "Reproductive health"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-heredity",
@@ -5136,18 +5316,24 @@
             "Sex determination",
             "Evolution and speciation"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-acids",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1856,
+          "authoredQuestions": 17,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 17,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science II (Chemistry & Biology Class 9–10): Matter, Atoms, Reactions, Acids/Salts, Metals, Carbon, Cell, Life Processes & Heredity (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20II%20(Chemistry%20%26%20Biology%20Class%209%E2%80%9310)%3A%20Matter%2C%20Atoms%2C%20Reactions%2C%20Acids%2FSalts%2C%20Metals%2C%20Carbon%2C%20Cell%2C%20Life%20Processes%20%26%20Heredity%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-science-eye",
@@ -5160,18 +5346,24 @@
             "Prism and dispersion",
             "Scattering of light"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-science-motion",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1592,
+          "authoredQuestions": 15,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 15,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT General Science I (Physics Class 9–10): Motion, Force, Gravitation, Work-Energy, Sound, Electricity, Magnetism & Human Eye (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20General%20Science%20I%20(Physics%20Class%209%E2%80%9310)%3A%20Motion%2C%20Force%2C%20Gravitation%2C%20Work-Energy%2C%20Sound%2C%20Electricity%2C%20Magnetism%20%26%20Human%20Eye%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-1",
@@ -5182,18 +5374,24 @@
             "Rational and irrational numbers",
             "Representation on a number line"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-2",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1382,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics I: Number System, Real Numbers, Euclid’s Lemma, HCF/LCM, Exponents & Polynomials with 60s Shortcuts (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20I%3A%20Number%20System%2C%20Real%20Numbers%2C%20Euclid%E2%80%99s%20Lemma%2C%20HCF%2FLCM%2C%20Exponents%20%26%20Polynomials%20with%2060s%20Shortcuts%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-2",
@@ -5232,18 +5430,24 @@
             "Degree and zeros",
             "Factorisation and relationships with coefficients"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-2",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1382,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics I: Number System, Real Numbers, Euclid’s Lemma, HCF/LCM, Exponents & Polynomials with 60s Shortcuts (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20I%3A%20Number%20System%2C%20Real%20Numbers%2C%20Euclid%E2%80%99s%20Lemma%2C%20HCF%2FLCM%2C%20Exponents%20%26%20Polynomials%20with%2060s%20Shortcuts%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-4",
@@ -5282,18 +5486,24 @@
             "Factorisation and quadratic formula",
             "Discriminant and nature of roots"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1309,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics II: Linear Equations in Two Variables, Quadratic Equations & Arithmetic Progressions (AP) with 60s Shortcuts (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20II%3A%20Linear%20Equations%20in%20Two%20Variables%2C%20Quadratic%20Equations%20%26%20Arithmetic%20Progressions%20(AP)%20with%2060s%20Shortcuts%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-6",
@@ -5304,18 +5514,24 @@
             "Common difference and nth term",
             "Sum of first n terms"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1309,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics II: Linear Equations in Two Variables, Quadratic Equations & Arithmetic Progressions (AP) with 60s Shortcuts (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20II%3A%20Linear%20Equations%20in%20Two%20Variables%2C%20Quadratic%20Equations%20%26%20Arithmetic%20Progressions%20(AP)%20with%2060s%20Shortcuts%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-7",
@@ -5326,18 +5542,24 @@
             "Definitions and axioms",
             "Reasoning from postulates"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-8",
@@ -5348,18 +5570,24 @@
             "Parallel lines and transversals",
             "Angle relationships"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-9",
@@ -5370,18 +5598,24 @@
             "Congruence and similarity",
             "Quadrilateral and circle properties"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-10",
@@ -5392,18 +5626,24 @@
             "Equal-area figures",
             "Base and height relationships"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-11",
@@ -5442,18 +5682,24 @@
             "Ratios and identities",
             "Heights and distances"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-13",
@@ -5464,18 +5710,24 @@
             "Constructing similar figures",
             "Tangents to a circle"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-14",
@@ -5486,18 +5738,24 @@
             "Semiperimeter",
             "Area from three side lengths"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-15",
@@ -5508,18 +5766,24 @@
             "Surface areas of solids",
             "Volumes and combined solids"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-16",
@@ -5530,18 +5794,24 @@
             "Sectors and segments",
             "Combined plane regions"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-11",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1624,
+          "authoredQuestions": 11,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 11,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics III: Coordinate Geometry, Lines, Triangles, Circles, Trigonometry, Heron’s Formula & 3D Mensuration (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20III%3A%20Coordinate%20Geometry%2C%20Lines%2C%20Triangles%2C%20Circles%2C%20Trigonometry%2C%20Heron%E2%80%99s%20Formula%20%26%203D%20Mensuration%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-math-17",
@@ -5580,18 +5850,24 @@
             "Sample spaces and events",
             "Simple probability calculations"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-math-17",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1211,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Mathematics IV: Statistics (Mean, Median, Mode, Empirical Formula & Ogives) and Probability with 60s Shortcuts (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Mathematics%20IV%3A%20Statistics%20(Mean%2C%20Median%2C%20Mode%2C%20Empirical%20Formula%20%26%20Ogives)%20and%20Probability%20with%2060s%20Shortcuts%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-geography-1",
@@ -5599,18 +5875,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Geography",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-geography-2",
@@ -5618,18 +5900,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Geography",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-geography-3",
@@ -5637,18 +5925,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Geography",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-geography-4",
@@ -5656,18 +5950,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Geography",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-geography-5",
@@ -5675,18 +5975,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Geography",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-geography-6",
@@ -5694,18 +6000,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Geography",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-geography-7",
@@ -5713,18 +6025,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Geography",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-geography-8",
@@ -5732,18 +6050,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Geography",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-economics-1",
@@ -5751,18 +6075,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Economics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-economics-2",
@@ -5770,18 +6100,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Economics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-economics-3",
@@ -5789,18 +6125,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Economics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-economics-4",
@@ -5808,18 +6150,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Economics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-history-1",
@@ -5827,18 +6175,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Punjab History",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-history-2",
@@ -5846,18 +6200,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Punjab History",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-history-3",
@@ -5890,18 +6250,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Punjab History",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-history-5",
@@ -5909,18 +6275,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Punjab History",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-history-6",
@@ -5928,18 +6300,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Punjab History",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-history-7",
@@ -5947,18 +6325,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Punjab History",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-history-8",
@@ -5966,18 +6350,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Punjab History",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-history-9",
@@ -5985,18 +6375,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Punjab History",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-civics-1",
@@ -6004,18 +6400,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Civics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-civics-2",
@@ -6023,18 +6425,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Civics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-civics-3",
@@ -6042,18 +6450,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Civics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-civics-4",
@@ -6061,18 +6475,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Civics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-civics-5",
@@ -6080,18 +6500,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Civics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-civics-6",
@@ -6099,18 +6525,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Civics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-sst-civics-7",
@@ -6118,18 +6550,24 @@
           "subject": "Social Science",
           "chapter": "Social Science → Civics",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-sst-history-3",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 4477,
+          "authoredQuestions": 20,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 20,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Social Studies Complete Blueprint: All 28 Archival Units — Punjab History, Indian Civics, Geography & Economy (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Social%20Studies%20Complete%20Blueprint%3A%20All%2028%20Archival%20Units%20%E2%80%94%20Punjab%20History%2C%20Indian%20Civics%2C%20Geography%20%26%20Economy%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-english-1",
@@ -6141,18 +6579,24 @@
             "Evidence and inference",
             "Vocabulary in context"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-english-2",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 2028,
+          "authoredQuestions": 13,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 13,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT English Complete Blueprint: Reading Comprehension, Grammar, Voice, Narration, Vocabulary & Punjabi-English Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20English%20Complete%20Blueprint%3A%20Reading%20Comprehension%2C%20Grammar%2C%20Voice%2C%20Narration%2C%20Vocabulary%20%26%20Punjabi-English%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-english-2",
@@ -6202,18 +6646,24 @@
             "Synonyms",
             "Idioms and phrases"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-english-2",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 2028,
+          "authoredQuestions": 13,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 13,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT English Complete Blueprint: Reading Comprehension, Grammar, Voice, Narration, Vocabulary & Punjabi-English Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20English%20Complete%20Blueprint%3A%20Reading%20Comprehension%2C%20Grammar%2C%20Voice%2C%20Narration%2C%20Vocabulary%20%26%20Punjabi-English%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-english-4",
@@ -6225,18 +6675,24 @@
             "English to Punjabi",
             "Meaning, grammar and natural phrasing"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-english-2",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 2028,
+          "authoredQuestions": 13,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 13,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT English Complete Blueprint: Reading Comprehension, Grammar, Voice, Narration, Vocabulary & Punjabi-English Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20English%20Complete%20Blueprint%3A%20Reading%20Comprehension%2C%20Grammar%2C%20Voice%2C%20Narration%2C%20Vocabulary%20%26%20Punjabi-English%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-1",
@@ -6244,18 +6700,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-2",
@@ -6263,18 +6725,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-3",
@@ -6282,18 +6750,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-4",
@@ -6336,18 +6810,24 @@
             "Conjunctions",
             "Interjections"
           ],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-6",
@@ -6355,18 +6835,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-7",
@@ -6374,18 +6860,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-8",
@@ -6393,18 +6885,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-9",
@@ -6412,18 +6910,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-10",
@@ -6431,18 +6935,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-11",
@@ -6450,18 +6960,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-12",
@@ -6469,18 +6985,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-13",
@@ -6488,18 +7010,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-14",
@@ -6507,18 +7035,24 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         },
         {
           "id": "ett-hindi-15",
@@ -6526,22 +7060,28 @@
           "subject": "Hindi",
           "chapter": "Hindi",
           "subtopics": [],
-          "lesson": false,
-          "lessonAlias": null,
-          "lessonStatus": "missing",
-          "reviewedQuestions": 0,
-          "englishWords": 0,
-          "authoredQuestions": 0,
+          "lesson": true,
+          "lessonAlias": "ett-hindi-4",
+          "lessonStatus": "complete",
+          "reviewedQuestions": 10,
+          "englishWords": 1974,
+          "authoredQuestions": 12,
           "generatedVariants": 0,
-          "distinctQuestions": 0,
+          "distinctQuestions": 12,
           "fullMiniSetsOf50": 0,
-          "flashcards": 0,
+          "flashcards": 6,
           "documents": [],
-          "videos": []
+          "videos": [
+            {
+              "title": "NCERT Official — ETT Hindi Complete Blueprint: Devanagari Script, Varna, Vikari/Avikari Shabd, Tatsam-Tadbhav, Affixes, Vocabulary & Hindi-to-Punjabi Translation (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=ETT%20Hindi%20Complete%20Blueprint%3A%20Devanagari%20Script%2C%20Varna%2C%20Vikari%2FAvikari%20Shabd%2C%20Tatsam-Tadbhav%2C%20Affixes%2C%20Vocabulary%20%26%20Hindi-to-Punjabi%20Translation%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
         }
       ],
       "topicCount": 100,
-      "missingLessons": 88,
+      "missingLessons": 0,
       "under50Topics": 100,
       "authoredQuestions": 187,
       "generatedVariants": 0,
@@ -6549,8 +7089,8 @@
       "reviewedTargetShortfall": 870,
       "uniqueQuestions": 187,
       "fullSetsOf50": 3,
-      "topicsWithoutPDF": 99,
-      "topicsWithoutVideo": 99,
+      "topicsWithoutPDF": 95,
+      "topicsWithoutVideo": 95,
       "status": "Partial outline; full official syllabus mapping and content review pending"
     },
     {

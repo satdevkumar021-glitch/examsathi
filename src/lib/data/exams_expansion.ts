@@ -13,6 +13,10 @@ export const HARYANA_EXAMS: Exam[] = [
   {
     id: 'haryana-htet',
     state: 'haryana',
+    // NOTE: This is a combined legacy entry covering all HTET levels (PRT/TGT/PGT).
+    // Learners should prefer the level-specific entries: htet-l1 (PRT) and htet-l2 (TGT)
+    // which are defined in exams.ts. This combined entry is retained for legacy question
+    // pool compatibility and the mock engine, but is not a separate official exam variant.
     name: 'HTET (Haryana Teacher Eligibility Test)',
     nameHindi: 'हरियाणा शिक्षक पात्रता परीक्षा (HTET)',
     namePunjabi: 'ਹਰਿਆਣਾ ਅਧਿਆਪਕ ਯੋਗਤਾ ਪ੍ਰੀਖਿਆ',
@@ -24,6 +28,7 @@ export const HARYANA_EXAMS: Exam[] = [
     officialWebsite: 'https://bseh.org.in',
     emoji: '📝',
     color: '#059669',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
       { name: 'Language I (Hindi)', nameHindi: 'अनिवार्य सामान्य हिंदी', marks: 15, questions: 15 },
@@ -378,6 +383,8 @@ export const DEFENCE_EXAMS: Exam[] = [
   {
     id: 'army-agniveer-gd',
     state: 'defence',
+    // Sub-track: overlaps with primary 'army-agniveer' (exams.ts). Marked provisional-archive
+    // until source document distinguishes this from the parent track content.
     name: 'Indian Army Agniveer General Duty (GD)',
     nameHindi: 'भारतीय सेना अग्निवीर जनरल ड्यूटी (GD)',
     namePunjabi: 'ਭਾਰਤੀ ਫੌਜ ਅਗਨੀਵੀਰ ਜਨਰਲ ਡਿਊਟੀ',
@@ -389,6 +396,7 @@ export const DEFENCE_EXAMS: Exam[] = [
     officialWebsite: 'https://joinindianarmy.nic.in',
     emoji: '⚔️',
     color: '#ca8a04',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'General Knowledge', nameHindi: 'सामान्य ज्ञान', marks: 30, questions: 15 },
       { name: 'General Science', nameHindi: 'सामान्य विज्ञान', marks: 30, questions: 15 },
@@ -440,6 +448,7 @@ export const DEFENCE_EXAMS: Exam[] = [
     officialWebsite: 'https://joinindianarmy.nic.in',
     emoji: '📑',
     color: '#b45309',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Part I: General Knowledge', nameHindi: 'भाग 1: सामान्य ज्ञान', marks: 20, questions: 5 },
       { name: 'Part I: General Science', nameHindi: 'भाग 1: सामान्य विज्ञान', marks: 20, questions: 5 },
@@ -498,6 +507,7 @@ export const PUNJAB_ADDITIONAL_EXAMS: Exam[] = [
     officialWebsite: 'https://pstet.pseb.ac.in',
     emoji: '🎓',
     color: '#6366f1',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
       { name: 'Language I (Punjabi Compulsory)', nameHindi: 'पंजाबी भाषा (अनिवार्य)', marks: 30, questions: 30 },
@@ -544,6 +554,7 @@ export const PUNJAB_ADDITIONAL_EXAMS: Exam[] = [
     officialWebsite: 'https://educationrecruitmentboard.com',
     emoji: '🏛️',
     color: '#4f46e5',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Paper A - Compulsory Punjabi Qualifying', nameHindi: 'पंजाबी अर्हता परीक्षा', marks: 50, questions: 50 },
       { name: 'Paper B - Post Graduate Subject Domain', nameHindi: 'स्नातकोत्तर विषय विशेषज्ञता', marks: 150, questions: 150 },
@@ -591,6 +602,7 @@ export const RAJASTHAN_ADDITIONAL_EXAMS: Exam[] = [
     officialWebsite: 'https://rsmssb.rajasthan.gov.in',
     emoji: '👨‍🏫',
     color: '#dc2626',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Rajasthan Geography, History & Culture', nameHindi: 'राजस्थान का भौगोलिक, ऐतिहासिक व सांस्कृतिक ज्ञान', marks: 100, questions: 50 },
       { name: 'Rajasthan General Knowledge, RTE 2009 & Educational Scenario', nameHindi: 'राजस्थान सामान्य ज्ञान, RTE व शैक्षिक परिदृश्य', marks: 80, questions: 40 },
@@ -673,6 +685,8 @@ export const RAJASTHAN_ADDITIONAL_EXAMS: Exam[] = [
   {
     id: 'rajasthan-police-constable',
     state: 'rajasthan',
+    // NOTE: A primary 'rajasthan-police' entry (exams.ts) also exists with different sections.
+    // Both need a source notification PDF to confirm which cycle/post each represents.
     name: 'Rajasthan Police Constable',
     nameHindi: 'राजस्थान पुलिस कांस्टेबल भर्ती',
     namePunjabi: 'ਰਾਜਸਥਾਨ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ',
@@ -684,6 +698,7 @@ export const RAJASTHAN_ADDITIONAL_EXAMS: Exam[] = [
     officialWebsite: 'https://police.rajasthan.gov.in',
     emoji: '🛡️',
     color: '#b91c1c',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Reasoning, Logic & Basic Computer Knowledge', nameHindi: 'तार्किक योग्यता व कंप्यूटर सामान्य ज्ञान', marks: 60, questions: 60 },
       { name: 'General Knowledge, General Science, Current Affairs & Women/Child Crimes Law', nameHindi: 'सामान्य ज्ञान, सामान्य विज्ञान, समसामयिकी व महिला एवं बाल अपराध कानून', marks: 45, questions: 45 },

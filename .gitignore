@@ -44,3 +44,11 @@ next-env.d.ts
 
 # Generated browser OCR runtime copied during builds
 /public/ocr/
+
+# Build output and runtime artifacts
+/dist/
+/.wrangler/
+/.sites-runtime/
+/.vinext/
+/.openai/
+/.bob/artifacts/

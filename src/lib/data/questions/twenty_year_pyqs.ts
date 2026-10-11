@@ -1,9 +1,20 @@
 import type { Question } from '../questions';
 
 /**
- * 20-Year Exam Question Archive (2004 - 2024)
- * Spanning Punjab Master Cadre, PSSSB Clerk, Punjab Police, Patwari, REET, and CTET
- * Categorized into Simple (Easy), Mid (Medium), and Hard with strategic examiner thoughts.
+ * Year-Labelled Practice Questions (2004–2024 tag span)
+ *
+ * IMPORTANT — NOT a verified PYQ archive:
+ * All items in this file use originType: 'authored-original'. They are original
+ * practice questions written to reflect year-tagged topics and difficulty, NOT
+ * authenticated reproductions of official past papers or final answer keys.
+ * No item has a SHA256-hashed source document or confirmed official-final-key provenance.
+ *
+ * Do NOT expose these as "verified PYQs" or count them toward an authenticated
+ * PYQ corpus. They are supplemental authored practice material only.
+ *
+ * To add a genuine PYQ: obtain the official question paper + final key,
+ * record SHA256/URL/page/notificationRef, set originType: 'verified-PYQ',
+ * and have a human reviewer sign off before publishing.
  */
 export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
   // =========================================================================

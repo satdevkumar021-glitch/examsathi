@@ -266,8 +266,17 @@ export interface TopicMeta {
 
 export const AVAILABLE_EXAMS: ExamInfo[] = Object.values(ALL_EXAMS).flat().map(exam => {
   const legacy = LEGACY_EXAMS.find(item => normalizePracticeExamId(item.id) === exam.id);
+  // Default question count: prefer legacy setting, fall back to total questions across sections,
+  // then 50 as a safe practice-set default.
+  const defaultQ = legacy?.defaultQuestions
+    ?? (exam.sections.length > 0
+      ? exam.sections.reduce((s, sec) => s + (sec.questions ?? Math.round(sec.marks)), 0)
+      : 50);
+  // Default timer: 1 min/question for full-paper counts (≥100), 0.9 min/question for practice sets.
+  const defaultTimer = legacy?.timeLimitMinutes
+    ?? Math.round(defaultQ * (defaultQ >= 100 ? 1.0 : 0.9));
   return { ...legacy, id: exam.id, name: exam.name, namePa: exam.namePunjabi || exam.name,
-    body: exam.body, badge: exam.emoji, defaultQuestions: 50, timeLimitMinutes: 45,
+    body: exam.body, badge: exam.emoji, defaultQuestions: defaultQ, timeLimitMinutes: defaultTimer,
     negativeMarking: typeof exam.negativeMarking === 'number' ? exam.negativeMarking : 0,
     syllabusSummary: exam.subjects.map(s => s.name).join(', '),
     syllabusSummaryPa: exam.subjects.map(s => s.namePunjabi || s.nameHindi).join(', '),

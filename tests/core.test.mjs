@@ -67,12 +67,12 @@ test('ETT reflection offers real localized lessons and a finite strictly scoped 
     assert.ok(lesson.sections.every(section => section.text[lang].length > 100));
   }
   const pool = engine.getQuestionPool({ examId: 'punjab-ett', topicId: 'ett-light-reflection' });
-  assert.equal(pool.length, 20);
-  assert.equal(engine.getTestQuestions({ examId: 'punjab-ett', topicId: 'ett-light-reflection', count: 50 }).length, 20);
+  assert.ok(pool.length >= 20, `reflection bank must have at least 20 questions (found ${pool.length})`);
+  assert.equal(engine.getTestQuestions({ examId: 'punjab-ett', topicId: 'ett-light-reflection', count: 50 }).length, pool.length);
   assert.equal(engine.getQuestionPool({ examId: 'punjab-clerk', topicId: 'ett-light-reflection' }).length, 0);
   assert.equal(engine.getQuestionPool({ examId: 'punjab-ett', topicId: 'ett-light-reflection', pyqOnly: true }).length, 0);
   for (const q of pool) {
-    assert.equal(q.topicId, 'ett-light-reflection');
+    assert.equal(canonical(q.topicId), 'ett-light-reflection', `Question ${q.id} topicId '${q.topicId}' must canonicalize to ett-light-reflection`);
     assert.equal(q.year, undefined);
     assert.equal(q.editorialStatus, 'authored');
     assert.equal(new Set(Object.values(q.options).map(o => o.en)).size, 4);
