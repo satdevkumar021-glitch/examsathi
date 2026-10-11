@@ -1,0 +1,5078 @@
+{
+  "generatedOn": "2026-10-11",
+  "rules": "Official headings are copied only from repository evidence files. Concepts are candidate decompositions (AI-GENERATED, needs human review) or MISSING. No completion percentage is asserted.",
+  "exams": [
+    {
+      "examId": "punjab-master-cadre-sst",
+      "baseline": "2022 (Advt 4161)",
+      "source": {
+        "url": "https://educationrecruitmentboard.com/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+        "sha256": "18a8efc683500f4f669131c0a59abd071d28e776663640156172f422f2da40ea",
+        "headingStatus": "VERIFIED by visual comparison of all four downloaded pages; archival 2022 only, transport caveat applies",
+        "caveat": "Browser fetch failed; read-only direct download succeeded from government URL with local TLS certificate validation bypass. Government-hosted visual source evidence is recorded, but authenticated transport remains unverified. No global security settings changed."
+      },
+      "scope": "History headings audited in depth; Geography/Economics/Civics headings not yet decomposed in the evidence file.",
+      "headings": [
+        {
+          "unitId": "P1",
+          "branch": "Punjab",
+          "officialHeading": "Physical setting of Punjab and its historical influence",
+          "sourcePage": 3,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "punjab-ancient-medieval",
+            "punjab-geography"
+          ],
+          "concepts": [
+            {
+              "conceptId": "P1-1",
+              "concept": "Punjab geographic extent",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P1-2",
+              "concept": "River corridors",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P1-3",
+              "concept": "Doabs and settlement",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P1-4",
+              "concept": "Mountain passes and invasion routes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P1-5",
+              "concept": "Agriculture and historical settlement",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            }
+          ]
+        },
+        {
+          "unitId": "P2",
+          "branch": "Punjab",
+          "officialHeading": "Sikhism during the ten Gurus",
+          "sourcePage": 3,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "guru-nanak-dev-ji",
+            "guru-angad-amar-ram-das",
+            "guru-arjan-dev-ji",
+            "guru-hargobind-to-tegh-bahadur",
+            "guru-gobind-singh-ji"
+          ],
+          "concepts": [
+            {
+              "conceptId": "P2-1",
+              "concept": "Guru Nanak: life and teachings",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-2",
+              "concept": "Guru Nanak: Udasis",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-3",
+              "concept": "Sangat institution",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-4",
+              "concept": "Pangat institution",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-5",
+              "concept": "Guru Angad: Gurmukhi development",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-6",
+              "concept": "Guru Amar Das: Manji organisation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-7",
+              "concept": "Guru Ram Das: Ramdaspur",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-8",
+              "concept": "Guru Arjan: Adi Granth",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-9",
+              "concept": "Guru Arjan: martyrdom and context",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-10",
+              "concept": "Guru Hargobind: Miri-Piri",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-11",
+              "concept": "Guru Hargobind: Akal Takht",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-12",
+              "concept": "Guru Har Rai: contribution",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-13",
+              "concept": "Guru Har Krishan: contribution",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-14",
+              "concept": "Guru Tegh Bahadur: teachings",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-15",
+              "concept": "Guru Tegh Bahadur: martyrdom",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-16",
+              "concept": "Guru Gobind Singh: Khalsa creation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-17",
+              "concept": "Guru Gobind Singh: Five Ks",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-18",
+              "concept": "Guru Gobind Singh: major conflicts",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-19",
+              "concept": "Guru Gobind Singh: Zafarnama",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P2-20",
+              "concept": "Guruship of Guru Granth Sahib",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            }
+          ]
+        },
+        {
+          "unitId": "P3",
+          "branch": "Punjab",
+          "officialHeading": "Banda Singh Bahadur: achievements",
+          "sourcePage": 3,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "banda-singh-bahadur-misls"
+          ],
+          "concepts": [
+            {
+              "conceptId": "P3-1",
+              "concept": "Banda: early background",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P3-2",
+              "concept": "Meeting with Guru Gobind Singh",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P3-3",
+              "concept": "Samana campaign",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P3-4",
+              "concept": "Chappar Chiri campaign",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P3-5",
+              "concept": "Lohgarh administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P3-6",
+              "concept": "Land arrangements under Banda",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P3-7",
+              "concept": "Coinage and authority",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P3-8",
+              "concept": "Capture and martyrdom",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            }
+          ]
+        },
+        {
+          "unitId": "P4",
+          "branch": "Punjab",
+          "officialHeading": "Emergence and development of Sikh Misls",
+          "sourcePage": 3,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "banda-singh-bahadur-misls"
+          ],
+          "concepts": [
+            {
+              "conceptId": "P4-1",
+              "concept": "Conditions for Misl formation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-2",
+              "concept": "Dal Khalsa organisation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-3",
+              "concept": "Budha Dal",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-4",
+              "concept": "Taruna Dal",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-5",
+              "concept": "Rakhi system",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-6",
+              "concept": "Sarbat Khalsa",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-7",
+              "concept": "Names and territories of twelve Misls",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-8",
+              "concept": "Sukerchakia Misl",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-9",
+              "concept": "Ahluwalia Misl",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-10",
+              "concept": "Bhangi Misl",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-11",
+              "concept": "Ramgarhia Misl",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P4-12",
+              "concept": "Inter-Misl relations",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            }
+          ]
+        },
+        {
+          "unitId": "P5",
+          "branch": "Punjab",
+          "officialHeading": "Ranjit Singh: early life, achievements and Anglo-Sikh relations to 1839",
+          "sourcePage": 3,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "maharaja-ranjit-singh-empire"
+          ],
+          "concepts": [
+            {
+              "conceptId": "P5-1",
+              "concept": "Early life and Sukerchakia inheritance",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-2",
+              "concept": "Capture of Lahore",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-3",
+              "concept": "Kingship and consolidation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-4",
+              "concept": "Multan conquest",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-5",
+              "concept": "Kashmir conquest",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-6",
+              "concept": "Peshawar frontier",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-7",
+              "concept": "Civil administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-8",
+              "concept": "Revenue administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-9",
+              "concept": "Army reform",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-10",
+              "concept": "Religious policy",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-11",
+              "concept": "Treaty of Amritsar and relations with Britain",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P5-12",
+              "concept": "Relations up to 1839",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            }
+          ]
+        },
+        {
+          "unitId": "P6",
+          "branch": "Punjab",
+          "officialHeading": "Anglo-Sikh wars and Punjab annexation",
+          "sourcePage": 3,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "maharaja-ranjit-singh-empire"
+          ],
+          "concepts": [
+            {
+              "conceptId": "P6-1",
+              "concept": "Succession crisis after Ranjit Singh",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-2",
+              "concept": "First war causes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-3",
+              "concept": "Mudki",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-4",
+              "concept": "Ferozeshah",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-5",
+              "concept": "Baddowal",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-6",
+              "concept": "Aliwal",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-7",
+              "concept": "Sobraon",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-8",
+              "concept": "Treaty of Lahore",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-9",
+              "concept": "Treaty of Bhairowal",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-10",
+              "concept": "Second war causes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-11",
+              "concept": "Ramnagar",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-12",
+              "concept": "Chillianwala",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-13",
+              "concept": "Multan siege",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-14",
+              "concept": "Gujrat battle",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            },
+            {
+              "conceptId": "P6-15",
+              "concept": "Annexation process and effects",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:punjab"
+            }
+          ]
+        },
+        {
+          "unitId": "I1",
+          "branch": "Ancient India",
+          "officialHeading": "Harappan civilisation: origin, date, extent, features and decline",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "ancient-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I1-1",
+              "concept": "Origins of urbanisation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-2",
+              "concept": "Chronological phases",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-3",
+              "concept": "Geographical extent",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-4",
+              "concept": "Harappa site evidence",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-5",
+              "concept": "Mohenjo-daro site evidence",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-6",
+              "concept": "Dholavira water management",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-7",
+              "concept": "Urban planning",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-8",
+              "concept": "Drainage",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-9",
+              "concept": "Crafts and exchange",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-10",
+              "concept": "Seals and script",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-11",
+              "concept": "Society and burial evidence",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I1-12",
+              "concept": "Decline hypotheses",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I2",
+          "branch": "Ancient India",
+          "officialHeading": "Rigvedic civilisation: origins and social, political, economic, religious life",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "ancient-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I2-1",
+              "concept": "Sources for Rigvedic history",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I2-2",
+              "concept": "Aryan-origin debates and evidence",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I2-3",
+              "concept": "Sapta Sindhu setting",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I2-4",
+              "concept": "Social organisation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I2-5",
+              "concept": "Political assemblies",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I2-6",
+              "concept": "Kingship",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I2-7",
+              "concept": "Pastoral economy",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I2-8",
+              "concept": "Agriculture",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I2-9",
+              "concept": "Religious practices",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I3",
+          "branch": "Ancient India",
+          "officialHeading": "Jainism and Buddhism",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "ancient-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I3-1",
+              "concept": "Conditions for religious change",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-2",
+              "concept": "Mahavira and Tirthankaras",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-3",
+              "concept": "Jain Triratna",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-4",
+              "concept": "Five Jain vows",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-5",
+              "concept": "Buddha life events",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-6",
+              "concept": "Four Noble Truths",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-7",
+              "concept": "Eightfold Path",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-8",
+              "concept": "Buddhist Sangha",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-9",
+              "concept": "Buddhist councils",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I3-10",
+              "concept": "Schools and spread",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I4",
+          "branch": "Ancient India",
+          "officialHeading": "Mauryas: Chandragupta and Ashoka",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "ancient-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I4-1",
+              "concept": "Foundation of Mauryan power",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-2",
+              "concept": "Arthashastra source limitations",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-3",
+              "concept": "Indica as a source",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-4",
+              "concept": "Mauryan administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-5",
+              "concept": "Mauryan economy",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-6",
+              "concept": "Kalinga war",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-7",
+              "concept": "Dhamma principles",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-8",
+              "concept": "Edict evidence",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-9",
+              "concept": "Art and pillars",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I4-10",
+              "concept": "Decline of Mauryas",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I5",
+          "branch": "Ancient India",
+          "officialHeading": "Guptas: Samudragupta and Chandragupta II",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "ancient-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I5-1",
+              "concept": "Rise of Gupta power",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I5-2",
+              "concept": "Samudragupta campaigns",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I5-3",
+              "concept": "Prayaga inscription",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I5-4",
+              "concept": "Chandragupta II",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I5-5",
+              "concept": "Administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I5-6",
+              "concept": "Economy and land grants",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I5-7",
+              "concept": "Literature and science",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I5-8",
+              "concept": "Art and religion",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I5-9",
+              "concept": "Limits of golden-age description",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I6",
+          "branch": "Ancient India",
+          "officialHeading": "Harsha: campaigns, diplomacy, literature and education",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "ancient-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I6-1",
+              "concept": "Harsha accession",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I6-2",
+              "concept": "Campaigns and territorial extent",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I6-3",
+              "concept": "Relations with Pulakeshin II",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I6-4",
+              "concept": "Diplomatic relations",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I6-5",
+              "concept": "Banabhatta and Harshacharita",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I6-6",
+              "concept": "Xuanzang as a source",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I6-7",
+              "concept": "Literary patronage",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            },
+            {
+              "conceptId": "I6-8",
+              "concept": "Education and Nalanda",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:ancient-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I7",
+          "branch": "Medieval India",
+          "officialHeading": "New kingdoms, AD 700–1200",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "medieval-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I7-1",
+              "concept": "Early medieval sources",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-2",
+              "concept": "Tripartite struggle",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-3",
+              "concept": "Gurjara-Pratiharas",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-4",
+              "concept": "Palas",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-5",
+              "concept": "Rashtrakutas",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-6",
+              "concept": "Chola state",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-7",
+              "concept": "Local administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-8",
+              "concept": "Land grants",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-9",
+              "concept": "Temples and economy",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I7-10",
+              "concept": "Agrarian expansion",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I8",
+          "branch": "Medieval India",
+          "officialHeading": "Delhi Sultanate dynasties",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "medieval-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I8-1",
+              "concept": "Mamluk foundation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-2",
+              "concept": "Iltutmish consolidation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-3",
+              "concept": "Razia and succession",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-4",
+              "concept": "Balban kingship",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-5",
+              "concept": "Khalji expansion",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-6",
+              "concept": "Alauddin market policies",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-7",
+              "concept": "Muhammad Tughlaq experiments",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-8",
+              "concept": "Firoz Tughlaq administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-9",
+              "concept": "Sayyid dynasty",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-10",
+              "concept": "Lodi dynasty",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-11",
+              "concept": "Iqta system",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I8-12",
+              "concept": "Sources and architecture",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I9",
+          "branch": "Medieval India",
+          "officialHeading": "Formation of the Mughal Empire",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "medieval-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I9-1",
+              "concept": "Babur and first Panipat",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-2",
+              "concept": "Humayun and restoration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-3",
+              "concept": "Sher Shah and Sur interlude",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-4",
+              "concept": "Akbar expansion",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-5",
+              "concept": "Mansabdari",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-6",
+              "concept": "Revenue administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-7",
+              "concept": "Religious policy",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-8",
+              "concept": "Jahangir",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-9",
+              "concept": "Shah Jahan",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-10",
+              "concept": "Aurangzeb",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-11",
+              "concept": "Regional relations",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-12",
+              "concept": "Art and architecture",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            },
+            {
+              "conceptId": "I9-13",
+              "concept": "Imperial decline",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:medieval-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I10",
+          "branch": "Modern India",
+          "officialHeading": "Company power: Plassey and Buxar",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "modern-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I10-1",
+              "concept": "Bengal political context",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I10-2",
+              "concept": "Plassey causes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I10-3",
+              "concept": "Plassey participants",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I10-4",
+              "concept": "Plassey consequences",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I10-5",
+              "concept": "Buxar causes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I10-6",
+              "concept": "Buxar alliance",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I10-7",
+              "concept": "Treaty of Allahabad",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I10-8",
+              "concept": "Diwani and dual government",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I11",
+          "branch": "Modern India",
+          "officialHeading": "1857 revolt: causes, events, consequences and failure",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "modern-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I11-1",
+              "concept": "Political causes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-2",
+              "concept": "Economic causes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-3",
+              "concept": "Military causes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-4",
+              "concept": "Cartridge controversy",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-5",
+              "concept": "Meerut outbreak",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-6",
+              "concept": "Delhi leadership",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-7",
+              "concept": "Regional centres",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-8",
+              "concept": "Reasons for failure",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-9",
+              "concept": "Crown transfer",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I11-10",
+              "concept": "Queen proclamation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I12",
+          "branch": "Modern India",
+          "officialHeading": "Education during British rule",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "modern-india"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I12-1",
+              "concept": "Orientalist-Anglicist debate",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I12-2",
+              "concept": "Charter Act and education",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I12-3",
+              "concept": "Macaulay minute",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I12-4",
+              "concept": "Wood dispatch",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I12-5",
+              "concept": "Universities and 1857",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I12-6",
+              "concept": "Hunter education commission",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I12-7",
+              "concept": "Curzon university policy",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I12-8",
+              "concept": "National education initiatives",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            },
+            {
+              "conceptId": "I12-9",
+              "concept": "Social effects and unequal access",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:modern-india"
+            }
+          ]
+        },
+        {
+          "unitId": "I13",
+          "branch": "Freedom Movement",
+          "officialHeading": "Indian national movement, 1885–1947",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "modern-india",
+            "punjab-freedom-movements",
+            "punjab-partition-suba-modern"
+          ],
+          "concepts": [
+            {
+              "conceptId": "I13-1",
+              "concept": "Congress foundation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-2",
+              "concept": "Moderate methods",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-3",
+              "concept": "Extremists and Surat split",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-4",
+              "concept": "Swadeshi movement",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-5",
+              "concept": "Home Rule",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-6",
+              "concept": "Lucknow Pact",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-7",
+              "concept": "Gandhi early satyagrahas",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-8",
+              "concept": "Rowlatt resistance",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-9",
+              "concept": "Jallianwala Bagh",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-10",
+              "concept": "Khilafat and Non-Cooperation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-11",
+              "concept": "Chauri Chaura",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-12",
+              "concept": "Swaraj Party",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-13",
+              "concept": "Simon Commission",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-14",
+              "concept": "Lahore Congress and Purna Swaraj",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-15",
+              "concept": "Civil Disobedience",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-16",
+              "concept": "Round Table conferences",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-17",
+              "concept": "Poona Pact",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-18",
+              "concept": "Government of India Act 1935",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-19",
+              "concept": "Quit India",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-20",
+              "concept": "Revolutionaries and HSRA",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-21",
+              "concept": "INA contribution",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-22",
+              "concept": "Cabinet Mission",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-23",
+              "concept": "Mountbatten plan",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            },
+            {
+              "conceptId": "I13-24",
+              "concept": "Independence and Partition",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:freedom-movement"
+            }
+          ]
+        },
+        {
+          "unitId": "W1",
+          "branch": "World History",
+          "officialHeading": "Beginning of modern age: Renaissance and Reformation",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "world-history"
+          ],
+          "concepts": [
+            {
+              "conceptId": "W1-1",
+              "concept": "Renaissance background",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-2",
+              "concept": "Humanism",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-3",
+              "concept": "Italian Renaissance",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-4",
+              "concept": "Printing and knowledge",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-5",
+              "concept": "Art and scientific inquiry",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-6",
+              "concept": "Reformation background",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-7",
+              "concept": "Luther and indulgences",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-8",
+              "concept": "Protestant traditions",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-9",
+              "concept": "Counter-Reformation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W1-10",
+              "concept": "Political and social consequences",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            }
+          ]
+        },
+        {
+          "unitId": "W2",
+          "branch": "World History",
+          "officialHeading": "First and Second World Wars",
+          "sourcePage": 4,
+          "officialExplicit": true,
+          "appTopicIds": [
+            "world-history"
+          ],
+          "concepts": [
+            {
+              "conceptId": "W2-1",
+              "concept": "WWI long-term causes",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-2",
+              "concept": "WWI immediate trigger",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-3",
+              "concept": "WWI fronts and alliances",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-4",
+              "concept": "Russian withdrawal",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-5",
+              "concept": "Versailles settlement",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-6",
+              "concept": "League of Nations",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-7",
+              "concept": "Interwar fascism and Nazism",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-8",
+              "concept": "WWII origins and invasion of Poland",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-9",
+              "concept": "WWII major theatres",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-10",
+              "concept": "Holocaust",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-11",
+              "concept": "War termination and atomic bombing",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            },
+            {
+              "conceptId": "W2-12",
+              "concept": "Postwar consequences",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:world-history"
+            }
+          ]
+        },
+        {
+          "unitId": "X1",
+          "branch": "Requested extension",
+          "officialHeading": "Colonial Punjab after annexation",
+          "sourcePage": 3,
+          "officialExplicit": false,
+          "appTopicIds": [
+            "punjab-freedom-movements"
+          ],
+          "concepts": [
+            {
+              "conceptId": "X1-1",
+              "concept": "Board of Administration",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X1-2",
+              "concept": "Punjab revenue and canal colonies",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X1-3",
+              "concept": "Punjab land laws and agrarian change",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X1-4",
+              "concept": "1857 in Punjab",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            }
+          ]
+        },
+        {
+          "unitId": "X2",
+          "branch": "Requested extension",
+          "officialHeading": "Singh Sabha movement",
+          "sourcePage": 3,
+          "officialExplicit": false,
+          "appTopicIds": [
+            "punjab-freedom-movements"
+          ],
+          "concepts": [
+            {
+              "conceptId": "X2-1",
+              "concept": "Amritsar Singh Sabha",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X2-2",
+              "concept": "Lahore Singh Sabha",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X2-3",
+              "concept": "Educational institutions",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X2-4",
+              "concept": "Chief Khalsa Diwan",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X2-5",
+              "concept": "Reform debates and literature",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            }
+          ]
+        },
+        {
+          "unitId": "X3",
+          "branch": "Requested extension",
+          "officialHeading": "Akali and Gurdwara reform",
+          "sourcePage": 3,
+          "officialExplicit": false,
+          "appTopicIds": [
+            "punjab-freedom-movements"
+          ],
+          "concepts": [
+            {
+              "conceptId": "X3-1",
+              "concept": "SGPC organisation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X3-2",
+              "concept": "Akali Dal origins",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X3-3",
+              "concept": "Nankana Sahib",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X3-4",
+              "concept": "Keys agitation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X3-5",
+              "concept": "Guru Ka Bagh",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X3-6",
+              "concept": "Jaito agitation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X3-7",
+              "concept": "Sikh Gurdwaras Act",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X3-8",
+              "concept": "Babbar Akalis",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            }
+          ]
+        },
+        {
+          "unitId": "X4",
+          "branch": "Requested extension",
+          "officialHeading": "Punjab Partition",
+          "sourcePage": 4,
+          "officialExplicit": false,
+          "appTopicIds": [
+            "punjab-partition-suba-modern"
+          ],
+          "concepts": [
+            {
+              "conceptId": "X4-1",
+              "concept": "Partition political context",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X4-2",
+              "concept": "Boundary commission",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X4-3",
+              "concept": "Communal violence",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X4-4",
+              "concept": "Displacement and rehabilitation",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            },
+            {
+              "conceptId": "X4-5",
+              "concept": "Human testimony and historical evidence",
+              "status": "AI-GENERATED (needs human review)",
+              "commonTag": "history:requested-extension"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "examId": "punjab-ett",
+      "baseline": "5994 Paper B (archival 01-12-2022)",
+      "source": {
+        "url": "https://educationrecruitmentboard.com/ETT5994/docs/SyllabusPaperB01_12_2022.pdf",
+        "mirror": "https://entri.app/blog/wp-content/uploads/2022/12/SyllabusPaperB01_12_2022.pdf",
+        "sha256": "f88a56067d11e63db9acdec68d027fba21f6aa8b6b47478fff9e80beafd29bcd",
+        "headingStatus": "Provisional archive: official host returned 502 in this check; mirror inspected in previous visual audit, search-accessible again now. Primary equality not established. Upcoming notification pending."
+      },
+      "headings": [
+        {
+          "subject": "Punjabi",
+          "subjectMarks": 40,
+          "topicId": "ett-punjabi-1",
+          "officialHeading": "Folk literature",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-punjabi-1-candidate-1",
+              "candidate": "Folk songs and oral stories",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-punjabi-1-candidate-2",
+              "candidate": "Forms and themes of folk literature",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Punjabi",
+          "subjectMarks": 40,
+          "topicId": "ett-punjabi-2",
+          "officialHeading": "Punjabi cultural traditions",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-punjabi-2-candidate-1",
+              "candidate": "Customs and festivals",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-punjabi-2-candidate-2",
+              "candidate": "Traditional life and cultural vocabulary",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Punjabi",
+          "subjectMarks": 40,
+          "topicId": "ett-punjabi-3",
+          "officialHeading": "Idiomatic and proverbial usage",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 13,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-punjabi-3-candidate-1",
+              "candidate": "Meaning in context",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-punjabi-3-candidate-2",
+              "candidate": "Appropriate use in a sentence",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Punjabi",
+          "subjectMarks": 40,
+          "topicId": "ett-punjabi-4",
+          "officialHeading": "Rendering English into Punjabi",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-punjabi-4-candidate-1",
+              "candidate": "Preserving meaning",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-punjabi-4-candidate-2",
+              "candidate": "Word order and grammatical agreement",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Punjabi",
+          "subjectMarks": 40,
+          "topicId": "ett-punjabi-5",
+          "officialHeading": "Rewriting sentences",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-punjabi-5-candidate-1",
+              "candidate": "Changing sentence structure",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-punjabi-5-candidate-2",
+              "candidate": "Retaining the original meaning",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-motion",
+          "officialHeading": "Motion",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 15,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-science-motion-candidate-1",
+              "candidate": "Distance and displacement",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-motion-candidate-2",
+              "candidate": "Speed and velocity",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-motion-candidate-3",
+              "candidate": "Acceleration",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-motion-candidate-4",
+              "candidate": "Distance–time and velocity–time graphs",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-force",
+          "officialHeading": "Force and laws of motion",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-force-candidate-1",
+              "candidate": "Inertia",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-force-candidate-2",
+              "candidate": "Newton’s laws",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-force-candidate-3",
+              "candidate": "Momentum",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-force-candidate-4",
+              "candidate": "Conservation of momentum",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-gravitation",
+          "officialHeading": "Gravitation",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-gravitation-candidate-1",
+              "candidate": "Universal gravitation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-gravitation-candidate-2",
+              "candidate": "Free fall",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-gravitation-candidate-3",
+              "candidate": "Mass and weight",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-gravitation-candidate-4",
+              "candidate": "Buoyancy and Archimedes’ principle",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-work-energy",
+          "officialHeading": "Work and energy",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-work-energy-candidate-1",
+              "candidate": "Work done by a force",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-work-energy-candidate-2",
+              "candidate": "Kinetic and potential energy",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-work-energy-candidate-3",
+              "candidate": "Conservation of energy",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-work-energy-candidate-4",
+              "candidate": "Power and units",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-sound",
+          "officialHeading": "Sound",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-sound-candidate-1",
+              "candidate": "Wave propagation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-sound-candidate-2",
+              "candidate": "Frequency and pitch",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-sound-candidate-3",
+              "candidate": "Amplitude and loudness",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-sound-candidate-4",
+              "candidate": "Echo and ultrasound",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-light-reflection",
+          "officialHeading": "Reflection and plane mirrors",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-light-reflection-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-light-2",
+          "officialHeading": "Spherical mirrors and ray diagrams",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-light-2-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-light-3",
+          "officialHeading": "Mirror formula and sign convention",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-light-3-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-light-4",
+          "officialHeading": "Refraction and refractive index",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-light-4-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-light-5",
+          "officialHeading": "Lenses, lens formula and power",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-light-5-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-electricity",
+          "officialHeading": "Electricity",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-electricity-candidate-1",
+              "candidate": "Current and potential difference",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-electricity-candidate-2",
+              "candidate": "Ohm’s law and resistance",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-electricity-candidate-3",
+              "candidate": "Series and parallel circuits",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-electricity-candidate-4",
+              "candidate": "Heating effect and electric power",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-magnetism",
+          "officialHeading": "Magnetism",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-magnetism-candidate-1",
+              "candidate": "Magnetic field lines",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-magnetism-candidate-2",
+              "candidate": "Field of a current-carrying conductor",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-magnetism-candidate-3",
+              "candidate": "Force on a conductor",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-magnetism-candidate-4",
+              "candidate": "Domestic circuits and safety",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-energy",
+          "officialHeading": "Sources of energy",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-energy-candidate-1",
+              "candidate": "Conventional sources",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-energy-candidate-2",
+              "candidate": "Solar and wind energy",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-energy-candidate-3",
+              "candidate": "Biomass and hydroelectricity",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-energy-candidate-4",
+              "candidate": "Environmental trade-offs",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-matter",
+          "officialHeading": "Matter in our surroundings",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-matter-candidate-1",
+              "candidate": "Particle model",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-matter-candidate-2",
+              "candidate": "States of matter",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-matter-candidate-3",
+              "candidate": "Changes of state",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-matter-candidate-4",
+              "candidate": "Evaporation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-atoms",
+          "officialHeading": "Atoms and molecules",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-atoms-candidate-1",
+              "candidate": "Laws of chemical combination",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-atoms-candidate-2",
+              "candidate": "Atoms and molecules",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-atoms-candidate-3",
+              "candidate": "Valency and formulae",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-atoms-candidate-4",
+              "candidate": "Atomic and molecular mass",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-reactions",
+          "officialHeading": "Chemical reactions and equations",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-reactions-candidate-1",
+              "candidate": "Balancing equations",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-reactions-candidate-2",
+              "candidate": "Reaction types",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-reactions-candidate-3",
+              "candidate": "Oxidation and reduction",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-reactions-candidate-4",
+              "candidate": "Corrosion and rancidity",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-acids",
+          "officialHeading": "Acids, bases and salts",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 17,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-science-acids-candidate-1",
+              "candidate": "Indicators",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-acids-candidate-2",
+              "candidate": "pH",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-acids-candidate-3",
+              "candidate": "Neutralisation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-acids-candidate-4",
+              "candidate": "Common salts and uses",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-metals",
+          "officialHeading": "Metals and non-metals",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-metals-candidate-1",
+              "candidate": "Physical and chemical properties",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-metals-candidate-2",
+              "candidate": "Reactivity series",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-metals-candidate-3",
+              "candidate": "Ionic compounds",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-metals-candidate-4",
+              "candidate": "Extraction and corrosion",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-carbon",
+          "officialHeading": "Carbon and its compounds",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-carbon-candidate-1",
+              "candidate": "Covalent bonding",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-carbon-candidate-2",
+              "candidate": "Hydrocarbons and homologous series",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-carbon-candidate-3",
+              "candidate": "Functional groups",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-carbon-candidate-4",
+              "candidate": "Ethanol, ethanoic acid and soaps",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-cell",
+          "officialHeading": "The fundamental unit of life",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-cell-candidate-1",
+              "candidate": "Cell membrane and transport",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-cell-candidate-2",
+              "candidate": "Nucleus",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-cell-candidate-3",
+              "candidate": "Cell organelles",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-cell-candidate-4",
+              "candidate": "Plant and animal cells",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-tissues",
+          "officialHeading": "Tissues",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-tissues-candidate-1",
+              "candidate": "Plant tissues",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-tissues-candidate-2",
+              "candidate": "Epithelial tissue",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-tissues-candidate-3",
+              "candidate": "Connective tissue",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-tissues-candidate-4",
+              "candidate": "Muscular and nervous tissue",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-diversity",
+          "officialHeading": "Diversity of living organisms",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-diversity-candidate-1",
+              "candidate": "Classification principles",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-diversity-candidate-2",
+              "candidate": "Plant groups",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-diversity-candidate-3",
+              "candidate": "Animal groups",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-diversity-candidate-4",
+              "candidate": "Scientific naming",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-illness",
+          "officialHeading": "Why do we fall ill?",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-illness-candidate-1",
+              "candidate": "Health and disease",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-illness-candidate-2",
+              "candidate": "Infectious and non-infectious disease",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-illness-candidate-3",
+              "candidate": "Transmission",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-illness-candidate-4",
+              "candidate": "Prevention and treatment",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-resources",
+          "officialHeading": "Natural resources",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-resources-candidate-1",
+              "candidate": "Air and water",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-resources-candidate-2",
+              "candidate": "Soil",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-resources-candidate-3",
+              "candidate": "Biogeochemical cycles",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-resources-candidate-4",
+              "candidate": "Pollution",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-food",
+          "officialHeading": "Improvement in food resources",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-food-candidate-1",
+              "candidate": "Crop variety improvement",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-food-candidate-2",
+              "candidate": "Crop production and protection",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-food-candidate-3",
+              "candidate": "Animal husbandry",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-food-candidate-4",
+              "candidate": "Fisheries and beekeeping",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-life",
+          "officialHeading": "Life processes",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-life-candidate-1",
+              "candidate": "Nutrition",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-life-candidate-2",
+              "candidate": "Respiration",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-life-candidate-3",
+              "candidate": "Transportation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-life-candidate-4",
+              "candidate": "Excretion",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-control",
+          "officialHeading": "Control and coordination",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-control-candidate-1",
+              "candidate": "Nervous system",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-control-candidate-2",
+              "candidate": "Reflex action",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-control-candidate-3",
+              "candidate": "Plant responses",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-control-candidate-4",
+              "candidate": "Hormones",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-reproduction",
+          "officialHeading": "Reproduction in organisms",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-reproduction-candidate-1",
+              "candidate": "Asexual reproduction",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-reproduction-candidate-2",
+              "candidate": "Sexual reproduction in plants",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-reproduction-candidate-3",
+              "candidate": "Human reproduction",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-reproduction-candidate-4",
+              "candidate": "Reproductive health",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-heredity",
+          "officialHeading": "Heredity and evolution",
+          "sourcePages": [
+            1
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-heredity-candidate-1",
+              "candidate": "Inherited variation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-heredity-candidate-2",
+              "candidate": "Mendelian inheritance",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-heredity-candidate-3",
+              "candidate": "Sex determination",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-heredity-candidate-4",
+              "candidate": "Evolution and speciation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "General Science",
+          "subjectMarks": 40,
+          "topicId": "ett-science-eye",
+          "officialHeading": "The human eye and colourful world",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-science-eye-candidate-1",
+              "candidate": "Eye and accommodation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-eye-candidate-2",
+              "candidate": "Vision defects",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-eye-candidate-3",
+              "candidate": "Prism and dispersion",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-science-eye-candidate-4",
+              "candidate": "Scattering of light",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-1",
+          "officialHeading": "Number systems and their properties",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-1-candidate-1",
+              "candidate": "Rational and irrational numbers",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-1-candidate-2",
+              "candidate": "Representation on a number line",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-2",
+          "officialHeading": "Working with real numbers",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 12,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-math-2-candidate-1",
+              "candidate": "Divisibility and prime factorisation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-2-candidate-2",
+              "candidate": "HCF and LCM",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-3",
+          "officialHeading": "Polynomial expressions",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-3-candidate-1",
+              "candidate": "Degree and zeros",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-3-candidate-2",
+              "candidate": "Factorisation and relationships with coefficients",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-4",
+          "officialHeading": "Linear equations in two variables, including simultaneous pairs",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 12,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-math-4-candidate-1",
+              "candidate": "Graphical solutions",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-4-candidate-2",
+              "candidate": "Substitution and elimination",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-5",
+          "officialHeading": "Solving quadratic equations",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-5-candidate-1",
+              "candidate": "Factorisation and quadratic formula",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-5-candidate-2",
+              "candidate": "Discriminant and nature of roots",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-6",
+          "officialHeading": "Arithmetic sequences",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-6-candidate-1",
+              "candidate": "Common difference and nth term",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-6-candidate-2",
+              "candidate": "Sum of first n terms",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-7",
+          "officialHeading": "Euclidean geometry foundations",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-7-candidate-1",
+              "candidate": "Definitions and axioms",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-7-candidate-2",
+              "candidate": "Reasoning from postulates",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-8",
+          "officialHeading": "Angles formed by lines",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-8-candidate-1",
+              "candidate": "Parallel lines and transversals",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-8-candidate-2",
+              "candidate": "Angle relationships",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-9",
+          "officialHeading": "Properties of triangles, quadrilaterals and circles",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-9-candidate-1",
+              "candidate": "Congruence and similarity",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-9-candidate-2",
+              "candidate": "Quadrilateral and circle properties",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-10",
+          "officialHeading": "Areas of triangular and quadrilateral figures",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-10-candidate-1",
+              "candidate": "Equal-area figures",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-10-candidate-2",
+              "candidate": "Base and height relationships",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-11",
+          "officialHeading": "Geometry with coordinates",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 11,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-math-11-candidate-1",
+              "candidate": "Distance and section formulae",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-11-candidate-2",
+              "candidate": "Area using coordinates",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-12",
+          "officialHeading": "Trigonometric ratios and applications",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-12-candidate-1",
+              "candidate": "Ratios and identities",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-12-candidate-2",
+              "candidate": "Heights and distances",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-13",
+          "officialHeading": "Geometric constructions",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-13-candidate-1",
+              "candidate": "Constructing similar figures",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-13-candidate-2",
+              "candidate": "Tangents to a circle",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-14",
+          "officialHeading": "Heron-based triangle area",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-14-candidate-1",
+              "candidate": "Semiperimeter",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-14-candidate-2",
+              "candidate": "Area from three side lengths",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-15",
+          "officialHeading": "Solid surface measurement and volume",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-15-candidate-1",
+              "candidate": "Surface areas of solids",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-15-candidate-2",
+              "candidate": "Volumes and combined solids",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-16",
+          "officialHeading": "Area involving circular regions",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-16-candidate-1",
+              "candidate": "Sectors and segments",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-16-candidate-2",
+              "candidate": "Combined plane regions",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-17",
+          "officialHeading": "Interpreting statistical data",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 12,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-math-17-candidate-1",
+              "candidate": "Mean, median and mode",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-17-candidate-2",
+              "candidate": "Grouped data and graphs",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Mathematics",
+          "subjectMarks": 40,
+          "topicId": "ett-math-18",
+          "officialHeading": "Calculating probability",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-math-18-candidate-1",
+              "candidate": "Sample spaces and events",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-math-18-candidate-2",
+              "candidate": "Simple probability calculations",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-geography-1",
+          "officialHeading": "India: location and overview",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-geography-1-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-geography-2",
+          "officialHeading": "India’s landforms",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-geography-2-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-geography-3",
+          "officialHeading": "Climate patterns",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-geography-3-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-geography-4",
+          "officialHeading": "Vegetation, wildlife and soils",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-geography-4-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-geography-5",
+          "officialHeading": "Land use and agricultural activities",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-geography-5-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-geography-6",
+          "officialHeading": "Mineral resources and energy",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-geography-6-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-geography-7",
+          "officialHeading": "Population patterns",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-geography-7-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-geography-8",
+          "officialHeading": "Punjab: terrain, drainage, climate, soils and farming",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-geography-8-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-economics-1",
+          "officialHeading": "Economic foundations",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-economics-1-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-economics-2",
+          "officialHeading": "India’s economic framework",
+          "sourcePages": [
+            2
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-economics-2-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-economics-3",
+          "officialHeading": "Agricultural development in India",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-economics-3-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-economics-4",
+          "officialHeading": "Industrial development in India",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-economics-4-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-1",
+          "officialHeading": "Geography’s influence on Punjab’s past",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-1-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-2",
+          "officialHeading": "Punjab’s society and politics before Guru Nanak",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-2-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-3",
+          "officialHeading": "Guru Nanak’s life and teachings",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-3-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-4",
+          "officialHeading": "Contributions of the Gurus from Guru Angad to Guru Tegh Bahadur",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-4-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-5",
+          "officialHeading": "Guru Gobind Singh, the Khalsa and its significance",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-5-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-6",
+          "officialHeading": "Banda Singh Bahadur and the Sikh Misls",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-6-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-7",
+          "officialHeading": "Ranjit Singh: early life, achievements and British relations",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-7-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-8",
+          "officialHeading": "Anglo-Sikh conflict and annexation",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-8-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-history-9",
+          "officialHeading": "Punjab’s contribution to the independence struggle",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-history-9-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-civics-1",
+          "officialHeading": "Meaning and importance of democracy",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-civics-1-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-civics-2",
+          "officialHeading": "Citizens’ constitutional rights",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-civics-2-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-civics-3",
+          "officialHeading": "Major constitutional features",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-civics-3-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-civics-4",
+          "officialHeading": "Government at the Union level",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-civics-4-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-civics-5",
+          "officialHeading": "Government at the state level",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-civics-5-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-civics-6",
+          "officialHeading": "The structure of Indian democracy",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-civics-6-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Social Science",
+          "subjectMarks": 40,
+          "topicId": "ett-sst-civics-7",
+          "officialHeading": "India’s external policy and the United Nations",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-sst-civics-7-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "English",
+          "subjectMarks": 20,
+          "topicId": "ett-english-1",
+          "officialHeading": "Understanding an unfamiliar passage",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-english-1-candidate-1",
+              "candidate": "Main idea",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-1-candidate-2",
+              "candidate": "Evidence and inference",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-1-candidate-3",
+              "candidate": "Vocabulary in context",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "English",
+          "subjectMarks": 20,
+          "topicId": "ett-english-2",
+          "officialHeading": "Grammar in sentences and clauses",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 13,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-english-2-candidate-1",
+              "candidate": "Articles",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-2",
+              "candidate": "Prepositions",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-3",
+              "candidate": "Determiners",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-4",
+              "candidate": "Conjunctions",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-5",
+              "candidate": "Modals",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-6",
+              "candidate": "Word and sentence error correction",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-7",
+              "candidate": "Tenses",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-8",
+              "candidate": "Voice",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-9",
+              "candidate": "Narration",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-10",
+              "candidate": "Sentence transformation",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-2-candidate-11",
+              "candidate": "Clauses",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "English",
+          "subjectMarks": 20,
+          "topicId": "ett-english-3",
+          "officialHeading": "Vocabulary and idiomatic meaning",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-english-3-candidate-1",
+              "candidate": "One-word substitution",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-3-candidate-2",
+              "candidate": "Antonyms",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-3-candidate-3",
+              "candidate": "Synonyms",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-3-candidate-4",
+              "candidate": "Idioms and phrases",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "English",
+          "subjectMarks": 20,
+          "topicId": "ett-english-4",
+          "officialHeading": "Translation between English and Punjabi",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-english-4-candidate-1",
+              "candidate": "Punjabi to English",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-4-candidate-2",
+              "candidate": "English to Punjabi",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-english-4-candidate-3",
+              "candidate": "Meaning, grammar and natural phrasing",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-1",
+          "officialHeading": "Language and writing systems",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-1-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-2",
+          "officialHeading": "Sounds and letters",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-2-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-3",
+          "officialHeading": "Word structure and classification",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-3-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-4",
+          "officialHeading": "Inflecting word classes",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "ready",
+          "authoredQuestions": 12,
+          "hasLesson": true,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-4-candidate-1",
+              "candidate": "Nouns",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-hindi-4-candidate-2",
+              "candidate": "Pronouns",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-hindi-4-candidate-3",
+              "candidate": "Adjectives",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-hindi-4-candidate-4",
+              "candidate": "Verbs",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-5",
+          "officialHeading": "Uninflected word classes",
+          "sourcePages": [
+            3
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-5-candidate-1",
+              "candidate": "Adverbs",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-hindi-5-candidate-2",
+              "candidate": "Postpositions",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-hindi-5-candidate-3",
+              "candidate": "Conjunctions",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            },
+            {
+              "conceptId": "ett-hindi-5-candidate-4",
+              "candidate": "Interjections",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-6",
+          "officialHeading": "Words with similar meanings",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-6-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-7",
+          "officialHeading": "Sanskrit-derived word forms",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-7-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-8",
+          "officialHeading": "Word formation using affixes",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-8-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-9",
+          "officialHeading": "Replacing a phrase with one word",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-9-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-10",
+          "officialHeading": "Words with several meanings",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-10-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-11",
+          "officialHeading": "Opposite-meaning vocabulary",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-11-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-12",
+          "officialHeading": "Correct and incorrect word forms",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-12-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-13",
+          "officialHeading": "Correcting sentences",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-13-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-14",
+          "officialHeading": "Idioms and proverbs in context",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-14-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        },
+        {
+          "subject": "Hindi",
+          "subjectMarks": 20,
+          "topicId": "ett-hindi-15",
+          "officialHeading": "Rendering Hindi into Punjabi",
+          "sourcePages": [
+            4
+          ],
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": [
+            {
+              "conceptId": "ett-hindi-15-candidate-1",
+              "candidate": "MISSING — atomic concept breakdown not defined",
+              "singlePointConcept": null,
+              "status": "MISSING"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "examId": "punjab-clerk",
+      "baseline": "Advt 11/2025 regular Clerk (mirror)",
+      "source": {
+        "url": "https://punjabjobalert.com/wp-content/uploads/2026/01/Syllabus-Clerk-Advt-11-of-2025.pdf",
+        "headingStatus": "MIRROR_UNVERIFIED"
+      },
+      "note": "Advt 02/2026 is draft_unverified; no repository artefact. Headings below are the app outline, not verified wording.",
+      "headings": [
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "constitution",
+          "heading": "Indian polity",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "sst-geo-environment",
+          "heading": "Environment",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "clerk-current-affairs",
+          "heading": "Current affairs",
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "general-science-concepts",
+          "heading": "Science and technology",
+          "appStatus": "ready",
+          "authoredQuestions": 189,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "indian-economy",
+          "heading": "Economy",
+          "appStatus": "ready",
+          "authoredQuestions": 104,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "modern-india",
+          "heading": "Indian history and independence",
+          "appStatus": "ready",
+          "authoredQuestions": 15,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "clerk-sports",
+          "heading": "Sports",
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "clerk-cinema-literature",
+          "heading": "Cinema and literature",
+          "appStatus": "pending",
+          "authoredQuestions": 0,
+          "hasLesson": false,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-general-awareness",
+          "topicId": "physical-geography",
+          "heading": "Geography",
+          "appStatus": "ready",
+          "authoredQuestions": 63,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-reasoning",
+          "topicId": "ssc-cgl-reasoning",
+          "heading": "Logical and analytical reasoning",
+          "appStatus": "ready",
+          "authoredQuestions": 5,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-reasoning",
+          "topicId": "clerk-data-analysis",
+          "heading": "Data interpretation",
+          "appStatus": "ready",
+          "authoredQuestions": 50,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-english",
+          "topicId": "english-grammar-lit",
+          "heading": "English grammar and usage",
+          "appStatus": "ready",
+          "authoredQuestions": 51,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-punjabi-language",
+          "topicId": "punjabi-grammar",
+          "heading": "Punjabi language practice",
+          "appStatus": "ready",
+          "authoredQuestions": 17,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "punjab-clerk-prep",
+          "heading": "PSSSB Clerk Exam Scheme & Raavi Typing Rules",
+          "appStatus": "ready",
+          "authoredQuestions": 5,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "computer-awareness",
+          "heading": "Computer Knowledge & IT Proficiency (Master Overview)",
+          "appStatus": "ready",
+          "authoredQuestions": 88,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "clerk-computer-hardware",
+          "heading": "Computer Architecture, CPU Registers, Memory Hierarchy & Number Systems",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "clerk-ms-office-mastery",
+          "heading": "MS Office Mastery: MS Word, MS Excel Formulas ($A$1, VLOOKUP, IF) & MS PowerPoint",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "clerk-networking-cybersecurity",
+          "heading": "Computer Networks, OSI 7-Layer Model, TCP/IP Protocols, IPv4/IPv6 & Cybersecurity",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "punjabi-paper-a",
+          "heading": "Compulsory Punjabi Qualifying Module",
+          "appStatus": "ready",
+          "authoredQuestions": 17,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "quantitative-aptitude",
+          "heading": "Numerical Ability & Aptitude",
+          "appStatus": "ready",
+          "authoredQuestions": 1,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "punjab-history",
+          "heading": "History of Punjab & Sikh Gurus (Master Overview)",
+          "appStatus": "ready",
+          "authoredQuestions": 141,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "punjab-ancient-medieval",
+          "heading": "Ancient & Medieval Punjab: Harappan Sites, Rigvedic Sapta Sindhu, Alexander, Sultanate, Mughals & Sufi Saints (B → I → A)",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "guru-nanak-dev-ji",
+          "heading": "Sri Guru Nanak Dev Ji (1469–1539): Life, Four Udasis, Bani & Philosophy",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "guru-angad-amar-ram-das",
+          "heading": "Guru Angad Dev Ji, Guru Amar Das Ji & Guru Ram Das Ji (1539–1581): Institutional Consolidation",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "guru-arjan-dev-ji",
+          "heading": "Sri Guru Arjan Dev Ji (1563–1606): Harmandir Sahib, Adi Granth Compilation & Martyrdom",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "guru-hargobind-to-tegh-bahadur",
+          "heading": "Guru Hargobind Sahib Ji to Guru Tegh Bahadur Ji (1606–1675): Miri-Piri, Akal Takht & Hind di Chadar",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "guru-gobind-singh-ji",
+          "heading": "Sri Guru Gobind Singh Ji (1666–1708): Creation of Khalsa, Battles, Sahibzadas & Eternal Guruship",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "banda-singh-bahadur-misls",
+          "heading": "Baba Banda Singh Bahadur, Dal Khalsa, Ghallugharas & The 12 Sikh Misls (1708–1799)",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "maharaja-ranjit-singh-empire",
+          "heading": "Maharaja Ranjit Singh (1780–1839), Sikh Empire Administration & The Anglo-Sikh Wars (1845–1849)",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "punjab-freedom-movements",
+          "heading": "Punjab in the Freedom Struggle (1849–1947): Kuka, Singh Sabha, Ghadar, Akali Morchas & Bhagat Singh",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "punjab-partition-suba-modern",
+          "heading": "Partition of Punjab (1947), PEPSU (1948–56), Punjabi Suba Movement & Reorganisation Act (1966) (B → I → A)",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-special",
+          "topicId": "punjab-culture-folklore",
+          "heading": "Punjab Culture & Heritage: Folk Dances, Fairs & Festivals, Ornaments, Phulkari & Sufi/Qissa Literature",
+          "appStatus": "ready",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        }
+      ]
+    },
+    {
+      "examId": "punjab-master-cadre-science",
+      "baseline": "Claimed 4161 (2022); not independently verified",
+      "source": {
+        "url": "https://erd.punjab.gov.in/master2022/Docs/ScienceSyllabus04_05_2022.pdf",
+        "headingStatus": "CLAIMED_NOT_VERIFIED",
+        "depthVerified": false
+      },
+      "headings": [
+        {
+          "subjectId": "science",
+          "topicId": "sci-foundation-class6-10-lab",
+          "heading": "Foundation Science (Class 6–10 PSEB/NCERT), SI Units, Constants, Lab Safety & Discoveries (B → I)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "physics-concepts",
+          "heading": "Classical Mechanics, Units & Error Analysis, Rotational Dynamics, Gravitation & Properties of Matter (B → I → H → G/P)",
+          "authoredQuestions": 63,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-phy-waves-optics",
+          "heading": "Waves, Acoustics & Geometrical/Wave Optics: SHM, Doppler Effect, Lenses, Interference, Diffraction & Polarisation (I → H → G)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-phy-thermo-statistical",
+          "heading": "Heat, Thermodynamics & Statistical Physics: Laws, Carnot Engine, Entropy, Maxwell Relations & Distributions (I → H → G/P)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-phy-electromagnetism-circuits",
+          "heading": "Electricity, Magnetism, AC Circuits & Electromagnetic Theory (Maxwell’s Equations) (I → H → G/P)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-phy-modern-quantum-nuclear",
+          "heading": "Modern Physics, Quantum Mechanics, Atomic/Molecular Spectra & Nuclear/Particle Physics (H → G/P)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-phy-electronics-solid-math",
+          "heading": "Condensed Matter (Solid State), Semiconductor Electronics & Mathematical Methods of Physics (H → G/P)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-chem-physical-states-thermo-eq",
+          "heading": "Physical Chemistry I: Mole Concept, Atomic Structure, States of Matter, Bonding, Thermodynamics & Equilibrium (B → I → H → G)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-chem-electro-kinetics-surface-solids",
+          "heading": "Physical Chemistry II: Electrochemistry, Chemical Kinetics, Solutions, Solid State, Surface Chemistry, Catalysis & Spectroscopy (H → G/P)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "chemistry-concepts",
+          "heading": "Inorganic Chemistry I: Periodic Table Trends, Metallurgy, Hydrogen, s-Block, p-Block & Environmental Chemistry (B → I → H → G)",
+          "authoredQuestions": 57,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-chem-inorganic-coord-bio-nuclear",
+          "heading": "Inorganic Chemistry II: d- & f-Block, Coordination & Organometallic Chemistry, Bioinorganic, Nuclear & Analytical Chemistry (H → G/P)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-chem-organic-goc-hydrocarbons-halides",
+          "heading": "Organic Chemistry I: Purification, GOC, Stereochemistry, Hydrocarbons, Haloalkanes, Alcohols, Phenols & Ethers (I → H → G)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-chem-organic-carbonyls-reagents-spectro",
+          "heading": "Organic Chemistry II: Carbonyls, Amines, Named Reactions, Selective Reagents, Biomolecules, Polymers & IR/UV/NMR Spectroscopy (H → G/P)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-bio-diversity-plant-structural",
+          "heading": "Botany I: Diversity of Living World, Plant Kingdom, Morphology, Plant Anatomy & Reproduction in Flowering Plants (B → I → H → G)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-bio-plant-physiology-ecology",
+          "heading": "Botany II: Plant Physiology (Water Relations, Photosynthesis, Respiration, Hormones) & Ecology, Biodiversity and Environment (B → I → H → G)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "sci-bio-zoology-diversity-human-physiology",
+          "heading": "Zoology I: Animal Kingdom Diversity, Animal Tissues & Complete Human Physiology (B → I → H → G)",
+          "authoredQuestions": 10,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "science",
+          "topicId": "biology-concepts",
+          "heading": "Cell Biology, Genetics, Molecular Biology, Evolution, Human Health & Biotechnology (B → I → H → G)",
+          "authoredQuestions": 63,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "punjabi-paper-a-subject",
+          "topicId": "punjabi-paper-a",
+          "heading": "Compulsory Punjabi Paper A: Grammar & Gurmukhi",
+          "authoredQuestions": 17,
+          "hasLesson": true,
+          "concepts": null
+        }
+      ]
+    }
+  ]
+}

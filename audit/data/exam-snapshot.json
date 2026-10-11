@@ -1,0 +1,4651 @@
+{
+  "generatedAt": "2026-10-11T03:30:09.031Z",
+  "authoredQuestions": 1803,
+  "uniqueAuthoredQuestions": 1799,
+  "exams": [
+    {
+      "id": "punjab-master-cadre-sst",
+      "state": "punjab",
+      "name": "Punjab Master Cadre (Social Science / SST)",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "level": "TGT - Classes 6 to 10",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://educationrecruitmentboard.com",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Paper A - Compulsory Punjabi Qualifying (50% min)",
+          "nameHindi": "अनिवार्य पंजाबी पात्रता (Paper A)",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Paper B - Social Science Subject Domain (Merit)",
+          "nameHindi": "सामाजिक विज्ञान विषय डोमेन (Paper B)",
+          "marks": 150,
+          "questions": 150
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 200,
+      "subjects": 2,
+      "topics": 37,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 670,
+      "poolAuthored": 575,
+      "topicRows": [
+        {
+          "id": "punjab-history",
+          "name": "History of Punjab & Sikh Gurus (Master Overview)",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 141,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-ancient-medieval",
+          "name": "Ancient & Medieval Punjab: Harappan Sites, Rigvedic Sapta Sindhu, Alexander, Sultanate, Mughals & Sufi Saints (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-nanak-dev-ji",
+          "name": "Sri Guru Nanak Dev Ji (1469–1539): Life, Four Udasis, Bani & Philosophy",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-angad-amar-ram-das",
+          "name": "Guru Angad Dev Ji, Guru Amar Das Ji & Guru Ram Das Ji (1539–1581): Institutional Consolidation",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-arjan-dev-ji",
+          "name": "Sri Guru Arjan Dev Ji (1563–1606): Harmandir Sahib, Adi Granth Compilation & Martyrdom",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-hargobind-to-tegh-bahadur",
+          "name": "Guru Hargobind Sahib Ji to Guru Tegh Bahadur Ji (1606–1675): Miri-Piri, Akal Takht & Hind di Chadar",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-gobind-singh-ji",
+          "name": "Sri Guru Gobind Singh Ji (1666–1708): Creation of Khalsa, Battles, Sahibzadas & Eternal Guruship",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "banda-singh-bahadur-misls",
+          "name": "Baba Banda Singh Bahadur, Dal Khalsa, Ghallugharas & The 12 Sikh Misls (1708–1799)",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "maharaja-ranjit-singh-empire",
+          "name": "Maharaja Ranjit Singh (1780–1839), Sikh Empire Administration & The Anglo-Sikh Wars (1845–1849)",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-freedom-movements",
+          "name": "Punjab in the Freedom Struggle (1849–1947): Kuka, Singh Sabha, Ghadar, Akali Morchas & Bhagat Singh",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-partition-suba-modern",
+          "name": "Partition of Punjab (1947), PEPSU (1948–56), Punjabi Suba Movement & Reorganisation Act (1966) (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-culture-folklore",
+          "name": "Punjab Culture & Heritage: Folk Dances, Fairs & Festivals, Ornaments, Phulkari & Sufi/Qissa Literature",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "modern-india",
+          "name": "Modern Indian History (1757-1947)",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 15,
+          "hasLesson": true
+        },
+        {
+          "id": "ancient-india",
+          "name": "Ancient India & Indus Valley Civilization",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 30,
+          "hasLesson": true
+        },
+        {
+          "id": "medieval-india",
+          "name": "Medieval India & Delhi Sultanate",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 5,
+          "hasLesson": true
+        },
+        {
+          "id": "world-history",
+          "name": "World History & Revolutions",
+          "subjectId": "social-science",
+          "chapterId": "history",
+          "pending": false,
+          "authoredQuestions": 52,
+          "hasLesson": true
+        },
+        {
+          "id": "fundamental-rights",
+          "name": "Constitution, Preamble & Fundamental Rights",
+          "subjectId": "social-science",
+          "chapterId": "civics",
+          "pending": false,
+          "authoredQuestions": 40,
+          "hasLesson": true
+        },
+        {
+          "id": "parliament",
+          "name": "Union Parliament & Executive",
+          "subjectId": "social-science",
+          "chapterId": "civics",
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
+        },
+        {
+          "id": "judiciary",
+          "name": "Judiciary: Supreme Court & High Courts",
+          "subjectId": "social-science",
+          "chapterId": "civics",
+          "pending": false,
+          "authoredQuestions": 11,
+          "hasLesson": true
+        },
+        {
+          "id": "local-govt",
+          "name": "Local Government: 73rd & 74th Amendments",
+          "subjectId": "social-science",
+          "chapterId": "civics",
+          "pending": false,
+          "authoredQuestions": 21,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-polity-concepts-theories",
+          "name": "Political Theory, Core Concepts & Ideologies (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "civics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-citizenship-election-parties",
+          "name": "Citizenship, Election Procedure & Party System in India (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "civics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-state-govt-punjab-local",
+          "name": "State Government, Indian Federalism & Local Democracy in Punjab (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "civics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-foreign-policy-uno",
+          "name": "India’s Foreign Policy, Regional Groupings & The United Nations (UNO) (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "civics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-geography",
+          "name": "Geography of Punjab: Relief, Rivers, Canals, Soils & Agro-Climatic Regions",
+          "subjectId": "social-science",
+          "chapterId": "geography",
+          "pending": false,
+          "authoredQuestions": 29,
+          "hasLesson": true
+        },
+        {
+          "id": "physical-geography",
+          "name": "Geography of India: Physiography, Drainage, Monsoon, Soils, Agriculture, Minerals & Population",
+          "subjectId": "social-science",
+          "chapterId": "geography",
+          "pending": false,
+          "authoredQuestions": 63,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-geo-earth",
+          "name": "Physical Geography I: Solar System, Latitudes, Longitudes, Time Zones & Earth Motions",
+          "subjectId": "social-science",
+          "chapterId": "geography",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-geo-tectonics",
+          "name": "Physical Geography II: Earth’s Interior, Rocks, Plate Tectonics, Earthquakes, Volcanoes & Landforms",
+          "subjectId": "social-science",
+          "chapterId": "geography",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-geo-atmosphere",
+          "name": "Physical Geography III: Atmosphere, Pressure Belts, Planetary/Local Winds, Cyclones & Koeppen Climate",
+          "subjectId": "social-science",
+          "chapterId": "geography",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-geo-oceans",
+          "name": "Physical Geography IV: Hydrosphere, Ocean Relief, Salinity, Tides & Warm/Cold Ocean Currents",
+          "subjectId": "social-science",
+          "chapterId": "geography",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-geo-environment",
+          "name": "Resources, Environment, Biodiversity, Protected Areas & International Environmental Agreements",
+          "subjectId": "social-science",
+          "chapterId": "geography",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-econ-micro-consumer-elasticity",
+          "name": "Micro vs Macro, Types of Economies, Consumer Equilibrium & Price Elasticity of Demand (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "economics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-econ-producer-cost-market",
+          "name": "Producer Behaviour (Production, Cost, Revenue, Supply), Market Forms & Price Determination (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "economics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-econ-keynesian-multiplier",
+          "name": "National Income Aggregates (GDP, GNP, NDP, NNP), Keynesian Income Determination (AD–AS, MPC/MPS) & Multiplier (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "economics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-econ-money-budget-bop-punjab",
+          "name": "Money & Banking, Govt Budget, BoT/BoP, Economic Planning & Economy of Punjab (B → I → A)",
+          "subjectId": "social-science",
+          "chapterId": "economics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "indian-economy",
+          "name": "Indian Economy Synthesis: Sectors, Poverty, Unemployment, Inflation & Human Development",
+          "subjectId": "social-science",
+          "chapterId": "economics",
+          "pending": false,
+          "authoredQuestions": 104,
+          "hasLesson": true
+        },
+        {
+          "id": "punjabi-paper-a",
+          "name": "Compulsory Punjabi Paper A: Grammar & Gurmukhi",
+          "subjectId": "punjabi-paper-a-subject",
+          "chapterId": "paper-a-grammar-core",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-master-cadre-science",
+      "state": "punjab",
+      "name": "Punjab Master Cadre (Science)",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "level": "TGT - Classes 6 to 10",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://educationrecruitmentboard.com",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Paper A - Compulsory Punjabi Qualifying (50% min)",
+          "nameHindi": "अनिवार्य पंजाबी पात्रता (Paper A)",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Paper B - Science Subject Domain (Physics, Chemistry, Botany & Zoology — 150 MCQs, 0 Negative Marking)",
+          "nameHindi": "विज्ञान विषय डोमेन (Paper B)",
+          "marks": 150,
+          "questions": 150
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 200,
+      "subjects": 2,
+      "topics": 18,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 416,
+      "poolAuthored": 340,
+      "topicRows": [
+        {
+          "id": "sci-foundation-class6-10-lab",
+          "name": "Foundation Science (Class 6–10 PSEB/NCERT), SI Units, Constants, Lab Safety & Discoveries (B → I)",
+          "subjectId": "science",
+          "chapterId": "science-foundation-lab",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "physics-concepts",
+          "name": "Classical Mechanics, Units & Error Analysis, Rotational Dynamics, Gravitation & Properties of Matter (B → I → H → G/P)",
+          "subjectId": "science",
+          "chapterId": "physics",
+          "pending": false,
+          "authoredQuestions": 63,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-phy-waves-optics",
+          "name": "Waves, Acoustics & Geometrical/Wave Optics: SHM, Doppler Effect, Lenses, Interference, Diffraction & Polarisation (I → H → G)",
+          "subjectId": "science",
+          "chapterId": "physics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-phy-thermo-statistical",
+          "name": "Heat, Thermodynamics & Statistical Physics: Laws, Carnot Engine, Entropy, Maxwell Relations & Distributions (I → H → G/P)",
+          "subjectId": "science",
+          "chapterId": "physics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-phy-electromagnetism-circuits",
+          "name": "Electricity, Magnetism, AC Circuits & Electromagnetic Theory (Maxwell’s Equations) (I → H → G/P)",
+          "subjectId": "science",
+          "chapterId": "physics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-phy-modern-quantum-nuclear",
+          "name": "Modern Physics, Quantum Mechanics, Atomic/Molecular Spectra & Nuclear/Particle Physics (H → G/P)",
+          "subjectId": "science",
+          "chapterId": "physics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-phy-electronics-solid-math",
+          "name": "Condensed Matter (Solid State), Semiconductor Electronics & Mathematical Methods of Physics (H → G/P)",
+          "subjectId": "science",
+          "chapterId": "physics",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-chem-physical-states-thermo-eq",
+          "name": "Physical Chemistry I: Mole Concept, Atomic Structure, States of Matter, Bonding, Thermodynamics & Equilibrium (B → I → H → G)",
+          "subjectId": "science",
+          "chapterId": "chemistry",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-chem-electro-kinetics-surface-solids",
+          "name": "Physical Chemistry II: Electrochemistry, Chemical Kinetics, Solutions, Solid State, Surface Chemistry, Catalysis & Spectroscopy (H → G/P)",
+          "subjectId": "science",
+          "chapterId": "chemistry",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "chemistry-concepts",
+          "name": "Inorganic Chemistry I: Periodic Table Trends, Metallurgy, Hydrogen, s-Block, p-Block & Environmental Chemistry (B → I → H → G)",
+          "subjectId": "science",
+          "chapterId": "chemistry",
+          "pending": false,
+          "authoredQuestions": 57,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-chem-inorganic-coord-bio-nuclear",
+          "name": "Inorganic Chemistry II: d- & f-Block, Coordination & Organometallic Chemistry, Bioinorganic, Nuclear & Analytical Chemistry (H → G/P)",
+          "subjectId": "science",
+          "chapterId": "chemistry",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-chem-organic-goc-hydrocarbons-halides",
+          "name": "Organic Chemistry I: Purification, GOC, Stereochemistry, Hydrocarbons, Haloalkanes, Alcohols, Phenols & Ethers (I → H → G)",
+          "subjectId": "science",
+          "chapterId": "chemistry",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-chem-organic-carbonyls-reagents-spectro",
+          "name": "Organic Chemistry II: Carbonyls, Amines, Named Reactions, Selective Reagents, Biomolecules, Polymers & IR/UV/NMR Spectroscopy (H → G/P)",
+          "subjectId": "science",
+          "chapterId": "chemistry",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-bio-diversity-plant-structural",
+          "name": "Botany I: Diversity of Living World, Plant Kingdom, Morphology, Plant Anatomy & Reproduction in Flowering Plants (B → I → H → G)",
+          "subjectId": "science",
+          "chapterId": "biology",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-bio-plant-physiology-ecology",
+          "name": "Botany II: Plant Physiology (Water Relations, Photosynthesis, Respiration, Hormones) & Ecology, Biodiversity and Environment (B → I → H → G)",
+          "subjectId": "science",
+          "chapterId": "biology",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sci-bio-zoology-diversity-human-physiology",
+          "name": "Zoology I: Animal Kingdom Diversity, Animal Tissues & Complete Human Physiology (B → I → H → G)",
+          "subjectId": "science",
+          "chapterId": "biology",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "biology-concepts",
+          "name": "Cell Biology, Genetics, Molecular Biology, Evolution, Human Health & Biotechnology (B → I → H → G)",
+          "subjectId": "science",
+          "chapterId": "biology",
+          "pending": false,
+          "authoredQuestions": 63,
+          "hasLesson": true
+        },
+        {
+          "id": "punjabi-paper-a",
+          "name": "Compulsory Punjabi Paper A: Grammar & Gurmukhi",
+          "subjectId": "punjabi-paper-a-subject",
+          "chapterId": "paper-a-grammar-core",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-master-cadre-math",
+      "state": "punjab",
+      "name": "Punjab Master Cadre (Mathematics)",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "level": "TGT - Classes 6 to 10",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://educationrecruitmentboard.com",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Paper A - Compulsory Punjabi Qualifying (50% min)",
+          "nameHindi": "अनिवार्य पंजाबी पात्रता (Paper A)",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Paper B - Mathematics Subject Domain (Merit)",
+          "nameHindi": "गणित विषय डोमेन (Paper B)",
+          "marks": 150,
+          "questions": 150
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 200,
+      "subjects": 2,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 169,
+      "poolAuthored": 19,
+      "topicRows": [
+        {
+          "id": "mathematics-core",
+          "name": "Algebra, Calculus, Matrices & Probability",
+          "subjectId": "mathematics",
+          "chapterId": "math-core",
+          "pending": false,
+          "authoredQuestions": 2,
+          "hasLesson": true
+        },
+        {
+          "id": "punjabi-paper-a",
+          "name": "Compulsory Punjabi Paper A: Grammar & Gurmukhi",
+          "subjectId": "punjabi-paper-a-subject",
+          "chapterId": "paper-a-grammar-core",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-master-cadre-punjabi",
+      "state": "punjab",
+      "name": "Punjab Master Cadre (Punjabi)",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "level": "TGT - Classes 6 to 10",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://educationrecruitmentboard.com",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Paper A - Compulsory Punjabi Qualifying (50% min)",
+          "nameHindi": "अनिवार्य पंजाबी पात्रता (Paper A)",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Paper B - Punjabi Language & Literature (Merit)",
+          "nameHindi": "पंजाबी भाषा व साहित्य (Paper B)",
+          "marks": 150,
+          "questions": 150
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 200,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 18,
+      "poolAuthored": 18,
+      "topicRows": [
+        {
+          "id": "punjabi-paper-a",
+          "name": "Compulsory Punjabi Paper A: Grammar & Gurmukhi",
+          "subjectId": "punjabi",
+          "chapterId": "punjabi-domain",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        },
+        {
+          "id": "punjabi-sahitya",
+          "name": "History of Punjabi Literature & Poets",
+          "subjectId": "punjabi",
+          "chapterId": "punjabi-domain",
+          "pending": false,
+          "authoredQuestions": 1,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-master-cadre-hindi",
+      "state": "punjab",
+      "name": "Punjab Master Cadre (Hindi)",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "level": "TGT - Classes 6 to 10",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://educationrecruitmentboard.com",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Paper A - Compulsory Punjabi Qualifying (50% min)",
+          "nameHindi": "अनिवार्य पंजाबी पात्रता (Paper A)",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Paper B - Hindi Language & Literature (Merit)",
+          "nameHindi": "हिंदी भाषा व साहित्य (Paper B)",
+          "marks": 150,
+          "questions": 150
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 200,
+      "subjects": 2,
+      "topics": 3,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 71,
+      "poolAuthored": 69,
+      "topicRows": [
+        {
+          "id": "hindi-sahitya",
+          "name": "History of Hindi Literature: Bhaktikal to Modern",
+          "subjectId": "hindi",
+          "chapterId": "hindi-domain",
+          "pending": false,
+          "authoredQuestions": 1,
+          "hasLesson": true
+        },
+        {
+          "id": "hindi-vyakaran",
+          "name": "Hindi Grammar & Poetics: Sandhi, Samas & Ras",
+          "subjectId": "hindi",
+          "chapterId": "hindi-domain",
+          "pending": false,
+          "authoredQuestions": 51,
+          "hasLesson": true
+        },
+        {
+          "id": "punjabi-paper-a",
+          "name": "Compulsory Punjabi Paper A: Grammar & Gurmukhi",
+          "subjectId": "punjabi-paper-a-subject",
+          "chapterId": "paper-a-grammar-core",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-master-cadre-english",
+      "state": "punjab",
+      "name": "Punjab Master Cadre (English)",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "level": "TGT - Classes 6 to 10",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://educationrecruitmentboard.com",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Paper A - Compulsory Punjabi Qualifying (50% min)",
+          "nameHindi": "अनिवार्य पंजाबी पात्रता (Paper A)",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Paper B - English Language & Literature (Merit)",
+          "nameHindi": "अंग्रेजी भाषा व साहित्य (Paper B)",
+          "marks": 150,
+          "questions": 150
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 200,
+      "subjects": 2,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 68,
+      "poolAuthored": 68,
+      "topicRows": [
+        {
+          "id": "english-grammar-lit",
+          "name": "Grammar Rules, Voice, Narration & Shakespeare",
+          "subjectId": "english",
+          "chapterId": "english-domain",
+          "pending": false,
+          "authoredQuestions": 51,
+          "hasLesson": true
+        },
+        {
+          "id": "punjabi-paper-a",
+          "name": "Compulsory Punjabi Paper A: Grammar & Gurmukhi",
+          "subjectId": "punjabi-paper-a-subject",
+          "chapterId": "paper-a-grammar-core",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-clerk",
+      "state": "punjab",
+      "name": "Punjab Clerk (PSSSB)",
+      "body": "Punjab Subordinate Services Selection Board (PSSSB)",
+      "level": "Regular Clerk — archival outline; specialised posts require separate syllabi",
+      "totalMarks": 100,
+      "duration": "150 minutes (11/2025 mirror; primary verification pending)",
+      "negativeMarking": 0.25,
+      "officialWebsite": "https://sssb.punjab.gov.in",
+      "syllabusStatus": "provisional-archive",
+      "sections": [
+        {
+          "name": "Part A - Compulsory Punjabi Qualifying (Matric Standard)",
+          "nameHindi": "पंजाबी योग्यता परीक्षा",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Part B - General Knowledge & Current Affairs",
+          "nameHindi": "सामान्य ज्ञान व करंट अफेयर्स",
+          "marks": 25,
+          "questions": 25
+        },
+        {
+          "name": "Part B - Logical Reasoning & Mental Ability",
+          "nameHindi": "तर्कशक्ति व मानसिक क्षमता",
+          "marks": 25,
+          "questions": 25
+        },
+        {
+          "name": "Part B - Punjab History & Culture",
+          "nameHindi": "पंजाब इतिहास व संस्कृति",
+          "marks": 17,
+          "questions": 17
+        },
+        {
+          "name": "Part B - Punjabi Language",
+          "nameHindi": "पंजाबी भाषा",
+          "marks": 13,
+          "questions": 13
+        },
+        {
+          "name": "Part B - English Language",
+          "nameHindi": "अंग्रेजी भाषा",
+          "marks": 12,
+          "questions": 12
+        },
+        {
+          "name": "Part B - ICT / Computer Awareness",
+          "nameHindi": "कंप्यूटर ज्ञान",
+          "marks": 8,
+          "questions": 8
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 5,
+      "topics": 32,
+      "pendingTopics": 3,
+      "topicsZeroAuthored": 3,
+      "topicsNoLesson": 3,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 1970,
+      "poolAuthored": 685,
+      "topicRows": [
+        {
+          "id": "constitution",
+          "name": "Indian polity",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "sst-geo-environment",
+          "name": "Environment",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-current-affairs",
+          "name": "Current affairs",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "general-science-concepts",
+          "name": "Science and technology",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": false,
+          "authoredQuestions": 189,
+          "hasLesson": true
+        },
+        {
+          "id": "indian-economy",
+          "name": "Economy",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": false,
+          "authoredQuestions": 104,
+          "hasLesson": true
+        },
+        {
+          "id": "modern-india",
+          "name": "Indian history and independence",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": false,
+          "authoredQuestions": 15,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-sports",
+          "name": "Sports",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "clerk-cinema-literature",
+          "name": "Cinema and literature",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "physical-geography",
+          "name": "Geography",
+          "subjectId": "clerk-general-awareness",
+          "chapterId": "clerk-gk-core",
+          "pending": false,
+          "authoredQuestions": 63,
+          "hasLesson": true
+        },
+        {
+          "id": "ssc-cgl-reasoning",
+          "name": "Logical and analytical reasoning",
+          "subjectId": "clerk-reasoning",
+          "chapterId": "clerk-reasoning-core",
+          "pending": false,
+          "authoredQuestions": 5,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-data-analysis",
+          "name": "Data interpretation",
+          "subjectId": "clerk-reasoning",
+          "chapterId": "clerk-reasoning-core",
+          "pending": false,
+          "authoredQuestions": 50,
+          "hasLesson": true
+        },
+        {
+          "id": "english-grammar-lit",
+          "name": "English grammar and usage",
+          "subjectId": "clerk-english",
+          "chapterId": "clerk-english-core",
+          "pending": false,
+          "authoredQuestions": 51,
+          "hasLesson": true
+        },
+        {
+          "id": "punjabi-grammar",
+          "name": "Punjabi language practice",
+          "subjectId": "clerk-punjabi-language",
+          "chapterId": "clerk-punjabi-core",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-clerk-prep",
+          "name": "PSSSB Clerk Exam Scheme & Raavi Typing Rules",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-skills",
+          "pending": false,
+          "authoredQuestions": 5,
+          "hasLesson": true
+        },
+        {
+          "id": "computer-awareness",
+          "name": "Computer Knowledge & IT Proficiency (Master Overview)",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-skills",
+          "pending": false,
+          "authoredQuestions": 88,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-computer-hardware",
+          "name": "Computer Architecture, CPU Registers, Memory Hierarchy & Number Systems",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-skills",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-ms-office-mastery",
+          "name": "MS Office Mastery: MS Word, MS Excel Formulas ($A$1, VLOOKUP, IF) & MS PowerPoint",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-skills",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-networking-cybersecurity",
+          "name": "Computer Networks, OSI 7-Layer Model, TCP/IP Protocols, IPv4/IPv6 & Cybersecurity",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-skills",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjabi-paper-a",
+          "name": "Compulsory Punjabi Qualifying Module",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-skills",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        },
+        {
+          "id": "quantitative-aptitude",
+          "name": "Numerical Ability & Aptitude",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-skills",
+          "pending": false,
+          "authoredQuestions": 1,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-history",
+          "name": "History of Punjab & Sikh Gurus (Master Overview)",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 141,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-ancient-medieval",
+          "name": "Ancient & Medieval Punjab: Harappan Sites, Rigvedic Sapta Sindhu, Alexander, Sultanate, Mughals & Sufi Saints (B → I → A)",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-nanak-dev-ji",
+          "name": "Sri Guru Nanak Dev Ji (1469–1539): Life, Four Udasis, Bani & Philosophy",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-angad-amar-ram-das",
+          "name": "Guru Angad Dev Ji, Guru Amar Das Ji & Guru Ram Das Ji (1539–1581): Institutional Consolidation",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-arjan-dev-ji",
+          "name": "Sri Guru Arjan Dev Ji (1563–1606): Harmandir Sahib, Adi Granth Compilation & Martyrdom",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-hargobind-to-tegh-bahadur",
+          "name": "Guru Hargobind Sahib Ji to Guru Tegh Bahadur Ji (1606–1675): Miri-Piri, Akal Takht & Hind di Chadar",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-gobind-singh-ji",
+          "name": "Sri Guru Gobind Singh Ji (1666–1708): Creation of Khalsa, Battles, Sahibzadas & Eternal Guruship",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "banda-singh-bahadur-misls",
+          "name": "Baba Banda Singh Bahadur, Dal Khalsa, Ghallugharas & The 12 Sikh Misls (1708–1799)",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "maharaja-ranjit-singh-empire",
+          "name": "Maharaja Ranjit Singh (1780–1839), Sikh Empire Administration & The Anglo-Sikh Wars (1845–1849)",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-freedom-movements",
+          "name": "Punjab in the Freedom Struggle (1849–1947): Kuka, Singh Sabha, Ghadar, Akali Morchas & Bhagat Singh",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-partition-suba-modern",
+          "name": "Partition of Punjab (1947), PEPSU (1948–56), Punjabi Suba Movement & Reorganisation Act (1966) (B → I → A)",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-culture-folklore",
+          "name": "Punjab Culture & Heritage: Folk Dances, Fairs & Festivals, Ornaments, Phulkari & Sufi/Qissa Literature",
+          "subjectId": "clerk-special",
+          "chapterId": "clerk-punjab-history-culture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-patwari",
+      "state": "punjab",
+      "name": "Punjab Patwari (PSSSB)",
+      "body": "Punjab Subordinate Services Selection Board (PSSSB)",
+      "level": "Revenue Department",
+      "totalMarks": 100,
+      "duration": "2 Hours",
+      "negativeMarking": 0.25,
+      "officialWebsite": "https://sssb.punjab.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Compulsory Punjabi Paper A",
+          "nameHindi": "पंजाबी योग्यता परीक्षा",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "General Knowledge & Punjab History",
+          "nameHindi": "सामान्य ज्ञान व पंजाब इतिहास",
+          "marks": 25,
+          "questions": 25
+        },
+        {
+          "name": "Mental Ability & Quantitative Aptitude",
+          "nameHindi": "रीजनिंग व मैथ्स",
+          "marks": 25,
+          "questions": 25
+        },
+        {
+          "name": "Agriculture & Land Measurement",
+          "nameHindi": "कृषि एवं भूमि माप इकाइयां",
+          "marks": 25,
+          "questions": 25
+        },
+        {
+          "name": "Computer & Languages",
+          "nameHindi": "कंप्यूटर व भाषाएं",
+          "marks": 25,
+          "questions": 25
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 16,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 318,
+      "poolAuthored": 170,
+      "topicRows": [
+        {
+          "id": "patwari-agriculture-accounts",
+          "name": "Punjab Land Units, Jamabandi & Agriculture",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 1,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-geography",
+          "name": "Punjab Drainage, Canals & Soils",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 29,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-ancient-medieval",
+          "name": "Ancient & Medieval Punjab: Harappan Sites, Rigvedic Sapta Sindhu, Alexander, Sultanate, Mughals & Sufi Saints (B → I → A)",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-nanak-dev-ji",
+          "name": "Sri Guru Nanak Dev Ji (1469–1539): Life, Four Udasis, Bani & Philosophy",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-angad-amar-ram-das",
+          "name": "Guru Angad Dev Ji, Guru Amar Das Ji & Guru Ram Das Ji (1539–1581): Institutional Consolidation",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-arjan-dev-ji",
+          "name": "Sri Guru Arjan Dev Ji (1563–1606): Harmandir Sahib, Adi Granth Compilation & Martyrdom",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-hargobind-to-tegh-bahadur",
+          "name": "Guru Hargobind Sahib Ji to Guru Tegh Bahadur Ji (1606–1675): Miri-Piri, Akal Takht & Hind di Chadar",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-gobind-singh-ji",
+          "name": "Sri Guru Gobind Singh Ji (1666–1708): Creation of Khalsa, Battles, Sahibzadas & Eternal Guruship",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "banda-singh-bahadur-misls",
+          "name": "Baba Banda Singh Bahadur, Dal Khalsa, Ghallugharas & The 12 Sikh Misls (1708–1799)",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "maharaja-ranjit-singh-empire",
+          "name": "Maharaja Ranjit Singh (1780–1839), Sikh Empire Administration & The Anglo-Sikh Wars (1845–1849)",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-freedom-movements",
+          "name": "Punjab in the Freedom Struggle (1849–1947): Kuka, Singh Sabha, Ghadar, Akali Morchas & Bhagat Singh",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-partition-suba-modern",
+          "name": "Partition of Punjab (1947), PEPSU (1948–56), Punjabi Suba Movement & Reorganisation Act (1966) (B → I → A)",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-culture-folklore",
+          "name": "Punjab Culture & Heritage: Folk Dances, Fairs & Festivals, Ornaments, Phulkari & Sufi/Qissa Literature",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-computer-hardware",
+          "name": "Computer Architecture, CPU Registers, Memory Hierarchy & Number Systems",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-ms-office-mastery",
+          "name": "MS Office Mastery: MS Word, MS Excel Formulas ($A$1, VLOOKUP, IF) & MS PowerPoint",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-networking-cybersecurity",
+          "name": "Computer Networks, OSI 7-Layer Model, TCP/IP Protocols, IPv4/IPv6 & Cybersecurity",
+          "subjectId": "patwari-special",
+          "chapterId": "revenue-agriculture",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-police",
+      "state": "punjab",
+      "name": "Punjab Police (Constable & SI)",
+      "body": "Punjab Police Recruitment Board",
+      "level": "Constable & Sub-Inspector Cadre",
+      "totalMarks": 100,
+      "duration": "2 Hours CBT + Physical Screening",
+      "negativeMarking": false,
+      "officialWebsite": "https://punjabpolice.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "General Awareness & Law",
+          "nameHindi": "सामान्य जागरूकता व कानून",
+          "marks": 35,
+          "questions": 35
+        },
+        {
+          "name": "Quantitative Aptitude & Numerical Skills",
+          "nameHindi": "मात्रात्मक योग्यता",
+          "marks": 20,
+          "questions": 20
+        },
+        {
+          "name": "Mental Ability & Logical Reasoning",
+          "nameHindi": "तर्कशक्ति",
+          "marks": 20,
+          "questions": 20
+        },
+        {
+          "name": "English Language Skills",
+          "nameHindi": "अंग्रेजी",
+          "marks": 10,
+          "questions": 10
+        },
+        {
+          "name": "Punjabi Language Skills",
+          "nameHindi": "पंजाबी",
+          "marks": 10,
+          "questions": 10
+        },
+        {
+          "name": "Digital Literacy & Computer Awareness",
+          "nameHindi": "डिजिटल साक्षरता",
+          "marks": 5,
+          "questions": 5
+        }
+      ],
+      "sectionMarks": 100,
+      "sectionQuestions": 100,
+      "subjects": 1,
+      "topics": 17,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 272,
+      "poolAuthored": 211,
+      "topicRows": [
+        {
+          "id": "police-law-basics",
+          "name": "Criminal Law Basics, FIR & Arrest Rules",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 3,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-history",
+          "name": "Punjab GK, History & Culture (Master Overview)",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 141,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-ancient-medieval",
+          "name": "Ancient & Medieval Punjab: Harappan Sites, Rigvedic Sapta Sindhu, Alexander, Sultanate, Mughals & Sufi Saints (B → I → A)",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-nanak-dev-ji",
+          "name": "Sri Guru Nanak Dev Ji (1469–1539): Life, Four Udasis, Bani & Philosophy",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-angad-amar-ram-das",
+          "name": "Guru Angad Dev Ji, Guru Amar Das Ji & Guru Ram Das Ji (1539–1581): Institutional Consolidation",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-arjan-dev-ji",
+          "name": "Sri Guru Arjan Dev Ji (1563–1606): Harmandir Sahib, Adi Granth Compilation & Martyrdom",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-hargobind-to-tegh-bahadur",
+          "name": "Guru Hargobind Sahib Ji to Guru Tegh Bahadur Ji (1606–1675): Miri-Piri, Akal Takht & Hind di Chadar",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "guru-gobind-singh-ji",
+          "name": "Sri Guru Gobind Singh Ji (1666–1708): Creation of Khalsa, Battles, Sahibzadas & Eternal Guruship",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "banda-singh-bahadur-misls",
+          "name": "Baba Banda Singh Bahadur, Dal Khalsa, Ghallugharas & The 12 Sikh Misls (1708–1799)",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "maharaja-ranjit-singh-empire",
+          "name": "Maharaja Ranjit Singh (1780–1839), Sikh Empire Administration & The Anglo-Sikh Wars (1845–1849)",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-freedom-movements",
+          "name": "Punjab in the Freedom Struggle (1849–1947): Kuka, Singh Sabha, Ghadar, Akali Morchas & Bhagat Singh",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-partition-suba-modern",
+          "name": "Partition of Punjab (1947), PEPSU (1948–56), Punjabi Suba Movement & Reorganisation Act (1966) (B → I → A)",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "punjab-culture-folklore",
+          "name": "Punjab Culture & Heritage: Folk Dances, Fairs & Festivals, Ornaments, Phulkari & Sufi/Qissa Literature",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-computer-hardware",
+          "name": "Computer Architecture, CPU Registers, Memory Hierarchy & Number Systems",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-ms-office-mastery",
+          "name": "MS Office Mastery: MS Word, MS Excel Formulas ($A$1, VLOOKUP, IF) & MS PowerPoint",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "clerk-networking-cybersecurity",
+          "name": "Computer Networks, OSI 7-Layer Model, TCP/IP Protocols, IPv4/IPv6 & Cybersecurity",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "fundamental-rights",
+          "name": "Indian Constitution & Fundamental Rights",
+          "subjectId": "police-general",
+          "chapterId": "police-core",
+          "pending": false,
+          "authoredQuestions": 40,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-ett",
+      "state": "punjab",
+      "name": "Punjab ETT — 5994 Paper B reference",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "level": "Archival preparation reference; upcoming notification pending",
+      "totalMarks": 200,
+      "duration": "100 Minutes (archival reference)",
+      "negativeMarking": false,
+      "officialWebsite": "https://educationrecruitmentboard.com/ETT5994/",
+      "syllabusStatus": "provisional-archive",
+      "sections": [
+        {
+          "name": "Punjabi",
+          "nameHindi": "पंजाबी",
+          "marks": 40
+        },
+        {
+          "name": "General Science",
+          "nameHindi": "सामान्य विज्ञान",
+          "marks": 40
+        },
+        {
+          "name": "Mathematics",
+          "nameHindi": "गणित",
+          "marks": 40
+        },
+        {
+          "name": "Social Science",
+          "nameHindi": "सामाजिक विज्ञान",
+          "marks": 40
+        },
+        {
+          "name": "English",
+          "nameHindi": "अंग्रेज़ी",
+          "marks": 20
+        },
+        {
+          "name": "Hindi",
+          "nameHindi": "हिंदी",
+          "marks": 20
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 0,
+      "subjects": 6,
+      "topics": 100,
+      "pendingTopics": 88,
+      "topicsZeroAuthored": 88,
+      "topicsNoLesson": 88,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 167,
+      "poolAuthored": 167,
+      "topicRows": [
+        {
+          "id": "ett-punjabi-1",
+          "name": "Folk literature",
+          "subjectId": "ett-punjabi",
+          "chapterId": "ett-punjabi",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-punjabi-2",
+          "name": "Punjabi cultural traditions",
+          "subjectId": "ett-punjabi",
+          "chapterId": "ett-punjabi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-punjabi-3",
+          "name": "Idiomatic and proverbial usage",
+          "subjectId": "ett-punjabi",
+          "chapterId": "ett-punjabi",
+          "pending": false,
+          "authoredQuestions": 13,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-punjabi-4",
+          "name": "Rendering English into Punjabi",
+          "subjectId": "ett-punjabi",
+          "chapterId": "ett-punjabi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-punjabi-5",
+          "name": "Rewriting sentences",
+          "subjectId": "ett-punjabi",
+          "chapterId": "ett-punjabi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-motion",
+          "name": "Motion",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-motion",
+          "pending": false,
+          "authoredQuestions": 15,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-science-force",
+          "name": "Force and laws of motion",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-force",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-gravitation",
+          "name": "Gravitation",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-gravitation",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-work-energy",
+          "name": "Work and energy",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-work-energy",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-sound",
+          "name": "Sound",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-sound",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-light-reflection",
+          "name": "Reflection and plane mirrors",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-light",
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-light-2",
+          "name": "Spherical mirrors and ray diagrams",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-light",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-light-3",
+          "name": "Mirror formula and sign convention",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-light",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-light-4",
+          "name": "Refraction and refractive index",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-light",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-light-5",
+          "name": "Lenses, lens formula and power",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-light",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-electricity",
+          "name": "Electricity",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-electricity",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-magnetism",
+          "name": "Magnetism",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-magnetism",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-energy",
+          "name": "Sources of energy",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-energy",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-matter",
+          "name": "Matter in our surroundings",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-matter",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-atoms",
+          "name": "Atoms and molecules",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-atoms",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-reactions",
+          "name": "Chemical reactions and equations",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-reactions",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-acids",
+          "name": "Acids, bases and salts",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-acids",
+          "pending": false,
+          "authoredQuestions": 17,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-science-metals",
+          "name": "Metals and non-metals",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-metals",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-carbon",
+          "name": "Carbon and its compounds",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-carbon",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-cell",
+          "name": "The fundamental unit of life",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-cell",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-tissues",
+          "name": "Tissues",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-tissues",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-diversity",
+          "name": "Diversity of living organisms",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-diversity",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-illness",
+          "name": "Why do we fall ill?",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-illness",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-resources",
+          "name": "Natural resources",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-resources",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-food",
+          "name": "Improvement in food resources",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-food",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-life",
+          "name": "Life processes",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-life",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-control",
+          "name": "Control and coordination",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-control",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-reproduction",
+          "name": "Reproduction in organisms",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-reproduction",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-heredity",
+          "name": "Heredity and evolution",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-heredity",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-science-eye",
+          "name": "The human eye and colourful world",
+          "subjectId": "ett-science",
+          "chapterId": "ett-science-eye",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-1",
+          "name": "Number systems and their properties",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-2",
+          "name": "Working with real numbers",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": false,
+          "authoredQuestions": 12,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-math-3",
+          "name": "Polynomial expressions",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-4",
+          "name": "Linear equations in two variables, including simultaneous pairs",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": false,
+          "authoredQuestions": 12,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-math-5",
+          "name": "Solving quadratic equations",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-6",
+          "name": "Arithmetic sequences",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-7",
+          "name": "Euclidean geometry foundations",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-8",
+          "name": "Angles formed by lines",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-9",
+          "name": "Properties of triangles, quadrilaterals and circles",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-10",
+          "name": "Areas of triangular and quadrilateral figures",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-11",
+          "name": "Geometry with coordinates",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": false,
+          "authoredQuestions": 11,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-math-12",
+          "name": "Trigonometric ratios and applications",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-13",
+          "name": "Geometric constructions",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-14",
+          "name": "Heron-based triangle area",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-15",
+          "name": "Solid surface measurement and volume",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-16",
+          "name": "Area involving circular regions",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-math-17",
+          "name": "Interpreting statistical data",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": false,
+          "authoredQuestions": 12,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-math-18",
+          "name": "Calculating probability",
+          "subjectId": "ett-mathematics",
+          "chapterId": "ett-math",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-geography-1",
+          "name": "India: location and overview",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-geography",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-geography-2",
+          "name": "India’s landforms",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-geography",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-geography-3",
+          "name": "Climate patterns",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-geography",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-geography-4",
+          "name": "Vegetation, wildlife and soils",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-geography",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-geography-5",
+          "name": "Land use and agricultural activities",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-geography",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-geography-6",
+          "name": "Mineral resources and energy",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-geography",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-geography-7",
+          "name": "Population patterns",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-geography",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-geography-8",
+          "name": "Punjab: terrain, drainage, climate, soils and farming",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-geography",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-economics-1",
+          "name": "Economic foundations",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-economics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-economics-2",
+          "name": "India’s economic framework",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-economics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-economics-3",
+          "name": "Agricultural development in India",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-economics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-economics-4",
+          "name": "Industrial development in India",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-economics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-history-1",
+          "name": "Geography’s influence on Punjab’s past",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-history-2",
+          "name": "Punjab’s society and politics before Guru Nanak",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-history-3",
+          "name": "Guru Nanak’s life and teachings",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-sst-history-4",
+          "name": "Contributions of the Gurus from Guru Angad to Guru Tegh Bahadur",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-history-5",
+          "name": "Guru Gobind Singh, the Khalsa and its significance",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-history-6",
+          "name": "Banda Singh Bahadur and the Sikh Misls",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-history-7",
+          "name": "Ranjit Singh: early life, achievements and British relations",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-history-8",
+          "name": "Anglo-Sikh conflict and annexation",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-history-9",
+          "name": "Punjab’s contribution to the independence struggle",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-history",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-civics-1",
+          "name": "Meaning and importance of democracy",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-civics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-civics-2",
+          "name": "Citizens’ constitutional rights",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-civics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-civics-3",
+          "name": "Major constitutional features",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-civics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-civics-4",
+          "name": "Government at the Union level",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-civics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-civics-5",
+          "name": "Government at the state level",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-civics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-civics-6",
+          "name": "The structure of Indian democracy",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-civics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-sst-civics-7",
+          "name": "India’s external policy and the United Nations",
+          "subjectId": "ett-social-science",
+          "chapterId": "ett-sst-civics",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-english-1",
+          "name": "Understanding an unfamiliar passage",
+          "subjectId": "ett-english",
+          "chapterId": "ett-english",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-english-2",
+          "name": "Grammar in sentences and clauses",
+          "subjectId": "ett-english",
+          "chapterId": "ett-english",
+          "pending": false,
+          "authoredQuestions": 13,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-english-3",
+          "name": "Vocabulary and idiomatic meaning",
+          "subjectId": "ett-english",
+          "chapterId": "ett-english",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-english-4",
+          "name": "Translation between English and Punjabi",
+          "subjectId": "ett-english",
+          "chapterId": "ett-english",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-1",
+          "name": "Language and writing systems",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-2",
+          "name": "Sounds and letters",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-3",
+          "name": "Word structure and classification",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-4",
+          "name": "Inflecting word classes",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": false,
+          "authoredQuestions": 12,
+          "hasLesson": true
+        },
+        {
+          "id": "ett-hindi-5",
+          "name": "Uninflected word classes",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-6",
+          "name": "Words with similar meanings",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-7",
+          "name": "Sanskrit-derived word forms",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-8",
+          "name": "Word formation using affixes",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-9",
+          "name": "Replacing a phrase with one word",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-10",
+          "name": "Words with several meanings",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-11",
+          "name": "Opposite-meaning vocabulary",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-12",
+          "name": "Correct and incorrect word forms",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-13",
+          "name": "Correcting sentences",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-14",
+          "name": "Idioms and proverbs in context",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        },
+        {
+          "id": "ett-hindi-15",
+          "name": "Rendering Hindi into Punjabi",
+          "subjectId": "ett-hindi",
+          "chapterId": "ett-hindi",
+          "pending": true,
+          "authoredQuestions": 0,
+          "hasLesson": false
+        }
+      ]
+    },
+    {
+      "id": "punjab-pstet",
+      "state": "punjab",
+      "name": "PSTET (Punjab State Teacher Eligibility Test)",
+      "body": "State Council of Educational Research and Training (SCERT) Punjab",
+      "level": "Paper 1 (Class 1-5) & Paper 2 (Class 6-8)",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://pstet.pseb.ac.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Child Development & Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language I (Punjabi Compulsory)",
+          "nameHindi": "पंजाबी भाषा (अनिवार्य)",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language II (English)",
+          "nameHindi": "अंग्रेजी भाषा",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Mathematics / Science OR Social Science",
+          "nameHindi": "विषय डोमेन (गणित/विज्ञान अथवा सामाजिक अध्ययन)",
+          "marks": 60,
+          "questions": 60
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 68,
+      "poolAuthored": 66,
+      "topicRows": [
+        {
+          "id": "child-development-pedagogy",
+          "name": "Cognitive Theories: Piaget, Vygotsky & Kohlberg",
+          "subjectId": "pstet-curriculum",
+          "chapterId": "pstet-core-pedagogy",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "punjab-lecturer-cadre",
+      "state": "punjab",
+      "name": "Punjab Lecturer Cadre (School Education)",
+      "body": "Education Recruitment Board (ERB), Punjab",
+      "level": "PGT - Senior Secondary Classes 11 & 12",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://educationrecruitmentboard.com",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Paper A - Compulsory Punjabi Qualifying",
+          "nameHindi": "पंजाबी अर्हता परीक्षा",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Paper B - Post Graduate Subject Domain",
+          "nameHindi": "स्नातकोत्तर विषय विशेषज्ञता",
+          "marks": 150,
+          "questions": 150
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 200,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 187,
+      "poolAuthored": 138,
+      "topicRows": [
+        {
+          "id": "punjab-history-deep",
+          "name": "Sikh Guru Period, Banda Bahadur & Maharaja Ranjit Singh",
+          "subjectId": "lecturer-history-specialization",
+          "chapterId": "lecturer-advanced-history",
+          "pending": false,
+          "authoredQuestions": 141,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "reet-level1",
+      "state": "rajasthan",
+      "name": "REET Level 1 (Primary Teachers)",
+      "body": "Board of Secondary Education, Rajasthan (BSER / RBSE)",
+      "level": "Classes 1 to 5",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://rajeduboard.rajasthan.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Section I: Child Development & Pedagogy (CDP)",
+          "nameHindi": "बाल विकास एवं शिक्षण विधियां",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section II: Language I (Hindi / First Language)",
+          "nameHindi": "भाषा I (हिंदी)",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section III: Language II (Second Language)",
+          "nameHindi": "भाषा II",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section IV: Mathematics",
+          "nameHindi": "गणित",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section V: Environmental Studies & Rajasthan GK",
+          "nameHindi": "पर्यावरण अध्ययन व राजस्थान सामान्य ज्ञान",
+          "marks": 30,
+          "questions": 30
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 4,
+      "topics": 5,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 1,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 353,
+      "poolAuthored": 191,
+      "topicRows": [
+        {
+          "id": "child-development-pedagogy",
+          "name": "Child Development, Piaget, Kohlberg & RTE 2009",
+          "subjectId": "reet-cdp",
+          "chapterId": "cdp-core",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        },
+        {
+          "id": "hindi-vyakaran",
+          "name": "Hindi Grammar for REET",
+          "subjectId": "reet-languages",
+          "chapterId": "hindi-grammar-reet",
+          "pending": false,
+          "authoredQuestions": 51,
+          "hasLesson": true
+        },
+        {
+          "id": "primary-mathematics",
+          "name": "Primary Mathematics & Arithmetic Operations",
+          "subjectId": "reet-math",
+          "chapterId": "primary-math-core",
+          "pending": false,
+          "authoredQuestions": 0,
+          "hasLesson": true
+        },
+        {
+          "id": "primary-environmental-studies",
+          "name": "Family, Plants, Animals & Environmental Conservation",
+          "subjectId": "reet-evs",
+          "chapterId": "evs-core",
+          "pending": false,
+          "authoredQuestions": 50,
+          "hasLesson": true
+        },
+        {
+          "id": "rajasthan-gk-heritage",
+          "name": "Rajasthan History, Art & Culture & Aravalli Geography",
+          "subjectId": "reet-evs",
+          "chapterId": "evs-core",
+          "pending": false,
+          "authoredQuestions": 24,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "reet-level2-sst",
+      "state": "rajasthan",
+      "name": "REET Level 2 (Upper Primary — Social Studies Stream)",
+      "body": "Board of Secondary Education, Rajasthan (BSER / RBSE)",
+      "level": "Classes 6 to 8",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://rajeduboard.rajasthan.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Section I: Child Development & Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section II: Language I",
+          "nameHindi": "भाषा I",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section III: Language II",
+          "nameHindi": "भाषा II",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section IV: Social Studies Domain",
+          "nameHindi": "सामाजिक अध्ययन डोमेन",
+          "marks": 60,
+          "questions": 60
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 4,
+      "topics": 8,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 334,
+      "poolAuthored": 294,
+      "topicRows": [
+        {
+          "id": "child-development-pedagogy",
+          "name": "Adolescent & Child Development Pedagogy",
+          "subjectId": "reet-l2-cdp",
+          "chapterId": "cdp-adolescent-core",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        },
+        {
+          "id": "hindi-vyakaran",
+          "name": "Hindi Grammar for REET",
+          "subjectId": "reet-l2-languages",
+          "chapterId": "l2-hindi-grammar",
+          "pending": false,
+          "authoredQuestions": 51,
+          "hasLesson": true
+        },
+        {
+          "id": "ancient-india",
+          "name": "Ancient India & Indus Valley Civilization",
+          "subjectId": "reet-l2-sst-domain",
+          "chapterId": "sst-history-geography",
+          "pending": false,
+          "authoredQuestions": 30,
+          "hasLesson": true
+        },
+        {
+          "id": "medieval-india",
+          "name": "Medieval India & Bhakti-Sufi Movements",
+          "subjectId": "reet-l2-sst-domain",
+          "chapterId": "sst-history-geography",
+          "pending": false,
+          "authoredQuestions": 5,
+          "hasLesson": true
+        },
+        {
+          "id": "modern-india",
+          "name": "Modern Indian National Movement",
+          "subjectId": "reet-l2-sst-domain",
+          "chapterId": "sst-history-geography",
+          "pending": false,
+          "authoredQuestions": 15,
+          "hasLesson": true
+        },
+        {
+          "id": "physical-geography",
+          "name": "Physical Geography & Resources",
+          "subjectId": "reet-l2-sst-domain",
+          "chapterId": "sst-history-geography",
+          "pending": false,
+          "authoredQuestions": 63,
+          "hasLesson": true
+        },
+        {
+          "id": "fundamental-rights",
+          "name": "Indian Constitution, Preamble & Democracy",
+          "subjectId": "reet-l2-sst-domain",
+          "chapterId": "sst-history-geography",
+          "pending": false,
+          "authoredQuestions": 40,
+          "hasLesson": true
+        },
+        {
+          "id": "rajasthan-gk-heritage",
+          "name": "Rajasthan History, Art, Culture & Geography",
+          "subjectId": "reet-l2-rajasthan-heritage",
+          "chapterId": "rajasthan-heritage-chapter",
+          "pending": false,
+          "authoredQuestions": 24,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "reet-level2-science-math",
+      "state": "rajasthan",
+      "name": "REET Level 2 (Upper Primary — Science & Mathematics Stream)",
+      "body": "Board of Secondary Education, Rajasthan (BSER / RBSE)",
+      "level": "Classes 6 to 8",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://rajeduboard.rajasthan.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Section I: Child Development & Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section II: Language I",
+          "nameHindi": "भाषा I",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section III: Language II",
+          "nameHindi": "भाषा II",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Section IV: Mathematics & Science Domain",
+          "nameHindi": "गणित व विज्ञान डोमेन",
+          "marks": 60,
+          "questions": 60
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 5,
+      "topics": 7,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 494,
+      "poolAuthored": 326,
+      "topicRows": [
+        {
+          "id": "child-development-pedagogy",
+          "name": "Adolescent & Child Development Pedagogy",
+          "subjectId": "reet-sci-cdp",
+          "chapterId": "cdp-core",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        },
+        {
+          "id": "hindi-vyakaran",
+          "name": "Hindi Grammar for REET",
+          "subjectId": "reet-sci-languages",
+          "chapterId": "sci-hindi-grammar",
+          "pending": false,
+          "authoredQuestions": 51,
+          "hasLesson": true
+        },
+        {
+          "id": "physics-concepts",
+          "name": "Science Specialization: Physics & Mechanics",
+          "subjectId": "reet-science-domain",
+          "chapterId": "science-domain-core",
+          "pending": false,
+          "authoredQuestions": 63,
+          "hasLesson": true
+        },
+        {
+          "id": "chemistry-concepts",
+          "name": "Science Specialization: Chemistry & Matter",
+          "subjectId": "reet-science-domain",
+          "chapterId": "science-domain-core",
+          "pending": false,
+          "authoredQuestions": 57,
+          "hasLesson": true
+        },
+        {
+          "id": "biology-concepts",
+          "name": "Science Specialization: Cell & Human Physiology",
+          "subjectId": "reet-science-domain",
+          "chapterId": "science-domain-core",
+          "pending": false,
+          "authoredQuestions": 63,
+          "hasLesson": true
+        },
+        {
+          "id": "mathematics-core",
+          "name": "Mathematics: Algebra, Mensuration & Statistics",
+          "subjectId": "reet-math-domain",
+          "chapterId": "math-domain-core",
+          "pending": false,
+          "authoredQuestions": 2,
+          "hasLesson": true
+        },
+        {
+          "id": "rajasthan-gk-heritage",
+          "name": "Rajasthan History, Art, Culture & Geography",
+          "subjectId": "reet-sci-rajasthan",
+          "chapterId": "sci-rajasthan-gk",
+          "pending": false,
+          "authoredQuestions": 24,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "rajasthan-police",
+      "state": "rajasthan",
+      "name": "Rajasthan Police Constable",
+      "body": "Rajasthan Police Subordinate Service Board",
+      "level": "Constable",
+      "totalMarks": 150,
+      "duration": "2 Hours",
+      "negativeMarking": 0.25,
+      "officialWebsite": "https://police.rajasthan.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Rajasthan GK & History",
+          "nameHindi": "राजस्थान सामान्य ज्ञान व इतिहास",
+          "marks": 45,
+          "questions": 45
+        },
+        {
+          "name": "Indian Constitution & Polity",
+          "nameHindi": "भारतीय संविधान व राजनीति",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Science & Technology",
+          "nameHindi": "विज्ञान व प्रौद्योगिकी",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Mathematics & Computer Basics",
+          "nameHindi": "गणित व कंप्यूटर",
+          "marks": 45,
+          "questions": 45
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 1,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 298,
+      "poolAuthored": 270,
+      "topicRows": [
+        {
+          "id": "raj-history-police",
+          "name": "Rajasthan History & Heritage",
+          "subjectId": "raj-police-core",
+          "chapterId": "raj-gk",
+          "pending": false,
+          "authoredQuestions": 0,
+          "hasLesson": true
+        },
+        {
+          "id": "science-tech-police",
+          "name": "Science, Technology & Computer Basics",
+          "subjectId": "raj-police-core",
+          "chapterId": "raj-gk",
+          "pending": false,
+          "authoredQuestions": 271,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "rajasthan-3rd-grade",
+      "state": "rajasthan",
+      "name": "Rajasthan 3rd Grade Teacher (Mains)",
+      "body": "Rajasthan Staff Selection Board (RSMSSB), Jaipur",
+      "level": "Level 1 (Classes 1-5) & Level 2 (Classes 6-8)",
+      "totalMarks": 300,
+      "duration": "2 Hours 30 Minutes (150 Mins)",
+      "negativeMarking": 0.66,
+      "officialWebsite": "https://rsmssb.rajasthan.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Rajasthan Geography, History & Culture",
+          "nameHindi": "राजस्थान का भौगोलिक, ऐतिहासिक व सांस्कृतिक ज्ञान",
+          "marks": 100,
+          "questions": 50
+        },
+        {
+          "name": "Rajasthan General Knowledge, RTE 2009 & Educational Scenario",
+          "nameHindi": "राजस्थान सामान्य ज्ञान, RTE व शैक्षिक परिदृश्य",
+          "marks": 80,
+          "questions": 40
+        },
+        {
+          "name": "School Subject Domain Knowledge",
+          "nameHindi": "संबंधित विद्यालय विषय ज्ञान",
+          "marks": 120,
+          "questions": 60
+        }
+      ],
+      "sectionMarks": 300,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 1,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 8,
+      "poolAuthored": 0,
+      "topicRows": [
+        {
+          "id": "rajasthan-heritage-forts",
+          "name": "UNESCO Hill Forts of Rajasthan & Culture",
+          "subjectId": "rsmssb-3rd-grade-core",
+          "chapterId": "rajasthan-gk-culture",
+          "pending": false,
+          "authoredQuestions": 0,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "rajasthan-police-si",
+      "state": "rajasthan",
+      "name": "Rajasthan Sub-Inspector (RPSC SI)",
+      "body": "Rajasthan Public Service Commission (RPSC), Ajmer",
+      "level": "Graduation Degree Level",
+      "totalMarks": 400,
+      "duration": "4 Hours (2 Hours per Paper)",
+      "negativeMarking": 0.66,
+      "officialWebsite": "https://rpsc.rajasthan.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Paper I: General Hindi",
+          "nameHindi": "पेपर 1: सामान्य हिंदी",
+          "marks": 200,
+          "questions": 100
+        },
+        {
+          "name": "Paper II: General Knowledge & General Science",
+          "nameHindi": "पेपर 2: सामान्य ज्ञान व सामान्य विज्ञान",
+          "marks": 200,
+          "questions": 100
+        }
+      ],
+      "sectionMarks": 400,
+      "sectionQuestions": 200,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 53,
+      "poolAuthored": 51,
+      "topicRows": [
+        {
+          "id": "hindi-grammar-deep",
+          "name": "Hindi Vyakaran: Sandhi, Samas, Upsarg, Pratyay",
+          "subjectId": "rpsc-si-curriculum",
+          "chapterId": "si-hindi-grammar",
+          "pending": false,
+          "authoredQuestions": 51,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "rajasthan-police-constable",
+      "state": "rajasthan",
+      "name": "Rajasthan Police Constable",
+      "body": "Rajasthan Police Recruitment Board / Police Headquarters Jaipur",
+      "level": "12th Senior Secondary Level",
+      "totalMarks": 150,
+      "duration": "2 Hours (120 Minutes)",
+      "negativeMarking": 0.25,
+      "officialWebsite": "https://police.rajasthan.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Reasoning, Logic & Basic Computer Knowledge",
+          "nameHindi": "तार्किक योग्यता व कंप्यूटर सामान्य ज्ञान",
+          "marks": 60,
+          "questions": 60
+        },
+        {
+          "name": "General Knowledge, General Science, Current Affairs & Women/Child Crimes Law",
+          "nameHindi": "सामान्य ज्ञान, सामान्य विज्ञान, समसामयिकी व महिला एवं बाल अपराध कानून",
+          "marks": 45,
+          "questions": 45
+        },
+        {
+          "name": "Rajasthan History, Culture, Geography, Economy & Polity",
+          "nameHindi": "राजस्थान का इतिहास, कला-संस्कृति, भूगोल व अर्थव्यवस्था",
+          "marks": 45,
+          "questions": 45
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 133,
+      "poolAuthored": 111,
+      "topicRows": [
+        {
+          "id": "rajasthan-gk-heritage",
+          "name": "Rajasthan History, Forts, Geography & Police Law",
+          "subjectId": "raj-police-constable-domain",
+          "chapterId": "raj-constable-core",
+          "pending": false,
+          "authoredQuestions": 24,
+          "hasLesson": true
+        },
+        {
+          "id": "computer-awareness",
+          "name": "Basic Computer Literacy & Operating Systems",
+          "subjectId": "raj-police-constable-domain",
+          "chapterId": "raj-constable-core",
+          "pending": false,
+          "authoredQuestions": 88,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "htet-l1",
+      "state": "haryana",
+      "name": "HTET Level 1 (PRT)",
+      "body": "Board of School Education Haryana (BSEH)",
+      "level": "Primary Teacher (PRT)",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://bseh.org.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Child Development & Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Hindi",
+          "nameHindi": "हिंदी",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "English",
+          "nameHindi": "अंग्रेजी",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Mathematics",
+          "nameHindi": "गणित",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "EVS",
+          "nameHindi": "पर्यावरण अध्ययन",
+          "marks": 30,
+          "questions": 30
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 77,
+      "poolAuthored": 72,
+      "topicRows": [
+        {
+          "id": "cdp-htet-l1",
+          "name": "Child Development, Learning Theories & Pedagogy",
+          "subjectId": "htet-l1-core",
+          "chapterId": "htet-l1-cdp",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        },
+        {
+          "id": "haryana-gk-htet",
+          "name": "Haryana GK & EVS",
+          "subjectId": "htet-l1-core",
+          "chapterId": "htet-l1-cdp",
+          "pending": false,
+          "authoredQuestions": 6,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "htet-l2",
+      "state": "haryana",
+      "name": "HTET Level 2 (TGT)",
+      "body": "Board of School Education Haryana (BSEH)",
+      "level": "Trained Graduate Teacher (TGT)",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://bseh.org.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Child Development & Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language Paper I",
+          "nameHindi": "भाषा पेपर I",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language Paper II",
+          "nameHindi": "भाषा पेपर II",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Subject-Specific Paper",
+          "nameHindi": "विषय-विशिष्ट पेपर",
+          "marks": 60,
+          "questions": 60
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 806,
+      "poolAuthored": 610,
+      "topicRows": [
+        {
+          "id": "cdp-htet-l2",
+          "name": "Adolescent Development & Pedagogy",
+          "subjectId": "htet-l2-core",
+          "chapterId": "htet-l2-cdp",
+          "pending": false,
+          "authoredQuestions": 116,
+          "hasLesson": true
+        },
+        {
+          "id": "subject-specific-htet-l2",
+          "name": "Subject-Specific Domain Knowledge",
+          "subjectId": "htet-l2-core",
+          "chapterId": "htet-l2-cdp",
+          "pending": false,
+          "authoredQuestions": 494,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "haryana-htet",
+      "state": "haryana",
+      "name": "HTET (Haryana Teacher Eligibility Test)",
+      "body": "Board of School Education Haryana (BSEH), Bhiwani",
+      "level": "PRT (L1), TGT (L2), PGT (L3)",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes (150 Mins)",
+      "negativeMarking": false,
+      "officialWebsite": "https://bseh.org.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Child Development & Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language I (Hindi)",
+          "nameHindi": "अनिवार्य सामान्य हिंदी",
+          "marks": 15,
+          "questions": 15
+        },
+        {
+          "name": "Language II (English)",
+          "nameHindi": "सामान्य अंग्रेजी",
+          "marks": 15,
+          "questions": 15
+        },
+        {
+          "name": "Quantitative Aptitude & Reasoning",
+          "nameHindi": "गणित व मानसिक योग्यता",
+          "marks": 20,
+          "questions": 20
+        },
+        {
+          "name": "Haryana General Knowledge & Current Affairs",
+          "nameHindi": "हरियाणा सामान्य ज्ञान व समसामयिकी",
+          "marks": 10,
+          "questions": 10
+        },
+        {
+          "name": "Subject Domain Specialization",
+          "nameHindi": "विषय डोमेन विशेषज्ञता",
+          "marks": 60,
+          "questions": 60
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 3,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 84,
+      "poolAuthored": 82,
+      "topicRows": [
+        {
+          "id": "haryana-history-rakhigarhi",
+          "name": "Ancient Haryana, Rakhigarhi & Mahabharata Era",
+          "subjectId": "haryana-htet-core",
+          "chapterId": "haryana-gk-history",
+          "pending": false,
+          "authoredQuestions": 8,
+          "hasLesson": true
+        },
+        {
+          "id": "haryana-geography-rivers",
+          "name": "Haryana Rivers, Climate & Agriculture",
+          "subjectId": "haryana-htet-core",
+          "chapterId": "haryana-gk-history",
+          "pending": false,
+          "authoredQuestions": 8,
+          "hasLesson": true
+        },
+        {
+          "id": "child-development-pedagogy",
+          "name": "Child Development, Piaget, Kohlberg & Vygotsky",
+          "subjectId": "haryana-htet-core",
+          "chapterId": "htet-child-pedagogy",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "haryana-police-constable",
+      "state": "haryana",
+      "name": "Haryana Police Constable",
+      "body": "Haryana Staff Selection Commission (HSSC), Panchkula",
+      "level": "10+2 Level",
+      "totalMarks": 100,
+      "duration": "105 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://hssc.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "General Studies & Science",
+          "nameHindi": "सामान्य अध्ययन व विज्ञान",
+          "marks": 20,
+          "questions": 20
+        },
+        {
+          "name": "Haryana GK & Culture",
+          "nameHindi": "हरियाणा सामान्य ज्ञान",
+          "marks": 25,
+          "questions": 25
+        },
+        {
+          "name": "Computer Fundamentals",
+          "nameHindi": "कंप्यूटर ज्ञान",
+          "marks": 10,
+          "questions": 10
+        },
+        {
+          "name": "Agriculture & Animal Husbandry",
+          "nameHindi": "कृषि व पशुपालन",
+          "marks": 15,
+          "questions": 15
+        },
+        {
+          "name": "Reasoning & Mathematics",
+          "nameHindi": "तर्कशक्ति व गणित",
+          "marks": 20,
+          "questions": 20
+        },
+        {
+          "name": "General Hindi & English",
+          "nameHindi": "सामान्य हिंदी व अंग्रेजी",
+          "marks": 10,
+          "questions": 10
+        }
+      ],
+      "sectionMarks": 100,
+      "sectionQuestions": 100,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 50,
+      "poolAuthored": 50,
+      "topicRows": [
+        {
+          "id": "haryana-agri-husbandry",
+          "name": "Agriculture Patterns & Animal Husbandry Breeds",
+          "subjectId": "haryana-police-domain",
+          "chapterId": "haryana-agri-animal",
+          "pending": false,
+          "authoredQuestions": 50,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "haryana-cet-clerk",
+      "state": "haryana",
+      "name": "Haryana CET Group C (Clerk & Patwari)",
+      "body": "Haryana Staff Selection Commission (HSSC)",
+      "level": "Graduation / 10+2 Level",
+      "totalMarks": 100,
+      "duration": "105 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://hssc.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Haryana History, GK & Literature",
+          "nameHindi": "हरियाणा इतिहास, सामान्य ज्ञान व साहित्य (25%)",
+          "marks": 25,
+          "questions": 25
+        },
+        {
+          "name": "General Awareness & Science",
+          "nameHindi": "सामान्य ज्ञान व विज्ञान",
+          "marks": 15,
+          "questions": 15
+        },
+        {
+          "name": "Math & Reasoning",
+          "nameHindi": "गणित व रीजनिंग",
+          "marks": 20,
+          "questions": 20
+        },
+        {
+          "name": "Hindi & English Languages",
+          "nameHindi": "हिंदी व अंग्रेजी भाषा",
+          "marks": 20,
+          "questions": 20
+        },
+        {
+          "name": "Computer Knowledge",
+          "nameHindi": "कंप्यूटर ज्ञान",
+          "marks": 10,
+          "questions": 10
+        },
+        {
+          "name": "Subject/Post Domain",
+          "nameHindi": "पद संबंधित विषय",
+          "marks": 10,
+          "questions": 10
+        }
+      ],
+      "sectionMarks": 100,
+      "sectionQuestions": 100,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 101,
+      "poolAuthored": 87,
+      "topicRows": [
+        {
+          "id": "computer-it-basics",
+          "name": "Computer Applications & Office Suite",
+          "subjectId": "hssc-cet-core",
+          "chapterId": "haryana-clerk-aptitude",
+          "pending": false,
+          "authoredQuestions": 88,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "haryana-ett-prt",
+      "state": "haryana",
+      "name": "Haryana PRT Primary Teacher (JBT / D.El.Ed Cadre)",
+      "body": "Board of School Education Haryana (BSEH) / HSSC",
+      "level": "PRT - Classes 1 to 5",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://bseh.org.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Child Development & Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language I (Hindi)",
+          "nameHindi": "अनिवार्य हिंदी भाषा",
+          "marks": 15,
+          "questions": 15
+        },
+        {
+          "name": "Language II (English)",
+          "nameHindi": "सामान्य अंग्रेजी",
+          "marks": 15,
+          "questions": 15
+        },
+        {
+          "name": "Quantitative Aptitude, Reasoning & Haryana GK",
+          "nameHindi": "गणित, रीजनिंग व हरियाणा सामान्य ज्ञान",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Mathematics & Environmental Studies (EVS)",
+          "nameHindi": "गणित व पर्यावरण अध्ययन",
+          "marks": 60,
+          "questions": 60
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 68,
+      "poolAuthored": 66,
+      "topicRows": [
+        {
+          "id": "child-development-pedagogy",
+          "name": "Primary Child Development & Learning Concepts",
+          "subjectId": "haryana-prt-domain",
+          "chapterId": "haryana-prt-pedagogy",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "delhi-police-constable",
+      "state": "delhi",
+      "name": "Delhi Police Constable (Executive)",
+      "body": "Staff Selection Commission (SSC) & Delhi Police",
+      "level": "10+2 Senior Secondary Level",
+      "totalMarks": 100,
+      "duration": "90 Minutes (1.5 Hours)",
+      "negativeMarking": 0.25,
+      "officialWebsite": "https://delhipolice.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "General Knowledge & Current Affairs",
+          "nameHindi": "सामान्य ज्ञान व समसामयिकी",
+          "marks": 50,
+          "questions": 50
+        },
+        {
+          "name": "Reasoning Ability",
+          "nameHindi": "तर्कशक्ति (रीजनिंग)",
+          "marks": 25,
+          "questions": 25
+        },
+        {
+          "name": "Numerical Ability (Maths)",
+          "nameHindi": "संख्यात्मक अभियोग्यता (गणित)",
+          "marks": 15,
+          "questions": 15
+        },
+        {
+          "name": "Computer Fundamentals, MS Excel & Internet",
+          "nameHindi": "कंप्यूटर ज्ञान व इंटरनेट",
+          "marks": 10,
+          "questions": 10
+        }
+      ],
+      "sectionMarks": 100,
+      "sectionQuestions": 100,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 111,
+      "poolAuthored": 97,
+      "topicRows": [
+        {
+          "id": "delhi-historical-heritage",
+          "name": "Delhi Through The Ages (Tomars to Modern Capital)",
+          "subjectId": "delhi-police-curriculum",
+          "chapterId": "delhi-gk-history",
+          "pending": false,
+          "authoredQuestions": 10,
+          "hasLesson": true
+        },
+        {
+          "id": "delhi-police-computer-apps",
+          "name": "Computer Applications: MS Word, Excel & Networking",
+          "subjectId": "delhi-police-curriculum",
+          "chapterId": "delhi-gk-history",
+          "pending": false,
+          "authoredQuestions": 88,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "central-capf-gd",
+      "state": "delhi",
+      "name": "SSC GD Constable (CAPF - BSF, CISF, CRPF, ITBP, SSB)",
+      "body": "Staff Selection Commission (SSC) / Ministry of Home Affairs",
+      "level": "10th Matriculation Pass",
+      "totalMarks": 160,
+      "duration": "60 Minutes (1 Hour)",
+      "negativeMarking": 0.5,
+      "officialWebsite": "https://ssc.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "General Intelligence & Reasoning",
+          "nameHindi": "सामान्य बुद्धिमत्ता व तर्कशक्ति",
+          "marks": 40,
+          "questions": 20
+        },
+        {
+          "name": "General Knowledge & General Awareness",
+          "nameHindi": "सामान्य ज्ञान व सामान्य चेतना",
+          "marks": 40,
+          "questions": 20
+        },
+        {
+          "name": "Elementary Mathematics",
+          "nameHindi": "प्रारंभिक गणित",
+          "marks": 40,
+          "questions": 20
+        },
+        {
+          "name": "English or Hindi (Candidate Choice)",
+          "nameHindi": "अंग्रेजी अथवा हिंदी भाषा",
+          "marks": 40,
+          "questions": 20
+        }
+      ],
+      "sectionMarks": 160,
+      "sectionQuestions": 80,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 1,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 346,
+      "poolAuthored": 189,
+      "topicRows": [
+        {
+          "id": "general-science-concepts",
+          "name": "General Science: Physics, Chemistry & Biology",
+          "subjectId": "capf-gd-curriculum",
+          "chapterId": "capf-gd-general-studies",
+          "pending": false,
+          "authoredQuestions": 189,
+          "hasLesson": true
+        },
+        {
+          "id": "elementary-mathematics",
+          "name": "Elementary Mathematics: Arithmetic Speed Techniques",
+          "subjectId": "capf-gd-curriculum",
+          "chapterId": "capf-gd-general-studies",
+          "pending": false,
+          "authoredQuestions": 0,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "ctet-paper1",
+      "state": "central",
+      "name": "CTET Paper 1 (Classes 1-5)",
+      "body": "Central Board of Secondary Education (CBSE)",
+      "level": "Primary Teachers (PRT)",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://ctet.nic.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Child Development and Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Mathematics",
+          "nameHindi": "गणित",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Environmental Studies (EVS)",
+          "nameHindi": "पर्यावरण अध्ययन",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language I (Compulsory)",
+          "nameHindi": "भाषा I",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language II (Compulsory)",
+          "nameHindi": "भाषा II",
+          "marks": 30,
+          "questions": 30
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 5,
+      "topics": 5,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 1,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 318,
+      "poolAuthored": 166,
+      "topicRows": [
+        {
+          "id": "child-development-pedagogy",
+          "name": "Child development & pedagogy",
+          "subjectId": "child-development",
+          "chapterId": "child-development-core",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        },
+        {
+          "id": "primary-mathematics",
+          "name": "Primary mathematics & teaching",
+          "subjectId": "primary-math",
+          "chapterId": "primary-math-core",
+          "pending": false,
+          "authoredQuestions": 0,
+          "hasLesson": true
+        },
+        {
+          "id": "primary-environmental-studies",
+          "name": "Environmental studies & teaching",
+          "subjectId": "primary-evs",
+          "chapterId": "primary-evs-core",
+          "pending": false,
+          "authoredQuestions": 50,
+          "hasLesson": true
+        },
+        {
+          "id": "primary-language-one",
+          "name": "Language I",
+          "subjectId": "language-one",
+          "chapterId": "language-one-core",
+          "pending": false,
+          "authoredQuestions": 50,
+          "hasLesson": true
+        },
+        {
+          "id": "primary-language-two",
+          "name": "Language II",
+          "subjectId": "language-two",
+          "chapterId": "language-two-core",
+          "pending": false,
+          "authoredQuestions": 50,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "ssc-chsl",
+      "state": "central",
+      "name": "SSC CHSL (10+2 Level)",
+      "body": "Staff Selection Commission (SSC)",
+      "level": "LDC / JSA / DEO",
+      "totalMarks": 200,
+      "duration": "60 Minutes",
+      "negativeMarking": 0.5,
+      "officialWebsite": "https://ssc.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "English Language",
+          "nameHindi": "अंग्रेजी भाषा",
+          "marks": 50,
+          "questions": 25
+        },
+        {
+          "name": "General Intelligence (Reasoning)",
+          "nameHindi": "तर्कशक्ति",
+          "marks": 50,
+          "questions": 25
+        },
+        {
+          "name": "Quantitative Aptitude",
+          "nameHindi": "मात्रात्मक योग्यता",
+          "marks": 50,
+          "questions": 25
+        },
+        {
+          "name": "General Awareness",
+          "nameHindi": "सामान्य जागरूकता",
+          "marks": 50,
+          "questions": 25
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 100,
+      "subjects": 1,
+      "topics": 4,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 307,
+      "poolAuthored": 143,
+      "topicRows": [
+        {
+          "id": "modern-india",
+          "name": "Indian History & National Movement",
+          "subjectId": "ssc-ga",
+          "chapterId": "general-studies",
+          "pending": false,
+          "authoredQuestions": 15,
+          "hasLesson": true
+        },
+        {
+          "id": "fundamental-rights",
+          "name": "Indian Polity & Constitution",
+          "subjectId": "ssc-ga",
+          "chapterId": "general-studies",
+          "pending": false,
+          "authoredQuestions": 40,
+          "hasLesson": true
+        },
+        {
+          "id": "computer-awareness",
+          "name": "Computer Knowledge & ICT",
+          "subjectId": "ssc-ga",
+          "chapterId": "general-studies",
+          "pending": false,
+          "authoredQuestions": 88,
+          "hasLesson": true
+        },
+        {
+          "id": "quantitative-aptitude",
+          "name": "Quantitative Aptitude & Shortcuts",
+          "subjectId": "ssc-ga",
+          "chapterId": "general-studies",
+          "pending": false,
+          "authoredQuestions": 1,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "ssc-cgl",
+      "state": "central",
+      "name": "SSC CGL (Combined Graduate Level)",
+      "body": "Staff Selection Commission (SSC)",
+      "level": "Graduation Degree Level (Inspector / ASO / Auditor)",
+      "totalMarks": 200,
+      "duration": "60 Minutes (Tier 1)",
+      "negativeMarking": 0.5,
+      "officialWebsite": "https://ssc.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "General Intelligence and Reasoning",
+          "nameHindi": "तर्कशक्ति व मानसिक योग्यता",
+          "marks": 50,
+          "questions": 25
+        },
+        {
+          "name": "General Awareness",
+          "nameHindi": "सामान्य जागरूकता व समसामयिकी",
+          "marks": 50,
+          "questions": 25
+        },
+        {
+          "name": "Quantitative Aptitude",
+          "nameHindi": "मात्रात्मक अभियोग्यता",
+          "marks": 50,
+          "questions": 25
+        },
+        {
+          "name": "English Comprehension",
+          "nameHindi": "अंग्रेजी भाषा व समझ",
+          "marks": 50,
+          "questions": 25
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 100,
+      "subjects": 1,
+      "topics": 6,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 1,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 1323,
+      "poolAuthored": 165,
+      "topicRows": [
+        {
+          "id": "fundamental-rights",
+          "name": "Indian Polity, Constitution & Governance",
+          "subjectId": "ssc-cgl-core",
+          "chapterId": "cgl-general-studies",
+          "pending": false,
+          "authoredQuestions": 40,
+          "hasLesson": true
+        },
+        {
+          "id": "modern-india",
+          "name": "Modern Indian History & Freedom Struggle",
+          "subjectId": "ssc-cgl-core",
+          "chapterId": "cgl-general-studies",
+          "pending": false,
+          "authoredQuestions": 15,
+          "hasLesson": true
+        },
+        {
+          "id": "indian-economy",
+          "name": "Indian Economy, Banking & National Income",
+          "subjectId": "ssc-cgl-core",
+          "chapterId": "cgl-general-studies",
+          "pending": false,
+          "authoredQuestions": 104,
+          "hasLesson": true
+        },
+        {
+          "id": "quantitative-aptitude",
+          "name": "Advanced Quantitative Aptitude & Geometry",
+          "subjectId": "ssc-cgl-core",
+          "chapterId": "cgl-general-studies",
+          "pending": false,
+          "authoredQuestions": 1,
+          "hasLesson": true
+        },
+        {
+          "id": "ssc-cgl-reasoning",
+          "name": "General Intelligence & Reasoning",
+          "subjectId": "ssc-cgl-core",
+          "chapterId": "ssc-cgl-general",
+          "pending": false,
+          "authoredQuestions": 5,
+          "hasLesson": true
+        },
+        {
+          "id": "ssc-cgl-quant",
+          "name": "Quantitative Aptitude",
+          "subjectId": "ssc-cgl-core",
+          "chapterId": "ssc-cgl-general",
+          "pending": false,
+          "authoredQuestions": 0,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "ssc-mts",
+      "state": "central",
+      "name": "SSC MTS (Multi-Tasking Staff & Havaldar)",
+      "body": "Staff Selection Commission (SSC)",
+      "level": "10th Matriculation Pass",
+      "totalMarks": 270,
+      "duration": "90 Minutes (2 Sessions)",
+      "negativeMarking": 1,
+      "officialWebsite": "https://ssc.gov.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Session I: Numerical & Mathematical Ability",
+          "nameHindi": "संख्यात्मक गणित (सत्र 1)",
+          "marks": 60,
+          "questions": 20
+        },
+        {
+          "name": "Session I: Reasoning Ability & Problem Solving",
+          "nameHindi": "तर्कशक्ति (सत्र 1)",
+          "marks": 60,
+          "questions": 20
+        },
+        {
+          "name": "Session II: General Awareness",
+          "nameHindi": "सामान्य जागरूकता (सत्र 2)",
+          "marks": 75,
+          "questions": 25
+        },
+        {
+          "name": "Session II: English Language & Comprehension",
+          "nameHindi": "अंग्रेजी भाषा (सत्र 2)",
+          "marks": 75,
+          "questions": 25
+        }
+      ],
+      "sectionMarks": 270,
+      "sectionQuestions": 90,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 166,
+      "poolAuthored": 16,
+      "topicRows": [
+        {
+          "id": "modern-india",
+          "name": "General Awareness & Indian Heritage",
+          "subjectId": "ssc-mts-domain",
+          "chapterId": "mts-studies",
+          "pending": false,
+          "authoredQuestions": 15,
+          "hasLesson": true
+        },
+        {
+          "id": "quantitative-aptitude",
+          "name": "Elementary Mathematics & Number Systems",
+          "subjectId": "ssc-mts-domain",
+          "chapterId": "mts-studies",
+          "pending": false,
+          "authoredQuestions": 1,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "ctet-paper2",
+      "state": "central",
+      "name": "CTET Paper 2 (Upper Primary Classes 6-8)",
+      "body": "Central Board of Secondary Education (CBSE)",
+      "level": "Upper Primary Teachers (TGT)",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://ctet.nic.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Child Development & Pedagogy",
+          "nameHindi": "बाल विकास व शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Mathematics & Science OR Social Studies/Social Science",
+          "nameHindi": "गणित-विज्ञान अथवा सामाजिक अध्ययन",
+          "marks": 60,
+          "questions": 60
+        },
+        {
+          "name": "Language I (Compulsory)",
+          "nameHindi": "भाषा I (अनिवार्य)",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language II (Compulsory)",
+          "nameHindi": "भाषा II (अनिवार्य)",
+          "marks": 30,
+          "questions": 30
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 2,
+      "topics": 5,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 463,
+      "poolAuthored": 425,
+      "topicRows": [
+        {
+          "id": "child-development-pedagogy",
+          "name": "Adolescent Psychology: Piaget, Vygotsky, Kohlberg & CCE",
+          "subjectId": "ctet-p2-curriculum",
+          "chapterId": "ctet-p2-core",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        },
+        {
+          "id": "fundamental-rights",
+          "name": "Social and Political Life (Constitution & Democratic Diversity)",
+          "subjectId": "ctet-p2-curriculum",
+          "chapterId": "ctet-p2-core",
+          "pending": false,
+          "authoredQuestions": 40,
+          "hasLesson": true
+        },
+        {
+          "id": "modern-india",
+          "name": "Our Pasts (History: Ancient, Medieval & Modern)",
+          "subjectId": "ctet-p2-curriculum",
+          "chapterId": "ctet-p2-core",
+          "pending": false,
+          "authoredQuestions": 15,
+          "hasLesson": true
+        },
+        {
+          "id": "cdp-adolescent",
+          "name": "Adolescent Development & Pedagogy",
+          "subjectId": "ctet-p2-core",
+          "chapterId": "ctet-p2-general",
+          "pending": false,
+          "authoredQuestions": 50,
+          "hasLesson": true
+        },
+        {
+          "id": "social-studies-p2",
+          "name": "Social Studies (History, Geography, Civics)",
+          "subjectId": "ctet-p2-core",
+          "chapterId": "ctet-p2-general",
+          "pending": false,
+          "authoredQuestions": 309,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "ugc-net",
+      "state": "central",
+      "name": "UGC NET Paper 1 (Teaching & Research Aptitude)",
+      "body": "National Testing Agency (NTA) / University Grants Commission",
+      "level": "Assistant Professor & JRF Eligibility (Postgraduate Level)",
+      "totalMarks": 100,
+      "duration": "60 Minutes (Paper 1)",
+      "negativeMarking": false,
+      "officialWebsite": "https://ugcnet.nta.ac.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Teaching Aptitude",
+          "nameHindi": "शिक्षण अभिवृत्ति",
+          "marks": 10,
+          "questions": 5
+        },
+        {
+          "name": "Research Aptitude",
+          "nameHindi": "शोध अभिवृत्ति",
+          "marks": 10,
+          "questions": 5
+        },
+        {
+          "name": "Comprehension & Communication",
+          "nameHindi": "बोध व संप्रेषण",
+          "marks": 20,
+          "questions": 10
+        },
+        {
+          "name": "Mathematical Reasoning & Data Interpretation",
+          "nameHindi": "गणितीय तर्क व डेटा व्याख्या",
+          "marks": 20,
+          "questions": 10
+        },
+        {
+          "name": "ICT & Higher Education System",
+          "nameHindi": "सूचना प्रौद्योगिकी व उच्च शिक्षा प्रणाली",
+          "marks": 20,
+          "questions": 10
+        },
+        {
+          "name": "People, Development & Environment",
+          "nameHindi": "लोग, विकास व पर्यावरण",
+          "marks": 20,
+          "questions": 10
+        }
+      ],
+      "sectionMarks": 100,
+      "sectionQuestions": 50,
+      "subjects": 2,
+      "topics": 4,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 155,
+      "poolAuthored": 141,
+      "topicRows": [
+        {
+          "id": "teaching-aptitude",
+          "name": "Teaching Aptitude, Evaluation Systems & NEP 2020",
+          "subjectId": "ugc-net-core",
+          "chapterId": "net-teaching-research",
+          "pending": false,
+          "authoredQuestions": 54,
+          "hasLesson": true
+        },
+        {
+          "id": "computer-awareness",
+          "name": "Information & Communication Technology (ICT) in Education",
+          "subjectId": "ugc-net-core",
+          "chapterId": "net-teaching-research",
+          "pending": false,
+          "authoredQuestions": 88,
+          "hasLesson": true
+        },
+        {
+          "id": "teaching-aptitude",
+          "name": "Teaching & Research Aptitude",
+          "subjectId": "ugc-net-p1",
+          "chapterId": "ugc-net-general",
+          "pending": false,
+          "authoredQuestions": 54,
+          "hasLesson": true
+        },
+        {
+          "id": "ict-net",
+          "name": "ICT, Data Interpretation & Higher Education",
+          "subjectId": "ugc-net-p1",
+          "chapterId": "ugc-net-general",
+          "pending": false,
+          "authoredQuestions": 88,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "utet-teaching",
+      "state": "central",
+      "name": "UTET (Uttarakhand Teacher Eligibility Test)",
+      "body": "Uttarakhand Board of School Education (UBSE), Ramnagar",
+      "level": "UTET Paper I (PRT) & Paper II (TGT)",
+      "totalMarks": 150,
+      "duration": "2 Hours 30 Minutes",
+      "negativeMarking": false,
+      "officialWebsite": "https://uktet.com",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Child Development and Pedagogy",
+          "nameHindi": "बाल विकास एवं शिक्षाशास्त्र",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language I (Hindi compulsory)",
+          "nameHindi": "भाषा I (हिंदी)",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Language II (English / Sanskrit / Urdu)",
+          "nameHindi": "भाषा II",
+          "marks": 30,
+          "questions": 30
+        },
+        {
+          "name": "Subject Domain (Math & EVS OR Social Science)",
+          "nameHindi": "विषय डोमेन (गणित-पर्यावरण अथवा सामाजिक अध्ययन)",
+          "marks": 60,
+          "questions": 60
+        }
+      ],
+      "sectionMarks": 150,
+      "sectionQuestions": 150,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 121,
+      "poolAuthored": 117,
+      "topicRows": [
+        {
+          "id": "child-development-pedagogy",
+          "name": "Child Development, Piaget, Vygotsky & Inclusive Education",
+          "subjectId": "utet-curriculum",
+          "chapterId": "utet-core-pedagogy",
+          "pending": false,
+          "authoredQuestions": 66,
+          "hasLesson": true
+        },
+        {
+          "id": "hindi-vyakaran",
+          "name": "Hindi Grammar & Pedagogy",
+          "subjectId": "utet-curriculum",
+          "chapterId": "utet-core-pedagogy",
+          "pending": false,
+          "authoredQuestions": 51,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "army-agniveer",
+      "state": "central",
+      "name": "Army Agniveer (General Duty)",
+      "body": "Indian Army",
+      "level": "General Duty (GD)",
+      "totalMarks": 100,
+      "duration": "60 Minutes",
+      "negativeMarking": 1,
+      "officialWebsite": "https://joinindianarmy.nic.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "General Knowledge",
+          "nameHindi": "सामान्य ज्ञान",
+          "marks": 30,
+          "questions": 15
+        },
+        {
+          "name": "General Science",
+          "nameHindi": "सामान्य विज्ञान",
+          "marks": 40,
+          "questions": 20
+        },
+        {
+          "name": "Mathematics",
+          "nameHindi": "गणित",
+          "marks": 20,
+          "questions": 10
+        },
+        {
+          "name": "Computer Science",
+          "nameHindi": "कंप्यूटर विज्ञान",
+          "marks": 10,
+          "questions": 5
+        }
+      ],
+      "sectionMarks": 100,
+      "sectionQuestions": 50,
+      "subjects": 1,
+      "topics": 2,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 539,
+      "poolAuthored": 354,
+      "topicRows": [
+        {
+          "id": "gk-agniveer",
+          "name": "General Knowledge & Current Affairs",
+          "subjectId": "agniveer-core",
+          "chapterId": "agniveer-general",
+          "pending": false,
+          "authoredQuestions": 165,
+          "hasLesson": true
+        },
+        {
+          "id": "science-agniveer",
+          "name": "General Science & Mathematics",
+          "subjectId": "agniveer-core",
+          "chapterId": "agniveer-general",
+          "pending": false,
+          "authoredQuestions": 189,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "army-agniveer-gd",
+      "state": "defence",
+      "name": "Indian Army Agniveer General Duty (GD)",
+      "body": "Join Indian Army (Headquarters Recruiting Zone)",
+      "level": "Class 10th / Matric with 45% aggregate",
+      "totalMarks": 100,
+      "duration": "60 Minutes (1 Hour)",
+      "negativeMarking": 0.5,
+      "officialWebsite": "https://joinindianarmy.nic.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "General Knowledge",
+          "nameHindi": "सामान्य ज्ञान",
+          "marks": 30,
+          "questions": 15
+        },
+        {
+          "name": "General Science",
+          "nameHindi": "सामान्य विज्ञान",
+          "marks": 30,
+          "questions": 15
+        },
+        {
+          "name": "Mathematics",
+          "nameHindi": "गणित",
+          "marks": 30,
+          "questions": 15
+        },
+        {
+          "name": "Logical Reasoning",
+          "nameHindi": "तर्कशक्ति (लॉजिकल रीजनिंग)",
+          "marks": 10,
+          "questions": 5
+        }
+      ],
+      "sectionMarks": 100,
+      "sectionQuestions": 50,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 12,
+      "poolAuthored": 12,
+      "topicRows": [
+        {
+          "id": "army-military-heritage",
+          "name": "Indian Armed Forces Heritage, Ranks & Honours",
+          "subjectId": "army-gd-curriculum",
+          "chapterId": "army-gd-domain",
+          "pending": false,
+          "authoredQuestions": 12,
+          "hasLesson": true
+        }
+      ]
+    },
+    {
+      "id": "army-agniveer-clerk",
+      "state": "defence",
+      "name": "Indian Army Agniveer Clerk / Store Keeper (SKT)",
+      "body": "Join Indian Army",
+      "level": "10+2 Intermediate (60% aggregate with English & Maths/Accounts)",
+      "totalMarks": 200,
+      "duration": "60 Minutes (1 Hour)",
+      "negativeMarking": 1,
+      "officialWebsite": "https://joinindianarmy.nic.in",
+      "syllabusStatus": "",
+      "sections": [
+        {
+          "name": "Part I: General Knowledge",
+          "nameHindi": "भाग 1: सामान्य ज्ञान",
+          "marks": 20,
+          "questions": 5
+        },
+        {
+          "name": "Part I: General Science",
+          "nameHindi": "भाग 1: सामान्य विज्ञान",
+          "marks": 20,
+          "questions": 5
+        },
+        {
+          "name": "Part I: Mathematics",
+          "nameHindi": "भाग 1: गणित",
+          "marks": 40,
+          "questions": 10
+        },
+        {
+          "name": "Part I: Computer Science",
+          "nameHindi": "भाग 1: कंप्यूटर विज्ञान",
+          "marks": 20,
+          "questions": 5
+        },
+        {
+          "name": "Part II: General English (Qualifying 32 Marks)",
+          "nameHindi": "भाग 2: सामान्य अंग्रेजी (अनिवार्य 32 अंक)",
+          "marks": 100,
+          "questions": 25
+        }
+      ],
+      "sectionMarks": 200,
+      "sectionQuestions": 50,
+      "subjects": 1,
+      "topics": 1,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
+      "nonPendingNoLesson": [],
+      "pendingWithQuestions": [],
+      "poolTotal": 50,
+      "poolAuthored": 50,
+      "topicRows": [
+        {
+          "id": "english-grammar-syntax",
+          "name": "Parts of Speech, Comprehension & Voice/Narration",
+          "subjectId": "army-clerk-curriculum",
+          "chapterId": "army-clerk-english-grammar",
+          "pending": false,
+          "authoredQuestions": 50,
+          "hasLesson": true
+        }
+      ]
+    }
+  ],
+  "leakage": [],
+  "orphanQuestions": {
+    "count": 82,
+    "byTopic": {
+      "economics-national-income": 8,
+      "patwari-revenue-math": 2,
+      "constitution-basics": 1,
+      "ett-evs-science": 1,
+      "police-bns-law": 10,
+      "police-punjab-act": 8,
+      "patwari-land-revenue": 7,
+      "punjab-gk": 5,
+      "ssc-general-awareness": 10,
+      "ssc-reasoning": 10,
+      "ett-paper-a-punjabi-script-phonetics-dialects": 10,
+      "ett-paper-a-punjabi-grammar-vocabulary-idioms": 10
+    }
+  }
+}
