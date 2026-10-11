@@ -180,6 +180,21 @@ test('Legacy aliases resolve transparently to separated tracks without data loss
   assert.equal(legacyPool.length, engine.getQuestionPool({ examId: 'punjab-master-cadre-sst' }).length);
 });
 
+test('Section marks consistency: sum of non-qualifying sections equals merit totalMarks', () => {
+  const allExamsList = Object.values(exams.ALL_EXAMS).flat();
+  for (const exam of allExamsList) {
+    if (!exam.sections || exam.sections.length === 0) continue;
+    const meritSum = exam.sections
+      .filter(s => !s.qualifying)
+      .reduce((sum, s) => sum + s.marks, 0);
+    const totalSum = exam.sections.reduce((sum, s) => sum + s.marks, 0);
+    assert.ok(
+      meritSum === exam.totalMarks || totalSum === exam.totalMarks,
+      `Exam ${exam.id} merit sum (${meritSum}) or total sum (${totalSum}) must match totalMarks (${exam.totalMarks})`
+    );
+  }
+});
+
 test('Official provenance register accurately documents Master Cadre and REET patterns', () => {
   const pmcRecords = provenance.PUNJAB_MASTER_CADRE_PROVENANCE;
   assert.ok(pmcRecords['punjab-master-cadre-sst']);

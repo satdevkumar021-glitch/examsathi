@@ -20,7 +20,7 @@ import Link from 'next/link';
 import { Clock, CheckCircle2, ChevronRight, ChevronLeft, AlertCircle, Layers, RotateCw, Award, Brain, ShieldAlert } from 'lucide-react';
 import { Question } from '@/lib/data/questions';
 import { getQuestionPool, getTestQuestions, getOrderedSetQuestions, evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
-import { computeScore, computeTopicBreakdown } from '@/lib/scoring';
+import { computeScore, computeTopicBreakdown, computeOfficialAllocatedSeconds } from '@/lib/scoring';
 import { CardRating, reviewCard, loadSRSStates, saveSRSStates, createNewCard, getSRSSummary } from '@/lib/srs';
 import { recordQuizMistakes, updateTopicMastery } from '@/lib/mistake-notebook';
 
@@ -286,7 +286,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       setQuestions(loadedQuestions);
       setLoaded(true);
       setLoadError(false);
-      const allocatedSeconds = minutes !== undefined ? Math.max(60, Math.min(10800, Math.round(minutes * 60))) : Math.max(300, loadedQuestions.length * 54);
+      const allocatedSeconds = computeOfficialAllocatedSeconds(loadedQuestions.length, activeExamId || examId, minutes);
       setTotalTimeSeconds(allocatedSeconds);
       setSecondsRemaining(allocatedSeconds);
       deadlineRef.current = Date.now() + allocatedSeconds * 1000;

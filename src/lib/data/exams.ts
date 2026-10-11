@@ -33,6 +33,7 @@ export interface Section {
   nameHindi: string;
   marks: number;
   questions?: number;
+  qualifying?: boolean;
 }
 
 export interface Subject {
@@ -318,7 +319,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '🌍',
     color: '#4338CA',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Social Science Subject Domain (Merit)', nameHindi: 'सामाजिक विज्ञान विषय डोमेन (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -779,7 +780,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '🔬',
     color: '#0D9488',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Science Subject Domain (Physics, Chemistry, Botany & Zoology — 150 MCQs, 0 Negative Marking)', nameHindi: 'विज्ञान विषय डोमेन (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1068,7 +1069,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '📐',
     color: '#2563EB',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Mathematics Subject Domain (Merit)', nameHindi: 'गणित विषय डोमेन (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1126,7 +1127,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '📖',
     color: '#EA580C',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Punjabi Language & Literature (Merit)', nameHindi: 'पंजाबी भाषा व साहित्य (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1197,7 +1198,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '📚',
     color: '#7C3AED',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Hindi Language & Literature (Merit)', nameHindi: 'हिंदी भाषा व साहित्य (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1268,7 +1269,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '🔤',
     color: '#475569',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - English Language & Literature (Merit)', nameHindi: 'अंग्रेजी भाषा व साहित्य (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1325,7 +1326,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '💼',
     color: '#0D9488',
     sections: [
-      { name: 'Part A - Compulsory Punjabi Qualifying (Matric Standard)', nameHindi: 'पंजाबी योग्यता परीक्षा', marks: 50, questions: 50 },
+      { name: 'Part A - Compulsory Punjabi Qualifying (Matric Standard)', nameHindi: 'पंजाबी योग्यता परीक्षा', marks: 50, questions: 50, qualifying: true },
       { name: 'Part B - General Knowledge & Current Affairs', nameHindi: 'सामान्य ज्ञान व करंट अफेयर्स', marks: 25, questions: 25 },
       { name: 'Part B - Logical Reasoning & Mental Ability', nameHindi: 'तर्कशक्ति व मानसिक क्षमता', marks: 25, questions: 25 },
       { name: 'Part B - Punjab History & Culture', nameHindi: 'पंजाब इतिहास व संस्कृति', marks: 17, questions: 17 },
@@ -1450,7 +1451,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '🌾',
     color: '#059669',
     sections: [
-      { name: 'Compulsory Punjabi Paper A', nameHindi: 'पंजाबी योग्यता परीक्षा', marks: 50, questions: 50 },
+      { name: 'Compulsory Punjabi Paper A', nameHindi: 'पंजाबी योग्यता परीक्षा', marks: 50, questions: 50, qualifying: true },
       { name: 'General Knowledge & Punjab History', nameHindi: 'सामान्य ज्ञान व पंजाब इतिहास', marks: 25, questions: 25 },
       { name: 'Mental Ability & Quantitative Aptitude', nameHindi: 'रीजनिंग व मैथ्स', marks: 25, questions: 25 },
       { name: 'Agriculture & Land Measurement', nameHindi: 'कृषि एवं भूमि माप इकाइयां', marks: 25, questions: 25 },

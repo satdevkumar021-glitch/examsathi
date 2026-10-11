@@ -979,6 +979,7 @@ import { PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS } from './questions/ppsc_cle
 import { PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS } from './questions/ppsc_clerk_punjabi_english_computer_mcqs';
 import { ETT_SCIENCE_LIGHT_MCQs } from './questions/ett_science_light_batch';
 import { ETT_SCIENCE_CORE_MCQs } from './questions/ett_science_core_batch';
+import { ETT_SCIENCE_PHYSICS_DEPTH } from './questions/ett_science_physics_depth';
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLERK_GK_FAST_QUESTIONS,
@@ -1008,6 +1009,7 @@ export const ALL_QUESTIONS: Question[] = [
   ...PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS,
   ...ETT_SCIENCE_LIGHT_MCQs,
   ...ETT_SCIENCE_CORE_MCQs,
+  ...ETT_SCIENCE_PHYSICS_DEPTH,
 ];
 
 

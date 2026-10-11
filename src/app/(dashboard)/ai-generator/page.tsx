@@ -501,9 +501,12 @@ export default function AIGeneratorPage() {
                 className="bg-slate-800/90 rounded-2xl p-4 border border-slate-700 shadow-sm flex flex-col gap-2.5"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5 flex-wrap">
                     <span className="text-xs font-black text-white bg-slate-700 px-2 py-0.5 rounded">
                       Q{idx + 1}
+                    </span>
+                    <span className="text-[10px] text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded font-bold">
+                      📝 AI DRAFT (UNREVIEWED)
                     </span>
                     <span className="text-[10px] text-teal-300 bg-teal-500/10 border border-teal-500/30 px-2 py-0.5 rounded font-bold">
                       {q.difficulty.toUpperCase()}

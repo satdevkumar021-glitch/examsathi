@@ -556,7 +556,7 @@ export const PUNJAB_ADDITIONAL_EXAMS: Exam[] = [
     color: '#4f46e5',
     syllabusStatus: 'provisional-archive' as const,
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying', nameHindi: 'पंजाबी अर्हता परीक्षा', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying', nameHindi: 'पंजाबी अर्हता परीक्षा', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Post Graduate Subject Domain', nameHindi: 'स्नातकोत्तर विषय विशेषज्ञता', marks: 150, questions: 150 },
     ],
     subjects: [
