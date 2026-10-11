@@ -1,0 +1,58 @@
+[
+  {
+    "environment": "local",
+    "path": "/api/ai/generate/",
+    "request": "{",
+    "status": 400,
+    "response": "{\"success\":false,\"message\":\"Invalid JSON request.\"}"
+  },
+  {
+    "environment": "local",
+    "path": "/api/ai/generate/",
+    "request": "{\"content\":\"short\",\"count\":5}",
+    "status": 400,
+    "response": "{\"success\":false,\"message\":\"Use 50\u2013100,000 characters and 1\u201350 questions.\"}"
+  },
+  {
+    "environment": "local",
+    "path": "/api/auth/login/",
+    "request": "{}",
+    "status": 400,
+    "response": "{\"success\":false,\"message\":\"Email and password are required.\"}"
+  },
+  {
+    "environment": "local",
+    "path": "/api/auth/register/",
+    "request": "{}",
+    "status": 400,
+    "response": "{\"success\":false,\"message\":\"Name, email, and password are required.\"}"
+  },
+  {
+    "environment": "live",
+    "path": "/api/ai/generate/",
+    "request": "{",
+    "status": 400,
+    "response": "{\"success\":false,\"message\":\"Invalid JSON request.\"}"
+  },
+  {
+    "environment": "live",
+    "path": "/api/ai/generate/",
+    "request": "{\"content\":\"short\",\"count\":5}",
+    "status": 400,
+    "response": "{\"success\":false,\"message\":\"Use 50\u2013100,000 characters and 1\u201350 questions.\"}"
+  },
+  {
+    "environment": "live",
+    "path": "/api/auth/login/",
+    "request": "{}",
+    "status": 400,
+    "response": "{\"success\":false,\"message\":\"Email and password are required.\"}"
+  },
+  {
+    "environment": "live",
+    "path": "/api/auth/register/",
+    "request": "{}",
+    "status": 400,
+    "response": "{\"success\":false,\"message\":\"Name, email, and password are required.\"}"
+  }
+]

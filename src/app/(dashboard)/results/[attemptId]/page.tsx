@@ -9,6 +9,8 @@ export function generateStaticParams() {
     { attemptId: 'latest' },
     { attemptId: 'default' },
     { attemptId: 'punjab-master-cadre' },
+    { attemptId: 'punjab-master-cadre-sst' },
+    { attemptId: 'reet-level2-sst' },
     { attemptId: 'clerk' },
     { attemptId: 'patwari' },
     { attemptId: 'topic-all' },

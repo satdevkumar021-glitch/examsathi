@@ -24,7 +24,7 @@ export default function ContactPage() {
         <div className="p-4 bg-slate-900/80 border border-slate-700/80 rounded-xl space-y-2">
           <div className="flex items-center gap-2 text-teal-400 font-bold text-sm">
             <Mail size={16} />
-            <h3>Direct Email Contact</h3>
+            <h3>Public Issue Tracker & Support</h3>
           </div>
           <p className="text-slate-300 text-xs">
             For general feedback, inquiries, or support:

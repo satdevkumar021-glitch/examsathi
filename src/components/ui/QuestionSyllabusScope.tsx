@@ -5,7 +5,7 @@ export default function QuestionSyllabusScope({ topicId, question, language }: {
   if (!topicId) return null;
   const matches = SYLLABUS_TOPICS.filter(entry => topicIncludes(entry.topic.id, topicId));
   return <div className="text-xs text-slate-300 p-2 bg-slate-800 rounded-lg my-2">
-    {question?.editorialStatus === 'authored' && <p className="text-amber-200">Original foundation question; independent editorial review pending.</p>}
+    {question?.editorialStatus === 'authored' && <p className="text-amber-200">{question.originType === 'computed-variant' ? 'Computed practice variant; independent editorial review pending.' : 'Original foundation question; independent editorial review pending.'}</p>}
     {question?.source && <a className="underline" href={question.source.url} target="_blank" rel="noopener noreferrer">Study reference: {question.source.title} ↗</a>}
     {language && question?.availableLanguages && !question.availableLanguages.includes(language) && <p className="text-amber-200">Translation pending. This question is available in {question.availableLanguages.join(', ')}.</p>}
     {language && question?.explanationLanguages && !question.explanationLanguages.includes(language) && <p className="text-amber-200">Explanation translation pending; available in {question.explanationLanguages.join(', ')}.</p>}

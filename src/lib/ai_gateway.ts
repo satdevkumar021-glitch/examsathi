@@ -23,8 +23,24 @@ export function incrementAIQuota(): void {
   studyStorage.setItem(STORAGE_USAGE_KEY, JSON.stringify({ date: new Date().toISOString().slice(0, 10), count: DAILY_LIMIT - quota.remaining + 1 }));
 }
 
+const INJECTION_PATTERNS = [
+  /ignore\s+(all\s+)?(previous|prior)\s+instructions/i,
+  /system\s*:\s*you\s+are/i,
+  /disregard\s+(above|preceding|all)/i,
+  /<script/i,
+  /javascript:/i,
+];
+
+/** Detects adversarial instruction injection attempts inside study text. */
+export function detectPromptInjection(text: string): boolean {
+  return INJECTION_PATTERNS.some(p => p.test(text));
+}
+
 /** Local recall practice: a term is removed from an actual sentence, never invented. */
 export function extractRecallQuestions(content: string, targetCount: number): Question[] {
+  if (detectPromptInjection(content)) {
+    throw new Error('Potentially unsafe or manipulative prompt instructions detected in study text.');
+  }
   const sentences = Array.from(new Set(content.split(/(?<=[.!?।])\s*|\n+/u).map(s => s.trim()).filter(s => s.length >= 35 && s.length <= 700)));
   const candidates = sentences.map(sentence => {
     const terms = sentence.match(/\p{N}{2,}|[\p{L}\p{M}]{5,}/gu) || [];
@@ -45,14 +61,29 @@ export function extractRecallQuestions(content: string, targetCount: number): Qu
     }
     const prompt = item.sentence.replace(item.answer, '______');
     const evidence = `Source excerpt: ${item.sentence}`;
-    result.push({ id: `notes-${Date.now()}-${index}`, topicId: 'custom-notes', subjectId: 'general', examTag: 'Local notes recall • not AI verified', question: { en: prompt, hi: prompt, pa: prompt }, options, correct, explanation: { en: evidence, hi: evidence, pa: evidence }, difficulty: 'easy' });
+    result.push({ 
+      id: `notes-${Date.now()}-${index}`, 
+      topicId: 'custom-notes', 
+      subjectId: 'general', 
+      examTag: 'Local notes recall • not AI verified', 
+      question: { en: prompt, hi: prompt, pa: prompt }, 
+      options, 
+      correct, 
+      explanation: { en: evidence, hi: evidence, pa: evidence }, 
+      difficulty: 'easy',
+      originType: 'computed-variant',
+      reviewStatus: 'draft'
+    });
     if (result.length >= Math.max(1, Math.min(50, targetCount))) break;
   }
   return result;
 }
 
-/** Validates untrusted model output and requires a literal excerpt from the source. */
+/** Validates untrusted model output and requires that the excerpt actually supports the declared answer. */
 export function validateGeneratedQuestions(value: unknown, content: string, count: number): Question[] {
+  if (detectPromptInjection(content)) {
+    throw new Error('Potentially unsafe or manipulative prompt instructions detected in study text.');
+  }
   if (!Array.isArray(value) || value.length === 0 || value.length > count) throw new Error('Invalid question count');
   const normalize = (text: string) => text.replace(/\s+/g, ' ').trim();
   const source = normalize(content);
@@ -64,11 +95,45 @@ export function validateGeneratedQuestions(value: unknown, content: string, coun
     if (!text(q.question) || !text(q.explanation) || !options || !['A', 'B', 'C', 'D'].every(k => text(options[k])) || !['A', 'B', 'C', 'D'].includes(String(q.correct)) || !['easy', 'medium', 'hard'].includes(String(q.difficulty))) throw new Error('Malformed question');
     if (new Set(Object.values(options).map(v => (v as { en: string }).en.trim().toLowerCase())).size !== 4) throw new Error('Duplicate options');
     if (typeof q.sourceExcerpt !== 'string' || q.sourceExcerpt.length < 15 || !source.includes(normalize(q.sourceExcerpt))) throw new Error('Question is missing source evidence');
+    
+    // Strict grounding check: Ensure the correct answer (or key keywords) appears in the excerpt
+    const correctOpt = options[String(q.correct)] as Record<string, string>;
+    const excerptNorm = normalize(q.sourceExcerpt).toLowerCase();
+    const answerTerms = [correctOpt.hi, correctOpt.pa, correctOpt.en]
+      .filter(Boolean)
+      .map(t => normalize(t).toLowerCase());
+    const isSupported = answerTerms.some(term => {
+      if (term.length >= 2 && excerptNorm.includes(term)) return true;
+      const words = term.split(/\s+/).filter(w => w.length >= 3);
+      if (words.length <= 1) return false;
+      const matched = words.filter(w => excerptNorm.includes(w));
+      return matched.length >= Math.max(2, Math.ceil(words.length * 0.75));
+    });
+    if (!isSupported) {
+      throw new Error('Question source excerpt does not support the declared correct answer');
+    }
+
     const explanation = q.explanation;
-    return { id: `ai-${Date.now()}-${index}`, topicId: 'custom-notes', subjectId: 'general', examTag: 'AI notes draft • review before use', question: q.question, options: options as Question['options'], correct: q.correct as Question['correct'], difficulty: q.difficulty as Question['difficulty'], explanation: { hi: `${explanation.hi}\n${q.sourceExcerpt}`, pa: `${explanation.pa}\n${q.sourceExcerpt}`, en: `${explanation.en}\nSource excerpt: ${q.sourceExcerpt}` } };
+    return { 
+      id: `ai-${Date.now()}-${index}`, 
+      topicId: 'custom-notes', 
+      subjectId: 'general', 
+      examTag: 'AI notes draft • review before use', 
+      question: q.question, 
+      options: options as Question['options'], 
+      correct: q.correct as Question['correct'], 
+      difficulty: q.difficulty as Question['difficulty'], 
+      explanation: { hi: `${explanation.hi}\n${q.sourceExcerpt}`, pa: `${explanation.pa}\n${q.sourceExcerpt}`, en: `${explanation.en}\nSource excerpt: ${q.sourceExcerpt}` },
+      originType: 'computed-variant',
+      reviewStatus: 'draft'
+    };
   });
 }
 export async function generateMCQsFromNotes(content: string, targetCount = 5): Promise<AIGenerationResult> {
-  const questions = content.trim().length >= 50 && content.length <= 100000 ? extractRecallQuestions(content, targetCount) : [];
-  return { success: questions.length > 0, questions, source: 'client_heuristic_engine', isVerified: false, message: questions.length ? `Created ${questions.length} local recall questions from your text. These are not AI-generated or independently verified.` : 'Not enough distinct facts to create reliable recall questions. Add several complete sentences or use the configured AI backend.' };
+  try {
+    const questions = content.trim().length >= 50 && content.length <= 100000 ? extractRecallQuestions(content, targetCount) : [];
+    return { success: questions.length > 0, questions, source: 'client_heuristic_engine', isVerified: false, message: questions.length ? `Created ${questions.length} local recall questions from your text. These are not AI-generated or independently verified.` : 'Not enough distinct facts to create reliable recall questions. Add several complete sentences or use the configured AI backend.' };
+  } catch (err) {
+    return { success: false, questions: [], source: 'client_heuristic_engine', isVerified: false, message: err instanceof Error ? err.message : 'Generation failed.' };
+  }
 }

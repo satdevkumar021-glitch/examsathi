@@ -1,0 +1,23 @@
+
+> examsathi-web@1.0.0 prebuild
+> node scripts/prepare-assets.js
+
+
+> examsathi-web@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.3.8 (webpack)
+- Environments: .env.local
+✓ Running next.config.ts took 12ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 3.9s
+  Running TypeScript ...
+src/lib/data/lessons/master_cadre_blueprint_adapter.ts(265,9): error TS2322: Type '"punjabi"' is not assignable to type '"science" | "pedagogy" | "math" | "history" | "polity" | "geography" | "economy" | "clerk" | "language" | "patwari" | "police" | "rajasthan" | "general"'.
+src/lib/data/lessons/master_cadre_blueprint_adapter.ts(274,9): error TS2322: Type '"punjabi"' is not assignable to type '"science" | "pedagogy" | "math" | "history" | "polity" | "geography" | "economy" | "clerk" | "language" | "patwari" | "police" | "rajasthan" | "general"'.
+src/lib/data/lessons/master_cadre_blueprint_adapter.ts(283,9): error TS2322: Type '"punjabi"' is not assignable to type '"science" | "pedagogy" | "math" | "history" | "polity" | "geography" | "economy" | "clerk" | "language" | "patwari" | "police" | "rajasthan" | "general"'.
+src/lib/data/lessons/master_cadre_blueprint_adapter.ts(292,9): error TS2322: Type '"punjabi"' is not assignable to type '"science" | "pedagogy" | "math" | "history" | "polity" | "geography" | "economy" | "clerk" | "language" | "patwari" | "police" | "rajasthan" | "general"'.
+src/lib/data/lessons/master_cadre_blueprint_adapter.ts(364,9): error TS2322: Type '"english"' is not assignable to type '"science" | "pedagogy" | "math" | "history" | "polity" | "geography" | "economy" | "clerk" | "language" | "patwari" | "police" | "rajasthan" | "general"'.
+src/lib/data/lessons/master_cadre_blueprint_adapter.ts(373,9): error TS2322: Type '"hindi"' is not assignable to type '"science" | "pedagogy" | "math" | "history" | "polity" | "geography" | "economy" | "clerk" | "language" | "patwari" | "police" | "rajasthan" | "general"'.
+Failed to type check.
+

@@ -1,20 +1,25 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import * as Dialog from '@radix-ui/react-dialog';
 import { useStore } from '@/lib/store';
 import { studyStorage } from '@/lib/storage';
 export default function OnboardingGuideModal() {
   const { language: lang } = useStore();
+  const pathname = usePathname();
   const t = (en: string, hi: string, pa: string) => ({ en, hi, pa })[lang];
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState(0);
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout> | undefined;
-    try { if (!studyStorage.getItem('examsathi_onboarding_completed')) timer = setTimeout(() => setOpen(true), 1200); } catch { /* Guide is optional. */ }
+    try {
+      const isTestOrActiveRoute = pathname?.startsWith('/mock-test') || pathname?.startsWith('/results') || pathname?.startsWith('/typing-practice');
+      if (!isTestOrActiveRoute && !studyStorage.getItem('examsathi_onboarding_completed')) timer = setTimeout(() => setOpen(true), 1200);
+    } catch { /* Guide is optional. */ }
     const reopen = () => { setStep(0); setOpen(true); };
     window.addEventListener('examsathi_open_onboarding', reopen);
     return () => { clearTimeout(timer); window.removeEventListener('examsathi_open_onboarding', reopen); };
-  }, []);
+  }, [pathname]);
   const close = () => { setOpen(false); studyStorage.setItem('examsathi_onboarding_completed', 'true'); };
   const steps = [
     { title: t('Welcome to ExamSathi', 'ExamSathi में आपका स्वागत है', 'ExamSathi ਵਿੱਚ ਤੁਹਾਡਾ ਸਵਾਗਤ ਹੈ'), text: t('Browse the syllabus to see available lessons and pending coverage. The preparation map is not a substitute for your latest official exam notification.', 'पाठ्यक्रम में उपलब्ध पाठ और लंबित सामग्री देखें। तैयारी मानचित्र के साथ नवीनतम आधिकारिक परीक्षा सूचना भी जांचें।', 'ਸਿਲੇਬਸ ਵਿੱਚ ਉਪਲਬਧ ਪਾਠ ਅਤੇ ਬਾਕੀ ਸਮੱਗਰੀ ਵੇਖੋ। ਤਿਆਰੀ ਨਕਸ਼ੇ ਨਾਲ ਨਵੀਂ ਅਧਿਕਾਰਕ ਪ੍ਰੀਖਿਆ ਸੂਚਨਾ ਵੀ ਵੇਖੋ।') },

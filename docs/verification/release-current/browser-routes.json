@@ -1,0 +1,128 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "title": "ExamSathi - परीक्षा साथी • ਮੁਫ਼ਤ ਪ੍ਰੀਖਿਆ ਤਿਆਰੀ ਮੰਚ",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/dashboard/",
+    "status": 200,
+    "title": "Student Dashboard & Today’s Plan",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/exams/",
+    "status": 200,
+    "title": "State & Central Exam Directory",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/exams/punjab/",
+    "status": 200,
+    "title": "State & Central Exam Directory",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/syllabus/",
+    "status": 200,
+    "title": "Dashboard | ExamSathi | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/coverage/",
+    "status": 200,
+    "title": "Dashboard | ExamSathi | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/lesson/clerk-data-analysis/?exam=punjab-clerk",
+    "status": 200,
+    "title": "Dashboard | ExamSathi | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/mock-test/",
+    "status": 200,
+    "title": "CBT Mock Tests & Spaced Repetition Practice",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/mock-test/topic-clerk-data-analysis/?exam=punjab-clerk&count=50",
+    "status": 200,
+    "title": "CBT Mock Tests & Spaced Repetition Practice",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/library/",
+    "status": 200,
+    "title": "24/7 Virtual Focus Study Room & Pomodoro",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/roadmap/",
+    "status": 200,
+    "title": "60-Day Structured Syllabus Roadmap",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/exam-coach/",
+    "status": 200,
+    "title": "Dashboard | ExamSathi | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/profile/",
+    "status": 200,
+    "title": "Student Profile & Performance Analytics",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/typing-practice/",
+    "status": 200,
+    "title": "PSSSB Raavi Punjabi Typing Practice Benchmark (10 Min)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/ai-generator/",
+    "status": 200,
+    "title": "Dashboard | ExamSathi | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/login/",
+    "status": 200,
+    "title": "Student Login | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/register/",
+    "status": 200,
+    "title": "Free Student Registration | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/about/",
+    "status": 200,
+    "title": "About Us & Educational Mission | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/contact/",
+    "status": 200,
+    "title": "Contact Us & Errata Support | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/privacy/",
+    "status": 200,
+    "title": "Privacy Policy | ExamSathi | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  },
+  {
+    "route": "/terms/",
+    "status": 200,
+    "title": "Terms of Service & Disclaimer | ExamSathi (परीक्षा साथी)",
+    "runtimeErrors": []
+  }
+]

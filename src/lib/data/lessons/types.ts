@@ -29,6 +29,11 @@ export interface DocumentResource {
   language: string;
   type?: 'syllabus' | 'textbook' | 'nios' | 'notes' | 'official' | string;
   fileSize?: string;
+  publisher?: string;
+  chapterOrPage?: string;
+  accessNotes?: string;
+  lastChecked?: string;
+  availability?: 'verified' | 'supplementary' | 'archival';
 }
 
 export interface SyllabusReference {
@@ -44,6 +49,50 @@ export interface LessonSection {
   heading: { hi: string; pa: string; en: string };
   text: { hi: string; pa: string; en: string };
   bulletPoints?: { hi: string[]; pa: string[]; en: string[] };
+}
+
+export interface WorkedExample {
+  title: { hi: string; pa: string; en: string };
+  problem: { hi: string; pa: string; en: string };
+  steps: { hi: string[]; pa: string[]; en: string[] };
+  solution: { hi: string; pa: string; en: string };
+  takeaway?: { hi: string; pa: string; en: string };
+}
+
+export interface CommonMisconception {
+  misconception: { hi: string; pa: string; en: string };
+  correction: { hi: string; pa: string; en: string };
+  whyItMatters: { hi: string; pa: string; en: string };
+}
+
+export interface QuickRevisionSheet {
+  highYieldPoints: { hi: string[]; pa: string[]; en: string[] };
+  keyFormulasOrRules?: { hi: string[]; pa: string[]; en: string[] };
+  examTraps: { hi: string[]; pa: string[]; en: string[] };
+}
+
+export interface EditorialRecord {
+  authoredDate: string;
+  lastUpdatedDate?: string;
+  authoringType: 'authored-curriculum' | 'archival-official' | 'editorial-board';
+  reviewerRecord?: string;
+  correctionHistory?: Array<{ date: string; description: string }>;
+  verifiedSyllabusDenominator?: string;
+}
+
+export interface TopicResourceEntry {
+  topicId: string;
+  examScope: string[];
+  title: string;
+  publisher: string;
+  type: 'syllabus' | 'textbook' | 'open-resource' | 'video' | 'notes' | 'official';
+  language: 'English' | 'Hindi' | 'Punjabi' | 'Bilingual' | string;
+  url: string;
+  chapterOrPage?: string;
+  accessNotes?: string;
+  rightsStatus?: 'official-public' | 'ncert-open' | 'pseb-open' | 'fair-use-educational';
+  lastChecked: string;
+  availability: 'verified' | 'supplementary' | 'archival';
 }
 
 export interface Lesson {
@@ -69,4 +118,10 @@ export interface Lesson {
   syllabusReference?: SyllabusReference;
   sources?: Array<{ title: string; url: string }>;
   sections?: LessonSection[];
+  prerequisites?: { hi: string[]; pa: string[]; en: string[] };
+  learningObjectives?: { hi: string[]; pa: string[]; en: string[] };
+  workedExamples?: WorkedExample[];
+  commonMisconceptions?: CommonMisconception[];
+  quickRevisionSheet?: QuickRevisionSheet;
+  editorialRecord?: EditorialRecord;
 }

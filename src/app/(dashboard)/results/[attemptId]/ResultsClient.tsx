@@ -1,7 +1,13 @@
 'use client';
 import QuestionSyllabusScope from '@/components/ui/QuestionSyllabusScope';
 import { getQuestionPool } from '@/lib/data/question_bank_engine';
-import { completedQuestionKeys } from '@/lib/practice-history';
+import { 
+  completedQuestionKeys, 
+  getLearnerExposure, 
+  resetLearnerExposure, 
+  explainResetBehavior 
+} from '@/lib/practice-history';
+import { normalizePracticeExamId } from '@/lib/exam-context';
 import { rememberQuestions } from '@/lib/question-vault';
 import { useStore } from '@/lib/store';
 import { studyStorage } from '@/lib/storage';
@@ -49,6 +55,7 @@ export default function Results() {
   const [bookmarkedIds, setBookmarkedIds] = useState<Record<string, boolean>>({});
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [isBottomSheetOpen, setIsBottomSheetOpen] = useState<boolean>(false);
+  const [, setExposureVersion] = useState<number>(0);
 
   useEffect(() => {
     try {
@@ -128,8 +135,27 @@ export default function Results() {
 
   const testId = result.testId || '1';
   const topicId = testId.startsWith('topic-') ? testId.slice(6) : 'all';
-  const remaining = result.examId === 'custom-notes' ? 0 : getQuestionPool({ examId: result.examId, topicId, difficulty: result.difficulty, pyq20Years: result.sourceConfig?.pyq20Years, pyqOnly: result.sourceConfig?.pyqOnly, excludeKeys: completedQuestionKeys() }).length;
-  const retakeQuery = new URLSearchParams({ exam: result.examId || 'all', diff: result.difficulty || 'all', count: String(total), pyq: result.sourceConfig?.pyq20Years ? '20y' : 'all', mode: 'exam' }).toString();
+  const learnerId = getStoredUser().id || 'usr-default';
+  const canonicalExamId = result.examId ? normalizePracticeExamId(result.examId) : 'punjab-master-cadre-sst';
+  const exposureSummary = getLearnerExposure(learnerId, canonicalExamId);
+
+  const remaining = result.examId === 'custom-notes'
+    ? 0
+    : getQuestionPool({
+        examId: canonicalExamId,
+        topicId,
+        difficulty: result.difficulty,
+        pyq20Years: result.sourceConfig?.pyq20Years,
+        pyqOnly: result.sourceConfig?.pyqOnly,
+        excludeKeys: completedQuestionKeys(),
+      }).length;
+  const retakeQuery = new URLSearchParams({
+    exam: canonicalExamId,
+    diff: result.difficulty || 'all',
+    count: String(total),
+    pyq: result.sourceConfig?.pyq20Years ? '20y' : 'all',
+    mode: 'exam',
+  }).toString();
   const testTitle = result.testTitle || 'Punjab Master Cadre 50-Question CBT Simulation';
   const questions = (result.questions && result.questions.length > 0) ? result.questions : [];
   const userAnswers = result.userAnswers || {};
@@ -495,7 +521,7 @@ export default function Results() {
             </div>
             <span className="text-[9px] text-slate-400">
               {difficultyStats.easy.total > 0 
-                ? `${Math.round((difficultyStats.easy.correct / difficultyStats.easy.total) * 100)}% Acc` 
+                ? `${Math.round((difficultyStats.easy.correct / difficultyStats.easy.total) * 100)}% score` 
                 : 'Direct Facts'}
             </span>
           </div>
@@ -508,7 +534,7 @@ export default function Results() {
             </div>
             <span className="text-[9px] text-slate-400">
               {difficultyStats.medium.total > 0 
-                ? `${Math.round((difficultyStats.medium.correct / difficultyStats.medium.total) * 100)}% Acc` 
+                ? `${Math.round((difficultyStats.medium.correct / difficultyStats.medium.total) * 100)}% score` 
                 : 'Competitive'}
             </span>
           </div>
@@ -521,7 +547,7 @@ export default function Results() {
             </div>
             <span className="text-[9px] text-slate-400">
               {difficultyStats.hard.total > 0 
-                ? `${Math.round((difficultyStats.hard.correct / difficultyStats.hard.total) * 100)}% Acc` 
+                ? `${Math.round((difficultyStats.hard.correct / difficultyStats.hard.total) * 100)}% score` 
                 : 'Merit Decider'}
             </span>
           </div>
@@ -764,7 +790,7 @@ export default function Results() {
                         )}
                       </div>
                       <span className="text-[10px] bg-slate-900/90 text-indigo-300 px-2 py-0.5 rounded border border-indigo-500/30 font-medium">
-                        {isCorrect ? 'Mastered in Mock ✓' : 'Revision Focus 📌'}
+                        {isCorrect ? 'Answered Correctly ✓' : 'Revision Focus 📌'}
                       </span>
                     </div>
                   )}
@@ -931,7 +957,7 @@ export default function Results() {
         {/* Share Score on WhatsApp */}
         <a 
           href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-            `🎓 *ExamSathi CBT Mock Test Scorecard!* 🇮🇳\n\nमैंने अभी ExamSathi पर ${testTitle} दिया:\n📊 Score: ${rawScore}/${total} (${percentage}%)\n🎯 Accuracy: ${accuracy}%\n\nयह 100% Free Portal है (Master Cadre, Clerk, Police, Patwari, REET, CTET)।\n👉 आप भी अपना टेस्ट दें और तैयारी करें:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
+            `🎓 *ExamSathi CBT Mock Test Scorecard!* 🇮🇳\n\nमैंने अभी ExamSathi पर ${testTitle} दिया:\n📊 Score: ${rawScore}/${total} (${percentage}%)\n🎯 Accuracy: ${accuracy}%\n\nयह 100% Free Portal है (Master Cadre, Clerk, Police, Patwari, REET, CTET)।\n👉 आप भी अपना टेस्ट दें और तैयारी करें:\n${typeof window !== 'undefined' && window.location.origin ? window.location.origin : 'https://examsathi-sxj3.onrender.com'}/`
           )}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -950,10 +976,54 @@ export default function Results() {
           <span>Review These {total} Questions in Flip Card Mode</span>
         </Link>
 
-        {result.examId !== 'custom-notes' && <div className="p-3 border border-teal-700 rounded-xl text-sm">
-          <p>{remaining} unseen questions remain in this exam/topic/filter pool.</p>
-          {remaining > 0 ? <Link className="block underline text-teal-300 mt-2" href={`/mock-test/${testId}?${retakeQuery}&fresh=1&set=${result.attemptId}`}>Next fresh set ({Math.min(total, remaining)} questions)</Link> : <p className="text-amber-200">Fresh questions exhausted. Review earlier sets or change the topic. Questions will not be silently repeated.</p>}
-        </div>}
+        {result.examId !== 'custom-notes' && (
+          <div className="p-4 bg-slate-900/80 border border-teal-700/60 rounded-xl text-sm space-y-3">
+            <div className="flex items-center justify-between text-xs">
+              <span className="font-semibold text-teal-300">📊 Syllabus Practice Exposure:</span>
+              <span className="text-slate-400 font-mono text-[11px]">
+                {exposureSummary.servedCount} served • {exposureSummary.answeredCount} answered • {exposureSummary.completedCount} completed
+              </span>
+            </div>
+            <p className="text-xs text-slate-300">
+              <span className="font-bold text-white">{remaining} unseen questions</span> remain in this exam syllabus pool ({result.difficulty || 'all'} difficulty).
+            </p>
+            {remaining > 0 ? (
+              <Link 
+                className="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold py-2.5 px-4 rounded-xl text-center text-xs flex items-center justify-center gap-2 transition"
+                href={`/mock-test/${testId}?${retakeQuery}&fresh=1&count=${Math.min(total, remaining)}&set=${result.attemptId}`}
+              >
+                <span>Take Next Fresh Set ({Math.min(total, remaining)} Unseen Qs) →</span>
+              </Link>
+            ) : (
+              <div className="space-y-2 pt-1 border-t border-slate-800">
+                <p className="text-amber-200 text-xs font-medium">
+                  ⚠️ Fresh unseen questions are currently exhausted in this pool. We never silently repeat questions in fresh sets.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-2 pt-1">
+                  <Link
+                    href={`/mock-test/${testId}?${retakeQuery}&mode=revision&repeat=1`}
+                    className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-3 rounded-lg text-center text-xs transition"
+                  >
+                    Start Revision Mode 🔁
+                  </Link>
+                  <button
+                    onClick={() => {
+                      resetLearnerExposure(learnerId, canonicalExamId);
+                      setExposureVersion(v => v + 1);
+                      showToast('Exposure tracking reset for this exam. You can practice from the beginning!');
+                    }}
+                    className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium py-2 px-3 rounded-lg text-center text-xs transition"
+                  >
+                    Reset Exposure 🔄
+                  </button>
+                </div>
+                <p className="text-[10px] text-slate-400 italic">
+                  {explainResetBehavior(reviewLang as 'en' | 'hi' | 'pa')}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
         {/* Retake Live Test */}
         <Link 
           href={`/mock-test/${testId}?${retakeQuery}&repeat=1&set=retake-${result.attemptId}`}

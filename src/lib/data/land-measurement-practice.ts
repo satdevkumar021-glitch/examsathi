@@ -29,7 +29,7 @@ export function generateLandMeasurementPractice(topicId: string, count: number):
     const wrong=[answer+1,answer-1,answer+2];
     const labels=(value:number)=>({en:String(value),hi:String(value),pa:String(value)});
     const options=Object.fromEntries(['A','B','C','D'].map(key=>[key,labels(key===correct?answer:wrong.shift()!)])) as Question['options'];
-    questions.push({id:`gen-land-${i}`,topicId,subjectId:'patwari',examTag:'Computed land-measurement exercise — not a past paper',question:{en:prompt,hi:prompt,pa:prompt},options,correct,explanation:{en:explanation,hi:explanation,pa:explanation},subtopic:{en:subtopic,hi:subtopic},difficulty:'easy',availableLanguages:['en']});
+    questions.push({id:`gen-land-${i}`,topicId,subjectId:'patwari',examTag:'Computed land-measurement exercise — not a past paper',question:{en:prompt,hi:prompt,pa:prompt},options,correct,explanation:{en:explanation,hi:explanation,pa:explanation},subtopic:{en:subtopic,hi:subtopic},difficulty:'easy',availableLanguages:['en'],originType:'computed-variant',reviewStatus:'reviewed'});
   }
   return questions;
 }

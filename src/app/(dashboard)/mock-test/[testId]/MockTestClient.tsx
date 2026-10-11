@@ -1,6 +1,14 @@
 'use client';
-import { normalizePracticeExamId } from '@/lib/exam-context';
-import { completedQuestionKeys, rememberCompletedQuestions } from '@/lib/practice-history';
+import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
+import { 
+  completedQuestionKeys, 
+  recordServedQuestions,
+  recordAnsweredQuestions,
+  recordCompletedQuestions,
+  resetLearnerExposure,
+  explainResetBehavior,
+} from '@/lib/practice-history';
+import { getStoredUser } from '@/lib/auth';
 import QuestionSyllabusScope from '@/components/ui/QuestionSyllabusScope';
 import { useStore } from '@/lib/store';
 import { rememberQuestions, savedReviewQuestions } from '@/lib/question-vault';
@@ -14,6 +22,7 @@ import { Question } from '@/lib/data/questions';
 import { getQuestionPool, getTestQuestions, evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
 import { computeScore, computeTopicBreakdown } from '@/lib/scoring';
 import { CardRating, reviewCard, loadSRSStates, saveSRSStates, createNewCard, getSRSSummary } from '@/lib/srs';
+import { recordQuizMistakes, updateTopicMastery } from '@/lib/mistake-notebook';
 
 export default function MockTest({ testId }: { testId?: string }) {
   const router = useRouter();
@@ -40,6 +49,10 @@ export default function MockTest({ testId }: { testId?: string }) {
   const [activeDifficulty, setActiveDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [sourceConfig, setSourceConfig] = useState({ count: 50, pyq20Years: false, pyqOnly: false });
   const [loadError, setLoadError] = useState(false);
+  const [isRevisionMode, setIsRevisionMode] = useState(false);
+  const [isRemainingSubset, setIsRemainingSubset] = useState(false);
+  const [totalPoolCount, setTotalPoolCount] = useState(0);
+  const [currentTopicId, setCurrentTopicId] = useState('all');
 
   // Initialize test configuration and questions
   useEffect(() => {
@@ -82,9 +95,9 @@ export default function MockTest({ testId }: { testId?: string }) {
       } else if (testId === 'patwari') {
         topicId = 'punjab-patwari-prep';
         examId = 'patwari-punjab';
-      } else if (testId === 'punjab-master-cadre') {
+      } else if (testId === 'punjab-master-cadre' || testId === 'punjab-master-cadre-sst') {
         topicId = 'all';
-        examId = 'master-cadre-sst';
+        examId = 'punjab-master-cadre-sst';
         count = 50;
       }
     }
@@ -121,6 +134,13 @@ export default function MockTest({ testId }: { testId?: string }) {
     if (examId) setActiveExamId(examId);
     setActiveDifficulty(difficulty);
 
+    const isRevision = requestedMode === 'flip' || query.get('repeat') === '1' || query.get('mode') === 'revision';
+    setIsRevisionMode(isRevision);
+    setCurrentTopicId(topicId);
+
+    const fullPool = getQuestionPool({ topicId, examId, difficulty, pyq20Years, pyqOnly });
+    setTotalPoolCount(fullPool.length);
+
     // 4. Derive title
     const examMeta = AVAILABLE_EXAMS.find(e => e.id === examId);
     const topicMeta = AVAILABLE_TEST_TOPICS.find(t => t.id === topicId);
@@ -146,8 +166,14 @@ export default function MockTest({ testId }: { testId?: string }) {
       pyq20Years,
       pyqOnly, 
       count,
-      excludeKeys: requestedMode === 'exam' && query.get('repeat') !== '1' ? completedQuestionKeys() : [],
+      excludeKeys: isRevision ? [] : completedQuestionKeys(),
     });
+
+    if (!isRevision && loadedQuestions.length > 0 && loadedQuestions.length < count && fullPool.length > 0) {
+      setIsRemainingSubset(true);
+    } else {
+      setIsRemainingSubset(false);
+    }
     // Check custom AI-generated question drill from sessionStorage
     if (topicId === 'ai-custom') {
       try {
@@ -174,7 +200,10 @@ export default function MockTest({ testId }: { testId?: string }) {
     if (loadedQuestions.length > 0) {
       if (examMeta && !review) setTestTitle(`${examMeta.name} — ${loadedQuestions.length} questions${diffLabel}`);
       rememberQuestions(loadedQuestions);
-    setQuestions(loadedQuestions);
+      const learnerId = getStoredUser().id || 'usr-default';
+      const targetExamId = examId || 'master-cadre-sst';
+      recordServedQuestions(learnerId, targetExamId, loadedQuestions);
+      setQuestions(loadedQuestions);
       setLoaded(true);
       setLoadError(false);
       const allocatedSeconds = minutes !== undefined ? Math.max(60, Math.min(10800, Math.round(minutes * 60))) : Math.max(300, loadedQuestions.length * 54);
@@ -242,6 +271,8 @@ export default function MockTest({ testId }: { testId?: string }) {
   const handleSelectOption = (key: string) => {
     if (!currentQuestion) return;
     setUserAnswers(prev => ({ ...prev, [currentQuestion.id]: key }));
+    const learnerId = getStoredUser().id || 'usr-default';
+    recordAnsweredQuestions(learnerId, activeExamId, [currentQuestion.id]);
   };
 
   const handleClearOption = () => {
@@ -267,14 +298,28 @@ export default function MockTest({ testId }: { testId?: string }) {
     submittingRef.current = true;
     setIsSubmitting(true);
 
-    const examMeta = AVAILABLE_EXAMS.find(e => e.id === activeExamId);
+    const canonicalId = normalizePracticeExamId(activeExamId);
+    const pExam = practiceExam(activeExamId);
+    const examMeta = AVAILABLE_EXAMS.find(e => e.id === canonicalId || e.id === activeExamId);
+    const resolvedPenalty = () => {
+      if (activeExamId === 'custom-notes') return 0;
+      if (pExam) {
+        if (typeof pExam.negativeMarking === 'number') return pExam.negativeMarking;
+        if (pExam.negativeMarking === false) return 0;
+        if (pExam.negativeMarking === true) return 0.25;
+      }
+      if (examMeta && typeof examMeta.negativeMarking === 'number') {
+        return examMeta.negativeMarking;
+      }
+      return 0;
+    };
     const correctAnswers = questions.reduce<Record<string, string>>(
       (acc, q) => ({ ...acc, [q.id]: q.correct }),
       {}
     );
     const config = {
       marksPerQuestion: 1,
-      negativeMarking: activeExamId === 'custom-notes' ? 0 : examMeta?.negativeMarking ?? 0.25,
+      negativeMarking: resolvedPenalty(),
       totalQuestions: questions.length,
     };
     const timeTaken = Math.min(totalTimeSeconds, Math.max(0, totalTimeSeconds - Math.ceil((deadlineRef.current - Date.now()) / 1000)));
@@ -313,7 +358,24 @@ export default function MockTest({ testId }: { testId?: string }) {
     };
 
     try {
-      rememberCompletedQuestions(questions);
+      const learnerId = getStoredUser().id || 'usr-default';
+      recordCompletedQuestions(learnerId, activeExamId, questions);
+      recordQuizMistakes(learnerId, activeExamId, questions, userAnswers);
+
+      for (const breakdown of topicBreakdown) {
+        if (breakdown.topicId) {
+          updateTopicMastery({
+            topicId: breakdown.topicId,
+            examId: activeExamId,
+            action: 'quiz_result',
+            quizStats: {
+              correct: breakdown.correct,
+              total: breakdown.total,
+            },
+          });
+        }
+      }
+
       studyStorage.setItem('examsathi_last_result', JSON.stringify(resultPayload));
       studyStorage.setItem(`examsathi_result_${resultPayload.attemptId}`, JSON.stringify(resultPayload));
     } catch {}
@@ -341,6 +403,52 @@ export default function MockTest({ testId }: { testId?: string }) {
   useEffect(() => { submitRef.current = handleSubmitTest; });
 
   if (loaded && questions.length === 0) {
+    const learnerId = getStoredUser().id || 'usr-default';
+    const isExhausted = totalPoolCount > 0 && !isRevisionMode;
+    if (isExhausted) {
+      return (
+        <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4 p-6 text-center max-w-md mx-auto">
+          <div className="w-16 h-16 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center border border-amber-500/30 shadow-lg">
+            <CheckCircle2 size={36} />
+          </div>
+          <h2 className="text-white font-bold text-xl">Question Bank Fully Explored</h2>
+          <p className="text-amber-300/90 text-sm font-medium">ਸਾਰੇ ਉਪਲਬਧ ਪ੍ਰਸ਼ਨ ਹੱਲ ਕੀਤੇ ਜਾ ਚੁੱਕੇ ਹਨ</p>
+          <p className="text-slate-300 text-xs leading-relaxed">
+            You have completed all {totalPoolCount} available questions in this syllabus bank. We never inflate counts or serve duplicate questions in fresh mock sets.
+          </p>
+          <div className="bg-slate-800/80 border border-slate-700/80 rounded-xl p-3 text-left w-full text-[11px] text-slate-400 space-y-1">
+            <div className="font-semibold text-slate-200">Exposure Policy:</div>
+            <div>{explainResetBehavior(lang as 'en' | 'hi' | 'pa')}</div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 w-full pt-2">
+            <button
+              onClick={() => {
+                const search = new URLSearchParams(window.location.search);
+                search.set('mode', 'revision');
+                search.set('repeat', '1');
+                router.push(`${window.location.pathname}?${search.toString()}`);
+              }}
+              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-90 text-slate-950 font-bold text-xs py-3 px-4 rounded-xl transition shadow"
+            >
+              Start Revision Mode 🔁
+            </button>
+            <button
+              onClick={() => {
+                resetLearnerExposure(learnerId, activeExamId);
+                window.location.reload();
+              }}
+              className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs py-3 px-4 rounded-xl transition"
+            >
+              Reset Exposure History 🔄
+            </button>
+          </div>
+          <Link href="/mock-test" className="text-xs text-slate-400 hover:text-white transition mt-2">
+            ← Browse Other Mock Tests
+          </Link>
+        </div>
+      );
+    }
+
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] gap-4 p-6 text-center">
         <div className="text-5xl">📚</div>
@@ -366,34 +474,35 @@ export default function MockTest({ testId }: { testId?: string }) {
             Question Loading Timed Out / प्रश्न लोड करने में विलंब
           </h2>
           <p className="text-xs text-slate-400 mb-6 max-w-sm leading-relaxed">
-            The question set for this topic took too long to assemble. You can load our standard 50-question simulation directly or retry.
+            The question set for this scoped syllabus could not be assembled in time. You can retry assembling the scoped pool or return to the directory.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
             <button
               onClick={() => {
                 setLoadError(false);
-                const fallback = getTestQuestions({ topicId: 'all', count: 50 });
-                setQuestions(fallback);
-              }}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-90 text-slate-950 font-bold text-xs py-3 px-4 rounded-xl transition shadow"
-            >
-              Load 50-Q Comprehensive Drill
-            </button>
-            <button
-              onClick={() => {
-                setLoadError(false);
-                const loaded = getTestQuestions({ topicId: testId?.replace('topic-', '') || 'all', count: 50 });
+                const loaded = getTestQuestions({ 
+                  topicId: currentTopicId,
+                  examId: activeExamId,
+                  difficulty: activeDifficulty,
+                  count: sourceConfig.count,
+                  excludeKeys: isRevisionMode ? [] : completedQuestionKeys(),
+                });
                 if (loaded && loaded.length > 0) {
                   setQuestions(loaded);
                 } else {
-                  const fallback = getTestQuestions({ topicId: 'all', count: 50 });
-                  setQuestions(fallback);
+                  router.push('/mock-test');
                 }
               }}
-              className="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs py-3 px-4 rounded-xl transition"
+              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-90 text-slate-950 font-bold text-xs py-3 px-4 rounded-xl transition shadow"
             >
-              Retry Loading Topic
+              Retry Scoped Pool
             </button>
+            <Link
+              href="/mock-test"
+              className="flex-1 text-center bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-xs py-3 px-4 rounded-xl transition flex items-center justify-center"
+            >
+              Browse Mock Tests
+            </Link>
           </div>
         </div>
       );
@@ -404,19 +513,16 @@ export default function MockTest({ testId }: { testId?: string }) {
         <div className="animate-spin text-teal-400 mb-4">
           <RotateCw size={36} />
         </div>
-        <h2 className="text-base font-bold text-white mb-1">Generating 50-Question CBT Set...</h2>
+        <h2 className="text-base font-bold text-white mb-1">Assembling Scoped CBT Practice Set...</h2>
         <p className="text-xs text-slate-400 mb-4 max-w-xs">
-          Loading topic questions, past year archives, and verifying answer keys.
+          Loading strictly scoped topic questions, verifying answer keys, and calculating unseen bank eligibility.
         </p>
-        <button
-          onClick={() => {
-            const fallback = getTestQuestions({ topicId: 'all', count: 50 });
-            setQuestions(fallback);
-          }}
+        <Link
+          href="/mock-test"
           className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs px-4 py-2 rounded-xl transition"
         >
-          Load Practice Set Directly
-        </button>
+          Return to Test Directory
+        </Link>
       </div>
     );
   }
@@ -427,23 +533,66 @@ export default function MockTest({ testId }: { testId?: string }) {
     ? { label: 'Hard 🔴', color: 'bg-rose-500/15 text-rose-300 border-rose-500/30' }
     : { label: 'Mid 🟡', color: 'bg-amber-500/15 text-amber-300 border-amber-500/30' };
 
-  const activeExamMeta = AVAILABLE_EXAMS.find(e => e.id === activeExamId);
+  const canonicalId = normalizePracticeExamId(activeExamId);
+  const pExam = practiceExam(activeExamId);
+  const activeExamMeta = AVAILABLE_EXAMS.find(e => e.id === canonicalId || e.id === activeExamId);
+  const displayNegativeMarking = () => {
+    if (activeExamId === 'custom-notes') return 0;
+    if (pExam) {
+      if (typeof pExam.negativeMarking === 'number') return pExam.negativeMarking;
+      if (pExam.negativeMarking === false) return 0;
+      if (pExam.negativeMarking === true) return 0.25;
+    }
+    if (activeExamMeta && typeof activeExamMeta.negativeMarking === 'number') {
+      return activeExamMeta.negativeMarking;
+    }
+    return 0;
+  };
 
   return (
     <div className="flex flex-col h-screen bg-slate-900 pb-safe text-slate-100">
 
       <QuestionSyllabusScope topicId={currentQuestion.topicId} question={currentQuestion} language={lang} />
+      {/* Revision Mode Banner */}
+      {isRevisionMode && (
+        <div className="bg-sky-950/70 border-b border-sky-700/50 px-3 py-1.5 flex items-center justify-between text-[11px] text-sky-200 shrink-0">
+          <span className="flex items-center gap-1.5">
+            <span>🔁</span>
+            <span className="font-semibold">Revision Mode:</span>
+            <span>Practicing previously seen questions. Exposure tracking is not modified.</span>
+          </span>
+          <span className="text-[10px] bg-sky-800/40 px-2 py-0.5 rounded border border-sky-600/30 font-mono">
+            Revision Practice
+          </span>
+        </div>
+      )}
+      {/* Remaining Subset Banner */}
+      {isRemainingSubset && (
+        <div className="bg-amber-950/70 border-b border-amber-600/50 px-3 py-1.5 flex items-center justify-between text-[11px] text-amber-200 shrink-0">
+          <span className="flex items-center gap-1.5">
+            <AlertCircle size={13} className="text-amber-400 shrink-0" />
+            <span className="font-semibold">Final Unseen Set:</span>
+            <span>Requested {sourceConfig.count} Qs, serving remaining {questions.length} unseen questions before bank exhaustion.</span>
+          </span>
+          <span className="text-[10px] bg-amber-800/40 px-2 py-0.5 rounded border border-amber-600/30 font-mono">
+            {questions.length} of {sourceConfig.count}
+          </span>
+        </div>
+      )}
       {/* Exam Pattern Info Banner */}
-      {loaded && questions.length > 0 && activeExamMeta && (
+      {loaded && questions.length > 0 && (activeExamMeta || pExam) && (
         <div className="bg-amber-950/40 border-b border-amber-700/40 px-3 py-1.5 flex items-center gap-2 text-[10px] text-amber-200 shrink-0">
           <ShieldAlert size={12} className="text-amber-400 shrink-0" />
           <span>
-            {activeExamMeta.negativeMarking > 0 ? <><span className="font-bold text-amber-300">Negative marking:</span> -{activeExamMeta.negativeMarking} per wrong answer</> : <span className="text-emerald-300 font-bold">No negative marking</span>}
+            {displayNegativeMarking() > 0 ? (
+              <><span className="font-bold text-amber-300">Negative marking:</span> -{displayNegativeMarking()} per wrong answer</>
+            ) : (
+              <span className="text-emerald-300 font-bold">No negative marking (+1 / 0)</span>
+            )}
             {' '}|{' '}
             <span className="font-semibold">Total:</span> {questions.length} Qs
             {' '}|{' '}
             <span className="font-semibold">{Math.round(totalTimeSeconds / 60)} minutes</span>
-
           </span>
         </div>
       )}

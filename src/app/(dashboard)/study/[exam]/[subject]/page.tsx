@@ -13,11 +13,22 @@ export function generateStaticParams() {
       paramsList.push({ exam: exam.id, subject: 'general' });
     }
   });
-  return [...paramsList, { exam: 'punjab-ett', subject: 'ett-core' }];
+  return [
+    ...paramsList,
+    { exam: 'punjab-ett', subject: 'ett-core' },
+    { exam: 'punjab-master-cadre', subject: 'social-science' },
+    { exam: 'reet-level2', subject: 'social-studies' },
+  ];
 }
 
 export default async function StudySubjectPage({ params }: { params: Promise<{ exam: string; subject: string }> }) {
   const resolved = await params;
   if (resolved.exam === 'punjab-ett' && resolved.subject === 'ett-core') return <div className="p-6 text-slate-200"><h1 className="text-xl font-bold">ETT subjects have been reorganised</h1><p>The old mixed preparation map has been replaced by a versioned Paper B reference.</p><Link className="underline text-teal-300" href="/syllabus/punjab-ett/">Open the ETT syllabus map</Link></div>;
+  if (resolved.exam === 'punjab-master-cadre') {
+    return <SubjectViewClient exam="punjab-master-cadre-sst" subject={resolved.subject} />;
+  }
+  if (resolved.exam === 'reet-level2') {
+    return <SubjectViewClient exam="reet-level2-sst" subject={resolved.subject} />;
+  }
   return <SubjectViewClient exam={resolved.exam} subject={resolved.subject} />;
 }

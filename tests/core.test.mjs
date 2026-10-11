@@ -44,7 +44,13 @@ test('ETT archival map retains scanned headings, multilingual labels and strict 
   assert.equal(new Set(topics.map(topic => topic.id)).size, topics.length);
   assert.ok(!topics.some(topic => topic.id === 'child-development-pedagogy' || topic.id === 'punjabi-paper-a'));
   assert.equal(engine.getQuestionPool({ examId: exam.id, topicId: 'child-development-pedagogy' }).length, 0);
-  assert.equal(engine.getQuestionPool({ examId: exam.id }).length, 20);
+  // The bank grows; assert syllabus eligibility and uniqueness instead of the old 20-item snapshot.
+  const pool = engine.getQuestionPool({ examId: exam.id });
+  assert.ok(pool.length >= 20, 'retain the original reflection bank');
+  const eligible = new Set(topics.flatMap(topic => [...scope.topicSourceIds(topic.id)]));
+  assert.ok(pool.every(question => eligible.has(canonical(question.topicId))));
+  assert.equal(new Set(pool.map(engine.questionIdentity)).size, pool.length);
+  assert.equal(engine.getQuestionPool({ examId: exam.id, excludeKeys: pool.map(engine.questionIdentity) }).length, 0);
 });
 test('ETT archival reference remains provisional and does not certify an upcoming notification', () => {
   const { ETT_SYLLABUS_REFERENCE, ETT_SCIENCE_UNITS, ETT_REFERENCE_SUBJECTS } = load('src/lib/data/ett-syllabus.ts');

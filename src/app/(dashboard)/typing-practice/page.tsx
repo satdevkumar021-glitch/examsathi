@@ -2,6 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Award, RotateCcw, Keyboard, Info } from 'lucide-react';
+import { evaluateTypingTest, saveTypingResult, TypingResult } from '@/lib/typing-engine';
 
 const PRACTICE_PASSAGES = {
   punjabi: {
@@ -20,6 +21,21 @@ const PRACTICE_PASSAGES = {
   },
 };
 
+const getWordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
+
+const PASSAGE_WORD_COUNTS = {
+  punjabi: {
+    beginner: getWordCount(PRACTICE_PASSAGES.punjabi.beginner),
+    intermediate: getWordCount(PRACTICE_PASSAGES.punjabi.intermediate),
+    hard: getWordCount(PRACTICE_PASSAGES.punjabi.hard),
+  },
+  english: {
+    beginner: getWordCount(PRACTICE_PASSAGES.english.beginner),
+    intermediate: getWordCount(PRACTICE_PASSAGES.english.intermediate),
+    hard: getWordCount(PRACTICE_PASSAGES.english.hard),
+  },
+};
+
 export default function TypingPracticePage() {
   const router = useRouter();
   
@@ -32,6 +48,7 @@ export default function TypingPracticePage() {
   const [isRunning, setIsRunning] = useState(false);
   const [finishedElapsed, setFinishedElapsed] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+  const [evalResult, setEvalResult] = useState<TypingResult | null>(null);
 
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const startedRef = useRef(0);
@@ -46,10 +63,27 @@ export default function TypingPracticePage() {
     const timer = setInterval(() => {
       const remaining = Math.max(0, testDuration - Math.floor((Date.now() - startedRef.current) / 1000));
       setTimeLeft(remaining);
-      if (remaining === 0) { finishedRef.current = startedRef.current + testDuration * 1000; setFinishedElapsed(testDuration); setIsRunning(false); setIsFinished(true); }
+      if (remaining === 0) {
+        finishedRef.current = startedRef.current + testDuration * 1000;
+        setFinishedElapsed(testDuration);
+        setIsRunning(false);
+        setIsFinished(true);
+        const presetId = testDuration === 600
+          ? (lang === 'punjabi' ? 'psssb-clerk-punjabi' : 'psssb-clerk-english')
+          : (lang === 'punjabi' ? 'practice-sprint-2m' : 'practice-sprint-5m');
+        const res = evaluateTypingTest({
+          targetText,
+          typedText: userInput,
+          durationSeconds: testDuration,
+          timeElapsedSeconds: testDuration,
+          presetId,
+        });
+        setEvalResult(res);
+        saveTypingResult(res);
+      }
     }, 250);
     return () => clearInterval(timer);
-  }, [isRunning, testDuration]);
+  }, [isRunning, testDuration, targetText, userInput, lang]);
 
   const handleStartTyping = (text: string) => {
     if (!isRunning && !isFinished && text.length > 0) {
@@ -62,10 +96,24 @@ export default function TypingPracticePage() {
     // If candidate has completed full target passage
     if (text.length >= targetText.length) {
       finishedRef.current = Date.now();
-      setFinishedElapsed(Math.max(0.001, (finishedRef.current - startedRef.current) / 1000));
+      const elapsed = Math.max(0.001, (finishedRef.current - startedRef.current) / 1000);
+      setFinishedElapsed(elapsed);
       setIsRunning(false);
       setIsFinished(true);
       if (timerRef.current) clearInterval(timerRef.current);
+
+      const presetId = testDuration === 600
+        ? (lang === 'punjabi' ? 'psssb-clerk-punjabi' : 'psssb-clerk-english')
+        : (lang === 'punjabi' ? 'practice-sprint-2m' : 'practice-sprint-5m');
+      const res = evaluateTypingTest({
+        targetText,
+        typedText: text,
+        durationSeconds: testDuration,
+        timeElapsedSeconds: elapsed,
+        presetId,
+      });
+      setEvalResult(res);
+      saveTypingResult(res);
     }
   };
 
@@ -76,6 +124,7 @@ export default function TypingPracticePage() {
     setTimeLeft(testDuration);
     setIsRunning(false);
     setIsFinished(false);
+    setEvalResult(null);
     if (inputRef.current) inputRef.current.focus();
   };
 
@@ -86,6 +135,7 @@ export default function TypingPracticePage() {
     setUserInput('');
     setIsRunning(false);
     setIsFinished(false);
+    setEvalResult(null);
   };
 
   // Metrics calculation
@@ -137,12 +187,15 @@ export default function TypingPracticePage() {
         </button>
       </div>
 
-      {/* Official PSSSB Rule Banner */}
+      {/* Practice Target Banner */}
       <div className="bg-indigo-950/60 border border-indigo-500/30 p-3 rounded-xl flex items-center justify-between text-xs">
         <div className="flex items-center gap-2">
           <Award size={16} className="text-amber-400 shrink-0" />
           <span className="text-indigo-200">
             <strong>Practice target:</strong> 30 WPM with &ge;92% Accuracy in 10 mins (Raavi Font)
+            <span className="block text-[10px] text-indigo-300/80 mt-0.5">
+              Standard PSSSB Clerk recruitment benchmark simulation · Verify official recruitment notification for specific instructions
+            </span>
           </span>
         </div>
       </div>
@@ -152,7 +205,7 @@ export default function TypingPracticePage() {
         <Info size={16} className="text-teal-400 shrink-0 mt-0.5" />
         <div className="leading-relaxed text-[11px]">
           <strong className="text-white block mb-0.5">Unicode InScript Layout (Not Legacy Remington / Asees):</strong>
-          Official PSSSB Clerk exams strictly use the <strong>Government of India InScript keyboard layout</strong> in Raavi Unicode font. Legacy typing layouts like Remington or non-Unicode fonts (Asees, Joy) are NOT accepted in online government exams.
+          PSSSB Clerk examination guidelines typically specify the Government of India InScript keyboard layout with Raavi Unicode font. Legacy typewriter or non-Unicode layouts (such as Remington or Asees) are generally not supported in online CBT typing tests. Consult your specific recruitment notification for instructions.
         </div>
       </div>
 
@@ -186,9 +239,21 @@ export default function TypingPracticePage() {
             onChange={e => { setDifficulty(e.target.value as typeof difficulty); handleReset(); }}
             className="w-full bg-slate-900 border border-slate-700 rounded p-1 text-slate-200 font-medium outline-none text-xs"
           >
-            <option value="beginner">Short Warmup (~160 words)</option>
-            <option value="intermediate">Exam Level (300+ words)</option>
-            <option value="hard">Hard Gazette (360+ words)</option>
+            <option value="beginner">
+              {lang === 'punjabi'
+                ? `ਸ਼ੁਰੂਆਤੀ ਪੱਧਰ (${PASSAGE_WORD_COUNTS.punjabi.beginner} ਸ਼ਬਦ)`
+                : `Short Warmup (${PASSAGE_WORD_COUNTS.english.beginner} words)`}
+            </option>
+            <option value="intermediate">
+              {lang === 'punjabi'
+                ? `ਮੱਧਮ ਅਭਿਆਸ (${PASSAGE_WORD_COUNTS.punjabi.intermediate} ਸ਼ਬਦ)`
+                : `Standard Practice (${PASSAGE_WORD_COUNTS.english.intermediate} words)`}
+            </option>
+            <option value="hard">
+              {lang === 'punjabi'
+                ? `ਉੱਨਤ ਗਜ਼ਟ ਪੱਧਰ (${PASSAGE_WORD_COUNTS.punjabi.hard} ਸ਼ਬਦ)`
+                : `Advanced Passage (${PASSAGE_WORD_COUNTS.english.hard} words)`}
+            </option>
           </select>
         </div>
         </div>{/* end grid-cols-2 */}
@@ -213,7 +278,7 @@ export default function TypingPracticePage() {
               onClick={() => handleDurationChange(600)}
               className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 600 ? 'bg-amber-500 text-slate-950' : 'text-amber-400'}`}
             >
-              ⭐ 10m Official
+              ⭐ 10m Simulation
             </button>
             <button
               onClick={() => handleDurationChange(900)}
@@ -295,17 +360,42 @@ export default function TypingPracticePage() {
 
       {/* Result Modal or Summary when Finished */}
       {isFinished && (
-        <div className={`p-4 rounded-2xl border ${isPsssBQualified ? 'bg-emerald-950/60 border-emerald-500/50' : 'bg-rose-950/60 border-rose-500/50'} animate-fadeIn text-center space-y-2`}>
-          <div className="text-2xl mb-1">{isPsssBQualified ? '🏆' : '⚠️'}</div>
+        <div className={`p-5 rounded-2xl border ${isPsssBQualified ? 'bg-emerald-950/70 border-emerald-500/50' : 'bg-rose-950/70 border-rose-500/50'} animate-fadeIn text-center space-y-3`}>
+          <div className="text-3xl">{isPsssBQualified ? '🏆' : '⚠️'}</div>
           <h3 className="font-bold text-base text-white">
-            {isPsssBQualified ? 'Practice target achieved. Check official test rules for your recruitment.' : 'Keep practicing toward 30 WPM and 92% accuracy.'}
+            {evalResult ? evalResult.qualificationSummary : (isPsssBQualified ? 'Practice target achieved. Check official test rules for your recruitment.' : 'Keep practicing toward 30 WPM and 92% accuracy.')}
           </h3>
-          <p className="text-xs text-slate-300">
-            Speed: <strong>{wpm} WPM</strong> | Accuracy: <strong>{accuracy}%</strong> | Chars: <strong>{totalCharsTyped}</strong>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs pt-1">
+            <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-750">
+              <span className="text-[10px] text-slate-400 block font-semibold">Net Speed (Official)</span>
+              <strong className="text-teal-400 text-base font-mono">{evalResult ? evalResult.netWpm : wpm} WPM</strong>
+            </div>
+            <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-750">
+              <span className="text-[10px] text-slate-400 block font-semibold">Gross Speed</span>
+              <strong className="text-white text-base font-mono">{evalResult ? evalResult.grossWpm : wpm} WPM</strong>
+            </div>
+            <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-750">
+              <span className="text-[10px] text-slate-400 block font-semibold">Full / Half Mistakes</span>
+              <strong className="text-amber-400 text-sm font-mono">
+                {evalResult ? `${evalResult.fullMistakes}F / ${evalResult.halfMistakes}H` : '0'}
+              </strong>
+            </div>
+            <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-750">
+              <span className="text-[10px] text-slate-400 block font-semibold">Graphemes / Chars</span>
+              <strong className="text-indigo-300 text-sm font-mono">
+                {evalResult ? `${evalResult.graphemesTyped} / ${totalCharsTyped}` : totalCharsTyped}
+              </strong>
+            </div>
+          </div>
+
+          <p className="text-[11px] text-slate-300">
+            Error rate: <strong>{evalResult ? `${evalResult.errorPercentage}%` : '0%'}</strong> | Accuracy: <strong>{accuracy}%</strong>
           </p>
+
           <button 
             onClick={handleReset}
-            className="mt-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2 rounded-xl text-xs transition"
+            className="mt-2 bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-2 rounded-xl text-xs transition shadow"
           >
             Try Again
           </button>

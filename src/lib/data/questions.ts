@@ -1,3 +1,4 @@
+import { CLERK_DATA_PRACTICE } from './clerk-data-practice';
 import ettReflectionQuestions from './questions/ett-reflection.json';
 import { FOUNDATION_QUESTIONS } from './foundation-content';
 import { topicIncludes } from './topic-scope';
@@ -5,6 +6,29 @@ import { topicIncludes } from './topic-scope';
 // ExamSathi - Comprehensive Question Bank (PYQs & Model Questions)
 // Master Cadre, PSSSB Clerk, Police, REET, CTET
 // ============================================================
+
+export interface DistractorExplanation {
+  hi?: string;
+  pa?: string;
+  en?: string;
+}
+
+export interface PYQMetadata {
+  examBoard: string;
+  notificationRef: string;
+  paper: string;
+  year?: number;
+  shift?: string;
+  questionNumber?: number;
+  answerKeyStatus: 'official-final-key' | 'provisional-key' | 'editorial-verified';
+}
+
+export interface RightsProvenance {
+  source: string;
+  accessType: 'public-recruitment' | 'educational-original' | 'fair-use-curriculum';
+  verifiedBy: string;
+  verifiedDate: string;
+}
 
 export interface Question {
   id: string;
@@ -14,6 +38,8 @@ export interface Question {
   examTag: string; // e.g., 'Punjab Master Cadre 2022', 'PSSSB Clerk 2023', 'Punjab ETT Cadre 5994'
   topicName?: { hi: string; pa?: string; en: string };
   subtopic?: { hi: string; pa?: string; en: string };
+  learningObjective?: string;
+  conceptGroupId?: string;
   deepConceptNote?: { hi: string; pa?: string; en: string };
   question: { hi: string; pa?: string; en: string };
   options: {
@@ -22,11 +48,21 @@ export interface Question {
     C: { hi: string; pa?: string; en: string };
     D: { hi: string; pa?: string; en: string };
   };
+  distractorExplanations?: {
+    A?: DistractorExplanation;
+    B?: DistractorExplanation;
+    C?: DistractorExplanation;
+    D?: DistractorExplanation;
+  };
   correct: 'A' | 'B' | 'C' | 'D';
   explanation: { hi: string; pa?: string; en: string };
   thought?: { hi: string; pa?: string; en: string }; // Strategic Examiner Insight & Elimination Technique
   difficulty: 'easy' | 'medium' | 'hard';
   year?: number;
+  originType?: 'verified-pyq' | 'authored-original' | 'computed-variant';
+  pyqMetadata?: PYQMetadata;
+  rightsProvenance?: RightsProvenance;
+  reviewStatus?: 'reviewed' | 'draft' | 'under-audit';
   availableLanguages?: readonly ('en' | 'hi' | 'pa')[];
   explanationLanguages?: readonly ('en' | 'hi' | 'pa')[];
   editorialStatus?: 'authored' | 'reviewed';
@@ -928,8 +964,16 @@ import { ETT_AND_CLERK_PYQS } from './questions/ett_and_clerk_pyqs';
 import { REET_QUESTIONS } from './questions/reet_questions';
 import { POLICE_PATWARI_QUESTIONS } from './questions/police_patwari_questions';
 import { SSC_HTET_QUESTIONS } from './questions/ssc_htet_questions';
+import { PUNJAB_HISTORY_AND_CLERK_TOPIC_MCQS } from './questions/punjab_history_and_clerk_topic_mcqs';
+import { MASTER_CADRE_POLITY_HISTORY_MCQS } from './questions/master_cadre_polity_history_mcqs';
+import { MASTER_CADRE_ECON_PUNJABI_MCQS } from './questions/master_cadre_econ_punjabi_mcqs';
+import { MASTER_CADRE_SCIENCE_PHY_BIO_MCQS } from './questions/master_cadre_science_phy_bio_mcqs';
+import { MASTER_CADRE_SCIENCE_CHEM_MCQS } from './questions/master_cadre_science_chem_mcqs';
+import { ETT_PUNJABI_LANGUAGES_SST_MCQS } from './questions/ett_punjabi_languages_sst_mcqs';
+import { ETT_MATH_SCIENCE_MCQS } from './questions/ett_math_science_mcqs';
 
 export const ALL_QUESTIONS: Question[] = [
+  ...CLERK_DATA_PRACTICE,
   ...QUESTIONS,
   ...(ettReflectionQuestions as Question[]),
   ...FOUNDATION_QUESTIONS,
@@ -941,7 +985,15 @@ export const ALL_QUESTIONS: Question[] = [
   ...REET_QUESTIONS,
   ...POLICE_PATWARI_QUESTIONS,
   ...SSC_HTET_QUESTIONS,
+  ...PUNJAB_HISTORY_AND_CLERK_TOPIC_MCQS,
+  ...MASTER_CADRE_POLITY_HISTORY_MCQS,
+  ...MASTER_CADRE_ECON_PUNJABI_MCQS,
+  ...MASTER_CADRE_SCIENCE_PHY_BIO_MCQS,
+  ...MASTER_CADRE_SCIENCE_CHEM_MCQS,
+  ...ETT_PUNJABI_LANGUAGES_SST_MCQS,
+  ...ETT_MATH_SCIENCE_MCQS,
 ];
+
 
 /** Unknown topics return no questions, never an unrelated fallback. */
 export function getQuestionsByTopic(topicId: string): Question[] {

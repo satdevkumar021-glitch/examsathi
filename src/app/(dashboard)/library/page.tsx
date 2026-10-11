@@ -6,6 +6,9 @@ import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { BookOpen, Play, Pause, RotateCcw, Volume2, VolumeX, CheckCircle2, Target, User, Flame } from 'lucide-react';
 import { getStoredUser, saveUserSession } from '@/lib/auth';
+import { useStore } from '@/lib/store';
+import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
+import { getExamTopics, getTestQuestions } from '@/lib/data/question_bank_engine';
 
 interface LibrarySeat {
   id: number;
@@ -14,8 +17,11 @@ interface LibrarySeat {
 }
 
 export default function VirtualStudyLibrary() {
+  const { selectedExam, language: lang } = useStore();
+  const queryExam = typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('exam') : null;
+  const activeExam = normalizePracticeExamId(queryExam || selectedExam || 'punjab-master-cadre');
   const [selectedSeat, setSelectedSeat] = useState<number | null>(null);
-  const [selectedTopic, setSelectedTopic] = useState<string>('child-development-pedagogy');
+  const [selectedTopic, setSelectedTopic] = useState<string>('');
   const [timerMode, setTimerMode] = useState<25 | 45 | 60>(25);
   const [secondsRemaining, setSecondsRemaining] = useState<number>(25 * 60);
   const [focus, setFocus] = useState<FocusSession | null>(null);
@@ -44,15 +50,6 @@ export default function VirtualStudyLibrary() {
     { id: 16, label: 'Deep Study Pod 16', type: 'pod' },
   ];
 
-  const TOPIC_OPTIONS = [
-    { id: 'child-development-pedagogy', label: '👶 ETT Child Psychology (Piaget, Vygotsky, RTE 2009)', testUrl: '/mock-test/topic-child-development-pedagogy' },
-    { id: 'environment-ecology', label: '🌿 ETT Environmental Studies & Punjab Ramsar Wetlands', testUrl: '/mock-test/topic-environment-ecology' },
-    { id: 'computer-awareness', label: '💻 PSSSB Clerk Computer IT & MS Office Shortcuts', testUrl: '/mock-test/topic-computer-awareness' },
-    { id: 'punjabi-grammar-lit', label: '⌨️ PSSSB Raavi Typing Rules & Paper A Punjabi Vyakaran', testUrl: '/mock-test/topic-punjabi-grammar-lit' },
-    { id: 'punjab-history', label: '🌾 Punjab History: 10 Gurus, Misals & Ranjit Singh', testUrl: '/mock-test/topic-punjab-history' },
-    { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', testUrl: '/mock-test/topic-fundamental-rights' },
-  ];
-
   const [nudge, setNudge] = useState<{ type: 'eyes' | 'hydration' | 'stretch' | null; snoozed: boolean }>({ type: null, snoozed: false });
   const [, setMinutesElapsed] = useState(0);
   const lastNudgeRef = useRef(0);
@@ -70,13 +67,13 @@ export default function VirtualStudyLibrary() {
         if ([25, 45, 60].includes(saved.minutes) && typeof saved.id === 'string' && Number.isFinite(saved.remaining) && (saved.deadline === null || Number.isFinite(saved.deadline))) {
           focusRef.current = saved;
           setFocus(saved);
-          setTimerMode(saved.minutes);
+          setTimerMode(saved.minutes as 25 | 45 | 60);
           setSecondsRemaining(focusRemaining(saved));
           setSessionCompleted(saved.completed);
         }
       }
     } catch {}
-  }, []);
+  }, [selectedExam]);
 
   const handleSelectSeat = (id: number) => {
     setSelectedSeat(id);
@@ -190,7 +187,27 @@ export default function VirtualStudyLibrary() {
 
   const progressPercentage = Math.round(((timerMode * 60 - secondsRemaining) / (timerMode * 60)) * 100);
 
-  const activeTopicObj = TOPIC_OPTIONS.find(t => t.id === selectedTopic) || TOPIC_OPTIONS[0];
+  const examTopics = getExamTopics(activeExam);
+  const topicsWithCounts = examTopics.map(t => {
+    const qCount = getTestQuestions({ topicId: t.id, examId: activeExam, count: 50 }).length;
+    return {
+      id: t.id,
+      label: `${t.name}${lang === 'pa' && t.namePa ? ` (${t.namePa})` : ''}`,
+      count: qCount,
+      testUrl: `/mock-test/topic-${t.id}?exam=${activeExam}`,
+    };
+  });
+
+  const fallbackTopics = [
+    { id: 'punjab-history', label: '🌾 Punjab History: 10 Gurus, Misals & Ranjit Singh', count: getTestQuestions({ topicId: 'punjab-history', examId: activeExam, count: 50 }).length, testUrl: `/mock-test/topic-punjab-history?exam=${activeExam}` },
+    { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', count: getTestQuestions({ topicId: 'fundamental-rights', examId: activeExam, count: 50 }).length, testUrl: `/mock-test/topic-fundamental-rights?exam=${activeExam}` },
+  ];
+
+  const TOPIC_OPTIONS = topicsWithCounts.length > 0 ? topicsWithCounts : fallbackTopics;
+  const activeTopicObj = TOPIC_OPTIONS.find(t => t.id === selectedTopic) 
+    || TOPIC_OPTIONS.find(t => t.count > 0) 
+    || TOPIC_OPTIONS[0];
+  const availableCount = activeTopicObj ? getTestQuestions({ topicId: activeTopicObj.id, examId: activeExam, count: 50 }).length : 0;
 
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-28 text-slate-100 max-w-xl mx-auto w-full">
@@ -276,17 +293,19 @@ export default function VirtualStudyLibrary() {
             <Target size={16} className="text-teal-400" />
             <h2 className="text-sm font-bold text-white">2. Topic Goal for this Desk Session</h2>
           </div>
-          <span className="text-[10px] text-teal-400 font-semibold">Active Focus</span>
+          <span className="text-[10px] text-teal-400 font-semibold">
+            {practiceExam(activeExam)?.name || activeExam}
+          </span>
         </div>
 
         <select
-          value={selectedTopic}
+          value={activeTopicObj?.id || ''}
           onChange={e => setSelectedTopic(e.target.value)}
           className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white text-xs font-medium focus:outline-none focus:border-teal-400 appearance-none cursor-pointer"
         >
           {TOPIC_OPTIONS.map(opt => (
             <option key={opt.id} value={opt.id}>
-              {opt.label}
+              {opt.label} — {opt.count > 0 ? `${opt.count} Qs available` : 'Coverage pending'}
             </option>
           ))}
         </select>
@@ -432,25 +451,34 @@ export default function VirtualStudyLibrary() {
           <span>🎯</span> Ready to test your mastery from this Desk?
         </h3>
         <p className="text-[11px] text-slate-400 leading-relaxed">
-          Launch a targeted 25 or 50 question CBT mock test specifically covering this desk&apos;s topic: <strong>{activeTopicObj.label}</strong>.
+          Launch a targeted CBT mock test specifically covering this desk&apos;s topic: <strong>{activeTopicObj.label}</strong> ({practiceExam(activeExam)?.name || activeExam}).
         </p>
 
-        <div className="flex gap-2 mt-1">
-          <Link
-            href={`${activeTopicObj.testUrl}?count=25`}
-            className="flex-1 bg-teal-500/20 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 py-2.5 rounded-xl text-center text-xs font-bold transition flex items-center justify-center gap-1.5"
-          >
-            <Play size={13} />
-            <span>25 Qs Speed Drill</span>
-          </Link>
-          <Link
-            href={`${activeTopicObj.testUrl}?count=50`}
-            className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-2.5 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5 shadow"
-          >
-            <Target size={13} />
-            <span>Up to 50 Qs Practice</span>
-          </Link>
-        </div>
+        {availableCount > 0 ? (
+          <div className="flex gap-2 mt-1">
+            <Link
+              href={`${activeTopicObj.testUrl}&count=${Math.min(25, availableCount)}`}
+              className="flex-1 bg-teal-500/20 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 py-2.5 rounded-xl text-center text-xs font-bold transition flex items-center justify-center gap-1.5"
+            >
+              <Play size={13} />
+              <span>{Math.min(25, availableCount)} Qs Speed Drill</span>
+            </Link>
+            <Link
+              href={`${activeTopicObj.testUrl}&count=${Math.min(50, availableCount)}`}
+              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-2.5 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5 shadow"
+            >
+              <Target size={13} />
+              <span>Up to {Math.min(50, availableCount)} Qs Practice</span>
+            </Link>
+          </div>
+        ) : (
+          <div className="bg-amber-950/40 border border-amber-500/30 p-3 rounded-xl text-xs text-amber-200 mt-1">
+            <p className="font-semibold mb-0.5">⚠️ Practice Questions Pending for this Topic</p>
+            <p className="text-[11px] text-slate-400">
+              This topic is part of your official syllabus mapping. Curated questions are not yet available for this unit. Please choose a topic with available questions to practice.
+            </p>
+          </div>
+        )}
       </div>
 
     </div>

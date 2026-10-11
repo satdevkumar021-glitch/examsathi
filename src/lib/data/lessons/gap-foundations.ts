@@ -74,6 +74,10 @@ export function buildGapLessons(base: Record<string,Lesson>): Record<string,Less
  const result: Record<string,Lesson> = {};
  const customIds = ['language-teaching-foundations',...plans.filter(([, ,references])=>!references.length).map(([id])=>id),'primary-mathematics'];
  for(const id of customIds) {
+  if (base[id]?.coverageStatus === 'complete') {
+   result[id] = base[id];
+   continue;
+  }
   const items = FOUNDATION_CONTENT.flatMap(unit=>unit.items.filter(item=>unit.group === 'regional' ? item.subtopic.startsWith(id+'/') : id === 'language-teaching-foundations' ? unit.group === 'language' : id === 'english-grammar-syntax' ? unit.group === 'english' : id === 'primary-environmental-studies' ? unit.group === 'evs' : id === 'cdp-adolescent' ? unit.group === 'pedagogy' && item.subtopic === 'Adolescence' : id === 'teaching-aptitude' ? unit.group === 'teaching' || unit.group === 'pedagogy' && item.subtopic === 'Research' : false));
   const lesson=makeFoundationLesson(id,plans.find(([key])=>key===id)?.[1] || 'Language teaching foundations',id,items);
   for(const [heading,body] of context[id] || []) {

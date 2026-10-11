@@ -60,7 +60,7 @@ export function generateReasoningPractice(topicId: string, count: number): Quest
   if(new Set([answer,...wrong]).size!==4)throw new Error(`Invalid options for reasoning ${i}`);
   const correct=(['A','B','C','D'] as const)[(Math.floor(i/8)+i)%4],distractors=[...wrong];
   const options=Object.fromEntries(['A','B','C','D'].map(key=>{const value=key===correct?answer:distractors.shift()!;return[key,{en:value,hi:kind===3?hindiDays[days.indexOf(value)]:value,pa:value}]})) as Question['options'];
-  result.push({id:`gen-reasoning-${topicId}-${i}`,topicId,subjectId:'reasoning',examTag:'Computed reasoning practice — not a past paper',question:{en,hi},options,correct,explanation:{en:explanation,hi:explanation},difficulty:'medium',subtopic:{en:subtopic,hi:subtopic},availableLanguages:['en','hi'],explanationLanguages:['en']});
+  result.push({id:`gen-reasoning-${topicId}-${i}`,topicId,subjectId:'reasoning',examTag:'Computed reasoning practice — not a past paper',question:{en,hi},options,correct,explanation:{en:explanation,hi:explanation},difficulty:'medium',subtopic:{en:subtopic,hi:subtopic},availableLanguages:['en','hi'],explanationLanguages:['en'],originType:'computed-variant',reviewStatus:'reviewed'});
  }
  return result;
 }

@@ -3,7 +3,7 @@ import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, HelpCircle, ChevronLeft, ChevronRight, Bookmark, Sparkles, FileText, Download, ExternalLink, ShieldCheck, Target } from 'lucide-react';
+import { ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, HelpCircle, ChevronLeft, ChevronRight, Bookmark, Sparkles, FileText, Download, ExternalLink, ShieldCheck, Target, AlertTriangle, Search, Trash2, Undo2 } from 'lucide-react';
 import { getLessonByTopicId, Lesson } from '@/lib/data/lessons';
 import { getTestQuestions } from '@/lib/data/question_bank_engine';
 import { Question } from '@/lib/data/questions';
@@ -12,6 +12,19 @@ import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
 import { awardStudyXP } from '@/lib/study-progress';
 import { getCardState, scheduleNextReview, saveCardState, Rating } from '@/lib/fsrs';
+import {
+  PersonalNote,
+  createPersonalNote,
+  updatePersonalNote,
+  deletePersonalNote,
+  restorePersonalNote,
+  getPersonalNotes,
+  saveNoteDraft,
+  getNoteDraft,
+  clearNoteDraft,
+  exportPersonalNotes,
+  migrateLegacyTopicNotes,
+} from '@/lib/personal-notes';
 
 export default function LessonView({ topicId }: { topicId: string }) {
   const lesson = getLessonByTopicId(topicId);
@@ -30,11 +43,16 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   const [selectedAnswers, setSelectedAnswers] = useState<Record<string, string>>({});
   const [showExplanation, setShowExplanation] = useState<Record<string, boolean>>({});
   
-  // Personal Notes State (persisted to LocalStorage)
+  // Personal Notes State
   const [userNote, setUserNote] = useState('');
-  const [savedNotes, setSavedNotes] = useState<Array<{ id: string; text: string; date: string }>>([]);
+  const [editingNoteId, setEditingNoteId] = useState<string | null>(null);
+  const [editNoteContent, setEditNoteContent] = useState('');
+  const [notesSearchQuery, setNotesSearchQuery] = useState('');
+  const [personalNotes, setPersonalNotes] = useState<PersonalNote[]>([]);
+  const [recentlyDeletedNote, setRecentlyDeletedNote] = useState<PersonalNote | null>(null);
   const [showContributeModal, setShowContributeModal] = useState(false);
   const [contributeName, setContributeName] = useState('');
+  const [rightsConfirmed, setRightsConfirmed] = useState(false);
   const [contributeSubmitted, setContributeSubmitted] = useState(false);
 
   const [practiceCount, setPracticeCount] = useState(10);
@@ -51,15 +69,24 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
     setShowExplanation({});
   }, [topicId, selectedExam, setSelectedExam, practiceCount]);
 
-  // Load saved notes from LocalStorage on mount
+  // Load personal notes & draft on mount or when exam/topic changes
   useEffect(() => {
     try {
-      const storageKey = `examsathi_notes_${lesson.id}`;
-      const existing = studyStorage.getItem(storageKey);
-      if (existing) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
-        setSavedNotes(JSON.parse(existing));
+      migrateLegacyTopicNotes(lesson.id, selectedExam || 'general');
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser notes on preference or search change.
+      setPersonalNotes(
+        getPersonalNotes({
+          examId: selectedExam || 'general',
+          topicId: lesson.id,
+          searchQuery: notesSearchQuery,
+        })
+      );
+
+      const draft = getNoteDraft(lesson.id, selectedExam || 'general');
+      if (draft) {
+        setUserNote((prev) => prev || draft);
       }
+
       const readStatus = studyStorage.getItem(`examsathi_read_${lesson.id}`);
       if (readStatus === 'true') {
         setIsReadMarked(true);
@@ -67,33 +94,75 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
     } catch {
       // LocalStorage fallback
     }
-  }, [lesson.id]);
+  }, [lesson.id, selectedExam, notesSearchQuery]);
+
+  const handleNoteInputChange = (text: string) => {
+    setUserNote(text);
+    saveNoteDraft(lesson.id, text, selectedExam || 'general');
+  };
 
   const handleSaveNote = () => {
     if (!userNote.trim()) return;
-    const newNote = {
-      id: Date.now().toString(),
-      text: userNote.trim(),
-      date: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
-    };
-    const updated = [newNote, ...savedNotes];
-    setSavedNotes(updated);
+    createPersonalNote({
+      examId: selectedExam || 'general',
+      topicId: lesson.id,
+      title: `${lesson.title[lang] || lesson.title.en} Note`,
+      content: userNote.trim(),
+    });
+    setPersonalNotes(getPersonalNotes({
+      examId: selectedExam || 'general',
+      topicId: lesson.id,
+      searchQuery: notesSearchQuery,
+    }));
     setUserNote('');
-    try {
-      studyStorage.setItem(`examsathi_notes_${lesson.id}`, JSON.stringify(updated));
-    } catch {
-      // Fallback
-    }
+    clearNoteDraft(lesson.id, selectedExam || 'general');
   };
 
-  const handleDeleteNote = (noteId: string) => {
-    const updated = savedNotes.filter(n => n.id !== noteId);
-    setSavedNotes(updated);
-    try {
-      studyStorage.setItem(`examsathi_notes_${lesson.id}`, JSON.stringify(updated));
-    } catch {
-      // Fallback
-    }
+  const handleUpdateNote = (id: string) => {
+    if (!editNoteContent.trim()) return;
+    updatePersonalNote(id, selectedExam || 'general', lesson.id, { content: editNoteContent.trim() });
+    setPersonalNotes(getPersonalNotes({
+      examId: selectedExam || 'general',
+      topicId: lesson.id,
+      searchQuery: notesSearchQuery,
+    }));
+    setEditingNoteId(null);
+    setEditNoteContent('');
+  };
+
+  const handleDeleteNote = (note: PersonalNote) => {
+    deletePersonalNote(note.id, selectedExam || 'general', lesson.id, true);
+    setRecentlyDeletedNote(note);
+    setPersonalNotes(getPersonalNotes({
+      examId: selectedExam || 'general',
+      topicId: lesson.id,
+      searchQuery: notesSearchQuery,
+    }));
+  };
+
+  const handleRestoreNote = () => {
+    if (!recentlyDeletedNote) return;
+    restorePersonalNote(recentlyDeletedNote.id, selectedExam || 'general', lesson.id);
+    setRecentlyDeletedNote(null);
+    setPersonalNotes(getPersonalNotes({
+      examId: selectedExam || 'general',
+      topicId: lesson.id,
+      searchQuery: notesSearchQuery,
+    }));
+  };
+
+  const handleExportNotes = (format: 'markdown' | 'txt' | 'json' = 'markdown') => {
+    if (personalNotes.length === 0) return;
+    const content = exportPersonalNotes(personalNotes, format, lesson.title[lang] || lesson.title.en);
+    const mime = format === 'json' ? 'application/json' : 'text/markdown';
+    const ext = format === 'json' ? 'json' : format === 'txt' ? 'txt' : 'md';
+    const blob = new Blob([content], { type: `${mime};charset=utf-8` });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${lesson.id}-notes.${ext}`;
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   const handleMarkAsRead = () => {
@@ -322,11 +391,186 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </div>
             )}
 
+            {/* Topic Prerequisites & Learning Objectives */}
+            {(lesson.prerequisites || lesson.learningObjectives) && (
+              <div className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-4 shadow-md space-y-3.5">
+                {lesson.prerequisites && (
+                  <div>
+                    <div className="flex items-center gap-2 mb-2 text-indigo-400 font-bold text-xs uppercase tracking-wider">
+                      <BookOpen size={14} />
+                      <span>{lang === 'pa' ? 'ਪੂਰਵ-ਲੋੜਾਂ (Prerequisites)' : lang === 'hi' ? 'पूर्वापेक्षाएं (Prerequisites)' : 'Prerequisites'}</span>
+                    </div>
+                    <ul className="space-y-1.5 text-xs text-slate-300">
+                      {(lesson.prerequisites[lang] || lesson.prerequisites.hi || lesson.prerequisites.en || []).map((req, rIdx) => (
+                        <li key={rIdx} className="flex items-start gap-2 bg-slate-900/50 p-2 rounded-lg border border-slate-800">
+                          <span className="text-indigo-400 font-bold text-xs shrink-0">•</span>
+                          <span className="leading-relaxed">{req}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {lesson.learningObjectives && (
+                  <div>
+                    <div className="flex items-center gap-2 mb-2 text-teal-400 font-bold text-xs uppercase tracking-wider">
+                      <Target size={14} />
+                      <span>{lang === 'pa' ? 'ਸਿੱਖਣ ਦੇ ਟੀਚੇ (Learning Objectives)' : lang === 'hi' ? 'अध्ययन के उद्देश्य (Learning Objectives)' : 'Learning Objectives'}</span>
+                    </div>
+                    <ul className="space-y-1.5 text-xs text-slate-300">
+                      {(lesson.learningObjectives[lang] || lesson.learningObjectives.hi || lesson.learningObjectives.en || []).map((obj, oIdx) => (
+                        <li key={oIdx} className="flex items-start gap-2 bg-slate-900/50 p-2 rounded-lg border border-slate-800">
+                          <CheckCircle2 size={13} className="text-teal-400 shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{obj}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Injected Detailed Rich Content */}
             <div 
               className="text-slate-200 leading-relaxed text-sm space-y-4"
               dangerouslySetInnerHTML={{ __html: lesson.content[lang] || lesson.content.hi || lesson.content.en }} 
             />
+
+            {/* Worked Examples & Step-by-Step Solutions */}
+            {lesson.workedExamples && lesson.workedExamples.length > 0 && (
+              <div className="space-y-4 my-2">
+                <div className="flex items-center justify-between border-b border-slate-800 pb-2">
+                  <div className="flex items-center gap-2">
+                    <Sparkles size={16} className="text-teal-400" />
+                    <h3 className="text-white font-bold text-sm">
+                      {lang === 'pa' ? 'ਹੱਲ ਕੀਤੀਆਂ ਉਦਾਹਰਣਾਂ (Worked Examples)' : lang === 'hi' ? 'हल किए गए उदाहरण (Worked Examples)' : 'Step-by-Step Worked Examples'}
+                    </h3>
+                  </div>
+                  <span className="text-[10px] bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full font-mono font-bold">
+                    {lesson.workedExamples.length} {lang === 'pa' ? 'ਉਦਾਹਰਣਾਂ' : 'उदा.'}
+                  </span>
+                </div>
+
+                <div className="space-y-3.5">
+                  {lesson.workedExamples.map((ex, exIdx) => (
+                    <div key={exIdx} className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-4 space-y-3 shadow-md">
+                      <div className="flex items-center gap-2">
+                        <span className="w-5 h-5 rounded-full bg-teal-500/20 text-teal-300 text-xs font-bold flex items-center justify-center shrink-0">
+                          {exIdx + 1}
+                        </span>
+                        <h4 className="text-white font-semibold text-xs leading-snug">
+                          {ex.title[lang] || ex.title.hi || ex.title.en}
+                        </h4>
+                      </div>
+
+                      {/* Problem Statement */}
+                      <div className="bg-slate-900/70 border border-slate-800 p-3 rounded-xl text-xs text-slate-200 leading-relaxed">
+                        <span className="text-slate-400 font-bold block mb-1 uppercase text-[10px] tracking-wider">
+                          {lang === 'pa' ? 'ਪ੍ਰਸ਼ਨ / ਸਵਾਲ' : lang === 'hi' ? 'प्रश्न / समस्या' : 'Problem Statement'}
+                        </span>
+                        <p>{ex.problem[lang] || ex.problem.hi || ex.problem.en}</p>
+                      </div>
+
+                      {/* Step-by-step reasoning */}
+                      <div className="space-y-2 text-xs">
+                        <span className="text-indigo-300 font-bold block uppercase text-[10px] tracking-wider">
+                          {lang === 'pa' ? 'ਕਦਮ-ਦਰ-ਕਦਮ ਹੱਲ' : lang === 'hi' ? 'चरणबद्ध समाधान' : 'Step-by-Step Solution'}
+                        </span>
+                        {(ex.steps[lang] || ex.steps.hi || ex.steps.en || []).map((step, sIdx) => (
+                          <div key={sIdx} className="flex items-start gap-2 bg-slate-900/40 p-2.5 rounded-lg border border-slate-800 text-slate-300">
+                            <span className="text-indigo-400 font-mono font-bold text-[11px] shrink-0 mt-0.5">
+                              {sIdx + 1}.
+                            </span>
+                            <span className="leading-relaxed">{step}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Final Solution */}
+                      <div className="bg-emerald-950/40 border border-emerald-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2">
+                        <CheckCircle2 size={14} className="text-emerald-400 shrink-0 mt-0.5" />
+                        <div>
+                          <span className="text-emerald-300 font-bold block text-[10px] uppercase">
+                            {lang === 'pa' ? 'ਸਹੀ ਉੱਤਰ / ਨਤੀਜਾ' : lang === 'hi' ? 'अंतिम उत्तर' : 'Final Solution'}
+                          </span>
+                          <span className="text-slate-200 font-medium">
+                            {ex.solution[lang] || ex.solution.hi || ex.solution.en}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Takeaway / Mnemonic */}
+                      {ex.takeaway && (
+                        <div className="bg-amber-950/30 border border-amber-500/30 p-2.5 rounded-xl text-xs flex items-start gap-2">
+                          <span className="text-amber-400 text-xs shrink-0">💡</span>
+                          <div>
+                            <span className="text-amber-300 font-bold block text-[10px] uppercase">
+                              {lang === 'pa' ? 'ਮੁੱਖ ਸਿੱਖਿਆ' : lang === 'hi' ? 'परीक्षा में याद रखने योग्य' : 'Exam Takeaway'}
+                            </span>
+                            <span className="text-slate-300">
+                              {ex.takeaway[lang] || ex.takeaway.hi || ex.takeaway.en}
+                            </span>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Common Misconceptions & Traps */}
+            {lesson.commonMisconceptions && lesson.commonMisconceptions.length > 0 && (
+              <div className="space-y-3.5 my-2">
+                <div className="flex items-center gap-2 border-b border-slate-800 pb-2">
+                  <AlertTriangle size={16} className="text-amber-400" />
+                  <h3 className="text-white font-bold text-sm">
+                    {lang === 'pa' ? 'ਆਮ ਭੁਲੇਖੇ ਅਤੇ ਸੁਧਾਰ (Common Misconceptions)' : lang === 'hi' ? 'सामान्य भ्रांतियां एवं प्रामाणिक तथ्य' : 'Common Misconceptions & Traps'}
+                  </h3>
+                </div>
+
+                <div className="space-y-3">
+                  {lesson.commonMisconceptions.map((misc, mIdx) => (
+                    <div key={mIdx} className="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-3.5 space-y-2.5 shadow-md">
+                      {/* Misconception */}
+                      <div className="bg-rose-950/40 border border-rose-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2 text-rose-200">
+                        <span className="shrink-0 font-bold">❌</span>
+                        <div>
+                          <span className="font-bold text-[10px] uppercase text-rose-400 block">
+                            {lang === 'pa' ? 'ਭੁਲੇਖਾ (Misconception)' : lang === 'hi' ? 'भ्रांति (Misconception)' : 'Misconception'}
+                          </span>
+                          <p className="leading-relaxed">{misc.misconception[lang] || misc.misconception.hi || misc.misconception.en}</p>
+                        </div>
+                      </div>
+
+                      {/* Verified Correction */}
+                      <div className="bg-emerald-950/40 border border-emerald-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2 text-emerald-200">
+                        <span className="shrink-0 font-bold">✅</span>
+                        <div>
+                          <span className="font-bold text-[10px] uppercase text-emerald-400 block">
+                            {lang === 'pa' ? 'ਪ੍ਰਮਾਣਿਤ ਤੱਥ (Verified Fact)' : lang === 'hi' ? 'सत्यापित तथ्य (Verified Fact)' : 'Verified Correction'}
+                          </span>
+                          <p className="leading-relaxed">{misc.correction[lang] || misc.correction.hi || misc.correction.en}</p>
+                        </div>
+                      </div>
+
+                      {/* Why It Matters */}
+                      {misc.whyItMatters && (
+                        <div className="bg-indigo-950/30 border border-indigo-500/30 p-2.5 rounded-xl text-xs flex items-start gap-2 text-slate-300">
+                          <span className="shrink-0 text-indigo-400 font-bold text-xs">🎯</span>
+                          <div>
+                            <span className="font-bold text-[10px] uppercase text-indigo-300 block">
+                              {lang === 'pa' ? 'ਪ੍ਰੀਖਿਆ ਲਈ ਮਹੱਤਵ' : lang === 'hi' ? 'परीक्षा में महत्व' : 'Why it Matters in Exams'}
+                            </span>
+                            <p className="leading-relaxed">{misc.whyItMatters[lang] || misc.whyItMatters.hi || misc.whyItMatters.en}</p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Quick Summary Card */}
             {lesson.summary && (
@@ -357,6 +601,73 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </div>
             )}
 
+            {/* Quick Revision Sheet */}
+            {lesson.quickRevisionSheet && (
+              <div className="bg-gradient-to-br from-indigo-950/50 via-slate-900 to-slate-900 border border-indigo-500/40 rounded-2xl p-4 shadow-xl space-y-4 my-2">
+                <div className="flex items-center gap-2 border-b border-indigo-500/30 pb-2">
+                  <Layers size={16} className="text-indigo-400" />
+                  <div>
+                    <h3 className="text-white font-bold text-sm">
+                      {lang === 'pa' ? 'ਤੁਰੰਤ ਦੁਹਰਾਈ ਸ਼ੀਟ (Quick Revision Sheet)' : lang === 'hi' ? 'क्विक रिवीजन शीट (High-Yield Sheet)' : 'Quick Revision Sheet'}
+                    </h3>
+                    <p className="text-[10px] text-indigo-300">
+                      {lang === 'pa' ? 'ਆਖਰੀ ਸਮੇਂ ਦੀ ਦੁਹਰਾਈ ਲਈ ਮੁੱਖ ਸੂਤਰ ਅਤੇ ਨੁਕਤੇ' : lang === 'hi' ? 'अंतिम समय के पुनरीक्षण हेतु उच्च-महत्व बिंदु' : 'High-yield points, key rules, and exam traps'}
+                    </p>
+                  </div>
+                </div>
+
+                {/* High Yield Points */}
+                {lesson.quickRevisionSheet.highYieldPoints && (
+                  <div className="space-y-1.5">
+                    <span className="text-[11px] font-bold text-teal-300 uppercase tracking-wider block">
+                      📌 {lang === 'pa' ? 'ਮੁੱਖ ਨੁਕਤੇ (High-Yield Points)' : lang === 'hi' ? 'उच्च-महत्व बिंदु (High-Yield Points)' : 'High-Yield Points'}
+                    </span>
+                    <div className="space-y-1.5 text-xs text-slate-200">
+                      {(lesson.quickRevisionSheet.highYieldPoints[lang] || lesson.quickRevisionSheet.highYieldPoints.hi || lesson.quickRevisionSheet.highYieldPoints.en || []).map((pt, pIdx) => (
+                        <div key={pIdx} className="bg-slate-800/80 p-2.5 rounded-lg border border-slate-700/60 flex items-start gap-2">
+                          <CheckCircle2 size={13} className="text-teal-400 shrink-0 mt-0.5" />
+                          <span className="leading-relaxed">{pt}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Key Formulas or Rules */}
+                {lesson.quickRevisionSheet.keyFormulasOrRules && (
+                  <div className="space-y-1.5">
+                    <span className="text-[11px] font-bold text-amber-300 uppercase tracking-wider block">
+                      📐 {lang === 'pa' ? 'ਮੁੱਖ ਫਾਰਮੂਲੇ / ਨਿਯਮ' : lang === 'hi' ? 'मुख्य सूत्र एवं नियम' : 'Key Formulas & Rules'}
+                    </span>
+                    <div className="space-y-1.5 text-xs text-slate-200">
+                      {(lesson.quickRevisionSheet.keyFormulasOrRules[lang] || lesson.quickRevisionSheet.keyFormulasOrRules.hi || lesson.quickRevisionSheet.keyFormulasOrRules.en || []).map((rule, rIdx) => (
+                        <div key={rIdx} className="bg-slate-800/80 p-2.5 rounded-lg border border-slate-700/60 font-mono text-amber-200 text-xs">
+                          {rule}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Exam Traps */}
+                {lesson.quickRevisionSheet.examTraps && (
+                  <div className="space-y-1.5">
+                    <span className="text-[11px] font-bold text-rose-300 uppercase tracking-wider block">
+                      ⚠️ {lang === 'pa' ? 'ਇਮਤਿਹਾਨ ਦੇ ਧੋਖੇ / ਗਲਤੀਆਂ' : lang === 'hi' ? 'परीक्षा के धोखे / निगेटिव मार्किंग ट्रैप्स' : 'Exam Traps to Avoid'}
+                    </span>
+                    <div className="space-y-1.5 text-xs text-slate-200">
+                      {(lesson.quickRevisionSheet.examTraps[lang] || lesson.quickRevisionSheet.examTraps.hi || lesson.quickRevisionSheet.examTraps.en || []).map((trap, tIdx) => (
+                        <div key={tIdx} className="bg-rose-950/30 p-2.5 rounded-lg border border-rose-500/30 text-rose-200 flex items-start gap-2">
+                          <span className="text-rose-400 shrink-0 font-bold">!</span>
+                          <span className="leading-relaxed">{trap}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Recommended Standard Books & NCERT references */}
             {lesson.bookRefs && lesson.bookRefs.length > 0 && (
               <div className="bg-slate-800/80 border border-slate-700/80 rounded-xl p-4">
@@ -376,6 +687,32 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     </div>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {/* Editorial Provenance Metadata */}
+            {lesson.editorialRecord && (
+              <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-[11px] text-slate-400 space-y-1.5">
+                <div className="flex items-center justify-between text-slate-300 font-semibold border-b border-slate-800 pb-1">
+                  <span>🏛️ {lang === 'pa' ? 'ਸੰਪਾਦਕੀ ਅਤੇ ਸਿਲੇਬਸ ਰਿਕਾਰਡ' : 'संपादकीय एवं पाठ्यक्रम विवरण (Editorial Provenance)'}</span>
+                  <span className="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">
+                    {lesson.editorialRecord.authoringType}
+                  </span>
+                </div>
+                {lesson.editorialRecord.verifiedSyllabusDenominator && (
+                  <p>
+                    <strong className="text-slate-300">{lang === 'pa' ? 'ਸਿਲੇਬਸ ਆਧਾਰ:' : 'पाठ्यक्रम आधार:'}</strong> {lesson.editorialRecord.verifiedSyllabusDenominator}
+                  </p>
+                )}
+                <div className="flex items-center justify-between text-[10px] text-slate-500 pt-0.5">
+                  <span>Authored: {lesson.editorialRecord.authoredDate}</span>
+                  {lesson.editorialRecord.lastUpdatedDate && <span>Updated: {lesson.editorialRecord.lastUpdatedDate}</span>}
+                </div>
+                {lesson.editorialRecord.reviewerRecord && (
+                  <p className="text-[10px] text-teal-400">
+                    Review: {lesson.editorialRecord.reviewerRecord}
+                  </p>
+                )}
               </div>
             )}
 
@@ -516,23 +853,48 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 </div>
               ) : (
                 lesson.documents.map((doc, dIdx) => (
-                  <div key={dIdx} className="bg-slate-800 border border-slate-700/80 rounded-xl p-3.5 flex items-center justify-between gap-3 shadow hover:border-slate-600 transition">
-                    <div className="flex items-start gap-3 min-w-0">
+                  <div key={dIdx} className="bg-slate-800 border border-slate-700/80 rounded-xl p-3.5 flex items-start justify-between gap-3 shadow hover:border-slate-600 transition">
+                    <div className="flex items-start gap-3 min-w-0 flex-1">
                       <div className="w-9 h-9 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center shrink-0 mt-0.5">
                         <FileText size={18} />
                       </div>
-                      <div className="min-w-0">
-                        <div className="flex items-center gap-1.5 mb-1">
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-1.5 mb-1 flex-wrap">
                           <span className="text-[10px] bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">
                             {doc.language}
                           </span>
                           <span className="text-[10px] bg-indigo-950 text-indigo-300 border border-indigo-700/40 px-1.5 py-0.5 rounded uppercase font-bold">
                             {doc.type || 'PDF'}
                           </span>
+                          {doc.publisher && (
+                            <span className="text-[10px] bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">
+                              🏛️ {doc.publisher}
+                            </span>
+                          )}
+                          {doc.availability === 'verified' && (
+                            <span className="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-700/40 px-1.5 py-0.5 rounded font-medium">
+                              ✓ Verified
+                            </span>
+                          )}
                         </div>
-                        <h5 className="text-white font-semibold text-xs leading-snug truncate">
+                        <h5 className="text-white font-semibold text-xs leading-snug">
                           {doc.title}
                         </h5>
+                        {doc.chapterOrPage && (
+                          <p className="text-[11px] text-indigo-300 mt-0.5 font-medium">
+                            📖 {doc.chapterOrPage}
+                          </p>
+                        )}
+                        {doc.accessNotes && (
+                          <p className="text-[11px] text-slate-400 mt-0.5 leading-tight">
+                            {doc.accessNotes}
+                          </p>
+                        )}
+                        {doc.lastChecked && (
+                          <p className="text-[10px] text-slate-500 mt-0.5 font-mono">
+                            Last verified: {doc.lastChecked}
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -541,7 +903,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="bg-slate-700 hover:bg-slate-600 text-teal-300 hover:text-white px-3 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 shrink-0 transition"
-                      title="Open PDF"
+                      title="Open Resource"
                     >
                       <Download size={13} />
                       <span>{lang === 'pa' ? 'ਖੋਲ੍ਹੋ' : 'खोलें'}</span>
@@ -549,6 +911,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   </div>
                 ))
               )}
+              <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 text-[10px] text-slate-400 leading-relaxed">
+                ℹ️ {lang === 'pa' 
+                  ? 'ਸੂਚਨਾ: ਲਿੰਕ ਅਧਿਕਾਰਤ ਸਰਕਾਰੀ ਪੋਰਟਲਾਂ ਅਤੇ ਮਾਨਤਾ ਪ੍ਰਾਪਤ ਪਾਠ ਪੁਸਤਕਾਂ ਦੇ ਹਨ। ExamSathi ਕਿਸੇ ਵੀ ਕਾਪੀਰਾਈਟ ਸਮੱਗਰੀ ਨੂੰ ਰੀ-ਹੋਸਟ ਨਹੀਂ ਕਰਦਾ ਅਤੇ ਸਿੱਧਾ ਅਧਿਕਾਰਤ ਸਰੋਤ ਉੱਤੇ ਭੇਜਦਾ ਹੈ।' 
+                  : 'सूचना: प्रदर्शित लिंक आधिकारिक सरकारी पोर्टलों एवं पाठ्यपुस्तकों के हैं। ExamSathi किसी भी कॉपीराइट सामग्री को री-होस्ट नहीं करता; समस्त दस्तावेज सीधे प्रकाशक के पोर्टल पर खुलते हैं।'}
+              </div>
             </div>
 
             {/* Recommended Hardcover Books List */}
@@ -847,19 +1214,28 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
         {/* ================= TAB 6: MY NOTES ================= */}
         {activeTab === 'notes' && (
           <div className="flex flex-col gap-4">
+            {/* Note Editor */}
             <div className="bg-slate-800/90 border border-slate-700 rounded-xl p-4">
-              <h3 className="text-white font-bold text-sm mb-2 flex items-center gap-2">
-                <Edit3 size={16} className="text-teal-400" />
-                <span>{lang === 'pa' ? 'ਇਸ ਵਿਸ਼ੇ ਲਈ ਨਿੱਜੀ ਨੋਟ ਲਿਖੋ' : 'इस टॉपिक के लिए अपने पर्सनल नोट्स बनाएं'}</span>
+              <h3 className="text-white font-bold text-sm mb-2 flex items-center justify-between">
+                <span className="flex items-center gap-2">
+                  <Edit3 size={16} className="text-teal-400" />
+                  <span>{lang === 'pa' ? 'ਇਸ ਵਿਸ਼ੇ ਲਈ ਨਿੱਜੀ ਨੋਟ ਲਿਖੋ' : 'इस टॉपिक के लिए अपने पर्सनल नोट्स बनाएं'}</span>
+                </span>
+                <span className="text-[10px] text-teal-400 font-mono bg-teal-950/60 border border-teal-800/40 px-2 py-0.5 rounded">
+                  {selectedExam || 'general'}
+                </span>
               </h3>
               <textarea 
                 value={userNote}
-                onChange={e => setUserNote(e.target.value)}
+                onChange={e => handleNoteInputChange(e.target.value)}
                 className="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 text-white text-xs h-32 focus:outline-none focus:border-teal-500 placeholder-slate-500 resize-none leading-relaxed" 
-                placeholder={lang === 'pa' ? 'ਆਪਣੇ ਨੋਟਿਸ ਇੱਥੇ ਲਿਖੋ ਅਤੇ ਸੇਵ ਕਰੋ...' : 'महत्वपूर्ण बातें, फॉर्मूले या ट्रिक्स यहाँ लिखें...'}
+                placeholder={lang === 'pa' ? 'ਆਪਣੇ ਨੋਟਿਸ ਇੱਥੇ ਲਿਖੋ ਅਤੇ ਸੇਵ ਕਰੋ...' : 'महत्वपूर्ण बातें, फॉर्मूले या ट्रिक्स यहाँ लिखें... (ड्राफ्ट स्वतः सहेजा जाएगा)'}
               />
               <div className="flex justify-between items-center mt-3">
-                <span className="text-[11px] text-slate-500">Auto-saved to device memory</span>
+                <span className="text-[11px] text-slate-500 flex items-center gap-1">
+                  <span>💾</span>
+                  <span>{userNote.trim() ? 'Draft autosaved locally' : 'Private to your device'}</span>
+                </span>
                 <button 
                   onClick={handleSaveNote}
                   disabled={!userNote.trim()}
@@ -870,29 +1246,130 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </div>
             </div>
 
+            {/* Recoverable Deletion Undo Banner */}
+            {recentlyDeletedNote && (
+              <div className="bg-amber-950/70 border border-amber-600/60 rounded-xl p-3 flex justify-between items-center text-xs text-amber-200">
+                <span className="truncate pr-2">
+                  Note removed ({recentlyDeletedNote.title || 'Untitled'}).
+                </span>
+                <button 
+                  onClick={handleRestoreNote} 
+                  className="font-bold underline text-amber-300 hover:text-white flex items-center gap-1 shrink-0"
+                >
+                  <Undo2 size={13} /> Undo
+                </button>
+              </div>
+            )}
+
+            {/* Notes Control Bar: Search & Export */}
+            <div className="flex flex-col sm:flex-row gap-2.5 items-stretch sm:items-center justify-between bg-slate-850 p-2.5 rounded-xl border border-slate-750">
+              <div className="relative flex-1">
+                <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+                <input
+                  type="text"
+                  value={notesSearchQuery}
+                  onChange={e => setNotesSearchQuery(e.target.value)}
+                  placeholder="Search in notes..."
+                  className="w-full bg-slate-900 border border-slate-700 rounded-lg pl-8 pr-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-teal-500"
+                />
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => handleExportNotes('markdown')}
+                  disabled={personalNotes.length === 0}
+                  className="bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-slate-200 border border-slate-700 text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition"
+                  title="Export notes as Markdown document"
+                >
+                  <Download size={13} />
+                  <span>Export MD</span>
+                </button>
+                <button
+                  onClick={() => handleExportNotes('txt')}
+                  disabled={personalNotes.length === 0}
+                  className="bg-slate-800 hover:bg-slate-700 disabled:opacity-40 text-slate-200 border border-slate-700 text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 transition"
+                  title="Export notes as plain text"
+                >
+                  <Download size={13} />
+                  <span>TXT</span>
+                </button>
+              </div>
+            </div>
+
             {/* Saved Notes List */}
             <div className="space-y-3">
-              <h4 className="text-slate-400 text-xs font-bold uppercase tracking-wider">
-                {lang === 'pa' ? 'ਸੰਭਾਲੇ ਹੋਏ ਨੋਟਿਸ' : 'सहेजे गए नोट्स'} ({savedNotes.length})
+              <h4 className="text-slate-400 text-xs font-bold uppercase tracking-wider flex items-center justify-between">
+                <span>{lang === 'pa' ? 'ਸੰਭਾਲੇ ਹੋਏ ਨੋਟਿਸ' : 'सहेजे गए नोट्स'} ({personalNotes.length})</span>
+                {notesSearchQuery && (
+                  <button 
+                    onClick={() => setNotesSearchQuery('')}
+                    className="text-teal-400 hover:underline text-[10px] normal-case"
+                  >
+                    Clear Search
+                  </button>
+                )}
               </h4>
-              {savedNotes.length === 0 ? (
+              {personalNotes.length === 0 ? (
                 <div className="bg-slate-800/40 border border-slate-700/40 rounded-xl p-6 text-center text-slate-500 text-xs">
-                  अभी तक कोई नोट नहीं लिखा गया है।
+                  {notesSearchQuery ? 'कोई भी नोट खोज से मेल नहीं खाता।' : 'अभी तक कोई नोट नहीं लिखा गया है।'}
                 </div>
               ) : (
-                savedNotes.map(n => (
-                  <div key={n.id} className="bg-slate-800 border border-slate-700/80 rounded-xl p-3.5 flex justify-between items-start gap-3">
-                    <div className="flex-1 text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
-                      {n.text}
-                      <p className="text-[10px] text-slate-500 mt-2">Saved on: {n.date}</p>
-                    </div>
-                    <button 
-                      onClick={() => handleDeleteNote(n.id)}
-                      className="text-slate-500 hover:text-rose-400 text-xs shrink-0 transition"
-                      title="Delete Note"
-                    >
-                      ✕
-                    </button>
+                personalNotes.map(n => (
+                  <div key={n.id} className="bg-slate-800 border border-slate-700/80 rounded-xl p-3.5 flex flex-col gap-2">
+                    {editingNoteId === n.id ? (
+                      <div className="space-y-2">
+                        <textarea
+                          value={editNoteContent}
+                          onChange={e => setEditNoteContent(e.target.value)}
+                          className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-white text-xs h-24 focus:outline-none focus:border-teal-500 resize-none leading-relaxed"
+                        />
+                        <div className="flex justify-end gap-2">
+                          <button
+                            onClick={() => setEditingNoteId(null)}
+                            className="bg-slate-700 hover:bg-slate-600 text-slate-300 text-xs px-3 py-1 rounded"
+                          >
+                            Cancel
+                          </button>
+                          <button
+                            onClick={() => handleUpdateNote(n.id)}
+                            className="bg-teal-600 hover:bg-teal-500 text-white text-xs px-3 py-1 rounded font-bold"
+                          >
+                            Save Edit
+                          </button>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <div className="flex justify-between items-start gap-3">
+                          <div className="flex-1 text-xs text-slate-200 whitespace-pre-wrap leading-relaxed">
+                            {n.content}
+                            {n.sourceExcerpt && (
+                              <p className="text-[11px] text-teal-300/80 mt-1.5 italic bg-slate-900/60 p-2 rounded border border-slate-800">
+                                📖 {n.sourceExcerpt}
+                              </p>
+                            )}
+                            <p className="text-[10px] text-slate-500 mt-2">
+                              Saved on: {new Date(n.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                            </p>
+                          </div>
+                          <div className="flex items-center gap-1 shrink-0">
+                            <button
+                              onClick={() => { setEditingNoteId(n.id); setEditNoteContent(n.content); }}
+                              className="p-1.5 text-slate-400 hover:text-teal-400 transition"
+                              title="Edit Note"
+                            >
+                              <Edit3 size={13} />
+                            </button>
+                            <button 
+                              onClick={() => handleDeleteNote(n)}
+                              className="p-1.5 text-slate-400 hover:text-rose-400 transition"
+                              title="Delete Note (Recoverable)"
+                            >
+                              <Trash2 size={13} />
+                            </button>
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 ))
               )}
@@ -903,15 +1380,15 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               <div className="flex items-start gap-3">
                 <span className="text-2xl">🎁</span>
                 <div>
-                  <p className="text-teal-300 font-bold text-sm">Share your notes with all students</p>
+                  <p className="text-teal-300 font-bold text-sm">Contribute notes for peer moderation</p>
                   <p className="text-slate-400 text-xs mt-1 leading-relaxed">
-                    Have great notes on this topic? Contribute them! After our team reviews, your notes will be available to thousands of students preparing for this exam.
+                    Uploading notes is always private by default. If you wish to propose public sharing, you can submit your notes for human moderation with explicit rights confirmation.
                   </p>
                   <button
-                    onClick={() => setShowContributeModal(true)}
+                    onClick={() => { setShowContributeModal(true); setRightsConfirmed(false); }}
                     className="mt-3 bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition"
                   >
-                    Contribute My Notes 🌟
+                    Propose Public Contribution 🌟
                   </button>
                 </div>
               </div>
@@ -928,8 +1405,8 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
             {contributeSubmitted ? (
               <div className="text-center py-4">
                 <span className="text-4xl block mb-3">🙏</span>
-                <h3 className="text-white font-bold text-lg mb-2">Thank you!</h3>
-                <p className="text-slate-400 text-sm">Your contribution has been submitted for review. We will notify you when it is published.</p>
+                <h3 className="text-white font-bold text-lg mb-2">Submitted for Review</h3>
+                <p className="text-slate-400 text-sm">Your contribution has been received for editorial moderation. Personal notes remain private until approved.</p>
                 <button
                   onClick={() => { setShowContributeModal(false); setContributeSubmitted(false); }}
                   className="mt-4 bg-teal-500 text-slate-950 font-bold px-6 py-2.5 rounded-xl text-sm"
@@ -940,11 +1417,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
             ) : (
               <>
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-white font-bold text-base">Contribute Your Notes</h3>
+                  <h3 className="text-white font-bold text-base">Propose Public Contribution</h3>
                   <button onClick={() => setShowContributeModal(false)} className="text-slate-400 hover:text-white text-xl leading-none">×</button>
                 </div>
                 <p className="text-slate-400 text-xs mb-3 leading-relaxed">
-                  Your saved notes on <strong className="text-teal-300">{lesson.title[lang]}</strong> will be submitted to our editorial team. Once reviewed, they become available to all students.
+                  Your saved notes on <strong className="text-teal-300">{lesson.title[lang] || lesson.title.en}</strong> will be submitted for editorial moderation.
                 </p>
                 <div className="mb-3">
                   <label className="text-xs text-slate-400 mb-1 block">Your name or initials (optional, for credit)</label>
@@ -957,37 +1434,47 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   />
                 </div>
                 <div className="bg-slate-800/60 rounded-xl p-3 mb-3 text-xs text-slate-400 border border-slate-700">
-                  <p className="font-bold text-slate-300 mb-1">What will be shared:</p>
+                  <p className="font-bold text-slate-300 mb-1">Privacy Guarantee & Submission Scope:</p>
                   <ul className="space-y-0.5">
-                    <li>• Your {savedNotes.length} saved note{savedNotes.length !== 1 ? 's' : ''} on this topic</li>
-                    <li>• Topic: {lesson.title.en}</li>
-                    <li>• Your name/initials (if provided)</li>
+                    <li>• Personal notes are never published automatically</li>
+                    <li>• Active notes on this topic: {personalNotes.length}</li>
+                    <li>• Topic: {lesson.title.en} ({selectedExam || 'general'})</li>
                   </ul>
-                  <p className="mt-2 text-[11px] text-slate-500">Your email or personal data is NOT shared.</p>
                 </div>
-                {savedNotes.length === 0 ? (
+                <label className="flex items-start gap-2.5 text-[11px] text-slate-300 cursor-pointer mb-3 p-2 bg-slate-800/40 rounded-lg border border-slate-700">
+                  <input
+                    type="checkbox"
+                    checked={rightsConfirmed}
+                    onChange={e => setRightsConfirmed(e.target.checked)}
+                    className="mt-0.5 rounded border-slate-700 text-teal-500 focus:ring-0"
+                  />
+                  <span>I confirm that I hold full rights to share these personal notes, that they contain no copyrighted or infringing coaching materials, and I agree to open educational moderation.</span>
+                </label>
+                {personalNotes.length === 0 ? (
                   <p className="text-amber-400 text-xs text-center mb-3">You have no saved notes yet. Write and save some notes first!</p>
                 ) : (
                   <button
+                    disabled={!rightsConfirmed}
                     onClick={() => {
-                      // In static mode: save to localStorage as a pending submission
                       try {
                         const submissions = JSON.parse(studyStorage.getItem('examsathi_pending_contributions') || '[]');
                         submissions.push({
-                          topicId: lesson.topicId,
+                          topicId: lesson.id,
                           topicTitle: lesson.title.en,
-                          notes: savedNotes,
+                          examId: selectedExam || 'general',
+                          notes: personalNotes,
                           creditName: contributeName || 'Anonymous',
+                          rightsConfirmed: true,
                           submittedAt: new Date().toISOString(),
-                          status: 'pending',
+                          status: 'pending-moderation',
                         });
                         studyStorage.setItem('examsathi_pending_contributions', JSON.stringify(submissions));
                       } catch {}
                       setContributeSubmitted(true);
                     }}
-                    className="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-bold py-3 rounded-xl text-sm transition"
+                    className="w-full bg-teal-500 hover:bg-teal-400 disabled:opacity-40 text-slate-950 font-bold py-3 rounded-xl text-sm transition"
                   >
-                    Submit for Review ✓
+                    Submit with Rights Confirmation ✓
                   </button>
                 )}
               </>

@@ -19,6 +19,6 @@ export function generateQuantPractice(topicId: string, count: number): Question[
       const value = String(key === correct ? answer : answer + (++distractor) * (i % 4 + 1));
       return [key, { en: value, hi: value, pa: value }];
     })) as Question['options'];
-    return { id: `gen-quant-${topicId}-${i}`, topicId, subjectId: 'mathematics', examTag: 'SSC / PSSSB / CTET arithmetic practice • not a past paper', question: { en: prompt, hi, pa }, options, correct, explanation: { en: working, hi: working, pa: working }, difficulty: kind === 0 || kind === 3 ? 'easy' : 'medium' };
+    return { id: `gen-quant-${topicId}-${i}`, topicId, subjectId: 'mathematics', examTag: 'SSC / PSSSB / CTET arithmetic practice • not a past paper', question: { en: prompt, hi, pa }, options, correct, explanation: { en: working, hi: working, pa: working }, difficulty: kind === 0 || kind === 3 ? 'easy' : 'medium', originType: 'computed-variant', reviewStatus: 'reviewed' };
   });
 }

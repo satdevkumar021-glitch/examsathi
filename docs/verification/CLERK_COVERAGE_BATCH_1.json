@@ -1,0 +1,296 @@
+{
+  "date": "2026-10-10",
+  "certifiedComplete": false,
+  "sourceStatus": "Mirror inspected; government endpoint timed out",
+  "topics": [
+    {
+      "id": "constitution",
+      "subject": "General awareness",
+      "lesson": true,
+      "status": "MISSING",
+      "questions": 10,
+      "computed": 0,
+      "flashcards": 0
+    },
+    {
+      "id": "sst-geo-environment",
+      "subject": "General awareness",
+      "lesson": true,
+      "status": "MISSING",
+      "questions": 10,
+      "computed": 0,
+      "flashcards": 0
+    },
+    {
+      "id": "clerk-current-affairs",
+      "subject": "General awareness",
+      "lesson": false,
+      "status": "MISSING",
+      "questions": 0,
+      "computed": 0,
+      "flashcards": 0
+    },
+    {
+      "id": "general-science-concepts",
+      "subject": "General awareness",
+      "lesson": true,
+      "status": "foundation",
+      "questions": 159,
+      "computed": 6,
+      "flashcards": 156
+    },
+    {
+      "id": "indian-economy",
+      "subject": "General awareness",
+      "lesson": true,
+      "status": "complete",
+      "questions": 112,
+      "computed": 8,
+      "flashcards": 8
+    },
+    {
+      "id": "modern-india",
+      "subject": "General awareness",
+      "lesson": true,
+      "status": "MISSING",
+      "questions": 19,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "clerk-sports",
+      "subject": "General awareness",
+      "lesson": false,
+      "status": "MISSING",
+      "questions": 0,
+      "computed": 0,
+      "flashcards": 0
+    },
+    {
+      "id": "clerk-cinema-literature",
+      "subject": "General awareness",
+      "lesson": false,
+      "status": "MISSING",
+      "questions": 0,
+      "computed": 0,
+      "flashcards": 0
+    },
+    {
+      "id": "physical-geography",
+      "subject": "General awareness",
+      "lesson": true,
+      "status": "complete",
+      "questions": 71,
+      "computed": 8,
+      "flashcards": 8
+    },
+    {
+      "id": "ssc-cgl-reasoning",
+      "subject": "Reasoning and numerical skills",
+      "lesson": true,
+      "status": "MISSING",
+      "questions": 1000,
+      "computed": 1000,
+      "flashcards": 8
+    },
+    {
+      "id": "clerk-data-analysis",
+      "subject": "Reasoning and numerical skills",
+      "lesson": true,
+      "status": "foundation",
+      "questions": 50,
+      "computed": 50,
+      "flashcards": 4
+    },
+    {
+      "id": "english-grammar-lit",
+      "subject": "English language",
+      "lesson": true,
+      "status": "MISSING",
+      "questions": 51,
+      "computed": 0,
+      "flashcards": 2
+    },
+    {
+      "id": "punjabi-grammar",
+      "subject": "Part B Punjabi",
+      "lesson": true,
+      "status": "complete",
+      "questions": 11,
+      "computed": 0,
+      "flashcards": 2
+    },
+    {
+      "id": "punjab-clerk-prep",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 5,
+      "computed": 0,
+      "flashcards": 2
+    },
+    {
+      "id": "computer-awareness",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 84,
+      "computed": 2,
+      "flashcards": 52
+    },
+    {
+      "id": "clerk-computer-hardware",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "clerk-ms-office-mastery",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "clerk-networking-cybersecurity",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "punjabi-paper-a",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 11,
+      "computed": 0,
+      "flashcards": 2
+    },
+    {
+      "id": "quantitative-aptitude",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "MISSING",
+      "questions": 151,
+      "computed": 150,
+      "flashcards": 1
+    },
+    {
+      "id": "punjab-history",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "MISSING",
+      "questions": 138,
+      "computed": 0,
+      "flashcards": 3
+    },
+    {
+      "id": "punjab-ancient-medieval",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 10,
+      "computed": 0,
+      "flashcards": 3
+    },
+    {
+      "id": "guru-nanak-dev-ji",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "guru-angad-amar-ram-das",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "guru-arjan-dev-ji",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "guru-hargobind-to-tegh-bahadur",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "guru-gobind-singh-ji",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "banda-singh-bahadur-misls",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "maharaja-ranjit-singh-empire",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "punjab-freedom-movements",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    },
+    {
+      "id": "punjab-partition-suba-modern",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 10,
+      "computed": 0,
+      "flashcards": 3
+    },
+    {
+      "id": "punjab-culture-folklore",
+      "subject": "Clerk Examination Modules",
+      "lesson": true,
+      "status": "complete",
+      "questions": 14,
+      "computed": 4,
+      "flashcards": 4
+    }
+  ],
+  "distinctExamPool": 1918
+}

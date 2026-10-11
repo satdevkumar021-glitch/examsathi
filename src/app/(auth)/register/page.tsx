@@ -183,10 +183,17 @@ export default function Register() {
             >
               <option value="ett-punjab">👶 Punjab ETT Cadre (6635 / 5994 Posts) &amp; PSTET</option>
               <option value="clerk-psssb">💼 PSSSB Clerk &amp; Raavi Typing Examination</option>
-              <option value="master-cadre-sst">🌾 Punjab Master Cadre Social Studies (SST)</option>
+              <option value="punjab-master-cadre-sst">🌾 Punjab Master Cadre Social Studies (SST)</option>
+              <option value="punjab-master-cadre-science">🔬 Punjab Master Cadre Science</option>
+              <option value="punjab-master-cadre-math">📐 Punjab Master Cadre Mathematics</option>
+              <option value="punjab-master-cadre-punjabi">📖 Punjab Master Cadre Punjabi</option>
+              <option value="punjab-master-cadre-hindi">📚 Punjab Master Cadre Hindi</option>
+              <option value="punjab-master-cadre-english">🔤 Punjab Master Cadre English</option>
+              <option value="reet-level1">🏜️ Rajasthan REET Level 1 (Classes 1-5)</option>
+              <option value="reet-level2-sst">🏜️ Rajasthan REET Level 2 (Social Studies)</option>
+              <option value="reet-level2-science-math">📐 Rajasthan REET Level 2 (Science &amp; Math)</option>
               <option value="police-punjab">👮 Punjab Police Constable &amp; Sub-Inspector</option>
               <option value="patwari-punjab">🗺️ Punjab Revenue Patwari &amp; Accounts</option>
-              <option value="reet-l2">🏜️ REET Level 2 &amp; Rajasthan Teacher</option>
               <option value="ctet-p2">🏛️ Central CTET Paper 2 (CBSE)</option>
             </select>
           </div>

@@ -8,7 +8,7 @@
     "hi",
     "pa"
   ],
-  "coverageStatus": "foundation",
+  "coverageStatus": "complete",
   "editorialStatus": "authored",
   "title": {
     "en": "Reflection and plane mirrors",
@@ -212,16 +212,26 @@
   ],
   "documents": [
     {
-      "title": "NCERT textbook selector: Class X Science, Light – Reflection and Refraction",
-      "url": "https://ncert.nic.in/textbook.php",
+      "title": "NCERT Class 10 Science — Light: Reflection and Refraction",
+      "url": "https://ncert.nic.in/textbook/pdf/jesc109.pdf",
       "language": "en/hi",
-      "type": "textbook"
+      "type": "textbook",
+      "publisher": "National Council of Educational Research and Training (NCERT)",
+      "chapterOrPage": "Chapter 9 (pp. 133–158)",
+      "accessNotes": "Comprehensive coverage of reflection laws, spherical mirrors, ray diagrams, and sign conventions.",
+      "lastChecked": "2026-10-10",
+      "availability": "verified"
     },
     {
-      "title": "Khan Academy: परावर्तन का नियम (Hindi video and exercises)",
-      "url": "https://hi.khanacademy.org/science/ncert-class-8-science/x55541eeaec8b3a9a:light/x55541eeaec8b3a9a:law-of-reflection/v/law-of-reflection",
-      "language": "hi",
-      "type": "notes"
+      "title": "NCERT Class 10 Science — Complete Textbook Portal",
+      "url": "https://ncert.nic.in/textbook.php",
+      "language": "en/hi",
+      "type": "textbook",
+      "publisher": "NCERT",
+      "chapterOrPage": "Class 10 Science",
+      "accessNotes": "Official repository access for secondary physics chapters.",
+      "lastChecked": "2026-10-10",
+      "availability": "verified"
     }
   ],
   "bookRefs": [
@@ -238,5 +248,235 @@
       "url": "https://ncert.nic.in/textbook.php"
     }
   ],
+  "prerequisites": {
+    "hi": [
+      "प्रकाश के एक सीधी रेखा में गमन (ऋजुरेखीय संचरण) का बुनियादी ज्ञान।",
+      "समतल ज्यामिति में लंब (Normal) और 90 डिग्री के कोण की समझ।",
+      "पारदर्शी, पारभासी एवं अपारदर्शी/परावर्तक सतहों के बीच स्पष्ट भेद।"
+    ],
+    "pa": [
+      "ਪ੍ਰਕਾਸ਼ ਦੀ ਸਿੱਧੀ ਰੇਖਾ ਵਿੱਚ ਚਾਲ (Rectilinear propagation) ਦੀ ਮੁੱਢਲੀ ਸਮਝ।",
+      "ਸਮਤਲ ਰੇਖਾਗਣਿਤ ਵਿੱਚ ਅਭਿਲੰਬ (ਲੰਬ) ਅਤੇ 90 ਡਿਗਰੀ ਕੋਣ ਦੀ ਸਮਝ।",
+      "ਪਾਰਦਰਸ਼ੀ, ਧੁੰਦਲੇ ਅਤੇ ਅਪਾਰਦਰਸ਼ੀ/ਪਰਾਵਰਤਕ ਸਤਹਾਂ ਵਿਚਲਾ ਅੰਤਰ।"
+    ],
+    "en": [
+      "Basic understanding of the rectilinear propagation of light rays.",
+      "Geometric concept of a normal (a line drawn perpendicular to a surface at 90°).",
+      "Distinction between transparent media and opaque, reflective boundaries."
+    ]
+  },
+  "learningObjectives": {
+    "hi": [
+      "प्रकाश के परावर्तन के दोनों नियमों को सही ढंग से समझना और किरण आरेखों पर लागू करना।",
+      "आपतन कोण और परावर्तन कोण को अभिलंब से मापने की अचूक समझ विकसित करना।",
+      "समतल दर्पण द्वारा बने प्रतिबिंब की विशेषताओं (आभासी, सीधा, वस्तु के बराबर आकार, समान दूरी और पार्श्व परिवर्तन) की गणना करना।",
+      "नियमित (दर्पण) एवं विसरित (खुरदरी सतह) परावर्तन के बीच भौतिक अंतर स्पष्ट करना।",
+      "दर्पण की ओर गति करने पर प्रतिबिंब की सापेक्ष गति तथा पूर्ण प्रतिबिंब देखने हेतु आवश्यक न्यूनतम लंबाई ज्ञात करना।"
+    ],
+    "pa": [
+      "ਪ੍ਰਕਾਸ਼ ਦੇ ਪਰਾਵਰਤਨ ਦੇ ਦੋਹਾਂ ਨਿਯਮਾਂ ਨੂੰ ਸਮਝਣਾ ਅਤੇ ਕਿਰਨ ਚਿੱਤਰਾਂ ਉੱਤੇ ਲਾਗੂ ਕਰਨਾ।",
+      "ਆਪਤਨ ਕੋਣ ਅਤੇ ਪਰਾਵਰਤਨ ਕੋਣ ਨੂੰ ਹਮੇਸ਼ਾ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪਣ ਦਾ ਸਹੀ ਅਭਿਆਸ ਕਰਨਾ।",
+      "ਸਮਤਲ ਦਰਪਣ ਰਾਹੀਂ ਬਣੇ ਪ੍ਰਤੀਬਿੰਬ ਦੇ ਗੁਣਾਂ (ਆਭਾਸੀ, ਸਿੱਧਾ, ਬਰਾਬਰ ਆਕਾਰ, ਪਾਸੇ ਤੋਂ ਉਲਟ) ਦੀ ਗਿਣਤੀ ਕਰਨਾ।",
+      "ਨਿਯਮਿਤ ਅਤੇ ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਦੇ ਭੌਤਿਕ ਅੰਤਰ ਨੂੰ ਸਪੱਸ਼ਟ ਕਰਨਾ।",
+      "ਦਰਪਣ ਵੱਲ ਵਸਤੂ ਦੇ ਤੁਰਨ ਨਾਲ ਪ੍ਰਤੀਬਿੰਬ ਦੀ ਸਾਪੇਖਿਕ ਚਾਲ ਅਤੇ ਪੂਰੇ ਪ੍ਰਤੀਬਿੰਬ ਲਈ ਲੋੜੀਂਦੀ ਦਰਪਣ ਦੀ ਲੰਬਾਈ ਕੱਢਣਾ।"
+    ],
+    "en": [
+      "Apply the two fundamental laws of reflection (angle of incidence equals angle of reflection; coplanar condition).",
+      "Accurately calculate angles of incidence and reflection measured from the normal rather than the mirror surface.",
+      "Characterize plane mirror images: virtual, erect, laterally inverted, equal in size, and formed at an equal distance behind the mirror.",
+      "Differentiate specular reflection from diffuse scattering while recognizing that microscopic reflection laws hold everywhere.",
+      "Compute relative velocity of image formation and the minimum mirror height required to see one's full vertical image."
+    ]
+  },
+  "workedExamples": [
+    {
+      "title": {
+        "hi": "उदाहरण 1: दर्पण की सतह से कोण और परावर्तन कोण की गणना",
+        "pa": "ਉਦਾਹਰਨ 1: ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਕੋਣ ਅਤੇ ਪਰਾਵਰਤਨ ਕੋਣ ਦੀ ਗਿਣਤੀ",
+        "en": "Worked Example 1: Measuring Angle of Reflection from the Surface Normal"
+      },
+      "problem": {
+        "hi": "एक प्रकाश किरण समतल दर्पण की परावर्तक सतह के साथ 35° का कोण बनाती हुई आपतित होती है। परावर्तन कोण का मान क्या होगा तथा आपतित किरण और परावर्तित किरण के बीच कुल कितना कोण बनेगा?",
+        "pa": "ਇੱਕ ਪ੍ਰਕਾਸ਼ ਕਿਰਨ ਸਮਤਲ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਨਾਲ 35° ਦਾ ਕੋਣ ਬਣਾਉਂਦੀ ਹੈ। ਪਰਾਵਰਤਨ ਕੋਣ ਦਾ ਮੁੱਲ ਕਿੰਨਾ ਹੋਵੇਗਾ ਅਤੇ ਦੋਵਾਂ ਕਿਰਨਾਂ ਵਿਚਕਾਰ ਕੁੱਲ ਕਿੰਨਾ ਕੋਣ ਬਣੇਗਾ?",
+        "en": "A light ray strikes a plane mirror making an angle of 35° with the mirror surface. What is the angle of reflection, and what is the total angle between the incident ray and the reflected ray?"
+      },
+      "steps": {
+        "hi": [
+          "कदम 1: अभिलंब दर्पण सतह के साथ 90° का कोण बनाता है।",
+          "कदम 2: आपतन कोण (i) = 90° − 35° = 55° (क्योंकि कोण हमेशा अभिलंब से मापा जाता है)।",
+          "कदम 3: परावर्तन के पहले नियम के अनुसार, परावर्तन कोण (r) = आपतन कोण (i) = 55°।",
+          "कदम 4: आपतित किरण और परावर्तित किरण के बीच कुल कोण = i + r = 55° + 55° = 110°।"
+        ],
+        "pa": [
+          "ਕਦਮ 1: ਅਭਿਲੰਬ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਨਾਲ 90° ਦਾ ਕੋਣ ਬਣਾਉਂਦਾ ਹੈ।",
+          "ਕਦਮ 2: ਆਪਤਨ ਕੋਣ (i) = 90° − 35° = 55° (ਕੋਣ ਹਮੇਸ਼ਾ ਅਭਿਲੰਬ ਤੋਂ ਮਾਪਿਆ ਜਾਂਦਾ ਹੈ)।",
+          "ਕਦਮ 3: ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਅਨੁਸਾਰ r = i = 55°।",
+          "ਕਦਮ 4: ਦੋਵਾਂ ਕਿਰਨਾਂ ਵਿਚਕਾਰ ਕੁੱਲ ਕੋਣ = 55° + 55° = 110°।"
+        ],
+        "en": [
+          "Step 1: The normal forms a 90° angle with the mirror boundary.",
+          "Step 2: The angle of incidence i is measured from the normal: i = 90° − 35° = 55°.",
+          "Step 3: By the first law of reflection, angle of reflection r = i = 55°.",
+          "Step 4: The total angle between incident and reflected ray is i + r = 55° + 55° = 110°."
+        ]
+      },
+      "solution": {
+        "hi": "परावर्तन कोण 55° है तथा दोनों किरणों के बीच कुल कोण 110° है।",
+        "pa": "ਪਰਾਵਰਤਨ ਕੋਣ 55° ਹੈ ਅਤੇ ਦੋਵਾਂ ਕਿਰਨਾਂ ਵਿਚਕਾਰ ਕੁੱਲ ਕੋਣ 110° ਹੈ।",
+        "en": "The angle of reflection is 55°, and the angle between incident and reflected rays is 110°."
+      },
+      "takeaway": {
+        "hi": "सावधानी: परीक्षा में दिए गए कोण को सीधे आपतन कोण न मानें; यदि कोण दर्पण की सतह से दिया है तो उसे 90° में से घटाएं।",
+        "pa": "ਧਿਆਨ ਰੱਖੋ: ਜੇ ਕੋਣ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਤੋਂ ਦਿੱਤਾ ਗਿਆ ਹੈ ਤਾਂ ਉਸਨੂੰ 90° ਵਿੱਚੋਂ ਘਟਾ ਕੇ ਆਪਤਨ ਕੋਣ ਕੱਢੋ।",
+        "en": "Key Takeaway: Never confuse the glancing surface angle with the angle of incidence; always subtract from 90°."
+      }
+    },
+    {
+      "title": {
+        "hi": "उदाहरण 2: गतिमान वस्तु और समतल दर्पण में प्रतिबिंब की दूरी",
+        "pa": "ਉਦਾਹਰਨ 2: ਚੱਲਦੀ ਵਸਤੂ ਅਤੇ ਸਮਤਲ ਦਰਪਣ ਵਿੱਚ ਪ੍ਰਤੀਬਿੰਬ ਦੀ ਦੂਰੀ",
+        "en": "Worked Example 2: Relative Distance and Image Shift in a Plane Mirror"
+      },
+      "problem": {
+        "hi": "एक व्यक्ति समतल दर्पण से 4 मीटर की दूरी पर खड़ा है। यदि वह दर्पण की ओर 1.5 मीटर आगे बढ़ता है, तो अब व्यक्ति और उसके प्रतिबिंब के बीच कुल कितनी दूरी होगी?",
+        "pa": "ਇੱਕ ਵਿਅਕਤੀ ਸਮਤਲ ਦਰਪਣ ਤੋਂ 4 ਮੀਟਰ ਦੀ ਦੂਰੀ 'ਤੇ ਖੜ੍ਹਾ ਹੈ। ਜੇ ਉਹ ਦਰਪਣ ਵੱਲ 1.5 ਮੀਟਰ ਅੱਗੇ ਤੁਰਦਾ ਹੈ, ਤਾਂ ਹੁਣ ਵਿਅਕਤੀ ਅਤੇ ਉਸਦੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿਚਕਾਰ ਕੁੱਲ ਕਿੰਨੀ ਦੂਰੀ ਹੋਵੇਗੀ?",
+        "en": "A person stands 4 meters in front of a flat plane mirror. If the person walks 1.5 meters towards the mirror, what is the new total distance between the person and their image?"
+      },
+      "steps": {
+        "hi": [
+          "कदम 1: प्रारंभ में व्यक्ति की दर्पण से दूरी = 4 मीटर, अतः प्रतिबिंब की दूरी भी = 4 मीटर (कुल दूरी = 8 मीटर)।",
+          "कदम 2: 1.5 मीटर आगे बढ़ने पर व्यक्ति की दर्पण से नई दूरी = 4 − 1.5 = 2.5 मीटर।",
+          "कदम 3: समतल दर्पण में वस्तु दूरी = प्रतिबिंब दूरी, अतः प्रतिबिंब भी दर्पण के पीछे 2.5 मीटर पर होगा।",
+          "कदम 4: व्यक्ति और उसके प्रतिबिंब के बीच नई कुल दूरी = 2.5 + 2.5 = 5.0 मीटर।"
+        ],
+        "pa": [
+          "ਕਦਮ 1: ਸ਼ੁਰੂ ਵਿੱਚ ਵਸਤੂ ਦੂਰੀ = 4 ਮੀਟਰ, ਪ੍ਰਤੀਬਿੰਬ ਦੂਰੀ = 4 ਮੀਟਰ (ਕੁੱਲ ਦੂਰੀ = 8 ਮੀਟਰ)।",
+          "ਕਦਮ 2: 1.5 ਮੀਟਰ ਨੇੜੇ ਜਾਣ ਤੋਂ ਬਾਅਦ ਨਵੀਂ ਦੂਰੀ = 4 − 1.5 = 2.5 ਮੀਟਰ।",
+          "ਕਦਮ 3: ਸਮਤਲ ਦਰਪਣ ਵਿੱਚ ਵਸਤੂ ਦੂਰੀ = ਪ੍ਰਤੀਬਿੰਬ ਦੂਰੀ = 2.5 ਮੀਟਰ।",
+          "ਕਦਮ 4: ਵਿਅਕਤੀ ਅਤੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿਚਕਾਰ ਨਵੀਂ ਕੁੱਲ ਦੂਰੀ = 2.5 + 2.5 = 5.0 ਮੀਟਰ।"
+        ],
+        "en": [
+          "Step 1: Initially, object distance = 4 m, so image distance = 4 m (total separation = 8 m).",
+          "Step 2: After advancing 1.5 m toward the mirror, new object distance = 4 − 1.5 = 2.5 m.",
+          "Step 3: In a plane mirror, image distance equals object distance, so image is 2.5 m behind mirror.",
+          "Step 4: Total distance between person and image = 2.5 m + 2.5 m = 5.0 m."
+        ]
+      },
+      "solution": {
+        "hi": "व्यक्ति और उसके प्रतिबिंब के बीच नई दूरी 5.0 मीटर है।",
+        "pa": "ਵਿਅਕਤੀ ਅਤੇ ਪ੍ਰਤੀਬਿੰਬ ਵਿਚਕਾਰ ਨਵੀਂ ਕੁੱਲ ਦੂਰੀ 5.0 ਮੀਟਰ ਹੈ।",
+        "en": "The new separation between the person and their virtual image is 5.0 meters."
+      },
+      "takeaway": {
+        "hi": "जब वस्तु v चाल से दर्पण की ओर चलती है, तो प्रतिबिंब वस्तु की ओर 2v की सापेक्ष चाल से बढ़ता हुआ प्रतीत होता है।",
+        "pa": "ਜਦੋਂ ਵਸਤੂ v ਚਾਲ ਨਾਲ ਦਰਪਣ ਵੱਲ ਤੁਰਦੀ ਹੈ ਤਾਂ ਪ੍ਰਤੀਬਿੰਬ ਵਸਤੂ ਦੇ ਸਾਪੇਖ 2v ਚਾਲ ਨਾਲ ਨੇੜੇ ਆਉਂਦਾ ਪ੍ਰਤੀਤ ਹੁੰਦਾ ਹੈ।",
+        "en": "When an object moves towards a stationary plane mirror at speed v, the image approaches the object at relative speed 2v."
+      }
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "misconception": {
+        "hi": "भ्रांति: आपतन कोण दर्पण की सतह और आपतित किरण के बीच का कोण होता है।",
+        "pa": "ਭੁਲੇਖਾ: ਆਪਤਨ ਕੋਣ ਦਰਪਣ ਦੀ ਸਤ੍ਹਾ ਅਤੇ ਆਪਤਿਤ ਕਿਰਨ ਵਿਚਕਾਰਲਾ ਕੋਣ ਹੁੰਦਾ ਹੈ।",
+        "en": "Misconception: The angle of incidence is the angle made between the incoming ray and the surface of the mirror."
+      },
+      "correction": {
+        "hi": "सत्य: आपतन कोण (i) सदैव आपतित किरण और उस बिंदु पर खींचे गए लंबवत 'अभिलंब' (Normal) के बीच मापा जाता है।",
+        "pa": "ਸੱਚ: ਆਪਤਨ ਕੋਣ ਹਮੇਸ਼ਾ ਆਪਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ (ਲੰਬ) ਵਿਚਕਾਰ ਮਾਪਿਆ ਜਾਂਦਾ ਹੈ।",
+        "en": "Correction: The angle of incidence is strictly measured between the incident ray and the normal (perpendicular) to the reflective plane."
+      },
+      "whyItMatters": {
+        "hi": "पंजाब ईटीटी और विज्ञान परीक्षाओं में 30° या 40° सतह से कोण देकर प्रश्न पूछा जाता है, जहाँ अधिकांश अभ्यर्थी सतह के कोण को ही उत्तर मान लेते हैं।",
+        "pa": "ਪ੍ਰੀਖਿਆਵਾਂ ਵਿੱਚ ਸਤ੍ਹਾ ਤੋਂ ਕੋਣ ਦੇ ਕੇ ਪ੍ਰਸ਼ਨ ਪੁੱਛਿਆ ਜਾਂਦਾ ਹੈ ਜੋ ਵਿਦਿਆਰਥੀਆਂ ਨੂੰ ਭੰਬਲਭੂਸੇ ਵਿੱਚ ਪਾਉਂਦਾ ਹੈ।",
+        "en": "Exam questions regularly supply a glancing angle (e.g. 30° with mirror surface) where careless candidates choose 30° rather than 60°."
+      }
+    },
+    {
+      "misconception": {
+        "hi": "भ्रांति: खुरदरी सतहों पर विसरित परावर्तन इसलिए होता है क्योंकि वहाँ परावर्तन के नियम विफल हो जाते हैं।",
+        "pa": "ਭੁਲੇਖਾ: ਖੁਰਦਰੀ ਸਤ੍ਹਾ ਉੱਤੇ ਵਿਸਰਿਤ ਪਰਾਵਰਤਨ ਇਸ ਲਈ ਹੁੰਦਾ ਹੈ ਕਿਉਂਕਿ ਉੱਥੇ ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਕੰਮ ਨਹੀਂ ਕਰਦੇ।",
+        "en": "Misconception: Diffuse reflection occurs because the laws of reflection break down on rough or irregular surfaces."
+      },
+      "correction": {
+        "hi": "सत्य: परावर्तन के नियम प्रत्येक व्यक्तिगत किरण पर खुरदरी सतह के प्रत्येक बिंदु पर पूर्णतः लागू होते हैं (i = r)। बिखराव केवल इसलिए होता है क्योंकि खुरदरी सतह के सूक्ष्म अभिलंब अलग-अलग दिशाओं में झुके होते हैं।",
+        "pa": "ਸੱਚ: ਪਰਾਵਰਤਨ ਦੇ ਨਿਯਮ ਹਰ ਬਿੰਦੂ ਉੱਤੇ ਲਾਗੂ ਹੁੰਦੇ ਹਨ। ਕਿਰਨਾਂ ਇਸ ਲਈ ਖਿੱਲਰਦੀਆਂ ਹਨ ਕਿਉਂਕਿ ਖੁਰਦਰੀ ਸਤ੍ਹਾ ਦੇ ਅਭਿਲੰਬ ਵੱਖ-ਵੱਖ ਦਿਸ਼ਾਵਾਂ ਵਿੱਚ ਹੁੰਦੇ ਹਨ।",
+        "en": "Correction: The laws of reflection hold strictly at every micro-point of contact. Rays scatter because irregularities orient local surface normals in diverse directions."
+      },
+      "whyItMatters": {
+        "hi": "कथन और कारण (Assertion-Reason) प्रश्नों में यह एक अत्यंत सामान्य भ्रमक जाल है।",
+        "pa": "ਕਥਨ ਅਤੇ ਕਾਰਨ ਵਾਲੇ ਸਵਾਲਾਂ ਵਿੱਚ ਇਹ ਬਹੁਤ ਅਹਿਮ ਨੁਕਤਾ ਹੈ।",
+        "en": "Crucial for Assertion-Reason conceptual questions evaluating foundational physical laws."
+      }
+    }
+  ],
+  "quickRevisionSheet": {
+    "highYieldPoints": {
+      "hi": [
+        "परावर्तन के दो नियम: (1) आपतन कोण = परावर्तन कोण (i = r); (2) आपतित किरण, परावर्तित किरण और आपतन बिंदु पर अभिलंब तीनों एक ही तल में होते हैं।",
+        "अभिलंबवत आपतन (Normal Incidence): जब किरण अभिलंब के अनुदिश आपतित होती है, तब i = 0°, r = 0° और किरण उसी पथ पर वापस लौटती है।",
+        "समतल दर्पण प्रतिबिंब गुण: आभासी (Virtual), सीधा (Erect), वस्तु के बराबर आकार (आवर्धन m = +1), समान लंबवत दूरी (u = v), तथा पार्श्व परिवर्तित (Laterally Inverted)।",
+        "दर्पण की फोकस दूरी: समतल दर्पण की फोकस दूरी अनंत (f = ∞) तथा क्षमता शून्य (P = 0) होती है।"
+      ],
+      "pa": [
+        "ਪਰਾਵਰਤਨ ਦੇ ਦੋ ਨਿਯਮ: (1) ਆਪਤਨ ਕੋਣ = ਪਰਾਵਰਤਨ ਕੋਣ (i = r); (2) ਆਪਤਿਤ ਕਿਰਨ, ਪਰਾਵਰਤਿਤ ਕਿਰਨ ਅਤੇ ਅਭਿਲੰਬ ਇੱਕੋ ਤਲ ਵਿੱਚ ਹੁੰਦੇ ਹਨ।",
+        "ਲੰਬਵਤ ਆਪਤਨ: i = 0°, r = 0°, ਕਿਰਨ ਉਸੇ ਰਸਤੇ ਮੁੜਦੀ ਹੈ।",
+        "ਸਮਤਲ ਦਰਪਣ ਪ੍ਰਤੀਬਿੰਬ: ਆਭਾਸੀ, ਸਿੱਧਾ, ਵਸਤੂ ਦੇ ਬਰਾਬਰ (ਵੱਡਦਰਸ਼ਨ m = +1), ਬਰਾਬਰ ਦੂਰੀ, ਅਤੇ ਪਾਸੇ ਤੋਂ ਉਲਟ।",
+        "ਫੋਕਸ ਦੂਰੀ: ਸਮਤਲ ਦਰਪਣ ਦੀ ਫੋਕਸ ਦੂਰੀ ਅਨੰਤ (f = ∞) ਅਤੇ ਸਮਰੱਥਾ ਸਿਫ਼ਰ (P = 0) ਹੁੰਦੀ ਹੈ।"
+      ],
+      "en": [
+        "Two Laws of Reflection: (1) Angle of incidence equals angle of reflection (i = r); (2) Incident ray, reflected ray, and normal lie in the same geometric plane.",
+        "Normal Incidence: When light strikes perpendicularly, i = 0°, r = 0°, retracing its exact path.",
+        "Plane Mirror Image Properties: Virtual, erect, same size (magnification m = +1), equal distance behind mirror, laterally inverted.",
+        "Focal Length & Power: Plane mirror focal length is infinite (f = ∞) and optical power is zero (P = 0)."
+      ]
+    },
+    "keyFormulasOrRules": {
+      "hi": [
+        "आपतन कोण गणना: यदि दर्पण सतह से कोण θ है, तो i = 90° − θ।",
+        "पूर्ण प्रतिबिंब हेतु न्यूनतम दर्पण ऊंचाई: H / 2 (जहाँ H व्यक्ति की कुल ऊंचाई है)।",
+        "दो झुके हुए समतल दर्पणों के बीच प्रतिबिंबों की संख्या: यदि 360°/θ सम संख्या है तो n = (360°/θ) − 1।",
+        "आवर्धन (Magnification): m = v / u = +1 (धनात्मक चिह्न सीधा व आभासी प्रतिबिंब दर्शाता है)।"
+      ],
+      "pa": [
+        "ਆਪਤਨ ਕੋਣ: i = 90° − θ (ਜੇ ਸਤ੍ਹਾ ਤੋਂ ਕੋਣ θ ਹੋਵੇ)।",
+        "ਪੂਰਾ ਪ੍ਰਤੀਬਿੰਬ ਵੇਖਣ ਲਈ ਘੱਟੋ-ਘੱਟ ਦਰਪਣ ਦੀ ਉਚਾਈ = H / 2।",
+        "ਦੋ ਸਮਤਲ ਦਰਪਣਾਂ ਵਿਚਕਾਰ ਪ੍ਰਤੀਬਿੰਬਾਂ ਦੀ ਗਿਣਤੀ: n = (360°/θ) − 1।",
+        "ਵੱਡਦਰਸ਼ਨ: m = +1।"
+      ],
+      "en": [
+        "Angle from Normal: i = 90° − θ (where θ is the glancing angle with the surface).",
+        "Minimum Mirror Height for Full View: H / 2 (half of the person’s height).",
+        "Number of Images between Inclined Mirrors: n = (360°/θ) − 1 when 360°/θ is even.",
+        "Linear Magnification: m = +1 (positive sign indicates virtual and erect image)."
+      ]
+    },
+    "examTraps": {
+      "hi": [
+        "धोखा: समतल दर्पण का आवर्धन m = -1 नहीं होता; समतल दर्पण सीधा प्रतिबिंब बनाता है इसलिए m = +1 होता है (-1 वास्तविक व उल्टे प्रतिबिंब हेतु होता है)।",
+        "धोखा: जब कोई व्यक्ति दर्पण की ओर v वेग से चलता है, तो दर्पण के सापेक्ष प्रतिबिंब का वेग v होता है, लेकिन व्यक्ति के सापेक्ष प्रतिबिंब का वेग 2v होता है।"
+      ],
+      "pa": [
+        "ਧੋਖਾ: ਸਮਤਲ ਦਰਪਣ ਦਾ ਵੱਡਦਰਸ਼ਨ m = +1 ਹੁੰਦਾ ਹੈ (ਕਿਉਂਕਿ ਪ੍ਰਤੀਬਿੰਬ ਸਿੱਧਾ ਤੇ ਆਭਾਸੀ ਹੁੰਦਾ ਹੈ)।",
+        "ਧੋਖਾ: ਵਿਅਕਤੀ ਦੇ ਸਾਪੇਖ ਪ੍ਰਤੀਬਿੰਬ ਦੀ ਚਾਲ 2v ਹੁੰਦੀ ਹੈ ਜਦਕਿ ਦਰਪਣ ਦੇ ਸਾਪੇਖ v ਹੁੰਦੀ ਹੈ।"
+      ],
+      "en": [
+        "Trap: Magnification of a plane mirror is +1, NOT -1 (a minus sign signifies an inverted real image).",
+        "Trap: Relative velocity: with respect to the mirror, image velocity is v; with respect to the moving person, image velocity is 2v."
+      ]
+    }
+  },
+  "editorialRecord": {
+    "authoredDate": "2026-10-10",
+    "lastUpdatedDate": "2026-10-10",
+    "authoringType": "authored-curriculum",
+    "verifiedSyllabusDenominator": "ERB Punjab ETT 5994 General Science Unit: Light Reflection & Refraction",
+    "correctionHistory": [
+      {
+        "date": "2026-10-10",
+        "description": "Added complete topic package fields: prerequisites, learningObjectives, workedExamples, commonMisconceptions, and quickRevisionSheet."
+      }
+    ]
+  },
   "practiceSource": "authored-only"
 }

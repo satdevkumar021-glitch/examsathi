@@ -11,6 +11,8 @@ export function generateStaticParams() {
     { testId: '2' },
     { testId: '3' },
     { testId: 'punjab-master-cadre' },
+    { testId: 'punjab-master-cadre-sst' },
+    { testId: 'reet-level2-sst' },
     { testId: 'clerk' },
     { testId: 'patwari' },
     { testId: 'topic-all' },

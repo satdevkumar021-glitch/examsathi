@@ -13,8 +13,6 @@ import { normalizePracticeExamId, practiceExam } from '../exam-context';
 import { generateQuantPractice } from './quant-practice';
 import { ALL_QUESTIONS, Question } from './questions';
 import { getLessonByTopicId } from './lessons';
-import { MASTER_CADRE_10YR_PYQS } from './questions/master_cadre_pyqs';
-import { TWENTY_YEAR_EXAM_PYQS } from './questions/twenty_year_pyqs';
 
 export interface UserPerformanceLevel {
   level: number;
@@ -67,7 +65,7 @@ const LEGACY_EXAMS: ExamInfo[] = [
     badge: '🌾 ERB Punjab',
     defaultQuestions: 50,
     timeLimitMinutes: 45,
-    negativeMarking: 0.25,
+    negativeMarking: 0.0,
     syllabusSummary: 'Punjab & World History, Indian Constitution, Physical Geography, Indian Economy & Banking',
     syllabusSummaryPa: 'ਇਤਿਹਾਸ, ਨਾਗਰਿਕ ਸ਼ਾਸਤਰ, ਭੂਗੋਲ ਅਤੇ ਅਰਥ ਸ਼ਾਸਤਰ ਦਾ ਸੰਪੂਰਨ ਸਿਲੇਬਸ',
     pyqSpan: 'Legacy archive · provenance under review',
@@ -93,7 +91,7 @@ const LEGACY_EXAMS: ExamInfo[] = [
     badge: '👶 ETT Punjab',
     defaultQuestions: 50,
     timeLimitMinutes: 45,
-    negativeMarking: 0.25,
+    negativeMarking: 0.0,
     syllabusSummary: 'Child Development & Pedagogy, Primary Mathematics, EVS & Punjab Ecology, Punjabi Vyakaran, General Science',
     syllabusSummaryPa: 'ਬਾਲ ਮਨੋਵਿਗਿਆਨ, ਈ.ਵੀ.ਐਸ., ਗਣਿਤ ਅਤੇ ਪੰਜਾਬੀ ਵਿਆਕਰਨ',
     pyqSpan: 'Legacy archive · provenance under review',
@@ -126,13 +124,13 @@ const LEGACY_EXAMS: ExamInfo[] = [
   },
   {
     id: 'reet-l2',
-    name: 'REET Level 2 & 3rd Grade Teacher',
-    namePa: 'ਰੀਟ (REET) ਲੈਵਲ 2 ਅਧਿਆਪਕ',
-    body: 'Rajasthan Board (RBSE) / RSMSSB',
+    name: 'REET Level 2 (Social Studies Stream)',
+    namePa: 'ਰੀਟ (REET) ਲੈਵਲ 2 ਸਮਾਜਿਕ ਸਿੱਖਿਆ',
+    body: 'Board of Secondary Education Rajasthan (BSER / RBSE)',
     badge: '🏜️ Rajasthan Board',
     defaultQuestions: 50,
     timeLimitMinutes: 45,
-    negativeMarking: 0.33,
+    negativeMarking: 0.0,
     syllabusSummary: 'Child Development & Pedagogy, Rajasthan Heritage, Subject Specialization, Teaching Methodology',
     syllabusSummaryPa: 'ਬਾਲ ਮਨੋਵਿਗਿਆਨ, ਰਾਜਸਥਾਨ ਜੀ.ਕੇ. ਅਤੇ ਅਧਿਆਪਨ ਵਿਧੀਆਂ',
     pyqSpan: 'Legacy archive · provenance under review',
@@ -385,9 +383,10 @@ export function generateProceduralQuestions(topicId: string, count: number): Que
         en: `Correct option (${choiceDistribution.correct}): ${card.a.en} based on this lesson’s flashcard. Verify the lesson source when needed.`,
       },
       difficulty: difficultyLevel,
+      originType: 'computed-variant',
+      reviewStatus: 'reviewed',
     });
   });
-
 
   return generated.slice(0, count);
 }
@@ -411,7 +410,7 @@ export function getQuestionPool(config: {
   const { topicId, examId, difficulty = 'all', pyqOnly, pyq20Years, count = 50 } = config;
   void count;
   const canonical = canonicalTopicId;
-  let pool = [...TWENTY_YEAR_EXAM_PYQS, ...MASTER_CADRE_10YR_PYQS, ...ALL_QUESTIONS];
+  let pool = [...ALL_QUESTIONS];
   if ((!topicId || topicId === 'all') && !pyqOnly && !pyq20Years) pool.push(...generateQuantPractice('mathematics-core', 150));
   if (topicId && topicId !== 'all') {
     pool = pool.filter(q => topicIncludes(topicId, q.topicId));
@@ -421,6 +420,9 @@ export function getQuestionPool(config: {
     const exam = practiceExam(examId);
     if (!exam) return [];
     const topics = new Set(exam.subjects.flatMap(subject => subject.chapters.flatMap(chapter => chapter.topics.flatMap(topic => [...topicSourceIds(topic.id)]))));
+    if (exam.id === 'punjab-ett' && topicId && topicId.startsWith('ett-paper-a-')) {
+      topics.add(canonical(topicId));
+    }
     // Only syllabus topics are eligible. Shared-topic questions retain their original source labels.
     pool = pool.filter(q => topics.has(canonical(q.topicId || '')));
     if (!pyqOnly && !pyq20Years && (!topicId || topicId === 'all')) {
@@ -435,8 +437,9 @@ export function getQuestionPool(config: {
   const seen = new Set<string>((config.excludeKeys || []).map(canonicalQuestionKey));
   pool = pool.filter(q => {
     const key = questionIdentity(q);
-    if (seen.has(key)) return false;
-    seen.add(key); return true;
+    const idKey = canonicalQuestionKey(q.id);
+    if (seen.has(key) || seen.has(idKey)) return false;
+    seen.add(key); seen.add(idKey); return true;
   });
   return pool;
 }

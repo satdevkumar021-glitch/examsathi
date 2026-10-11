@@ -64,6 +64,21 @@ const LIGHT_NAMES = [
   ['अपवर्तन और अपवर्तनांक', 'ਅਪਵਰਤਨ ਅਤੇ ਅਪਵਰਤਨ ਅੰਕ'],
   ['लेंस, लेंस सूत्र और क्षमता', 'ਲੈਂਸ, ਲੈਂਸ ਸੂਤਰ ਅਤੇ ਸ਼ਕਤੀ'],
 ];
+export const ETT_READY_TOPIC_IDS = new Set<string>([
+  'ett-light-reflection',
+  'ett-punjabi-1',
+  'ett-punjabi-3',
+  'ett-math-2',
+  'ett-math-4',
+  'ett-math-11',
+  'ett-math-17',
+  'ett-science-motion',
+  'ett-science-acids',
+  'ett-sst-history-3',
+  'ett-english-2',
+  'ett-hindi-4',
+]);
+
 export function buildEttSubjects(): Subject[] {
   const result: Subject[] = [];
   for (const subject of ETT_REFERENCE_SUBJECTS) {
@@ -79,7 +94,8 @@ export function buildEttSubjects(): Subject[] {
             subtopics: [], sourcePages: [1], materialStatus: index === 0 ? undefined : 'pending',
             examQuestions: 'Not assigned by the archive', difficulty: 'medium',
           })) : [{ id: `ett-science-${id}`, name: en, nameHindi: hi, namePunjabi: pa,
-            subtopics: [...subtopics], sourcePages: [id === 'eye' ? 2 : 1], materialStatus: 'pending',
+            subtopics: [...subtopics], sourcePages: [id === 'eye' ? 2 : 1],
+            materialStatus: ETT_READY_TOPIC_IDS.has(`ett-science-${id}`) ? undefined : 'pending',
             examQuestions: 'Not assigned by the archive', difficulty: 'medium' }],
         })),
       });
@@ -87,7 +103,8 @@ export function buildEttSubjects(): Subject[] {
       result.push({ id: `ett-${subject.name.toLowerCase().replaceAll(' ', '-')}`, name: subject.name, nameHindi: subject.hi, namePunjabi: subject.pa, emoji: '📚',
         chapters: groups.map(group => ({ id: `ett-${group.id}`, name: group.title.en, nameHindi: group.title.hi, namePunjabi: group.title.pa,
           topics: group.units.map((unit): Topic => ({ id: unit.id, name: unit.title.en, nameHindi: unit.title.hi, namePunjabi: unit.title.pa,
-            subtopics: [...unit.studyTopics.en], sourcePages: [unit.sourcePage], materialStatus: 'pending',
+            subtopics: [...unit.studyTopics.en], sourcePages: [unit.sourcePage],
+            materialStatus: ETT_READY_TOPIC_IDS.has(unit.id) ? undefined : 'pending',
             examQuestions: 'Not assigned by the archive', difficulty: 'medium' })),
         })),
       });
@@ -95,3 +112,4 @@ export function buildEttSubjects(): Subject[] {
   }
   return result;
 }
+

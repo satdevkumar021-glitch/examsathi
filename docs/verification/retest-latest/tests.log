@@ -1,0 +1,129 @@
+
+> examsathi-web@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ Punjab Master Cadre is separated into 6 distinct verified subject tracks (12.060667ms)
+✔ Master Cadre tracks feature Paper A qualifying Punjabi alongside Paper B specialization (4.783208ms)
+✔ Science questions do not leak into Master Cadre SST pool and vice versa (9.882959ms)
+✔ REET is disaggregated into Level 1, Level 2 SST, and Level 2 Science-Math (30.594333ms)
+✔ Legacy aliases resolve transparently to separated tracks without data loss (4.003541ms)
+✔ Official provenance register accurately documents Master Cadre and REET patterns (0.088916ms)
+✔ Top-priority ETT and Clerk topics are all complete topic packages (0.669834ms)
+✔ Section 7 TOPIC_RESOURCES_TABLE provides verified provenance without placeholder bundles (0.113417ms)
+✔ Document resources on target lessons contain Section 7 provenance fields (0.078042ms)
+✔ Topic alias mappings resolve clerk and punjabi tracks accurately (0.052375ms)
+✔ Academic depth and mathematical consistency in worked examples (0.149375ms)
+✔ All 12 segregated Sikh Gurus, Punjab History, Culture & PSSSB Clerk subtopics have deep trilingual lessons and 10+ dedicated Topic Mini Mock MCQs (225.190667ms)
+✔ All 8 foundational BASE_LESSONS have full multi-section trilingual content without 1-sentence stubs (0.144542ms)
+✔ Section 5 Question Provenance: ETT and Clerk PYQs have complete verified metadata and distractor explanations (0.464291ms)
+✔ Section 5 Question Provenance: 20-Year PYQ archive uses canonical exam IDs and verified origins (0.09175ms)
+✔ Section 5 Question Quality: Procedural generators assign originType: computed-variant and reviewStatus: reviewed (0.722666ms)
+✔ Section 6 Official Marking Schemes: PSSSB Clerk, Punjab ETT, Master Cadre, and REET penalty rules are verified (0.122917ms)
+✔ Section 6 Multi-Level Partitioned Exposure Tracking: Partitioned strictly by learner and exam (0.465584ms)
+✔ Section 6 Disjoint Next Unseen Sets and Exhaustion Semantics (120 pool with count 50) (0.813375ms)
+✔ Section 6 Strict Scoping: Unknown exams or unmapped topics never silently borrow from "all" (4.362458ms)
+✔ Section 8 Personal Notes: Creation, exam/topic scoping, and default private status (1.2665ms)
+✔ Section 8 Recoverable Deletion: Soft-delete trash bin and restoration (0.285875ms)
+✔ Section 8 Draft Autosave: Saving, retrieving, and auto-clearing upon note creation (0.103917ms)
+✔ Section 8 Search and Inline Editing: Fast search and update integrity (0.152458ms)
+✔ Section 8 Multi-Format Export: Markdown, Plain Text, and JSON formats (13.943583ms)
+✔ Section 8 Privacy & Moderation Guard: Uploads stay private, moderation requires rights confirmation (0.191709ms)
+✔ Section 8 Legacy Migration: Preserves legacy topic notes into scoped engine (0.148958ms)
+✔ Section 8 Document AI: Adversarial prompt injection detection (0.230083ms)
+✔ Section 8 Document AI Grounding: Rejects ungrounded or contradictory answers (0.582625ms)
+✔ Section 9 Study Planner: Generates exam-version-specific plan with catch-up days and mocks (73.229ms)
+✔ Section 9 Study Planner: Never invents topic weights; uses official marks or states equal weight (0.093333ms)
+✔ Section 9 Study Planner: Day completion toggling and persistence (152.600042ms)
+✔ Section 9 Mistake Notebook: Automatic recording of quiz mistakes and lapse counts (0.365125ms)
+✔ Section 9 Mistake Notebook: Resolution, reopening, and multi-field search (0.23175ms)
+✔ Section 9 Four-Tier Mastery Matrix: Strict separation of read, complete, practiced, and sustained mastery (0.206042ms)
+✔ Section 9 Focus Session Engine: Break sessions, reset, and configurable non-punitive nudges (0.133667ms)
+✔ Section 10 Typing: Distinguishes official government rules from unsourced practice presets (0.560833ms)
+✔ Section 10 Typing: Accurate Gurmukhi combining mark and grapheme cluster counting (6.46775ms)
+✔ Section 10 Typing: Full mistakes vs Half mistakes evaluation under official board norms (0.479334ms)
+✔ Section 10 Physical Standards: Accurate official recruitment standards & category mappings (0.103333ms)
+✔ Section 10 Physical Standards: Medical disclaimer and private local workout logging (0.189666ms)
+✔ Section 11 Deep Testing Protocol: Mandatory Exam-Isolation Matrix across all 11 priority tracks (56.64275ms)
+✔ Section 11 Deep Testing: End-to-end journey persistence and conflict policy (2.800167ms)
+✔ Section 11 Security: Personal notes sanitize XSS payloads and preserve data integrity (8.564875ms)
+✔ Section 11 Security: Multi-user account isolation and guest vault isolation (0.185166ms)
+✔ Section 11 Negative & Zero Scoring: Strict official penalization across all recruitment boards (0.07225ms)
+✔ Library dynamically generates topics for selected exam and scopes drill URLs (9.096166ms)
+✔ Typing practice word counts match true passage lengths and avoid unverified claims (0.222083ms)
+✔ Roadmap honors exam precedence and carries exam in mock-test links (0.121916ms)
+✔ Onboarding modal auto-launch is suppressed on active test and typing routes (0.085667ms)
+✔ Dashboard metrics use honest labels and dynamic share link (0.110334ms)
+✔ Results page distinguishes score percentage from accuracy and avoids false mastery tag (0.142ms)
+✔ Contact page labels GitHub issues truthfully as Public Issue Tracker (0.067458ms)
+✔ requires a valid URL and a public key; rejects secret keys and incomplete configuration (1.263916ms)
+✔ all auth links preserve the Pages subdirectory and support root/local deployments (0.219375ms)
+✔ PKCE callback exchanges a one-use code once across duplicate mounts and verifies user (13.394125ms)
+✔ direct visits and error redirects cannot reuse an existing session (3.553833ms)
+✔ expired codes and failed user verification produce actionable errors (21.320959ms)
+✔ legacy recovery links require tokens and recovery type (5.412417ms)
+✖ ETT archival map retains scanned headings, multilingual labels and strict unfinished-unit gaps (9.089542ms)
+✔ ETT archival reference remains provisional and does not certify an upcoming notification (0.123084ms)
+✔ ETT reflection offers real localized lessons and a finite strictly scoped original bank (9.068125ms)
+✔ all exam filters stay strict across difficulties and PYQ windows (291.886541ms)
+✔ topic filtering never fills with unrelated topics; unknown lessons stay missing (91.075083ms)
+✔ question IDs and answer keys are valid (0.50275ms)
+✔ arithmetic practice offers 50 distinct questions with computed answers and no exam year (1.7195ms)
+✔ account vaults isolate authenticated users from guest records (2.450458ms)
+✔ zero and negative scores remain valid, with exam-specific penalties (3.08225ms)
+✔ local notes recall uses real source excerpts and never simulates uploads (6.759375ms)
+✔ catalogue merges duplicate exam IDs without losing topic branches (0.093ms)
+✔ no rank is invented without a verified candidate cohort (0.061792ms)
+✔ saved generated questions survive vault lookup and custom-practice transport (4.610416ms)
+✔ focus session handles sleeping tabs and pause/resume without elapsed-time drift (1.608958ms)
+✔ study XP awards are once-only and streak resets after missing a full day (3.994ms)
+✔ study backup restores allowed records and rejects credentials before mutation (3.627167ms)
+✔ elementary math practice supplies 50 distinct variants with localized prompts (1.699333ms)
+✔ every catalogue exam only supplies its mapped syllabus topics and unknown exams stay empty (97.557208ms)
+✔ fresh sets exclude completed wording across IDs and stop at exhaustion (17.271709ms)
+✔ legacy ETT aliases resolve to the same strict pool; CTET primary does not select civics (4.956875ms)
+✔ Haryana general-knowledge questions are not child-pedagogy or Punjab ETT practice (4.767542ms)
+✔ foundation content has honest attribution and unambiguous option labels (0.91775ms)
+✔ catalogue topics expose available or explicitly pending material; tracks retain eligible practice (197.553833ms)
+✔ all 1000 reasoning exercises pass independent numerical and coding checks (3.481833ms)
+✔ UGC NET no longer borrows the school child-development bank (2.333959ms)
+✔ land exercises state conversion rules and pass dimensional calculation checks (0.452875ms)
+✔ eligible pools remain stable across repeated reads before shuffling a test (182.193166ms)
+✔ confirmed paraphrases deduplicate and historical completed wording remains excluded (3.271458ms)
+✔ Punjab date correction and district-topic classification stay intact (26.306959ms)
+✔ completed foundation topics meet fifty authored questions without procedural filler (20.01025ms)
+✔ document extraction rejects oversized, unsupported and unreadable input before generation (48.113208ms)
+✔ scanned PDF page limit rejects work and releases PDF worker (8.752334ms)
+✔ OCR uses owned runtime paths, selected language and terminates after recognition (13.21375ms)
+✔ cancelling OCR releases a worker even when recognition never resolves (8.9795ms)
+✔ cloud transfers refuse a different active local account before reading any vault (17.693709ms)
+✔ cloud save propagates version conflicts without changing local records (9.356042ms)
+✔ Node production and Pages exports keep assets, API and auth redirects on matching paths (9.286583ms)
+ℹ tests 96
+ℹ suites 0
+ℹ pass 95
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2035.068458
+
+✖ failing tests:
+
+test at tests/core.test.mjs:24:1
+✖ ETT archival map retains scanned headings, multilingual labels and strict unfinished-unit gaps (9.089542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  130 !== 20
+  
+      at TestContext.<anonymous> (file:///Users/satdevkumar/Desktop/exam-saathi/examsathi-audit/tests/core.test.mjs:47:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 130,
+    expected: 20,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

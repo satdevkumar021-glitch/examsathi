@@ -40,16 +40,7 @@ const modules: Array<{ id: string; title: string; subject: string; notes: Array<
     ['Syllogisms', 'Use only the stated premises; a real-world assumption is not a valid deduction.'],
     ['Arrangement', 'Write fixed positions first, then apply adjacency, ordering and exclusion constraints.'],
   ] },
-  { id: 'child-development-pedagogy', title: 'Child development & inclusive teaching', subject: 'pedagogy', notes: [
-    ['Growth and development', 'Growth concerns quantitative physical changes. Development includes qualitative changes in abilities and functioning.'],
-    ['Individual differences', 'Learners develop at different rates. Use varied examples and flexible support rather than ranking children by one task.'],
-    ['Piaget', 'Piaget described sensorimotor, preoperational, concrete operational and formal operational stages. Stage ages are approximate.'],
-    ['Vygotsky', 'The zone of proximal development distinguishes independent performance from performance with suitable guidance.'],
-    ['Scaffolding', 'Scaffolding is temporary, adjustable support that is gradually removed as competence grows.'],
-    ['Formative assessment', 'Formative assessment uses evidence during learning to improve teaching and provide actionable feedback.'],
-    ['Inclusive education', 'Inclusive teaching removes barriers to participation through accessible materials, appropriate accommodations and respectful expectations.'],
-    ['Constructivism', 'Learners actively build understanding by connecting experiences with prior knowledge; misconceptions should be explored and addressed.'],
-  ] },
+
   { id: 'science-concepts', title: 'General science: foundations', subject: 'science', notes: [
     ['Measurement', 'The SI base unit of length is the metre, mass is the kilogram and time is the second.'],
     ['Speed and velocity', 'Speed is scalar; velocity includes direction. Acceleration is the rate of change of velocity.'],

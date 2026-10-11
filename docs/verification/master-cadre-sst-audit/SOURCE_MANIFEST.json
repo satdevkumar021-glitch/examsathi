@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://educationrecruitmentboard.com/master2022/Docs/SocialSciencesyllabus04_05_2022.pdf",
+    "sha256": "18a8efc683500f4f669131c0a59abd071d28e776663640156172f422f2da40ea",
+    "status": "Downloaded from official host; visually read where indicated; TLS validation caveat",
+    "localCopy": "master-sst-transport-unverified.pdf"
+  },
+  {
+    "url": "https://educationrecruitmentboard.com/MasterCadre2182/Docs/socialsciencesyllabus.pdf",
+    "sha256": "233d7e71e89e693e4e7083b754d8b43f5a8291d813d41f48f40beb346bc9a7ba",
+    "status": "Downloaded from official host; visually read where indicated; TLS validation caveat",
+    "localCopy": "master-sst-2020.pdf"
+  },
+  {
+    "url": "https://ssapunjab.org/doc/AdvertisementforMasterCadre4161Posts08_01_2022.pdf",
+    "sha256": "9cd6bd13075e7e896e5b2f9a41e0126986fdf932a1a2eef7b17ada94bea3bcdf",
+    "status": "Downloaded from official host; visually read where indicated; TLS validation caveat",
+    "localCopy": "master-ad-2022.pdf"
+  },
+  {
+    "url": "https://educationrecruitmentboard.com/master2022/Docs/RevisedAnswerKeysSocialScience_28_04_2023.pdf",
+    "sha256": "c71146e70a729f37d8478dd74e574a74e8d82fe4164d29ad671e19524ed794d9",
+    "status": "Downloaded from official host; visually read where indicated; TLS validation caveat",
+    "localCopy": "master-sst-key2022.pdf"
+  }
+]

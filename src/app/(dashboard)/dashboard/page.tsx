@@ -139,7 +139,7 @@ export default function Dashboard() {
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 mb-0.5">
               <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">
-                ⚡ 2004–2024 Archive
+                ⚡ Curated Practice Bank
               </span>
               <span className="bg-teal-500/20 text-teal-300 text-[9px] font-bold px-1.5 py-0.2 rounded border border-teal-500/30">
                 50 Qs Set
@@ -191,7 +191,7 @@ export default function Dashboard() {
         <div className="grid grid-cols-2 gap-3">
           {/* Track 1: School Teaching Cadres */}
           <Link 
-            href="/study/punjab-master-cadre/social-science"
+            href="/study/punjab-master-cadre-sst/social-science"
             className="bg-slate-800/90 border border-slate-700 hover:border-indigo-500/60 p-4 rounded-2xl flex flex-col gap-2.5 transition shadow-md group"
           >
             <div className="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
@@ -229,12 +229,12 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Preparation KPI Readiness */}
+      {/* Preparation KPI Status */}
       <div className="flex flex-col gap-1.5">
         <div className="grid grid-cols-4 gap-2.5">
           <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
             <span className="text-teal-400 font-bold text-lg">{readinessValue}</span>
-            <span className="text-slate-400 text-[10px] uppercase font-semibold">Readiness</span>
+            <span className="text-slate-400 text-[10px] uppercase font-semibold">Last Score</span>
           </div>
           <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
             <span className="text-indigo-400 font-bold text-lg">{topicsDone}</span>
@@ -246,14 +246,14 @@ export default function Dashboard() {
           </div>
           <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
             <span className="text-emerald-400 font-bold text-lg">{avgScore}</span>
-            <span className="text-slate-400 text-[10px] uppercase font-semibold">Avg Score</span>
+            <span className="text-slate-400 text-[10px] uppercase font-semibold">Last Acc</span>
           </div>
         </div>
-        {!lastResult && (
-          <p className="text-[10px] text-slate-400 text-center">
-            🎯 Complete your first CBT Mock Test to calculate practice accuracy and answer explanations.
-          </p>
-        )}
+        <p className="text-[10px] text-slate-400 text-center">
+          {lastResult
+            ? '🎯 Scores reflect your latest CBT test attempt. Complete topics across your syllabus to build broad exam mastery.'
+            : '🎯 Complete your first CBT Mock Test to calculate practice accuracy and answer explanations.'}
+        </p>
       </div>
 
       {/* Daily Knowledge, Inspiration & Free Govt Portals */}
@@ -412,7 +412,7 @@ export default function Dashboard() {
         <h2 className="text-white font-bold text-sm mb-3">Interactive Practice Suite</h2>
         <div className="grid grid-cols-2 gap-3">
           <Link 
-            href="/study/punjab-master-cadre/social-science" 
+            href="/study/punjab-master-cadre-sst/social-science" 
             className="bg-slate-800/90 p-4 rounded-xl border border-slate-700 flex flex-col items-center justify-center gap-2 hover:bg-slate-750 transition shadow"
           >
             <div className="bg-indigo-500/20 p-2.5 rounded-full text-indigo-400">
@@ -484,7 +484,7 @@ export default function Dashboard() {
         </p>
         <a 
           href={`https://api.whatsapp.com/send?text=${encodeURIComponent(
-            `🎓 *ExamSathi (परीक्षा साथी · ਪ੍ਰੀਖਿਆ ਸਾਥੀ)* 🇮🇳\n\nपंजाब, राजस्थान और केंद्रीय भर्ती परीक्षाओं (Master Cadre, ETT, Clerk, Police, Patwari, REET, CTET) की तैयारी हेतु ExamSathi:\n\n✨ Topic Practice with Available Questions\n✨ Saved attempts and answer explanations\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ (Gurmukhi) & English\n\n👉 Platform Link:\nhttps://satdevkumar021-glitch.github.io/examsathi/`
+            `🎓 *ExamSathi (परीक्षा साथी · ਪ੍ਰੀਖਿਆ ਸਾਥੀ)* 🇮🇳\n\nपंजाब, राजस्थान और केंद्रीय भर्ती परीक्षाओं (Master Cadre, ETT, Clerk, Police, Patwari, REET, CTET) की तैयारी हेतु ExamSathi:\n\n✨ Topic Practice with Available Questions\n✨ Saved attempts and answer explanations\n✨ 3D Spaced Repetition Flip Cards & Notes\n✨ हिंदी, ਪੰਜਾਬੀ (Gurmukhi) & English\n\n👉 Platform Link:\n${typeof window !== 'undefined' && window.location.origin ? window.location.origin : 'https://examsathi-sxj3.onrender.com'}/`
           )}`}
           target="_blank"
           rel="noopener noreferrer"
