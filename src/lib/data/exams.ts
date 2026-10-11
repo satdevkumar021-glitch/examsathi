@@ -1,3 +1,4 @@
+import { CLERK_GK_FAST_SUBJECT } from './clerk-gk-fast';
 import { CTET_PRIMARY_SUBJECTS } from './ctet-primary-outline';
 import { buildEttSubjects } from './ett-syllabus';
 // ============================================================
@@ -629,6 +630,7 @@ export const PUNJAB_EXAMS: Exam[] = [
       { name: 'Part B - ICT / Computer Awareness', nameHindi: 'कंप्यूटर ज्ञान', marks: 8, questions: 8 },
     ],
     subjects: [
+      CLERK_GK_FAST_SUBJECT,
       {
         id: 'clerk-special',
         name: 'Clerk Examination Modules',

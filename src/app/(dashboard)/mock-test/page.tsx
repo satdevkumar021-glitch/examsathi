@@ -103,6 +103,15 @@ export default function MockTestHub() {
         </select>
       </label>
       <p className="text-xs text-amber-200">Only questions mapped to this exam’s current topic outline are shown. Coverage is incomplete; shared topics can use questions labelled from another exam. See the coverage report before treating this as a full mock.</p>
+      <section className="my-4 rounded-2xl border border-emerald-500 bg-emerald-950/40 p-5 space-y-3">
+        <h2 className="text-lg font-bold text-emerald-200">⚡ Clerk GK — 100-question revision test</h2>
+        <p className="text-sm text-slate-200">Polity, Indian History, Geography, Science and Punjab GK · 20 questions each.</p>
+        <p className="text-xs text-amber-200">English questions · Hindi/Punjabi translations pending. AI-assisted original practice; independent editorial review pending. Not a PYQ, current-affairs set, or official full-paper mock. 90-minute practice timer; +1 correct, −0.25 wrong, 0 skipped.</p>
+        <div className="flex flex-wrap gap-3">
+          <Link className="rounded-lg bg-emerald-600 px-4 py-3 font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=100&mode=exam&fresh=1">Start 100-question GK test →</Link>
+          <Link className="rounded-lg border border-emerald-500 px-4 py-3 text-emerald-200" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=20&mode=exam&fresh=1">Quick 20-question practice</Link>
+        </div>
+      </section>
       <Link href="/coverage" className="underline text-teal-300 text-sm">Check topic coverage & available fresh sets</Link>
       {/* Header Banner */}
       <div className="bg-gradient-to-br from-indigo-900/70 via-slate-800 to-teal-900/50 p-5 rounded-2xl border border-indigo-700/40 shadow-lg">

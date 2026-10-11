@@ -1,3 +1,4 @@
+import { CLERK_GK_FAST_QUESTIONS } from './clerk-gk-fast';
 import ettReflectionQuestions from './questions/ett-reflection.json';
 import { FOUNDATION_QUESTIONS } from './foundation-content';
 import { topicIncludes } from './topic-scope';
@@ -930,6 +931,7 @@ import { POLICE_PATWARI_QUESTIONS } from './questions/police_patwari_questions';
 import { SSC_HTET_QUESTIONS } from './questions/ssc_htet_questions';
 
 export const ALL_QUESTIONS: Question[] = [
+  ...CLERK_GK_FAST_QUESTIONS,
   ...QUESTIONS,
   ...(ettReflectionQuestions as Question[]),
   ...FOUNDATION_QUESTIONS,
