@@ -972,6 +972,7 @@ import { MASTER_CADRE_SCIENCE_CHEM_MCQS } from './questions/master_cadre_science
 import { ETT_PUNJABI_LANGUAGES_SST_MCQS } from './questions/ett_punjabi_languages_sst_mcqs';
 import { ETT_MATH_SCIENCE_MCQS } from './questions/ett_math_science_mcqs';
 import { NEW_CONTENT_BATCH_QUESTIONS } from './questions/new_content_batch';
+import { ETT_PAPER_B_BATCH2 } from './questions/ett_paper_b_batch2';
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLERK_DATA_PRACTICE,
@@ -994,6 +995,7 @@ export const ALL_QUESTIONS: Question[] = [
   ...ETT_PUNJABI_LANGUAGES_SST_MCQS,
   ...ETT_MATH_SCIENCE_MCQS,
   ...NEW_CONTENT_BATCH_QUESTIONS,
+  ...ETT_PAPER_B_BATCH2,
 ];
 
 
