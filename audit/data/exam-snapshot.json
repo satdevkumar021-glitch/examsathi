@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-11T04:08:32.488Z",
-  "authoredQuestions": 1803,
-  "uniqueAuthoredQuestions": 1799,
+  "generatedAt": "2026-10-11T04:10:57.035Z",
+  "authoredQuestions": 2183,
+  "uniqueAuthoredQuestions": 2172,
   "exams": [
     {
       "id": "punjab-master-cadre-sst",
@@ -37,8 +37,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 670,
-      "poolAuthored": 575,
+      "poolTotal": 806,
+      "poolAuthored": 711,
       "topicRows": [
         {
           "id": "punjab-history",
@@ -154,7 +154,7 @@
           "subjectId": "social-science",
           "chapterId": "history",
           "pending": false,
-          "authoredQuestions": 15,
+          "authoredQuestions": 45,
           "hasLesson": true
         },
         {
@@ -190,7 +190,7 @@
           "subjectId": "social-science",
           "chapterId": "civics",
           "pending": false,
-          "authoredQuestions": 40,
+          "authoredQuestions": 142,
           "hasLesson": true
         },
         {
@@ -271,7 +271,7 @@
           "subjectId": "social-science",
           "chapterId": "geography",
           "pending": false,
-          "authoredQuestions": 63,
+          "authoredQuestions": 104,
           "hasLesson": true
         },
         {
@@ -316,7 +316,7 @@
           "subjectId": "social-science",
           "chapterId": "geography",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 31,
           "hasLesson": true
         },
         {
@@ -361,7 +361,7 @@
           "subjectId": "social-science",
           "chapterId": "economics",
           "pending": false,
-          "authoredQuestions": 104,
+          "authoredQuestions": 124,
           "hasLesson": true
         },
         {
@@ -370,7 +370,7 @@
           "subjectId": "punjabi-paper-a-subject",
           "chapterId": "paper-a-grammar-core",
           "pending": false,
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true
         }
       ]
@@ -409,8 +409,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 416,
-      "poolAuthored": 340,
+      "poolTotal": 451,
+      "poolAuthored": 375,
       "topicRows": [
         {
           "id": "sci-foundation-class6-10-lab",
@@ -571,7 +571,7 @@
           "subjectId": "punjabi-paper-a-subject",
           "chapterId": "paper-a-grammar-core",
           "pending": false,
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true
         }
       ]
@@ -610,8 +610,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 169,
-      "poolAuthored": 19,
+      "poolTotal": 204,
+      "poolAuthored": 54,
       "topicRows": [
         {
           "id": "mathematics-core",
@@ -628,7 +628,7 @@
           "subjectId": "punjabi-paper-a-subject",
           "chapterId": "paper-a-grammar-core",
           "pending": false,
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true
         }
       ]
@@ -667,8 +667,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 18,
-      "poolAuthored": 18,
+      "poolTotal": 53,
+      "poolAuthored": 53,
       "topicRows": [
         {
           "id": "punjabi-paper-a",
@@ -676,7 +676,7 @@
           "subjectId": "punjabi",
           "chapterId": "punjabi-domain",
           "pending": false,
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true
         },
         {
@@ -724,8 +724,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 71,
-      "poolAuthored": 69,
+      "poolTotal": 106,
+      "poolAuthored": 104,
       "topicRows": [
         {
           "id": "hindi-sahitya",
@@ -751,7 +751,7 @@
           "subjectId": "punjabi-paper-a-subject",
           "chapterId": "paper-a-grammar-core",
           "pending": false,
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true
         }
       ]
@@ -790,8 +790,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 68,
-      "poolAuthored": 68,
+      "poolTotal": 128,
+      "poolAuthored": 128,
       "topicRows": [
         {
           "id": "english-grammar-lit",
@@ -799,7 +799,7 @@
           "subjectId": "english",
           "chapterId": "english-domain",
           "pending": false,
-          "authoredQuestions": 51,
+          "authoredQuestions": 76,
           "hasLesson": true
         },
         {
@@ -808,7 +808,7 @@
           "subjectId": "punjabi-paper-a-subject",
           "chapterId": "paper-a-grammar-core",
           "pending": false,
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true
         }
       ]
@@ -870,23 +870,77 @@
       ],
       "sectionMarks": 150,
       "sectionQuestions": 150,
-      "subjects": 5,
-      "topics": 32,
-      "pendingTopics": 3,
-      "topicsZeroAuthored": 3,
-      "topicsNoLesson": 3,
+      "subjects": 6,
+      "topics": 38,
+      "pendingTopics": 0,
+      "topicsZeroAuthored": 0,
+      "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 1970,
-      "poolAuthored": 685,
+      "poolTotal": 2474,
+      "poolAuthored": 1171,
       "topicRows": [
+        {
+          "id": "clerk-gk-fast-practice",
+          "name": "GK: Polity, History, Geography, Science and Punjab",
+          "subjectId": "clerk-gk-practice",
+          "chapterId": "clerk-gk-fast",
+          "pending": false,
+          "authoredQuestions": 100,
+          "hasLesson": true
+        },
+        {
+          "id": "gk-polity-foundation",
+          "name": "GK: Polity",
+          "subjectId": "clerk-gk-practice",
+          "chapterId": "clerk-gk-fast",
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
+        },
+        {
+          "id": "gk-history-foundation",
+          "name": "GK: History",
+          "subjectId": "clerk-gk-practice",
+          "chapterId": "clerk-gk-fast",
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
+        },
+        {
+          "id": "gk-geography-foundation",
+          "name": "GK: Geography",
+          "subjectId": "clerk-gk-practice",
+          "chapterId": "clerk-gk-fast",
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
+        },
+        {
+          "id": "gk-science-foundation",
+          "name": "GK: Science",
+          "subjectId": "clerk-gk-practice",
+          "chapterId": "clerk-gk-fast",
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
+        },
+        {
+          "id": "gk-punjab-foundation",
+          "name": "GK: Punjab GK",
+          "subjectId": "clerk-gk-practice",
+          "chapterId": "clerk-gk-fast",
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
+        },
         {
           "id": "constitution",
           "name": "Indian polity",
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 142,
           "hasLesson": true
         },
         {
@@ -895,7 +949,7 @@
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 31,
           "hasLesson": true
         },
         {
@@ -903,9 +957,9 @@
           "name": "Current affairs",
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
-          "pending": true,
-          "authoredQuestions": 0,
-          "hasLesson": false
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
         },
         {
           "id": "general-science-concepts",
@@ -913,7 +967,7 @@
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
           "pending": false,
-          "authoredQuestions": 189,
+          "authoredQuestions": 209,
           "hasLesson": true
         },
         {
@@ -922,7 +976,7 @@
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
           "pending": false,
-          "authoredQuestions": 104,
+          "authoredQuestions": 124,
           "hasLesson": true
         },
         {
@@ -931,7 +985,7 @@
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
           "pending": false,
-          "authoredQuestions": 15,
+          "authoredQuestions": 45,
           "hasLesson": true
         },
         {
@@ -939,18 +993,18 @@
           "name": "Sports",
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
-          "pending": true,
-          "authoredQuestions": 0,
-          "hasLesson": false
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
         },
         {
           "id": "clerk-cinema-literature",
           "name": "Cinema and literature",
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
-          "pending": true,
-          "authoredQuestions": 0,
-          "hasLesson": false
+          "pending": false,
+          "authoredQuestions": 20,
+          "hasLesson": true
         },
         {
           "id": "physical-geography",
@@ -958,7 +1012,7 @@
           "subjectId": "clerk-general-awareness",
           "chapterId": "clerk-gk-core",
           "pending": false,
-          "authoredQuestions": 63,
+          "authoredQuestions": 104,
           "hasLesson": true
         },
         {
@@ -985,7 +1039,7 @@
           "subjectId": "clerk-english",
           "chapterId": "clerk-english-core",
           "pending": false,
-          "authoredQuestions": 51,
+          "authoredQuestions": 76,
           "hasLesson": true
         },
         {
@@ -994,7 +1048,7 @@
           "subjectId": "clerk-punjabi-language",
           "chapterId": "clerk-punjabi-core",
           "pending": false,
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true
         },
         {
@@ -1003,7 +1057,7 @@
           "subjectId": "clerk-special",
           "chapterId": "clerk-skills",
           "pending": false,
-          "authoredQuestions": 5,
+          "authoredQuestions": 20,
           "hasLesson": true
         },
         {
@@ -1012,7 +1066,7 @@
           "subjectId": "clerk-special",
           "chapterId": "clerk-skills",
           "pending": false,
-          "authoredQuestions": 88,
+          "authoredQuestions": 113,
           "hasLesson": true
         },
         {
@@ -1021,7 +1075,7 @@
           "subjectId": "clerk-special",
           "chapterId": "clerk-skills",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 18,
           "hasLesson": true
         },
         {
@@ -1030,7 +1084,7 @@
           "subjectId": "clerk-special",
           "chapterId": "clerk-skills",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 20,
           "hasLesson": true
         },
         {
@@ -1039,7 +1093,7 @@
           "subjectId": "clerk-special",
           "chapterId": "clerk-skills",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 17,
           "hasLesson": true
         },
         {
@@ -1048,7 +1102,7 @@
           "subjectId": "clerk-special",
           "chapterId": "clerk-skills",
           "pending": false,
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true
         },
         {
@@ -1222,8 +1276,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 318,
-      "poolAuthored": 170,
+      "poolTotal": 343,
+      "poolAuthored": 195,
       "topicRows": [
         {
           "id": "patwari-agriculture-accounts",
@@ -1348,7 +1402,7 @@
           "subjectId": "patwari-special",
           "chapterId": "revenue-agriculture",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 18,
           "hasLesson": true
         },
         {
@@ -1357,7 +1411,7 @@
           "subjectId": "patwari-special",
           "chapterId": "revenue-agriculture",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 20,
           "hasLesson": true
         },
         {
@@ -1366,7 +1420,7 @@
           "subjectId": "patwari-special",
           "chapterId": "revenue-agriculture",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 17,
           "hasLesson": true
         }
       ]
@@ -1429,8 +1483,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 272,
-      "poolAuthored": 211,
+      "poolTotal": 399,
+      "poolAuthored": 338,
       "topicRows": [
         {
           "id": "police-law-basics",
@@ -1555,7 +1609,7 @@
           "subjectId": "police-general",
           "chapterId": "police-core",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 18,
           "hasLesson": true
         },
         {
@@ -1564,7 +1618,7 @@
           "subjectId": "police-general",
           "chapterId": "police-core",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 20,
           "hasLesson": true
         },
         {
@@ -1573,7 +1627,7 @@
           "subjectId": "police-general",
           "chapterId": "police-core",
           "pending": false,
-          "authoredQuestions": 10,
+          "authoredQuestions": 17,
           "hasLesson": true
         },
         {
@@ -1582,7 +1636,7 @@
           "subjectId": "police-general",
           "chapterId": "police-core",
           "pending": false,
-          "authoredQuestions": 40,
+          "authoredQuestions": 142,
           "hasLesson": true
         }
       ]
@@ -2800,8 +2854,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 334,
-      "poolAuthored": 294,
+      "poolTotal": 511,
+      "poolAuthored": 467,
       "topicRows": [
         {
           "id": "child-development-pedagogy",
@@ -2845,7 +2899,7 @@
           "subjectId": "reet-l2-sst-domain",
           "chapterId": "sst-history-geography",
           "pending": false,
-          "authoredQuestions": 15,
+          "authoredQuestions": 45,
           "hasLesson": true
         },
         {
@@ -2854,7 +2908,7 @@
           "subjectId": "reet-l2-sst-domain",
           "chapterId": "sst-history-geography",
           "pending": false,
-          "authoredQuestions": 63,
+          "authoredQuestions": 104,
           "hasLesson": true
         },
         {
@@ -2863,7 +2917,7 @@
           "subjectId": "reet-l2-sst-domain",
           "chapterId": "sst-history-geography",
           "pending": false,
-          "authoredQuestions": 40,
+          "authoredQuestions": 142,
           "hasLesson": true
         },
         {
@@ -3037,8 +3091,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 298,
-      "poolAuthored": 270,
+      "poolTotal": 323,
+      "poolAuthored": 295,
       "topicRows": [
         {
           "id": "raj-history-police",
@@ -3055,7 +3109,7 @@
           "subjectId": "raj-police-core",
           "chapterId": "raj-gk",
           "pending": false,
-          "authoredQuestions": 271,
+          "authoredQuestions": 296,
           "hasLesson": true
         }
       ]
@@ -3202,8 +3256,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 133,
-      "poolAuthored": 111,
+      "poolTotal": 158,
+      "poolAuthored": 136,
       "topicRows": [
         {
           "id": "rajasthan-gk-heritage",
@@ -3220,7 +3274,7 @@
           "subjectId": "raj-police-constable-domain",
           "chapterId": "raj-constable-core",
           "pending": false,
-          "authoredQuestions": 88,
+          "authoredQuestions": 113,
           "hasLesson": true
         }
       ]
@@ -3346,8 +3400,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 806,
-      "poolAuthored": 610,
+      "poolTotal": 951,
+      "poolAuthored": 751,
       "topicRows": [
         {
           "id": "cdp-htet-l2",
@@ -3364,7 +3418,7 @@
           "subjectId": "htet-l2-core",
           "chapterId": "htet-l2-cdp",
           "pending": false,
-          "authoredQuestions": 494,
+          "authoredQuestions": 635,
           "hasLesson": true
         }
       ]
@@ -3589,8 +3643,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 101,
-      "poolAuthored": 87,
+      "poolTotal": 126,
+      "poolAuthored": 112,
       "topicRows": [
         {
           "id": "computer-it-basics",
@@ -3598,7 +3652,7 @@
           "subjectId": "hssc-cet-core",
           "chapterId": "haryana-clerk-aptitude",
           "pending": false,
-          "authoredQuestions": 88,
+          "authoredQuestions": 113,
           "hasLesson": true
         }
       ]
@@ -3715,8 +3769,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 111,
-      "poolAuthored": 97,
+      "poolTotal": 136,
+      "poolAuthored": 122,
       "topicRows": [
         {
           "id": "delhi-historical-heritage",
@@ -3733,7 +3787,7 @@
           "subjectId": "delhi-police-curriculum",
           "chapterId": "delhi-gk-history",
           "pending": false,
-          "authoredQuestions": 88,
+          "authoredQuestions": 113,
           "hasLesson": true
         }
       ]
@@ -3784,8 +3838,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 346,
-      "poolAuthored": 189,
+      "poolTotal": 366,
+      "poolAuthored": 209,
       "topicRows": [
         {
           "id": "general-science-concepts",
@@ -3793,7 +3847,7 @@
           "subjectId": "capf-gd-curriculum",
           "chapterId": "capf-gd-general-studies",
           "pending": false,
-          "authoredQuestions": 189,
+          "authoredQuestions": 209,
           "hasLesson": true
         },
         {
@@ -3955,8 +4009,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 307,
-      "poolAuthored": 143,
+      "poolTotal": 468,
+      "poolAuthored": 300,
       "topicRows": [
         {
           "id": "modern-india",
@@ -3964,7 +4018,7 @@
           "subjectId": "ssc-ga",
           "chapterId": "general-studies",
           "pending": false,
-          "authoredQuestions": 15,
+          "authoredQuestions": 45,
           "hasLesson": true
         },
         {
@@ -3973,7 +4027,7 @@
           "subjectId": "ssc-ga",
           "chapterId": "general-studies",
           "pending": false,
-          "authoredQuestions": 40,
+          "authoredQuestions": 142,
           "hasLesson": true
         },
         {
@@ -3982,7 +4036,7 @@
           "subjectId": "ssc-ga",
           "chapterId": "general-studies",
           "pending": false,
-          "authoredQuestions": 88,
+          "authoredQuestions": 113,
           "hasLesson": true
         },
         {
@@ -4042,8 +4096,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 1323,
-      "poolAuthored": 165,
+      "poolTotal": 1479,
+      "poolAuthored": 317,
       "topicRows": [
         {
           "id": "fundamental-rights",
@@ -4051,7 +4105,7 @@
           "subjectId": "ssc-cgl-core",
           "chapterId": "cgl-general-studies",
           "pending": false,
-          "authoredQuestions": 40,
+          "authoredQuestions": 142,
           "hasLesson": true
         },
         {
@@ -4060,7 +4114,7 @@
           "subjectId": "ssc-cgl-core",
           "chapterId": "cgl-general-studies",
           "pending": false,
-          "authoredQuestions": 15,
+          "authoredQuestions": 45,
           "hasLesson": true
         },
         {
@@ -4069,7 +4123,7 @@
           "subjectId": "ssc-cgl-core",
           "chapterId": "cgl-general-studies",
           "pending": false,
-          "authoredQuestions": 104,
+          "authoredQuestions": 124,
           "hasLesson": true
         },
         {
@@ -4147,8 +4201,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 166,
-      "poolAuthored": 16,
+      "poolTotal": 200,
+      "poolAuthored": 46,
       "topicRows": [
         {
           "id": "modern-india",
@@ -4156,7 +4210,7 @@
           "subjectId": "ssc-mts-domain",
           "chapterId": "mts-studies",
           "pending": false,
-          "authoredQuestions": 15,
+          "authoredQuestions": 45,
           "hasLesson": true
         },
         {
@@ -4216,8 +4270,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 463,
-      "poolAuthored": 425,
+      "poolTotal": 608,
+      "poolAuthored": 566,
       "topicRows": [
         {
           "id": "child-development-pedagogy",
@@ -4234,7 +4288,7 @@
           "subjectId": "ctet-p2-curriculum",
           "chapterId": "ctet-p2-core",
           "pending": false,
-          "authoredQuestions": 40,
+          "authoredQuestions": 142,
           "hasLesson": true
         },
         {
@@ -4243,7 +4297,7 @@
           "subjectId": "ctet-p2-curriculum",
           "chapterId": "ctet-p2-core",
           "pending": false,
-          "authoredQuestions": 15,
+          "authoredQuestions": 45,
           "hasLesson": true
         },
         {
@@ -4261,7 +4315,7 @@
           "subjectId": "ctet-p2-core",
           "chapterId": "ctet-p2-general",
           "pending": false,
-          "authoredQuestions": 309,
+          "authoredQuestions": 450,
           "hasLesson": true
         }
       ]
@@ -4324,8 +4378,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 155,
-      "poolAuthored": 141,
+      "poolTotal": 180,
+      "poolAuthored": 166,
       "topicRows": [
         {
           "id": "teaching-aptitude",
@@ -4342,7 +4396,7 @@
           "subjectId": "ugc-net-core",
           "chapterId": "net-teaching-research",
           "pending": false,
-          "authoredQuestions": 88,
+          "authoredQuestions": 113,
           "hasLesson": true
         },
         {
@@ -4360,7 +4414,7 @@
           "subjectId": "ugc-net-p1",
           "chapterId": "ugc-net-general",
           "pending": false,
-          "authoredQuestions": 88,
+          "authoredQuestions": 113,
           "hasLesson": true
         }
       ]
@@ -4480,8 +4534,8 @@
       "topicsNoLesson": 0,
       "nonPendingNoLesson": [],
       "pendingWithQuestions": [],
-      "poolTotal": 539,
-      "poolAuthored": 354,
+      "poolTotal": 736,
+      "poolAuthored": 547,
       "topicRows": [
         {
           "id": "gk-agniveer",
@@ -4489,7 +4543,7 @@
           "subjectId": "agniveer-core",
           "chapterId": "agniveer-general",
           "pending": false,
-          "authoredQuestions": 165,
+          "authoredQuestions": 338,
           "hasLesson": true
         },
         {
@@ -4498,7 +4552,7 @@
           "subjectId": "agniveer-core",
           "chapterId": "agniveer-general",
           "pending": false,
-          "authoredQuestions": 189,
+          "authoredQuestions": 209,
           "hasLesson": true
         }
       ]
@@ -4632,12 +4686,11 @@
   ],
   "leakage": [],
   "orphanQuestions": {
-    "count": 82,
+    "count": 81,
     "byTopic": {
       "economics-national-income": 8,
       "patwari-revenue-math": 2,
       "constitution-basics": 1,
-      "ett-evs-science": 1,
       "police-bns-law": 10,
       "police-punjab-act": 8,
       "patwari-land-revenue": 7,

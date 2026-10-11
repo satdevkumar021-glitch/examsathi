@@ -2,6 +2,16 @@
 
 Audit date: 2026-10-11 · `main` @ `d1285ae` · Data: `audit/data/exam-snapshot.json`, `audit/ATOMIC_SYLLABUS_MAP.json`
 
+> **Post-merge refresh (after integrating `origin/main` @ `3e79043`, v2.6.0 Clerk mega suites).** `exam-snapshot.json`, `ALL_EXAMS_INVENTORY.csv` and `ATOMIC_SYLLABUS_MAP.json` were regenerated. The changed figures are:
+> - Authored questions: 1,803 → **2,183** (2,172 unique).
+> - Cross-exam leakage: still **0** across all 37 exams.
+> - Orphans: 82 → **81**.
+> - Pending topics: 91 → **88**, all ETT. The 3 Clerk topics (clerk-current-affairs, clerk-sports, clerk-cinema-literature) now have lessons and 20 authored questions each. Punjab Clerk has 38 topics, 0 pending.
+> - Non-pending topics without a lesson: **0**. Pending topics with questions: **0**.
+> - Questions with a year but no verified origin: unchanged at **482**. `verified-pyq`: unchanged at 23.
+>
+> The sections below describe the pre-merge state unless a figure is listed above.
+
 **Counting rules.** The counts below come from the runtime data layer, loaded the same way the tests load it. An "authored" question is a static question in `ALL_QUESTIONS` whose topic falls within the requested topic's scope. Computed generators (quant, reasoning, land, flashcard variants) are excluded. Pool totals are deduplicated per exam. Nothing in this report is a coverage percentage of an official syllabus. No validated atomic denominator exists for any exam.
 
 ## Headline numbers

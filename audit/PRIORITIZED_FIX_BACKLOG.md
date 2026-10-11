@@ -17,6 +17,7 @@ Audit date: 2026-10-11 · `main` @ `d1285ae`. Effort: **S** < 1 h · **M** 1–4
 | P0-7 | 14 `twenty_year_pyqs.ts` items are marked `verified-pyq` + `reviewed` with zero provenance. `pyq-20y-pol-01` has a year/tag mismatch (2023 vs "SI 2021") | `questions/twenty_year_pyqs.ts` | **Deferred, needs a test change.** `audit_batch4` L99 asserts `verified-pyq` for every item. Correct fix: change origin to `authored-original` and update the test assertion. User sign-off required because it rewrites a test's intent | S | proposed |
 | P0-8 | `official-provenance.ts` marks Master Cadre Math/Punjabi/Hindi/English and all REET tracks `verified-official` with only a home-page URL | `official-provenance.ts` | Set `unresolved-verification` (type already allows it). Not rendered in the UI (grep: no importer outside tests). Data-only | S | **done** |
 | P0-9 | ETT blueprint states the 5994 Paper A threshold (50 %), "no negative marking" and the 100-question count as rules. Repository evidence lists all three as UNVERIFIED | `ett-blueprint.ts` Problem 4 (L294) and L76 | Prefix "Reported (unverified):", keep "re-verify" | S | **done** (EN/HI/PA prefix added; full HI/PA caveat wording review → P1-10) |
+| P0-10 | v2.6.0 (merged from `origin/main` @ `3e79043`) labels the Clerk mega suite "Full Syllabus Mock". Clerk 02/2026 is draft_unverified, and no validated syllabus denominator exists | `dashboard/page.tsx` L126, `mock-test/page.tsx` L178 | Relabel as "All-Subjects Practice Mock" | S | **done** |
 
 **Cross-exam leakage.** Checked across all 37 exam pools. **0** items fall outside their exam's scoped topic set. No P0 fix is required. The depth issue in shared families is tracked as P1-6.
 
@@ -25,6 +26,8 @@ Audit date: 2026-10-11 · `main` @ `d1285ae`. Effort: **S** < 1 h · **M** 1–4
 ## P0 batch result
 
 P0-1…P0-6, P0-8 and P0-9 are implemented in the commit after `a290ef8`. Validation: `npm test` 100/100, `tsc --noEmit` clean, `eslint src` clean, `npm run build` OK. P0-7 is still open and needs approval because it changes a test assertion.
+
+After merging `origin/main` (v2.6.0) the P0 edits are intact. P0-10 was added, and the audit snapshot, inventory and atomic map were regenerated (2,183 authored questions, 0 leakage, 88 pending, all ETT). Validation: `npm test` 107/107 (remote added 7 tests), `npm run build` OK.
 
 ## P1: missing core content and pattern fidelity
 

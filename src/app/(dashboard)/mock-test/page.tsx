@@ -175,7 +175,7 @@ export default function MockTestHub() {
                 Live Test 1 • All Clerical & PPSC Subjects Combined ({ppscClerkMegaCount} Qs Bank)
               </span>
               <h3 className="text-sm font-black text-white">
-                💼 Punjab PPSC & PSSSB Clerk Full Syllabus Mega Mock (50-Q Sets)
+                💼 Punjab PPSC & PSSSB Clerk All-Subjects Practice Mock (50-Q Sets)
               </h3>
               <p className="text-[11px] text-slate-300 mt-0.5">
                 Polity, History, Geography, Economy, Science, Current Affairs, Sports, Cinema/Lit, Punjabi, English, Computer/MS Office, Reasoning & Quant.

@@ -119,11 +119,11 @@ export default function Dashboard() {
           </Link>
         </div>
 
-        {/* Live Test 1: Punjab PPSC & PSSSB Clerical Full Syllabus */}
+        {/* Live Test 1: Punjab PPSC & PSSSB Clerical All-Subjects Practice */}
         <div className="rounded-xl bg-slate-900/90 border border-teal-500/50 p-3 space-y-2">
           <div className="flex items-center justify-between gap-2">
             <h3 className="text-xs sm:text-sm font-black text-white">
-              💼 1. Punjab PPSC &amp; PSSSB Clerk Full Syllabus Mock (300+ Qs)
+              💼 1. Punjab PPSC &amp; PSSSB Clerk All-Subjects Practice Mock (300+ Qs)
             </h3>
             <span className="text-[10px] font-bold text-teal-300 shrink-0">50-50 Sets</span>
           </div>

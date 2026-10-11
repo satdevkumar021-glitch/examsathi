@@ -4630,11 +4630,65 @@
       "note": "Advt 02/2026 is draft_unverified; no repository artefact. Headings below are the app outline, not verified wording.",
       "headings": [
         {
+          "subjectId": "clerk-gk-practice",
+          "topicId": "clerk-gk-fast-practice",
+          "heading": "GK: Polity, History, Geography, Science and Punjab",
+          "appStatus": "ready",
+          "authoredQuestions": 100,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-gk-practice",
+          "topicId": "gk-polity-foundation",
+          "heading": "GK: Polity",
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-gk-practice",
+          "topicId": "gk-history-foundation",
+          "heading": "GK: History",
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-gk-practice",
+          "topicId": "gk-geography-foundation",
+          "heading": "GK: Geography",
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-gk-practice",
+          "topicId": "gk-science-foundation",
+          "heading": "GK: Science",
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
+          "subjectId": "clerk-gk-practice",
+          "topicId": "gk-punjab-foundation",
+          "heading": "GK: Punjab GK",
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
+          "concepts": null
+        },
+        {
           "subjectId": "clerk-general-awareness",
           "topicId": "constitution",
           "heading": "Indian polity",
           "appStatus": "ready",
-          "authoredQuestions": 10,
+          "authoredQuestions": 142,
           "hasLesson": true,
           "concepts": null
         },
@@ -4643,7 +4697,7 @@
           "topicId": "sst-geo-environment",
           "heading": "Environment",
           "appStatus": "ready",
-          "authoredQuestions": 10,
+          "authoredQuestions": 31,
           "hasLesson": true,
           "concepts": null
         },
@@ -4651,9 +4705,9 @@
           "subjectId": "clerk-general-awareness",
           "topicId": "clerk-current-affairs",
           "heading": "Current affairs",
-          "appStatus": "pending",
-          "authoredQuestions": 0,
-          "hasLesson": false,
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
           "concepts": null
         },
         {
@@ -4661,7 +4715,7 @@
           "topicId": "general-science-concepts",
           "heading": "Science and technology",
           "appStatus": "ready",
-          "authoredQuestions": 189,
+          "authoredQuestions": 209,
           "hasLesson": true,
           "concepts": null
         },
@@ -4670,7 +4724,7 @@
           "topicId": "indian-economy",
           "heading": "Economy",
           "appStatus": "ready",
-          "authoredQuestions": 104,
+          "authoredQuestions": 124,
           "hasLesson": true,
           "concepts": null
         },
@@ -4679,7 +4733,7 @@
           "topicId": "modern-india",
           "heading": "Indian history and independence",
           "appStatus": "ready",
-          "authoredQuestions": 15,
+          "authoredQuestions": 45,
           "hasLesson": true,
           "concepts": null
         },
@@ -4687,18 +4741,18 @@
           "subjectId": "clerk-general-awareness",
           "topicId": "clerk-sports",
           "heading": "Sports",
-          "appStatus": "pending",
-          "authoredQuestions": 0,
-          "hasLesson": false,
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
           "concepts": null
         },
         {
           "subjectId": "clerk-general-awareness",
           "topicId": "clerk-cinema-literature",
           "heading": "Cinema and literature",
-          "appStatus": "pending",
-          "authoredQuestions": 0,
-          "hasLesson": false,
+          "appStatus": "ready",
+          "authoredQuestions": 20,
+          "hasLesson": true,
           "concepts": null
         },
         {
@@ -4706,7 +4760,7 @@
           "topicId": "physical-geography",
           "heading": "Geography",
           "appStatus": "ready",
-          "authoredQuestions": 63,
+          "authoredQuestions": 104,
           "hasLesson": true,
           "concepts": null
         },
@@ -4733,7 +4787,7 @@
           "topicId": "english-grammar-lit",
           "heading": "English grammar and usage",
           "appStatus": "ready",
-          "authoredQuestions": 51,
+          "authoredQuestions": 76,
           "hasLesson": true,
           "concepts": null
         },
@@ -4742,7 +4796,7 @@
           "topicId": "punjabi-grammar",
           "heading": "Punjabi language practice",
           "appStatus": "ready",
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true,
           "concepts": null
         },
@@ -4751,7 +4805,7 @@
           "topicId": "punjab-clerk-prep",
           "heading": "PSSSB Clerk Exam Scheme & Raavi Typing Rules",
           "appStatus": "ready",
-          "authoredQuestions": 5,
+          "authoredQuestions": 20,
           "hasLesson": true,
           "concepts": null
         },
@@ -4760,7 +4814,7 @@
           "topicId": "computer-awareness",
           "heading": "Computer Knowledge & IT Proficiency (Master Overview)",
           "appStatus": "ready",
-          "authoredQuestions": 88,
+          "authoredQuestions": 113,
           "hasLesson": true,
           "concepts": null
         },
@@ -4769,7 +4823,7 @@
           "topicId": "clerk-computer-hardware",
           "heading": "Computer Architecture, CPU Registers, Memory Hierarchy & Number Systems",
           "appStatus": "ready",
-          "authoredQuestions": 10,
+          "authoredQuestions": 18,
           "hasLesson": true,
           "concepts": null
         },
@@ -4778,7 +4832,7 @@
           "topicId": "clerk-ms-office-mastery",
           "heading": "MS Office Mastery: MS Word, MS Excel Formulas ($A$1, VLOOKUP, IF) & MS PowerPoint",
           "appStatus": "ready",
-          "authoredQuestions": 10,
+          "authoredQuestions": 20,
           "hasLesson": true,
           "concepts": null
         },
@@ -4787,7 +4841,7 @@
           "topicId": "clerk-networking-cybersecurity",
           "heading": "Computer Networks, OSI 7-Layer Model, TCP/IP Protocols, IPv4/IPv6 & Cybersecurity",
           "appStatus": "ready",
-          "authoredQuestions": 10,
+          "authoredQuestions": 17,
           "hasLesson": true,
           "concepts": null
         },
@@ -4796,7 +4850,7 @@
           "topicId": "punjabi-paper-a",
           "heading": "Compulsory Punjabi Qualifying Module",
           "appStatus": "ready",
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true,
           "concepts": null
         },
@@ -5068,7 +5122,7 @@
           "subjectId": "punjabi-paper-a-subject",
           "topicId": "punjabi-paper-a",
           "heading": "Compulsory Punjabi Paper A: Grammar & Gurmukhi",
-          "authoredQuestions": 17,
+          "authoredQuestions": 52,
           "hasLesson": true,
           "concepts": null
         }
