@@ -15,6 +15,7 @@ import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 import { computeTopicBreakdown, TopicBreakdown } from '@/lib/scoring';
 
 interface StoredResult {
+  revisionSet?: number;
   attemptId?: string;
   scoringConfig?: { marksPerQuestion: number; negativeMarking: number; totalQuestions: number };
   sourceConfig?: { count: number; pyq20Years: boolean; pyqOnly: boolean };
@@ -129,7 +130,7 @@ export default function Results() {
   const testId = result.testId || '1';
   const topicId = testId.startsWith('topic-') ? testId.slice(6) : 'all';
   const remaining = result.examId === 'custom-notes' ? 0 : getQuestionPool({ examId: result.examId, topicId, difficulty: result.difficulty, pyq20Years: result.sourceConfig?.pyq20Years, pyqOnly: result.sourceConfig?.pyqOnly, excludeKeys: completedQuestionKeys() }).length;
-  const retakeQuery = new URLSearchParams({ exam: result.examId || 'all', diff: result.difficulty || 'all', count: String(total), pyq: result.sourceConfig?.pyq20Years ? '20y' : 'all', mode: 'exam' }).toString();
+  const retakeQuery = new URLSearchParams({ exam: result.examId || 'all', diff: result.difficulty || 'all', count: String(total), pyq: result.sourceConfig?.pyq20Years ? '20y' : 'all', mode: 'exam', ...(result.revisionSet ? {packSet:String(result.revisionSet)} : {}) }).toString();
   const testTitle = result.testTitle || 'Punjab Master Cadre 50-Question CBT Simulation';
   const questions = (result.questions && result.questions.length > 0) ? result.questions : [];
   const userAnswers = result.userAnswers || {};
@@ -941,6 +942,11 @@ export default function Results() {
           <span>Share Score & Platform on WhatsApp 📲</span>
         </a>
 
+        {result.revisionSet && <section className="p-4 border border-emerald-500 rounded-xl space-y-3">
+          <h2 className="font-bold">Revision set {result.revisionSet} of 4 complete · सेट पूरा · ਸੈੱਟ ਪੂਰਾ</h2>
+          {result.revisionSet < 4 ? <Link className="block bg-emerald-600 rounded-lg p-4 text-center font-bold" href={`/mock-test/topic-clerk-revision-200/?exam=punjab-clerk&packSet=${result.revisionSet+1}&count=50&mode=exam&fresh=1`}>Next 50 questions — Set {result.revisionSet+1} / अगले 50 / ਅਗਲੇ 50 →</Link> : <p>All four sets completed. These 200 questions are exhausted; revisit solutions or intentionally retake a set.</p>}
+          <Link href="/mock-test/?exam=punjab-clerk" className="underline">Choose any numbered set</Link>
+        </section>}
         {/* Review in Flip Card Mode */}
         <Link 
           href={`/mock-test/${testId}?${retakeQuery.replace('mode=exam', 'mode=flip')}&review=${result.attemptId || ''}`}
@@ -950,7 +956,7 @@ export default function Results() {
           <span>Review These {total} Questions in Flip Card Mode</span>
         </Link>
 
-        {result.examId !== 'custom-notes' && <div className="p-3 border border-teal-700 rounded-xl text-sm">
+        {result.examId !== 'custom-notes' && !result.revisionSet && <div className="p-3 border border-teal-700 rounded-xl text-sm">
           <p>{remaining} unseen questions remain in this exam/topic/filter pool.</p>
           {remaining > 0 ? <Link className="block underline text-teal-300 mt-2" href={`/mock-test/${testId}?${retakeQuery}&fresh=1&set=${result.attemptId}`}>Next fresh set ({Math.min(total, remaining)} questions)</Link> : <p className="text-amber-200">Fresh questions exhausted. Review earlier sets or change the topic. Questions will not be silently repeated.</p>}
         </div>}

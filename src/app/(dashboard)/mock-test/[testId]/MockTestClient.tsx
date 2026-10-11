@@ -1,4 +1,5 @@
 'use client';
+import { clerkRevisionSet, CLERK_REVISION_TOPIC } from '@/lib/data/clerk-revision-sets';
 import { normalizePracticeExamId } from '@/lib/exam-context';
 import { completedQuestionKeys, rememberCompletedQuestions } from '@/lib/practice-history';
 import QuestionSyllabusScope from '@/components/ui/QuestionSyllabusScope';
@@ -148,6 +149,10 @@ export default function MockTest({ testId }: { testId?: string }) {
       count,
       excludeKeys: requestedMode === 'exam' && query.get('repeat') !== '1' ? completedQuestionKeys() : [],
     });
+    if (topicId === CLERK_REVISION_TOPIC && query.has('packSet')) {
+      loadedQuestions = examId === 'punjab-clerk' ? clerkRevisionSet(Number(query.get('packSet'))) : [];
+      count=loadedQuestions.length;
+    }
     // Check custom AI-generated question drill from sessionStorage
     if (topicId === 'ai-custom') {
       try {
@@ -172,7 +177,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       if (review.examId) setActiveExamId(review.examId);
     }
     if (loadedQuestions.length > 0) {
-      if (examMeta && !review) setTestTitle(`${examMeta.name} — ${loadedQuestions.length} questions${diffLabel}`);
+      if (examMeta && !review) setTestTitle(`${examMeta.name} — ${loadedQuestions.length} questions${topicId===CLERK_REVISION_TOPIC && query.has('packSet') ? ` · Revision set ${query.get('packSet')}/4` : ''}${diffLabel}`);
       rememberQuestions(loadedQuestions);
     setQuestions(loadedQuestions);
       setLoaded(true);
@@ -289,6 +294,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     const predictedRank = calculatePredictedRank(scored.percentage, scored.rawScore, questions.length);
 
     const resultPayload = {
+      revisionSet: testId===`topic-${CLERK_REVISION_TOPIC}` ? Number(new URLSearchParams(window.location.search).get('packSet')) || undefined : undefined,
       attemptId: crypto.randomUUID(),
       scoringConfig: config,
       sourceConfig,

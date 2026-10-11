@@ -72,3 +72,14 @@ test('Every GK prompt, option and explanation has real Hindi and Punjabi text',(
   assert.equal(new Set(Object.values(q.options).map(option=>option[lang])).size,4);
  }
 });
+const {clerkRevisionSet,CLERK_EXTRA_QUESTIONS}=load('src/lib/data/clerk-revision-sets.ts');
+test('Numbered Clerk revision sets contain exactly200 unique questions with no set overlap',()=>{
+ const sets=[1,2,3,4].map(clerkRevisionSet);assert.ok(sets.every(set=>set.length===50));
+ const all=sets.flat();assert.equal(new Set(all.map(q=>q.id)).size,200);assert.equal(new Set(all.map(questionIdentity)).size,200);
+ assert.equal(clerkRevisionSet(0).length,0);assert.equal(clerkRevisionSet(5).length,0);assert.equal(clerkRevisionSet(1.5).length,0);
+ const topicIds=['gk-polity-foundation','gk-history-foundation','gk-geography-foundation','gk-science-foundation','gk-punjab-foundation','clerk-revision-reasoning','clerk-revision-computer','clerk-revision-punjabi','clerk-revision-english'];
+ for(const set of sets)for(const id of topicIds)assert.ok(set.some(q=>q.topicId===id),`set omits ${id}`);
+ assert.equal(getQuestionPool({examId:'punjab-clerk',topicId:'clerk-revision-200'}).length,200);
+ assert.equal(getQuestionPool({examId:'punjab-ett',topicId:'clerk-revision-200'}).length,0);
+ for(const q of CLERK_EXTRA_QUESTIONS) for(const lang of ['en','hi','pa']){assert.ok(q.question[lang].trim());assert.ok(q.explanation[lang].trim());assert.equal(new Set(Object.values(q.options).map(o=>o[lang])).size,4);assert.ok(q.options[q.correct][lang]);}
+});

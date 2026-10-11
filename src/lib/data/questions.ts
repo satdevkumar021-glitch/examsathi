@@ -1,3 +1,4 @@
+import { CLERK_EXTRA_QUESTIONS } from './clerk-revision-sets';
 import { CLERK_GK_FAST_QUESTIONS } from './clerk-gk-fast';
 import ettReflectionQuestions from './questions/ett-reflection.json';
 import { FOUNDATION_QUESTIONS } from './foundation-content';
@@ -932,6 +933,7 @@ import { SSC_HTET_QUESTIONS } from './questions/ssc_htet_questions';
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLERK_GK_FAST_QUESTIONS,
+  ...CLERK_EXTRA_QUESTIONS,
   ...QUESTIONS,
   ...(ettReflectionQuestions as Question[]),
   ...FOUNDATION_QUESTIONS,

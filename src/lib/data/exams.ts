@@ -1,3 +1,4 @@
+import { CLERK_REVISION_SUBJECT } from './clerk-revision-sets';
 import { CLERK_GK_FAST_SUBJECT } from './clerk-gk-fast';
 import { CTET_PRIMARY_SUBJECTS } from './ctet-primary-outline';
 import { buildEttSubjects } from './ett-syllabus';
@@ -631,6 +632,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     ],
     subjects: [
       CLERK_GK_FAST_SUBJECT,
+      CLERK_REVISION_SUBJECT,
       {
         id: 'clerk-special',
         name: 'Clerk Examination Modules',

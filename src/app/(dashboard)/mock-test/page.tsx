@@ -107,6 +107,13 @@ export default function MockTestHub() {
         </select>
       </label>
       <p className="text-xs text-amber-200">Only questions mapped to this exam’s current topic outline are shown. Coverage is incomplete; shared topics can use questions labelled from another exam. See the coverage report before treating this as a full mock.</p>
+      <section className="rounded-2xl border border-indigo-400 bg-indigo-950/40 p-5 space-y-3">
+        <h2 className="text-lg font-bold">Punjab Clerk — 4 × 50 revision questions</h2>
+        <p className="text-sm">200 unique questions · English / हिंदी / ਪੰਜਾਬੀ. GK, Punjab GK, reasoning, maths, computer, Punjabi and English.</p>
+        <p className="text-xs text-amber-200">Original AI-generated practice; human editorial/translation review pending. Partial revision, not a complete syllabus or official-pattern paper. Current affairs not included. Fixed numbered sets do not overlap each other; GK questions also appear in the GK-only test below.</p>
+        <div className="grid grid-cols-2 gap-3">{[1,2,3,4].map(set=><Link key={set} className="rounded-xl bg-indigo-600 p-4 font-bold text-center" href={`/mock-test/topic-clerk-revision-200/?exam=punjab-clerk&packSet=${set}&count=50&mode=exam&fresh=1`}>Set {set} · 50 questions<br/>सेट {set} · ਸੈੱਟ {set}</Link>)}</div>
+        <p className="text-xs">Complete a set, then use “Next 50 questions” on your results page. / अगला सेट परिणाम पृष्ठ पर / ਅਗਲਾ ਸੈੱਟ ਨਤੀਜੇ ਵਾਲੇ ਸਫ਼ੇ ਉੱਤੇ</p>
+      </section>
       <section className="my-4 rounded-2xl border border-emerald-500 bg-emerald-950/40 p-5 space-y-3">
         <h2 className="text-lg font-bold text-emerald-200">⚡ Clerk GK — 100-question revision test</h2>
         <p className="text-sm text-slate-200">Polity, Indian History, Geography, Science and Punjab GK · 20 questions each.</p>
