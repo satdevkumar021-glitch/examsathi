@@ -2,7 +2,7 @@
   "summary": {
     "emptyExamPools": 0,
     "missingLessons": 0,
-    "under50Topics": 211,
+    "under50Topics": 219,
     "examsMeetingReviewedTarget": 0
   },
   "auditedOn": "2026-10-11",
@@ -1784,40 +1784,233 @@
       "officialWebsite": "https://educationrecruitmentboard.com",
       "topics": [
         {
-          "id": "mathematics-core",
-          "name": "Algebra, Calculus, Matrices & Probability",
+          "id": "math-matrices-linear-algebra",
+          "name": "Matrices, Determinants, Rank & Eigenvalues",
           "subject": "Mathematics",
-          "chapter": "Higher Mathematics Core",
+          "chapter": "Linear & Abstract Algebra",
           "subtopics": [
-            "Quadratic Equations: Discriminant D = b² - 4ac (D=0 equal roots, D>0 real distinct, D<0 complex)",
-            "Progressions: AP (Tn = a+(n-1)d), GP (Tn = ar^(n-1), S_inf = a/(1-r))",
-            "Differential Calculus: Limits, L Hopital Rule (0/0, inf/inf), Maxima and Minima (f''(x) < 0 maximum)",
-            "Integral Calculus: King Property integral 0 to a f(x)dx = integral 0 to a f(a-x)dx",
-            "Matrices & Determinants: Inverse A^-1 = adj(A)/|A| (requires |A| != 0), Transpose (AB)^T = B^T A^T",
-            "Empirical Statistics: Mode = 3 Median - 2 Mean; Probability addition theorem"
+            "Types of Matrices: Symmetric, Skew-Symmetric, Hermitian, Skew-Hermitian, Orthogonal, Unitary",
+            "Rank of Matrix & Systems of Linear Equations (AX=B consistency, unique, infinite, no solution)",
+            "Eigenvalues, Eigenvectors, Cayley-Hamilton Theorem & Inverse calculation"
           ],
           "lesson": true,
           "lessonAlias": null,
-          "lessonStatus": "legacy-depth-unverified",
+          "lessonStatus": "complete",
           "reviewedQuestions": 0,
-          "englishWords": 119,
-          "authoredQuestions": 2,
-          "generatedVariants": 150,
-          "distinctQuestions": 152,
-          "fullMiniSetsOf50": 3,
-          "flashcards": 2,
-          "documents": [
-            "https://erd.punjab.gov.in/master2022/Docs/MathSyllabus04_05_2022.pdf",
-            "https://static.pseb.ac.in/media/1670561226_Ganit-10%28Punjabi%29.pdf",
-            "https://ncert.nic.in/textbook/pdf/jemh1dd.zip",
-            "https://ncert.nic.in/textbook/pdf/jhmh1dd.zip",
-            "https://ncert.nic.in/textbook/pdf/jemh101.pdf",
-            "https://ncert.nic.in/textbook/pdf/eemh104.pdf"
-          ],
+          "englishWords": 434,
+          "authoredQuestions": 3,
+          "generatedVariants": 0,
+          "distinctQuestions": 3,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 3,
+          "documents": [],
           "videos": [
             {
-              "title": "Find Mathematics Core: Algebra, Calculus, Matrices & Probability videos on NCERT's official channel",
-              "url": "https://www.youtube.com/ncertofficial/search?query=Mathematics%20Core%3A%20Algebra%2C%20Calculus%2C%20Matrices%20%26%20Probability",
+              "title": "NCERT Official — Matrices, Determinants, Rank, Eigenvalues & Linear Algebra (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=Matrices%2C%20Determinants%2C%20Rank%2C%20Eigenvalues%20%26%20Linear%20Algebra%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
+        },
+        {
+          "id": "math-abstract-algebra-groups",
+          "name": "Abstract Algebra: Groups, Subgroups & Homomorphisms",
+          "subject": "Mathematics",
+          "chapter": "Linear & Abstract Algebra",
+          "subtopics": [
+            "Group Axioms, Abelian Groups, Order of Element, Cyclic Groups & Generators",
+            "Lagrange's Theorem on Subgroups, Cosets, Normal Subgroups & Quotient Groups",
+            "Homomorphism, Isomorphism, Fundamental Homomorphism Theorem & Cayley Theorem"
+          ],
+          "lesson": true,
+          "lessonAlias": null,
+          "lessonStatus": "complete",
+          "reviewedQuestions": 0,
+          "englishWords": 320,
+          "authoredQuestions": 2,
+          "generatedVariants": 0,
+          "distinctQuestions": 2,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 1,
+          "documents": [],
+          "videos": [
+            {
+              "title": "NCERT Official — Abstract Algebra: Groups, Subgroups, Cyclic Groups, Normal Subgroups & Homomorphisms (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=Abstract%20Algebra%3A%20Groups%2C%20Subgroups%2C%20Cyclic%20Groups%2C%20Normal%20Subgroups%20%26%20Homomorphisms%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
+        },
+        {
+          "id": "math-differential-calculus",
+          "name": "Differential Calculus & Mean Value Theorems",
+          "subject": "Mathematics",
+          "chapter": "Calculus & Differential Equations",
+          "subtopics": [
+            "Limits (L'Hopital Rule), Continuity, Differentiability, Rolle's & Lagrange's MVT",
+            "Maxima, Minima, Points of Inflexion, Asymptotes & Radius of Curvature",
+            "Partial Derivatives, Euler's Theorem on Homogeneous Functions, Total Differential"
+          ],
+          "lesson": true,
+          "lessonAlias": null,
+          "lessonStatus": "complete",
+          "reviewedQuestions": 0,
+          "englishWords": 400,
+          "authoredQuestions": 2,
+          "generatedVariants": 0,
+          "distinctQuestions": 2,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 2,
+          "documents": [],
+          "videos": [
+            {
+              "title": "NCERT Official — Differential Calculus, Limits, Mean Value Theorems, Maxima/Minima & Partial Derivatives (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=Differential%20Calculus%2C%20Limits%2C%20Mean%20Value%20Theorems%2C%20Maxima%2FMinima%20%26%20Partial%20Derivatives%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
+        },
+        {
+          "id": "math-integral-calculus",
+          "name": "Integral Calculus & Beta-Gamma Functions",
+          "subject": "Mathematics",
+          "chapter": "Calculus & Differential Equations",
+          "subtopics": [
+            "Definite Integrals & Properties (King Rule, Queen Rule), Reduction Formulas",
+            "Beta and Gamma Functions: Relation, Duplication Formula, Dirichlet Integrals",
+            "Area Bounded by Curves, Length of Arc, Double and Triple Integrals"
+          ],
+          "lesson": true,
+          "lessonAlias": null,
+          "lessonStatus": "complete",
+          "reviewedQuestions": 0,
+          "englishWords": 272,
+          "authoredQuestions": 2,
+          "generatedVariants": 0,
+          "distinctQuestions": 2,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 1,
+          "documents": [],
+          "videos": [
+            {
+              "title": "NCERT Official — Integral Calculus, Definite Integrals, Beta-Gamma Functions & Multiple Integrals (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=Integral%20Calculus%2C%20Definite%20Integrals%2C%20Beta-Gamma%20Functions%20%26%20Multiple%20Integrals%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
+        },
+        {
+          "id": "math-differential-equations",
+          "name": "Ordinary Differential Equations & Linear DEs",
+          "subject": "Mathematics",
+          "chapter": "Calculus & Differential Equations",
+          "subtopics": [
+            "First Order DEs: Variable Separable, Homogeneous, Exact DEs & Integrating Factors",
+            "Linear DEs with Constant Coefficients: Complementary Function (CF) & Particular Integral (PI)",
+            "Cauchy-Euler Equations, Clairaut Form & Orthogonal Trajectories"
+          ],
+          "lesson": true,
+          "lessonAlias": null,
+          "lessonStatus": "complete",
+          "reviewedQuestions": 0,
+          "englishWords": 339,
+          "authoredQuestions": 2,
+          "generatedVariants": 0,
+          "distinctQuestions": 2,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 1,
+          "documents": [],
+          "videos": [
+            {
+              "title": "NCERT Official — Ordinary Differential Equations, Integrating Factors & Linear DEs with Constant Coefficients (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=Ordinary%20Differential%20Equations%2C%20Integrating%20Factors%20%26%20Linear%20DEs%20with%20Constant%20Coefficients%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
+        },
+        {
+          "id": "math-coordinate-geometry-3d",
+          "name": "Analytical 3D Geometry: Lines, Planes, Sphere & Cones",
+          "subject": "Mathematics",
+          "chapter": "3D Geometry, Vectors & Mechanics",
+          "subtopics": [
+            "Direction Cosines and Direction Ratios, Angle between Lines, Shortest Distance",
+            "Equations of Plane, Intercept and Normal Form, Coplanarity of Lines",
+            "Sphere (General Equation, Tangent Plane), Right Circular Cone and Cylinder"
+          ],
+          "lesson": true,
+          "lessonAlias": null,
+          "lessonStatus": "complete",
+          "reviewedQuestions": 0,
+          "englishWords": 230,
+          "authoredQuestions": 2,
+          "generatedVariants": 0,
+          "distinctQuestions": 2,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 1,
+          "documents": [],
+          "videos": [
+            {
+              "title": "NCERT Official — Analytical 3D Geometry: Direction Cosines, Straight Lines, Planes, Spheres & Cones (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=Analytical%203D%20Geometry%3A%20Direction%20Cosines%2C%20Straight%20Lines%2C%20Planes%2C%20Spheres%20%26%20Cones%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
+        },
+        {
+          "id": "math-vector-mechanics",
+          "name": "Vector Calculus & Classical Mechanics",
+          "subject": "Mathematics",
+          "chapter": "3D Geometry, Vectors & Mechanics",
+          "subtopics": [
+            "Gradient, Divergence and Curl of Vector Fields, Directional Derivative",
+            "Gauss Divergence Theorem, Green's Theorem in Plane, Stokes' Theorem",
+            "Statics & Dynamics: Equilibrium of Forces, Lami's Theorem, Projectile Motion"
+          ],
+          "lesson": true,
+          "lessonAlias": null,
+          "lessonStatus": "complete",
+          "reviewedQuestions": 0,
+          "englishWords": 276,
+          "authoredQuestions": 2,
+          "generatedVariants": 0,
+          "distinctQuestions": 2,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 1,
+          "documents": [],
+          "videos": [
+            {
+              "title": "NCERT Official — Vector Calculus & Classical Mechanics: Grad/Div/Curl, Integral Theorems, Statics & Dynamics (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=Vector%20Calculus%20%26%20Classical%20Mechanics%3A%20Grad%2FDiv%2FCurl%2C%20Integral%20Theorems%2C%20Statics%20%26%20Dynamics%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
+              "isSearch": true
+            }
+          ]
+        },
+        {
+          "id": "math-prob-stats-distributions",
+          "name": "Probability Theorems, Distributions & Statistics",
+          "subject": "Mathematics",
+          "chapter": "Probability & Statistics",
+          "subtopics": [
+            "Addition and Multiplication Theorems of Probability, Conditional Probability, Bayes' Theorem",
+            "Discrete & Continuous Distributions: Binomial, Poisson and Normal Distributions",
+            "Measures of Dispersion (Variance, Standard Deviation), Correlation and Regression Lines"
+          ],
+          "lesson": true,
+          "lessonAlias": null,
+          "lessonStatus": "complete",
+          "reviewedQuestions": 0,
+          "englishWords": 290,
+          "authoredQuestions": 2,
+          "generatedVariants": 0,
+          "distinctQuestions": 2,
+          "fullMiniSetsOf50": 0,
+          "flashcards": 1,
+          "documents": [],
+          "videos": [
+            {
+              "title": "NCERT Official — Probability, Random Variables, Probability Distributions (Binomial, Poisson, Normal) & Statistics (Level B → I → A)",
+              "url": "https://www.youtube.com/ncertofficial/search?query=Probability%2C%20Random%20Variables%2C%20Probability%20Distributions%20(Binomial%2C%20Poisson%2C%20Normal)%20%26%20Statistics%20(Level%20B%20%E2%86%92%20I%20%E2%86%92%20A)",
               "isSearch": true
             }
           ]
@@ -1859,17 +2052,17 @@
           ]
         }
       ],
-      "topicCount": 2,
+      "topicCount": 9,
       "missingLessons": 0,
-      "under50Topics": 0,
-      "authoredQuestions": 54,
-      "generatedVariants": 150,
+      "under50Topics": 8,
+      "authoredQuestions": 69,
+      "generatedVariants": 0,
       "reviewedQuestions": 35,
       "reviewedTargetShortfall": 965,
-      "uniqueQuestions": 204,
-      "fullSetsOf50": 4,
-      "topicsWithoutPDF": 0,
-      "topicsWithoutVideo": 2,
+      "uniqueQuestions": 69,
+      "fullSetsOf50": 1,
+      "topicsWithoutPDF": 8,
+      "topicsWithoutVideo": 9,
       "status": "Partial outline; full official syllabus mapping and content review pending"
     },
     {

@@ -6,7 +6,7 @@ All 31 tracks have partial preparation outlines. No track is certified as coveri
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | Punjab Master Cadre (Social Science / SST) | 37 | 0 | 725 | 135 | 95 | 820 | 16 | 31 | 24 | 21 |
 | Punjab Master Cadre (Science) | 18 | 0 | 375 | 175 | 76 | 451 | 9 | 14 | 14 | 18 |
-| Punjab Master Cadre (Mathematics) | 2 | 0 | 54 | 35 | 150 | 204 | 4 | 0 | 0 | 2 |
+| Punjab Master Cadre (Mathematics) | 9 | 0 | 69 | 35 | 0 | 69 | 1 | 8 | 8 | 9 |
 | Punjab Master Cadre (Punjabi) | 2 | 0 | 53 | 35 | 0 | 53 | 1 | 1 | 0 | 2 |
 | Punjab Master Cadre (Hindi) | 3 | 0 | 104 | 35 | 2 | 106 | 2 | 1 | 0 | 3 |
 | Punjab Master Cadre (English) | 2 | 0 | 128 | 60 | 0 | 128 | 2 | 0 | 0 | 2 |
@@ -42,6 +42,6 @@ All 31 tracks have partial preparation outlines. No track is certified as coveri
 | Indian Army Agniveer General Duty (GD) | 1 | 0 | 12 | 0 | 0 | 12 | 0 | 1 | 1 | 1 |
 | Indian Army Agniveer Clerk / Store Keeper (SKT) | 1 | 0 | 50 | 0 | 0 | 50 | 1 | 0 | 1 | 1 |
 
-Current baseline: 0 empty exam pools; 0 missing lesson slots; 211 topic entries below 50; 0 exams with 1,000 recorded reviewed questions. Foundation modules do not certify full official syllabus coverage.
+Current baseline: 0 empty exam pools; 0 missing lesson slots; 219 topic entries below 50; 0 exams with 1,000 recorded reviewed questions. Foundation modules do not certify full official syllabus coverage.
 
 14 repeated authored prompt groups found; practice pools deduplicate normalized wording and the explicitly confirmed paraphrase groups. Full topic details and resource URLs are in src/lib/data/coverage-audit.json.

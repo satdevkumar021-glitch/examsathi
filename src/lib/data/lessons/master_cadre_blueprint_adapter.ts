@@ -5,6 +5,7 @@ import { MASTER_CADRE_PUNJAB_HISTORY_BLUEPRINT_LESSONS } from './master_cadre_pu
 import { MASTER_CADRE_SCIENCE_PHYSICS_BLUEPRINT_LESSONS } from './master_cadre_science_physics_blueprint';
 import { MASTER_CADRE_SCIENCE_CHEMISTRY_BLUEPRINT_LESSONS } from './master_cadre_science_chemistry_blueprint';
 import { MASTER_CADRE_SCIENCE_BIOLOGY_BLUEPRINT_LESSONS } from './master_cadre_science_biology_blueprint';
+import { MASTER_CADRE_MATH_BLUEPRINT_LESSONS } from './master_cadre_math_blueprint';
 import { ETT_PUNJABI_LANGUAGES_BLUEPRINT_LESSONS } from './ett_punjabi_languages_blueprint';
 import { ETT_MATH_SCIENCE_SST_BLUEPRINT_LESSONS } from './ett_math_science_sst_blueprint';
 import { CLERK_GK_SPECIAL_LESSONS } from './clerk_gk_special_lessons';
@@ -405,6 +406,78 @@ const BLUEPRINT_TOPIC_METADATA: Record<
             hi: 'पंजाबी एवं भारतीय साहित्य, गुरमति/सूफ़ी/किस्सा/आधुनिक कवि, साहित्य अकादमी, ज्ञानपीठ एवं भारतीय/पंजाबी सिनेमा (Level B → I → A)'
         },
         examRelevance: 'Punjab PPSC & PSSSB Clerk / Senior Assistant / Master Cadre (Literature & Cinema — 4 to 6 Qs)'
+    },
+    'math-matrices-linear-algebra': {
+        category: 'math',
+        title: {
+            en: 'Matrices, Determinants, Rank, Eigenvalues & Linear Algebra (Level B → I → A)',
+            pa: 'ਮੈਟ੍ਰਿਕਸ, ਡਿਟਰਮੀਨੈਂਟ, ਰੈਂਕ, ਆਈਗਨ ਮੁੱਲ ਅਤੇ ਲੀਨੀਅਰ ਅਲਜਬਰਾ (Level B → I → A)',
+            hi: 'आव्यूह, सारणिक, कोटि, अभिलाक्षणिक मान एवं रैखिक बीजगणित (Level B → I → A)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Linear Algebra — 18 to 22 Qs)'
+    },
+    'math-differential-calculus': {
+        category: 'math',
+        title: {
+            en: 'Differential Calculus, Limits, Mean Value Theorems, Maxima/Minima & Partial Derivatives (Level B → I → A)',
+            pa: 'ਡਿਫਰੈਂਸ਼ੀਅਲ ਕੈਲਕੂਲਸ, ਸੀਮਾਵਾਂ, ਮੱਧਮਾਨ ਪ੍ਰਮੇਯ, ਅਧਿਕਤਮ/ਨਿਊਨਤਮ ਅਤੇ ਅੰਸ਼ਕ ਡੈਰੀਵੇਟਿਵਜ਼ (Level B → I → A)',
+            hi: 'अवकल गणित, सीमाएं, मध्यमान प्रमेय, उच्चिष्ठ/निम्निष्ठ एवं आंशिक अवकलन (Level B → I → A)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Differential Calculus — 20 to 24 Qs)'
+    },
+    'math-integral-calculus': {
+        category: 'math',
+        title: {
+            en: 'Integral Calculus, Definite Integrals, Beta-Gamma Functions & Multiple Integrals (Level B → I → A)',
+            pa: 'ਇੰਟੈਗਰਲ ਕੈਲਕੂਲਸ, ਨਿਸ਼ਚਿਤ ਇੰਟੈਗਰਲ, ਬੀਟਾ-ਗਾਮਾ ਫੰਕਸ਼ਨ ਅਤੇ ਬਹੁ-ਇੰਟੈਗਰਲ (Level B → I → A)',
+            hi: 'समाकलन गणित, निश्चित समाकलन, बीटा-गामा फलन एवं बहु-समाकलन (Level B → I → A)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Integral Calculus — 18 to 22 Qs)'
+    },
+    'math-differential-equations': {
+        category: 'math',
+        title: {
+            en: 'Ordinary Differential Equations, Integrating Factors & Linear DEs with Constant Coefficients (Level B → I → A)',
+            pa: 'ਆਰਡੀਨਰੀ ਡਿਫਰੈਂਸ਼ੀਅਲ ਸਮੀਕਰਨਾਂ, ਇੰਟੈਗਰੇਟਿੰਗ ਫੈਕਟਰ ਅਤੇ ਰੇਖਿਕ ਸਮੀਕਰਨਾਂ (Level B → I → A)',
+            hi: 'साधारण अवकल समीकरण, समाकलन गुणक एवं अचर गुणांक वाले रैखिक अवकल समीकरण (Level B → I → A)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Differential Equations — 15 to 18 Qs)'
+    },
+    'math-abstract-algebra-groups': {
+        category: 'math',
+        title: {
+            en: 'Abstract Algebra: Groups, Subgroups, Cyclic Groups, Normal Subgroups & Homomorphisms (Level B → I → A)',
+            pa: 'ਅਮੂਰਤ ਅਲਜਬਰਾ: ਗਰੁੱਪ, ਉਪ-ਗਰੁੱਪ, ਚੱਕਰੀ ਗਰੁੱਪ, ਸਧਾਰਨ ਉਪ-ਗਰੁੱਪ ਅਤੇ ਹੋਮੋਮੋਰਫਿਜ਼ਮ (Level B → I → A)',
+            hi: 'अमूर्त बीजगणित: समूह, उपसमूह, चक्रीय समूह, प्रसामान्य उपसमूह एवं समाकारिता (Level B → I → A)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Abstract Algebra — 16 to 20 Qs)'
+    },
+    'math-coordinate-geometry-3d': {
+        category: 'math',
+        title: {
+            en: 'Analytical 3D Geometry: Direction Cosines, Straight Lines, Planes, Spheres & Cones (Level B → I → A)',
+            pa: 'ਵਿਸ਼ਲੇਸ਼ਣਾਤਮਕ 3D ਜਿਓਮੈਟਰੀ: ਦਿਸ਼ਾ ਕੋਸਾਈਨ, ਰੇਖਾਵਾਂ, ਸਮਤਲ, ਗੋਲਾ ਅਤੇ ਸ਼ੰਕੂ (Level B → I → A)',
+            hi: 'त्रिविमीय ज्यामिति: दिक्-कोज्या, सरल रेखाएं, समतल, गोला एवं शंकु (Level B → I → A)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (3D Coordinate Geometry — 16 to 20 Qs)'
+    },
+    'math-vector-mechanics': {
+        category: 'math',
+        title: {
+            en: 'Vector Calculus & Classical Mechanics: Grad/Div/Curl, Integral Theorems, Statics & Dynamics (Level B → I → A)',
+            pa: 'ਵੈਕਟਰ ਕੈਲਕੂਲਸ ਅਤੇ ਕਲਾਸੀਕਲ ਮਕੈਨਿਕਸ: ਗ੍ਰੇਡੀਐਂਟ, ਡਾਇਵਰਜੈਂਸ, ਕਰਲ, ਪ੍ਰਮੇਯ ਅਤੇ ਸੰਤੁਲਨ (Level B → I → A)',
+            hi: 'सदिश कलन एवं यांत्रिकी: प्रवणता, अपसरण, कर्ल, समाकलन प्रमेय, स्थैतिकी एवं गतिविज्ञान (Level B → I → A)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Vector Calculus & Mechanics — 14 to 18 Qs)'
+    },
+    'math-prob-stats-distributions': {
+        category: 'math',
+        title: {
+            en: 'Probability, Random Variables, Probability Distributions (Binomial, Poisson, Normal) & Statistics (Level B → I → A)',
+            pa: 'ਸੰਭਾਵਨਾ, ਰੈਂਡਮ ਵੇਰੀਏਬਲ, ਸੰਭਾਵਨਾ ਵੰਡ (ਬਾਈਨੋਮੀਅਲ, ਪੋਆਇਸਨ, ਨਾਰਮਲ) ਅਤੇ ਅੰਕੜਾ ਵਿਗਿਆਨ (Level B → I → A)',
+            hi: 'प्रायिकता, यादृच्छिक चर, प्रायिकता बंटन (द्विपद, प्वासों, प्रसामान्य) एवं सांख्यिकी (Level B → I → A)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Probability & Statistics — 15 to 18 Qs)'
     }
 };
 
@@ -685,6 +758,9 @@ export const MASTER_CADRE_BLUEPRINT_LESSONS: Record<string, Lesson> = {
     ),
     ...Object.fromEntries(
         MASTER_CADRE_SCIENCE_BIOLOGY_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
+    ),
+    ...Object.fromEntries(
+        MASTER_CADRE_MATH_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
     ),
     ...Object.fromEntries(
         ETT_PUNJABI_LANGUAGES_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
