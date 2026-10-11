@@ -76,7 +76,7 @@ export const MASTER_CADRE_SST_PATTERNS_BY_YEAR: MasterCadreYearlyPattern[] = [
         totalMarks: 150,
         durationMinutes: 150,
         negativeMarking: 'None (0 negative marking; 1 mark per MCQ)',
-        subjectCombinationRule: 'Candidates opt for 2 subjects out of 4 (History, Polity, Geography, Economics) × 75 MCQs each = 150 MCQs. ExamSathi provides complete coverage of all 4 subjects.',
+        subjectCombinationRule: 'Reported: candidates opt for 2 subjects out of 4 (History, Polity, Geography, Economics) × 75 MCQs each = 150 MCQs. Verify in the official notification.',
         qualifyingPaperA: 'Compulsory Punjabi Paper-A (50 MCQs, 50 Marks, minimum 50% = 25 marks qualifying as per Punjab Govt rules)',
         verificationStatus: 'reported-verify-before-publish',
         officialSourceUrl: 'https://educationrecruitmentboard.com/'
@@ -104,7 +104,7 @@ export const MASTER_CADRE_SST_PATTERNS_BY_YEAR: MasterCadreYearlyPattern[] = [
         negativeMarking: 'None (0 negative marking)',
         subjectCombinationRule: 'Any 2 subjects out of History, Political Science, Geography, Economics (75 marks each = 150 marks)',
         qualifyingPaperA: 'Punjabi at Matriculation level mandatory',
-        verificationStatus: 'official-archived',
+        verificationStatus: 'reported-verify-before-publish',
         officialSourceUrl: 'https://educationrecruitmentboard.com/'
     },
     {
@@ -117,7 +117,7 @@ export const MASTER_CADRE_SST_PATTERNS_BY_YEAR: MasterCadreYearlyPattern[] = [
         negativeMarking: 'None (0 negative marking)',
         subjectCombinationRule: '2 subjects × 75 questions each = 150 questions',
         qualifyingPaperA: 'Punjabi at Matriculation level mandatory',
-        verificationStatus: 'official-archived',
+        verificationStatus: 'reported-verify-before-publish',
         officialSourceUrl: 'https://educationrecruitmentboard.com/'
     }
 ];

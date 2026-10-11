@@ -8,19 +8,23 @@ Audit date: 2026-10-11 · `main` @ `d1285ae`. Effort: **S** < 1 h · **M** 1–4
 
 | ID | Issue | Location | Fix | Effort | Status |
 |---|---|---|---|---|---|
-| P0-1 | "ExamSathi provides complete coverage of all 4 subjects" in the 2026 SST pattern row | `master-cadre-sst-blueprint.ts` L79 | Remove the completeness sentence | S | this batch |
-| P0-2 | Science trust row: "Every numerical MCQ is verified by executable calculation; all 18 Science topics include …" stated as certification | `master-cadre-science-blueprint.ts` L109 | Rephrase as availability, add "not a syllabus-coverage certification", and keep the depth caveat | S | this batch |
-| P0-3 | Science 2022/2020/2017 pattern rows have `verified: true`, shown as an **"Official Archived"** badge. No inspection record exists | `master-cadre-science-blueprint.ts` L281/297/313 | Set `verified: false` until the PDF is inspected and hashed | S | this batch |
-| P0-4 | Postgrad fallback text "B.Sc. Graduation depth covers 100% of this unit" | `syllabus/punjab-master-cadre-science/page.tsx` L392 | Replace with "No M.Sc.-only extension flagged; depth not independently verified" | S | this batch |
-| P0-5 | SST 2020 and 2016–17 pattern rows are `official-archived` with no document | `master-cadre-sst-blueprint.ts` L107/120 | Set `reported-verify-before-publish`. Keep 2022, which has the verified syllabus and advertisement | S | this batch |
-| P0-6 | "📜 Last 20 Years PYQs (2004–2024)" button and "20-Yr Archive" badge serve 482 items that have only a `year` label | `MockTestBottomSheet.tsx` L191, `mock-test/page.tsx` L391 | Relabel as "Year-labelled questions (source unverified)", matching the existing mock title wording. Filter semantics unchanged (tests rely on them) | S | this batch |
+| P0-1 | "ExamSathi provides complete coverage of all 4 subjects" in the 2026 SST pattern row | `master-cadre-sst-blueprint.ts` L79 | Remove the completeness sentence | S | **done** |
+| P0-2 | Science trust row: "Every numerical MCQ is verified by executable calculation; all 18 Science topics include …" stated as certification | `master-cadre-science-blueprint.ts` L109 | Rephrase as availability, add "not a syllabus-coverage certification", and keep the depth caveat | S | **done** |
+| P0-3 | Science 2022/2020/2017 pattern rows have `verified: true`, shown as an **"Official Archived"** badge. No inspection record exists | `master-cadre-science-blueprint.ts` L281/297/313 | Set `verified: false` until the PDF is inspected and hashed | S | **done** |
+| P0-4 | Postgrad fallback text "B.Sc. Graduation depth covers 100% of this unit" | `syllabus/punjab-master-cadre-science/page.tsx` L392 | Replace with "No M.Sc.-only extension flagged; depth not independently verified" | S | **done** |
+| P0-5 | SST 2020 and 2016–17 pattern rows are `official-archived` with no document | `master-cadre-sst-blueprint.ts` L107/120 | Set `reported-verify-before-publish`. Keep 2022, which has the verified syllabus and advertisement | S | **done** |
+| P0-6 | "📜 Last 20 Years PYQs (2004–2024)" button and "20-Yr Archive" badge serve 482 items that have only a `year` label | `MockTestBottomSheet.tsx` L191, `mock-test/page.tsx` L391 | Relabel as "Year-labelled questions (source unverified)", matching the existing mock title wording. Filter semantics unchanged (tests rely on them) | S | **done** |
 | P0-7 | 14 `twenty_year_pyqs.ts` items are marked `verified-pyq` + `reviewed` with zero provenance. `pyq-20y-pol-01` has a year/tag mismatch (2023 vs "SI 2021") | `questions/twenty_year_pyqs.ts` | **Deferred, needs a test change.** `audit_batch4` L99 asserts `verified-pyq` for every item. Correct fix: change origin to `authored-original` and update the test assertion. User sign-off required because it rewrites a test's intent | S | proposed |
-| P0-8 | `official-provenance.ts` marks Master Cadre Math/Punjabi/Hindi/English and all REET tracks `verified-official` with only a home-page URL | `official-provenance.ts` | Set `unresolved-verification` (type already allows it). Not rendered in the UI (grep: no importer outside tests). Data-only | S | this batch |
-| P0-9 | ETT blueprint states the 5994 Paper A threshold (50 %), "no negative marking" and the 100-question count as rules. Repository evidence lists all three as UNVERIFIED | `ett-blueprint.ts` Problem 4 (L294) and L76 | Prefix "Reported (unverified):", keep "re-verify" | S | this batch (EN text only; HI/PA need translation review → P1) |
+| P0-8 | `official-provenance.ts` marks Master Cadre Math/Punjabi/Hindi/English and all REET tracks `verified-official` with only a home-page URL | `official-provenance.ts` | Set `unresolved-verification` (type already allows it). Not rendered in the UI (grep: no importer outside tests). Data-only | S | **done** |
+| P0-9 | ETT blueprint states the 5994 Paper A threshold (50 %), "no negative marking" and the 100-question count as rules. Repository evidence lists all three as UNVERIFIED | `ett-blueprint.ts` Problem 4 (L294) and L76 | Prefix "Reported (unverified):", keep "re-verify" | S | **done** (EN/HI/PA prefix added; full HI/PA caveat wording review → P1-10) |
 
 **Cross-exam leakage.** Checked across all 37 exam pools. **0** items fall outside their exam's scoped topic set. No P0 fix is required. The depth issue in shared families is tracked as P1-6.
 
 **Pending without lesson.** 0 violations. Every topic without a lesson is already marked `pending`.
+
+## P0 batch result
+
+P0-1…P0-6, P0-8 and P0-9 are implemented in the commit after `a290ef8`. Validation: `npm test` 100/100, `tsc --noEmit` clean, `eslint src` clean, `npm run build` OK. P0-7 is still open and needs approval because it changes a test assertion.
 
 ## P1: missing core content and pattern fidelity
 

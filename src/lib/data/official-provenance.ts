@@ -73,7 +73,7 @@ export const PUNJAB_MASTER_CADRE_PROVENANCE: Record<string, ExamProvenanceRecord
         negativeMarking: 0,
       },
     },
-    notes: 'Paper A minimum 50% (25 marks) is compulsory to qualify; Paper B score exclusively decides selection merit list. No negative marking in either paper.',
+    notes: 'Syllabus headings verified against the 2022 (Advt 4161) ERB PDF. The separate 50-mark Paper A (50% qualifying) is NOT established for the 2022 cycle and is recorded from later reported rules — verify on the current notification. 2022 evidence: choose 2 of 4 sections × 75 questions, no negative marking.',
   },
   'punjab-master-cadre-science': {
     examId: 'punjab-master-cadre-science',
@@ -88,7 +88,7 @@ export const PUNJAB_MASTER_CADRE_PROVENANCE: Record<string, ExamProvenanceRecord
     documentTitle: 'Syllabus for the Post of Master Cadre - Science',
     publishedDate: null,
     fetchedDate: '2026-10-10',
-    verificationStatus: 'verified-official',
+    verificationStatus: 'unresolved-verification', // audit 2026-10-11: no syllabus document recorded
     language: 'bilingual',
     structure: {
       paperA: {
@@ -123,7 +123,7 @@ export const PUNJAB_MASTER_CADRE_PROVENANCE: Record<string, ExamProvenanceRecord
     documentTitle: 'Syllabus for the Post of Master Cadre - Mathematics',
     publishedDate: null,
     fetchedDate: '2026-10-10',
-    verificationStatus: 'verified-official',
+    verificationStatus: 'unresolved-verification', // audit 2026-10-11: no syllabus document recorded
     language: 'bilingual',
     structure: {
       paperA: {
@@ -158,7 +158,7 @@ export const PUNJAB_MASTER_CADRE_PROVENANCE: Record<string, ExamProvenanceRecord
     documentTitle: 'Syllabus for the Post of Master Cadre - Punjabi',
     publishedDate: null,
     fetchedDate: '2026-10-10',
-    verificationStatus: 'verified-official',
+    verificationStatus: 'unresolved-verification', // audit 2026-10-11: no syllabus document recorded
     language: 'punjabi',
     structure: {
       paperA: {
@@ -193,7 +193,7 @@ export const PUNJAB_MASTER_CADRE_PROVENANCE: Record<string, ExamProvenanceRecord
     documentTitle: 'Syllabus for the Post of Master Cadre - Hindi',
     publishedDate: null,
     fetchedDate: '2026-10-10',
-    verificationStatus: 'verified-official',
+    verificationStatus: 'unresolved-verification', // audit 2026-10-11: no syllabus document recorded
     language: 'hindi',
     structure: {
       paperA: {
@@ -228,7 +228,7 @@ export const PUNJAB_MASTER_CADRE_PROVENANCE: Record<string, ExamProvenanceRecord
     documentTitle: 'Syllabus for the Post of Master Cadre - English',
     publishedDate: null,
     fetchedDate: '2026-10-10',
-    verificationStatus: 'verified-official',
+    verificationStatus: 'unresolved-verification', // audit 2026-10-11: no syllabus document recorded
     language: 'english',
     structure: {
       paperA: {
@@ -266,7 +266,7 @@ export const RAJASTHAN_REET_PROVENANCE: Record<string, ExamProvenanceRecord> = {
     documentTitle: 'REET Level 1 Detailed Syllabus & Guidelines',
     publishedDate: null,
     fetchedDate: '2026-10-10',
-    verificationStatus: 'verified-official',
+    verificationStatus: 'unresolved-verification', // audit 2026-10-11: no syllabus document recorded
     language: 'bilingual',
     structure: {
       paperB: {
@@ -293,7 +293,7 @@ export const RAJASTHAN_REET_PROVENANCE: Record<string, ExamProvenanceRecord> = {
     documentTitle: 'REET Level 2 Syllabus — Social Studies Choice',
     publishedDate: null,
     fetchedDate: '2026-10-10',
-    verificationStatus: 'verified-official',
+    verificationStatus: 'unresolved-verification', // audit 2026-10-11: no syllabus document recorded
     language: 'bilingual',
     structure: {
       paperB: {
@@ -320,7 +320,7 @@ export const RAJASTHAN_REET_PROVENANCE: Record<string, ExamProvenanceRecord> = {
     documentTitle: 'REET Level 2 Syllabus — Mathematics & Science Choice',
     publishedDate: null,
     fetchedDate: '2026-10-10',
-    verificationStatus: 'verified-official',
+    verificationStatus: 'unresolved-verification', // audit 2026-10-11: no syllabus document recorded
     language: 'bilingual',
     structure: {
       paperB: {

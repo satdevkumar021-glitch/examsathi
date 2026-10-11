@@ -188,7 +188,7 @@ export default function MockTestBottomSheet({
                   : 'bg-slate-800 border-slate-700 text-slate-400'
               }`}
             >
-              <span>📜 Last 20 Years PYQs (2004–2024)</span>
+              <span>📜 Year-labelled questions 2004–2024 (source unverified)</span>
             </button>
             <button
               onClick={() => setIs20YearPYQ(false)}

@@ -389,7 +389,7 @@ export default function MasterCadreScienceBlueprintPage() {
                                                 </div>
                                                 <p className="text-slate-300">
                                                     {item.levelProgression.postgradPFlag ||
-                                                        'No M.Sc.-only extension needed; Class 11–12 & B.Sc. Graduation depth covers 100% of this unit.'}
+                                                        'No M.Sc.-only extension flagged for this unit; required depth is not independently verified.'}
                                                 </p>
                                             </div>
                                         </div>

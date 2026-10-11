@@ -106,7 +106,7 @@ export const MASTER_CADRE_SCIENCE_TRUST_LEVELS: ScienceTrustLevelRow[] = [
     {
         part: 'Sections 5–8: Numerical Verifier, Formula/Reaction Cards & Pipeline',
         source: 'ExamSathi Science Curriculum Engine (KaTeX equations, code-verified numericals, trilingual B/I/H/G/P MCQs)',
-        trustGuidance: 'Every numerical MCQ is verified by executable calculation; all 18 Science topics include trilingual lessons, flip cards, and 10+ Topic Mini Mock MCQs.',
+        trustGuidance: 'All 18 Science topic entries currently link a trilingual lesson, flip cards and topic MCQs. This is availability, not certification of official-syllabus coverage; M.Sc.-level depth is not verified.',
         statusBadge: 'Active Science Pipeline'
     }
 ];
@@ -278,7 +278,8 @@ export const MASTER_CADRE_SCIENCE_PATTERNS_BY_AD: ScienceAdvertisementPattern[] 
         subjectCombinationRule: 'Candidates opt for any 3 subjects out of 5 (Physics, Chemistry, Botany, Zoology, Mathematics) as per B.Sc. combination × 50 marks each = 150 marks.',
         qualifyingPaperA: 'Punjabi at Matriculation level mandatory; separate Paper-A added in subsequent state recruitment rules',
         source: 'https://erd.punjab.gov.in/master2022/Docs/ScienceSyllabus04_05_2022.pdf',
-        verified: true
+        // No inspection/hash record for this PDF exists in docs/verification (audit 2026-10-11).
+        verified: false
     },
     {
         exam: 'Punjab Master Cadre',
@@ -294,7 +295,7 @@ export const MASTER_CADRE_SCIENCE_PATTERNS_BY_AD: ScienceAdvertisementPattern[] 
         subjectCombinationRule: 'Any 3 subjects out of Physics, Chemistry, Botany, Zoology, Mathematics (50 marks each = 150 marks).',
         qualifyingPaperA: 'Punjabi at Matriculation level mandatory',
         source: 'https://educationrecruitmentboard.com/',
-        verified: true
+        verified: false
     },
     {
         exam: 'Punjab Master Cadre',
@@ -310,7 +311,7 @@ export const MASTER_CADRE_SCIENCE_PATTERNS_BY_AD: ScienceAdvertisementPattern[] 
         subjectCombinationRule: '3 subjects out of Physics, Chemistry, Botany, Zoology, Mathematics.',
         qualifyingPaperA: 'Punjabi at Matriculation level mandatory',
         source: 'https://educationrecruitmentboard.com/',
-        verified: true
+        verified: false
     }
 ];
 

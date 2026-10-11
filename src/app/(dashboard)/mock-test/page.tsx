@@ -388,7 +388,7 @@ export default function MockTestHub() {
                     </span>
                     {topic.isPYQRich && (
                       <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
-                        <Calendar size={10} /> 20-Yr Archive
+                        <Calendar size={10} /> Year-labelled (unverified)
                       </span>
                     )}
                     <span className="text-teal-400 text-[10px] font-semibold">
