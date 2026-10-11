@@ -1,3 +1,4 @@
+import { CLERK_GK_FAST_QUESTIONS } from './clerk-gk-fast';
 import { CLERK_DATA_PRACTICE } from './clerk-data-practice';
 import ettReflectionQuestions from './questions/ett-reflection.json';
 import { FOUNDATION_QUESTIONS } from './foundation-content';
@@ -973,8 +974,12 @@ import { ETT_PUNJABI_LANGUAGES_SST_MCQS } from './questions/ett_punjabi_language
 import { ETT_MATH_SCIENCE_MCQS } from './questions/ett_math_science_mcqs';
 import { NEW_CONTENT_BATCH_QUESTIONS } from './questions/new_content_batch';
 import { ETT_PAPER_B_BATCH2 } from './questions/ett_paper_b_batch2';
+import { PPSC_CLERK_POLITY_HISTORY_GEO_ECON_MCQS } from './questions/ppsc_clerk_polity_history_geo_econ_mcqs';
+import { PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS } from './questions/ppsc_clerk_current_sports_lit_science_mcqs';
+import { PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS } from './questions/ppsc_clerk_punjabi_english_computer_mcqs';
 
 export const ALL_QUESTIONS: Question[] = [
+  ...CLERK_GK_FAST_QUESTIONS,
   ...CLERK_DATA_PRACTICE,
   ...QUESTIONS,
   ...(ettReflectionQuestions as Question[]),
@@ -996,6 +1001,9 @@ export const ALL_QUESTIONS: Question[] = [
   ...ETT_MATH_SCIENCE_MCQS,
   ...NEW_CONTENT_BATCH_QUESTIONS,
   ...ETT_PAPER_B_BATCH2,
+  ...PPSC_CLERK_POLITY_HISTORY_GEO_ECON_MCQS,
+  ...PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS,
+  ...PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS,
 ];
 
 

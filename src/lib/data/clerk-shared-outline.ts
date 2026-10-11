@@ -12,7 +12,7 @@ export const CLERK_SYLLABUS_EVIDENCE = {
 } as const;
 
 function topic(id: string, en: string, hi: string, pa: string, subtopics: string[]): Topic {
-  return { ...(new Set(['clerk-current-affairs', 'clerk-sports', 'clerk-cinema-literature']).has(id) ? { materialStatus: 'pending' as const } : {}), id, name: en, nameHindi: hi, namePunjabi: pa, subtopics,
+  return { id, name: en, nameHindi: hi, namePunjabi: pa, subtopics,
     examQuestions: 'No topic-level allocation verified', difficulty: 'medium' };
 }
 

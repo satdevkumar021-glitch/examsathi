@@ -466,6 +466,113 @@ export function getTestQuestions(config: Parameters<typeof getQuestionPool>[0]):
 }
 
 /**
+ * Builds a deterministic, round-robin topic-balanced pool prioritizing trilingual authored questions
+ * over procedural variants so that Set 1 (1..50), Set 2 (51..100), Set 3 (101..150), Set 4 (151..200),
+ * Set 5 (201..250), Set 6 (251..300) each contain a balanced cross-section of all topics.
+ */
+export function getBalancedOrderedPool(config: {
+  topicId?: string;
+  examId?: string;
+  difficulty?: 'all' | 'easy' | 'medium' | 'hard';
+  pyqOnly?: boolean;
+  pyq20Years?: boolean;
+}): Question[] {
+  const rawPool = getQuestionPool({
+    topicId: config.topicId,
+    examId: config.examId,
+    difficulty: config.difficulty,
+    pyqOnly: config.pyqOnly,
+    pyq20Years: config.pyq20Years,
+  });
+
+  const primaryAuthored: Question[] = [];
+  const secondaryAuthored: Question[] = [];
+  const computedPool: Question[] = [];
+
+  for (const q of rawPool) {
+    const isComputed = q.id.startsWith('gen-') || q.originType === 'computed-variant';
+    const hasDistinctPunjabi = Boolean(q.question.pa && q.question.pa !== q.question.en);
+    if (isComputed) {
+      computedPool.push(q);
+    } else if (hasDistinctPunjabi) {
+      primaryAuthored.push(q);
+    } else {
+      secondaryAuthored.push(q);
+    }
+  }
+
+  const interleaveByTopic = (items: Question[], maxPerTopic?: number): Question[] => {
+    const groups = new Map<string, Question[]>();
+    for (const q of items) {
+      const key = q.topicId || 'general';
+      const arr = groups.get(key) || [];
+      if (!maxPerTopic || arr.length < maxPerTopic) {
+        arr.push(q);
+        groups.set(key, arr);
+      }
+    }
+    const groupArrays = Array.from(groups.values());
+    const result: Question[] = [];
+    let round = 0;
+    let added = true;
+    while (added) {
+      added = false;
+      for (const group of groupArrays) {
+        if (round < group.length) {
+          result.push(group[round]);
+          added = true;
+        }
+      }
+      round++;
+    }
+    return result;
+  };
+
+  const isSingleTopic = Boolean(
+    config.topicId &&
+    config.topicId !== 'all' &&
+    config.topicId !== 'ppsc-clerk-mega' &&
+    config.topicId !== 'punjab-gk-punjabi-mega'
+  );
+  const interleavedPrimary = interleaveByTopic(primaryAuthored);
+  const interleavedSecondary = interleaveByTopic(secondaryAuthored);
+  const interleavedComputed = interleaveByTopic(computedPool, isSingleTopic ? undefined : 25);
+
+  return [...interleavedPrimary, ...interleavedSecondary, ...interleavedComputed];
+}
+
+export function getOrderedSetQuestions(config: {
+  topicId?: string;
+  examId?: string;
+  difficulty?: 'all' | 'easy' | 'medium' | 'hard';
+  pyqOnly?: boolean;
+  pyq20Years?: boolean;
+  count?: number;
+  setNumber?: number;
+}): { questions: Question[]; setNumber: number; totalSets: number; totalPoolCount: number } {
+  const setSize = Number.isFinite(config.count) ? Math.max(1, Math.min(150, Math.floor(config.count!))) : 50;
+  let orderedPool = getBalancedOrderedPool(config);
+  if (orderedPool.length === 0 && config.topicId && config.topicId !== 'all') {
+    orderedPool = getBalancedOrderedPool({ ...config, examId: undefined });
+  }
+  if (orderedPool.length === 0 && config.difficulty && config.difficulty !== 'all') {
+    orderedPool = getBalancedOrderedPool({ ...config, difficulty: 'all' });
+  }
+  const totalPoolCount = orderedPool.length;
+  const totalSets = Math.max(1, Math.ceil(totalPoolCount / setSize));
+  const requestedSet = Number.isFinite(config.setNumber) && config.setNumber! >= 1 ? Math.floor(config.setNumber!) : 1;
+  const normalizedSet = ((requestedSet - 1) % totalSets) + 1;
+  const startIdx = (normalizedSet - 1) * setSize;
+  const questions = orderedPool.slice(startIdx, startIdx + setSize);
+  return {
+    questions,
+    setNumber: normalizedSet,
+    totalSets,
+    totalPoolCount,
+  };
+}
+
+/**
  * Evaluates candidate level based on score percentage and accuracy
  */
 export function evaluateUserLevel(percentage: number, accuracy: number): UserPerformanceLevel {

@@ -7,6 +7,7 @@ import { MASTER_CADRE_SCIENCE_CHEMISTRY_BLUEPRINT_LESSONS } from './master_cadre
 import { MASTER_CADRE_SCIENCE_BIOLOGY_BLUEPRINT_LESSONS } from './master_cadre_science_biology_blueprint';
 import { ETT_PUNJABI_LANGUAGES_BLUEPRINT_LESSONS } from './ett_punjabi_languages_blueprint';
 import { ETT_MATH_SCIENCE_SST_BLUEPRINT_LESSONS } from './ett_math_science_sst_blueprint';
+import { CLERK_GK_SPECIAL_LESSONS } from './clerk_gk_special_lessons';
 
 export interface BlueprintLessonInput {
     topicId: string;
@@ -377,6 +378,33 @@ const BLUEPRINT_TOPIC_METADATA: Record<
             hi: 'ETT हिंदी संपूर्ण ब्लूप्रिंट: देवनागरी लिपि, वर्ण विचार, विकारी/अविकारी शब्द, तत्सम-तद्भव, उपसर्ग-प्रत्यय, शब्दावली और हिंदी-से-पंजाबी अनुवाद (Level B → I → A)'
         },
         examRelevance: 'Punjab ETT Paper B Merit (Hindi: 10 Qs / 20 Marks — All 15 Archival Units)'
+    },
+    'clerk-current-affairs': {
+        category: 'polity',
+        title: {
+            en: 'Current Affairs & Static General Awareness: International Orgs, Flagship Schemes, Space/Defence, Commissions & Punjab Governance (Level B → I → A)',
+            pa: 'ਸਮਕਾਲੀ ਮਾਮਲੇ ਅਤੇ ਆਮ ਜਾਣਕਾਰੀ: ਅੰਤਰਰਾਸ਼ਟਰੀ ਸੰਗਠਨ, ਪ੍ਰਮੁੱਖ ਯੋਜਨਾਵਾਂ, ਪੁਲਾੜ/ਰੱਖਿਆ ਮਿਸ਼ਨ, ਕਮਿਸ਼ਨ ਅਤੇ ਪੰਜਾਬ ਪ੍ਰਸ਼ਾਸਨ (Level B → I → A)',
+            hi: 'समसामयिकी एवं सामान्य जागरूकता: अंतर्राष्ट्रीय संगठन, प्रमुख योजनाएँ, अंतरिक्ष/रक्षा मिशन, आयोग और पंजाब प्रशासन (Level B → I → A)'
+        },
+        examRelevance: 'Punjab PPSC & PSSSB Clerk / Senior Assistant / Patwari (General Awareness — 5 to 8 Qs)'
+    },
+    'clerk-sports': {
+        category: 'history',
+        title: {
+            en: 'Sports, Olympics, Asian/Commonwealth Games, Trophies, Terminology & Punjab Sports Legends (Level B → I → A)',
+            pa: 'ਖੇਡਾਂ, ਓਲੰਪਿਕਸ, ਏਸ਼ੀਅਨ/ਰਾਸ਼ਟਰਮੰਡਲ ਖੇਡਾਂ, ਟਰਾਫੀਆਂ, ਸ਼ਬਦਾਵਲੀ ਅਤੇ ਪੰਜਾਬ ਦੇ ਮਹਾਨ ਖਿਡਾਰੀ (Level B → I → A)',
+            hi: 'खेल, ओलंपिक, एशियाई/राष्ट्रमंडल खेल, ट्रॉफियाँ, शब्दावली एवं पंजाब के महान खिलाड़ी (Level B → I → A)'
+        },
+        examRelevance: 'Punjab PPSC & PSSSB Clerk / Senior Assistant / Police (Sports GK — 3 to 5 Qs)'
+    },
+    'clerk-cinema-literature': {
+        category: 'history',
+        title: {
+            en: 'Punjabi & Indian Literature, Gurmat/Sufi/Qissa/Modern Poets, Sahitya Akademi, Jnanpith & Indian/Punjabi Cinema Milestones (Level B → I → A)',
+            pa: 'ਪੰਜਾਬੀ ਅਤੇ ਭਾਰਤੀ ਸਾਹਿਤ, ਗੁਰਮਤਿ/ਸੂਫ਼ੀ/ਕਿੱਸਾ/ਆਧੁਨਿਕ ਕਵੀ, ਸਾਹਿਤ ਅਕਾਦਮੀ, ਗਿਆਨਪੀਠ ਅਤੇ ਭਾਰਤੀ/ਪੰਜਾਬੀ ਸਿਨੇਮਾ (Level B → I → A)',
+            hi: 'पंजाबी एवं भारतीय साहित्य, गुरमति/सूफ़ी/किस्सा/आधुनिक कवि, साहित्य अकादमी, ज्ञानपीठ एवं भारतीय/पंजाबी सिनेमा (Level B → I → A)'
+        },
+        examRelevance: 'Punjab PPSC & PSSSB Clerk / Senior Assistant / Master Cadre (Literature & Cinema — 4 to 6 Qs)'
     }
 };
 
@@ -663,6 +691,9 @@ export const MASTER_CADRE_BLUEPRINT_LESSONS: Record<string, Lesson> = {
     ),
     ...Object.fromEntries(
         ETT_MATH_SCIENCE_SST_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
+    ),
+    ...Object.fromEntries(
+        CLERK_GK_SPECIAL_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
     )
 };
 

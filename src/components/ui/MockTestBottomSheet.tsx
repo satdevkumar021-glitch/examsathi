@@ -34,6 +34,7 @@ export default function MockTestBottomSheet({
   const [selectedDifficulty, setSelectedDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [is20YearPYQ, setIs20YearPYQ] = useState<boolean>(false);
   const [questionCount, setQuestionCount] = useState<number>(50);
+  const [selectedSet, setSelectedSet] = useState<number>(1);
 
   if (!isOpen) return null;
 
@@ -42,17 +43,19 @@ export default function MockTestBottomSheet({
   const availableCount = getQuestionPool({ examId: selectedExam, topicId: defaultTopicId, difficulty: selectedDifficulty, pyq20Years: is20YearPYQ }).length;
 
   const freshCount = getQuestionPool({ examId: selectedExam, topicId: defaultTopicId, difficulty: selectedDifficulty, pyq20Years: is20YearPYQ, excludeKeys: completedQuestionKeys() }).length;
+  const totalSets = Math.max(1, Math.ceil(availableCount / questionCount));
 
-  const handleStartTest = (mode: 'exam' | 'flip') => {
-    if (!activeExam || !availableCount || (mode === 'exam' && !freshCount)) return;
+  const handleStartTest = (mode: 'exam' | 'flip', customSet?: number) => {
+    if (!activeExam || !availableCount) return;
+    const setNum = customSet || selectedSet || 1;
     const catalogue = practiceExam(selectedExam);
     if (catalogue) rememberExam(catalogue.state, catalogue.id);
     const configPayload = {
       testId: `exam-${selectedExam}`,
       examId: selectedExam,
       topicId: defaultTopicId,
-      title: `${activeExam.name} - ${questionCount} Qs ${is20YearPYQ ? '(Historical labels (unverified))' : 'Simulator'}`,
-      titlePa: `${activeExam?.namePa} - ${questionCount} ਸਵਾਲ`,
+      title: `${activeExam.name} - Set ${setNum} (${questionCount} Qs)`,
+      titlePa: `${activeExam?.namePa} - ਸੈੱਟ ${setNum} (${questionCount} ਸਵਾਲ)`,
       count: questionCount,
       difficulty: selectedDifficulty,
       timeLimitMinutes: Math.round(questionCount * 0.9), // ~45 mins for 50 Qs
@@ -69,6 +72,7 @@ export default function MockTestBottomSheet({
       exam: selectedExam,
       diff: selectedDifficulty,
       count: questionCount.toString(),
+      set: String(setNum),
       pyq: is20YearPYQ ? '20y' : 'all',
       mode,
       minutes: String(configPayload.timeLimitMinutes),
@@ -233,6 +237,37 @@ export default function MockTestBottomSheet({
           </div>
         </div>
 
+        {/* 5. Choose 50-Question Set */}
+        {totalSets > 1 && (
+          <div>
+            <label className="text-xs font-bold text-slate-300 mb-2 block uppercase tracking-wider">
+              5. Choose Question Set (Set 1 to Set {totalSets})
+            </label>
+            <div className="grid grid-cols-3 gap-2">
+              {Array.from({ length: Math.min(totalSets, 9) }, (_, idx) => {
+                const sNum = idx + 1;
+                const startQ = (sNum - 1) * questionCount + 1;
+                const endQ = Math.min(sNum * questionCount, availableCount);
+                const isSelected = selectedSet === sNum;
+                return (
+                  <button
+                    key={sNum}
+                    onClick={() => setSelectedSet(sNum)}
+                    className={`p-2 rounded-xl border text-center transition ${
+                      isSelected
+                        ? 'bg-teal-500/20 border-teal-400 text-white font-bold ring-1 ring-teal-400'
+                        : 'bg-slate-800 border-slate-700 text-slate-300'
+                    }`}
+                  >
+                    <div className="text-xs font-black">Set {sNum}</div>
+                    <div className="text-[10px] text-slate-400">Q{startQ}–{endQ}</div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         {/* Negative Marking Notice */}
         <div className="bg-amber-950/30 border border-amber-500/40 rounded-xl p-2.5 flex items-center gap-2 text-xs text-amber-300">
           <ShieldAlert size={16} className="shrink-0 text-amber-400" />
@@ -244,12 +279,12 @@ export default function MockTestBottomSheet({
         {/* Start Actions */}
         <div className="flex flex-col gap-2 pt-2">
           <button
-            disabled={!freshCount || !activeExam}
+            disabled={!availableCount || !activeExam}
             onClick={() => handleStartTest('exam')}
             className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-3.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition"
           >
             <Target size={16} />
-            <span>Start {Math.min(questionCount, freshCount)}-Question Practice</span>
+            <span>Start Set {selectedSet} ({Math.min(questionCount, availableCount)}-Question Practice)</span>
           </button>
 
           <button
@@ -258,7 +293,7 @@ export default function MockTestBottomSheet({
             className="w-full bg-slate-800 hover:bg-slate-750 border border-slate-700 text-teal-300 font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition"
           >
             <Layers size={15} />
-            <span>Practice this Set in 3D Flip Card Mode</span>
+            <span>Practice Set {selectedSet} in 3D Flip Card Mode</span>
           </button>
         </div>
       </div>

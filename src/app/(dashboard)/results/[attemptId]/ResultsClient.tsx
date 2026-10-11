@@ -28,6 +28,8 @@ interface StoredResult {
   testTitle?: string;
   examId?: string;
   difficulty?: 'all' | 'easy' | 'medium' | 'hard';
+  setNumber?: number;
+  totalSets?: number;
   total?: number;
   correct?: number;
   wrong?: number;
@@ -134,10 +136,31 @@ export default function Results() {
   const predictedRank: PredictedRankReport = calculatePredictedRank(percentage, numericRawScore, total);
 
   const testId = result.testId || '1';
-  const topicId = testId.startsWith('topic-') ? testId.slice(6) : 'all';
+  const topicId = testId === 'ppsc-clerk'
+    ? 'ppsc-clerk-mega'
+    : testId === 'punjab-gk-punjabi'
+    ? 'punjab-gk-punjabi-mega'
+    : testId.startsWith('topic-')
+    ? testId.slice(6)
+    : 'all';
   const learnerId = getStoredUser().id || 'usr-default';
   const canonicalExamId = result.examId ? normalizePracticeExamId(result.examId) : 'punjab-master-cadre-sst';
   const exposureSummary = getLearnerExposure(learnerId, canonicalExamId);
+
+  const fullPoolCount = result.examId === 'custom-notes'
+    ? total
+    : getQuestionPool({
+        examId: canonicalExamId,
+        topicId,
+        difficulty: result.difficulty,
+        pyq20Years: result.sourceConfig?.pyq20Years,
+        pyqOnly: result.sourceConfig?.pyqOnly,
+      }).length || getQuestionPool({ topicId }).length;
+
+  const setSize = total > 0 ? total : 50;
+  const totalSetsCount = Math.max(1, result.totalSets || Math.ceil(fullPoolCount / setSize));
+  const currentSetNum = result.setNumber && result.setNumber > 0 ? result.setNumber : 1;
+  const nextSetNum = currentSetNum < totalSetsCount ? currentSetNum + 1 : 1;
 
   const remaining = result.examId === 'custom-notes'
     ? 0
@@ -326,6 +349,57 @@ export default function Results() {
         <h1 className="text-2xl font-black text-white">CBT Performance Report</h1>
         <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">{testTitle}</p>
       </div>
+
+      {/* 0. INSTANT NEXT 50 QUESTIONS SET BAR (ABOVE THE FOLD) */}
+      {result.examId !== 'custom-notes' && fullPoolCount > setSize && (
+        <div className="bg-gradient-to-r from-emerald-950/90 via-teal-950/90 to-indigo-950/90 rounded-2xl p-4 border-2 border-emerald-400/70 shadow-xl space-y-3">
+          <div className="flex items-center justify-between gap-2 flex-wrap">
+            <div>
+              <span className="text-[10px] uppercase font-black tracking-wider text-emerald-300 block">
+                🚀 Continue 50-50 Set Progression • ਅਗਲੇ 50 ਪ੍ਰਸ਼ਨ • अगले 50 प्रश्न
+              </span>
+              <h2 className="text-sm font-black text-white">
+                Completed Set {currentSetNum} of {totalSetsCount} ({fullPoolCount} Total Qs in Bank)
+              </h2>
+            </div>
+            <span className="bg-emerald-500/20 text-emerald-200 border border-emerald-400/40 text-[10px] font-bold px-2.5 py-1 rounded-full">
+              {remaining} Unseen Qs Left
+            </span>
+          </div>
+
+          <Link
+            href={`/mock-test/${testId}?${retakeQuery}&set=${nextSetNum}`}
+            className="w-full bg-gradient-to-r from-emerald-400 to-teal-400 hover:opacity-95 text-slate-950 font-black py-3 px-4 rounded-xl text-center text-xs sm:text-sm shadow-lg flex items-center justify-center gap-2 transition"
+          >
+            <span>
+              ▶️ Start Next 50 Questions — Set {nextSetNum} (Q{(nextSetNum - 1) * setSize + 1}–{Math.min(nextSetNum * setSize, fullPoolCount)}) →
+            </span>
+          </Link>
+
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1">
+            <span className="text-[10px] font-bold text-slate-300 shrink-0 mr-1">Jump to Set:</span>
+            {Array.from({ length: Math.min(totalSetsCount, 10) }, (_, idx) => {
+              const sNum = idx + 1;
+              const startQ = (sNum - 1) * setSize + 1;
+              const endQ = Math.min(sNum * setSize, fullPoolCount);
+              const isCurr = sNum === currentSetNum;
+              return (
+                <Link
+                  key={sNum}
+                  href={`/mock-test/${testId}?${retakeQuery}&set=${sNum}`}
+                  className={`px-2.5 py-1 rounded-lg text-[10px] font-bold shrink-0 border transition ${
+                    isCurr
+                      ? 'bg-emerald-500/30 text-emerald-200 border-emerald-400'
+                      : 'bg-slate-900/90 text-slate-200 border-slate-700 hover:border-teal-400 hover:text-white'
+                  }`}
+                >
+                  Set {sNum} ({startQ}–{endQ}){isCurr ? ' ✓' : ''}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* 1. PREDICTED STATE & CATEGORY RANK CARD */}
       <div className="bg-gradient-to-br from-indigo-950 via-slate-850 to-teal-950 rounded-2xl p-5 border-2 border-teal-500/60 shadow-xl flex flex-col gap-3.5">
