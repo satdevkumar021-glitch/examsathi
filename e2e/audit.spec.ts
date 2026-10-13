@@ -50,15 +50,15 @@ test.describe('ExamSathi Comprehensive E2E Audit Suite', () => {
     expect(await statCards.count()).toBeGreaterThan(0);
   });
 
-  test('03. Auth flows: Register, Login, Demo Login, Forgot Password', async ({ page }) => {
+  test('03. Auth flows: Register, Login (no demo accounts), Forgot Password', async ({ page }) => {
     // 1. Register page
     await page.goto('/register/');
     await expect(page.locator('input[type="text"], input[name="name"]').first()).toBeVisible();
     
     // 2. Login page
     await page.goto('/login/');
-    const demoLoginBtn = page.locator('button:has-text("Demo"), button:has-text("डेमो")');
-    console.log('Demo Login button present:', await demoLoginBtn.count() > 0);
+    await expect(page.locator('button:has-text("Demo"), button:has-text("डेमो")')).toHaveCount(0);
+    await expect(page.locator('input[type="email"]')).toBeVisible();
 
     // 3. Forgot password page
     await page.goto('/forgot-password/');

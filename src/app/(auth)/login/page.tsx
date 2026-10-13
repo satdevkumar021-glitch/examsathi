@@ -2,8 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Eye, EyeOff, Mail, Lock, Sparkles, Check, ArrowRight } from 'lucide-react';
-import { instantDemoLogin } from '@/lib/auth';
+import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
 import { useStore } from '@/lib/store';
 import { createClient } from '@/lib/supabase/client';
 import { isSupabaseConfigured, authRedirectUrl, isGoogleAuthEnabled } from '@/lib/supabase/config';
@@ -13,22 +12,12 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
-  const [toastMsg, setToastMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [oauthLoading, setOauthLoading] = useState(false);
   const configured = isSupabaseConfigured();
   const googleEnabled = isGoogleAuthEnabled();
   const router = useRouter();
   const { setUser } = useStore();
-
-  const handleDemoLogin = (role: 'ett' | 'clerk' | 'master-cadre') => {
-    const user = instantDemoLogin(role);
-    setUser({ name: user.name, streak: user.streak, xp: user.xp });
-    setToastMsg(`Logged in as ${user.name}! 🎓`);
-    setTimeout(() => {
-      router.push('/dashboard');
-    }, 500);
-  };
 
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,13 +68,6 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 flex flex-col p-6 justify-center max-w-lg mx-auto w-full text-slate-100">
 
-      {toastMsg && (
-        <div className="fixed top-5 left-1/2 -translate-x-1/2 z-50 bg-teal-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs shadow-2xl flex items-center gap-2 animate-bounce">
-          <Check size={16} />
-          <span>{toastMsg}</span>
-        </div>
-      )}
-
       <div className="bg-slate-900/90 backdrop-blur-xl p-7 rounded-3xl border border-slate-700/80 shadow-2xl">
 
         {/* Header */}
@@ -99,54 +81,10 @@ export default function Login() {
           </p>
         </div>
 
-        {/* Guest / Demo section */}
-        <div className="bg-slate-800/80 p-3 rounded-2xl border border-indigo-500/30 mb-5">
-          <div className="flex items-center gap-1.5 text-xs font-bold text-teal-300 mb-2">
-            <Sparkles size={14} className="text-amber-400" />
-            <span>Guest / Demo Access — No account needed:</span>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            <button
-              type="button"
-              onClick={() => handleDemoLogin('ett')}
-              className="bg-indigo-950/70 hover:bg-indigo-900 border border-indigo-700/50 p-2 rounded-xl text-center transition"
-            >
-              <span className="text-[11px] font-black text-white block">👶 ETT Punjab</span>
-              <span className="text-[9px] text-teal-300">6635 / 5994</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleDemoLogin('clerk')}
-              className="bg-teal-950/70 hover:bg-teal-900 border border-teal-700/50 p-2 rounded-xl text-center transition"
-            >
-              <span className="text-[11px] font-black text-white block">💼 PSSSB Clerk</span>
-              <span className="text-[9px] text-teal-300">Raavi & IT</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleDemoLogin('master-cadre')}
-              className="bg-amber-950/70 hover:bg-amber-900 border border-amber-700/50 p-2 rounded-xl text-center transition"
-            >
-              <span className="text-[11px] font-black text-white block">🌾 Master Cadre</span>
-              <span className="text-[9px] text-amber-300">SST Service</span>
-            </button>
-          </div>
-          <p className="text-[10px] text-slate-400 mt-2 text-center">
-            Guest progress is stored locally — not synced across devices.
-          </p>
-        </div>
-
-        {/* Divider */}
-        <div className="flex items-center gap-3 my-5">
-          <div className="flex-1 h-px bg-slate-700" />
-          <span className="text-xs text-slate-400 whitespace-nowrap">— or sign in with your account —</span>
-          <div className="flex-1 h-px bg-slate-700" />
-        </div>
-
         {/* Backend not configured notice */}
         {!configured && (
           <div className="bg-amber-950/60 border border-amber-500/40 rounded-xl p-3 mb-4 text-xs text-amber-200">
-            ⚠️ <strong>Backend not configured</strong> — running in guest/demo mode only. To enable real accounts, follow the{' '}
+            ⚠️ <strong>Backend not configured</strong> — accounts are unavailable, so you can only use guest mode. To enable real accounts, follow the{' '}
             <Link href="https://github.com/satdevkumar021-glitch/examsathi/blob/main/docs/SUPABASE_SETUP.md" className="underline text-amber-300">Supabase setup guide</Link>.
           </div>
         )}

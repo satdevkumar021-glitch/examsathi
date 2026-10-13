@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { User, Mail, Lock, Target, ArrowRight, Check } from 'lucide-react';
-import { registerUser } from '@/lib/auth';
+import { getStoredUser, saveUserSession } from '@/lib/auth';
 import { useStore } from '@/lib/store';
 import { createClient } from '@/lib/supabase/client';
 import { isSupabaseConfigured, authRedirectUrl } from '@/lib/supabase/config';
@@ -52,13 +52,12 @@ export default function Register() {
         setLoading(false);
       }
     } else {
-      // Guest local profile fallback
-      const newUser = registerUser({ name, email: email || '', targetExam, state });
-      setUser({ name: newUser.name, streak: newUser.streak, xp: newUser.xp });
-      setToastMsg(`Local profile created for ${newUser.name}! 🎓`);
-      setTimeout(() => {
-        router.push('/dashboard');
-      }, 600);
+      // No backend: keep the chosen name and target exam in this browser's study profile. Nothing is awarded up front.
+      const profile = { ...getStoredUser(), name: name || 'Aspirant', targetExam, state };
+      saveUserSession(profile);
+      setUser({ name: profile.name, streak: profile.streak, xp: profile.xp });
+      setToastMsg(`Local profile created for ${profile.name}! 🎓`);
+      setTimeout(() => { router.push('/dashboard'); }, 600);
     }
   };
 
