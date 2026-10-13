@@ -1,6 +1,6 @@
 'use client';
 import QuestionSyllabusScope from '@/components/ui/QuestionSyllabusScope';
-import { getQuestionPool } from '@/lib/data/question_bank_engine';
+import { useCounts } from '@/lib/use-question-data';
 import { 
   completedQuestionKeys, 
   getLearnerExposure, 
@@ -14,8 +14,8 @@ import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Target, Clock, Trophy, CheckCircle2, XCircle, MinusCircle, RotateCcw, Layers, Award, Sparkles, BookOpen, Brain, BookmarkCheck, Bookmark, Check, FileText, Share2, Star, Lightbulb, Compass, Library } from 'lucide-react';
-import { evaluateUserLevel, calculatePredictedRank, UserPerformanceLevel, PredictedRankReport } from '@/lib/data/question_bank_engine';
-import { Question } from '@/lib/data/questions';
+import { evaluateUserLevel, calculatePredictedRank, UserPerformanceLevel, PredictedRankReport } from '@/lib/data/exam-catalog';
+import type { Question } from '@/lib/question-types';
 import { toggleFavoriteQuestion, toggleBookmarkQuestion, getStoredUser } from '@/lib/auth';
 import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 import { computeTopicBreakdown, TopicBreakdown } from '@/lib/scoring';
@@ -147,31 +147,27 @@ export default function Results() {
   const canonicalExamId = result.examId ? normalizePracticeExamId(result.examId) : 'punjab-master-cadre-sst';
   const exposureSummary = getLearnerExposure(learnerId, canonicalExamId);
 
-  const fullPoolCount = result.examId === 'custom-notes'
-    ? total
-    : getQuestionPool({
-        examId: canonicalExamId,
-        topicId,
-        difficulty: result.difficulty,
-        pyq20Years: result.sourceConfig?.pyq20Years,
-        pyqOnly: result.sourceConfig?.pyqOnly,
-      }).length || getQuestionPool({ topicId }).length;
+  const isCustom = result.examId === 'custom-notes';
+  const poolQuery = {
+    examId: canonicalExamId,
+    topicId,
+    difficulty: result.difficulty,
+    pyq20Years: result.sourceConfig?.pyq20Years,
+    pyqOnly: result.sourceConfig?.pyqOnly,
+  };
+  // Pool sizes come from the server; the bank is not available in the browser.
+  const poolCounts = useCounts(
+    isCustom ? [] : [poolQuery, { topicId }, { ...poolQuery, fresh: true }],
+    completedQuestionKeys(),
+  );
+  const fullPoolCount = isCustom ? total : (poolCounts?.[0] || poolCounts?.[1] || 0);
 
   const setSize = total > 0 ? total : 50;
   const totalSetsCount = Math.max(1, result.totalSets || Math.ceil(fullPoolCount / setSize));
   const currentSetNum = result.setNumber && result.setNumber > 0 ? result.setNumber : 1;
   const nextSetNum = currentSetNum < totalSetsCount ? currentSetNum + 1 : 1;
 
-  const remaining = result.examId === 'custom-notes'
-    ? 0
-    : getQuestionPool({
-        examId: canonicalExamId,
-        topicId,
-        difficulty: result.difficulty,
-        pyq20Years: result.sourceConfig?.pyq20Years,
-        pyqOnly: result.sourceConfig?.pyqOnly,
-        excludeKeys: completedQuestionKeys(),
-      }).length;
+  const remaining = isCustom ? 0 : (poolCounts?.[2] ?? 0);
   const retakeQuery = new URLSearchParams({
     exam: canonicalExamId,
     diff: result.difficulty || 'all',
@@ -747,7 +743,7 @@ export default function Results() {
               onClick={() => setReviewFilter('correct')}
               className={`px-3 py-1.5 rounded-lg text-xs font-bold transition ${
                 reviewFilter === 'correct'
-                  ? 'bg-emerald-600 text-white'
+                  ? 'bg-emerald-700 text-white'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-750'
               }`}
             >
@@ -1035,7 +1031,7 @@ export default function Results() {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black py-3.5 rounded-xl text-center text-xs shadow-lg flex items-center justify-center gap-2 transition"
+          className="w-full bg-emerald-700 hover:bg-emerald-500 text-white font-black py-3.5 rounded-xl text-center text-xs shadow-lg flex items-center justify-center gap-2 transition"
         >
           <Share2 size={16} />
           <span>Share Score & Platform on WhatsApp 📲</span>

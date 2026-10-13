@@ -1,4 +1,4 @@
-import type { Question } from './questions';
+import type { Question } from '../question-types';
 /** Local units vary. Every exercise states its own conversion assumptions. */
 export function generateLandMeasurementPractice(topicId: string, count: number): Question[] {
   if (topicId !== 'patwari-agriculture-accounts') return [];

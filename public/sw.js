@@ -29,3 +29,33 @@ self.addEventListener('fetch', event => {
       })));
   }
 });
+
+// Streak reminders (Web Push). The payload is {title, body, url, tag}; anything malformed still shows a safe default.
+self.addEventListener('push', event => {
+  let data = {};
+  try { data = event.data ? event.data.json() : {}; } catch { /* use defaults */ }
+  const title = typeof data.title === 'string' && data.title ? data.title.slice(0, 80) : 'ExamSathi';
+  const body = typeof data.body === 'string' ? data.body.slice(0, 160) : '';
+  const url = typeof data.url === 'string' ? data.url : '/dashboard/';
+  event.waitUntil(self.registration.showNotification(title, {
+    body,
+    tag: typeof data.tag === 'string' ? data.tag : 'examsathi',
+    icon: new URL('icons/icon-192.png', root).href,
+    badge: new URL('icons/icon-192.png', root).href,
+    data: { url },
+  }));
+});
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  // Only ever open a page of this site, inside this app's scope.
+  const requested = event.notification.data && event.notification.data.url;
+  let target = new URL('dashboard/', root);
+  try {
+    const candidate = new URL(String(requested).replace(/^\//, ''), root);
+    if (candidate.origin === root.origin && candidate.pathname.startsWith(root.pathname)) target = candidate;
+  } catch { /* keep the default */ }
+  event.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(windows => {
+    const open = windows.find(w => w.url.startsWith(root.origin));
+    return open ? open.focus().then(w => w.navigate(target.href)) : self.clients.openWindow(target.href);
+  }));
+});

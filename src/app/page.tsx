@@ -95,7 +95,7 @@ export default function LandingPage() {
       >
         <Link 
           href="/dashboard" 
-          className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold py-3.5 rounded-xl shadow-lg transition text-sm flex items-center justify-center gap-2"
+          className="w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-bold py-3.5 rounded-xl shadow-lg transition text-sm flex items-center justify-center gap-2"
         >
           <span>Start Learning • अध्ययन शुरू करें</span>
         </Link>
@@ -122,7 +122,7 @@ export default function LandingPage() {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full bg-emerald-600/90 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow transition text-xs flex items-center justify-center gap-2 border border-emerald-500/50"
+          className="w-full bg-emerald-700/90 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow transition text-xs flex items-center justify-center gap-2 border border-emerald-500/50"
         >
           <span>📲 Share on WhatsApp (व्हाट्सएप पर शेयर करें)</span>
         </a>
@@ -138,7 +138,7 @@ export default function LandingPage() {
         </div>
 
         {/* Footer Policy Links for Google AdSense & DPDP Compliance */}
-        <div className="pt-3 border-t border-slate-800/80 flex flex-wrap justify-center gap-x-4 gap-y-1.5 text-[11px] text-slate-500">
+        <div className="pt-3 border-t border-slate-800/80 flex flex-wrap justify-center gap-x-4 gap-y-1.5 text-[11px] text-slate-400">
           <Link href="/privacy-policy" className="hover:text-slate-300 transition">
             Privacy Policy
           </Link>

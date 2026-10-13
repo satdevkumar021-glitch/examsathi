@@ -5,8 +5,8 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, HelpCircle, ChevronLeft, ChevronRight, Bookmark, Sparkles, FileText, Download, ExternalLink, ShieldCheck, Target, AlertTriangle, Search, Trash2, Undo2 } from 'lucide-react';
 import { getLessonByTopicId, Lesson } from '@/lib/data/lessons';
-import { getTestQuestions } from '@/lib/data/question_bank_engine';
-import { Question } from '@/lib/data/questions';
+import { fetchQuestionSet, fetchReveals } from '@/lib/question-client';
+import type { PublicQuestion, QuestionReveal } from '@/lib/question-types';
 import FlipCard from '@/components/ui/FlipCard';
 import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
@@ -57,28 +57,30 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
   const [practiceCount, setPracticeCount] = useState(10);
   const [effectiveExamId, setEffectiveExamId] = useState<string>('all');
-  const [topicQuestions, setTopicQuestions] = useState(() => {
-    const storedExam = useStore.getState().selectedExam || undefined;
-    const scoped = getTestQuestions({ topicId, examId: storedExam, count: 10 });
-    return scoped.length > 0 ? scoped : getTestQuestions({ topicId, count: 10 });
-  });
+  const [topicQuestions, setTopicQuestions] = useState<PublicQuestion[]>([]);
+  const [practiceError, setPracticeError] = useState('');
+  const [revealed, setRevealed] = useState<Record<string, QuestionReveal>>({});
+
+  // The question bank lives on the server: draw a topic set, falling back to any exam when this one has none.
+  const drawPractice = async (examId: string | undefined, count: number) => {
+    const scoped = examId ? (await fetchQuestionSet({ topicId, examId, count })).questions : [];
+    if (scoped.length > 0) return { questions: scoped, examId: examId as string };
+    return { questions: (await fetchQuestionSet({ topicId, count })).questions, examId: undefined };
+  };
 
   useEffect(() => {
     const requested = new URLSearchParams(window.location.search).get('exam');
     const resolved = requested ? practiceExam(requested) : undefined;
     const examId = resolved ? normalizePracticeExamId(requested!) : selectedExam || undefined;
     if (resolved && selectedExam !== examId) setSelectedExam(resolved.state, resolved.id);
-    const scoped = getTestQuestions({ topicId, examId, count: practiceCount });
-    if (scoped.length > 0) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- Recompute bounded practice after preference hydration or a syllabus link changes exam context.
-      setTopicQuestions(scoped);
-      setEffectiveExamId(examId || 'all');
-    } else {
-      setTopicQuestions(getTestQuestions({ topicId, count: practiceCount }));
-      setEffectiveExamId('all');
-    }
-    setSelectedAnswers({});
-    setShowExplanation({});
+    let live = true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Reset the answered state while a new set loads.
+    setSelectedAnswers({}); setShowExplanation({}); setRevealed({}); setPracticeError('');
+    drawPractice(examId, practiceCount)
+      .then(({ questions, examId: used }) => { if (live) { setTopicQuestions(questions); setEffectiveExamId(used || 'all'); } })
+      .catch(() => { if (live) { setTopicQuestions([]); setPracticeError('Could not load practice questions. Check your connection and reopen this tab.'); } });
+    return () => { live = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- drawPractice only closes over topicId.
   }, [topicId, selectedExam, setSelectedExam, practiceCount]);
 
   // Load personal notes & draft on mount or when exam/topic changes
@@ -192,6 +194,8 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   const handleOptionSelect = (qId: string, optKey: string) => {
     setSelectedAnswers(prev => ({ ...prev, [qId]: optKey }));
     setShowExplanation(prev => ({ ...prev, [qId]: true }));
+    // The answer is only fetched once the learner has committed to a choice.
+    fetchReveals([qId]).then(found => setRevealed(prev => ({ ...prev, ...found }))).catch(() => setPracticeError('Could not load the answer. Check your connection.'));
   };
 
   const currentCards = lesson.flashcards && lesson.flashcards.length > 0 ? lesson.flashcards : [
@@ -716,7 +720,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     <strong className="text-slate-300">{lang === 'pa' ? 'ਸਿਲੇਬਸ ਆਧਾਰ:' : 'पाठ्यक्रम आधार:'}</strong> {lesson.editorialRecord.verifiedSyllabusDenominator}
                   </p>
                 )}
-                <div className="flex items-center justify-between text-[10px] text-slate-500 pt-0.5">
+                <div className="flex items-center justify-between text-[10px] text-slate-400 pt-0.5">
                   <span>Authored: {lesson.editorialRecord.authoredDate}</span>
                   {lesson.editorialRecord.lastUpdatedDate && <span>Updated: {lesson.editorialRecord.lastUpdatedDate}</span>}
                 </div>
@@ -745,7 +749,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-600/40 text-emerald-300 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition"
+                className="flex-1 bg-emerald-700/20 hover:bg-emerald-600/30 border border-emerald-600/40 text-emerald-300 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition"
               >
                 📲 Share on WhatsApp
               </a>
@@ -903,7 +907,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                           </p>
                         )}
                         {doc.lastChecked && (
-                          <p className="text-[10px] text-slate-500 mt-0.5 font-mono">
+                          <p className="text-[10px] text-slate-400 mt-0.5 font-mono">
                             Last verified: {doc.lastChecked}
                           </p>
                         )}
@@ -1025,7 +1029,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </button>
             </div>
 
-            <p className="text-slate-500 text-[11px] mt-2">
+            <p className="text-slate-400 text-[11px] mt-2">
               ⚡ FSRS Spaced Repetition Algorithm enabled
             </p>
           </div>
@@ -1035,10 +1039,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
         {activeTab === 'practice' && (
           <div className="flex flex-col gap-6">
             <label className="flex items-center gap-3 text-slate-200">Practice set
-              <select aria-label="Practice question count" value={practiceCount} onChange={e => { const count = Number(e.target.value); setPracticeCount(count); setTopicQuestions(getTestQuestions({ topicId, examId: useStore.getState().selectedExam || undefined, count })); setSelectedAnswers({}); setShowExplanation({}); }} className="bg-slate-800 p-2 rounded">
+              <select aria-label="Practice question count" value={practiceCount} onChange={e => setPracticeCount(Number(e.target.value))} className="bg-slate-800 p-2 rounded">
                 {[10, 20, 50].map(count => <option key={count} value={count}>{count} questions</option>)}
               </select>
             </label>
+            {practiceError && <p role="alert" className="text-xs text-rose-300">{practiceError}</p>}
             <p className="text-xs text-slate-400">{topicQuestions.length} matching questions available in this set. Short sets stay within this topic.</p>
 
             <div className="bg-slate-800/80 border border-slate-700 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -1053,7 +1058,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               <div className="flex items-center gap-2">
                 <Link
                   href={`/mock-test/topic-${topicId}?exam=${effectiveExamId}`}
-                  className="bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
+                  className="bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
                 >
                   <Target size={14} />
                   <span>{lang === 'pa' ? 'ਪੂਰਾ ਲਾਈਵ ਟੈਸਟ ਸ਼ੁਰੂ ਕਰੋ' : 'पूरा टॉपिक अभ्यास शुरू करें'}</span>
@@ -1062,10 +1067,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
             </div>
 
             <div className="space-y-6">
-              {topicQuestions.map((q: Question, idx: number) => {
+              {topicQuestions.map((q: PublicQuestion, idx: number) => {
                 const isAnswered = Boolean(selectedAnswers[q.id]);
                 const chosen = selectedAnswers[q.id];
-                const isCorrect = chosen === q.correct;
+                const reveal = revealed[q.id];
+                const isCorrect = chosen === reveal?.correct;
 
                 return (
                   <div key={q.id} className="bg-slate-800/90 border border-slate-700/80 rounded-xl p-4 shadow-sm">
@@ -1089,8 +1095,8 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                         const optText = q.options[optKey][lang] || q.options[optKey].hi || q.options[optKey].en;
                         
                         let btnStyle = 'bg-slate-900/60 border-slate-700 hover:border-slate-600 text-slate-200';
-                        if (isAnswered) {
-                          if (optKey === q.correct) {
+                        if (isAnswered && reveal) {
+                          if (optKey === reveal.correct) {
                             btnStyle = 'bg-emerald-950/80 border-emerald-500 text-emerald-200';
                           } else if (chosen === optKey && !isCorrect) {
                             btnStyle = 'bg-rose-950/80 border-rose-500 text-rose-200';
@@ -1104,7 +1110,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                             onClick={() => handleOptionSelect(q.id, optKey)}
                             className={`w-full text-left p-3 rounded-lg border text-xs flex items-center gap-3 transition-colors ${btnStyle}`}
                           >
-                            <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 ${isAnswered && optKey === q.correct ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300'}`}>
+                            <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 ${isAnswered && optKey === reveal?.correct ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300'}`}>
                               {optKey}
                             </span>
                             <span className="flex-1">{optText}</span>
@@ -1114,13 +1120,14 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     </div>
 
                     {/* Instant Explanation Box */}
-                    {showExplanation[q.id] && (
+                    {showExplanation[q.id] && !reveal && <p className="mt-3 text-xs text-slate-400">Checking answer…</p>}
+                    {showExplanation[q.id] && reveal && (
                       <div className={`mt-3 p-3 rounded-lg text-xs border ${isCorrect ? 'bg-emerald-950/40 border-emerald-500/40 text-emerald-300' : 'bg-rose-950/30 border-rose-500/40 text-slate-300'}`}>
                         <p className="font-bold mb-1">
-                          {isCorrect ? '✅ सही उत्तर (Correct!)' : `❌ गलत! सही उत्तर: विकल्प ${q.correct}`}
+                          {isCorrect ? '✅ सही उत्तर (Correct!)' : `❌ गलत! सही उत्तर: विकल्प ${reveal.correct}`}
                         </p>
                         <p className="text-slate-300 leading-relaxed">
-                          {q.explanation[lang] || q.explanation.hi || q.explanation.en}
+                          {reveal.explanation[lang] || reveal.explanation.hi || reveal.explanation.en}
                         </p>
                       </div>
                     )}
@@ -1172,7 +1179,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     </a>
                   ))}
                 </div>
-                <p className="text-[11px] text-slate-500 text-center pt-1">
+                <p className="text-[11px] text-slate-400 text-center pt-1">
                   Found a good video for this topic? <Link href="/contact" className="text-teal-400 underline">Suggest it to us ↗</Link>
                 </p>
               </div>
@@ -1244,14 +1251,14 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 placeholder={lang === 'pa' ? 'ਆਪਣੇ ਨੋਟਿਸ ਇੱਥੇ ਲਿਖੋ ਅਤੇ ਸੇਵ ਕਰੋ...' : 'महत्वपूर्ण बातें, फॉर्मूले या ट्रिक्स यहाँ लिखें... (ड्राफ्ट स्वतः सहेजा जाएगा)'}
               />
               <div className="flex justify-between items-center mt-3">
-                <span className="text-[11px] text-slate-500 flex items-center gap-1">
+                <span className="text-[11px] text-slate-400 flex items-center gap-1">
                   <span>💾</span>
                   <span>{userNote.trim() ? 'Draft autosaved locally' : 'Private to your device'}</span>
                 </span>
                 <button 
                   onClick={handleSaveNote}
                   disabled={!userNote.trim()}
-                  className="bg-teal-600 hover:bg-teal-500 disabled:opacity-40 text-white font-bold px-4 py-2 rounded-lg text-xs transition"
+                  className="bg-teal-700 hover:bg-teal-500 disabled:opacity-40 text-white font-bold px-4 py-2 rounded-lg text-xs transition"
                 >
                   Save Note
                 </button>
@@ -1321,7 +1328,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 )}
               </h4>
               {personalNotes.length === 0 ? (
-                <div className="bg-slate-800/40 border border-slate-700/40 rounded-xl p-6 text-center text-slate-500 text-xs">
+                <div className="bg-slate-800/40 border border-slate-700/40 rounded-xl p-6 text-center text-slate-400 text-xs">
                   {notesSearchQuery ? 'कोई भी नोट खोज से मेल नहीं खाता।' : 'अभी तक कोई नोट नहीं लिखा गया है।'}
                 </div>
               ) : (
@@ -1343,7 +1350,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                           </button>
                           <button
                             onClick={() => handleUpdateNote(n.id)}
-                            className="bg-teal-600 hover:bg-teal-500 text-white text-xs px-3 py-1 rounded font-bold"
+                            className="bg-teal-700 hover:bg-teal-500 text-white text-xs px-3 py-1 rounded font-bold"
                           >
                             Save Edit
                           </button>
@@ -1359,7 +1366,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                                 📖 {n.sourceExcerpt}
                               </p>
                             )}
-                            <p className="text-[10px] text-slate-500 mt-2">
+                            <p className="text-[10px] text-slate-400 mt-2">
                               Saved on: {new Date(n.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                             </p>
                           </div>

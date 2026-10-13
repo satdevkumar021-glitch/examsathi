@@ -1,13 +1,14 @@
 'use client';
 import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
-import { getQuestionPool } from '@/lib/data/question_bank_engine';
+import { useCounts } from '@/lib/use-question-data';
+import type { CountQuery } from '@/lib/question-client';
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Target, Clock, Layers, Award, CheckCircle2, Play, BookOpen, ChevronRight, Flame, Calendar, Sparkles, SlidersHorizontal } from 'lucide-react';
-import { getExamTopics, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
+import { getExamTopics, AVAILABLE_EXAMS } from '@/lib/data/exam-catalog';
 import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 
 export default function MockTestHub() {
@@ -59,39 +60,36 @@ export default function MockTestHub() {
 
   const [topicSearch, setTopicSearch] = useState('');
   const [showUnavailable, setShowUnavailable] = useState(false);
+  const baseTopics = useMemo(() => getExamTopics(selectedExamForDrawer), [selectedExamForDrawer]);
+  // Query layout: [ppsc mega, punjab-gk mega, exam total, ...(scoped, fallback) per topic]
+  const countQueries = useMemo<CountQuery[]>(
+    () => [
+      { topicId: 'ppsc-clerk-mega' },
+      { topicId: 'punjab-gk-punjabi-mega' },
+      { examId: selectedExamForDrawer },
+      ...baseTopics.flatMap<CountQuery>(topic => [
+        { examId: selectedExamForDrawer, topicId: topic.id, difficulty: difficultyFilter },
+        { topicId: topic.id, difficulty: difficultyFilter },
+      ]),
+    ],
+    [baseTopics, selectedExamForDrawer, difficultyFilter]
+  );
+  const counts = useCounts(countQueries);
+  // availableCount is null while counts are loading (unknown, not zero).
   const examTopics = useMemo(
     () =>
-      getExamTopics(selectedExamForDrawer).map(topic => {
-        const scopedCount = getQuestionPool({
-          examId: selectedExamForDrawer,
-          topicId: topic.id,
-          difficulty: difficultyFilter,
-        }).length;
-        const fallbackCount =
-          scopedCount > 0
-            ? scopedCount
-            : getQuestionPool({
-                topicId: topic.id,
-                difficulty: difficultyFilter,
-              }).length;
-        return {
-          ...topic,
-          availableCount: fallbackCount,
-        };
+      baseTopics.map((topic, i) => {
+        const availableCount: number | null = counts ? (counts[3 + i * 2] > 0 ? counts[3 + i * 2] : counts[4 + i * 2]) : null;
+        return { ...topic, availableCount };
       }),
-    [selectedExamForDrawer, difficultyFilter]
+    [baseTopics, counts]
   );
   const subjects = ['All', ...new Set(examTopics.map(topic => topic.subject))];
-  const filteredTopics = examTopics.filter(topic => (selectedSubject === 'All' || topic.subject === selectedSubject) && (showUnavailable || topic.availableCount > 0) && `${topic.name} ${topic.namePa} ${topic.subject}`.toLowerCase().includes(topicSearch.toLowerCase()));
+  const filteredTopics = examTopics.filter(topic => (selectedSubject === 'All' || topic.subject === selectedSubject) && (showUnavailable || topic.availableCount === null || topic.availableCount > 0) && `${topic.name} ${topic.namePa} ${topic.subject}`.toLowerCase().includes(topicSearch.toLowerCase()));
 
-  const ppscClerkMegaCount = useMemo(
-    () => getQuestionPool({ topicId: 'ppsc-clerk-mega' }).length,
-    []
-  );
-  const punjabGkPunjabiMegaCount = useMemo(
-    () => getQuestionPool({ topicId: 'punjab-gk-punjabi-mega' }).length,
-    []
-  );
+  const ppscClerkMegaCount = counts ? counts[0] : '…';
+  const punjabGkPunjabiMegaCount = counts ? counts[1] : '…';
+  const examAvailableCount = counts ? counts[2] : '…';
 
   const startTopicTest = (topicId: string, customMode?: 'exam' | 'flip', isPyq = false, setNum?: number) => {
     const mode = customMode || testMode;
@@ -253,9 +251,9 @@ export default function MockTestHub() {
         <p className="text-xs text-slate-200">Polity, Indian History, Geography, Science and Punjab GK · 20 questions each.</p>
         <p className="text-[11px] text-amber-200">English · हिंदी · ਪੰਜਾਬੀ questions, options and explanations. AI-assisted original practice; independent editorial and translation review pending. Not a PYQ, current-affairs set, or official full-paper mock. 90-minute practice timer; +1 correct, −0.25 wrong, 0 skipped.</p>
         <div className="flex flex-wrap gap-2">
-          <Link className="rounded-lg bg-emerald-600 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=100&mode=exam&fresh=1">Start 100-question GK test →</Link>
-          <Link className="rounded-lg bg-teal-600 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=50&set=1&mode=exam">Set 1 (Q1–50) →</Link>
-          <Link className="rounded-lg bg-teal-600 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=50&set=2&mode=exam">Set 2 (Q51–100) →</Link>
+          <Link className="rounded-lg bg-emerald-700 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=100&mode=exam&fresh=1">Start 100-question GK test →</Link>
+          <Link className="rounded-lg bg-teal-700 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=50&set=1&mode=exam">Set 1 (Q1–50) →</Link>
+          <Link className="rounded-lg bg-teal-700 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=50&set=2&mode=exam">Set 2 (Q51–100) →</Link>
           <Link className="rounded-lg border border-emerald-500 px-3.5 py-2.5 text-xs text-emerald-200" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=20&mode=exam&fresh=1">Quick 20-question practice</Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">{Object.entries({Polity:'gk-polity-foundation',History:'gk-history-foundation',Geography:'gk-geography-foundation',Science:'gk-science-foundation','Punjab GK':'gk-punjab-foundation'}).map(([name,id])=><Link key={id} className="rounded-lg bg-slate-800 hover:bg-slate-700 p-2.5 text-xs font-semibold text-emerald-200 border border-slate-700" href={`/mock-test/topic-${id}/?exam=punjab-clerk&count=20&mode=exam&fresh=1`}>{name} · 20 questions →</Link>)}</div>
@@ -383,7 +381,7 @@ export default function MockTestHub() {
                     {exam.badge}
                   </span>
                   <span className="text-[9px] text-slate-400 font-mono">
-                    {getQuestionPool({examId: exam.id}).length} available
+                    {examAvailableCount} available
                   </span>
                 </div>
                 <h3 className="text-white font-bold text-xs group-hover:text-teal-300 transition line-clamp-1">
@@ -518,7 +516,7 @@ export default function MockTestHub() {
         <label className="block text-sm mb-3">Find a topic / विषय खोजें / ਵਿਸ਼ਾ ਲੱਭੋ
           <input type="search" aria-label="Find a topic" value={topicSearch} onChange={event=>setTopicSearch(event.target.value)} placeholder="History, Science, Punjab…" className="block w-full rounded-lg bg-slate-800 p-3 mt-1" />
         </label>
-        <label className="flex gap-2 text-xs text-slate-300 mb-3"><input type="checkbox" checked={showUnavailable} onChange={event=>setShowUnavailable(event.target.checked)} />Show topics still being prepared ({examTopics.filter(topic=>!topic.availableCount).length})</label>
+        <label className="flex gap-2 text-xs text-slate-300 mb-3"><input type="checkbox" checked={showUnavailable} onChange={event=>setShowUnavailable(event.target.checked)} />Show topics still being prepared ({counts ? examTopics.filter(topic=>!topic.availableCount).length : '…'})</label>
         {!filteredTopics.length && <p role="status" className="p-4 text-amber-200">No ready tests match this selection. Try another subject or clear the search. Topics still being prepared have no usable questions yet.</p>}
         {/* Subject Filter Pills */}
         <div className="flex gap-1.5 overflow-x-auto pb-2 scrollbar-none">
@@ -556,7 +554,7 @@ export default function MockTestHub() {
                       </span>
                     )}
                     <span className="text-teal-400 text-[10px] font-semibold">
-                      {topic.availableCount} available questions
+                      {topic.availableCount ?? '…'} available questions
                     </span>
                   </div>
                   <h3 className="text-white font-bold text-xs leading-snug">
@@ -569,13 +567,13 @@ export default function MockTestHub() {
               </div>
 
               {/* Multi-Set 50-Q Pills when topic has > 50 questions */}
-              {topic.availableCount > 50 && (
+              {topic.availableCount !== null && topic.availableCount > 50 && (
                 <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1">
                   <span className="text-[10px] font-bold text-slate-400 shrink-0">50-Q Sets:</span>
                   {Array.from({ length: Math.min(Math.ceil(topic.availableCount / 50), 8) }, (_, idx) => {
                     const sNum = idx + 1;
                     const startQ = (sNum - 1) * 50 + 1;
-                    const endQ = Math.min(sNum * 50, topic.availableCount);
+                    const endQ = Math.min(sNum * 50, topic.availableCount ?? 0);
                     return (
                       <button
                         key={sNum}
@@ -592,14 +590,14 @@ export default function MockTestHub() {
               {/* Action Buttons */}
               <div className="flex items-center gap-2 pt-2 border-t border-slate-700/60">
                 <button
-                  disabled={!topic.availableCount}
+                  disabled={topic.availableCount === 0}
                   onClick={() => startTopicTest(topic.id, 'exam', false, 1)}
                   className="flex-1 bg-teal-500/20 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  <Play size={12} /> {topic.availableCount ? `Start ${Math.min(questionCount, topic.availableCount)} questions` : 'Questions coming soon'}
+                  <Play size={12} /> {topic.availableCount === null ? `Start ${questionCount} questions` : topic.availableCount ? `Start ${Math.min(questionCount, topic.availableCount)} questions` : 'Questions coming soon'}
                 </button>
                 <button
-                  disabled={!topic.availableCount}
+                  disabled={topic.availableCount === 0}
                   onClick={() => startTopicTest(topic.id, 'flip', false, 1)}
                   className="flex-1 bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 border border-amber-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >

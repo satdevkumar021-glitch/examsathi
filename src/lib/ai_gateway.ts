@@ -1,5 +1,5 @@
 import { studyStorage } from '@/lib/storage';
-import type { Question } from './data/questions';
+import type { Question } from './question-types';
 
 export interface AIGenerationResult {
   success: boolean;

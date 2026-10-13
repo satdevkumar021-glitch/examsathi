@@ -1,5 +1,5 @@
 import { studyStorage } from './storage';
-import { getExamTopics, getTestQuestions, AVAILABLE_EXAMS } from './data/question_bank_engine';
+import { getExamTopics, AVAILABLE_EXAMS } from './data/exam-catalog';
 import { getLessonByTopicId } from './data/lessons';
 import { practiceExam } from './exam-context';
 
@@ -80,6 +80,8 @@ export function generateExamStudyPlan(params: {
   dailyHoursBudget?: number;
   startDate?: string;
   baselineKnowledge?: Record<string, BaselineConfidence>;
+  /** Available questions per topic id (from the server manifest). Missing topics count as 0. */
+  topicQuestionCounts?: Record<string, number>;
 }): PersonalizedStudyPlan {
   const examId = params.examId;
   const examMeta = practiceExam(examId) || AVAILABLE_EXAMS.find((e: { id: string }) => e.id === examId);
@@ -207,7 +209,7 @@ export function generateExamStudyPlan(params: {
       const topicObj = topicQueue[queueIdx % topicQueue.length];
       queueIdx++;
       const lesson = getLessonByTopicId(topicObj.id);
-      const qCount = getTestQuestions({ topicId: topicObj.id, examId, count: 50 }).length;
+      const qCount = Math.min(50, params.topicQuestionCounts?.[topicObj.id] ?? 0);
 
       schedule.push({
         dayNumber: dayIndex,
@@ -294,6 +296,7 @@ export function getOrGenerateStudyPlan(params: {
   dailyHoursBudget?: number;
   startDate?: string;
   baselineKnowledge?: Record<string, BaselineConfidence>;
+  topicQuestionCounts?: Record<string, number>;
 }): PersonalizedStudyPlan {
   try {
     const raw = studyStorage.getItem(`${STORAGE_PLAN_PREFIX}${params.examId}`);

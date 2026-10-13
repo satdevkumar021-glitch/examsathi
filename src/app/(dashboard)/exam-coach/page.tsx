@@ -158,7 +158,7 @@ export default function ExamDayCoach() {
             <button
               onClick={() => { setTechnique('box'); handleResetBreathing(); }}
               className={`px-3 py-1 rounded-lg font-semibold transition ${
-                technique === 'box' ? 'bg-teal-600 text-white shadow' : 'text-slate-400 hover:text-white'
+                technique === 'box' ? 'bg-teal-700 text-white shadow' : 'text-slate-400 hover:text-white'
               }`}
             >
               {t('Calming (4-4-6)', 'शांत (4-4-6)', 'ਸ਼ਾਂਤ (4-4-6)')}
@@ -166,7 +166,7 @@ export default function ExamDayCoach() {
             <button
               onClick={() => { setTechnique('gentle'); handleResetBreathing(); }}
               className={`px-3 py-1 rounded-lg font-semibold transition ${
-                technique === 'gentle' ? 'bg-teal-600 text-white shadow' : 'text-slate-400 hover:text-white'
+                technique === 'gentle' ? 'bg-teal-700 text-white shadow' : 'text-slate-400 hover:text-white'
               }`}
             >
               {t('Gentle Flow (No Hold)', 'सहज (रोकने बिना)', 'ਸਹਿਜ (ਰੋਕਣ ਬਿਨਾਂ)')}
@@ -201,7 +201,7 @@ export default function ExamDayCoach() {
             onClick={handleStartStop}
             className={`px-6 py-2.5 rounded-xl font-bold text-xs transition shadow ${
               phase === 'idle' || phase === 'complete'
-                ? 'bg-teal-600 hover:bg-teal-500 text-white'
+                ? 'bg-teal-700 hover:bg-teal-500 text-white'
                 : 'bg-rose-600 hover:bg-rose-500 text-white'
             }`}
           >
@@ -227,7 +227,7 @@ export default function ExamDayCoach() {
           )}
         </div>
 
-        <p className="text-[10px] text-slate-500 text-center">
+        <p className="text-[10px] text-slate-400 text-center">
           * {t(
             'Physiological relaxation guide based on autonomic calming research. Does not constitute medical therapy or guarantee exam selection.',
             'तनाव नियंत्रण मार्गदर्शिका। यह चिकित्सा उपचार नहीं है और चयन की गारंटी नहीं देता।',

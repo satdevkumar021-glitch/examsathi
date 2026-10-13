@@ -11,7 +11,7 @@ import {
     MASTER_CADRE_SCIENCE_STUDENT_STRATEGY
 } from '@/lib/data/master-cadre-science-blueprint';
 import { getLessonByTopicId } from '@/lib/data/lessons';
-import { getTestQuestions } from '@/lib/data/question_bank_engine';
+import { poolCount } from '@/lib/question-service';
 
 export default function MasterCadreScienceBlueprintPage() {
     const sampleJsonRecord = {
@@ -308,11 +308,11 @@ export default function MasterCadreScienceBlueprintPage() {
                         <div className="grid grid-cols-1 gap-3">
                             {domain.topics.map((item) => {
                                 const lesson = getLessonByTopicId(item.topicId);
-                                const scopedQuestions = getTestQuestions({
+                                const scopedCount = poolCount({
                                     examId: 'punjab-master-cadre-science',
                                     topicId: item.topicId,
-                                    count: 100
-                                });
+                                    limit: 100
+                                }, []);
 
                                 return (
                                     <div
@@ -347,11 +347,11 @@ export default function MasterCadreScienceBlueprintPage() {
                                             </div>
                                             <div className="flex items-center gap-2 flex-wrap">
                                                 <span className="text-[11px] bg-emerald-950/80 text-emerald-300 border border-emerald-600/40 px-2 py-0.5 rounded font-semibold">
-                                                    {scopedQuestions.length} Scoped MCQs
+                                                    {scopedCount} Scoped MCQs
                                                 </span>
                                                 <Link
                                                     href={`/lesson/${item.topicId}?exam=punjab-master-cadre-science`}
-                                                    className="text-xs bg-teal-600 hover:bg-teal-500 text-white font-semibold px-3 py-1.5 rounded-lg transition"
+                                                    className="text-xs bg-teal-700 hover:bg-teal-500 text-white font-semibold px-3 py-1.5 rounded-lg transition"
                                                 >
                                                     📖 Read B→I→H→G Lesson
                                                 </Link>

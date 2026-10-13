@@ -8,7 +8,7 @@ import { generateMCQsFromNotes, checkAIQuota } from '@/lib/ai_gateway';
 import { extractDocumentText } from '@/lib/document-text';
 import { apiUrl } from '@/lib/paths';
 import { createClient } from '@/lib/supabase/client';
-import { Question } from '@/lib/data/questions';
+import type { Question } from '@/lib/question-types';
 
 const PRESET_SNIPPETS = [
   {
@@ -421,7 +421,7 @@ export default function AIGeneratorPage() {
           disabled={isGenerating}
           className={`w-full py-3 rounded-xl font-black text-xs flex items-center justify-center gap-2 shadow-lg transition mt-1 ${
             isGenerating
-              ? 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
+              ? 'bg-slate-800 text-slate-400 cursor-not-allowed border border-slate-700'
               : 'bg-gradient-to-r from-teal-400 via-indigo-500 to-teal-400 hover:opacity-95 text-slate-950 shadow-teal-500/10'
           }`}
         >

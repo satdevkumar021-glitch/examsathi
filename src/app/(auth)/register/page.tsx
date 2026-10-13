@@ -79,7 +79,7 @@ export default function Register() {
           </p>
           <Link
             href="/login"
-            className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-bold py-2.5 px-5 rounded-xl text-sm transition"
+            className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 px-5 rounded-xl text-sm transition"
           >
             Go to Login <ArrowRight size={14} />
           </Link>
@@ -101,7 +101,7 @@ export default function Register() {
       <div className="bg-slate-900/90 backdrop-blur-xl p-7 rounded-3xl border border-slate-700/80 shadow-2xl">
 
         <div className="text-center mb-6">
-          <div className="w-12 h-12 bg-gradient-to-tr from-teal-500 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2 shadow-lg">
+          <div className="w-12 h-12 bg-gradient-to-tr from-teal-600 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2 shadow-lg">
             🎓
           </div>
           <h2 className="text-2xl font-black text-white">
@@ -206,7 +206,7 @@ export default function Register() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-black py-3.5 rounded-xl shadow-lg mt-2 text-xs flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-black py-3.5 rounded-xl shadow-lg mt-2 text-xs flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? (
               <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />

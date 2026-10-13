@@ -5,7 +5,7 @@ import {
     MASTER_CADRE_SST_BLUEPRINT_DOMAINS
 } from '@/lib/data/master-cadre-sst-blueprint';
 import { getLessonByTopicId } from '@/lib/data/lessons';
-import { getTestQuestions } from '@/lib/data/question_bank_engine';
+import { poolCount } from '@/lib/question-service';
 
 export default function MasterCadreSstBlueprintPage() {
     return (
@@ -159,11 +159,11 @@ export default function MasterCadreSstBlueprintPage() {
                         <div className="grid grid-cols-1 gap-3.5">
                             {domain.topics.map((item) => {
                                 const lesson = getLessonByTopicId(item.topicId);
-                                const qCount = getTestQuestions({
+                                const qCount = poolCount({
                                     topicId: item.topicId,
                                     examId: 'punjab-master-cadre-sst',
-                                    count: 150
-                                }).length;
+                                    limit: 150
+                                }, []);
 
                                 return (
                                     <article
@@ -220,7 +220,7 @@ export default function MasterCadreSstBlueprintPage() {
                                         <div className="flex flex-wrap items-center gap-3 pt-1 text-xs font-semibold">
                                             <Link
                                                 href={`/lesson/${item.topicId}/?exam=punjab-master-cadre-sst`}
-                                                className="bg-teal-600/20 hover:bg-teal-600/30 text-teal-300 border border-teal-500/40 px-3 py-1.5 rounded-lg transition"
+                                                className="bg-teal-700/20 hover:bg-teal-600/30 text-teal-300 border border-teal-500/40 px-3 py-1.5 rounded-lg transition"
                                             >
                                                 📖 Read B→I→A Deep-Dive Lesson →
                                             </Link>

@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { getQuestionPool } from '@/lib/data/question_bank_engine';
+import { useManifest } from '@/lib/use-question-data';
 import { useStore } from '@/lib/store';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Target, ChevronRight } from 'lucide-react';
@@ -15,6 +15,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
 function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) {
   const examId = exam.id;
   const router = useRouter();
+  const manifest = useManifest([examId]);
   const { language } = useStore();
   const localName = (item: { name: string; nameHindi?: string; namePunjabi?: string }) => language === 'pa' ? item.namePunjabi || item.nameHindi || item.name : language === 'hi' ? item.nameHindi || item.name : item.name;
   useEffect(() => { const selected = getExamById(examId); if (selected) useStore.getState().setSelectedExam(selected.state, selected.id); }, [examId]);
@@ -124,7 +125,7 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
               <button
                 key={ch.id}
                 onClick={() => setActiveChapterId(ch.id)}
-                className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold transition border ${isActive ? 'bg-teal-600/30 border-teal-500 text-teal-300' : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'}`}
+                className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold transition border ${isActive ? 'bg-teal-700/30 border-teal-500 text-teal-300' : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'}`}
               >
                 {localName(ch)}
               </button>
@@ -164,7 +165,7 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
                 </div>
 
                 <span className="bg-slate-700/80 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
-                  {getQuestionPool({examId, topicId: topic.id}).length} practice Qs
+                  {manifest ? (manifest[examId]?.[topic.id] ?? 0) : '…'} practice Qs
                 </span>
               </div>
 

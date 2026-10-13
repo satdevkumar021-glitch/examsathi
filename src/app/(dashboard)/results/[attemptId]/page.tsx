@@ -1,5 +1,5 @@
 import ResultsClient from './ResultsClient';
-import { AVAILABLE_TEST_TOPICS } from '@/lib/data/question_bank_engine';
+import { AVAILABLE_TEST_TOPICS } from '@/lib/data/exam-catalog';
 
 export function generateStaticParams() {
   const baseParams = [

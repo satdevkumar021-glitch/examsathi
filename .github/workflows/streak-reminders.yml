@@ -1,0 +1,28 @@
+# Calls the reminder endpoint once an hour. Each device has its own timezone and the server decides who is
+# in their 18:00-21:00 window, so an hourly call is safe: a device is nudged at most once per local day.
+#
+# Needs two repository secrets: REMINDER_URL (e.g. https://examsathi.example.com) and CRON_SECRET (same value as the server).
+# GitHub's scheduler can run late by several minutes and pauses on repos with no activity for 60 days; if you need
+# stronger guarantees use your host's cron (see docs/DEPLOYMENT.md).
+name: Streak reminders
+
+on:
+  schedule:
+    - cron: '5 * * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    if: ${{ vars.REMINDERS_ENABLED == 'true' }}
+    steps:
+      - name: Trigger reminders
+        env:
+          REMINDER_URL: ${{ secrets.REMINDER_URL }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          test -n "$REMINDER_URL" && test -n "$CRON_SECRET" || { echo "REMINDER_URL and CRON_SECRET secrets are required"; exit 1; }
+          curl --fail --silent --show-error --max-time 120 --retry 2 \
+            -X POST -H "Authorization: Bearer $CRON_SECRET" "${REMINDER_URL%/}/api/push/send/"

@@ -1,7 +1,7 @@
 import { SYLLABUS_TOPICS } from '@/lib/data/curriculum';
-import type { Question } from '@/lib/data/questions';
+import type { PublicQuestion } from '@/lib/question-types';
 import { topicIncludes } from '@/lib/data/topic-scope';
-export default function QuestionSyllabusScope({ topicId, question, language }: { topicId?: string; question?: Question; language?: 'en' | 'hi' | 'pa' }) {
+export default function QuestionSyllabusScope({ topicId, question, language }: { topicId?: string; question?: PublicQuestion; language?: 'en' | 'hi' | 'pa' }) {
   if (!topicId) return null;
   const matches = SYLLABUS_TOPICS.filter(entry => topicIncludes(entry.topic.id, topicId)).sort((a,b)=>Number(b.topic.id===topicId)-Number(a.topic.id===topicId));
   return <div className="text-xs text-slate-300 p-2.5 bg-slate-800/90 border border-slate-700/60 rounded-xl my-2 space-y-1.5">

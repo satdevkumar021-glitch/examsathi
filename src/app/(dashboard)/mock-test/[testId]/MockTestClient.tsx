@@ -18,9 +18,10 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { Clock, CheckCircle2, ChevronRight, ChevronLeft, AlertCircle, Layers, RotateCw, Award, Brain, ShieldAlert } from 'lucide-react';
-import { Question } from '@/lib/data/questions';
-import { getQuestionPool, getTestQuestions, getOrderedSetQuestions, evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
-import { computeScore, computeTopicBreakdown, computeOfficialAllocatedSeconds } from '@/lib/scoring';
+import type { PublicQuestion, QuestionReveal, ReviewedQuestion } from '@/lib/question-types';
+import { evaluateUserLevel, calculatePredictedRank, AVAILABLE_TEST_TOPICS, AVAILABLE_EXAMS } from '@/lib/data/exam-catalog';
+import { computeScore, computeTopicBreakdown, computeOfficialAllocatedSeconds, type ScoreResult, type TopicBreakdown } from '@/lib/scoring';
+import { fetchQuestionSet, fetchReveals, mergeReveals, submitAttemptAsLearner, type SetResponse } from '@/lib/question-client';
 import { CardRating, reviewCard, loadSRSStates, saveSRSStates, createNewCard, getSRSSummary } from '@/lib/srs';
 import { recordQuizMistakes, updateTopicMastery } from '@/lib/mistake-notebook';
 
@@ -40,11 +41,19 @@ export default function MockTest({ testId }: { testId?: string }) {
   const [mode, setMode] = useState<'exam' | 'flip'>('exam');
   const [isFlipped, setIsFlipped] = useState(false);
   const [srsSummary, setSrsSummary] = useState({ due: 0, new_: 0, learning: 0, review: 0 });
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [questions, setQuestions] = useState<ReviewedQuestion[]>([]);
+  // Answer material the server has revealed (or that AI-made questions carry themselves).
+  const [reveals, setReveals] = useState<Record<string, QuestionReveal>>({});
+  const [revealError, setRevealError] = useState(false);
+  const [revealRetry, setRevealRetry] = useState(0);
+  const [loadAttempt, setLoadAttempt] = useState(0);
+  const [submitError, setSubmitError] = useState('');
+  const localScoringRef = useRef(false);
+  const autoSubmitBlockedRef = useRef(false);
   const [testTitle, setTestTitle] = useState('Master Cadre & State CBT Mock Test');
   const [secondsRemaining, setSecondsRemaining] = useState(45 * 60);
   const [totalTimeSeconds, setTotalTimeSeconds] = useState(45 * 60);
-  const [, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [activeExamId, setActiveExamId] = useState<string>('master-cadre-sst');
   const [activeDifficulty, setActiveDifficulty] = useState<'all' | 'easy' | 'medium' | 'hard'>('all');
   const [sourceConfig, setSourceConfig] = useState({ count: 50, pyq20Years: false, pyqOnly: false });
@@ -52,16 +61,17 @@ export default function MockTest({ testId }: { testId?: string }) {
   const [isRevisionMode, setIsRevisionMode] = useState(false);
   const [isRemainingSubset, setIsRemainingSubset] = useState(false);
   const [totalPoolCount, setTotalPoolCount] = useState(0);
-  const [currentTopicId, setCurrentTopicId] = useState('all');
   const [currentSetNumber, setCurrentSetNumber] = useState<number>(1);
   const [totalSetCount, setTotalSetCount] = useState<number>(1);
   const [instantFeedback, setInstantFeedback] = useState<boolean>(false);
 
-  // Initialize test configuration and questions
+  // Initialize test configuration and fetch the question set from the server
   useEffect(() => {
     submittingRef.current = false;
+    autoSubmitBlockedRef.current = false;
     // eslint-disable-next-line react-hooks/set-state-in-effect -- Reset the browser attempt when URL configuration changes.
-    setUserAnswers({}); setMarkedForReview({}); setQIndex(0); setIsFlipped(false);
+    setUserAnswers({}); setMarkedForReview({}); setQIndex(0); setIsFlipped(false); setSubmitError('');
+    setLoaded(false); setLoadError(false); setQuestions([]); setReveals({});
     let topicId = 'all';
     let count = 50;
     let minutes: number | undefined;
@@ -71,7 +81,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     let examId: string | undefined = undefined;
     let difficulty: 'all' | 'easy' | 'medium' | 'hard' = 'all';
 
-    // 1. Read URL query parameters (Client-side safe for static export)
+    // 1. Read URL query parameters
     if (typeof window !== 'undefined') {
       const searchParams = new URLSearchParams(window.location.search);
       if (searchParams.get('exam')) examId = searchParams.get('exam')!;
@@ -158,161 +168,149 @@ export default function MockTest({ testId }: { testId?: string }) {
     const isFreshRequested = query.get('fresh') === '1' || numericSet >= 1;
     const isRevision = requestedMode === 'flip' || query.get('repeat') === '1' || query.get('mode') === 'revision';
     setIsRevisionMode(isRevision);
-    setCurrentTopicId(topicId);
 
-    // Resolve pool and automatic fallbacks so a mismatched stored exam or difficulty never causes 0 questions
-    let effectiveExamForPool = examId === 'all' ? undefined : examId;
-    let fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty, pyq20Years, pyqOnly });
-    if (fullPool.length === 0 && topicId !== 'all' && effectiveExamForPool) {
-      effectiveExamForPool = undefined;
-      fullPool = getQuestionPool({ topicId, difficulty, pyq20Years, pyqOnly });
-    }
-    if (fullPool.length === 0 && difficulty !== 'all') {
-      difficulty = 'all';
-      fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty: 'all', pyq20Years, pyqOnly });
-    }
-    if (fullPool.length === 0 && (pyq20Years || pyqOnly)) {
-      pyq20Years = false;
-      pyqOnly = false;
-      fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty });
-    }
+    let cancelled = false;
+    (async () => {
+      let loadedQuestions: ReviewedQuestion[] = [];
+      let customExamId: string | undefined;
+      let customTitle: string | undefined;
+      let fetched: SetResponse | null = null;
 
-    // 4. Derive title
-    const examMeta = AVAILABLE_EXAMS.find(e => e.id === examId);
-    const topicMeta = AVAILABLE_TEST_TOPICS.find(t => t.id === topicId);
-    const diffLabel = difficulty === 'easy' ? ' (Simple)' : difficulty === 'medium' ? ' (Mid)' : difficulty === 'hard' ? ' (Hard)' : '';
-
-    setSourceConfig({ count, pyq20Years, pyqOnly });
-
-    // 5. Fetch questions from Question Bank Engine (deterministic Set 1..N or standard pool)
-    let loadedQuestions: Question[] = [];
-    if (numericSet >= 1 || topicId === 'ppsc-clerk-mega' || topicId === 'punjab-gk-punjabi-mega') {
-      const ordered = getOrderedSetQuestions({
-        topicId,
-        examId: effectiveExamForPool,
-        difficulty,
-        pyq20Years,
-        pyqOnly,
-        count,
-        setNumber: numericSet || 1,
-      });
-      loadedQuestions = ordered.questions;
-      setCurrentSetNumber(ordered.setNumber);
-      setTotalSetCount(ordered.totalSets);
-      setTotalPoolCount(ordered.totalPoolCount);
-      setIsRemainingSubset(false);
-    } else {
-      setTotalPoolCount(fullPool.length);
-      const computedTotalSets = Math.max(1, Math.ceil(fullPool.length / count));
-      setTotalSetCount(computedTotalSets);
-      setCurrentSetNumber(1);
-      loadedQuestions = getTestQuestions({ 
-        topicId, 
-        examId: effectiveExamForPool,
-        difficulty,
-        pyq20Years,
-        pyqOnly, 
-        count,
-        excludeKeys: (isRevision || isFreshRequested) ? [] : completedQuestionKeys(),
-      });
-      // Never block the user with 0 questions if the pool has questions
-      if (loadedQuestions.length === 0 && fullPool.length > 0) {
-        const orderedFallback = getOrderedSetQuestions({
-          topicId,
-          examId: effectiveExamForPool,
-          difficulty,
-          pyq20Years,
-          pyqOnly,
-          count,
-          setNumber: 1,
-        });
-        loadedQuestions = orderedFallback.questions;
-        setIsRevisionMode(true);
+      // Locally held questions: AI-generated drills and saved reviews.
+      let local: ReviewedQuestion[] | null = null;
+      if (topicId === 'ai-custom') {
+        try {
+          const parsed = JSON.parse(studyStorage.getItem('examsathi_custom_cbt_questions') || 'null');
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            local = parsed;
+            customExamId = 'custom-notes';
+            customTitle = `Custom Practice — ${parsed.length} Saved Questions`;
+          }
+        } catch {}
       }
-      if (!isRevision && !isFreshRequested && loadedQuestions.length > 0 && loadedQuestions.length < count && fullPool.length > count) {
-        setIsRemainingSubset(true);
+      const review = query.get('review') ? savedReviewQuestions(query.get('review')!) : null;
+      if (review) {
+        local = review.questions;
+        customTitle = review.testTitle || customTitle;
+        customExamId = review.examId || customExamId;
+      }
+
+      if (local) {
+        loadedQuestions = local;
       } else {
+        try {
+          fetched = await fetchQuestionSet({
+            topicId,
+            examId,
+            difficulty,
+            pyq20Years,
+            pyqOnly,
+            count,
+            setNumber: numericSet,
+            isRevision,
+            isFresh: isFreshRequested,
+            excludeKeys: (isRevision || isFreshRequested) ? [] : completedQuestionKeys(),
+          });
+        } catch {
+          if (!cancelled) setLoadError(true);
+          return;
+        }
+        loadedQuestions = fetched.questions;
+      }
+      if (cancelled) return;
+
+      if (fetched) {
+        pyq20Years = fetched.effective.pyq20Years;
+        pyqOnly = fetched.effective.pyqOnly;
+        difficulty = fetched.effective.difficulty;
+        setCurrentSetNumber(fetched.setNumber);
+        setTotalSetCount(fetched.totalSets);
+        setTotalPoolCount(fetched.totalPoolCount);
+        setIsRevisionMode(fetched.isRevisionMode);
+        setIsRemainingSubset(fetched.isRemainingSubset);
+      } else {
+        setCurrentSetNumber(1);
+        setTotalSetCount(1);
+        setTotalPoolCount(0);
         setIsRemainingSubset(false);
       }
-    }
+      setSourceConfig({ count, pyq20Years, pyqOnly });
 
-    const setBadge = (numericSet >= 1 || topicId === 'ppsc-clerk-mega' || topicId === 'punjab-gk-punjabi-mega')
-      ? ` • Set ${numericSet || 1}`
-      : '';
-
-    if (topicId === 'ppsc-clerk-mega') {
-      setTestTitle(`Punjab PPSC & PSSSB Clerk Live Mock${setBadge} (${loadedQuestions.length} Qs)`);
-    } else if (topicId === 'punjab-gk-punjabi-mega') {
-      setTestTitle(`Punjab GK & Punjabi Special Live Mock${setBadge} (${loadedQuestions.length} Qs)`);
-    } else if (topicMeta) {
-      setTestTitle(`${topicMeta.name}${setBadge}${diffLabel}`);
-    } else if (examMeta && topicId === 'all') {
-      setTestTitle(`${examMeta.name}${setBadge} — ${loadedQuestions.length || count} Qs${diffLabel}`);
-    } else if (topicId !== 'all') {
-      const cleanTopic = topicId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-      setTestTitle(`${cleanTopic}${setBadge} (${loadedQuestions.length || count} Qs)${diffLabel}`);
-    } else {
-      setTestTitle(`Topic Practice Set${setBadge}${diffLabel}`);
-    }
-
-    // Check custom AI-generated question drill from sessionStorage
-    if (topicId === 'ai-custom') {
-      try {
-        const rawCustom = studyStorage.getItem('examsathi_custom_cbt_questions');
-        if (rawCustom) {
-          const parsed = JSON.parse(rawCustom);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            loadedQuestions = parsed;
-            setActiveExamId('custom-notes');
-            setTestTitle(`Custom Practice — ${parsed.length} Saved Questions`);
-          }
-        }
-      } catch {}
-    }
-
-    // Saved reviews are independent of today's bank or filter availability.
-    const reviewId = query.get('review');
-    const review = reviewId ? savedReviewQuestions(reviewId) : null;
-    if (review) {
-      loadedQuestions = review.questions;
-      if (review.testTitle) setTestTitle(review.testTitle);
-      if (review.examId) setActiveExamId(review.examId);
-    }
-    if (loadedQuestions.length > 0) {
-      rememberQuestions(loadedQuestions);
-      const learnerId = getStoredUser().id || 'usr-default';
-      const targetExamId = (examId && examId !== 'all') ? examId : 'punjab-clerk';
-      recordServedQuestions(learnerId, targetExamId, loadedQuestions);
-      setQuestions(loadedQuestions);
-      setLoaded(true);
-      setLoadError(false);
-      const allocatedSeconds = computeOfficialAllocatedSeconds(loadedQuestions.length, activeExamId || examId, minutes);
-      setTotalTimeSeconds(allocatedSeconds);
-      setSecondsRemaining(allocatedSeconds);
-      deadlineRef.current = Date.now() + allocatedSeconds * 1000;
-      attemptKeyRef.current = `examsathi_active_attempt_${testId}_${window.location.search}`;
-      if (requestedMode === 'exam' && !query.has('review')) {
-        try {
-          const saved = JSON.parse(studyStorage.getItem(attemptKeyRef.current) || 'null');
-          const eligibleIds = new Set(loadedQuestions.map(q => q.id));
-          const validScope = saved?.questions?.length === loadedQuestions.length && saved?.questions?.every((q: Question) => topicId === 'ai-custom' || eligibleIds.has(q.id));
-          if (validScope && saved?.questions?.length && Number.isFinite(saved.deadline) && Number.isFinite(saved.totalTime)) {
-            setQuestions(saved.questions);
-            setUserAnswers(saved.answers || {});
-            setMarkedForReview(saved.marked || {});
-            setQIndex(Math.min(saved.index || 0, saved.questions.length - 1));
-            setTotalTimeSeconds(saved.totalTime);
-            deadlineRef.current = saved.deadline;
-            setSecondsRemaining(Math.max(0, Math.ceil((saved.deadline - Date.now()) / 1000)));
-          }
-        } catch { /* A corrupt draft starts a fresh attempt. */ }
+      // Derive title
+      const examMeta = AVAILABLE_EXAMS.find(e => e.id === examId);
+      const topicMeta = AVAILABLE_TEST_TOPICS.find(t => t.id === topicId);
+      const diffLabel = difficulty === 'easy' ? ' (Simple)' : difficulty === 'medium' ? ' (Mid)' : difficulty === 'hard' ? ' (Hard)' : '';
+      const setBadge = (numericSet >= 1 || topicId === 'ppsc-clerk-mega' || topicId === 'punjab-gk-punjabi-mega')
+        ? ` • Set ${numericSet || 1}`
+        : '';
+      if (customTitle) {
+        setTestTitle(customTitle);
+      } else if (topicId === 'ppsc-clerk-mega') {
+        setTestTitle(`Punjab PPSC & PSSSB Clerk Live Mock${setBadge} (${loadedQuestions.length} Qs)`);
+      } else if (topicId === 'punjab-gk-punjabi-mega') {
+        setTestTitle(`Punjab GK & Punjabi Special Live Mock${setBadge} (${loadedQuestions.length} Qs)`);
+      } else if (topicMeta) {
+        setTestTitle(`${topicMeta.name}${setBadge}${diffLabel}`);
+      } else if (examMeta && topicId === 'all') {
+        setTestTitle(`${examMeta.name}${setBadge} — ${loadedQuestions.length || count} Qs${diffLabel}`);
+      } else if (topicId !== 'all') {
+        const cleanTopic = topicId.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        setTestTitle(`${cleanTopic}${setBadge} (${loadedQuestions.length || count} Qs)${diffLabel}`);
+      } else {
+        setTestTitle(`Topic Practice Set${setBadge}${diffLabel}`);
       }
-    } else {
-      setQuestions([]);
+      if (customExamId) setActiveExamId(customExamId);
+
+      if (loadedQuestions.length > 0) {
+        // Questions that arrived with their answers (AI drills, saved reviews) are scored in the browser.
+        const held: Record<string, QuestionReveal> = {};
+        for (const q of loadedQuestions) if (q.correct) held[q.id] = q as QuestionReveal;
+        localScoringRef.current = Object.keys(held).length === loadedQuestions.length;
+        setReveals(held);
+        rememberQuestions(loadedQuestions);
+        const learnerId = getStoredUser().id || 'usr-default';
+        const targetExamId = (examId && examId !== 'all') ? examId : 'punjab-clerk';
+        recordServedQuestions(learnerId, targetExamId, loadedQuestions);
+        setQuestions(loadedQuestions);
+        const allocatedSeconds = computeOfficialAllocatedSeconds(loadedQuestions.length, customExamId || examId, minutes);
+        setTotalTimeSeconds(allocatedSeconds);
+        setSecondsRemaining(allocatedSeconds);
+        deadlineRef.current = Date.now() + allocatedSeconds * 1000;
+        attemptKeyRef.current = `examsathi_active_attempt_${testId}_${window.location.search}`;
+        if (requestedMode === 'exam' && !query.has('review')) {
+          try {
+            const saved = JSON.parse(studyStorage.getItem(attemptKeyRef.current) || 'null');
+            const eligibleIds = new Set(loadedQuestions.map(q => q.id));
+            const validScope = saved?.questions?.length === loadedQuestions.length && saved?.questions?.every((q: PublicQuestion) => topicId === 'ai-custom' || eligibleIds.has(q.id));
+            if (validScope && saved?.questions?.length && Number.isFinite(saved.deadline) && Number.isFinite(saved.totalTime)) {
+              setQuestions(saved.questions);
+              setUserAnswers(saved.answers || {});
+              setMarkedForReview(saved.marked || {});
+              setQIndex(Math.min(saved.index || 0, saved.questions.length - 1));
+              setTotalTimeSeconds(saved.totalTime);
+              deadlineRef.current = saved.deadline;
+              setSecondsRemaining(Math.max(0, Math.ceil((saved.deadline - Date.now()) / 1000)));
+            }
+          } catch { /* A corrupt draft starts a fresh attempt. */ }
+        }
+      }
       setLoaded(true);
-      setLoadError(false);
-    }
-  }, [testId, searchKey]);
+    })();
+    return () => { cancelled = true; };
+  }, [testId, searchKey, loadAttempt]);
+
+  // Fetch the answer for the current question only when the learner asks to see it
+  useEffect(() => {
+    const q = questions[qIndex];
+    if (!q || reveals[q.id]) return;
+    const wanted = (mode === 'exam' && instantFeedback && Boolean(userAnswers[q.id])) || (mode === 'flip' && isFlipped);
+    if (!wanted) return;
+    let live = true;
+    fetchReveals([q.id])
+      .then(found => { if (live) { setRevealError(false); setReveals(prev => ({ ...prev, ...found })); } })
+      .catch(() => { if (live) setRevealError(true); });
+    return () => { live = false; };
+  }, [questions, qIndex, reveals, mode, instantFeedback, isFlipped, userAnswers, revealRetry]);
 
   // Refresh SRS summary whenever questions load or mode switches to flip
   useEffect(() => {
@@ -329,7 +327,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     const tick = () => {
       const remaining = Math.max(0, Math.ceil((deadlineRef.current - Date.now()) / 1000));
       setSecondsRemaining(remaining);
-      if (remaining === 0) submitRef.current();
+      if (remaining === 0 && !autoSubmitBlockedRef.current) submitRef.current();
     };
     const timer = setInterval(tick, 1000);
     return () => clearInterval(timer);
@@ -347,6 +345,7 @@ export default function MockTest({ testId }: { testId?: string }) {
   };
 
   const currentQuestion = questions[qIndex] || questions[0];
+  const revealed = currentQuestion ? reveals[currentQuestion.id] : undefined;
 
   const handleSelectOption = (key: string) => {
     if (!currentQuestion) return;
@@ -372,49 +371,68 @@ export default function MockTest({ testId }: { testId?: string }) {
     }));
   };
 
-  const handleSubmitTest = () => {
+  const handleSubmitTest = async () => {
     recordStudyActivity();
     if (submittingRef.current || questions.length === 0) return;
     submittingRef.current = true;
     setIsSubmitting(true);
+    setSubmitError('');
 
-    const canonicalId = normalizePracticeExamId(activeExamId);
     const pExam = practiceExam(activeExamId);
+    const canonicalId = normalizePracticeExamId(activeExamId);
     const examMeta = AVAILABLE_EXAMS.find(e => e.id === canonicalId || e.id === activeExamId);
-    const resolvedPenalty = () => {
+    const localPenalty = () => {
       if (activeExamId === 'custom-notes') return 0;
       if (pExam) {
         if (typeof pExam.negativeMarking === 'number') return pExam.negativeMarking;
         if (pExam.negativeMarking === false) return 0;
         if (pExam.negativeMarking === true) return 0.25;
       }
-      if (examMeta && typeof examMeta.negativeMarking === 'number') {
-        return examMeta.negativeMarking;
-      }
-      return 0;
-    };
-    const correctAnswers = questions.reduce<Record<string, string>>(
-      (acc, q) => ({ ...acc, [q.id]: q.correct }),
-      {}
-    );
-    const config = {
-      marksPerQuestion: 1,
-      negativeMarking: resolvedPenalty(),
-      totalQuestions: questions.length,
+      return examMeta && typeof examMeta.negativeMarking === 'number' ? examMeta.negativeMarking : 0;
     };
     const timeTaken = Math.min(totalTimeSeconds, Math.max(0, totalTimeSeconds - Math.ceil((deadlineRef.current - Date.now()) / 1000)));
-    const scored = computeScore(correctAnswers, userAnswers, config, timeTaken);
-    const topicBreakdown = computeTopicBreakdown(
-      questions.map(q => ({ id: q.id, topicId: q.topicId || 'general' })),
-      correctAnswers,
-      userAnswers
-    );
+    const attemptId = crypto.randomUUID();
 
+    let scored: ScoreResult;
+    let topicBreakdown: TopicBreakdown[];
+    let reviewed: ReviewedQuestion[];
+    let penalty = localPenalty();
+    try {
+      if (localScoringRef.current) {
+        // AI-made drills and saved reviews carry their own answers and are never part of the bank.
+        const correctAnswers = Object.fromEntries(questions.map(q => [q.id, q.correct as string]));
+        scored = computeScore(correctAnswers, userAnswers, { marksPerQuestion: 1, negativeMarking: penalty, totalQuestions: questions.length }, timeTaken);
+        topicBreakdown = computeTopicBreakdown(questions.map(q => ({ id: q.id, topicId: q.topicId || 'general' })), correctAnswers, userAnswers);
+        reviewed = questions;
+      } else {
+        // The server holds the answer key: it scores the raw answers and returns the review.
+        const result = await submitAttemptAsLearner({
+          attemptId,
+          examId: activeExamId,
+          testId: testId || 'custom',
+          questionIds: questions.map(q => q.id),
+          answers: userAnswers,
+          timeTakenSeconds: timeTaken,
+        });
+        scored = result.score;
+        topicBreakdown = result.topicBreakdown;
+        reviewed = mergeReveals(questions, result.reveals);
+        if (scored.wrong > 0) penalty = Math.round(((scored.correct - scored.rawScore) / scored.wrong) * 10000) / 10000;
+      }
+    } catch (error) {
+      submittingRef.current = false;
+      autoSubmitBlockedRef.current = true;
+      setIsSubmitting(false);
+      setSubmitError(error instanceof Error ? error.message : 'Could not submit your answers.');
+      return;
+    }
+
+    const config = { marksPerQuestion: 1, negativeMarking: penalty, totalQuestions: questions.length };
     const levelInfo = evaluateUserLevel(scored.percentage, scored.accuracy);
     const predictedRank = calculatePredictedRank(scored.percentage, scored.rawScore, questions.length);
 
     const resultPayload = {
-      attemptId: crypto.randomUUID(),
+      attemptId,
       scoringConfig: config,
       sourceConfig,
       testId: testId || 'custom',
@@ -434,7 +452,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       level: levelInfo,
       predictedRank,
       topicBreakdown,
-      questions,
+      questions: reviewed,
       userAnswers,
       completedAt: new Date().toISOString(),
     };
@@ -442,7 +460,7 @@ export default function MockTest({ testId }: { testId?: string }) {
     try {
       const learnerId = getStoredUser().id || 'usr-default';
       recordCompletedQuestions(learnerId, activeExamId, questions);
-      recordQuizMistakes(learnerId, activeExamId, questions, userAnswers);
+      recordQuizMistakes(learnerId, activeExamId, reviewed, userAnswers);
 
       for (const breakdown of topicBreakdown) {
         if (breakdown.topicId) {
@@ -510,7 +528,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                 search.set('repeat', '1');
                 router.push(`${window.location.pathname}?${search.toString()}`);
               }}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-90 text-slate-950 font-bold text-xs py-3 px-4 rounded-xl transition shadow"
+              className="flex-1 bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-90 text-white font-bold text-xs py-3 px-4 rounded-xl transition shadow"
             >
               Start Revision Mode 🔁
             </button>
@@ -553,31 +571,17 @@ export default function MockTest({ testId }: { testId?: string }) {
             <AlertCircle size={32} />
           </div>
           <h2 className="text-base font-bold text-white mb-1">
-            Question Loading Timed Out / प्रश्न लोड करने में विलंब
+            Could not load questions / प्रश्न लोड नहीं हो सके
           </h2>
           <p className="text-xs text-slate-400 mb-6 max-w-sm leading-relaxed">
-            The question set for this scoped syllabus could not be assembled in time. You can retry assembling the scoped pool or return to the directory.
+            The question service could not be reached. Check your connection and try again, or return to the directory.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
             <button
-              onClick={() => {
-                setLoadError(false);
-                const loaded = getTestQuestions({ 
-                  topicId: currentTopicId,
-                  examId: activeExamId,
-                  difficulty: activeDifficulty,
-                  count: sourceConfig.count,
-                  excludeKeys: isRevisionMode ? [] : completedQuestionKeys(),
-                });
-                if (loaded && loaded.length > 0) {
-                  setQuestions(loaded);
-                } else {
-                  router.push('/mock-test');
-                }
-              }}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-90 text-slate-950 font-bold text-xs py-3 px-4 rounded-xl transition shadow"
+              onClick={() => { setLoadError(false); setLoadAttempt(n => n + 1); }}
+              className="flex-1 bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-90 text-white font-bold text-xs py-3 px-4 rounded-xl transition shadow"
             >
-              Retry Scoped Pool
+              Try Again
             </button>
             <Link
               href="/mock-test"
@@ -819,7 +823,7 @@ export default function MockTest({ testId }: { testId?: string }) {
           } else if (isMarked) {
             btnColor = 'bg-amber-500 text-white';
           } else if (isAnswered) {
-            btnColor = 'bg-emerald-600 text-white';
+            btnColor = 'bg-emerald-700 text-white';
           }
 
           return (
@@ -874,7 +878,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                 if (!opt) return null;
                 const isSelected = userAnswers[currentQuestion.id] === key;
                 const hasAnsweredCurrent = Boolean(userAnswers[currentQuestion.id]);
-                const isCorrectOption = currentQuestion.correct === key;
+                const isCorrectOption = revealed?.correct === key;
 
                 let optionStyle = isSelected
                   ? 'bg-indigo-600/20 border-indigo-500 shadow-md ring-1 ring-indigo-500'
@@ -882,9 +886,9 @@ export default function MockTest({ testId }: { testId?: string }) {
 
                 let badgeStyle = isSelected ? 'bg-indigo-500 text-white' : 'bg-slate-700 text-slate-300';
 
-                if (instantFeedback && hasAnsweredCurrent) {
+                if (instantFeedback && hasAnsweredCurrent && revealed) {
                   if (isCorrectOption) {
-                    optionStyle = 'bg-emerald-600/20 border-emerald-500 shadow-md ring-1 ring-emerald-500';
+                    optionStyle = 'bg-emerald-700/20 border-emerald-500 shadow-md ring-1 ring-emerald-500';
                     badgeStyle = 'bg-emerald-500 text-slate-950';
                   } else if (isSelected && !isCorrectOption) {
                     optionStyle = 'bg-rose-600/20 border-rose-500 shadow-md ring-1 ring-rose-500';
@@ -914,16 +918,26 @@ export default function MockTest({ testId }: { testId?: string }) {
             {/* Instant Answer & Trilingual Explanation Card when Ans: ON */}
             {instantFeedback && Boolean(userAnswers[currentQuestion.id]) && (
               <div className="mt-4 p-3.5 rounded-xl bg-slate-800/90 border border-teal-500/40 space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className={`text-xs font-bold ${userAnswers[currentQuestion.id] === currentQuestion.correct ? 'text-emerald-400' : 'text-rose-400'}`}>
-                    {userAnswers[currentQuestion.id] === currentQuestion.correct
-                      ? '✅ Correct Answer! / ਸਹੀ ਉੱਤਰ! / सही उत्तर!'
-                      : `❌ Correct Option is (${currentQuestion.correct}): ${currentQuestion.options[currentQuestion.correct]?.[lang] || currentQuestion.options[currentQuestion.correct]?.en}`}
-                  </span>
-                </div>
-                <p className="text-xs text-slate-200 leading-relaxed">
-                  {currentQuestion.explanation[lang] || currentQuestion.explanation.pa || currentQuestion.explanation.hi || currentQuestion.explanation.en}
-                </p>
+                {revealed ? (
+                  <>
+                    <div className="flex items-center justify-between">
+                      <span className={`text-xs font-bold ${userAnswers[currentQuestion.id] === revealed.correct ? 'text-emerald-400' : 'text-rose-400'}`}>
+                        {userAnswers[currentQuestion.id] === revealed.correct
+                          ? '✅ Correct Answer! / ਸਹੀ ਉੱਤਰ! / सही उत्तर!'
+                          : `❌ Correct Option is (${revealed.correct}): ${currentQuestion.options[revealed.correct]?.[lang] || currentQuestion.options[revealed.correct]?.en}`}
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-200 leading-relaxed">
+                      {revealed.explanation[lang] || revealed.explanation.pa || revealed.explanation.hi || revealed.explanation.en}
+                    </p>
+                  </>
+                ) : revealError ? (
+                  <button onClick={() => { setRevealError(false); setRevealRetry(n => n + 1); }} className="text-xs text-amber-300 underline">
+                    Could not load the answer. Tap to retry.
+                  </button>
+                ) : (
+                  <p className="text-xs text-slate-400">Checking answer…</p>
+                )}
               </div>
             )}
           </div>
@@ -980,33 +994,43 @@ export default function MockTest({ testId }: { testId?: string }) {
                 </div>
               ) : (
                 // Back: Correct Answer, Explanation & Examiner Thought
+                revealed ? (
                 <div className="my-auto py-2 space-y-2.5">
                   <div className="inline-flex items-center gap-1.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-3 py-1 rounded-full text-xs font-bold">
-                    <CheckCircle2 size={14} /> Correct Option: ({currentQuestion.correct})
+                    <CheckCircle2 size={14} /> Correct Option: ({revealed.correct})
                   </div>
                   <h4 className="text-white font-bold text-xs">
-                    {currentQuestion.options[currentQuestion.correct]?.[lang] || currentQuestion.options[currentQuestion.correct]?.pa || currentQuestion.options[currentQuestion.correct]?.hi || currentQuestion.options[currentQuestion.correct]?.en}
+                    {currentQuestion.options[revealed.correct]?.[lang] || currentQuestion.options[revealed.correct]?.pa || currentQuestion.options[revealed.correct]?.hi || currentQuestion.options[revealed.correct]?.en}
                   </h4>
-                  
+
                   {/* Detailed Explanation */}
                   <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-700 text-xs text-slate-300 leading-relaxed">
                     <span className="text-amber-400 font-bold block mb-1">Answer explanation:</span>
-                    {currentQuestion.explanation[lang] || currentQuestion.explanation.pa || currentQuestion.explanation.hi || currentQuestion.explanation.en}
+                    {revealed.explanation[lang] || revealed.explanation.pa || revealed.explanation.hi || revealed.explanation.en}
                   </div>
 
                   {/* Strategic Examiner Thought */}
-                  {currentQuestion.thought && (
+                  {revealed.thought && (
                     <div className="bg-indigo-950/40 p-3 rounded-xl border border-indigo-700/50 text-[11px] text-indigo-200 leading-relaxed">
                       <div className="flex items-center gap-1.5 text-indigo-300 font-bold mb-1">
                         <Brain size={13} className="text-teal-400" />
                         <span>🧠 Antigravity Strategic Thought (Examiner Mindset):</span>
                       </div>
                       <p>
-                        {currentQuestion.thought[lang] || currentQuestion.thought.pa || currentQuestion.thought.hi || currentQuestion.thought.en}
+                        {revealed.thought[lang] || revealed.thought.pa || revealed.thought.hi || revealed.thought.en}
                       </p>
                     </div>
                   )}
                 </div>
+                ) : (
+                <div className="my-auto py-2 text-center text-xs text-slate-400">
+                  {revealError ? (
+                    <button onClick={e => { e.stopPropagation(); setRevealError(false); setRevealRetry(n => n + 1); }} className="text-amber-300 underline">
+                      Could not load the answer. Tap to retry.
+                    </button>
+                  ) : 'Loading answer…'}
+                </div>
+                )
               )}
 
               <div className="flex items-center justify-between pt-2 border-t border-slate-700/60 text-[11px] text-slate-400">
@@ -1055,6 +1079,11 @@ export default function MockTest({ testId }: { testId?: string }) {
 
       {/* Footer Navigation Actions */}
       <div className="p-3 bg-slate-900 border-t border-slate-800 shrink-0">
+        {submitError && (
+          <p role="alert" className="max-w-xl mx-auto mb-2 text-xs text-rose-300">
+            {submitError} Your answers are saved on this device — tap Submit to try again.
+          </p>
+        )}
         <div className="max-w-xl mx-auto flex items-center justify-between gap-2">
           
           <div className="flex gap-1.5">
@@ -1106,9 +1135,10 @@ export default function MockTest({ testId }: { testId?: string }) {
 
             <button 
               onClick={handleSubmitTest}
-              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3.5 py-2 rounded-lg text-xs shadow-lg flex items-center gap-1"
+              disabled={isSubmitting}
+              className="bg-emerald-700 hover:bg-emerald-500 disabled:opacity-60 text-white font-bold px-3.5 py-2 rounded-lg text-xs shadow-lg flex items-center gap-1"
             >
-              <Award size={14} /> {qIndex < questions.length - 1 ? 'Submit ✓' : 'Submit & Check Level'}
+              <Award size={14} /> {isSubmitting ? 'Scoring…' : qIndex < questions.length - 1 ? 'Submit ✓' : 'Submit & Check Level'}
             </button>
           </div>
 

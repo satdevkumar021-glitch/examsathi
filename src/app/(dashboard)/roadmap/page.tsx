@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { useStore } from '@/lib/store';
 import { studyStorage, STORAGE_EVENT } from '@/lib/storage';
 import { SYLLABUS_TOPICS } from '@/lib/data/curriculum';
-import { ALL_QUESTIONS } from '@/lib/data/questions';
-import { getTestQuestions } from '@/lib/data/question_bank_engine';
+import { fetchDailyQuestion, fetchReveals, topicAvailable } from '@/lib/question-client';
+import { useManifest } from '@/lib/use-question-data';
+import type { PublicQuestion, QuestionReveal } from '@/lib/question-types';
 import { getLessonByTopicId } from '@/lib/data/lessons';
 import { getStoredUser } from '@/lib/auth';
 import { getSRSSummary, loadSRSStates } from '@/lib/srs';
@@ -50,6 +51,8 @@ export default function StudyRoadmap() {
   const [day, setDay] = useState(1);
   const [completed, setCompleted] = useState<Record<string, boolean>>({});
   const [answer, setAnswer] = useState<string | null>(null);
+  const [challenge, setChallenge] = useState<PublicQuestion | null>(null);
+  const [challengeReveal, setChallengeReveal] = useState<QuestionReveal | null>(null);
   const [date, setDate] = useState(studyDay);
   const [queue, setQueue] = useState({ due: 0, new_: 0, learning: 0, review: 0 });
 
@@ -61,6 +64,10 @@ export default function StudyRoadmap() {
   // Mistake Notebook state
   const [mistakes, setMistakes] = useState<MistakeRecord[]>([]);
   const [mistakeSearch, setMistakeSearch] = useState<string>('');
+
+  const manifest = useManifest([track]);
+  const topicCounts = manifest?.[track];
+  const hasCounts = Boolean(topicCounts && Object.keys(topicCounts).length > 0);
 
   useEffect(() => {
     const refresh = () => {
@@ -84,19 +91,22 @@ export default function StudyRoadmap() {
       setDay(Number.isFinite(days) ? Math.max(1, Math.min(60, days)) : 1);
       studyStorage.setItem('examsathi_study_start_date', normalized);
       
-      const loadedPlan = getOrGenerateStudyPlan({
-        examId: resolvedTrack,
-        dailyHoursBudget: dailyHours,
-        targetExamDate: targetDate || undefined,
-      });
-      setStudyPlan(loadedPlan);
+      // The plan records how many questions each topic has, so wait for the server's counts.
+      if (hasCounts) {
+        setStudyPlan(getOrGenerateStudyPlan({
+          examId: resolvedTrack,
+          dailyHoursBudget: dailyHours,
+          targetExamDate: targetDate || undefined,
+          topicQuestionCounts: topicCounts,
+        }));
+      }
       setMistakes(getMistakeNotebook({ examId: resolvedTrack, searchQuery: mistakeSearch }));
     } catch { /* A damaged plan starts fresh. */ }
     refresh();
     window.addEventListener(STORAGE_EVENT, refresh);
     window.addEventListener('focus', refresh);
     return () => { window.removeEventListener(STORAGE_EVENT, refresh); window.removeEventListener('focus', refresh); };
-  }, [track, dailyHours, targetDate, mistakeSearch]);
+  }, [track, dailyHours, targetDate, mistakeSearch, hasCounts, topicCounts]);
 
   const handleUpdatePlan = (newHours: number, newDate?: string) => {
     setDailyHours(newHours);
@@ -105,6 +115,7 @@ export default function StudyRoadmap() {
       examId: track,
       dailyHoursBudget: newHours,
       targetExamDate: newDate !== undefined ? newDate : targetDate || undefined,
+      topicQuestionCounts: topicCounts,
     });
     setStudyPlan(updated);
   };
@@ -133,11 +144,19 @@ export default function StudyRoadmap() {
   const unique = entries.filter((e, i) => entries.findIndex(other => other.topic.id === e.topic.id) === i);
   const topic = unique[(day - 1) % Math.max(1, unique.length)]?.topic;
   const lesson = topic ? getLessonByTopicId(topic.id) : undefined;
-  const available = topic ? getTestQuestions({ topicId: topic.id, examId: track, count: 50 }).length : 0;
+  const available = topic && manifest ? topicAvailable(manifest, track, topic.id, 50) : 0;
   const topicName = topic ? (lang === 'hi' ? topic.nameHindi : lang === 'pa' ? topic.namePunjabi || topic.name : topic.name) : '';
-  const challengePool = unique.flatMap(e => ALL_QUESTIONS.filter(q => q.topicId === e.topic.id));
   const dailyIndex = Math.floor(Date.parse(`${date}T12:00:00`) / 86400000);
-  const challenge = challengePool.length ? challengePool[dailyIndex % challengePool.length] : undefined;
+  const challengeTopics = unique.map(e => e.topic.id).join('|');
+  useEffect(() => {
+    let live = true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- A new day or track starts a fresh challenge.
+    setChallenge(null); setChallengeReveal(null); setAnswer(null);
+    if (challengeTopics && Number.isInteger(dailyIndex) && dailyIndex >= 0) {
+      fetchDailyQuestion(challengeTopics.split('|'), dailyIndex).then(r => { if (live) setChallenge(r.question); }).catch(() => {});
+    }
+    return () => { live = false; };
+  }, [challengeTopics, dailyIndex]);
   
   const tasks = topic ? [
     { id: 'read', title: t('Read topic and subtopics', 'विषय और उपविषय पढ़ें', 'ਵਿਸ਼ਾ ਅਤੇ ਉਪਵਿਸ਼ੇ ਪੜ੍ਹੋ'), href: `/lesson/${topic.id}/`, ready: Boolean(lesson), xp: 20 },
@@ -176,14 +195,13 @@ export default function StudyRoadmap() {
               key={item.id}
               aria-pressed={track === item.id}
               className={`rounded-lg px-3 py-2 text-sm font-semibold transition ${
-                track === item.id ? 'bg-teal-600 text-white shadow-md' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                track === item.id ? 'bg-teal-700 text-white shadow-md' : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
               onClick={() => {
                 setTrack(item.id);
                 setAnswer(null);
                 useStore.getState().setSelectedExam('punjab', item.id);
-                const p = getOrGenerateStudyPlan({ examId: item.id, dailyHoursBudget: dailyHours });
-                setStudyPlan(p);
+                setStudyPlan(null);
                 setMistakes(getMistakeNotebook({ examId: item.id }));
               }}
             >
@@ -260,7 +278,7 @@ export default function StudyRoadmap() {
 
             <button
               onClick={() => {
-                const refreshed = getOrGenerateStudyPlan({ examId: track, dailyHoursBudget: dailyHours, targetExamDate: targetDate });
+                const refreshed = getOrGenerateStudyPlan({ examId: track, dailyHoursBudget: dailyHours, targetExamDate: targetDate, topicQuestionCounts: topicCounts });
                 setStudyPlan(refreshed);
               }}
               className="text-xs text-teal-300 hover:text-teal-200 flex items-center gap-1 font-semibold"
@@ -366,7 +384,7 @@ export default function StudyRoadmap() {
 
                             <div className="flex items-center gap-4 text-[11px] text-slate-400 mt-2 flex-wrap">
                               <span>⏱ {item.targetMinutes} {t('mins target', 'मिनट लक्ष्य', 'ਮਿੰਟ ਟੀਚਾ')}</span>
-                              <span className="text-slate-500">•</span>
+                              <span className="text-slate-400">•</span>
                               <span className="text-teal-300/80 font-mono text-[10px]">
                                 ⚖ {item.officialWeightNote}
                               </span>
@@ -384,7 +402,7 @@ export default function StudyRoadmap() {
                             </Link>
                             <Link
                               href={`/mock-test/topic-${item.topicId}/?exam=${track}&count=20`}
-                              className="text-xs bg-teal-600/30 hover:bg-teal-600/40 text-teal-200 px-2.5 py-1 rounded-lg font-semibold text-center"
+                              className="text-xs bg-teal-700/30 hover:bg-teal-600/40 text-teal-200 px-2.5 py-1 rounded-lg font-semibold text-center"
                             >
                               {t('Practice', 'अभ्यास', 'ਅਭਿਆਸ')}
                             </Link>
@@ -469,20 +487,26 @@ export default function StudyRoadmap() {
                       disabled={answer !== null}
                       aria-pressed={answer === key}
                       className={`p-3 text-left rounded-lg text-xs transition ${
-                        answer !== null && key === challenge.correct
+                        answer !== null && key === challengeReveal?.correct
                           ? 'bg-emerald-800 text-white font-bold'
                           : 'bg-slate-900 text-slate-200 hover:bg-slate-750'
                       }`}
                       onClick={() => {
                         setAnswer(key);
-                        awardStudyXP(`challenge-${track}-${date}`, key === challenge.correct ? 10 : 0);
+                        // The answer is fetched only after the learner commits to a choice.
+                        fetchReveals([challenge.id]).then(found => {
+                          const reveal = found[challenge.id];
+                          if (!reveal) return;
+                          setChallengeReveal(reveal);
+                          awardStudyXP(`challenge-${track}-${date}`, key === reveal.correct ? 10 : 0);
+                        }).catch(() => setAnswer(null));
                       }}
                     >
                       {key}. {text[lang] || text.en}
                     </button>
                   ))}
                 </div>
-                {answer && <p role="status" className="mt-3 text-xs text-emerald-300">{challenge.explanation[lang] || challenge.explanation.en}</p>}
+                {answer && challengeReveal && <p role="status" className="mt-3 text-xs text-emerald-300">{challengeReveal.explanation[lang] || challengeReveal.explanation.en}</p>}
               </div>
             ) : (
               <p className="text-xs text-slate-400">{t('No reviewed question available for this track yet.', 'इस परीक्षा के लिए अभी प्रश्न उपलब्ध नहीं है।', 'ਇਸ ਪ੍ਰੀਖਿਆ ਲਈ ਅਜੇ ਸਵਾਲ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।')}</p>
@@ -612,7 +636,7 @@ export default function StudyRoadmap() {
                       className={`text-xs px-3 py-1.5 rounded-xl font-bold transition shrink-0 ${
                         m.resolved
                           ? 'bg-slate-700 text-slate-300 hover:bg-slate-600'
-                          : 'bg-emerald-600 hover:bg-emerald-500 text-white shadow'
+                          : 'bg-emerald-700 hover:bg-emerald-500 text-white shadow'
                       }`}
                     >
                       {m.resolved ? t('Reopen', 'पुनः खोलें', 'ਮੁੜ ਖੋਲ੍ਹੋ') : t('Mark Resolved', 'हल चिह्नित करें', 'ਹੱਲ ਨਿਸ਼ਾਨ ਲਾਓ')}

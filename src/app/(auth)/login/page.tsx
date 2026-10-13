@@ -90,7 +90,7 @@ export default function Login() {
 
         {/* Header */}
         <div className="text-center mb-6">
-          <div className="w-12 h-12 bg-gradient-to-tr from-teal-500 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2 shadow-lg">
+          <div className="w-12 h-12 bg-gradient-to-tr from-teal-600 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2 shadow-lg">
             🎓
           </div>
           <h2 className="text-2xl font-black text-white">ExamSathi Login</h2>
@@ -139,7 +139,7 @@ export default function Login() {
         {/* Divider */}
         <div className="flex items-center gap-3 my-5">
           <div className="flex-1 h-px bg-slate-700" />
-          <span className="text-xs text-slate-500 whitespace-nowrap">— or sign in with your account —</span>
+          <span className="text-xs text-slate-400 whitespace-nowrap">— or sign in with your account —</span>
           <div className="flex-1 h-px bg-slate-700" />
         </div>
 
@@ -208,7 +208,7 @@ export default function Login() {
           <button
             type="submit"
             disabled={loading || !configured}
-            className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-black py-3 rounded-xl shadow-lg text-sm flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-black py-3 rounded-xl shadow-lg text-sm flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? (
               <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
@@ -248,7 +248,7 @@ export default function Login() {
         </p>
 
         <div className="mt-3 text-center">
-          <Link href="/dashboard" className="text-[11px] text-slate-500 hover:text-slate-400">
+          <Link href="/dashboard" className="text-[11px] text-slate-400 hover:text-slate-400">
             Continue as Guest (No Login Required) &rarr;
           </Link>
         </div>

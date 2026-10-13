@@ -1,5 +1,5 @@
 import { studyStorage } from './storage';
-import { Question } from './data/questions';
+import type { ReviewedQuestion } from './question-types';
 
 // ============================================================
 // ExamSathi - Mistake Notebook & Spaced Mastery Tracking
@@ -79,7 +79,7 @@ function writeMistakes(examId: string, records: MistakeRecord[]): void {
 export function recordQuizMistakes(
   learnerId: string,
   examId: string,
-  questions: Question[],
+  questions: ReviewedQuestion[],
   userAnswers: Record<string, string>
 ): number {
   if (!questions || questions.length === 0 || !userAnswers) return 0;
@@ -90,7 +90,8 @@ export function recordQuizMistakes(
 
   for (const q of questions) {
     const userAns = userAnswers[q.id];
-    if (userAns && userAns !== q.correct) {
+    // Only questions whose answer was revealed (after submission) can be recorded as mistakes.
+    if (userAns && q.correct && q.explanation && userAns !== q.correct) {
       const existing = mistakeMap.get(q.id);
       if (existing) {
         existing.lapsesCount = (existing.lapsesCount || 1) + 1;

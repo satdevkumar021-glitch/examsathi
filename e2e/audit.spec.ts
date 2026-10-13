@@ -133,27 +133,16 @@ test.describe('ExamSathi Comprehensive E2E Audit Suite', () => {
   });
 
   test('09. Roadmap page audit', async ({ page }) => {
+    await page.addInitScript(() => { localStorage.setItem('examsathi_onboarding_completed', 'true'); });
     await page.goto('/roadmap/');
-    
-    // Check Day counter
-    const dayLabel = page.locator('text=/Day [0-9]+|दिन [0-9]+/i');
-    expect(await dayLabel.count()).toBeGreaterThan(0);
 
-    // Click ETT track tab
-    const ettTab = page.locator('button:has-text("ETT")').first();
-    await ettTab.click();
-    await page.waitForTimeout(300);
+    // 60-day plan with a day counter
+    await expect(page.locator('text=/[0-9]+\\/60/').first()).toBeVisible();
 
-    // Check Piaget task link in DOM
-    const piagetText = page.locator('text=/Revise Piaget/i');
-    console.log('Found Piaget task on ETT tab:', await piagetText.count() > 0);
-    expect(await piagetText.count()).toBeGreaterThan(0);
-
-    // Check that it links to child pedagogy
-    const piagetLink = page.locator('a:has-text("Read Lesson Notes")').first();
-    const href = await piagetLink.getAttribute('href');
-    console.log('Piaget lesson link href:', href);
-    expect(href).toContain('/lesson/child-development-pedagogy');
+    // The REET plan includes Child Development & Pedagogy lessons
+    await page.locator('button:has-text("REET")').first().click();
+    const pedagogy = page.locator('a[href*="/lesson/child-development-pedagogy"]').first();
+    await expect(pedagogy).toBeVisible();
   });
 
   test('10. Virtual Library page audit', async ({ page }) => {
@@ -175,23 +164,19 @@ test.describe('ExamSathi Comprehensive E2E Audit Suite', () => {
   });
 
   test('11. Profile page audit', async ({ page }) => {
+    await page.addInitScript(() => { localStorage.setItem('examsathi_onboarding_completed', 'true'); });
     await page.goto('/profile/');
-    
-    // Check honest guest banner and no fake email
-    const fakeEmail = page.locator('text=aspirant@examsathi.in');
-    expect(await fakeEmail.count()).toBe(0);
-    const guestBanner = page.locator('text=/Guest Student/i');
-    expect(await guestBanner.count()).toBeGreaterThan(0);
+
+    // Honest guest state and no fake identity
+    expect(await page.locator('text=aspirant@examsathi.in').count()).toBe(0);
+    await expect(page.locator('text=/Progress is saved in this browser|प्रगति इस ब्राउज़र में सहेजी जाती है/').first()).toBeVisible();
+    await expect(page.locator('a[href*="/login"]').first()).toBeVisible();
   });
 
   test('12. Admin portal route guard audit', async ({ page }) => {
-    // Direct access to /admin/ without logging in
+    // Without a session cookie the proxy redirects /admin/ to /login/
     await page.goto('/admin/');
-    
-    // Verify access is blocked with restricted credentials gate
-    const adminGate = page.locator('text=/Restricted Administrative Access|Enter Admin Passkey/i').first();
-    console.log('Admin security challenge visible:', await adminGate.isVisible());
-    expect(await adminGate.isVisible()).toBe(true);
+    await expect(page).toHaveURL(/\/login\/?/);
   });
 
 });

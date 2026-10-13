@@ -1,5 +1,5 @@
-# ExamSathi — CI Checks
-# Runs on every pull request to main
+# ExamSathi — CI checks
+# Runs on every pull request and push to main. Deployment is a Node host (see docs/DEPLOYMENT.md).
 
 name: CI
 
@@ -7,10 +7,13 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - main
 
 jobs:
-  lint-and-build:
-    name: Lint & Build Check
+  check:
+    name: Test, lint & build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install dependencies
@@ -28,7 +31,17 @@ jobs:
       - name: TypeScript check
         run: npx tsc --noEmit
 
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npm test
+
       - name: Build
         run: npm run build
-        env:
-          NEXT_PUBLIC_BASE_PATH: examsathi
+
+      - name: Answer key must not ship to the browser
+        run: node scripts/check-bundle-leaks.mjs
+
+      - name: MCP server unit tests
+        run: cd mcp-server && npm ci && npm test

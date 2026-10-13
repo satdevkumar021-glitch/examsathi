@@ -1,89 +1,48 @@
 'use client';
 import { useAuth } from '@/lib/hooks/useAuth';
-import { studyStorage } from '@/lib/storage';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { PlusCircle, BookOpen, HelpCircle, Video, FileText, CheckCircle2, ArrowLeft, ShieldCheck, UploadCloud, Check, X, Layers } from 'lucide-react';
+import { PlusCircle, BookOpen, HelpCircle, Video, FileText, CheckCircle2, ArrowLeft, ShieldCheck, UploadCloud, Check, X, Layers, AlertTriangle } from 'lucide-react';
 import { ALL_LESSONS } from '@/lib/data/lessons';
+import { canDelete, canTransition, isStaffRole, type StaffRole, type WorkflowStatus } from '@/lib/content-workflow';
+import { createContent, deleteContent, listContent, moveContent, type ContentItem } from '@/lib/admin-client';
+import QualityPanel from '@/components/admin/QualityPanel';
 
-export type AdminRole = 'educator' | 'reviewer' | 'superadmin';
-export type WorkflowStatus = 'draft' | 'review' | 'published' | 'rejected';
+type AdminRole = StaffRole;
+type PipelineItem = ContentItem;
 
-export interface PipelineItem {
-  id: string;
-  type: 'question' | 'lesson' | 'video' | 'pdf';
-  title: string;
-  topicId: string;
-  author: string;
-  role: AdminRole;
-  status: WorkflowStatus;
-  createdAt: string;
-  reviewedBy?: string;
-  feedback?: string;
-  data: Record<string, unknown>;
+/** Shows reviewers exactly what the question contains, including the key, before they approve it. */
+function QuestionPreview({ data }: { data: Record<string, unknown> }) {
+  const q = data as { question?: { en?: string; hi?: string }; options?: Record<string, { en?: string; hi?: string }>; correct?: string; explanation?: { en?: string; hi?: string }; difficulty?: string };
+  if (!q.question || !q.options) return null;
+  return (
+    <div className="text-[11px] bg-slate-900/60 p-2.5 rounded-lg border border-slate-800 space-y-1">
+      <p className="text-slate-100">{q.question.en || q.question.hi}</p>
+      {(['A', 'B', 'C', 'D'] as const).map(key => (
+        <p key={key} className={q.correct === key ? 'text-emerald-300 font-bold' : 'text-slate-300'}>
+          {key}. {q.options?.[key]?.en || q.options?.[key]?.hi}{q.correct === key ? '  ✓ correct' : ''}
+        </p>
+      ))}
+      {q.explanation && <p className="text-slate-400">{q.explanation.en || q.explanation.hi}</p>}
+      {q.difficulty && <p className="text-slate-400">Difficulty: {q.difficulty}</p>}
+    </div>
+  );
 }
-
-const DEFAULT_PIPELINE: PipelineItem[] = [
-  {
-    id: 'pipe-01',
-    type: 'question',
-    title: 'Punjab Master Cadre: Battle of Chappar Chiri & Lohgarh Fort (1710)',
-    topicId: 'punjab-history',
-    author: 'Prof. Harpreet Kaur (Educator)',
-    role: 'educator',
-    status: 'review',
-    createdAt: '2024-03-14 10:30',
-    data: {
-      questionHi: 'चप्पड़चिड़ी के युद्ध (1710) के पश्चात बाबा बंदा सिंह बहादुर ने प्रथम खालसा राजधानी कहाँ स्थापित की?',
-      correctOpt: 'B',
-      explanation: 'बंदा सिंह बहादुर ने मुखलिसपुर किले का जीर्णोद्धार कर उसका नाम लोहगढ़ रखा।'
-    }
-  },
-  {
-    id: 'pipe-02',
-    type: 'lesson',
-    title: 'Cognitive Development: Piaget 4 Stages vs Vygotsky Scaffolding',
-    topicId: 'child-development-pedagogy',
-    author: 'Dr. R. Sharma (Educator)',
-    role: 'educator',
-    status: 'draft',
-    createdAt: '2024-03-14 14:15',
-    data: {
-      summary: 'Detailed comparative analysis for ETT & PSTET 2024'
-    }
-  },
-  {
-    id: 'pipe-03',
-    type: 'question',
-    title: 'Polity: Art 72 Presidential Pardon Judicial Review Scope',
-    topicId: 'fundamental-rights',
-    author: 'Adv. Manjit Singh (Senior Reviewer)',
-    role: 'reviewer',
-    status: 'published',
-    createdAt: '2024-03-13 18:00',
-    reviewedBy: 'Superadmin (Verified against Epuru Sudhakar 2006)',
-    data: {
-      questionHi: 'क्या राष्ट्रपति की क्षमादान शक्ति (अनुच्छेद 72) न्यायिक समीक्षा के अधीन है?',
-      correctOpt: 'C',
-      explanation: 'ईपुरु सुधाकर मामले (2006) के तहत दुर्भावनापूर्ण आधारों पर सीमित न्यायिक समीक्षा संभव है।'
-    }
-  }
-];
 
 export default function AdminResourcePortal() {
   const { user: verifiedUser, loading: authLoading } = useAuth();
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState<'pipeline' | 'question' | 'lesson' | 'video' | 'pdf'>('pipeline');
+  const [activeTab, setActiveTab] = useState<'pipeline' | 'quality' | 'question' | 'lesson' | 'video' | 'pdf'>('pipeline');
   const [successMsg, setSuccessMsg] = useState('');
   
   // Auth & Role Management
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(false);
   const [adminRole, setAdminRole] = useState<AdminRole>('educator');
-  const [, setAuthError] = useState('');
-  const [adminUser, setAdminUser] = useState('Educator Sathi');
+  const [loadError, setLoadError] = useState('');
+  const [busy, setBusy] = useState(false);
 
   // Content Pipeline Store
-  const [pipeline, setPipeline] = useState<PipelineItem[]>(DEFAULT_PIPELINE);
+  const [pipeline, setPipeline] = useState<PipelineItem[]>([]);
   const [pipelineFilter, setPipelineFilter] = useState<'all' | WorkflowStatus>('all');
 
   // Question Form States
@@ -96,6 +55,7 @@ export default function AdminResourcePortal() {
   const [optD, setOptD] = useState('');
   const [correctOpt, setCorrectOpt] = useState<'A' | 'B' | 'C' | 'D'>('A');
   const [explanation, setExplanation] = useState('');
+  const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
   const [examTag, setExamTag] = useState('Punjab Master Cadre 2024');
 
   // Video Form States
@@ -108,151 +68,94 @@ export default function AdminResourcePortal() {
   const [lessonTitle, setLessonTitle] = useState('');
   const [lessonContent, setLessonContent] = useState('');
 
-  // Load Pipeline and Session
+  // The role comes from the verified session; the pipeline lives in the database, not the browser.
+  const trustedRole = verifiedUser?.app_metadata?.role;
+  const userId = verifiedUser?.id;
   useEffect(() => {
-    try {
-      const savedPipeline = studyStorage.getItem('examsathi_admin_pipeline');
-      if (savedPipeline) {
-        // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
-        setPipeline(JSON.parse(savedPipeline));
-      }
-    } catch {}
-  }, []);
+    if (!userId || !isStaffRole(trustedRole)) return;
+    let live = true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Adopt the verified identity, then load the server pipeline.
+    setIsAdminAuthenticated(true); setAdminRole(trustedRole);
+    listContent()
+      .then(result => { if (live) { setPipeline(result.items); setAdminRole(result.role); setLoadError(''); } })
+      .catch(error => { if (live) setLoadError(error instanceof Error ? error.message : 'Could not load the pipeline.'); });
+    return () => { live = false; };
+  }, [userId, trustedRole]);
 
-  const savePipeline = (updated: PipelineItem[]) => {
-    setPipeline(updated);
-    try {
-      studyStorage.setItem('examsathi_admin_pipeline', JSON.stringify(updated));
-    } catch {}
-  };
+  const flash = (message: string) => { setSuccessMsg(message); setTimeout(() => setSuccessMsg(''), 4000); };
+  const fail = (error: unknown) => { setLoadError(error instanceof Error ? error.message : 'Request failed.'); setTimeout(() => setLoadError(''), 6000); };
 
-  useEffect(() => {
-    const trustedRole = verifiedUser?.app_metadata?.role;
-    const allowed = ['educator', 'reviewer', 'superadmin'].includes(trustedRole);
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- Hydrate client-only browser data after mount; this bounded effect does not update its own dependencies.
-    setIsAdminAuthenticated(allowed);
-    if (allowed) { setAdminRole(trustedRole); setAdminUser(verifiedUser?.email || 'Educator'); }
-  }, [verifiedUser]);
-  const handleSwitchRole = (_role: AdminRole) => { setAuthError('Roles are managed by the server.'); };
+  // The server re-checks every action; these only hide buttons the caller cannot use.
+  const may = (item: PipelineItem, to: WorkflowStatus) =>
+    canTransition({ id: userId || '', role: adminRole }, { authorId: item.mine ? userId || '' : 'not-the-viewer', status: item.status }, to);
 
   // Pipeline Actions
-  const handleUpdateStatus = (id: string, newStatus: WorkflowStatus, note?: string) => {
-    const updated = pipeline.map(item => {
-      if (item.id === id) {
-        return {
-          ...item,
-          status: newStatus,
-          reviewedBy: `${adminUser} (${adminRole.toUpperCase()})`,
-          feedback: note || item.feedback,
-        };
-      }
-      return item;
-    });
-    savePipeline(updated);
-    setSuccessMsg(`✅ Item status changed to "${newStatus.toUpperCase()}"!`);
-    setTimeout(() => setSuccessMsg(''), 4000);
+  const handleUpdateStatus = async (id: string, newStatus: WorkflowStatus, note?: string) => {
+    if (busy) return;
+    setBusy(true);
+    try {
+      const { item } = await moveContent(id, newStatus, note);
+      setPipeline(prev => prev.map(i => i.id === id ? item : i));
+      flash(`✅ Item status changed to "${newStatus.toUpperCase()}"!`);
+    } catch (error) { fail(error); } finally { setBusy(false); }
   };
 
-  const handleDeletePipelineItem = (id: string) => {
-    const updated = pipeline.filter(i => i.id !== id);
-    savePipeline(updated);
-    setSuccessMsg('🗑️ Item removed from editorial pipeline.');
-    setTimeout(() => setSuccessMsg(''), 4000);
+  const handleDeletePipelineItem = async (id: string) => {
+    if (busy || !confirm('Delete this item permanently?')) return;
+    setBusy(true);
+    try {
+      await deleteContent(id);
+      setPipeline(prev => prev.filter(i => i.id !== id));
+      flash('🗑️ Item removed from editorial pipeline.');
+    } catch (error) { fail(error); } finally { setBusy(false); }
+  };
+
+  const submitItem = async (input: Parameters<typeof createContent>[0], reset: () => void, label: string) => {
+    if (busy) return;
+    setBusy(true);
+    try {
+      const { item } = await createContent(input);
+      setPipeline(prev => [item, ...prev]);
+      reset();
+      setActiveTab('pipeline');
+      flash(`✅ ${label} recorded as "${input.status.toUpperCase()}"!`);
+    } catch (error) { fail(error); } finally { setBusy(false); }
   };
 
   // Submit Question
   const handleAddQuestion = (submitStatus: WorkflowStatus) => {
     if (!qTextHi && !qTextEn) return;
-
-    const newItem: PipelineItem = {
-      id: `pipe-q-${Date.now()}`,
+    if (submitStatus === 'published' && !confirm('Publish now? Students will see this question as soon as it is saved.')) return;
+    void submitItem({
       type: 'question',
       title: `${examTag}: ${qTextHi.slice(0, 45) || qTextEn.slice(0, 45)}...`,
       topicId: qTopic,
-      author: adminUser,
-      role: adminRole,
       status: submitStatus,
-      createdAt: new Date().toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' }),
       data: {
-        topicId: qTopic,
-        questionHi: qTextHi,
-        questionEn: qTextEn,
-        optA, optB, optC, optD,
-        correctOpt,
-        explanation,
-        examTag
-      }
-    };
-
-    savePipeline([newItem, ...pipeline]);
-    setSuccessMsg(`✅ Question recorded as "${submitStatus.toUpperCase()}"!`);
-    setQTextHi('');
-    setQTextEn('');
-    setOptA('');
-    setOptB('');
-    setOptC('');
-    setOptD('');
-    setExplanation('');
-    setActiveTab('pipeline');
-    setTimeout(() => setSuccessMsg(''), 4000);
+        question: { hi: qTextHi, en: qTextEn },
+        // The option text is shown in both languages; the editor types it once.
+        options: { A: { en: optA, hi: optA }, B: { en: optB, hi: optB }, C: { en: optC, hi: optC }, D: { en: optD, hi: optD } },
+        correct: correctOpt, explanation: { hi: explanation, en: explanation }, difficulty, examTag,
+      },
+    }, () => { setQTextHi(''); setQTextEn(''); setOptA(''); setOptB(''); setOptC(''); setOptD(''); setExplanation(''); }, 'Question');
   };
 
   // Submit Video
   const handleAddVideo = (submitStatus: WorkflowStatus) => {
     if (!vidTitle || !vidUrl) return;
-
-    const newItem: PipelineItem = {
-      id: `pipe-v-${Date.now()}`,
-      type: 'video',
-      title: vidTitle,
-      topicId: qTopic,
-      author: adminUser,
-      role: adminRole,
-      status: submitStatus,
-      createdAt: new Date().toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' }),
-      data: {
-        vidTitle,
-        vidUrl,
-        vidChannel,
-        vidDuration
-      }
-    };
-
-    savePipeline([newItem, ...pipeline]);
-    setSuccessMsg(`✅ Video recorded as "${submitStatus.toUpperCase()}"!`);
-    setVidTitle('');
-    setVidUrl('');
-    setVidChannel('');
-    setVidDuration('');
-    setActiveTab('pipeline');
-    setTimeout(() => setSuccessMsg(''), 4000);
+    void submitItem({
+      type: 'video', title: vidTitle, topicId: qTopic, status: submitStatus,
+      data: { vidTitle, vidUrl, vidChannel, vidDuration },
+    }, () => { setVidTitle(''); setVidUrl(''); setVidChannel(''); setVidDuration(''); }, 'Video');
   };
 
   // Submit Lesson
   const handleAddLesson = (submitStatus: WorkflowStatus) => {
     if (!lessonTitle) return;
-
-    const newItem: PipelineItem = {
-      id: `pipe-l-${Date.now()}`,
-      type: 'lesson',
-      title: lessonTitle,
-      topicId: qTopic,
-      author: adminUser,
-      role: adminRole,
-      status: submitStatus,
-      createdAt: new Date().toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' }),
-      data: {
-        lessonTitle,
-        lessonContent
-      }
-    };
-
-    savePipeline([newItem, ...pipeline]);
-    setSuccessMsg(`✅ Lesson recorded as "${submitStatus.toUpperCase()}"!`);
-    setLessonTitle('');
-    setLessonContent('');
-    setActiveTab('pipeline');
-    setTimeout(() => setSuccessMsg(''), 4000);
+    void submitItem({
+      type: 'lesson', title: lessonTitle, topicId: qTopic, status: submitStatus,
+      data: { lessonTitle, lessonContent },
+    }, () => { setLessonTitle(''); setLessonContent(''); }, 'Lesson');
   };
 
   // Topic list from ALL_LESSONS
@@ -274,9 +177,9 @@ export default function AdminResourcePortal() {
 
   if (authLoading || !isAdminAuthenticated) return <div className="max-w-xl mx-auto p-6 text-slate-200 space-y-3">
     <h1 className="text-xl font-bold">Educator workspace</h1>
-    <p>{authLoading ? 'Checking access…' : 'Sign in with an educator or administrator account. Access roles must be assigned by the server.'}</p>
+    <p>{authLoading ? 'Checking access…' : verifiedUser ? 'This account does not have educator access. Roles are assigned by an administrator.' : 'Sign in with an educator or administrator account. Access roles must be assigned by the server.'}</p>
     <a href="../login/" className="text-teal-300 underline">Sign in</a>
-    <p className="text-sm text-slate-400">This workspace stores local drafts. Publishing to the live question bank requires a reviewed backend workflow.</p>
+    <p className="text-sm text-slate-400">Drafts and reviews are stored on the server and every action is checked against your assigned role.</p>
   </div>;
 
   return (
@@ -300,29 +203,18 @@ export default function AdminResourcePortal() {
           </div>
         </div>
 
-        {/* Role Switcher Pill */}
+        {/* Role comes from the server and cannot be changed here */}
         <div className="flex items-center gap-2 bg-slate-800 p-1.5 rounded-xl border border-slate-700">
           <span className="text-[10px] text-slate-400 font-bold px-1.5 uppercase">Role:</span>
-          <button
-            onClick={() => handleSwitchRole('educator')}
-            className={`px-2 py-1 rounded-lg text-[10px] font-bold transition ${adminRole === 'educator' ? 'bg-amber-500 text-slate-950 font-black shadow' : 'text-slate-400 hover:text-white'}`}
-          >
-            Educator
-          </button>
-          <button
-            onClick={() => handleSwitchRole('reviewer')}
-            className={`px-2 py-1 rounded-lg text-[10px] font-bold transition ${adminRole === 'reviewer' ? 'bg-indigo-600 text-white font-black shadow' : 'text-slate-400 hover:text-white'}`}
-          >
-            Reviewer
-          </button>
-          <button
-            onClick={() => handleSwitchRole('superadmin')}
-            className={`px-2 py-1 rounded-lg text-[10px] font-bold transition ${adminRole === 'superadmin' ? 'bg-emerald-600 text-white font-black shadow' : 'text-slate-400 hover:text-white'}`}
-          >
-            Superadmin
-          </button>
+          <span className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase ${adminRole === 'educator' ? 'bg-amber-500 text-slate-950' : adminRole === 'reviewer' ? 'bg-indigo-600 text-white' : 'bg-emerald-700 text-white'}`}>
+            {adminRole}
+          </span>
         </div>
       </div>
+
+      {loadError && (
+        <div role="alert" className="bg-rose-950/80 border border-rose-500/50 text-rose-200 text-xs p-3.5 rounded-xl">{loadError}</div>
+      )}
 
       {/* Success Notification */}
       {successMsg && (
@@ -333,13 +225,21 @@ export default function AdminResourcePortal() {
       )}
 
       {/* Primary Category Selector */}
-      <div className="grid grid-cols-5 gap-2 bg-slate-800/80 p-1 rounded-xl border border-slate-700">
+      <div className={`grid ${adminRole === 'educator' ? 'grid-cols-5' : 'grid-cols-3 sm:grid-cols-6'} gap-2 bg-slate-800/80 p-1 rounded-xl border border-slate-700`}>
         <button 
           onClick={() => setActiveTab('pipeline')}
-          className={`py-2 text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition ${activeTab === 'pipeline' ? 'bg-teal-600 text-white shadow' : 'text-slate-400 hover:text-white'}`}
+          className={`py-2 text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition ${activeTab === 'pipeline' ? 'bg-teal-700 text-white shadow' : 'text-slate-400 hover:text-white'}`}
         >
           <Layers size={14} /> Pipeline ({pipeline.length})
         </button>
+        {adminRole !== 'educator' && (
+          <button
+            onClick={() => setActiveTab('quality')}
+            className={`py-2 text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition ${activeTab === 'quality' ? 'bg-teal-700 text-white shadow' : 'text-slate-400 hover:text-white'}`}
+          >
+            <AlertTriangle size={14} /> Quality
+          </button>
+        )}
         <button 
           onClick={() => setActiveTab('question')}
           className={`py-2 text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition ${activeTab === 'question' ? 'bg-indigo-600 text-white shadow' : 'text-slate-400 hover:text-white'}`}
@@ -365,6 +265,8 @@ export default function AdminResourcePortal() {
           <FileText size={14} /> Doc/PDF
         </button>
       </div>
+
+      {activeTab === 'quality' && adminRole !== 'educator' && <QualityPanel />}
 
       {/* ================= TAB 0: EDITORIAL PIPELINE & REVIEW QUEUE ================= */}
       {activeTab === 'pipeline' && (
@@ -422,20 +324,22 @@ export default function AdminResourcePortal() {
                       <div className="text-[10px] text-slate-400 mt-1 flex items-center gap-3">
                         <span>Created by: <strong>{item.author}</strong></span>
                         <span>•</span>
-                        <span>{item.createdAt}</span>
+                        <span>{new Date(item.createdAt).toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' })}</span>
                       </div>
                     </div>
 
-                    {adminRole === 'superadmin' && (
+                    {canDelete(adminRole) && (
                       <button 
                         onClick={() => handleDeletePipelineItem(item.id)}
-                        className="text-slate-500 hover:text-rose-400 p-1"
+                        className="text-slate-400 hover:text-rose-400 p-1"
                         title="Delete item"
                       >
                         <X size={14} />
                       </button>
                     )}
                   </div>
+
+                  {item.type === 'question' && <QuestionPreview data={item.data} />}
 
                   {item.reviewedBy && (
                     <div className="text-[10px] bg-slate-900/60 p-2 rounded-lg border border-slate-800 text-slate-300">
@@ -447,8 +351,9 @@ export default function AdminResourcePortal() {
                   {/* Actions according to Role */}
                   <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-750 text-xs">
                     {/* Educator can submit Draft to Review */}
-                    {item.status === 'draft' && (
+                    {may(item, 'review') && (
                       <button
+                        disabled={busy}
                         onClick={() => handleUpdateStatus(item.id, 'review')}
                         className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] transition"
                       >
@@ -457,11 +362,11 @@ export default function AdminResourcePortal() {
                     )}
 
                     {/* Reviewer / Superadmin can Approve or Reject */}
-                    {(adminRole === 'reviewer' || adminRole === 'superadmin') && item.status === 'review' && (
+                    {item.status === 'review' && may(item, 'published') && (
                       <>
                         <button
                           onClick={() => handleUpdateStatus(item.id, 'published')}
-                          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] transition flex items-center gap-1"
+                          className="bg-emerald-700 hover:bg-emerald-500 text-white font-bold px-3 py-1.5 rounded-lg text-[11px] transition flex items-center gap-1"
                         >
                           <Check size={13} /> Approve & Publish
                         </button>
@@ -478,7 +383,7 @@ export default function AdminResourcePortal() {
                     )}
 
                     {/* Superadmin can toggle Published state */}
-                    {adminRole === 'superadmin' && item.status === 'published' && (
+                    {may(item, 'draft') && item.status === 'published' && (
                       <button
                         onClick={() => handleUpdateStatus(item.id, 'draft', 'Unpublished by administrator')}
                         className="bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3 py-1.5 rounded-lg text-[11px] transition"
@@ -488,7 +393,7 @@ export default function AdminResourcePortal() {
                     )}
 
                     {/* If rejected, educator can send back to draft */}
-                    {item.status === 'rejected' && (
+                    {item.status === 'rejected' && may(item, 'draft') && (
                       <button
                         onClick={() => handleUpdateStatus(item.id, 'draft')}
                         className="bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3 py-1.5 rounded-lg text-[11px] transition"
@@ -624,7 +529,7 @@ export default function AdminResourcePortal() {
             </div>
             <div>
               <label className="text-[11px] text-slate-300 font-semibold block mb-1">Difficulty Level</label>
-              <select className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white">
+              <select value={difficulty} onChange={e => setDifficulty(e.target.value as 'easy' | 'medium' | 'hard')} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white">
                 <option value="easy">Easy (Direct Fact)</option>
                 <option value="medium">Medium (Standard)</option>
                 <option value="hard">Hard (Conceptual / Deep)</option>
@@ -662,7 +567,7 @@ export default function AdminResourcePortal() {
             {adminRole === 'superadmin' && (
               <button 
                 type="submit"
-                className="flex-1 bg-teal-600 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs shadow-lg transition"
+                className="flex-1 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs shadow-lg transition"
               >
                 Publish Directly (प्रकाशित करें)
               </button>
@@ -760,7 +665,7 @@ export default function AdminResourcePortal() {
             {adminRole === 'superadmin' && (
               <button 
                 type="submit"
-                className="flex-1 bg-teal-600 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow"
+                className="flex-1 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow"
               >
                 Publish Directly
               </button>
@@ -847,7 +752,7 @@ export default function AdminResourcePortal() {
               <button 
                 type="button"
                 onClick={() => handleAddLesson('published')}
-                className="flex-1 bg-teal-600 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs transition"
+                className="flex-1 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs transition"
               >
                 Publish Directly
               </button>

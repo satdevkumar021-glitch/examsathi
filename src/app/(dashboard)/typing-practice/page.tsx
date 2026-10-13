@@ -264,13 +264,13 @@ export default function TypingPracticePage() {
           <div className="flex gap-1">
             <button
               onClick={() => handleDurationChange(60)}
-              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 60 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 60 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
             >
               1m Practice
             </button>
             <button
               onClick={() => handleDurationChange(300)}
-              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 300 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 300 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
             >
               5m Warm-up
             </button>
@@ -282,7 +282,7 @@ export default function TypingPracticePage() {
             </button>
             <button
               onClick={() => handleDurationChange(900)}
-              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 900 ? 'bg-teal-600 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 900 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
             >
               15m Extended
             </button>
@@ -352,7 +352,7 @@ export default function TypingPracticePage() {
           className="w-full bg-slate-800 border-2 border-slate-700 focus:border-teal-400 rounded-2xl p-4 text-white text-sm leading-relaxed outline-none transition h-36 resize-none disabled:opacity-60"
         />
         {!isRunning && !isFinished && userInput.length === 0 && (
-          <div className="absolute bottom-4 right-4 pointer-events-none text-slate-500 text-xs">
+          <div className="absolute bottom-4 right-4 pointer-events-none text-slate-400 text-xs">
             Press any key to begin ⌨️
           </div>
         )}

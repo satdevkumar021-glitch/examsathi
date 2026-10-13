@@ -17,7 +17,7 @@ export default function OfflinePage() {
       >
         Go to Dashboard
       </a>
-      <p className="text-xs text-slate-500 mt-4">
+      <p className="text-xs text-slate-400 mt-4">
         Study data does not sync automatically. Download a backup from your profile.
       </p>
     </div>

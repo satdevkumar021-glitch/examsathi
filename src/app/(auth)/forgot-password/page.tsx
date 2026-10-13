@@ -40,7 +40,7 @@ export default function ForgotPassword() {
       <div className="bg-slate-900/90 backdrop-blur-xl p-7 rounded-3xl border border-slate-700/80 shadow-2xl">
 
         <div className="text-center mb-6">
-          <div className="w-12 h-12 bg-gradient-to-tr from-teal-500 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2 shadow-lg">
+          <div className="w-12 h-12 bg-gradient-to-tr from-teal-600 to-indigo-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-2 shadow-lg">
             🔑
           </div>
           <h1 className="text-2xl font-black text-white">Reset Password</h1>
@@ -101,7 +101,7 @@ export default function ForgotPassword() {
               <button
                 type="submit"
                 disabled={loading || !configured}
-                className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-black py-3 rounded-xl shadow-lg text-sm flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-black py-3 rounded-xl shadow-lg text-sm flex items-center justify-center gap-2 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <span className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />

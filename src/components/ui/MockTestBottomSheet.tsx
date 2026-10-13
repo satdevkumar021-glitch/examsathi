@@ -1,12 +1,14 @@
 'use client';
 import { studyStorage } from '@/lib/storage';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { X, Target, Layers, Check, ShieldAlert } from 'lucide-react';
 import { completedQuestionKeys } from '@/lib/practice-history';
 import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
-import { getQuestionPool, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
+import { AVAILABLE_EXAMS } from '@/lib/data/exam-catalog';
+import { useCounts } from '@/lib/use-question-data';
+import type { CountQuery } from '@/lib/question-client';
 
 interface MockTestBottomSheetProps {
   isOpen: boolean;
@@ -36,17 +38,26 @@ export default function MockTestBottomSheet({
   const [questionCount, setQuestionCount] = useState<number>(50);
   const [selectedSet, setSelectedSet] = useState<number>(1);
 
+  // Completed keys are read from localStorage each time the drawer opens.
+  const completedKeys = useMemo(() => (isOpen ? completedQuestionKeys() : []), [isOpen]);
+  const countQueries = useMemo<CountQuery[]>(() => {
+    if (!isOpen) return [];
+    const base = { examId: selectedExam, topicId: defaultTopicId, difficulty: selectedDifficulty, pyq20Years: is20YearPYQ };
+    return [base, { ...base, fresh: true }];
+  }, [isOpen, selectedExam, defaultTopicId, selectedDifficulty, is20YearPYQ]);
+  const counts = useCounts(countQueries, completedKeys);
+
   if (!isOpen) return null;
 
   const activeExam = AVAILABLE_EXAMS.find(e => e.id === selectedExam);
 
-  const availableCount = getQuestionPool({ examId: selectedExam, topicId: defaultTopicId, difficulty: selectedDifficulty, pyq20Years: is20YearPYQ }).length;
-
-  const freshCount = getQuestionPool({ examId: selectedExam, topicId: defaultTopicId, difficulty: selectedDifficulty, pyq20Years: is20YearPYQ, excludeKeys: completedQuestionKeys() }).length;
-  const totalSets = Math.max(1, Math.ceil(availableCount / questionCount));
+  // null while loading: unknown, not zero.
+  const availableCount: number | null = counts ? counts[0] : null;
+  const freshCount: number | null = counts ? counts[1] : null;
+  const totalSets = Math.max(1, Math.ceil((availableCount ?? 0) / questionCount));
 
   const handleStartTest = (mode: 'exam' | 'flip', customSet?: number) => {
-    if (!activeExam || !availableCount) return;
+    if (!activeExam || availableCount === 0) return;
     const setNum = customSet || selectedSet || 1;
     const catalogue = practiceExam(selectedExam);
     if (catalogue) rememberExam(catalogue.state, catalogue.id);
@@ -111,7 +122,7 @@ export default function MockTestBottomSheet({
           </button>
         </div>
 
-        <p role="status" className="text-sm text-amber-200">{availableCount} distinct questions match these filters. This set will contain {Math.min(questionCount, freshCount)} unseen questions ({freshCount} remaining). Flipcards can review the full pool. Shared syllabus questions retain their source labels. This is topic practice, not a complete official paper.</p>
+        <p role="status" className="text-sm text-amber-200">{availableCount ?? '…'} distinct questions match these filters. This set will contain {freshCount === null ? '…' : Math.min(questionCount, freshCount)} unseen questions ({freshCount ?? '…'} remaining). Flipcards can review the full pool. Shared syllabus questions retain their source labels. This is topic practice, not a complete official paper.</p>
         {/* 1. Target Examination Selector */}
         <div>
           <label className="text-xs font-bold text-slate-300 mb-2 block uppercase tracking-wider">
@@ -247,7 +258,7 @@ export default function MockTestBottomSheet({
               {Array.from({ length: Math.min(totalSets, 9) }, (_, idx) => {
                 const sNum = idx + 1;
                 const startQ = (sNum - 1) * questionCount + 1;
-                const endQ = Math.min(sNum * questionCount, availableCount);
+                const endQ = Math.min(sNum * questionCount, availableCount ?? 0);
                 const isSelected = selectedSet === sNum;
                 return (
                   <button
@@ -279,16 +290,16 @@ export default function MockTestBottomSheet({
         {/* Start Actions */}
         <div className="flex flex-col gap-2 pt-2">
           <button
-            disabled={!availableCount || !activeExam}
+            disabled={availableCount === 0 || !activeExam}
             onClick={() => handleStartTest('exam')}
-            className="w-full bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-3.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition"
+            className="w-full bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-black py-3.5 rounded-xl text-xs flex items-center justify-center gap-2 shadow-lg transition"
           >
             <Target size={16} />
-            <span>Start Set {selectedSet} ({Math.min(questionCount, availableCount)}-Question Practice)</span>
+            <span>Start Set {selectedSet} ({availableCount === null ? questionCount : Math.min(questionCount, availableCount)}-Question Practice)</span>
           </button>
 
           <button
-            disabled={!availableCount || !activeExam}
+            disabled={availableCount === 0 || !activeExam}
             onClick={() => handleStartTest('flip')}
             className="w-full bg-slate-800 hover:bg-slate-750 border border-slate-700 text-teal-300 font-bold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition"
           >

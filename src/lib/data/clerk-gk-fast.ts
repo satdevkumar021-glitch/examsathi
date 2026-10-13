@@ -1,7 +1,7 @@
 import type { Lesson } from './lessons/types';
 import data from './content/clerk-gk-100.json';
 import translated from './content/clerk-gk-translations.json';
-import type { Question } from './questions';
+import type { Question } from '../question-types';
 import type { Subject } from './exams';
 const text = (en: string, hi: string, pa: string) => ({en,hi,pa});
 type Row = typeof data[number];

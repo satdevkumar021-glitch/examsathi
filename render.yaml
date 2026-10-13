@@ -18,5 +18,15 @@ services:
         sync: false
       - key: GEMINI_API_KEY
         sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
       - key: NEXT_PUBLIC_GOOGLE_AUTH_ENABLED
         value: "false"
+      - key: VAPID_PUBLIC_KEY
+        sync: false
+      - key: VAPID_PRIVATE_KEY
+        sync: false
+      - key: VAPID_SUBJECT
+        sync: false
+      - key: CRON_SECRET
+        sync: false

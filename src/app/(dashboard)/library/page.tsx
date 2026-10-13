@@ -8,7 +8,9 @@ import { BookOpen, Play, Pause, RotateCcw, Volume2, VolumeX, CheckCircle2, Targe
 import { getStoredUser, saveUserSession } from '@/lib/auth';
 import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
-import { getExamTopics, getTestQuestions } from '@/lib/data/question_bank_engine';
+import { getExamTopics } from '@/lib/data/exam-catalog';
+import { topicAvailable } from '@/lib/question-client';
+import { useManifest } from '@/lib/use-question-data';
 
 interface LibrarySeat {
   id: number;
@@ -187,9 +189,11 @@ export default function VirtualStudyLibrary() {
 
   const progressPercentage = Math.round(((timerMode * 60 - secondsRemaining) / (timerMode * 60)) * 100);
 
+  const manifest = useManifest([activeExam]);
+  const countFor = (topicId: string) => (manifest ? topicAvailable(manifest, activeExam, topicId, 50) : 0);
   const examTopics = getExamTopics(activeExam);
   const topicsWithCounts = examTopics.map(t => {
-    const qCount = getTestQuestions({ topicId: t.id, examId: activeExam, count: 50 }).length;
+    const qCount = countFor(t.id);
     return {
       id: t.id,
       label: `${t.name}${lang === 'pa' && t.namePa ? ` (${t.namePa})` : ''}`,
@@ -199,15 +203,15 @@ export default function VirtualStudyLibrary() {
   });
 
   const fallbackTopics = [
-    { id: 'punjab-history', label: '🌾 Punjab History: 10 Gurus, Misals & Ranjit Singh', count: getTestQuestions({ topicId: 'punjab-history', examId: activeExam, count: 50 }).length, testUrl: `/mock-test/topic-punjab-history?exam=${activeExam}` },
-    { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', count: getTestQuestions({ topicId: 'fundamental-rights', examId: activeExam, count: 50 }).length, testUrl: `/mock-test/topic-fundamental-rights?exam=${activeExam}` },
+    { id: 'punjab-history', label: '🌾 Punjab History: 10 Gurus, Misals & Ranjit Singh', count: countFor('punjab-history'), testUrl: `/mock-test/topic-punjab-history?exam=${activeExam}` },
+    { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', count: countFor('fundamental-rights'), testUrl: `/mock-test/topic-fundamental-rights?exam=${activeExam}` },
   ];
 
   const TOPIC_OPTIONS = topicsWithCounts.length > 0 ? topicsWithCounts : fallbackTopics;
   const activeTopicObj = TOPIC_OPTIONS.find(t => t.id === selectedTopic) 
     || TOPIC_OPTIONS.find(t => t.count > 0) 
     || TOPIC_OPTIONS[0];
-  const availableCount = activeTopicObj ? getTestQuestions({ topicId: activeTopicObj.id, examId: activeExam, count: 50 }).length : 0;
+  const availableCount = activeTopicObj ? countFor(activeTopicObj.id) : 0;
 
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-28 text-slate-100 max-w-xl mx-auto w-full">
@@ -283,7 +287,7 @@ export default function VirtualStudyLibrary() {
             );
           })}
         </div>
-        <p className="text-xs text-slate-500">Showing your desk. Real-time presence coming soon.</p>
+        <p className="text-xs text-slate-400">Showing your desk. Real-time presence coming soon.</p>
       </div>
 
       {/* 2. CHOOSE TOPIC FOR THIS SESSION */}
@@ -465,7 +469,7 @@ export default function VirtualStudyLibrary() {
             </Link>
             <Link
               href={`${activeTopicObj.testUrl}&count=${Math.min(50, availableCount)}`}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-2.5 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5 shadow"
+              className="flex-1 bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-black py-2.5 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5 shadow"
             >
               <Target size={13} />
               <span>Up to {Math.min(50, availableCount)} Qs Practice</span>

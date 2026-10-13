@@ -1,25 +1,31 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
+import { readBoundedText } from '@/lib/request-body';
+import { clientIp, rateLimit } from '@/lib/rate-limit';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
+    const limited = rateLimit(`register:${clientIp(req)}`, 5, 60 * 60 * 1000);
+    if (!limited.ok) {
+      return NextResponse.json({ success: false, message: 'Too many attempts. Try again later.' }, { status: 429, headers: { 'Retry-After': String(limited.retryAfter) } });
+    }
+    const body = JSON.parse(await readBoundedText(req, 10000));
     const { email, password, name, phone, targetExam = 'master-cadre-sst', state = 'punjab' } = body;
 
-    if (!email || !password || !name) {
+    if (typeof email !== 'string' || typeof password !== 'string' || typeof name !== 'string' || !email || !password || !name || email.length > 254 || password.length > 256 || name.length > 100) {
       return NextResponse.json({
         success: false,
         message: 'Name, email, and password are required.',
       }, { status: 400 });
     }
 
-    if (password.length < 6) {
+    if (password.length < 8) {
       return NextResponse.json({
         success: false,
-        message: 'Password must be at least 6 characters.',
+        message: 'Password must be at least 8 characters.',
       }, { status: 400 });
     }
 
@@ -62,7 +68,9 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ success: false, message: 'Authentication service is not configured.' }, { status: 503 });
-  } catch {
+  } catch (error) {
+    if (error instanceof Error && error.message === 'TOO_LARGE') return NextResponse.json({ success: false, message: 'Request too large.' }, { status: 413 });
+    if (error instanceof SyntaxError) return NextResponse.json({ success: false, message: 'Invalid JSON request.' }, { status: 400 });
     return NextResponse.json({
       success: false,
       message: 'Unable to register. Please try again.',

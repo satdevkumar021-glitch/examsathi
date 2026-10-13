@@ -30,7 +30,7 @@ function load(file) {
   vm.runInNewContext(js, {
     module: loaded,
     exports: loaded.exports,
-    require: name => load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)),
+    require: name => name === 'server-only' ? {} : load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)),
     window,
     Event: class Event {},
     Date,

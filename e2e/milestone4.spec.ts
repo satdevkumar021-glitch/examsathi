@@ -2,65 +2,29 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Milestone 4: Admin Portal, Dynamic Roadmap, Virtual Library, and Raavi Typing (B2, B3, B8, B9, B10)', () => {
 
-  test('M4-1. Admin Portal RBAC, Pipeline & 50+ Topics (B3)', async ({ page }) => {
+  test('M4-1. Admin Portal is session-gated and its API rejects anonymous callers', async ({ page, request }) => {
+    // No session cookie: the proxy redirects to login
     await page.goto('/admin/');
+    await expect(page).toHaveURL(/\/login\/?/);
 
-    // Passkey authentication challenge visible
-    const passkeyInput = page.locator('input[type="password"]');
-    await expect(passkeyInput).toBeVisible();
-
-    // Authenticate with reviewer passkey
-    await passkeyInput.fill('reviewer');
-    await page.locator('button[type="submit"]:has-text("Authenticate")').click();
-
-    // Verify Admin Portal loaded
-    await expect(page.locator('h1:has-text("Publisher & Review Portal")')).toBeVisible();
-
-    // Verify Role badge shows Reviewer
-    await expect(page.locator('button:has-text("Reviewer")')).toHaveClass(/bg-indigo-600/);
-
-    // Verify Editorial Pipeline items are visible
-    const pipelineItems = page.locator('text=/review|draft|published/i');
-    expect(await pipelineItems.count()).toBeGreaterThan(0);
-
-    // Switch to Question tab and verify topic selector has 50+ topics
-    await page.locator('button:has-text("+Question")').click();
-    const topicSelect = page.locator('select').first();
-    const topicOptionCount = await topicSelect.locator('option').count();
-    console.log('Total topic options in admin dropdown:', topicOptionCount);
-    expect(topicOptionCount).toBeGreaterThanOrEqual(40);
+    // The API is the real enforcement point
+    const res = await request.get('/api/admin/content/');
+    expect(res.status()).toBe(401);
   });
 
-  test('M4-2. Roadmap Dynamic Day & Milestones (B8)', async ({ page }) => {
+  test('M4-2. Roadmap day navigator covers a 60-day plan', async ({ page }) => {
+    await page.addInitScript(() => { localStorage.setItem('examsathi_onboarding_completed', 'true'); });
     await page.goto('/roadmap/');
+    await page.locator('button:has-text("REET")').first().click();
 
-    // Verify Day indicator
-    const dayBadge = page.locator('text=/Day [0-9]+ of 60/');
-    await expect(dayBadge).toBeVisible();
+    // The direct day navigator offers all 60 days
+    const daySelect = page.locator('select').filter({ has: page.locator('option[value="60"]') }).first();
+    await expect(daySelect).toBeVisible();
+    expect(await daySelect.locator('option').count()).toBe(60);
 
-    // Switch to ETT track
-    const ettTab = page.locator('button:has-text("ETT")').first();
-    await ettTab.click();
-    await page.waitForTimeout(200);
-
-    // Verify milestone selector buttons (Day 1, 14, 30, 45, 60)
-    const milestone1 = page.locator('button:has-text("Day 1")').first();
-    const milestone14 = page.locator('button:has-text("Day 14")').first();
-    const milestone60 = page.locator('button:has-text("Day 60")').first();
-    await expect(milestone1).toBeVisible();
-    await expect(milestone14).toBeVisible();
-    await expect(milestone60).toBeVisible();
-
-    // Click Day 1 milestone
-    await milestone1.click();
-    await page.waitForTimeout(200);
-    await expect(page.locator('h2:has-text("Day 1:")')).toBeVisible();
-
-    // Click Day 14 and verify Piaget task
-    await milestone14.click();
-    await page.waitForTimeout(200);
-    const piagetTask = page.locator('a[href*="/lesson/child-development-pedagogy"]').first();
-    await expect(piagetTask).toBeVisible();
+    await daySelect.selectOption('14');
+    await expect(page.locator('text=/14\\/60/').first()).toBeVisible();
+    await expect(page.locator('a[href*="/lesson/"]').first()).toBeVisible();
   });
 
   test('M4-3. Virtual Library Honest States & 25m Pomodoro Sync (B2, B9)', async ({ page }) => {

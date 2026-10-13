@@ -1,30 +1,22 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, BookOpen, Layers, CheckCircle, User } from 'lucide-react';
+import { NAV_ITEMS, isActive } from './navItems';
 
+/** Phone navigation. Hidden from the lg breakpoint, where the sidebar takes over. */
 export default function BottomNav() {
   const pathname = usePathname();
-  
-  const navs = [
-    { name: 'Home', path: '/dashboard', icon: Home },
-    { name: 'Study', path: '/exams', icon: BookOpen },
-    { name: 'Cards', path: '/mock-test?mode=flip', icon: Layers },
-    { name: 'Test', path: '/mock-test', icon: CheckCircle },
-    { name: 'Profile', path: '/profile', icon: User },
-  ];
-
   return (
-    <nav aria-label="Bottom Navigation" className="fixed bottom-0 w-full max-w-[480px] bg-slate-900 border-t border-slate-800 pb-safe">
-      <div className="flex justify-around items-center h-16">
-        {navs.map((nav) => {
-          const Icon = nav.icon;
-          const isActive = pathname.startsWith(nav.path) && (nav.path !== '/exams' || pathname === '/exams' || pathname.startsWith('/exams/') || pathname.startsWith('/study/'));
-          // basic active matching
+    <nav aria-label="Bottom Navigation" className="fixed bottom-0 inset-x-0 z-40 border-t border-slate-800 bg-slate-900/95 backdrop-blur pb-safe lg:hidden">
+      <div className="mx-auto flex h-16 max-w-2xl items-center justify-around">
+        {NAV_ITEMS.map(item => {
+          const Icon = item.icon;
+          const active = isActive(pathname, item);
           return (
-            <Link key={nav.name} href={nav.path} className={`flex flex-col items-center justify-center w-full h-full gap-1 ${isActive ? 'text-teal-400' : 'text-slate-400 hover:text-slate-300'}`}>
-              <Icon size={20} className={isActive ? 'fill-teal-400/20' : ''} />
-              <span className="text-[10px] font-medium">{nav.name}</span>
+            <Link key={item.name} href={item.path} aria-current={active ? 'page' : undefined}
+              className={`flex h-full w-full flex-col items-center justify-center gap-1 ${active ? 'text-teal-400' : 'text-slate-400 hover:text-slate-300'}`}>
+              <Icon size={20} className={active ? 'fill-teal-400/20' : ''} />
+              <span className="text-[10px] font-medium">{item.name}</span>
             </Link>
           );
         })}

@@ -11,6 +11,7 @@ import { getStoredUser } from '@/lib/auth';
 import InstallAppButton from '@/components/ui/InstallAppButton';
 import StreakBadge from '@/components/ui/StreakBadge';
 import DailyKnowledge from '@/components/dashboard/DailyKnowledge';
+import WeakTopicsCard from '@/components/dashboard/WeakTopicsCard';
 import { getTodayContent } from '@/lib/data/daily_content';
 import { Target, Book, Layers, ArrowRight, Keyboard, Compass, Sparkles, GraduationCap, Briefcase, Share2, Brain } from 'lucide-react';
 
@@ -102,6 +103,8 @@ export default function Dashboard() {
           <StreakBadge streak={streakCount} />
         </div>
       </div>
+
+      <WeakTopicsCard />
 
       {/* 🔴 TODAY'S LIVE EXAM MOCKS — 1-CLICK 50-50 SETS */}
       <section className="rounded-2xl border-2 border-amber-500/70 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-teal-950/90 p-4 space-y-3.5 shadow-xl">
@@ -230,7 +233,7 @@ export default function Dashboard() {
                 <p className="text-xs font-bold text-orange-300 mb-1">📅 आज इतिहास में</p>
                 <p className="text-xs font-semibold text-slate-200">{daily.gkTitle}</p>
                 <p className="text-xs text-slate-400 mt-1 line-clamp-2">{daily.gkDescription}</p>
-                {daily.gkSource && <p className="text-[10px] text-slate-500 mt-1">स्रोत: {daily.gkSource}</p>}
+                {daily.gkSource && <p className="text-[10px] text-slate-400 mt-1">स्रोत: {daily.gkSource}</p>}
               </div>
             )}
           </div>
@@ -598,7 +601,7 @@ export default function Dashboard() {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-2 shadow transition"
+          className="w-full bg-emerald-700 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-2 shadow transition"
         >
           <span>📲 Share on WhatsApp (व्हाट्सएप पर शेयर करें)</span>
         </a>
@@ -617,7 +620,7 @@ export default function Dashboard() {
       </div>
 
       {/* Footer */}
-      <div className="mt-4 pt-4 border-t border-slate-800 flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+      <div className="mt-4 pt-4 border-t border-slate-800 flex flex-wrap justify-center gap-4 text-xs text-slate-400">
         <Link href="/about" className="hover:text-slate-400">About</Link>
         <Link href="/privacy" className="hover:text-slate-400">Privacy Policy</Link>
         <Link href="/terms" className="hover:text-slate-400">Terms</Link>
