@@ -23,6 +23,10 @@ services:
 
       - key: NEXT_PUBLIC_SITE_URL
         sync: false
+      - key: SENTRY_DSN
+        sync: false
+      - key: NEXT_PUBLIC_SENTRY_DSN
+        sync: false
       - key: NEXT_PUBLIC_GOOGLE_AUTH_ENABLED
         value: "false"
       - key: VAPID_PUBLIC_KEY

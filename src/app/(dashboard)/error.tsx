@@ -1,9 +1,12 @@
 'use client';
 
+import { useEffect } from 'react';
 import Link from 'next/link';
+import * as Sentry from '@sentry/nextjs';
 
 // Wraps the page inside the dashboard layout, so the navigation and account state stay usable.
 export default function DashboardError({ error, retry }: { error: Error & { digest?: string }; retry: () => void }) {
+  useEffect(() => { Sentry.captureException(error); }, [error]);
   return (
     <div role="alert" className="flex flex-col items-center gap-4 p-8 text-center text-slate-200">
       <h1 className="text-lg font-bold">Something went wrong</h1>

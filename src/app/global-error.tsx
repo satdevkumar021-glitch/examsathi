@@ -1,8 +1,12 @@
 'use client';
 
+import { useEffect } from 'react';
+import * as Sentry from '@sentry/nextjs';
+
 // Replaces the root layout when it fails, so it needs its own <html>/<body> and inline styles
 // (global CSS is not loaded here).
 export default function GlobalError({ error, retry }: { error: Error & { digest?: string }; retry: () => void }) {
+  useEffect(() => { Sentry.captureException(error); }, [error]);
   return (
     <html lang="en">
       <body style={{ margin: 0, minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0f172a', color: '#e2e8f0', fontFamily: 'system-ui, sans-serif', textAlign: 'center', padding: 24 }}>

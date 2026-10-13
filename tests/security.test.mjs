@@ -161,3 +161,11 @@ test('AI generation authenticates before revealing configuration and spends quot
   assert.ok(auth < config, 'an anonymous caller must get 401 before learning whether AI is configured');
   assert.ok(config < quota, 'a server without a Gemini key must not burn a learner\'s daily quota');
 });
+
+test('error reporting is off without a DSN and never sends personal data', () => {
+  const server = readFileSync('src/instrumentation.ts', 'utf8');
+  const client = readFileSync('src/instrumentation-client.ts', 'utf8');
+  assert.match(server, /if \(!dsn\) return;/);
+  assert.match(client, /if \(dsn\)/);
+  for (const source of [server, client]) { assert.match(source, /userInfo: false/); assert.match(source, /cookies: false/); assert.match(source, /httpBodies: \[\]/); }
+});

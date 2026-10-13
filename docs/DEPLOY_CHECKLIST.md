@@ -52,6 +52,7 @@ Open your service → **Environment** and set:
 | Variable | Required | Notes |
 |----------|:--------:|-------|
 | `NEXT_PUBLIC_SITE_URL` | yes | Production origin, e.g. `https://examsathi.in`. No trailing slash. Needed for `robots.ts` and `sitemap.ts` — without it both return empty. |
+| `SENTRY_DSN` / `NEXT_PUBLIC_SENTRY_DSN` | recommended | DSN of a Sentry project. Without them no errors are reported. `NEXT_PUBLIC_` values are baked in at build time, so set it before the build. Pair it with an uptime monitor on `/api/health/` (it returns 503 when the database is unreachable). |
 | `NEXT_PUBLIC_SUPABASE_URL` | yes | Your project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | yes | Publishable anon key |
 | `SUPABASE_SERVICE_ROLE_KEY` | yes | Keep secret. Needed to save attempts, run the editorial pipeline and load published content. |
