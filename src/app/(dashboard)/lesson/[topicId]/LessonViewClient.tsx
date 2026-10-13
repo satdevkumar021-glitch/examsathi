@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, HelpCircle, ChevronLeft, ChevronRight, Bookmark, Sparkles, FileText, Download, ExternalLink, ShieldCheck, Target, AlertTriangle, Search, Trash2, Undo2 } from 'lucide-react';
-import { getLessonByTopicId, Lesson } from '@/lib/data/lessons';
+import type { Lesson } from '@/lib/data/lessons/types';
 import { fetchQuestionSet, fetchReveals } from '@/lib/question-client';
 import { fetchResources } from '@/lib/resources-client';
 import type { PublicResource } from '@/lib/resource-content';
@@ -28,8 +28,7 @@ import {
   migrateLegacyTopicNotes,
 } from '@/lib/personal-notes';
 
-export default function LessonView({ topicId }: { topicId: string }) {
-  const lesson = getLessonByTopicId(topicId);
+export default function LessonView({ topicId, lesson }: { topicId: string; lesson: Lesson | undefined }) {
   if (!lesson) return <div className="p-6 text-slate-200"><h1 className="text-xl font-bold">Study material is being prepared</h1><p>This topic does not yet have a reviewed lesson. Check the syllabus and official resources.</p><Link href="/syllabus" className="text-teal-300 underline">Browse syllabus coverage</Link></div>;
   return <LessonContent key={topicId} topicId={topicId} lesson={lesson} />;
 }

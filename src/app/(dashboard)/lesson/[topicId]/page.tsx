@@ -1,7 +1,7 @@
 import { ALL_EXAMS } from '@/lib/data/exams';
 import { ALL_QUESTIONS } from '@/lib/data/questions';
 import { ALL_TOPIC_IDS } from '@/lib/data/curriculum';
-import { ALL_LESSONS, TOPIC_ALIASES } from '@/lib/data/lessons';
+import { ALL_LESSONS, TOPIC_ALIASES, getLessonByTopicId } from '@/lib/data/lessons';
 import LessonViewClient from './LessonViewClient';
 
 export function generateStaticParams() {
@@ -24,5 +24,6 @@ export function generateStaticParams() {
 
 export default async function LessonPage({ params }: { params: Promise<{ topicId: string }> }) {
   const resolved = await params;
-  return <LessonViewClient topicId={resolved.topicId} />;
+  // The lesson bank is large (hundreds of KB); look it up here so only this one lesson is sent to the browser.
+  return <LessonViewClient topicId={resolved.topicId} lesson={getLessonByTopicId(resolved.topicId)} />;
 }
