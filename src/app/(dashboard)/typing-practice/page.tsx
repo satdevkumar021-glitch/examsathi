@@ -193,7 +193,7 @@ export default function TypingPracticePage() {
           <Award size={16} className="text-amber-400 shrink-0" />
           <span className="text-indigo-200">
             <strong>Practice target:</strong> 30 WPM with &ge;92% Accuracy in 10 mins (Raavi Font)
-            <span className="block text-[10px] text-indigo-300/80 mt-0.5">
+            <span className="block text-xs text-indigo-300/80 mt-0.5">
               Standard PSSSB Clerk recruitment benchmark simulation · Verify official recruitment notification for specific instructions
             </span>
           </span>
@@ -214,7 +214,7 @@ export default function TypingPracticePage() {
         <div className="grid grid-cols-2 gap-2">
         {/* Language */}
         <div className="bg-slate-800/90 border border-slate-700 p-2 rounded-xl">
-          <span className="text-[10px] text-slate-400 font-semibold block mb-1">Language</span>
+          <span className="text-xs text-slate-400 font-semibold block mb-1">Language</span>
           <div className="flex gap-1">
             <button 
               onClick={() => { setLang('punjabi'); handleReset(); }}
@@ -233,7 +233,7 @@ export default function TypingPracticePage() {
 
         {/* Difficulty */}
         <div className="bg-slate-800/90 border border-slate-700 p-2 rounded-xl">
-          <span className="text-[10px] text-slate-400 font-semibold block mb-1">Passage Length</span>
+          <span className="text-xs text-slate-400 font-semibold block mb-1">Passage Length</span>
           <select 
             value={difficulty}
             onChange={e => { setDifficulty(e.target.value as typeof difficulty); handleReset(); }}
@@ -260,35 +260,35 @@ export default function TypingPracticePage() {
 
         {/* Duration */}
         <div className="bg-slate-800/90 border border-slate-700 p-2 rounded-xl">
-          <span className="text-[10px] text-slate-400 font-semibold block mb-1">Timer Preset</span>
+          <span className="text-xs text-slate-400 font-semibold block mb-1">Timer Preset</span>
           <div className="flex gap-1">
             <button
               onClick={() => handleDurationChange(60)}
-              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 60 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-xs ${testDuration === 60 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
             >
               1m Practice
             </button>
             <button
               onClick={() => handleDurationChange(300)}
-              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 300 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-xs ${testDuration === 300 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
             >
               5m Warm-up
             </button>
             <button
               onClick={() => handleDurationChange(600)}
-              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 600 ? 'bg-amber-500 text-slate-950' : 'text-amber-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-xs ${testDuration === 600 ? 'bg-amber-500 text-slate-950' : 'text-amber-400'}`}
             >
               ⭐ 10m Simulation
             </button>
             <button
               onClick={() => handleDurationChange(900)}
-              className={`flex-1 py-1 rounded text-center font-bold text-[10px] ${testDuration === 900 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
+              className={`flex-1 py-1 rounded text-center font-bold text-xs ${testDuration === 900 ? 'bg-teal-700 text-white' : 'text-slate-400'}`}
             >
               15m Extended
             </button>
           </div>
           {testDuration === 600 && (
-            <p className="text-[9px] text-amber-400 mt-1 text-center font-semibold">Practice target — 30 WPM / 92%</p>
+            <p className="text-xs text-amber-400 mt-1 text-center font-semibold">Practice target — 30 WPM / 92%</p>
           )}
         </div>
       </div>
@@ -297,21 +297,21 @@ export default function TypingPracticePage() {
       <div className="grid grid-cols-4 gap-2">
         <div className="bg-slate-800/90 border border-slate-700 p-2.5 rounded-xl text-center">
           <span className="text-xl font-bold font-mono text-teal-400">{wpm}</span>
-          <span className="text-[10px] text-slate-400 uppercase block font-semibold">Speed (WPM)</span>
+          <span className="text-xs text-slate-400 uppercase block font-semibold">Speed (WPM)</span>
         </div>
         <div className="bg-slate-800/90 border border-slate-700 p-2.5 rounded-xl text-center">
           <span className={`text-xl font-bold font-mono ${accuracy >= 92 ? 'text-emerald-400' : 'text-rose-400'}`}>{accuracy}%</span>
-          <span className="text-[10px] text-slate-400 uppercase block font-semibold">Accuracy</span>
+          <span className="text-xs text-slate-400 uppercase block font-semibold">Accuracy</span>
         </div>
         <div className="bg-slate-800/90 border border-slate-700 p-2.5 rounded-xl text-center">
           <span className="text-xl font-bold font-mono text-amber-400">{timeLeft}s</span>
-          <span className="text-[10px] text-slate-400 uppercase block font-semibold">Time Left</span>
+          <span className="text-xs text-slate-400 uppercase block font-semibold">Time Left</span>
         </div>
         <div className="bg-slate-800/90 border border-slate-700 p-2.5 rounded-xl text-center">
           <span className={`text-xs font-bold px-1.5 py-0.5 rounded ${isPsssBQualified ? 'bg-emerald-950 text-emerald-300 border border-emerald-500/50' : 'bg-rose-950 text-rose-300 border border-rose-500/50'}`}>
             {isPsssBQualified ? 'PASSED' : 'NEED 30/92'}
           </span>
-          <span className="text-[10px] text-slate-400 uppercase block font-semibold mt-1">Status</span>
+          <span className="text-xs text-slate-400 uppercase block font-semibold mt-1">Status</span>
         </div>
       </div>
 
@@ -368,21 +368,21 @@ export default function TypingPracticePage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs pt-1">
             <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-750">
-              <span className="text-[10px] text-slate-400 block font-semibold">Net Speed (Official)</span>
+              <span className="text-xs text-slate-400 block font-semibold">Net Speed (Official)</span>
               <strong className="text-teal-400 text-base font-mono">{evalResult ? evalResult.netWpm : wpm} WPM</strong>
             </div>
             <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-750">
-              <span className="text-[10px] text-slate-400 block font-semibold">Gross Speed</span>
+              <span className="text-xs text-slate-400 block font-semibold">Gross Speed</span>
               <strong className="text-white text-base font-mono">{evalResult ? evalResult.grossWpm : wpm} WPM</strong>
             </div>
             <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-750">
-              <span className="text-[10px] text-slate-400 block font-semibold">Full / Half Mistakes</span>
+              <span className="text-xs text-slate-400 block font-semibold">Full / Half Mistakes</span>
               <strong className="text-amber-400 text-sm font-mono">
                 {evalResult ? `${evalResult.fullMistakes}F / ${evalResult.halfMistakes}H` : '0'}
               </strong>
             </div>
             <div className="bg-slate-900/80 p-2.5 rounded-xl border border-slate-750">
-              <span className="text-[10px] text-slate-400 block font-semibold">Graphemes / Chars</span>
+              <span className="text-xs text-slate-400 block font-semibold">Graphemes / Chars</span>
               <strong className="text-indigo-300 text-sm font-mono">
                 {evalResult ? `${evalResult.graphemesTyped} / ${totalCharsTyped}` : totalCharsTyped}
               </strong>
@@ -421,7 +421,7 @@ export default function TypingPracticePage() {
           <div>• ਲਾਂ (ੇ): <strong>s</strong> | ਦੁਲਾਵਾਂ (ੈ): <strong>w</strong></div>
           <div>• ਹੋੜਾ (ੋ): <strong>a</strong> | ਕਨੌੜਾ (ੌ): <strong>q</strong></div>
         </div>
-        <p className="text-[10px] text-amber-400/80 mt-2">⚠️ Key hints are for Raavi Unicode layout. Legacy ASCII Raavi layouts differ.</p>
+        <p className="text-xs text-amber-400/80 mt-2">⚠️ Key hints are for Raavi Unicode layout. Legacy ASCII Raavi layouts differ.</p>
       </div>
 
     </div>

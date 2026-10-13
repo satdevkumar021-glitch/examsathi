@@ -58,7 +58,7 @@ export default function DailyKnowledge() {
       <div className="bg-gradient-to-br from-indigo-950/70 via-slate-850 to-slate-900 border border-indigo-500/30 rounded-2xl p-4 shadow-md">
         <div className="flex items-center gap-2 mb-2">
           <Lightbulb size={16} className="text-amber-400" />
-          <span className="text-[10px] uppercase font-bold text-amber-300 tracking-wider">
+          <span className="text-xs uppercase font-bold text-amber-300 tracking-wider">
             {language === 'pa' ? 'ਅੱਜ ਦਾ ਪ੍ਰੇਰਣਾਦਾਇਕ ਵਿਚਾਰ' : language === 'hi' ? 'आज का सुविचार' : 'Daily Thought of The Day'}
           </span>
         </div>
@@ -68,7 +68,7 @@ export default function DailyKnowledge() {
         <p className="text-slate-300 text-[11px] mt-1.5 leading-snug">
           {currentQuote.meaning}
         </p>
-        <span className="text-[10px] text-teal-400 font-medium block mt-1">
+        <span className="text-xs text-teal-400 font-medium block mt-1">
           — {currentQuote.author}
         </span>
       </div>
@@ -106,7 +106,7 @@ export default function DailyKnowledge() {
               {language === 'pa' ? 'ਸਰਕਾਰੀ ਮੁਫ਼ਤ ਅਧਿਐਨ ਪੋਰਟਲ' : language === 'hi' ? 'प्रमाणित सरकारी अध्ययन पोर्टल' : 'Curated Free Govt Portals'}
             </h3>
           </div>
-          <span className="text-[10px] text-teal-400 font-semibold">100% Free</span>
+          <span className="text-xs text-teal-400 font-semibold">100% Free</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -122,7 +122,7 @@ export default function DailyKnowledge() {
                 <div className="flex items-center gap-1.5 mb-0.5">
                   <h4 className="text-white font-bold text-[11px] truncate">{language === 'pa' ? res.namePa : res.name}</h4>
                 </div>
-                <p className="text-[10px] text-slate-400 truncate">{res.desc}</p>
+                <p className="text-xs text-slate-400 truncate">{res.desc}</p>
               </div>
               <ExternalLink size={12} className="text-slate-400 group-hover:text-teal-400 shrink-0" />
             </a>

@@ -51,7 +51,7 @@ function ResourcePreview({ item }: { item: ContentItem }) {
     if (!title || !body) return <p className={`${box} text-amber-300`}>This item was saved in an older format and will not be shown to students until it is edited and saved again.</p>;
     return (<div className={box}>
       {(['en', 'hi', 'pa'] as const).filter(l => title[l] || body[l]).map(l => (
-        <div key={l}><p className="text-slate-400 uppercase text-[9px]">{l}</p><p className="text-slate-100 font-semibold">{title[l]}</p><p className="text-slate-300 whitespace-pre-wrap">{body[l]}</p></div>
+        <div key={l}><p className="text-slate-400 uppercase text-xs">{l}</p><p className="text-slate-100 font-semibold">{title[l]}</p><p className="text-slate-300 whitespace-pre-wrap">{body[l]}</p></div>
       ))}
     </div>);
   }
@@ -311,8 +311,8 @@ export default function AdminResourcePortal({ uniqueTopics }: { uniqueTopics: Ad
 
         {/* Role comes from the server and cannot be changed here */}
         <div className="flex items-center gap-2 bg-slate-800 p-1.5 rounded-xl border border-slate-700">
-          <span className="text-[10px] text-slate-400 font-bold px-1.5 uppercase">Role:</span>
-          <span className={`px-2 py-1 rounded-lg text-[10px] font-black uppercase ${adminRole === 'educator' ? 'bg-amber-500 text-slate-950' : adminRole === 'reviewer' ? 'bg-indigo-600 text-white' : 'bg-emerald-700 text-white'}`}>
+          <span className="text-xs text-slate-400 font-bold px-1.5 uppercase">Role:</span>
+          <span className={`px-2 py-1 rounded-lg text-xs font-black uppercase ${adminRole === 'educator' ? 'bg-amber-500 text-slate-950' : adminRole === 'reviewer' ? 'bg-indigo-600 text-white' : 'bg-emerald-700 text-white'}`}>
             {adminRole}
           </span>
         </div>
@@ -389,12 +389,12 @@ export default function AdminResourcePortal({ uniqueTopics }: { uniqueTopics: Ad
             </div>
 
             {/* Filter Pills */}
-            <div className="flex gap-1 bg-slate-800 p-1 rounded-xl border border-slate-700 text-[10px]">
+            <div className="flex gap-1 bg-slate-800 p-1 rounded-xl border border-slate-700 text-xs">
               {(['all', 'draft', 'review', 'published', 'rejected'] as const).map(f => (
                 <button
                   key={f}
                   onClick={() => setPipelineFilter(f)}
-                  className={`px-2 py-0.5 rounded capitalize font-bold transition ${pipelineFilter === f ? 'bg-slate-700 text-teal-300' : 'text-slate-400'}`}
+                  className={`px-2 py-0.5 rounded capitalize font-bold transition ${pipelineFilter === f ? 'bg-slate-700 text-teal-300' : 'text-slate-300'}`}
                 >
                   {f}
                 </button>
@@ -416,18 +416,18 @@ export default function AdminResourcePortal({ uniqueTopics }: { uniqueTopics: Ad
                   <div className="flex items-start justify-between gap-2">
                     <div className="min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border uppercase ${statusColors[item.status]}`}>
+                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full border uppercase ${statusColors[item.status]}`}>
                           {item.status}
                         </span>
-                        <span className="text-[10px] bg-slate-900 text-slate-300 px-2 py-0.5 rounded font-mono">
+                        <span className="text-xs bg-slate-900 text-slate-300 px-2 py-0.5 rounded font-mono">
                           {item.type.toUpperCase()}
                         </span>
-                        <span className="text-[10px] text-teal-400 font-mono truncate">
+                        <span className="text-xs text-teal-400 font-mono truncate">
                           #{item.topicId}
                         </span>
                       </div>
                       <h3 className="text-xs font-bold text-white leading-snug">{item.title}</h3>
-                      <div className="text-[10px] text-slate-400 mt-1 flex items-center gap-3">
+                      <div className="text-xs text-slate-400 mt-1 flex items-center gap-3">
                         <span>Created by: <strong>{item.author}</strong></span>
                         <span>•</span>
                         <span>{new Date(item.createdAt).toLocaleString('en-IN', { dateStyle: 'short', timeStyle: 'short' })}</span>
@@ -448,7 +448,7 @@ export default function AdminResourcePortal({ uniqueTopics }: { uniqueTopics: Ad
                   {item.type === 'question' ? <QuestionPreview data={item.data} /> : <ResourcePreview item={item} />}
 
                   {item.reviewedBy && (
-                    <div className="text-[10px] bg-slate-900/60 p-2 rounded-lg border border-slate-800 text-slate-300">
+                    <div className="text-xs bg-slate-900/60 p-2 rounded-lg border border-slate-800 text-slate-300">
                       <strong>Audit Trail:</strong> Last action by {item.reviewedBy}
                       {item.feedback && <div className="text-amber-300 mt-0.5">Note: {item.feedback}</div>}
                     </div>
@@ -537,7 +537,7 @@ export default function AdminResourcePortal({ uniqueTopics }: { uniqueTopics: Ad
               <PlusCircle size={16} className="text-teal-400" />
               {editingId ? 'Edit question' : 'Add Multiple Choice Question (MCQ)'}
             </h2>
-            <span className="text-[10px] text-slate-400 font-mono">Total Topics: {uniqueTopics.length}</span>
+            <span className="text-xs text-slate-400 font-mono">Total Topics: {uniqueTopics.length}</span>
           </div>
           {editingId && (
             <div className="flex items-center justify-between gap-2 text-[11px] bg-indigo-950/60 border border-indigo-500/40 text-indigo-200 rounded-lg p-2.5">

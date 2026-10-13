@@ -230,7 +230,7 @@ export default function VirtualStudyLibrary() {
               </p>
             </div>
           </div>
-          <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2 py-1 rounded-full border border-emerald-500/40 flex items-center gap-1 font-mono">
+          <span className="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-2 py-1 rounded-full border border-emerald-500/40 flex items-center gap-1 font-mono">
             <Flame size={12} /> {totalHours > 0 ? `${totalHours.toFixed(1)}h Studied` : '0.0h Studied'}
           </span>
         </div>
@@ -243,13 +243,13 @@ export default function VirtualStudyLibrary() {
             <User size={16} className="text-teal-400" />
             <h2 className="text-sm font-bold text-white">1. Select Your Library Desk</h2>
           </div>
-          <span className="text-[10px] text-teal-300 font-semibold">
+          <span className="text-xs text-teal-300 font-semibold">
             {selectedSeat ? `Desk #${selectedSeat.toString().padStart(2, '0')} Claimed` : 'No Desk Claimed (Choose a desk below)'}
           </span>
         </div>
 
         {/* Legend */}
-        <div className="flex items-center gap-3 text-[10px] text-slate-400 border-b border-slate-750 pb-2">
+        <div className="flex items-center gap-3 text-xs text-slate-400 border-b border-slate-750 pb-2">
           <span className="flex items-center gap-1">
             <span className="w-2.5 h-2.5 rounded-full bg-teal-400 ring-2 ring-teal-400/30" /> Your Claimed Seat
           </span>
@@ -276,11 +276,11 @@ export default function VirtualStudyLibrary() {
                 title="Click to claim this desk"
               >
                 <div className="flex items-center justify-between w-full">
-                  <span className="text-[10px] font-bold font-mono">#{seat.id.toString().padStart(2, '0')}</span>
+                  <span className="text-xs font-bold font-mono">#{seat.id.toString().padStart(2, '0')}</span>
                   {isSelected && <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />}
                 </div>
 
-                <div className="text-[10px] leading-tight truncate">
+                <div className="text-xs leading-tight truncate">
                   {isSelected ? 'Your Desk (Active)' : 'Open Desk'}
                 </div>
               </button>
@@ -297,7 +297,7 @@ export default function VirtualStudyLibrary() {
             <Target size={16} className="text-teal-400" />
             <h2 className="text-sm font-bold text-white">2. Topic Goal for this Desk Session</h2>
           </div>
-          <span className="text-[10px] text-teal-400 font-semibold">
+          <span className="text-xs text-teal-400 font-semibold">
             {practiceExam(activeExam)?.name || activeExam}
           </span>
         </div>
@@ -364,10 +364,10 @@ export default function VirtualStudyLibrary() {
             <span className="text-4xl font-black text-white font-mono tracking-tight">
               {formatTimer(secondsRemaining)}
             </span>
-            <span className="text-[10px] text-teal-300 font-bold uppercase tracking-wider mt-1">
+            <span className="text-xs text-teal-300 font-bold uppercase tracking-wider mt-1">
               {isRunning ? 'Desk Focus Active' : 'Session Paused'}
             </span>
-            <span className="text-[10px] text-slate-400 font-mono">
+            <span className="text-xs text-slate-400 font-mono">
               {selectedSeat ? `Desk #${selectedSeat.toString().padStart(2, '0')}` : 'No Desk Claimed'}
             </span>
           </div>

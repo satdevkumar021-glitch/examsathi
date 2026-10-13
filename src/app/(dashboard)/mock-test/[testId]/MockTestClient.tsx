@@ -654,7 +654,7 @@ export default function MockTest({ testId }: { testId?: string }) {
             <span className="font-semibold">Revision Mode:</span>
             <span>Practicing previously seen questions. Exposure tracking is not modified.</span>
           </span>
-          <span className="text-[10px] bg-sky-800/40 px-2 py-0.5 rounded border border-sky-600/30 font-mono">
+          <span className="text-xs bg-sky-800/40 px-2 py-0.5 rounded border border-sky-600/30 font-mono">
             Revision Practice
           </span>
         </div>
@@ -667,14 +667,14 @@ export default function MockTest({ testId }: { testId?: string }) {
             <span className="font-semibold">Final Unseen Set:</span>
             <span>Requested {sourceConfig.count} Qs, serving remaining {questions.length} unseen questions before bank exhaustion.</span>
           </span>
-          <span className="text-[10px] bg-amber-800/40 px-2 py-0.5 rounded border border-amber-600/30 font-mono">
+          <span className="text-xs bg-amber-800/40 px-2 py-0.5 rounded border border-amber-600/30 font-mono">
             {questions.length} of {sourceConfig.count}
           </span>
         </div>
       )}
       {/* Exam Pattern Info Banner */}
       {loaded && questions.length > 0 && (activeExamMeta || pExam) && (
-        <div className="bg-amber-950/40 border-b border-amber-700/40 px-3 py-1 flex items-center justify-between gap-2 text-[10px] text-amber-200 shrink-0">
+        <div className="bg-amber-950/40 border-b border-amber-700/40 px-3 py-1 flex items-center justify-between gap-2 text-xs text-amber-200 shrink-0">
           <span className="flex items-center gap-1.5">
             <ShieldAlert size={12} className="text-amber-400 shrink-0" />
             {displayNegativeMarking() > 0 ? (
@@ -701,7 +701,7 @@ export default function MockTest({ testId }: { testId?: string }) {
           <h1 className="text-white font-bold text-xs truncate max-w-[190px] sm:max-w-xs">
             {testTitle}
           </h1>
-          <p className="text-[10px] text-slate-400">
+          <p className="text-xs text-slate-400">
             {questions.length} Qs • {currentSetNumber > 0 ? `Set ${currentSetNumber} of ${totalSetCount}` : mode === 'exam' ? 'Exam Mode' : '3D Flip Card'}
           </p>
         </div>
@@ -711,7 +711,7 @@ export default function MockTest({ testId }: { testId?: string }) {
           {mode === 'exam' && (
             <button
               onClick={() => setInstantFeedback(prev => !prev)}
-              className={`px-2 py-1 rounded-lg text-[10px] font-bold border transition ${
+              className={`px-2 py-1 rounded-lg text-xs font-bold border transition ${
                 instantFeedback
                   ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/50'
                   : 'bg-slate-800 text-slate-300 border-slate-700 hover:border-slate-600'
@@ -728,7 +728,7 @@ export default function MockTest({ testId }: { testId?: string }) {
               router.push('/mock-test');
               setIsFlipped(false);
             }}
-            className={`px-2 py-1 rounded-lg text-[10px] font-bold border flex items-center gap-1 transition ${
+            className={`px-2 py-1 rounded-lg text-xs font-bold border flex items-center gap-1 transition ${
               mode === 'flip'
                 ? 'bg-amber-500/20 text-amber-300 border-amber-500/40'
                 : 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
@@ -743,19 +743,19 @@ export default function MockTest({ testId }: { testId?: string }) {
           <div className="flex bg-slate-800 rounded-lg p-0.5 border border-slate-700">
             <button 
               onClick={() => setLang('hi')} 
-              className={`px-1.5 py-0.5 text-[10px] font-semibold rounded ${lang === 'hi' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
+              className={`px-1.5 py-0.5 text-xs font-semibold rounded ${lang === 'hi' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
             >
               हिं
             </button>
             <button 
               onClick={() => setLang('pa')} 
-              className={`px-1.5 py-0.5 text-[10px] font-semibold rounded ${lang === 'pa' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
+              className={`px-1.5 py-0.5 text-xs font-semibold rounded ${lang === 'pa' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
             >
               ਪੰ
             </button>
             <button 
               onClick={() => setLang('en')} 
-              className={`px-1.5 py-0.5 text-[10px] font-semibold rounded ${lang === 'en' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
+              className={`px-1.5 py-0.5 text-xs font-semibold rounded ${lang === 'en' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
             >
               EN
             </button>
@@ -776,7 +776,7 @@ export default function MockTest({ testId }: { testId?: string }) {
       {/* 50-Question Set Switcher Bar (Set 1: Q1-50, Set 2: Q51-100, Set 3: Q101-150, Set 4: Q151-200...) */}
       {totalSetCount > 1 && (
         <div className="bg-indigo-950/60 border-b border-indigo-500/30 px-2.5 py-1.5 flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0">
-          <span className="text-[10px] font-black uppercase tracking-wider text-teal-300 shrink-0 mr-1">
+          <span className="text-xs font-black uppercase tracking-wider text-teal-300 shrink-0 mr-1">
             50-Q Sets:
           </span>
           {Array.from({ length: Math.min(totalSetCount, 10) }, (_, idx) => {
@@ -789,7 +789,7 @@ export default function MockTest({ testId }: { testId?: string }) {
               <button
                 key={setNum}
                 onClick={() => switchSet(setNum)}
-                className={`px-2.5 py-1 rounded-lg text-[10px] font-bold shrink-0 border transition ${
+                className={`px-2.5 py-1 rounded-lg text-xs font-bold shrink-0 border transition ${
                   isActiveSet
                     ? 'bg-teal-500 text-slate-950 border-teal-400 shadow'
                     : 'bg-slate-800/90 text-slate-300 border-slate-700 hover:border-teal-500/50 hover:text-white'
@@ -802,7 +802,7 @@ export default function MockTest({ testId }: { testId?: string }) {
           {(currentSetNumber || 1) < totalSetCount && (
             <button
               onClick={() => switchSet((currentSetNumber || 1) + 1)}
-              className="ml-auto px-2.5 py-1 rounded-lg text-[10px] font-black shrink-0 bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 transition"
+              className="ml-auto px-2.5 py-1 rounded-lg text-xs font-black shrink-0 bg-amber-500/20 text-amber-300 border border-amber-500/40 hover:bg-amber-500/30 transition"
             >
               Next 50 Qs (Set {(currentSetNumber || 1) + 1}) →
             </button>
@@ -854,10 +854,10 @@ export default function MockTest({ testId }: { testId?: string }) {
                 </span>
                 
                 <div className="flex items-center gap-1.5">
-                  <span className={`text-[10px] px-2 py-0.5 rounded border font-bold ${difficultyBadge.color}`}>
+                  <span className={`text-xs px-2 py-0.5 rounded border font-bold ${difficultyBadge.color}`}>
                     {difficultyBadge.label}
                   </span>
-                  <span className="text-[10px] bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded truncate max-w-[190px]">
+                  <span className="text-xs bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded truncate max-w-[190px]">
                     {currentQuestion.examTag || 'Practice question'} {currentQuestion.year ? `(${currentQuestion.year})` : ''}
                   </span>
                 </div>
@@ -908,7 +908,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                     </div>
                     <div className="text-xs">
                       <p className="text-white font-medium">{opt[lang] || opt.pa || opt.hi || opt.en}</p>
-                      {lang !== 'en' && opt.en && (opt[lang] || opt.hi) !== opt.en && <p className="text-slate-400 text-[10px] mt-0.5">{opt.en}</p>}
+                      {lang !== 'en' && opt.en && (opt[lang] || opt.hi) !== opt.en && <p className="text-slate-400 text-xs mt-0.5">{opt.en}</p>}
                     </div>
                   </button>
                 );
@@ -960,14 +960,14 @@ export default function MockTest({ testId }: { testId?: string }) {
             >
               <div className="flex justify-between items-center gap-2">
                 <div className="flex items-center gap-1.5">
-                  <span className="text-[10px] uppercase font-bold text-amber-400 tracking-wider">
+                  <span className="text-xs uppercase font-bold text-amber-400 tracking-wider">
                     {isFlipped ? 'Answer & Strategic Analysis' : 'Question Card (Tap to Flip)'}
                   </span>
-                  <span className={`text-[9px] px-1.5 py-0.2 rounded border font-bold ${difficultyBadge.color}`}>
+                  <span className={`text-xs px-1.5 py-0.2 rounded border font-bold ${difficultyBadge.color}`}>
                     {difficultyBadge.label}
                   </span>
                 </div>
-                <span className="text-[10px] text-slate-400">Card {qIndex + 1} of {questions.length}</span>
+                <span className="text-xs text-slate-400">Card {qIndex + 1} of {questions.length}</span>
               </div>
 
               {!isFlipped ? (
@@ -983,7 +983,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                       if (!opt) return null;
                       return (
                         <div key={key} className="p-2 bg-slate-900/60 rounded-lg border border-slate-800 flex items-center gap-2">
-                          <span className="w-4 h-4 bg-slate-700 rounded-full flex items-center justify-center text-[10px] font-bold">
+                          <span className="w-4 h-4 bg-slate-700 rounded-full flex items-center justify-center text-xs font-bold">
                             {key}
                           </span>
                           <span className="truncate">{opt[lang] || opt.pa || opt.hi || opt.en}</span>
@@ -1101,7 +1101,7 @@ export default function MockTest({ testId }: { testId?: string }) {
                 </button>
                 <button 
                   onClick={handleClearOption}
-                  className="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-2.5 py-2 rounded-lg text-xs text-slate-400"
+                  className="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-2.5 py-2 rounded-lg text-xs text-slate-300"
                 >
                   Clear
                 </button>

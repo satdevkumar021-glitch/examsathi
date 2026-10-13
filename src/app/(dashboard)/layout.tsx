@@ -30,7 +30,7 @@ export default function DashboardLayout({
             </div>
             <div className="flex min-w-0 flex-col">
               <span className="truncate text-sm font-extrabold leading-tight tracking-tight text-white">ExamSathi</span>
-              <span className="hidden truncate text-[10px] font-semibold leading-tight text-teal-400 min-[420px]:block">परीक्षा साथी</span>
+              <span className="hidden truncate text-xs font-semibold leading-tight text-teal-400 min-[420px]:block">परीक्षा साथी</span>
             </div>
           </Link>
           <div className="hidden lg:block" />

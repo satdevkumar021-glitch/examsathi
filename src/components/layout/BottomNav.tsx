@@ -16,7 +16,7 @@ export default function BottomNav() {
             <Link key={item.name} href={item.path} aria-current={active ? 'page' : undefined}
               className={`flex h-full w-full flex-col items-center justify-center gap-1 ${active ? 'text-teal-400' : 'text-slate-400 hover:text-slate-300'}`}>
               <Icon size={20} className={active ? 'fill-teal-400/20' : ''} />
-              <span className="text-[10px] font-medium">{item.name}</span>
+              <span className="text-xs font-medium">{item.name}</span>
             </Link>
           );
         })}

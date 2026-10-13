@@ -43,5 +43,13 @@ jobs:
       - name: Answer key must not ship to the browser
         run: node scripts/check-bundle-leaks.mjs
 
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: E2E tests (Playwright)
+        run: npx playwright test
+        env:
+          CI: true
+
       - name: MCP server unit tests
         run: cd mcp-server && npm ci && npm test

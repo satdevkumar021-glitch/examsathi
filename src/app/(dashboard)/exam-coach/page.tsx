@@ -227,7 +227,7 @@ export default function ExamDayCoach() {
           )}
         </div>
 
-        <p className="text-[10px] text-slate-400 text-center">
+        <p className="text-xs text-slate-400 text-center">
           * {t(
             'Physiological relaxation guide based on autonomic calming research. Does not constitute medical therapy or guarantee exam selection.',
             'तनाव नियंत्रण मार्गदर्शिका। यह चिकित्सा उपचार नहीं है और चयन की गारंटी नहीं देता।',
@@ -338,11 +338,11 @@ export default function ExamDayCoach() {
           {/* Height Standards */}
           <div className="grid grid-cols-2 gap-2 text-xs pt-1">
             <div className="bg-slate-800 p-2.5 rounded-lg border border-slate-700">
-              <span className="text-[10px] text-slate-400 block font-semibold">♂ Male Height Requirement:</span>
+              <span className="text-xs text-slate-400 block font-semibold">♂ Male Height Requirement:</span>
               <strong className="text-white text-xs">{currentPhysical.heightRequirement.male}</strong>
             </div>
             <div className="bg-slate-800 p-2.5 rounded-lg border border-slate-700">
-              <span className="text-[10px] text-slate-400 block font-semibold">♀ Female Height Requirement:</span>
+              <span className="text-xs text-slate-400 block font-semibold">♀ Female Height Requirement:</span>
               <strong className="text-white text-xs">{currentPhysical.heightRequirement.female}</strong>
             </div>
           </div>

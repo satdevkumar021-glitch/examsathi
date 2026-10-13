@@ -301,7 +301,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
             <FileText size={14} /> 
             <span>{lang === 'pa' ? 'ਸਰੋਤ / PDFs' : lang === 'hi' ? 'दस्तावेज / PDFs' : 'Official PDFs'}</span>
             {lesson.documents && lesson.documents.length > 0 && (
-              <span className="bg-indigo-500/20 text-indigo-300 text-[10px] px-1.5 py-0.2 rounded-full font-mono">
+              <span className="bg-indigo-500/20 text-indigo-300 text-xs px-1.5 py-0.2 rounded-full font-mono">
                 {lesson.documents.length}
               </span>
             )}
@@ -357,16 +357,16 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-1.5 flex-wrap">
-                      <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider">
+                      <span className="text-xs text-amber-400 font-bold uppercase tracking-wider">
                         {lang === 'pa' ? 'ਸਰਕਾਰੀ ਸਿਲੇਬਸ ਨਾਲ ਪ੍ਰਮਾਣਿਤ' : 'आधिकारिक सरकारी पाठ्यक्रम से मैप किया गया'}
                       </span>
                       {lesson.syllabusReference.body && (
-                        <span className="text-[10px] bg-indigo-900/60 text-indigo-200 px-1.5 py-0.5 rounded border border-indigo-600/40 font-medium">
+                        <span className="text-xs bg-indigo-900/60 text-indigo-200 px-1.5 py-0.5 rounded border border-indigo-600/40 font-medium">
                           🏛️ {lesson.syllabusReference.body}
                         </span>
                       )}
                       {lesson.syllabusReference.verifiedOn && (
-                        <span className="text-[10px] bg-emerald-950/60 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-600/40 font-medium flex items-center gap-1">
+                        <span className="text-xs bg-emerald-950/60 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-600/40 font-medium flex items-center gap-1">
                           <CheckCircle2 size={10} className="text-emerald-400" />
                           Verified on {lesson.syllabusReference.verifiedOn}
                         </span>
@@ -396,7 +396,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 <span className="text-slate-200 font-medium">{lesson.examRelevance}</span>
               </div>
               {isReadMarked && (
-                <span className="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full text-[10px] font-bold flex items-center gap-1">
+                <span className="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full text-xs font-bold flex items-center gap-1">
                   <CheckCircle2 size={12} /> {lang === 'pa' ? 'ਪੂਰਾ ਹੋ ਗਿਆ' : 'पूर्ण'}
                 </span>
               )}
@@ -476,7 +476,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   <article key={item.id} className="bg-slate-800/70 border border-slate-700 rounded-xl p-4">
                     <h4 className="text-white font-bold text-sm mb-2">{pick(item.lesson?.title)}</h4>
                     <p className="text-slate-200 text-sm leading-relaxed whitespace-pre-wrap">{pick(item.lesson?.body)}</p>
-                    <p className="text-[10px] text-slate-400 mt-3">{lang === 'en' ? 'Written by an ExamSathi educator and approved by a reviewer.' : 'ExamSathi शिक्षक द्वारा लिखित, समीक्षक द्वारा स्वीकृत।'}</p>
+                    <p className="text-xs text-slate-400 mt-3">{lang === 'en' ? 'Written by an ExamSathi educator and approved by a reviewer.' : 'ExamSathi शिक्षक द्वारा लिखित, समीक्षक द्वारा स्वीकृत।'}</p>
                   </article>
                 ))}
               </section>
@@ -492,7 +492,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       {lang === 'pa' ? 'ਹੱਲ ਕੀਤੀਆਂ ਉਦਾਹਰਣਾਂ (Worked Examples)' : lang === 'hi' ? 'हल किए गए उदाहरण (Worked Examples)' : 'Step-by-Step Worked Examples'}
                     </h3>
                   </div>
-                  <span className="text-[10px] bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full font-mono font-bold">
+                  <span className="text-xs bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full font-mono font-bold">
                     {lesson.workedExamples.length} {lang === 'pa' ? 'ਉਦਾਹਰਣਾਂ' : 'उदा.'}
                   </span>
                 </div>
@@ -511,7 +511,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
                       {/* Problem Statement */}
                       <div className="bg-slate-900/70 border border-slate-800 p-3 rounded-xl text-xs text-slate-200 leading-relaxed">
-                        <span className="text-slate-400 font-bold block mb-1 uppercase text-[10px] tracking-wider">
+                        <span className="text-slate-400 font-bold block mb-1 uppercase text-xs tracking-wider">
                           {lang === 'pa' ? 'ਪ੍ਰਸ਼ਨ / ਸਵਾਲ' : lang === 'hi' ? 'प्रश्न / समस्या' : 'Problem Statement'}
                         </span>
                         <p>{ex.problem[lang] || ex.problem.hi || ex.problem.en}</p>
@@ -519,7 +519,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
                       {/* Step-by-step reasoning */}
                       <div className="space-y-2 text-xs">
-                        <span className="text-indigo-300 font-bold block uppercase text-[10px] tracking-wider">
+                        <span className="text-indigo-300 font-bold block uppercase text-xs tracking-wider">
                           {lang === 'pa' ? 'ਕਦਮ-ਦਰ-ਕਦਮ ਹੱਲ' : lang === 'hi' ? 'चरणबद्ध समाधान' : 'Step-by-Step Solution'}
                         </span>
                         {(ex.steps[lang] || ex.steps.hi || ex.steps.en || []).map((step, sIdx) => (
@@ -536,7 +536,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       <div className="bg-emerald-950/40 border border-emerald-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2">
                         <CheckCircle2 size={14} className="text-emerald-400 shrink-0 mt-0.5" />
                         <div>
-                          <span className="text-emerald-300 font-bold block text-[10px] uppercase">
+                          <span className="text-emerald-300 font-bold block text-xs uppercase">
                             {lang === 'pa' ? 'ਸਹੀ ਉੱਤਰ / ਨਤੀਜਾ' : lang === 'hi' ? 'अंतिम उत्तर' : 'Final Solution'}
                           </span>
                           <span className="text-slate-200 font-medium">
@@ -550,7 +550,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                         <div className="bg-amber-950/30 border border-amber-500/30 p-2.5 rounded-xl text-xs flex items-start gap-2">
                           <span className="text-amber-400 text-xs shrink-0">💡</span>
                           <div>
-                            <span className="text-amber-300 font-bold block text-[10px] uppercase">
+                            <span className="text-amber-300 font-bold block text-xs uppercase">
                               {lang === 'pa' ? 'ਮੁੱਖ ਸਿੱਖਿਆ' : lang === 'hi' ? 'परीक्षा में याद रखने योग्य' : 'Exam Takeaway'}
                             </span>
                             <span className="text-slate-300">
@@ -582,7 +582,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       <div className="bg-rose-950/40 border border-rose-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2 text-rose-200">
                         <span className="shrink-0 font-bold">❌</span>
                         <div>
-                          <span className="font-bold text-[10px] uppercase text-rose-400 block">
+                          <span className="font-bold text-xs uppercase text-rose-400 block">
                             {lang === 'pa' ? 'ਭੁਲੇਖਾ (Misconception)' : lang === 'hi' ? 'भ्रांति (Misconception)' : 'Misconception'}
                           </span>
                           <p className="leading-relaxed">{misc.misconception[lang] || misc.misconception.hi || misc.misconception.en}</p>
@@ -593,7 +593,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       <div className="bg-emerald-950/40 border border-emerald-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2 text-emerald-200">
                         <span className="shrink-0 font-bold">✅</span>
                         <div>
-                          <span className="font-bold text-[10px] uppercase text-emerald-400 block">
+                          <span className="font-bold text-xs uppercase text-emerald-400 block">
                             {lang === 'pa' ? 'ਪ੍ਰਮਾਣਿਤ ਤੱਥ (Verified Fact)' : lang === 'hi' ? 'सत्यापित तथ्य (Verified Fact)' : 'Verified Correction'}
                           </span>
                           <p className="leading-relaxed">{misc.correction[lang] || misc.correction.hi || misc.correction.en}</p>
@@ -605,7 +605,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                         <div className="bg-indigo-950/30 border border-indigo-500/30 p-2.5 rounded-xl text-xs flex items-start gap-2 text-slate-300">
                           <span className="shrink-0 text-indigo-400 font-bold text-xs">🎯</span>
                           <div>
-                            <span className="font-bold text-[10px] uppercase text-indigo-300 block">
+                            <span className="font-bold text-xs uppercase text-indigo-300 block">
                               {lang === 'pa' ? 'ਪ੍ਰੀਖਿਆ ਲਈ ਮਹੱਤਵ' : lang === 'hi' ? 'परीक्षा में महत्व' : 'Why it Matters in Exams'}
                             </span>
                             <p className="leading-relaxed">{misc.whyItMatters[lang] || misc.whyItMatters.hi || misc.whyItMatters.en}</p>
@@ -656,7 +656,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     <h3 className="text-white font-bold text-sm">
                       {lang === 'pa' ? 'ਤੁਰੰਤ ਦੁਹਰਾਈ ਸ਼ੀਟ (Quick Revision Sheet)' : lang === 'hi' ? 'क्विक रिवीजन शीट (High-Yield Sheet)' : 'Quick Revision Sheet'}
                     </h3>
-                    <p className="text-[10px] text-indigo-300">
+                    <p className="text-xs text-indigo-300">
                       {lang === 'pa' ? 'ਆਖਰੀ ਸਮੇਂ ਦੀ ਦੁਹਰਾਈ ਲਈ ਮੁੱਖ ਸੂਤਰ ਅਤੇ ਨੁਕਤੇ' : lang === 'hi' ? 'अंतिम समय के पुनरीक्षण हेतु उच्च-महत्व बिंदु' : 'High-yield points, key rules, and exam traps'}
                     </p>
                   </div>
@@ -741,7 +741,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-[11px] text-slate-400 space-y-1.5">
                 <div className="flex items-center justify-between text-slate-300 font-semibold border-b border-slate-800 pb-1">
                   <span>🏛️ {lang === 'pa' ? 'ਸੰਪਾਦਕੀ ਅਤੇ ਸਿਲੇਬਸ ਰਿਕਾਰਡ' : 'संपादकीय एवं पाठ्यक्रम विवरण (Editorial Provenance)'}</span>
-                  <span className="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">
+                  <span className="text-xs bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">
                     {lesson.editorialRecord.authoringType}
                   </span>
                 </div>
@@ -750,12 +750,12 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     <strong className="text-slate-300">{lang === 'pa' ? 'ਸਿਲੇਬਸ ਆਧਾਰ:' : 'पाठ्यक्रम आधार:'}</strong> {lesson.editorialRecord.verifiedSyllabusDenominator}
                   </p>
                 )}
-                <div className="flex items-center justify-between text-[10px] text-slate-400 pt-0.5">
+                <div className="flex items-center justify-between text-xs text-slate-400 pt-0.5">
                   <span>Authored: {lesson.editorialRecord.authoredDate}</span>
                   {lesson.editorialRecord.lastUpdatedDate && <span>Updated: {lesson.editorialRecord.lastUpdatedDate}</span>}
                 </div>
                 {lesson.editorialRecord.reviewerRecord && (
-                  <p className="text-[10px] text-teal-400">
+                  <p className="text-xs text-teal-400">
                     Review: {lesson.editorialRecord.reviewerRecord}
                   </p>
                 )}
@@ -798,7 +798,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   <Target size={14} className="text-teal-400" />
                   <span>{lang === 'pa' ? 'ਆਪਣੀ ਤਿਆਰੀ ਦਾ ਪੱਧਰ ਜਾਂਚੋ' : 'तैयारी का स्तर जाँचें'}</span>
                 </span>
-                <span className="bg-teal-500/20 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                <span className="bg-teal-500/20 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full">
                   Topic practice · source labels on each question
                 </span>
               </div>
@@ -857,11 +857,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                      <span className="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider inline-block">
+                      <span className="bg-indigo-500/20 text-indigo-300 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wider inline-block">
                         🏛️ {lesson.syllabusReference.body || 'Official Notification'}
                       </span>
                       {lesson.syllabusReference.verifiedOn && (
-                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                           <CheckCircle2 size={11} className="text-emerald-400" />
                           Verified on {lesson.syllabusReference.verifiedOn}
                         </span>
@@ -897,12 +897,12 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 <div key={item.id} className="bg-slate-800 border border-teal-700/40 rounded-xl p-3.5 flex items-start justify-between gap-3">
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-1.5 mb-1 flex-wrap">
-                      <span className="text-[10px] bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">{item.document?.language}</span>
-                      <span className="text-[10px] bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">{lang === 'en' ? 'Added by an educator' : 'शिक्षक द्वारा जोड़ा गया'}</span>
-                      {item.document?.publisher && <span className="text-[10px] text-slate-300">{item.document.publisher}</span>}
+                      <span className="text-xs bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">{item.document?.language}</span>
+                      <span className="text-xs bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">{lang === 'en' ? 'Added by an educator' : 'शिक्षक द्वारा जोड़ा गया'}</span>
+                      {item.document?.publisher && <span className="text-xs text-slate-300">{item.document.publisher}</span>}
                     </div>
                     <h5 className="text-white font-semibold text-xs leading-snug">{item.title}</h5>
-                    <p className="text-[10px] text-slate-400 mt-0.5 break-all">{item.document?.url && new URL(item.document.url).hostname}</p>
+                    <p className="text-xs text-slate-400 mt-0.5 break-all">{item.document?.url && new URL(item.document.url).hostname}</p>
                   </div>
                   <a href={item.document?.url} target="_blank" rel="noopener noreferrer nofollow" className="bg-slate-700 hover:bg-slate-600 text-teal-300 hover:text-white px-3 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 shrink-0 transition">
                     <ExternalLink size={13} />
@@ -924,19 +924,19 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-1.5 mb-1 flex-wrap">
-                          <span className="text-[10px] bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">
+                          <span className="text-xs bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">
                             {doc.language}
                           </span>
-                          <span className="text-[10px] bg-indigo-950 text-indigo-300 border border-indigo-700/40 px-1.5 py-0.5 rounded uppercase font-bold">
+                          <span className="text-xs bg-indigo-950 text-indigo-300 border border-indigo-700/40 px-1.5 py-0.5 rounded uppercase font-bold">
                             {doc.type || 'PDF'}
                           </span>
                           {doc.publisher && (
-                            <span className="text-[10px] bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">
+                            <span className="text-xs bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">
                               🏛️ {doc.publisher}
                             </span>
                           )}
                           {doc.availability === 'verified' && (
-                            <span className="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-700/40 px-1.5 py-0.5 rounded font-medium">
+                            <span className="text-xs bg-emerald-950 text-emerald-300 border border-emerald-700/40 px-1.5 py-0.5 rounded font-medium">
                               ✓ Verified
                             </span>
                           )}
@@ -955,7 +955,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                           </p>
                         )}
                         {doc.lastChecked && (
-                          <p className="text-[10px] text-slate-400 mt-0.5 font-mono">
+                          <p className="text-xs text-slate-400 mt-0.5 font-mono">
                             Last verified: {doc.lastChecked}
                           </p>
                         )}
@@ -975,7 +975,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   </div>
                 ))
               )}
-              <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 text-[10px] text-slate-400 leading-relaxed">
+              <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 text-xs text-slate-400 leading-relaxed">
                 ℹ️ {lang === 'pa' 
                   ? 'ਸੂਚਨਾ: ਲਿੰਕ ਅਧਿਕਾਰਤ ਸਰਕਾਰੀ ਪੋਰਟਲਾਂ ਅਤੇ ਮਾਨਤਾ ਪ੍ਰਾਪਤ ਪਾਠ ਪੁਸਤਕਾਂ ਦੇ ਹਨ। ExamSathi ਕਿਸੇ ਵੀ ਕਾਪੀਰਾਈਟ ਸਮੱਗਰੀ ਨੂੰ ਰੀ-ਹੋਸਟ ਨਹੀਂ ਕਰਦਾ ਅਤੇ ਸਿੱਧਾ ਅਧਿਕਾਰਤ ਸਰੋਤ ਉੱਤੇ ਭੇਜਦਾ ਹੈ।' 
                   : 'सूचना: प्रदर्शित लिंक आधिकारिक सरकारी पोर्टलों एवं पाठ्यपुस्तकों के हैं। ExamSathi किसी भी कॉपीराइट सामग्री को री-होस्ट नहीं करता; समस्त दस्तावेज सीधे प्रकाशक के पोर्टल पर खुलते हैं।'}
@@ -1042,28 +1042,28 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   className="bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
                   title="Needs repetition (< 10m)"
                 >
-                  Again <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{againLabel}</span>
+                  Again <br/><span className="text-xs font-normal text-slate-300 font-mono">{againLabel}</span>
                 </button>
                 <button 
                   onClick={() => handleRateCard(2)}
                   className="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
                   title="Difficult recall"
                 >
-                  Hard <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{hardLabel}</span>
+                  Hard <br/><span className="text-xs font-normal text-slate-300 font-mono">{hardLabel}</span>
                 </button>
                 <button 
                   onClick={() => handleRateCard(3)}
                   className="bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
                   title="Correct recall"
                 >
-                  Good <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{goodLabel}</span>
+                  Good <br/><span className="text-xs font-normal text-slate-300 font-mono">{goodLabel}</span>
                 </button>
                 <button 
                   onClick={() => handleRateCard(4)}
                   className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 border border-blue-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
                   title="Effortless recall"
                 >
-                  Easy <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{easyLabel}</span>
+                  Easy <br/><span className="text-xs font-normal text-slate-300 font-mono">{easyLabel}</span>
                 </button>
               </div>
 
@@ -1127,7 +1127,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     {/* Question Header */}
                     <div className="flex items-center justify-between gap-2 mb-2">
                       <span className="text-xs font-bold text-teal-400">Q{idx + 1}</span>
-                      <span className="text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">
+                      <span className="text-xs bg-slate-700 text-slate-300 px-2 py-0.5 rounded">
                         {q.examTag}
                       </span>
                     </div>
@@ -1158,7 +1158,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                             onClick={() => handleOptionSelect(q.id, optKey)}
                             className={`w-full text-left p-3 rounded-lg border text-xs flex items-center gap-3 transition-colors ${btnStyle}`}
                           >
-                            <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 ${isAnswered && optKey === reveal?.correct ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300'}`}>
+                            <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${isAnswered && optKey === reveal?.correct ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300'}`}>
                               {optKey}
                             </span>
                             <span className="flex-1">{optText}</span>
@@ -1212,7 +1212,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   />
                 </div>
                 <div className="p-3.5">
-                  <span className="text-[10px] bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">{lang === 'en' ? 'Chosen by an educator' : 'शिक्षक द्वारा चुना गया'}</span>
+                  <span className="text-xs bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">{lang === 'en' ? 'Chosen by an educator' : 'शिक्षक द्वारा चुना गया'}</span>
                   <h4 className="text-white font-bold text-sm mt-2 mb-1 line-clamp-2">{item.title}</h4>
                   <div className="flex justify-between text-slate-400 text-xs">
                     <span>{item.video?.channel}</span>
@@ -1278,7 +1278,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       {vid.tags && vid.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 mb-2">
                           {vid.tags.map((tag, tIdx) => (
-                            <span key={tIdx} className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-[10px] px-2 py-0.5 rounded font-medium">
+                            <span key={tIdx} className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2 py-0.5 rounded font-medium">
                               {tag}
                             </span>
                           ))}
@@ -1315,7 +1315,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   <Edit3 size={16} className="text-teal-400" />
                   <span>{lang === 'pa' ? 'ਇਸ ਵਿਸ਼ੇ ਲਈ ਨਿੱਜੀ ਨੋਟ ਲਿਖੋ' : 'इस टॉपिक के लिए अपने पर्सनल नोट्स बनाएं'}</span>
                 </span>
-                <span className="text-[10px] text-teal-400 font-mono bg-teal-950/60 border border-teal-800/40 px-2 py-0.5 rounded">
+                <span className="text-xs text-teal-400 font-mono bg-teal-950/60 border border-teal-800/40 px-2 py-0.5 rounded">
                   {selectedExam || 'general'}
                 </span>
               </h3>
@@ -1396,7 +1396,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 {notesSearchQuery && (
                   <button 
                     onClick={() => setNotesSearchQuery('')}
-                    className="text-teal-400 hover:underline text-[10px] normal-case"
+                    className="text-teal-400 hover:underline text-xs normal-case"
                   >
                     Clear Search
                   </button>
@@ -1441,7 +1441,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                                 📖 {n.sourceExcerpt}
                               </p>
                             )}
-                            <p className="text-[10px] text-slate-400 mt-2">
+                            <p className="text-xs text-slate-400 mt-2">
                               Saved on: {new Date(n.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                             </p>
                           </div>

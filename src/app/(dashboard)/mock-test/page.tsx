@@ -153,9 +153,6 @@ export default function MockTestHub() {
       <section className="rounded-2xl border-2 border-amber-500/70 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-teal-950/90 p-4 space-y-4 shadow-xl">
         <div className="flex items-center justify-between gap-2 flex-wrap">
           <div className="flex items-center gap-2">
-            <span className="bg-amber-500 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
-              🔴 LIVE EXAM SPECIAL
-            </span>
             <h2 className="text-sm sm:text-base font-black text-white">
               Punjab PPSC & PSSSB Clerical + Punjabi Live 50-50 Mock Sets
             </h2>
@@ -169,7 +166,7 @@ export default function MockTestHub() {
         <div className="rounded-xl bg-slate-900/90 border border-teal-500/50 p-3.5 space-y-2.5">
           <div className="flex items-start justify-between gap-2">
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-teal-400 block">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-teal-400 block">
                 Live Test 1 • All Clerical & PPSC Subjects Combined ({ppscClerkMegaCount} Qs Bank)
               </span>
               <h3 className="text-sm font-black text-white">
@@ -206,7 +203,7 @@ export default function MockTestHub() {
         <div className="rounded-xl bg-slate-900/90 border border-amber-500/50 p-3.5 space-y-2.5">
           <div className="flex items-start justify-between gap-2">
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-amber-400 block">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-amber-400 block">
                 Live Test 2 • Punjab GK + Compulsory Punjabi Paper A & B ({punjabGkPunjabiMegaCount} Qs Bank)
               </span>
               <h3 className="text-sm font-black text-white">
@@ -272,7 +269,7 @@ export default function MockTestHub() {
               <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — Year-tagged practice sets (sources under review)</p>
             </div>
           </div>
-          <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
+          <span className="bg-amber-500/20 text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
             <Flame size={12} /> Live CBT
           </span>
         </div>
@@ -281,7 +278,7 @@ export default function MockTestHub() {
         {lastLevel ? (
           <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between bg-slate-900/60 p-3 rounded-xl">
             <div>
-              <span className="text-[10px] uppercase font-bold text-slate-400">Latest Performance</span>
+              <span className="text-xs uppercase font-bold text-slate-400">Latest Performance</span>
               <div className="text-sm font-bold text-teal-300 flex items-center gap-1.5 mt-0.5">
                 <Award size={16} className="text-amber-400" />
                 {lastLevel.title}
@@ -289,7 +286,7 @@ export default function MockTestHub() {
             </div>
             <div className="text-right">
               <span className="text-xs font-mono font-bold text-white">{lastLevel.percentage}% Score</span>
-              <div className="text-[10px] text-teal-400 font-medium">
+              <div className="text-xs text-teal-400 font-medium">
                 {lastLevel.rankText || lastLevel.badge}
               </div>
             </div>
@@ -319,7 +316,7 @@ export default function MockTestHub() {
               </p>
             </div>
           </div>
-          <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-black px-2 py-0.5 rounded-full border border-emerald-500/30">
+          <span className="bg-emerald-500/20 text-emerald-300 text-xs font-black px-2 py-0.5 rounded-full border border-emerald-500/30">
             Up to 50 Qs
           </span>
         </div>
@@ -349,7 +346,7 @@ export default function MockTestHub() {
           <div>
             <div className="flex items-center gap-2">
               <h3 className="text-white font-bold text-xs sm:text-sm">AI Drill Generator ✨</h3>
-              <span className="text-[9px] bg-teal-500/20 text-teal-300 font-bold px-1.5 py-0.5 rounded border border-teal-500/30 font-mono">Cloud AI drafts</span>
+              <span className="text-xs bg-teal-500/20 text-teal-300 font-bold px-1.5 py-0.5 rounded border border-teal-500/30 font-mono">Cloud AI drafts</span>
             </div>
             <p className="text-[11px] text-slate-300 mt-0.5">
               Paste handwritten notes, PDF text, or coaching material to generate custom CBT drills instantly.
@@ -365,7 +362,7 @@ export default function MockTestHub() {
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
             1. Configure selected examination
           </h2>
-          <span className="text-[10px] text-teal-400 font-semibold">Coverage under review</span>
+          <span className="text-xs text-teal-400 font-semibold">Coverage under review</span>
         </div>
         
         <div className="grid grid-cols-2 gap-2.5">
@@ -377,22 +374,22 @@ export default function MockTestHub() {
             >
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[9px] font-bold text-teal-400 bg-teal-500/10 px-1.5 py-0.5 rounded border border-teal-500/20">
+                  <span className="text-xs font-bold text-teal-400 bg-teal-500/10 px-1.5 py-0.5 rounded border border-teal-500/20">
                     {exam.badge}
                   </span>
-                  <span className="text-[9px] text-slate-400 font-mono">
+                  <span className="text-xs text-slate-400 font-mono">
                     {examAvailableCount} available
                   </span>
                 </div>
                 <h3 className="text-white font-bold text-xs group-hover:text-teal-300 transition line-clamp-1">
                   {exam.name}
                 </h3>
-                <p className="text-[10px] text-slate-400 mt-0.5 line-clamp-1">
+                <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">
                   {exam.pyqSpan}
                 </p>
               </div>
 
-              <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-700/60 text-[10px] text-teal-400 font-bold">
+              <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-700/60 text-xs text-teal-400 font-bold">
                 <span>Configure Test</span>
                 <ChevronRight size={12} className="group-hover:translate-x-1 transition-transform" />
               </div>
@@ -407,7 +404,7 @@ export default function MockTestHub() {
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
             2. Question Difficulty Tier
           </h2>
-          <span className="text-[10px] text-slate-400">Exam Grading Filter</span>
+          <span className="text-xs text-slate-400">Exam Grading Filter</span>
         </div>
 
         <div className="grid grid-cols-4 gap-2">
@@ -429,7 +426,7 @@ export default function MockTestHub() {
                 }`}
               >
                 <div className={`text-xs font-bold ${diff.color}`}>{diff.label}</div>
-                <div className="text-[9px] text-slate-400 mt-0.5">{diff.desc}</div>
+                <div className="text-xs text-slate-400 mt-0.5">{diff.desc}</div>
               </button>
             );
           })}
@@ -510,7 +507,7 @@ export default function MockTestHub() {
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
             Ready topic tests ({filteredTopics.length} Topics)
           </h2>
-          <span className="text-[10px] text-teal-400 font-semibold">Topic availability below</span>
+          <span className="text-xs text-teal-400 font-semibold">Topic availability below</span>
         </div>
         
         <label className="block text-sm mb-3">Find a topic / विषय खोजें / ਵਿਸ਼ਾ ਲੱਭੋ
@@ -545,15 +542,15 @@ export default function MockTestHub() {
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="bg-slate-700 text-slate-300 text-[9px] font-bold uppercase px-2 py-0.5 rounded">
+                    <span className="bg-slate-700 text-slate-300 text-xs font-bold uppercase px-2 py-0.5 rounded">
                       {topic.subject}
                     </span>
                     {false && topic.isPYQRich && (
-                      <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
+                      <span className="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
                         <Calendar size={10} /> Year-labelled (unverified)
                       </span>
                     )}
-                    <span className="text-teal-400 text-[10px] font-semibold">
+                    <span className="text-teal-400 text-xs font-semibold">
                       {topic.availableCount ?? '…'} available questions
                     </span>
                   </div>
@@ -569,7 +566,7 @@ export default function MockTestHub() {
               {/* Multi-Set 50-Q Pills when topic has > 50 questions */}
               {topic.availableCount !== null && topic.availableCount > 50 && (
                 <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1">
-                  <span className="text-[10px] font-bold text-slate-400 shrink-0">50-Q Sets:</span>
+                  <span className="text-xs font-bold text-slate-400 shrink-0">50-Q Sets:</span>
                   {Array.from({ length: Math.min(Math.ceil(topic.availableCount / 50), 8) }, (_, idx) => {
                     const sNum = idx + 1;
                     const startQ = (sNum - 1) * 50 + 1;
@@ -578,7 +575,7 @@ export default function MockTestHub() {
                       <button
                         key={sNum}
                         onClick={() => startTopicTest(topic.id, 'exam', false, sNum)}
-                        className="px-2 py-1 rounded-md text-[10px] font-bold shrink-0 bg-slate-900 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 transition"
+                        className="px-2 py-1 rounded-md text-xs font-bold shrink-0 bg-slate-900 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 transition"
                       >
                         Set {sNum} ({startQ}–{endQ})
                       </button>

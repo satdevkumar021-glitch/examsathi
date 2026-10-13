@@ -351,14 +351,14 @@ export default function Results() {
         <div className="bg-gradient-to-r from-emerald-950/90 via-teal-950/90 to-indigo-950/90 rounded-2xl p-4 border-2 border-emerald-400/70 shadow-xl space-y-3">
           <div className="flex items-center justify-between gap-2 flex-wrap">
             <div>
-              <span className="text-[10px] uppercase font-black tracking-wider text-emerald-300 block">
+              <span className="text-xs uppercase font-black tracking-wider text-emerald-300 block">
                 🚀 Continue 50-50 Set Progression • ਅਗਲੇ 50 ਪ੍ਰਸ਼ਨ • अगले 50 प्रश्न
               </span>
               <h2 className="text-sm font-black text-white">
                 Completed Set {currentSetNum} of {totalSetsCount} ({fullPoolCount} Total Qs in Bank)
               </h2>
             </div>
-            <span className="bg-emerald-500/20 text-emerald-200 border border-emerald-400/40 text-[10px] font-bold px-2.5 py-1 rounded-full">
+            <span className="bg-emerald-500/20 text-emerald-200 border border-emerald-400/40 text-xs font-bold px-2.5 py-1 rounded-full">
               {remaining} Unseen Qs Left
             </span>
           </div>
@@ -373,7 +373,7 @@ export default function Results() {
           </Link>
 
           <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1">
-            <span className="text-[10px] font-bold text-slate-300 shrink-0 mr-1">Jump to Set:</span>
+            <span className="text-xs font-bold text-slate-300 shrink-0 mr-1">Jump to Set:</span>
             {Array.from({ length: Math.min(totalSetsCount, 10) }, (_, idx) => {
               const sNum = idx + 1;
               const startQ = (sNum - 1) * setSize + 1;
@@ -383,7 +383,7 @@ export default function Results() {
                 <Link
                   key={sNum}
                   href={`/mock-test/${testId}?${retakeQuery}&set=${sNum}`}
-                  className={`px-2.5 py-1 rounded-lg text-[10px] font-bold shrink-0 border transition ${
+                  className={`px-2.5 py-1 rounded-lg text-xs font-bold shrink-0 border transition ${
                     isCurr
                       ? 'bg-emerald-500/30 text-emerald-200 border-emerald-400'
                       : 'bg-slate-900/90 text-slate-200 border-slate-700 hover:border-teal-400 hover:text-white'
@@ -405,14 +405,14 @@ export default function Results() {
               <Trophy size={20} />
             </span>
             <div>
-              <span className="text-[10px] uppercase font-bold text-teal-400 tracking-wider">
+              <span className="text-xs uppercase font-bold text-teal-400 tracking-wider">
                 Practice feedback
               </span>
               <h2 className="text-base font-black text-white">Illustrative Practice Benchmark</h2>
             </div>
           </div>
           {predictedRank.hasEnoughData && (
-            <span className="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-black px-2.5 py-1 rounded-full">
+            <span className="bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-black px-2.5 py-1 rounded-full">
               Top {100 - predictedRank.percentile}% Tier
             </span>
           )}
@@ -428,21 +428,21 @@ export default function Results() {
             {/* State Rank & Percentile Big Stats */}
             <div className="grid grid-cols-2 gap-3 bg-slate-900/70 p-3.5 rounded-xl border border-slate-700/60">
               <div>
-                <span className="text-[10px] text-slate-400 font-semibold block uppercase">Illustrative Rank</span>
+                <span className="text-xs text-slate-400 font-semibold block uppercase">Illustrative Rank</span>
                 <div className="text-2xl font-black text-teal-300 font-mono mt-0.5">
                   #{predictedRank.stateRank.toLocaleString()}
                 </div>
-                <span className="text-[10px] text-slate-400">
+                <span className="text-xs text-slate-400">
                   out of {predictedRank.totalCandidates.toLocaleString()} Aspirants
                 </span>
               </div>
 
               <div className="text-right border-l border-slate-800 pl-3">
-                <span className="text-[10px] text-slate-400 font-semibold block uppercase">Percentile Score</span>
+                <span className="text-xs text-slate-400 font-semibold block uppercase">Percentile Score</span>
                 <div className="text-2xl font-black text-white font-mono mt-0.5">
                   {predictedRank.percentile}%
                 </div>
-                <span className="text-[10px] text-emerald-400 font-bold">
+                <span className="text-xs text-emerald-400 font-bold">
                   {predictedRank.selectionProbability}
                 </span>
               </div>
@@ -450,24 +450,24 @@ export default function Results() {
 
             {/* Category-Wise Predicted Ranks */}
             <div>
-              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
+              <span className="text-xs uppercase font-bold text-slate-400 tracking-wider block mb-1.5">
                 Illustrative Category Split
               </span>
               <div className="grid grid-cols-4 gap-2">
                 <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
-                  <span className="text-[10px] text-slate-400 block font-semibold">General</span>
+                  <span className="text-xs text-slate-400 block font-semibold">General</span>
                   <span className="text-xs font-black text-white font-mono">#{predictedRank.categoryRank.general}</span>
                 </div>
                 <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
-                  <span className="text-[10px] text-slate-400 block font-semibold">SC (M&B/R&O)</span>
+                  <span className="text-xs text-slate-400 block font-semibold">SC (M&B/R&O)</span>
                   <span className="text-xs font-black text-teal-300 font-mono">#{predictedRank.categoryRank.sc}</span>
                 </div>
                 <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
-                  <span className="text-[10px] text-slate-400 block font-semibold">BC / OBC</span>
+                  <span className="text-xs text-slate-400 block font-semibold">BC / OBC</span>
                   <span className="text-xs font-black text-amber-300 font-mono">#{predictedRank.categoryRank.bc}</span>
                 </div>
                 <div className="bg-slate-900/60 p-2 rounded-xl border border-slate-800 text-center">
-                  <span className="text-[10px] text-slate-400 block font-semibold">EWS</span>
+                  <span className="text-xs text-slate-400 block font-semibold">EWS</span>
                   <span className="text-xs font-black text-indigo-300 font-mono">#{predictedRank.categoryRank.ews}</span>
                 </div>
               </div>
@@ -494,7 +494,7 @@ export default function Results() {
               Diagnostic Level Evaluation
             </span>
           </div>
-          <span className="bg-slate-900/80 text-amber-300 border border-amber-500/30 text-[10px] font-black px-2.5 py-0.5 rounded-full">
+          <span className="bg-slate-900/80 text-amber-300 border border-amber-500/30 text-xs font-black px-2.5 py-0.5 rounded-full">
             {candidateLevel.percentile}
           </span>
         </div>
@@ -547,7 +547,7 @@ export default function Results() {
           </svg>
           <div className="absolute text-center">
             <div className="text-3xl font-black text-white font-mono">{rawScore}</div>
-            <div className="text-[10px] font-bold text-slate-400 uppercase">Net Marks / {total}</div>
+            <div className="text-xs font-bold text-slate-400 uppercase">Net Marks / {total}</div>
             <div className="text-[11px] font-bold text-teal-400 uppercase tracking-wider mt-0.5">{percentage}% Score</div>
           </div>
         </div>
@@ -557,19 +557,19 @@ export default function Results() {
         <div className="bg-slate-800/90 p-3.5 rounded-xl border border-slate-700 text-center shadow">
           <Target size={18} className="text-emerald-400 mx-auto mb-1" />
           <div className="text-white font-bold text-base">{accuracy}%</div>
-          <div className="text-[10px] text-slate-400 uppercase font-semibold">Accuracy</div>
+          <div className="text-xs text-slate-400 uppercase font-semibold">Accuracy</div>
         </div>
         <div className="bg-slate-800/90 p-3.5 rounded-xl border border-slate-700 text-center shadow">
           <Clock size={18} className="text-amber-400 mx-auto mb-1" />
           <div className="text-white font-bold text-base">{minsTaken}m {secsTaken}s</div>
-          <div className="text-[10px] text-slate-400 uppercase font-semibold">Time Taken</div>
+          <div className="text-xs text-slate-400 uppercase font-semibold">Time Taken</div>
         </div>
         <div className="bg-slate-800/90 p-3.5 rounded-xl border border-slate-700 text-center shadow">
           <Trophy size={18} className="text-indigo-400 mx-auto mb-1" />
           <div className="text-white font-bold text-base">
             {predictedRank.hasEnoughData ? `#${predictedRank.stateRank}` : '—'}
           </div>
-          <div className="text-[10px] text-slate-400 uppercase font-semibold">State Rank</div>
+          <div className="text-xs text-slate-400 uppercase font-semibold">State Rank</div>
         </div>
       </div>
 
@@ -579,17 +579,17 @@ export default function Results() {
           <h3 className="text-white font-bold text-sm flex items-center gap-2">
             <span>📊</span> Difficulty Performance Breakdown
           </h3>
-          <span className="text-[10px] text-slate-400">Simple vs Mid vs Hard</span>
+          <span className="text-xs text-slate-400">Simple vs Mid vs Hard</span>
         </div>
 
         <div className="grid grid-cols-3 gap-2.5">
           {/* Simple / Easy */}
           <div className="bg-slate-900/60 p-3 rounded-xl border border-emerald-500/30 text-center">
-            <span className="text-[10px] font-bold text-emerald-300 block mb-0.5">Simple 🟢</span>
+            <span className="text-xs font-bold text-emerald-300 block mb-0.5">Simple 🟢</span>
             <div className="text-base font-black text-white">
               {difficultyStats.easy.correct} / {difficultyStats.easy.total}
             </div>
-            <span className="text-[9px] text-slate-400">
+            <span className="text-xs text-slate-400">
               {difficultyStats.easy.total > 0 
                 ? `${Math.round((difficultyStats.easy.correct / difficultyStats.easy.total) * 100)}% score` 
                 : 'Direct Facts'}
@@ -598,11 +598,11 @@ export default function Results() {
 
           {/* Mid / Medium */}
           <div className="bg-slate-900/60 p-3 rounded-xl border border-amber-500/30 text-center">
-            <span className="text-[10px] font-bold text-amber-300 block mb-0.5">Mid 🟡</span>
+            <span className="text-xs font-bold text-amber-300 block mb-0.5">Mid 🟡</span>
             <div className="text-base font-black text-white">
               {difficultyStats.medium.correct} / {difficultyStats.medium.total}
             </div>
-            <span className="text-[9px] text-slate-400">
+            <span className="text-xs text-slate-400">
               {difficultyStats.medium.total > 0 
                 ? `${Math.round((difficultyStats.medium.correct / difficultyStats.medium.total) * 100)}% score` 
                 : 'Competitive'}
@@ -611,11 +611,11 @@ export default function Results() {
 
           {/* Hard */}
           <div className="bg-slate-900/60 p-3 rounded-xl border border-rose-500/30 text-center">
-            <span className="text-[10px] font-bold text-rose-300 block mb-0.5">Hard 🔴</span>
+            <span className="text-xs font-bold text-rose-300 block mb-0.5">Hard 🔴</span>
             <div className="text-base font-black text-white">
               {difficultyStats.hard.correct} / {difficultyStats.hard.total}
             </div>
-            <span className="text-[9px] text-slate-400">
+            <span className="text-xs text-slate-400">
               {difficultyStats.hard.total > 0 
                 ? `${Math.round((difficultyStats.hard.correct / difficultyStats.hard.total) * 100)}% score` 
                 : 'Merit Decider'}
@@ -628,7 +628,7 @@ export default function Results() {
       <div className="bg-slate-800/90 rounded-2xl p-4 border border-slate-700 shadow-md">
         <div className="flex items-center justify-between mb-3.5">
           <h3 className="text-white font-bold text-sm">Negative Marking Breakdown</h3>
-          <span className="text-[10px] bg-slate-700/80 text-amber-300 font-semibold px-2 py-0.5 rounded">
+          <span className="text-xs bg-slate-700/80 text-amber-300 font-semibold px-2 py-0.5 rounded">
             -{negativeMarking} Mark Penalty
           </span>
         </div>
@@ -697,19 +697,19 @@ export default function Results() {
           <div className="flex bg-slate-800 rounded-lg p-0.5 border border-slate-700">
             <button 
               onClick={() => setReviewLang('hi')} 
-              className={`px-2 py-0.5 text-[10px] font-semibold rounded ${reviewLang === 'hi' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
+              className={`px-2 py-0.5 text-xs font-semibold rounded ${reviewLang === 'hi' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
             >
               हिं
             </button>
             <button 
               onClick={() => setReviewLang('pa')} 
-              className={`px-2 py-0.5 text-[10px] font-semibold rounded ${reviewLang === 'pa' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
+              className={`px-2 py-0.5 text-xs font-semibold rounded ${reviewLang === 'pa' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
             >
               ਪੰ
             </button>
             <button 
               onClick={() => setReviewLang('en')} 
-              className={`px-2 py-0.5 text-[10px] font-semibold rounded ${reviewLang === 'en' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
+              className={`px-2 py-0.5 text-xs font-semibold rounded ${reviewLang === 'en' ? 'bg-indigo-600 text-white' : 'text-slate-400'}`}
             >
               EN
             </button>
@@ -821,25 +821,25 @@ export default function Results() {
                       <span className="text-xs font-black text-white bg-slate-700 px-2 py-0.5 rounded">
                         Q{idx + 1}
                       </span>
-                      <span className={`text-[10px] px-2 py-0.5 rounded border font-bold ${diffBadge.color}`}>
+                      <span className={`text-xs px-2 py-0.5 rounded border font-bold ${diffBadge.color}`}>
                         {diffBadge.label}
                       </span>
-                      <span className="text-[10px] bg-slate-900 text-slate-300 px-2 py-0.5 rounded border border-slate-750 truncate max-w-[180px]">
+                      <span className="text-xs bg-slate-900 text-slate-300 px-2 py-0.5 rounded border border-slate-750 truncate max-w-[180px]">
                         {q.examTag} {q.year ? `(${q.year})` : ''}
                       </span>
                     </div>
 
                     <div className="flex items-center gap-1.5">
                       {isCorrect ? (
-                        <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded border border-emerald-500/40 flex items-center gap-1">
+                        <span className="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-2 py-0.5 rounded border border-emerald-500/40 flex items-center gap-1">
                           <CheckCircle2 size={12} /> Correct (+1.00)
                         </span>
                       ) : isUnattempted ? (
-                        <span className="bg-slate-700 text-slate-300 text-[10px] font-bold px-2 py-0.5 rounded">
+                        <span className="bg-slate-700 text-slate-300 text-xs font-bold px-2 py-0.5 rounded">
                           Skipped (0.00)
                         </span>
                       ) : (
-                        <span className="bg-rose-500/20 text-rose-300 text-[10px] font-bold px-2 py-0.5 rounded border border-rose-500/40 flex items-center gap-1">
+                        <span className="bg-rose-500/20 text-rose-300 text-xs font-bold px-2 py-0.5 rounded border border-rose-500/40 flex items-center gap-1">
                           <XCircle size={12} /> Incorrect (-{negativeMarking})
                         </span>
                       )}
@@ -859,7 +859,7 @@ export default function Results() {
                           </>
                         )}
                       </div>
-                      <span className="text-[10px] bg-slate-900/90 text-indigo-300 px-2 py-0.5 rounded border border-indigo-500/30 font-medium">
+                      <span className="text-xs bg-slate-900/90 text-indigo-300 px-2 py-0.5 rounded border border-indigo-500/30 font-medium">
                         {isCorrect ? 'Answered Correctly ✓' : 'Revision Focus 📌'}
                       </span>
                     </div>
@@ -898,7 +898,7 @@ export default function Results() {
                           key={key}
                           className={`p-2.5 rounded-xl border flex items-center gap-2 ${optStyle}`}
                         >
-                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 ${
+                          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
                             isOptionCorrect 
                               ? 'bg-emerald-500 text-slate-950' 
                               : isOptionChosen 
@@ -1087,7 +1087,7 @@ export default function Results() {
                     Reset Exposure 🔄
                   </button>
                 </div>
-                <p className="text-[10px] text-slate-400 italic">
+                <p className="text-xs text-slate-400 italic">
                   {explainResetBehavior(reviewLang as 'en' | 'hi' | 'pa')}
                 </p>
               </div>

@@ -143,11 +143,11 @@ export default function MockTestBottomSheet({
                   }`}
                 >
                   <div className="flex items-center justify-between w-full">
-                    <span className="text-[10px] font-bold text-teal-400">{exam.badge}</span>
+                    <span className="text-xs font-bold text-teal-400">{exam.badge}</span>
                     {isSelected && <Check size={14} className="text-teal-400" />}
                   </div>
                   <span className="text-xs font-bold line-clamp-1">{exam.name}</span>
-                  <span className="text-[10px] text-slate-400">{exam.pyqSpan}</span>
+                  <span className="text-xs text-slate-400">{exam.pyqSpan}</span>
                 </button>
               );
             })}
@@ -182,7 +182,7 @@ export default function MockTestBottomSheet({
                   }`}
                 >
                   <div className={`text-xs font-bold ${diff.color}`}>{diff.label}</div>
-                  <div className="text-[9px] text-slate-400 mt-0.5">{diff.desc}</div>
+                  <div className="text-xs text-slate-400 mt-0.5">{diff.desc}</div>
                 </button>
               );
             })}
@@ -241,7 +241,7 @@ export default function MockTestBottomSheet({
                   }`}
                 >
                   <div className="text-xs font-black">{item.label}</div>
-                  <div className="text-[10px] text-slate-400">{item.sub}</div>
+                  <div className="text-xs text-slate-400">{item.sub}</div>
                 </button>
               );
             })}
@@ -271,7 +271,7 @@ export default function MockTestBottomSheet({
                     }`}
                   >
                     <div className="text-xs font-black">Set {sNum}</div>
-                    <div className="text-[10px] text-slate-400">Q{startQ}–{endQ}</div>
+                    <div className="text-xs text-slate-400">Q{startQ}–{endQ}</div>
                   </button>
                 );
               })}

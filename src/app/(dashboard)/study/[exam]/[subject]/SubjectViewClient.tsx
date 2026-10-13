@@ -164,7 +164,7 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
                   </div>
                 </div>
 
-                <span className="bg-slate-700/80 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
+                <span className="bg-slate-700/80 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
                   {manifest ? (manifest[examId]?.[topic.id] ?? 0) : '…'} practice Qs
                 </span>
               </div>
@@ -173,14 +173,14 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
               {topic.materialStatus === 'pending' && <p className="text-xs text-amber-200">Detailed lesson and dedicated question bank pending · विस्तृत पाठ बाकी · ਵਿਸਥਾਰ ਵਾਲਾ ਪਾਠ ਬਾਕੀ</p>}
               {topic.subtopics && topic.subtopics.length > 0 && (
                 <div className="bg-slate-900/60 rounded-xl p-2.5 border border-slate-700/50">
-                  <span className="text-[10px] text-slate-400 font-semibold block mb-1.5 uppercase tracking-wider">
+                  <span className="text-xs text-slate-400 font-semibold block mb-1.5 uppercase tracking-wider">
                     Syllabus Subtopics ({topic.subtopics.length}):
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {topic.subtopics.map((sub, sIdx) => (
                       <span
                         key={sIdx}
-                        className="bg-slate-800 border border-slate-700/80 text-slate-300 text-[10px] px-2 py-0.5 rounded-md leading-tight"
+                        className="bg-slate-800 border border-slate-700/80 text-slate-300 text-xs px-2 py-0.5 rounded-md leading-tight"
                       >
                         {sub}
                       </span>

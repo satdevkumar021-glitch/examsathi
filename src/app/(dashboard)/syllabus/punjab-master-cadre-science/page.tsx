@@ -127,7 +127,7 @@ export default function MasterCadreScienceBlueprintPage() {
                             <div className="flex items-start justify-between gap-2">
                                 <h3 className="text-xs font-bold text-white">{rf.title.en}</h3>
                                 <span
-                                    className={`text-[10px] px-2 py-0.5 rounded font-bold uppercase shrink-0 ${
+                                    className={`text-xs px-2 py-0.5 rounded font-bold uppercase shrink-0 ${
                                         rf.severity === 'critical'
                                             ? 'bg-rose-950 text-rose-300 border border-rose-600/40'
                                             : rf.severity === 'high'
@@ -328,7 +328,7 @@ export default function MasterCadreScienceBlueprintPage() {
                                                     {item.levelBadges.map((b) => (
                                                         <span
                                                             key={b}
-                                                            className={`text-[10px] px-1.5 py-0.2 rounded font-bold ${
+                                                            className={`text-xs px-1.5 py-0.2 rounded font-bold ${
                                                                 b === 'P'
                                                                     ? 'bg-rose-950 text-rose-300 border border-rose-600/40'
                                                                     : 'bg-slate-800 text-teal-300 border border-slate-700'
@@ -450,7 +450,7 @@ export default function MasterCadreScienceBlueprintPage() {
                             >
                                 <div className="flex items-center justify-between">
                                     <span className="font-bold text-teal-300">{card.branch}</span>
-                                    <span className="bg-slate-800 text-amber-300 border border-slate-700 px-2 py-0.5 rounded text-[10px] font-bold">
+                                    <span className="bg-slate-800 text-amber-300 border border-slate-700 px-2 py-0.5 rounded text-xs font-bold">
                                         Level {card.levelTag}
                                     </span>
                                 </div>

@@ -365,15 +365,15 @@ export default function StudyRoadmap({ lessonInfo }: { lessonInfo: Record<string
                               <span className="font-bold text-white text-sm">
                                 {item.title[lang] || item.title.en}
                               </span>
-                              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${badgeClass}`}>
+                              <span className={`text-xs font-bold px-2 py-0.5 rounded-full border ${badgeClass}`}>
                                 {typeLabel}
                               </span>
                               {item.contentReadiness.lessonReady ? (
-                                <span className="text-[10px] bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30 font-semibold">
+                                <span className="text-xs bg-emerald-500/10 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-500/30 font-semibold">
                                   ✓ {t('Lesson Ready', 'पाठ उपलब्ध', 'ਪਾਠ ਉਪਲਬਧ')}
                                 </span>
                               ) : (
-                                <span className="text-[10px] bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded-full border border-amber-500/30 font-semibold">
+                                <span className="text-xs bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded-full border border-amber-500/30 font-semibold">
                                   ⏳ {t('Lesson Pending', 'पाठ लंबित', 'ਪਾਠ ਬਾਕੀ')}
                                 </span>
                               )}
@@ -386,7 +386,7 @@ export default function StudyRoadmap({ lessonInfo }: { lessonInfo: Record<string
                             <div className="flex items-center gap-4 text-[11px] text-slate-400 mt-2 flex-wrap">
                               <span>⏱ {item.targetMinutes} {t('mins target', 'मिनट लक्ष्य', 'ਮਿੰਟ ਟੀਚਾ')}</span>
                               <span className="text-slate-400">•</span>
-                              <span className="text-teal-300/80 font-mono text-[10px]">
+                              <span className="text-teal-300/80 font-mono text-xs">
                                 ⚖ {item.officialWeightNote}
                               </span>
                             </div>
@@ -584,7 +584,7 @@ export default function StudyRoadmap({ lessonInfo }: { lessonInfo: Record<string
                   <div className="flex items-start justify-between gap-3">
                     <div className="space-y-2">
                       <div className="flex items-center gap-2">
-                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                        <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
                           m.resolved
                             ? 'bg-emerald-500/10 text-emerald-300 border border-emerald-500/30'
                             : 'bg-amber-500/20 text-amber-300 border border-amber-500/40'
@@ -592,11 +592,11 @@ export default function StudyRoadmap({ lessonInfo }: { lessonInfo: Record<string
                           {m.resolved ? t('Resolved ✓', 'हल किया गया ✓', 'ਹੱਲ ਕੀਤਾ ✓') : t('Lapsed (Review Needed)', 'समीक्षा आवश्यक', 'ਦੁਹਰਾਈ ਚਾਹੀਦੀ')}
                         </span>
                         {m.lapsesCount > 1 && (
-                          <span className="text-[10px] bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full font-mono">
+                          <span className="text-xs bg-red-500/20 text-red-300 px-2 py-0.5 rounded-full font-mono">
                             {m.lapsesCount} {t('lapses', 'बार चूके', 'ਵਾਰ ਖੁੰਝੇ')}
                           </span>
                         )}
-                        <span className="text-[10px] text-slate-400">
+                        <span className="text-xs text-slate-400">
                           {new Date(m.timestamp).toLocaleDateString('en-IN')}
                         </span>
                       </div>
@@ -607,7 +607,7 @@ export default function StudyRoadmap({ lessonInfo }: { lessonInfo: Record<string
 
                       <div className="grid grid-cols-2 gap-2 text-xs pt-1">
                         <div className="bg-red-950/40 border border-red-800/40 p-2 rounded-lg">
-                          <span className="text-[10px] text-red-400 font-bold block">
+                          <span className="text-xs text-red-400 font-bold block">
                             ✕ {t('Your Answer:', 'आपका उत्तर:', 'ਤੁਹਾਡਾ ਜਵਾਬ:')}
                           </span>
                           <span className="text-slate-200">
@@ -615,7 +615,7 @@ export default function StudyRoadmap({ lessonInfo }: { lessonInfo: Record<string
                           </span>
                         </div>
                         <div className="bg-emerald-950/40 border border-emerald-800/40 p-2 rounded-lg">
-                          <span className="text-[10px] text-emerald-400 font-bold block">
+                          <span className="text-xs text-emerald-400 font-bold block">
                             ✓ {t('Correct Answer:', 'सही उत्तर:', 'ਸਹੀ ਜਵਾਬ:')}
                           </span>
                           <span className="text-slate-200">
@@ -669,19 +669,19 @@ export default function StudyRoadmap({ lessonInfo }: { lessonInfo: Record<string
           {/* 4 Tiers Legend */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
             <div className="bg-slate-800 p-2.5 rounded-xl border border-slate-700">
-              <span className="text-[10px] text-blue-400 font-bold block">1. 📖 {t('Read', 'पढ़ा गया', 'ਪੜ੍ਹਿਆ')}</span>
+              <span className="text-xs text-blue-400 font-bold block">1. 📖 {t('Read', 'पढ़ा गया', 'ਪੜ੍ਹਿਆ')}</span>
               <span className="text-[11px] text-slate-300">{t('Lesson content opened', 'पाठ सामग्री खोली गई', 'ਪਾਠ ਸਮੱਗਰੀ ਖੋਲ੍ਹੀ ਗਈ')}</span>
             </div>
             <div className="bg-slate-800 p-2.5 rounded-xl border border-slate-700">
-              <span className="text-[10px] text-teal-400 font-bold block">2. ✅ {t('Marked Complete', 'पूर्ण चिह्नित', 'ਪੂਰਾ ਨਿਸ਼ਾਨ')}</span>
+              <span className="text-xs text-teal-400 font-bold block">2. ✅ {t('Marked Complete', 'पूर्ण चिह्नित', 'ਪੂਰਾ ਨਿਸ਼ਾਨ')}</span>
               <span className="text-[11px] text-slate-300">{t('Manually confirmed', 'पुष्टि की गई', 'ਤਸਦੀਕ ਕੀਤਾ')}</span>
             </div>
             <div className="bg-slate-800 p-2.5 rounded-xl border border-slate-700">
-              <span className="text-[10px] text-amber-400 font-bold block">3. 🎯 {t('Practiced Once', 'एक बार अभ्यास', 'ਇਕ ਵਾਰ ਅਭਿਆਸ')}</span>
+              <span className="text-xs text-amber-400 font-bold block">3. 🎯 {t('Practiced Once', 'एक बार अभ्यास', 'ਇਕ ਵਾਰ ਅਭਿਆਸ')}</span>
               <span className="text-[11px] text-slate-300">{t('Answered correctly in quiz', 'प्रश्नोत्तरी में सही उत्तर दिया', 'ਕਵਿਜ਼ ਵਿੱਚ ਸਹੀ ਜਵਾਬ')}</span>
             </div>
             <div className="bg-slate-800 p-2.5 rounded-xl border border-slate-700">
-              <span className="text-[10px] text-emerald-400 font-bold block">4. 🏆 {t('Sustained Mastery', 'निरंतर दक्षता', 'ਨਿਰੰਤਰ ਮਹਾਰਤ')}</span>
+              <span className="text-xs text-emerald-400 font-bold block">4. 🏆 {t('Sustained Mastery', 'निरंतर दक्षता', 'ਨਿਰੰਤਰ ਮਹਾਰਤ')}</span>
               <span className="text-[11px] text-slate-300">{t('High accuracy + FSRS stability', 'उच्च सटीकता + स्मृति स्थिरता', 'ਉੱਚ ਸ਼ੁੱਧਤਾ + ਯਾਦ ਸਥਿਰਤਾ')}</span>
             </div>
           </div>
@@ -697,31 +697,31 @@ export default function StudyRoadmap({ lessonInfo }: { lessonInfo: Record<string
                 const tier = mastery?.tier || 'unseen';
 
                 let tierBadge = (
-                  <span className="bg-slate-700 text-slate-400 text-[10px] px-2 py-0.5 rounded-full font-semibold">
+                  <span className="bg-slate-700 text-slate-300 text-xs px-2 py-0.5 rounded-full font-semibold">
                     {t('Unseen', 'अनदेखा', 'ਅਣਵੇਖਿਆ')}
                   </span>
                 );
                 if (tier === 'read') {
                   tierBadge = (
-                    <span className="bg-blue-500/20 text-blue-300 text-[10px] px-2 py-0.5 rounded-full font-semibold">
+                    <span className="bg-blue-500/20 text-blue-300 text-xs px-2 py-0.5 rounded-full font-semibold">
                       📖 {t('Read', 'पढ़ा गया', 'ਪੜ੍ਹਿਆ')}
                     </span>
                   );
                 } else if (tier === 'marked_complete') {
                   tierBadge = (
-                    <span className="bg-teal-500/20 text-teal-300 text-[10px] px-2 py-0.5 rounded-full font-semibold">
+                    <span className="bg-teal-500/20 text-teal-300 text-xs px-2 py-0.5 rounded-full font-semibold">
                       ✅ {t('Marked Complete', 'पूर्ण', 'ਪੂਰਾ')}
                     </span>
                   );
                 } else if (tier === 'practiced_once') {
                   tierBadge = (
-                    <span className="bg-amber-500/20 text-amber-300 text-[10px] px-2 py-0.5 rounded-full font-semibold">
+                    <span className="bg-amber-500/20 text-amber-300 text-xs px-2 py-0.5 rounded-full font-semibold">
                       🎯 {t('Practiced Once', 'अभ्यास हुआ', 'ਅਭਿਆਸ ਹੋਇਆ')}
                     </span>
                   );
                 } else if (tier === 'sustained_mastery') {
                   tierBadge = (
-                    <span className="bg-emerald-500/20 text-emerald-300 text-[10px] px-2 py-0.5 rounded-full font-semibold">
+                    <span className="bg-emerald-500/20 text-emerald-300 text-xs px-2 py-0.5 rounded-full font-semibold">
                       🏆 {t('Sustained Mastery', 'निरंतर दक्षता', 'ਨਿਰੰਤਰ ਮਹਾਰਤ')}
                     </span>
                   );

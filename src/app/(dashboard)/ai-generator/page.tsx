@@ -220,7 +220,7 @@ export default function AIGeneratorPage() {
               </p>
             </div>
           </div>
-          <span className="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-indigo-500/40 flex items-center gap-1 font-mono">
+          <span className="bg-indigo-500/20 text-indigo-300 text-xs font-bold px-2.5 py-1 rounded-full border border-indigo-500/40 flex items-center gap-1 font-mono">
             <Brain size={12} /> Notes practice
           </span>
         </div>
@@ -272,19 +272,19 @@ export default function AIGeneratorPage() {
                 <BookOpen size={16} className="text-teal-400" />
                 <span>1. Paste Study Notes or Syllabus Passage</span>
               </h2>
-              <span className="text-[10px] text-slate-400 font-mono">
+              <span className="text-xs text-slate-400 font-mono">
                 {notesInput.length} chars (min 50)
               </span>
             </div>
 
             {/* Preset Quick Load Buttons */}
             <div className="flex flex-wrap gap-1.5 pt-1">
-              <span className="text-[10px] text-slate-400 self-center mr-1">Quick Presets:</span>
+              <span className="text-xs text-slate-400 self-center mr-1">Quick Presets:</span>
               {PRESET_SNIPPETS.map((snippet, idx) => (
                 <button
                   key={idx}
                   onClick={() => { setNotesInput(snippet.text); setGeneratedQuestions([]); }}
-                  className="text-[10px] bg-slate-900/80 hover:bg-slate-900 text-teal-300 border border-slate-750 hover:border-teal-500/50 px-2 py-1 rounded-lg transition"
+                  className="text-xs bg-slate-900/80 hover:bg-slate-900 text-teal-300 border border-slate-750 hover:border-teal-500/50 px-2 py-1 rounded-lg transition"
                 >
                   {snippet.title}
                 </button>
@@ -306,7 +306,7 @@ export default function AIGeneratorPage() {
                 <UploadCloud size={16} className="text-teal-400" />
                 <span>1. Select a document or study photo</span>
               </h2>
-              <span className="text-[10px] text-teal-300 font-mono font-bold">
+              <span className="text-xs text-teal-300 font-mono font-bold">
                 Max 10MB
               </span>
             </div>
@@ -347,7 +347,7 @@ export default function AIGeneratorPage() {
                   </span>
                   <div className="min-w-0">
                     <p className="text-xs font-bold text-white truncate">{uploadedFile.name}</p>
-                    <p className="text-[10px] text-slate-400 font-mono">
+                    <p className="text-xs text-slate-400 font-mono">
                       {(uploadedFile.size / 1024).toFixed(1)} KB • {uploadedFile.type || 'Document'}
                     </p>
                   </div>
@@ -373,7 +373,7 @@ export default function AIGeneratorPage() {
               <button type="button" disabled={isGenerating || !apiUrl('/api/ai/generate')} aria-pressed={generationMode === 'cloud'} className={`p-2 rounded disabled:opacity-40 ${generationMode === 'cloud' ? 'bg-indigo-700' : 'bg-slate-800'}`} onClick={() => setGenerationMode('cloud')}>Cloud AI drafts</button>
               <p className="text-xs text-slate-400">{generationMode === 'local' ? 'Free recall practice on this device. It may return fewer questions when the source is short.' : 'Requires sign-in and a configured provider. Generating sends reviewed notes to Google Gemini. Free-tier data may be used to improve Google products; use local recall for private notes. Answers need review.'}</p>
             </div>
-            <label className="text-[10px] font-bold text-slate-400 block mb-1">Question Count</label>
+            <label className="text-xs font-bold text-slate-400 block mb-1">Question Count</label>
             <div className="grid grid-cols-3 gap-1.5">
               {[5, 10, 20, 50].map(cnt => (
                 <button
@@ -392,7 +392,7 @@ export default function AIGeneratorPage() {
           </div>
 
           <div>
-            <label className="text-[10px] font-bold text-slate-400 block mb-1">Exam label for your study vault</label>
+            <label className="text-xs font-bold text-slate-400 block mb-1">Exam label for your study vault</label>
             <select
               value={examTarget}
               onChange={e => setExamTarget(e.target.value)}
@@ -505,14 +505,14 @@ export default function AIGeneratorPage() {
                     <span className="text-xs font-black text-white bg-slate-700 px-2 py-0.5 rounded">
                       Q{idx + 1}
                     </span>
-                    <span className="text-[10px] text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded font-bold">
+                    <span className="text-xs text-amber-300 bg-amber-500/10 border border-amber-500/30 px-2 py-0.5 rounded font-bold">
                       📝 AI DRAFT (UNREVIEWED)
                     </span>
-                    <span className="text-[10px] text-teal-300 bg-teal-500/10 border border-teal-500/30 px-2 py-0.5 rounded font-bold">
+                    <span className="text-xs text-teal-300 bg-teal-500/10 border border-teal-500/30 px-2 py-0.5 rounded font-bold">
                       {q.difficulty.toUpperCase()}
                     </span>
                   </div>
-                  <span className="text-[10px] text-slate-400 font-mono">
+                  <span className="text-xs text-slate-400 font-mono">
                     Correct: Option ({q.correct})
                   </span>
                 </div>
@@ -537,7 +537,7 @@ export default function AIGeneratorPage() {
                             : 'bg-slate-900/60 border-slate-755 text-slate-300'
                         }`}
                       >
-                        <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold shrink-0 ${
+                        <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
                           isCorrect ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-400'
                         }`}>
                           {key}

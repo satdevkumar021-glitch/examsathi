@@ -20,7 +20,7 @@ export default function QuestionSyllabusScope({ topicId, question, language }: {
         </span>
       )}
       {question?.rightsProvenance && (
-        <span className="text-slate-400 text-[10px]">
+        <span className="text-slate-400 text-xs">
           Source: {question.rightsProvenance.source}
         </span>
       )}

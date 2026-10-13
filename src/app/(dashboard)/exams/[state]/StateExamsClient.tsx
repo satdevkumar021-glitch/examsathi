@@ -64,7 +64,7 @@ export default function StateExams({ state }: { state: string }) {
                       {exam.body}
                     </span>
                     {exam.syllabusStatus === 'provisional-archive' && (
-                      <span className="bg-amber-950/60 border border-amber-700/50 text-amber-300 text-[10px] px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
+                      <span className="bg-amber-950/60 border border-amber-700/50 text-amber-300 text-xs px-2 py-0.5 rounded-full font-medium whitespace-nowrap">
                         Source unverified
                       </span>
                     )}

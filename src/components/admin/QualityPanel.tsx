@@ -19,8 +19,8 @@ function Row({ item }: { item: QualityItem }) {
   return (
     <li className="space-y-2 rounded-xl border border-slate-700 bg-slate-800 p-3">
       <div className="flex flex-wrap items-center gap-1.5">
-        {item.flags.map(f => <span key={f} className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${LABEL[f].tone}`}>{LABEL[f].text}</span>)}
-        <span className="ml-auto font-mono text-[10px] text-slate-400">{item.id}</span>
+        {item.flags.map(f => <span key={f} className={`rounded-full px-2 py-0.5 text-xs font-bold ${LABEL[f].tone}`}>{LABEL[f].text}</span>)}
+        <span className="ml-auto font-mono text-xs text-slate-400">{item.id}</span>
       </div>
       <p className="text-[11px] text-slate-300">{item.flags.map(f => LABEL[f].hint).join(' ')}</p>
       <p className="text-[11px] text-slate-300">
@@ -33,8 +33,8 @@ function Row({ item }: { item: QualityItem }) {
             <div className="flex h-12 items-end rounded bg-slate-900">
               <div className={`w-full rounded ${l === item.key ? 'bg-emerald-600' : 'bg-slate-500'}`} style={{ height: `${Math.max(4, (item.counts[l] / max) * 100)}%` }} />
             </div>
-            <p className="mt-1 text-[10px] font-bold text-slate-300">{l}{l === item.key ? ' (key)' : ''}</p>
-            <p className="text-[10px] text-slate-400">all {item.counts[l]} · top {item.upperCounts[l]}</p>
+            <p className="mt-1 text-xs font-bold text-slate-300">{l}{l === item.key ? ' (key)' : ''}</p>
+            <p className="text-xs text-slate-400">all {item.counts[l]} · top {item.upperCounts[l]}</p>
           </div>
         ))}
       </div>
