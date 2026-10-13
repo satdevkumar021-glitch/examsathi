@@ -90,12 +90,18 @@ test('text is trimmed and Punjabi is kept when supplied', () => {
 
 // ---- editorial store behaviour -------------------------------------------------
 
-function makeStore({ rows, failing = false, now = { t: 1_000_000 } }) {
+function makeStore({ rows, resources = [], failing = false, failResources = false, now = { t: 1_000_000 } }) {
   let calls = 0;
-  const state = { rows, failing };
+  const state = { rows, resources, failing, failResources };
+  const reply = (down, data) => down ? { data: null, error: { message: 'down' } } : { data, error: null };
   const db = {
     from: () => ({
-      select: () => ({ eq: () => ({ eq: () => ({ order: () => ({ limit: async () => { calls++; return state.failing ? { data: null, error: { message: 'down' } } : { data: state.rows, error: null }; } }) }) }) }),
+      select: () => ({
+        // questions: .eq('type').eq('status').order().limit()
+        eq: () => ({ eq: () => ({ order: () => ({ limit: async () => { calls++; return reply(state.failing, state.rows); } }) }) }),
+        // resources: .in('type', [...]).eq('status').order().limit()
+        in: () => ({ eq: () => ({ order: () => ({ limit: async () => reply(state.failing || state.failResources, state.resources) }) }) }),
+      }),
     }),
   };
   const content = load('../src/lib/question-content.ts');
@@ -105,8 +111,9 @@ function makeStore({ rows, failing = false, now = { t: 1_000_000 } }) {
     'server-only': {},
     './question-content': content,
     './editorial-store': mem,
+    './resource-content': load('../src/lib/resource-content.ts', {}, { TextEncoder }),
     './server-auth': { serviceClient: () => db },
-  }, clock);
+  }, { ...clock, TextEncoder });
   const store = { ...mem, ...loader };
   return { store, state, now, calls: () => calls };
 }
@@ -187,7 +194,7 @@ test('an unpublished question leaves the pool but stays gradable for a day, then
 test('with no database configured the store is simply empty', async () => {
   const content = load('../src/lib/question-content.ts');
   const mem = load('../src/lib/editorial-store.ts', { 'server-only': {} });
-  const store = { ...mem, ...load('../src/lib/editorial-loader.ts', { 'server-only': {}, './question-content': content, './editorial-store': mem, './server-auth': { serviceClient: () => null } }) };
+  const store = { ...mem, ...load('../src/lib/editorial-loader.ts', { 'server-only': {}, './question-content': content, './editorial-store': mem, './resource-content': load('../src/lib/resource-content.ts', {}, { TextEncoder }), './server-auth': { serviceClient: () => null } }) };
   await store.refreshEditorial();
   assert.equal(store.editorialQuestions().length, 0);
 });
@@ -244,4 +251,42 @@ test('the edit form never collapses text that differs by language', () => {
   assert.ok(page.includes('const differs ='), 'edit decides between single and per-language view');
   assert.match(page, /!!t\.pa \|\| \(!!t\.hi && t\.en !== t\.hi\)/, 'Punjabi, Hindi-only or differing text opens the per-language view');
   assert.ok(page.includes('updateContent('), 'saving an edit calls the PUT API');
+});
+
+// ---- published lessons, videos and links ----------------------------------------
+const res = (id, type, topic_id, data, title = 'T') => ({ id, type, title, topic_id, data });
+const video = (id, topic = 'punjab-history') => res(id, 'video', topic, { youtubeId: 'dQw4w9WgXcQ', channel: 'C', language: 'hi' });
+
+test('published resources load and are filtered by topic', async () => {
+  const { store } = makeStore({ rows: [], resources: [video('v1'), video('v2', 'modern-india'), res('l1', 'lesson', 'punjab-history', { title: { en: 'T' }, body: { en: 'B' } })] });
+  assert.equal(store.editorialResources(['punjab-history']).length, 0, 'nothing before the first load');
+  await store.refreshEditorial();
+  assert.equal(JSON.stringify(store.editorialResources(['punjab-history']).map(i => i.id)), JSON.stringify(['v1', 'l1']));
+  assert.equal(JSON.stringify(store.editorialResources(['modern-india']).map(i => i.id)), JSON.stringify(['v2']));
+  assert.equal(JSON.stringify(store.editorialResources(['other'])), '[]');
+});
+
+test('malformed or legacy resource rows are never served', async () => {
+  const { store } = makeStore({ rows: [], resources: [res('old', 'video', 't', { vidUrl: 'https://x.example', vidTitle: 'old format' }), res('badlink', 'pdf', 't', { url: 'http://x.example' }), video('ok', 't')] });
+  await store.refreshEditorial();
+  assert.equal(JSON.stringify(store.editorialResources(['t']).map(i => i.id)), JSON.stringify(['ok']));
+});
+
+test('if either query fails nothing changes: no half-loaded content', async () => {
+  const h = makeStore({ rows: [row('a')], resources: [video('v1')] });
+  await h.store.refreshEditorial();
+  h.state.rows = [row('a'), row('b')]; h.state.resources = []; h.state.failResources = true;
+  h.now.t += 61_000;
+  await h.store.refreshEditorial();
+  assert.equal(JSON.stringify(h.store.editorialQuestions().map(q => q.id)), JSON.stringify(['cms-a']), 'questions keep the last good copy too');
+  assert.equal(JSON.stringify(h.store.editorialResources(['punjab-history']).map(i => i.id)), JSON.stringify(['v1']));
+});
+
+test('unpublishing a resource removes it at once; it has no answer to keep gradable', async () => {
+  const h = makeStore({ rows: [], resources: [video('v1')] });
+  await h.store.refreshEditorial();
+  h.state.resources = [];
+  h.store.invalidateEditorial();
+  await h.store.refreshEditorial();
+  assert.equal(JSON.stringify(h.store.editorialResources(['punjab-history'])), '[]');
 });

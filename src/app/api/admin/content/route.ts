@@ -4,6 +4,7 @@ import { clientIp } from '@/lib/rate-limit';
 import { limitRequest } from '@/lib/rate-limit-shared';
 import { requireStaff, serviceClient, staffRoute } from '@/lib/server-auth';
 import { validateQuestionData } from '@/lib/question-content';
+import { byteLength, isResourceType, MAX_DATA_BYTES, validateResourceData } from '@/lib/resource-content';
 import { invalidateEditorial } from '@/lib/editorial-loader';
 import { canCreate, canDelete, canEdit, canTransition, isUuid, validateEdit, validateNewItem, validateTransition, type StaffRole, type WorkflowStatus } from '@/lib/content-workflow';
 
@@ -55,6 +56,12 @@ export async function POST(req: NextRequest) {
       const checked = validateQuestionData(item.data);
       if (!checked.ok) return fail(checked.message, 400);
       item.data = checked.value as unknown as Record<string, unknown>;
+      if (byteLength(item.data) > MAX_DATA_BYTES) return fail('This question is too long. Shorten the text.', 400);
+    } else if (isResourceType(item.type)) {
+      // Lessons are plain text, videos are a validated YouTube id, documents are a public https link.
+      const checked = validateResourceData(item.type, item.data);
+      if (!checked.ok) return fail(checked.message, 400);
+      item.data = checked.value as unknown as Record<string, unknown>;
     }
     if (!canCreate(user.role, item.status)) return fail('Only a superadmin can publish directly. Submit it for review instead.', 403);
     const db = serviceClient();
@@ -88,6 +95,11 @@ export async function PUT(req: NextRequest) {
     }
     if (current.type === 'question') {
       const checked = validateQuestionData(data);
+      if (!checked.ok) return fail(checked.message, 400);
+      data = checked.value as unknown as Record<string, unknown>;
+      if (byteLength(data) > MAX_DATA_BYTES) return fail('This question is too long. Shorten the text.', 400);
+    } else if (isResourceType(current.type)) {
+      const checked = validateResourceData(current.type, data);
       if (!checked.ok) return fail(checked.message, 400);
       data = checked.value as unknown as Record<string, unknown>;
     }

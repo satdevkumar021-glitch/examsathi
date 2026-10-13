@@ -1,5 +1,6 @@
 import 'server-only';
 import type { Question } from './question-types';
+import type { PublicResource } from './resource-content';
 
 // Published editorial questions held in memory. This file has no database or network dependency so the
 // question engine can import it cheaply; `editorial-loader.ts` fills it from the database.
@@ -36,3 +37,14 @@ export function setEditorialQuestions(next: Question[]): boolean {
   if (changed) { published = next; byId = new Map(next.map(q => [q.id, q])); version++; }
   return changed;
 }
+
+// Published lessons, videos and document links. Served read-only to students; they carry no answers, so
+// unlike questions there is nothing to keep gradable after they are unpublished.
+let resources: PublicResource[] = [];
+
+/** Published resources for any of the given topics (empty list means all, used by tests). */
+export function editorialResources(topicIds: readonly string[]): PublicResource[] {
+  return resources.filter(item => topicIds.includes(item.topicId));
+}
+
+export function setEditorialResources(next: PublicResource[]): void { resources = next; }

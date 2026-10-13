@@ -286,6 +286,9 @@ Returns trilingual inspirational quote, historical events for today's date, and 
 
 ---
 
+### `GET /api/resources?topics=<id1,id2>` (max 4 topics)
+Reviewed lessons, videos and document links published by staff educators, for the given topics. Public, answer-free and cached briefly. Each item has `{ id, type, topicId, title, lesson?, video?, document? }`. `lesson` is `{ title: Localized, body: Localized }` — plain text, never HTML; `video` is `{ youtubeId: string, channel?, duration?, language }` — only the validated id; `document` is `{ url: string, language, publisher? }` — only a public https link.
+
 ## Question and attempt API (current)
 
 Routes are `POST` unless stated, JSON, same origin, and rate-limited per IP. Successful responses have `success: true`; errors have `success: false, message`.

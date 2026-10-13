@@ -2,11 +2,12 @@
 import { useAuth } from '@/lib/hooks/useAuth';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { PlusCircle, BookOpen, HelpCircle, Video, FileText, CheckCircle2, ArrowLeft, ShieldCheck, UploadCloud, Check, X, Layers, AlertTriangle } from 'lucide-react';
+import { PlusCircle, BookOpen, HelpCircle, Video, FileText, CheckCircle2, ArrowLeft, ShieldCheck, Check, X, Layers, AlertTriangle } from 'lucide-react';
 import { ALL_LESSONS } from '@/lib/data/lessons';
-import { canDelete, canEdit, canTransition, isStaffRole, type StaffRole, type WorkflowStatus } from '@/lib/content-workflow';
+import { canDelete, canEdit, canTransition, isStaffRole, type ItemType, type StaffRole, type WorkflowStatus } from '@/lib/content-workflow';
 import { createContent, deleteContent, listContent, moveContent, updateContent, type ContentItem } from '@/lib/admin-client';
 import QualityPanel from '@/components/admin/QualityPanel';
+import { youtubeIdFrom, safeHttpsUrl } from '@/lib/resource-content';
 
 type AdminRole = StaffRole;
 type PipelineItem = ContentItem;
@@ -40,6 +41,40 @@ function QuestionPreview({ data }: { data: Record<string, unknown> }) {
   );
 }
 
+/** Shows reviewers what students would actually receive, in the same shape the public API serves. */
+function ResourcePreview({ item }: { item: ContentItem }) {
+  const d = item.data as Record<string, unknown>;
+  const box = 'text-[11px] bg-slate-900/60 p-2.5 rounded-lg border border-slate-800 space-y-1';
+  if (item.type === 'lesson') {
+    const title = d.title as { en?: string; hi?: string; pa?: string } | undefined;
+    const body = d.body as { en?: string; hi?: string; pa?: string } | undefined;
+    if (!title || !body) return <p className={`${box} text-amber-300`}>This item was saved in an older format and will not be shown to students until it is edited and saved again.</p>;
+    return (<div className={box}>
+      {(['en', 'hi', 'pa'] as const).filter(l => title[l] || body[l]).map(l => (
+        <div key={l}><p className="text-slate-400 uppercase text-[9px]">{l}</p><p className="text-slate-100 font-semibold">{title[l]}</p><p className="text-slate-300 whitespace-pre-wrap">{body[l]}</p></div>
+      ))}
+    </div>);
+  }
+  if (item.type === 'video') {
+    const id = youtubeIdFrom(d.youtubeId);
+    if (!id) return <p className={`${box} text-amber-300`}>This item was saved in an older format and will not be shown to students until it is edited and saved again.</p>;
+    return (<div className={box}>
+      <p className="text-slate-100">YouTube video <span className="font-mono">{id}</span>{d.channel ? ` · ${String(d.channel)}` : ''}{d.duration ? ` · ${String(d.duration)}` : ''}</p>
+      <a href={`https://www.youtube.com/watch?v=${id}`} target="_blank" rel="noopener noreferrer" className="text-teal-300 underline">Check the video before approving ↗</a>
+    </div>);
+  }
+  if (item.type === 'pdf') {
+    const url = safeHttpsUrl(d.url);
+    if (!url) return <p className={`${box} text-amber-300`}>This item was saved in an older format and will not be shown to students until it is edited and saved again.</p>;
+    return (<div className={box}>
+      <p className="text-slate-100 break-all">{url}</p>
+      {d.publisher ? <p className="text-slate-400">Publisher: {String(d.publisher)}</p> : null}
+      <a href={url} target="_blank" rel="noopener noreferrer nofollow" className="text-teal-300 underline">Open the link before approving ↗</a>
+    </div>);
+  }
+  return null;
+}
+
 export default function AdminResourcePortal() {
   const { user: verifiedUser, loading: authLoading } = useAuth();
   const router = useRouter();
@@ -68,15 +103,18 @@ export default function AdminResourcePortal() {
   const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
   const [examTag, setExamTag] = useState('Punjab Master Cadre 2024');
 
-  // Video Form States
+  // Resource form states (lesson, video, document link)
   const [vidTitle, setVidTitle] = useState('');
   const [vidUrl, setVidUrl] = useState('');
   const [vidChannel, setVidChannel] = useState('');
   const [vidDuration, setVidDuration] = useState('');
-
-  // Lesson Form States
-  const [lessonTitle, setLessonTitle] = useState('');
-  const [lessonContent, setLessonContent] = useState('');
+  const [lessonTitle, setLessonTitle] = useState<Lang3>(blank());
+  const [lessonBody, setLessonBody] = useState<Lang3>(blank());
+  const [docTitle, setDocTitle] = useState('');
+  const [docUrl, setDocUrl] = useState('');
+  const [docPublisher, setDocPublisher] = useState('');
+  const [resLang, setResLang] = useState<'hi' | 'pa' | 'en'>('hi');
+  const [editingType, setEditingType] = useState<ItemType | null>(null);
 
   // The role comes from the verified session; the pipeline lives in the database, not the browser.
   const trustedRole = verifiedUser?.app_metadata?.role;
@@ -132,7 +170,7 @@ export default function AdminResourcePortal() {
     } catch (error) { fail(error); } finally { setBusy(false); }
   };
 
-  const resetQuestionForm = () => { setQText(blank()); setOpts(blankOptions()); setExplanation(blank()); setCorrectOpt('A'); setPerLang(false); setEditingId(null); };
+  const resetQuestionForm = () => { setQText(blank()); setOpts(blankOptions()); setExplanation(blank()); setCorrectOpt('A'); setPerLang(false); setEditingId(null); setEditingType(null); };
 
   const questionPayload = () => {
     const shared = (t: Lang3): Lang3 => (perLang ? t : { en: t.en || t.hi, hi: t.en || t.hi, pa: '' });
@@ -166,7 +204,7 @@ export default function AdminResourcePortal() {
     setPerLang(OPTION_KEYS.some(key => differs(nextOpts[key])) || differs(nextExplanation));
     setCorrectOpt(OPTION_KEYS.includes(d.correct as OptionKey) ? (d.correct as OptionKey) : 'A');
     setDifficulty(d.difficulty ?? 'medium'); setExamTag(d.examTag ?? ''); setQTopic(item.topicId);
-    setEditingId(item.id); setActiveTab('question');
+    setEditingId(item.id); setEditingType('question'); setActiveTab('question');
   };
 
   const saveEdit = async (thenReview: boolean) => {
@@ -182,22 +220,60 @@ export default function AdminResourcePortal() {
     } catch (error) { fail(error); } finally { setBusy(false); }
   };
 
-  // Submit Video
-  const handleAddVideo = (submitStatus: WorkflowStatus) => {
-    if (!vidTitle || !vidUrl) return;
-    void submitItem({
-      type: 'video', title: vidTitle, topicId: qTopic, status: submitStatus,
-      data: { vidTitle, vidUrl, vidChannel, vidDuration },
-    }, () => { setVidTitle(''); setVidUrl(''); setVidChannel(''); setVidDuration(''); }, 'Video');
+  const resetResourceForms = () => {
+    setVidTitle(''); setVidUrl(''); setVidChannel(''); setVidDuration('');
+    setLessonTitle(blank()); setLessonBody(blank());
+    setDocTitle(''); setDocUrl(''); setDocPublisher(''); setResLang('hi');
+    setEditingId(null); setEditingType(null);
   };
 
-  // Submit Lesson
-  const handleAddLesson = (submitStatus: WorkflowStatus) => {
-    if (!lessonTitle) return;
-    void submitItem({
-      type: 'lesson', title: lessonTitle, topicId: qTopic, status: submitStatus,
-      data: { lessonTitle, lessonContent },
-    }, () => { setLessonTitle(''); setLessonContent(''); }, 'Lesson');
+  /** The exact payload for the resource form that is open. The server validates it again. */
+  const resourcePayload = (type: 'lesson' | 'video' | 'pdf') => {
+    if (type === 'lesson') {
+      const title = clean(lessonTitle);
+      return { title: (lessonTitle.en || lessonTitle.hi || lessonTitle.pa).slice(0, 200), topicId: qTopic, data: { title, body: clean(lessonBody) } };
+    }
+    if (type === 'video') return { title: vidTitle, topicId: qTopic, data: { youtubeId: vidUrl, channel: vidChannel, duration: vidDuration, language: resLang } };
+    return { title: docTitle, topicId: qTopic, data: { url: docUrl, publisher: docPublisher, language: resLang } };
+  };
+
+  const handleAddResource = (type: 'lesson' | 'video' | 'pdf', submitStatus: WorkflowStatus) => {
+    const payload = resourcePayload(type);
+    if (!payload.title.trim()) return;
+    if (submitStatus === 'published' && !confirm('Publish now? Students will see this as soon as it is saved.')) return;
+    void submitItem({ type, status: submitStatus, ...payload }, resetResourceForms, type === 'lesson' ? 'Lesson' : type === 'video' ? 'Video' : 'Link');
+  };
+
+  const startEditResource = (item: PipelineItem) => {
+    const d = item.data as Record<string, unknown>;
+    resetResourceForms();
+    setQTopic(item.topicId);
+    // Items saved before the structured formats existed keep their text so nothing has to be retyped.
+    if (item.type === 'lesson') {
+      setLessonTitle(d.title ? toLang3(d.title) : { ...blank(), hi: String(d.lessonTitle ?? item.title) });
+      setLessonBody(d.body ? toLang3(d.body) : { ...blank(), hi: String(d.lessonContent ?? '') });
+    } else if (item.type === 'video') {
+      setVidTitle(item.title); setVidUrl(String(d.youtubeId ?? d.vidUrl ?? '')); setVidChannel(String(d.channel ?? d.vidChannel ?? '')); setVidDuration(String(d.duration ?? d.vidDuration ?? ''));
+      setResLang(d.language === 'pa' || d.language === 'en' ? d.language : 'hi');
+    } else {
+      setDocTitle(item.title); setDocUrl(String(d.url ?? '')); setDocPublisher(String(d.publisher ?? ''));
+      setResLang(d.language === 'pa' || d.language === 'en' ? d.language : 'hi');
+    }
+    setEditingId(item.id); setEditingType(item.type);
+    setActiveTab(item.type === 'pdf' ? 'pdf' : item.type);
+  };
+
+  const saveResourceEdit = async (thenReview: boolean) => {
+    if (busy || !editingId || !editingType || editingType === 'question') return;
+    setBusy(true);
+    try {
+      let { item } = await updateContent({ id: editingId, ...resourcePayload(editingType) });
+      if (thenReview) item = (await moveContent(editingId, 'review')).item;
+      setPipeline(prev => prev.map(i => i.id === item.id ? item : i));
+      resetResourceForms();
+      setActiveTab('pipeline');
+      flash(thenReview ? '✅ Changes saved and submitted for review.' : '✅ Changes saved.');
+    } catch (error) { fail(error); } finally { setBusy(false); }
   };
 
   // Topic list from ALL_LESSONS
@@ -304,7 +380,7 @@ export default function AdminResourcePortal() {
           onClick={() => setActiveTab('pdf')}
           className={`py-2 text-xs font-semibold rounded-lg flex items-center justify-center gap-1.5 transition ${activeTab === 'pdf' ? 'bg-indigo-600 text-white shadow' : 'text-slate-400 hover:text-white'}`}
         >
-          <FileText size={14} /> Doc/PDF
+          <FileText size={14} /> +Link
         </button>
       </div>
 
@@ -381,7 +457,7 @@ export default function AdminResourcePortal() {
                     )}
                   </div>
 
-                  {item.type === 'question' && <QuestionPreview data={item.data} />}
+                  {item.type === 'question' ? <QuestionPreview data={item.data} /> : <ResourcePreview item={item} />}
 
                   {item.reviewedBy && (
                     <div className="text-[10px] bg-slate-900/60 p-2 rounded-lg border border-slate-800 text-slate-300">
@@ -393,8 +469,8 @@ export default function AdminResourcePortal() {
                   {/* Actions according to Role */}
                   <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-750 text-xs">
                     {/* Questions can be corrected while they are drafts or were sent back. Withdraw or unpublish first for anything else. */}
-                    {item.type === 'question' && canEdit({ id: userId || '', role: adminRole }, { authorId: item.mine ? userId || '' : 'not-the-viewer', status: item.status }) && (
-                      <button disabled={busy} onClick={() => startEdit(item)} className="bg-slate-700 hover:bg-slate-600 text-slate-100 font-bold px-3 py-1.5 rounded-lg text-[11px] transition">
+                    {canEdit({ id: userId || '', role: adminRole }, { authorId: item.mine ? userId || '' : 'not-the-viewer', status: item.status }) && (
+                      <button disabled={busy} onClick={() => (item.type === 'question' ? startEdit(item) : startEditResource(item))} className="bg-slate-700 hover:bg-slate-600 text-slate-100 font-bold px-3 py-1.5 rounded-lg text-[11px] transition">
                         Edit
                       </button>
                     )}
@@ -576,190 +652,113 @@ export default function AdminResourcePortal() {
         </form>
       )}
 
-      {/* ================= TAB 2: ADD VIDEO ================= */}
-      {activeTab === 'video' && (
-        <form onSubmit={(e) => { e.preventDefault(); handleAddVideo(adminRole === 'superadmin' ? 'published' : 'review'); }} className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-5 space-y-4 shadow-lg">
-          <h2 className="text-sm font-bold text-white mb-2 flex items-center gap-2">
-            <Video size={16} className="text-teal-400" />
-            Curate Open-Source Video Resource (YouTube)
-          </h2>
+      {/* ================= RESOURCE FORMS: VIDEO, LINK, LESSON ================= */}
+      {(activeTab === 'video' || activeTab === 'pdf' || activeTab === 'lesson') && (() => {
+        const type = activeTab === 'video' ? 'video' : activeTab === 'pdf' ? 'pdf' : 'lesson';
+        const editing = !!editingId && editingType === type;
+        const heading = type === 'video' ? 'YouTube video for a topic' : type === 'pdf' ? 'Link to an official document or study handout' : 'Write a short lesson';
+        const hint = type === 'video'
+          ? 'Students watch it inside ExamSathi. Only YouTube links are accepted.'
+          : type === 'pdf'
+            ? 'Students open the link in a new tab. Use the publisher’s own page (for example the recruitment board or NCERT). Files are not uploaded to ExamSathi.'
+            : 'Plain text only. A new line starts a new paragraph. Formatting and links are not supported, which keeps the page safe for students.';
+        return (
+          <form onSubmit={(e) => { e.preventDefault(); if (editing) void saveResourceEdit(false); else handleAddResource(type, adminRole === 'superadmin' ? 'published' : 'review'); }} className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-5 space-y-4 shadow-lg">
+            <h2 className="text-sm font-bold text-white flex items-center gap-2">
+              {type === 'video' ? <Video size={16} className="text-teal-400" /> : type === 'pdf' ? <FileText size={16} className="text-teal-400" /> : <BookOpen size={16} className="text-teal-400" />}
+              {editing ? 'Edit' : 'Add'}: {heading}
+            </h2>
+            <p className="text-[11px] text-slate-400">{hint}</p>
+            {editing && (
+              <div className="flex items-center justify-between gap-2 text-[11px] bg-indigo-950/60 border border-indigo-500/40 text-indigo-200 rounded-lg p-2.5">
+                <span>Editing a saved item. Saving keeps its place in the pipeline.</span>
+                <button type="button" onClick={() => { resetResourceForms(); setActiveTab('pipeline'); }} className="underline shrink-0">Cancel</button>
+              </div>
+            )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Target Topic</label>
-              <select 
-                value={qTopic} 
-                onChange={e => setQTopic(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500"
-              >
-                {uniqueTopics.map(topic => (
-                  <option key={topic.id} value={topic.id}>
-                    {topic.titleHi} ({topic.titleEn})
-                  </option>
-                ))}
+              <label htmlFor="r-topic" className="text-[11px] text-slate-300 font-semibold block mb-1">Target Topic</label>
+              <select id="r-topic" value={qTopic} onChange={e => setQTopic(e.target.value)} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500">
+                {uniqueTopics.map(topic => (<option key={topic.id} value={topic.id}>{topic.titleHi} ({topic.titleEn})</option>))}
+                {!uniqueTopics.some(topic => topic.id === qTopic) && <option value={qTopic}>{qTopic}</option>}
               </select>
             </div>
-            <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Video Title</label>
-              <input 
-                type="text" 
-                value={vidTitle}
-                onChange={e => setVidTitle(e.target.value)}
-                placeholder="e.g. Complete Sikh Gurus History in 1 Shot"
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white" 
-                required 
-              />
-            </div>
-          </div>
 
-          <div>
-            <label className="text-[11px] text-slate-300 font-semibold block mb-1">YouTube Video URL or ID</label>
-            <input 
-              type="text" 
-              value={vidUrl}
-              onChange={e => setVidUrl(e.target.value)}
-              placeholder="https://www.youtube.com/watch?v=... or 11-char ID"
-              className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white" 
-              required 
-            />
-          </div>
+            {type === 'video' && (<>
+              <div>
+                <label htmlFor="v-title" className="text-[11px] text-slate-300 font-semibold block mb-1">Video title</label>
+                <input id="v-title" type="text" value={vidTitle} onChange={e => setVidTitle(e.target.value)} maxLength={300} placeholder="e.g. Ten Sikh Gurus in one lecture" className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" required />
+              </div>
+              <div>
+                <label htmlFor="v-url" className="text-[11px] text-slate-300 font-semibold block mb-1">YouTube link or video id</label>
+                <input id="v-url" type="text" value={vidUrl} onChange={e => setVidUrl(e.target.value)} placeholder="https://www.youtube.com/watch?v=… or the 11-character id" className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" required />
+                {vidUrl && (youtubeIdFrom(vidUrl)
+                  ? <p className="text-[11px] text-emerald-300 mt-1">Video id: <span className="font-mono">{youtubeIdFrom(vidUrl)}</span></p>
+                  : <p className="text-[11px] text-amber-300 mt-1">This is not a YouTube link or video id yet.</p>)}
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label htmlFor="v-channel" className="text-[11px] text-slate-300 font-semibold block mb-1">Channel (optional)</label>
+                  <input id="v-channel" type="text" value={vidChannel} onChange={e => setVidChannel(e.target.value)} maxLength={100} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" />
+                </div>
+                <div>
+                  <label htmlFor="v-duration" className="text-[11px] text-slate-300 font-semibold block mb-1">Duration (optional)</label>
+                  <input id="v-duration" type="text" value={vidDuration} onChange={e => setVidDuration(e.target.value)} maxLength={20} placeholder="1:15:30" className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" />
+                </div>
+              </div>
+            </>)}
 
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Channel / Educator</label>
-              <input 
-                type="text" 
-                value={vidChannel}
-                onChange={e => setVidChannel(e.target.value)}
-                placeholder="e.g. StudyIQ Punjab"
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white" 
-              />
-            </div>
-            <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Duration</label>
-              <input 
-                type="text" 
-                value={vidDuration}
-                onChange={e => setVidDuration(e.target.value)}
-                placeholder="e.g. 1:15:30"
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white" 
-              />
-            </div>
-          </div>
+            {type === 'pdf' && (<>
+              <div>
+                <label htmlFor="d-title" className="text-[11px] text-slate-300 font-semibold block mb-1">Title</label>
+                <input id="d-title" type="text" value={docTitle} onChange={e => setDocTitle(e.target.value)} maxLength={300} placeholder="e.g. PSEB Class 10 Social Science textbook" className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" required />
+              </div>
+              <div>
+                <label htmlFor="d-url" className="text-[11px] text-slate-300 font-semibold block mb-1">Link (https)</label>
+                <input id="d-url" type="url" value={docUrl} onChange={e => setDocUrl(e.target.value)} placeholder="https://…" className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" required />
+                {docUrl && !safeHttpsUrl(docUrl) && <p className="text-[11px] text-amber-300 mt-1">Use a public https link. Plain http, IP addresses, localhost and links with a password are not accepted.</p>}
+              </div>
+              <div>
+                <label htmlFor="d-publisher" className="text-[11px] text-slate-300 font-semibold block mb-1">Publisher (optional)</label>
+                <input id="d-publisher" type="text" value={docPublisher} onChange={e => setDocPublisher(e.target.value)} maxLength={120} placeholder="e.g. NCERT" className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" />
+              </div>
+            </>)}
 
-          <div className="flex gap-2 pt-2">
-            <button 
-              type="button"
-              onClick={() => handleAddVideo('draft')}
-              className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold py-2.5 rounded-xl text-xs transition"
-            >
-              Save as Draft
-            </button>
-            <button 
-              type="button"
-              onClick={() => handleAddVideo('review')}
-              className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs transition"
-            >
-              Submit for Review
-            </button>
-            {adminRole === 'superadmin' && (
-              <button 
-                type="submit"
-                className="flex-1 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow"
-              >
-                Publish Directly
-              </button>
+            {type !== 'lesson' && (
+              <div>
+                <label htmlFor="r-lang" className="text-[11px] text-slate-300 font-semibold block mb-1">Language of the resource</label>
+                <select id="r-lang" value={resLang} onChange={e => setResLang(e.target.value as 'hi' | 'pa' | 'en')} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500">
+                  <option value="hi">Hindi</option><option value="pa">Punjabi</option><option value="en">English</option>
+                </select>
+              </div>
             )}
-          </div>
-        </form>
-      )}
 
-      {/* ================= TAB 3: UPLOAD DOCS / PDF ================= */}
-      {activeTab === 'pdf' && (
-        <div className="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 text-center space-y-4 shadow-lg">
-          <UploadCloud size={40} className="text-teal-400 mx-auto" />
-          <div>
-            <h3 className="text-white font-bold text-sm">Upload Official Syllabus PDF or Study Handout</h3>
-            <p className="text-xs text-slate-400 mt-1">Supports PSSSB Official Notices, NCERT PDF notes, PSEB Chapters</p>
-          </div>
-          <div className="border-2 border-dashed border-slate-700 rounded-xl p-8 hover:border-teal-500 transition cursor-pointer">
-            <span className="text-xs text-slate-400">Click to browse or drag & drop PDF, DOCX file</span>
-          </div>
-          <button 
-            onClick={() => { setSuccessMsg('✅ Document indexed for editorial review pipeline!'); setTimeout(() => setSuccessMsg(''), 4000); }}
-            className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-6 py-2.5 rounded-xl text-xs"
-          >
-            Submit Document to Pipeline
-          </button>
-        </div>
-      )}
-
-      {/* ================= TAB 4: LESSON WRITER ================= */}
-      {activeTab === 'lesson' && (
-        <div className="bg-slate-800/90 border border-slate-700 rounded-2xl p-5 space-y-4 shadow-lg">
-          <h2 className="text-sm font-bold text-white flex items-center gap-2">
-            <BookOpen size={16} className="text-teal-400" />
-            Create or Edit Topic Lesson Content
-          </h2>
-          <p className="text-xs text-slate-400">Teachers can write structured definitions, memory mnemonics, and summary points.</p>
-          
-          <div>
-            <label className="text-[11px] text-slate-300 font-semibold block mb-1">Target Topic</label>
-            <select 
-              value={qTopic} 
-              onChange={e => setQTopic(e.target.value)}
-              className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500"
-            >
-              {uniqueTopics.map(topic => (
-                <option key={topic.id} value={topic.id}>
-                  {topic.titleHi} ({topic.titleEn})
-                </option>
+            {type === 'lesson' && (<>
+              {([['hi', 'Hindi (हिन्दी)'], ['en', 'English'], ['pa', 'Punjabi (ਪੰਜਾਬੀ)']] as const).map(([lang, label]) => (
+                <fieldset key={lang} className="space-y-1.5 border border-slate-700/70 rounded-lg p-2.5">
+                  <legend className="text-[11px] text-slate-300 font-semibold px-1">{label}</legend>
+                  <input aria-label={`Lesson title (${lang})`} type="text" value={lessonTitle[lang]} maxLength={200} placeholder="Title" onChange={e => setLessonTitle(prev => ({ ...prev, [lang]: e.target.value }))} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" />
+                  <textarea aria-label={`Lesson text (${lang})`} rows={5} value={lessonBody[lang]} maxLength={6000} placeholder="Lesson text" onChange={e => setLessonBody(prev => ({ ...prev, [lang]: e.target.value }))} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500 resize-y" />
+                </fieldset>
               ))}
-            </select>
-          </div>
+              <p className="text-[11px] text-slate-400">Fill in Hindi or English at least. Students see their own language and fall back to the other.</p>
+            </>)}
 
-          <input 
-            type="text" 
-            value={lessonTitle}
-            onChange={e => setLessonTitle(e.target.value)}
-            placeholder="Lesson Title (e.g. Punjab Geography - 5 Doabs & Rivers)"
-            className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white" 
-          />
-          <textarea 
-            rows={6}
-            value={lessonContent}
-            onChange={e => setLessonContent(e.target.value)}
-            placeholder="Type comprehensive lesson in Hindi or Punjabi with bullet points..."
-            className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-xs text-white resize-none"
-          />
-          
-          <div className="flex gap-2">
-            <button 
-              type="button"
-              onClick={() => handleAddLesson('draft')}
-              className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold py-2.5 rounded-xl text-xs transition"
-            >
-              Save Draft
-            </button>
-            <button 
-              type="button"
-              onClick={() => handleAddLesson('review')}
-              className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs transition"
-            >
-              Submit for Review
-            </button>
-            {adminRole === 'superadmin' && (
-              <button 
-                type="button"
-                onClick={() => handleAddLesson('published')}
-                className="flex-1 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs transition"
-              >
-                Publish Directly
-              </button>
-            )}
-          </div>
-        </div>
-      )}
+            <div className="flex gap-2 pt-2">
+              {editing ? (<>
+                <button type="button" disabled={busy} onClick={() => void saveResourceEdit(false)} className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold py-2.5 rounded-xl text-xs transition">Save changes</button>
+                <button type="button" disabled={busy} onClick={() => void saveResourceEdit(true)} className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs transition">Save and submit for review</button>
+              </>) : (<>
+                <button type="button" onClick={() => handleAddResource(type, 'draft')} className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold py-2.5 rounded-xl text-xs transition">Save as Draft</button>
+                <button type="button" onClick={() => handleAddResource(type, 'review')} className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs transition">Submit for Review</button>
+                {adminRole === 'superadmin' && (
+                  <button type="submit" className="flex-1 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs transition shadow">Publish Directly</button>
+                )}
+              </>)}
+            </div>
+          </form>
+        );
+      })()}
 
     </div>
   );

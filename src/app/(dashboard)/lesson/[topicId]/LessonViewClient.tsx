@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, HelpCircle, ChevronLeft, ChevronRight, Bookmark, Sparkles, FileText, Download, ExternalLink, ShieldCheck, Target, AlertTriangle, Search, Trash2, Undo2 } from 'lucide-react';
 import { getLessonByTopicId, Lesson } from '@/lib/data/lessons';
 import { fetchQuestionSet, fetchReveals } from '@/lib/question-client';
+import { fetchResources } from '@/lib/resources-client';
+import type { PublicResource } from '@/lib/resource-content';
 import type { PublicQuestion, QuestionReveal } from '@/lib/question-types';
 import FlipCard from '@/components/ui/FlipCard';
 import { useStore } from '@/lib/store';
@@ -54,6 +56,18 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   const [contributeName, setContributeName] = useState('');
   const [rightsConfirmed, setRightsConfirmed] = useState(false);
   const [contributeSubmitted, setContributeSubmitted] = useState(false);
+
+  // Lessons, videos and links that educators wrote and a reviewer approved. They add to, never replace, the built-in lesson.
+  const [educatorItems, setEducatorItems] = useState<PublicResource[]>([]);
+  useEffect(() => {
+    let live = true;
+    fetchResources([topicId, lesson.id]).then(items => { if (live) setEducatorItems(items); });
+    return () => { live = false; };
+  }, [topicId, lesson.id]);
+  const educatorLessons = educatorItems.filter(item => item.lesson);
+  const educatorVideos = educatorItems.filter(item => item.video);
+  const educatorDocs = educatorItems.filter(item => item.document);
+  const pick = (value: { en?: string; hi?: string; pa?: string } | undefined) => value?.[lang] || value?.en || value?.hi || value?.pa || '';
 
   const [practiceCount, setPracticeCount] = useState(10);
   const [effectiveExamId, setEffectiveExamId] = useState<string>('all');
@@ -451,6 +465,23 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               className="text-slate-200 leading-relaxed text-sm space-y-4"
               dangerouslySetInnerHTML={{ __html: lesson.content[lang] || lesson.content.hi || lesson.content.en }} 
             />
+
+            {/* Reviewed lessons from ExamSathi educators. Plain text only: it is never rendered as HTML. */}
+            {educatorLessons.length > 0 && (
+              <section aria-label="Lessons from educators" className="space-y-3 border-t border-slate-800 pt-4">
+                <h3 className="text-white font-bold text-sm flex items-center gap-2">
+                  <BookOpen size={16} className="text-teal-400" />
+                  {lang === 'pa' ? 'ਅਧਿਆਪਕਾਂ ਵੱਲੋਂ ਵਾਧੂ ਪਾਠ' : lang === 'en' ? 'More lessons from our educators' : 'शिक्षकों की ओर से अतिरिक्त पाठ'}
+                </h3>
+                {educatorLessons.map(item => (
+                  <article key={item.id} className="bg-slate-800/70 border border-slate-700 rounded-xl p-4">
+                    <h4 className="text-white font-bold text-sm mb-2">{pick(item.lesson?.title)}</h4>
+                    <p className="text-slate-200 text-sm leading-relaxed whitespace-pre-wrap">{pick(item.lesson?.body)}</p>
+                    <p className="text-[10px] text-slate-400 mt-3">{lang === 'en' ? 'Written by an ExamSathi educator and approved by a reviewer.' : 'ExamSathi शिक्षक द्वारा लिखित, समीक्षक द्वारा स्वीकृत।'}</p>
+                  </article>
+                ))}
+              </section>
+            )}
 
             {/* Worked Examples & Step-by-Step Solutions */}
             {lesson.workedExamples && lesson.workedExamples.length > 0 && (
@@ -863,6 +894,24 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 {lang === 'pa' ? 'ਸੰਬੰਧਿਤ ਪੁਸਤਕਾਂ ਅਤੇ ਅਧਿਆਇ' : 'संबंधित पाठ्य सामग्री एवं मॉड्यूल'} ({lesson.documents?.length || 0})
               </h4>
 
+              {educatorDocs.map(item => (
+                <div key={item.id} className="bg-slate-800 border border-teal-700/40 rounded-xl p-3.5 flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5 mb-1 flex-wrap">
+                      <span className="text-[10px] bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">{item.document?.language}</span>
+                      <span className="text-[10px] bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">{lang === 'en' ? 'Added by an educator' : 'शिक्षक द्वारा जोड़ा गया'}</span>
+                      {item.document?.publisher && <span className="text-[10px] text-slate-300">{item.document.publisher}</span>}
+                    </div>
+                    <h5 className="text-white font-semibold text-xs leading-snug">{item.title}</h5>
+                    <p className="text-[10px] text-slate-400 mt-0.5 break-all">{item.document?.url && new URL(item.document.url).hostname}</p>
+                  </div>
+                  <a href={item.document?.url} target="_blank" rel="noopener noreferrer nofollow" className="bg-slate-700 hover:bg-slate-600 text-teal-300 hover:text-white px-3 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 shrink-0 transition">
+                    <ExternalLink size={13} />
+                    <span>{lang === 'pa' ? 'ਖੋਲ੍ਹੋ' : 'खोलें'}</span>
+                  </a>
+                </div>
+              ))}
+
               {(!lesson.documents || lesson.documents.length === 0) ? (
                 <div className="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 text-center text-slate-400 text-xs">
                   {lang === 'pa' ? 'ਕੋਈ ਦਸਤਾਵੇਜ਼ ਨਹੀਂ ਮਿਲਿਆ' : 'इस टॉपिक के लिए अभी अतिरिक्त दस्तावेज लोड हो रहे हैं।'}
@@ -1150,7 +1199,34 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </p>
             </div>
 
-            {lesson.videos.length === 0 ? (
+            {educatorVideos.map(item => (
+              <div key={item.id} className="bg-slate-800 border border-teal-700/40 rounded-xl overflow-hidden shadow-lg">
+                <div className="relative aspect-video w-full bg-black">
+                  <iframe
+                    className="w-full h-full"
+                    src={`https://www.youtube-nocookie.com/embed/${item.video?.youtubeId}?rel=0&modestbranding=1`}
+                    title={item.title}
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="p-3.5">
+                  <span className="text-[10px] bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">{lang === 'en' ? 'Chosen by an educator' : 'शिक्षक द्वारा चुना गया'}</span>
+                  <h4 className="text-white font-bold text-sm mt-2 mb-1 line-clamp-2">{item.title}</h4>
+                  <div className="flex justify-between text-slate-400 text-xs">
+                    <span>{item.video?.channel}</span>
+                    <span>{item.video?.duration || 'Full Lecture'}</span>
+                  </div>
+                  <a href={`https://www.youtube.com/watch?v=${item.video?.youtubeId}`} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-1.5 text-xs text-red-400 hover:text-red-300 font-semibold transition">
+                    <span>▶</span> Watch on YouTube ↗
+                  </a>
+                </div>
+              </div>
+            ))}
+
+            {lesson.videos.length === 0 && educatorVideos.length === 0 ? (
               <div className="space-y-3">
                 <div className="bg-amber-950/40 border border-amber-700/50 rounded-xl p-4">
                   <p className="text-amber-200 text-sm font-bold mb-1">📹 Curated videos for this topic coming soon</p>
@@ -1183,7 +1259,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   Found a good video for this topic? <Link href="/contact" className="text-teal-400 underline">Suggest it to us ↗</Link>
                 </p>
               </div>
-            ) : (
+            ) : lesson.videos.length === 0 ? null : (
               lesson.videos.map((vid, i) => {
                 const ytId = vid.youtubeId || (vid.url?.includes('watch?v=') ? vid.url.split('watch?v=')[1]?.split('&')[0] : undefined);
 

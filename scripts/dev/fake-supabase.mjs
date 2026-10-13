@@ -23,7 +23,8 @@ http.createServer((req, res) => {
     if (url.pathname === '/rest/v1/examsathi_content_items') {
       const q = Object.fromEntries(url.searchParams);
       const eq = k => q[k]?.startsWith('eq.') ? q[k].slice(3) : null;
-      const match = r => (!eq('status') || r.status === eq('status')) && (!eq('type') || r.type === eq('type')) && (!eq('id') || r.id === eq('id')) && (!eq('author_id') || r.author_id === eq('author_id'));
+      const inList = k => q[k]?.startsWith('in.(') ? q[k].slice(4, -1).split(',').map(v => v.replace(/^"|"$/g, '')) : null;
+      const match = r => (!eq('status') || r.status === eq('status')) && (!eq('type') || r.type === eq('type')) && (!inList('type') || inList('type').includes(r.type)) && (!eq('id') || r.id === eq('id')) && (!eq('author_id') || r.author_id === eq('author_id'));
       if (req.method === 'GET') return send(res, 200, rows.filter(match));
       if (req.method === 'POST') { const b = JSON.parse(raw); const row = { id: randomUUID(), created_at: new Date().toISOString(), updated_at: new Date().toISOString(), reviewed_by: null, feedback: null, ...b }; rows.push(row); return send(res, 201, row); }
       if (req.method === 'PATCH') { const b = JSON.parse(raw); const hit = rows.filter(match); hit.forEach(r => Object.assign(r, b)); return send(res, 200, hit); }

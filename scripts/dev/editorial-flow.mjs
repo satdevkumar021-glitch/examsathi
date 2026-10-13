@@ -66,5 +66,45 @@ r=await j('POST','/api/questions/reveal/',{ids:['cms-'+eid]}); ok('the revealed 
 r=await j('PUT','/api/admin/content/',{id:'nope',title:'x',topicId:'t',data:{}},'tok-educator'); ok('bad id is a 400', r.s===400, r.t);
 r=await j('PUT','/api/admin/content/',{id:eid,title:'x',topicId:'t',data:{}}); ok('no token is a 401', r.s===401, r.t);
 
+
+// ---- Lessons, videos and document links ----
+const RT='cms-e2e-resources';
+const rget=(topics)=>j('GET','/api/resources/?topics='+encodeURIComponent(topics));
+const mk=(type,data,tok='tok-educator',status='review',title='res')=>j('POST','/api/admin/content/',{type,title,topicId:RT,status,data},tok);
+const approve=async id=>j('PATCH','/api/admin/content/',{id,to:'published'},'tok-reviewer');
+r=await rget(RT); ok('no resources before anything is published', r.s===200 && r.o?.resources?.length===0, r.t);
+r=await rget(''); ok('missing topics is a 400', r.s===400, r.t);
+r=await rget('a,b,c,d,e'); ok('more than 4 topics is a 400', r.s===400, r.t);
+r=await mk('video',{youtubeId:'https://evil.example/watch?v=dQw4w9WgXcQ'}); ok('a non-YouTube video link is rejected (400)', r.s===400, r.t);
+r=await mk('video',{youtubeId:'javascript:alert(1)'}); ok('a javascript: video link is rejected (400)', r.s===400, r.t);
+r=await mk('pdf',{url:'http://ncert.nic.in/a.pdf'}); ok('an http document link is rejected (400)', r.s===400, r.t);
+r=await mk('pdf',{url:'https://169.254.169.254/latest/meta-data'}); ok('a metadata-IP link is rejected (400)', r.s===400, r.t);
+r=await mk('pdf',{url:'https://user:pw@ncert.nic.in/a.pdf'}); ok('a link with credentials is rejected (400)', r.s===400, r.t);
+r=await mk('lesson',{title:{en:'x'}}); ok('a lesson without text is rejected (400)', r.s===400, r.t);
+r=await mk('lesson',{title:{hi:'शीर्षक'},body:{hi:'अ'.repeat(5000),pa:'ਅ'.repeat(5000)}}); ok('an oversized Hindi+Punjabi lesson is a clean 400, not a database error', r.s===400 && /too/i.test(r.t), r.t);
+r=await mk('video',{youtubeId:'https://youtu.be/dQw4w9WgXcQ?si=zz',channel:'StudyIQ',duration:'1:00:00',language:'pa'}); ok('educator submits a YouTube video for review (201)', r.s===201 && r.o?.item?.data?.youtubeId==='dQw4w9WgXcQ', r.t.slice(0,200));
+const vid=r.o?.item?.id;
+r=await mk('pdf',{url:'https://ncert.nic.in/textbook.php',publisher:'NCERT',language:'en'},'tok-educator','review','NCERT textbook'); const docid=r.o?.item?.id; ok('educator submits a document link (201)', r.s===201, r.t);
+r=await mk('lesson',{title:{en:'Doabs of Punjab',pa:'ਪੰਜਾਬ ਦੇ ਦੁਆਬੇ'},body:{en:'Five doabs.\n\n<script>alert(1)</script>',pa:'ਪੰਜ ਦੁਆਬੇ।'}}); const lid=r.o?.item?.id; ok('educator submits a lesson (201)', r.s===201, r.t);
+r=await rget(RT); ok('items under review are NOT served', r.o?.resources?.length===0, r.t);
+r=await j('PATCH','/api/admin/content/',{id:vid,to:'published'},'tok-educator'); ok('the author cannot approve their own video (403)', r.s===403, r.t);
+for (const id of [vid,docid,lid]) { r=await approve(id); }
+ok('reviewer approves all three', r.s===200, r.t);
+r=await rget(RT); const items=r.o?.resources||[];
+ok('all three are now served', items.length===3, r.t.slice(0,200));
+ok('public items carry no staff data', !/author|reviewed|edu@x|rev@x|feedback/.test(r.t), r.t.slice(0,200));
+const v=items.find(i=>i.id===vid); ok('the video is served as a bare validated id', v?.video?.youtubeId==='dQw4w9WgXcQ' && !/youtu\.be|si=zz/.test(JSON.stringify(v)), JSON.stringify(v));
+const d=items.find(i=>i.id===docid); ok('the document is served as a normalised https link', d?.document?.url==='https://ncert.nic.in/textbook.php', JSON.stringify(d));
+const l=items.find(i=>i.id===lid); ok('lesson markup is delivered as inert text for the page to render as text', l?.lesson?.body?.en?.includes('<script>alert(1)</script>'), JSON.stringify(l).slice(0,200));
+r=await rget('some-other-topic'); ok('a different topic gets none of them', r.o?.resources?.length===0);
+r=await j('PUT','/api/admin/content/',{id:vid,title:'x',topicId:RT,data:{youtubeId:'dQw4w9WgXcQ'}},'tok-educator'); ok('a live video cannot be edited in place (403)', r.s===403, r.t);
+r=await j('PATCH','/api/admin/content/',{id:vid,to:'draft',note:'wrong video'},'tok-super'); ok('superadmin unpublishes the video', r.s===200, r.t);
+r=await rget(RT); ok('the unpublished video disappears at once', r.o?.resources?.length===2 && !r.o.resources.some(i=>i.id===vid), r.t.slice(0,160));
+r=await j('PUT','/api/admin/content/',{id:vid,title:'fixed',topicId:RT,data:{youtubeId:'https://evil.example/x'}},'tok-super'); ok('an edit is validated like a create (400)', r.s===400, r.t);
+r=await j('PUT','/api/admin/content/',{id:vid,title:'fixed',topicId:RT,data:{youtubeId:'aaaaaaaaaaa',channel:'Fixed'}},'tok-super'); ok('superadmin edits the video draft', r.s===200 && r.o?.item?.data?.youtubeId==='aaaaaaaaaaa', r.t.slice(0,160));
+r=await j('POST','/api/admin/content/',{type:'video',title:'direct',topicId:RT,status:'published',data:{youtubeId:'bbbbbbbbbbb'}},'tok-super'); ok('superadmin can publish a video directly', r.s===201, r.t);
+r=await rget(RT); ok('and it is served at once', r.o?.resources?.some(i=>i.video?.youtubeId==='bbbbbbbbbbb'), r.t.slice(0,200));
+r=await j('POST','/api/questions/set/',{topicId:RT,count:10}); ok('resources never appear in the question bank', r.o?.questions?.length===0, r.t.slice(0,160));
+
 console.log(`\n${pass} passed, ${failn} failed`);
 process.exit(failn?1:0);
