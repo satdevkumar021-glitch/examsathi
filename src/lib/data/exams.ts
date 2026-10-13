@@ -1,3 +1,4 @@
+import { CLERK_REVISION_SUBJECT } from './clerk-revision-sets';
 import { CLERK_GK_FAST_SUBJECT } from './clerk-gk-fast';
 import { CLERK_SHARED_SUBJECTS } from './clerk-shared-outline';
 import { CTET_PRIMARY_SUBJECTS } from './ctet-primary-outline';
@@ -1449,6 +1450,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     syllabusStatus: 'provisional-archive',
     subjects: [
       CLERK_GK_FAST_SUBJECT,
+      CLERK_REVISION_SUBJECT,
       ...CLERK_SHARED_SUBJECTS,
       {
         id: 'clerk-special',

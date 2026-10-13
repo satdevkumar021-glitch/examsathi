@@ -1,0 +1,1082 @@
+[
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word is a noun in “ਬੱਚਾ ਹੱਸਦਾ ਹੈ”?",
+    "answer": "ਬੱਚਾ",
+    "wrong1": "ਹੱਸਦਾ",
+    "wrong2": "ਹੈ",
+    "wrong3": "ਹੱਸਦਾ ਹੈ",
+    "explanation": "“ਬੱਚਾ” names a person, so it is a noun.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਬੱਚਾ ਹੱਸਦਾ ਹੈ” में संज्ञा कौन-सी है?",
+        "answer": "ਬੱਚਾ",
+        "wrong1": "ਹੱਸਦਾ",
+        "wrong2": "ਹੈ",
+        "wrong3": "ਹੱਸਦਾ ਹੈ",
+        "explanation": "“ਬੱਚਾ” व्यक्ति का नाम बताता है, इसलिए यह संज्ञा है।"
+      },
+      "pa": {
+        "prompt": "“ਬੱਚਾ ਹੱਸਦਾ ਹੈ” ਵਿੱਚ ਨਾਂਵ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਬੱਚਾ",
+        "wrong1": "ਹੱਸਦਾ",
+        "wrong2": "ਹੈ",
+        "wrong3": "ਹੱਸਦਾ ਹੈ",
+        "explanation": "“ਬੱਚਾ” ਵਿਅਕਤੀ ਦਾ ਨਾਂ ਦੱਸਦਾ ਹੈ, ਇਸ ਲਈ ਇਹ ਨਾਂਵ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word is a pronoun?",
+    "answer": "ਉਹ",
+    "wrong1": "ਕਿਤਾਬ",
+    "wrong2": "ਸੁੰਦਰ",
+    "wrong3": "ਦੌੜਨਾ",
+    "explanation": "“ਉਹ” can stand in place of a noun.",
+    "translations": {
+      "hi": {
+        "prompt": "कौन-सा शब्द सर्वनाम है?",
+        "answer": "ਉਹ",
+        "wrong1": "ਕਿਤਾਬ",
+        "wrong2": "ਸੁੰਦਰ",
+        "wrong3": "ਦੌੜਨਾ",
+        "explanation": "“ਉਹ” संज्ञा के स्थान पर आ सकता है।"
+      },
+      "pa": {
+        "prompt": "ਕਿਹੜਾ ਸ਼ਬਦ ਪੜਨਾਂਵ ਹੈ?",
+        "answer": "ਉਹ",
+        "wrong1": "ਕਿਤਾਬ",
+        "wrong2": "ਸੁੰਦਰ",
+        "wrong3": "ਦੌੜਨਾ",
+        "explanation": "“ਉਹ” ਨਾਂਵ ਦੀ ਥਾਂ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word describes the noun in “ਲਾਲ ਫੁੱਲ”?",
+    "answer": "ਲਾਲ",
+    "wrong1": "ਫੁੱਲ",
+    "wrong2": "ਪਾਣੀ",
+    "wrong3": "ਖੇਡ",
+    "explanation": "“ਲਾਲ” describes the colour of the flower.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਲਾਲ ਫੁੱਲ” में संज्ञा की विशेषता कौन बताता है?",
+        "answer": "ਲਾਲ",
+        "wrong1": "ਫੁੱਲ",
+        "wrong2": "ਪਾਣੀ",
+        "wrong3": "ਖੇਡ",
+        "explanation": "“ਲਾਲ” फूल का रंग बताता है।"
+      },
+      "pa": {
+        "prompt": "“ਲਾਲ ਫੁੱਲ” ਵਿੱਚ ਨਾਂਵ ਦੀ ਵਿਸ਼ੇਸ਼ਤਾ ਕਿਹੜਾ ਸ਼ਬਦ ਦੱਸਦਾ ਹੈ?",
+        "answer": "ਲਾਲ",
+        "wrong1": "ਫੁੱਲ",
+        "wrong2": "ਪਾਣੀ",
+        "wrong3": "ਖੇਡ",
+        "explanation": "“ਲਾਲ” ਫੁੱਲ ਦਾ ਰੰਗ ਦੱਸਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word is the main verb in “ਰੀਨਾ ਪੜ੍ਹਦੀ ਹੈ”?",
+    "answer": "ਪੜ੍ਹਦੀ",
+    "wrong1": "ਰੀਨਾ",
+    "wrong2": "ਕਿਤਾਬ",
+    "wrong3": "ਸਕੂਲ",
+    "explanation": "“ਪੜ੍ਹਦੀ” is the main verb expressing reading; “ਹੈ” is the auxiliary verb.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਰੀਨਾ ਪੜ੍ਹਦੀ ਹੈ” में मुख्य क्रिया कौन-सी है?",
+        "answer": "ਪੜ੍ਹਦੀ",
+        "wrong1": "ਰੀਨਾ",
+        "wrong2": "ਕਿਤਾਬ",
+        "wrong3": "ਸਕੂਲ",
+        "explanation": "“ਪੜ੍ਹਦੀ” पढ़ने की मुख्य क्रिया है; “ਹੈ” सहायक क्रिया है।"
+      },
+      "pa": {
+        "prompt": "“ਰੀਨਾ ਪੜ੍ਹਦੀ ਹੈ” ਵਿੱਚ ਮੁੱਖ ਕਿਰਿਆ ਕਿਹੜੀ ਹੈ?",
+        "answer": "ਪੜ੍ਹਦੀ",
+        "wrong1": "ਰੀਨਾ",
+        "wrong2": "ਕਿਤਾਬ",
+        "wrong3": "ਸਕੂਲ",
+        "explanation": "“ਪੜ੍ਹਦੀ” ਪੜ੍ਹਨ ਦੀ ਮੁੱਖ ਕਿਰਿਆ ਹੈ; “ਹੈ” ਸਹਾਇਕ ਕਿਰਿਆ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "What is the plural of “ਕਿਤਾਬ”?",
+    "answer": "ਕਿਤਾਬਾਂ",
+    "wrong1": "ਕਿਤਾਬੀ",
+    "wrong2": "ਕਿਤਾਬ ਦਾ",
+    "wrong3": "ਕਿਤਾਬ ਨੇ",
+    "explanation": "The plural form of “ਕਿਤਾਬ” is “ਕਿਤਾਬਾਂ”.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਕਿਤਾਬ” का बहुवचन क्या है?",
+        "answer": "ਕਿਤਾਬਾਂ",
+        "wrong1": "ਕਿਤਾਬੀ",
+        "wrong2": "ਕਿਤਾਬ ਦਾ",
+        "wrong3": "ਕਿਤਾਬ ਨੇ",
+        "explanation": "“ਕਿਤਾਬ” का बहुवचन “ਕਿਤਾਬਾਂ” है।"
+      },
+      "pa": {
+        "prompt": "“ਕਿਤਾਬ” ਦਾ ਬਹੁਵਚਨ ਕੀ ਹੈ?",
+        "answer": "ਕਿਤਾਬਾਂ",
+        "wrong1": "ਕਿਤਾਬੀ",
+        "wrong2": "ਕਿਤਾਬ ਦਾ",
+        "wrong3": "ਕਿਤਾਬ ਨੇ",
+        "explanation": "“ਕਿਤਾਬ” ਦਾ ਬਹੁਵਚਨ “ਕਿਤਾਬਾਂ” ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "What is the direct plural form of “ਮੁੰਡਾ”?",
+    "answer": "ਮੁੰਡੇ",
+    "wrong1": "ਮੁੰਡੀ",
+    "wrong2": "ਮੁੰਡਾ ਦਾ",
+    "wrong3": "ਮੁੰਡਾ ਨੇ",
+    "explanation": "“ਮੁੰਡੇ” is the direct plural form of “ਮੁੰਡਾ”.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਮੁੰਡਾ” का सीधा बहुवचन रूप क्या है?",
+        "answer": "ਮੁੰਡੇ",
+        "wrong1": "ਮੁੰਡੀ",
+        "wrong2": "ਮੁੰਡਾ ਦਾ",
+        "wrong3": "ਮੁੰਡਾ ਨੇ",
+        "explanation": "“ਮੁੰਡੇ”, “ਮੁੰਡਾ” का सीधा बहुवचन रूप है।"
+      },
+      "pa": {
+        "prompt": "“ਮੁੰਡਾ” ਦਾ ਸਿੱਧਾ ਬਹੁਵਚਨ ਰੂਪ ਕੀ ਹੈ?",
+        "answer": "ਮੁੰਡੇ",
+        "wrong1": "ਮੁੰਡੀ",
+        "wrong2": "ਮੁੰਡਾ ਦਾ",
+        "wrong3": "ਮੁੰਡਾ ਨੇ",
+        "explanation": "“ਮੁੰਡੇ”, “ਮੁੰਡਾ” ਦਾ ਸਿੱਧਾ ਬਹੁਵਚਨ ਰੂਪ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which is the feminine counterpart of “ਸ਼ੇਰ”?",
+    "answer": "ਸ਼ੇਰਨੀ",
+    "wrong1": "ਸ਼ੇਰਾਂ",
+    "wrong2": "ਸ਼ੇਰ ਨੂੰ",
+    "wrong3": "ਸ਼ੇਰ ਦਾ",
+    "explanation": "“ਸ਼ੇਰਨੀ” denotes a female lion.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਸ਼ੇਰ” का स्त्रीलिंग रूप कौन-सा है?",
+        "answer": "ਸ਼ੇਰਨੀ",
+        "wrong1": "ਸ਼ੇਰਾਂ",
+        "wrong2": "ਸ਼ੇਰ ਨੂੰ",
+        "wrong3": "ਸ਼ੇਰ ਦਾ",
+        "explanation": "“ਸ਼ੇਰਨੀ” मादा शेर को कहते हैं।"
+      },
+      "pa": {
+        "prompt": "“ਸ਼ੇਰ” ਦਾ ਇਸਤਰੀ ਲਿੰਗ ਰੂਪ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਸ਼ੇਰਨੀ",
+        "wrong1": "ਸ਼ੇਰਾਂ",
+        "wrong2": "ਸ਼ੇਰ ਨੂੰ",
+        "wrong3": "ਸ਼ੇਰ ਦਾ",
+        "explanation": "“ਸ਼ੇਰਨੀ” ਮਾਦਾ ਸ਼ੇਰ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which is the feminine counterpart of “ਘੋੜਾ”?",
+    "answer": "ਘੋੜੀ",
+    "wrong1": "ਘੋੜੇ",
+    "wrong2": "ਘੋੜਿਆਂ",
+    "wrong3": "ਘੋੜਾ ਨੂੰ",
+    "explanation": "“ਘੋੜੀ” is the feminine counterpart of “ਘੋੜਾ”.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਘੋੜਾ” का स्त्रीलिंग रूप कौन-सा है?",
+        "answer": "ਘੋੜੀ",
+        "wrong1": "ਘੋੜੇ",
+        "wrong2": "ਘੋੜਿਆਂ",
+        "wrong3": "ਘੋੜਾ ਨੂੰ",
+        "explanation": "“ਘੋੜਾ” का स्त्रीलिंग “ਘੋੜੀ” है।"
+      },
+      "pa": {
+        "prompt": "“ਘੋੜਾ” ਦਾ ਇਸਤਰੀ ਲਿੰਗ ਰੂਪ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਘੋੜੀ",
+        "wrong1": "ਘੋੜੇ",
+        "wrong2": "ਘੋੜਿਆਂ",
+        "wrong3": "ਘੋੜਾ ਨੂੰ",
+        "explanation": "“ਘੋੜਾ” ਦਾ ਇਸਤਰੀ ਲਿੰਗ ਰੂਪ “ਘੋੜੀ” ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word means the opposite of “ਦਿਨ”?",
+    "answer": "ਰਾਤ",
+    "wrong1": "ਸਵੇਰ",
+    "wrong2": "ਦੁਪਹਿਰ",
+    "wrong3": "ਸ਼ਾਮ",
+    "explanation": "“ਦਿਨ” means day and “ਰਾਤ” means night.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਦਿਨ” का विलोम कौन-सा है?",
+        "answer": "ਰਾਤ",
+        "wrong1": "ਸਵੇਰ",
+        "wrong2": "ਦੁਪਹਿਰ",
+        "wrong3": "ਸ਼ਾਮ",
+        "explanation": "“ਦਿਨ” का अर्थ दिन और “ਰਾਤ” का अर्थ रात है।"
+      },
+      "pa": {
+        "prompt": "“ਦਿਨ” ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਰਾਤ",
+        "wrong1": "ਸਵੇਰ",
+        "wrong2": "ਦੁਪਹਿਰ",
+        "wrong3": "ਸ਼ਾਮ",
+        "explanation": "“ਦਿਨ” ਅਤੇ “ਰਾਤ” ਵਿਰੋਧੀ ਅਰਥ ਵਾਲੇ ਸ਼ਬਦ ਹਨ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word means the opposite of “ਸੱਚ”?",
+    "answer": "ਝੂਠ",
+    "wrong1": "ਸਹੀ",
+    "wrong2": "ਇਮਾਨ",
+    "wrong3": "ਭਰੋਸਾ",
+    "explanation": "“ਸੱਚ” means truth; “ਝੂਠ” means a lie.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਸੱਚ” का विलोम कौन-सा है?",
+        "answer": "ਝੂਠ",
+        "wrong1": "ਸਹੀ",
+        "wrong2": "ਇਮਾਨ",
+        "wrong3": "ਭਰੋਸਾ",
+        "explanation": "“ਸੱਚ” सत्य और “ਝੂਠ” झूठ को कहते हैं।"
+      },
+      "pa": {
+        "prompt": "“ਸੱਚ” ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਝੂਠ",
+        "wrong1": "ਸਹੀ",
+        "wrong2": "ਇਮਾਨ",
+        "wrong3": "ਭਰੋਸਾ",
+        "explanation": "“ਸੱਚ” ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ “ਝੂਠ” ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word is a synonym of “ਪਾਣੀ”?",
+    "answer": "ਜਲ",
+    "wrong1": "ਅੱਗ",
+    "wrong2": "ਹਵਾ",
+    "wrong3": "ਮਿੱਟੀ",
+    "explanation": "Both “ਪਾਣੀ” and “ਜਲ” mean water.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਪਾਣੀ” का समानार्थी शब्द कौन-सा है?",
+        "answer": "ਜਲ",
+        "wrong1": "ਅੱਗ",
+        "wrong2": "ਹਵਾ",
+        "wrong3": "ਮਿੱਟੀ",
+        "explanation": "“ਪਾਣੀ” और “ਜਲ” दोनों का अर्थ पानी है।"
+      },
+      "pa": {
+        "prompt": "“ਪਾਣੀ” ਦਾ ਸਮਾਨਾਰਥਕ ਸ਼ਬਦ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਜਲ",
+        "wrong1": "ਅੱਗ",
+        "wrong2": "ਹਵਾ",
+        "wrong3": "ਮਿੱਟੀ",
+        "explanation": "“ਪਾਣੀ” ਅਤੇ “ਜਲ” ਦੋਵਾਂ ਦਾ ਅਰਥ ਇੱਕੋ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word is a synonym of “ਸੂਰਜ”?",
+    "answer": "ਰਵੀ",
+    "wrong1": "ਚੰਦ",
+    "wrong2": "ਤਾਰਾ",
+    "wrong3": "ਬੱਦਲ",
+    "explanation": "“ਰਵੀ” is another name for the sun.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਸੂਰਜ” का समानार्थी शब्द कौन-सा है?",
+        "answer": "ਰਵੀ",
+        "wrong1": "ਚੰਦ",
+        "wrong2": "ਤਾਰਾ",
+        "wrong3": "ਬੱਦਲ",
+        "explanation": "“ਰਵੀ” सूर्य का एक अन्य नाम है।"
+      },
+      "pa": {
+        "prompt": "“ਸੂਰਜ” ਦਾ ਸਮਾਨਾਰਥਕ ਸ਼ਬਦ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਰਵੀ",
+        "wrong1": "ਚੰਦ",
+        "wrong2": "ਤਾਰਾ",
+        "wrong3": "ਬੱਦਲ",
+        "explanation": "“ਰਵੀ” ਸੂਰਜ ਦਾ ਇੱਕ ਹੋਰ ਨਾਂ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word joins the two nouns in “ਰਾਮ ਅਤੇ ਸ਼ਾਮ”?",
+    "answer": "ਅਤੇ",
+    "wrong1": "ਰਾਮ",
+    "wrong2": "ਸ਼ਾਮ",
+    "wrong3": "ਨਾਂ",
+    "explanation": "“ਅਤੇ” is a conjunction joining the two names.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਰਾਮ ਅਤੇ ਸ਼ਾਮ” में दोनों संज्ञाओं को कौन जोड़ता है?",
+        "answer": "ਅਤੇ",
+        "wrong1": "ਰਾਮ",
+        "wrong2": "ਸ਼ਾਮ",
+        "wrong3": "ਨਾਂ",
+        "explanation": "“ਅਤੇ” दोनों नामों को जोड़ने वाला संयोजक है।"
+      },
+      "pa": {
+        "prompt": "“ਰਾਮ ਅਤੇ ਸ਼ਾਮ” ਵਿੱਚ ਦੋਵੇਂ ਨਾਂਵਾਂ ਨੂੰ ਕਿਹੜਾ ਸ਼ਬਦ ਜੋੜਦਾ ਹੈ?",
+        "answer": "ਅਤੇ",
+        "wrong1": "ਰਾਮ",
+        "wrong2": "ਸ਼ਾਮ",
+        "wrong3": "ਨਾਂ",
+        "explanation": "“ਅਤੇ” ਦੋਵੇਂ ਨਾਂਵਾਂ ਨੂੰ ਜੋੜਨ ਵਾਲਾ ਯੋਜਕ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word expresses negation in “ਮੈਂ ਨਹੀਂ ਆਵਾਂਗਾ”?",
+    "answer": "ਨਹੀਂ",
+    "wrong1": "ਮੈਂ",
+    "wrong2": "ਆਵਾਂਗਾ",
+    "wrong3": "ਮੈਂ ਆਵਾਂਗਾ",
+    "explanation": "“ਨਹੀਂ” makes the statement negative.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਮੈਂ ਨਹੀਂ ਆਵਾਂਗਾ” में निषेध कौन व्यक्त करता है?",
+        "answer": "ਨਹੀਂ",
+        "wrong1": "ਮੈਂ",
+        "wrong2": "ਆਵਾਂਗਾ",
+        "wrong3": "ਮੈਂ ਆਵਾਂਗਾ",
+        "explanation": "“ਨਹੀਂ” कथन को नकारात्मक बनाता है।"
+      },
+      "pa": {
+        "prompt": "“ਮੈਂ ਨਹੀਂ ਆਵਾਂਗਾ” ਵਿੱਚ ਨਾਂਹ ਕਿਹੜਾ ਸ਼ਬਦ ਦਰਸਾਉਂਦਾ ਹੈ?",
+        "answer": "ਨਹੀਂ",
+        "wrong1": "ਮੈਂ",
+        "wrong2": "ਆਵਾਂਗਾ",
+        "wrong3": "ਮੈਂ ਆਵਾਂਗਾ",
+        "explanation": "“ਨਹੀਂ” ਵਾਕ ਵਿੱਚ ਨਾਂਹ ਦਰਸਾਉਂਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which tense is expressed by “ਮੈਂ ਕੱਲ੍ਹ ਜਾਵਾਂਗਾ”?",
+    "answer": "Future tense",
+    "wrong1": "Past tense",
+    "wrong2": "Present tense",
+    "wrong3": "Past perfect tense",
+    "explanation": "“ਜਾਵਾਂਗਾ” expresses an action that will happen later.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਮੈਂ ਕੱਲ੍ਹ ਜਾਵਾਂਗਾ” कौन-सा काल व्यक्त करता है?",
+        "answer": "भविष्य काल",
+        "wrong1": "भूतकाल",
+        "wrong2": "वर्तमान काल",
+        "wrong3": "पूर्ण भूतकाल",
+        "explanation": "“ਜਾਵਾਂਗਾ” भविष्य में होने वाली क्रिया बताता है।"
+      },
+      "pa": {
+        "prompt": "“ਮੈਂ ਕੱਲ੍ਹ ਜਾਵਾਂਗਾ” ਕਿਹੜਾ ਕਾਲ ਦਰਸਾਉਂਦਾ ਹੈ?",
+        "answer": "ਭਵਿੱਖ ਕਾਲ",
+        "wrong1": "ਭੂਤਕਾਲ",
+        "wrong2": "ਵਰਤਮਾਨ ਕਾਲ",
+        "wrong3": "ਪੂਰਨ ਭੂਤਕਾਲ",
+        "explanation": "“ਜਾਵਾਂਗਾ” ਭਵਿੱਖ ਵਿੱਚ ਹੋਣ ਵਾਲਾ ਕੰਮ ਦੱਸਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which tense is expressed by “ਉਹ ਰੋਜ਼ ਖੇਡਦਾ ਹੈ”?",
+    "answer": "Present tense",
+    "wrong1": "Future tense",
+    "wrong2": "Past tense",
+    "wrong3": "Past perfect tense",
+    "explanation": "“ਖੇਡਦਾ ਹੈ” describes a habitual action in the present.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਉਹ ਰੋਜ਼ ਖੇਡਦਾ ਹੈ” कौन-सा काल व्यक्त करता है?",
+        "answer": "वर्तमान काल",
+        "wrong1": "भविष्य काल",
+        "wrong2": "भूतकाल",
+        "wrong3": "पूर्ण भूतकाल",
+        "explanation": "“ਖੇਡਦਾ ਹੈ” वर्तमान की नियमित क्रिया बताता है।"
+      },
+      "pa": {
+        "prompt": "“ਉਹ ਰੋਜ਼ ਖੇਡਦਾ ਹੈ” ਕਿਹੜਾ ਕਾਲ ਦਰਸਾਉਂਦਾ ਹੈ?",
+        "answer": "ਵਰਤਮਾਨ ਕਾਲ",
+        "wrong1": "ਭਵਿੱਖ ਕਾਲ",
+        "wrong2": "ਭੂਤਕਾਲ",
+        "wrong3": "ਪੂਰਨ ਭੂਤਕਾਲ",
+        "explanation": "“ਖੇਡਦਾ ਹੈ” ਵਰਤਮਾਨ ਵਿੱਚ ਰੋਜ਼ ਹੋਣ ਵਾਲਾ ਕੰਮ ਦੱਸਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which sentence is a question?",
+    "answer": "ਤੁਸੀਂ ਕਿੱਥੇ ਰਹਿੰਦੇ ਹੋ?",
+    "wrong1": "ਮੈਂ ਘਰ ਰਹਿੰਦਾ ਹਾਂ।",
+    "wrong2": "ਉਹ ਸਕੂਲ ਗਿਆ।",
+    "wrong3": "ਅਸੀਂ ਖੇਡਦੇ ਹਾਂ।",
+    "explanation": "“ਤੁਸੀਂ ਕਿੱਥੇ ਰਹਿੰਦੇ ਹੋ?” asks for information about a place.",
+    "translations": {
+      "hi": {
+        "prompt": "कौन-सा वाक्य प्रश्न है?",
+        "answer": "ਤੁਸੀਂ ਕਿੱਥੇ ਰਹਿੰਦੇ ਹੋ?",
+        "wrong1": "ਮੈਂ ਘਰ ਰਹਿੰਦਾ ਹਾਂ।",
+        "wrong2": "ਉਹ ਸਕੂਲ ਗਿਆ।",
+        "wrong3": "ਅਸੀਂ ਖੇਡਦੇ ਹਾਂ।",
+        "explanation": "“ਤੁਸੀਂ ਕਿੱਥੇ ਰਹਿੰਦੇ ਹੋ?” स्थान के बारे में जानकारी पूछता है।"
+      },
+      "pa": {
+        "prompt": "ਕਿਹੜਾ ਵਾਕ ਪ੍ਰਸ਼ਨ ਹੈ?",
+        "answer": "ਤੁਸੀਂ ਕਿੱਥੇ ਰਹਿੰਦੇ ਹੋ?",
+        "wrong1": "ਮੈਂ ਘਰ ਰਹਿੰਦਾ ਹਾਂ।",
+        "wrong2": "ਉਹ ਸਕੂਲ ਗਿਆ।",
+        "wrong3": "ਅਸੀਂ ਖੇਡਦੇ ਹਾਂ।",
+        "explanation": "“ਤੁਸੀਂ ਕਿੱਥੇ ਰਹਿੰਦੇ ਹੋ?” ਥਾਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਪੁੱਛਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word indicates manner in “ਉਹ ਹੌਲੀ ਤੁਰਦਾ ਹੈ”?",
+    "answer": "ਹੌਲੀ",
+    "wrong1": "ਉਹ",
+    "wrong2": "ਤੁਰਦਾ",
+    "wrong3": "ਹੈ",
+    "explanation": "“ਹੌਲੀ” explains how the person walks.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਉਹ ਹੌਲੀ ਤੁਰਦਾ ਹੈ” में चलने का ढंग कौन बताता है?",
+        "answer": "ਹੌਲੀ",
+        "wrong1": "ਉਹ",
+        "wrong2": "ਤੁਰਦਾ",
+        "wrong3": "ਹੈ",
+        "explanation": "“ਹੌਲੀ” बताता है कि व्यक्ति कैसे चलता है।"
+      },
+      "pa": {
+        "prompt": "“ਉਹ ਹੌਲੀ ਤੁਰਦਾ ਹੈ” ਵਿੱਚ ਤੁਰਨ ਦਾ ਢੰਗ ਕਿਹੜਾ ਸ਼ਬਦ ਦੱਸਦਾ ਹੈ?",
+        "answer": "ਹੌਲੀ",
+        "wrong1": "ਉਹ",
+        "wrong2": "ਤੁਰਦਾ",
+        "wrong3": "ਹੈ",
+        "explanation": "“ਹੌਲੀ” ਦੱਸਦਾ ਹੈ ਕਿ ਵਿਅਕਤੀ ਕਿਵੇਂ ਤੁਰਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word expresses the spatial relationship between the book and the table in “ਕਿਤਾਬ ਮੇਜ਼ ਉੱਤੇ ਹੈ”?",
+    "answer": "ਉੱਤੇ",
+    "wrong1": "ਕਿਤਾਬ",
+    "wrong2": "ਮੇਜ਼",
+    "wrong3": "ਹੈ",
+    "explanation": "“ਉੱਤੇ” expresses the position of the book relative to the table.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਕਿਤਾਬ ਮੇਜ਼ ਉੱਤੇ ਹੈ” में स्थान-संबंध कौन बताता है?",
+        "answer": "ਉੱਤੇ",
+        "wrong1": "ਕਿਤਾਬ",
+        "wrong2": "ਮੇਜ਼",
+        "wrong3": "ਹੈ",
+        "explanation": "“ਉੱਤੇ” मेज़ के संबंध में किताब की स्थिति बताता है।"
+      },
+      "pa": {
+        "prompt": "“ਕਿਤਾਬ ਮੇਜ਼ ਉੱਤੇ ਹੈ” ਵਿੱਚ ਥਾਂ ਦਾ ਸੰਬੰਧ ਕਿਹੜਾ ਸ਼ਬਦ ਦੱਸਦਾ ਹੈ?",
+        "answer": "ਉੱਤੇ",
+        "wrong1": "ਕਿਤਾਬ",
+        "wrong2": "ਮੇਜ਼",
+        "wrong3": "ਹੈ",
+        "explanation": "“ਉੱਤੇ” ਮੇਜ਼ ਦੇ ਸੰਬੰਧ ਵਿੱਚ ਕਿਤਾਬ ਦੀ ਥਾਂ ਦੱਸਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "Punjabi Language",
+    "prompt": "Which word means the opposite of “ਉੱਚਾ”?",
+    "answer": "ਨੀਵਾਂ",
+    "wrong1": "ਲੰਮਾ",
+    "wrong2": "ਵੱਡਾ",
+    "wrong3": "ਚੌੜਾ",
+    "explanation": "“ਉੱਚਾ” means high; “ਨੀਵਾਂ” means low.",
+    "translations": {
+      "hi": {
+        "prompt": "“ਉੱਚਾ” का विलोम कौन-सा है?",
+        "answer": "ਨੀਵਾਂ",
+        "wrong1": "ਲੰਮਾ",
+        "wrong2": "ਵੱਡਾ",
+        "wrong3": "ਚੌੜਾ",
+        "explanation": "“ਉੱਚਾ” ऊँचा और “ਨੀਵਾਂ” नीचा दर्शाते हैं।"
+      },
+      "pa": {
+        "prompt": "“ਉੱਚਾ” ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਨੀਵਾਂ",
+        "wrong1": "ਲੰਮਾ",
+        "wrong2": "ਵੱਡਾ",
+        "wrong3": "ਚੌੜਾ",
+        "explanation": "“ਉੱਚਾ” ਦਾ ਵਿਰੋਧੀ ਸ਼ਬਦ “ਨੀਵਾਂ” ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the article: “She bought ___ umbrella.”",
+    "answer": "an",
+    "wrong1": "a",
+    "wrong2": "the a",
+    "wrong3": "no an",
+    "explanation": "“Umbrella” begins with a vowel sound, so “an” fits.",
+    "translations": {
+      "hi": {
+        "prompt": "आर्टिकल चुनें: “She bought ___ umbrella.”",
+        "answer": "an",
+        "wrong1": "a",
+        "wrong2": "the a",
+        "wrong3": "no an",
+        "explanation": "“Umbrella” स्वर ध्वनि से शुरू होता है, इसलिए “an” सही है।"
+      },
+      "pa": {
+        "prompt": "ਆਰਟੀਕਲ ਚੁਣੋ: “She bought ___ umbrella.”",
+        "answer": "an",
+        "wrong1": "a",
+        "wrong2": "the a",
+        "wrong3": "no an",
+        "explanation": "“Umbrella” ਸਵਰ ਧੁਨੀ ਨਾਲ ਸ਼ੁਰੂ ਹੁੰਦਾ ਹੈ, ਇਸ ਲਈ “an” ਢੁੱਕਵਾਂ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the article: “He is ___ university student.”",
+    "answer": "a",
+    "wrong1": "an",
+    "wrong2": "an the",
+    "wrong3": "a an",
+    "explanation": "“University” begins with the consonant sound /y/, so use “a”.",
+    "translations": {
+      "hi": {
+        "prompt": "आर्टिकल चुनें: “He is ___ university student.”",
+        "answer": "a",
+        "wrong1": "an",
+        "wrong2": "an the",
+        "wrong3": "a an",
+        "explanation": "“University” की शुरुआत /y/ व्यंजन ध्वनि से होती है, इसलिए “a” लगता है।"
+      },
+      "pa": {
+        "prompt": "ਆਰਟੀਕਲ ਚੁਣੋ: “He is ___ university student.”",
+        "answer": "a",
+        "wrong1": "an",
+        "wrong2": "an the",
+        "wrong3": "a an",
+        "explanation": "“University” ਦੇ ਸ਼ੁਰੂ ਵਿੱਚ /y/ ਵਿਅੰਜਨ ਧੁਨੀ ਹੈ, ਇਸ ਲਈ “a” ਵਰਤੋ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Complete: “She ___ to school every day.”",
+    "answer": "goes",
+    "wrong1": "go",
+    "wrong2": "going",
+    "wrong3": "gone",
+    "explanation": "A third-person singular subject takes “goes” in the simple present.",
+    "translations": {
+      "hi": {
+        "prompt": "पूरा करें: “She ___ to school every day.”",
+        "answer": "goes",
+        "wrong1": "go",
+        "wrong2": "going",
+        "wrong3": "gone",
+        "explanation": "सामान्य वर्तमान में तृतीय पुरुष एकवचन के साथ “goes” आता है।"
+      },
+      "pa": {
+        "prompt": "ਪੂਰਾ ਕਰੋ: “She ___ to school every day.”",
+        "answer": "goes",
+        "wrong1": "go",
+        "wrong2": "going",
+        "wrong3": "gone",
+        "explanation": "ਸਧਾਰਨ ਵਰਤਮਾਨ ਵਿੱਚ ਤੀਜੇ ਪੁਰਖ ਦੇ ਇਕਵਚਨ ਨਾਲ “goes” ਆਉਂਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Complete: “They ___ playing now.”",
+    "answer": "are",
+    "wrong1": "is",
+    "wrong2": "am",
+    "wrong3": "be",
+    "explanation": "The plural subject “They” takes “are” in the present continuous.",
+    "translations": {
+      "hi": {
+        "prompt": "पूरा करें: “They ___ playing now.”",
+        "answer": "are",
+        "wrong1": "is",
+        "wrong2": "am",
+        "wrong3": "be",
+        "explanation": "वर्तमान निरंतर काल में बहुवचन “They” के साथ “are” आता है।"
+      },
+      "pa": {
+        "prompt": "ਪੂਰਾ ਕਰੋ: “They ___ playing now.”",
+        "answer": "are",
+        "wrong1": "is",
+        "wrong2": "am",
+        "wrong3": "be",
+        "explanation": "ਵਰਤਮਾਨ ਚਾਲੂ ਕਾਲ ਵਿੱਚ ਬਹੁਵਚਨ “They” ਨਾਲ “are” ਆਉਂਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the simple past of “write”.",
+    "answer": "wrote",
+    "wrong1": "written",
+    "wrong2": "writing",
+    "wrong3": "writes",
+    "explanation": "“Wrote” is the simple past; “written” is the past participle.",
+    "translations": {
+      "hi": {
+        "prompt": "“write” का सामान्य भूतकाल रूप चुनें।",
+        "answer": "wrote",
+        "wrong1": "written",
+        "wrong2": "writing",
+        "wrong3": "writes",
+        "explanation": "“Wrote” सामान्य भूतकाल और “written” भूत कृदंत है।"
+      },
+      "pa": {
+        "prompt": "“write” ਦਾ ਸਧਾਰਨ ਭੂਤਕਾਲ ਰੂਪ ਚੁਣੋ।",
+        "answer": "wrote",
+        "wrong1": "written",
+        "wrong2": "writing",
+        "wrong3": "writes",
+        "explanation": "“Wrote” ਸਧਾਰਨ ਭੂਤਕਾਲ ਅਤੇ “written” ਭੂਤਕਾਲੀ ਕਿਰਦੰਤ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the past participle of “eat”.",
+    "answer": "eaten",
+    "wrong1": "ate",
+    "wrong2": "eating",
+    "wrong3": "eats",
+    "explanation": "“Eaten” is the past participle used after “has”, “have” or “had”.",
+    "translations": {
+      "hi": {
+        "prompt": "“eat” का भूत कृदंत चुनें।",
+        "answer": "eaten",
+        "wrong1": "ate",
+        "wrong2": "eating",
+        "wrong3": "eats",
+        "explanation": "“Eaten” भूत कृदंत है, जो “has”, “have” या “had” के बाद आता है।"
+      },
+      "pa": {
+        "prompt": "“eat” ਦਾ ਭੂਤਕਾਲੀ ਕਿਰਦੰਤ ਚੁਣੋ।",
+        "answer": "eaten",
+        "wrong1": "ate",
+        "wrong2": "eating",
+        "wrong3": "eats",
+        "explanation": "“Eaten” ਭੂਤਕਾਲੀ ਕਿਰਦੰਤ ਹੈ ਜੋ “has”, “have” ਜਾਂ “had” ਮਗਰੋਂ ਆਉਂਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Complete: “The book is ___ the table.” (It rests on the surface.)",
+    "answer": "on",
+    "wrong1": "into",
+    "wrong2": "through",
+    "wrong3": "under",
+    "explanation": "“On” describes contact with the upper surface.",
+    "translations": {
+      "hi": {
+        "prompt": "पूरा करें: “The book is ___ the table.” (किताब ऊपरी सतह पर रखी है।)",
+        "answer": "on",
+        "wrong1": "into",
+        "wrong2": "through",
+        "wrong3": "under",
+        "explanation": "“On” ऊपरी सतह के संपर्क को दर्शाता है।"
+      },
+      "pa": {
+        "prompt": "ਪੂਰਾ ਕਰੋ: “The book is ___ the table.” (ਕਿਤਾਬ ਉੱਪਰਲੀ ਸਤ੍ਹਾ ਉੱਤੇ ਪਈ ਹੈ।)",
+        "answer": "on",
+        "wrong1": "into",
+        "wrong2": "through",
+        "wrong3": "under",
+        "explanation": "“On” ਉੱਪਰਲੀ ਸਤ੍ਹਾ ਨਾਲ ਸੰਪਰਕ ਦਰਸਾਉਂਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Complete: “We arrived ___ 6 p.m.”",
+    "answer": "at",
+    "wrong1": "on",
+    "wrong2": "into",
+    "wrong3": "by at",
+    "explanation": "“At” introduces a specific clock time.",
+    "translations": {
+      "hi": {
+        "prompt": "पूरा करें: “We arrived ___ 6 p.m.”",
+        "answer": "at",
+        "wrong1": "on",
+        "wrong2": "into",
+        "wrong3": "by at",
+        "explanation": "निश्चित घड़ी के समय से पहले “at” आता है।"
+      },
+      "pa": {
+        "prompt": "ਪੂਰਾ ਕਰੋ: “We arrived ___ 6 p.m.”",
+        "answer": "at",
+        "wrong1": "on",
+        "wrong2": "into",
+        "wrong3": "by at",
+        "explanation": "ਘੜੀ ਦੇ ਨਿਸ਼ਚਿਤ ਸਮੇਂ ਤੋਂ ਪਹਿਲਾਂ “at” ਆਉਂਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the plural of “child”.",
+    "answer": "children",
+    "wrong1": "childs",
+    "wrong2": "childes",
+    "wrong3": "childrens",
+    "explanation": "“Child” has the irregular plural “children”.",
+    "translations": {
+      "hi": {
+        "prompt": "“child” का बहुवचन चुनें।",
+        "answer": "children",
+        "wrong1": "childs",
+        "wrong2": "childes",
+        "wrong3": "childrens",
+        "explanation": "“Child” का अनियमित बहुवचन “children” है।"
+      },
+      "pa": {
+        "prompt": "“child” ਦਾ ਬਹੁਵਚਨ ਚੁਣੋ।",
+        "answer": "children",
+        "wrong1": "childs",
+        "wrong2": "childes",
+        "wrong3": "childrens",
+        "explanation": "“Child” ਦਾ ਅਨਿਯਮਿਤ ਬਹੁਵਚਨ “children” ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the plural of “mouse” for the animal.",
+    "answer": "mice",
+    "wrong1": "mouses",
+    "wrong2": "mousees",
+    "wrong3": "mices",
+    "explanation": "The animal noun “mouse” has the plural “mice”.",
+    "translations": {
+      "hi": {
+        "prompt": "जानवर के अर्थ में “mouse” का बहुवचन चुनें।",
+        "answer": "mice",
+        "wrong1": "mouses",
+        "wrong2": "mousees",
+        "wrong3": "mices",
+        "explanation": "जानवर वाले “mouse” का बहुवचन “mice” है।"
+      },
+      "pa": {
+        "prompt": "ਜਾਨਵਰ ਦੇ ਅਰਥ ਵਿੱਚ “mouse” ਦਾ ਬਹੁਵਚਨ ਚੁਣੋ।",
+        "answer": "mice",
+        "wrong1": "mouses",
+        "wrong2": "mousees",
+        "wrong3": "mices",
+        "explanation": "ਜਾਨਵਰ ਵਾਲੇ “mouse” ਦਾ ਬਹੁਵਚਨ “mice” ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the comparative form of “tall”.",
+    "answer": "taller",
+    "wrong1": "tallest",
+    "wrong2": "more taller",
+    "wrong3": "most tall",
+    "explanation": "“Taller” compares the height of two people or things.",
+    "translations": {
+      "hi": {
+        "prompt": "“tall” का तुलनात्मक रूप चुनें।",
+        "answer": "taller",
+        "wrong1": "tallest",
+        "wrong2": "more taller",
+        "wrong3": "most tall",
+        "explanation": "“Taller” दो व्यक्तियों या वस्तुओं की ऊँचाई की तुलना करता है।"
+      },
+      "pa": {
+        "prompt": "“tall” ਦਾ ਤੁਲਨਾਤਮਕ ਰੂਪ ਚੁਣੋ।",
+        "answer": "taller",
+        "wrong1": "tallest",
+        "wrong2": "more taller",
+        "wrong3": "most tall",
+        "explanation": "“Taller” ਦੋ ਵਿਅਕਤੀਆਂ ਜਾਂ ਚੀਜ਼ਾਂ ਦੀ ਉਚਾਈ ਦੀ ਤੁਲਨਾ ਕਰਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the superlative form of “good”.",
+    "answer": "best",
+    "wrong1": "better",
+    "wrong2": "gooder",
+    "wrong3": "goodest",
+    "explanation": "“Good”, “better” and “best” are the positive, comparative and superlative forms.",
+    "translations": {
+      "hi": {
+        "prompt": "“good” का सर्वोत्तमावस्था रूप चुनें।",
+        "answer": "best",
+        "wrong1": "better",
+        "wrong2": "gooder",
+        "wrong3": "goodest",
+        "explanation": "“Good”, “better” और “best” क्रमशः मूल, तुलनात्मक और सर्वोत्तमावस्था रूप हैं।"
+      },
+      "pa": {
+        "prompt": "“good” ਦਾ ਉੱਤਮਤਮ ਰੂਪ ਚੁਣੋ।",
+        "answer": "best",
+        "wrong1": "better",
+        "wrong2": "gooder",
+        "wrong3": "goodest",
+        "explanation": "“Good”, “better” ਅਤੇ “best” ਕ੍ਰਮਵਾਰ ਮੂਲ, ਤੁਲਨਾਤਮਕ ਅਤੇ ਉੱਤਮਤਮ ਰੂਪ ਹਨ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the adverb in “The child spoke softly.”",
+    "answer": "softly",
+    "wrong1": "child",
+    "wrong2": "spoke",
+    "wrong3": "The",
+    "explanation": "“Softly” describes how the child spoke.",
+    "translations": {
+      "hi": {
+        "prompt": "“The child spoke softly.” में क्रिया-विशेषण चुनें।",
+        "answer": "softly",
+        "wrong1": "child",
+        "wrong2": "spoke",
+        "wrong3": "The",
+        "explanation": "“Softly” बताता है कि बच्चे ने कैसे बोला।"
+      },
+      "pa": {
+        "prompt": "“The child spoke softly.” ਵਿੱਚ ਕਿਰਿਆ ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
+        "answer": "softly",
+        "wrong1": "child",
+        "wrong2": "spoke",
+        "wrong3": "The",
+        "explanation": "“Softly” ਦੱਸਦਾ ਹੈ ਕਿ ਬੱਚੇ ਨੇ ਕਿਵੇਂ ਬੋਲਿਆ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the adjective in “The blue bag is heavy.” that describes colour.",
+    "answer": "blue",
+    "wrong1": "bag",
+    "wrong2": "is",
+    "wrong3": "The",
+    "explanation": "“Blue” describes the colour of the bag.",
+    "translations": {
+      "hi": {
+        "prompt": "“The blue bag is heavy.” में रंग बताने वाला विशेषण चुनें।",
+        "answer": "blue",
+        "wrong1": "bag",
+        "wrong2": "is",
+        "wrong3": "The",
+        "explanation": "“Blue” बैग का रंग बताता है।"
+      },
+      "pa": {
+        "prompt": "“The blue bag is heavy.” ਵਿੱਚ ਰੰਗ ਦੱਸਣ ਵਾਲਾ ਵਿਸ਼ੇਸ਼ਣ ਚੁਣੋ।",
+        "answer": "blue",
+        "wrong1": "bag",
+        "wrong2": "is",
+        "wrong3": "The",
+        "explanation": "“Blue” ਬੈਗ ਦਾ ਰੰਗ ਦੱਸਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Complete: “Ravi and I ___ ready.”",
+    "answer": "are",
+    "wrong1": "is",
+    "wrong2": "am",
+    "wrong3": "was",
+    "explanation": "“Ravi and I” is a plural subject, so “are” fits.",
+    "translations": {
+      "hi": {
+        "prompt": "पूरा करें: “Ravi and I ___ ready.”",
+        "answer": "are",
+        "wrong1": "is",
+        "wrong2": "am",
+        "wrong3": "was",
+        "explanation": "“Ravi and I” बहुवचन कर्ता है, इसलिए “are” सही है।"
+      },
+      "pa": {
+        "prompt": "ਪੂਰਾ ਕਰੋ: “Ravi and I ___ ready.”",
+        "answer": "are",
+        "wrong1": "is",
+        "wrong2": "am",
+        "wrong3": "was",
+        "explanation": "“Ravi and I” ਬਹੁਵਚਨ ਕਰਤਾ ਹੈ, ਇਸ ਲਈ “are” ਢੁੱਕਵਾਂ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Complete: “There ___ two pens on the desk.”",
+    "answer": "are",
+    "wrong1": "is",
+    "wrong2": "am",
+    "wrong3": "has",
+    "explanation": "The plural noun phrase “two pens” requires “are”.",
+    "translations": {
+      "hi": {
+        "prompt": "पूरा करें: “There ___ two pens on the desk.”",
+        "answer": "are",
+        "wrong1": "is",
+        "wrong2": "am",
+        "wrong3": "has",
+        "explanation": "बहुवचन “two pens” के साथ “are” चाहिए।"
+      },
+      "pa": {
+        "prompt": "ਪੂਰਾ ਕਰੋ: “There ___ two pens on the desk.”",
+        "answer": "are",
+        "wrong1": "is",
+        "wrong2": "am",
+        "wrong3": "has",
+        "explanation": "ਬਹੁਵਚਨ “two pens” ਨਾਲ “are” ਚਾਹੀਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the correct object pronoun: “Please help ___.” (the speaker)",
+    "answer": "me",
+    "wrong1": "I",
+    "wrong2": "my",
+    "wrong3": "mine",
+    "explanation": "“Me” is the object form referring to the speaker.",
+    "translations": {
+      "hi": {
+        "prompt": "सही कर्म सर्वनाम चुनें: “Please help ___.” (वक्ता के लिए)",
+        "answer": "me",
+        "wrong1": "I",
+        "wrong2": "my",
+        "wrong3": "mine",
+        "explanation": "वक्ता के लिए कर्म रूप “me” है।"
+      },
+      "pa": {
+        "prompt": "ਸਹੀ ਕਰਮ ਪੜਨਾਂਵ ਚੁਣੋ: “Please help ___.” (ਬੋਲਣ ਵਾਲੇ ਲਈ)",
+        "answer": "me",
+        "wrong1": "I",
+        "wrong2": "my",
+        "wrong3": "mine",
+        "explanation": "ਬੋਲਣ ਵਾਲੇ ਲਈ ਕਰਮ ਰੂਪ “me” ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the possessive pronoun: “This pen belongs to me. It is ___.”",
+    "answer": "mine",
+    "wrong1": "my",
+    "wrong2": "me",
+    "wrong3": "I",
+    "explanation": "“Mine” can stand alone to express possession; “my” needs a following noun.",
+    "translations": {
+      "hi": {
+        "prompt": "अधिकारवाचक सर्वनाम चुनें: “This pen belongs to me. It is ___.”",
+        "answer": "mine",
+        "wrong1": "my",
+        "wrong2": "me",
+        "wrong3": "I",
+        "explanation": "“Mine” अकेले अधिकार बताता है; “my” के बाद संज्ञा चाहिए।"
+      },
+      "pa": {
+        "prompt": "ਮਾਲਕੀ ਪੜਨਾਂਵ ਚੁਣੋ: “This pen belongs to me. It is ___.”",
+        "answer": "mine",
+        "wrong1": "my",
+        "wrong2": "me",
+        "wrong3": "I",
+        "explanation": "“Mine” ਇਕੱਲਾ ਮਾਲਕੀ ਦੱਸਦਾ ਹੈ; “my” ਤੋਂ ਬਾਅਦ ਨਾਂਵ ਚਾਹੀਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the conjunction expressing contrast: “She was tired, ___ she continued working.”",
+    "answer": "but",
+    "wrong1": "because",
+    "wrong2": "or",
+    "wrong3": "so",
+    "explanation": "“But” contrasts being tired with continuing to work.",
+    "translations": {
+      "hi": {
+        "prompt": "विरोध दर्शाने वाला संयोजक चुनें: “She was tired, ___ she continued working.”",
+        "answer": "but",
+        "wrong1": "because",
+        "wrong2": "or",
+        "wrong3": "so",
+        "explanation": "“But” थकान और काम जारी रखने के बीच विरोध दर्शाता है।"
+      },
+      "pa": {
+        "prompt": "ਵਿਰੋਧ ਦਰਸਾਉਣ ਵਾਲਾ ਯੋਜਕ ਚੁਣੋ: “She was tired, ___ she continued working.”",
+        "answer": "but",
+        "wrong1": "because",
+        "wrong2": "or",
+        "wrong3": "so",
+        "explanation": "“But” ਥਕਾਵਟ ਅਤੇ ਕੰਮ ਜਾਰੀ ਰੱਖਣ ਵਿਚਲਾ ਵਿਰੋਧ ਦਰਸਾਉਂਦਾ ਹੈ।"
+      }
+    }
+  },
+  {
+    "subject": "English Language",
+    "prompt": "Choose the correctly punctuated direct question.",
+    "answer": "Where do you live?",
+    "wrong1": "Where do you live.",
+    "wrong2": "Where do you live,",
+    "wrong3": "Where do you live;",
+    "explanation": "A direct question ends with a question mark.",
+    "translations": {
+      "hi": {
+        "prompt": "सही विराम चिह्न वाला सीधा प्रश्न चुनें।",
+        "answer": "Where do you live?",
+        "wrong1": "Where do you live.",
+        "wrong2": "Where do you live,",
+        "wrong3": "Where do you live;",
+        "explanation": "सीधे प्रश्न के अंत में प्रश्नवाचक चिह्न आता है।"
+      },
+      "pa": {
+        "prompt": "ਸਹੀ ਵਿਸ਼ਰਾਮ ਚਿੰਨ੍ਹ ਵਾਲਾ ਸਿੱਧਾ ਪ੍ਰਸ਼ਨ ਚੁਣੋ।",
+        "answer": "Where do you live?",
+        "wrong1": "Where do you live.",
+        "wrong2": "Where do you live,",
+        "wrong3": "Where do you live;",
+        "explanation": "ਸਿੱਧੇ ਪ੍ਰਸ਼ਨ ਦੇ ਅੰਤ ਵਿੱਚ ਪ੍ਰਸ਼ਨ ਚਿੰਨ੍ਹ ਆਉਂਦਾ ਹੈ।"
+      }
+    }
+  }
+]

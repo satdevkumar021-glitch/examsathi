@@ -1,0 +1,1952 @@
+[
+  {
+    "prompt": "What is 18% of 250?",
+    "answer": "45",
+    "wrong1": "40",
+    "wrong2": "50",
+    "wrong3": "55",
+    "explanation": "250 × 18/100 = 45.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "250 का 18% कितना है?",
+        "answer": "45",
+        "wrong1": "40",
+        "wrong2": "50",
+        "wrong3": "55",
+        "explanation": "250 × 18/100 = 45।"
+      },
+      "pa": {
+        "prompt": "250 ਦਾ 18% ਕਿੰਨਾ ਹੈ?",
+        "answer": "45",
+        "wrong1": "40",
+        "wrong2": "50",
+        "wrong3": "55",
+        "explanation": "250 × 18/100 = 45।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A price rises from ₹800 to ₹920. What is the percentage increase?",
+    "answer": "15%",
+    "wrong1": "12%",
+    "wrong2": "18%",
+    "wrong3": "20%",
+    "explanation": "Increase = 120; 120/800 × 100 = 15%.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "कीमत ₹800 से ₹920 हुई। प्रतिशत वृद्धि कितनी है?",
+        "answer": "15%",
+        "wrong1": "12%",
+        "wrong2": "18%",
+        "wrong3": "20%",
+        "explanation": "वृद्धि = 120; 120/800 × 100 = 15%।"
+      },
+      "pa": {
+        "prompt": "ਕੀਮਤ ₹800 ਤੋਂ ₹920 ਹੋਈ। ਪ੍ਰਤੀਸ਼ਤ ਵਾਧਾ ਕਿੰਨਾ ਹੈ?",
+        "answer": "15%",
+        "wrong1": "12%",
+        "wrong2": "18%",
+        "wrong3": "20%",
+        "explanation": "ਵਾਧਾ = 120; 120/800 × 100 = 15%।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Divide ₹840 in the ratio 3:4. What is the larger share?",
+    "answer": "₹480",
+    "wrong1": "₹360",
+    "wrong2": "₹420",
+    "wrong3": "₹560",
+    "explanation": "Seven parts total ₹840; each is ₹120. The larger share is 4 × 120 = ₹480.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "₹840 को 3:4 में बाँटें। बड़ा हिस्सा कितना है?",
+        "answer": "₹480",
+        "wrong1": "₹360",
+        "wrong2": "₹420",
+        "wrong3": "₹560",
+        "explanation": "कुल सात भाग हैं; एक भाग ₹120 है। बड़ा हिस्सा 4 × 120 = ₹480 है।"
+      },
+      "pa": {
+        "prompt": "₹840 ਨੂੰ 3:4 ਵਿੱਚ ਵੰਡੋ। ਵੱਡਾ ਹਿੱਸਾ ਕਿੰਨਾ ਹੈ?",
+        "answer": "₹480",
+        "wrong1": "₹360",
+        "wrong2": "₹420",
+        "wrong3": "₹560",
+        "explanation": "ਕੁੱਲ ਸੱਤ ਭਾਗ ਹਨ; ਇੱਕ ਭਾਗ ₹120 ਹੈ। ਵੱਡਾ ਹਿੱਸਾ 4 × 120 = ₹480 ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is the average of 14, 18, 22 and 26?",
+    "answer": "20",
+    "wrong1": "18",
+    "wrong2": "22",
+    "wrong3": "24",
+    "explanation": "Their sum is 80; 80 ÷ 4 = 20.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "14, 18, 22 और 26 का औसत क्या है?",
+        "answer": "20",
+        "wrong1": "18",
+        "wrong2": "22",
+        "wrong3": "24",
+        "explanation": "योग 80 है; 80 ÷ 4 = 20।"
+      },
+      "pa": {
+        "prompt": "14, 18, 22 ਅਤੇ 26 ਦੀ ਔਸਤ ਕੀ ਹੈ?",
+        "answer": "20",
+        "wrong1": "18",
+        "wrong2": "22",
+        "wrong3": "24",
+        "explanation": "ਜੋੜ 80 ਹੈ; 80 ÷ 4 = 20।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is the simple interest on ₹5,000 at 6% per year for 2 years?",
+    "answer": "₹600",
+    "wrong1": "₹300",
+    "wrong2": "₹560",
+    "wrong3": "₹660",
+    "explanation": "Simple interest = 5000 × 6 × 2/100 = ₹600.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "₹5,000 पर 6% वार्षिक दर से 2 वर्ष का साधारण ब्याज कितना है?",
+        "answer": "₹600",
+        "wrong1": "₹300",
+        "wrong2": "₹560",
+        "wrong3": "₹660",
+        "explanation": "साधारण ब्याज = 5000 × 6 × 2/100 = ₹600।"
+      },
+      "pa": {
+        "prompt": "₹5,000 ਉੱਤੇ 6% ਸਾਲਾਨਾ ਦਰ ਨਾਲ 2 ਸਾਲ ਦਾ ਸਾਧਾਰਨ ਵਿਆਜ ਕਿੰਨਾ ਹੈ?",
+        "answer": "₹600",
+        "wrong1": "₹300",
+        "wrong2": "₹560",
+        "wrong3": "₹660",
+        "explanation": "ਸਾਧਾਰਨ ਵਿਆਜ = 5000 × 6 × 2/100 = ₹600।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "An article costs ₹750 and sells for ₹900. What is the profit percentage on cost?",
+    "answer": "20%",
+    "wrong1": "15%",
+    "wrong2": "25%",
+    "wrong3": "18%",
+    "explanation": "Profit is ₹150; 150/750 × 100 = 20%.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "एक वस्तु ₹750 में खरीदकर ₹900 में बेची गई। लागत पर लाभ प्रतिशत कितना है?",
+        "answer": "20%",
+        "wrong1": "15%",
+        "wrong2": "25%",
+        "wrong3": "18%",
+        "explanation": "लाभ ₹150 है; 150/750 × 100 = 20%।"
+      },
+      "pa": {
+        "prompt": "ਇੱਕ ਵਸਤੂ ₹750 ਵਿੱਚ ਖਰੀਦ ਕੇ ₹900 ਵਿੱਚ ਵੇਚੀ ਗਈ। ਲਾਗਤ ਉੱਤੇ ਲਾਭ ਪ੍ਰਤੀਸ਼ਤ ਕਿੰਨਾ ਹੈ?",
+        "answer": "20%",
+        "wrong1": "15%",
+        "wrong2": "25%",
+        "wrong3": "18%",
+        "explanation": "ਲਾਭ ₹150 ਹੈ; 150/750 × 100 = 20%।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A ₹1,200 bag has a 25% discount. What is its sale price?",
+    "answer": "₹900",
+    "wrong1": "₹950",
+    "wrong2": "₹1,000",
+    "wrong3": "₹300",
+    "explanation": "Discount = ₹300; 1200 − 300 = ₹900.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "₹1,200 के बैग पर 25% छूट है। बिक्री मूल्य कितना है?",
+        "answer": "₹900",
+        "wrong1": "₹950",
+        "wrong2": "₹1,000",
+        "wrong3": "₹300",
+        "explanation": "छूट ₹300 है; 1200 − 300 = ₹900।"
+      },
+      "pa": {
+        "prompt": "₹1,200 ਦੇ ਬੈਗ ਉੱਤੇ 25% ਛੋਟ ਹੈ। ਵਿਕਰੀ ਮੁੱਲ ਕਿੰਨਾ ਹੈ?",
+        "answer": "₹900",
+        "wrong1": "₹950",
+        "wrong2": "₹1,000",
+        "wrong3": "₹300",
+        "explanation": "ਛੋਟ ₹300 ਹੈ; 1200 − 300 = ₹900।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A bus travels 150 km in 3 hours at constant speed. What is its speed?",
+    "answer": "50 km/h",
+    "wrong1": "45 km/h",
+    "wrong2": "60 km/h",
+    "wrong3": "75 km/h",
+    "explanation": "Speed = distance/time = 150/3 = 50 km/h.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "एक बस समान चाल से 3 घंटे में 150 किमी चलती है। चाल कितनी है?",
+        "answer": "50 किमी/घंटा",
+        "wrong1": "45 किमी/घंटा",
+        "wrong2": "60 किमी/घंटा",
+        "wrong3": "75 किमी/घंटा",
+        "explanation": "चाल = दूरी/समय = 150/3 = 50 किमी/घंटा।"
+      },
+      "pa": {
+        "prompt": "ਇੱਕ ਬੱਸ ਇਕਸਾਰ ਚਾਲ ਨਾਲ 3 ਘੰਟਿਆਂ ਵਿੱਚ 150 ਕਿਮੀ ਚੱਲਦੀ ਹੈ। ਚਾਲ ਕਿੰਨੀ ਹੈ?",
+        "answer": "50 ਕਿਮੀ/ਘੰਟਾ",
+        "wrong1": "45 ਕਿਮੀ/ਘੰਟਾ",
+        "wrong2": "60 ਕਿਮੀ/ਘੰਟਾ",
+        "wrong3": "75 ਕਿਮੀ/ਘੰਟਾ",
+        "explanation": "ਚਾਲ = ਦੂਰੀ/ਸਮਾਂ = 150/3 = 50 ਕਿਮੀ/ਘੰਟਾ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A 120 m train passes a pole in 8 seconds. What is its speed in metres per second?",
+    "answer": "15",
+    "wrong1": "12",
+    "wrong2": "18",
+    "wrong3": "20",
+    "explanation": "It travels its own length: 120 ÷ 8 = 15 m/s.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "120 मीटर लंबी ट्रेन 8 सेकंड में खंभा पार करती है। मीटर प्रति सेकंड में चाल कितनी है?",
+        "answer": "15",
+        "wrong1": "12",
+        "wrong2": "18",
+        "wrong3": "20",
+        "explanation": "ट्रेन अपनी लंबाई जितनी दूरी तय करती है: 120 ÷ 8 = 15 मीटर/सेकंड।"
+      },
+      "pa": {
+        "prompt": "120 ਮੀਟਰ ਲੰਬੀ ਰੇਲ 8 ਸਕਿੰਟਾਂ ਵਿੱਚ ਖੰਭਾ ਪਾਰ ਕਰਦੀ ਹੈ। ਮੀਟਰ ਪ੍ਰਤੀ ਸਕਿੰਟ ਵਿੱਚ ਚਾਲ ਕਿੰਨੀ ਹੈ?",
+        "answer": "15",
+        "wrong1": "12",
+        "wrong2": "18",
+        "wrong3": "20",
+        "explanation": "ਰੇਲ ਆਪਣੀ ਲੰਬਾਈ ਜਿੰਨੀ ਦੂਰੀ ਤੈਅ ਕਰਦੀ ਹੈ: 120 ÷ 8 = 15 ਮੀਟਰ/ਸਕਿੰਟ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A completes a job in 12 days and B in 6 days. Working together at unchanged rates, how many days do they need?",
+    "answer": "4",
+    "wrong1": "3",
+    "wrong2": "6",
+    "wrong3": "9",
+    "explanation": "Their daily rate is 1/12 + 1/6 = 1/4 of the job, so they need 4 days.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "A काम 12 दिन में और B 6 दिन में करता है। समान दरों पर साथ काम करके कितने दिन लगेंगे?",
+        "answer": "4",
+        "wrong1": "3",
+        "wrong2": "6",
+        "wrong3": "9",
+        "explanation": "दैनिक दर 1/12 + 1/6 = 1/4 काम है, इसलिए 4 दिन लगेंगे।"
+      },
+      "pa": {
+        "prompt": "A ਕੰਮ 12 ਦਿਨਾਂ ਵਿੱਚ ਅਤੇ B 6 ਦਿਨਾਂ ਵਿੱਚ ਕਰਦਾ ਹੈ। ਉਹੀ ਦਰਾਂ ਨਾਲ ਇਕੱਠੇ ਕਿੰਨੇ ਦਿਨ ਲੱਗਣਗੇ?",
+        "answer": "4",
+        "wrong1": "3",
+        "wrong2": "6",
+        "wrong3": "9",
+        "explanation": "ਰੋਜ਼ਾਨਾ ਦਰ 1/12 + 1/6 = 1/4 ਕੰਮ ਹੈ, ਇਸ ਲਈ 4 ਦਿਨ ਲੱਗਣਗੇ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is the least common multiple of 12 and 18?",
+    "answer": "36",
+    "wrong1": "6",
+    "wrong2": "24",
+    "wrong3": "72",
+    "explanation": "12 = 2² × 3 and 18 = 2 × 3²; LCM = 2² × 3² = 36.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "12 और 18 का लघुत्तम समापवर्त्य क्या है?",
+        "answer": "36",
+        "wrong1": "6",
+        "wrong2": "24",
+        "wrong3": "72",
+        "explanation": "12 = 2² × 3 और 18 = 2 × 3²; लघुत्तम समापवर्त्य = 2² × 3² = 36।"
+      },
+      "pa": {
+        "prompt": "12 ਅਤੇ 18 ਦਾ ਲਘੂਤਮ ਸਾਂਝਾ ਗੁਣਜ ਕੀ ਹੈ?",
+        "answer": "36",
+        "wrong1": "6",
+        "wrong2": "24",
+        "wrong3": "72",
+        "explanation": "12 = 2² × 3 ਅਤੇ 18 = 2 × 3²; ਲਘੂਤਮ ਸਾਂਝਾ ਗੁਣਜ = 2² × 3² = 36।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is the greatest common divisor of 48 and 60?",
+    "answer": "12",
+    "wrong1": "6",
+    "wrong2": "24",
+    "wrong3": "15",
+    "explanation": "48 = 12 × 4 and 60 = 12 × 5; 4 and 5 have no common factor above 1.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "48 और 60 का महत्तम समापवर्तक क्या है?",
+        "answer": "12",
+        "wrong1": "6",
+        "wrong2": "24",
+        "wrong3": "15",
+        "explanation": "48 = 12 × 4 और 60 = 12 × 5; 4 और 5 का 1 से बड़ा साझा गुणनखंड नहीं है।"
+      },
+      "pa": {
+        "prompt": "48 ਅਤੇ 60 ਦਾ ਮਹਾਨਤਮ ਸਾਂਝਾ ਭਾਜਕ ਕੀ ਹੈ?",
+        "answer": "12",
+        "wrong1": "6",
+        "wrong2": "24",
+        "wrong3": "15",
+        "explanation": "48 = 12 × 4 ਅਤੇ 60 = 12 × 5; 4 ਅਤੇ 5 ਦਾ 1 ਤੋਂ ਵੱਡਾ ਸਾਂਝਾ ਗੁਣਨਖੰਡ ਨਹੀਂ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is 3/4 + 5/8?",
+    "answer": "11/8",
+    "wrong1": "8/12",
+    "wrong2": "1",
+    "wrong3": "9/8",
+    "explanation": "Convert 3/4 to 6/8; 6/8 + 5/8 = 11/8.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "3/4 + 5/8 कितना है?",
+        "answer": "11/8",
+        "wrong1": "8/12",
+        "wrong2": "1",
+        "wrong3": "9/8",
+        "explanation": "3/4 = 6/8; इसलिए 6/8 + 5/8 = 11/8।"
+      },
+      "pa": {
+        "prompt": "3/4 + 5/8 ਕਿੰਨਾ ਹੈ?",
+        "answer": "11/8",
+        "wrong1": "8/12",
+        "wrong2": "1",
+        "wrong3": "9/8",
+        "explanation": "3/4 = 6/8; ਇਸ ਲਈ 6/8 + 5/8 = 11/8।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Solve 3x + 7 = 28. What is x?",
+    "answer": "7",
+    "wrong1": "5",
+    "wrong2": "9",
+    "wrong3": "11",
+    "explanation": "Subtract 7 to get 3x = 21; divide by 3 to get x = 7.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "3x + 7 = 28 में x कितना है?",
+        "answer": "7",
+        "wrong1": "5",
+        "wrong2": "9",
+        "wrong3": "11",
+        "explanation": "7 घटाने पर 3x = 21; 3 से भाग देने पर x = 7।"
+      },
+      "pa": {
+        "prompt": "3x + 7 = 28 ਵਿੱਚ x ਕਿੰਨਾ ਹੈ?",
+        "answer": "7",
+        "wrong1": "5",
+        "wrong2": "9",
+        "wrong3": "11",
+        "explanation": "7 ਘਟਾਉਣ ਉੱਤੇ 3x = 21; 3 ਨਾਲ ਭਾਗ ਦੇਣ ਉੱਤੇ x = 7।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A rectangle is 13 cm long and 7 cm wide. What is its perimeter?",
+    "answer": "40 cm",
+    "wrong1": "91 cm",
+    "wrong2": "20 cm",
+    "wrong3": "42 cm",
+    "explanation": "Perimeter = 2 × (13 + 7) = 40 cm.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "एक आयत की लंबाई 13 सेमी और चौड़ाई 7 सेमी है। परिमाप कितना है?",
+        "answer": "40 सेमी",
+        "wrong1": "91 सेमी",
+        "wrong2": "20 सेमी",
+        "wrong3": "42 सेमी",
+        "explanation": "परिमाप = 2 × (13 + 7) = 40 सेमी।"
+      },
+      "pa": {
+        "prompt": "ਇੱਕ ਆਇਤ ਦੀ ਲੰਬਾਈ 13 ਸੈਮੀ ਅਤੇ ਚੌੜਾਈ 7 ਸੈਮੀ ਹੈ। ਘੇਰਾ ਕਿੰਨਾ ਹੈ?",
+        "answer": "40 ਸੈਮੀ",
+        "wrong1": "91 ਸੈਮੀ",
+        "wrong2": "20 ਸੈਮੀ",
+        "wrong3": "42 ਸੈਮੀ",
+        "explanation": "ਘੇਰਾ = 2 × (13 + 7) = 40 ਸੈਮੀ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A triangle has base 10 cm and perpendicular height 9 cm. What is its area?",
+    "answer": "45 cm²",
+    "wrong1": "90 cm²",
+    "wrong2": "19 cm²",
+    "wrong3": "50 cm²",
+    "explanation": "Area = 1/2 × base × height = 1/2 × 10 × 9 = 45 cm².",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "त्रिभुज का आधार 10 सेमी और लंबवत ऊँचाई 9 सेमी है। क्षेत्रफल कितना है?",
+        "answer": "45 सेमी²",
+        "wrong1": "90 सेमी²",
+        "wrong2": "19 सेमी²",
+        "wrong3": "50 सेमी²",
+        "explanation": "क्षेत्रफल = 1/2 × आधार × ऊँचाई = 1/2 × 10 × 9 = 45 सेमी²।"
+      },
+      "pa": {
+        "prompt": "ਤਿਕੋਣ ਦਾ ਆਧਾਰ 10 ਸੈਮੀ ਅਤੇ ਲੰਬਵਤ ਉਚਾਈ 9 ਸੈਮੀ ਹੈ। ਖੇਤਰਫਲ ਕਿੰਨਾ ਹੈ?",
+        "answer": "45 ਸੈਮੀ²",
+        "wrong1": "90 ਸੈਮੀ²",
+        "wrong2": "19 ਸੈਮੀ²",
+        "wrong3": "50 ਸੈਮੀ²",
+        "explanation": "ਖੇਤਰਫਲ = 1/2 × ਆਧਾਰ × ਉਚਾਈ = 1/2 × 10 × 9 = 45 ਸੈਮੀ²।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A fair six-sided die is rolled once. What is the probability of getting a number greater than 4?",
+    "answer": "1/3",
+    "wrong1": "1/2",
+    "wrong2": "1/6",
+    "wrong3": "2/3",
+    "explanation": "Favourable outcomes are 5 and 6: 2 out of 6, giving 1/3.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "एक निष्पक्ष छह-फलकीय पासा एक बार फेंका जाता है। 4 से बड़ी संख्या आने की प्रायिकता क्या है?",
+        "answer": "1/3",
+        "wrong1": "1/2",
+        "wrong2": "1/6",
+        "wrong3": "2/3",
+        "explanation": "अनुकूल परिणाम 5 और 6 हैं: 6 में से 2, यानी 1/3।"
+      },
+      "pa": {
+        "prompt": "ਇੱਕ ਨਿਰਪੱਖ ਛੇ-ਪਾਸਿਆਂ ਵਾਲਾ ਪਾਸਾ ਇੱਕ ਵਾਰ ਸੁੱਟਿਆ ਜਾਂਦਾ ਹੈ। 4 ਤੋਂ ਵੱਡੀ ਸੰਖਿਆ ਆਉਣ ਦੀ ਸੰਭਾਵਨਾ ਕੀ ਹੈ?",
+        "answer": "1/3",
+        "wrong1": "1/2",
+        "wrong2": "1/6",
+        "wrong3": "2/3",
+        "explanation": "ਅਨੁਕੂਲ ਨਤੀਜੇ 5 ਅਤੇ 6 ਹਨ: 6 ਵਿੱਚੋਂ 2, ਅਰਥਾਤ 1/3।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What comes next when each term increases by 4: 7, 11, 15, 19, ...?",
+    "answer": "23",
+    "wrong1": "21",
+    "wrong2": "24",
+    "wrong3": "27",
+    "explanation": "The common difference is 4; 19 + 4 = 23.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "हर पद में 4 बढ़ने पर अगला पद क्या होगा: 7, 11, 15, 19, ...?",
+        "answer": "23",
+        "wrong1": "21",
+        "wrong2": "24",
+        "wrong3": "27",
+        "explanation": "समान अंतर 4 है; 19 + 4 = 23।"
+      },
+      "pa": {
+        "prompt": "ਹਰ ਪਦ ਵਿੱਚ 4 ਵਧਣ ਉੱਤੇ ਅਗਲਾ ਪਦ ਕੀ ਹੋਵੇਗਾ: 7, 11, 15, 19, ...?",
+        "answer": "23",
+        "wrong1": "21",
+        "wrong2": "24",
+        "wrong3": "27",
+        "explanation": "ਸਾਂਝਾ ਅੰਤਰ 4 ਹੈ; 19 + 4 = 23।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What comes next when each term is doubled: 3, 6, 12, 24, ...?",
+    "answer": "48",
+    "wrong1": "36",
+    "wrong2": "42",
+    "wrong3": "54",
+    "explanation": "Each term is twice the previous term; 24 × 2 = 48.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "हर पद दोगुना होने पर अगला पद क्या होगा: 3, 6, 12, 24, ...?",
+        "answer": "48",
+        "wrong1": "36",
+        "wrong2": "42",
+        "wrong3": "54",
+        "explanation": "हर पद पिछले पद का दोगुना है; 24 × 2 = 48।"
+      },
+      "pa": {
+        "prompt": "ਹਰ ਪਦ ਦੁੱਗਣਾ ਹੋਣ ਉੱਤੇ ਅਗਲਾ ਪਦ ਕੀ ਹੋਵੇਗਾ: 3, 6, 12, 24, ...?",
+        "answer": "48",
+        "wrong1": "36",
+        "wrong2": "42",
+        "wrong3": "54",
+        "explanation": "ਹਰ ਪਦ ਪਿਛਲੇ ਪਦ ਦਾ ਦੁੱਗਣਾ ਹੈ; 24 × 2 = 48।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Using consecutive square numbers, fill the gap: 1, 4, 9, __, 25.",
+    "answer": "16",
+    "wrong1": "12",
+    "wrong2": "15",
+    "wrong3": "18",
+    "explanation": "The terms are 1², 2², 3², 4², 5²; 4² = 16.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "क्रमागत वर्ग संख्याओं में रिक्त स्थान भरें: 1, 4, 9, __, 25।",
+        "answer": "16",
+        "wrong1": "12",
+        "wrong2": "15",
+        "wrong3": "18",
+        "explanation": "पद 1², 2², 3², 4², 5² हैं; 4² = 16।"
+      },
+      "pa": {
+        "prompt": "ਲਗਾਤਾਰ ਵਰਗ ਸੰਖਿਆਵਾਂ ਵਿੱਚ ਖਾਲੀ ਥਾਂ ਭਰੋ: 1, 4, 9, __, 25।",
+        "answer": "16",
+        "wrong1": "12",
+        "wrong2": "15",
+        "wrong3": "18",
+        "explanation": "ਪਦ 1², 2², 3², 4², 5² ਹਨ; 4² = 16।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "In a code, every English letter is replaced by the next letter: CAT becomes DBU. How is DOG coded?",
+    "answer": "EPH",
+    "wrong1": "CNE",
+    "wrong2": "EOG",
+    "wrong3": "FQI",
+    "explanation": "D becomes E, O becomes P and G becomes H, giving EPH.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "एक कूट में हर अंग्रेज़ी अक्षर को अगले अक्षर से बदलते हैं: CAT का DBU है। DOG का कूट क्या है?",
+        "answer": "EPH",
+        "wrong1": "CNE",
+        "wrong2": "EOG",
+        "wrong3": "FQI",
+        "explanation": "D से E, O से P और G से H बनता है; कूट EPH है।"
+      },
+      "pa": {
+        "prompt": "ਇੱਕ ਕੋਡ ਵਿੱਚ ਹਰ ਅੰਗਰੇਜ਼ੀ ਅੱਖਰ ਨੂੰ ਅਗਲੇ ਅੱਖਰ ਨਾਲ ਬਦਲਦੇ ਹਨ: CAT ਦਾ DBU ਹੈ। DOG ਦਾ ਕੋਡ ਕੀ ਹੈ?",
+        "answer": "EPH",
+        "wrong1": "CNE",
+        "wrong2": "EOG",
+        "wrong3": "FQI",
+        "explanation": "D ਤੋਂ E, O ਤੋਂ P ਅਤੇ G ਤੋਂ H ਬਣਦਾ ਹੈ; ਕੋਡ EPH ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Ravi faces north, turns right, then turns right again. Which direction does he face?",
+    "answer": "South",
+    "wrong1": "East",
+    "wrong2": "West",
+    "wrong3": "North",
+    "explanation": "The first right turn faces east; the second faces south.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "रवि उत्तर की ओर है। वह दाएँ मुड़ता है और फिर दाएँ मुड़ता है। अब किस दिशा में है?",
+        "answer": "दक्षिण",
+        "wrong1": "पूर्व",
+        "wrong2": "पश्चिम",
+        "wrong3": "उत्तर",
+        "explanation": "पहले दाएँ मुड़ने पर पूर्व और दूसरी बार दक्षिण दिशा होती है।"
+      },
+      "pa": {
+        "prompt": "ਰਵੀ ਉੱਤਰ ਵੱਲ ਹੈ। ਉਹ ਸੱਜੇ ਮੁੜਦਾ ਹੈ ਅਤੇ ਫਿਰ ਸੱਜੇ ਮੁੜਦਾ ਹੈ। ਹੁਣ ਕਿਸ ਦਿਸ਼ਾ ਵੱਲ ਹੈ?",
+        "answer": "ਦੱਖਣ",
+        "wrong1": "ਪੂਰਬ",
+        "wrong2": "ਪੱਛਮ",
+        "wrong3": "ਉੱਤਰ",
+        "explanation": "ਪਹਿਲੀ ਵਾਰ ਸੱਜੇ ਮੁੜਨ ਉੱਤੇ ਪੂਰਬ ਅਤੇ ਦੂਜੀ ਵਾਰ ਦੱਖਣ ਦਿਸ਼ਾ ਹੁੰਦੀ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A person walks 6 m east and then 8 m north. What is the straight-line distance from the start?",
+    "answer": "10 m",
+    "wrong1": "14 m",
+    "wrong2": "2 m",
+    "wrong3": "12 m",
+    "explanation": "The paths form a right angle; distance = √(6² + 8²) = √100 = 10 m.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "एक व्यक्ति 6 मीटर पूर्व और फिर 8 मीटर उत्तर चलता है। आरंभ से सीधी दूरी कितनी है?",
+        "answer": "10 मीटर",
+        "wrong1": "14 मीटर",
+        "wrong2": "2 मीटर",
+        "wrong3": "12 मीटर",
+        "explanation": "रास्ते समकोण बनाते हैं; दूरी = √(6² + 8²) = √100 = 10 मीटर।"
+      },
+      "pa": {
+        "prompt": "ਇੱਕ ਵਿਅਕਤੀ 6 ਮੀਟਰ ਪੂਰਬ ਅਤੇ ਫਿਰ 8 ਮੀਟਰ ਉੱਤਰ ਤੁਰਦਾ ਹੈ। ਸ਼ੁਰੂਆਤ ਤੋਂ ਸਿੱਧੀ ਦੂਰੀ ਕਿੰਨੀ ਹੈ?",
+        "answer": "10 ਮੀਟਰ",
+        "wrong1": "14 ਮੀਟਰ",
+        "wrong2": "2 ਮੀਟਰ",
+        "wrong3": "12 ਮੀਟਰ",
+        "explanation": "ਰਸਤੇ ਸਮਕੋਣ ਬਣਾਉਂਦੇ ਹਨ; ਦੂਰੀ = √(6² + 8²) = √100 = 10 ਮੀਟਰ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Neha is 8th from the front and 13th from the back in a single queue. How many people are in the queue?",
+    "answer": "20",
+    "wrong1": "21",
+    "wrong2": "19",
+    "wrong3": "22",
+    "explanation": "Total = 8 + 13 − 1 = 20; Neha is counted in both positions.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "नेहा कतार में आगे से 8वीं और पीछे से 13वीं है। कुल कितने लोग हैं?",
+        "answer": "20",
+        "wrong1": "21",
+        "wrong2": "19",
+        "wrong3": "22",
+        "explanation": "कुल = 8 + 13 − 1 = 20; नेहा दोनों गिनतियों में शामिल है।"
+      },
+      "pa": {
+        "prompt": "ਨੇਹਾ ਕਤਾਰ ਵਿੱਚ ਅੱਗੇ ਤੋਂ 8ਵੀਂ ਅਤੇ ਪਿੱਛੇ ਤੋਂ 13ਵੀਂ ਹੈ। ਕੁੱਲ ਕਿੰਨੇ ਲੋਕ ਹਨ?",
+        "answer": "20",
+        "wrong1": "21",
+        "wrong2": "19",
+        "wrong3": "22",
+        "explanation": "ਕੁੱਲ = 8 + 13 − 1 = 20; ਨੇਹਾ ਦੋਵਾਂ ਗਿਣਤੀਆਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "All roses are flowers. All flowers are plants. Which conclusion must follow?",
+    "answer": "All roses are plants",
+    "wrong1": "All plants are roses",
+    "wrong2": "All flowers are roses",
+    "wrong3": "No rose is a plant",
+    "explanation": "Roses are within flowers, and flowers within plants; therefore every rose is a plant.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "सभी गुलाब फूल हैं। सभी फूल पौधे हैं। कौन-सा निष्कर्ष अवश्य सही है?",
+        "answer": "सभी गुलाब पौधे हैं",
+        "wrong1": "सभी पौधे गुलाब हैं",
+        "wrong2": "सभी फूल गुलाब हैं",
+        "wrong3": "कोई गुलाब पौधा नहीं है",
+        "explanation": "गुलाब फूलों में और फूल पौधों में आते हैं; इसलिए हर गुलाब पौधा है।"
+      },
+      "pa": {
+        "prompt": "ਸਾਰੇ ਗੁਲਾਬ ਫੁੱਲ ਹਨ। ਸਾਰੇ ਫੁੱਲ ਪੌਦੇ ਹਨ। ਕਿਹੜਾ ਨਤੀਜਾ ਲਾਜ਼ਮੀ ਸਹੀ ਹੈ?",
+        "answer": "ਸਾਰੇ ਗੁਲਾਬ ਪੌਦੇ ਹਨ",
+        "wrong1": "ਸਾਰੇ ਪੌਦੇ ਗੁਲਾਬ ਹਨ",
+        "wrong2": "ਸਾਰੇ ਫੁੱਲ ਗੁਲਾਬ ਹਨ",
+        "wrong3": "ਕੋਈ ਗੁਲਾਬ ਪੌਦਾ ਨਹੀਂ ਹੈ",
+        "explanation": "ਗੁਲਾਬ ਫੁੱਲਾਂ ਵਿੱਚ ਅਤੇ ਫੁੱਲ ਪੌਦਿਆਂ ਵਿੱਚ ਆਉਂਦੇ ਹਨ; ਇਸ ਲਈ ਹਰ ਗੁਲਾਬ ਪੌਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "All clerks are employees. Some employees are singers. What must be true about clerks being singers?",
+    "answer": "It cannot be determined from these statements",
+    "wrong1": "All clerks are singers",
+    "wrong2": "No clerk is a singer",
+    "wrong3": "Some clerks must be singers",
+    "explanation": "The singing employees may or may not be clerks, so no definite overlap follows.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "सभी लिपिक कर्मचारी हैं। कुछ कर्मचारी गायक हैं। लिपिकों के गायक होने के बारे में क्या निश्चित है?",
+        "answer": "इन कथनों से तय नहीं किया जा सकता",
+        "wrong1": "सभी लिपिक गायक हैं",
+        "wrong2": "कोई लिपिक गायक नहीं है",
+        "wrong3": "कुछ लिपिक अवश्य गायक हैं",
+        "explanation": "गायक कर्मचारी लिपिक हो भी सकते हैं और नहीं भी; निश्चित साझा समूह नहीं निकलता।"
+      },
+      "pa": {
+        "prompt": "ਸਾਰੇ ਕਲਰਕ ਕਰਮਚਾਰੀ ਹਨ। ਕੁਝ ਕਰਮਚਾਰੀ ਗਾਇਕ ਹਨ। ਕਲਰਕਾਂ ਦੇ ਗਾਇਕ ਹੋਣ ਬਾਰੇ ਕੀ ਨਿਸ਼ਚਿਤ ਹੈ?",
+        "answer": "ਇਨ੍ਹਾਂ ਕਥਨਾਂ ਤੋਂ ਤੈਅ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
+        "wrong1": "ਸਾਰੇ ਕਲਰਕ ਗਾਇਕ ਹਨ",
+        "wrong2": "ਕੋਈ ਕਲਰਕ ਗਾਇਕ ਨਹੀਂ ਹੈ",
+        "wrong3": "ਕੁਝ ਕਲਰਕ ਲਾਜ਼ਮੀ ਗਾਇਕ ਹਨ",
+        "explanation": "ਗਾਇਕ ਕਰਮਚਾਰੀ ਕਲਰਕ ਹੋ ਵੀ ਸਕਦੇ ਹਨ ਅਤੇ ਨਹੀਂ ਵੀ; ਨਿਸ਼ਚਿਤ ਸਾਂਝਾ ਸਮੂਹ ਨਹੀਂ ਨਿਕਲਦਾ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A is taller than B, and B is taller than C. Who is shortest among these three?",
+    "answer": "C",
+    "wrong1": "A",
+    "wrong2": "B",
+    "wrong3": "Cannot be determined",
+    "explanation": "The order of height is A > B > C, so C is shortest.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "A, B से लंबा है और B, C से लंबा है। तीनों में सबसे छोटा कौन है?",
+        "answer": "C",
+        "wrong1": "A",
+        "wrong2": "B",
+        "wrong3": "तय नहीं किया जा सकता",
+        "explanation": "ऊँचाई का क्रम A > B > C है, इसलिए C सबसे छोटा है।"
+      },
+      "pa": {
+        "prompt": "A, B ਤੋਂ ਲੰਮਾ ਹੈ ਅਤੇ B, C ਤੋਂ ਲੰਮਾ ਹੈ। ਤਿੰਨਾਂ ਵਿੱਚ ਸਭ ਤੋਂ ਛੋਟਾ ਕੌਣ ਹੈ?",
+        "answer": "C",
+        "wrong1": "A",
+        "wrong2": "B",
+        "wrong3": "ਤੈਅ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ",
+        "explanation": "ਕੱਦ ਦਾ ਕ੍ਰਮ A > B > C ਹੈ, ਇਸ ਲਈ C ਸਭ ਤੋਂ ਛੋਟਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "If today is Tuesday, what day will it be 10 days later?",
+    "answer": "Friday",
+    "wrong1": "Thursday",
+    "wrong2": "Saturday",
+    "wrong3": "Sunday",
+    "explanation": "10 days is 1 week plus 3 days; three days after Tuesday is Friday.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "यदि आज मंगलवार है, तो 10 दिन बाद कौन-सा दिन होगा?",
+        "answer": "शुक्रवार",
+        "wrong1": "गुरुवार",
+        "wrong2": "शनिवार",
+        "wrong3": "रविवार",
+        "explanation": "10 दिन = 1 सप्ताह और 3 दिन; मंगलवार के तीन दिन बाद शुक्रवार है।"
+      },
+      "pa": {
+        "prompt": "ਜੇ ਅੱਜ ਮੰਗਲਵਾਰ ਹੈ, ਤਾਂ 10 ਦਿਨ ਬਾਅਦ ਕਿਹੜਾ ਦਿਨ ਹੋਵੇਗਾ?",
+        "answer": "ਸ਼ੁੱਕਰਵਾਰ",
+        "wrong1": "ਵੀਰਵਾਰ",
+        "wrong2": "ਸ਼ਨੀਵਾਰ",
+        "wrong3": "ਐਤਵਾਰ",
+        "explanation": "10 ਦਿਨ = 1 ਹਫ਼ਤਾ ਅਤੇ 3 ਦਿਨ; ਮੰਗਲਵਾਰ ਤੋਂ ਤਿੰਨ ਦਿਨ ਬਾਅਦ ਸ਼ੁੱਕਰਵਾਰ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "A father is 40 and his son is 10. After how many years will the father be twice the son’s age?",
+    "answer": "20",
+    "wrong1": "10",
+    "wrong2": "15",
+    "wrong3": "30",
+    "explanation": "40 + t = 2(10 + t), so 20 = t. At that time their ages are 60 and 30.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "पिता 40 वर्ष और पुत्र 10 वर्ष का है। कितने वर्ष बाद पिता की आयु पुत्र की दुगुनी होगी?",
+        "answer": "20",
+        "wrong1": "10",
+        "wrong2": "15",
+        "wrong3": "30",
+        "explanation": "40 + t = 2(10 + t), इसलिए t = 20। तब आयु 60 और 30 वर्ष होगी।"
+      },
+      "pa": {
+        "prompt": "ਪਿਤਾ 40 ਸਾਲ ਅਤੇ ਪੁੱਤਰ 10 ਸਾਲ ਦਾ ਹੈ। ਕਿੰਨੇ ਸਾਲ ਬਾਅਦ ਪਿਤਾ ਦੀ ਉਮਰ ਪੁੱਤਰ ਤੋਂ ਦੁੱਗਣੀ ਹੋਵੇਗੀ?",
+        "answer": "20",
+        "wrong1": "10",
+        "wrong2": "15",
+        "wrong3": "30",
+        "explanation": "40 + t = 2(10 + t), ਇਸ ਲਈ t = 20। ਤਦ ਉਮਰਾਂ 60 ਅਤੇ 30 ਸਾਲ ਹੋਣਗੀਆਂ।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "At exactly 3:00, what is the smaller angle between the clock hands?",
+    "answer": "90°",
+    "wrong1": "30°",
+    "wrong2": "60°",
+    "wrong3": "120°",
+    "explanation": "The minute hand is at 12 and the hour hand at 3; three 30° intervals give 90°.",
+    "subject": "Reasoning & Maths",
+    "translations": {
+      "hi": {
+        "prompt": "ठीक 3:00 बजे घड़ी की सुइयों के बीच छोटा कोण कितना होता है?",
+        "answer": "90°",
+        "wrong1": "30°",
+        "wrong2": "60°",
+        "wrong3": "120°",
+        "explanation": "मिनट की सुई 12 पर और घंटे की 3 पर है; 30° के तीन अंतराल = 90°।"
+      },
+      "pa": {
+        "prompt": "ਠੀਕ 3:00 ਵਜੇ ਘੜੀ ਦੀਆਂ ਸੂਈਆਂ ਵਿਚਕਾਰ ਛੋਟਾ ਕੋਣ ਕਿੰਨਾ ਹੁੰਦਾ ਹੈ?",
+        "answer": "90°",
+        "wrong1": "30°",
+        "wrong2": "60°",
+        "wrong3": "120°",
+        "explanation": "ਮਿੰਟ ਦੀ ਸੂਈ 12 ਉੱਤੇ ਅਤੇ ਘੰਟੇ ਦੀ 3 ਉੱਤੇ ਹੈ; 30° ਦੇ ਤਿੰਨ ਅੰਤਰਾਲ = 90°।"
+      }
+    },
+    "source": {
+      "title": "Original solved practice"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which part of a computer performs arithmetic and logical operations?",
+    "answer": "Arithmetic logic unit",
+    "wrong1": "Monitor",
+    "wrong2": "Keyboard",
+    "wrong3": "Printer",
+    "explanation": "The arithmetic logic unit (ALU) performs calculations and logical comparisons.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "कंप्यूटर का कौन-सा भाग अंकगणितीय और तार्किक क्रियाएँ करता है?",
+        "answer": "अंकगणितीय तर्क इकाई",
+        "wrong1": "मॉनिटर",
+        "wrong2": "कीबोर्ड",
+        "wrong3": "प्रिंटर",
+        "explanation": "अंकगणितीय तर्क इकाई (ALU) गणनाएँ और तार्किक तुलनाएँ करती है।"
+      },
+      "pa": {
+        "prompt": "ਕੰਪਿਊਟਰ ਦਾ ਕਿਹੜਾ ਭਾਗ ਅੰਕਗਣਿਤ ਅਤੇ ਤਾਰਕਿਕ ਕਾਰਵਾਈਆਂ ਕਰਦਾ ਹੈ?",
+        "answer": "ਅੰਕਗਣਿਤ ਤਰਕ ਇਕਾਈ",
+        "wrong1": "ਮਾਨੀਟਰ",
+        "wrong2": "ਕੀਬੋਰਡ",
+        "wrong3": "ਪ੍ਰਿੰਟਰ",
+        "explanation": "ਅੰਕਗਣਿਤ ਤਰਕ ਇਕਾਈ (ALU) ਗਣਨਾਵਾਂ ਅਤੇ ਤਾਰਕਿਕ ਤੁਲਨਾਵਾਂ ਕਰਦੀ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which memory normally loses its contents when power is switched off?",
+    "answer": "RAM",
+    "wrong1": "ROM",
+    "wrong2": "SSD",
+    "wrong3": "DVD",
+    "explanation": "RAM is volatile working memory; ordinary RAM needs power to retain data.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "बिजली बंद होने पर सामान्यतः किस मेमोरी की सामग्री मिट जाती है?",
+        "answer": "RAM",
+        "wrong1": "ROM",
+        "wrong2": "SSD",
+        "wrong3": "DVD",
+        "explanation": "RAM अस्थायी कार्यशील मेमोरी है; सामान्य RAM को डेटा बनाए रखने के लिए बिजली चाहिए।"
+      },
+      "pa": {
+        "prompt": "ਬਿਜਲੀ ਬੰਦ ਹੋਣ ਉੱਤੇ ਆਮ ਤੌਰ ਉੱਤੇ ਕਿਹੜੀ ਮੈਮੋਰੀ ਦੀ ਸਮੱਗਰੀ ਮਿਟ ਜਾਂਦੀ ਹੈ?",
+        "answer": "RAM",
+        "wrong1": "ROM",
+        "wrong2": "SSD",
+        "wrong3": "DVD",
+        "explanation": "RAM ਅਸਥਿਰ ਕਾਰਜਸ਼ੀਲ ਮੈਮੋਰੀ ਹੈ; ਆਮ RAM ਨੂੰ ਡਾਟਾ ਰੱਖਣ ਲਈ ਬਿਜਲੀ ਚਾਹੀਦੀ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which device is primarily used to enter printed page images into a computer?",
+    "answer": "Scanner",
+    "wrong1": "Speaker",
+    "wrong2": "Projector",
+    "wrong3": "Plotter",
+    "explanation": "A scanner captures a physical page as a digital image.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "मुद्रित पृष्ठ की छवि कंप्यूटर में डालने के लिए मुख्यतः कौन-सा उपकरण उपयोग होता है?",
+        "answer": "स्कैनर",
+        "wrong1": "स्पीकर",
+        "wrong2": "प्रोजेक्टर",
+        "wrong3": "प्लॉटर",
+        "explanation": "स्कैनर भौतिक पृष्ठ को डिजिटल छवि के रूप में कैप्चर करता है।"
+      },
+      "pa": {
+        "prompt": "ਛਪੇ ਪੰਨੇ ਦੀ ਤਸਵੀਰ ਕੰਪਿਊਟਰ ਵਿੱਚ ਪਾਉਣ ਲਈ ਮੁੱਖ ਤੌਰ ਉੱਤੇ ਕਿਹੜਾ ਯੰਤਰ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+        "answer": "ਸਕੈਨਰ",
+        "wrong1": "ਸਪੀਕਰ",
+        "wrong2": "ਪ੍ਰੋਜੈਕਟਰ",
+        "wrong3": "ਪਲਾਟਰ",
+        "explanation": "ਸਕੈਨਰ ਭੌਤਿਕ ਪੰਨੇ ਨੂੰ ਡਿਜੀਟਲ ਤਸਵੀਰ ਵਜੋਂ ਕੈਪਚਰ ਕਰਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which of these is an output device?",
+    "answer": "Speaker",
+    "wrong1": "Mouse",
+    "wrong2": "Keyboard",
+    "wrong3": "Microphone",
+    "explanation": "A speaker outputs sound; the other three devices supply input.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "इनमें से कौन-सा आउटपुट उपकरण है?",
+        "answer": "स्पीकर",
+        "wrong1": "माउस",
+        "wrong2": "कीबोर्ड",
+        "wrong3": "माइक्रोफोन",
+        "explanation": "स्पीकर ध्वनि देता है; बाकी तीन उपकरण इनपुट देते हैं।"
+      },
+      "pa": {
+        "prompt": "ਇਨ੍ਹਾਂ ਵਿੱਚੋਂ ਕਿਹੜਾ ਆਉਟਪੁੱਟ ਯੰਤਰ ਹੈ?",
+        "answer": "ਸਪੀਕਰ",
+        "wrong1": "ਮਾਊਸ",
+        "wrong2": "ਕੀਬੋਰਡ",
+        "wrong3": "ਮਾਈਕ੍ਰੋਫੋਨ",
+        "explanation": "ਸਪੀਕਰ ਆਵਾਜ਼ ਦਿੰਦਾ ਹੈ; ਬਾਕੀ ਤਿੰਨ ਯੰਤਰ ਇਨਪੁੱਟ ਦਿੰਦੇ ਹਨ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "How many bits make one byte?",
+    "answer": "8",
+    "wrong1": "2",
+    "wrong2": "4",
+    "wrong3": "16",
+    "explanation": "A byte consists of eight bits.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "एक बाइट में कितने बिट होते हैं?",
+        "answer": "8",
+        "wrong1": "2",
+        "wrong2": "4",
+        "wrong3": "16",
+        "explanation": "एक बाइट में आठ बिट होते हैं।"
+      },
+      "pa": {
+        "prompt": "ਇੱਕ ਬਾਈਟ ਵਿੱਚ ਕਿੰਨੇ ਬਿੱਟ ਹੁੰਦੇ ਹਨ?",
+        "answer": "8",
+        "wrong1": "2",
+        "wrong2": "4",
+        "wrong3": "16",
+        "explanation": "ਇੱਕ ਬਾਈਟ ਵਿੱਚ ਅੱਠ ਬਿੱਟ ਹੁੰਦੇ ਹਨ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is the decimal value of the binary number 1010?",
+    "answer": "10",
+    "wrong1": "8",
+    "wrong2": "12",
+    "wrong3": "14",
+    "explanation": "1010₂ = 1×8 + 0×4 + 1×2 + 0×1 = 10.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "द्विआधारी संख्या 1010 का दशमलव मान क्या है?",
+        "answer": "10",
+        "wrong1": "8",
+        "wrong2": "12",
+        "wrong3": "14",
+        "explanation": "1010₂ = 1×8 + 0×4 + 1×2 + 0×1 = 10।"
+      },
+      "pa": {
+        "prompt": "ਦੋ-ਆਧਾਰੀ ਸੰਖਿਆ 1010 ਦਾ ਦਸ਼ਮਲਵ ਮੁੱਲ ਕੀ ਹੈ?",
+        "answer": "10",
+        "wrong1": "8",
+        "wrong2": "12",
+        "wrong3": "14",
+        "explanation": "1010₂ = 1×8 + 0×4 + 1×2 + 0×1 = 10।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which software manages hardware resources and provides services to applications?",
+    "answer": "Operating system",
+    "wrong1": "Spreadsheet",
+    "wrong2": "Presentation file",
+    "wrong3": "Image file",
+    "explanation": "An operating system manages resources such as memory, processes and devices.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "कौन-सा सॉफ़्टवेयर हार्डवेयर संसाधन सँभालता है और अनुप्रयोगों को सेवाएँ देता है?",
+        "answer": "ऑपरेटिंग सिस्टम",
+        "wrong1": "स्प्रेडशीट",
+        "wrong2": "प्रस्तुति फ़ाइल",
+        "wrong3": "छवि फ़ाइल",
+        "explanation": "ऑपरेटिंग सिस्टम मेमोरी, प्रक्रियाओं और उपकरणों जैसे संसाधन सँभालता है।"
+      },
+      "pa": {
+        "prompt": "ਕਿਹੜਾ ਸਾਫਟਵੇਅਰ ਹਾਰਡਵੇਅਰ ਸਰੋਤ ਸੰਭਾਲਦਾ ਹੈ ਅਤੇ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਸੇਵਾਵਾਂ ਦਿੰਦਾ ਹੈ?",
+        "answer": "ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ",
+        "wrong1": "ਸਪ੍ਰੈਡਸ਼ੀਟ",
+        "wrong2": "ਪੇਸ਼ਕਾਰੀ ਫਾਈਲ",
+        "wrong3": "ਤਸਵੀਰ ਫਾਈਲ",
+        "explanation": "ਓਪਰੇਟਿੰਗ ਸਿਸਟਮ ਮੈਮੋਰੀ, ਪ੍ਰਕਿਰਿਆਵਾਂ ਅਤੇ ਯੰਤਰਾਂ ਵਰਗੇ ਸਰੋਤ ਸੰਭਾਲਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which of these is application software?",
+    "answer": "Word processor",
+    "wrong1": "Device driver",
+    "wrong2": "Operating-system kernel",
+    "wrong3": "Boot firmware",
+    "explanation": "A word processor helps users create and edit documents; the others support system operation.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "इनमें से कौन-सा अनुप्रयोग सॉफ़्टवेयर है?",
+        "answer": "वर्ड प्रोसेसर",
+        "wrong1": "डिवाइस ड्राइवर",
+        "wrong2": "ऑपरेटिंग-सिस्टम कर्नेल",
+        "wrong3": "बूट फ़र्मवेयर",
+        "explanation": "वर्ड प्रोसेसर दस्तावेज़ बनाने और संपादित करने में मदद करता है; बाकी सिस्टम चलाने में सहायक हैं।"
+      },
+      "pa": {
+        "prompt": "ਇਨ੍ਹਾਂ ਵਿੱਚੋਂ ਕਿਹੜਾ ਐਪਲੀਕੇਸ਼ਨ ਸਾਫਟਵੇਅਰ ਹੈ?",
+        "answer": "ਵਰਡ ਪ੍ਰੋਸੈਸਰ",
+        "wrong1": "ਡਿਵਾਈਸ ਡਰਾਈਵਰ",
+        "wrong2": "ਓਪਰੇਟਿੰਗ-ਸਿਸਟਮ ਕਰਨਲ",
+        "wrong3": "ਬੂਟ ਫਰਮਵੇਅਰ",
+        "explanation": "ਵਰਡ ਪ੍ਰੋਸੈਸਰ ਦਸਤਾਵੇਜ਼ ਬਣਾਉਣ ਅਤੇ ਸੋਧਣ ਵਿੱਚ ਮਦਦ ਕਰਦਾ ਹੈ; ਬਾਕੀ ਸਿਸਟਮ ਚਲਾਉਣ ਵਿੱਚ ਸਹਾਇਕ ਹਨ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "In a spreadsheet, what does the cell address C5 mean?",
+    "answer": "Column C, row 5",
+    "wrong1": "Column 5, row C",
+    "wrong2": "Sheet C, page 5",
+    "wrong3": "Five merged columns",
+    "explanation": "A cell address combines a column letter with a row number.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "स्प्रेडशीट में C5 सेल पते का क्या अर्थ है?",
+        "answer": "स्तंभ C, पंक्ति 5",
+        "wrong1": "स्तंभ 5, पंक्ति C",
+        "wrong2": "शीट C, पृष्ठ 5",
+        "wrong3": "पाँच संयुक्त स्तंभ",
+        "explanation": "सेल पता स्तंभ के अक्षर और पंक्ति की संख्या से बनता है।"
+      },
+      "pa": {
+        "prompt": "ਸਪ੍ਰੈਡਸ਼ੀਟ ਵਿੱਚ C5 ਸੈੱਲ ਪਤੇ ਦਾ ਕੀ ਅਰਥ ਹੈ?",
+        "answer": "ਕਾਲਮ C, ਕਤਾਰ 5",
+        "wrong1": "ਕਾਲਮ 5, ਕਤਾਰ C",
+        "wrong2": "ਸ਼ੀਟ C, ਪੰਨਾ 5",
+        "wrong3": "ਪੰਜ ਮਿਲਾਏ ਕਾਲਮ",
+        "explanation": "ਸੈੱਲ ਪਤਾ ਕਾਲਮ ਦੇ ਅੱਖਰ ਅਤੇ ਕਤਾਰ ਦੇ ਨੰਬਰ ਤੋਂ ਬਣਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "If A1 is 7 and A2 is 9, what does =SUM(A1:A2) return in a spreadsheet?",
+    "answer": "16",
+    "wrong1": "79",
+    "wrong2": "2",
+    "wrong3": "63",
+    "explanation": "SUM adds the values in the range: 7 + 9 = 16.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "यदि A1 में 7 और A2 में 9 है, तो स्प्रेडशीट में =SUM(A1:A2) क्या देता है?",
+        "answer": "16",
+        "wrong1": "79",
+        "wrong2": "2",
+        "wrong3": "63",
+        "explanation": "SUM क्षेत्र के मान जोड़ता है: 7 + 9 = 16।"
+      },
+      "pa": {
+        "prompt": "ਜੇ A1 ਵਿੱਚ 7 ਅਤੇ A2 ਵਿੱਚ 9 ਹੈ, ਤਾਂ ਸਪ੍ਰੈਡਸ਼ੀਟ ਵਿੱਚ =SUM(A1:A2) ਕੀ ਦਿੰਦਾ ਹੈ?",
+        "answer": "16",
+        "wrong1": "79",
+        "wrong2": "2",
+        "wrong3": "63",
+        "explanation": "SUM ਰੇਂਜ ਦੇ ਮੁੱਲ ਜੋੜਦਾ ਹੈ: 7 + 9 = 16।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What does $A$1 represent in a spreadsheet formula using A1-style references?",
+    "answer": "An absolute cell reference",
+    "wrong1": "A currency amount only",
+    "wrong2": "A reference that changes both row and column when copied",
+    "wrong3": "An invalid cell name",
+    "explanation": "The dollar signs fix both column A and row 1 when the formula is copied.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "A1-शैली वाली स्प्रेडशीट के सूत्र में $A$1 क्या दर्शाता है?",
+        "answer": "निरपेक्ष सेल संदर्भ",
+        "wrong1": "केवल मुद्रा राशि",
+        "wrong2": "कॉपी करने पर पंक्ति और स्तंभ दोनों बदलने वाला संदर्भ",
+        "wrong3": "अमान्य सेल नाम",
+        "explanation": "डॉलर चिह्न सूत्र कॉपी होने पर स्तंभ A और पंक्ति 1 दोनों को स्थिर रखते हैं।"
+      },
+      "pa": {
+        "prompt": "A1-ਸ਼ੈਲੀ ਵਾਲੀ ਸਪ੍ਰੈਡਸ਼ੀਟ ਦੇ ਫਾਰਮੂਲੇ ਵਿੱਚ $A$1 ਕੀ ਦਰਸਾਉਂਦਾ ਹੈ?",
+        "answer": "ਨਿਰਪੇਖ ਸੈੱਲ ਹਵਾਲਾ",
+        "wrong1": "ਕੇਵਲ ਮੁਦਰਾ ਰਕਮ",
+        "wrong2": "ਕਾਪੀ ਕਰਨ ਉੱਤੇ ਕਤਾਰ ਅਤੇ ਕਾਲਮ ਦੋਵੇਂ ਬਦਲਣ ਵਾਲਾ ਹਵਾਲਾ",
+        "wrong3": "ਗਲਤ ਸੈੱਲ ਨਾਮ",
+        "explanation": "ਡਾਲਰ ਚਿੰਨ੍ਹ ਫਾਰਮੂਲਾ ਕਾਪੀ ਹੋਣ ਉੱਤੇ ਕਾਲਮ A ਅਤੇ ਕਤਾਰ 1 ਦੋਵਾਂ ਨੂੰ ਸਥਿਰ ਰੱਖਦੇ ਹਨ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which word-processing feature checks a document for possible misspelled words?",
+    "answer": "Spell checker",
+    "wrong1": "Page numbering",
+    "wrong2": "Mail merge",
+    "wrong3": "Print preview",
+    "explanation": "A spell checker flags words that may be misspelled; its suggestions still need judgment.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "वर्ड प्रोसेसर की कौन-सी सुविधा संभावित गलत वर्तनी वाले शब्द जाँचती है?",
+        "answer": "वर्तनी जाँचक",
+        "wrong1": "पृष्ठ क्रमांकन",
+        "wrong2": "मेल मर्ज",
+        "wrong3": "प्रिंट पूर्वावलोकन",
+        "explanation": "वर्तनी जाँचक संभावित गलत शब्द चिह्नित करता है; सुझावों पर फिर भी विचार करना चाहिए।"
+      },
+      "pa": {
+        "prompt": "ਵਰਡ ਪ੍ਰੋਸੈਸਰ ਦੀ ਕਿਹੜੀ ਸਹੂਲਤ ਸੰਭਾਵਿਤ ਗਲਤ ਸ਼ਬਦ-ਜੋੜ ਜਾਂਚਦੀ ਹੈ?",
+        "answer": "ਸ਼ਬਦ-ਜੋੜ ਜਾਂਚਕ",
+        "wrong1": "ਪੰਨਾ ਨੰਬਰ ਦੇਣਾ",
+        "wrong2": "ਮੇਲ ਮਰਜ",
+        "wrong3": "ਪ੍ਰਿੰਟ ਝਲਕ",
+        "explanation": "ਸ਼ਬਦ-ਜੋੜ ਜਾਂਚਕ ਸੰਭਾਵਿਤ ਗਲਤ ਸ਼ਬਦ ਦਰਸਾਉਂਦਾ ਹੈ; ਸੁਝਾਵਾਂ ਬਾਰੇ ਫਿਰ ਵੀ ਵਿਚਾਰ ਕਰਨਾ ਚਾਹੀਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is the main purpose of mail merge?",
+    "answer": "Create personalized documents from a template and data list",
+    "wrong1": "Combine all inbox messages into one image",
+    "wrong2": "Delete duplicate files automatically",
+    "wrong3": "Encrypt every email attachment",
+    "explanation": "Mail merge inserts recipient-specific fields from a data source into a common template.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "मेल मर्ज का मुख्य उद्देश्य क्या है?",
+        "answer": "टेम्पलेट और डेटा सूची से व्यक्तिगत दस्तावेज़ बनाना",
+        "wrong1": "इनबॉक्स के सभी संदेशों को एक छवि बनाना",
+        "wrong2": "डुप्लिकेट फ़ाइलें स्वतः मिटाना",
+        "wrong3": "हर ईमेल संलग्नक एन्क्रिप्ट करना",
+        "explanation": "मेल मर्ज साझा टेम्पलेट में डेटा स्रोत से प्राप्तकर्ता-विशेष विवरण भरता है।"
+      },
+      "pa": {
+        "prompt": "ਮੇਲ ਮਰਜ ਦਾ ਮੁੱਖ ਉਦੇਸ਼ ਕੀ ਹੈ?",
+        "answer": "ਟੈਂਪਲੇਟ ਅਤੇ ਡਾਟਾ ਸੂਚੀ ਤੋਂ ਵਿਅਕਤੀਗਤ ਦਸਤਾਵੇਜ਼ ਬਣਾਉਣਾ",
+        "wrong1": "ਇਨਬਾਕਸ ਦੇ ਸਾਰੇ ਸੁਨੇਹਿਆਂ ਨੂੰ ਇੱਕ ਤਸਵੀਰ ਬਣਾਉਣਾ",
+        "wrong2": "ਦੁਹਰਾਈਆਂ ਫਾਈਲਾਂ ਆਪਣੇ ਆਪ ਮਿਟਾਉਣਾ",
+        "wrong3": "ਹਰ ਈਮੇਲ ਅਟੈਚਮੈਂਟ ਐਨਕ੍ਰਿਪਟ ਕਰਨਾ",
+        "explanation": "ਮੇਲ ਮਰਜ ਸਾਂਝੇ ਟੈਂਪਲੇਟ ਵਿੱਚ ਡਾਟਾ ਸਰੋਤ ਤੋਂ ਪ੍ਰਾਪਤਕਰਤਾ ਦੇ ਖਾਸ ਵੇਰਵੇ ਭਰਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is a slide in presentation software?",
+    "answer": "One page or screen of a presentation",
+    "wrong1": "A spreadsheet column",
+    "wrong2": "A computer network cable",
+    "wrong3": "A database password",
+    "explanation": "A presentation consists of slides that hold text, images or other content.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "प्रस्तुति सॉफ़्टवेयर में स्लाइड क्या है?",
+        "answer": "प्रस्तुति का एक पृष्ठ या स्क्रीन",
+        "wrong1": "स्प्रेडशीट का स्तंभ",
+        "wrong2": "कंप्यूटर नेटवर्क केबल",
+        "wrong3": "डेटाबेस पासवर्ड",
+        "explanation": "प्रस्तुति स्लाइडों से बनती है जिनमें पाठ, चित्र या अन्य सामग्री होती है।"
+      },
+      "pa": {
+        "prompt": "ਪੇਸ਼ਕਾਰੀ ਸਾਫਟਵੇਅਰ ਵਿੱਚ ਸਲਾਈਡ ਕੀ ਹੈ?",
+        "answer": "ਪੇਸ਼ਕਾਰੀ ਦਾ ਇੱਕ ਪੰਨਾ ਜਾਂ ਸਕ੍ਰੀਨ",
+        "wrong1": "ਸਪ੍ਰੈਡਸ਼ੀਟ ਦਾ ਕਾਲਮ",
+        "wrong2": "ਕੰਪਿਊਟਰ ਨੈੱਟਵਰਕ ਕੇਬਲ",
+        "wrong3": "ਡਾਟਾਬੇਸ ਪਾਸਵਰਡ",
+        "explanation": "ਪੇਸ਼ਕਾਰੀ ਸਲਾਈਡਾਂ ਤੋਂ ਬਣਦੀ ਹੈ ਜਿਨ੍ਹਾਂ ਵਿੱਚ ਲਿਖਤ, ਤਸਵੀਰਾਂ ਜਾਂ ਹੋਰ ਸਮੱਗਰੀ ਹੁੰਦੀ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which network usually covers a small local area such as one office building?",
+    "answer": "LAN",
+    "wrong1": "WAN",
+    "wrong2": "The entire Internet",
+    "wrong3": "A global satellite network",
+    "explanation": "A local area network (LAN) connects devices within a limited local area.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "एक कार्यालय भवन जैसे छोटे स्थानीय क्षेत्र में सामान्यतः कौन-सा नेटवर्क होता है?",
+        "answer": "LAN",
+        "wrong1": "WAN",
+        "wrong2": "पूरा इंटरनेट",
+        "wrong3": "वैश्विक उपग्रह नेटवर्क",
+        "explanation": "लोकल एरिया नेटवर्क (LAN) सीमित स्थानीय क्षेत्र के उपकरण जोड़ता है।"
+      },
+      "pa": {
+        "prompt": "ਇੱਕ ਦਫ਼ਤਰੀ ਇਮਾਰਤ ਵਰਗੇ ਛੋਟੇ ਸਥਾਨਕ ਖੇਤਰ ਵਿੱਚ ਆਮ ਤੌਰ ਉੱਤੇ ਕਿਹੜਾ ਨੈੱਟਵਰਕ ਹੁੰਦਾ ਹੈ?",
+        "answer": "LAN",
+        "wrong1": "WAN",
+        "wrong2": "ਪੂਰਾ ਇੰਟਰਨੈੱਟ",
+        "wrong3": "ਵਿਸ਼ਵ ਉਪਗ੍ਰਹਿ ਨੈੱਟਵਰਕ",
+        "explanation": "ਲੋਕਲ ਏਰੀਆ ਨੈੱਟਵਰਕ (LAN) ਸੀਮਿਤ ਸਥਾਨਕ ਖੇਤਰ ਦੇ ਯੰਤਰ ਜੋੜਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is the principal role of a router?",
+    "answer": "Forward packets between networks",
+    "wrong1": "Display web pages on a screen",
+    "wrong2": "Scan paper documents",
+    "wrong3": "Convert text into printed pages",
+    "explanation": "A router uses network information to forward data packets between networks.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "राउटर का मुख्य कार्य क्या है?",
+        "answer": "नेटवर्कों के बीच डेटा पैकेट भेजना",
+        "wrong1": "स्क्रीन पर वेब पृष्ठ दिखाना",
+        "wrong2": "कागज़ी दस्तावेज़ स्कैन करना",
+        "wrong3": "पाठ को मुद्रित पृष्ठ बनाना",
+        "explanation": "राउटर नेटवर्क जानकारी से डेटा पैकेट नेटवर्कों के बीच आगे भेजता है।"
+      },
+      "pa": {
+        "prompt": "ਰਾਊਟਰ ਦਾ ਮੁੱਖ ਕੰਮ ਕੀ ਹੈ?",
+        "answer": "ਨੈੱਟਵਰਕਾਂ ਵਿਚਕਾਰ ਡਾਟਾ ਪੈਕੇਟ ਭੇਜਣਾ",
+        "wrong1": "ਸਕ੍ਰੀਨ ਉੱਤੇ ਵੈੱਬ ਪੰਨੇ ਦਿਖਾਉਣਾ",
+        "wrong2": "ਕਾਗਜ਼ੀ ਦਸਤਾਵੇਜ਼ ਸਕੈਨ ਕਰਨਾ",
+        "wrong3": "ਲਿਖਤ ਨੂੰ ਛਪੇ ਪੰਨੇ ਬਣਾਉਣਾ",
+        "explanation": "ਰਾਊਟਰ ਨੈੱਟਵਰਕ ਜਾਣਕਾਰੀ ਨਾਲ ਡਾਟਾ ਪੈਕੇਟ ਨੈੱਟਵਰਕਾਂ ਵਿਚਕਾਰ ਅੱਗੇ ਭੇਜਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What does DNS primarily do?",
+    "answer": "Translate domain names into IP addresses",
+    "wrong1": "Compress every image file",
+    "wrong2": "Supply electrical power to a computer",
+    "wrong3": "Print web pages",
+    "explanation": "The Domain Name System resolves human-readable domain names to network addresses.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "DNS मुख्यतः क्या करता है?",
+        "answer": "डोमेन नामों को IP पतों में बदलता है",
+        "wrong1": "हर छवि फ़ाइल संपीड़ित करता है",
+        "wrong2": "कंप्यूटर को बिजली देता है",
+        "wrong3": "वेब पृष्ठ छापता है",
+        "explanation": "डोमेन नेम सिस्टम पढ़ने योग्य डोमेन नामों का नेटवर्क पतों से मिलान करता है।"
+      },
+      "pa": {
+        "prompt": "DNS ਮੁੱਖ ਤੌਰ ਉੱਤੇ ਕੀ ਕਰਦਾ ਹੈ?",
+        "answer": "ਡੋਮੇਨ ਨਾਮਾਂ ਨੂੰ IP ਪਤਿਆਂ ਵਿੱਚ ਬਦਲਦਾ ਹੈ",
+        "wrong1": "ਹਰ ਤਸਵੀਰ ਫਾਈਲ ਸੰਕੁਚਿਤ ਕਰਦਾ ਹੈ",
+        "wrong2": "ਕੰਪਿਊਟਰ ਨੂੰ ਬਿਜਲੀ ਦਿੰਦਾ ਹੈ",
+        "wrong3": "ਵੈੱਬ ਪੰਨੇ ਛਾਪਦਾ ਹੈ",
+        "explanation": "ਡੋਮੇਨ ਨੇਮ ਸਿਸਟਮ ਪੜ੍ਹਨਯੋਗ ਡੋਮੇਨ ਨਾਮਾਂ ਦਾ ਨੈੱਟਵਰਕ ਪਤਿਆਂ ਨਾਲ ਮਿਲਾਨ ਕਰਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which protocol is commonly used to send email from a mail client to a mail server?",
+    "answer": "SMTP",
+    "wrong1": "FTP",
+    "wrong2": "DHCP",
+    "wrong3": "ARP",
+    "explanation": "Simple Mail Transfer Protocol (SMTP) handles email submission and transfer.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "मेल क्लाइंट से मेल सर्वर तक ईमेल भेजने में सामान्यतः कौन-सा प्रोटोकॉल प्रयोग होता है?",
+        "answer": "SMTP",
+        "wrong1": "FTP",
+        "wrong2": "DHCP",
+        "wrong3": "ARP",
+        "explanation": "सिंपल मेल ट्रांसफर प्रोटोकॉल (SMTP) ईमेल जमा और स्थानांतरण का काम करता है।"
+      },
+      "pa": {
+        "prompt": "ਮੇਲ ਕਲਾਇੰਟ ਤੋਂ ਮੇਲ ਸਰਵਰ ਤੱਕ ਈਮੇਲ ਭੇਜਣ ਲਈ ਆਮ ਤੌਰ ਉੱਤੇ ਕਿਹੜਾ ਪ੍ਰੋਟੋਕੋਲ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ?",
+        "answer": "SMTP",
+        "wrong1": "FTP",
+        "wrong2": "DHCP",
+        "wrong3": "ARP",
+        "explanation": "ਸਿੰਪਲ ਮੇਲ ਟ੍ਰਾਂਸਫਰ ਪ੍ਰੋਟੋਕੋਲ (SMTP) ਈਮੇਲ ਜਮ੍ਹਾਂ ਅਤੇ ਟ੍ਰਾਂਸਫਰ ਕਰਨ ਦਾ ਕੰਮ ਕਰਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What does the Bcc field in an email do?",
+    "answer": "Hide Bcc recipients’ addresses from other recipients",
+    "wrong1": "Make the message publicly searchable",
+    "wrong2": "Guarantee the message is virus-free",
+    "wrong3": "Increase the attachment size limit",
+    "explanation": "Blind carbon copy sends a copy without revealing Bcc recipients in the visible recipient list.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "ईमेल में Bcc का क्या काम है?",
+        "answer": "Bcc प्राप्तकर्ताओं के पते अन्य प्राप्तकर्ताओं से छिपाना",
+        "wrong1": "संदेश को सार्वजनिक खोज योग्य बनाना",
+        "wrong2": "संदेश को वायरस-मुक्त सुनिश्चित करना",
+        "wrong3": "संलग्नक आकार सीमा बढ़ाना",
+        "explanation": "ब्लाइंड कार्बन कॉपी, Bcc प्राप्तकर्ताओं को दृश्य सूची में दिखाए बिना प्रति भेजती है।"
+      },
+      "pa": {
+        "prompt": "ਈਮੇਲ ਵਿੱਚ Bcc ਦਾ ਕੀ ਕੰਮ ਹੈ?",
+        "answer": "Bcc ਪ੍ਰਾਪਤਕਰਤਾਵਾਂ ਦੇ ਪਤੇ ਹੋਰ ਪ੍ਰਾਪਤਕਰਤਾਵਾਂ ਤੋਂ ਲੁਕਾਉਣਾ",
+        "wrong1": "ਸੁਨੇਹੇ ਨੂੰ ਜਨਤਕ ਖੋਜਯੋਗ ਬਣਾਉਣਾ",
+        "wrong2": "ਸੁਨੇਹੇ ਨੂੰ ਵਾਇਰਸ-ਮੁਕਤ ਯਕੀਨੀ ਬਣਾਉਣਾ",
+        "wrong3": "ਅਟੈਚਮੈਂਟ ਆਕਾਰ ਸੀਮਾ ਵਧਾਉਣਾ",
+        "explanation": "ਬਲਾਈਂਡ ਕਾਰਬਨ ਕਾਪੀ, Bcc ਪ੍ਰਾਪਤਕਰਤਾਵਾਂ ਨੂੰ ਦਿਸਦੀ ਸੂਚੀ ਵਿੱਚ ਦਿਖਾਏ ਬਿਨਾਂ ਕਾਪੀ ਭੇਜਦੀ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What does HTTPS add to HTTP for data in transit?",
+    "answer": "TLS encryption and authentication of the connection",
+    "wrong1": "A guarantee that all page claims are true",
+    "wrong2": "Unlimited download speed",
+    "wrong3": "Automatic deletion of browser history",
+    "explanation": "HTTPS uses TLS to protect the connection; it does not establish that website content is truthful.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "भेजे जा रहे डेटा के लिए HTTPS, HTTP में क्या जोड़ता है?",
+        "answer": "कनेक्शन का TLS एन्क्रिप्शन और प्रमाणीकरण",
+        "wrong1": "पृष्ठ के सभी दावे सत्य होने की गारंटी",
+        "wrong2": "असीमित डाउनलोड गति",
+        "wrong3": "ब्राउज़र इतिहास का स्वतः मिटना",
+        "explanation": "HTTPS कनेक्शन की रक्षा के लिए TLS उपयोग करता है; इससे वेबसाइट की सामग्री सत्य साबित नहीं होती।"
+      },
+      "pa": {
+        "prompt": "ਭੇਜੇ ਜਾ ਰਹੇ ਡਾਟੇ ਲਈ HTTPS, HTTP ਵਿੱਚ ਕੀ ਜੋੜਦਾ ਹੈ?",
+        "answer": "ਕਨੈਕਸ਼ਨ ਦਾ TLS ਐਨਕ੍ਰਿਪਸ਼ਨ ਅਤੇ ਪ੍ਰਮਾਣੀਕਰਨ",
+        "wrong1": "ਪੰਨੇ ਦੇ ਸਾਰੇ ਦਾਅਵੇ ਸੱਚ ਹੋਣ ਦੀ ਗਾਰੰਟੀ",
+        "wrong2": "ਬੇਅੰਤ ਡਾਊਨਲੋਡ ਗਤੀ",
+        "wrong3": "ਬ੍ਰਾਊਜ਼ਰ ਇਤਿਹਾਸ ਆਪਣੇ ਆਪ ਮਿਟਣਾ",
+        "explanation": "HTTPS ਕਨੈਕਸ਼ਨ ਦੀ ਰੱਖਿਆ ਲਈ TLS ਵਰਤਦਾ ਹੈ; ਇਸ ਨਾਲ ਵੈੱਬਸਾਈਟ ਦੀ ਸਮੱਗਰੀ ਸੱਚ ਸਾਬਤ ਨਹੀਂ ਹੁੰਦੀ।"
+      }
+    },
+    "source": {
+      "title": "MDN — HTTPS glossary",
+      "url": "https://developer.mozilla.org/en-US/docs/Glossary/HTTPS"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "An email pretending to be your bank asks for your password through a link. What is this tactic called?",
+    "answer": "Phishing",
+    "wrong1": "Defragmentation",
+    "wrong2": "Formatting",
+    "wrong3": "Rendering",
+    "explanation": "Phishing impersonates a trusted party to trick people into revealing sensitive information.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "बैंक के नाम से आया ईमेल लिंक पर पासवर्ड माँगता है। इस चाल को क्या कहते हैं?",
+        "answer": "फ़िशिंग",
+        "wrong1": "डीफ़्रैग्मेंटेशन",
+        "wrong2": "फ़ॉर्मैटिंग",
+        "wrong3": "रेंडरिंग",
+        "explanation": "फ़िशिंग में भरोसेमंद संस्था का रूप धरकर संवेदनशील जानकारी माँगी जाती है।"
+      },
+      "pa": {
+        "prompt": "ਬੈਂਕ ਦੇ ਨਾਮ ਨਾਲ ਆਈ ਈਮੇਲ ਲਿੰਕ ਉੱਤੇ ਪਾਸਵਰਡ ਮੰਗਦੀ ਹੈ। ਇਸ ਚਾਲ ਨੂੰ ਕੀ ਕਹਿੰਦੇ ਹਨ?",
+        "answer": "ਫਿਸ਼ਿੰਗ",
+        "wrong1": "ਡੀਫ੍ਰੈਗਮੈਂਟੇਸ਼ਨ",
+        "wrong2": "ਫਾਰਮੈਟਿੰਗ",
+        "wrong3": "ਰੈਂਡਰਿੰਗ",
+        "explanation": "ਫਿਸ਼ਿੰਗ ਵਿੱਚ ਭਰੋਸੇਯੋਗ ਸੰਸਥਾ ਦਾ ਰੂਪ ਧਾਰ ਕੇ ਸੰਵੇਦਨਸ਼ੀਲ ਜਾਣਕਾਰੀ ਮੰਗੀ ਜਾਂਦੀ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "CISA — Secure Our World: cybersecurity guidance",
+      "url": "https://www.cisa.gov/secure-our-world"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which is an example of two different authentication factors?",
+    "answer": "A password and a code from a separate authenticator device",
+    "wrong1": "Two passwords",
+    "wrong2": "A password and a security-question answer",
+    "wrong3": "Two security-question answers",
+    "explanation": "A password is something you know; a separate authenticator device is something you have.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "दो अलग प्रमाणीकरण कारकों का उदाहरण कौन-सा है?",
+        "answer": "पासवर्ड और अलग प्रमाणक उपकरण का कोड",
+        "wrong1": "दो पासवर्ड",
+        "wrong2": "पासवर्ड और सुरक्षा प्रश्न का उत्तर",
+        "wrong3": "दो सुरक्षा प्रश्नों के उत्तर",
+        "explanation": "पासवर्ड आपके ज्ञान का कारक है; अलग प्रमाणक उपकरण आपके पास होने का कारक है।"
+      },
+      "pa": {
+        "prompt": "ਦੋ ਵੱਖਰੇ ਪ੍ਰਮਾਣੀਕਰਨ ਕਾਰਕਾਂ ਦੀ ਮਿਸਾਲ ਕਿਹੜੀ ਹੈ?",
+        "answer": "ਪਾਸਵਰਡ ਅਤੇ ਵੱਖਰੇ ਪ੍ਰਮਾਣਕ ਯੰਤਰ ਦਾ ਕੋਡ",
+        "wrong1": "ਦੋ ਪਾਸਵਰਡ",
+        "wrong2": "ਪਾਸਵਰਡ ਅਤੇ ਸੁਰੱਖਿਆ ਸਵਾਲ ਦਾ ਜਵਾਬ",
+        "wrong3": "ਦੋ ਸੁਰੱਖਿਆ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ",
+        "explanation": "ਪਾਸਵਰਡ ਤੁਹਾਡੇ ਗਿਆਨ ਦਾ ਕਾਰਕ ਹੈ; ਵੱਖਰਾ ਪ੍ਰਮਾਣਕ ਯੰਤਰ ਤੁਹਾਡੇ ਕੋਲ ਹੋਣ ਦਾ ਕਾਰਕ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "CISA — Secure Our World: cybersecurity guidance",
+      "url": "https://www.cisa.gov/secure-our-world"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is the main purpose of a data backup?",
+    "answer": "Keep a separate recoverable copy of data",
+    "wrong1": "Increase the monitor resolution",
+    "wrong2": "Replace all passwords",
+    "wrong3": "Remove the need for updates",
+    "explanation": "A backup provides a copy from which data can be restored after loss or damage.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "डेटा बैकअप का मुख्य उद्देश्य क्या है?",
+        "answer": "डेटा की अलग पुनर्प्राप्त करने योग्य प्रति रखना",
+        "wrong1": "मॉनिटर का रिज़ॉल्यूशन बढ़ाना",
+        "wrong2": "सभी पासवर्ड बदलना",
+        "wrong3": "अपडेट की आवश्यकता हटाना",
+        "explanation": "बैकअप से डेटा खोने या क्षतिग्रस्त होने पर उसे वापस पाया जा सकता है।"
+      },
+      "pa": {
+        "prompt": "ਡਾਟਾ ਬੈਕਅੱਪ ਦਾ ਮੁੱਖ ਉਦੇਸ਼ ਕੀ ਹੈ?",
+        "answer": "ਡਾਟੇ ਦੀ ਵੱਖਰੀ ਮੁੜ ਪ੍ਰਾਪਤ ਕਰਨਯੋਗ ਕਾਪੀ ਰੱਖਣਾ",
+        "wrong1": "ਮਾਨੀਟਰ ਦਾ ਰੈਜ਼ੋਲਿਊਸ਼ਨ ਵਧਾਉਣਾ",
+        "wrong2": "ਸਾਰੇ ਪਾਸਵਰਡ ਬਦਲਣਾ",
+        "wrong3": "ਅੱਪਡੇਟ ਦੀ ਲੋੜ ਹਟਾਉਣਾ",
+        "explanation": "ਬੈਕਅੱਪ ਤੋਂ ਡਾਟਾ ਗੁਆਚਣ ਜਾਂ ਖਰਾਬ ਹੋਣ ਉੱਤੇ ਵਾਪਸ ਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "CISA — Secure Our World: cybersecurity guidance",
+      "url": "https://www.cisa.gov/secure-our-world"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What does a firewall primarily control?",
+    "answer": "Network traffic according to security rules",
+    "wrong1": "The brightness of a display",
+    "wrong2": "The rotation speed of a printer roller",
+    "wrong3": "The spelling of document text",
+    "explanation": "A firewall filters incoming or outgoing network traffic using configured rules.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "फ़ायरवॉल मुख्यतः क्या नियंत्रित करता है?",
+        "answer": "सुरक्षा नियमों के अनुसार नेटवर्क ट्रैफ़िक",
+        "wrong1": "डिस्प्ले की चमक",
+        "wrong2": "प्रिंटर रोलर की घूमने की गति",
+        "wrong3": "दस्तावेज़ पाठ की वर्तनी",
+        "explanation": "फ़ायरवॉल निर्धारित नियमों से आने-जाने वाला नेटवर्क ट्रैफ़िक छाँटता है।"
+      },
+      "pa": {
+        "prompt": "ਫਾਇਰਵਾਲ ਮੁੱਖ ਤੌਰ ਉੱਤੇ ਕੀ ਨਿਯੰਤਰਿਤ ਕਰਦਾ ਹੈ?",
+        "answer": "ਸੁਰੱਖਿਆ ਨਿਯਮਾਂ ਅਨੁਸਾਰ ਨੈੱਟਵਰਕ ਟ੍ਰੈਫਿਕ",
+        "wrong1": "ਡਿਸਪਲੇ ਦੀ ਚਮਕ",
+        "wrong2": "ਪ੍ਰਿੰਟਰ ਰੋਲਰ ਦੇ ਘੁੰਮਣ ਦੀ ਗਤੀ",
+        "wrong3": "ਦਸਤਾਵੇਜ਼ ਲਿਖਤ ਦੇ ਸ਼ਬਦ-ਜੋੜ",
+        "explanation": "ਫਾਇਰਵਾਲ ਤੈਅ ਨਿਯਮਾਂ ਨਾਲ ਆਉਣ-ਜਾਣ ਵਾਲਾ ਨੈੱਟਵਰਕ ਟ੍ਰੈਫਿਕ ਛਾਣਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "CISA — Secure Our World: cybersecurity guidance",
+      "url": "https://www.cisa.gov/secure-our-world"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Malware encrypts a victim’s files and demands payment to unlock them. What type is it?",
+    "answer": "Ransomware",
+    "wrong1": "Spreadsheet software",
+    "wrong2": "Device firmware",
+    "wrong3": "Screen saver",
+    "explanation": "Ransomware holds access to data or a system hostage and demands a ransom.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "दुर्भावनापूर्ण सॉफ़्टवेयर फ़ाइलें एन्क्रिप्ट करके खोलने के लिए भुगतान माँगता है। यह किस प्रकार का है?",
+        "answer": "रैनसमवेयर",
+        "wrong1": "स्प्रेडशीट सॉफ़्टवेयर",
+        "wrong2": "डिवाइस फ़र्मवेयर",
+        "wrong3": "स्क्रीन सेवर",
+        "explanation": "रैनसमवेयर डेटा या सिस्टम की पहुँच रोककर फिरौती माँगता है।"
+      },
+      "pa": {
+        "prompt": "ਨੁਕਸਾਨਦੇਹ ਸਾਫਟਵੇਅਰ ਫਾਈਲਾਂ ਐਨਕ੍ਰਿਪਟ ਕਰਕੇ ਖੋਲ੍ਹਣ ਲਈ ਭੁਗਤਾਨ ਮੰਗਦਾ ਹੈ। ਇਹ ਕਿਸ ਕਿਸਮ ਦਾ ਹੈ?",
+        "answer": "ਰੈਨਸਮਵੇਅਰ",
+        "wrong1": "ਸਪ੍ਰੈਡਸ਼ੀਟ ਸਾਫਟਵੇਅਰ",
+        "wrong2": "ਡਿਵਾਈਸ ਫਰਮਵੇਅਰ",
+        "wrong3": "ਸਕ੍ਰੀਨ ਸੇਵਰ",
+        "explanation": "ਰੈਨਸਮਵੇਅਰ ਡਾਟੇ ਜਾਂ ਸਿਸਟਮ ਦੀ ਪਹੁੰਚ ਰੋਕ ਕੇ ਫਿਰੌਤੀ ਮੰਗਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "CISA — Secure Our World: cybersecurity guidance",
+      "url": "https://www.cisa.gov/secure-our-world"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "In a relational database table, what is the purpose of a primary key?",
+    "answer": "Uniquely identify each row",
+    "wrong1": "Store only pictures",
+    "wrong2": "Sort every query automatically",
+    "wrong3": "Allow duplicate identifiers for every row",
+    "explanation": "A primary key uniquely identifies records and cannot contain null key values.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "संबंधपरक डेटाबेस तालिका में प्राथमिक कुंजी का उद्देश्य क्या है?",
+        "answer": "हर पंक्ति को विशिष्ट पहचान देना",
+        "wrong1": "केवल चित्र रखना",
+        "wrong2": "हर क्वेरी स्वतः क्रमबद्ध करना",
+        "wrong3": "हर पंक्ति में समान पहचानकर्ता स्वीकार करना",
+        "explanation": "प्राथमिक कुंजी रिकॉर्ड की विशिष्ट पहचान करती है और उसके कुंजी मान null नहीं हो सकते।"
+      },
+      "pa": {
+        "prompt": "ਸੰਬੰਧਾਤਮਕ ਡਾਟਾਬੇਸ ਸਾਰਣੀ ਵਿੱਚ ਮੁੱਢਲੀ ਕੁੰਜੀ ਦਾ ਉਦੇਸ਼ ਕੀ ਹੈ?",
+        "answer": "ਹਰ ਕਤਾਰ ਨੂੰ ਵਿਲੱਖਣ ਪਛਾਣ ਦੇਣਾ",
+        "wrong1": "ਕੇਵਲ ਤਸਵੀਰਾਂ ਰੱਖਣਾ",
+        "wrong2": "ਹਰ ਕਵੇਰੀ ਆਪਣੇ ਆਪ ਕ੍ਰਮਬੱਧ ਕਰਨਾ",
+        "wrong3": "ਹਰ ਕਤਾਰ ਵਿੱਚ ਇੱਕੋ ਪਛਾਣਕਰਤਾ ਸਵੀਕਾਰ ਕਰਨਾ",
+        "explanation": "ਮੁੱਢਲੀ ਕੁੰਜੀ ਰਿਕਾਰਡ ਦੀ ਵਿਲੱਖਣ ਪਛਾਣ ਕਰਦੀ ਹੈ ਅਤੇ ਉਸ ਦੇ ਕੁੰਜੀ ਮੁੱਲ null ਨਹੀਂ ਹੋ ਸਕਦੇ।"
+      }
+    },
+    "source": {
+      "title": "PostgreSQL — SQL language documentation",
+      "url": "https://www.postgresql.org/docs/current/sql.html"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which SQL command retrieves rows from a database table?",
+    "answer": "SELECT",
+    "wrong1": "DELETE",
+    "wrong2": "DROP",
+    "wrong3": "UPDATE",
+    "explanation": "SELECT reads data; DELETE removes rows, DROP removes objects, and UPDATE changes stored values.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "कौन-सा SQL आदेश डेटाबेस तालिका से पंक्तियाँ प्राप्त करता है?",
+        "answer": "SELECT",
+        "wrong1": "DELETE",
+        "wrong2": "DROP",
+        "wrong3": "UPDATE",
+        "explanation": "SELECT डेटा पढ़ता है; DELETE पंक्तियाँ हटाता है, DROP ऑब्जेक्ट हटाता है और UPDATE मान बदलता है।"
+      },
+      "pa": {
+        "prompt": "ਕਿਹੜਾ SQL ਹੁਕਮ ਡਾਟਾਬੇਸ ਸਾਰਣੀ ਤੋਂ ਕਤਾਰਾਂ ਪ੍ਰਾਪਤ ਕਰਦਾ ਹੈ?",
+        "answer": "SELECT",
+        "wrong1": "DELETE",
+        "wrong2": "DROP",
+        "wrong3": "UPDATE",
+        "explanation": "SELECT ਡਾਟਾ ਪੜ੍ਹਦਾ ਹੈ; DELETE ਕਤਾਰਾਂ ਹਟਾਉਂਦਾ ਹੈ, DROP ਆਬਜੈਕਟ ਹਟਾਉਂਦਾ ਹੈ ਅਤੇ UPDATE ਮੁੱਲ ਬਦਲਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "PostgreSQL — SQL language documentation",
+      "url": "https://www.postgresql.org/docs/current/sql.html"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which HTML element creates a hyperlink when used with an href attribute?",
+    "answer": "<a>",
+    "wrong1": "<p>",
+    "wrong2": "<h1>",
+    "wrong3": "<br>",
+    "explanation": "The anchor element <a> uses href to specify the link destination.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "href विशेषता के साथ कौन-सा HTML एलिमेंट हाइपरलिंक बनाता है?",
+        "answer": "<a>",
+        "wrong1": "<p>",
+        "wrong2": "<h1>",
+        "wrong3": "<br>",
+        "explanation": "एंकर एलिमेंट <a> में href लिंक का गंतव्य बताता है।"
+      },
+      "pa": {
+        "prompt": "href ਵਿਸ਼ੇਸ਼ਤਾ ਨਾਲ ਕਿਹੜਾ HTML ਐਲੀਮੈਂਟ ਹਾਈਪਰਲਿੰਕ ਬਣਾਉਂਦਾ ਹੈ?",
+        "answer": "<a>",
+        "wrong1": "<p>",
+        "wrong2": "<h1>",
+        "wrong3": "<br>",
+        "explanation": "ਐਂਕਰ ਐਲੀਮੈਂਟ <a> ਵਿੱਚ href ਲਿੰਕ ਦੀ ਮੰਜ਼ਿਲ ਦੱਸਦਾ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "MDN — The anchor element",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "What is Unicode designed to provide?",
+    "answer": "A consistent way to represent text characters from many writing systems",
+    "wrong1": "A method only for compressing videos",
+    "wrong2": "A type of printer cartridge",
+    "wrong3": "A rule requiring all text to be English",
+    "explanation": "Unicode assigns code points to characters across many scripts, supporting multilingual text.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "यूनिकोड किस उद्देश्य के लिए बनाया गया है?",
+        "answer": "कई लिपियों के अक्षरों को दर्शाने की संगत व्यवस्था",
+        "wrong1": "केवल वीडियो संपीड़ित करने की विधि",
+        "wrong2": "प्रिंटर कार्ट्रिज का प्रकार",
+        "wrong3": "सारा पाठ अंग्रेज़ी में रखने का नियम",
+        "explanation": "यूनिकोड कई लिपियों के अक्षरों को कोड पॉइंट देता है, जिससे बहुभाषी पाठ संभव होता है।"
+      },
+      "pa": {
+        "prompt": "ਯੂਨੀਕੋਡ ਕਿਸ ਉਦੇਸ਼ ਲਈ ਬਣਾਇਆ ਗਿਆ ਹੈ?",
+        "answer": "ਕਈ ਲਿਪੀਆਂ ਦੇ ਅੱਖਰ ਦਰਸਾਉਣ ਦੀ ਇਕਸਾਰ ਵਿਵਸਥਾ",
+        "wrong1": "ਕੇਵਲ ਵੀਡੀਓ ਸੰਕੁਚਿਤ ਕਰਨ ਦੀ ਵਿਧੀ",
+        "wrong2": "ਪ੍ਰਿੰਟਰ ਕਾਰਟ੍ਰਿਜ ਦੀ ਕਿਸਮ",
+        "wrong3": "ਸਾਰੀ ਲਿਖਤ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਰੱਖਣ ਦਾ ਨਿਯਮ",
+        "explanation": "ਯੂਨੀਕੋਡ ਕਈ ਲਿਪੀਆਂ ਦੇ ਅੱਖਰਾਂ ਨੂੰ ਕੋਡ ਪੁਆਇੰਟ ਦਿੰਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਬਹੁਭਾਸ਼ੀ ਲਿਖਤ ਸੰਭਵ ਹੁੰਦੀ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "Unicode Consortium — What is Unicode?",
+      "url": "https://www.unicode.org/standard/WhatIsUnicode.html"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  },
+  {
+    "prompt": "Which sequence best describes the basic information-processing cycle?",
+    "answer": "Input → Processing → Output",
+    "wrong1": "Output → Input → No processing",
+    "wrong2": "Printing → Scanning → Deletion only",
+    "wrong3": "Storage → Shutdown → No output",
+    "explanation": "Data enters as input, is processed, and produces output; storage may support the cycle.",
+    "subject": "Computer & ICT",
+    "translations": {
+      "hi": {
+        "prompt": "मूल सूचना-प्रसंस्करण चक्र का सही क्रम कौन-सा है?",
+        "answer": "इनपुट → प्रसंस्करण → आउटपुट",
+        "wrong1": "आउटपुट → इनपुट → कोई प्रसंस्करण नहीं",
+        "wrong2": "केवल छपाई → स्कैनिंग → मिटाना",
+        "wrong3": "भंडारण → बंद करना → कोई आउटपुट नहीं",
+        "explanation": "डेटा इनपुट के रूप में आता है, प्रसंस्कृत होता है और आउटपुट देता है; भंडारण चक्र में सहायक हो सकता है।"
+      },
+      "pa": {
+        "prompt": "ਮੁੱਢਲੇ ਜਾਣਕਾਰੀ-ਪ੍ਰਕਿਰਿਆ ਚੱਕਰ ਦਾ ਸਹੀ ਕ੍ਰਮ ਕਿਹੜਾ ਹੈ?",
+        "answer": "ਇਨਪੁੱਟ → ਪ੍ਰਕਿਰਿਆ → ਆਉਟਪੁੱਟ",
+        "wrong1": "ਆਉਟਪੁੱਟ → ਇਨਪੁੱਟ → ਕੋਈ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ",
+        "wrong2": "ਕੇਵਲ ਛਪਾਈ → ਸਕੈਨਿੰਗ → ਮਿਟਾਉਣਾ",
+        "wrong3": "ਸਟੋਰੇਜ → ਬੰਦ ਕਰਨਾ → ਕੋਈ ਆਉਟਪੁੱਟ ਨਹੀਂ",
+        "explanation": "ਡਾਟਾ ਇਨਪੁੱਟ ਵਜੋਂ ਆਉਂਦਾ ਹੈ, ਪ੍ਰਕਿਰਿਆ ਹੁੰਦੀ ਹੈ ਅਤੇ ਆਉਟਪੁੱਟ ਦਿੰਦਾ ਹੈ; ਸਟੋਰੇਜ ਚੱਕਰ ਵਿੱਚ ਸਹਾਇਕ ਹੋ ਸਕਦੀ ਹੈ।"
+      }
+    },
+    "source": {
+      "title": "NCERT Computer Science textbooks — computer systems, data representation and networking",
+      "url": "https://www.ncert.nic.in/textbook.php"
+    },
+    "aiGenerated": true,
+    "reviewStatus": "pending"
+  }
+]

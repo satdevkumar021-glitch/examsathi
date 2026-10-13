@@ -234,17 +234,11 @@ export function getOrderedSetQuestions(config: {
   setNumber?: number;
 }): { questions: Question[]; setNumber: number; totalSets: number; totalPoolCount: number } {
   const setSize = Number.isFinite(config.count) ? Math.max(1, Math.min(150, Math.floor(config.count!))) : 50;
-  let orderedPool = getBalancedOrderedPool(config);
-  if (orderedPool.length === 0 && config.topicId && config.topicId !== 'all') {
-    orderedPool = getBalancedOrderedPool({ ...config, examId: undefined });
-  }
-  if (orderedPool.length === 0 && config.difficulty && config.difficulty !== 'all') {
-    orderedPool = getBalancedOrderedPool({ ...config, difficulty: 'all' });
-  }
+  const orderedPool = getBalancedOrderedPool(config);
   const totalPoolCount = orderedPool.length;
   const totalSets = Math.max(1, Math.ceil(totalPoolCount / setSize));
   const requestedSet = Number.isFinite(config.setNumber) && config.setNumber! >= 1 ? Math.floor(config.setNumber!) : 1;
-  const normalizedSet = ((requestedSet - 1) % totalSets) + 1;
+  const normalizedSet = requestedSet;
   const startIdx = (normalizedSet - 1) * setSize;
   const questions = orderedPool.slice(startIdx, startIdx + setSize);
   return {

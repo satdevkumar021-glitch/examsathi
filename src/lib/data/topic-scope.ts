@@ -167,6 +167,7 @@ export const TOPIC_ALIASES: Record<string, string> = {
 
 /** Explicit broader-topic -> eligible source-topic families. Never infer from exam tags. */
 export const TOPIC_FAMILIES: Record<string, string[]> = {
+  'clerk-revision-200':['clerk-gk-fast-practice','clerk-revision-reasoning','clerk-revision-computer','clerk-revision-punjabi','clerk-revision-english'],
   'clerk-gk-fast-practice': ['gk-polity-foundation','gk-history-foundation','gk-geography-foundation','gk-science-foundation','gk-punjab-foundation'],
   'rajasthan-gk-heritage': ['reet-rajasthan-history', 'reet-rajasthan-geography', 'reet-rajasthan-culture', 'raj-history-pratap', 'rajasthan-heritage-forts'],
   'english-grammar-lit': ['english-grammar-syntax'],
