@@ -35,5 +35,36 @@ r=await j('POST','/api/admin/content/',{type:'question',title:'direct',topicId:T
 r=await set(); ok('direct publish is served at once', r.o?.questions?.length===1);
 r=await j('GET','/api/admin/content/',null,'tok-educator'); ok('educator list only shows own items', r.o?.items?.every(i=>i.mine)&&r.o.items.length>=1, r.t.slice(0,150));
 r=await j('GET','/api/admin/content/',null,'tok-reviewer'); ok('reviewer sees the whole pipeline', r.o?.items?.length>=2);
+
+// ---- Edit after save ----
+const EDIT_TOPIC='cms-e2e-edit';
+const edit=(id,data,tok,extra={})=>j('PUT','/api/admin/content/',{id,title:'cap',topicId:EDIT_TOPIC,data,...extra},tok);
+r=await j('POST','/api/admin/content/',{type:'question',title:'typo',topicId:EDIT_TOPIC,status:'draft',data:{...q,question:{en:'Which city is the capitol of Punjab (India)?'}}},'tok-educator'); ok('educator saves a draft with a typo (201)', r.s===201, r.t);
+const eid=r.o?.item?.id; const fixed={...q,question:{en:'Which city is the capital of Punjab (India)?',pa:'ਪੰਜਾਬ ਦੀ ਰਾਜਧਾਨੀ ਕਿਹੜਾ ਸ਼ਹਿਰ ਹੈ?'}};
+r=await edit(eid,fixed,'tok-educator'); ok('author edits own draft (200)', r.s===200 && r.o?.item?.status==='draft' && r.o.item.data.question.pa?.startsWith('ਪੰਜਾਬ'), r.t.slice(0,200));
+r=await edit(eid,fixed,'tok-other'); ok('a non-staff user cannot edit (403)', r.s===403, r.t);
+r=await j('POST','/api/admin/content/',{type:'question',title:'theirs',topicId:EDIT_TOPIC,status:'draft',data:q},'tok-super'); const sid=r.o?.item?.id;
+r=await edit(sid,fixed,'tok-educator'); ok("an educator cannot see or edit someone else's item (404)", r.s===404, r.t);
+r=await edit(eid,{...fixed,correct:'Z'},'tok-educator'); ok('an edit is validated like a create (400)', r.s===400, r.t);
+r=await edit(eid,{...fixed,options:{...q.options,B:{en:'chandigarh'}}},'tok-educator'); ok('an edit cannot create duplicate options (400)', r.s===400, r.t);
+r=await edit(eid,fixed,'tok-educator',{status:'published'}); ok('an edit cannot smuggle in a status change', r.s===200 && r.o?.item?.status==='draft', r.t.slice(0,160));
+r=await j('PATCH','/api/admin/content/',{id:eid,to:'review'},'tok-educator'); ok('author submits the corrected draft for review', r.s===200 && r.o?.item?.status==='review', r.t);
+r=await edit(eid,fixed,'tok-educator'); ok('an item under review cannot be edited in place (403)', r.s===403 && /Withdraw/.test(r.t), r.t);
+r=await edit(eid,fixed,'tok-reviewer'); ok('a reviewer cannot rewrite a question they are reviewing (403/404)', r.s===403, r.t);
+r=await j('PATCH','/api/admin/content/',{id:eid,to:'draft'},'tok-educator'); ok('author withdraws it back to draft', r.s===200 && r.o?.item?.status==='draft', r.t);
+r=await j('PATCH','/api/admin/content/',{id:eid,to:'review'},'tok-educator');
+r=await j('PATCH','/api/admin/content/',{id:eid,to:'published'},'tok-reviewer'); ok('reviewer publishes the corrected question', r.s===200 && r.o?.item?.status==='published', r.t);
+r=await edit(eid,{...fixed,correct:'B'},'tok-educator'); ok('a live question cannot be edited in place, not even by its author (403)', r.s===403, r.t);
+r=await edit(eid,{...fixed,correct:'B'},'tok-super'); ok('not even by a superadmin until unpublished (403)', r.s===403, r.t);
+r=await j('POST','/api/questions/set/',{topicId:EDIT_TOPIC,count:10}); ok('what students see is the corrected text, never the typo', JSON.stringify(r.o).includes('capital')&&!JSON.stringify(r.o).includes('capitol'), JSON.stringify(r.o).slice(0,200));
+r=await j('PATCH','/api/admin/content/',{id:eid,to:'draft',note:'fix key'},'tok-super'); ok('superadmin unpublishes to correct it', r.s===200, r.t);
+r=await edit(eid,{...fixed,correct:'B'},'tok-super'); ok('superadmin then edits the draft', r.s===200 && r.o?.item?.data?.correct==='B', r.t.slice(0,160));
+r=await j('POST','/api/questions/set/',{topicId:EDIT_TOPIC,count:10}); ok('the unpublished question is not served while being edited', r.o?.questions?.length===0, r.t.slice(0,160));
+r=await j('PATCH','/api/admin/content/',{id:eid,to:'review'},'tok-super'); r=await j('PATCH','/api/admin/content/',{id:eid,to:'published',note:'ok'},'tok-super'); ok('after the fix it is published again', r.s===200, r.t);
+r=await j('POST','/api/questions/set/',{topicId:EDIT_TOPIC,count:10}); ok('students now get the corrected key and nothing else changed', r.o?.questions?.length===1 && !/"correct"/.test(r.t), r.t.slice(0,160));
+r=await j('POST','/api/questions/reveal/',{ids:['cms-'+eid]}); ok('the revealed key is the edited one (B)', r.o?.reveals?.['cms-'+eid]?.correct==='B', r.t.slice(0,160));
+r=await j('PUT','/api/admin/content/',{id:'nope',title:'x',topicId:'t',data:{}},'tok-educator'); ok('bad id is a 400', r.s===400, r.t);
+r=await j('PUT','/api/admin/content/',{id:eid,title:'x',topicId:'t',data:{}}); ok('no token is a 401', r.s===401, r.t);
+
 console.log(`\n${pass} passed, ${failn} failed`);
 process.exit(failn?1:0);

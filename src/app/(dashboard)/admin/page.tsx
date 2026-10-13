@@ -4,12 +4,23 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { PlusCircle, BookOpen, HelpCircle, Video, FileText, CheckCircle2, ArrowLeft, ShieldCheck, UploadCloud, Check, X, Layers, AlertTriangle } from 'lucide-react';
 import { ALL_LESSONS } from '@/lib/data/lessons';
-import { canDelete, canTransition, isStaffRole, type StaffRole, type WorkflowStatus } from '@/lib/content-workflow';
-import { createContent, deleteContent, listContent, moveContent, type ContentItem } from '@/lib/admin-client';
+import { canDelete, canEdit, canTransition, isStaffRole, type StaffRole, type WorkflowStatus } from '@/lib/content-workflow';
+import { createContent, deleteContent, listContent, moveContent, updateContent, type ContentItem } from '@/lib/admin-client';
 import QualityPanel from '@/components/admin/QualityPanel';
 
 type AdminRole = StaffRole;
 type PipelineItem = ContentItem;
+type OptionKey = 'A' | 'B' | 'C' | 'D';
+type Lang3 = { en: string; hi: string; pa: string };
+const OPTION_KEYS: readonly OptionKey[] = ['A', 'B', 'C', 'D'];
+const blank = (): Lang3 => ({ en: '', hi: '', pa: '' });
+const blankOptions = (): Record<OptionKey, Lang3> => ({ A: blank(), B: blank(), C: blank(), D: blank() });
+/** Only the languages the editor actually filled in are sent. */
+const clean = (t: Lang3) => Object.fromEntries((Object.entries(t) as Array<[keyof Lang3, string]>).filter(([, v]) => v.trim()).map(([k, v]) => [k, v.trim()]));
+const toLang3 = (value: unknown): Lang3 => {
+  const v = (value && typeof value === 'object' ? value : {}) as Partial<Lang3>;
+  return { en: v.en ?? '', hi: v.hi ?? '', pa: v.pa ?? '' };
+};
 
 /** Shows reviewers exactly what the question contains, including the key, before they approve it. */
 function QuestionPreview({ data }: { data: Record<string, unknown> }) {
@@ -47,14 +58,13 @@ export default function AdminResourcePortal() {
 
   // Question Form States
   const [qTopic, setQTopic] = useState('punjab-history');
-  const [qTextHi, setQTextHi] = useState('');
-  const [qTextEn, setQTextEn] = useState('');
-  const [optA, setOptA] = useState('');
-  const [optB, setOptB] = useState('');
-  const [optC, setOptC] = useState('');
-  const [optD, setOptD] = useState('');
-  const [correctOpt, setCorrectOpt] = useState<'A' | 'B' | 'C' | 'D'>('A');
-  const [explanation, setExplanation] = useState('');
+  const [qText, setQText] = useState<Lang3>(blank());
+  const [opts, setOpts] = useState<Record<OptionKey, Lang3>>(blankOptions());
+  const [correctOpt, setCorrectOpt] = useState<OptionKey>('A');
+  const [explanation, setExplanation] = useState<Lang3>(blank());
+  // Off: options and explanation are typed once and shown in English and Hindi. On: each language is edited separately.
+  const [perLang, setPerLang] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
   const [difficulty, setDifficulty] = useState<'easy' | 'medium' | 'hard'>('medium');
   const [examTag, setExamTag] = useState('Punjab Master Cadre 2024');
 
@@ -122,22 +132,54 @@ export default function AdminResourcePortal() {
     } catch (error) { fail(error); } finally { setBusy(false); }
   };
 
+  const resetQuestionForm = () => { setQText(blank()); setOpts(blankOptions()); setExplanation(blank()); setCorrectOpt('A'); setPerLang(false); setEditingId(null); };
+
+  const questionPayload = () => {
+    const shared = (t: Lang3): Lang3 => (perLang ? t : { en: t.en || t.hi, hi: t.en || t.hi, pa: '' });
+    const text = clean(qText);
+    return {
+      title: `${examTag}: ${(qText.hi || qText.en || qText.pa).slice(0, 45)}...`,
+      topicId: qTopic,
+      data: {
+        question: text,
+        options: Object.fromEntries(OPTION_KEYS.map(key => [key, clean(shared(opts[key]))])),
+        correct: correctOpt, explanation: clean(shared(explanation)), difficulty, examTag,
+      },
+    };
+  };
+
   // Submit Question
   const handleAddQuestion = (submitStatus: WorkflowStatus) => {
-    if (!qTextHi && !qTextEn) return;
+    if (!qText.hi && !qText.en && !qText.pa) return;
     if (submitStatus === 'published' && !confirm('Publish now? Students will see this question as soon as it is saved.')) return;
-    void submitItem({
-      type: 'question',
-      title: `${examTag}: ${qTextHi.slice(0, 45) || qTextEn.slice(0, 45)}...`,
-      topicId: qTopic,
-      status: submitStatus,
-      data: {
-        question: { hi: qTextHi, en: qTextEn },
-        // The option text is shown in both languages; the editor types it once.
-        options: { A: { en: optA, hi: optA }, B: { en: optB, hi: optB }, C: { en: optC, hi: optC }, D: { en: optD, hi: optD } },
-        correct: correctOpt, explanation: { hi: explanation, en: explanation }, difficulty, examTag,
-      },
-    }, () => { setQTextHi(''); setQTextEn(''); setOptA(''); setOptB(''); setOptC(''); setOptD(''); setExplanation(''); }, 'Question');
+    void submitItem({ type: 'question', status: submitStatus, ...questionPayload() }, resetQuestionForm, 'Question');
+  };
+
+  const startEdit = (item: PipelineItem) => {
+    const d = item.data as { question?: unknown; options?: Record<string, unknown>; correct?: string; explanation?: unknown; difficulty?: 'easy' | 'medium' | 'hard'; examTag?: string };
+    const nextOpts = blankOptions();
+    for (const key of OPTION_KEYS) nextOpts[key] = toLang3(d.options?.[key]);
+    const nextExplanation = toLang3(d.explanation);
+    // Never collapse text that differs by language into one box: that would overwrite it on save.
+    const differs = (t: Lang3) => !!t.pa || (!!t.hi && t.en !== t.hi);
+    setQText(toLang3(d.question)); setOpts(nextOpts); setExplanation(nextExplanation);
+    setPerLang(OPTION_KEYS.some(key => differs(nextOpts[key])) || differs(nextExplanation));
+    setCorrectOpt(OPTION_KEYS.includes(d.correct as OptionKey) ? (d.correct as OptionKey) : 'A');
+    setDifficulty(d.difficulty ?? 'medium'); setExamTag(d.examTag ?? ''); setQTopic(item.topicId);
+    setEditingId(item.id); setActiveTab('question');
+  };
+
+  const saveEdit = async (thenReview: boolean) => {
+    if (busy || !editingId) return;
+    setBusy(true);
+    try {
+      let { item } = await updateContent({ id: editingId, ...questionPayload() });
+      if (thenReview) item = (await moveContent(editingId, 'review')).item;
+      setPipeline(prev => prev.map(i => i.id === item.id ? item : i));
+      resetQuestionForm();
+      setActiveTab('pipeline');
+      flash(thenReview ? '✅ Changes saved and submitted for review.' : '✅ Changes saved.');
+    } catch (error) { fail(error); } finally { setBusy(false); }
   };
 
   // Submit Video
@@ -350,6 +392,20 @@ export default function AdminResourcePortal() {
 
                   {/* Actions according to Role */}
                   <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-750 text-xs">
+                    {/* Questions can be corrected while they are drafts or were sent back. Withdraw or unpublish first for anything else. */}
+                    {item.type === 'question' && canEdit({ id: userId || '', role: adminRole }, { authorId: item.mine ? userId || '' : 'not-the-viewer', status: item.status }) && (
+                      <button disabled={busy} onClick={() => startEdit(item)} className="bg-slate-700 hover:bg-slate-600 text-slate-100 font-bold px-3 py-1.5 rounded-lg text-[11px] transition">
+                        Edit
+                      </button>
+                    )}
+
+                    {/* Author can pull their own item back from review to keep editing */}
+                    {item.status === 'review' && item.mine && may(item, 'draft') && (
+                      <button disabled={busy} onClick={() => handleUpdateStatus(item.id, 'draft')} className="bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold px-3 py-1.5 rounded-lg text-[11px] transition">
+                        Withdraw to draft
+                      </button>
+                    )}
+
                     {/* Educator can submit Draft to Review */}
                     {may(item, 'review') && (
                       <button
@@ -409,127 +465,77 @@ export default function AdminResourcePortal() {
         </div>
       )}
 
-      {/* ================= TAB 1: ADD QUESTION ================= */}
+      {/* ================= TAB 1: ADD / EDIT QUESTION ================= */}
       {activeTab === 'question' && (
-        <form onSubmit={(e) => { e.preventDefault(); handleAddQuestion(adminRole === 'superadmin' ? 'published' : 'review'); }} className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-5 space-y-4 shadow-lg">
+        <form onSubmit={(e) => { e.preventDefault(); if (editingId) void saveEdit(false); else handleAddQuestion(adminRole === 'superadmin' ? 'published' : 'review'); }} className="bg-slate-800/90 border border-slate-700/80 rounded-2xl p-5 space-y-4 shadow-lg">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-bold text-white flex items-center gap-2">
               <PlusCircle size={16} className="text-teal-400" />
-              Add Multiple Choice Question (MCQ)
+              {editingId ? 'Edit question' : 'Add Multiple Choice Question (MCQ)'}
             </h2>
             <span className="text-[10px] text-slate-400 font-mono">Total Topics: {uniqueTopics.length}</span>
           </div>
+          {editingId && (
+            <div className="flex items-center justify-between gap-2 text-[11px] bg-indigo-950/60 border border-indigo-500/40 text-indigo-200 rounded-lg p-2.5">
+              <span>Editing a saved question. Saving keeps its place in the pipeline.</span>
+              <button type="button" onClick={() => { resetQuestionForm(); setActiveTab('pipeline'); }} className="underline shrink-0">Cancel</button>
+            </div>
+          )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Target Topic (All {uniqueTopics.length} Topics)</label>
-              <select 
-                value={qTopic} 
-                onChange={e => setQTopic(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500 max-h-48"
-              >
+              <label htmlFor="q-topic" className="text-[11px] text-slate-300 font-semibold block mb-1">Target Topic (All {uniqueTopics.length} Topics)</label>
+              <select id="q-topic" value={qTopic} onChange={e => setQTopic(e.target.value)} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500 max-h-48">
                 {uniqueTopics.map(topic => (
-                  <option key={topic.id} value={topic.id}>
-                    {topic.titleHi} ({topic.titleEn})
-                  </option>
+                  <option key={topic.id} value={topic.id}>{topic.titleHi} ({topic.titleEn})</option>
                 ))}
+                {!uniqueTopics.some(topic => topic.id === qTopic) && <option value={qTopic}>{qTopic}</option>}
               </select>
             </div>
             <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Exam Tag (PYQ / Recruiting Body)</label>
-              <input 
-                type="text" 
-                value={examTag}
-                onChange={e => setExamTag(e.target.value)}
-                placeholder="e.g. Punjab Master Cadre 2024 / PSSSB Clerk" 
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500"
-              />
+              <label htmlFor="q-tag" className="text-[11px] text-slate-300 font-semibold block mb-1">Exam Tag (PYQ / Recruiting Body)</label>
+              <input id="q-tag" type="text" value={examTag} onChange={e => setExamTag(e.target.value)} placeholder="e.g. Punjab Master Cadre 2024 / PSSSB Clerk" className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500" />
             </div>
           </div>
 
-          <div>
-            <label className="text-[11px] text-slate-300 font-semibold block mb-1">Question Statement (Hindi / Punjabi)</label>
-            <textarea 
-              rows={2}
-              value={qTextHi}
-              onChange={e => setQTextHi(e.target.value)}
-              placeholder="प्रश्न यहाँ टाइप करें..."
-              className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500 resize-none"
-              required
-            />
-          </div>
+          <fieldset className="space-y-3">
+            <legend className="text-[11px] text-slate-300 font-semibold mb-1">Question statement (at least one of Hindi or English)</legend>
+            {([['hi', 'Hindi (हिन्दी)', 'प्रश्न यहाँ टाइप करें...'], ['en', 'English', 'Type the question...'], ['pa', 'Punjabi (ਪੰਜਾਬੀ)', 'ਸਵਾਲ ਇੱਥੇ ਲਿਖੋ...']] as const).map(([lang, label, placeholder]) => (
+              <div key={lang}>
+                <label htmlFor={`q-text-${lang}`} className="text-[11px] text-slate-400 block mb-1">{label}</label>
+                <textarea id={`q-text-${lang}`} rows={2} value={qText[lang]} onChange={e => setQText(prev => ({ ...prev, [lang]: e.target.value }))} placeholder={placeholder} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500 resize-none" />
+              </div>
+            ))}
+          </fieldset>
 
-          <div>
-            <label className="text-[11px] text-slate-300 font-semibold block mb-1">Question Statement (English)</label>
-            <textarea 
-              rows={2}
-              value={qTextEn}
-              onChange={e => setQTextEn(e.target.value)}
-              placeholder="Type English translation..."
-              className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500 resize-none"
-            />
+          <label className="flex items-center gap-2 text-[11px] text-slate-300">
+            <input type="checkbox" checked={perLang} onChange={e => setPerLang(e.target.checked)} />
+            Write options and explanation separately in Hindi, English and Punjabi
+          </label>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {OPTION_KEYS.map(key => (
+              <fieldset key={key} className="space-y-1.5 border border-slate-700/70 rounded-lg p-2.5">
+                <legend className="text-[11px] text-slate-300 font-semibold px-1">Option {key}</legend>
+                {(perLang ? (['en', 'hi', 'pa'] as const) : (['en'] as const)).map(lang => (
+                  <input key={lang} aria-label={`Option ${key}${perLang ? ` (${lang})` : ''}`} type="text" value={opts[key][lang]} placeholder={perLang ? lang.toUpperCase() : 'Shown in every language'}
+                    onChange={e => setOpts(prev => ({ ...prev, [key]: { ...prev[key], [lang]: e.target.value } }))}
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white" />
+                ))}
+              </fieldset>
+            ))}
           </div>
 
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Option A</label>
-              <input 
-                type="text" 
-                value={optA} 
-                onChange={e => setOptA(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white" 
-                required 
-              />
-            </div>
-            <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Option B</label>
-              <input 
-                type="text" 
-                value={optB} 
-                onChange={e => setOptB(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white" 
-                required 
-              />
-            </div>
-            <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Option C</label>
-              <input 
-                type="text" 
-                value={optC} 
-                onChange={e => setOptC(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white" 
-                required 
-              />
-            </div>
-            <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Option D</label>
-              <input 
-                type="text" 
-                value={optD} 
-                onChange={e => setOptD(e.target.value)}
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-white" 
-                required 
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-3">
-            <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Correct Answer</label>
-              <select 
-                value={correctOpt}
-                onChange={e => setCorrectOpt(e.target.value as 'A' | 'B' | 'C' | 'D')}
-                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white"
-              >
-                <option value="A">Option A</option>
-                <option value="B">Option B</option>
-                <option value="C">Option C</option>
-                <option value="D">Option D</option>
+              <label htmlFor="q-correct" className="text-[11px] text-slate-300 font-semibold block mb-1">Correct Answer</label>
+              <select id="q-correct" value={correctOpt} onChange={e => setCorrectOpt(e.target.value as OptionKey)} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white">
+                {OPTION_KEYS.map(key => <option key={key} value={key}>Option {key}</option>)}
               </select>
             </div>
             <div>
-              <label className="text-[11px] text-slate-300 font-semibold block mb-1">Difficulty Level</label>
-              <select value={difficulty} onChange={e => setDifficulty(e.target.value as 'easy' | 'medium' | 'hard')} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white">
+              <label htmlFor="q-difficulty" className="text-[11px] text-slate-300 font-semibold block mb-1">Difficulty Level</label>
+              <select id="q-difficulty" value={difficulty} onChange={e => setDifficulty(e.target.value as 'easy' | 'medium' | 'hard')} className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white">
                 <option value="easy">Easy (Direct Fact)</option>
                 <option value="medium">Medium (Standard)</option>
                 <option value="hard">Hard (Conceptual / Deep)</option>
@@ -537,42 +543,36 @@ export default function AdminResourcePortal() {
             </div>
           </div>
 
-          <div>
-            <label className="text-[11px] text-slate-300 font-semibold block mb-1">Detailed Explanation / Rationale</label>
-            <textarea 
-              rows={2}
-              value={explanation}
-              onChange={e => setExplanation(e.target.value)}
-              placeholder="Why this option is correct, historical context..."
-              className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500 resize-none"
-            />
-          </div>
+          <fieldset className="space-y-1.5">
+            <legend className="text-[11px] text-slate-300 font-semibold mb-1">Detailed Explanation / Rationale</legend>
+            {(perLang ? (['en', 'hi', 'pa'] as const) : (['en'] as const)).map(lang => (
+              <textarea key={lang} aria-label={`Explanation${perLang ? ` (${lang})` : ''}`} rows={2} value={explanation[lang]} placeholder={perLang ? lang.toUpperCase() : 'Why this option is correct, historical context...'}
+                onChange={e => setExplanation(prev => ({ ...prev, [lang]: e.target.value }))}
+                className="w-full bg-slate-900 border border-slate-700 rounded-lg p-2.5 text-xs text-white outline-none focus:border-teal-500 resize-none" />
+            ))}
+          </fieldset>
 
           {/* Workflow Submission Options */}
-          <div className="flex gap-2 pt-2">
-            <button 
-              type="button"
-              onClick={() => handleAddQuestion('draft')}
-              className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold py-2.5 rounded-xl text-xs transition"
-            >
-              Save as Draft (कच्चा प्रारूप)
-            </button>
-            <button 
-              type="button"
-              onClick={() => handleAddQuestion('review')}
-              className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs shadow transition"
-            >
-              Submit for Review (समीक्षा हेतु भेजें)
-            </button>
-            {adminRole === 'superadmin' && (
-              <button 
-                type="submit"
-                className="flex-1 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs shadow-lg transition"
-              >
-                Publish Directly (प्रकाशित करें)
+          {editingId ? (
+            <div className="flex gap-2 pt-2">
+              <button type="button" disabled={busy} onClick={() => void saveEdit(false)} className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold py-2.5 rounded-xl text-xs transition">Save changes</button>
+              <button type="button" disabled={busy} onClick={() => void saveEdit(true)} className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs shadow transition">Save and submit for review</button>
+            </div>
+          ) : (
+            <div className="flex gap-2 pt-2">
+              <button type="button" onClick={() => handleAddQuestion('draft')} className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-200 font-bold py-2.5 rounded-xl text-xs transition">
+                Save as Draft (कच्चा प्रारूप)
               </button>
-            )}
-          </div>
+              <button type="button" onClick={() => handleAddQuestion('review')} className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs shadow transition">
+                Submit for Review (समीक्षा हेतु भेजें)
+              </button>
+              {adminRole === 'superadmin' && (
+                <button type="submit" className="flex-1 bg-teal-700 hover:bg-teal-500 text-white font-bold py-2.5 rounded-xl text-xs shadow-lg transition">
+                  Publish Directly (प्रकाशित करें)
+                </button>
+              )}
+            </div>
+          )}
         </form>
       )}
 

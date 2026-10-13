@@ -42,5 +42,7 @@ async function call<T>(method: string, body?: unknown): Promise<T> {
 export const listContent = () => call<{ role: StaffRole; items: ContentItem[] }>('GET');
 export const createContent = (item: { type: ItemType; title: string; topicId: string; status: WorkflowStatus; data: Record<string, unknown> }) =>
   call<{ item: ContentItem }>('POST', item);
+export const updateContent = (item: { id: string; title: string; topicId: string; data: Record<string, unknown> }) =>
+  call<{ item: ContentItem }>('PUT', item);
 export const moveContent = (id: string, to: WorkflowStatus, note?: string) => call<{ item: ContentItem }>('PATCH', { id, to, note });
 export const deleteContent = (id: string) => call<unknown>('DELETE', { id });

@@ -25,6 +25,7 @@
     "lint": "eslint",
     "smoke": "node scripts/smoke.mjs",
     "test:editorial": "node scripts/dev/editorial-flow.mjs",
+    "test:admin-ui": "node scripts/dev/admin-ui.mjs",
     "test:learner": "node scripts/dev/learner-flow.mjs",
     "test:push": "node scripts/dev/push-flow.mjs",
     "test:quality": "node scripts/dev/quality-flow.mjs",

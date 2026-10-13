@@ -5,7 +5,7 @@ import { limitRequest } from '@/lib/rate-limit-shared';
 import { requireStaff, serviceClient, staffRoute } from '@/lib/server-auth';
 import { validateQuestionData } from '@/lib/question-content';
 import { invalidateEditorial } from '@/lib/editorial-loader';
-import { canCreate, canDelete, canTransition, isUuid, validateNewItem, validateTransition, type StaffRole, type WorkflowStatus } from '@/lib/content-workflow';
+import { canCreate, canDelete, canEdit, canTransition, isUuid, validateEdit, validateNewItem, validateTransition, type StaffRole, type WorkflowStatus } from '@/lib/content-workflow';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -67,6 +67,37 @@ export async function POST(req: NextRequest) {
     if (error) return fail('Could not save the item.', 500);
     if (item.status === 'published') invalidateEditorial();
     return NextResponse.json({ success: true, item: present(data as Row, user.id) }, { status: 201, headers: NO_STORE });
+  });
+}
+
+/** Edits a draft or rejected item in place. Anything under review or live must first be withdrawn or unpublished. */
+export async function PUT(req: NextRequest) {
+  return staffRoute(req, { name: 'admin-edit', limit: 240, windowMs: WINDOW, maxBytes: 40000 }, async (body, user) => {
+    const parsed = validateEdit(body);
+    if (!parsed.ok) return fail(parsed.message, 400);
+    const { id, title, topicId } = parsed.value;
+    let data = parsed.value.data;
+    const db = serviceClient();
+    if (!db) return unavailable();
+    const { data: current, error: readError } = await db.from('examsathi_content_items').select(COLUMNS).eq('id', id).maybeSingle();
+    if (readError) return fail('Could not load the item.', 500);
+    // Educators cannot learn that other people's items exist.
+    if (!current || (user.role === 'educator' && current.author_id !== user.id)) return fail('Item not found.', 404);
+    if (!canEdit(user, { authorId: current.author_id, status: current.status })) {
+      return fail(current.status === 'draft' || current.status === 'rejected' ? 'You cannot edit this item.' : 'Withdraw this item to draft before editing it.', 403);
+    }
+    if (current.type === 'question') {
+      const checked = validateQuestionData(data);
+      if (!checked.ok) return fail(checked.message, 400);
+      data = checked.value as unknown as Record<string, unknown>;
+    }
+    const { data: saved, error } = await db.from('examsathi_content_items')
+      .update({ title, topic_id: topicId, data, updated_at: new Date().toISOString() })
+      .eq('id', id).eq('status', current.status) // It may have been submitted or moved since it was loaded.
+      .select(COLUMNS).maybeSingle();
+    if (error) return fail('Could not save the item.', 500);
+    if (!saved) return fail('This item changed. Refresh and try again.', 409);
+    return NextResponse.json({ success: true, item: present(saved as Row, user.id) }, { headers: NO_STORE });
   });
 }
 

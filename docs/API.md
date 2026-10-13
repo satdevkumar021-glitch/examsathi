@@ -349,12 +349,13 @@ Treat a flag as "look at this", not as proof. With few answers a real problem ca
 
 - `GET` lists items. Educators see only their own; reviewers and superadmins see all.
 - `POST { title, body, examId?, topicId? }` creates a `draft`.
+- `PUT { id, title, topicId, data }` edits an item in place. Only the author (or a superadmin) may, and only while it is a `draft` or `rejected`; a question is re-validated exactly as on create. An item under review returns 403 ("Withdraw this item to draft before editing it"), and so does a live one: unpublish first. Nobody, including a superadmin, edits text a reviewer is approving or students are seeing. It never changes status, and returns 409 if the item moved in the meantime.
 - `PATCH { id, to }` moves an item between `draft`, `review`, `published` and `rejected`. A reviewer cannot approve their own item (four-eyes). Only a superadmin can publish directly from draft or unpublish. A concurrent change returns 409.
 - `DELETE { id }` is superadmin only.
 
 **Questions go live when published.** A `question` item must carry complete data, which the server validates on create:
 `{ question: {en?, hi?, pa?}, options: {A,B,C,D: {en?, hi?, pa?}}, correct: 'A'|'B'|'C'|'D', explanation: {…}, difficulty?: 'easy'|'medium'|'hard', examTag? }`.
-Every text needs English or Hindi; options must differ; a missing language falls back to the other. When an item becomes `published`
+Every text needs English or Hindi (Punjabi is optional and served when present for the question and all four options); options must differ; a missing language falls back to the other. When an item becomes `published`
 it joins the served bank under the id `cms-<item id>` (always namespaced, never colliding with built-in ids) and is served through
 the same answer-protected `set` / `lookup` / `reveal` / `count` / `daily` / `attempts` routes. Moving it back to `draft`, or deleting it, removes it from new sets immediately on the instance that handled the change and on other instances within 60 seconds. A question that was served stays gradable for 24 hours so a learner mid-test is never failed by an edit. Lessons, videos and PDFs are recorded but not yet served.
 

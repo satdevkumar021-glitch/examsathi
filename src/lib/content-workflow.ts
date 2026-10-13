@@ -42,6 +42,16 @@ export function canTransition(actor: Actor, item: ItemState, to: WorkflowStatus)
 
 export const canDelete = (role: StaffRole): boolean => role === 'superadmin';
 
+/**
+ * Content can only change while it is not in front of a reviewer or students: a draft or a rejected item,
+ * by its author or a superadmin. To edit something under review the author first withdraws it to draft, and to
+ * edit something live a superadmin first unpublishes it. That way a reviewer never approves text that then changes.
+ */
+export function canEdit(actor: Actor, item: ItemState): boolean {
+  if (item.status !== 'draft' && item.status !== 'rejected') return false;
+  return item.authorId === actor.id || actor.role === 'superadmin';
+}
+
 export const MAX_DATA_BYTES = 20000;
 
 export interface NewItemInput {
@@ -64,6 +74,19 @@ export function validateNewItem(body: unknown): Validation<NewItemInput> {
   if (!data || typeof data !== 'object' || Array.isArray(data)) return { ok: false, message: 'Invalid item data.' };
   if (JSON.stringify(data).length > MAX_DATA_BYTES) return { ok: false, message: 'Item is too large.' };
   return { ok: true, value: { type, title: title.trim(), topicId, status, data: data as Record<string, unknown> } };
+}
+
+export interface EditInput { id: string; title: string; topicId: string; data: Record<string, unknown> }
+
+export function validateEdit(body: unknown): Validation<EditInput> {
+  if (!body || typeof body !== 'object') return { ok: false, message: 'Invalid request.' };
+  const { id, title, topicId, data } = body as Record<string, unknown>;
+  if (!isUuid(id)) return { ok: false, message: 'Invalid item.' };
+  if (typeof title !== 'string' || !title.trim() || title.length > 300) return { ok: false, message: 'Title must be 1–300 characters.' };
+  if (typeof topicId !== 'string' || !topicId || topicId.length > 120) return { ok: false, message: 'Invalid topic.' };
+  if (!data || typeof data !== 'object' || Array.isArray(data)) return { ok: false, message: 'Invalid item data.' };
+  if (JSON.stringify(data).length > MAX_DATA_BYTES) return { ok: false, message: 'Item is too large.' };
+  return { ok: true, value: { id, title: title.trim(), topicId, data: data as Record<string, unknown> } };
 }
 
 export interface TransitionInput { id: string; to: WorkflowStatus; note?: string }

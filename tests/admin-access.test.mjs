@@ -78,7 +78,7 @@ test('item and transition bodies are validated', () => {
 test('every admin route verifies the staff role on the server before touching data', () => {
   const route = readFileSync(new URL('../src/app/api/admin/content/route.ts', import.meta.url), 'utf8');
   assert.ok(route.includes('requireStaff(req)'), 'GET must verify the caller');
-  assert.equal((route.match(/staffRoute\(/g) || []).length, 3, 'POST, PATCH and DELETE use staffRoute');
+  assert.equal((route.match(/staffRoute\(/g) || []).length, 4, 'POST, PUT, PATCH and DELETE use staffRoute');
   assert.ok(route.includes('canTransition(') && route.includes('canCreate(') && route.includes('canDelete('));
   assert.ok(route.includes(".eq('author_id', staff.user.id)"), 'educators only list their own items');
   const auth = code(readFileSync(new URL('../src/lib/server-auth.ts', import.meta.url), 'utf8'));
@@ -126,4 +126,39 @@ test('no admin route is reachable without the auth prelude', () => {
     const src = readFileSync(file, 'utf8');
     assert.ok(src.includes('requireStaff(') || src.includes('staffRoute('), `${file.pathname} is unprotected`);
   }
+});
+
+test('editing is limited to the author or a superadmin, and only while the item is a draft or rejected', () => {
+  for (const status of ['draft', 'rejected']) {
+    assert.equal(w.canEdit(actor('educator', 'author'), item(status, 'author')), true, `author edits ${status}`);
+    assert.equal(w.canEdit(actor('educator', 'other'), item(status, 'author')), false, `other educator ${status}`);
+    assert.equal(w.canEdit(actor('reviewer', 'other'), item(status, 'author')), false, `reviewer cannot rewrite ${status}`);
+    assert.equal(w.canEdit(actor('superadmin', 'other'), item(status, 'author')), true, `superadmin edits ${status}`);
+  }
+  for (const status of ['review', 'published']) {
+    for (const role of ['educator', 'reviewer', 'superadmin']) assert.equal(w.canEdit(actor(role, 'author'), item(status, 'author')), false, `${role} cannot edit ${status} in place`);
+  }
+});
+
+test('edit bodies are validated like new items', () => {
+  const id = '123e4567-e89b-42d3-a456-426614174000';
+  const ok = { id, title: ' T ', topicId: 'punjab-history', data: { a: 1 } };
+  assert.equal(w.validateEdit(ok).ok, true);
+  assert.equal(w.validateEdit(ok).value.title, 'T');
+  for (const patch of [{ id: 'nope' }, { title: '' }, { title: 'x'.repeat(301) }, { topicId: '' }, { data: [] }, { data: null }, { data: { big: 'x'.repeat(20001) } }]) {
+    assert.equal(w.validateEdit({ ...ok, ...patch }).ok, false, JSON.stringify(patch).slice(0, 40));
+  }
+  assert.equal(w.validateEdit(null).ok, false);
+});
+
+test('the PUT route authorises, validates the question, and guards against a concurrent move', () => {
+  const route = code(readFileSync(new URL('../src/app/api/admin/content/route.ts', import.meta.url), 'utf8'));
+  const put = route.slice(route.indexOf('export async function PUT'), route.indexOf('export async function PATCH'));
+  assert.ok(put.includes('staffRoute('));
+  assert.ok(put.includes('canEdit('), 'PUT checks the edit rule');
+  assert.ok(put.includes('validateQuestionData('), 'an edited question is re-validated');
+  assert.ok(put.includes(".eq('status', current.status)"), 'a status change in between returns 409');
+  assert.ok(put.includes("current.author_id !== user.id"), 'educators cannot learn other items exist');
+  assert.ok(!put.includes('invalidateEditorial'), 'editable items are never live, so the served bank is untouched');
+  assert.doesNotMatch(put, /status:\s*(to|body)/, 'an edit can never change status');
 });

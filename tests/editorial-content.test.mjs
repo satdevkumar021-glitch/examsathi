@@ -224,3 +224,24 @@ test('editorial questions never reach the browser with answers', () => {
   assert.ok(src('lib/editorial-loader.ts').startsWith("import 'server-only'"));
   assert.ok(!/from '\.\/server-auth'|supabase/i.test(code(src('lib/editorial-store.ts'))), 'the engine-facing store must stay dependency-free');
 });
+
+test('a Punjabi-only option set is valid and served in Punjabi with Hindi/English filled from it', () => {
+  const data = { ...good(), question: { pa: 'x', hi: 'पंजाब?' }, options: { A: { hi: 'चंडीगढ़', pa: 'ਚੰਡੀਗੜ੍ਹ' }, B: { hi: 'अमृतसर', pa: 'ਅੰਮ੍ਰਿਤਸਰ' }, C: { hi: 'लुधियाना', pa: 'ਲੁਧਿਆਣਾ' }, D: { hi: 'पटियाला', pa: 'ਪਟਿਆਲਾ' } } };
+  const r = c.validateQuestionData(data);
+  assert.equal(r.ok, true, r.message);
+  const q = c.buildQuestion('abc', 'topic', r.value);
+  assert.equal(q.options.A.pa, 'ਚੰਡੀਗੜ੍ਹ');
+  assert.equal(q.options.A.en, 'चंडीगढ़', 'missing English falls back to Hindi');
+});
+
+test('an option with only Punjabi text is rejected (English or Hindi is required)', () => {
+  const data = { ...good(), options: { ...good().options, B: { pa: 'ਅੰਮ੍ਰਿਤਸਰ' } } };
+  assert.equal(c.validateQuestionData(data).ok, false);
+});
+
+test('the edit form never collapses text that differs by language', () => {
+  const page = src('app/(dashboard)/admin/page.tsx');
+  assert.ok(page.includes('const differs ='), 'edit decides between single and per-language view');
+  assert.match(page, /!!t\.pa \|\| \(!!t\.hi && t\.en !== t\.hi\)/, 'Punjabi, Hindi-only or differing text opens the per-language view');
+  assert.ok(page.includes('updateContent('), 'saving an edit calls the PUT API');
+});

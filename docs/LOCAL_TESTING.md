@@ -44,7 +44,8 @@ NEXT_PUBLIC_SUPABASE_URL=http://127.0.0.1:54321 \
 NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_testtesttesttesttest1234 \
 SUPABASE_SERVICE_ROLE_KEY=svc-test-key \
 npx next start -p 3200 &
-SMOKE_URL=http://localhost:3200 npm run test:editorial      # 25 checks
+SMOKE_URL=http://localhost:3200 npm run test:editorial      # 48 checks, incl. editing after save
+SMOKE_URL=http://localhost:3200 npm run test:admin-ui       # 15 checks in a real browser (needs the app built with the fake Supabase URL above)
 ```
 
 It uses the fake tokens `tok-educator`, `tok-reviewer` and `tok-super`. It covers validation, four-eyes review, immediate
