@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { fail } from '@/lib/api-route';
-import { clientIp, rateLimit } from '@/lib/rate-limit';
+import { clientIp } from '@/lib/rate-limit';
+import { limitRequest } from '@/lib/rate-limit-shared';
 import { requireStaff, serviceClient, staffRoute } from '@/lib/server-auth';
 import { validateQuestionData } from '@/lib/question-content';
 import { invalidateEditorial } from '@/lib/editorial-loader';
@@ -31,7 +32,7 @@ const unavailable = () => fail('The editorial service is not configured.', 503);
 
 /** Educators see their own items; reviewers and superadmins see the whole pipeline. */
 export async function GET(req: NextRequest) {
-  const limited = rateLimit(`admin-list:${clientIp(req)}`, 300, WINDOW);
+  const limited = await limitRequest(`admin-list:${clientIp(req)}`, 300, WINDOW);
   if (!limited.ok) return fail('Too many requests. Try again later.', 429, { 'Retry-After': String(limited.retryAfter) });
   const staff = await requireStaff(req);
   if (!staff.ok) return staff.response;

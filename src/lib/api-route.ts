@@ -1,7 +1,8 @@
 import 'server-only';
 import { NextRequest, NextResponse } from 'next/server';
 import { readBoundedText } from './request-body';
-import { clientIp, rateLimit } from './rate-limit';
+import { clientIp } from './rate-limit';
+import { limitRequest } from './rate-limit-shared';
 import { refreshEditorial } from './editorial-loader';
 
 export const fail = (message: string, status: number, headers?: Record<string, string>) =>
@@ -18,12 +19,12 @@ export async function jsonRoute(
 ): Promise<NextResponse> {
   try {
     const ip = clientIp(req);
-    const first = rateLimit(`${options.name}:${ip}`, options.limit, options.windowMs);
+    const first = await limitRequest(`${options.name}:${ip}`, options.limit, options.windowMs);
     if (!first.ok) return fail('Too many requests. Try again later.', 429, { 'Retry-After': String(first.retryAfter) });
     const body = JSON.parse(await readBoundedText(req, options.maxBytes));
     const extra = (options.cost?.(body) ?? 1) - 1;
     for (let i = 0; i < extra; i++) {
-      const next = rateLimit(`${options.name}:${ip}`, options.limit, options.windowMs);
+      const next = await limitRequest(`${options.name}:${ip}`, options.limit, options.windowMs);
       if (!next.ok) return fail('Too many requests. Try again later.', 429, { 'Retry-After': String(next.retryAfter) });
     }
     // Routes that read the question bank first pick up newly published editorial questions.

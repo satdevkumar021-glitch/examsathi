@@ -18,7 +18,7 @@ Required environment: see `.env.example`. `SUPABASE_SERVICE_ROLE_KEY` is server-
 
 Grant staff roles with the service role only, for example `update auth.users set raw_app_meta_data = raw_app_meta_data || '{"role":"reviewer"}' where email = 'person@example.com';` (roles: `educator`, `reviewer`, `superadmin`). The user must sign in again to get a token carrying the new role.
 
-The rate limiter is in-memory per instance. Before running more than one instance, move it to a shared store (for example Redis or Upstash).
+Rate limiting is shared across instances when `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are set (an Upstash Redis database; the free tier is enough to start). Each limited request makes one short call (`INCR` + `PEXPIRE NX` + `PTTL` in a single `MULTI/EXEC`, 800 ms timeout). Without those variables the limiter is in-memory per instance, which is only correct for a single instance, so set them before scaling out. If the store is unreachable the app keeps serving and falls back to per-instance limits for 10 seconds at a time (it never blocks users because Redis is down), and logs `rate limit store unavailable`. Limits are keyed by the first `X-Forwarded-For` address, so run behind a proxy that overwrites that header (Render does).
 
 ## Dynamic Next deployment for cloud AI
 

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { fail } from '@/lib/api-route';
-import { clientIp, rateLimit } from '@/lib/rate-limit';
+import { clientIp } from '@/lib/rate-limit';
+import { limitRequest } from '@/lib/rate-limit-shared';
 import { serviceClient, verifyBearer } from '@/lib/server-auth';
 import { computeInsights, DEFAULT_TZ_OFFSET_MINUTES, type AttemptRow } from '@/lib/learner-insights';
 
@@ -15,7 +16,7 @@ const HISTORY_LIMIT = 400;
  * Guests have no server history; the client keeps using its local figures for them.
  */
 export async function GET(req: NextRequest) {
-  const limited = rateLimit(`learner-profile:${clientIp(req)}`, 240, 60 * 60 * 1000);
+  const limited = await limitRequest(`learner-profile:${clientIp(req)}`, 240, 60 * 60 * 1000);
   if (!limited.ok) return fail('Too many requests. Try again later.', 429, { 'Retry-After': String(limited.retryAfter) });
   const user = await verifyBearer(req);
   if (!user) return fail('Sign in to see your progress.', 401);

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { fail } from '@/lib/api-route';
-import { clientIp, rateLimit } from '@/lib/rate-limit';
+import { clientIp } from '@/lib/rate-limit';
+import { limitRequest } from '@/lib/rate-limit-shared';
 import { validCronSecret, sendPush, pushConfigured, pushDryRun } from '@/lib/push-server';
 import { serviceClient } from '@/lib/server-auth';
 import { dayKey } from '@/lib/learner-insights';
@@ -18,7 +19,7 @@ const GIVE_UP_AFTER_FAILURES = 5;
  * already nudged today) is made per device; running it hourly is safe because `last_sent_day` makes it idempotent.
  */
 export async function POST(req: NextRequest) {
-  const limited = rateLimit(`push-send:${clientIp(req)}`, 30, 60 * 60 * 1000);
+  const limited = await limitRequest(`push-send:${clientIp(req)}`, 30, 60 * 60 * 1000);
   if (!limited.ok) return fail('Too many requests.', 429, { 'Retry-After': String(limited.retryAfter) });
   if (!validCronSecret(req.headers.get('authorization'))) return fail('Unauthorized.', 401);
   if (!pushConfigured()) return NextResponse.json({ success: true, sent: 0, skipped: 0, removed: 0, note: 'not configured' });

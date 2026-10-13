@@ -1,14 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabaseClient, isSupabaseConfigured } from '@/lib/supabase';
 import { readBoundedText } from '@/lib/request-body';
-import { clientIp, rateLimit } from '@/lib/rate-limit';
+import { clientIp } from '@/lib/rate-limit';
+import { limitRequest } from '@/lib/rate-limit-shared';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   try {
-    const limited = rateLimit(`login:${clientIp(req)}`, 10, 15 * 60 * 1000);
+    const limited = await limitRequest(`login:${clientIp(req)}`, 10, 15 * 60 * 1000);
     if (!limited.ok) {
       return NextResponse.json({ success: false, message: 'Too many attempts. Try again later.' }, { status: 429, headers: { 'Retry-After': String(limited.retryAfter) } });
     }

@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { fail } from '@/lib/api-route';
 import { refreshEditorial } from '@/lib/editorial-loader';
-import { clientIp, rateLimit } from '@/lib/rate-limit';
+import { clientIp } from '@/lib/rate-limit';
+import { limitRequest } from '@/lib/rate-limit-shared';
 import { findQuestion } from '@/lib/question-service';
 import { requireStaff, serviceClient } from '@/lib/server-auth';
 import { analyzeQuestions, buildReport, MIN_ANSWERS, type AttemptSample } from '@/lib/question-quality';
@@ -20,7 +21,7 @@ const WINDOW_MS = 60 * 60 * 1000;
  * no learner id or per-learner answer ever leaves this route.
  */
 export async function GET(req: NextRequest) {
-  const limited = rateLimit(`admin-quality:${clientIp(req)}`, 30, WINDOW_MS);
+  const limited = await limitRequest(`admin-quality:${clientIp(req)}`, 30, WINDOW_MS);
   if (!limited.ok) return fail('Too many requests. Try again later.', 429, { 'Retry-After': String(limited.retryAfter) });
   const staff = await requireStaff(req);
   if (!staff.ok) return staff.response;
