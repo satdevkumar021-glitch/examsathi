@@ -110,7 +110,7 @@ test('proxy redirects session-less visitors to login and lets signed-in cookies 
 });
 
 test('the admin page no longer keeps the pipeline or role in the browser', () => {
-  const page = readFileSync(new URL('../src/app/(dashboard)/admin/page.tsx', import.meta.url), 'utf8');
+  const page = readFileSync(new URL('../src/app/(dashboard)/admin/AdminClient.tsx', import.meta.url), 'utf8');
   assert.ok(!page.includes('examsathi_admin_pipeline'));
   assert.ok(!page.includes('DEFAULT_PIPELINE'));
   assert.ok(!page.includes('studyStorage'));

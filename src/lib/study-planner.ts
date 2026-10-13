@@ -1,6 +1,5 @@
 import { studyStorage } from './storage';
 import { getExamTopics, AVAILABLE_EXAMS } from './data/exam-catalog';
-import { getLessonByTopicId } from './data/lessons';
 import { practiceExam } from './exam-context';
 
 // ============================================================
@@ -82,6 +81,8 @@ export function generateExamStudyPlan(params: {
   baselineKnowledge?: Record<string, BaselineConfidence>;
   /** Available questions per topic id (from the server manifest). Missing topics count as 0. */
   topicQuestionCounts?: Record<string, number>;
+  /** Lesson availability per topic id, resolved on the server so the lesson bank is not bundled here. */
+  lessonInfo?: Record<string, { provenance?: string }>;
 }): PersonalizedStudyPlan {
   const examId = params.examId;
   const examMeta = practiceExam(examId) || AVAILABLE_EXAMS.find((e: { id: string }) => e.id === examId);
@@ -208,7 +209,7 @@ export function generateExamStudyPlan(params: {
     if (topicQueue.length > 0) {
       const topicObj = topicQueue[queueIdx % topicQueue.length];
       queueIdx++;
-      const lesson = getLessonByTopicId(topicObj.id);
+      const lesson = params.lessonInfo?.[topicObj.id];
       const qCount = Math.min(50, params.topicQuestionCounts?.[topicObj.id] ?? 0);
 
       schedule.push({
@@ -229,7 +230,7 @@ export function generateExamStudyPlan(params: {
         contentReadiness: {
           lessonReady: Boolean(lesson),
           questionCount: qCount,
-          officialProvenanceNote: lesson?.editorialRecord?.verifiedSyllabusDenominator || lesson?.examRelevance || 'Official syllabus topic',
+          officialProvenanceNote: lesson?.provenance || 'Official syllabus topic',
         },
         officialWeightNote: getOfficialTopicWeightNote(examId, topicObj.id),
         targetMinutes,
@@ -297,6 +298,8 @@ export function getOrGenerateStudyPlan(params: {
   startDate?: string;
   baselineKnowledge?: Record<string, BaselineConfidence>;
   topicQuestionCounts?: Record<string, number>;
+  /** Lesson availability per topic id, resolved on the server so the lesson bank is not bundled here. */
+  lessonInfo?: Record<string, { provenance?: string }>;
 }): PersonalizedStudyPlan {
   try {
     const raw = studyStorage.getItem(`${STORAGE_PLAN_PREFIX}${params.examId}`);

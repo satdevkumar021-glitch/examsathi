@@ -96,7 +96,7 @@ test('Typing practice word counts match true passage lengths and avoid unverifie
 });
 
 test('Roadmap honors exam precedence and carries exam in mock-test links', () => {
-  const source = readFileSync('src/app/(dashboard)/roadmap/page.tsx', 'utf8');
+  const source = readFileSync('src/app/(dashboard)/roadmap/RoadmapClient.tsx', 'utf8');
   
   // Precedence checks
   assert.ok(source.includes('const examParam = query.get(\'exam\');'));

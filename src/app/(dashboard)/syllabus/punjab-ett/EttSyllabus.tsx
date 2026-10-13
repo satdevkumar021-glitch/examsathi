@@ -20,9 +20,9 @@ import {
   ETT_STUDENT_STRATEGY,
 } from '@/lib/data/ett-blueprint';
 import { useCounts } from '@/lib/use-question-data';
-import { getLessonByTopicId } from '@/lib/data/lessons';
 
-export default function EttSyllabus() {
+export default function EttSyllabus({ lessonTopicIds }: { lessonTopicIds: string[] }) {
+  const hasLessonFor = (topicId: string) => lessonTopicIds.includes(topicId);
   const { language, setLanguage } = useStore();
   const label = (en: string, hi: string, pa: string) =>
     language === 'pa' ? pa : language === 'hi' ? hi : en;
@@ -780,7 +780,7 @@ export default function EttSyllabus() {
             </summary>
             <div className="mt-3 space-y-3">
               {group.units.map((unit) => {
-                const hasLesson = Boolean(getLessonByTopicId(unit.id));
+                const hasLesson = hasLessonFor(unit.id);
                 const unitPool = poolOf(unit.id);
                 return (
                   <details
@@ -883,7 +883,7 @@ export default function EttSyllabus() {
         </p>
         {ETT_SCIENCE_UNITS.map(([id, en, hi, pa, subtopics]) => {
           const unitTopicId = `ett-science-${id}`;
-          const unitHasLesson = Boolean(getLessonByTopicId(unitTopicId));
+          const unitHasLesson = hasLessonFor(unitTopicId);
           const unitPoolCount = poolOf(unitTopicId);
           return (
             <details

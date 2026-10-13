@@ -247,7 +247,7 @@ test('an option with only Punjabi text is rejected (English or Hindi is required
 });
 
 test('the edit form never collapses text that differs by language', () => {
-  const page = src('app/(dashboard)/admin/page.tsx');
+  const page = src('app/(dashboard)/admin/AdminClient.tsx');
   assert.ok(page.includes('const differs ='), 'edit decides between single and per-language view');
   assert.match(page, /!!t\.pa \|\| \(!!t\.hi && t\.en !== t\.hi\)/, 'Punjabi, Hindi-only or differing text opens the per-language view');
   assert.ok(page.includes('updateContent('), 'saving an edit calls the PUT API');

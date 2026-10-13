@@ -125,7 +125,7 @@ test('every educator link the student page opens is https by construction', () =
 });
 
 test('the fake upload tab is gone: nothing claims success without saving', () => {
-  const admin = src('app/(dashboard)/admin/page.tsx');
+  const admin = src('app/(dashboard)/admin/AdminClient.tsx');
   assert.ok(!admin.includes('Document indexed'), 'no fake success message');
   assert.ok(!admin.includes('UploadCloud'));
 });
