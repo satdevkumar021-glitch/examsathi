@@ -28,11 +28,19 @@ test('rate limiter isolates keys and resets after the window', () => {
   assert.equal(rateLimit('x', 1, 1000, t + 1001).ok, true);
 });
 
-test('client IP uses the first forwarded address, falling back safely', () => {
+test('client IP counts trusted proxies from the right, so a spoofed header cannot choose the rate-limit key', () => {
   const req = headers => ({ headers: { get: name => headers[name] ?? null } });
-  assert.equal(clientIp(req({ 'x-forwarded-for': '1.2.3.4, 5.6.7.8' })), '1.2.3.4');
-  assert.equal(clientIp(req({ 'x-real-ip': '9.9.9.9' })), '9.9.9.9');
-  assert.equal(clientIp(req({})), 'unknown');
+  // One trusted proxy appended the real address on the right; the attacker's value on the left is ignored.
+  assert.equal(clientIp(req({ 'x-forwarded-for': '127.0.0.1, 203.0.113.7' }), 1), '203.0.113.7');
+  assert.equal(clientIp(req({ 'x-forwarded-for': '203.0.113.7' }), 1), '203.0.113.7');
+  // Two proxies in front (e.g. CDN + platform router): the client is the second from the right.
+  assert.equal(clientIp(req({ 'x-forwarded-for': '10.0.0.1, 203.0.113.7, 198.51.100.2' }), 2), '203.0.113.7');
+  // Fewer entries than hops falls back to the leftmost rather than throwing.
+  assert.equal(clientIp(req({ 'x-forwarded-for': '203.0.113.7' }), 3), '203.0.113.7');
+  assert.equal(clientIp(req({ 'x-real-ip': '9.9.9.9' }), 1), '9.9.9.9');
+  assert.equal(clientIp(req({}), 1), 'unknown');
+  // No trusted proxy: headers are attacker-controlled, so they are ignored.
+  assert.equal(clientIp(req({ 'x-forwarded-for': '1.2.3.4' }), 0), 'unknown');
 });
 
 test('the app sets security headers and is never built as a static export', () => {
@@ -142,4 +150,14 @@ test('every route that rate limits uses the shared limiter, not the per-instance
     assert.ok(source.includes('limitRequest('), `${file} uses limitRequest`);
     assert.doesNotMatch(source, /[^a-zA-Z]rateLimit\(/, `${file} must not call the in-memory limiter directly`);
   }
+});
+
+test('AI generation authenticates before revealing configuration and spends quota only once it will be served', () => {
+  const source = readFileSync(new URL('../src/app/api/ai/generate/route.ts', import.meta.url), 'utf8');
+  const auth = source.indexOf('authenticateUser(req)');
+  const config = source.indexOf('process.env.GEMINI_API_KEY)');
+  const quota = source.indexOf('consumeQuota(');
+  assert.ok(auth > 0 && config > 0 && quota > 0, 'all three steps are present');
+  assert.ok(auth < config, 'an anonymous caller must get 401 before learning whether AI is configured');
+  assert.ok(config < quota, 'a server without a Gemini key must not burn a learner\'s daily quota');
 });

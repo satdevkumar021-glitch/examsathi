@@ -232,8 +232,8 @@ examsathi-audit/
 │       ├── supabase/          # Supabase client factory
 │       └── data/              # All static data (exams, questions, lessons)
 ├── public/
-│   ├── sitemap.xml
-│   ├── robots.txt
+│   ├── sitemap.xml  (generated — set NEXT_PUBLIC_SITE_URL)
+│   ├── robots.txt   (generated — by src/app/robots.ts)
 │   └── ads.txt
 └── docs/
     ├── AUDIT.md               # Bug register — all 10 bugs found and fixed

@@ -19,6 +19,23 @@ export function rateLimit(key: string, limit: number, windowMs: number, now = Da
   return bucket.count <= limit ? { ok: true, retryAfter: 0 } : { ok: false, retryAfter: Math.ceil((bucket.resetAt - now) / 1000) };
 }
 
-export function clientIp(request: Request): string {
-  return request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || request.headers.get('x-real-ip') || 'unknown';
+/** Number of reverse proxies in front of the app that append to X-Forwarded-For (TRUSTED_PROXY_HOPS, default 1). */
+function trustedHops(): number {
+  const raw = typeof process !== 'undefined' ? process.env.TRUSTED_PROXY_HOPS : undefined;
+  const n = raw === undefined || raw === '' ? 1 : Number(raw);
+  return Number.isInteger(n) && n >= 0 && n <= 5 ? n : 1;
+}
+
+/**
+ * The caller's IP for rate limiting. X-Forwarded-For reads "client, proxy1, proxy2": a client can put anything on
+ * the left, but each trusted proxy appends the address it actually saw on the right. So count `hops` entries from the
+ * right instead of trusting the first one, which an attacker controls. hops = 0 means no proxy: ignore the header.
+ */
+export function clientIp(request: Request, hops: number = trustedHops()): string {
+  if (hops > 0) {
+    const chain = (request.headers.get('x-forwarded-for') ?? '').split(',').map(part => part.trim()).filter(Boolean);
+    if (chain.length) return chain[Math.max(0, chain.length - hops)];
+    return request.headers.get('x-real-ip')?.trim() || 'unknown';
+  }
+  return 'unknown';
 }

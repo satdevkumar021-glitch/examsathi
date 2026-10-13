@@ -20,6 +20,9 @@ services:
         sync: false
       - key: SUPABASE_SERVICE_ROLE_KEY
         sync: false
+
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
       - key: NEXT_PUBLIC_GOOGLE_AUTH_ENABLED
         value: "false"
       - key: VAPID_PUBLIC_KEY
