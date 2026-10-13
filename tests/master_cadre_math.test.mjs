@@ -29,7 +29,7 @@ function load(file) {
   vm.runInNewContext(js, {
     module: loaded,
     exports: loaded.exports,
-    require: name => load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)),
+    require: name => name === 'server-only' ? {} : load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)),
     window,
     Event: class Event {},
     Date,
@@ -45,7 +45,6 @@ function load(file) {
 const exams = load('src/lib/data/exams.ts');
 const lessons = load('src/lib/data/lessons.ts');
 const engine = load('src/lib/data/question_bank_engine.ts');
-const questions = load('src/lib/data/questions.ts');
 
 const EXPECTED_MATH_TOPICS = [
   'math-matrices-linear-algebra',

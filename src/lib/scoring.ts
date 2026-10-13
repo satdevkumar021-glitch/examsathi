@@ -72,7 +72,6 @@ export function computeReet2024Score(
   const whollyUnmarkedDeduction = parseFloat((whollyUnmarkedCount * (marksPerQuestion / 3)).toFixed(2));
   const rawScore = parseFloat((correct * marksPerQuestion - whollyUnmarkedDeduction).toFixed(2));
   const maxScore = (config.totalQuestions || questionIds.length) * marksPerQuestion;
-  const attempted = correct + wrong + omrOptionECount;
   const unattempted = omrOptionECount + whollyUnmarkedCount;
   const percentage = maxScore > 0 ? parseFloat(((rawScore / maxScore) * 100).toFixed(1)) : 0;
   const accuracy = (correct + wrong) > 0 ? parseFloat(((correct / (correct + wrong)) * 100).toFixed(1)) : 0;
