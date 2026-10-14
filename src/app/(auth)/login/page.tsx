@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+import { getStoredUser, saveUserSession } from '@/lib/auth';
 import { useStore } from '@/lib/store';
 import { createClient } from '@/lib/supabase/client';
 import { isSupabaseConfigured, authRedirectUrl, isGoogleAuthEnabled } from '@/lib/supabase/config';
@@ -33,8 +34,10 @@ export default function Login() {
         return;
       }
       if (data.user && data.session) {
-        const displayName = data.user.user_metadata?.full_name || data.user.email || 'Student';
-        setUser({ name: displayName, streak: 0, xp: 0 });
+        const stored = getStoredUser();
+        const displayName = data.user.user_metadata?.full_name || data.user.email || stored.name || 'Student';
+        setUser({ name: displayName, streak: stored.streak || 0, xp: stored.xp || 0 });
+        saveUserSession({ ...stored, id: data.user.id, name: displayName, email: data.user.email || stored.email });
         router.push('/dashboard');
       } else { setError('No account session was created. Please try again.'); setLoading(false); }
     } catch {

@@ -45,7 +45,14 @@ export default function Register() {
           setLoading(false);
           return;
         }
-        if (data.session) { router.push('/dashboard'); } else { setEmailSent(true); }
+        if (data.session) {
+          const profile = { ...getStoredUser(), id: data.user?.id || 'usr-default', name: name || 'Aspirant', email, targetExam, state };
+          saveUserSession(profile);
+          setUser({ name: profile.name, streak: profile.streak, xp: profile.xp });
+          router.push('/dashboard');
+        } else {
+          setEmailSent(true);
+        }
         setLoading(false);
       } catch {
         setError('An unexpected error occurred. Please try again.');
