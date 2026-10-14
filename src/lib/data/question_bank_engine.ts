@@ -425,6 +425,15 @@ export function getQuestionPool(config: {
     }
     // Only syllabus topics are eligible. Shared-topic questions retain their original source labels.
     pool = pool.filter(q => topics.has(canonical(q.topicId || '')));
+    const isMasterOrLecturerExam = exam.id.startsWith('punjab-master-cadre') || exam.id === 'punjab-lecturer-cadre';
+    if (!isMasterOrLecturerExam) {
+      const sharedScienceTopics = new Set(['physics-concepts', 'chemistry-concepts', 'biology-concepts']);
+      pool = pool.filter(q => {
+        if (!/Master Cadre|Lecturer/i.test(q.examTag || '')) return true;
+        if (exam.id === 'htet-l2') return false;
+        return !sharedScienceTopics.has(canonical(q.topicId || ''));
+      });
+    }
     if (!pyqOnly && !pyq20Years && (!topicId || topicId === 'all')) {
       for (const id of topics) pool.push(...generateProceduralQuestions(id, 150), ...generateQuantPractice(id, 150), ...generateReasoningPractice(id, 1000), ...generateLandMeasurementPractice(id, 100));
     }
@@ -551,17 +560,14 @@ export function getOrderedSetQuestions(config: {
   setNumber?: number;
 }): { questions: Question[]; setNumber: number; totalSets: number; totalPoolCount: number } {
   const setSize = Number.isFinite(config.count) ? Math.max(1, Math.min(150, Math.floor(config.count!))) : 50;
-  let orderedPool = getBalancedOrderedPool(config);
-  if (orderedPool.length === 0 && config.topicId && config.topicId !== 'all') {
-    orderedPool = getBalancedOrderedPool({ ...config, examId: undefined });
-  }
-  if (orderedPool.length === 0 && config.difficulty && config.difficulty !== 'all') {
-    orderedPool = getBalancedOrderedPool({ ...config, difficulty: 'all' });
-  }
+  // A numbered set must preserve the requested syllabus and filters.
+  // Empty eligibility is an empty result, never permission to widen the scope.
+  const orderedPool = getBalancedOrderedPool(config);
   const totalPoolCount = orderedPool.length;
   const totalSets = Math.max(1, Math.ceil(totalPoolCount / setSize));
   const requestedSet = Number.isFinite(config.setNumber) && config.setNumber! >= 1 ? Math.floor(config.setNumber!) : 1;
-  const normalizedSet = ((requestedSet - 1) % totalSets) + 1;
+  // Beyond the final set, expose exhaustion instead of silently replaying Set 1.
+  const normalizedSet = requestedSet;
   const startIdx = (normalizedSet - 1) * setSize;
   const questions = orderedPool.slice(startIdx, startIdx + setSize);
   return {

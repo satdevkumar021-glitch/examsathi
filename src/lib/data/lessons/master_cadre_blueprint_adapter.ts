@@ -8,6 +8,10 @@ import { MASTER_CADRE_SCIENCE_BIOLOGY_BLUEPRINT_LESSONS } from './master_cadre_s
 import { ETT_PUNJABI_LANGUAGES_BLUEPRINT_LESSONS } from './ett_punjabi_languages_blueprint';
 import { ETT_MATH_SCIENCE_SST_BLUEPRINT_LESSONS } from './ett_math_science_sst_blueprint';
 import { CLERK_GK_SPECIAL_LESSONS } from './clerk_gk_special_lessons';
+import { MASTER_CADRE_MATH_BLUEPRINT_LESSONS } from './master_cadre_math_blueprint';
+import { MASTER_CADRE_PUNJABI_LIT_BLUEPRINT_LESSONS } from './master_cadre_punjabi_lit_blueprint';
+import { PSTET_PEDAGOGY_BLUEPRINT_LESSONS } from './pstet_pedagogy_blueprint';
+import { RAJASTHAN_AND_AGNIVEER_BLUEPRINT_LESSONS } from './rajasthan_and_agniveer_blueprint';
 
 export interface BlueprintLessonInput {
     topicId: string;
@@ -405,6 +409,223 @@ const BLUEPRINT_TOPIC_METADATA: Record<
             hi: 'पंजाबी एवं भारतीय साहित्य, गुरमति/सूफ़ी/किस्सा/आधुनिक कवि, साहित्य अकादमी, ज्ञानपीठ एवं भारतीय/पंजाबी सिनेमा (Level B → I → A)'
         },
         examRelevance: 'Punjab PPSC & PSSSB Clerk / Senior Assistant / Master Cadre (Literature & Cinema — 4 to 6 Qs)'
+    },
+
+    // Punjab Master Cadre Mathematics (6 Topics)
+    'math-linear-algebra-matrices': {
+        category: 'math',
+        title: {
+            en: 'Linear Algebra, Matrices, Vector Spaces & Eigenvalues (Level I → H → G)',
+            pa: 'ਲੀਨੀਅਰ ਅਲਜਬਰਾ, ਮੈਟ੍ਰਿਕਸ, ਵੈਕਟਰ ਸਪੇਸ ਅਤੇ ਆਈਗਨ ਮੁੱਲ (ਪੱਧਰ I → H → G)',
+            hi: 'रैखिक बीजगणित, आव्यूह, सदिश समष्टि एवं आइगेन मान (Level I → H → G)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Linear Algebra & Matrices — 20 to 25 Qs)'
+    },
+    'math-real-analysis-calculus': {
+        category: 'math',
+        title: {
+            en: 'Real Analysis, Sequences, Infinite Series & Advanced Calculus (Level H → G)',
+            pa: 'ਰੀਅਲ ਐਨਾਲਿਸਿਸ, ਅਨੁਕ੍ਰਮ, ਅਨੰਤ ਲੜੀਆਂ ਅਤੇ ਕੈਲਕੂਲਸ (ਪੱਧਰ H → G)',
+            hi: 'वास्तविक विश्लेषण, अनुक्रम, अनंत श्रेणियां एवं उच्च कलन (Level H → G)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Real Analysis & Calculus — 25 to 30 Qs)'
+    },
+    'math-abstract-algebra-groups': {
+        category: 'math',
+        title: {
+            en: 'Abstract Algebra: Groups, Rings, Integral Domains & Fields (Level G)',
+            pa: 'ਅਮੂਰਤ ਅਲਜਬਰਾ: ਗਰੁੱਪ, ਰਿੰਗ, ਇੰਟੈਗਰਲ ਡੋਮੇਨ ਅਤੇ ਫੀਲਡ (ਪੱਧਰ G)',
+            hi: 'अमूर्त बीजगणित: समूह, वलय, पूर्णांकीय प्रांत एवं क्षेत्र (Level G)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Abstract Algebra & Group Theory — 20 to 25 Qs)'
+    },
+    'math-diff-equations-mechanics': {
+        category: 'math',
+        title: {
+            en: 'Differential Equations, Vector Calculus, Statics & Dynamics (Level H → G)',
+            pa: 'ਡਿਫਰੈਂਸ਼ੀਅਲ ਸਮੀਕਰਨ, ਵੈਕਟਰ ਕੈਲਕੂਲਸ, ਸਥਿਰ ਵਿਗਿਆਨ ਅਤੇ ਗਤੀ ਵਿਗਿਆਨ (ਪੱਧਰ H → G)',
+            hi: 'अवकल समीकरण, सदिश कलन, स्थिति विज्ञान एवं गति विज्ञान (Level H → G)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Differential Equations & Mechanics — 25 to 30 Qs)'
+    },
+    'math-coordinate-solid-geometry': {
+        category: 'math',
+        title: {
+            en: '2D & 3D Coordinate Geometry: Conics, Sphere, Cone & Cylinder (Level H → G)',
+            pa: '2D ਅਤੇ 3D ਨਿਰਦੇਸ਼-ਅੰਕ ਜਿਓਮੈਟਰੀ: ਕੋਨਿਕ, ਗੋਲਾ, ਸ਼ੰਕੂ ਅਤੇ ਵੇਲਣ (ਪੱਧਰ H → G)',
+            hi: '2D एवं 3D निर्देशांक ज्यामिति: शांकव, गोला, शंकु एवं बेलन (Level H → G)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Coordinate & Solid Geometry — 20 to 25 Qs)'
+    },
+    'math-prob-stats-numerical': {
+        category: 'math',
+        title: {
+            en: 'Probability, Mathematical Statistics, Linear Programming & Numerical Analysis (Level H → G)',
+            pa: 'ਸੰਭਾਵਨਾ, ਅੰਕੜਾ ਵਿਗਿਆਨ, ਲੀਨੀਅਰ ਪ੍ਰੋਗਰਾਮਿੰਗ ਅਤੇ ਸੰਖਿਆਤਮਕ ਵਿਸ਼ਲੇਸ਼ਣ (ਪੱਧਰ H → G)',
+            hi: 'प्रायिकता, सांख्यिकी, रैखिक प्रोग्रामन एवं संख्यात्मक विश्लेषण (Level H → G)'
+        },
+        examRelevance: 'Punjab Master Cadre Mathematics (Probability, Stats & Numerical — 20 to 25 Qs)'
+    },
+
+    // Punjab Master Cadre Punjabi Literature (5 Topics)
+    'punjabi-lit-gurmat-sufi': {
+        category: 'language',
+        title: {
+            en: 'Gurmat Kav & Sufi Kav: Core Bani, Sufi Poets & Ideological Foundations',
+            pa: 'ਗੁਰਮਤਿ ਕਾਵਿ ਅਤੇ ਸੂਫ਼ੀ ਕਾਵਿ: ਗੁਰੂ ਸਾਹਿਬਾਨ, ਭਗਤ ਬਾਣੀ ਅਤੇ ਪ੍ਰਮੁੱਖ ਸੂਫ਼ੀ ਕਵੀ',
+            hi: 'गुरमत काव्य एवं सूफी काव्य: गुरु साहिबान, भगत बाणी एवं प्रमुख सूफी कवि'
+        },
+        examRelevance: 'Punjab Master Cadre Punjabi (Gurmat & Sufi Poetry — 25 to 30 Qs)'
+    },
+    'punjabi-lit-qissa-bir': {
+        category: 'language',
+        title: {
+            en: 'Qissa Kav & Bir Kav: Romantic Epics, Chhand, Heroic Ballads & Historical Jangnamas',
+            pa: 'ਕਿੱਸਾ ਕਾਵਿ ਅਤੇ ਬੀਰ ਕਾਵਿ: ਪ੍ਰਮੁੱਖ ਕਿੱਸਾਕਾਰ, ਛੰਦ, ਵਾਰਾਂ ਅਤੇ ਜੰਗਨਾਮੇ',
+            hi: 'किस्सा काव्य एवं बीर काव्य: प्रमुख किस्साकार, छंद, वारें एवं जंगनामे'
+        },
+        examRelevance: 'Punjab Master Cadre Punjabi (Qissa & Bir Kav — 25 to 30 Qs)'
+    },
+    'punjabi-lit-modern-poetry': {
+        category: 'language',
+        title: {
+            en: 'Modern Punjabi Poetry: Progressive Movement, Experimentalism & Award-Winning Poets',
+            pa: 'ਆਧੁਨਿਕ ਪੰਜਾਬੀ ਕਵਿਤਾ: ਭਾਈ ਵੀਰ ਸਿੰਘ, ਅੰਮ੍ਰਿਤਾ ਪ੍ਰੀਤਮ, ਸ਼ਿਵ ਕੁਮਾਰ, ਪਾਸ਼ ਅਤੇ ਸੁਰਜੀਤ ਪਾਤਰ',
+            hi: 'आधुनिक पंजाबी कविता: भाई वीर सिंह, अमृता प्रीतम, शिव कुमार, पाश एवं सुरजीत पातर'
+        },
+        examRelevance: 'Punjab Master Cadre Punjabi (Modern Poetry — 25 to 30 Qs)'
+    },
+    'punjabi-lit-prose-drama': {
+        category: 'language',
+        title: {
+            en: 'Modern Punjabi Prose & Theatre: Drama, One-Act Play, Novel, Short Story & Autobiography',
+            pa: 'ਪੰਜਾਬੀ ਵਾਰਤਕ ਅਤੇ ਰੰਗਮੰਚ: ਨਾਟਕ, ਇਕਾਂਗੀ, ਨਾਵਲ, ਨਿੱਕੀ ਕਹਾਣੀ ਅਤੇ ਸਵੈ-ਜੀਵਨੀ',
+            hi: 'पंजाबी गद्य एवं रंगमंच: नाटक, एकांकी, उपन्यास, कहानी एवं आत्मकथा'
+        },
+        examRelevance: 'Punjab Master Cadre Punjabi (Prose, Drama & Fiction — 25 to 30 Qs)'
+    },
+    'punjabi-vyakaran-linguistics': {
+        category: 'language',
+        title: {
+            en: 'Punjabi Grammar & Linguistics: Gurmukhi Script Evolution, Phonology, Morphology & Syntax',
+            pa: 'ਪੰਜਾਬੀ ਵਿਆਕਰਨ ਅਤੇ ਭਾਸ਼ਾ ਵਿਗਿਆਨ: ਗੁਰਮੁਖੀ ਲਿਪੀ ਨਿਕਾਸ, ਧੁਨੀ ਵਿਉਂਤ, ਸ਼ਬਦ ਤੇ ਵਾਕ ਬਣਤਰ',
+            hi: 'पंजाबी व्याकरण एवं भाषा विज्ञान: गुरमुखी लिपि विकास, ध्वनि विचार, शब्द एवं वाक्य विचार'
+        },
+        examRelevance: 'Punjab Master Cadre Punjabi (Grammar & Linguistics — 30 to 35 Qs)'
+    },
+
+    // PSTET Pedagogy (5 Topics)
+    'pstet-cdp-core': {
+        category: 'pedagogy',
+        title: {
+            en: 'Child Development, Learning Theories (Piaget, Vygotsky, Kohlberg) & Inclusive Education',
+            pa: 'ਬਾਲ ਵਿਕਾਸ, ਸਿੱਖਣ ਸਿਧਾਂਤ (ਪਿਆਜੇ, ਵਾਈਗੋਤਸਕੀ, ਕੋਹਲਬਰਗ) ਅਤੇ ਸਮਾਵੇਸ਼ੀ ਸਿੱਖਿਆ',
+            hi: 'बाल विकास, अधिगम सिद्धांत (पियाजे, वाइगोत्स्की, कोहलबर्ग) एवं समावेशी शिक्षा'
+        },
+        examRelevance: 'Punjab PSTET (Child Development & Pedagogy — 30 Qs)'
+    },
+    'pstet-punjabi-pedagogy': {
+        category: 'pedagogy',
+        title: {
+            en: 'Punjabi Language Pedagogy: LSRW Skills, Teaching Methods, Remedial Teaching & CCE',
+            pa: 'ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਅਧਿਆਪਨ: ਭਾਸ਼ਾਈ ਕੌਸ਼ਲ (ਸੁਣਨਾ, ਬੋਲਣਾ, ਪੜ੍ਹਨਾ, ਲਿਖਣਾ), ਵਿਧੀਆਂ ਤੇ ਮੁਲਾਂਕਣ',
+            hi: 'पंजाबी भाषा शिक्षण शास्त्र: भाषाई कौशल (LSRW), शिक्षण विधियां एवं सतत व्यापक मूल्यांकन'
+        },
+        examRelevance: 'Punjab PSTET (Language I Punjabi Pedagogy — 15 Qs)'
+    },
+    'pstet-english-pedagogy': {
+        category: 'pedagogy',
+        title: {
+            en: 'English Language Teaching (ELT): Acquisition vs Learning, Principles & Diagnostic Testing',
+            pa: 'ਅੰਗਰੇਜ਼ੀ ਭਾਸ਼ਾ ਅਧਿਆਪਨ (ELT): ਸਿੱਖਣ ਸਿਧਾਂਤ, ਵਿਧੀਆਂ ਅਤੇ ਉਪਚਾਰਾਤਮਕ ਸਿੱਖਿਆ',
+            hi: 'अंग्रेजी भाषा शिक्षण शास्त्र: भाषा अर्जन बनाम अधिगम, सिद्धांत एवं उपचारात्मक शिक्षण'
+        },
+        examRelevance: 'Punjab PSTET (Language II English Pedagogy — 15 Qs)'
+    },
+    'pstet-math-pedagogy': {
+        category: 'pedagogy',
+        title: {
+            en: 'Mathematics Pedagogy: Nature of Math, Curriculum Placement, Diagnostic & Remedial Teaching',
+            pa: 'ਗਣਿਤ ਅਧਿਆਪਨ: ਗਣਿਤ ਦੀ ਪ੍ਰਕਿਰਤੀ, ਪਾਠਕ੍ਰਮ ਵਿੱਚ ਸਥਾਨ, ਨਿਦਾਨਾਤਮਕ ਅਤੇ ਉਪਚਾਰਾਤਮਕ ਸਿੱਖਿਆ',
+            hi: 'गणित शिक्षण शास्त्र: गणित की प्रकृति, पाठ्यक्रम में स्थान, निदानात्मक व उपचारात्मक शिक्षण'
+        },
+        examRelevance: 'Punjab PSTET (Mathematics Pedagogy — 15 Qs)'
+    },
+    'pstet-evs-pedagogy': {
+        category: 'pedagogy',
+        title: {
+            en: 'EVS Pedagogy: Integrated EVS, 6 Themes, Environmental Sensitivity & Activity-Based Learning',
+            pa: 'ਵਾਤਾਵਰਨ ਸਿੱਖਿਆ (EVS) ਅਧਿਆਪਨ: ਏਕੀਕ੍ਰਿਤ EVS, 6 ਮੁੱਖ ਵਿਸ਼ੇ ਅਤੇ ਗਤੀਵਿਧੀ-ਅਧਾਰਿਤ ਸਿੱਖਿਆ',
+            hi: 'पर्यावरण अध्ययन (EVS) शिक्षण शास्त्र: एकीकृत EVS, 6 मुख्य विषय एवं गतिविधि आधारित शिक्षण'
+        },
+        examRelevance: 'Punjab PSTET (EVS Pedagogy — 15 Qs)'
+    },
+
+    // Rajasthan 3rd Grade Teacher (3 Topics)
+    'rajasthan-geography-drainage': {
+        category: 'rajasthan',
+        title: {
+            en: 'Rajasthan Geography: 4 Physical Divisions, Drainage Systems, Lakes & Mineral Wealth',
+            pa: 'ਰਾਜਸਥਾਨ ਭੂਗੋਲ: ਭੌਤਿਕ ਵੰਡ, ਨਦੀ ਪ੍ਰਣਾਲੀ, ਝੀਲਾਂ, ਜਲਵਾਯੂ ਅਤੇ ਖਣਿਜ ਸੰਪਤੀ',
+            hi: 'राजस्थान भूगोल: भौतिक प्रदेश, अपवाह तंत्र (नदियां व झीलें), जलवायु एवं खनिज संपदा'
+        },
+        examRelevance: 'RSMSSB Rajasthan 3rd Grade Teacher (Geography & Drainage — 30 to 40 Marks)'
+    },
+    'rajasthan-history-culture': {
+        category: 'rajasthan',
+        title: {
+            en: 'Rajasthan History & Heritage: Ancient Civilizations, Forts, 1857 Revolt, Lok Devtas & Fairs',
+            pa: 'ਰਾਜਸਥਾਨ ਇਤਿਹਾਸ ਤੇ ਸੱਭਿਆਚਾਰ: ਪ੍ਰਾਚੀਨ ਸੱਭਿਅਤਾਵਾਂ, ਕਿਲ੍ਹੇ, 1857 ਵਿਦਰੋਹ, ਲੋਕ ਦੇਵਤੇ ਅਤੇ ਮੇਲੇ',
+            hi: 'राजस्थान इतिहास एवं संस्कृति: प्राचीन सभ्यताएं, दुर्ग, 1857 क्रांति, लोक देवता एवं मेले'
+        },
+        examRelevance: 'RSMSSB Rajasthan 3rd Grade Teacher (History, Art & Culture — 40 to 50 Marks)'
+    },
+    'rajasthan-edu-psychology-rte': {
+        category: 'rajasthan',
+        title: {
+            en: 'Educational Psychology, RTE Act 2009, Rajasthan RTE Rules 2011 & Educational Scenario',
+            pa: 'ਸਿੱਖਿਆ ਮਨੋਵਿਗਿਆਨ, RTE ਐਕਟ 2009, ਰਾਜਸਥਾਨ RTE ਨਿਯਮ 2011 ਅਤੇ ਰਾਜ ਵਿੱਦਿਅਕ ਪਰਿਦ੍ਰਿਸ਼',
+            hi: 'शैक्षिक मनोविज्ञान, बाल अधिकार (RTE Act 2009), राजस्थान RTE नियम 2011 एवं शैक्षिक परिदृश्य'
+        },
+        examRelevance: 'RSMSSB Rajasthan 3rd Grade Teacher (Psychology & RTE — 30 to 40 Marks)'
+    },
+
+    // Army Agniveer GD (4 Topics)
+    'agniveer-gk-military': {
+        category: 'general',
+        title: {
+            en: 'Agniveer General Knowledge: Indian Armed Forces, Military Heritage, Geography & Polity',
+            pa: 'ਅਗਨੀਵੀਰ ਜਨਰਲ ਨਾਲਜ: ਭਾਰਤੀ ਹਥਿਆਰਬੰਦ ਫੌਜਾਂ, ਫੌਜੀ ਵਿਰਾਸਤ, ਭੂਗੋਲ ਅਤੇ ਸੰਵਿਧਾਨ',
+            hi: 'अग्निवीर सामान्य ज्ञान: भारतीय सशस्त्र बल, सैन्य परंपराएं, भारत का भूगोल एवं संविधान'
+        },
+        examRelevance: 'Indian Army Agniveer GD (General Knowledge — 15 Qs / 30 Marks)'
+    },
+    'agniveer-general-science': {
+        category: 'science',
+        title: {
+            en: 'Agniveer General Science: Physics, Chemistry & Biology Matric Essentials',
+            pa: 'ਅਗਨੀਵੀਰ ਜਨਰਲ ਸਾਇੰਸ: ਭੌਤਿਕ ਵਿਗਿਆਨ, ਰਸਾਇਣ ਵਿਗਿਆਨ ਅਤੇ ਜੀਵ ਵਿਗਿਆਨ (ਦਸਵੀਂ ਪੱਧਰ)',
+            hi: 'अग्निवीर सामान्य विज्ञान: भौतिकी, रसायन एवं जीव विज्ञान (मैट्रिक स्तर)'
+        },
+        examRelevance: 'Indian Army Agniveer GD (General Science — 15 Qs / 30 Marks)'
+    },
+    'agniveer-math-foundation': {
+        category: 'math',
+        title: {
+            en: 'Agniveer Elementary Mathematics: Arithmetic, Algebra, Geometry, Mensuration & Trigonometry',
+            pa: 'ਅਗਨੀਵੀਰ ਮੁੱਢਲਾ ਗਣਿਤ: ਅੰਕਗਣਿਤ, ਅਲਜਬਰਾ, ਖੇਤਰਮਿਤੀ (ਮੈਂਸੁਰੇਸ਼ਨ) ਅਤੇ ਤ੍ਰਿਕੋਣਮਿਤੀ',
+            hi: 'अग्निवीर प्रारंभिक गणित: अंकगणित, बीजगणित, क्षेत्रमिति एवं त्रिकोणमिति'
+        },
+        examRelevance: 'Indian Army Agniveer GD (Mathematics — 15 Qs / 30 Marks)'
+    },
+    'agniveer-reasoning-ability': {
+        category: 'general',
+        title: {
+            en: 'Agniveer Logical Reasoning: Coding-Decoding, Number Series, Blood Relations & Directions',
+            pa: 'ਅਗਨੀਵੀਰ ਤਰਕਸ਼ਕਤੀ (ਰੀਜ਼ਨਿੰਗ): ਕੋਡਿੰਗ-ਡੀਕੋਡਿੰਗ, ਸੰਖਿਆ ਲੜੀ, ਖੂਨ ਦੇ ਰਿਸ਼ਤੇ ਅਤੇ ਦਿਸ਼ਾ ਗਿਆਨ',
+            hi: 'अग्निवीर तार्किक क्षमता: कोडिंग-डिकोडिंग, श्रेणी, रक्त संबंध एवं दिशा ज्ञान'
+        },
+        examRelevance: 'Indian Army Agniveer GD (Logical Reasoning — 5 Qs / 10 Marks)'
     }
 };
 
@@ -546,6 +767,11 @@ function adaptBlueprintLesson(input: BlueprintLessonInput): Lesson {
     };
     const isScience = meta.category === 'science';
     const isEtt = input.topicId.startsWith('ett-');
+    const isMath = meta.category === 'math';
+    const isLanguage = meta.category === 'language' || input.topicId.startsWith('punjabi-lit-');
+    const isPedagogy = meta.category === 'pedagogy' || input.topicId.startsWith('pstet-');
+    const isRajasthan = meta.category === 'rajasthan' || input.topicId.startsWith('rajasthan-');
+    const isAgniveer = input.topicId.startsWith('agniveer-');
 
     const misconceptionsCount = input.commonMisconceptions?.en.length || 0;
     const commonMisconceptions = Array.from({ length: misconceptionsCount }, (_, i) => {
@@ -560,17 +786,47 @@ function adaptBlueprintLesson(input: BlueprintLessonInput): Lesson {
                     ? 'High-frequency conceptual & OMR trap in Punjab ETT Paper A & Paper B.'
                     : isScience
                       ? 'Frequently tested conceptual & numerical distinction in Punjab Master Cadre Science.'
-                      : 'Frequently tested conceptual distinction in Punjab Master Cadre SST.',
+                      : isMath
+                        ? 'Frequently tested conceptual & calculation distinction in Punjab Master Cadre Mathematics.'
+                        : isLanguage
+                          ? 'Frequently tested literary, grammatical or dialect distinction in Punjab Master Cadre Punjabi.'
+                          : isPedagogy
+                            ? 'High-yield conceptual & application trap in PSTET Pedagogy & Child Development.'
+                            : isRajasthan
+                              ? 'High-yield factual & conceptual distinction in RSMSSB Rajasthan 3rd Grade Teacher Exam.'
+                              : isAgniveer
+                                ? 'Essential matric-level conceptual rule in Indian Army Agniveer GD Examination.'
+                                : 'Frequently tested conceptual distinction in Punjab Master Cadre SST.',
                 pa: isEtt
                     ? 'ਪੰਜਾਬ ETT ਪੇਪਰ A ਅਤੇ ਪੇਪਰ B ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਮਹੱਤਵਪੂਰਨ ਅੰਤਰ।'
                     : isScience
                       ? 'ਪੰਜਾਬ ਮਾਸਟਰ ਕੇਡਰ ਸਾਇੰਸ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਮਹੱਤਵਪੂਰਨ ਵਿਗਿਆਨਕ ਅੰਤਰ।'
-                      : 'ਪੰਜਾਬ ਮਾਸਟਰ ਕੇਡਰ SST ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਮਹੱਤਵਪੂਰਨ ਅੰਤਰ।',
+                      : isMath
+                        ? 'ਪੰਜਾਬ ਮਾਸਟਰ ਕੇਡਰ ਗਣਿਤ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਮਹੱਤਵਪੂਰਨ ਗਣਿਤਿਕ ਅੰਤਰ।'
+                        : isLanguage
+                          ? 'ਪੰਜਾਬ ਮਾਸਟਰ ਕੇਡਰ ਪੰਜਾਬੀ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਸਾਹਿਤਕ ਤੇ ਵਿਆਕਰਨਿਕ ਅੰਤਰ।'
+                          : isPedagogy
+                            ? 'PSTET ਬਾਲ ਵਿਕਾਸ ਅਤੇ ਅਧਿਆਪਨ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਮਹੱਤਵਪੂਰਨ ਸੰਕਲਪਿਕ ਅੰਤਰ।'
+                            : isRajasthan
+                              ? 'ਰਾਜਸਥਾਨ ਤੀਜੀ ਸ਼੍ਰੇਣੀ ਅਧਿਆਪਕ ਭਰਤੀ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਮਹੱਤਵਪੂਰਨ ਤੱਥ ਤੇ ਅੰਤਰ।'
+                              : isAgniveer
+                                ? 'ਭਾਰਤੀ ਫੌਜ ਅਗਨੀਵੀਰ ਜਨਰਲ ਡਿਊਟੀ ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਮੁੱਢਲਾ ਨਿਯਮ।'
+                                : 'ਪੰਜਾਬ ਮਾਸਟਰ ਕੇਡਰ SST ਪ੍ਰੀਖਿਆ ਵਿੱਚ ਅਕਸਰ ਪੁੱਛਿਆ ਜਾਣ ਵਾਲਾ ਮਹੱਤਵਪੂਰਨ ਅੰਤਰ।',
                 hi: isEtt
                     ? 'पंजाब ETT पेपर A और पेपर B परीक्षा में बार-बार पूछा जाने वाला महत्वपूर्ण अंतर।'
                     : isScience
                       ? 'पंजाब मास्टर कैडर विज्ञान परीक्षा में बार-बार पूछा जाने वाला महत्वपूर्ण वैज्ञानिक अंतर।'
-                      : 'पंजाब मास्टर कैडर SST परीक्षा में बार-बार पूछा जाने वाला महत्वपूर्ण वैचारिक अंतर।'
+                      : isMath
+                        ? 'पंजाब मास्टर कैडर गणित परीक्षा में बार-बार पूछा जाने वाला महत्वपूर्ण गणितीय अंतर।'
+                        : isLanguage
+                          ? 'पंजाब मास्टर कैडर पंजाबी परीक्षा में बार-बार पूछा जाने वाला साहित्यिक व व्याकरणिक अंतर।'
+                          : isPedagogy
+                            ? 'PSTET बाल विकास एवं शिक्षाशास्त्र परीक्षा में बार-बार पूछा जाने वाला महत्वपूर्ण वैचारिक अंतर।'
+                            : isRajasthan
+                              ? 'राजस्थान तृतीय श्रेणी अध्यापक परीक्षा में बार-बार पूछा जाने वाला महत्वपूर्ण तथ्यात्मक अंतर।'
+                              : isAgniveer
+                                ? 'भारतीय सेना अग्निवीर जनरल ड्यूटी परीक्षा में बार-बार पूछा जाने वाला आधारभूत नियम।'
+                                : 'पंजाब मास्टर कैडर SST परीक्षा में बार-बार पूछा जाने वाला महत्वपूर्ण वैचारिक अंतर।'
             }
         };
     });
@@ -578,7 +834,21 @@ function adaptBlueprintLesson(input: BlueprintLessonInput): Lesson {
     return {
         id: input.topicId,
         topicId: input.topicId,
-        subjectId: isEtt ? `ett-${meta.category}` : isScience ? 'science' : 'social-science',
+        subjectId: isEtt
+            ? `ett-${meta.category}`
+            : isScience
+              ? 'science'
+              : isMath
+                ? 'mathematics'
+                : isLanguage
+                  ? 'punjabi'
+                  : isPedagogy
+                    ? 'pedagogy'
+                    : isRajasthan
+                      ? 'rajasthan-gk'
+                      : isAgniveer
+                        ? 'army-gd-curriculum'
+                        : 'social-science',
         category: meta.category,
         coverageStatus: 'complete',
         editorialStatus: 'authored',
@@ -632,12 +902,47 @@ function adaptBlueprintLesson(input: BlueprintLessonInput): Lesson {
                     body: 'Education Recruitment Board, Punjab',
                     verifiedOn: input.editorialRecord?.lastUpdatedDate || '2026-04-12'
                 }
-              : {
-                    title: 'Education Recruitment Board (ERB) Punjab — Master Cadre Social Science Official Syllabus Blueprint',
-                    url: 'https://educationrecruitmentboard.com/',
-                    body: 'Education Recruitment Board, Punjab',
-                    verifiedOn: input.editorialRecord?.lastUpdatedDate || '2026-04-12'
-                },
+              : isMath
+                ? {
+                      title: 'Education Recruitment Board (ERB) Punjab — Master Cadre Mathematics Official Syllabus',
+                      url: 'https://educationrecruitmentboard.com/',
+                      body: 'Education Recruitment Board, Punjab',
+                      verifiedOn: input.editorialRecord?.lastUpdatedDate || '2026-04-14'
+                  }
+                : isLanguage
+                  ? {
+                        title: 'Education Recruitment Board (ERB) Punjab — Master Cadre Punjabi Official Syllabus',
+                        url: 'https://educationrecruitmentboard.com/',
+                        body: 'Education Recruitment Board, Punjab',
+                        verifiedOn: input.editorialRecord?.lastUpdatedDate || '2026-04-14'
+                    }
+                  : isPedagogy
+                    ? {
+                          title: 'State Council of Educational Research and Training (SCERT) Punjab — PSTET Official Syllabus',
+                          url: 'https://pstet.pseb.ac.in/',
+                          body: 'SCERT Punjab & PSEB',
+                          verifiedOn: input.editorialRecord?.lastUpdatedDate || '2026-04-14'
+                      }
+                    : isRajasthan
+                      ? {
+                            title: 'Rajasthan Staff Selection Board (RSMSSB) — 3rd Grade Teacher Official Syllabus',
+                            url: 'https://rsmssb.rajasthan.gov.in/',
+                            body: 'RSMSSB Jaipur',
+                            verifiedOn: input.editorialRecord?.lastUpdatedDate || '2026-04-14'
+                        }
+                      : isAgniveer
+                        ? {
+                              title: 'Join Indian Army — Agniveer General Duty (GD) Official Syllabus & Exam Pattern',
+                              url: 'https://joinindianarmy.nic.in/',
+                              body: 'Headquarters Recruiting Zone, Indian Army',
+                              verifiedOn: input.editorialRecord?.lastUpdatedDate || '2026-04-14'
+                          }
+                        : {
+                              title: 'Education Recruitment Board (ERB) Punjab — Master Cadre Social Science Official Syllabus Blueprint',
+                              url: 'https://educationrecruitmentboard.com/',
+                              body: 'Education Recruitment Board, Punjab',
+                              verifiedOn: input.editorialRecord?.lastUpdatedDate || '2026-04-12'
+                          },
         workedExamples: (input.workedExamples || []).map((ex, idx) => ({
             title: {
                 en: `Worked Example ${idx + 1} (${meta.title.en})`,
@@ -662,11 +967,11 @@ function adaptBlueprintLesson(input: BlueprintLessonInput): Lesson {
               }
             : undefined,
         editorialRecord: {
-            authoredDate: input.editorialRecord?.lastUpdatedDate || '2026-04-12',
-            lastUpdatedDate: input.editorialRecord?.lastUpdatedDate || '2026-04-12',
+            authoredDate: input.editorialRecord?.lastUpdatedDate || '2026-04-14',
+            lastUpdatedDate: input.editorialRecord?.lastUpdatedDate || '2026-04-14',
             authoringType: 'authored-curriculum',
             reviewerRecord: input.editorialRecord?.editorialNote,
-            verifiedSyllabusDenominator: isEtt ? '200' : '150'
+            verifiedSyllabusDenominator: isEtt ? '200' : isAgniveer ? '50' : '150'
         }
     };
 }
@@ -694,6 +999,18 @@ export const MASTER_CADRE_BLUEPRINT_LESSONS: Record<string, Lesson> = {
     ),
     ...Object.fromEntries(
         CLERK_GK_SPECIAL_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
+    ),
+    ...Object.fromEntries(
+        MASTER_CADRE_MATH_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
+    ),
+    ...Object.fromEntries(
+        MASTER_CADRE_PUNJABI_LIT_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
+    ),
+    ...Object.fromEntries(
+        PSTET_PEDAGOGY_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
+    ),
+    ...Object.fromEntries(
+        RAJASTHAN_AND_AGNIVEER_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
     )
 };
 

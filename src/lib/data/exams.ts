@@ -1,3 +1,4 @@
+import { CLERK_REVISION_SUBJECT } from './clerk-revision-sets';
 import { CLERK_GK_FAST_SUBJECT } from './clerk-gk-fast';
 import { CLERK_SHARED_SUBJECTS } from './clerk-shared-outline';
 import { CTET_PRIMARY_SUBJECTS } from './ctet-primary-outline';
@@ -1087,10 +1088,100 @@ export const PUNJAB_EXAMS: Exam[] = [
             namePunjabi: 'ਉੱਚ ਗਣਿਤ',
             topics: [
               {
+                id: 'math-linear-algebra-matrices',
+                name: 'Linear Algebra, Matrices, Vector Spaces & Eigenvalues',
+                nameHindi: 'रैखिक बीजगणित, आव्यूह, सदिश समष्टि एवं आइगेन मान',
+                namePunjabi: 'ਲੀਨੀਅਰ ਅਲਜਬਰਾ, ਮੈਟ੍ਰਿਕਸ, ਵੈਕਟਰ ਸਪੇਸ ਤੇ ਆਈਗਨ ਮੁੱਲ',
+                subtopics: [
+                  'Matrices & Determinants: Rank of matrix, Echelon form, System of linear equations AX = B (Rouches theorem)',
+                  'Vector Spaces: Subspaces, Linear span, Linear independence, Basis and Dimension, Quotient spaces',
+                  'Linear Transformations: Kernel and Image, Rank-Nullity Theorem (dim V = rank + nullity)',
+                  'Eigenvalues & Eigenvectors: Characteristic equation, Cayley-Hamilton Theorem and matrix inversion',
+                  'Inner Product Spaces: Cauchy-Schwarz inequality, Gram-Schmidt orthogonalization process',
+                ],
+                examQuestions: '20-25',
+                difficulty: 'hard',
+              },
+              {
+                id: 'math-real-analysis-calculus',
+                name: 'Real Analysis, Sequences, Infinite Series & Advanced Calculus',
+                nameHindi: 'वास्तविक विश्लेषण, अनुक्रम, अनंत श्रेणियां एवं उच्च कलन',
+                namePunjabi: 'ਰੀਅਲ ਐਨਾਲਿਸਿਸ, ਅਨੁਕ੍ਰਮ, ਅਨੰਤ ਲੜੀਆਂ ਤੇ ਕੈਲਕੂਲਸ',
+                subtopics: [
+                  'Sequences & Series: Boundedness, Bolzano-Weierstrass theorem, Cauchy criterion, p-series test',
+                  'Convergence Tests: Ratio test, Root test, Raabes test, Leibniz alternating series test',
+                  'Limits, Continuity & Differentiability: Rolles theorem, Lagrange & Cauchy Mean Value Theorems',
+                  'Advanced Calculus: Partial differentiation, Eulers theorem for homogeneous functions, Maxima-Minima (Hessian)',
+                  'Integral Calculus & Leibniz Rule: Definite integrals, Beta and Gamma functions, Double/Triple integrals',
+                ],
+                examQuestions: '25-30',
+                difficulty: 'hard',
+              },
+              {
+                id: 'math-abstract-algebra-groups',
+                name: 'Abstract Algebra: Groups, Rings, Integral Domains & Fields',
+                nameHindi: 'अमूर्त बीजगणित: समूह, वलय, पूर्णांकीय प्रांत एवं क्षेत्र',
+                namePunjabi: 'ਅਮੂਰਤ ਅਲਜਬਰਾ: ਗਰੁੱਪ, ਰਿੰਗ, ਇੰਟੈਗਰਲ ਡੋਮੇਨ ਤੇ ਫੀਲਡ',
+                subtopics: [
+                  'Group Theory: Groups, Subgroups, Cyclic groups, Cosets, Lagranges theorem (order of subgroup divides group order)',
+                  'Normal Subgroups & Quotient Groups: First Isomorphism Theorem for groups, Cayleys theorem',
+                  'Permutation Groups: Symmetric group Sn, Alternating group An, Even and odd permutations',
+                  'Ring Theory: Rings, Integral domains, Fields, Characteristic of a ring, Ideals and Quotient rings',
+                  'Polynomial Rings: Divisibility, Eisensteins criterion for irreducibility over rationals, Maximal & Prime ideals',
+                ],
+                examQuestions: '20-25',
+                difficulty: 'hard',
+              },
+              {
+                id: 'math-diff-equations-mechanics',
+                name: 'Differential Equations, Vector Calculus, Statics & Dynamics',
+                nameHindi: 'अवकल समीकरण, सदिश कलन, स्थिति विज्ञान एवं गति विज्ञान',
+                namePunjabi: 'ਡਿਫਰੈਂਸ਼ੀਅਲ ਸਮੀਕਰਨ, ਵੈਕਟਰ ਕੈਲਕੂਲਸ, ਸਥਿਰ ਤੇ ਗਤੀ ਵਿਗਿਆਨ',
+                subtopics: [
+                  'First Order ODEs: Exact differential equations (dM/dy = dN/dx), Integrating factors, Bernoullis equation',
+                  'Higher Order Linear ODEs: Complementary function, Particular integral, Method of variation of parameters',
+                  'Cauchy-Euler Equations & Partial Differential Equations: Charpits method, Wave, Heat, and Laplace equations',
+                  'Vector Calculus: Gradient, Divergence (solenoidal), Curl (irrotational), Gauss Divergence & Stokes theorems',
+                  'Statics & Dynamics: Coplanar forces, Virtual work, Simple Harmonic Motion (SHM), Projectile motion and Central orbits',
+                ],
+                examQuestions: '25-30',
+                difficulty: 'hard',
+              },
+              {
+                id: 'math-coordinate-solid-geometry',
+                name: '2D & 3D Coordinate Geometry: Conics, Sphere, Cone & Cylinder',
+                nameHindi: '2D एवं 3D निर्देशांक ज्यामिति: शांकव, गोला, शंकु एवं बेलन',
+                namePunjabi: '2D ਤੇ 3D ਨਿਰਦੇਸ਼-ਅੰਕ ਜਿਓਮੈਟਰੀ: ਕੋਨਿਕ, ਗੋਲਾ, ਸ਼ੰਕੂ ਤੇ ਵੇਲਣ',
+                subtopics: [
+                  '2D Conics: Parabola (y² = 4ax), Ellipse (x²/a² + y²/b² = 1), Hyperbola, Tangents, Normals, and Eccentricity',
+                  'General Second-Degree Equation: ax² + 2hxy + by² + 2gx + 2fy + c = 0, Discriminant Δ and classification of conics',
+                  '3D Coordinate Geometry: Direction cosines (l² + m² + n² = 1), Angle between lines, Shortest distance between skew lines',
+                  'Planes & Lines in 3D: Equation of plane, Distance from point to plane, Symmetrical form of straight line',
+                  'Sphere, Cone & Cylinder: Equation of sphere, Tangent plane, Right circular cone (generator and guiding curve), Right circular cylinder',
+                ],
+                examQuestions: '20-25',
+                difficulty: 'medium',
+              },
+              {
+                id: 'math-prob-stats-numerical',
+                name: 'Probability, Mathematical Statistics, Linear Programming & Numerical Analysis',
+                nameHindi: 'प्रायिकता, सांख्यिकी, रैखिक प्रोग्रामन एवं संख्यात्मक विश्लेषण',
+                namePunjabi: 'ਸੰਭਾਵਨਾ, ਅੰਕੜਾ ਵਿਗਿਆਨ, ਲੀਨੀਅਰ ਪ੍ਰੋਗਰਾਮਿੰਗ ਤੇ ਸੰਖਿਆਤਮਕ ਵਿਸ਼ਲੇਸ਼ਣ',
+                subtopics: [
+                  'Probability: Addition and Multiplication theorems, Conditional probability, Bayes theorem',
+                  'Probability Distributions: Binomial (n, p), Poisson (λ = np), Normal distribution (Z-score and bell curve)',
+                  'Mathematical Statistics: Measures of central tendency, Standard deviation, Pearson correlation coefficient, Linear regression lines',
+                  'Linear Programming: Graphical method, Convex sets, Extreme points, Simplex method foundations',
+                  'Numerical Analysis: Newton-Raphson method (quadratic convergence), Bisection method, Trapezoidal & Simpsons 1/3rd rules',
+                ],
+                examQuestions: '20-25',
+                difficulty: 'medium',
+              },
+              {
                 id: 'mathematics-core',
-                name: 'Algebra, Calculus, Matrices & Probability',
-                nameHindi: 'बीजगणित, कलन, आव्यूह एवं प्रायिकता',
-                namePunjabi: 'ਅਲਜਬਰਾ ਤੇ ਕੈਲਕੂਲਸ',
+                name: 'Algebra, Calculus, Matrices & Probability Overview',
+                nameHindi: 'बीजगणित, कलन, आव्यूह एवं प्रायिकता समग्र अवलोकन',
+                namePunjabi: 'ਅਲਜਬਰਾ ਤੇ ਕੈਲਕੂਲਸ ਸਮੁੱਚਾ ਸੰਖੇਪ',
                 subtopics: [
                   'Quadratic Equations: Discriminant D = b² - 4ac (D=0 equal roots, D>0 real distinct, D<0 complex)',
                   'Progressions: AP (Tn = a+(n-1)d), GP (Tn = ar^(n-1), S_inf = a/(1-r))',
@@ -1160,10 +1251,85 @@ export const PUNJAB_EXAMS: Exam[] = [
                 difficulty: 'medium',
               },
               {
+                id: 'punjabi-lit-gurmat-sufi',
+                name: 'Gurmat Kav & Sufi Kav: Core Bani, Sufi Poets & Ideology',
+                nameHindi: 'गुरमत काव्य एवं सूफी काव्य: गुरु साहिबान, भगत बाणी एवं प्रमुख सूफी कवि',
+                namePunjabi: 'ਗੁਰਮਤਿ ਕਾਵਿ ਅਤੇ ਸੂਫ਼ੀ ਕਾਵਿ: ਗੁਰੂ ਸਾਹਿਬਾਨ, ਭਗਤ ਬਾਣੀ ਤੇ ਪ੍ਰਮੁੱਖ ਸੂਫ਼ੀ ਕਵੀ',
+                subtopics: [
+                  'Gurmat Kav: Sri Guru Nanak Dev Ji (Japji Sahib, Asa di Var, Barah Maha Tukhari, Sidh Gosht)',
+                  'Sikh Gurus: Sri Guru Angad Dev Ji, Sri Guru Amar Das Ji (Anand Sahib), Sri Guru Ram Das Ji (Lavan), Sri Guru Arjan Dev Ji (Sukhmani Sahib)',
+                  'Saloks & Bhagats: Sri Guru Tegh Bahadur Ji (Salok Mahala 9, Raga Jaijaiwanti), Bhagat Kabir, Bhagat Ravidas, Bhagat Namdev in Guru Granth Sahib',
+                  'Sufi Pioneers: Baba Sheikh Farid (112 saloks & 4 shabads in SGGS), Shah Hussain (pioneer of Kafi form, Murshid Madho Lal)',
+                  'Classical Sufis: Bulleh Shah (156 Kafian, Ishq Haqiqi), Sultan Bahu (Abyat & Hoo radif), Ali Haider, Khwaja Ghulam Farid',
+                ],
+                examQuestions: '25-30',
+                difficulty: 'hard',
+              },
+              {
+                id: 'punjabi-lit-qissa-bir',
+                name: 'Qissa Kav & Bir Kav: Romantic Epics, Chhand, Heroic Ballads',
+                nameHindi: 'किस्सा काव्य एवं बीर काव्य: प्रमुख किस्साकार, छंद, वारें एवं जंगनामे',
+                namePunjabi: 'ਕਿੱਸਾ ਕਾਵਿ ਅਤੇ ਬੀਰ ਕਾਵਿ: ਪ੍ਰਮੁੱਖ ਕਿੱਸਾਕਾਰ, ਛੰਦ, ਵਾਰਾਂ ਤੇ ਜੰਗਨਾਮੇ',
+                subtopics: [
+                  'Qissa Pioneers: Damodar (first written Heer in Davaiya chhand), Pilu (Mirza Sahiban in Sad chhand, tragic fatalism)',
+                  'Waris Shah: Heer Waris (1766, Baint chhand, cultural encyclopedia of 18th century Punjab)',
+                  'Other Masters: Hashim Shah (Sassi Punnu in Davaiya), Hafiz Barkhurdar (Yousaf Zulaikha), Qadiryar (Puran Bhagat in Baint, Si-harfi)',
+                  'Bir Kav — Guru Gobind Singh Ji: Chandi di Var (55 stanzas, Sirkhindi & Nishani chhand, spiritual heroism)',
+                  'Historical Ballads: Shah Mohammad (Jangnama Singhan te Firangian — 105 Baints, First Anglo-Sikh War), Najabat (Var Nadir Shah 1739)',
+                ],
+                examQuestions: '25-30',
+                difficulty: 'hard',
+              },
+              {
+                id: 'punjabi-lit-modern-poetry',
+                name: 'Modern Punjabi Poetry: Progressive Movement & Award-Winning Poets',
+                nameHindi: 'आधुनिक पंजाबी कविता: भाई वीर सिंह, अमृता प्रीतम, शिव कुमार, पाश एवं सुरजीत पातर',
+                namePunjabi: 'ਆਧੁਨਿਕ ਪੰਜਾਬੀ ਕਵਿਤਾ: ਭਾਈ ਵੀਰ ਸਿੰਘ, ਅੰਮ੍ਰਿਤਾ ਪ੍ਰੀਤਮ, ਸ਼ਿਵ ਕੁਮਾਰ, ਪਾਸ਼ ਤੇ ਸੁਰਜੀਤ ਪਾਤਰ',
+                subtopics: [
+                  'Pioneers: Bhai Vir Singh (Father of modern Punjabi literature, Rana Surat Singh, Mere Saiyan Jio — 1st Sahitya Akademi 1955)',
+                  'Free Verse & Progressivism: Prof. Puran Singh (Khule Maidan), Dhani Ram Chatrik (Chandanwari), Diwan Singh Kalepani (Wagde Pani)',
+                  'Romantic & Revolutionary: Amrita Pritam (Ajj Aakhan Waris Shah Nu, Kagaz te Canvas — Jnanpith 1981), Prof. Mohan Singh (Save Pattar, Wadda Vela)',
+                  'Lyricism: Shiv Kumar Batalvi (Birha da Sultan, Loona poetic drama — Sahitya Akademi 1967 at age 31)',
+                  'Post-1970s: Paash (Loh-Katha, Sab Ton Khatarnak), Surjit Patar (Hawa Vich Likhe Harf, Lafzan di Dargah — Saraswati Samman)',
+                ],
+                examQuestions: '25-30',
+                difficulty: 'hard',
+              },
+              {
+                id: 'punjabi-lit-prose-drama',
+                name: 'Modern Punjabi Prose & Theatre: Drama, One-Act Play, Novel, Short Story',
+                nameHindi: 'पंजाबी गद्य एवं रंगमंच: नाटक, एकांकी, उपन्यास, कहानी एवं आत्मकथा',
+                namePunjabi: 'ਪੰਜਾਬੀ ਵਾਰਤਕ ਅਤੇ ਰੰਗਮੰਚ: ਨਾਟਕ, ਇਕਾਂਗੀ, ਨਾਵਲ, ਨਿੱਕੀ ਕਹਾਣੀ ਤੇ ਸਵੈ-ਜੀਵਨੀ',
+                subtopics: [
+                  'Theatre & Drama: Ishwar Chandra Nanda (Father of Punjabi drama, Dulhan/Suhag 1913, Subhadra), Balwant Gargi (Loha Kutt 1944, Rangmanch)',
+                  'Modern Playwrights: Sant Singh Sekhon (Baba Bohar, Mitter Piara), Dr. Harcharan Singh, Dr. Atamjit (Tatti Tavi da Sach)',
+                  'Novel: Bhai Vir Singh (Sundari 1898 first novel), Nanak Singh (Father of Punjabi novel, Chitta Lahu, Pavittar Papi, Ik Mian Do Talwaran)',
+                  'Regional Realism: Gurdial Singh (Marhi da Deeva, Annhe Ghore da Daan — Jnanpith 1999), Jaswant Singh Kanwal (Lahu di Lau)',
+                  'Short Story: Kulwant Singh Virk (Father of short story, Dharti Hethla Balad, Naveen Lok), Kartar Singh Duggal, Ajit Caur (Khanabadosh)',
+                ],
+                examQuestions: '25-30',
+                difficulty: 'hard',
+              },
+              {
+                id: 'punjabi-vyakaran-linguistics',
+                name: 'Punjabi Grammar & Linguistics: Gurmukhi Script Evolution, Phonology, Morphology & Syntax',
+                nameHindi: 'पंजाबी व्याकरण एवं भाषा विज्ञान: गुरमुखी लिपि विकास, ध्वनि विचार, शब्द एवं वाक्य विचार',
+                namePunjabi: 'ਪੰਜਾਬੀ ਵਿਆਕਰਨ ਅਤੇ ਭਾਸ਼ਾ ਵਿਗਿਆਨ: ਗੁਰਮੁਖੀ ਲਿਪੀ ਨਿਕਾਸ, ਧੁਨੀ ਵਿਉਂਤ, ਸ਼ਬਦ ਤੇ ਵਾਕ ਬਣਤਰ',
+                subtopics: [
+                  'Linguistic Genealogy: Indo-European -> Indo-Iranian -> Indo-Aryan; Gurmukhi script standardization by Guru Angad Dev Ji',
+                  'Phonology: 41 letters (35 traditional + 6 foot-dot), 3 vowel carriers (ੳ, ਅ, ੲ), 10 lagan-matran, 3 lagakhar, 3 dutt akhar',
+                  'Punjabi Tones: Three phonemic tones (High, Mid, Low) emerging from historical voiced aspirates (ਘ, ਝ, ਢ, ਧ, ਭ) and Ha (ਹ)',
+                  'Morphology & Word Classes: 8 parts of speech (4 Vikari, 4 Avikari), Causative verbs (Sadharan -> 1st -> 2nd Prernarthak)',
+                  'Syntax: Subject + Object + Verb (SOV), Simple, Compound and Complex sentences, 13 standard punctuation marks (Vishram Chinh)',
+                ],
+                examQuestions: '30-35',
+                difficulty: 'medium',
+              },
+              {
                 id: 'punjabi-sahitya',
-                name: 'History of Punjabi Literature & Poets',
-                nameHindi: 'पंजाबी साहित्य का इतिहास एवं कवि',
-                namePunjabi: 'ਪੰਜਾਬੀ ਸਾਹਿਤ ਦਾ ਇਤਿਹਾਸ',
+                name: 'History of Punjabi Literature & Poets Overview',
+                nameHindi: 'पंजाबी साहित्य का इतिहास एवं कवि समग्र अवलोकन',
+                namePunjabi: 'ਪੰਜਾਬੀ ਸਾਹਿਤ ਦਾ ਇਤਿਹਾਸ ਸਮੁੱਚਾ ਸੰਖੇਪ',
                 subtopics: [
                   'Gurmat Kav: Guru Nanak Dev, Guru Angad Dev, Guru Arjan Dev (Adi Granth 1604), Guru Gobind Singh',
                   'Sufi Poets: Baba Farid (112 saloks in Guru Granth Sahib), Shah Hussain, Bulleh Shah kaafiyan',
@@ -1336,6 +1502,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     syllabusStatus: 'provisional-archive',
     subjects: [
       CLERK_GK_FAST_SUBJECT,
+  CLERK_REVISION_SUBJECT,
       ...CLERK_SHARED_SUBJECTS,
       {
         id: 'clerk-special',
@@ -2488,9 +2655,13 @@ export const CENTRAL_EXAMS: Exam[] = [
             topics: [
               {
                 id: 'teaching-aptitude',
-                name: 'Teaching Aptitude, Evaluation Systems & NEP 2020',
-                nameHindi: 'शिक्षण अभिवृत्ति, मूल्यांकन प्रणालियां व एनईपी 2020',
-                subtopics: ['Levels of Teaching (Memory, Understanding, Reflective), CBCS, NEP 2020 Higher Education Provisions'],
+                name: 'Teaching & Research Aptitude, Evaluation Systems & NEP 2020',
+                nameHindi: 'शिक्षण व शोध अभिवृत्ति, मूल्यांकन प्रणालियां व एनईपी 2020',
+                subtopics: [
+                  'Levels of Teaching (Memory, Understanding, Reflective), CBCS, NEP 2020 Higher Education Provisions',
+                  'Teaching methods, Characteristics of good teacher',
+                  'Research types, Thesis writing, Sampling methods',
+                ],
                 examQuestions: '10',
                 difficulty: 'hard',
               },
@@ -2500,6 +2671,14 @@ export const CENTRAL_EXAMS: Exam[] = [
                 nameHindi: 'शिक्षा में सूचना एवं संचार प्रौद्योगिकी (ICT)',
                 subtopics: ['Digital initiatives in higher education: SWAYAM, SWAYAMPRABHA, Digilocker, IPv4 vs IPv6, Cloud'],
                 examQuestions: '10',
+                difficulty: 'medium',
+              },
+              {
+                id: 'ict-net',
+                name: 'ICT, Data Interpretation & Higher Education',
+                nameHindi: 'ICT, डेटा व उच्च शिक्षा',
+                subtopics: ['Internet, E-learning, Digital literacy', 'Bar graphs, Pie charts, Tables', 'UGC Act, Universities in India, NAAC'],
+                examQuestions: '30',
                 difficulty: 'medium',
               },
             ],
@@ -2825,7 +3004,8 @@ const ARMY_AGNIVEER_EXAM: Exam = {
   ],
 };
 
-CENTRAL_EXAMS.push(SSC_CGL_EXAM, CTET_P2_EXAM, UGC_NET_EXAM, ARMY_AGNIVEER_EXAM);
+void UGC_NET_EXAM;
+CENTRAL_EXAMS.push(SSC_CGL_EXAM, CTET_P2_EXAM, ARMY_AGNIVEER_EXAM);
 
 // ---------------------------------------------------------------------------
 // 4. HARYANA EXAMS DATABASE

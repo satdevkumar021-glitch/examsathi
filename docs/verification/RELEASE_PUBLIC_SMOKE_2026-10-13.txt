@@ -1,0 +1,68 @@
+
+> examsathi-web@2.6.0 smoke
+> node scripts/smoke.mjs
+
+
+1. Health and security headers
+  PASS  GET /api/health/ is ok
+  PASS  security headers present
+
+2. Pages render (HTTP 200)
+  PASS  GET /
+  PASS  GET /login/
+  PASS  GET /register/
+  PASS  GET /forgot-password/
+  PASS  GET /dashboard/
+  PASS  GET /exams/
+  PASS  GET /syllabus/
+  PASS  GET /syllabus/punjab-ett/
+  PASS  GET /mock-test/
+  PASS  GET /library/
+  PASS  GET /roadmap/
+  PASS  GET /profile/
+  PASS  GET /ai-generator/
+  PASS  GET /exam-coach/
+  PASS  GET /typing-practice/
+  PASS  GET /coverage/
+  PASS  GET /about/
+  PASS  GET /contact/
+  PASS  GET /privacy/
+  PASS  GET /terms/
+  PASS  GET /offline/
+  PASS  unknown page returns 404
+
+3. Question bank API (answers never leave the server early)
+  PASS  manifest lists topic counts  (37 topics)
+  PASS  count returns pool sizes
+  PASS  set returns questions WITHOUT answers  (5 questions)
+  PASS  lookup returns text only
+  PASS  daily question has no answer
+  PASS  bad input is rejected with 400
+
+4. Attempt scoring is server-authoritative
+  PASS  reveal returns the answer key
+  PASS  all-correct submission scores 100%
+  PASS  all-wrong submission applies negative marking
+  PASS  client-sent score is ignored
+  PASS  tampered attempt (unknown question) -> 422
+  PASS  answer outside the served set -> 422
+  PASS  malformed attempt -> 400
+
+5. Auth API validation
+  PASS  login rejects empty credentials
+  PASS  register rejects short password
+  PASS  login with wrong credentials is not a 200  (status 401)
+
+6. Admin protection
+  PASS  /admin/ without a session redirects to /login/
+  PASS  GET /api/admin/content/ without a token -> 401
+  PASS  POST /api/admin/content/ without a token -> 401
+  PASS  PATCH /api/admin/content/ without a token -> 401
+  PASS  DELETE /api/admin/content/ without a token -> 401
+  PASS  garbage bearer token -> 401
+
+7. Staff workflow (needs SMOKE_STAFF_TOKEN)
+  SKIP  create -> review -> publish  (set SMOKE_STAFF_TOKEN to a staff user's access token)
+
+============================================================
+46/46 checks passed, 1 skipped

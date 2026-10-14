@@ -10,7 +10,7 @@ import { Question } from '@/lib/data/questions';
 import FlipCard from '@/components/ui/FlipCard';
 import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
-import { awardStudyXP } from '@/lib/study-progress';
+import { awardStudyXP, recordStudyActivity } from '@/lib/study-progress';
 import { getCardState, scheduleNextReview, saveCardState, Rating } from '@/lib/fsrs';
 import {
   PersonalNote,
@@ -79,6 +79,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
     }
     setSelectedAnswers({});
     setShowExplanation({});
+    recordStudyActivity();
   }, [topicId, selectedExam, setSelectedExam, practiceCount]);
 
   // Load personal notes & draft on mount or when exam/topic changes
@@ -178,6 +179,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   };
 
   const handleMarkAsRead = () => {
+    recordStudyActivity();
     if (isReadMarked) return;
     setIsReadMarked(true);
     markTopicComplete(lesson.id);
@@ -192,6 +194,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   const handleOptionSelect = (qId: string, optKey: string) => {
     setSelectedAnswers(prev => ({ ...prev, [qId]: optKey }));
     setShowExplanation(prev => ({ ...prev, [qId]: true }));
+    recordStudyActivity();
   };
 
   const currentCards = lesson.flashcards && lesson.flashcards.length > 0 ? lesson.flashcards : [
@@ -202,6 +205,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   ];
 
   const handleRateCard = (rating: Rating) => {
+    recordStudyActivity();
     const cardId = `fc-${lesson.id}-${cardIndex}`;
     const currentState = getCardState(cardId, lesson.id);
     const { nextState } = scheduleNextReview(currentState, rating);

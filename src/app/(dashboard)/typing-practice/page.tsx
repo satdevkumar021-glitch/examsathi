@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { ArrowLeft, Award, RotateCcw, Keyboard, Info } from 'lucide-react';
 import { evaluateTypingTest, saveTypingResult, TypingResult } from '@/lib/typing-engine';
+import { recordStudyActivity } from '@/lib/study-progress';
 
 const PRACTICE_PASSAGES = {
   punjabi: {
@@ -80,6 +81,7 @@ export default function TypingPracticePage() {
         });
         setEvalResult(res);
         saveTypingResult(res);
+        recordStudyActivity();
       }
     }, 250);
     return () => clearInterval(timer);
@@ -114,6 +116,7 @@ export default function TypingPracticePage() {
       });
       setEvalResult(res);
       saveTypingResult(res);
+      recordStudyActivity();
     }
   };
 

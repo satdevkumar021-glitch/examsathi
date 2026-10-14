@@ -1,0 +1,262 @@
+topic_id,topic_title_en,in_syllabus,exam_ids,material_status,authored_static_count,unique_normalized_stems,duplicate_stems,pa_equals_en_count,hi_equals_en_count,verified_pyq_count,verified_pyq_with_metadata,year_labelled_non_pyq_count,computed_pool_sample_count,has_lesson,lesson_flashcards
+"ancient-india","Ancient India & Indus Valley Civilization",true,"punjab-master-cadre-sst|reet-level2-sst","ready",30,30,0,0,0,0,0,30,30,true,2
+"army-military-heritage","Indian Armed Forces Heritage, Ranks & Honours",true,"army-agniveer-gd","ready",12,12,0,12,12,0,0,0,12,true,12
+"banda-singh-bahadur-misls","Baba Banda Singh Bahadur, Dal Khalsa, Ghallugharas & The 12 Sikh Misls (1708–1799)",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"biology-concepts","Cell Biology, Genetics, Molecular Biology, Evolution, Human Health & Biotechnology (B → I → H → G)",true,"punjab-master-cadre-science|reet-level2-science-math","ready",63,63,0,50,50,0,0,1,65,true,52
+"cdp-adolescent","Adolescent Development & Pedagogy",true,"ctet-paper2","ready",50,50,0,50,50,0,0,0,50,true,50
+"cdp-htet-l1","Child Development, Learning Theories & Pedagogy",true,"htet-l1","ready",66,66,0,46,46,5,3,15,68,true,48
+"cdp-htet-l2","Adolescent Development & Pedagogy",true,"htet-l2","ready",116,116,0,96,96,5,3,15,118,true,98
+"chemistry-concepts","Inorganic Chemistry I: Periodic Table Trends, Metallurgy, Hydrogen, s-Block, p-Block & Environmental Chemistry (B → I → H → G)",true,"punjab-master-cadre-science|reet-level2-science-math","ready",57,57,0,50,50,0,0,1,59,true,52
+"child-development-pedagogy","Cognitive Theories: Piaget, Vygotsky & Kohlberg",true,"punjab-pstet|reet-level1|reet-level2-sst|reet-level2-science-math|haryana-htet|haryana-ett-prt|ctet-paper1|ctet-paper2|utet-teaching","ready",66,66,0,46,46,5,3,15,68,true,48
+"clerk-cinema-literature","Cinema and literature",true,"punjab-clerk","ready",20,20,0,0,0,0,0,0,26,true,6
+"clerk-computer-hardware","Computer Architecture, CPU Registers, Memory Hierarchy & Number Systems",true,"punjab-clerk|punjab-patwari|punjab-police","ready",18,18,0,0,0,0,0,0,22,true,4
+"clerk-current-affairs","Current affairs",true,"punjab-clerk","ready",20,20,0,0,0,0,0,0,26,true,6
+"clerk-data-analysis","Data interpretation",true,"punjab-clerk","ready",50,50,0,0,0,0,0,0,50,true,4
+"clerk-gk-fast-practice","GK: Polity, History, Geography, Science and Punjab",true,"punjab-clerk","ready",100,100,0,0,0,0,0,0,100,true,100
+"clerk-ms-office-mastery","MS Office Mastery: MS Word, MS Excel Formulas ($A$1, VLOOKUP, IF) & MS PowerPoint",true,"punjab-clerk|punjab-patwari|punjab-police","ready",20,20,0,0,0,0,0,0,24,true,4
+"clerk-networking-cybersecurity","Computer Networks, OSI 7-Layer Model, TCP/IP Protocols, IPv4/IPv6 & Cybersecurity",true,"punjab-clerk|punjab-patwari|punjab-police","ready",17,17,0,0,0,0,0,0,21,true,4
+"clerk-sports","Sports",true,"punjab-clerk","ready",20,20,0,0,0,0,0,0,26,true,6
+"computer-awareness","Computer Knowledge & IT Proficiency (Master Overview)",true,"punjab-clerk|rajasthan-police-constable|ssc-chsl|ugc-net","ready",113,112,1,50,50,2,2,0,114,true,52
+"computer-it-basics","Computer Applications & Office Suite",true,"haryana-cet-clerk","ready",113,112,1,50,50,2,2,0,114,true,52
+"constitution","Indian polity",true,"punjab-clerk","ready",142,142,0,0,0,0,0,82,142,true,0
+"constitution-basics","(ORPHAN TOPIC)",false,"NONE","orphan",1,1,0,0,0,1,0,0,1,false,0
+"delhi-historical-heritage","Delhi Through The Ages (Tomars to Modern Capital)",true,"delhi-police-constable","ready",10,10,0,10,10,0,0,0,10,true,10
+"delhi-police-computer-apps","Computer Applications: MS Word, Excel & Networking",true,"delhi-police-constable","ready",113,112,1,50,50,2,2,0,114,true,52
+"economics-national-income","(ORPHAN TOPIC)",false,"NONE","orphan",8,8,0,0,0,0,0,8,8,false,0
+"elementary-mathematics","Elementary Mathematics: Arithmetic Speed Techniques",true,"central-capf-gd","ready",0,0,0,0,0,0,0,0,151,true,17
+"english-grammar-lit","Grammar Rules, Voice, Narration & Shakespeare",true,"punjab-master-cadre-english|punjab-clerk","ready",76,76,0,50,50,0,0,1,76,true,2
+"english-grammar-syntax","Parts of Speech, Comprehension & Voice/Narration",true,"army-agniveer-clerk","ready",50,50,0,50,50,0,0,0,50,true,50
+"ett-child-pedagogy","(ORPHAN TOPIC)",false,"NONE","orphan",17,17,0,0,0,3,3,14,68,true,48
+"ett-english-1","Understanding an unfamiliar passage",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-english-2","Grammar in sentences and clauses",true,"punjab-ett","ready",13,13,0,3,3,0,0,0,13,true,6
+"ett-english-3","Vocabulary and idiomatic meaning",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-english-4","Translation between English and Punjabi",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-evs-science","(ORPHAN TOPIC)",false,"NONE","orphan",1,1,0,0,0,1,1,0,1,false,0
+"ett-hindi-1","Language and writing systems",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-10","Words with several meanings",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-11","Opposite-meaning vocabulary",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-12","Correct and incorrect word forms",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-13","Correcting sentences",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-14","Idioms and proverbs in context",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-15","Rendering Hindi into Punjabi",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-2","Sounds and letters",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-3","Word structure and classification",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-4","Inflecting word classes",true,"punjab-ett","ready",12,12,0,0,0,0,0,0,12,true,6
+"ett-hindi-5","Uninflected word classes",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-6","Words with similar meanings",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-7","Sanskrit-derived word forms",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-8","Word formation using affixes",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-hindi-9","Replacing a phrase with one word",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-light-2","Spherical mirrors and ray diagrams",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-light-3","Mirror formula and sign convention",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-light-4","Refraction and refractive index",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-light-5","Lenses, lens formula and power",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-light-reflection","Reflection and plane mirrors",true,"punjab-ett","ready",20,20,0,0,0,0,0,0,20,true,6
+"ett-math-1","Number systems and their properties",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-10","Areas of triangular and quadrilateral figures",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-11","Geometry with coordinates",true,"punjab-ett","ready",11,11,0,0,0,0,0,0,11,true,6
+"ett-math-12","Trigonometric ratios and applications",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-13","Geometric constructions",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-14","Heron-based triangle area",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-15","Solid surface measurement and volume",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-16","Area involving circular regions",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-17","Interpreting statistical data",true,"punjab-ett","ready",12,12,0,0,0,0,0,0,12,true,6
+"ett-math-18","Calculating probability",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-2","Working with real numbers",true,"punjab-ett","ready",12,12,0,0,0,0,0,0,12,true,6
+"ett-math-3","Polynomial expressions",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-4","Linear equations in two variables, including simultaneous pairs",true,"punjab-ett","ready",12,12,0,0,0,0,0,0,12,true,6
+"ett-math-5","Solving quadratic equations",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-6","Arithmetic sequences",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-7","Euclidean geometry foundations",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-8","Angles formed by lines",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-math-9","Properties of triangles, quadrilaterals and circles",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-paper-a-punjabi-grammar-vocabulary-idioms","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,0,10,true,6
+"ett-paper-a-punjabi-script-phonetics-dialects","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,0,10,true,6
+"ett-primary-math","(ORPHAN TOPIC)",false,"NONE","orphan",1,1,0,0,0,1,1,0,152,true,2
+"ett-punjabi-1","Folk literature",true,"punjab-ett","ready",10,10,0,0,0,0,0,0,10,true,6
+"ett-punjabi-2","Punjabi cultural traditions",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-punjabi-3","Idiomatic and proverbial usage",true,"punjab-ett","ready",13,13,0,0,0,0,0,0,13,true,6
+"ett-punjabi-4","Rendering English into Punjabi",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-punjabi-5","Rewriting sentences",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-acids","Acids, bases and salts",true,"punjab-ett","ready",17,17,0,0,0,0,0,0,17,true,6
+"ett-science-atoms","Atoms and molecules",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-carbon","Carbon and its compounds",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-cell","The fundamental unit of life",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-control","Control and coordination",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-diversity","Diversity of living organisms",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-electricity","Electricity",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-energy","Sources of energy",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-eye","The human eye and colourful world",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-food","Improvement in food resources",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-force","Force and laws of motion",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-gravitation","Gravitation",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-heredity","Heredity and evolution",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-illness","Why do we fall ill?",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-life","Life processes",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-magnetism","Magnetism",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-matter","Matter in our surroundings",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-metals","Metals and non-metals",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-motion","Motion",true,"punjab-ett","ready",15,15,0,0,0,0,0,0,15,true,6
+"ett-science-reactions","Chemical reactions and equations",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-reproduction","Reproduction in organisms",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-resources","Natural resources",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-sound","Sound",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-tissues","Tissues",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-science-work-energy","Work and energy",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-civics-1","Meaning and importance of democracy",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-civics-2","Citizens’ constitutional rights",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-civics-3","Major constitutional features",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-civics-4","Government at the Union level",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-civics-5","Government at the state level",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-civics-6","The structure of Indian democracy",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-civics-7","India’s external policy and the United Nations",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-economics-1","Economic foundations",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-economics-2","India’s economic framework",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-economics-3","Agricultural development in India",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-economics-4","Industrial development in India",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-geography-1","India: location and overview",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-geography-2","India’s landforms",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-geography-3","Climate patterns",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-geography-4","Vegetation, wildlife and soils",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-geography-5","Land use and agricultural activities",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-geography-6","Mineral resources and energy",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-geography-7","Population patterns",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-geography-8","Punjab: terrain, drainage, climate, soils and farming",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-history-1","Geography’s influence on Punjab’s past",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-history-2","Punjab’s society and politics before Guru Nanak",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-history-3","Guru Nanak’s life and teachings",true,"punjab-ett","ready",20,20,0,0,0,0,0,0,20,true,6
+"ett-sst-history-4","Contributions of the Gurus from Guru Angad to Guru Tegh Bahadur",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-history-5","Guru Gobind Singh, the Khalsa and its significance",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-history-6","Banda Singh Bahadur and the Sikh Misls",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-history-7","Ranjit Singh: early life, achievements and British relations",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-history-8","Anglo-Sikh conflict and annexation",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"ett-sst-history-9","Punjab’s contribution to the independence struggle",true,"punjab-ett","pending",0,0,0,0,0,0,0,0,0,false,0
+"fundamental-rights","Constitution, Preamble & Fundamental Rights",true,"punjab-master-cadre-sst|punjab-police|reet-level2-sst|ssc-chsl|ssc-cgl|ctet-paper2","ready",142,142,0,0,0,0,0,82,142,true,2
+"general-science-concepts","Science and technology",true,"punjab-clerk|central-capf-gd","ready",209,209,0,150,150,0,0,3,215,true,156
+"gk-agniveer","General Knowledge & Current Affairs",true,"army-agniveer","ready",338,338,0,12,12,1,1,195,346,true,20
+"gk-geography-foundation","GK: Geography",true,"punjab-clerk","ready",20,20,0,0,0,0,0,0,20,true,20
+"gk-history-foundation","GK: History",true,"punjab-clerk","ready",20,20,0,0,0,0,0,0,20,true,20
+"gk-polity-foundation","GK: Polity",true,"punjab-clerk","ready",20,20,0,0,0,0,0,0,20,true,20
+"gk-punjab-foundation","GK: Punjab GK",true,"punjab-clerk","ready",20,20,0,0,0,0,0,0,20,true,20
+"gk-science-foundation","GK: Science",true,"punjab-clerk","ready",20,20,0,0,0,0,0,0,20,true,20
+"guru-angad-amar-ram-das","Guru Angad Dev Ji, Guru Amar Das Ji & Guru Ram Das Ji (1539–1581): Institutional Consolidation",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"guru-arjan-dev-ji","Sri Guru Arjan Dev Ji (1563–1606): Harmandir Sahib, Adi Granth Compilation & Martyrdom",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"guru-gobind-singh-ji","Sri Guru Gobind Singh Ji (1666–1708): Creation of Khalsa, Battles, Sahibzadas & Eternal Guruship",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"guru-hargobind-to-tegh-bahadur","Guru Hargobind Sahib Ji to Guru Tegh Bahadur Ji (1606–1675): Miri-Piri, Akal Takht & Hind di Chadar",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"guru-nanak-dev-ji","Sri Guru Nanak Dev Ji (1469–1539): Life, Four Udasis, Bani & Philosophy",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"haryana-agri-husbandry","Agriculture Patterns & Animal Husbandry Breeds",true,"haryana-police-constable","ready",50,50,0,50,50,0,0,0,50,true,50
+"haryana-geography-rivers","Haryana Rivers, Climate & Agriculture",true,"haryana-htet","ready",8,8,0,8,8,0,0,0,8,true,8
+"haryana-gk-htet","Haryana GK & EVS",true,"htet-l1","ready",6,6,0,0,0,0,0,6,9,true,4
+"haryana-history-rakhigarhi","Ancient Haryana, Rakhigarhi & Mahabharata Era",true,"haryana-htet","ready",8,8,0,8,8,0,0,0,8,true,8
+"hindi-grammar-deep","Hindi Vyakaran: Sandhi, Samas, Upsarg, Pratyay",true,"rajasthan-police-si","ready",51,51,0,50,50,0,0,1,53,true,52
+"hindi-sahitya","History of Hindi Literature: Bhaktikal to Modern",true,"punjab-master-cadre-hindi","ready",1,1,0,0,0,0,0,1,1,true,2
+"hindi-vyakaran","Hindi Grammar & Poetics: Sandhi, Samas & Ras",true,"punjab-master-cadre-hindi|reet-level1|reet-level2-sst|reet-level2-science-math|utet-teaching","ready",51,51,0,50,50,0,0,1,53,true,52
+"ict-net","ICT, Data Interpretation & Higher Education",true,"ugc-net","ready",113,112,1,50,50,2,2,0,114,true,60
+"indian-economy","Indian Economy Synthesis: Sectors, Poverty, Unemployment, Inflation & Human Development",true,"punjab-master-cadre-sst|punjab-clerk|ssc-cgl","ready",124,124,0,0,0,0,0,64,132,true,8
+"judiciary","Judiciary: Supreme Court & High Courts",true,"punjab-master-cadre-sst","ready",11,11,0,0,0,0,0,11,11,true,0
+"language-teaching-foundations","(ORPHAN TOPIC)",false,"NONE","orphan",50,50,0,50,50,0,0,0,50,true,50
+"local-govt","Local Government: 73rd & 74th Amendments",true,"punjab-master-cadre-sst","ready",21,21,0,0,0,0,0,11,21,true,0
+"maharaja-ranjit-singh-empire","Maharaja Ranjit Singh (1780–1839), Sikh Empire Administration & The Anglo-Sikh Wars (1845–1849)",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"mathematics-core","Algebra, Calculus, Matrices & Probability",true,"punjab-master-cadre-math|reet-level2-science-math","ready",2,2,0,0,0,1,1,1,152,true,2
+"medieval-india","Medieval India & Delhi Sultanate",true,"punjab-master-cadre-sst|reet-level2-sst","ready",5,5,0,0,0,0,0,5,25,true,20
+"modern-india","Modern Indian History (1757-1947)",true,"punjab-master-cadre-sst|punjab-clerk|reet-level2-sst|ssc-chsl|ssc-cgl|ssc-mts|ctet-paper2","ready",45,45,0,0,0,0,0,15,49,true,4
+"parliament","Union Parliament & Executive",true,"punjab-master-cadre-sst","ready",20,20,0,0,0,0,0,20,20,true,2
+"patwari-agriculture-accounts","Punjab Land Units, Jamabandi & Agriculture",true,"punjab-patwari","ready",1,1,0,0,0,0,0,1,101,true,2
+"patwari-land-revenue","(ORPHAN TOPIC)",false,"NONE","orphan",7,7,0,0,0,0,0,7,7,false,0
+"patwari-revenue-math","(ORPHAN TOPIC)",false,"NONE","orphan",2,2,0,0,0,2,0,0,2,false,0
+"physical-geography","Geography of India: Physiography, Drainage, Monsoon, Soils, Agriculture, Minerals & Population",true,"punjab-master-cadre-sst|punjab-clerk|reet-level2-sst","ready",104,104,0,0,0,1,1,63,112,true,8
+"physics-concepts","Classical Mechanics, Units & Error Analysis, Rotational Dynamics, Gravitation & Properties of Matter (B → I → H → G/P)",true,"punjab-master-cadre-science|reet-level2-science-math","ready",63,63,0,50,50,0,0,1,65,true,52
+"police-bns-law","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,false,0
+"police-law-basics","Criminal Law Basics, FIR & Arrest Rules",true,"punjab-police","ready",3,3,0,0,0,2,0,1,3,true,2
+"police-punjab-act","(ORPHAN TOPIC)",false,"NONE","orphan",8,8,0,0,0,0,0,8,8,false,0
+"primary-environmental-studies","Family, Plants, Animals & Environmental Conservation",true,"reet-level1|ctet-paper1","ready",50,50,0,50,50,0,0,0,50,true,50
+"primary-language-one","Language I",true,"ctet-paper1","ready",50,50,0,50,50,0,0,0,50,true,50
+"primary-language-two","Language II",true,"ctet-paper1","ready",50,50,0,50,50,0,0,0,50,true,50
+"primary-mathematics","Primary Mathematics & Arithmetic Operations",true,"reet-level1|ctet-paper1","ready",0,0,0,0,0,0,0,0,150,true,2
+"psssb-computer-it","(ORPHAN TOPIC)",false,"NONE","orphan",2,2,0,0,0,2,2,0,114,true,52
+"psssb-raavi-typing","(ORPHAN TOPIC)",false,"NONE","orphan",1,1,0,0,0,1,1,0,20,true,2
+"punjab-ancient-medieval","Ancient & Medieval Punjab: Harappan Sites, Rigvedic Sapta Sindhu, Alexander, Sultanate, Mughals & Sufi Saints (B → I → A)",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,10,true,3
+"punjab-clerk-prep","PSSSB Clerk Exam Scheme & Raavi Typing Rules",true,"punjab-clerk","ready",20,20,0,0,0,3,1,2,20,true,2
+"punjab-culture-folklore","Punjab Culture & Heritage: Folk Dances, Fairs & Festivals, Ornaments, Phulkari & Sufi/Qissa Literature",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"punjab-freedom-movements","Punjab in the Freedom Struggle (1849–1947): Kuka, Singh Sabha, Ghadar, Akali Morchas & Bhagat Singh",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,14,true,4
+"punjab-geography","Geography of Punjab: Relief, Rivers, Canals, Soils & Agro-Climatic Regions",true,"punjab-master-cadre-sst|punjab-patwari","ready",29,29,0,0,0,1,1,28,29,true,2
+"punjab-gk","(ORPHAN TOPIC)",false,"NONE","orphan",5,5,0,0,0,0,0,5,5,false,0
+"punjab-history","History of Punjab & Sikh Gurus (Master Overview)",true,"punjab-master-cadre-sst|punjab-clerk|punjab-police","ready",141,138,3,0,0,4,0,27,138,true,3
+"punjab-history-deep","Sikh Guru Period, Banda Bahadur & Maharaja Ranjit Singh",true,"punjab-lecturer-cadre","ready",141,138,3,0,0,4,0,27,151,true,13
+"punjab-partition-suba-modern","Partition of Punjab (1947), PEPSU (1948–56), Punjabi Suba Movement & Reorganisation Act (1966) (B → I → A)",true,"punjab-master-cadre-sst|punjab-clerk|punjab-patwari|punjab-police","ready",10,10,0,0,0,0,0,0,10,true,3
+"punjabi-grammar","Punjabi language practice",true,"punjab-clerk","ready",52,52,0,0,0,0,0,1,52,true,2
+"punjabi-paper-a","Compulsory Punjabi Paper A: Grammar & Gurmukhi",true,"punjab-master-cadre-sst|punjab-master-cadre-science|punjab-master-cadre-math|punjab-master-cadre-punjabi|punjab-master-cadre-hindi|punjab-master-cadre-english|punjab-clerk","ready",52,52,0,0,0,0,0,1,52,true,2
+"punjabi-sahitya","History of Punjabi Literature & Poets",true,"punjab-master-cadre-punjabi","ready",1,1,0,0,0,0,0,1,1,true,2
+"quantitative-aptitude","Numerical Ability & Aptitude",true,"punjab-clerk|ssc-chsl|ssc-cgl|ssc-mts","ready",1,1,0,0,0,0,0,1,151,true,1
+"raj-history-police","Rajasthan History & Heritage",true,"rajasthan-police","ready",0,0,0,0,0,0,0,0,8,true,8
+"rajasthan-gk-heritage","Rajasthan History, Art & Culture & Aravalli Geography",true,"reet-level1|reet-level2-sst|reet-level2-science-math|rajasthan-police-constable","ready",24,24,0,0,0,1,0,23,24,true,2
+"rajasthan-heritage-forts","UNESCO Hill Forts of Rajasthan & Culture",true,"rajasthan-3rd-grade","ready",0,0,0,0,0,0,0,0,8,true,8
+"reet-rajasthan-culture","(ORPHAN TOPIC)",false,"NONE","orphan",7,7,0,0,0,0,0,7,24,true,2
+"reet-rajasthan-geography","(ORPHAN TOPIC)",false,"NONE","orphan",7,7,0,0,0,0,0,7,24,true,2
+"reet-rajasthan-history","(ORPHAN TOPIC)",false,"NONE","orphan",8,8,0,0,0,0,0,8,24,true,2
+"sci-bio-diversity-plant-structural","Botany I: Diversity of Living World, Plant Kingdom, Morphology, Plant Anatomy & Reproduction in Flowering Plants (B → I → H → G)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-bio-plant-physiology-ecology","Botany II: Plant Physiology (Water Relations, Photosynthesis, Respiration, Hormones) & Ecology, Biodiversity and Environment (B → I → H → G)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-bio-zoology-diversity-human-physiology","Zoology I: Animal Kingdom Diversity, Animal Tissues & Complete Human Physiology (B → I → H → G)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-chem-electro-kinetics-surface-solids","Physical Chemistry II: Electrochemistry, Chemical Kinetics, Solutions, Solid State, Surface Chemistry, Catalysis & Spectroscopy (H → G/P)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-chem-inorganic-coord-bio-nuclear","Inorganic Chemistry II: d- & f-Block, Coordination & Organometallic Chemistry, Bioinorganic, Nuclear & Analytical Chemistry (H → G/P)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-chem-organic-carbonyls-reagents-spectro","Organic Chemistry II: Carbonyls, Amines, Named Reactions, Selective Reagents, Biomolecules, Polymers & IR/UV/NMR Spectroscopy (H → G/P)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-chem-organic-goc-hydrocarbons-halides","Organic Chemistry I: Purification, GOC, Stereochemistry, Hydrocarbons, Haloalkanes, Alcohols, Phenols & Ethers (I → H → G)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-chem-physical-states-thermo-eq","Physical Chemistry I: Mole Concept, Atomic Structure, States of Matter, Bonding, Thermodynamics & Equilibrium (B → I → H → G)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-foundation-class6-10-lab","Foundation Science (Class 6–10 PSEB/NCERT), SI Units, Constants, Lab Safety & Discoveries (B → I)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-phy-electromagnetism-circuits","Electricity, Magnetism, AC Circuits & Electromagnetic Theory (Maxwell’s Equations) (I → H → G/P)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-phy-electronics-solid-math","Condensed Matter (Solid State), Semiconductor Electronics & Mathematical Methods of Physics (H → G/P)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-phy-modern-quantum-nuclear","Modern Physics, Quantum Mechanics, Atomic/Molecular Spectra & Nuclear/Particle Physics (H → G/P)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-phy-thermo-statistical","Heat, Thermodynamics & Statistical Physics: Laws, Carnot Engine, Entropy, Maxwell Relations & Distributions (I → H → G/P)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"sci-phy-waves-optics","Waves, Acoustics & Geometrical/Wave Optics: SHM, Doppler Effect, Lenses, Interference, Diffraction & Polarisation (I → H → G)",true,"punjab-master-cadre-science","ready",10,10,0,0,0,0,0,0,15,true,5
+"science-agniveer","General Science & Mathematics",true,"army-agniveer","ready",209,209,0,150,150,0,0,3,215,true,173
+"science-tech-police","Science, Technology & Computer Basics",true,"rajasthan-police","ready",296,295,1,200,200,2,2,3,301,true,208
+"social-studies-p2","Social Studies (History, Geography, Civics)",true,"ctet-paper2","ready",450,450,0,0,0,1,1,259,486,true,36
+"ssc-cgl-quant","Quantitative Aptitude",true,"ssc-cgl","ready",0,0,0,0,0,0,0,0,150,true,8
+"ssc-cgl-reasoning","Logical and analytical reasoning",true,"punjab-clerk|ssc-cgl","ready",5,5,0,0,0,0,0,0,1005,true,8
+"ssc-general-awareness","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,false,0
+"ssc-reasoning","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,false,0
+"sst-buddhism-jainism","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-citizenship-election-parties","Citizenship, Election Procedure & Party System in India (B → I → A)",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,0,10,true,5
+"sst-constitution","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,142,true,0
+"sst-demand-supply","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-development","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-econ-keynesian-multiplier","National Income Aggregates (GDP, GNP, NDP, NNP), Keynesian Income Determination (AD–AS, MPC/MPS) & Multiplier (B → I → A)",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,0,10,true,5
+"sst-econ-micro-consumer-elasticity","Micro vs Macro, Types of Economies, Consumer Equilibrium & Price Elasticity of Demand (B → I → A)",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,0,10,true,5
+"sst-econ-money-budget-bop-punjab","Money & Banking, Govt Budget, BoT/BoP, Economic Planning & Economy of Punjab (B → I → A)",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,0,10,true,5
+"sst-econ-producer-cost-market","Producer Behaviour (Production, Cost, Revenue, Supply), Market Forms & Price Determination (B → I → A)",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,0,10,true,5
+"sst-economic-sectors","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-executive","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-federal-local","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,11,true,0
+"sst-foreign-policy-uno","India’s Foreign Policy, Regional Groupings & The United Nations (UNO) (B → I → A)",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,0,10,true,5
+"sst-french-revolution","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-fundamental-rights","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,30,true,0
+"sst-geo-atmosphere","Physical Geography III: Atmosphere, Pressure Belts, Planetary/Local Winds, Cyclones & Koeppen Climate",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,10,10,true,0
+"sst-geo-earth","Physical Geography I: Solar System, Latitudes, Longitudes, Time Zones & Earth Motions",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,10,10,true,0
+"sst-geo-environment","Resources, Environment, Biodiversity, Protected Areas & International Environmental Agreements",true,"punjab-master-cadre-sst|punjab-clerk","ready",31,31,0,0,0,1,1,10,31,true,0
+"sst-geo-landforms","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-geo-monsoon","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-geo-oceans","Physical Geography IV: Hydrosphere, Ocean Relief, Salinity, Tides & Warm/Cold Ocean Currents",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,10,10,true,0
+"sst-geo-punjab","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,19,true,0
+"sst-geo-tectonics","Physical Geography II: Earth’s Interior, Rocks, Plate Tectonics, Earthquakes, Volcanoes & Landforms",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,10,10,true,0
+"sst-harappa","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-india-geography","(ORPHAN TOPIC)",false,"NONE","orphan",3,3,0,0,0,0,0,3,31,true,8
+"sst-indian-economy-deep","(ORPHAN TOPIC)",false,"NONE","orphan",3,3,0,0,0,0,0,3,32,true,8
+"sst-industrial-revolution","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-inflation-employment","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-judiciary","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,11,true,0
+"sst-legislature","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-maurya","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-medieval-india","(ORPHAN TOPIC)",false,"NONE","orphan",5,5,0,0,0,0,0,5,25,true,20
+"sst-national-income","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-national-movement","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,45,true,0
+"sst-polity-concepts-theories","Political Theory, Core Concepts & Ideologies (B → I → A)",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,0,10,true,5
+"sst-punjab-history-deep","(ORPHAN TOPIC)",false,"NONE","orphan",5,5,0,0,0,0,0,5,151,true,13
+"sst-punjab-sikh","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-renaissance","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-state-govt-punjab-local","State Government, Indian Federalism & Local Democracy in Punjab (B → I → A)",true,"punjab-master-cadre-sst","ready",10,10,0,0,0,0,0,0,10,true,5
+"sst-trade","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"sst-world-history-modern","(ORPHAN TOPIC)",false,"NONE","orphan",3,3,0,0,0,0,0,3,22,true,10
+"sst-world-wars","(ORPHAN TOPIC)",false,"NONE","orphan",10,10,0,0,0,0,0,10,10,true,0
+"subject-specific-htet-l2","Subject-Specific Domain Knowledge",true,"htet-l2","ready",635,635,0,150,150,2,2,263,643,true,186
+"teaching-aptitude","Teaching Aptitude, Evaluation Systems & NEP 2020",true,"ugc-net","ready",54,54,0,54,54,0,0,0,54,true,54
+"world-history","World History & Revolutions",true,"punjab-master-cadre-sst","ready",52,52,0,0,0,0,0,52,62,true,10

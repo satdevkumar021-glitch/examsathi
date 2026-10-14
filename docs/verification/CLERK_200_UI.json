@@ -1,0 +1,9 @@
+{
+  "base": "https://examsathi-sxj3.onrender.com",
+  "mobile": "390x844",
+  "set1": 50,
+  "nextSet2": 50,
+  "translations": true,
+  "onboardingDoesNotBlock": true,
+  "pageErrors": []
+}

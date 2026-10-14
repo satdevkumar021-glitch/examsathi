@@ -66,3 +66,6 @@ Release commit 4406b5c is on codex/clerk-gk-live, based on the previously deploy
 
 ## GK multilingual update — 2026-10-11
 100 original GK questions now have Hindi/Punjabi prompts, options and explanations; independent editorial and translation review pending. Five disjoint 20-question topic pools plus one 100-question parent pool. Ready-topic filtering, search and simpler navigation added. Does not complete other exam syllabus gaps. Release validation: 47 unit tests, lint, production build and mobile browser flows pass.
+
+## Urgent Punjab Clerk revision — 2026-10-11
+200 original AI-generated questions:100 GK,30 reasoning/maths,30 ICT,20 Punjabi,20 English. All three product languages. Four numbered50-question revision sets added; no official/full-syllabus or reviewed-content claim. Existing newer local numbered-set engine preserved. Current official PDF could not be retrieved. Human editorial/translation review remains pending.

@@ -56,13 +56,55 @@ export const TOPIC_ALIASES: Record<string, string> = {
   'reet-rajasthan-history': 'rajasthan-gk-heritage',
   'reet-rajasthan-geography': 'rajasthan-gk-heritage',
   'reet-rajasthan-culture': 'rajasthan-gk-heritage',
+  'police-bns-law': 'police-law-basics',
+  'police-punjab-act': 'police-law-basics',
+  'ssc-reasoning': 'ssc-cgl-reasoning',
+  'economics-national-income': 'sst-national-income',
+  'patwari-land-revenue': 'patwari-agriculture-accounts',
+  'patwari-revenue-math': 'patwari-agriculture-accounts',
+  'punjab-gk': 'sst-punjab-history-deep',
+  'constitution-basics': 'sst-constitution',
 };
 
 
 /** Explicit broader-topic -> eligible source-topic families. Never infer from exam tags. */
 export const TOPIC_FAMILIES: Record<string, string[]> = {
+  'mathematics-core': [
+    'math-linear-algebra-matrices',
+    'math-real-analysis-calculus',
+    'math-abstract-algebra-groups',
+    'math-diff-equations-mechanics',
+    'math-coordinate-solid-geometry',
+    'math-prob-stats-numerical',
+  ],
+  'punjabi-sahitya': [
+    'punjabi-lit-gurmat-sufi',
+    'punjabi-lit-qissa-bir',
+    'punjabi-lit-modern-poetry',
+    'punjabi-lit-prose-drama',
+    'punjabi-vyakaran-linguistics',
+  ],
+  'child-development-pedagogy': [
+    'pstet-cdp-core',
+    'pstet-punjabi-pedagogy',
+    'pstet-english-pedagogy',
+    'pstet-math-pedagogy',
+    'pstet-evs-pedagogy',
+  ],
+  'rajasthan-heritage-forts': [
+    'rajasthan-geography-drainage',
+    'rajasthan-history-culture',
+    'rajasthan-edu-psychology-rte',
+  ],
+  'army-military-heritage': [
+    'agniveer-gk-military',
+    'agniveer-general-science',
+    'agniveer-math-foundation',
+    'agniveer-reasoning-ability',
+  ],
+  'clerk-revision-200':['clerk-gk-fast-practice','clerk-revision-reasoning','clerk-revision-computer','clerk-revision-punjabi','clerk-revision-english'],
   'clerk-gk-fast-practice': ['gk-polity-foundation','gk-history-foundation','gk-geography-foundation','gk-science-foundation','gk-punjab-foundation'],
-  'rajasthan-gk-heritage': ['reet-rajasthan-history', 'reet-rajasthan-geography', 'reet-rajasthan-culture', 'raj-history-pratap', 'rajasthan-heritage-forts'],
+  'rajasthan-gk-heritage': ['reet-rajasthan-history', 'reet-rajasthan-geography', 'reet-rajasthan-culture', 'raj-history-pratap', 'rajasthan-heritage-forts', 'rajasthan-geography-drainage', 'rajasthan-history-culture'],
   'english-grammar-lit': ['english-grammar-syntax'],
   'ancient-india': ['sst-harappa', 'sst-buddhism-jainism', 'sst-maurya'],
   'punjab-history': [
@@ -115,7 +157,7 @@ export const TOPIC_FAMILIES: Record<string, string[]> = {
     'clerk-networking-cybersecurity',
   ],
   'medieval-india': ['sst-medieval-india'],
-  'fundamental-rights': ['sst-fundamental-rights', 'sst-constitution'],
+  'fundamental-rights': ['sst-fundamental-rights', 'sst-constitution', 'ssc-general-awareness'],
   'parliament': ['sst-legislature', 'sst-executive'],
   'local-govt': ['sst-federal-local', 'sst-state-govt-punjab-local'],
   'indian-economy': [
@@ -180,6 +222,8 @@ export const TOPIC_FAMILIES: Record<string, string[]> = {
   ],
   'punjabi-paper-a': [
     'mc-punjabi-1',
+    'ett-paper-a-punjabi-script-phonetics-dialects',
+    'ett-paper-a-punjabi-grammar-vocabulary-idioms',
   ],
   'ppsc-clerk-mega': [
     'constitution',

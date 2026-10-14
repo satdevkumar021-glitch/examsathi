@@ -1,0 +1,554 @@
+{
+  "date": "2026-10-11",
+  "note": "Launch availability only; not content correctness or complete syllabus coverage.",
+  "entries": 304,
+  "empty": [
+    {
+      "exam": "punjab-clerk",
+      "topic": "clerk-current-affairs",
+      "name": "Current affairs",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-clerk",
+      "topic": "clerk-sports",
+      "name": "Sports",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-clerk",
+      "topic": "clerk-cinema-literature",
+      "name": "Cinema and literature",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-punjabi-2",
+      "name": "Punjabi cultural traditions",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-punjabi-4",
+      "name": "Rendering English into Punjabi",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-punjabi-5",
+      "name": "Rewriting sentences",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-force",
+      "name": "Force and laws of motion",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-gravitation",
+      "name": "Gravitation",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-work-energy",
+      "name": "Work and energy",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-sound",
+      "name": "Sound",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-light-2",
+      "name": "Spherical mirrors and ray diagrams",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-light-3",
+      "name": "Mirror formula and sign convention",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-light-4",
+      "name": "Refraction and refractive index",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-light-5",
+      "name": "Lenses, lens formula and power",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-electricity",
+      "name": "Electricity",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-magnetism",
+      "name": "Magnetism",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-energy",
+      "name": "Sources of energy",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-matter",
+      "name": "Matter in our surroundings",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-atoms",
+      "name": "Atoms and molecules",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-reactions",
+      "name": "Chemical reactions and equations",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-metals",
+      "name": "Metals and non-metals",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-carbon",
+      "name": "Carbon and its compounds",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-cell",
+      "name": "The fundamental unit of life",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-tissues",
+      "name": "Tissues",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-diversity",
+      "name": "Diversity of living organisms",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-illness",
+      "name": "Why do we fall ill?",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-resources",
+      "name": "Natural resources",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-food",
+      "name": "Improvement in food resources",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-life",
+      "name": "Life processes",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-control",
+      "name": "Control and coordination",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-reproduction",
+      "name": "Reproduction in organisms",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-heredity",
+      "name": "Heredity and evolution",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-science-eye",
+      "name": "The human eye and colourful world",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-1",
+      "name": "Number systems and their properties",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-3",
+      "name": "Polynomial expressions",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-5",
+      "name": "Solving quadratic equations",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-6",
+      "name": "Arithmetic sequences",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-7",
+      "name": "Euclidean geometry foundations",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-8",
+      "name": "Angles formed by lines",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-9",
+      "name": "Properties of triangles, quadrilaterals and circles",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-10",
+      "name": "Areas of triangular and quadrilateral figures",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-12",
+      "name": "Trigonometric ratios and applications",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-13",
+      "name": "Geometric constructions",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-14",
+      "name": "Heron-based triangle area",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-15",
+      "name": "Solid surface measurement and volume",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-16",
+      "name": "Area involving circular regions",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-math-18",
+      "name": "Calculating probability",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-geography-1",
+      "name": "India: location and overview",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-geography-2",
+      "name": "India’s landforms",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-geography-3",
+      "name": "Climate patterns",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-geography-4",
+      "name": "Vegetation, wildlife and soils",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-geography-5",
+      "name": "Land use and agricultural activities",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-geography-6",
+      "name": "Mineral resources and energy",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-geography-7",
+      "name": "Population patterns",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-geography-8",
+      "name": "Punjab: terrain, drainage, climate, soils and farming",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-economics-1",
+      "name": "Economic foundations",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-economics-2",
+      "name": "India’s economic framework",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-economics-3",
+      "name": "Agricultural development in India",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-economics-4",
+      "name": "Industrial development in India",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-history-1",
+      "name": "Geography’s influence on Punjab’s past",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-history-2",
+      "name": "Punjab’s society and politics before Guru Nanak",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-history-4",
+      "name": "Contributions of the Gurus from Guru Angad to Guru Tegh Bahadur",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-history-5",
+      "name": "Guru Gobind Singh, the Khalsa and its significance",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-history-6",
+      "name": "Banda Singh Bahadur and the Sikh Misls",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-history-7",
+      "name": "Ranjit Singh: early life, achievements and British relations",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-history-8",
+      "name": "Anglo-Sikh conflict and annexation",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-history-9",
+      "name": "Punjab’s contribution to the independence struggle",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-civics-1",
+      "name": "Meaning and importance of democracy",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-civics-2",
+      "name": "Citizens’ constitutional rights",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-civics-3",
+      "name": "Major constitutional features",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-civics-4",
+      "name": "Government at the Union level",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-civics-5",
+      "name": "Government at the state level",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-civics-6",
+      "name": "The structure of Indian democracy",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-sst-civics-7",
+      "name": "India’s external policy and the United Nations",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-english-1",
+      "name": "Understanding an unfamiliar passage",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-english-3",
+      "name": "Vocabulary and idiomatic meaning",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-english-4",
+      "name": "Translation between English and Punjabi",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-1",
+      "name": "Language and writing systems",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-2",
+      "name": "Sounds and letters",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-3",
+      "name": "Word structure and classification",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-5",
+      "name": "Uninflected word classes",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-6",
+      "name": "Words with similar meanings",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-7",
+      "name": "Sanskrit-derived word forms",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-8",
+      "name": "Word formation using affixes",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-9",
+      "name": "Replacing a phrase with one word",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-10",
+      "name": "Words with several meanings",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-11",
+      "name": "Opposite-meaning vocabulary",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-12",
+      "name": "Correct and incorrect word forms",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-13",
+      "name": "Correcting sentences",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-14",
+      "name": "Idioms and proverbs in context",
+      "questions": 0
+    },
+    {
+      "exam": "punjab-ett",
+      "topic": "ett-hindi-15",
+      "name": "Rendering Hindi into Punjabi",
+      "questions": 0
+    }
+  ],
+  "under50": 230
+}

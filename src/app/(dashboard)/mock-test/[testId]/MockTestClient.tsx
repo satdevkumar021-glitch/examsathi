@@ -160,22 +160,9 @@ export default function MockTest({ testId }: { testId?: string }) {
     setIsRevisionMode(isRevision);
     setCurrentTopicId(topicId);
 
-    // Resolve pool and automatic fallbacks so a mismatched stored exam or difficulty never causes 0 questions
-    let effectiveExamForPool = examId === 'all' ? undefined : examId;
-    let fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty, pyq20Years, pyqOnly });
-    if (fullPool.length === 0 && topicId !== 'all' && effectiveExamForPool) {
-      effectiveExamForPool = undefined;
-      fullPool = getQuestionPool({ topicId, difficulty, pyq20Years, pyqOnly });
-    }
-    if (fullPool.length === 0 && difficulty !== 'all') {
-      difficulty = 'all';
-      fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty: 'all', pyq20Years, pyqOnly });
-    }
-    if (fullPool.length === 0 && (pyq20Years || pyqOnly)) {
-      pyq20Years = false;
-      pyqOnly = false;
-      fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty });
-    }
+    // Preserve the requested scope. An empty result must never silently change exams or PYQ filters.
+    const effectiveExamForPool = examId === 'all' ? undefined : examId;
+    const fullPool = getQuestionPool({ topicId, examId: effectiveExamForPool, difficulty, pyq20Years, pyqOnly });
 
     // 4. Derive title
     const examMeta = AVAILABLE_EXAMS.find(e => e.id === examId);
@@ -213,22 +200,8 @@ export default function MockTest({ testId }: { testId?: string }) {
         pyq20Years,
         pyqOnly, 
         count,
-        excludeKeys: (isRevision || isFreshRequested) ? [] : completedQuestionKeys(),
+        excludeKeys: isRevision ? [] : completedQuestionKeys(),
       });
-      // Never block the user with 0 questions if the pool has questions
-      if (loadedQuestions.length === 0 && fullPool.length > 0) {
-        const orderedFallback = getOrderedSetQuestions({
-          topicId,
-          examId: effectiveExamForPool,
-          difficulty,
-          pyq20Years,
-          pyqOnly,
-          count,
-          setNumber: 1,
-        });
-        loadedQuestions = orderedFallback.questions;
-        setIsRevisionMode(true);
-      }
       if (!isRevision && !isFreshRequested && loadedQuestions.length > 0 && loadedQuestions.length < count && fullPool.length > count) {
         setIsRemainingSubset(true);
       } else {

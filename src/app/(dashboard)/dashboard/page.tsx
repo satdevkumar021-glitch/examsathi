@@ -10,12 +10,13 @@ import { activityStreak } from '@/lib/study-progress';
 import { getStoredUser } from '@/lib/auth';
 import InstallAppButton from '@/components/ui/InstallAppButton';
 import StreakBadge from '@/components/ui/StreakBadge';
+import StreakCard from '@/components/dashboard/StreakCard';
 import DailyKnowledge from '@/components/dashboard/DailyKnowledge';
 import { getTodayContent } from '@/lib/data/daily_content';
 import { Target, Book, Layers, ArrowRight, Keyboard, Compass, Sparkles, GraduationCap, Briefcase, Share2, Brain } from 'lucide-react';
 
 export default function Dashboard() {
-  const { completedTopics } = useStore();
+  const { completedTopics, language } = useStore();
   const { user: authUser, isGuest, loading: authLoading } = useAuth();
   const [, setCurrentUser] = useState<ReturnType<typeof getStoredUser> | null>(null);
   const [lastResult, setLastResult] = useState<{ accuracy: number; percentage: number } | null>(null);
@@ -102,6 +103,9 @@ export default function Dashboard() {
           <StreakBadge streak={streakCount} />
         </div>
       </div>
+
+      {/* Dynamic 7-Day Study Streak Tracker */}
+      <StreakCard />
 
       {/* 🔴 TODAY'S LIVE EXAM MOCKS — 1-CLICK 50-50 SETS */}
       <section className="rounded-2xl border-2 border-amber-500/70 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-teal-950/90 p-4 space-y-3.5 shadow-xl">
@@ -215,19 +219,39 @@ export default function Dashboard() {
 
       {/* Daily Content Card */}
       {(() => {
-        const daily = getTodayContent('hi');
-        if (!daily) return null;
+        const userLang = (language === 'pa' ? 'pa' : language === 'en' ? 'en' : 'hi') as 'hi' | 'pa' | 'en';
+        const daily = getTodayContent(userLang);
         return (
           <div className="bg-gradient-to-br from-amber-950/50 to-orange-950/40 rounded-2xl p-4 border border-amber-700/40">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-amber-300 text-sm font-bold">💡 आज का विचार</span>
-              <span className="text-xs text-amber-500 ml-auto">{new Date().toLocaleDateString('hi-IN', { day: 'numeric', month: 'long' })}</span>
+              <span className="text-amber-300 text-sm font-bold">
+                💡 {userLang === 'pa' ? 'ਅੱਜ ਦਾ ਵਿਚਾਰ' : userLang === 'hi' ? 'आज का विचार' : 'Thought of the Day'}
+              </span>
+              <span className="text-xs text-amber-500 ml-auto font-medium">{daily.formattedDate[userLang]}</span>
             </div>
             <blockquote className="text-slate-200 text-sm italic mb-1">&ldquo;{daily.thought}&rdquo;</blockquote>
             <p className="text-amber-400 text-xs">— {daily.thoughtAuthor}</p>
-            {daily.gkTitle && (
+
+            {daily.historicalPerson && (
+              <div className="mt-3 pt-3 border-t border-amber-800/40 bg-amber-900/20 -mx-4 -mb-1 px-4 py-2 rounded-b-2xl">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <span className="text-xs font-bold text-amber-200">🎂 {daily.historicalPerson.name}</span>
+                  {daily.historicalPerson.birthYear && (
+                    <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1 rounded border border-amber-500/30">
+                      {userLang === 'pa' ? `ਜਨਮ: ${daily.historicalPerson.birthYear}` : userLang === 'hi' ? `जन्म: ${daily.historicalPerson.birthYear}` : `Born: ${daily.historicalPerson.birthYear}`}
+                    </span>
+                  )}
+                </div>
+                <p className="text-[11px] text-amber-300/80 mt-0.5">{daily.historicalPerson.title}</p>
+                <p className="text-xs text-slate-300 mt-1 line-clamp-2">{daily.historicalPerson.significance}</p>
+              </div>
+            )}
+
+            {!daily.historicalPerson && daily.gkTitle && (
               <div className="mt-3 pt-3 border-t border-amber-800/50">
-                <p className="text-xs font-bold text-orange-300 mb-1">📅 आज इतिहास में</p>
+                <p className="text-xs font-bold text-orange-300 mb-1">
+                  📅 {userLang === 'pa' ? 'ਅੱਜ ਇਤਿਹਾਸ ਵਿੱਚ' : userLang === 'hi' ? 'आज इतिहास में' : 'Today in History'}
+                </p>
                 <p className="text-xs font-semibold text-slate-200">{daily.gkTitle}</p>
                 <p className="text-xs text-slate-400 mt-1 line-clamp-2">{daily.gkDescription}</p>
                 {daily.gkSource && <p className="text-[10px] text-slate-500 mt-1">स्रोत: {daily.gkSource}</p>}

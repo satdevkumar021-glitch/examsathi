@@ -4,10 +4,15 @@ import Link from 'next/link';
 import { useStore } from '@/lib/store';
 import { useRouter } from 'next/navigation';
 import { ALL_EXAMS } from '@/lib/data/exams';
+import { ALL_LESSONS } from '@/lib/data/lessons';
+import { ALL_QUESTIONS } from '@/lib/data/questions';
 
 export default function LandingPage() {
   const router = useRouter();
   const { setLanguage } = useStore();
+  const totalExamTracks = new Set(Object.values(ALL_EXAMS).flat().map(e => e.id)).size;
+  const totalLessons = Object.keys(ALL_LESSONS).length;
+  const totalAuthoredQuestions = ALL_QUESTIONS.length;
 
   const handleSelectLang = (lang: 'hi' | 'pa' | 'en') => {
     setLanguage(lang);
@@ -72,17 +77,17 @@ export default function LandingPage() {
       >
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
           <div className="text-xl font-bold text-amber-400">
-            {Object.values(ALL_EXAMS).reduce((acc, l) => acc + l.length, 0)}
+            {totalExamTracks}
           </div>
-          <div className="text-[11px] text-slate-400">Recruitments</div>
+          <div className="text-[11px] text-slate-400">Exam Tracks</div>
         </div>
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-teal-400">20-Yr</div>
-          <div className="text-[11px] text-slate-400">PYQ Archive</div>
+          <div className="text-xl font-bold text-teal-400">{totalLessons}</div>
+          <div className="text-[11px] text-slate-400">Trilingual Lessons</div>
         </div>
         <div className="bg-slate-800/60 p-3 rounded-2xl border border-slate-700/60 text-center">
-          <div className="text-xl font-bold text-indigo-400">600+</div>
-          <div className="text-[11px] text-slate-400">Authentic MCQs</div>
+          <div className="text-xl font-bold text-indigo-400">{totalAuthoredQuestions.toLocaleString()}</div>
+          <div className="text-[11px] text-slate-400">Authored MCQs</div>
         </div>
       </motion.div>
 

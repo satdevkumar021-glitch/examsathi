@@ -1,3 +1,4 @@
+import { CLERK_EXTRA_QUESTIONS } from './clerk-revision-sets';
 import { CLERK_GK_FAST_QUESTIONS } from './clerk-gk-fast';
 import { CLERK_DATA_PRACTICE } from './clerk-data-practice';
 import ettReflectionQuestions from './questions/ett-reflection.json';
@@ -60,7 +61,7 @@ export interface Question {
   thought?: { hi: string; pa?: string; en: string }; // Strategic Examiner Insight & Elimination Technique
   difficulty: 'easy' | 'medium' | 'hard';
   year?: number;
-  originType?: 'verified-pyq' | 'authored-original' | 'computed-variant';
+  originType?: 'verified-pyq' | 'pyq-style' | 'authored-original' | 'computed-variant';
   pyqMetadata?: PYQMetadata;
   rightsProvenance?: RightsProvenance;
   reviewStatus?: 'reviewed' | 'draft' | 'under-audit';
@@ -977,9 +978,14 @@ import { ETT_PAPER_B_BATCH2 } from './questions/ett_paper_b_batch2';
 import { PPSC_CLERK_POLITY_HISTORY_GEO_ECON_MCQS } from './questions/ppsc_clerk_polity_history_geo_econ_mcqs';
 import { PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS } from './questions/ppsc_clerk_current_sports_lit_science_mcqs';
 import { PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS } from './questions/ppsc_clerk_punjabi_english_computer_mcqs';
+import { PSTET_PEDAGOGY_MCQS } from './questions/pstet_pedagogy_mcqs';
+import { MASTER_CADRE_PUNJABI_LIT_MCQS } from './questions/master_cadre_punjabi_lit_mcqs';
+import { MASTER_CADRE_MATH_MCQS } from './questions/master_cadre_math_mcqs';
+import { RAJASTHAN_AND_AGNIVEER_MCQS } from './questions/rajasthan_and_agniveer_mcqs';
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLERK_GK_FAST_QUESTIONS,
+  ...CLERK_EXTRA_QUESTIONS,
   ...CLERK_DATA_PRACTICE,
   ...QUESTIONS,
   ...(ettReflectionQuestions as Question[]),
@@ -1004,6 +1010,10 @@ export const ALL_QUESTIONS: Question[] = [
   ...PPSC_CLERK_POLITY_HISTORY_GEO_ECON_MCQS,
   ...PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS,
   ...PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS,
+  ...PSTET_PEDAGOGY_MCQS,
+  ...MASTER_CADRE_PUNJABI_LIT_MCQS,
+  ...MASTER_CADRE_MATH_MCQS,
+  ...RAJASTHAN_AND_AGNIVEER_MCQS,
 ];
 
 

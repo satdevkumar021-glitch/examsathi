@@ -1,0 +1,12 @@
+{
+  "base": "http://127.0.0.1:3104",
+  "mobile": "390x844",
+  "examPreserved": true,
+  "readyOnly": true,
+  "search": true,
+  "science20": true,
+  "hindi": true,
+  "punjabi": true,
+  "parent100": true,
+  "errors": []
+}

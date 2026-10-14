@@ -1,29 +1,12 @@
 'use client';
-import { Calendar, ExternalLink, Lightbulb, GraduationCap } from 'lucide-react';
+import { Calendar, ExternalLink, Lightbulb, GraduationCap, Cake, Sparkles } from 'lucide-react';
 import { useStore } from '@/lib/store';
+import { getTodayContent } from '@/lib/data/daily_content';
 
 export default function DailyKnowledge() {
   const { language } = useStore();
-
-  const QUOTES = {
-    hi: {
-      quote: 'उद्यमेन हि सिध्यन्ति कार्याणि न मनोरथैः।',
-      meaning: 'कठिन परिश्रम और दैनिक निरंतर अभ्यास से ही सरकारी चयन संभव होता है।',
-      author: 'हितोपदेश सुभाषितम्',
-    },
-    pa: {
-      quote: 'ਮਿਹਨਤ ਤੇ ਲਗਨ ਨਾਲ ਹੀ ਮੰਜਿਲ ਮਿਲਦੀ ਹੈ।',
-      meaning: 'ਰੋਜ਼ਾਨਾ ਈਮਾਨਦਾਰ ਤਿਆਰੀ ਅਤੇ ਨਿਯਮਿਤ ਅਭਿਆਸ ਹੀ ਸਰਕਾਰੀ ਮੈਰਿਟ ਸੂਚੀ ਦੀ ਕੁੰਜੀ ਹੈ।',
-      author: 'ਪ੍ਰੇਰਣਾਦਾਇਕ ਵਿਚਾਰ',
-    },
-    en: {
-      quote: 'Consistency turns ordinary efforts into extraordinary selection merit.',
-      meaning: 'Daily structured revision and CBT testing build unbreakable exam confidence.',
-      author: 'ExamSathi Mentor',
-    },
-  };
-
-  const currentQuote = QUOTES[language] || QUOTES.hi;
+  const lang = (language === 'pa' ? 'pa' : language === 'en' ? 'en' : 'hi') as 'hi' | 'pa' | 'en';
+  const daily = getTodayContent(lang);
 
   const FREE_RESOURCES = [
     {
@@ -54,45 +37,83 @@ export default function DailyKnowledge() {
 
   return (
     <div className="flex flex-col gap-3">
-      {/* 1. Daily Inspirational Quote */}
+      {/* 1. Daily Inspirational Quote / Thought of the Day */}
       <div className="bg-gradient-to-br from-indigo-950/70 via-slate-850 to-slate-900 border border-indigo-500/30 rounded-2xl p-4 shadow-md">
-        <div className="flex items-center gap-2 mb-2">
-          <Lightbulb size={16} className="text-amber-400" />
-          <span className="text-[10px] uppercase font-bold text-amber-300 tracking-wider">
-            {language === 'pa' ? 'ਅੱਜ ਦਾ ਪ੍ਰੇਰਣਾਦਾਇਕ ਵਿਚਾਰ' : language === 'hi' ? 'आज का सुविचार' : 'Daily Thought of The Day'}
+        <div className="flex items-center justify-between gap-2 mb-2">
+          <div className="flex items-center gap-2">
+            <Lightbulb size={16} className="text-amber-400" />
+            <span className="text-[10px] uppercase font-bold text-amber-300 tracking-wider">
+              {lang === 'pa' ? 'ਅੱਜ ਦਾ ਪ੍ਰੇਰਣਾਦਾਇਕ ਵਿਚਾਰ' : lang === 'hi' ? 'आज का सुविचार' : 'Daily Thought of The Day'}
+            </span>
+          </div>
+          <span className="text-[11px] text-teal-400 font-semibold bg-teal-500/10 px-2 py-0.5 rounded-full border border-teal-500/20">
+            {daily.formattedDate[lang]}
           </span>
         </div>
         <p className="text-white font-bold text-xs sm:text-sm leading-relaxed italic">
-          &ldquo;{currentQuote.quote}&rdquo;
+          &ldquo;{daily.thought}&rdquo;
         </p>
-        <p className="text-slate-300 text-[11px] mt-1.5 leading-snug">
-          {currentQuote.meaning}
-        </p>
-        <span className="text-[10px] text-teal-400 font-medium block mt-1">
-          — {currentQuote.author}
+        <span className="text-[11px] text-amber-300 font-medium block mt-1.5">
+          — {daily.thoughtAuthor}
         </span>
       </div>
 
-      {/* 2. Today in History & Exam General Awareness */}
+      {/* 2. Today in History & Historical Personality Birthday */}
       <div className="bg-slate-850 border border-slate-700/80 rounded-2xl p-4 shadow-sm">
-        <div className="flex items-center gap-2 mb-2.5">
-          <Calendar size={16} className="text-teal-400" />
-          <h3 className="text-white font-bold text-xs">
-            {language === 'pa' ? 'ਇਤਿਹਾਸ ਦੇ ਝਰੋਖੇ ਵਿੱਚੋਂ' : language === 'hi' ? 'आज का ऐतिहासिक तथ्य' : 'Today in History & GK'}
-          </h3>
-        </div>
-        <div className="space-y-2 text-xs">
-          <div className="p-2.5 bg-slate-900/60 rounded-xl border border-slate-800 flex items-start gap-2.5">
-            <span className="text-xs shrink-0 mt-0.5">🇮🇳</span>
-            <p className="text-slate-300 text-[11px] leading-relaxed">
-              <strong className="text-white">Constitutional Assembly Milestone:</strong> Drafting Committee under Dr. B.R. Ambedkar adopted key consensus articles establishing equal citizenship and universal adult suffrage (Article 326).
-            </p>
+        <div className="flex items-center justify-between gap-2 mb-2.5">
+          <div className="flex items-center gap-2">
+            <Calendar size={16} className="text-teal-400" />
+            <h3 className="text-white font-bold text-xs">
+              {lang === 'pa' ? 'ਇਤਿਹਾਸ ਦੇ ਝਰੋਖੇ ਵਿੱਚੋਂ' : lang === 'hi' ? 'आज का इतिहास एवं जयंती' : 'Today in History & Milestones'}
+            </h3>
           </div>
-          <div className="p-2.5 bg-slate-900/60 rounded-xl border border-slate-800 flex items-start gap-2.5">
-            <span className="text-xs shrink-0 mt-0.5">🌾</span>
-            <p className="text-slate-300 text-[11px] leading-relaxed">
-              <strong className="text-white">Punjab Heritage Fact:</strong> The historic Battle of Chappar Chiri (May 1710) led by Baba Banda Singh Bahadur defeated Wazir Khan of Sirhind and established the first sovereign peasant rule in Punjab.
-            </p>
+          <span className="text-[10px] text-slate-400 font-medium">
+            {daily.formattedDate[lang]}
+          </span>
+        </div>
+
+        <div className="space-y-2.5 text-xs">
+          {/* Historical Personality / Birthday Spotlight */}
+          {daily.historicalPerson && (
+            <div className="p-3 bg-gradient-to-r from-amber-950/40 via-slate-900 to-slate-900 rounded-xl border border-amber-600/30 flex items-start gap-2.5">
+              <Cake size={16} className="text-amber-400 shrink-0 mt-0.5" />
+              <div className="min-w-0">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <span className="text-white font-bold text-xs">
+                    {daily.historicalPerson.name}
+                  </span>
+                  {daily.historicalPerson.birthYear && (
+                    <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded border border-amber-500/30">
+                      {lang === 'pa' ? `ਜਨਮ: ${daily.historicalPerson.birthYear}` : lang === 'hi' ? `जन्म: ${daily.historicalPerson.birthYear}` : `Born: ${daily.historicalPerson.birthYear}`}
+                    </span>
+                  )}
+                </div>
+                <p className="text-amber-300/90 text-[11px] font-medium mt-0.5">
+                  {daily.historicalPerson.title}
+                </p>
+                <p className="text-slate-300 text-[11px] leading-relaxed mt-1">
+                  {daily.historicalPerson.significance}
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Key Historical Event / Milestone */}
+          <div className="p-3 bg-slate-900/70 rounded-xl border border-slate-800 flex items-start gap-2.5">
+            <Sparkles size={16} className="text-teal-400 shrink-0 mt-0.5" />
+            <div className="min-w-0">
+              <h4 className="text-white font-bold text-xs mb-1">
+                {daily.gkTitle}
+              </h4>
+              <p className="text-slate-300 text-[11px] leading-relaxed">
+                {daily.gkDescription}
+              </p>
+              {daily.gkSource && (
+                <p className="text-[10px] text-slate-400 mt-1.5">
+                  {lang === 'pa' ? 'ਸਰੋਤ: ' : lang === 'hi' ? 'स्रोत: ' : 'Source: '}{daily.gkSource}
+                </p>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -103,7 +124,7 @@ export default function DailyKnowledge() {
           <div className="flex items-center gap-2">
             <GraduationCap size={16} className="text-indigo-400" />
             <h3 className="text-white font-bold text-xs">
-              {language === 'pa' ? 'ਸਰਕਾਰੀ ਮੁਫ਼ਤ ਅਧਿਐਨ ਪੋਰਟਲ' : language === 'hi' ? 'प्रमाणित सरकारी अध्ययन पोर्टल' : 'Curated Free Govt Portals'}
+              {lang === 'pa' ? 'ਸਰਕਾਰੀ ਮੁਫ਼ਤ ਅਧਿਐਨ ਪੋਰਟਲ' : lang === 'hi' ? 'प्रमाणित सरकारी अध्ययन पोर्टल' : 'Curated Free Govt Portals'}
             </h3>
           </div>
           <span className="text-[10px] text-teal-400 font-semibold">100% Free</span>
@@ -120,7 +141,7 @@ export default function DailyKnowledge() {
             >
               <div className="min-w-0">
                 <div className="flex items-center gap-1.5 mb-0.5">
-                  <h4 className="text-white font-bold text-[11px] truncate">{language === 'pa' ? res.namePa : res.name}</h4>
+                  <h4 className="text-white font-bold text-[11px] truncate">{lang === 'pa' ? res.namePa : res.name}</h4>
                 </div>
                 <p className="text-[10px] text-slate-400 truncate">{res.desc}</p>
               </div>

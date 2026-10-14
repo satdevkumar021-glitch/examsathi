@@ -44,3 +44,6 @@ next-env.d.ts
 
 # Generated browser OCR runtime copied during builds
 /public/ocr/
+
+# Local release artifacts
+/artifacts/

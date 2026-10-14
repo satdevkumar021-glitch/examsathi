@@ -1414,28 +1414,34 @@ export const DAILY_CONTENT: Record<string, DailyContent> = {
   },
 };
 
+import { getPerpetualDailyContent } from './perpetual_calendar';
+
 /**
- * Get daily content for today's date.
- * Uses month-day key (MM-DD) for recurring annual events.
+ * Get daily content for today's date (or any specified date).
+ * Uses month-day key (MM-DD) for recurring annual events, with a
+ * guaranteed perpetual rotating calendar covering all 366 days.
+ * Never returns null.
  */
-export function getTodayContent(lang: 'hi' | 'pa' | 'en' = 'hi'): {
+export function getTodayContent(
+  lang: 'hi' | 'pa' | 'en' = 'hi',
+  date: Date = new Date()
+): {
+  dateKey: string;
+  formattedDate: { hi: string; pa: string; en: string };
   thought: string;
   thoughtAuthor: string;
-  gkTitle: string | null;
-  gkDescription: string | null;
-  gkSource: string | null;
-  miniQuiz: DailyContent['miniQuiz'] | null;
-} | null {
-  const today = new Date();
-  const monthDay = `${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getDate().toString().padStart(2, '0')}`;
-  const content = DAILY_CONTENT[monthDay];
-  if (!content) return null;
-  return {
-    thought: content.thought.text[lang],
-    thoughtAuthor: content.thought.author[lang],
-    gkTitle: content.gkEvent?.title[lang] ?? null,
-    gkDescription: content.gkEvent?.description[lang] ?? null,
-    gkSource: content.gkEvent?.source ?? null,
-    miniQuiz: content.miniQuiz ?? null,
+  gkTitle: string;
+  gkDescription: string;
+  gkSource: string;
+  historicalPerson?: {
+    name: string;
+    birthYear?: number;
+    deathYear?: number;
+    title: string;
+    significance: string;
   };
+  miniQuiz: DailyContent['miniQuiz'] | null;
+} {
+  return getPerpetualDailyContent(date, lang, DAILY_CONTENT);
 }
+
