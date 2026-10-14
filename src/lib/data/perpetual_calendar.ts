@@ -719,6 +719,743 @@ export const PERPETUAL_HISTORICAL_DAYS: Record<string, CalendarDayEntry> = {
       },
     },
   },
+
+  '09-28': {
+    date: '09-28',
+    thought: {
+      text: {
+        hi: 'क्रांति की तलवार विचारों की सान पर तेज होती है। बम और पिस्तौल क्रांति नहीं लाते।',
+        pa: 'ਕ੍ਰਾਂਤੀ ਦੀ ਤਲਵਾਰ ਵਿਚਾਰਾਂ ਦੀ ਸਾਣ ਉੱਤੇ ਤੇਜ਼ ਹੁੰਦੀ ਹੈ। ਬੰਬ ਅਤੇ ਪਿਸਤੌਲ ਇਨਕਲਾਬ ਨਹੀਂ ਲਿਆਉਂਦੇ।',
+        en: 'The sword of revolution is sharpened on the whetting-stone of ideas. Bombs and pistols do not make a revolution.',
+      },
+      author: {
+        hi: 'शहीद भगत सिंह',
+        pa: 'ਸ਼ਹੀਦ ਭਗਤ ਸਿੰਘ',
+        en: 'Shaheed Bhagat Singh',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'शहीद-ए-आज़म भगत सिंह',
+        pa: 'ਸ਼ਹੀਦ-ਏ-ਆਜ਼ਮ ਭਗਤ ਸਿੰਘ',
+        en: 'Shaheed-e-Azam Bhagat Singh',
+      },
+      birthYear: 1907,
+      deathYear: 1931,
+      title: {
+        hi: 'नौजवान भारत सभा एवं HSRA के प्रणेता (बंगा, लायलपुर जन्म)',
+        pa: 'ਨੌਜਵਾਨ ਭਾਰਤ ਸਭਾ ਤੇ HSRA ਦੇ ਨਾਇਕ (ਬੰਗਾ, ਲਾਇਲਪੁਰ)',
+        en: 'Revolutionary Thinker & Founder of Naujawan Bharat Sabha',
+      },
+      significance: {
+        hi: '28 सितंबर 1907 को बंगा (पंजाब) में जन्मे भगत सिंह ने 1926 में नौजवान भारत सभा की स्थापना की और हिंदुस्तान सोशलिस्ट रिपब्लिकन एसोसिएशन (HSRA) को वैचारिक दिशा दी।',
+        pa: '28 ਸਤੰਬਰ 1907 ਨੂੰ ਜਨਮੇ ਭਗਤ ਸਿੰਘ ਨੇ ਨੌਜਵਾਨਾਂ ਨੂੰ ਜਾਗਰੂਕ ਕਰਨ ਲਈ 1926 ਵਿੱਚ ਨੌਜਵਾਨ ਭਾਰਤ ਸਭਾ ਬਣਾਈ ਅਤੇ ਕੌਮੀ ਆਜ਼ਾਦੀ ਲਹਿਰ ਵਿੱਚ ਨਵੀਂ ਰੂਹ ਫੂਕੀ।',
+        en: 'Born on 28 September 1907 at Banga (Punjab), Bhagat Singh founded the Naujawan Bharat Sabha (1926) and shaped the socialist vision of the Indian revolutionary movement.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'भगत सिंह जयंती (1907) — अमर शहीद का जन्म दिवस',
+        pa: 'ਸ਼ਹੀਦ ਭਗਤ ਸਿੰਘ ਜਨਮ ਦਿਹਾੜਾ (1907)',
+        en: 'Shaheed Bhagat Singh Birth Anniversary (1907)',
+      },
+      description: {
+        hi: '28 सितंबर को शहीद-ए-आज़म भगत सिंह का जन्म दिवस पूरे देश में मनाया जाता है। उनके क्रांतिकारी विचार आज भी युवाओं के लिए प्रेरणास्रोत हैं।',
+        pa: '28 ਸਤੰਬਰ ਨੂੰ ਸ਼ਹੀਦ ਭਗਤ ਸਿੰਘ ਦਾ ਜਨਮ ਦਿਨ ਦੇਸ਼ ਭਰ ਵਿੱਚ ਸ਼ਰਧਾ ਨਾਲ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Observed nationwide on 28 September honoring Shaheed Bhagat Singh\'s towering legacy of sacrifice, critical inquiry, and patriotism.',
+      },
+      source: 'National Archives of India & Punjab State Archives',
+    },
+    miniQuiz: {
+      question: {
+        hi: 'भगत सिंह ने पंजाब के युवाओं को स्वतंत्रता संग्राम से जोड़ने के लिए 1926 में किस संगठन की स्थापना की थी?',
+        pa: 'ਭਗਤ ਸਿੰਘ ਨੇ 1926 ਵਿੱਚ ਲਾਹੌਰ ਵਿਖੇ ਕਿਸ ਇਨਕਲਾਬੀ ਜਥੇਬੰਦੀ ਦੀ ਨੀਂਹ ਰੱਖੀ ਸੀ?',
+        en: 'Which revolutionary youth organisation was founded by Bhagat Singh at Lahore in March 1926?',
+      },
+      options: {
+        A: { hi: 'नौजवान भारत सभा', pa: 'ਨੌਜਵਾਨ ਭਾਰਤ ਸਭਾ', en: 'Naujawan Bharat Sabha' },
+        B: { hi: 'ग़दर पार्टी', pa: 'ਗ਼ਦਰ ਪਾਰਟੀ', en: 'Ghadar Party' },
+        C: { hi: 'अभिनव भारत', pa: 'ਅਭਿਨਵ ਭਾਰਤ', en: 'Abhinav Bharat' },
+        D: { hi: 'अनुशीलन समिति', pa: 'ਅਨੁਸ਼ੀਲਨ ਸਮਿਤੀ', en: 'Anushilan Samiti' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'भगत सिंह ने मार्च 1926 में लाहौर में नौजवान भारत सभा की स्थापना की थी, जिसके महासचिव भगत सिंह और अध्यक्ष राम किशन थे।',
+        pa: 'ਭਗਤ ਸਿੰਘ ਨੇ ਮਾਰਚ 1926 ਵਿੱਚ ਲਾਹੌਰ ਵਿਖੇ ਨੌਜਵਾਨ ਭਾਰਤ ਸਭਾ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ ਸੀ।',
+        en: 'Bhagat Singh founded the Naujawan Bharat Sabha in March 1926 at Lahore to foster secular nationalist unity among the youth.',
+      },
+    },
+  },
+
+  '05-24': {
+    date: '05-24',
+    thought: {
+      text: {
+        hi: 'सेवा देश दी जिंदड़ीए बड़ी औखी, गल्लां करनियां ढेर सुखल्लियां ने।',
+        pa: 'ਸੇਵਾ ਦੇਸ਼ ਦੀ ਜਿੰਦੜੀਏ ਬੜੀ ਔਖੀ, ਗੱਲਾਂ ਕਰਨੀਆਂ ਢੇਰ ਸੁਖੱਲੀਆਂ ਨੇ।',
+        en: 'Serving the motherland is the most demanding path in life; mere words and slogans are easy.',
+      },
+      author: {
+        hi: 'शहीद करतार सिंह सराभा',
+        pa: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ',
+        en: 'Shaheed Kartar Singh Sarabha',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'शहीद करतार सिंह सराभा',
+        pa: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ',
+        en: 'Shaheed Kartar Singh Sarabha',
+      },
+      birthYear: 1896,
+      deathYear: 1915,
+      title: {
+        hi: 'ग़दर पार्टी के महानायक एवं भगत सिंह के प्रेरक आदर्श',
+        pa: 'ਗ਼ਦਰ ਅੰਦੋਲਨ ਦੇ ਮਹਾਨਾਇਕ ਤੇ ਭਗਤ ਸਿੰਘ ਦੇ ਆਦਰਸ਼',
+        en: 'Ghadar Movement Prodigy & Mentor to Bhagat Singh',
+      },
+      significance: {
+        hi: '24 मई 1896 को लुधियाना के सराभा गांव में जन्मे करतार सिंह सराभा ने सैन फ्रांसिस्को में ग़दर अखबार के संपादन और मुद्रण का कार्य संभाला और 1915 में ब्रिटिश छावनियों में क्रांति का बिगुल फूंका।',
+        pa: '24 ਮਈ 1896 ਨੂੰ ਲੁਧਿਆਣਾ ਦੇ ਪਿੰਡ ਸਰਾਭਾ ਵਿਖੇ ਜਨਮੇ ਕਰਤਾਰ ਸਿੰਘ ਨੇ ਸਿਰਫ਼ 19 ਸਾਲ ਦੀ ਉਮਰ ਵਿੱਚ ਦੇਸ਼ ਲਈ ਆਪਣੀ ਜਾਨ ਕੁਰਬਾਨ ਕਰ ਦਿੱਤੀ। ਭਗਤ ਸਿੰਘ ਉਨ੍ਹਾਂ ਦੀ ਤਸਵੀਰ ਹਮੇਸ਼ਾ ਆਪਣੀ ਜੇਬ ਵਿੱਚ ਰੱਖਦੇ ਸਨ।',
+        en: 'Born on 24 May 1896 in Sarabha (Ludhiana), he managed the Ghadar press in California and was martyred at age 19. Bhagat Singh revered him as his foremost hero and guide.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'शहीद करतार सिंह सराभा जयंती (1896)',
+        pa: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਜਨਮ ਦਿਨ (1896)',
+        en: 'Shaheed Kartar Singh Sarabha Birth Anniversary (1896)',
+      },
+      description: {
+        hi: '24 मई को ग़दर क्रांति के सबसे युवा महानायक शहीद करतार सिंह सराभा की जयंती मनाई जाती है।',
+        pa: '24 ਮਈ ਨੂੰ ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਦਾ ਜਨਮ ਦਿਨ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Commemorates the birth of Shaheed Kartar Singh Sarabha, chief organizer of the Ghadar revolt of February 1915.',
+      },
+      source: 'Punjab Heritage Archives & Desh Bhagat Yadgar Hall, Jalandhar',
+    },
+    miniQuiz: {
+      question: {
+        hi: 'ग़दर आंदोलन के किस महान शहीद की तस्वीर शहीद-ए-आज़म भगत सिंह सदैव अपनी जेब में रखते थे?',
+        pa: 'ਕਿਸ ਗ਼ਦਰੀ ਸ਼ਹੀਦ ਦੀ ਤਸਵੀਰ ਸ਼ਹੀਦ ਭਗਤ ਸਿੰਘ ਹਮੇਸ਼ਾ ਆਪਣੀ ਜੇਬ ਵਿੱਚ ਰੱਖਦੇ ਸਨ?',
+        en: 'Whose portrait did Shaheed Bhagat Singh always carry in his pocket as his supreme guiding light?',
+      },
+      options: {
+        A: { hi: 'करतार सिंह सराभा', pa: 'ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ', en: 'Kartar Singh Sarabha' },
+        B: { hi: 'लाला हरदयाल', pa: 'ਲਾਲਾ ਹਰਦਿਆਲ', en: 'Lala Har Dayal' },
+        C: { hi: 'मदन लाल ढींगरा', pa: 'ਮਦਨ ਲਾਲ ਢੀਂਗਰਾ', en: 'Madan Lal Dhingra' },
+        D: { hi: 'सोहन सिंह भकना', pa: 'ਸੋਹਣ ਸਿੰਘ ਭਕਨਾ', en: 'Sohan Singh Bhakna' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'भगत सिंह करतार सिंह सराभा को अपना गुरु और पथ-प्रदर्शक मानते थे और उनकी तस्वीर सदैव अपनी जेब में रखते थे।',
+        pa: 'ਭਗਤ ਸਿੰਘ ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਨੂੰ ਆਪਣਾ ਰੋਲ ਮਾਡਲ ਮੰਨਦੇ ਸਨ।',
+        en: 'Bhagat Singh regarded Kartar Singh Sarabha as his hero and inspiration, always keeping his photograph close to his heart.',
+      },
+    },
+  },
+
+  '11-16': {
+    date: '11-16',
+    thought: {
+      text: {
+        hi: 'फांसी के फंदे को चूमते हुए हमें केवल एक ही इच्छा है कि हम बार-बार इसी भारत भूमि पर जन्म लें और इसकी स्वतंत्रता के लिए समर्पित हों।',
+        pa: 'ਫਾਂਸੀ ਦਾ ਰੱਸਾ ਚੁੰਮਦਿਆਂ ਸਾਡੀ ਇੱਕੋ ਤਮੰਨਾ ਹੈ ਕਿ ਵਾਰ-ਵਾਰ ਇਸੇ ਪਵਿੱਤਰ ਧਰਤੀ ਉੱਤੇ ਜਨਮ ਲਈਏ ਅਤੇ ਇਸਦੀ ਅਜ਼ਾਦੀ ਲਈ ਕੁਰਬਾਨ ਹੋਈਏ।',
+        en: 'Stepping to the gallows with a smile, our solitary prayer is to be reborn on this sacred soil to fight again for its freedom.',
+      },
+      author: {
+        hi: 'शहीद करतार सिंह सराभा (शहादत दिवस संदेश)',
+        pa: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ (ਸ਼ਹੀਦੀ ਸੰਦੇਸ਼)',
+        en: 'Shaheed Kartar Singh Sarabha',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'शहीद करतार सिंह सराभा एवं साथी ग़दरी शहीद',
+        pa: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਤੇ ਸਾਥੀ ਗ਼ਦਰੀ',
+        en: 'Shaheed Kartar Singh Sarabha & Ghadar Martyrs',
+      },
+      birthYear: 1896,
+      deathYear: 1915,
+      title: {
+        hi: 'प्रथम लाहौर षड्यंत्र केस में अमर शहादत (1915)',
+        pa: 'ਪਹਿਲੇ ਲਾਹੌਰ ਸਾਜ਼ਿਸ਼ ਕੇਸ ਵਿੱਚ ਲਾਸਾਨੀ ਸ਼ਹਾਦਤ (1915)',
+        en: 'Supreme Martyrdom in First Lahore Conspiracy Case (1915)',
+      },
+      significance: {
+        hi: '16 नवंबर 1915 को सेंट्रल जेल लाहौर में मात्र 19 वर्ष की आयु में करतार सिंह सराभा सहित 7 ग़दर क्रांतिकारियों को ब्रिटिश हुकूमत द्वारा फांसी दी गई थी।',
+        pa: '16 ਨਵੰਬਰ 1915 ਨੂੰ ਲਾਹੌਰ ਸੈਂਟਰਲ ਜੇਲ੍ਹ ਵਿੱਚ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਅਤੇ 6 ਹੋਰ ਦੇਸ਼ ਭਗਤਾਂ ਨੂੰ ਫਾਂਸੀ ਦਿੱਤੀ ਗਈ।',
+        en: 'On 16 November 1915, 19-year-old Kartar Singh Sarabha along with 6 fellow Ghadarites was hanged at Central Jail, Lahore.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'शहीद करतार सिंह सराभा शहादत दिवस (1915) एवं राष्ट्रीय प्रेस दिवस',
+        pa: 'ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਸ਼ਹੀਦੀ ਦਿਹਾੜਾ ਤੇ ਰਾਸ਼ਟਰੀ ਪ੍ਰੈੱਸ ਦਿਵਸ',
+        en: 'Shaheed Kartar Singh Sarabha Martyrdom Day (1915) & National Press Day',
+      },
+      description: {
+        hi: '16 नवंबर 1915 को करतार सिंह सराभा शहीद हुए। इसी दिन 1966 में प्रेस काउंसिल ऑफ इंडिया ने कार्य शुरू किया था, जिसे राष्ट्रीय प्रेस दिवस के रूप में मनाया जाता है।',
+        pa: '16 ਨਵੰਬਰ ਨੂੰ ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਦੀ ਸ਼ਹਾਦਤ ਦੀ ਯਾਦ ਮਨਾਈ ਜਾਂਦੀ ਹੈ ਅਤੇ ਇਸੇ ਦਿਨ ਰਾਸ਼ਟਰੀ ਪ੍ਰੈੱਸ ਦਿਵਸ ਵੀ ਹੁੰਦਾ ਹੈ।',
+        en: 'Commemorates the supreme martyrdom of Kartar Singh Sarabha (1915) and National Press Day marking the start of the Press Council of India (1966).',
+      },
+      source: 'Government of India, Ministry of Information & Broadcasting and Punjab Archives',
+    },
+    miniQuiz: {
+      question: {
+        hi: '16 नवंबर 1915 को करतार सिंह सराभा को किस जेल में फांसी दी गई थी?',
+        pa: '16 ਨਵੰਬਰ 1915 ਨੂੰ ਸ਼ਹੀਦ ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਨੂੰ ਕਿਹੜੀ ਜੇਲ੍ਹ ਵਿੱਚ ਫਾਂਸੀ ਦਿੱਤੀ ਗਈ ਸੀ?',
+        en: 'In which prison was Shaheed Kartar Singh Sarabha hanged by the British on 16 November 1915?',
+      },
+      options: {
+        A: { hi: 'सेंट्रल जेल लाहौर', pa: 'ਸੈਂਟਰਲ ਜੇਲ੍ਹ ਲਾਹੌਰ', en: 'Central Jail Lahore' },
+        B: { hi: 'सेलुलर जेल (अंडमान)', pa: 'ਸੈਲੂਲਰ ਜੇਲ੍ਹ ਅੰਡੇਮਾਨ', en: 'Cellular Jail Andaman' },
+        C: { hi: 'तिहाड़ जेल दिल्ली', pa: 'ਤਿਹਾੜ ਜੇਲ੍ਹ ਦਿੱਲੀ', en: 'Tihar Jail Delhi' },
+        D: { hi: 'यरवदा जेल पुणे', pa: 'ਯਰਵਦਾ ਜੇਲ੍ਹ ਪੁਣੇ', en: 'Yerwada Jail Pune' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'करतार सिंह सराभा को प्रथम लाहौर षड्यंत्र केस के तहत 16 नवंबर 1915 को सेंट्रल जेल लाहौर में फांसी दी गई थी।',
+        pa: 'ਕਰਤਾਰ ਸਿੰਘ ਸਰਾਭਾ ਨੂੰ 16 ਨਵੰਬਰ 1915 ਨੂੰ ਲਾਹੌਰ ਸੈਂਟਰਲ ਜੇਲ੍ਹ ਵਿੱਚ ਫਾਂਸੀ ਦਿੱਤੀ ਗਈ ਸੀ।',
+        en: 'Kartar Singh Sarabha was executed at Central Jail Lahore on 16 November 1915 in the First Lahore Conspiracy Case.',
+      },
+    },
+  },
+
+  '07-31': {
+    date: '07-31',
+    thought: {
+      text: {
+        hi: 'साहित्य का उद्देश्य केवल मनोरंजन नहीं है, बल्कि मानव आत्मा को जगाना और सामाजिक विषमताओं के विरुद्ध संघर्ष करना है।',
+        pa: 'ਸਾਹਿਤ ਦਾ ਅਸਲ ਮਕਸਦ ਸਿਰਫ਼ ਮਨੋਰੰਜਨ ਨਹੀਂ, ਸਗੋਂ ਸਮਾਜਿਕ ਬੇਇਨਸਾਫ਼ੀ ਵਿਰੁੱਧ ਆਵਾਜ਼ ਬੁਲੰਦ ਕਰਨਾ ਹੈ।',
+        en: 'Literature does not merely entertain; it awakens conscience, elevates human empathy, and resists oppression.',
+      },
+      author: {
+        hi: 'मुंशी प्रेमचंद एवं शहीद उधम सिंह',
+        pa: 'ਮੁੰਸ਼ੀ ਪ੍ਰੇਮਚੰਦ ਅਤੇ ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ',
+        en: 'Munshi Premchand & Shaheed Udham Singh',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'शहीद उधम सिंह एवं मुंशी प्रेमचंद',
+        pa: 'ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ ਅਤੇ ਮੁਨਸ਼ੀ ਪ੍ਰੇਮਚੰਦ',
+        en: 'Shaheed Udham Singh & Munshi Premchand',
+      },
+      birthYear: 1880,
+      deathYear: 1940,
+      title: {
+        hi: 'उधम सिंह शहादत दिवस (1940) एवं प्रेमचंद जयंती (1880)',
+        pa: 'ਊਧਮ ਸਿੰਘ ਸ਼ਹੀਦੀ ਦਿਹਾੜਾ (1940) ਤੇ ਪ੍ਰੇਮਚੰਦ ਜਨਮ ਦਿਨ (1880)',
+        en: 'Udham Singh Martyrdom Day (1940) & Premchand Birth Anniversary (1880)',
+      },
+      significance: {
+        hi: '31 जुलाई 1940 को लंदन की पेंटनविले जेल में जलियांवाला बाग के प्रतिशोधक शहीद उधम सिंह को फांसी दी गई। इसी दिन 31 जुलाई 1880 को लमही (वाराणसी) में उपन्यास सम्राट मुंशी प्रेमचंद का जन्म हुआ था।',
+        pa: '31 ਜੁਲਾਈ 1940 ਨੂੰ ਲੰਡਨ ਵਿੱਚ ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ ਨੂੰ ਫਾਂਸੀ ਦਿੱਤੀ ਗਈ ਜਿਨ੍ਹਾਂ ਨੇ ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਦੇ ਖ਼ੂਨੀ ਸਾਕੇ ਦਾ ਬਦਲਾ ਲਿਆ। 31 ਜੁਲਾਈ 1880 ਨੂੰ ਮਹਾਨ ਨਾਵਲਕਾਰ ਮੁਨਸ਼ੀ ਪ੍ਰੇਮਚੰਦ ਦਾ ਜਨਮ ਹੋਇਆ।',
+        en: 'On 31 July 1940, Shaheed Udham Singh was hanged at Pentonville Prison, London after avenging Jallianwala Bagh. 31 July 1880 also marks the birth of Hindi-Urdu literary titan Munshi Premchand.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'शहीद उधम सिंह शहादत दिवस (1940) एवं प्रेमचंद जयंती (1880)',
+        pa: 'ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ ਸ਼ਹੀਦੀ ਦਿਹਾੜਾ ਅਤੇ ਪ੍ਰੇਮਚੰਦ ਜਯੰਤੀ',
+        en: 'Shaheed Udham Singh Martyrdom Day (1940) & Munshi Premchand Jayanti (1880)',
+      },
+      description: {
+        hi: '31 जुलाई को देश शहीद उधम सिंह के सर्वोच्च बलिदान और मुंशी प्रेमचंद की अमर साहित्यिक विरासत को नमन करता है।',
+        pa: '31 ਜੁਲਾਈ ਨੂੰ ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ ਦੀ ਸ਼ਹਾਦਤ ਅਤੇ ਮੁਨਸ਼ੀ ਪ੍ਰੇਮਚੰਦ ਦੇ ਜਨਮ ਦਿਨ ਵਜੋਂ ਯਾਦ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।',
+        en: 'Honoring Shaheed Udham Singh\'s supreme sacrifice in London and celebrating the immortal literary genius of Munshi Premchand.',
+      },
+      source: 'National Archives of India & Sahitya Akademi',
+    },
+    miniQuiz: {
+      question: {
+        hi: '13 मार्च 1940 को लंदन के कैक्सटन हॉल में शहीद उधम सिंह ने किस पूर्व ब्रिटिश लेफ्टिनेंट गवर्नर की गोली मारकर हत्या की थी?',
+        pa: '13 ਮਾਰਚ 1940 ਨੂੰ ਲੰਡਨ ਦੇ ਕੈਕਸਟਨ ਹਾਲ ਵਿੱਚ ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ ਨੇ ਕਿਸ ਅੰਗਰੇਜ਼ ਅਫ਼ਸਰ ਨੂੰ ਗੋਲੀ ਮਾਰੀ ਸੀ?',
+        en: 'Whom did Shaheed Udham Singh shoot at Caxton Hall, London on 13 March 1940 to avenge Jallianwala Bagh?',
+      },
+      options: {
+        A: { hi: 'माइकल ओ\'डायर (Michael O\'Dwyer)', pa: 'ਮਾਈਕਲ ਓ\'ਡਵਾਇਰ', en: 'Michael O\'Dwyer' },
+        B: { hi: 'जनरल रेजीनाल्ड डायर', pa: 'ਜਨਰਲ ਰੇਜੀਨਾਲਡ ਡਾਇਰ', en: 'General Reginald Dyer' },
+        C: { hi: 'लॉर्ड कर्जन', pa: 'ਲਾਰਡ ਕਰਜ਼ਨ', en: 'Lord Curzon' },
+        D: { hi: 'लॉर्ड माउंटबेटन', pa: 'ਲਾਰਡ ਮਾਊਂਟਬੈਟਨ', en: 'Lord Mountbatten' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'उधम सिंह ने जलियांवाला बाग हत्याकांड (1919) के समय पंजाब के तत्कालीन लेफ्टिनेंट गवर्नर रहे माइकल ओ\'डायर को कैक्सटन हॉल में गोली मारी थी। (जनरल डायर की मृत्यु 1927 में बीमारी से हो चुकी थी)।',
+        pa: 'ਸ਼ਹੀਦ ਊਧਮ ਸਿੰਘ ਨੇ ਪੰਜਾਬ ਦੇ ਤਤਕਾਲੀ ਲੈਫ਼ਟੀਨੈਂਟ ਗਵਰਨਰ ਮਾਈਕਲ ਓ\'ਡਵਾਇਰ ਨੂੰ ਮਾਰਿਆ ਸੀ।',
+        en: 'Udham Singh assassinated Michael O\'Dwyer, who was the Lieutenant Governor of Punjab during the 1919 Jallianwala Bagh massacre.',
+      },
+    },
+  },
+
+  '01-03': {
+    date: '01-03',
+    thought: {
+      text: {
+        hi: 'शिक्षा ही मनुष्य को स्वाभिमान और सामाजिक दास्ता से मुक्ति दिलाती है।',
+        pa: 'ਸਿੱਖਿਆ ਹੀ ਮਨੁੱਖ ਨੂੰ ਸਵੈ-ਮਾਣ ਅਤੇ ਅਜ਼ਾਦੀ ਬਖ਼ਸ਼ਦੀ ਹੈ। ਅਗਿਆਨਤਾ ਹੀ ਸਾਰੇ ਦੁੱਖਾਂ ਦੀ ਜੜ੍ਹ ਹੈ।',
+        en: 'Lack of learning leads to lack of intellect; intellect leads to lack of morality; lack of morality leads to ruin. Education is the key to liberation.',
+      },
+      author: {
+        hi: 'क्रांतिज्योति सावित्रीबाई फुले',
+        pa: 'ਸਾਵਿਤਰੀਬਾਈ ਫੂਲੇ',
+        en: 'Krantijyoti Savitribai Phule',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'क्रांतिज्योति सावित्रीबाई फुले',
+        pa: 'ਸਾਵਿਤਰੀਬਾਈ ਫੂਲੇ',
+        en: 'Krantijyoti Savitribai Phule',
+      },
+      birthYear: 1831,
+      deathYear: 1897,
+      title: {
+        hi: 'भारत की प्रथम महिला शिक्षिका एवं समाज सुधारक (नायगांव जन्म)',
+        pa: 'ਭਾਰਤ ਦੀ ਪਹਿਲੀ ਮਹਿਲਾ ਅਧਿਆਪਕਾ ਤੇ ਸਮਾਜ ਸੁਧਾਰਕ',
+        en: 'India\'s First Woman Teacher & Social Emancipator',
+      },
+      significance: {
+        hi: '3 जनवरी 1831 को जन्मी सावित्रीबाई फुले ने 1848 में पुणे के भिड़े वाड़ा में भारत का पहला बालिका विद्यालय खोला और सामाजिक रूढ़ियों को तोड़ते हुए महिला शिक्षा की नींव रखी।',
+        pa: '3 ਜਨਵਰੀ 1831 ਨੂੰ ਜਨਮੀ ਸਾਵਿਤਰੀਬਾਈ ਫੂਲੇ ਨੇ 1848 ਵਿੱਚ ਪੁਣੇ ਵਿਖੇ ਕੁੜੀਆਂ ਲਈ ਭਾਰਤ ਦਾ ਪਹਿਲਾ ਸਕੂਲ ਖੋਲ੍ਹਿਆ।',
+        en: 'Born 3 January 1831, she pioneered modern girls\' education in India, opening the historic Bhide Wada school in Pune in 1848.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'सावित्रीबाई फुले जयंती (1831) — भारतीय महिला शिक्षा दिवस',
+        pa: 'ਸਾਵਿਤਰੀਬਾਈ ਫੂਲੇ ਜਨਮ ਦਿਨ (1831)',
+        en: 'Savitribai Phule Birth Anniversary (1831)',
+      },
+      description: {
+        hi: '3 जनवरी को सावित्रीबाई फुले की जयंती मनाई जाती है, जिसे महाराष्ट्र में बालिका दिवस के रूप में मनाया जाता है।',
+        pa: '3 ਜਨਵਰੀ ਨੂੰ ਸਾਵਿਤਰੀਬਾਈ ਫੂਲੇ ਦਾ ਜਨਮ ਦਿਨ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Observed as Balika Shiksha Diwas honoring the mother of modern Indian feminist pedagogy.',
+      },
+      source: 'Government of Maharashtra & Ministry of Women and Child Development',
+    },
+    miniQuiz: {
+      question: {
+        hi: 'सावित्रीबाई फुले द्वारा रचित प्रथम मराठी काव्य-संग्रह (1854) का क्या नाम है?',
+        pa: 'ਸਾਵਿਤਰੀਬਾਈ ਫੂਲੇ ਦੁਆਰਾ ਰਚਿਤ ਪ੍ਰਸਿੱਧ ਕਾਵਿ-ਸੰਗ੍ਰਹਿ ਦਾ ਨਾਂ ਕੀ ਹੈ?',
+        en: 'What is the title of the pioneering poetry collection published by Savitribai Phule in 1854?',
+      },
+      options: {
+        A: { hi: 'काव्य फुले (Kavya Phule)', pa: 'ਕਾਵਿ ਫੂਲੇ (Kavya Phule)', en: 'Kavya Phule' },
+        B: { hi: 'गुलामगिरी', pa: 'ਗ਼ੁਲਾਮਗਿਰੀ', en: 'Gulamgiri' },
+        C: { hi: 'शेतकऱ्याचा आसूड', pa: 'ਸ਼ੇਤਕਰੀਆਚਾ ਆਸੂੜ', en: 'Shetkaryacha Asud' },
+        D: { hi: 'सत्यशोधक कविता', pa: 'ਸੱਤਿਆਸ਼ੋਧਕ ਕਵਿਤਾ', en: 'Satyashodhak Kavita' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'सावित्रीबाई फुले का पहला काव्य-संग्रह "काव्य फुले" 1854 में प्रकाशित हुआ था, जिसमें उन्होंने शिक्षा और समानता का संदेश दिया। (गुलामगिरी ज्योतिराव फुले की पुस्तक थी)।',
+        pa: 'ਸਾਵਿਤਰੀਬਾਈ ਫੂਲੇ ਦੀ ਪਹਿਲੀ ਕਿਤਾਬ \'ਕਾਵਿ ਫੂਲੇ\' 1854 ਵਿੱਚ ਛਪੀ ਸੀ।',
+        en: 'Savitribai Phule published "Kavya Phule" in 1854, championing education, labor dignity, and reason.',
+      },
+    },
+  },
+
+  '04-11': {
+    date: '04-11',
+    thought: {
+      text: {
+        hi: 'विद्येविना मति गेली, मतीविना नीति गेली! शिक्षा के बिना विवेक नष्ट होता है और विवेक के बिना मनुष्य पतन की ओर जाता है।',
+        pa: 'ਵਿੱਦਿਆ ਬਿਨਾਂ ਮੱਤ ਗਈ, ਮੱਤ ਬਿਨਾਂ ਨੀਤੀ ਗਈ! ਸਿੱਖਿਆ ਹੀ ਮਨੁੱਖੀ ਆਤਮਾ ਦਾ ਸੱਚਾ ਗਹਿਣਾ ਹੈ।',
+        en: 'Without education intellect is lost; without intellect morality is lost. Universal education alone destroys inequality.',
+      },
+      author: {
+        hi: 'महात्मा ज्योतिराव फुले',
+        pa: 'ਮਹਾਤਮਾ ਜੋਤੀਰਾਓ ਫੂਲੇ',
+        en: 'Mahatma Jyotirao Phule',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'महात्मा ज्योतिराव फुले',
+        pa: 'ਮਹਾਤਮਾ ਜੋਤੀਰਾਓ ਫੂਲੇ',
+        en: 'Mahatma Jyotirao Phule',
+      },
+      birthYear: 1827,
+      deathYear: 1890,
+      title: {
+        hi: 'सत्यशोधक समाज के संस्थापक एवं सामाजिक क्रांति के अग्रदूत',
+        pa: 'ਸੱਤਿਆਸ਼ੋਧਕ ਸਮਾਜ ਦੇ ਬਾਨੀ ਤੇ ਸਮਾਜ ਸੁਧਾਰਕ',
+        en: 'Founder of Satyashodhak Samaj & Social Emancipator',
+      },
+      significance: {
+        hi: '11 अप्रैल 1827 को जन्मे ज्योतिराव फुले ने 1873 में सत्यशोधक समाज की स्थापना की और वंचितों, किसानों एवं स्त्रियों के उत्थान के लिए आजीवन संघर्ष किया। 1888 में जनता ने उन्हें "महात्मा" की उपाधि दी।',
+        pa: '11 ਅਪ੍ਰੈਲ 1827 ਨੂੰ ਜਨਮੇ ਜੋਤੀਰਾਓ ਫੂਲੇ ਨੇ 1873 ਵਿੱਚ ਸੱਤਿਆਸ਼ੋਧਕ ਸਮਾਜ ਦੀ ਨੀਂਹ ਰੱਖੀ ਅਤੇ ਦੱਬੇ-ਕੁਚਲੇ ਲੋਕਾਂ ਦੇ ਹੱਕਾਂ ਲਈ ਲੜਾਈ ਲੜੀ।',
+        en: 'Born 11 April 1827, he founded the Satyashodhak Samaj (1873) and authored "Gulamgiri", championing universal schooling and peasant rights. Bestowed the title Mahatma in 1888.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'महात्मा ज्योतिराव फुले जयंती (1827)',
+        pa: 'ਮਹਾਤਮਾ ਜੋਤੀਰਾਓ ਫੂਲੇ ਜਨਮ ਦਿਨ (1827)',
+        en: 'Mahatma Jyotirao Phule Birth Anniversary (1827)',
+      },
+      description: {
+        hi: '11 अप्रैल को महात्मा ज्योतिराव फुले की जयंती मनाई जाती है, जिसे राष्ट्रीय समता दिवस के रूप में भी स्मरण किया जाता है।',
+        pa: '11 ਅਪ੍ਰੈਲ ਨੂੰ ਮਹਾਤਮਾ ਜੋਤੀਰਾਓ ਫੂਲੇ ਦਾ ਜਨਮ ਦਿਹਾੜਾ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Commemorating the revolutionary legacy of Mahatma Jyotirao Phule across India.',
+      },
+      source: 'Government of India, National Archives & Ministry of Social Justice',
+    },
+    miniQuiz: {
+      question: {
+        hi: 'महात्मा ज्योतिराव फुले ने अपनी प्रसिद्ध पुस्तक "गुलामगिरी" (1873) किसे समर्पित की थी?',
+        pa: 'ਮਹਾਤਮਾ ਜੋਤੀਰਾਓ ਫੂਲੇ ਨੇ ਆਪਣੀ ਕਿਤਾਬ "ਗ਼ੁਲਾਮਗਿਰੀ" (1873) ਕਿਸਨੂੰ ਸਮਰਪਿਤ ਕੀਤੀ ਸੀ?',
+        en: 'To whom did Mahatma Jyotirao Phule dedicate his historic anti-caste treatise "Gulamgiri" (1873)?',
+      },
+      options: {
+        A: { hi: 'अमेरिकी जनता को (नीग्रो दासों की मुक्ति के लिए संघर्षरत)', pa: 'ਅਮਰੀਕੀ ਜਨਤਾ ਨੂੰ (ਦਾਸਤਾ ਵਿਰੋਧੀ ਸੰਘਰਸ਼ ਲਈ)', en: 'The good people of the United States (for their struggle against Negro slavery)' },
+        B: { hi: 'ब्रिटिश संसद को', pa: 'ਬ੍ਰਿਟਿਸ਼ ਸੰਸਦ ਨੂੰ', en: 'The British Parliament' },
+        C: { hi: 'भारतीय किसानों को', pa: 'ਭਾਰਤੀ ਕਿਸਾਨਾਂ ਨੂੰ', en: 'Indian Farmers' },
+        D: { hi: 'बाल गंगाधर तिलक को', pa: 'ਬਾਲ ਗੰਗਾਧਰ ਤਿਲਕ ਨੂੰ', en: 'Bal Gangadhar Tilak' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'फुले ने गुलामगिरी को उन अमेरिकी नागरिकों को समर्पित किया जिन्होंने अश्वेत नीग्रो दासों को मुक्त कराने के लिए गृहयुद्ध में संघर्ष किया था।',
+        pa: 'ਜੋਤੀਰਾਓ ਫੂਲੇ ਨੇ ਆਪਣੀ ਪੁਸਤਕ ਅਮਰੀਕਾ ਵਿੱਚ ਗੁਲਾਮੀ ਖ਼ਿਲਾਫ਼ ਲੜਨ ਵਾਲੇ ਲੋਕਾਂ ਨੂੰ ਸਮਰਪਿਤ ਕੀਤੀ ਸੀ।',
+        en: 'Phule dedicated Gulamgiri to the people of the United States who fought to abolish African-American slavery.',
+      },
+    },
+  },
+
+  '11-15': {
+    date: '11-15',
+    thought: {
+      text: {
+        hi: 'अबुआ दिशुम रे अबुआ राज (हमारी धरती पर हमारा राज)! जल, जंगल, जमीन पर मूल निवासियों का अधिकार अक्षुण्ण है।',
+        pa: 'ਸਾਡੀ ਧਰਤੀ ਉੱਤੇ ਸਾਡਾ ਰਾਜ! ਜਲ, ਜੰਗਲ ਅਤੇ ਜ਼ਮੀਨ ਦੀ ਰਾਖੀ ਲਈ ਲੜਨਾ ਹਰ ਨਾਗਰਿਕ ਦਾ ਫ਼ਰਜ਼ ਹੈ।',
+        en: 'Our land, our rule! The struggle for Jal, Jungle, and Zameen is a sacred battle for human dignity and indigenous sovereignty.',
+      },
+      author: {
+        hi: 'भगवान बिरसा मुंडा',
+        pa: 'ਭਗਵਾਨ ਬਿਰਸਾ ਮੁੰਡਾ',
+        en: 'Bhagwan Birsa Munda',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'धरती आबा भगवान बिरसा मुंडा',
+        pa: 'ਭਗਵਾਨ ਬਿਰਸਾ ਮੁੰਡਾ',
+        en: 'Dharti Aaba Bhagwan Birsa Munda',
+      },
+      birthYear: 1875,
+      deathYear: 1900,
+      title: {
+        hi: 'उलगुलान के महानायक एवं जनजातीय गौरव दिवस',
+        pa: 'ਉਲਗੁਲਾਨ ਦੇ ਨਾਇਕ ਤੇ ਜਨਜਾਤੀ ਗੌਰਵ ਦਿਵਸ',
+        en: 'Hero of the Munda Ulgulan & Janjatiya Gaurav Divas',
+      },
+      significance: {
+        hi: '15 नवंबर 1875 को उलीहातू (झारखंड) में जन्मे बिरसा मुंडा ने 1899-1900 में ब्रिटिश शोषण और दीकुओं के विरुद्ध ऐतिहासिक उलगुलान क्रांति का नेतृत्व किया। 15 नवंबर को राष्ट्रीय "जनजातीय गौरव दिवस" घोषित किया गया है।',
+        pa: '15 ਨਵੰਬਰ 1875 ਨੂੰ ਜਨਮੇ ਬਿਰਸਾ ਮੁੰਡਾ ਨੇ ਅੰਗਰੇਜ਼ੀ ਹਕੂਮਤ ਖ਼ਿਲਾਫ਼ ਉਲਗੁਲਾਨ ਲਹਿਰ ਚਲਾਈ। ਉਨ੍ਹਾਂ ਦੇ ਜਨਮ ਦਿਨ ਨੂੰ ਜਨਜਾਤੀ ਗੌਰਵ ਦਿਵਸ ਵਜੋਂ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Born 15 November 1875 at Ulihatu, he led the historic Munda Ulgulan against British land alienation. Celebrated nationally as Janjatiya Gaurav Divas since 2021.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'जनजातीय गौरव दिवस — भगवान बिरसा मुंडा जयंती (1875) एवं झारखंड स्थापना दिवस (2000)',
+        pa: 'ਜਨਜਾਤੀ ਗੌਰਵ ਦਿਵਸ — ਬਿਰਸਾ ਮੁੰਡਾ ਜਨਮ ਦਿਨ ਤੇ ਝਾਰਖੰਡ ਸਥਾਪਨਾ ਦਿਵਸ',
+        en: 'Janjatiya Gaurav Divas — Birsa Munda Jayanti (1875) & Jharkhand Foundation Day (2000)',
+      },
+      description: {
+        hi: '15 नवंबर को बिरसा मुंडा की जयंती को जनजातीय गौरव दिवस के रूप में मनाया जाता है। इसी दिन 2000 में भारत के 28वें राज्य के रूप में झारखंड का गठन हुआ था।',
+        pa: '15 ਨਵੰਬਰ ਨੂੰ ਬਿਰਸਾ ਮੁੰਡਾ ਦੀ ਯਾਦ ਵਿੱਚ ਜਨਜਾਤੀ ਗੌਰਵ ਦਿਵਸ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ। ਇਸੇ ਦਿਨ 2000 ਵਿੱਚ ਝਾਰਖੰਡ ਰਾਜ ਬਣਿਆ ਸੀ।',
+        en: 'Marks Janjatiya Gaurav Divas honoring tribal freedom fighters, and Jharkhand State Formation Day (15 November 2000).',
+      },
+      source: 'Ministry of Tribal Affairs, Government of India & Gazette of India',
+    },
+    miniQuiz: {
+      question: {
+        hi: '1899–1900 में भगवान बिरसा मुंडा के नेतृत्व में छोटानागपुर क्षेत्र में हुए प्रसिद्ध आदिवासी विद्रोह को किस नाम से जाना जाता है?',
+        pa: '1899-1900 ਵਿੱਚ ਬਿਰਸਾ ਮੁੰਡਾ ਦੀ ਅਗਵਾਈ ਵਿੱਚ ਹੋਏ ਪ੍ਰਸਿੱਧ ਆਦਿਵਾਸੀ ਵਿਦਰੋਹ ਨੂੰ ਕੀ ਕਿਹਾ ਜਾਂਦਾ ਹੈ?',
+        en: 'What is the historic tribal rebellion led by Birsa Munda in Chhotanagpur (1899–1900) called?',
+      },
+      options: {
+        A: { hi: 'उलगुलान (The Great Tumult)', pa: 'ਉਲਗੁਲਾਨ (Ulgulan)', en: 'Ulgulan (The Great Tumult)' },
+        B: { hi: 'संथाल हुल', pa: 'ਸੰਥਾਲ ਹੁਲ', en: 'Santhal Hool' },
+        C: { hi: 'कोल विद्रोह', pa: 'ਕੋਲ ਵਿਦਰੋਹ', en: 'Kol Rebellion' },
+        D: { hi: 'रम्पा विद्रोह', pa: 'ਰੰਪਾ ਵਿਦਰੋਹ', en: 'Rampa Rebellion' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'बिरसा मुंडा के आंदोलन को मुंडारी भाषा में "उलगुलान" (महान हलचल / The Great Tumult) कहा जाता है, जिसके परिणामस्वरूप 1908 में छोटानागपुर काश्तकारी अधिनियम (CNT Act) पारित हुआ।',
+        pa: 'ਬਿਰਸਾ ਮੁੰਡਾ ਦੀ ਅਗਵਾਈ ਵਾਲੀ ਲਹਿਰ ਨੂੰ \'ਉਲਗੁਲਾਨ\' (The Great Tumult) ਕਿਹਾ ਜਾਂਦਾ ਹੈ।',
+        en: 'The Munda rebellion was known as Ulgulan (The Great Tumult), leading directly to the Chotanagpur Tenancy Act of 1908.',
+      },
+    },
+  },
+
+  '02-13': {
+    date: '02-13',
+    thought: {
+      text: {
+        hi: 'हम केवल स्वप्नदृष्टा नहीं हैं; हम उस जागृत भारत के निर्माता हैं जिसकी शक्ति उसकी नारी-चेतना में है।',
+        pa: 'ਅਸੀਂ ਕੇਵਲ ਸੁਪਨੇ ਲੈਣ ਵਾਲੇ ਨਹੀਂ, ਅਸੀਂ ਆਪਣੀ ਮਾਤ-ਭੂਮੀ ਦੇ ਨਿਰਮਾਤਾ ਹਾਂ।',
+        en: 'A country\'s greatness lies in its undying ideals of love and sacrifice that inspire the mothers of the race.',
+      },
+      author: {
+        hi: 'सरोजिनी नायडू (भारत कोकिला)',
+        pa: 'ਸਰੋਜਿਨੀ ਨਾਇਡੂ',
+        en: 'Sarojini Naidu (Nightingale of India)',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'सरोजिनी नायडू (भारत कोकिला)',
+        pa: 'ਸਰੋਜਿਨੀ ਨਾਇਡੂ',
+        en: 'Sarojini Naidu',
+      },
+      birthYear: 1879,
+      deathYear: 1949,
+      title: {
+        hi: 'राष्ट्रीय महिला दिवस एवं भारतीय राष्ट्रीय कांग्रेस की प्रथम भारतीय महिला अध्यक्ष',
+        pa: 'ਰਾਸ਼ਟਰੀ ਮਹਿਲਾ ਦਿਵਸ ਤੇ ਕਾਂਗਰਸ ਦੀ ਪਹਿਲੀ ਭਾਰਤੀ ਮਹਿਲਾ ਪ੍ਰਧਾਨ',
+        en: 'First Indian Woman President of INC & National Women\'s Day',
+      },
+      significance: {
+        hi: '13 फरवरी 1879 को हैदराबाद में जन्मी सरोजिनी नायडू 1925 में कानपुर कांग्रेस अधिवेशन की प्रथम भारतीय महिला अध्यक्ष बनीं और स्वतंत्रता के बाद उत्तर प्रदेश की पहली महिला राज्यपाल बनीं।',
+        pa: '13 ਫ਼ਰਵਰੀ 1879 ਨੂੰ ਜਨਮੀ ਸਰੋਜਿਨੀ ਨਾਇਡੂ 1925 ਵਿੱਚ ਕਾਨਪੁਰ ਕਾਂਗਰਸ ਦੀ ਪ੍ਰਧਾਨ ਬਣੀ ਅਤੇ ਆਜ਼ਾਦ ਭਾਰਤ ਦੀ ਪਹਿਲੀ ਮਹਿਲਾ ਰਾਜਪਾਲ ਰਹੀ।',
+        en: 'Born 13 February 1879, she was the first Indian woman to preside over the Indian National Congress (Kanpur 1925) and served as independent India\'s first woman Governor (UP 1947–1949).',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'राष्ट्रीय महिला दिवस (National Women\'s Day) — सरोजिनी नायडू जयंती (1879)',
+        pa: 'ਰਾਸ਼ਟਰੀ ਮਹਿਲਾ ਦਿਵਸ — ਸਰੋਜਿਨੀ ਨਾਇਡੂ ਜਨਮ ਦਿਨ (1879)',
+        en: 'National Women\'s Day — Sarojini Naidu Birth Anniversary (1879)',
+      },
+      description: {
+        hi: '13 फरवरी को भारत कोकिला सरोजिनी नायडू की जयंती को "राष्ट्रीय महिला दिवस" के रूप में मनाया जाता है (अंतर्राष्ट्रीय महिला दिवस 8 मार्च को मनाया जाता है)।',
+        pa: '13 ਫ਼ਰਵਰੀ ਨੂੰ ਭਾਰਤ ਵਿੱਚ ਰਾਸ਼ਟਰੀ ਮਹਿਲਾ ਦਿਵਸ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Celebrated nationwide on 13 February as National Women\'s Day honoring Sarojini Naidu (International Women\'s Day is 8 March).',
+      },
+      source: 'Government of India & Ministry of Women and Child Development',
+    },
+    miniQuiz: {
+      question: {
+        hi: 'सरोजिनी नायडू ने भारतीय राष्ट्रीय कांग्रेस के किस ऐतिहासिक वार्षिक अधिवेशन (1925) की अध्यक्षता की थी?',
+        pa: 'ਸਰੋਜਿਨੀ ਨਾਇਡੂ ਨੇ 1925 ਵਿੱਚ ਕਾਂਗਰਸ ਦੇ ਕਿਸ ਇਤਿਹਾਸਕ ਸੈਸ਼ਨ ਦੀ ਪ੍ਰਧਾਨਗੀ ਕੀਤੀ ਸੀ?',
+        en: 'Which annual session of the Indian National Congress did Sarojini Naidu preside over in 1925?',
+      },
+      options: {
+        A: { hi: 'कानपुर अधिवेशन (1925)', pa: 'ਕਾਨਪੁਰ ਸੈਸ਼ਨ (1925)', en: 'Kanpur Session (1925)' },
+        B: { hi: 'बेलगाम अधिवेशन (1924)', pa: 'ਬੇਲਗਾਮ ਸੈਸ਼ਨ (1924)', en: 'Belgaum Session (1924)' },
+        C: { hi: 'लाहौर अधिवेशन (1929)', pa: 'ਲਾਹੌਰ ਸੈਸ਼ਨ (1929)', en: 'Lahore Session (1929)' },
+        D: { hi: 'कलकत्ता अधिवेशन (1917)', pa: 'ਕਲਕੱਤਾ ਸੈਸ਼ਨ (1917)', en: 'Calcutta Session (1917)' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'सरोजिनी नायडू 1925 के कानपुर अधिवेशन में कांग्रेस की प्रथम भारतीय महिला अध्यक्ष बनीं। (1917 में एनी बेसेंट प्रथम महिला अध्यक्ष थीं, पर वे विदेशी थीं; 1924 में बेलगाम में गांधी जी अध्यक्ष थे)।',
+        pa: 'ਸਰੋਜਿਨੀ ਨਾਇਡੂ ਨੇ 1925 ਵਿੱਚ ਕਾਨਪੁਰ ਕਾਂਗਰਸ ਸੈਸ਼ਨ ਦੀ ਪ੍ਰਧਾਨਗੀ ਕੀਤੀ।',
+        en: 'Sarojini Naidu presided over the 1925 Kanpur session, becoming the first Indian woman Congress President (Annie Besant in 1917 was British).',
+      },
+    },
+  },
+
+  '05-07': {
+    date: '05-07',
+    thought: {
+      text: {
+        hi: 'जहाँ मन भयमुक्त हो और शीश गर्व से ऊँचा हो... हे पिता, मेरे देश को उसी स्वतंत्रता के स्वर्ग में जगाओ।',
+        pa: 'ਚਿੱਤ ਜਿੱਥੇ ਭੈ-ਮੁਕਤ ਹੋਵੇ ਅਤੇ ਸਿਰ ਉੱਚਾ ਹੋਵੇ... ਉੱਥੇ ਹੀ ਸੱਚੀ ਸੁਤੰਤਰਤਾ ਹੈ।',
+        en: 'Where the mind is without fear and the head is held high; where knowledge is free... Into that heaven of freedom, my Father, let my country awake.',
+      },
+      author: {
+        hi: 'गुरुदेव रवींद्रनाथ टैगोर (गीतांजलि)',
+        pa: 'ਗੁਰੂਦੇਵ ਰਬਿੰਦਰਨਾਥ ਟੈਗੋਰ',
+        en: 'Gurudev Rabindranath Tagore (Gitanjali)',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'गुरुदेव रवींद्रनाथ टैगोर',
+        pa: 'ਗੁਰੂਦੇਵ ਰਬਿੰਦਰਨਾਥ ਟੈਗੋਰ',
+        en: 'Gurudev Rabindranath Tagore',
+      },
+      birthYear: 1861,
+      deathYear: 1941,
+      title: {
+        hi: 'एशिया के प्रथम नोबेल पुरस्कार विजेता (1913) एवं विश्वभारती के संस्थापक',
+        pa: 'ਏਸ਼ੀਆ ਦੇ ਪਹਿਲੇ ਨੋਬਲ ਪੁਰਸਕਾਰ ਜੇਤੂ (1913) ਤੇ ਵਿਸ਼ਵ-ਭਾਰਤੀ ਦੇ ਬਾਨੀ',
+        en: 'Asia\'s First Nobel Laureate (1913) & Founder of Visva-Bharati',
+      },
+      significance: {
+        hi: '7 मई 1861 को कोलकाता में जन्मे रवींद्रनाथ टैगोर को 1913 में "गीतांजलि" के लिए साहित्य का नोबेल पुरस्कार मिला। उन्होंने भारत (जन गण मन) और बांग्लादेश (आमार शोनार बांग्ला) के राष्ट्रगान रचे।',
+        pa: '7 ਮਈ 1861 ਨੂੰ ਜਨਮੇ ਰਬਿੰਦਰਨਾਥ ਟੈਗੋਰ ਨੂੰ 1913 ਵਿੱਚ ਨੋਬਲ ਇਨਾਮ ਮਿਲਿਆ। ਉਨ੍ਹਾਂ ਨੇ ਸ਼ਾਂਤੀਨਿਕੇਤਨ ਵਿਖੇ ਵਿਸ਼ਵ-ਭਾਰਤੀ ਯੂਨੀਵਰਸਿਟੀ ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ।',
+        en: 'Born 7 May 1861, Gurudev won the 1913 Nobel Prize in Literature for "Gitanjali". He penned the national anthems of India and Bangladesh and founded Visva-Bharati at Santiniketan.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'रवींद्रनाथ टैगोर जयंती (1861)',
+        pa: 'ਗੁਰੂਦੇਵ ਰਬਿੰਦਰਨਾਥ ਟੈਗੋਰ ਜਨਮ ਦਿਨ (1861)',
+        en: 'Rabindranath Tagore Birth Anniversary (1861)',
+      },
+      description: {
+        hi: '7 मई को विश्वकवि गुरुदेव रवींद्रनाथ टैगोर की जयंती मनाई जाती है, जिसे पश्चिम बंगाल में "पोइला बैसाख / 25शे बैशाख" के रूप में श्रद्धा से मनाया जाता है।',
+        pa: '7 ਮਈ ਨੂੰ ਰਬਿੰਦਰਨਾਥ ਟੈਗੋਰ ਦਾ ਜਨਮ ਦਿਹਾੜਾ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Celebrated globally commemorating Gurudev\'s supreme cultural, philosophical, and educational contribution to modern civilization.',
+      },
+      source: 'Visva-Bharati University & Sahitya Akademi',
+    },
+    miniQuiz: {
+      question: {
+        hi: '13 अप्रैल 1919 के जलियांवाला बाग नरसंहार के विरोध में रवींद्रनाथ टैगोर ने ब्रिटिश ताज द्वारा प्रदत्त कौन सी उपाधि लौटा दी थी?',
+        pa: '1919 ਦੇ ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਸਾਕੇ ਦੇ ਵਿਰੋਧ ਵਿੱਚ ਰਬਿੰਦਰਨਾਥ ਟੈਗੋਰ ਨੇ ਕਿਹੜੀ ਅੰਗਰੇਜ਼ੀ ਉਪਾਧੀ ਵਾਪਸ ਕਰ ਦਿੱਤੀ ਸੀ?',
+        en: 'Which British title was renounced by Rabindranath Tagore in protest against the 1919 Jallianwala Bagh massacre?',
+      },
+      options: {
+        A: { hi: 'नाईटहुड / सर (Knighthood)', pa: 'ਨਾਈਟਹੁੱਡ / ਸਰ (Knighthood)', en: 'Knighthood (Sir)' },
+        B: { hi: 'कैसर-ए-हिंद', pa: 'ਕੈਸਰ-ਏ-ਹਿੰਦ', en: 'Kaisar-i-Hind' },
+        C: { hi: 'राय बहादुर', pa: 'ਰਾਏ ਬਹਾਦਰ', en: 'Rai Bahadur' },
+        D: { hi: 'दीवान बहादुर', pa: 'ਦੀਵਾਨ ਬਹਾਦਰ', en: 'Dewan Bahadur' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'टैगोर ने 1919 में वायसराय लॉर्ड चेम्सफोर्ड को पत्र लिखकर अपनी "नाईटहुड" (Knighthood) की उपाधि त्याग दी थी। (गांधी जी ने कैसर-ए-हिंद पदक लौटाया था)।',
+        pa: 'ਰਬਿੰਦਰਨਾਥ ਟੈਗੋਰ ਨੇ ਜਲ੍ਹਿਆਂਵਾਲਾ ਬਾਗ਼ ਸਾਕੇ ਦੇ ਰੋਸ ਵਜੋਂ ਆਪਣੀ ਨਾਈਟਹੁੱਡ ਦੀ ਪਦਵੀ ਵਾਪਸ ਕੀਤੀ ਸੀ।',
+        en: 'Rabindranath Tagore renounced his Knighthood in May 1919 in a historic letter to Viceroy Lord Chelmsford protesting British brutality at Amritsar.',
+      },
+    },
+  },
+
+  '08-12': {
+    date: '08-12',
+    thought: {
+      text: {
+        hi: 'हम राष्ट्र के विकास में विज्ञान और अंतरिक्ष प्रौद्योगिकी के अनुप्रयोग में किसी से पीछे नहीं रह सकते।',
+        pa: 'ਸਾਨੂੰ ਵਿਗਿਆਨ ਅਤੇ ਪੁਲਾੜ ਖੋਜ ਦੀ ਵਰਤੋਂ ਆਮ ਲੋਕਾਂ ਦੇ ਜੀਵਨ ਨੂੰ ਸੁਧਾਰਨ ਲਈ ਕਰਨੀ ਚਾਹੀਦੀ ਹੈ।',
+        en: 'We must be second to none in the application of advanced technologies to the real problems of man and society.',
+      },
+      author: {
+        hi: 'डॉ. विक्रम साराभाई',
+        pa: 'ਡਾ. ਵਿਕਰਮ ਸਾਰਾਭਾਈ',
+        en: 'Dr. Vikram Sarabhai',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'डॉ. विक्रम साराभाई',
+        pa: 'ਡਾ. ਵਿਕਰਮ ਸਾਰਾਭਾਈ',
+        en: 'Dr. Vikram Sarabhai',
+      },
+      birthYear: 1919,
+      deathYear: 1971,
+      title: {
+        hi: 'भारतीय अंतरिक्ष कार्यक्रम के जनक (Father of Indian Space Program)',
+        pa: 'ਭਾਰਤੀ ਪੁਲਾੜ ਪ੍ਰੋਗਰਾਮ ਦੇ ਪਿਤਾਮਾ',
+        en: 'Father of the Indian Space Program',
+      },
+      significance: {
+        hi: '12 अगस्त 1919 को अहमदाबाद में जन्मे डॉ. विक्रम साराभाई ने ISRO (1969), PRL और IIM अहमदाबाद की स्थापना की। उनके प्रयासों से 1975 में भारत का प्रथम उपग्रह आर्यभट्ट प्रक्षेपित हुआ।',
+        pa: '12 ਅਗਸਤ 1919 ਨੂੰ ਜਨਮੇ ਡਾ. ਸਾਰਾਭਾਈ ਨੇ ਇਸਰੋ (ISRO) ਦੀ ਨੀਂਹ ਰੱਖੀ ਅਤੇ ਭਾਰਤ ਨੂੰ ਪੁਲਾੜ ਵਿਗਿਆਨ ਵਿੱਚ ਆਤਮ-ਨਿਰਭਰ ਬਣਾਇਆ।',
+        en: 'Born 12 August 1919, Dr. Sarabhai founded ISRO (1969), PRL, and guided India\'s first satellite Aryabhata (1975). Sriharikota\'s spaceport was later named in his honor.',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'डॉ. विक्रम साराभाई जयंती (1919) एवं अंतर्राष्ट्रीय युवा दिवस',
+        pa: 'ਡਾ. ਵਿਕਰਮ ਸਾਰਾਭਾਈ ਜਨਮ ਦਿਨ (1919) ਤੇ ਅੰਤਰਰਾਸ਼ਟਰੀ ਯੁਵਾ ਦਿਵਸ',
+        en: 'Dr. Vikram Sarabhai Birth Anniversary (1919) & International Youth Day',
+      },
+      description: {
+        hi: '12 अगस्त को भारतीय अंतरिक्ष कार्यक्रम के जनक डॉ. विक्रम साराभाई की जयंती मनाई जाती है। इसी दिन संयुक्त राष्ट्र द्वारा अंतर्राष्ट्रीय युवा दिवस भी मनाया जाता है।',
+        pa: '12 ਅਗਸਤ ਨੂੰ ਡਾ. ਵਿਕਰਮ ਸਾਰਾਭਾਈ ਦਾ ਜਨਮ ਦਿਨ ਅਤੇ ਅੰਤਰਰਾਸ਼ਟਰੀ ਨੌਜਵਾਨ ਦਿਵਸ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Honors the father of Indian space science on his birth anniversary, observed globally as International Youth Day.',
+      },
+      source: 'Indian Space Research Organisation (ISRO) & Department of Space',
+    },
+    miniQuiz: {
+      question: {
+        hi: 'भारतीय अंतरिक्ष अनुसंधान संगठन (ISRO) की स्थापना 15 अगस्त 1969 को किसके दूरदर्शी नेतृत्व में की गई थी?',
+        pa: 'ਭਾਰਤੀ ਪੁਲਾੜ ਖੋਜ ਸੰਸਥਾ (ISRO) ਦੀ ਸਥਾਪਨਾ 15 ਅਗਸਤ 1969 ਨੂੰ ਕਿਸ ਦੀ ਅਗਵਾਈ ਹੇਠ ਹੋਈ ਸੀ?',
+        en: 'Under whose visionary leadership was the Indian Space Research Organisation (ISRO) founded on 15 August 1969?',
+      },
+      options: {
+        A: { hi: 'डॉ. विक्रम साराभाई', pa: 'ਡਾ. ਵਿਕਰਮ ਸਾਰਾਭਾਈ', en: 'Dr. Vikram Sarabhai' },
+        B: { hi: 'डॉ. होमी जहांगीर भाभा', pa: 'ਡਾ. ਹੋਮੀ ਭਾਬਾ', en: 'Dr. Homi Bhabha' },
+        C: { hi: 'डॉ. ए.पी.जे. अब्दुल कलाम', pa: 'ਡਾ. ਅਬਦੁਲ ਕਲਾਮ', en: 'Dr. A. P. J. Abdul Kalam' },
+        D: { hi: 'प्रो. सतीश धवन', pa: 'ਪ੍ਰੋ. ਸਤੀਸ਼ ਧਵਨ', en: 'Prof. Satish Dhawan' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: 'डॉ. विक्रम साराभाई ने 15 अगस्त 1969 को INCOSPAR का पुनर्गठन कर ISRO की स्थापना की थी।',
+        pa: 'ਡਾ. ਵਿਕਰਮ ਸਾਰਾਭਾਈ ਨੇ 15 ਅਗਸਤ 1969 ਨੂੰ ਇਸਰੋ (ISRO) ਦੀ ਸਥਾਪਨਾ ਕੀਤੀ ਸੀ।',
+        en: 'Dr. Vikram Sarabhai founded ISRO on 15 August 1969, superseding INCOSPAR to drive national development through space technology.',
+      },
+    },
+  },
+
+  '12-05': {
+    date: '12-05',
+    thought: {
+      text: {
+        hi: 'रही वासते घत्त, समें ने इक न मंन्नी... फड़ फड़ रही धरीक, समें खिसकाई कन्नी! समय अमूल्य है, इसे ज्ञान और सत्कर्म में लगाओ।',
+        pa: 'ਰਹੀ ਵਾਸਤੇ ਘੱਤ, ਸਮੇਂ ਨੇ ਇੱਕ ਨਾ ਮੰਨੀ... ਫੜ ਫੜ ਰਹੀ ਧਰੀਕ, ਸਮੇਂ ਖਿਸਕਾਈ ਕੰਨੀ। ਸਮਾਂ ਅਮੋਲਕ ਹੈ, ਇਸਦੀ ਕਦਰ ਕਰੋ।',
+        en: 'Time waits for no mortal; hold fast to wisdom, righteousness, and selfless service while breath remains.',
+      },
+      author: {
+        hi: 'भाई वीर सिंह जी (ਆਧੁਨਿਕ ਪੰਜਾਬੀ ਸਾਹਿਤ ਦੇ ਪਿਤਾਮਾ)',
+        pa: 'ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ',
+        en: 'Bhai Vir Singh Ji (Father of Modern Punjabi Literature)',
+      },
+    },
+    historicalPerson: {
+      name: {
+        hi: 'भाई वीर सिंह जी',
+        pa: 'ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ',
+        en: 'Bhai Vir Singh Ji',
+      },
+      birthYear: 1872,
+      deathYear: 1957,
+      title: {
+        hi: 'आधुनिक पंजाबी साहित्य के पितामाह एवं प्रथम साहित्य अकादमी विजेता (1955)',
+        pa: 'ਆਧੁਨਿਕ ਪੰਜਾਬੀ ਸਾਹਿਤ ਦੇ ਪਿਤਾਮਾ ਤੇ ਪਹਿਲੇ ਸਾਹਿਤ ਅਕਾਦਮੀ ਪੁਰਸਕਾਰ ਜੇਤੂ',
+        en: 'Father of Modern Punjabi Literature & First Sahitya Akademi Awardee',
+      },
+      significance: {
+        hi: '5 दिसंबर 1872 को अमृतसर में जन्मे भाई वीर सिंह जी ने पंजाबी उपन्यास (सुंदरी, सतवंत कौर), महाकाव्य (राणा सूरत सिंह) और कविता की आधुनिक धारा का सूत्रपात किया। 1955 में "मेरे साईयां जीओ" के लिए प्रथम साहित्य अकादमी पुरस्कार मिला।',
+        pa: '5 ਦਸੰਬਰ 1872 ਨੂੰ ਅੰਮ੍ਰਿਤਸਰ ਵਿਖੇ ਜਨਮੇ ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ ਨੇ ਪੰਜਾਬੀ ਨਾਵਲ, ਕਵਿਤਾ ਤੇ ਖੋਜ ਨੂੰ ਨਵੇਂ ਸਿਖ਼ਰਾਂ \'ਤੇ ਪਹੁੰਚਾਇਆ। 1955 ਵਿੱਚ ਉਨ੍ਹਾਂ ਦੀ ਪੁਸਤਕ \'ਮੇਰੇ ਸਾਈਆਂ ਜੀਓ\' ਨੂੰ ਪਹਿਲਾ ਸਾਹਿਤ ਅਕਾਦਮੀ ਪੁਰਸਕਾਰ ਮਿਲਿਆ।',
+        en: 'Born 5 December 1872 in Amritsar, Bhai Vir Singh revitalized Punjabi literature with modern novels (Sundari), epic poetry (Rana Surat Singh), and won the inaugural 1955 Sahitya Akademi Award for "Mere Saaiyan Jio".',
+      },
+    },
+    gkEvent: {
+      title: {
+        hi: 'भाई वीर सिंह जयंती (1872) — आधुनिक पंजाबी साहित्य दिवस',
+        pa: 'ਭਾਈ ਵੀਰ ਸਿੰਘ ਜਨਮ ਦਿਹਾੜਾ (1872) — ਆਧੁਨਿਕ ਪੰਜਾਬੀ ਸਾਹਿਤ ਦਿਵਸ',
+        en: 'Bhai Vir Singh Birth Anniversary (1872) — Modern Punjabi Literature Day',
+      },
+      description: {
+        hi: '5 दिसंबर को आधुनिक पंजाबी साहित्य के पितामाह भाई वीर सिंह जी का जन्म दिवस मनाया जाता है। इसी दिन विश्व मृदा दिवस (World Soil Day) भी मनाया जाता है।',
+        pa: '5 ਦਸੰਬਰ ਨੂੰ ਆਧੁਨਿਕ ਪੰਜਾਬੀ ਸਾਹਿਤ ਦੇ ਬਾਨੀ ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ ਦਾ ਜਨਮ ਦਿਨ ਅਤੇ ਵਿਸ਼ਵ ਮਿੱਟੀ ਦਿਵਸ ਮਨਾਇਆ ਜਾਂਦਾ ਹੈ।',
+        en: 'Commemorates the birth of Bhai Vir Singh Ji (1872) and observed globally as UN World Soil Day.',
+      },
+      source: 'Punjab Sahit Akademi & Punjabi University Patiala',
+    },
+    miniQuiz: {
+      question: {
+        hi: '1955 में पंजाबी भाषा का सर्वप्रथम साहित्य अकादमी पुरस्कार भाई वीर सिंह जी की किस प्रसिद्ध काव्य-रचना को प्रदान किया गया था?',
+        pa: '1955 ਵਿੱਚ ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਦਾ ਪਹਿਲਾ ਸਾਹਿਤ ਅਕਾਦਮੀ ਪੁਰਸਕਾਰ ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ ਦੀ ਕਿਸ ਪੁਸਤਕ ਨੂੰ ਮਿਲਿਆ ਸੀ?',
+        en: 'Which poetry anthology by Bhai Vir Singh won the inaugural Sahitya Akademi Award in Punjabi in 1955?',
+      },
+      options: {
+        A: { hi: 'मेरे साईयां जीओ (Mere Saaiyan Jio)', pa: 'ਮੇਰੇ ਸਾਈਆਂ ਜੀਓ (Mere Saaiyan Jio)', en: 'Mere Saaiyan Jio' },
+        B: { hi: 'सुंदरी (Sundari)', pa: 'ਸੁੰਦਰੀ (Sundari)', en: 'Sundari' },
+        C: { hi: 'राणा सूरत सिंह (Rana Surat Singh)', pa: 'ਰਾਣਾ ਸੂਰਤ ਸਿੰਘ', en: 'Rana Surat Singh' },
+        D: { hi: 'मटक हुलारे', pa: 'ਮਟਕ ਹੁਲਾਰੇ', en: 'Matak Hulare' },
+      },
+      correct: 'A',
+      explanation: {
+        hi: '1955 में भाई वीर सिंह जी को उनकी प्रसिद्ध आध्यात्मिक काव्य-कृति "मेरे साईयां जीओ" के लिए पंजाबी भाषा का पहला साहित्य अकादमी पुरस्कार दिया गया था।',
+        pa: '1955 ਵਿੱਚ ਭਾਈ ਵੀਰ ਸਿੰਘ ਜੀ ਦੀ ਪੁਸਤਕ \'ਮੇਰੇ ਸਾਈਆਂ ਜੀਓ\' ਨੂੰ ਪਹਿਲਾ ਸਾਹਿਤ ਅਕਾਦਮੀ ਪੁਰਸਕਾਰ ਪ੍ਰਦਾਨ ਕੀਤਾ ਗਿਆ ਸੀ।',
+        en: 'Bhai Vir Singh won the first-ever Sahitya Akademi Award for Punjabi in 1955 for his poetry collection "Mere Saaiyan Jio".',
+      },
+    },
+  },
 };
 
 /**

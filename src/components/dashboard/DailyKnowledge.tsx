@@ -1,12 +1,74 @@
 'use client';
-import { Calendar, ExternalLink, Lightbulb, GraduationCap, Cake, Sparkles } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Calendar, ExternalLink, Lightbulb, GraduationCap, Cake, Sparkles, CheckCircle, HelpCircle, Award } from 'lucide-react';
 import { useStore } from '@/lib/store';
 import { getTodayContent } from '@/lib/data/daily_content';
+import { studyStorage } from '@/lib/storage';
+import { awardStudyXP } from '@/lib/study-progress';
 
 export default function DailyKnowledge() {
   const { language } = useStore();
   const lang = (language === 'pa' ? 'pa' : language === 'en' ? 'en' : 'hi') as 'hi' | 'pa' | 'en';
-  const daily = getTodayContent(lang);
+
+  // Live date tracking: automatically updates on midnight rollover and tab refocus
+  const [currentDate, setCurrentDate] = useState<Date>(() => new Date());
+  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const [hasAnswered, setHasAnswered] = useState(false);
+
+  useEffect(() => {
+    const checkDateChange = () => {
+      const now = new Date();
+      if (
+        now.getDate() !== currentDate.getDate() ||
+        now.getMonth() !== currentDate.getMonth() ||
+        now.getFullYear() !== currentDate.getFullYear()
+      ) {
+        setCurrentDate(now);
+      }
+    };
+
+    const interval = setInterval(checkDateChange, 30000);
+    const handleVisibility = () => {
+      if (document.visibilityState === 'visible') checkDateChange();
+    };
+
+    window.addEventListener('visibilitychange', handleVisibility);
+    window.addEventListener('focus', checkDateChange);
+
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('visibilitychange', handleVisibility);
+      window.removeEventListener('focus', checkDateChange);
+    };
+  }, [currentDate]);
+
+  const daily = getTodayContent(lang, currentDate);
+
+  // Restore saved daily quiz attempt
+  useEffect(() => {
+    try {
+      const saved = studyStorage.getItem(`examsathi_daily_quiz_${daily.dateKey}`);
+      if (saved) {
+        setSelectedOption(saved);
+        setHasAnswered(true);
+      } else {
+        setSelectedOption(null);
+        setHasAnswered(false);
+      }
+    } catch {
+      // Fallback
+    }
+  }, [daily.dateKey]);
+
+  const handleSelectOption = (key: 'A' | 'B' | 'C' | 'D') => {
+    if (hasAnswered) return;
+    setSelectedOption(key);
+    setHasAnswered(true);
+    studyStorage.setItem(`examsathi_daily_quiz_${daily.dateKey}`, key);
+    
+    // Award 5 XP and automatically activate today's study streak
+    awardStudyXP(`daily-quiz-${daily.dateKey}`, 5);
+  };
 
   const FREE_RESOURCES = [
     {
@@ -118,7 +180,81 @@ export default function DailyKnowledge() {
         </div>
       </div>
 
-      {/* 3. Verified Free Govt Learning Portals */}
+      {/* 3. Daily Mini-Quiz — 1-Question Streak Activator */}
+      {daily.miniQuiz && (
+        <div className="bg-gradient-to-br from-slate-900 via-slate-850 to-teal-950/40 border border-teal-500/40 rounded-2xl p-4 shadow-sm">
+          <div className="flex items-center justify-between gap-2 mb-2.5">
+            <div className="flex items-center gap-2">
+              <HelpCircle size={16} className="text-teal-400" />
+              <h3 className="text-white font-bold text-xs">
+                {lang === 'pa' ? 'ਅੱਜ ਦਾ ਸਵਾਲ (Daily Mini Quiz)' : lang === 'hi' ? 'आज का प्रश्न (Daily Mini Quiz)' : 'Daily Practice Question'}
+              </h3>
+            </div>
+            <span className="inline-flex items-center gap-1 text-[10px] font-bold text-amber-300 bg-amber-500/20 px-2 py-0.5 rounded-full border border-amber-500/30">
+              <Award size={11} /> +5 XP
+            </span>
+          </div>
+
+          <p className="text-slate-100 font-semibold text-xs leading-relaxed mb-3">
+            {daily.miniQuiz.question[lang]}
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2.5">
+            {(['A', 'B', 'C', 'D'] as const).map((optKey) => {
+              const optionText = daily.miniQuiz?.options[optKey]?.[lang];
+              if (!optionText) return null;
+              const isSelected = selectedOption === optKey;
+              const isCorrect = daily.miniQuiz?.correct === optKey;
+
+              let btnStyle = 'bg-slate-800/90 hover:bg-slate-750 text-slate-200 border-slate-700';
+              if (hasAnswered) {
+                if (isCorrect) {
+                  btnStyle = 'bg-emerald-950/80 text-emerald-200 border-emerald-500/80 font-bold';
+                } else if (isSelected) {
+                  btnStyle = 'bg-rose-950/80 text-rose-200 border-rose-500/80 line-through';
+                } else {
+                  btnStyle = 'bg-slate-850/60 text-slate-400 border-slate-800 opacity-60';
+                }
+              }
+
+              return (
+                <button
+                  key={optKey}
+                  type="button"
+                  disabled={hasAnswered}
+                  onClick={() => handleSelectOption(optKey)}
+                  className={`text-left px-3 py-2 rounded-xl border text-xs transition flex items-start gap-2 ${btnStyle}`}
+                >
+                  <span className="font-mono font-bold text-[11px] opacity-75 shrink-0">{optKey}.</span>
+                  <span className="min-w-0">{optionText}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          {hasAnswered && (
+            <div className={`mt-2.5 p-2.5 rounded-xl border text-[11px] leading-relaxed ${
+              selectedOption === daily.miniQuiz.correct
+                ? 'bg-emerald-950/40 border-emerald-500/40 text-emerald-200'
+                : 'bg-amber-950/40 border-amber-500/40 text-amber-200'
+            }`}>
+              <div className="flex items-center gap-1.5 font-bold mb-1">
+                <CheckCircle size={13} className={selectedOption === daily.miniQuiz.correct ? 'text-emerald-400' : 'text-amber-400'} />
+                <span>
+                  {selectedOption === daily.miniQuiz.correct
+                    ? (lang === 'pa' ? 'ਬਿਲਕੁਲ ਸਹੀ! (+5 XP ਅਤੇ ਸਟ੍ਰੀਕ ਕਿਰਿਆਸ਼ੀਲ)' : lang === 'hi' ? 'बिल्कुल सही! (+5 XP एवं लकीर सक्रिय)' : 'Correct! (+5 XP & Streak Active)')
+                    : (lang === 'pa' ? `ਸਹੀ ਜਵਾਬ: ਵਿਕਲਪ ${daily.miniQuiz.correct}` : lang === 'hi' ? `सही उत्तर: विकल्प ${daily.miniQuiz.correct}` : `Correct Answer: Option ${daily.miniQuiz.correct}`)}
+                </span>
+              </div>
+              <p className="text-slate-300">
+                {daily.miniQuiz.explanation[lang]}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 4. Verified Free Govt Learning Portals */}
       <div className="bg-slate-850 border border-slate-700/80 rounded-2xl p-4 shadow-sm">
         <div className="flex items-center justify-between mb-2.5">
           <div className="flex items-center gap-2">

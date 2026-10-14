@@ -35,9 +35,18 @@ export default function StreakCard() {
     const handleUpdate = () => syncStreak();
     window.addEventListener('examsathi_streak_updated', handleUpdate);
     window.addEventListener('storage', handleUpdate);
+    window.addEventListener('visibilitychange', handleUpdate);
+    window.addEventListener('focus', handleUpdate);
+
+    // Periodically verify day rollover so "Active Today" resets smoothly on a new day
+    const interval = setInterval(handleUpdate, 30000);
+
     return () => {
       window.removeEventListener('examsathi_streak_updated', handleUpdate);
       window.removeEventListener('storage', handleUpdate);
+      window.removeEventListener('visibilitychange', handleUpdate);
+      window.removeEventListener('focus', handleUpdate);
+      clearInterval(interval);
     };
   }, []);
 

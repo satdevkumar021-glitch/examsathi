@@ -83,7 +83,6 @@ html[data-theme="light"] {
   --ink-indigo-200: oklch(39.8% 0.195 277.366);
   --ink-indigo-300: oklch(39.8% 0.195 277.366);
   --ink-indigo-400: oklch(39.8% 0.195 277.366);
-  --ink-orange-300: oklch(47% 0.157 37.304);
   --ink-purple-300: oklch(43.8% 0.218 303.724);
   --ink-purple-400: oklch(43.8% 0.218 303.724);
   --ink-red-300: oklch(44.4% 0.177 26.899);
@@ -235,7 +234,6 @@ html[data-theme="light"] .via-teal-500 {
   --ink-indigo-200: oklch(87% 0.065 274.039);
   --ink-indigo-300: oklch(78.5% 0.115 274.713);
   --ink-indigo-400: oklch(67.3% 0.182 276.935);
-  --ink-orange-300: oklch(83.7% 0.128 66.29);
   --ink-purple-300: oklch(82.7% 0.119 306.383);
   --ink-purple-400: oklch(71.4% 0.203 305.504);
   --ink-red-300: oklch(80.8% 0.114 19.571);
@@ -307,7 +305,6 @@ html[data-theme="light"] .text-indigo-200 { color: var(--ink-indigo-200); }
 html[data-theme="light"] .text-indigo-300 { color: var(--ink-indigo-300); }
 html[data-theme="light"] .text-indigo-300\/80 { color: color-mix(in oklab, var(--ink-indigo-300) 80%, transparent); }
 html[data-theme="light"] .text-indigo-400 { color: var(--ink-indigo-400); }
-html[data-theme="light"] .text-orange-300 { color: var(--ink-orange-300); }
 html[data-theme="light"] .text-purple-300 { color: var(--ink-purple-300); }
 html[data-theme="light"] .text-purple-400 { color: var(--ink-purple-400); }
 html[data-theme="light"] .text-red-300 { color: var(--ink-red-300); }

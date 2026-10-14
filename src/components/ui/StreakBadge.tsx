@@ -21,9 +21,17 @@ export default function StreakBadge({ streak = 0 }: { streak?: number }) {
     sync();
     window.addEventListener('examsathi_streak_updated', sync);
     window.addEventListener('storage', sync);
+    window.addEventListener('visibilitychange', sync);
+    window.addEventListener('focus', sync);
+
+    const interval = setInterval(sync, 30000);
+
     return () => {
       window.removeEventListener('examsathi_streak_updated', sync);
       window.removeEventListener('storage', sync);
+      window.removeEventListener('visibilitychange', sync);
+      window.removeEventListener('focus', sync);
+      clearInterval(interval);
     };
   }, [streak]);
 
