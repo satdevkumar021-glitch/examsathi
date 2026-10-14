@@ -114,7 +114,17 @@ export default function AIGeneratorPage() {
           signal: AbortSignal.timeout(50000),
         });
         const dataResult = await serverRes.json();
-        if (!serverRes.ok) throw new Error(dataResult.message || 'AI service unavailable.');
+        if (!serverRes.ok) {
+          // Automatic graceful degradation to local recall generator when cloud AI is unconfigured, throttled, or offline
+          const fallback = await generateMCQsFromNotes(notesInput, questionCount);
+          if (fallback.success && fallback.questions.length) {
+            setGeneratedQuestions(fallback.questions);
+            setQuota(checkAIQuota());
+            showToast('Cloud AI is currently unconfigured or busy; generated local recall practice from your notes.');
+            return;
+          }
+          throw new Error(dataResult.message || 'AI service unavailable.');
+        }
         if (dataResult.success && dataResult.questions?.length) {
           setGeneratedQuestions(dataResult.questions);
           showToast(`Created ${dataResult.questions.length} AI draft questions. Review source excerpts before studying.`);
@@ -134,6 +144,16 @@ export default function AIGeneratorPage() {
         showToast(res.message || `Created ${res.questions.length} local recall questions.`);
       }
     } catch (error) {
+      // Second-line fallback: attempt local recall generator before showing error
+      try {
+        const fallback = await generateMCQsFromNotes(notesInput, questionCount);
+        if (fallback.success && fallback.questions.length) {
+          setGeneratedQuestions(fallback.questions);
+          setQuota(checkAIQuota());
+          showToast('Generated local recall practice from your notes.');
+          return;
+        }
+      } catch {}
       setErrorMessage(error instanceof Error ? error.message : 'Could not generate questions.');
     } finally {
       setIsGenerating(false);
