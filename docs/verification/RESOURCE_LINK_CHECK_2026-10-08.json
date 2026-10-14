@@ -33,12 +33,6 @@
       "result": "reachable"
     },
     {
-      "url": "https://ncert.nic.in/textbook.php?ghss2=0-10",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "result": "reachable"
-    },
-    {
       "url": "https://ncert.nic.in/textbook.php?jhss2=0-5",
       "status": 200,
       "contentType": "text/html; charset=utf-8",
@@ -51,19 +45,25 @@
       "result": "reachable"
     },
     {
+      "url": "https://ncert.nic.in/textbook.php?ghss2=0-10",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "result": "reachable"
+    },
+    {
       "url": "https://ncert.nic.in/textbook.php?jess2=0-7",
       "status": 200,
       "contentType": "text/html; charset=utf-8",
       "result": "reachable"
     },
     {
-      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-11.pdf",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-11.pdf",
       "status": 206,
       "contentType": "application/pdf",
       "result": "reachable"
     },
     {
-      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-11.pdf",
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-11.pdf",
       "status": 206,
       "contentType": "application/pdf",
       "result": "reachable"
@@ -75,9 +75,9 @@
       "result": "reachable"
     },
     {
-      "url": "https://static.pseb.ac.in/media/1670582676_Bhugol-12%28Punjabi%29.pdf",
-      "status": 206,
-      "contentType": "application/pdf",
+      "url": "https://ncert.nic.in/textbook.php?lech1=0-6",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
       "result": "reachable"
     },
     {
@@ -87,9 +87,9 @@
       "result": "reachable"
     },
     {
-      "url": "https://ncert.nic.in/textbook.php?lech1=0-6",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
+      "url": "https://static.pseb.ac.in/media/1670582676_Bhugol-12%28Punjabi%29.pdf",
+      "status": 206,
+      "contentType": "application/pdf",
       "result": "reachable"
     },
     {
@@ -103,10 +103,6 @@
       "status": 403,
       "contentType": "application/xml",
       "result": "unverified-or-unavailable"
-    },
-    {
-      "url": "https://sssb.punjab.gov.in/Downloads/2023/Punjabi_Qualifying_Notification.pdf",
-      "result": "could-not-verify-network-or-certificate"
     },
     {
       "url": "https://static.pseb.ac.in/media/1670561141_Vigyan-10%28Punjabi%29.pdf",
@@ -127,6 +123,10 @@
       "result": "reachable"
     },
     {
+      "url": "https://sssb.punjab.gov.in/Downloads/2023/Punjabi_Qualifying_Notification.pdf",
+      "result": "could-not-verify-network-or-certificate"
+    },
+    {
       "url": "https://ncert.nic.in/textbook/pdf/jesc109.pdf",
       "status": 206,
       "contentType": "application/pdf",
@@ -139,28 +139,28 @@
       "result": "reachable"
     },
     {
-      "url": "https://ncert.nic.in/textbook/pdf/jesc102.pdf",
-      "status": 206,
-      "contentType": "application/pdf",
-      "result": "reachable"
-    },
-    {
       "url": "https://static.pseb.ac.in/media/1670561421_Sahit%20Mala-10%28Punjabi%29.pdf",
       "status": 403,
       "contentType": "application/xml",
       "result": "unverified-or-unavailable"
     },
     {
-      "url": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+      "url": "https://static.pseb.ac.in/media/1670561462_Vangi-10.pdf",
+      "status": 403,
+      "contentType": "application/xml",
+      "result": "unverified-or-unavailable"
+    },
+    {
+      "url": "https://ncert.nic.in/textbook/pdf/jesc102.pdf",
       "status": 206,
       "contentType": "application/pdf",
       "result": "reachable"
     },
     {
-      "url": "https://static.pseb.ac.in/media/1670561462_Vangi-10.pdf",
-      "status": 403,
-      "contentType": "application/xml",
-      "result": "unverified-or-unavailable"
+      "url": "https://ncert.nic.in/textbook/pdf/jesc105.pdf",
+      "status": 206,
+      "contentType": "application/pdf",
+      "result": "reachable"
     },
     {
       "url": "https://static.pseb.ac.in/media/1670561054_Hindi%20Pustak-10.pdf",
@@ -253,21 +253,25 @@
       "result": "reachable"
     },
     {
-      "url": "https://punjabrevenue.nic.in/land-revenue-act.pdf",
-      "result": "could-not-verify-network-or-certificate"
-    },
-    {
       "url": "https://ncert.nic.in/textbook/pdf/jhmh1dd.zip",
       "status": 206,
       "contentType": "application/zip",
       "result": "reachable"
     },
     {
-      "url": "https://sssb.punjab.gov.in/Downloads/2023/Patwari_Syllabus.pdf",
+      "url": "https://punjabrevenue.nic.in/land-revenue-act.pdf",
       "result": "could-not-verify-network-or-certificate"
     },
     {
       "url": "https://erd.punjab.gov.in/master2022/Docs/HindiSyllabus04_05_2022.pdf",
+      "result": "could-not-verify-network-or-certificate"
+    },
+    {
+      "url": "https://sssb.punjab.gov.in/Downloads/2023/Patwari_Syllabus.pdf",
+      "result": "could-not-verify-network-or-certificate"
+    },
+    {
+      "url": "https://erd.punjab.gov.in/master2022/Docs/EnglishSyllabus04_05_2022.pdf",
       "result": "could-not-verify-network-or-certificate"
     },
     {
@@ -279,26 +283,20 @@
       "result": "could-not-verify-network-or-certificate"
     },
     {
-      "url": "https://erd.punjab.gov.in/master2022/Docs/EnglishSyllabus04_05_2022.pdf",
+      "url": "https://epathshala.nic.in/",
       "result": "could-not-verify-network-or-certificate"
+    },
+    {
+      "url": "https://ctet.nic.in/document/information-bulletin-ctet-2024.pdf",
+      "status": 404,
+      "contentType": "text/html; charset=UTF-8",
+      "result": "unverified-or-unavailable"
     },
     {
       "url": "https://ncert.nic.in/textbook/pdf/kepy104.pdf",
       "status": 206,
       "contentType": "application/pdf",
       "result": "reachable"
-    },
-    {
-      "url": "https://dsel.education.gov.in/rte",
-      "status": 200,
-      "contentType": "text/html; charset=utf-8",
-      "result": "reachable"
-    },
-    {
-      "url": "https://www.education.gov.in/sites/upload_files/mhrd/files/upload_document/rte.pdf",
-      "status": 404,
-      "contentType": "text/html; charset=utf-8",
-      "result": "unverified-or-unavailable"
     },
     {
       "url": "https://static.pseb.ac.in/media/Punjab_History_9.pdf",
@@ -319,18 +317,24 @@
       "result": "reachable"
     },
     {
+      "url": "https://dsel.education.gov.in/rte",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "result": "reachable"
+    },
+    {
+      "url": "https://erd.punjab.gov.in/master2022/Docs/MathSyllabus04_05_2022.pdf",
+      "result": "could-not-verify-network-or-certificate"
+    },
+    {
+      "url": "https://www.education.gov.in/sites/upload_files/mhrd/files/upload_document/rte.pdf",
+      "status": 404,
+      "contentType": "text/html; charset=utf-8",
+      "result": "unverified-or-unavailable"
+    },
+    {
       "url": "https://rsmssb.rajasthan.gov.in/Static/files/Syllabus_2024.pdf",
       "result": "could-not-verify-network-or-certificate"
-    },
-    {
-      "url": "https://epathshala.nic.in/",
-      "result": "could-not-verify-network-or-certificate"
-    },
-    {
-      "url": "https://rajeduboard.rajasthan.gov.in",
-      "status": 206,
-      "contentType": "text/html",
-      "result": "reachable"
     },
     {
       "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-16.pdf",
@@ -339,15 +343,9 @@
       "result": "reachable"
     },
     {
-      "url": "https://bseh.org.in",
+      "url": "https://rajeduboard.rajasthan.gov.in",
       "status": 206,
       "contentType": "text/html",
-      "result": "reachable"
-    },
-    {
-      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-08.pdf",
-      "status": 206,
-      "contentType": "application/pdf",
       "result": "reachable"
     },
     {
@@ -363,18 +361,22 @@
       "result": "reachable"
     },
     {
+      "url": "https://bseh.org.in",
+      "status": 206,
+      "contentType": "text/html",
+      "result": "reachable"
+    },
+    {
       "url": "https://nios.ac.in/media/documents/SecSocSciCour/English/Lesson-08.pdf",
       "status": 206,
       "contentType": "application/pdf",
       "result": "reachable"
     },
     {
-      "url": "https://erd.punjab.gov.in/master2022/Docs/MathSyllabus04_05_2022.pdf",
-      "result": "could-not-verify-network-or-certificate"
-    },
-    {
-      "url": "https://ctet.nic.in/document/information-bulletin-ctet-2024.pdf",
-      "result": "could-not-verify-network-or-certificate"
+      "url": "https://nios.ac.in/media/documents/SecSocSciCour/Hindi/Lesson-08.pdf",
+      "status": 206,
+      "contentType": "application/pdf",
+      "result": "reachable"
     },
     {
       "url": "https://erd.punjab.gov.in/ETT6635/Docs/ETT6635Syllabus13_08_2021.pdf",
