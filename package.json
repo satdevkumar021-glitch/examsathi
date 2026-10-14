@@ -32,6 +32,9 @@
     "dev:fake-supabase": "node scripts/dev/fake-supabase.mjs",
     "test:auth": "node --test tests/auth.test.mjs",
     "test": "node --test tests/*.test.mjs",
+    "audit:coverage": "node scripts/audit-coverage.mjs",
+    "check:leaks": "node scripts/check-bundle-leaks.mjs",
+    "check:links": "node scripts/check-coverage-links.mjs",
     "predev": "node scripts/prepare-assets.js && node scripts/gen-theme-css.mjs",
     "prebuild": "node scripts/prepare-assets.js && node scripts/gen-theme-css.mjs"
   },
