@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "examsathi": {
+      "command": "node",
+      "args": ["mcp-server/src/index.mjs"],
+      "env": {
+        "EXAMSATHI_API_URL": "http://localhost:3000"
+      },
+      "alwaysAllow": ["list_exams", "list_topics", "search_questions", "count_questions"]
+    }
+  }
+}

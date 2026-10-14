@@ -57,19 +57,12 @@ test.describe('ExamSathi Bug Fix Verification Suite', () => {
     expect(await streakBadge.isVisible()).toBe(true);
   });
 
-  test('VERIFY BUG-09: Roadmap ETT Piaget task links to Child Pedagogy', async ({ page }) => {
+  test('VERIFY BUG-09: Roadmap REET task links to Child Pedagogy', async ({ page }) => {
+    await page.addInitScript(() => { localStorage.setItem('examsathi_onboarding_completed', 'true'); });
     await page.goto('/roadmap/');
-    await page.waitForTimeout(500);
+    await page.locator('button:has-text("REET")').first().click();
 
-    // Click ETT tab
-    const ettTab = page.locator('button:has-text("ETT")').first();
-    await ettTab.click();
-    await page.waitForTimeout(300);
-
-    // Check Piaget task link href
-    const piagetTask = page.locator('a:has-text("Read Lesson Notes")').first();
-    const href = await piagetTask.getAttribute('href');
-    console.log('Verified Piaget task link href:', href);
+    const href = await page.locator('a[href*="child-development-pedagogy"]').first().getAttribute('href');
     expect(href).toContain('/lesson/child-development-pedagogy');
   });
 
@@ -86,25 +79,18 @@ test.describe('ExamSathi Bug Fix Verification Suite', () => {
     expect(await halantDHint.count()).toBeGreaterThan(0);
   });
 
-  test('VERIFY BUG-11: BottomNav Cards link opens mock-test flip mode', async ({ page }) => {
+  test('VERIFY BUG-11: Cards link (bottom bar and sidebar) opens mock-test flip mode', async ({ page }) => {
     await page.goto('/dashboard/');
-    const cardsNav = page.locator('nav a:has-text("Cards")');
-    const href = await cardsNav.getAttribute('href');
-    console.log('Verified Cards Nav href:', href);
-    expect(href).toMatch(/(\/examsathi)?\/mock-test\/?\?mode=flip/);
+    for (const nav of [page.getByLabel('Bottom Navigation'), page.locator('aside nav, nav:not([aria-label="Bottom Navigation"])').first()]) {
+      const href = await nav.locator('a:has-text("Cards")').first().getAttribute('href');
+      expect(href).toMatch(/(\/examsathi)?\/mock-test\/?\?mode=flip/);
+    }
   });
 
-  test('VERIFY BUG-03: Admin portal is protected and rejects unauthorized access', async ({ page }) => {
+  test('VERIFY BUG-03: Admin portal is protected and rejects unauthorized access', async ({ page, request }) => {
     await page.goto('/admin/');
-    await page.waitForTimeout(500);
-
-    // Verify restricted access gate is visible
-    const gateTitle = page.locator('text=/Restricted Administrative Access/i');
-    await expect(gateTitle).toBeVisible();
-
-    // Verify publisher form is blocked until authentication
-    const passkeyInput = page.locator('input[type="password"]');
-    await expect(passkeyInput).toBeVisible();
+    await expect(page).toHaveURL(/\/login\/?/);
+    expect((await request.post('/api/admin/content/', { data: { title: 'x', body: 'y' } })).status()).toBe(401);
   });
 
   test('VERIFY BUG-14 & BUG-15: Viewport zoom permitted, Bengali character removed from Hindi lesson', async ({ page }) => {

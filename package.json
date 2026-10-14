@@ -21,20 +21,26 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
-    "build:static": "node scripts/build-static.js",
     "start": "next start",
     "lint": "eslint",
+    "smoke": "node scripts/smoke.mjs",
+    "test:editorial": "node scripts/dev/editorial-flow.mjs",
+    "test:admin-ui": "node scripts/dev/admin-ui.mjs",
+    "test:learner": "node scripts/dev/learner-flow.mjs",
+    "test:push": "node scripts/dev/push-flow.mjs",
+    "test:quality": "node scripts/dev/quality-flow.mjs",
+    "dev:fake-supabase": "node scripts/dev/fake-supabase.mjs",
     "test:auth": "node --test tests/auth.test.mjs",
     "test": "node --test tests/*.test.mjs",
     "predev": "node scripts/prepare-assets.js",
-    "prebuild": "node scripts/prepare-assets.js",
-    "prebuild:static": "node scripts/prepare-assets.js"
+    "prebuild": "node scripts/prepare-assets.js"
   },
   "dependencies": {
     "@google/genai": "^2.27.0",
     "@radix-ui/react-dialog": "^1.1.23",
     "@radix-ui/react-progress": "^1.1.16",
     "@radix-ui/react-tabs": "^1.1.21",
+    "@sentry/nextjs": "11.7.0",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.117.2",
     "fflate": "^0.8.3",
@@ -45,6 +51,7 @@
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "tesseract.js": "^7.0.0",
+    "web-push": "^3.6.7",
     "zustand": "^5.0.15"
   },
   "devDependencies": {
@@ -53,6 +60,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/web-push": "^3.6.4",
     "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "tailwindcss": "^4",

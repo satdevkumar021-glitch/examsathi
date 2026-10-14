@@ -12,10 +12,10 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
   webServer: {
-    command: 'node scripts/serve-static.js',
+    command: 'npm run build && npm run start -- --port 3000',
     url: 'http://127.0.0.1:3000',
     reuseExistingServer: !process.env.CI,
-    timeout: 30 * 1000,
+    timeout: 10 * 60 * 1000,
   },
   projects: [
     {

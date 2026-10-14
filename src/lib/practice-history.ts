@@ -1,6 +1,6 @@
 import { studyStorage } from './storage';
-import { questionIdentity, canonicalQuestionKey } from './data/question_bank_engine';
-import type { Question } from './data/questions';
+import { questionIdentity, canonicalQuestionKey } from './data/exam-catalog';
+import type { PublicQuestion } from '@/lib/question-types';
 
 // ============================================================
 // ExamSathi - Practice History & Learner Exposure Tracking Engine
@@ -69,7 +69,7 @@ export function completedQuestionKeys(): string[] {
 /**
  * Legacy global remember completed questions (maintains backward compatibility).
  */
-export function rememberCompletedQuestions(questions: Question[]): void {
+export function rememberCompletedQuestions(questions: PublicQuestion[]): void {
   const keys = new Set([...completedQuestionKeys(), ...questions.map(questionIdentity)]);
   try {
     studyStorage.setItem(GLOBAL_COMPLETED_KEY, JSON.stringify(Object.fromEntries([...keys].map(key => [key, true]))));
@@ -107,7 +107,7 @@ export function getLearnerExposure(learnerId: string, examId: string): LearnerEx
 /**
  * Records that a batch of questions has been served in an active test set.
  */
-export function recordServedQuestions(learnerId: string, examId: string, questions: Question[]): void {
+export function recordServedQuestions(learnerId: string, examId: string, questions: PublicQuestion[]): void {
   if (!questions || questions.length === 0) return;
   const record = readScopedRecord(learnerId, examId);
   const now = Date.now();
@@ -151,7 +151,7 @@ export function recordAnsweredQuestions(
 /**
  * Records completed questions upon test submission, both in scoped exposure and global index.
  */
-export function recordCompletedQuestions(learnerId: string, examId: string, questions: Question[]): void {
+export function recordCompletedQuestions(learnerId: string, examId: string, questions: PublicQuestion[]): void {
   if (!questions || questions.length === 0) return;
   const record = readScopedRecord(learnerId, examId);
   const now = Date.now();
@@ -184,17 +184,17 @@ export function resetLearnerExposure(learnerId: string, examId: string): void {
  * Helper to calculate unseen questions in a pool given an exclusion set.
  */
 export function calculateUnseenPool(
-  pool: Question[],
+  pool: PublicQuestion[],
   excludedKeys: Iterable<string>
 ): {
-  unseen: Question[];
+  unseen: PublicQuestion[];
   totalEligible: number;
   unseenCount: number;
   isExhausted: boolean;
 } {
   const excluded = new Set(Array.from(excludedKeys).map(canonicalQuestionKey));
   const seenInSet = new Set<string>();
-  const unseen: Question[] = [];
+  const unseen: PublicQuestion[] = [];
 
   for (const q of pool) {
     const key = questionIdentity(q);

@@ -93,6 +93,7 @@ Comprehensive architectural and engineering specifications:
 | **[`docs/TESTING.md`](docs/TESTING.md)** | Playwright E2E suite, unit test matrix, and CI test execution instructions. |
 | **[`docs/CONTENT_GUIDE.md`](docs/CONTENT_GUIDE.md)** | Primary source citations (NCERT, PSEB, ERB gazettes), PYQ authenticity, and Gurmukhi/Devanagari standards. |
 | **[`docs/ADSENSE_CHECKLIST.md`](docs/ADSENSE_CHECKLIST.md)** | Google AdSense monetization readiness, student-focus ad placement policy, and Core Web Vitals. |
+| **[`docs/THEMING.md`](docs/THEMING.md)** | Light/dark theme system (generated `theme-light.css`), responsive sidebar/bottom-nav layout, and known contrast gaps. |
 | **[`docs/CONTRIBUTING.md`](docs/CONTRIBUTING.md)** | Contributor guidelines, code standards, and PR process. |
 
 ---
@@ -116,8 +117,8 @@ npm run dev
 # 4. Run automated E2E tests (Chromium headless)
 npx playwright test
 
-# 5. Build production static bundle
-npm run build:static
+# 5. Production build, then verify no answer key is in the browser bundle
+npm run build && node scripts/check-bundle-leaks.mjs
 ```
 
 ---
@@ -126,13 +127,13 @@ npm run build:static
 
 | Layer | Technology |
 |---|---|
-| Framework | Next.js 16 (App Router, static export) |
+| Framework | Next.js 16 (App Router, Node server) |
 | Language | TypeScript 5 |
 | Styling | Tailwind CSS 4 |
 | State | Zustand |
 | Auth | Supabase Auth (email + Google OAuth) |
 | Database | Supabase (Postgres) — optional, see below |
-| Hosting | GitHub Pages (current) · Vercel (production) |
+| Hosting | Node host (Render / Vercel) |
 | AI (planned) | Google Gemini 1.5 Pro via Supabase Edge Functions |
 
 ---
@@ -189,21 +190,14 @@ See **[docs/SUPABASE_SETUP.md](docs/SUPABASE_SETUP.md)** for the complete setup 
 - Run the DB migrations
 - Configure Google OAuth redirect URLs
 
-Without these, the app operates in static mode — all features work, data is stored in `localStorage`.
+Without these, the app runs as a guest: questions and scoring still come from the server, and progress is kept in `localStorage`.
 
 ---
 
 ## Deployment
 
-### GitHub Pages (automatic)
-Push to the `main` branch — the CI/CD workflow (`.github/workflows/deploy.yml`) builds and deploys automatically.
-
-**Prerequisites:**
-1. Go to your GitHub repo → Settings → Pages
-2. Set Source to **GitHub Actions**
-3. Add optional Supabase secrets: `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-
-The site will be live at: `https://YOUR_USERNAME.github.io/examsathi/`
+### Node host (required)
+The question bank and answer key live on the server, so the app cannot be hosted as static files (GitHub Pages is retired). Deploy to any Node host. See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) and `.env.example`.
 
 ### Vercel (recommended for full-stack)
 1. Connect your GitHub repo to Vercel
@@ -238,8 +232,8 @@ examsathi-audit/
 │       ├── supabase/          # Supabase client factory
 │       └── data/              # All static data (exams, questions, lessons)
 ├── public/
-│   ├── sitemap.xml
-│   ├── robots.txt
+│   ├── sitemap.xml  (generated — set NEXT_PUBLIC_SITE_URL)
+│   ├── robots.txt   (generated — by src/app/robots.ts)
 │   └── ads.txt
 └── docs/
     ├── AUDIT.md               # Bug register — all 10 bugs found and fixed

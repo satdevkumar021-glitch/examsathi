@@ -8,7 +8,9 @@ import { BookOpen, Play, Pause, RotateCcw, Volume2, VolumeX, CheckCircle2, Targe
 import { getStoredUser, saveUserSession } from '@/lib/auth';
 import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
-import { getExamTopics, getTestQuestions } from '@/lib/data/question_bank_engine';
+import { getExamTopics } from '@/lib/data/exam-catalog';
+import { topicAvailable } from '@/lib/question-client';
+import { useManifest } from '@/lib/use-question-data';
 
 interface LibrarySeat {
   id: number;
@@ -187,9 +189,11 @@ export default function VirtualStudyLibrary() {
 
   const progressPercentage = Math.round(((timerMode * 60 - secondsRemaining) / (timerMode * 60)) * 100);
 
+  const manifest = useManifest([activeExam]);
+  const countFor = (topicId: string) => (manifest ? topicAvailable(manifest, activeExam, topicId, 50) : 0);
   const examTopics = getExamTopics(activeExam);
   const topicsWithCounts = examTopics.map(t => {
-    const qCount = getTestQuestions({ topicId: t.id, examId: activeExam, count: 50 }).length;
+    const qCount = countFor(t.id);
     return {
       id: t.id,
       label: `${t.name}${lang === 'pa' && t.namePa ? ` (${t.namePa})` : ''}`,
@@ -199,15 +203,15 @@ export default function VirtualStudyLibrary() {
   });
 
   const fallbackTopics = [
-    { id: 'punjab-history', label: '🌾 Punjab History: 10 Gurus, Misals & Ranjit Singh', count: getTestQuestions({ topicId: 'punjab-history', examId: activeExam, count: 50 }).length, testUrl: `/mock-test/topic-punjab-history?exam=${activeExam}` },
-    { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', count: getTestQuestions({ topicId: 'fundamental-rights', examId: activeExam, count: 50 }).length, testUrl: `/mock-test/topic-fundamental-rights?exam=${activeExam}` },
+    { id: 'punjab-history', label: '🌾 Punjab History: 10 Gurus, Misals & Ranjit Singh', count: countFor('punjab-history'), testUrl: `/mock-test/topic-punjab-history?exam=${activeExam}` },
+    { id: 'fundamental-rights', label: '⚖️ Indian Constitution, Writs & Fundamental Rights', count: countFor('fundamental-rights'), testUrl: `/mock-test/topic-fundamental-rights?exam=${activeExam}` },
   ];
 
   const TOPIC_OPTIONS = topicsWithCounts.length > 0 ? topicsWithCounts : fallbackTopics;
   const activeTopicObj = TOPIC_OPTIONS.find(t => t.id === selectedTopic) 
     || TOPIC_OPTIONS.find(t => t.count > 0) 
     || TOPIC_OPTIONS[0];
-  const availableCount = activeTopicObj ? getTestQuestions({ topicId: activeTopicObj.id, examId: activeExam, count: 50 }).length : 0;
+  const availableCount = activeTopicObj ? countFor(activeTopicObj.id) : 0;
 
   return (
     <div className="p-4 flex flex-col gap-6 min-h-screen bg-slate-900 pb-28 text-slate-100 max-w-xl mx-auto w-full">
@@ -226,7 +230,7 @@ export default function VirtualStudyLibrary() {
               </p>
             </div>
           </div>
-          <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-bold px-2 py-1 rounded-full border border-emerald-500/40 flex items-center gap-1 font-mono">
+          <span className="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-2 py-1 rounded-full border border-emerald-500/40 flex items-center gap-1 font-mono">
             <Flame size={12} /> {totalHours > 0 ? `${totalHours.toFixed(1)}h Studied` : '0.0h Studied'}
           </span>
         </div>
@@ -239,13 +243,13 @@ export default function VirtualStudyLibrary() {
             <User size={16} className="text-teal-400" />
             <h2 className="text-sm font-bold text-white">1. Select Your Library Desk</h2>
           </div>
-          <span className="text-[10px] text-teal-300 font-semibold">
+          <span className="text-xs text-teal-300 font-semibold">
             {selectedSeat ? `Desk #${selectedSeat.toString().padStart(2, '0')} Claimed` : 'No Desk Claimed (Choose a desk below)'}
           </span>
         </div>
 
         {/* Legend */}
-        <div className="flex items-center gap-3 text-[10px] text-slate-400 border-b border-slate-750 pb-2">
+        <div className="flex items-center gap-3 text-xs text-slate-400 border-b border-slate-750 pb-2">
           <span className="flex items-center gap-1">
             <span className="w-2.5 h-2.5 rounded-full bg-teal-400 ring-2 ring-teal-400/30" /> Your Claimed Seat
           </span>
@@ -272,18 +276,18 @@ export default function VirtualStudyLibrary() {
                 title="Click to claim this desk"
               >
                 <div className="flex items-center justify-between w-full">
-                  <span className="text-[10px] font-bold font-mono">#{seat.id.toString().padStart(2, '0')}</span>
+                  <span className="text-xs font-bold font-mono">#{seat.id.toString().padStart(2, '0')}</span>
                   {isSelected && <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />}
                 </div>
 
-                <div className="text-[10px] leading-tight truncate">
+                <div className="text-xs leading-tight truncate">
                   {isSelected ? 'Your Desk (Active)' : 'Open Desk'}
                 </div>
               </button>
             );
           })}
         </div>
-        <p className="text-xs text-slate-500">Showing your desk. Real-time presence coming soon.</p>
+        <p className="text-xs text-slate-400">Showing your desk. Real-time presence coming soon.</p>
       </div>
 
       {/* 2. CHOOSE TOPIC FOR THIS SESSION */}
@@ -293,7 +297,7 @@ export default function VirtualStudyLibrary() {
             <Target size={16} className="text-teal-400" />
             <h2 className="text-sm font-bold text-white">2. Topic Goal for this Desk Session</h2>
           </div>
-          <span className="text-[10px] text-teal-400 font-semibold">
+          <span className="text-xs text-teal-400 font-semibold">
             {practiceExam(activeExam)?.name || activeExam}
           </span>
         </div>
@@ -360,10 +364,10 @@ export default function VirtualStudyLibrary() {
             <span className="text-4xl font-black text-white font-mono tracking-tight">
               {formatTimer(secondsRemaining)}
             </span>
-            <span className="text-[10px] text-teal-300 font-bold uppercase tracking-wider mt-1">
+            <span className="text-xs text-teal-300 font-bold uppercase tracking-wider mt-1">
               {isRunning ? 'Desk Focus Active' : 'Session Paused'}
             </span>
-            <span className="text-[10px] text-slate-400 font-mono">
+            <span className="text-xs text-slate-400 font-mono">
               {selectedSeat ? `Desk #${selectedSeat.toString().padStart(2, '0')}` : 'No Desk Claimed'}
             </span>
           </div>
@@ -465,7 +469,7 @@ export default function VirtualStudyLibrary() {
             </Link>
             <Link
               href={`${activeTopicObj.testUrl}&count=${Math.min(50, availableCount)}`}
-              className="flex-1 bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-slate-950 font-black py-2.5 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5 shadow"
+              className="flex-1 bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-black py-2.5 rounded-xl text-center text-xs transition flex items-center justify-center gap-1.5 shadow"
             >
               <Target size={13} />
               <span>Up to {Math.min(50, availableCount)} Qs Practice</span>

@@ -19,7 +19,7 @@ test.describe('ExamSathi Google AdSense & DPDP Legal Compliance Suite', () => {
     await expect(page.locator('h1')).toContainText(/Privacy Policy|गोपनीयता नीति/i);
     await expect(page.locator('text=/DPDP Act 2023/i').first()).toBeVisible();
     await expect(page.locator('text=/Google AdSense/i').first()).toBeVisible();
-    await expect(page.locator('text=privacy@examsathi.in').first()).toBeVisible();
+    await expect(page.locator('text=/Contact the maintainer via the Contact page/i').first()).toBeVisible();
   });
 
   test('03. /terms renders platform terms and official disclaimers', async ({ page }) => {
@@ -41,12 +41,12 @@ test.describe('ExamSathi Google AdSense & DPDP Legal Compliance Suite', () => {
     await expect(page.locator('text=/FSRS Spaced Repetition/i')).toBeVisible();
   });
 
-  test('05. /contact renders support email and errata reporting protocol', async ({ page }) => {
+  test('05. /contact renders the issue tracker and errata reporting protocol', async ({ page }) => {
     await page.goto('/contact/');
     await page.waitForTimeout(500);
 
     await expect(page.locator('h1')).toContainText(/Contact & Support|संपर्क करें/i);
-    await expect(page.locator('text=support@examsathi.in')).toBeVisible();
+    await expect(page.locator('a:has-text("Open a GitHub issue")').first()).toBeVisible();
     await expect(page.locator('text=/Report Question Errata/i')).toBeVisible();
   });
 

@@ -1,5 +1,5 @@
 import data from './content/foundation-content.json';
-import type { Question } from './questions';
+import type { Question } from '../question-types';
 import type { Lesson } from './lessons/types';
 export type FoundationItem = typeof data[number]['items'][number];
 export const FOUNDATION_CONTENT = data;

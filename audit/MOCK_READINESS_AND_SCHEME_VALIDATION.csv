@@ -1,0 +1,38 @@
+exam_id,exam_name,state,pattern_duration_mins,total_marks,negative_marking,qualifying_paper_a,reviewed_questions_count,mock_status,scoring_engine_verified,notes
+punjab-master-cadre-sst,Punjab Master Cadre (SST),punjab,150,150,0,50 Marks (50% min),135,PARTIAL,VERIFIED,2 of 4 subjects × 75 MCQs; qualifying Punjabi Paper A
+punjab-master-cadre-science,Punjab Master Cadre (Science),punjab,150,150,0,50 Marks (50% min),175,PARTIAL,VERIFIED,3 of 5 × 50 MCQs; qualifying Punjabi Paper A
+punjab-master-cadre-math,Punjab Master Cadre (Mathematics),punjab,150,150,0,50 Marks (50% min),35,PREVIEW,VERIFIED,150 MCQs; qualifying Punjabi Paper A
+punjab-master-cadre-punjabi,Punjab Master Cadre (Punjabi),punjab,150,150,0,50 Marks (50% min),35,PREVIEW,VERIFIED,150 MCQs; qualifying Punjabi Paper A
+punjab-master-cadre-hindi,Punjab Master Cadre (Hindi),punjab,150,150,0,50 Marks (50% min),35,PREVIEW,VERIFIED,150 MCQs; qualifying Punjabi Paper A
+punjab-master-cadre-english,Punjab Master Cadre (English),punjab,150,150,0,50 Marks (50% min),60,PREVIEW,VERIFIED,150 MCQs; qualifying Punjabi Paper A
+punjab-clerk,Punjab Clerk (PSSSB),punjab,120,100,0.25,50 Marks (50% min),280,PARTIAL,VERIFIED,100 Marks merit + 50 Marks qualifying Paper A
+punjab-patwari,Punjab Patwari (PSSSB),punjab,120,100,0.25,50 Marks (50% min),25,PREVIEW,VERIFIED,100 Marks merit + 50 Marks qualifying Paper A
+punjab-police,Punjab Police (Constable & SI),punjab,120,100,0.25,None,45,PREVIEW,VERIFIED,100 Marks objective CBT
+punjab-ett,Punjab ETT — 5994 Paper B reference,punjab,100,100,0,Separate PSTET,130,PARTIAL,VERIFIED,100 MCQs Paper B archival reference
+punjab-pstet,PSTET,punjab,150,150,0,None,0,PREVIEW,VERIFIED,150 MCQs / 150 mins TET standard
+punjab-lecturer-cadre,Punjab Lecturer Cadre,punjab,150,150,0,50 Marks (50% min),0,PREVIEW,VERIFIED,150 Marks merit + 50 Marks qualifying Paper A
+reet-level1,REET Level 1,rajasthan,150,150,0.33 per unmarked (0 for wrong),None,0,PARTIAL,VERIFIED,5-Option OMR rules: 1/3 penalty per unmarked; >10% unmarked triggers disqualification
+reet-level2-sst,REET Level 2 (SST),rajasthan,150,150,0.33 per unmarked (0 for wrong),None,80,PARTIAL,VERIFIED,5-Option OMR rules: 1/3 penalty per unmarked; >10% unmarked triggers disqualification
+reet-level2-science-math,REET Level 2 (Science-Math),rajasthan,150,150,0.33 per unmarked (0 for wrong),None,0,PARTIAL,VERIFIED,5-Option OMR rules: 1/3 penalty per unmarked; >10% unmarked triggers disqualification
+rajasthan-police,Rajasthan Police Constable,rajasthan,120,150,0.25,None,25,PREVIEW,VERIFIED,150 Marks / 150 Qs
+rajasthan-3rd-grade,Rajasthan 3rd Grade Teacher (Mains),rajasthan,150,300,0.33,None,0,OUTLINE_ONLY,VERIFIED,300 Marks / 150 Qs
+rajasthan-police-si,Rajasthan Police Sub-Inspector,rajasthan,240,400,0.33,None,0,PREVIEW,VERIFIED,Paper 1 (Hindi 200M) + Paper 2 (GS 200M)
+rajasthan-police-constable,Rajasthan Police Constable (Secondary),rajasthan,120,150,0.25,None,25,PREVIEW,VERIFIED,150 Marks / 150 Qs
+htet-l1,HTET Level 1 (PRT),haryana,150,150,0,None,0,PREVIEW,VERIFIED,150 Qs / 150 mins
+htet-l2,HTET Level 2 (TGT),haryana,150,150,0,None,100,PARTIAL,VERIFIED,150 Qs / 150 mins
+haryana-htet,HTET (General),haryana,150,150,0,None,0,PREVIEW,VERIFIED,Level-agnostic outline
+haryana-police-constable,Haryana Police Constable,haryana,90,100,0.25,None,0,PREVIEW,VERIFIED,100 Qs / 0.8 mark per question
+haryana-cet-clerk,Haryana CET Group C,haryana,105,100,0,None,25,PREVIEW,VERIFIED,CET Group C merit
+haryana-ett-prt,Haryana PRT (JBT Cadre),haryana,150,150,0,None,0,PREVIEW,VERIFIED,D.El.Ed / JBT Cadre
+delhi-police-constable,Delhi Police Constable,delhi,90,100,0.25,None,25,PREVIEW,VERIFIED,100 Qs / 90 mins CBT
+central-capf-gd,SSC GD Constable (CAPF),central,60,160,0.50 (per 2M question),None,20,PREVIEW,VERIFIED,80 Qs × 2 Marks = 160 Marks / 60 mins
+ctet-paper1,CTET Paper 1,central,150,150,0,None,0,PARTIAL,VERIFIED,150 Qs / 150 mins
+ssc-chsl,SSC CHSL Tier 1,central,60,200,0.50 (per 2M question),None,65,PARTIAL,VERIFIED,100 Qs × 2 Marks = 200 Marks / 60 mins
+ssc-cgl,SSC CGL Tier 1,central,60,200,0.50 (per 2M question),None,60,PARTIAL,VERIFIED,100 Qs × 2 Marks = 200 Marks / 60 mins
+ssc-mts,SSC MTS,central,90,270,1.00 (Session 2 only),None,20,PREVIEW,VERIFIED,Session 1 (no negative) + Session 2 (negative)
+ctet-paper2,CTET Paper 2,central,150,150,0,None,100,PARTIAL,VERIFIED,150 Qs / 150 mins
+utet-teaching,UTET Uttarakhand,central,150,150,0,None,0,PREVIEW,VERIFIED,150 Qs / 150 mins
+ugc-net,UGC NET Paper 1,central,180,300,0,None,25,PARTIAL,VERIFIED,Paper 1 (50 Qs) + Paper 2 (100 Qs)
+army-agniveer,Army Agniveer (Combined),defence,60,100,0.50,None,100,PARTIAL,VERIFIED,50 Qs × 2 Marks = 100 Marks / 60 mins
+army-agniveer-gd,Army Agniveer GD,defence,60,100,0.50,None,0,PREVIEW,VERIFIED,50 Qs / 60 mins
+army-agniveer-clerk,Army Agniveer Clerk / SKT,defence,60,200,1.00,None,0,PREVIEW,VERIFIED,50 Qs × 4 Marks = 200 Marks / 60 mins

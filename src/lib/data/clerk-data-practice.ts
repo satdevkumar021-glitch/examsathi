@@ -1,4 +1,4 @@
-import type { Question } from './questions';
+import type { Question } from '../question-types';
 
 const tr = (en: string, hi: string, pa: string) => ({ en, hi, pa });
 const keys = ['A', 'B', 'C', 'D'] as const;

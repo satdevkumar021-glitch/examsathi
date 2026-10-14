@@ -4,7 +4,7 @@ import { ALL_LESSONS, TOPIC_ALIASES } from '@/lib/data/lessons';
 import { TOPIC_FAMILIES } from '@/lib/data/topic-scope';
 import { Suspense } from 'react';
 import MockTestClient from './MockTestClient';
-import { AVAILABLE_TEST_TOPICS } from '@/lib/data/question_bank_engine';
+import { AVAILABLE_TEST_TOPICS } from '@/lib/data/exam-catalog';
 
 export function generateStaticParams() {
   const baseParams = [

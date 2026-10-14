@@ -9,67 +9,8 @@ import { topicIncludes } from './topic-scope';
 // Master Cadre, PSSSB Clerk, Police, REET, CTET
 // ============================================================
 
-export interface DistractorExplanation {
-  hi?: string;
-  pa?: string;
-  en?: string;
-}
-
-export interface PYQMetadata {
-  examBoard: string;
-  notificationRef: string;
-  paper: string;
-  year?: number;
-  shift?: string;
-  questionNumber?: number;
-  answerKeyStatus: 'official-final-key' | 'provisional-key' | 'editorial-verified';
-}
-
-export interface RightsProvenance {
-  source: string;
-  accessType: 'public-recruitment' | 'educational-original' | 'fair-use-curriculum';
-  verifiedBy: string;
-  verifiedDate: string;
-}
-
-export interface Question {
-  id: string;
-  topicId: string;
-  subjectId: string;
-  examId?: string; // e.g. 'master-cadre-sst', 'ett-punjab', 'clerk-psssb', 'police-punjab', 'patwari-punjab', 'reet-l2', 'ctet-p2'
-  examTag: string; // e.g., 'Punjab Master Cadre 2022', 'PSSSB Clerk 2023', 'Punjab ETT Cadre 5994'
-  topicName?: { hi: string; pa?: string; en: string };
-  subtopic?: { hi: string; pa?: string; en: string };
-  learningObjective?: string;
-  conceptGroupId?: string;
-  deepConceptNote?: { hi: string; pa?: string; en: string };
-  question: { hi: string; pa?: string; en: string };
-  options: {
-    A: { hi: string; pa?: string; en: string };
-    B: { hi: string; pa?: string; en: string };
-    C: { hi: string; pa?: string; en: string };
-    D: { hi: string; pa?: string; en: string };
-  };
-  distractorExplanations?: {
-    A?: DistractorExplanation;
-    B?: DistractorExplanation;
-    C?: DistractorExplanation;
-    D?: DistractorExplanation;
-  };
-  correct: 'A' | 'B' | 'C' | 'D';
-  explanation: { hi: string; pa?: string; en: string };
-  thought?: { hi: string; pa?: string; en: string }; // Strategic Examiner Insight & Elimination Technique
-  difficulty: 'easy' | 'medium' | 'hard';
-  year?: number;
-  originType?: 'verified-pyq' | 'pyq-style' | 'authored-original' | 'computed-variant';
-  pyqMetadata?: PYQMetadata;
-  rightsProvenance?: RightsProvenance;
-  reviewStatus?: 'reviewed' | 'draft' | 'under-audit';
-  availableLanguages?: readonly ('en' | 'hi' | 'pa')[];
-  explanationLanguages?: readonly ('en' | 'hi' | 'pa')[];
-  editorialStatus?: 'authored' | 'reviewed';
-  source?: { title: string; url: string };
-}
+export type { DistractorExplanation, PYQMetadata, RightsProvenance, Question } from "../question-types";
+import type { Question } from "../question-types";
 
 export const QUESTIONS: Question[] = [
   // -------------------------------------------------------------
@@ -978,10 +919,13 @@ import { ETT_PAPER_B_BATCH2 } from './questions/ett_paper_b_batch2';
 import { PPSC_CLERK_POLITY_HISTORY_GEO_ECON_MCQS } from './questions/ppsc_clerk_polity_history_geo_econ_mcqs';
 import { PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS } from './questions/ppsc_clerk_current_sports_lit_science_mcqs';
 import { PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS } from './questions/ppsc_clerk_punjabi_english_computer_mcqs';
-import { PSTET_PEDAGOGY_MCQS } from './questions/pstet_pedagogy_mcqs';
-import { MASTER_CADRE_PUNJABI_LIT_MCQS } from './questions/master_cadre_punjabi_lit_mcqs';
-import { MASTER_CADRE_MATH_MCQS } from './questions/master_cadre_math_mcqs';
-import { RAJASTHAN_AND_AGNIVEER_MCQS } from './questions/rajasthan_and_agniveer_mcqs';
+import { ETT_SCIENCE_LIGHT_MCQs } from "./questions/ett_science_light_batch";
+import { ETT_SCIENCE_CORE_MCQs } from "./questions/ett_science_core_batch";
+import { ETT_SCIENCE_PHYSICS_DEPTH } from "./questions/ett_science_physics_depth";
+import { MASTER_CADRE_MATH_MCQS } from "./questions/master_cadre_math_mcqs";
+import { PSTET_PEDAGOGY_MCQS } from "./questions/pstet_pedagogy_mcqs";
+import { MASTER_CADRE_PUNJABI_LIT_MCQS } from "./questions/master_cadre_punjabi_lit_mcqs";
+import { RAJASTHAN_AND_AGNIVEER_MCQS } from "./questions/rajasthan_and_agniveer_mcqs";
 
 export const ALL_QUESTIONS: Question[] = [
   ...CLERK_GK_FAST_QUESTIONS,
@@ -1010,9 +954,12 @@ export const ALL_QUESTIONS: Question[] = [
   ...PPSC_CLERK_POLITY_HISTORY_GEO_ECON_MCQS,
   ...PPSC_CLERK_CURRENT_SPORTS_LIT_SCIENCE_MCQS,
   ...PPSC_CLERK_PUNJABI_ENGLISH_COMPUTER_MCQS,
+  ...ETT_SCIENCE_LIGHT_MCQs,
+  ...ETT_SCIENCE_CORE_MCQs,
+  ...ETT_SCIENCE_PHYSICS_DEPTH,
+  ...MASTER_CADRE_MATH_MCQS,
   ...PSTET_PEDAGOGY_MCQS,
   ...MASTER_CADRE_PUNJABI_LIT_MCQS,
-  ...MASTER_CADRE_MATH_MCQS,
   ...RAJASTHAN_AND_AGNIVEER_MCQS,
 ];
 

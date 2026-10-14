@@ -47,7 +47,7 @@ export default function ContactPage() {
             <li>Observed error & correct option</li>
             <li>Authoritative reference source (NCERT Chapter, PSEB Gazette, or Official Board Key)</li>
           </ul>
-          <p className="text-[10px] text-amber-400">
+          <p className="text-xs text-amber-400">
             Include the question ID, expected answer and an official source. Reports are public; do not include passwords or private documents.
           </p>
         </div>

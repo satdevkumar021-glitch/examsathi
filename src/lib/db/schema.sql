@@ -1,6 +1,11 @@
 -- ============================================================
--- ExamSathi (परीक्षा साथी) — Supabase PostgreSQL Schema
--- Production Database Setup with Row Level Security (RLS)
+-- ⚠ DEPRECATED — DO NOT APPLY THIS FILE TO ANY DATABASE ⚠
+-- This was the original design sketch and no longer reflects the real schema.
+-- The real tables, RLS policies and functions are in supabase/migrations/ (202610070001 → 202610110004).
+-- Those are the only files that should ever be run against your Supabase project.
+-- Applying this file would create a completely different set of tables that the API code never uses.
+-- ============================================================
+-- ExamSathi (परीक्षा साथी) — Historical Schema Reference (DEPRECATED)
 -- ============================================================
 
 -- 1. PROFILES TABLE (Mirrors auth.users)

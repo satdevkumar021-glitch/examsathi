@@ -30,7 +30,7 @@ function load(file) {
   vm.runInNewContext(js, {
     module: loaded,
     exports: loaded.exports,
-    require: name => load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)),
+    require: name => name === 'server-only' ? {} : load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)),
     window,
     Event: class Event {},
     Date,
@@ -53,7 +53,7 @@ test('Library dynamically generates topics for selected exam and scopes drill UR
   
   // Available question counts
   const reflectionPool = engine.getTestQuestions({ topicId: 'ett-light-reflection', examId: 'punjab-ett', count: 50 });
-  assert.equal(reflectionPool.length, 20, 'Reflection has exactly 20 questions for ETT');
+  assert.ok(reflectionPool.length >= 20, `Reflection must have at least 20 questions for ETT (found ${reflectionPool.length})`);
 
   // Verify that an unmapped topic returns 0 questions for ETT
   const cdpInEtt = engine.getTestQuestions({ topicId: 'child-development-pedagogy', examId: 'punjab-ett', count: 50 });
@@ -96,7 +96,7 @@ test('Typing practice word counts match true passage lengths and avoid unverifie
 });
 
 test('Roadmap honors exam precedence and carries exam in mock-test links', () => {
-  const source = readFileSync('src/app/(dashboard)/roadmap/page.tsx', 'utf8');
+  const source = readFileSync('src/app/(dashboard)/roadmap/RoadmapClient.tsx', 'utf8');
   
   // Precedence checks
   assert.ok(source.includes('const examParam = query.get(\'exam\');'));

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { publicPath } from '@/lib/paths';
+import { THEME_BOOT_SCRIPT } from '@/lib/theme';
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +26,10 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0f172a',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#f1f5f9' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
+  ],
 };
 
 export default function RootLayout({
@@ -34,8 +38,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="hi" className="dark">
+    <html lang="hi" className="dark" data-theme="dark" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_BOOT_SCRIPT }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -44,9 +49,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen antialiased bg-slate-900 text-slate-100">
-        <main className="max-w-[480px] mx-auto min-h-screen bg-slate-900 relative shadow-2xl overflow-x-hidden">
+        <div className="relative min-h-screen overflow-x-hidden bg-slate-900">
           {children}
-        </main>
+        </div>
         <script
           dangerouslySetInnerHTML={{
             __html: `

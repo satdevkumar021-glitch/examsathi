@@ -11,7 +11,7 @@ import {
     MASTER_CADRE_SCIENCE_STUDENT_STRATEGY
 } from '@/lib/data/master-cadre-science-blueprint';
 import { getLessonByTopicId } from '@/lib/data/lessons';
-import { getTestQuestions } from '@/lib/data/question_bank_engine';
+import { poolCount } from '@/lib/question-service';
 
 export default function MasterCadreScienceBlueprintPage() {
     const sampleJsonRecord = {
@@ -127,7 +127,7 @@ export default function MasterCadreScienceBlueprintPage() {
                             <div className="flex items-start justify-between gap-2">
                                 <h3 className="text-xs font-bold text-white">{rf.title.en}</h3>
                                 <span
-                                    className={`text-[10px] px-2 py-0.5 rounded font-bold uppercase shrink-0 ${
+                                    className={`text-xs px-2 py-0.5 rounded font-bold uppercase shrink-0 ${
                                         rf.severity === 'critical'
                                             ? 'bg-rose-950 text-rose-300 border border-rose-600/40'
                                             : rf.severity === 'high'
@@ -308,11 +308,11 @@ export default function MasterCadreScienceBlueprintPage() {
                         <div className="grid grid-cols-1 gap-3">
                             {domain.topics.map((item) => {
                                 const lesson = getLessonByTopicId(item.topicId);
-                                const scopedQuestions = getTestQuestions({
+                                const scopedCount = poolCount({
                                     examId: 'punjab-master-cadre-science',
                                     topicId: item.topicId,
-                                    count: 100
-                                });
+                                    limit: 100
+                                }, []);
 
                                 return (
                                     <div
@@ -328,7 +328,7 @@ export default function MasterCadreScienceBlueprintPage() {
                                                     {item.levelBadges.map((b) => (
                                                         <span
                                                             key={b}
-                                                            className={`text-[10px] px-1.5 py-0.2 rounded font-bold ${
+                                                            className={`text-xs px-1.5 py-0.2 rounded font-bold ${
                                                                 b === 'P'
                                                                     ? 'bg-rose-950 text-rose-300 border border-rose-600/40'
                                                                     : 'bg-slate-800 text-teal-300 border border-slate-700'
@@ -347,11 +347,11 @@ export default function MasterCadreScienceBlueprintPage() {
                                             </div>
                                             <div className="flex items-center gap-2 flex-wrap">
                                                 <span className="text-[11px] bg-emerald-950/80 text-emerald-300 border border-emerald-600/40 px-2 py-0.5 rounded font-semibold">
-                                                    {scopedQuestions.length} Scoped MCQs
+                                                    {scopedCount} Scoped MCQs
                                                 </span>
                                                 <Link
                                                     href={`/lesson/${item.topicId}?exam=punjab-master-cadre-science`}
-                                                    className="text-xs bg-teal-600 hover:bg-teal-500 text-white font-semibold px-3 py-1.5 rounded-lg transition"
+                                                    className="text-xs bg-teal-700 hover:bg-teal-500 text-white font-semibold px-3 py-1.5 rounded-lg transition"
                                                 >
                                                     📖 Read B→I→H→G Lesson
                                                 </Link>
@@ -450,7 +450,7 @@ export default function MasterCadreScienceBlueprintPage() {
                             >
                                 <div className="flex items-center justify-between">
                                     <span className="font-bold text-teal-300">{card.branch}</span>
-                                    <span className="bg-slate-800 text-amber-300 border border-slate-700 px-2 py-0.5 rounded text-[10px] font-bold">
+                                    <span className="bg-slate-800 text-amber-300 border border-slate-700 px-2 py-0.5 rounded text-xs font-bold">
                                         Level {card.levelTag}
                                     </span>
                                 </div>

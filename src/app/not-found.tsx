@@ -27,7 +27,7 @@ export default function NotFound() {
         >
           <Home size={20} className="text-teal-400" />
           <span className="text-xs font-bold text-white">Student Dashboard</span>
-          <span className="text-[10px] text-slate-400">मुख्य डैशबोर्ड</span>
+          <span className="text-xs text-slate-400">मुख्य डैशबोर्ड</span>
         </Link>
 
         <Link 
@@ -36,7 +36,7 @@ export default function NotFound() {
         >
           <Compass size={20} className="text-amber-400" />
           <span className="text-xs font-bold text-white">Exam Directory</span>
-          <span className="text-[10px] text-slate-400">पंजाब, राजस्थान, SSC</span>
+          <span className="text-xs text-slate-400">पंजाब, राजस्थान, SSC</span>
         </Link>
 
         <Link 
@@ -45,7 +45,7 @@ export default function NotFound() {
         >
           <Target size={20} className="text-indigo-400" />
           <span className="text-xs font-bold text-white">50-Q CBT Tests</span>
-          <span className="text-[10px] text-slate-400">मॉक टेस्ट व मेरिट रैंक</span>
+          <span className="text-xs text-slate-400">मॉक टेस्ट व मेरिट रैंक</span>
         </Link>
 
         <Link 
@@ -54,7 +54,7 @@ export default function NotFound() {
         >
           <BookOpen size={20} className="text-emerald-400" />
           <span className="text-xs font-bold text-white">Virtual Library</span>
-          <span className="text-[10px] text-slate-400">25m फोकस टाइमर</span>
+          <span className="text-xs text-slate-400">25m फोकस टाइमर</span>
         </Link>
       </div>
 

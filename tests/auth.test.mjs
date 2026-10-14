@@ -61,3 +61,14 @@ test('legacy recovery links require tokens and recovery type', async () => {
   await assert.rejects(api.completeAuthCallback('https://example.com/auth/reset-password/#access_token=test&refresh_token=test&type=signup'), /recovery link/);
   assert.equal(await api.completeAuthCallback('https://example.com/auth/reset-password/#access_token=test&refresh_token=test&type=recovery'), session);
 });
+
+test('there is no fake local login: no demo accounts, no invented ids, no free XP', async () => {
+  const { readFileSync } = await import('node:fs');
+  const lib = readFileSync(new URL('../src/lib/auth.ts', import.meta.url), 'utf8');
+  for (const name of ['instantDemoLogin', 'registerUser', 'loginUser', 'requestPasswordReset', 'verifyAndResetPassword']) assert.ok(!lib.includes(name), `${name} must not exist`);
+  assert.ok(!/demo-|usr-\$\{Date|@examsathi\.in/.test(lib), 'no demo users or timestamp ids');
+  for (const page of ['login', 'register']) {
+    const src = readFileSync(new URL(`../src/app/(auth)/${page}/page.tsx`, import.meta.url), 'utf8');
+    assert.ok(!/instantDemoLogin|registerUser|Demo Access/.test(src), `${page} page must not offer demo accounts`);
+  }
+});

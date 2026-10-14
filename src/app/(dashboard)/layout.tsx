@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import BottomNav from '@/components/layout/BottomNav';
+import SideNav from '@/components/layout/SideNav';
+import ThemeToggle from '@/components/layout/ThemeToggle';
 import LanguageToggle from '@/components/layout/LanguageToggle';
 import AccountBoundary from '@/components/layout/AccountBoundary';
 import AccountLink from '@/components/layout/AccountLink';
@@ -17,31 +19,35 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex flex-col min-h-screen bg-slate-900 pb-20">
-      <header className="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-4 py-3 flex justify-between items-center">
-        <Link href="/dashboard" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-teal-500 to-indigo-600 text-white flex items-center justify-center text-lg font-bold shadow-md shadow-indigo-950 group-hover:scale-105 transition-transform">
-            🎓
+    <div className="flex min-h-screen bg-slate-900">
+      <SideNav />
+      <div className="flex min-w-0 flex-1 flex-col pb-20 lg:pb-0">
+        <header className="sticky top-0 z-30 flex items-center justify-between gap-2 border-b border-slate-800 bg-slate-900/90 px-3 py-2.5 backdrop-blur-md sm:px-4 sm:py-3">
+          {/* Brand: shown on phones only; the sidebar carries it on desktop. */}
+          <Link href="/dashboard" className="group flex min-w-0 items-center gap-1.5 lg:hidden">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-tr from-teal-600 to-indigo-600 text-base font-bold text-white shadow-md transition-transform group-hover:scale-105">
+              🎓
+            </div>
+            <div className="flex min-w-0 flex-col">
+              <span className="truncate text-sm font-extrabold leading-tight tracking-tight text-white">ExamSathi</span>
+              <span className="hidden truncate text-xs font-semibold leading-tight text-teal-400 min-[420px]:block">परीक्षा साथी</span>
+            </div>
+          </Link>
+          <div className="hidden lg:block" />
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
+            <Link href="/syllabus" className="hidden text-xs text-teal-300 underline sm:inline lg:hidden">Syllabus</Link>
+            <div className="lg:hidden"><ThemeToggle cycle /></div>
+            <LanguageToggle />
+            <AccountLink />
           </div>
-          <div className="flex flex-col">
-            <span className="text-white text-base font-extrabold leading-tight tracking-tight">
-              ExamSathi
-            </span>
-            <span className="text-teal-400 text-[11px] font-semibold leading-tight">
-              परीक्षा साथी • ਪ੍ਰੀਖਿਆ ਸਾਥੀ
-            </span>
+        </header>
+
+        <main className="flex-1">
+          <div className="mx-auto w-full max-w-2xl lg:max-w-4xl xl:max-w-5xl">
+            <AccountBoundary>{children}</AccountBoundary>
           </div>
-        </Link>
-        <div className="flex items-center gap-2">
-          <Link href="/syllabus" className="text-xs text-teal-300 underline">Syllabus</Link>
-          <LanguageToggle />
-          <AccountLink />
-        </div>
-      </header>
-      
-      <main className="flex-1 overflow-y-auto">
-        <AccountBoundary>{children}</AccountBoundary>
-      </main>
+        </main>
+      </div>
 
       <OnboardingGuideModal />
       <BottomNav />

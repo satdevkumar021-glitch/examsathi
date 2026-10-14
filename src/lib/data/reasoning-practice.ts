@@ -1,4 +1,4 @@
-import type { Question } from './questions';
+import type { Question } from '../question-types';
 /** Finite solved exercises. Variants are counted separately from authored/past-paper items. */
 export function generateReasoningPractice(topicId: string, count: number): Question[] {
  if(topicId !== 'ssc-cgl-reasoning') return [];

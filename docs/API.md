@@ -282,3 +282,84 @@ Returns trilingual inspirational quote, historical events for today's date, and 
   }
 }
 ```
+
+
+---
+
+### `GET /api/resources?topics=<id1,id2>` (max 4 topics)
+Reviewed lessons, videos and document links published by staff educators, for the given topics. Public, answer-free and cached briefly. Each item has `{ id, type, topicId, title, lesson?, video?, document? }`. `lesson` is `{ title: Localized, body: Localized }` — plain text, never HTML; `video` is `{ youtubeId: string, channel?, duration?, language }` — only the validated id; `document` is `{ url: string, language, publisher? }` — only a public https link.
+
+## Question and attempt API (current)
+
+Routes are `POST` unless stated, JSON, same origin, and rate-limited per IP. Successful responses have `success: true`; errors have `success: false, message`.
+
+### `POST /api/questions/set`
+Body: `{ topicId, examId?, difficulty?, pyq20Years?, pyqOnly?, count?, setNumber?, ordered?, isRevision?, isFresh?, excludeKeys? }`.
+Returns `{ questions, effective, setNumber, totalSets, totalPoolCount, isRevisionMode, isRemainingSubset }`. Questions carry no `correct`, `explanation`, `thought`, `deepConceptNote` or `distractorExplanations`.
+
+### `POST /api/questions/reveal`
+Body: `{ ids: string[] }` (max 150). Returns `{ reveals: { [id]: { correct, explanation, thought?, ... } } }`. Each id costs one unit of an hourly per-IP budget so the bank cannot be bulk-exported.
+
+### `POST /api/questions/count` / `manifest` / `lookup` / `daily`
+Pool sizes per filter, per-topic pool sizes per exam, question text by id (no answers), and the deterministic daily question (no answer).
+
+### `GET /api/catalog`
+Public exam and syllabus catalog: `{ exams: [{ id, name, namePa, body, defaultQuestions, timeLimitMinutes, negativeMarking, syllabusSummary, topics: [{ id, name, namePa, subject }] }] }`. Built from the client-safe catalog, so it carries no questions or answers. Used by the MCP server ([MCP.md](MCP.md)).
+
+### `POST /api/attempts`
+Body: `{ attemptId (uuid), examId, testId, questionIds, answers, timeTakenSeconds }`. The client never sends a score. Returns `{ stored, score, topicBreakdown, reveals }`. Negative marking comes from the exam definition. Guests are scored but not stored; a valid `Authorization: Bearer <supabase access token>` also stores the attempt in `examsathi_attempts`. Answers for questions outside `questionIds`, or unknown ids, return 422.
+
+### `GET /api/learner/profile?tz=<minutes east of UTC>`
+Requires `Authorization: Bearer <supabase access token>` (401 without a valid session, 503 if the server has no service key). Returns
+`{ insights: { attempts, questionsAnswered, accuracy, streak, practisedToday, weakTopics: [{ topicId, examId, total, correct, accuracy }] } }`,
+derived only from the caller's own server-scored attempts, so it cannot be inflated from the browser and follows the learner across devices.
+The streak counts consecutive practice days in the learner's timezone (`tz`, default IST +330; invalid values fall back to the default) and stays alive
+until the day ends. A weak topic is under 60% accuracy over at least 5 questions in the last 30 days; the three lowest are returned. Weak topics need
+migration `202610110003` (`topic_breakdown` on `examsathi_attempts`); without it the route still returns the streak and accuracy with an empty list.
+
+### Reminders: `/api/push/*`
+- `GET /api/push/key`: the public VAPID key (503 when reminders are not configured).
+- `POST /api/push/subscribe` `{ subscription: { endpoint, keys: { p256dh, auth } }, tzOffsetMinutes?, lang? }`: Bearer token required. The endpoint must be https on a known push service (Google, Mozilla, Apple, Windows), which also prevents the sender being used to reach internal hosts. Re-registering a device is idempotent; an account can hold 10 devices (409 beyond that).
+- `DELETE /api/push/subscribe` `{ endpoint }`: Bearer token required; removes only the caller's own device.
+- `POST /api/push/send`: scheduler only. `Authorization: Bearer <CRON_SECRET>` (compared in constant time; an unset or short secret never matches). Returns `{ sent, skipped, removed }`. Idempotent per device per local day.
+
+## Question quality API (reviewers and superadmins)
+`GET /api/admin/quality`: Bearer token required; 401 without a session, 403 for educators (authors should not tune questions to the statistics). Reads the latest 5,000 stored attempts and returns
+`{ attemptsAnalysed, minAnswers, report: { analysed, flagged, byFlag, items: [{ id, topicId, declaredDifficulty, key, n, pCorrect, discrimination, counts, upperCounts, flags }] } }`, worst first, capped at 100.
+It is aggregate-only: no learner id and no per-learner answers are returned. Nothing is changed automatically; a reviewer decides.
+
+| Flag | Meaning |
+| :--- | :--- |
+| `key-suspect` | Among the top 27% of learners (ranked by score on the *other* questions), another option beats the key by a z-score of 2.5 or more. The key or the wording is probably wrong. |
+| `negative-discrimination` | Strong learners do at least 15 points worse than weak ones on this question. |
+| `too-hard` | Under 15% answered correctly. |
+| `difficulty-mismatch` | Labelled easy but under 35% correct, or labelled hard but over 85% correct. |
+| `too-easy` | Over 97% correct. |
+
+A question needs at least 30 answers to be flagged, and the upper and lower groups need at least 8 learners each for a discrimination figure. Measured on simulated cohorts (see `tests/question-quality.test.mjs`):
+
+| Learners | Random-answer question called a bad key | Sound question called a bad key | Clearly wrong key caught | Wrong key caught when only the weaker learners know the right answer |
+| :--- | :--- | :--- | :--- | :--- |
+| 100 | 1.7% | 0% | 100% | 43% |
+| 200 | 2.3% | 0% | 100% | 81% |
+| 400 | 1.0% | 0% | 100% | 99.7% |
+
+Treat a flag as "look at this", not as proof. With few answers a real problem can be missed, and about 1 in 50 noisy questions is flagged by chance.
+
+## Admin content API (staff only)
+
+`/api/admin/content` requires `Authorization: Bearer <supabase access token>`. The role is read from the verified user's `app_metadata.role` (`educator`, `reviewer` or `superadmin`); `user_metadata` and anything in the request body are never trusted. No token returns 401, a non-staff user returns 403.
+
+- `GET` lists items. Educators see only their own; reviewers and superadmins see all.
+- `POST { title, body, examId?, topicId? }` creates a `draft`.
+- `PUT { id, title, topicId, data }` edits an item in place. Only the author (or a superadmin) may, and only while it is a `draft` or `rejected`; a question is re-validated exactly as on create. An item under review returns 403 ("Withdraw this item to draft before editing it"), and so does a live one: unpublish first. Nobody, including a superadmin, edits text a reviewer is approving or students are seeing. It never changes status, and returns 409 if the item moved in the meantime.
+- `PATCH { id, to }` moves an item between `draft`, `review`, `published` and `rejected`. A reviewer cannot approve their own item (four-eyes). Only a superadmin can publish directly from draft or unpublish. A concurrent change returns 409.
+- `DELETE { id }` is superadmin only.
+
+**Questions go live when published.** A `question` item must carry complete data, which the server validates on create:
+`{ question: {en?, hi?, pa?}, options: {A,B,C,D: {en?, hi?, pa?}}, correct: 'A'|'B'|'C'|'D', explanation: {…}, difficulty?: 'easy'|'medium'|'hard', examTag? }`.
+Every text needs English or Hindi (Punjabi is optional and served when present for the question and all four options); options must differ; a missing language falls back to the other. When an item becomes `published`
+it joins the served bank under the id `cms-<item id>` (always namespaced, never colliding with built-in ids) and is served through
+the same answer-protected `set` / `lookup` / `reveal` / `count` / `daily` / `attempts` routes. Moving it back to `draft`, or deleting it, removes it from new sets immediately on the instance that handled the change and on other instances within 60 seconds. A question that was served stays gradable for 24 hours so a learner mid-test is never failed by an edit. Lessons, videos and PDFs are recorded but not yet served.
+
+`src/proxy.ts` redirects `/admin` to `/login/` when no Supabase session cookie exists. This is a convenience gate, not authorization; the API above is the enforcement point.

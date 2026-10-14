@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
+    "dist/**",
+    ".vinext/**",
     "public/ocr/**", // Generated third-party OCR runtime; source is audited through npm.
     "build/**",
     "next-env.d.ts",

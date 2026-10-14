@@ -1,22 +1,24 @@
 # ExamSathi deployment
 
-## Current production
+## Architecture
 
-GitHub Pages serves the static export at https://satdevkumar021-glitch.github.io/examsathi/.
-Pushes to `main` run core tests, build the export and deploy through `.github/workflows/deploy.yml`. Documentation-only release records may use `[skip ci]` in the commit message.
+ExamSathi is a server-rendered Next.js app. The question bank and its answer key exist only on the server; the browser receives question text and fetches answers through the API after the learner commits to a choice or submits a test. GitHub Pages and static export are **retired** because they cannot do this: `npm run build:static`, `scripts/build-static.js` and the Pages workflow were removed.
 
-Run `npm ci`, `npm test`, `npm run lint` and `npm run build:static` before publishing. The build script temporarily excludes API routes, restores them in a `finally` block and copies the PDF.js worker into public assets.
+| Route | Purpose |
+|---|---|
+| `POST /api/questions/set` | Draws a set of questions. Never includes answers. |
+| `POST /api/questions/reveal` | Answer and explanation for specific ids (instant feedback, flashcards, lessons). Rate-limited per id. |
+| `POST /api/questions/count`, `/manifest` | Pool sizes for filters and syllabus pages. |
+| `POST /api/questions/lookup`, `/daily` | Question text for saved ids; the daily question. |
+| `POST /api/attempts` | Scores raw answers against the key, returns the review. Stores the attempt for signed-in users. |
 
-## What works on Pages
+Run `npm ci`, `npx tsc --noEmit`, `npm run lint`, `npm test`, `npm run build`, then `node scripts/check-bundle-leaks.mjs`. The last step fails the release if any answer key appears in `.next/static`. CI runs the same steps (`.github/workflows/ci.yml`).
 
-- Public lessons, syllabus coverage, resources and practice tests.
-- Browser extraction of text-based PDF, DOCX, TXT and Markdown documents.
-- Local source-grounded recall questions; this is explicitly labelled local practice rather than cloud AI.
-- Supabase browser authentication when public URL/key and redirect allowlists are configured.
-- Per-account browser progress. Manual same-account cloud backup/restore is available; automatic sync/merging is not implemented.
-- Public offline fallback and install prompt where the browser supports them.
+Required environment: see `.env.example`. `SUPABASE_SERVICE_ROLE_KEY` is server-only and is needed to store attempts; without it attempts are still scored but not saved. Apply `supabase/migrations/202610110001_attempts.sql` first. The admin content API (`/api/admin/content`) also needs the service-role key and `supabase/migrations/202610110002_content_items.sql`.
 
-Pages does not execute `/api/*`. It cannot provide Gemini generation or server publishing. OCR runs locally in the browser.
+Grant staff roles with the service role only, for example `update auth.users set raw_app_meta_data = raw_app_meta_data || '{"role":"reviewer"}' where email = 'person@example.com';` (roles: `educator`, `reviewer`, `superadmin`). The user must sign in again to get a token carrying the new role.
+
+Rate limiting is shared across instances when `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` are set (an Upstash Redis database; the free tier is enough to start). Each limited request makes one short call (`INCR` + `PEXPIRE NX` + `PTTL` in a single `MULTI/EXEC`, 800 ms timeout). Without those variables the limiter is in-memory per instance, which is only correct for a single instance, so set them before scaling out. If the store is unreachable the app keeps serving and falls back to per-instance limits for 10 seconds at a time (it never blocks users because Redis is down), and logs `rate limit store unavailable`. Limits are keyed by the client address taken from the **right** of `X-Forwarded-For`, counting `TRUSTED_PROXY_HOPS` proxies (default `1`, correct for Render on its own). The left-most value is supplied by the caller and is ignored. If you put another proxy in front of Render (for example Cloudflare), set `TRUSTED_PROXY_HOPS=2`; set it to `0` if the app is reached directly with no proxy, in which case all callers share one bucket.
 
 ## Dynamic Next deployment for cloud AI
 
@@ -27,7 +29,7 @@ Set:
 - `NEXT_PUBLIC_BASE_PATH` to an empty string for a root-domain deployment.
 - Public `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
 - Server-only `GEMINI_API_KEY`; optionally `GEMINI_MODEL`.
-- Leave `STATIC_EXPORT` unset and do not set `NEXT_PUBLIC_STATIC_EXPORT=true`.
+- Server-only `SUPABASE_SERVICE_ROLE_KEY` so signed-in learners' attempts are stored.
 
 Use a single origin for frontend and API. A separate `NEXT_PUBLIC_API_URL` backend requires an explicit CORS allowlist and has not been end-to-end validated here. Never expose a Gemini or Supabase service-role secret as `NEXT_PUBLIC_*`.
 
@@ -66,3 +68,24 @@ OCR now runs in the browser for PNG/JPEG/WebP and optional scanned PDF pages (ma
 ## Live backend
 
 https://examsathi-sxj3.onrender.com/ runs the frontend and Node API. The public-Git Render service is manually deployed; do not assume each GitHub push deploys Render. Existing authenticated login, cloud backup read/save/restore and five-question Gemini generation/practice were checked on 8 October 2026. The additive study-backup migration is applied. SMTP delivery and Google OAuth are still pending.
+
+
+## Streak reminders (Web Push)
+
+Signed-in learners can opt in on their profile page to get one nudge on an evening when a streak of 2+ days is at risk.
+Everything is optional: with no VAPID keys the profile toggle is hidden and the send route does nothing.
+
+1. Apply `supabase/migrations/202610110004_push_subscriptions.sql` (after `...0001` to `...0003`).
+2. Generate keys once and keep the private key secret:
+   `node -e "const wp=require('web-push');console.log(JSON.stringify(wp.generateVAPIDKeys()))"`
+3. Set on the server: `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT` (a `mailto:` or `https:` contact) and `CRON_SECRET`
+   (random, 16+ characters). Changing the VAPID keys later invalidates every existing subscription.
+4. Call the sender every hour: `curl -X POST -H "Authorization: Bearer $CRON_SECRET" https://YOUR-HOST/api/push/send/`.
+   `.github/workflows/streak-reminders.yml` does this on GitHub Actions: add the secrets `REMINDER_URL` and `CRON_SECRET`
+   and the repository variable `REMINDERS_ENABLED=true`. GitHub can start scheduled jobs several minutes late and pauses
+   them on repositories with no activity for 60 days; a Render/other host cron is more dependable.
+
+Rules, all enforced on the server: only 18:00-21:00 in the device's own timezone; only if the learner has not practised
+today; only with a streak of 2+; at most one per device per local day; a device the push service reports as gone (404/410)
+is deleted, and one that keeps failing is skipped after 5 failures. Each account can register up to 10 devices.
+Web Push needs HTTPS (localhost is exempt). On iPhone it only works once the app is added to the Home Screen (iOS 16.4+).

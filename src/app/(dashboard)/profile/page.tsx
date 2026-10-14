@@ -10,9 +10,10 @@ import { studyStorage } from '@/lib/storage';
 import { exportStudyBackup, restoreStudyBackup } from '@/lib/study-backup';
 import { readCloudStudy, saveCloudStudy, restoreCloudStudy, type CloudSnapshot } from '@/lib/cloud-study';
 import { activityStreak } from '@/lib/study-progress';
-import { Question } from '@/lib/data/questions';
+import type { ReviewedQuestion } from '@/lib/question-types';
 import { createClient } from '@/lib/supabase/client';
 import { isSupabaseConfigured } from '@/lib/supabase/config';
+import PushToggle from '@/components/ui/PushToggle';
 interface Note { id: string; questionId: string; title: string; explanation: string; correctText: string; examTag?: string; thought?: string }
 interface Attempt { attemptId?: string; testTitle?: string; completedAt?: string; percentage?: number; correct?: number; total?: number }
 export default function Profile() {
@@ -22,7 +23,7 @@ export default function Profile() {
   const t = (en: string, hi: string, pa: string) => ({ en, hi, pa })[lang];
   const [user, setUser] = useState<ReturnType<typeof getStoredUser> | null>(null);
   const [notes, setNotes] = useState<Note[]>([]);
-  const [questions, setQuestions] = useState<Question[]>([]);
+  const [questions, setQuestions] = useState<ReviewedQuestion[]>([]);
   const [tab, setTab] = useState<'notes' | 'favorites' | 'bookmarks'>('notes');
   const [history, setHistory] = useState<Attempt[]>([]);
   const [status, setStatus] = useState('');
@@ -46,17 +47,19 @@ export default function Profile() {
     finally { setCloudBusy(false); }
   };
   useEffect(() => {
+    let live = true;
     const refresh = () => {
       try {
         const current = getStoredUser();
         setUser(current);
         setNotes(JSON.parse(studyStorage.getItem('examsathi_saved_review_notes') || '[]'));
         setHistory(JSON.parse(studyStorage.getItem('examsathi_mock_history') || '[]'));
-        setQuestions(getVaultQuestions(tab === 'favorites' ? current.favoriteQuestionIds : current.bookmarkedQuestionIds));
+        void getVaultQuestions(tab === 'favorites' ? current.favoriteQuestionIds : current.bookmarkedQuestionIds).then(found => { if (live) setQuestions(found); });
         setStreak(activityStreak(JSON.parse(studyStorage.getItem('examsathi_activity_days') || '[]')));
       } catch { setStatus('Unable to read saved study data. Restore a valid backup.'); }
     };
     refresh();
+    return () => { live = false; };
   }, [tab, authUser?.id]);
   const practice = () => {
     try { saveCustomPractice(questions); router.push(`/mock-test/topic-ai-custom/?mode=exam&count=${questions.length}`); }
@@ -94,8 +97,8 @@ export default function Profile() {
     <p>{streak} {t('day streak', 'दिन लगातार अध्ययन', 'ਦਿਨ ਲਗਾਤਾਰ ਅਧਿਐਨ')} · {user?.xp || 0} XP · {(user?.libraryHours || 0).toFixed(1)} {t('study hours', 'अध्ययन घंटे', 'ਅਧਿਐਨ ਘੰਟੇ')}</p>
     {(status || authError) && <p role="alert">{status || authError}</p>}
     <div className="flex gap-2 flex-wrap">{(['notes', 'favorites', 'bookmarks'] as const).map(item => <button key={item} aria-pressed={tab === item} className={`p-3 rounded-lg ${tab === item ? 'bg-teal-700' : 'bg-slate-800'}`} onClick={() => setTab(item)}>{labels[item]} ({item === 'notes' ? notes.length : item === 'favorites' ? user?.favoriteQuestionIds.length || 0 : user?.bookmarkedQuestionIds.length || 0})</button>)}</div>
-    {tab !== 'notes' && questions.length > 0 && <button className="p-3 bg-teal-600 rounded-lg w-full" onClick={practice}>{t('Launch revision drill', 'दोहराव अभ्यास शुरू करें', 'ਦੁਹਰਾਈ ਅਭਿਆਸ ਸ਼ੁਰੂ ਕਰੋ')} ({questions.length})</button>}
-    {tab === 'notes' ? notes.map(note => <article key={note.id} className="bg-slate-800 p-4 rounded-xl space-y-2"><details><summary className="cursor-pointer">{note.title}</summary><p className="mt-3">{note.correctText}</p><p className="text-sm">{note.explanation}</p><p className="text-xs text-slate-400">{note.examTag} · {note.thought}</p></details><button className="text-rose-300 underline" onClick={() => remove(note.id)}>{t('Remove note', 'नोट हटाएं', 'ਨੋਟ ਹਟਾਓ')}</button></article>) : questions.map(q => <article key={q.id} className="bg-slate-800 p-4 rounded-xl space-y-2"><details><summary className="cursor-pointer">{q.question[lang] || q.question.en}</summary><p className="mt-3">{q.correct}: {q.options[q.correct][lang] || q.options[q.correct].en}</p><p className="text-sm">{q.explanation[lang] || q.explanation.en}</p></details><button className="text-rose-300 underline" onClick={() => remove(q.id)}>{t('Remove from list', 'सूची से हटाएं', 'ਸੂਚੀ ਤੋਂ ਹਟਾਓ')}</button></article>)}
+    {tab !== 'notes' && questions.length > 0 && <button className="p-3 bg-teal-700 rounded-lg w-full" onClick={practice}>{t('Launch revision drill', 'दोहराव अभ्यास शुरू करें', 'ਦੁਹਰਾਈ ਅਭਿਆਸ ਸ਼ੁਰੂ ਕਰੋ')} ({questions.length})</button>}
+    {tab === 'notes' ? notes.map(note => <article key={note.id} className="bg-slate-800 p-4 rounded-xl space-y-2"><details><summary className="cursor-pointer">{note.title}</summary><p className="mt-3">{note.correctText}</p><p className="text-sm">{note.explanation}</p><p className="text-xs text-slate-400">{note.examTag} · {note.thought}</p></details><button className="text-rose-300 underline" onClick={() => remove(note.id)}>{t('Remove note', 'नोट हटाएं', 'ਨੋਟ ਹਟਾਓ')}</button></article>) : questions.map(q => <article key={q.id} className="bg-slate-800 p-4 rounded-xl space-y-2"><details><summary className="cursor-pointer">{q.question[lang] || q.question.en}</summary>{q.correct && q.explanation ? <><p className="mt-3">{q.correct}: {q.options[q.correct][lang] || q.options[q.correct].en}</p><p className="text-sm">{q.explanation[lang] || q.explanation.en}</p></> : <p className="mt-3 text-sm text-slate-400">{t('Answers appear after you practise this question.', 'उत्तर अभ्यास के बाद दिखेंगे।', 'ਜਵਾਬ ਅਭਿਆਸ ਤੋਂ ਬਾਅਦ ਦਿਖਣਗੇ।')}</p>}</details><button className="text-rose-300 underline" onClick={() => remove(q.id)}>{t('Remove from list', 'सूची से हटाएं', 'ਸੂਚੀ ਤੋਂ ਹਟਾਓ')}</button></article>)}
     {(tab === 'notes' ? notes.length === 0 : questions.length === 0) && <p>{t('No saved items in this list.', 'इस सूची में कोई सामग्री नहीं है।', 'ਇਸ ਸੂਚੀ ਵਿੱਚ ਕੋਈ ਸਮੱਗਰੀ ਨਹੀਂ ਹੈ।')}</p>}
     <section className="space-y-3"><h2 className="font-bold">{t('Recent attempts', 'हाल के प्रयास', 'ਹਾਲੀਆ ਕੋਸ਼ਿਸ਼ਾਂ')}</h2>{history.slice(0, 10).map((item, i) => <article className="bg-slate-800 rounded-lg p-3" key={item.attemptId || i}><p>{item.testTitle} · {item.percentage ?? 0}% · {item.correct ?? 0}/{item.total ?? 0}</p>{item.attemptId && <Link className="text-teal-300 underline" href={`/results/latest/?attempt=${encodeURIComponent(item.attemptId)}`}>{t('Review result', 'परिणाम देखें', 'ਨਤੀਜਾ ਵੇਖੋ')}</Link>}</article>)}</section>
     <section className="bg-slate-800 p-4 rounded-xl space-y-3"><h2 className="font-bold">{t('Study backup', 'अध्ययन बैकअप', 'ਅਧਿਐਨ ਬੈਕਅੱਪ')}</h2><button className="underline text-teal-300" onClick={download}>{t('Download backup', 'बैकअप डाउनलोड करें', 'ਬੈਕਅੱਪ ਡਾਊਨਲੋਡ ਕਰੋ')}</button><label className="block">{t('Restore backup (replaces local study records)', 'बैकअप बहाल करें (स्थानीय अध्ययन रिकॉर्ड बदलेंगे)', 'ਬੈਕਅੱਪ ਬਹਾਲ ਕਰੋ (ਸਥਾਨਕ ਅਧਿਐਨ ਰਿਕਾਰਡ ਬਦਲਣਗੇ)')}<input aria-label={t('Restore study backup', 'अध्ययन बैकअप बहाल करें', 'ਅਧਿਐਨ ਬੈਕਅੱਪ ਬਹਾਲ ਕਰੋ')} type="file" accept=".json" className="block mt-2" onChange={e => { void restore(e.target.files?.[0]); }} /></label></section>
@@ -111,6 +114,7 @@ export default function Profile() {
         <button disabled={cloudBusy || !cloudReady || cloudAccount !== authUser.id || !cloud || !allowRestore} className="p-2 rounded bg-indigo-700 disabled:opacity-40" onClick={() => { void cloudAction('restore'); }}>{t('Restore from cloud', 'क्लाउड से बहाल करें', 'ਕਲਾਉਡ ਤੋਂ ਬਹਾਲ ਕਰੋ')}</button>
       </>}
     </section>
-    <nav className="flex gap-4 flex-wrap"><Link href="/syllabus/">{t('Syllabus', 'पाठ्यक्रम', 'ਸਿਲੇਬਸ')}</Link><Link href="/ai-generator/">{t('Notes practice', 'नोट्स अभ्यास', 'ਨੋਟਸ ਅਭਿਆਸ')}</Link><Link href="/login/">{t('Switch account', 'खाता बदलें', 'ਖਾਤਾ ਬਦਲੋ')}</Link><button disabled={busy} onClick={() => { void logout(); }}>{t('Sign out', 'लॉगआउट', 'ਲਾਗਆਉਟ')}</button></nav>
+    {authUser && <PushToggle />}
+    <nav className="flex gap-4 flex-wrap"><Link href="/syllabus/">{t('Syllabus', 'पाठ्यक्रम', 'ਸਿਲੇਬਸ')}</Link><Link href="/ai-generator/">{t('Notes practice', 'नोट्स अभ्यास', 'ਨੋਟਸ ਅਭਿਆਸ')}</Link><button onClick={() => window.dispatchEvent(new Event('examsathi_open_onboarding'))}>{t('Platform guide', 'प्लेटफ़ॉर्म गाइड', 'ਪਲੇਟਫਾਰਮ ਗਾਈਡ')}</button><Link href="/login/">{t('Switch account', 'खाता बदलें', 'ਖਾਤਾ ਬਦਲੋ')}</Link><button disabled={busy} onClick={() => { void logout(); }}>{t('Sign out', 'लॉगआउट', 'ਲਾਗਆਉਟ')}</button></nav>
   </div>;
 }

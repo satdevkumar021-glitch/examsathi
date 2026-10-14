@@ -1,9 +1,20 @@
 import type { Question } from '../questions';
 
 /**
- * 20-Year Exam Question Archive (2004 - 2024)
- * Spanning Punjab Master Cadre, PSSSB Clerk, Punjab Police, Patwari, REET, and CTET
- * Categorized into Simple (Easy), Mid (Medium), and Hard with strategic examiner thoughts.
+ * Year-Labelled Practice Questions (2004–2024 tag span)
+ *
+ * IMPORTANT — NOT a verified PYQ archive:
+ * All items in this file use originType: 'authored-original'. They are original
+ * practice questions written to reflect year-tagged topics and difficulty, NOT
+ * authenticated reproductions of official past papers or final answer keys.
+ * No item has a SHA256-hashed source document or confirmed official-final-key provenance.
+ *
+ * Do NOT expose these as "verified PYQs" or count them toward an authenticated
+ * PYQ corpus. They are supplemental authored practice material only.
+ *
+ * To add a genuine PYQ: obtain the official question paper + final key,
+ * record SHA256/URL/page/notificationRef, set originType: 'verified-PYQ',
+ * and have a human reviewer sign off before publishing.
  */
 export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
   // =========================================================================
@@ -15,13 +26,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'social-science',
     examId: 'punjab-master-cadre-sst',
     examTag: 'Punjab Master Cadre 2004',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'गुरु नानक देव जी की प्रसिद्ध रचना "जपुजी साहिब" में कुल कितनी पौड़ियों (Pauris) का संकलन है?',
@@ -54,13 +59,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'social-science',
     examId: 'punjab-master-cadre-sst',
     examTag: 'Punjab Master Cadre 2008',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'सिख इतिहास में "मंजी प्रथा" (Manji System) की शुरुआत 22 प्रचार केंद्रों के साथ किस सिख गुरु ने की थी?',
@@ -93,13 +92,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'social-science',
     examId: 'punjab-master-cadre-sst',
     examTag: 'Punjab Master Cadre 2011',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: '1762 में अहमद शाह अब्दाली द्वारा कुप-रहीड़ा के मैदान में किए गए नरसंहार को सिख इतिहास में किस नाम से जाना जाता है?',
@@ -132,13 +125,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'social-science',
     examId: 'punjab-master-cadre-sst',
     examTag: 'Punjab Master Cadre 2014',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'महाराजा रणजीत सिंह की नियमित आधुनिक सेना (Fauj-i-Khas) के फ्रांसीसी जनरल कौन थे जिन्होंने पैदल सेना को यूरोपीय तर्ज पर प्रशिक्षित किया?',
@@ -175,13 +162,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'general-studies',
     examId: 'punjab-clerk',
     examTag: 'PSSSB Clerk 2016',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'पंजाब अधीनस्थ सेवा चयन बोर्ड (PSSSB) टाइपिंग परीक्षा हेतु पंजाबी टाइपिंग के लिए अनिवार्य आधिकारिक फॉन्ट कौन सा है?',
@@ -214,13 +195,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'general-studies',
     examId: 'punjab-clerk',
     examTag: 'PSSSB Senior Assistant 2023',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'माइक्रोसॉफ्ट वर्ड में किसी चयनित पाठ (Selected Text) को "हाइपरलिंक" बनाने के लिए किस शॉर्टकट कुंजी का उपयोग किया जाता है?',
@@ -257,13 +232,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'revenue-math',
     examId: 'punjab-patwari',
     examTag: 'Punjab Patwari Exam 2016',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'पंजाब के राजस्व रिकॉर्ड (Revenue Records) में 1 करम (Karam) की लंबाई कितने इंच के बराबर मानी जाती है?',
@@ -296,13 +265,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'revenue-math',
     examId: 'punjab-patwari',
     examTag: 'Punjab Patwari Exam 2021',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'पंजाब राजस्व व्यवस्था में भूमि के स्वामित्व और अधिकारों के आधिकारिक रिकॉर्ड को क्या कहा जाता है?',
@@ -338,14 +301,8 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     topicId: 'police-law-basics',
     subjectId: 'police-special',
     examId: 'punjab-police',
-    examTag: 'Punjab Police SI / Constable 2023 Pattern',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    examTag: 'Punjab Police SI 2021',
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'भारतीय दंड संहिता की जगह 2023 में संसद द्वारा पारित नए कानून का आधिकारिक नाम क्या है?',
@@ -378,13 +335,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'police-special',
     examId: 'punjab-police',
     examTag: 'Punjab Police Constable 2023',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'पंजाब राज्य की सीमाएं भारत के कितने राज्यों (States) को स्पर्श करती हैं (केंद्र शासित प्रदेशों को छोड़कर)?',
@@ -421,13 +372,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'rajasthan-gk',
     examId: 'reet-level2-sst',
     examTag: 'REET Level 2 2018',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'राजस्थान के किस दुर्ग को "जल दुर्ग" (Water Fort / Audak Durg) की श्रेणी में रखा जाता है?',
@@ -460,13 +405,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'pedagogy',
     examId: 'reet-level1',
     examTag: 'REET Level 1 2021',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'लेव वायगोत्स्की के सामाजिक-सांस्कृतिक सिद्धांत में "समीपस्थ विकास का क्षेत्र" (ZPD) क्या दर्शाता है?',
@@ -503,13 +442,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'pedagogy',
     examId: 'ctet-paper2',
     examTag: 'CTET Paper 2 2019',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'लॉरेंस कोहलबर्ग के नैतिक विकास के सिद्धांत में "अच्छा लड़का-अच्छी लड़की अनुकूलन" (Good Boy-Nice Girl Orientation) किस स्तर के अंतर्गत आता है?',
@@ -542,13 +475,7 @@ export const TWENTY_YEAR_EXAM_PYQS: Question[] = [
     subjectId: 'social-science',
     examId: 'ctet-paper2',
     examTag: 'CTET Paper 2 2024',
-    originType: 'pyq-style',
-    rightsProvenance: {
-      source: 'ExamSathi Historical Exam Pattern Archive (Syllabus-Aligned Reconstruction; Primary Paper Pending)',
-      accessType: 'educational-original',
-      verifiedBy: 'ExamSathi Editorial Audit',
-      verifiedDate: '2026-10-11',
-    },
+    originType: 'authored-original',
     reviewStatus: 'reviewed',
     question: {
       hi: 'भारतीय संविधान के अनुच्छेद 21-A के तहत 6 से 14 वर्ष के बच्चों के लिए निःशुल्क और अनिवार्य शिक्षा का अधिकार किस संविधान संशोधन द्वारा जोड़ा गया था?',

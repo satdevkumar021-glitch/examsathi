@@ -5,10 +5,10 @@ import { MASTER_CADRE_PUNJAB_HISTORY_BLUEPRINT_LESSONS } from './master_cadre_pu
 import { MASTER_CADRE_SCIENCE_PHYSICS_BLUEPRINT_LESSONS } from './master_cadre_science_physics_blueprint';
 import { MASTER_CADRE_SCIENCE_CHEMISTRY_BLUEPRINT_LESSONS } from './master_cadre_science_chemistry_blueprint';
 import { MASTER_CADRE_SCIENCE_BIOLOGY_BLUEPRINT_LESSONS } from './master_cadre_science_biology_blueprint';
+import { MASTER_CADRE_MATH_BLUEPRINT_LESSONS } from './master_cadre_math_blueprint';
 import { ETT_PUNJABI_LANGUAGES_BLUEPRINT_LESSONS } from './ett_punjabi_languages_blueprint';
 import { ETT_MATH_SCIENCE_SST_BLUEPRINT_LESSONS } from './ett_math_science_sst_blueprint';
 import { CLERK_GK_SPECIAL_LESSONS } from './clerk_gk_special_lessons';
-import { MASTER_CADRE_MATH_BLUEPRINT_LESSONS } from './master_cadre_math_blueprint';
 import { MASTER_CADRE_PUNJABI_LIT_BLUEPRINT_LESSONS } from './master_cadre_punjabi_lit_blueprint';
 import { PSTET_PEDAGOGY_BLUEPRINT_LESSONS } from './pstet_pedagogy_blueprint';
 import { RAJASTHAN_AND_AGNIVEER_BLUEPRINT_LESSONS } from './rajasthan_and_agniveer_blueprint';
@@ -410,222 +410,239 @@ const BLUEPRINT_TOPIC_METADATA: Record<
         },
         examRelevance: 'Punjab PPSC & PSSSB Clerk / Senior Assistant / Master Cadre (Literature & Cinema — 4 to 6 Qs)'
     },
-
-    // Punjab Master Cadre Mathematics (6 Topics)
-    'math-linear-algebra-matrices': {
-        category: 'math',
+    // Punjab Master Cadre Mathematics (8 Degree-Level Topics)
+    "math-matrices-linear-algebra": {
+        category: "math",
         title: {
-            en: 'Linear Algebra, Matrices, Vector Spaces & Eigenvalues (Level I → H → G)',
-            pa: 'ਲੀਨੀਅਰ ਅਲਜਬਰਾ, ਮੈਟ੍ਰਿਕਸ, ਵੈਕਟਰ ਸਪੇਸ ਅਤੇ ਆਈਗਨ ਮੁੱਲ (ਪੱਧਰ I → H → G)',
-            hi: 'रैखिक बीजगणित, आव्यूह, सदिश समष्टि एवं आइगेन मान (Level I → H → G)'
+            en: "Matrices, Determinants, Rank, Eigenvalues & Linear Algebra (Level B → I → A)",
+            pa: "ਮੈਟ੍ਰਿਕਸ, ਡਿਟਰਮੀਨੈਂਟ, ਰੈਂਕ, ਆਈਗਨ ਮੁੱਲ ਅਤੇ ਲੀਨੀਅਰ ਅਲਜਬਰਾ (Level B → I → A)",
+            hi: "आव्यूह, सारणिक, कोटि, अभिलाक्षणिक मान एवं रैखिक बीजगणित (Level B → I → A)"
         },
-        examRelevance: 'Punjab Master Cadre Mathematics (Linear Algebra & Matrices — 20 to 25 Qs)'
+        examRelevance: "Punjab Master Cadre Mathematics (Linear Algebra — 18 to 22 Qs)"
     },
-    'math-real-analysis-calculus': {
-        category: 'math',
+    "math-differential-calculus": {
+        category: "math",
         title: {
-            en: 'Real Analysis, Sequences, Infinite Series & Advanced Calculus (Level H → G)',
-            pa: 'ਰੀਅਲ ਐਨਾਲਿਸਿਸ, ਅਨੁਕ੍ਰਮ, ਅਨੰਤ ਲੜੀਆਂ ਅਤੇ ਕੈਲਕੂਲਸ (ਪੱਧਰ H → G)',
-            hi: 'वास्तविक विश्लेषण, अनुक्रम, अनंत श्रेणियां एवं उच्च कलन (Level H → G)'
+            en: "Differential Calculus, Limits, Mean Value Theorems, Maxima/Minima & Partial Derivatives (Level B → I → A)",
+            pa: "ਡਿਫਰੈਂਸ਼ੀਅਲ ਕੈਲਕੂਲਸ, ਸੀਮਾਵਾਂ, ਮੱਧਮਾਨ ਪ੍ਰਮੇਯ, ਅਧਿਕਤਮ/ਨਿਊਨਤਮ ਅਤੇ ਅੰਸ਼ਕ ਡੈਰੀਵੇਟਿਵਜ਼ (Level B → I → A)",
+            hi: "अवकल गणित, सीमाएं, मध्यमान प्रमेय, उच्चिष्ठ/निम्निष्ठ एवं आंशिक अवकलन (Level B → I → A)"
         },
-        examRelevance: 'Punjab Master Cadre Mathematics (Real Analysis & Calculus — 25 to 30 Qs)'
+        examRelevance: "Punjab Master Cadre Mathematics (Differential Calculus — 20 to 24 Qs)"
     },
-    'math-abstract-algebra-groups': {
-        category: 'math',
+    "math-integral-calculus": {
+        category: "math",
         title: {
-            en: 'Abstract Algebra: Groups, Rings, Integral Domains & Fields (Level G)',
-            pa: 'ਅਮੂਰਤ ਅਲਜਬਰਾ: ਗਰੁੱਪ, ਰਿੰਗ, ਇੰਟੈਗਰਲ ਡੋਮੇਨ ਅਤੇ ਫੀਲਡ (ਪੱਧਰ G)',
-            hi: 'अमूर्त बीजगणित: समूह, वलय, पूर्णांकीय प्रांत एवं क्षेत्र (Level G)'
+            en: "Integral Calculus, Definite Integrals, Beta-Gamma Functions & Multiple Integrals (Level B → I → A)",
+            pa: "ਇੰਟੈਗਰਲ ਕੈਲਕੂਲਸ, ਨਿਸ਼ਚਿਤ ਇੰਟੈਗਰਲ, ਬੀਟਾ-ਗਾਮਾ ਫੰਕਸ਼ਨ ਅਤੇ ਬਹੁ-ਇੰਟੈਗਰਲ (Level B → I → A)",
+            hi: "समाकलन गणित, निश्चित समाकलन, बीटा-गामा फलन एवं बहु-समाकलन (Level B → I → A)"
         },
-        examRelevance: 'Punjab Master Cadre Mathematics (Abstract Algebra & Group Theory — 20 to 25 Qs)'
+        examRelevance: "Punjab Master Cadre Mathematics (Integral Calculus — 18 to 22 Qs)"
     },
-    'math-diff-equations-mechanics': {
-        category: 'math',
+    "math-differential-equations": {
+        category: "math",
         title: {
-            en: 'Differential Equations, Vector Calculus, Statics & Dynamics (Level H → G)',
-            pa: 'ਡਿਫਰੈਂਸ਼ੀਅਲ ਸਮੀਕਰਨ, ਵੈਕਟਰ ਕੈਲਕੂਲਸ, ਸਥਿਰ ਵਿਗਿਆਨ ਅਤੇ ਗਤੀ ਵਿਗਿਆਨ (ਪੱਧਰ H → G)',
-            hi: 'अवकल समीकरण, सदिश कलन, स्थिति विज्ञान एवं गति विज्ञान (Level H → G)'
+            en: "Ordinary Differential Equations, Integrating Factors & Linear DEs with Constant Coefficients (Level B → I → A)",
+            pa: "ਆਰਡੀਨਰੀ ਡਿਫਰੈਂਸ਼ੀਅਲ ਸਮੀਕਰਨਾਂ, ਇੰਟੈਗਰੇਟਿੰਗ ਫੈਕਟਰ ਅਤੇ ਰੇਖਿਕ ਸਮੀਕਰਨਾਂ (Level B → I → A)",
+            hi: "साधारण अवकल समीकरण, समाकलन गुणक एवं अचर गुणांक वाले रैखिक अवकल समीकरण (Level B → I → A)"
         },
-        examRelevance: 'Punjab Master Cadre Mathematics (Differential Equations & Mechanics — 25 to 30 Qs)'
+        examRelevance: "Punjab Master Cadre Mathematics (Differential Equations — 15 to 18 Qs)"
     },
-    'math-coordinate-solid-geometry': {
-        category: 'math',
+    "math-abstract-algebra-groups": {
+        category: "math",
         title: {
-            en: '2D & 3D Coordinate Geometry: Conics, Sphere, Cone & Cylinder (Level H → G)',
-            pa: '2D ਅਤੇ 3D ਨਿਰਦੇਸ਼-ਅੰਕ ਜਿਓਮੈਟਰੀ: ਕੋਨਿਕ, ਗੋਲਾ, ਸ਼ੰਕੂ ਅਤੇ ਵੇਲਣ (ਪੱਧਰ H → G)',
-            hi: '2D एवं 3D निर्देशांक ज्यामिति: शांकव, गोला, शंकु एवं बेलन (Level H → G)'
+            en: "Abstract Algebra: Groups, Subgroups, Cyclic Groups, Normal Subgroups & Homomorphisms (Level B → I → A)",
+            pa: "ਅਮੂਰਤ ਅਲਜਬਰਾ: ਗਰੁੱਪ, ਉਪ-ਗਰੁੱਪ, ਚੱਕਰੀ ਗਰੁੱਪ, ਸਧਾਰਨ ਉਪ-ਗਰੁੱਪ ਅਤੇ ਹੋਮੋਮੋਰਫਿਜ਼ਮ (Level B → I → A)",
+            hi: "अमूर्त बीजगणित: समूह, उपसमूह, चक्रीय समूह, प्रसामान्य उपसमूह एवं समाकारिता (Level B → I → A)"
         },
-        examRelevance: 'Punjab Master Cadre Mathematics (Coordinate & Solid Geometry — 20 to 25 Qs)'
+        examRelevance: "Punjab Master Cadre Mathematics (Abstract Algebra — 16 to 20 Qs)"
     },
-    'math-prob-stats-numerical': {
-        category: 'math',
+    "math-coordinate-geometry-3d": {
+        category: "math",
         title: {
-            en: 'Probability, Mathematical Statistics, Linear Programming & Numerical Analysis (Level H → G)',
-            pa: 'ਸੰਭਾਵਨਾ, ਅੰਕੜਾ ਵਿਗਿਆਨ, ਲੀਨੀਅਰ ਪ੍ਰੋਗਰਾਮਿੰਗ ਅਤੇ ਸੰਖਿਆਤਮਕ ਵਿਸ਼ਲੇਸ਼ਣ (ਪੱਧਰ H → G)',
-            hi: 'प्रायिकता, सांख्यिकी, रैखिक प्रोग्रामन एवं संख्यात्मक विश्लेषण (Level H → G)'
+            en: "Analytical 3D Geometry: Direction Cosines, Straight Lines, Planes, Spheres & Cones (Level B → I → A)",
+            pa: "ਵਿਸ਼ਲੇਸ਼ਣਾਤਮਕ 3D ਜਿਓਮੈਟਰੀ: ਦਿਸ਼ਾ ਕੋਸਾਈਨ, ਰੇਖਾਵਾਂ, ਸਮਤਲ, ਗੋਲਾ ਅਤੇ ਸ਼ੰਕੂ (Level B → I → A)",
+            hi: "त्रिविमीय ज्यामिति: दिक्-कोज्या, सरल रेखाएं, समतल, गोला एवं शंकु (Level B → I → A)"
         },
-        examRelevance: 'Punjab Master Cadre Mathematics (Probability, Stats & Numerical — 20 to 25 Qs)'
+        examRelevance: "Punjab Master Cadre Mathematics (3D Coordinate Geometry — 16 to 20 Qs)"
+    },
+    "math-vector-mechanics": {
+        category: "math",
+        title: {
+            en: "Vector Calculus & Classical Mechanics: Grad/Div/Curl, Integral Theorems, Statics & Dynamics (Level B → I → A)",
+            pa: "ਵੈਕਟਰ ਕੈਲਕੂਲਸ ਅਤੇ ਕਲਾਸੀਕਲ ਮਕੈਨਿਕਸ: ਗ੍ਰੇਡੀਐਂਟ, ਡਾਇਵਰਜੈਂਸ, ਕਰਲ, ਪ੍ਰਮੇਯ ਅਤੇ ਸੰਤੁਲਨ (Level B → I → A)",
+            hi: "सदिश कलन एवं यांत्रिकी: प्रवणता, अपसरण, कर्ल, समाकलन प्रमेय, स्थैतिकी एवं गतिविज्ञान (Level B → I → A)"
+        },
+        examRelevance: "Punjab Master Cadre Mathematics (Vector Calculus & Mechanics — 14 to 18 Qs)"
+    },
+    "math-prob-stats-distributions": {
+        category: "math",
+        title: {
+            en: "Probability, Random Variables, Probability Distributions (Binomial, Poisson, Normal) & Statistics (Level B → I → A)",
+            pa: "ਸੰਭਾਵਨਾ, ਰੈਂਡਮ ਵੇਰੀਏਬਲ, ਸੰਭਾਵਨਾ ਵੰਡ (ਬਾਈਨੋਮੀਅਲ, ਪੋਆਇਸਨ, ਨਾਰਮਲ) ਅਤੇ ਅੰਕੜਾ ਵਿਗਿਆਨ (Level B → I → A)",
+            hi: "प्रायिकता, यादृच्छिक चर, प्रायिकता बंटन (द्विपद, प्वासों, प्रसामान्य) एवं सांख्यिकी (Level B → I → A)"
+        },
+        examRelevance: "Punjab Master Cadre Mathematics (Probability & Statistics — 15 to 18 Qs)"
     },
 
     // Punjab Master Cadre Punjabi Literature (5 Topics)
-    'punjabi-lit-gurmat-sufi': {
-        category: 'language',
+    "punjabi-lit-gurmat-sufi": {
+        category: "language",
         title: {
-            en: 'Gurmat Kav & Sufi Kav: Core Bani, Sufi Poets & Ideological Foundations',
-            pa: 'ਗੁਰਮਤਿ ਕਾਵਿ ਅਤੇ ਸੂਫ਼ੀ ਕਾਵਿ: ਗੁਰੂ ਸਾਹਿਬਾਨ, ਭਗਤ ਬਾਣੀ ਅਤੇ ਪ੍ਰਮੁੱਖ ਸੂਫ਼ੀ ਕਵੀ',
-            hi: 'गुरमत काव्य एवं सूफी काव्य: गुरु साहिबान, भगत बाणी एवं प्रमुख सूफी कवि'
+            en: "Gurmat Kav & Sufi Kav: Core Bani, Sufi Poets & Ideological Foundations",
+            pa: "ਗੁਰਮਤਿ ਕਾਵਿ ਅਤੇ ਸੂਫ਼ੀ ਕਾਵਿ: ਗੁਰੂ ਸਾਹਿਬਾਨ, ਭਗਤ ਬਾਣੀ ਅਤੇ ਪ੍ਰਮੁੱਖ ਸੂਫ਼ੀ ਕਵੀ",
+            hi: "गुरमत काव्य एवं सूफी काव्य: गुरु साहिबान, भगत बाणी एवं प्रमुख सूफी कवि"
         },
-        examRelevance: 'Punjab Master Cadre Punjabi (Gurmat & Sufi Poetry — 25 to 30 Qs)'
+        examRelevance: "Punjab Master Cadre Punjabi (Gurmat & Sufi Poetry — 25 to 30 Qs)"
     },
-    'punjabi-lit-qissa-bir': {
-        category: 'language',
+    "punjabi-lit-qissa-bir": {
+        category: "language",
         title: {
-            en: 'Qissa Kav & Bir Kav: Romantic Epics, Chhand, Heroic Ballads & Historical Jangnamas',
-            pa: 'ਕਿੱਸਾ ਕਾਵਿ ਅਤੇ ਬੀਰ ਕਾਵਿ: ਪ੍ਰਮੁੱਖ ਕਿੱਸਾਕਾਰ, ਛੰਦ, ਵਾਰਾਂ ਅਤੇ ਜੰਗਨਾਮੇ',
-            hi: 'किस्सा काव्य एवं बीर काव्य: प्रमुख किस्साकार, छंद, वारें एवं जंगनामे'
+            en: "Qissa Kav & Bir Kav: Romantic Epics, Chhand, Heroic Ballads & Historical Jangnamas",
+            pa: "ਕਿੱਸਾ ਕਾਵਿ ਅਤੇ ਬੀਰ ਕਾਵਿ: ਪ੍ਰਮੁੱਖ ਕਿੱਸਾਕਾਰ, ਛੰਦ, ਵਾਰਾਂ ਅਤੇ ਜੰਗਨਾਮੇ",
+            hi: "किस्सा काव्य एवं बीर काव्य: प्रमुख किस्साकार, छंद, वारें एवं जंगनामे"
         },
-        examRelevance: 'Punjab Master Cadre Punjabi (Qissa & Bir Kav — 25 to 30 Qs)'
+        examRelevance: "Punjab Master Cadre Punjabi (Qissa & Bir Kav — 25 to 30 Qs)"
     },
-    'punjabi-lit-modern-poetry': {
-        category: 'language',
+    "punjabi-lit-modern-poetry": {
+        category: "language",
         title: {
-            en: 'Modern Punjabi Poetry: Progressive Movement, Experimentalism & Award-Winning Poets',
-            pa: 'ਆਧੁਨਿਕ ਪੰਜਾਬੀ ਕਵਿਤਾ: ਭਾਈ ਵੀਰ ਸਿੰਘ, ਅੰਮ੍ਰਿਤਾ ਪ੍ਰੀਤਮ, ਸ਼ਿਵ ਕੁਮਾਰ, ਪਾਸ਼ ਅਤੇ ਸੁਰਜੀਤ ਪਾਤਰ',
-            hi: 'आधुनिक पंजाबी कविता: भाई वीर सिंह, अमृता प्रीतम, शिव कुमार, पाश एवं सुरजीत पातर'
+            en: "Modern Punjabi Poetry: Progressive Movement, Experimentalism & Award-Winning Poets",
+            pa: "ਆਧੁਨਿਕ ਪੰਜਾਬੀ ਕਵਿਤਾ: ਭਾਈ ਵੀਰ ਸਿੰਘ, ਅੰਮ੍ਰਿਤਾ ਪ੍ਰੀਤਮ, ਸ਼ਿਵ ਕੁਮਾਰ, ਪਾਸ਼ ਅਤੇ ਸੁਰਜੀਤ ਪਾਤਰ",
+            hi: "आधुनिक पंजाबी कविता: भाई वीर सिंह, अमृता प्रीतम, शिव कुमार, पाश एवं सुरजीत पातर"
         },
-        examRelevance: 'Punjab Master Cadre Punjabi (Modern Poetry — 25 to 30 Qs)'
+        examRelevance: "Punjab Master Cadre Punjabi (Modern Poetry — 25 to 30 Qs)"
     },
-    'punjabi-lit-prose-drama': {
-        category: 'language',
+    "punjabi-lit-prose-drama": {
+        category: "language",
         title: {
-            en: 'Modern Punjabi Prose & Theatre: Drama, One-Act Play, Novel, Short Story & Autobiography',
-            pa: 'ਪੰਜਾਬੀ ਵਾਰਤਕ ਅਤੇ ਰੰਗਮੰਚ: ਨਾਟਕ, ਇਕਾਂਗੀ, ਨਾਵਲ, ਨਿੱਕੀ ਕਹਾਣੀ ਅਤੇ ਸਵੈ-ਜੀਵਨੀ',
-            hi: 'पंजाबी गद्य एवं रंगमंच: नाटक, एकांकी, उपन्यास, कहानी एवं आत्मकथा'
+            en: "Modern Punjabi Prose & Theatre: Drama, One-Act Play, Novel, Short Story & Autobiography",
+            pa: "ਪੰਜਾਬੀ ਵਾਰਤਕ ਅਤੇ ਰੰਗਮੰਚ: ਨਾਟਕ, ਇਕਾਂਗੀ, ਨਾਵਲ, ਨਿੱਕੀ ਕਹਾਣੀ ਅਤੇ ਸਵੈ-ਜੀਵਨੀ",
+            hi: "पंजाबी गद्य एवं रंगमंच: नाटक, एकांकी, उपन्यास, कहानी एवं आत्मकथा"
         },
-        examRelevance: 'Punjab Master Cadre Punjabi (Prose, Drama & Fiction — 25 to 30 Qs)'
+        examRelevance: "Punjab Master Cadre Punjabi (Prose, Drama & Fiction — 25 to 30 Qs)"
     },
-    'punjabi-vyakaran-linguistics': {
-        category: 'language',
+    "punjabi-vyakaran-linguistics": {
+        category: "language",
         title: {
-            en: 'Punjabi Grammar & Linguistics: Gurmukhi Script Evolution, Phonology, Morphology & Syntax',
-            pa: 'ਪੰਜਾਬੀ ਵਿਆਕਰਨ ਅਤੇ ਭਾਸ਼ਾ ਵਿਗਿਆਨ: ਗੁਰਮੁਖੀ ਲਿਪੀ ਨਿਕਾਸ, ਧੁਨੀ ਵਿਉਂਤ, ਸ਼ਬਦ ਤੇ ਵਾਕ ਬਣਤਰ',
-            hi: 'पंजाबी व्याकरण एवं भाषा विज्ञान: गुरमुखी लिपि विकास, ध्वनि विचार, शब्द एवं वाक्य विचार'
+            en: "Punjabi Grammar & Linguistics: Gurmukhi Script Evolution, Phonology, Morphology & Syntax",
+            pa: "ਪੰਜਾਬੀ ਵਿਆਕਰਨ ਅਤੇ ਭਾਸ਼ਾ ਵਿਗਿਆਨ: ਗੁਰਮੁਖੀ ਲਿਪੀ ਨਿਕਾਸ, ਧੁਨੀ ਵਿਉਂਤ, ਸ਼ਬਦ ਤੇ ਵਾਕ ਬਣਤਰ",
+            hi: "पंजाबी व्याकरण एवं भाषा विज्ञान: गुरमुखी लिपि विकास, ध्वनि विचार, शब्द एवं वाक्य विचार"
         },
-        examRelevance: 'Punjab Master Cadre Punjabi (Grammar & Linguistics — 30 to 35 Qs)'
+        examRelevance: "Punjab Master Cadre Punjabi (Grammar & Linguistics — 30 to 35 Qs)"
     },
 
     // PSTET Pedagogy (5 Topics)
-    'pstet-cdp-core': {
-        category: 'pedagogy',
+    "pstet-cdp-core": {
+        category: "pedagogy",
         title: {
-            en: 'Child Development, Learning Theories (Piaget, Vygotsky, Kohlberg) & Inclusive Education',
-            pa: 'ਬਾਲ ਵਿਕਾਸ, ਸਿੱਖਣ ਸਿਧਾਂਤ (ਪਿਆਜੇ, ਵਾਈਗੋਤਸਕੀ, ਕੋਹਲਬਰਗ) ਅਤੇ ਸਮਾਵੇਸ਼ੀ ਸਿੱਖਿਆ',
-            hi: 'बाल विकास, अधिगम सिद्धांत (पियाजे, वाइगोत्स्की, कोहलबर्ग) एवं समावेशी शिक्षा'
+            en: "Child Development, Learning Theories (Piaget, Vygotsky, Kohlberg) & Inclusive Education",
+            pa: "ਬਾਲ ਵਿਕਾਸ, ਸਿੱਖਣ ਸਿਧਾਂਤ (ਪਿਆਜੇ, ਵਾਈਗੋਤਸਕੀ, ਕੋਹਲਬਰਗ) ਅਤੇ ਸਮਾਵੇਸ਼ੀ ਸਿੱਖਿਆ",
+            hi: "बाल विकास, अधिगम सिद्धांत (पियाजे, वाइगोत्स्की, कोहलबर्ग) एवं समावेशी शिक्षा"
         },
-        examRelevance: 'Punjab PSTET (Child Development & Pedagogy — 30 Qs)'
+        examRelevance: "Punjab PSTET (Child Development & Pedagogy — 30 Qs)"
     },
-    'pstet-punjabi-pedagogy': {
-        category: 'pedagogy',
+    "pstet-punjabi-pedagogy": {
+        category: "pedagogy",
         title: {
-            en: 'Punjabi Language Pedagogy: LSRW Skills, Teaching Methods, Remedial Teaching & CCE',
-            pa: 'ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਅਧਿਆਪਨ: ਭਾਸ਼ਾਈ ਕੌਸ਼ਲ (ਸੁਣਨਾ, ਬੋਲਣਾ, ਪੜ੍ਹਨਾ, ਲਿਖਣਾ), ਵਿਧੀਆਂ ਤੇ ਮੁਲਾਂਕਣ',
-            hi: 'पंजाबी भाषा शिक्षण शास्त्र: भाषाई कौशल (LSRW), शिक्षण विधियां एवं सतत व्यापक मूल्यांकन'
+            en: "Punjabi Language Pedagogy: LSRW Skills, Teaching Methods, Remedial Teaching & CCE",
+            pa: "ਪੰਜਾਬੀ ਭਾਸ਼ਾ ਅਧਿਆਪਨ: ਭਾਸ਼ਾਈ ਕੌਸ਼ਲ (ਸੁਣਨਾ, ਬੋਲਣਾ, ਪੜ੍ਹਨਾ, ਲਿਖਣਾ), ਵਿਧੀਆਂ ਤੇ ਮੁਲਾਂਕਣ",
+            hi: "पंजाबी भाषा शिक्षण शास्त्र: भाषाई कौशल (LSRW), शिक्षण विधियां एवं सतत व्यापक मूल्यांकन"
         },
-        examRelevance: 'Punjab PSTET (Language I Punjabi Pedagogy — 15 Qs)'
+        examRelevance: "Punjab PSTET (Language I Punjabi Pedagogy — 15 Qs)"
     },
-    'pstet-english-pedagogy': {
-        category: 'pedagogy',
+    "pstet-english-pedagogy": {
+        category: "pedagogy",
         title: {
-            en: 'English Language Teaching (ELT): Acquisition vs Learning, Principles & Diagnostic Testing',
-            pa: 'ਅੰਗਰੇਜ਼ੀ ਭਾਸ਼ਾ ਅਧਿਆਪਨ (ELT): ਸਿੱਖਣ ਸਿਧਾਂਤ, ਵਿਧੀਆਂ ਅਤੇ ਉਪਚਾਰਾਤਮਕ ਸਿੱਖਿਆ',
-            hi: 'अंग्रेजी भाषा शिक्षण शास्त्र: भाषा अर्जन बनाम अधिगम, सिद्धांत एवं उपचारात्मक शिक्षण'
+            en: "English Language Teaching (ELT): Acquisition vs Learning, Principles & Diagnostic Testing",
+            pa: "ਅੰਗਰੇਜ਼ੀ ਭਾਸ਼ਾ ਅਧਿਆਪਨ (ELT): ਸਿੱਖਣ ਸਿਧਾਂਤ, ਵਿਧੀਆਂ ਅਤੇ ਉਪਚਾਰਾਤਮਕ ਸਿੱਖਿਆ",
+            hi: "अंग्रेजी भाषा शिक्षण शास्त्र: भाषा अर्जन बनाम अधिगम, सिद्धांत एवं उपचारात्मक शिक्षण"
         },
-        examRelevance: 'Punjab PSTET (Language II English Pedagogy — 15 Qs)'
+        examRelevance: "Punjab PSTET (Language II English Pedagogy — 15 Qs)"
     },
-    'pstet-math-pedagogy': {
-        category: 'pedagogy',
+    "pstet-math-pedagogy": {
+        category: "pedagogy",
         title: {
-            en: 'Mathematics Pedagogy: Nature of Math, Curriculum Placement, Diagnostic & Remedial Teaching',
-            pa: 'ਗਣਿਤ ਅਧਿਆਪਨ: ਗਣਿਤ ਦੀ ਪ੍ਰਕਿਰਤੀ, ਪਾਠਕ੍ਰਮ ਵਿੱਚ ਸਥਾਨ, ਨਿਦਾਨਾਤਮਕ ਅਤੇ ਉਪਚਾਰਾਤਮਕ ਸਿੱਖਿਆ',
-            hi: 'गणित शिक्षण शास्त्र: गणित की प्रकृति, पाठ्यक्रम में स्थान, निदानात्मक व उपचारात्मक शिक्षण'
+            en: "Mathematics Pedagogy: Nature of Math, Curriculum Placement, Diagnostic & Remedial Teaching",
+            pa: "ਗਣਿਤ ਅਧਿਆਪਨ: ਗਣਿਤ ਦੀ ਪ੍ਰਕਿਰਤੀ, ਪਾਠਕ੍ਰਮ ਵਿੱਚ ਸਥਾਨ, ਨਿਦਾਨਾਤਮਕ ਅਤੇ ਉਪਚਾਰਾਤਮਕ ਸਿੱਖਿਆ",
+            hi: "गणित शिक्षण शास्त्र: गणित की प्रकृति, पाठ्यक्रम में स्थान, निदानात्मक व उपचारात्मक शिक्षण"
         },
-        examRelevance: 'Punjab PSTET (Mathematics Pedagogy — 15 Qs)'
+        examRelevance: "Punjab PSTET (Mathematics Pedagogy — 15 Qs)"
     },
-    'pstet-evs-pedagogy': {
-        category: 'pedagogy',
+    "pstet-evs-pedagogy": {
+        category: "pedagogy",
         title: {
-            en: 'EVS Pedagogy: Integrated EVS, 6 Themes, Environmental Sensitivity & Activity-Based Learning',
-            pa: 'ਵਾਤਾਵਰਨ ਸਿੱਖਿਆ (EVS) ਅਧਿਆਪਨ: ਏਕੀਕ੍ਰਿਤ EVS, 6 ਮੁੱਖ ਵਿਸ਼ੇ ਅਤੇ ਗਤੀਵਿਧੀ-ਅਧਾਰਿਤ ਸਿੱਖਿਆ',
-            hi: 'पर्यावरण अध्ययन (EVS) शिक्षण शास्त्र: एकीकृत EVS, 6 मुख्य विषय एवं गतिविधि आधारित शिक्षण'
+            en: "EVS Pedagogy: Integrated EVS, 6 Themes, Environmental Sensitivity & Activity-Based Learning",
+            pa: "ਵਾਤਾਵਰਨ ਸਿੱਖਿਆ (EVS) ਅਧਿਆਪਨ: ਏਕੀਕ੍ਰਿਤ EVS, 6 ਮੁੱਖ ਵਿਸ਼ੇ ਅਤੇ ਗਤੀਵਿਧੀ-ਅਧਾਰਿਤ ਸਿੱਖਿਆ",
+            hi: "पर्यावरण अध्ययन (EVS) शिक्षण शास्त्र: एकीकृत EVS, 6 मुख्य विषय एवं गतिविधि आधारित शिक्षण"
         },
-        examRelevance: 'Punjab PSTET (EVS Pedagogy — 15 Qs)'
+        examRelevance: "Punjab PSTET (EVS Pedagogy — 15 Qs)"
     },
 
     // Rajasthan 3rd Grade Teacher (3 Topics)
-    'rajasthan-geography-drainage': {
-        category: 'rajasthan',
+    "rajasthan-geography-drainage": {
+        category: "rajasthan",
         title: {
-            en: 'Rajasthan Geography: 4 Physical Divisions, Drainage Systems, Lakes & Mineral Wealth',
-            pa: 'ਰਾਜਸਥਾਨ ਭੂਗੋਲ: ਭੌਤਿਕ ਵੰਡ, ਨਦੀ ਪ੍ਰਣਾਲੀ, ਝੀਲਾਂ, ਜਲਵਾਯੂ ਅਤੇ ਖਣਿਜ ਸੰਪਤੀ',
-            hi: 'राजस्थान भूगोल: भौतिक प्रदेश, अपवाह तंत्र (नदियां व झीलें), जलवायु एवं खनिज संपदा'
+            en: "Rajasthan Geography: 4 Physical Divisions, Drainage Systems, Lakes & Mineral Wealth",
+            pa: "ਰਾਜਸਥਾਨ ਭੂਗੋਲ: ਭੌਤਿਕ ਵੰਡ, ਨਦੀ ਪ੍ਰਣਾਲੀ, ਝੀਲਾਂ, ਜਲਵਾਯੂ ਅਤੇ ਖਣਿਜ ਸੰਪਤੀ",
+            hi: "राजस्थान भूगोल: भौतिक प्रदेश, अपवाह तंत्र (नदियां व झीलें), जलवायु एवं खनिज संपदा"
         },
-        examRelevance: 'RSMSSB Rajasthan 3rd Grade Teacher (Geography & Drainage — 30 to 40 Marks)'
+        examRelevance: "RSMSSB Rajasthan 3rd Grade Teacher (Geography & Drainage — 30 to 40 Marks)"
     },
-    'rajasthan-history-culture': {
-        category: 'rajasthan',
+    "rajasthan-history-culture": {
+        category: "rajasthan",
         title: {
-            en: 'Rajasthan History & Heritage: Ancient Civilizations, Forts, 1857 Revolt, Lok Devtas & Fairs',
-            pa: 'ਰਾਜਸਥਾਨ ਇਤਿਹਾਸ ਤੇ ਸੱਭਿਆਚਾਰ: ਪ੍ਰਾਚੀਨ ਸੱਭਿਅਤਾਵਾਂ, ਕਿਲ੍ਹੇ, 1857 ਵਿਦਰੋਹ, ਲੋਕ ਦੇਵਤੇ ਅਤੇ ਮੇਲੇ',
-            hi: 'राजस्थान इतिहास एवं संस्कृति: प्राचीन सभ्यताएं, दुर्ग, 1857 क्रांति, लोक देवता एवं मेले'
+            en: "Rajasthan History & Heritage: Ancient Civilizations, Forts, 1857 Revolt, Lok Devtas & Fairs",
+            pa: "ਰਾਜਸਥਾਨ ਇਤਿਹਾਸ ਤੇ ਸੱਭਿਆਚਾਰ: ਪ੍ਰਾਚੀਨ ਸੱਭਿਅਤਾਵਾਂ, ਕਿਲ੍ਹੇ, 1857 ਵਿਦਰੋਹ, ਲੋਕ ਦੇਵਤੇ ਅਤੇ ਮੇਲੇ",
+            hi: "राजस्थान इतिहास एवं संस्कृति: प्राचीन सभ्यताएं, दुर्ग, 1857 क्रांति, लोक देवता एवं मेले"
         },
-        examRelevance: 'RSMSSB Rajasthan 3rd Grade Teacher (History, Art & Culture — 40 to 50 Marks)'
+        examRelevance: "RSMSSB Rajasthan 3rd Grade Teacher (History, Art & Culture — 40 to 50 Marks)"
     },
-    'rajasthan-edu-psychology-rte': {
-        category: 'rajasthan',
+    "rajasthan-edu-psychology-rte": {
+        category: "rajasthan",
         title: {
-            en: 'Educational Psychology, RTE Act 2009, Rajasthan RTE Rules 2011 & Educational Scenario',
-            pa: 'ਸਿੱਖਿਆ ਮਨੋਵਿਗਿਆਨ, RTE ਐਕਟ 2009, ਰਾਜਸਥਾਨ RTE ਨਿਯਮ 2011 ਅਤੇ ਰਾਜ ਵਿੱਦਿਅਕ ਪਰਿਦ੍ਰਿਸ਼',
-            hi: 'शैक्षिक मनोविज्ञान, बाल अधिकार (RTE Act 2009), राजस्थान RTE नियम 2011 एवं शैक्षिक परिदृश्य'
+            en: "Educational Psychology, RTE Act 2009, Rajasthan RTE Rules 2011 & Educational Scenario",
+            pa: "ਸਿੱਖਿਆ ਮਨੋਵਿਗਿਆਨ, RTE ਐਕਟ 2009, ਰਾਜਸਥਾਨ RTE ਨਿਯਮ 2011 ਅਤੇ ਰਾਜ ਵਿੱਦਿਅਕ ਪਰਿਦ੍ਰਿਸ਼",
+            hi: "शैक्षिक मनोविज्ञान, बाल अधिकार (RTE Act 2009), राजस्थान RTE नियम 2011 एवं शैक्षिक परिदृश्य"
         },
-        examRelevance: 'RSMSSB Rajasthan 3rd Grade Teacher (Psychology & RTE — 30 to 40 Marks)'
+        examRelevance: "RSMSSB Rajasthan 3rd Grade Teacher (Psychology & RTE — 30 to 40 Marks)"
     },
 
     // Army Agniveer GD (4 Topics)
-    'agniveer-gk-military': {
-        category: 'general',
+    "agniveer-gk-military": {
+        category: "general",
         title: {
-            en: 'Agniveer General Knowledge: Indian Armed Forces, Military Heritage, Geography & Polity',
-            pa: 'ਅਗਨੀਵੀਰ ਜਨਰਲ ਨਾਲਜ: ਭਾਰਤੀ ਹਥਿਆਰਬੰਦ ਫੌਜਾਂ, ਫੌਜੀ ਵਿਰਾਸਤ, ਭੂਗੋਲ ਅਤੇ ਸੰਵਿਧਾਨ',
-            hi: 'अग्निवीर सामान्य ज्ञान: भारतीय सशस्त्र बल, सैन्य परंपराएं, भारत का भूगोल एवं संविधान'
+            en: "Agniveer General Knowledge: Indian Armed Forces, Military Heritage, Geography & Polity",
+            pa: "ਅਗਨੀਵੀਰ ਜਨਰਲ ਨਾਲਜ: ਭਾਰਤੀ ਹਥਿਆਰਬੰਦ ਫੌਜਾਂ, ਫੌਜੀ ਵਿਰਾਸਤ, ਭੂਗੋਲ ਅਤੇ ਸੰਵਿਧਾਨ",
+            hi: "अग्निवीर सामान्य ज्ञान: भारतीय सशस्त्र बल, सैन्य परंपराएं, भारत का भूगोल एवं संविधान"
         },
-        examRelevance: 'Indian Army Agniveer GD (General Knowledge — 15 Qs / 30 Marks)'
+        examRelevance: "Indian Army Agniveer GD (General Knowledge — 15 Qs / 30 Marks)"
     },
-    'agniveer-general-science': {
-        category: 'science',
+    "agniveer-general-science": {
+        category: "science",
         title: {
-            en: 'Agniveer General Science: Physics, Chemistry & Biology Matric Essentials',
-            pa: 'ਅਗਨੀਵੀਰ ਜਨਰਲ ਸਾਇੰਸ: ਭੌਤਿਕ ਵਿਗਿਆਨ, ਰਸਾਇਣ ਵਿਗਿਆਨ ਅਤੇ ਜੀਵ ਵਿਗਿਆਨ (ਦਸਵੀਂ ਪੱਧਰ)',
-            hi: 'अग्निवीर सामान्य विज्ञान: भौतिकी, रसायन एवं जीव विज्ञान (मैट्रिक स्तर)'
+            en: "Agniveer General Science: Physics, Chemistry & Biology Matric Essentials",
+            pa: "ਅਗਨੀਵੀਰ ਜਨਰਲ ਸਾਇੰਸ: ਭੌਤਿਕ ਵਿਗਿਆਨ, ਰਸਾਇਣ ਵਿਗਿਆਨ ਅਤੇ ਜੀਵ ਵਿਗਿਆਨ (ਦਸਵੀਂ ਪੱਧਰ)",
+            hi: "अग्निवीर सामान्य विज्ञान: भौतिकी, रसायन एवं जीव विज्ञान (मैट्रिक स्तर)"
         },
-        examRelevance: 'Indian Army Agniveer GD (General Science — 15 Qs / 30 Marks)'
+        examRelevance: "Indian Army Agniveer GD (General Science — 15 Qs / 30 Marks)"
     },
-    'agniveer-math-foundation': {
-        category: 'math',
+    "agniveer-math-foundation": {
+        category: "math",
         title: {
-            en: 'Agniveer Elementary Mathematics: Arithmetic, Algebra, Geometry, Mensuration & Trigonometry',
-            pa: 'ਅਗਨੀਵੀਰ ਮੁੱਢਲਾ ਗਣਿਤ: ਅੰਕਗਣਿਤ, ਅਲਜਬਰਾ, ਖੇਤਰਮਿਤੀ (ਮੈਂਸੁਰੇਸ਼ਨ) ਅਤੇ ਤ੍ਰਿਕੋਣਮਿਤੀ',
-            hi: 'अग्निवीर प्रारंभिक गणित: अंकगणित, बीजगणित, क्षेत्रमिति एवं त्रिकोणमिति'
+            en: "Agniveer Elementary Mathematics: Arithmetic, Algebra, Geometry, Mensuration & Trigonometry",
+            pa: "ਅਗਨੀਵੀਰ ਮੁੱਢਲਾ ਗਣਿਤ: ਅੰਕਗਣਿਤ, ਅਲਜਬਰਾ, ਖੇਤਰਮਿਤੀ (ਮੈਂਸੁਰੇਸ਼ਨ) ਅਤੇ ਤ੍ਰਿਕੋਣਮਿਤੀ",
+            hi: "अग्निवीर प्रारंभिक गणित: अंकगणित, बीजगणित, क्षेत्रमिति एवं त्रिकोणमिति"
         },
-        examRelevance: 'Indian Army Agniveer GD (Mathematics — 15 Qs / 30 Marks)'
+        examRelevance: "Indian Army Agniveer GD (Mathematics — 15 Qs / 30 Marks)"
     },
-    'agniveer-reasoning-ability': {
-        category: 'general',
+    "agniveer-reasoning-ability": {
+        category: "general",
         title: {
-            en: 'Agniveer Logical Reasoning: Coding-Decoding, Number Series, Blood Relations & Directions',
-            pa: 'ਅਗਨੀਵੀਰ ਤਰਕਸ਼ਕਤੀ (ਰੀਜ਼ਨਿੰਗ): ਕੋਡਿੰਗ-ਡੀਕੋਡਿੰਗ, ਸੰਖਿਆ ਲੜੀ, ਖੂਨ ਦੇ ਰਿਸ਼ਤੇ ਅਤੇ ਦਿਸ਼ਾ ਗਿਆਨ',
-            hi: 'अग्निवीर तार्किक क्षमता: कोडिंग-डिकोडिंग, श्रेणी, रक्त संबंध एवं दिशा ज्ञान'
+            en: "Agniveer Logical Reasoning: Coding-Decoding, Number Series, Blood Relations & Directions",
+            pa: "ਅਗਨੀਵੀਰ ਤਰਕਸ਼ਕਤੀ (ਰੀਜ਼ਨਿੰਗ): ਕੋਡਿੰਗ-ਡੀਕੋਡਿੰਗ, ਸੰਖਿਆ ਲੜੀ, ਖੂਨ ਦੇ ਰਿਸ਼ਤੇ ਅਤੇ ਦਿਸ਼ਾ ਗਿਆਨ",
+            hi: "अग्निवीर तार्किक क्षमता: कोडिंग-डिकोडिंग, श्रेणी, रक्त संबंध एवं दिशा ज्ञान"
         },
-        examRelevance: 'Indian Army Agniveer GD (Logical Reasoning — 5 Qs / 10 Marks)'
+        examRelevance: "Indian Army Agniveer GD (Logical Reasoning — 5 Qs / 10 Marks)"
     }
 };
 
@@ -990,6 +1007,9 @@ export const MASTER_CADRE_BLUEPRINT_LESSONS: Record<string, Lesson> = {
     ),
     ...Object.fromEntries(
         MASTER_CADRE_SCIENCE_BIOLOGY_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
+    ),
+    ...Object.fromEntries(
+        MASTER_CADRE_MATH_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])
     ),
     ...Object.fromEntries(
         ETT_PUNJABI_LANGUAGES_BLUEPRINT_LESSONS.map((item) => [item.topicId, adaptBlueprintLesson(item)])

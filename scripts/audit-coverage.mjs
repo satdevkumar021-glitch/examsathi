@@ -13,7 +13,7 @@ function load(file) {
   if (cache.has(file)) return cache.get(file).exports;
   const loaded = { exports: {} }; cache.set(file, loaded);
   const js = ts.transpileModule(readFileSync(file, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
-  vm.runInNewContext(js, { module: loaded, exports: loaded.exports, require: name => load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)), window, Event: class Event {}, Date, Math, Set, Map, process, console });
+  vm.runInNewContext(js, { module: loaded, exports: loaded.exports, require: name => name === 'server-only' ? {} : load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)), window, Event: class Event {}, Date, Math, Set, Map, process, console });
   return loaded.exports;
 }
 

@@ -39,7 +39,7 @@ export default function StreakBadge({ streak = 0 }: { streak?: number }) {
       {currentStreak > 0 ? (
         <Flame size={16} className="text-amber-500 fill-amber-500 animate-pulse" />
       ) : (
-        <Flame size={16} className="text-slate-500" />
+        <Flame size={16} className="text-slate-400" />
       )}
       <span className={currentStreak > 0 ? "text-amber-400 font-bold text-sm" : "text-slate-400 font-bold text-sm"}>
         {currentStreak}

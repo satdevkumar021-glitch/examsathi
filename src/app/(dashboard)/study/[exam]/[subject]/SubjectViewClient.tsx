@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { getQuestionPool } from '@/lib/data/question_bank_engine';
+import { useManifest } from '@/lib/use-question-data';
 import { useStore } from '@/lib/store';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Target, ChevronRight } from 'lucide-react';
@@ -15,6 +15,7 @@ export default function SubjectView({ exam: examId, subject: subjectId }: { exam
 function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) {
   const examId = exam.id;
   const router = useRouter();
+  const manifest = useManifest([examId]);
   const { language } = useStore();
   const localName = (item: { name: string; nameHindi?: string; namePunjabi?: string }) => language === 'pa' ? item.namePunjabi || item.nameHindi || item.name : language === 'hi' ? item.nameHindi || item.name : item.name;
   useEffect(() => { const selected = getExamById(examId); if (selected) useStore.getState().setSelectedExam(selected.state, selected.id); }, [examId]);
@@ -76,7 +77,20 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
         </div>
       </div>
 
-      {exam.syllabusStatus === 'provisional-archive' && <Link href="/syllabus/punjab-ett/" className="rounded-lg border border-amber-700 p-3 text-sm text-amber-200">5994 Paper B archival reference. Upcoming notification and publisher verification pending. Qualifying Paper A is separate. Open source pages and coverage status →</Link>}
+      {exam.syllabusStatus === 'provisional-archive' && (
+        exam.id === 'punjab-ett'
+          ? <Link href="/syllabus/punjab-ett/" className="rounded-lg border border-amber-700 p-3 text-sm text-amber-200">5994 Paper B archival reference. Upcoming notification and publisher verification pending. Qualifying Paper A is separate. Open source pages and coverage status →</Link>
+          : <div className="rounded-lg border border-amber-700/70 bg-amber-950/30 p-3 text-sm text-amber-200">
+              <span className="font-semibold">⚠ Source not yet verified.</span>{' '}
+              This exam&apos;s syllabus and official notification have not been independently confirmed for the current cycle.
+              Content is provided for practice reference only.{' '}
+              {exam.officialWebsite && (
+                <a href={exam.officialWebsite} target="_blank" rel="noopener noreferrer" className="underline text-amber-300">
+                  Check official site ↗
+                </a>
+              )}
+            </div>
+      )}
 
       {/* Subject Selector Tabs (if multiple subjects exist) */}
       {availableSubjects.length > 1 && (
@@ -111,7 +125,7 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
               <button
                 key={ch.id}
                 onClick={() => setActiveChapterId(ch.id)}
-                className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold transition border ${isActive ? 'bg-teal-600/30 border-teal-500 text-teal-300' : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'}`}
+                className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-semibold transition border ${isActive ? 'bg-teal-700/30 border-teal-500 text-teal-300' : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'}`}
               >
                 {localName(ch)}
               </button>
@@ -150,8 +164,8 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
                   </div>
                 </div>
 
-                <span className="bg-slate-700/80 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
-                  {getQuestionPool({examId, topicId: topic.id}).length} practice Qs
+                <span className="bg-slate-700/80 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full whitespace-nowrap shrink-0">
+                  {manifest ? (manifest[examId]?.[topic.id] ?? 0) : '…'} practice Qs
                 </span>
               </div>
 
@@ -159,14 +173,14 @@ function SubjectContent({ exam, subjectId }: { exam: Exam; subjectId: string }) 
               {topic.materialStatus === 'pending' && <p className="text-xs text-amber-200">Detailed lesson and dedicated question bank pending · विस्तृत पाठ बाकी · ਵਿਸਥਾਰ ਵਾਲਾ ਪਾਠ ਬਾਕੀ</p>}
               {topic.subtopics && topic.subtopics.length > 0 && (
                 <div className="bg-slate-900/60 rounded-xl p-2.5 border border-slate-700/50">
-                  <span className="text-[10px] text-slate-400 font-semibold block mb-1.5 uppercase tracking-wider">
+                  <span className="text-xs text-slate-400 font-semibold block mb-1.5 uppercase tracking-wider">
                     Syllabus Subtopics ({topic.subtopics.length}):
                   </span>
                   <div className="flex flex-wrap gap-1.5">
                     {topic.subtopics.map((sub, sIdx) => (
                       <span
                         key={sIdx}
-                        className="bg-slate-800 border border-slate-700/80 text-slate-300 text-[10px] px-2 py-0.5 rounded-md leading-tight"
+                        className="bg-slate-800 border border-slate-700/80 text-slate-300 text-xs px-2 py-0.5 rounded-md leading-tight"
                       >
                         {sub}
                       </span>

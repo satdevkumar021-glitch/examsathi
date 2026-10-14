@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { TOPIC_DOCUMENTS } from '@/lib/data/topic-resources';
 import { ALL_EXAMS } from '@/lib/data/exams';
 import { getLessonByTopicId } from '@/lib/data/lessons';
-import { getTestQuestions } from '@/lib/data/question_bank_engine';
+import { poolCount } from '@/lib/question-service';
 export default function SyllabusPage() {
   return <div className="max-w-4xl mx-auto p-5 space-y-5 text-slate-200">
     <h1 className="text-2xl font-bold text-white">Exam syllabus & coverage</h1>
@@ -34,7 +34,7 @@ export default function SyllabusPage() {
         {subject.chapters.map(chapter => <div key={chapter.id}><h3 className="text-indigo-200">{chapter.name}</h3>
           {chapter.topics.map(topic => {
             const lesson = getLessonByTopicId(topic.id);
-            const available = getTestQuestions({ topicId: topic.id, examId: exam.id, count: 150 }).length;
+            const available = poolCount({ topicId: topic.id, examId: exam.id, limit: 150 }, []);
             return <article key={topic.id} className="my-3 border border-slate-700 rounded-lg p-3">
               <h4 className="font-semibold">{topic.name}</h4>
               {exam.id === 'punjab-ett' && topic.sourcePages?.map(page => <a key={page} className="text-xs underline text-teal-300" href={`https://entri.app/blog/wp-content/uploads/2022/12/SyllabusPaperB01_12_2022.pdf#page=${page}`} target="_blank" rel="noopener noreferrer">Archival mirror · page {page} ↗ </a>)}

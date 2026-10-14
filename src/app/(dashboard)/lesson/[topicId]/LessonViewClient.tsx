@@ -4,9 +4,11 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, BookOpen, Edit3, Layers, Video, CheckCircle2, HelpCircle, ChevronLeft, ChevronRight, Bookmark, Sparkles, FileText, Download, ExternalLink, ShieldCheck, Target, AlertTriangle, Search, Trash2, Undo2 } from 'lucide-react';
-import { getLessonByTopicId, Lesson } from '@/lib/data/lessons';
-import { getTestQuestions } from '@/lib/data/question_bank_engine';
-import { Question } from '@/lib/data/questions';
+import type { Lesson } from '@/lib/data/lessons/types';
+import { fetchQuestionSet, fetchReveals } from '@/lib/question-client';
+import { fetchResources } from '@/lib/resources-client';
+import type { PublicResource } from '@/lib/resource-content';
+import type { PublicQuestion, QuestionReveal } from '@/lib/question-types';
 import FlipCard from '@/components/ui/FlipCard';
 import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
@@ -26,8 +28,7 @@ import {
   migrateLegacyTopicNotes,
 } from '@/lib/personal-notes';
 
-export default function LessonView({ topicId }: { topicId: string }) {
-  const lesson = getLessonByTopicId(topicId);
+export default function LessonView({ topicId, lesson }: { topicId: string; lesson: Lesson | undefined }) {
   if (!lesson) return <div className="p-6 text-slate-200"><h1 className="text-xl font-bold">Study material is being prepared</h1><p>This topic does not yet have a reviewed lesson. Check the syllabus and official resources.</p><Link href="/syllabus" className="text-teal-300 underline">Browse syllabus coverage</Link></div>;
   return <LessonContent key={topicId} topicId={topicId} lesson={lesson} />;
 }
@@ -55,31 +56,45 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
   const [rightsConfirmed, setRightsConfirmed] = useState(false);
   const [contributeSubmitted, setContributeSubmitted] = useState(false);
 
+  // Lessons, videos and links that educators wrote and a reviewer approved. They add to, never replace, the built-in lesson.
+  const [educatorItems, setEducatorItems] = useState<PublicResource[]>([]);
+  useEffect(() => {
+    let live = true;
+    fetchResources([topicId, lesson.id]).then(items => { if (live) setEducatorItems(items); });
+    return () => { live = false; };
+  }, [topicId, lesson.id]);
+  const educatorLessons = educatorItems.filter(item => item.lesson);
+  const educatorVideos = educatorItems.filter(item => item.video);
+  const educatorDocs = educatorItems.filter(item => item.document);
+  const pick = (value: { en?: string; hi?: string; pa?: string } | undefined) => value?.[lang] || value?.en || value?.hi || value?.pa || '';
+
   const [practiceCount, setPracticeCount] = useState(10);
   const [effectiveExamId, setEffectiveExamId] = useState<string>('all');
-  const [topicQuestions, setTopicQuestions] = useState(() => {
-    const storedExam = useStore.getState().selectedExam || undefined;
-    const scoped = getTestQuestions({ topicId, examId: storedExam, count: 10 });
-    return scoped.length > 0 ? scoped : getTestQuestions({ topicId, count: 10 });
-  });
+  const [topicQuestions, setTopicQuestions] = useState<PublicQuestion[]>([]);
+  const [practiceError, setPracticeError] = useState('');
+  const [revealed, setRevealed] = useState<Record<string, QuestionReveal>>({});
+
+  // The question bank lives on the server: draw a topic set, falling back to any exam when this one has none.
+  const drawPractice = async (examId: string | undefined, count: number) => {
+    const scoped = examId ? (await fetchQuestionSet({ topicId, examId, count })).questions : [];
+    if (scoped.length > 0) return { questions: scoped, examId: examId as string };
+    return { questions: (await fetchQuestionSet({ topicId, count })).questions, examId: undefined };
+  };
 
   useEffect(() => {
     const requested = new URLSearchParams(window.location.search).get('exam');
     const resolved = requested ? practiceExam(requested) : undefined;
     const examId = resolved ? normalizePracticeExamId(requested!) : selectedExam || undefined;
     if (resolved && selectedExam !== examId) setSelectedExam(resolved.state, resolved.id);
-    const scoped = getTestQuestions({ topicId, examId, count: practiceCount });
-    if (scoped.length > 0) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- Recompute bounded practice after preference hydration or a syllabus link changes exam context.
-      setTopicQuestions(scoped);
-      setEffectiveExamId(examId || 'all');
-    } else {
-      setTopicQuestions(getTestQuestions({ topicId, count: practiceCount }));
-      setEffectiveExamId('all');
-    }
-    setSelectedAnswers({});
-    setShowExplanation({});
+    let live = true;
     recordStudyActivity();
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- Reset the answered state while a new set loads.
+    setSelectedAnswers({}); setShowExplanation({}); setRevealed({}); setPracticeError('');
+    drawPractice(examId, practiceCount)
+      .then(({ questions, examId: used }) => { if (live) { setTopicQuestions(questions); setEffectiveExamId(used || 'all'); } })
+      .catch(() => { if (live) { setTopicQuestions([]); setPracticeError('Could not load practice questions. Check your connection and reopen this tab.'); } });
+    return () => { live = false; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- drawPractice only closes over topicId.
   }, [topicId, selectedExam, setSelectedExam, practiceCount]);
 
   // Load personal notes & draft on mount or when exam/topic changes
@@ -195,6 +210,8 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
     setSelectedAnswers(prev => ({ ...prev, [qId]: optKey }));
     setShowExplanation(prev => ({ ...prev, [qId]: true }));
     recordStudyActivity();
+    // The answer is only fetched once the learner has committed to a choice.
+    fetchReveals([qId]).then(found => setRevealed(prev => ({ ...prev, ...found }))).catch(() => setPracticeError('Could not load the answer. Check your connection.'));
   };
 
   const currentCards = lesson.flashcards && lesson.flashcards.length > 0 ? lesson.flashcards : [
@@ -288,7 +305,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
             <FileText size={14} /> 
             <span>{lang === 'pa' ? 'ਸਰੋਤ / PDFs' : lang === 'hi' ? 'दस्तावेज / PDFs' : 'Official PDFs'}</span>
             {lesson.documents && lesson.documents.length > 0 && (
-              <span className="bg-indigo-500/20 text-indigo-300 text-[10px] px-1.5 py-0.2 rounded-full font-mono">
+              <span className="bg-indigo-500/20 text-indigo-300 text-xs px-1.5 py-0.2 rounded-full font-mono">
                 {lesson.documents.length}
               </span>
             )}
@@ -344,16 +361,16 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   </div>
                   <div className="min-w-0">
                     <div className="flex items-center gap-1.5 flex-wrap">
-                      <span className="text-[10px] text-amber-400 font-bold uppercase tracking-wider">
+                      <span className="text-xs text-amber-400 font-bold uppercase tracking-wider">
                         {lang === 'pa' ? 'ਸਰਕਾਰੀ ਸਿਲੇਬਸ ਨਾਲ ਪ੍ਰਮਾਣਿਤ' : 'आधिकारिक सरकारी पाठ्यक्रम से मैप किया गया'}
                       </span>
                       {lesson.syllabusReference.body && (
-                        <span className="text-[10px] bg-indigo-900/60 text-indigo-200 px-1.5 py-0.5 rounded border border-indigo-600/40 font-medium">
+                        <span className="text-xs bg-indigo-900/60 text-indigo-200 px-1.5 py-0.5 rounded border border-indigo-600/40 font-medium">
                           🏛️ {lesson.syllabusReference.body}
                         </span>
                       )}
                       {lesson.syllabusReference.verifiedOn && (
-                        <span className="text-[10px] bg-emerald-950/60 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-600/40 font-medium flex items-center gap-1">
+                        <span className="text-xs bg-emerald-950/60 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-600/40 font-medium flex items-center gap-1">
                           <CheckCircle2 size={10} className="text-emerald-400" />
                           Verified on {lesson.syllabusReference.verifiedOn}
                         </span>
@@ -383,7 +400,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 <span className="text-slate-200 font-medium">{lesson.examRelevance}</span>
               </div>
               {isReadMarked && (
-                <span className="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full text-[10px] font-bold flex items-center gap-1">
+                <span className="bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full text-xs font-bold flex items-center gap-1">
                   <CheckCircle2 size={12} /> {lang === 'pa' ? 'ਪੂਰਾ ਹੋ ਗਿਆ' : 'पूर्ण'}
                 </span>
               )}
@@ -452,6 +469,23 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               dangerouslySetInnerHTML={{ __html: lesson.content[lang] || lesson.content.hi || lesson.content.en }} 
             />
 
+            {/* Reviewed lessons from ExamSathi educators. Plain text only: it is never rendered as HTML. */}
+            {educatorLessons.length > 0 && (
+              <section aria-label="Lessons from educators" className="space-y-3 border-t border-slate-800 pt-4">
+                <h3 className="text-white font-bold text-sm flex items-center gap-2">
+                  <BookOpen size={16} className="text-teal-400" />
+                  {lang === 'pa' ? 'ਅਧਿਆਪਕਾਂ ਵੱਲੋਂ ਵਾਧੂ ਪਾਠ' : lang === 'en' ? 'More lessons from our educators' : 'शिक्षकों की ओर से अतिरिक्त पाठ'}
+                </h3>
+                {educatorLessons.map(item => (
+                  <article key={item.id} className="bg-slate-800/70 border border-slate-700 rounded-xl p-4">
+                    <h4 className="text-white font-bold text-sm mb-2">{pick(item.lesson?.title)}</h4>
+                    <p className="text-slate-200 text-sm leading-relaxed whitespace-pre-wrap">{pick(item.lesson?.body)}</p>
+                    <p className="text-xs text-slate-400 mt-3">{lang === 'en' ? 'Written by an ExamSathi educator and approved by a reviewer.' : 'ExamSathi शिक्षक द्वारा लिखित, समीक्षक द्वारा स्वीकृत।'}</p>
+                  </article>
+                ))}
+              </section>
+            )}
+
             {/* Worked Examples & Step-by-Step Solutions */}
             {lesson.workedExamples && lesson.workedExamples.length > 0 && (
               <div className="space-y-4 my-2">
@@ -462,7 +496,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       {lang === 'pa' ? 'ਹੱਲ ਕੀਤੀਆਂ ਉਦਾਹਰਣਾਂ (Worked Examples)' : lang === 'hi' ? 'हल किए गए उदाहरण (Worked Examples)' : 'Step-by-Step Worked Examples'}
                     </h3>
                   </div>
-                  <span className="text-[10px] bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full font-mono font-bold">
+                  <span className="text-xs bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full font-mono font-bold">
                     {lesson.workedExamples.length} {lang === 'pa' ? 'ਉਦਾਹਰਣਾਂ' : 'उदा.'}
                   </span>
                 </div>
@@ -481,7 +515,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
                       {/* Problem Statement */}
                       <div className="bg-slate-900/70 border border-slate-800 p-3 rounded-xl text-xs text-slate-200 leading-relaxed">
-                        <span className="text-slate-400 font-bold block mb-1 uppercase text-[10px] tracking-wider">
+                        <span className="text-slate-400 font-bold block mb-1 uppercase text-xs tracking-wider">
                           {lang === 'pa' ? 'ਪ੍ਰਸ਼ਨ / ਸਵਾਲ' : lang === 'hi' ? 'प्रश्न / समस्या' : 'Problem Statement'}
                         </span>
                         <p>{ex.problem[lang] || ex.problem.hi || ex.problem.en}</p>
@@ -489,7 +523,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
 
                       {/* Step-by-step reasoning */}
                       <div className="space-y-2 text-xs">
-                        <span className="text-indigo-300 font-bold block uppercase text-[10px] tracking-wider">
+                        <span className="text-indigo-300 font-bold block uppercase text-xs tracking-wider">
                           {lang === 'pa' ? 'ਕਦਮ-ਦਰ-ਕਦਮ ਹੱਲ' : lang === 'hi' ? 'चरणबद्ध समाधान' : 'Step-by-Step Solution'}
                         </span>
                         {(ex.steps[lang] || ex.steps.hi || ex.steps.en || []).map((step, sIdx) => (
@@ -506,7 +540,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       <div className="bg-emerald-950/40 border border-emerald-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2">
                         <CheckCircle2 size={14} className="text-emerald-400 shrink-0 mt-0.5" />
                         <div>
-                          <span className="text-emerald-300 font-bold block text-[10px] uppercase">
+                          <span className="text-emerald-300 font-bold block text-xs uppercase">
                             {lang === 'pa' ? 'ਸਹੀ ਉੱਤਰ / ਨਤੀਜਾ' : lang === 'hi' ? 'अंतिम उत्तर' : 'Final Solution'}
                           </span>
                           <span className="text-slate-200 font-medium">
@@ -520,7 +554,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                         <div className="bg-amber-950/30 border border-amber-500/30 p-2.5 rounded-xl text-xs flex items-start gap-2">
                           <span className="text-amber-400 text-xs shrink-0">💡</span>
                           <div>
-                            <span className="text-amber-300 font-bold block text-[10px] uppercase">
+                            <span className="text-amber-300 font-bold block text-xs uppercase">
                               {lang === 'pa' ? 'ਮੁੱਖ ਸਿੱਖਿਆ' : lang === 'hi' ? 'परीक्षा में याद रखने योग्य' : 'Exam Takeaway'}
                             </span>
                             <span className="text-slate-300">
@@ -552,7 +586,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       <div className="bg-rose-950/40 border border-rose-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2 text-rose-200">
                         <span className="shrink-0 font-bold">❌</span>
                         <div>
-                          <span className="font-bold text-[10px] uppercase text-rose-400 block">
+                          <span className="font-bold text-xs uppercase text-rose-400 block">
                             {lang === 'pa' ? 'ਭੁਲੇਖਾ (Misconception)' : lang === 'hi' ? 'भ्रांति (Misconception)' : 'Misconception'}
                           </span>
                           <p className="leading-relaxed">{misc.misconception[lang] || misc.misconception.hi || misc.misconception.en}</p>
@@ -563,7 +597,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       <div className="bg-emerald-950/40 border border-emerald-500/40 p-2.5 rounded-xl text-xs flex items-start gap-2 text-emerald-200">
                         <span className="shrink-0 font-bold">✅</span>
                         <div>
-                          <span className="font-bold text-[10px] uppercase text-emerald-400 block">
+                          <span className="font-bold text-xs uppercase text-emerald-400 block">
                             {lang === 'pa' ? 'ਪ੍ਰਮਾਣਿਤ ਤੱਥ (Verified Fact)' : lang === 'hi' ? 'सत्यापित तथ्य (Verified Fact)' : 'Verified Correction'}
                           </span>
                           <p className="leading-relaxed">{misc.correction[lang] || misc.correction.hi || misc.correction.en}</p>
@@ -575,7 +609,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                         <div className="bg-indigo-950/30 border border-indigo-500/30 p-2.5 rounded-xl text-xs flex items-start gap-2 text-slate-300">
                           <span className="shrink-0 text-indigo-400 font-bold text-xs">🎯</span>
                           <div>
-                            <span className="font-bold text-[10px] uppercase text-indigo-300 block">
+                            <span className="font-bold text-xs uppercase text-indigo-300 block">
                               {lang === 'pa' ? 'ਪ੍ਰੀਖਿਆ ਲਈ ਮਹੱਤਵ' : lang === 'hi' ? 'परीक्षा में महत्व' : 'Why it Matters in Exams'}
                             </span>
                             <p className="leading-relaxed">{misc.whyItMatters[lang] || misc.whyItMatters.hi || misc.whyItMatters.en}</p>
@@ -626,7 +660,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     <h3 className="text-white font-bold text-sm">
                       {lang === 'pa' ? 'ਤੁਰੰਤ ਦੁਹਰਾਈ ਸ਼ੀਟ (Quick Revision Sheet)' : lang === 'hi' ? 'क्विक रिवीजन शीट (High-Yield Sheet)' : 'Quick Revision Sheet'}
                     </h3>
-                    <p className="text-[10px] text-indigo-300">
+                    <p className="text-xs text-indigo-300">
                       {lang === 'pa' ? 'ਆਖਰੀ ਸਮੇਂ ਦੀ ਦੁਹਰਾਈ ਲਈ ਮੁੱਖ ਸੂਤਰ ਅਤੇ ਨੁਕਤੇ' : lang === 'hi' ? 'अंतिम समय के पुनरीक्षण हेतु उच्च-महत्व बिंदु' : 'High-yield points, key rules, and exam traps'}
                     </p>
                   </div>
@@ -711,7 +745,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               <div className="bg-slate-900/80 border border-slate-800 rounded-xl p-3 text-[11px] text-slate-400 space-y-1.5">
                 <div className="flex items-center justify-between text-slate-300 font-semibold border-b border-slate-800 pb-1">
                   <span>🏛️ {lang === 'pa' ? 'ਸੰਪਾਦਕੀ ਅਤੇ ਸਿਲੇਬਸ ਰਿਕਾਰਡ' : 'संपादकीय एवं पाठ्यक्रम विवरण (Editorial Provenance)'}</span>
-                  <span className="text-[10px] bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">
+                  <span className="text-xs bg-slate-800 text-slate-300 px-1.5 py-0.5 rounded font-mono">
                     {lesson.editorialRecord.authoringType}
                   </span>
                 </div>
@@ -720,12 +754,12 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     <strong className="text-slate-300">{lang === 'pa' ? 'ਸਿਲੇਬਸ ਆਧਾਰ:' : 'पाठ्यक्रम आधार:'}</strong> {lesson.editorialRecord.verifiedSyllabusDenominator}
                   </p>
                 )}
-                <div className="flex items-center justify-between text-[10px] text-slate-500 pt-0.5">
+                <div className="flex items-center justify-between text-xs text-slate-400 pt-0.5">
                   <span>Authored: {lesson.editorialRecord.authoredDate}</span>
                   {lesson.editorialRecord.lastUpdatedDate && <span>Updated: {lesson.editorialRecord.lastUpdatedDate}</span>}
                 </div>
                 {lesson.editorialRecord.reviewerRecord && (
-                  <p className="text-[10px] text-teal-400">
+                  <p className="text-xs text-teal-400">
                     Review: {lesson.editorialRecord.reviewerRecord}
                   </p>
                 )}
@@ -749,7 +783,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-600/40 text-emerald-300 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition"
+                className="flex-1 bg-emerald-700/20 hover:bg-emerald-600/30 border border-emerald-600/40 text-emerald-300 font-bold text-xs py-2.5 rounded-xl flex items-center justify-center gap-1.5 transition"
               >
                 📲 Share on WhatsApp
               </a>
@@ -768,7 +802,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   <Target size={14} className="text-teal-400" />
                   <span>{lang === 'pa' ? 'ਆਪਣੀ ਤਿਆਰੀ ਦਾ ਪੱਧਰ ਜਾਂਚੋ' : 'तैयारी का स्तर जाँचें'}</span>
                 </span>
-                <span className="bg-teal-500/20 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                <span className="bg-teal-500/20 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full">
                   Topic practice · source labels on each question
                 </span>
               </div>
@@ -827,11 +861,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <div className="flex items-center gap-2 mb-1.5 flex-wrap">
-                      <span className="bg-indigo-500/20 text-indigo-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider inline-block">
+                      <span className="bg-indigo-500/20 text-indigo-300 text-xs font-bold px-2 py-0.5 rounded-full uppercase tracking-wider inline-block">
                         🏛️ {lesson.syllabusReference.body || 'Official Notification'}
                       </span>
                       {lesson.syllabusReference.verifiedOn && (
-                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                        <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
                           <CheckCircle2 size={11} className="text-emerald-400" />
                           Verified on {lesson.syllabusReference.verifiedOn}
                         </span>
@@ -863,6 +897,24 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 {lang === 'pa' ? 'ਸੰਬੰਧਿਤ ਪੁਸਤਕਾਂ ਅਤੇ ਅਧਿਆਇ' : 'संबंधित पाठ्य सामग्री एवं मॉड्यूल'} ({lesson.documents?.length || 0})
               </h4>
 
+              {educatorDocs.map(item => (
+                <div key={item.id} className="bg-slate-800 border border-teal-700/40 rounded-xl p-3.5 flex items-start justify-between gap-3">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5 mb-1 flex-wrap">
+                      <span className="text-xs bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">{item.document?.language}</span>
+                      <span className="text-xs bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">{lang === 'en' ? 'Added by an educator' : 'शिक्षक द्वारा जोड़ा गया'}</span>
+                      {item.document?.publisher && <span className="text-xs text-slate-300">{item.document.publisher}</span>}
+                    </div>
+                    <h5 className="text-white font-semibold text-xs leading-snug">{item.title}</h5>
+                    <p className="text-xs text-slate-400 mt-0.5 break-all">{item.document?.url && new URL(item.document.url).hostname}</p>
+                  </div>
+                  <a href={item.document?.url} target="_blank" rel="noopener noreferrer nofollow" className="bg-slate-700 hover:bg-slate-600 text-teal-300 hover:text-white px-3 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 shrink-0 transition">
+                    <ExternalLink size={13} />
+                    <span>{lang === 'pa' ? 'ਖੋਲ੍ਹੋ' : 'खोलें'}</span>
+                  </a>
+                </div>
+              ))}
+
               {(!lesson.documents || lesson.documents.length === 0) ? (
                 <div className="bg-slate-800/50 border border-slate-700/60 rounded-xl p-6 text-center text-slate-400 text-xs">
                   {lang === 'pa' ? 'ਕੋਈ ਦਸਤਾਵੇਜ਼ ਨਹੀਂ ਮਿਲਿਆ' : 'इस टॉपिक के लिए अभी अतिरिक्त दस्तावेज लोड हो रहे हैं।'}
@@ -876,19 +928,19 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-1.5 mb-1 flex-wrap">
-                          <span className="text-[10px] bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">
+                          <span className="text-xs bg-slate-700 text-slate-200 px-2 py-0.5 rounded font-medium">
                             {doc.language}
                           </span>
-                          <span className="text-[10px] bg-indigo-950 text-indigo-300 border border-indigo-700/40 px-1.5 py-0.5 rounded uppercase font-bold">
+                          <span className="text-xs bg-indigo-950 text-indigo-300 border border-indigo-700/40 px-1.5 py-0.5 rounded uppercase font-bold">
                             {doc.type || 'PDF'}
                           </span>
                           {doc.publisher && (
-                            <span className="text-[10px] bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">
+                            <span className="text-xs bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">
                               🏛️ {doc.publisher}
                             </span>
                           )}
                           {doc.availability === 'verified' && (
-                            <span className="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-700/40 px-1.5 py-0.5 rounded font-medium">
+                            <span className="text-xs bg-emerald-950 text-emerald-300 border border-emerald-700/40 px-1.5 py-0.5 rounded font-medium">
                               ✓ Verified
                             </span>
                           )}
@@ -907,7 +959,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                           </p>
                         )}
                         {doc.lastChecked && (
-                          <p className="text-[10px] text-slate-500 mt-0.5 font-mono">
+                          <p className="text-xs text-slate-400 mt-0.5 font-mono">
                             Last verified: {doc.lastChecked}
                           </p>
                         )}
@@ -927,7 +979,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   </div>
                 ))
               )}
-              <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 text-[10px] text-slate-400 leading-relaxed">
+              <div className="p-2.5 rounded-lg bg-slate-900/60 border border-slate-800 text-xs text-slate-400 leading-relaxed">
                 ℹ️ {lang === 'pa' 
                   ? 'ਸੂਚਨਾ: ਲਿੰਕ ਅਧਿਕਾਰਤ ਸਰਕਾਰੀ ਪੋਰਟਲਾਂ ਅਤੇ ਮਾਨਤਾ ਪ੍ਰਾਪਤ ਪਾਠ ਪੁਸਤਕਾਂ ਦੇ ਹਨ। ExamSathi ਕਿਸੇ ਵੀ ਕਾਪੀਰਾਈਟ ਸਮੱਗਰੀ ਨੂੰ ਰੀ-ਹੋਸਟ ਨਹੀਂ ਕਰਦਾ ਅਤੇ ਸਿੱਧਾ ਅਧਿਕਾਰਤ ਸਰੋਤ ਉੱਤੇ ਭੇਜਦਾ ਹੈ।' 
                   : 'सूचना: प्रदर्शित लिंक आधिकारिक सरकारी पोर्टलों एवं पाठ्यपुस्तकों के हैं। ExamSathi किसी भी कॉपीराइट सामग्री को री-होस्ट नहीं करता; समस्त दस्तावेज सीधे प्रकाशक के पोर्टल पर खुलते हैं।'}
@@ -994,28 +1046,28 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   className="bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 border border-rose-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
                   title="Needs repetition (< 10m)"
                 >
-                  Again <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{againLabel}</span>
+                  Again <br/><span className="text-xs font-normal text-slate-300 font-mono">{againLabel}</span>
                 </button>
                 <button 
                   onClick={() => handleRateCard(2)}
                   className="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
                   title="Difficult recall"
                 >
-                  Hard <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{hardLabel}</span>
+                  Hard <br/><span className="text-xs font-normal text-slate-300 font-mono">{hardLabel}</span>
                 </button>
                 <button 
                   onClick={() => handleRateCard(3)}
                   className="bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-300 border border-emerald-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
                   title="Correct recall"
                 >
-                  Good <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{goodLabel}</span>
+                  Good <br/><span className="text-xs font-normal text-slate-300 font-mono">{goodLabel}</span>
                 </button>
                 <button 
                   onClick={() => handleRateCard(4)}
                   className="bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 border border-blue-500/40 py-2.5 rounded-lg text-xs font-bold text-center transition"
                   title="Effortless recall"
                 >
-                  Easy <br/><span className="text-[9px] font-normal text-slate-300 font-mono">{easyLabel}</span>
+                  Easy <br/><span className="text-xs font-normal text-slate-300 font-mono">{easyLabel}</span>
                 </button>
               </div>
 
@@ -1029,7 +1081,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </button>
             </div>
 
-            <p className="text-slate-500 text-[11px] mt-2">
+            <p className="text-slate-400 text-[11px] mt-2">
               ⚡ FSRS Spaced Repetition Algorithm enabled
             </p>
           </div>
@@ -1039,10 +1091,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
         {activeTab === 'practice' && (
           <div className="flex flex-col gap-6">
             <label className="flex items-center gap-3 text-slate-200">Practice set
-              <select aria-label="Practice question count" value={practiceCount} onChange={e => { const count = Number(e.target.value); setPracticeCount(count); setTopicQuestions(getTestQuestions({ topicId, examId: useStore.getState().selectedExam || undefined, count })); setSelectedAnswers({}); setShowExplanation({}); }} className="bg-slate-800 p-2 rounded">
+              <select aria-label="Practice question count" value={practiceCount} onChange={e => setPracticeCount(Number(e.target.value))} className="bg-slate-800 p-2 rounded">
                 {[10, 20, 50].map(count => <option key={count} value={count}>{count} questions</option>)}
               </select>
             </label>
+            {practiceError && <p role="alert" className="text-xs text-rose-300">{practiceError}</p>}
             <p className="text-xs text-slate-400">{topicQuestions.length} matching questions available in this set. Short sets stay within this topic.</p>
 
             <div className="bg-slate-800/80 border border-slate-700 p-4 rounded-xl flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -1057,7 +1110,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               <div className="flex items-center gap-2">
                 <Link
                   href={`/mock-test/topic-${topicId}?exam=${effectiveExamId}`}
-                  className="bg-gradient-to-r from-teal-500 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
+                  className="bg-gradient-to-r from-teal-600 to-indigo-600 hover:opacity-95 text-white font-bold text-xs px-3.5 py-2 rounded-xl flex items-center gap-1.5 shadow"
                 >
                   <Target size={14} />
                   <span>{lang === 'pa' ? 'ਪੂਰਾ ਲਾਈਵ ਟੈਸਟ ਸ਼ੁਰੂ ਕਰੋ' : 'पूरा टॉपिक अभ्यास शुरू करें'}</span>
@@ -1066,10 +1119,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
             </div>
 
             <div className="space-y-6">
-              {topicQuestions.map((q: Question, idx: number) => {
+              {topicQuestions.map((q: PublicQuestion, idx: number) => {
                 const isAnswered = Boolean(selectedAnswers[q.id]);
                 const chosen = selectedAnswers[q.id];
-                const isCorrect = chosen === q.correct;
+                const reveal = revealed[q.id];
+                const isCorrect = chosen === reveal?.correct;
 
                 return (
                   <div key={q.id} className="bg-slate-800/90 border border-slate-700/80 rounded-xl p-4 shadow-sm">
@@ -1077,7 +1131,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     {/* Question Header */}
                     <div className="flex items-center justify-between gap-2 mb-2">
                       <span className="text-xs font-bold text-teal-400">Q{idx + 1}</span>
-                      <span className="text-[10px] bg-slate-700 text-slate-300 px-2 py-0.5 rounded">
+                      <span className="text-xs bg-slate-700 text-slate-300 px-2 py-0.5 rounded">
                         {q.examTag}
                       </span>
                     </div>
@@ -1093,8 +1147,8 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                         const optText = q.options[optKey][lang] || q.options[optKey].hi || q.options[optKey].en;
                         
                         let btnStyle = 'bg-slate-900/60 border-slate-700 hover:border-slate-600 text-slate-200';
-                        if (isAnswered) {
-                          if (optKey === q.correct) {
+                        if (isAnswered && reveal) {
+                          if (optKey === reveal.correct) {
                             btnStyle = 'bg-emerald-950/80 border-emerald-500 text-emerald-200';
                           } else if (chosen === optKey && !isCorrect) {
                             btnStyle = 'bg-rose-950/80 border-rose-500 text-rose-200';
@@ -1108,7 +1162,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                             onClick={() => handleOptionSelect(q.id, optKey)}
                             className={`w-full text-left p-3 rounded-lg border text-xs flex items-center gap-3 transition-colors ${btnStyle}`}
                           >
-                            <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-[10px] shrink-0 ${isAnswered && optKey === q.correct ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300'}`}>
+                            <span className={`w-5 h-5 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${isAnswered && optKey === reveal?.correct ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-300'}`}>
                               {optKey}
                             </span>
                             <span className="flex-1">{optText}</span>
@@ -1118,13 +1172,14 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     </div>
 
                     {/* Instant Explanation Box */}
-                    {showExplanation[q.id] && (
+                    {showExplanation[q.id] && !reveal && <p className="mt-3 text-xs text-slate-400">Checking answer…</p>}
+                    {showExplanation[q.id] && reveal && (
                       <div className={`mt-3 p-3 rounded-lg text-xs border ${isCorrect ? 'bg-emerald-950/40 border-emerald-500/40 text-emerald-300' : 'bg-rose-950/30 border-rose-500/40 text-slate-300'}`}>
                         <p className="font-bold mb-1">
-                          {isCorrect ? '✅ सही उत्तर (Correct!)' : `❌ गलत! सही उत्तर: विकल्प ${q.correct}`}
+                          {isCorrect ? '✅ सही उत्तर (Correct!)' : `❌ गलत! सही उत्तर: विकल्प ${reveal.correct}`}
                         </p>
                         <p className="text-slate-300 leading-relaxed">
-                          {q.explanation[lang] || q.explanation.hi || q.explanation.en}
+                          {reveal.explanation[lang] || reveal.explanation.hi || reveal.explanation.en}
                         </p>
                       </div>
                     )}
@@ -1147,7 +1202,34 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
               </p>
             </div>
 
-            {lesson.videos.length === 0 ? (
+            {educatorVideos.map(item => (
+              <div key={item.id} className="bg-slate-800 border border-teal-700/40 rounded-xl overflow-hidden shadow-lg">
+                <div className="relative aspect-video w-full bg-black">
+                  <iframe
+                    className="w-full h-full"
+                    src={`https://www.youtube-nocookie.com/embed/${item.video?.youtubeId}?rel=0&modestbranding=1`}
+                    title={item.title}
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="p-3.5">
+                  <span className="text-xs bg-teal-950 text-teal-300 border border-teal-700/40 px-1.5 py-0.5 rounded font-medium">{lang === 'en' ? 'Chosen by an educator' : 'शिक्षक द्वारा चुना गया'}</span>
+                  <h4 className="text-white font-bold text-sm mt-2 mb-1 line-clamp-2">{item.title}</h4>
+                  <div className="flex justify-between text-slate-400 text-xs">
+                    <span>{item.video?.channel}</span>
+                    <span>{item.video?.duration || 'Full Lecture'}</span>
+                  </div>
+                  <a href={`https://www.youtube.com/watch?v=${item.video?.youtubeId}`} target="_blank" rel="noopener noreferrer" className="mt-2 flex items-center gap-1.5 text-xs text-red-400 hover:text-red-300 font-semibold transition">
+                    <span>▶</span> Watch on YouTube ↗
+                  </a>
+                </div>
+              </div>
+            ))}
+
+            {lesson.videos.length === 0 && educatorVideos.length === 0 ? (
               <div className="space-y-3">
                 <div className="bg-amber-950/40 border border-amber-700/50 rounded-xl p-4">
                   <p className="text-amber-200 text-sm font-bold mb-1">📹 Curated videos for this topic coming soon</p>
@@ -1176,11 +1258,11 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                     </a>
                   ))}
                 </div>
-                <p className="text-[11px] text-slate-500 text-center pt-1">
+                <p className="text-[11px] text-slate-400 text-center pt-1">
                   Found a good video for this topic? <Link href="/contact" className="text-teal-400 underline">Suggest it to us ↗</Link>
                 </p>
               </div>
-            ) : (
+            ) : lesson.videos.length === 0 ? null : (
               lesson.videos.map((vid, i) => {
                 const ytId = vid.youtubeId || (vid.url?.includes('watch?v=') ? vid.url.split('watch?v=')[1]?.split('&')[0] : undefined);
 
@@ -1200,7 +1282,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                       {vid.tags && vid.tags.length > 0 && (
                         <div className="flex flex-wrap gap-1.5 mb-2">
                           {vid.tags.map((tag, tIdx) => (
-                            <span key={tIdx} className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-[10px] px-2 py-0.5 rounded font-medium">
+                            <span key={tIdx} className="bg-indigo-950/80 border border-indigo-700/50 text-indigo-300 text-xs px-2 py-0.5 rounded font-medium">
                               {tag}
                             </span>
                           ))}
@@ -1237,7 +1319,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                   <Edit3 size={16} className="text-teal-400" />
                   <span>{lang === 'pa' ? 'ਇਸ ਵਿਸ਼ੇ ਲਈ ਨਿੱਜੀ ਨੋਟ ਲਿਖੋ' : 'इस टॉपिक के लिए अपने पर्सनल नोट्स बनाएं'}</span>
                 </span>
-                <span className="text-[10px] text-teal-400 font-mono bg-teal-950/60 border border-teal-800/40 px-2 py-0.5 rounded">
+                <span className="text-xs text-teal-400 font-mono bg-teal-950/60 border border-teal-800/40 px-2 py-0.5 rounded">
                   {selectedExam || 'general'}
                 </span>
               </h3>
@@ -1248,14 +1330,14 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 placeholder={lang === 'pa' ? 'ਆਪਣੇ ਨੋਟਿਸ ਇੱਥੇ ਲਿਖੋ ਅਤੇ ਸੇਵ ਕਰੋ...' : 'महत्वपूर्ण बातें, फॉर्मूले या ट्रिक्स यहाँ लिखें... (ड्राफ्ट स्वतः सहेजा जाएगा)'}
               />
               <div className="flex justify-between items-center mt-3">
-                <span className="text-[11px] text-slate-500 flex items-center gap-1">
+                <span className="text-[11px] text-slate-400 flex items-center gap-1">
                   <span>💾</span>
                   <span>{userNote.trim() ? 'Draft autosaved locally' : 'Private to your device'}</span>
                 </span>
                 <button 
                   onClick={handleSaveNote}
                   disabled={!userNote.trim()}
-                  className="bg-teal-600 hover:bg-teal-500 disabled:opacity-40 text-white font-bold px-4 py-2 rounded-lg text-xs transition"
+                  className="bg-teal-700 hover:bg-teal-500 disabled:opacity-40 text-white font-bold px-4 py-2 rounded-lg text-xs transition"
                 >
                   Save Note
                 </button>
@@ -1318,14 +1400,14 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                 {notesSearchQuery && (
                   <button 
                     onClick={() => setNotesSearchQuery('')}
-                    className="text-teal-400 hover:underline text-[10px] normal-case"
+                    className="text-teal-400 hover:underline text-xs normal-case"
                   >
                     Clear Search
                   </button>
                 )}
               </h4>
               {personalNotes.length === 0 ? (
-                <div className="bg-slate-800/40 border border-slate-700/40 rounded-xl p-6 text-center text-slate-500 text-xs">
+                <div className="bg-slate-800/40 border border-slate-700/40 rounded-xl p-6 text-center text-slate-400 text-xs">
                   {notesSearchQuery ? 'कोई भी नोट खोज से मेल नहीं खाता।' : 'अभी तक कोई नोट नहीं लिखा गया है।'}
                 </div>
               ) : (
@@ -1347,7 +1429,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                           </button>
                           <button
                             onClick={() => handleUpdateNote(n.id)}
-                            className="bg-teal-600 hover:bg-teal-500 text-white text-xs px-3 py-1 rounded font-bold"
+                            className="bg-teal-700 hover:bg-teal-500 text-white text-xs px-3 py-1 rounded font-bold"
                           >
                             Save Edit
                           </button>
@@ -1363,7 +1445,7 @@ function LessonContent({ topicId, lesson }: { topicId: string; lesson: Lesson })
                                 📖 {n.sourceExcerpt}
                               </p>
                             )}
-                            <p className="text-[10px] text-slate-500 mt-2">
+                            <p className="text-xs text-slate-400 mt-2">
                               Saved on: {new Date(n.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                             </p>
                           </div>

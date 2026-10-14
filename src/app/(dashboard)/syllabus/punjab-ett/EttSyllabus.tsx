@@ -19,18 +19,24 @@ import {
   ETT_PAST_PAPER_CHECKLIST,
   ETT_STUDENT_STRATEGY,
 } from '@/lib/data/ett-blueprint';
-import { getQuestionPool } from '@/lib/data/question_bank_engine';
-import { getLessonByTopicId } from '@/lib/data/lessons';
+import { useCounts } from '@/lib/use-question-data';
 
-export default function EttSyllabus() {
+export default function EttSyllabus({ lessonTopicIds }: { lessonTopicIds: string[] }) {
+  const hasLessonFor = (topicId: string) => lessonTopicIds.includes(topicId);
   const { language, setLanguage } = useStore();
   const label = (en: string, hi: string, pa: string) =>
     language === 'pa' ? pa : language === 'hi' ? hi : en;
 
-  const available = getQuestionPool({
-    topicId: 'ett-light-reflection',
-    examId: 'punjab-ett',
-  }).length;
+  // Pool sizes come from the server: light-reflection first, then each module and unit.
+  const poolTopicIds = [
+    'ett-light-reflection',
+    ...ETT_BLUEPRINT_MODULES.map((m) => m.topicId),
+    ...ETT_MAPPED_GROUPS.flatMap((g) => g.units.map((u) => u.id)),
+    ...ETT_SCIENCE_UNITS.map(([id]) => `ett-science-${id}`),
+  ];
+  const poolSizes = useCounts(poolTopicIds.map((topicId) => ({ topicId, examId: 'punjab-ett' })));
+  const poolOf = (topicId: string) => poolSizes?.[poolTopicIds.indexOf(topicId)] ?? 0;
+  const available = poolOf('ett-light-reflection');
 
   const paperAModules = ETT_BLUEPRINT_MODULES.filter(
     (m) => m.paper === 'Paper A (Qualifying)'
@@ -158,7 +164,7 @@ export default function EttSyllabus() {
                 <span
                   className={`text-xs font-bold px-2.5 py-0.5 rounded-full ${
                     item.isThisBlueprint
-                      ? 'bg-teal-600 text-white'
+                      ? 'bg-teal-700 text-white'
                       : 'bg-slate-700 text-slate-300'
                   }`}
                 >
@@ -490,10 +496,7 @@ export default function EttSyllabus() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {paperAModules.map((mod) => {
-              const poolCount = getQuestionPool({
-                topicId: mod.topicId,
-                examId: 'punjab-ett',
-              }).length;
+              const poolCount = poolOf(mod.topicId);
               return (
                 <article
                   key={mod.topicId}
@@ -583,10 +586,7 @@ export default function EttSyllabus() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {paperBModules.map((mod) => {
-              const poolCount = getQuestionPool({
-                topicId: mod.topicId,
-                examId: 'punjab-ett',
-              }).length;
+              const poolCount = poolOf(mod.topicId);
               return (
                 <article
                   key={mod.topicId}
@@ -780,11 +780,8 @@ export default function EttSyllabus() {
             </summary>
             <div className="mt-3 space-y-3">
               {group.units.map((unit) => {
-                const hasLesson = Boolean(getLessonByTopicId(unit.id));
-                const unitPool = getQuestionPool({
-                  topicId: unit.id,
-                  examId: 'punjab-ett',
-                }).length;
+                const hasLesson = hasLessonFor(unit.id);
+                const unitPool = poolOf(unit.id);
                 return (
                   <details
                     key={unit.id}
@@ -886,11 +883,8 @@ export default function EttSyllabus() {
         </p>
         {ETT_SCIENCE_UNITS.map(([id, en, hi, pa, subtopics]) => {
           const unitTopicId = `ett-science-${id}`;
-          const unitHasLesson = Boolean(getLessonByTopicId(unitTopicId));
-          const unitPoolCount = getQuestionPool({
-            topicId: unitTopicId,
-            examId: 'punjab-ett',
-          }).length;
+          const unitHasLesson = hasLessonFor(unitTopicId);
+          const unitPoolCount = poolOf(unitTopicId);
           return (
             <details
               key={id}

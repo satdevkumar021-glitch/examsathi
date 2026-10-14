@@ -54,7 +54,7 @@ export default function FlipCard({ question, answer, onRate }: FlipCardProps) {
           </button>
           <button
             onClick={() => handleRate('good')}
-            className="text-xs px-3 py-1.5 rounded-full font-bold bg-emerald-600/80 hover:bg-emerald-500 text-white border border-emerald-500/60 transition"
+            className="text-xs px-3 py-1.5 rounded-full font-bold bg-emerald-700/80 hover:bg-emerald-500 text-white border border-emerald-500/60 transition"
           >
             🟢 Good
           </button>

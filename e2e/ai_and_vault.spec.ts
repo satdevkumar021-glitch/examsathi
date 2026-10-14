@@ -1,128 +1,91 @@
 import { test, expect } from '@playwright/test';
 
+// Suppress the first-visit onboarding dialog (it overlays the page) except in the test that exercises it.
+const skipOnboarding = () => { localStorage.setItem('examsathi_onboarding_completed', 'true'); };
+
 test.describe('ExamSathi AI Generator, Study Vault & Knowledge Deep-Dive Suite', () => {
 
-  test('01. /ai-generator loads, validates quota, loads preset, and generates MCQs', async ({ page }) => {
+  test('01. /ai-generator loads, loads a preset and generates a practice set', async ({ page }) => {
+    await page.addInitScript(skipOnboarding);
     await page.goto('/ai-generator/');
 
-    // Verify Title & Header
-    await expect(page.locator('h1')).toContainText(/AI Practice Drill Generator/i);
-    await expect(page.locator('text=/DPDP Act 2023 Compliant/i')).toBeVisible();
+    await expect(page.locator('h1')).toContainText(/Notes & AI Practice Generator/i);
+    await expect(page.locator('text=/Files are read on this device/i')).toBeVisible();
 
-    // Verify Quota indicator
-    const quotaIndicator = page.locator('text=/[0-9] \/ 5 Drills Left Today/i');
-    await expect(quotaIndicator).toBeVisible();
-
-    // Click quick preset button for Harappa
-    const presetBtn = page.locator('button:has-text("हड़प्पा")').first();
-    await presetBtn.click();
-
-    // Verify textarea populated
-    const textarea = page.locator('textarea');
-    const textVal = await textarea.inputValue();
+    // Quick preset fills the textarea
+    await page.locator('button:has-text("हड़प्पा")').first().click();
+    const textVal = await page.locator('textarea').inputValue();
     expect(textVal.length).toBeGreaterThan(50);
 
-    // Click Generate MCQs
-    const generateBtn = page.locator('button:has-text("Generate 5 Practice MCQs")');
-    await generateBtn.click();
-
-    // Wait for generation to complete
-    await expect(page.locator('text=/Generated CBT Set/i')).toBeVisible({ timeout: 5000 });
-
-    // Verify CBT Launch and Vault Save buttons
-    const cbtLaunchBtn = page.locator('button:has-text("Start CBT Mock")');
-    await expect(cbtLaunchBtn).toBeVisible();
-
-    const saveVaultBtn = page.locator('button:has-text("Save to Vault")');
-    await expect(saveVaultBtn).toBeVisible();
+    // Local recall generation works without any cloud key
+    await page.locator('button:has-text("Generate up to 5 recall MCQs")').click();
+    await expect(page.locator('text=/Generated CBT Set/i')).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('button:has-text("Save to Vault")')).toBeVisible();
   });
 
-  test('02. Mock Test Hub and Dashboard render AI Drill Generator entry points', async ({ page }) => {
-    // Check Mock Test Hub
-    await page.goto('/mock-test/');
-    const mockAiLink = page.locator('a[href*="/ai-generator"]');
-    await expect(mockAiLink).toBeVisible();
-
-    // Check Dashboard
+  test('02. Dashboard and Mock Test Hub link to the notes generator', async ({ page }) => {
+    await page.addInitScript(skipOnboarding);
     await page.goto('/dashboard/');
-    const dashAiLink = page.locator('a[href*="/ai-generator"]');
-    await expect(dashAiLink).toBeVisible();
+    await expect(page.locator('a[href*="/ai-generator"]').first()).toBeVisible();
+
+    // On the hub the banner lives inside the collapsed "More options" panel
+    await page.goto('/mock-test/');
+    const aiLink = page.locator('a[href*="/ai-generator"]');
+    await expect(aiLink).toBeHidden();
+    await page.locator('summary:has-text("More options")').click();
+    await expect(aiLink).toBeVisible();
   });
 
-  test('03. Profile Study Vault renders Notes, Starred Favorites, and WhatsApp Share', async ({ page }) => {
+  test('03. Profile study vault renders notes, starred and saved-later lists', async ({ page }) => {
+    await page.addInitScript(skipOnboarding);
     await page.goto('/profile/');
 
-    // Check Study Vault title
-    await expect(page.locator('h3:has-text("Study Vault")')).toBeVisible();
-
-    // Check tabs
-    const notesTab = page.locator('button:has-text("Notes")');
-    const starredTab = page.locator('button:has-text("Starred")');
-    const bookmarksTab = page.locator('button:has-text("Saved Later")');
-
+    // Default language is Hindi: नोट्स / पसंदीदा / बाद के लिए
+    const notesTab = page.locator('button[aria-pressed]:has-text("नोट्स")');
+    const starredTab = page.locator('button[aria-pressed]:has-text("पसंदीदा")');
+    const savedTab = page.locator('button[aria-pressed]:has-text("बाद के लिए")');
     await expect(notesTab).toBeVisible();
     await expect(starredTab).toBeVisible();
-    await expect(bookmarksTab).toBeVisible();
+    await expect(savedTab).toBeVisible();
 
-    // Click Starred tab
     await starredTab.click();
-    await page.waitForTimeout(200);
+    await expect(starredTab).toHaveAttribute('aria-pressed', 'true');
+    await savedTab.click();
+    await expect(savedTab).toHaveAttribute('aria-pressed', 'true');
+    await expect(page.locator('text=/इस सूची में कोई सामग्री नहीं है/')).toBeVisible();
 
-    // Click Saved Later tab
-    await bookmarksTab.click();
-    await page.waitForTimeout(200);
-
-    // Verify WhatsApp Share button is present and valid
-    const whatsappBtn = page.locator('a:has-text("Share on WhatsApp")');
-    await expect(whatsappBtn).toBeVisible();
-    const href = await whatsappBtn.getAttribute('href');
-    expect(href).toContain('api.whatsapp.com');
+    await expect(page.locator('button:has-text("बैकअप डाउनलोड करें")')).toBeVisible();
   });
 
-  test('04. Question Results render Lesson Notes deep-dive links for revision', async ({ page }) => {
-    await page.goto('/results/1/');
-    await page.waitForTimeout(500);
+  test('04. A finished practice attempt shows the review with lesson deep-links', async ({ page }) => {
+    await page.addInitScript(skipOnboarding);
+    await page.goto('/mock-test/ppsc-clerk/?exam=punjab-clerk&count=5&set=1&mode=exam');
+    await page.locator('button:has-text("Submit")').waitFor({ timeout: 15000 });
+    await page.locator('button:has-text("Submit")').click();
+    await page.waitForURL(/\/results\//, { timeout: 15000 });
 
-    // Verify Lesson Notes deep link button is present
-    const lessonNotesLinks = page.locator('a:has-text("Lesson Notes 📖")');
-    expect(await lessonNotesLinks.count()).toBeGreaterThan(0);
-
-    // Check that first link points to /lesson/
-    const firstHref = await lessonNotesLinks.first().getAttribute('href');
-    expect(firstHref).toContain('/lesson/');
+    // Review is scored by the server, then shows lesson links for revision
+    const lessonLinks = page.locator('a:has-text("Lesson Notes 📖")');
+    await expect(lessonLinks.first()).toBeVisible({ timeout: 15000 });
+    expect(await lessonLinks.first().getAttribute('href')).toContain('/lesson/');
   });
 
-  test('05. Onboarding Guide Modal guides first-time users and can be re-opened from profile', async ({ page }) => {
+  test('05. Onboarding guide can be re-opened from the profile and completed', async ({ page }) => {
+    await page.addInitScript(skipOnboarding);
     await page.goto('/profile/');
-    await page.waitForTimeout(300);
 
-    // Click Platform Guidance & Onboarding Tour button
-    const tourBtn = page.locator('button:has-text("Platform Guidance & Onboarding Tour")');
-    await expect(tourBtn).toBeVisible();
-    await tourBtn.click();
+    await page.locator('button:has-text("प्लेटफ़ॉर्म गाइड")').click();
+    const dialog = page.locator('[role="dialog"]');
+    await expect(dialog).toBeVisible();
+    await expect(dialog).toContainText('1/4');
 
-    // Verify modal is visible
-    const modalHeading = page.locator('#onboarding-guide-title');
-    await expect(modalHeading).toBeVisible();
-    await expect(modalHeading).toContainText(/परीक्षा साथी/i);
-
-    // Click Next
-    const nextBtn = page.locator('button:has-text("Next")');
-    await nextBtn.click();
-    await expect(modalHeading).toContainText(/CBT/i);
-
-    // Click Next again
-    await nextBtn.click();
-    await expect(modalHeading).toContainText(/AI/i);
-
-    // Click Next again
-    await nextBtn.click();
-    await expect(modalHeading).toContainText(/लाइब्रेरी/i);
-
-    // Complete tour
-    const startBtn = page.locator('button:has-text("Start Learning")');
-    await startBtn.click();
-    await expect(modalHeading).not.toBeVisible();
+    // Language is Hindi: आगे = Next
+    for (const step of ['2/4', '3/4', '4/4']) {
+      await dialog.locator('button:has-text("आगे")').click();
+      await expect(dialog).toContainText(step);
+    }
+    await dialog.locator('button:has-text("पूरा")').click();
+    await expect(dialog).toBeHidden();
   });
 
 });

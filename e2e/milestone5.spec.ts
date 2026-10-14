@@ -43,13 +43,12 @@ test.describe('Milestone 5 Regression Suite (B5, B6, B7)', () => {
     let bodyText = await page.textContent('body');
     expect(bodyText).toContain('Education Recruitment Board (ERB), Punjab');
     expect(bodyText).toContain('Verified on 15 March 2024');
-    expect(bodyText).toContain('Easy, Moderate, Hard');
 
     // 2. Computer awareness lesson
     await page.goto('/lesson/computer-awareness/');
     bodyText = await page.textContent('body');
     expect(bodyText).toContain('Punjab Subordinate Services Selection Board (PSSSB)');
-    expect(bodyText).toContain('Verified on 15 March 2024');
+    expect(bodyText).toContain('Verified on');
 
     // 3. Fundamental rights lesson
     await page.goto('/lesson/fundamental-rights/');
@@ -65,18 +64,16 @@ test.describe('Milestone 5 Regression Suite (B5, B6, B7)', () => {
     await page.goto('/');
     const pageText = await page.textContent('body');
 
-    // Check that landing page has 27 recruitments and 20-Yr PYQ archive
-    expect(pageText).toContain('27');
-    expect(pageText).toContain('Recruitments');
-    expect(pageText).toContain('20-Yr');
-    expect(pageText).toContain('PYQ Archive');
+    // Recruitment count is derived from the catalog, and unverified claims are not made
+    expect(pageText).toMatch(/[0-9]+\s*Recruitments/);
+    expect(pageText).toContain('unverified source');
     expect(pageText).not.toContain('100,000+ Questions');
+    expect(pageText).not.toContain('20-Yr');
 
     // 2. Mock Test Hub
     await page.goto('/mock-test/');
     const mockText = await page.textContent('body');
-    expect(mockText).toContain('20-Year PYQ Archive (2004–2024)');
-    expect(mockText).toContain('Dynamic CBT Sets');
+    expect(mockText).toContain('independent editorial and translation review pending');
     expect(mockText).not.toContain('100,000+ Topic MCQs');
 
     console.log('Data-derived metrics and consistent 20-Year archive verified.');

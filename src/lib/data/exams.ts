@@ -34,6 +34,7 @@ export interface Section {
   nameHindi: string;
   marks: number;
   questions?: number;
+  qualifying?: boolean;
 }
 
 export interface Subject {
@@ -319,7 +320,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '🌍',
     color: '#4338CA',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Social Science Subject Domain (Merit)', nameHindi: 'सामाजिक विज्ञान विषय डोमेन (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -780,7 +781,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '🔬',
     color: '#0D9488',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Science Subject Domain (Physics, Chemistry, Botany & Zoology — 150 MCQs, 0 Negative Marking)', nameHindi: 'विज्ञान विषय डोमेन (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1069,7 +1070,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '📐',
     color: '#2563EB',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Mathematics Subject Domain (Merit)', nameHindi: 'गणित विषय डोमेन (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1082,115 +1083,137 @@ export const PUNJAB_EXAMS: Exam[] = [
         emoji: '📐',
         chapters: [
           {
-            id: 'math-core',
-            name: 'Higher Mathematics Core',
-            nameHindi: 'उच्च गणित',
-            namePunjabi: 'ਉੱਚ ਗਣਿਤ',
+            id: 'math-linear-abstract-algebra',
+            name: 'Linear & Abstract Algebra',
+            nameHindi: 'रैखिक एवं अमूर्त बीजगणित',
+            namePunjabi: 'ਲੀਨੀਅਰ ਅਤੇ ਅਮੂਰਤ ਅਲਜਬਰਾ',
             topics: [
               {
-                id: 'math-linear-algebra-matrices',
-                name: 'Linear Algebra, Matrices, Vector Spaces & Eigenvalues',
-                nameHindi: 'रैखिक बीजगणित, आव्यूह, सदिश समष्टि एवं आइगेन मान',
-                namePunjabi: 'ਲੀਨੀਅਰ ਅਲਜਬਰਾ, ਮੈਟ੍ਰਿਕਸ, ਵੈਕਟਰ ਸਪੇਸ ਤੇ ਆਈਗਨ ਮੁੱਲ',
+                id: 'math-matrices-linear-algebra',
+                name: 'Matrices, Determinants, Rank & Eigenvalues',
+                nameHindi: 'आव्यूह, सारणिक, कोटि एवं अभिलाक्षणिक मान',
+                namePunjabi: 'ਮੈਟ੍ਰਿਕਸ, ਡਿਟਰਮੀਨੈਂਟ, ਰੈਂਕ ਅਤੇ ਆਈਗਨ ਮੁੱਲ',
                 subtopics: [
-                  'Matrices & Determinants: Rank of matrix, Echelon form, System of linear equations AX = B (Rouches theorem)',
-                  'Vector Spaces: Subspaces, Linear span, Linear independence, Basis and Dimension, Quotient spaces',
-                  'Linear Transformations: Kernel and Image, Rank-Nullity Theorem (dim V = rank + nullity)',
-                  'Eigenvalues & Eigenvectors: Characteristic equation, Cayley-Hamilton Theorem and matrix inversion',
-                  'Inner Product Spaces: Cauchy-Schwarz inequality, Gram-Schmidt orthogonalization process',
+                  'Types of Matrices: Symmetric, Skew-Symmetric, Hermitian, Skew-Hermitian, Orthogonal, Unitary',
+                  'Rank of Matrix & Systems of Linear Equations (AX=B consistency, unique, infinite, no solution)',
+                  'Eigenvalues, Eigenvectors, Cayley-Hamilton Theorem & Inverse calculation',
                 ],
-                examQuestions: '20-25',
-                difficulty: 'hard',
-              },
-              {
-                id: 'math-real-analysis-calculus',
-                name: 'Real Analysis, Sequences, Infinite Series & Advanced Calculus',
-                nameHindi: 'वास्तविक विश्लेषण, अनुक्रम, अनंत श्रेणियां एवं उच्च कलन',
-                namePunjabi: 'ਰੀਅਲ ਐਨਾਲਿਸਿਸ, ਅਨੁਕ੍ਰਮ, ਅਨੰਤ ਲੜੀਆਂ ਤੇ ਕੈਲਕੂਲਸ',
-                subtopics: [
-                  'Sequences & Series: Boundedness, Bolzano-Weierstrass theorem, Cauchy criterion, p-series test',
-                  'Convergence Tests: Ratio test, Root test, Raabes test, Leibniz alternating series test',
-                  'Limits, Continuity & Differentiability: Rolles theorem, Lagrange & Cauchy Mean Value Theorems',
-                  'Advanced Calculus: Partial differentiation, Eulers theorem for homogeneous functions, Maxima-Minima (Hessian)',
-                  'Integral Calculus & Leibniz Rule: Definite integrals, Beta and Gamma functions, Double/Triple integrals',
-                ],
-                examQuestions: '25-30',
+                examQuestions: '18-22',
                 difficulty: 'hard',
               },
               {
                 id: 'math-abstract-algebra-groups',
-                name: 'Abstract Algebra: Groups, Rings, Integral Domains & Fields',
-                nameHindi: 'अमूर्त बीजगणित: समूह, वलय, पूर्णांकीय प्रांत एवं क्षेत्र',
-                namePunjabi: 'ਅਮੂਰਤ ਅਲਜਬਰਾ: ਗਰੁੱਪ, ਰਿੰਗ, ਇੰਟੈਗਰਲ ਡੋਮੇਨ ਤੇ ਫੀਲਡ',
+                name: 'Abstract Algebra: Groups, Subgroups & Homomorphisms',
+                nameHindi: 'अमूर्त बीजगणित: समूह, उपसमूह एवं समाकारिता',
+                namePunjabi: 'ਅਮੂਰਤ ਅਲਜਬਰਾ: ਗਰੁੱਪ, ਉਪ-ਗਰੁੱਪ ਅਤੇ ਹੋਮੋਮੋਰਫਿਜ਼ਮ',
                 subtopics: [
-                  'Group Theory: Groups, Subgroups, Cyclic groups, Cosets, Lagranges theorem (order of subgroup divides group order)',
-                  'Normal Subgroups & Quotient Groups: First Isomorphism Theorem for groups, Cayleys theorem',
-                  'Permutation Groups: Symmetric group Sn, Alternating group An, Even and odd permutations',
-                  'Ring Theory: Rings, Integral domains, Fields, Characteristic of a ring, Ideals and Quotient rings',
-                  'Polynomial Rings: Divisibility, Eisensteins criterion for irreducibility over rationals, Maximal & Prime ideals',
+                  'Group Axioms, Abelian Groups, Order of Element, Cyclic Groups & Generators',
+                  "Lagrange's Theorem on Subgroups, Cosets, Normal Subgroups & Quotient Groups",
+                  'Homomorphism, Isomorphism, Fundamental Homomorphism Theorem & Cayley Theorem',
                 ],
-                examQuestions: '20-25',
+                examQuestions: '16-20',
+                difficulty: 'hard',
+              },
+            ],
+          },
+          {
+            id: 'math-calculus-de',
+            name: 'Calculus & Differential Equations',
+            nameHindi: 'कलन एवं अवकल समीकरण',
+            namePunjabi: 'ਕੈਲਕੂਲਸ ਅਤੇ ਡਿਫਰੈਂਸ਼ੀਅਲ ਸਮੀਕਰਨਾਂ',
+            topics: [
+              {
+                id: 'math-differential-calculus',
+                name: 'Differential Calculus & Mean Value Theorems',
+                nameHindi: 'अवकल गणित एवं मध्यमान प्रमेय',
+                namePunjabi: 'ਡਿਫਰੈਂਸ਼ੀਅਲ ਕੈਲਕੂਲਸ ਅਤੇ ਮੱਧਮਾਨ ਪ੍ਰਮੇਯ',
+                subtopics: [
+                  "Limits (L'Hopital Rule), Continuity, Differentiability, Rolle's & Lagrange's MVT",
+                  'Maxima, Minima, Points of Inflexion, Asymptotes & Radius of Curvature',
+                  "Partial Derivatives, Euler's Theorem on Homogeneous Functions, Total Differential",
+                ],
+                examQuestions: '20-24',
                 difficulty: 'hard',
               },
               {
-                id: 'math-diff-equations-mechanics',
-                name: 'Differential Equations, Vector Calculus, Statics & Dynamics',
-                nameHindi: 'अवकल समीकरण, सदिश कलन, स्थिति विज्ञान एवं गति विज्ञान',
-                namePunjabi: 'ਡਿਫਰੈਂਸ਼ੀਅਲ ਸਮੀਕਰਨ, ਵੈਕਟਰ ਕੈਲਕੂਲਸ, ਸਥਿਰ ਤੇ ਗਤੀ ਵਿਗਿਆਨ',
+                id: 'math-integral-calculus',
+                name: 'Integral Calculus & Beta-Gamma Functions',
+                nameHindi: 'समाकलन गणित एवं बीटा-गामा फलन',
+                namePunjabi: 'ਇੰਟੈਗਰਲ ਕੈਲਕੂਲਸ ਅਤੇ ਬੀਟਾ-ਗਾਮਾ ਫੰਕਸ਼ਨ',
                 subtopics: [
-                  'First Order ODEs: Exact differential equations (dM/dy = dN/dx), Integrating factors, Bernoullis equation',
-                  'Higher Order Linear ODEs: Complementary function, Particular integral, Method of variation of parameters',
-                  'Cauchy-Euler Equations & Partial Differential Equations: Charpits method, Wave, Heat, and Laplace equations',
-                  'Vector Calculus: Gradient, Divergence (solenoidal), Curl (irrotational), Gauss Divergence & Stokes theorems',
-                  'Statics & Dynamics: Coplanar forces, Virtual work, Simple Harmonic Motion (SHM), Projectile motion and Central orbits',
+                  'Definite Integrals & Properties (King Rule, Queen Rule), Reduction Formulas',
+                  'Beta and Gamma Functions: Relation, Duplication Formula, Dirichlet Integrals',
+                  'Area Bounded by Curves, Length of Arc, Double and Triple Integrals',
                 ],
-                examQuestions: '25-30',
+                examQuestions: '18-22',
                 difficulty: 'hard',
               },
               {
-                id: 'math-coordinate-solid-geometry',
-                name: '2D & 3D Coordinate Geometry: Conics, Sphere, Cone & Cylinder',
-                nameHindi: '2D एवं 3D निर्देशांक ज्यामिति: शांकव, गोला, शंकु एवं बेलन',
-                namePunjabi: '2D ਤੇ 3D ਨਿਰਦੇਸ਼-ਅੰਕ ਜਿਓਮੈਟਰੀ: ਕੋਨਿਕ, ਗੋਲਾ, ਸ਼ੰਕੂ ਤੇ ਵੇਲਣ',
+                id: 'math-differential-equations',
+                name: 'Ordinary Differential Equations & Linear DEs',
+                nameHindi: 'साधारण अवकल समीकरण एवं रैखिक समीकरण',
+                namePunjabi: 'ਆਰਡੀਨਰੀ ਡਿਫਰੈਂਸ਼ੀਅਲ ਸਮੀਕਰਨਾਂ ਅਤੇ ਰੇਖਿਕ ਸਮੀਕਰਨਾਂ',
                 subtopics: [
-                  '2D Conics: Parabola (y² = 4ax), Ellipse (x²/a² + y²/b² = 1), Hyperbola, Tangents, Normals, and Eccentricity',
-                  'General Second-Degree Equation: ax² + 2hxy + by² + 2gx + 2fy + c = 0, Discriminant Δ and classification of conics',
-                  '3D Coordinate Geometry: Direction cosines (l² + m² + n² = 1), Angle between lines, Shortest distance between skew lines',
-                  'Planes & Lines in 3D: Equation of plane, Distance from point to plane, Symmetrical form of straight line',
-                  'Sphere, Cone & Cylinder: Equation of sphere, Tangent plane, Right circular cone (generator and guiding curve), Right circular cylinder',
+                  'First Order DEs: Variable Separable, Homogeneous, Exact DEs & Integrating Factors',
+                  'Linear DEs with Constant Coefficients: Complementary Function (CF) & Particular Integral (PI)',
+                  'Cauchy-Euler Equations, Clairaut Form & Orthogonal Trajectories',
                 ],
-                examQuestions: '20-25',
-                difficulty: 'medium',
+                examQuestions: '15-18',
+                difficulty: 'hard',
+              },
+            ],
+          },
+          {
+            id: 'math-geometry-mechanics',
+            name: '3D Geometry, Vectors & Mechanics',
+            nameHindi: 'त्रिविमीय ज्यामिति, सदिश एवं यांत्रिकी',
+            namePunjabi: '3D ਜਿਓਮੈਟਰੀ, ਵੈਕਟਰ ਅਤੇ ਮਕੈਨਿਕਸ',
+            topics: [
+              {
+                id: 'math-coordinate-geometry-3d',
+                name: 'Analytical 3D Geometry: Lines, Planes, Sphere & Cones',
+                nameHindi: 'त्रिविमीय ज्यामिति: रेखा, समतल, गोला एवं शंकु',
+                namePunjabi: '3D ਜਿਓਮੈਟਰੀ: ਰੇਖਾਵਾਂ, ਸਮਤਲ, ਗੋਲਾ ਅਤੇ ਸ਼ੰਕੂ',
+                subtopics: [
+                  'Direction Cosines and Direction Ratios, Angle between Lines, Shortest Distance',
+                  'Equations of Plane, Intercept and Normal Form, Coplanarity of Lines',
+                  'Sphere (General Equation, Tangent Plane), Right Circular Cone and Cylinder',
+                ],
+                examQuestions: '16-20',
+                difficulty: 'hard',
               },
               {
-                id: 'math-prob-stats-numerical',
-                name: 'Probability, Mathematical Statistics, Linear Programming & Numerical Analysis',
-                nameHindi: 'प्रायिकता, सांख्यिकी, रैखिक प्रोग्रामन एवं संख्यात्मक विश्लेषण',
-                namePunjabi: 'ਸੰਭਾਵਨਾ, ਅੰਕੜਾ ਵਿਗਿਆਨ, ਲੀਨੀਅਰ ਪ੍ਰੋਗਰਾਮਿੰਗ ਤੇ ਸੰਖਿਆਤਮਕ ਵਿਸ਼ਲੇਸ਼ਣ',
+                id: 'math-vector-mechanics',
+                name: 'Vector Calculus & Classical Mechanics',
+                nameHindi: 'सदिश कलन एवं यांत्रिकी',
+                namePunjabi: 'ਵੈਕਟਰ ਕੈਲਕੂਲਸ ਅਤੇ ਕਲਾਸੀਕਲ ਮਕੈਨਿਕਸ',
                 subtopics: [
-                  'Probability: Addition and Multiplication theorems, Conditional probability, Bayes theorem',
-                  'Probability Distributions: Binomial (n, p), Poisson (λ = np), Normal distribution (Z-score and bell curve)',
-                  'Mathematical Statistics: Measures of central tendency, Standard deviation, Pearson correlation coefficient, Linear regression lines',
-                  'Linear Programming: Graphical method, Convex sets, Extreme points, Simplex method foundations',
-                  'Numerical Analysis: Newton-Raphson method (quadratic convergence), Bisection method, Trapezoidal & Simpsons 1/3rd rules',
+                  'Gradient, Divergence and Curl of Vector Fields, Directional Derivative',
+                  "Gauss Divergence Theorem, Green's Theorem in Plane, Stokes' Theorem",
+                  "Statics & Dynamics: Equilibrium of Forces, Lami's Theorem, Projectile Motion",
                 ],
-                examQuestions: '20-25',
-                difficulty: 'medium',
+                examQuestions: '14-18',
+                difficulty: 'hard',
               },
+            ],
+          },
+          {
+            id: 'math-probability-statistics',
+            name: 'Probability & Statistics',
+            nameHindi: 'प्रायिकता एवं सांख्यिकी',
+            namePunjabi: 'ਸੰਭਾਵਨਾ ਅਤੇ ਅੰਕੜਾ ਵਿਗਿਆਨ',
+            topics: [
               {
-                id: 'mathematics-core',
-                name: 'Algebra, Calculus, Matrices & Probability Overview',
-                nameHindi: 'बीजगणित, कलन, आव्यूह एवं प्रायिकता समग्र अवलोकन',
-                namePunjabi: 'ਅਲਜਬਰਾ ਤੇ ਕੈਲਕੂਲਸ ਸਮੁੱਚਾ ਸੰਖੇਪ',
+                id: 'math-prob-stats-distributions',
+                name: 'Probability Theorems, Distributions & Statistics',
+                nameHindi: 'प्रायिकता प्रमेय, बंटन एवं सांख्यिकी',
+                namePunjabi: 'ਸੰਭਾਵਨਾ ਪ੍ਰਮੇਯ, ਵੰਡ ਅਤੇ ਅੰਕੜਾ ਵਿਗਿਆਨ',
                 subtopics: [
-                  'Quadratic Equations: Discriminant D = b² - 4ac (D=0 equal roots, D>0 real distinct, D<0 complex)',
-                  'Progressions: AP (Tn = a+(n-1)d), GP (Tn = ar^(n-1), S_inf = a/(1-r))',
-                  "Differential Calculus: Limits, L Hopital Rule (0/0, inf/inf), Maxima and Minima (f''(x) < 0 maximum)",
-                  'Integral Calculus: King Property integral 0 to a f(x)dx = integral 0 to a f(a-x)dx',
-                  'Matrices & Determinants: Inverse A^-1 = adj(A)/|A| (requires |A| != 0), Transpose (AB)^T = B^T A^T',
-                  'Empirical Statistics: Mode = 3 Median - 2 Mean; Probability addition theorem',
+                  "Addition and Multiplication Theorems of Probability, Conditional Probability, Bayes' Theorem",
+                  'Discrete & Continuous Distributions: Binomial, Poisson and Normal Distributions',
+                  'Measures of Dispersion (Variance, Standard Deviation), Correlation and Regression Lines',
                 ],
-                examQuestions: '50-60',
+                examQuestions: '15-18',
                 difficulty: 'hard',
               },
             ],
@@ -1217,7 +1240,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '📖',
     color: '#EA580C',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Punjabi Language & Literature (Merit)', nameHindi: 'पंजाबी भाषा व साहित्य (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1363,7 +1386,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '📚',
     color: '#7C3AED',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - Hindi Language & Literature (Merit)', nameHindi: 'हिंदी भाषा व साहित्य (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1434,7 +1457,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '🔤',
     color: '#475569',
     sections: [
-      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50 },
+      { name: 'Paper A - Compulsory Punjabi Qualifying (50% min)', nameHindi: 'अनिवार्य पंजाबी पात्रता (Paper A)', marks: 50, questions: 50, qualifying: true },
       { name: 'Paper B - English Language & Literature (Merit)', nameHindi: 'अंग्रेजी भाषा व साहित्य (Paper B)', marks: 150, questions: 150 },
     ],
     subjects: [
@@ -1491,7 +1514,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '💼',
     color: '#0D9488',
     sections: [
-      { name: 'Part A - Compulsory Punjabi Qualifying (Matric Standard)', nameHindi: 'पंजाबी योग्यता परीक्षा', marks: 50, questions: 50 },
+      { name: 'Part A - Compulsory Punjabi Qualifying (Matric Standard)', nameHindi: 'पंजाबी योग्यता परीक्षा', marks: 50, questions: 50, qualifying: true },
       { name: 'Part B - General Knowledge & Current Affairs', nameHindi: 'सामान्य ज्ञान व करंट अफेयर्स', marks: 25, questions: 25 },
       { name: 'Part B - Logical Reasoning & Mental Ability', nameHindi: 'तर्कशक्ति व मानसिक क्षमता', marks: 25, questions: 25 },
       { name: 'Part B - Punjab History & Culture', nameHindi: 'पंजाब इतिहास व संस्कृति', marks: 17, questions: 17 },
@@ -1617,7 +1640,7 @@ export const PUNJAB_EXAMS: Exam[] = [
     emoji: '🌾',
     color: '#059669',
     sections: [
-      { name: 'Compulsory Punjabi Paper A', nameHindi: 'पंजाबी योग्यता परीक्षा', marks: 50, questions: 50 },
+      { name: 'Compulsory Punjabi Paper A', nameHindi: 'पंजाबी योग्यता परीक्षा', marks: 50, questions: 50, qualifying: true },
       { name: 'General Knowledge & Punjab History', nameHindi: 'सामान्य ज्ञान व पंजाब इतिहास', marks: 25, questions: 25 },
       { name: 'Mental Ability & Quantitative Aptitude', nameHindi: 'रीजनिंग व मैथ्स', marks: 25, questions: 25 },
       { name: 'Agriculture & Land Measurement', nameHindi: 'कृषि एवं भूमि माप इकाइयां', marks: 25, questions: 25 },
@@ -1790,6 +1813,7 @@ export const RAJASTHAN_EXAMS: Exam[] = [
     officialWebsite: 'https://rajeduboard.rajasthan.gov.in',
     emoji: '🏜️',
     color: '#DC2626',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Section I: Child Development & Pedagogy (CDP)', nameHindi: 'बाल विकास एवं शिक्षण विधियां', marks: 30, questions: 30 },
       { name: 'Section II: Language I (Hindi / First Language)', nameHindi: 'भाषा I (हिंदी)', marks: 30, questions: 30 },
@@ -1930,6 +1954,7 @@ export const RAJASTHAN_EXAMS: Exam[] = [
     officialWebsite: 'https://rajeduboard.rajasthan.gov.in',
     emoji: '🏜️',
     color: '#B91C1C',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Section I: Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
       { name: 'Section II: Language I', nameHindi: 'भाषा I', marks: 30, questions: 30 },
@@ -2079,6 +2104,7 @@ export const RAJASTHAN_EXAMS: Exam[] = [
     officialWebsite: 'https://rajeduboard.rajasthan.gov.in',
     emoji: '📐',
     color: '#0D9488',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Section I: Child Development & Pedagogy', nameHindi: 'बाल विकास व शिक्षाशास्त्र', marks: 30, questions: 30 },
       { name: 'Section II: Language I', nameHindi: 'भाषा I', marks: 30, questions: 30 },
@@ -2227,6 +2253,10 @@ export const RAJASTHAN_EXAMS: Exam[] = [
 const RAJASTHAN_POLICE_EXAM: Exam = {
   id: 'rajasthan-police',
   state: 'rajasthan',
+  // NOTE: A second entry 'rajasthan-police-constable' (exams_expansion.ts) also exists.
+  // Both represent Rajasthan Police Constable recruitment but differ in sections/marks.
+  // They may correspond to different cycles or notifications. Mark as provisional-archive
+  // until an official notification PDF confirms the exact pattern for each entry.
   name: 'Rajasthan Police Constable',
   nameHindi: 'राजस्थान पुलिस कांस्टेबल',
   namePunjabi: 'ਰਾਜਸਥਾਨ ਪੁਲਿਸ ਕਾਂਸਟੇਬਲ',
@@ -2238,6 +2268,7 @@ const RAJASTHAN_POLICE_EXAM: Exam = {
   officialWebsite: 'https://police.rajasthan.gov.in',
   emoji: '👮',
   color: '#7C3AED',
+  syllabusStatus: 'provisional-archive' as const,
   sections: [
     { name: 'Rajasthan GK & History', nameHindi: 'राजस्थान सामान्य ज्ञान व इतिहास', marks: 45, questions: 45 },
     { name: 'Indian Constitution & Polity', nameHindi: 'भारतीय संविधान व राजनीति', marks: 30, questions: 30 },
@@ -2618,75 +2649,7 @@ export const CENTRAL_EXAMS: Exam[] = [
     ],
   },
 
-  // 3.6 UGC NET Paper 1
-  {
-    id: 'ugc-net',
-    state: 'central',
-    name: 'UGC NET Paper 1 (Teaching & Research Aptitude)',
-    nameHindi: 'यूजीसी नेट पेपर 1 (शिक्षण व शोध अभिवृत्ति)',
-    namePunjabi: 'ਯੂ.ਜੀ.ਸੀ. ਨੈੱਟ ਪੇਪਰ 1',
-    body: 'National Testing Agency (NTA) / University Grants Commission',
-    level: 'Assistant Professor & JRF Eligibility (Postgraduate Level)',
-    totalMarks: 100,
-    duration: '60 Minutes (Paper 1)',
-    negativeMarking: false,
-    officialWebsite: 'https://ugcnet.nta.ac.in',
-    emoji: '🎓',
-    color: '#7c3aed',
-    sections: [
-      { name: 'Teaching Aptitude', nameHindi: 'शिक्षण अभिवृत्ति', marks: 10, questions: 5 },
-      { name: 'Research Aptitude', nameHindi: 'शोध अभिवृत्ति', marks: 10, questions: 5 },
-      { name: 'Comprehension & Communication', nameHindi: 'बोध व संप्रेषण', marks: 20, questions: 10 },
-      { name: 'Mathematical Reasoning & Data Interpretation', nameHindi: 'गणितीय तर्क व डेटा व्याख्या', marks: 20, questions: 10 },
-      { name: 'ICT & Higher Education System', nameHindi: 'सूचना प्रौद्योगिकी व उच्च शिक्षा प्रणाली', marks: 20, questions: 10 },
-      { name: 'People, Development & Environment', nameHindi: 'लोग, विकास व पर्यावरण', marks: 20, questions: 10 },
-    ],
-    subjects: [
-      {
-        id: 'ugc-net-core',
-        name: 'Paper 1 General Aptitude & Higher Education',
-        nameHindi: 'पेपर 1 सामान्य योग्यता व उच्च शिक्षा',
-        emoji: '🧠',
-        chapters: [
-          {
-            id: 'net-teaching-research',
-            name: 'Teaching, Research & ICT Frameworks',
-            nameHindi: 'शिक्षण, शोध व आईसीटी संरचना',
-            topics: [
-              {
-                id: 'teaching-aptitude',
-                name: 'Teaching & Research Aptitude, Evaluation Systems & NEP 2020',
-                nameHindi: 'शिक्षण व शोध अभिवृत्ति, मूल्यांकन प्रणालियां व एनईपी 2020',
-                subtopics: [
-                  'Levels of Teaching (Memory, Understanding, Reflective), CBCS, NEP 2020 Higher Education Provisions',
-                  'Teaching methods, Characteristics of good teacher',
-                  'Research types, Thesis writing, Sampling methods',
-                ],
-                examQuestions: '10',
-                difficulty: 'hard',
-              },
-              {
-                id: 'computer-awareness',
-                name: 'Information & Communication Technology (ICT) in Education',
-                nameHindi: 'शिक्षा में सूचना एवं संचार प्रौद्योगिकी (ICT)',
-                subtopics: ['Digital initiatives in higher education: SWAYAM, SWAYAMPRABHA, Digilocker, IPv4 vs IPv6, Cloud'],
-                examQuestions: '10',
-                difficulty: 'medium',
-              },
-              {
-                id: 'ict-net',
-                name: 'ICT, Data Interpretation & Higher Education',
-                nameHindi: 'ICT, डेटा व उच्च शिक्षा',
-                subtopics: ['Internet, E-learning, Digital literacy', 'Bar graphs, Pie charts, Tables', 'UGC Act, Universities in India, NAAC'],
-                examQuestions: '30',
-                difficulty: 'medium',
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  },
+  // 3.6 UGC NET — defined separately as UGC_NET_EXAM below; pushed via CENTRAL_EXAMS.push(...)
 
   // 3.7 UTET (Uttarakhand Teacher Eligibility Test)
   {
@@ -2703,6 +2666,7 @@ export const CENTRAL_EXAMS: Exam[] = [
     officialWebsite: 'https://uktet.com',
     emoji: '🏔️',
     color: '#047857',
+    syllabusStatus: 'provisional-archive' as const,
     sections: [
       { name: 'Child Development and Pedagogy', nameHindi: 'बाल विकास एवं शिक्षाशास्त्र', marks: 30, questions: 30 },
       { name: 'Language I (Hindi compulsory)', nameHindi: 'भाषा I (हिंदी)', marks: 30, questions: 30 },
@@ -3004,8 +2968,7 @@ const ARMY_AGNIVEER_EXAM: Exam = {
   ],
 };
 
-void UGC_NET_EXAM;
-CENTRAL_EXAMS.push(SSC_CGL_EXAM, CTET_P2_EXAM, ARMY_AGNIVEER_EXAM);
+CENTRAL_EXAMS.push(SSC_CGL_EXAM, CTET_P2_EXAM, ARMY_AGNIVEER_EXAM, UGC_NET_EXAM);
 
 // ---------------------------------------------------------------------------
 // 4. HARYANA EXAMS DATABASE

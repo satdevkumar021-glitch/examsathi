@@ -1,13 +1,14 @@
 'use client';
 import { useStore } from '@/lib/store';
 import { normalizePracticeExamId, practiceExam } from '@/lib/exam-context';
-import { getQuestionPool } from '@/lib/data/question_bank_engine';
+import { useCounts } from '@/lib/use-question-data';
+import type { CountQuery } from '@/lib/question-client';
 import { studyStorage } from '@/lib/storage';
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Target, Clock, Layers, Award, CheckCircle2, Play, BookOpen, ChevronRight, Flame, Calendar, Sparkles, SlidersHorizontal } from 'lucide-react';
-import { getExamTopics, AVAILABLE_EXAMS } from '@/lib/data/question_bank_engine';
+import { getExamTopics, AVAILABLE_EXAMS } from '@/lib/data/exam-catalog';
 import MockTestBottomSheet from '@/components/ui/MockTestBottomSheet';
 
 export default function MockTestHub() {
@@ -59,39 +60,36 @@ export default function MockTestHub() {
 
   const [topicSearch, setTopicSearch] = useState('');
   const [showUnavailable, setShowUnavailable] = useState(false);
+  const baseTopics = useMemo(() => getExamTopics(selectedExamForDrawer), [selectedExamForDrawer]);
+  // Query layout: [ppsc mega, punjab-gk mega, exam total, ...(scoped, fallback) per topic]
+  const countQueries = useMemo<CountQuery[]>(
+    () => [
+      { topicId: 'ppsc-clerk-mega' },
+      { topicId: 'punjab-gk-punjabi-mega' },
+      { examId: selectedExamForDrawer },
+      ...baseTopics.flatMap<CountQuery>(topic => [
+        { examId: selectedExamForDrawer, topicId: topic.id, difficulty: difficultyFilter },
+        { topicId: topic.id, difficulty: difficultyFilter },
+      ]),
+    ],
+    [baseTopics, selectedExamForDrawer, difficultyFilter]
+  );
+  const counts = useCounts(countQueries);
+  // availableCount is null while counts are loading (unknown, not zero).
   const examTopics = useMemo(
     () =>
-      getExamTopics(selectedExamForDrawer).map(topic => {
-        const scopedCount = getQuestionPool({
-          examId: selectedExamForDrawer,
-          topicId: topic.id,
-          difficulty: difficultyFilter,
-        }).length;
-        const fallbackCount =
-          scopedCount > 0
-            ? scopedCount
-            : getQuestionPool({
-                topicId: topic.id,
-                difficulty: difficultyFilter,
-              }).length;
-        return {
-          ...topic,
-          availableCount: fallbackCount,
-        };
+      baseTopics.map((topic, i) => {
+        const availableCount: number | null = counts ? (counts[3 + i * 2] > 0 ? counts[3 + i * 2] : counts[4 + i * 2]) : null;
+        return { ...topic, availableCount };
       }),
-    [selectedExamForDrawer, difficultyFilter]
+    [baseTopics, counts]
   );
   const subjects = ['All', ...new Set(examTopics.map(topic => topic.subject))];
-  const filteredTopics = examTopics.filter(topic => (selectedSubject === 'All' || topic.subject === selectedSubject) && (showUnavailable || topic.availableCount > 0) && `${topic.name} ${topic.namePa} ${topic.subject}`.toLowerCase().includes(topicSearch.toLowerCase()));
+  const filteredTopics = examTopics.filter(topic => (selectedSubject === 'All' || topic.subject === selectedSubject) && (showUnavailable || topic.availableCount === null || topic.availableCount > 0) && `${topic.name} ${topic.namePa} ${topic.subject}`.toLowerCase().includes(topicSearch.toLowerCase()));
 
-  const ppscClerkMegaCount = useMemo(
-    () => getQuestionPool({ topicId: 'ppsc-clerk-mega' }).length,
-    []
-  );
-  const punjabGkPunjabiMegaCount = useMemo(
-    () => getQuestionPool({ topicId: 'punjab-gk-punjabi-mega' }).length,
-    []
-  );
+  const ppscClerkMegaCount = counts ? counts[0] : '…';
+  const punjabGkPunjabiMegaCount = counts ? counts[1] : '…';
+  const examAvailableCount = counts ? counts[2] : '…';
 
   const startTopicTest = (topicId: string, customMode?: 'exam' | 'flip', isPyq = false, setNum?: number) => {
     const mode = customMode || testMode;
@@ -155,9 +153,6 @@ export default function MockTestHub() {
       <section className="rounded-2xl border-2 border-amber-500/70 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-teal-950/90 p-4 space-y-4 shadow-xl">
         <div className="flex items-center justify-between gap-2 flex-wrap">
           <div className="flex items-center gap-2">
-            <span className="bg-amber-500 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
-              🔴 LIVE EXAM SPECIAL
-            </span>
             <h2 className="text-sm sm:text-base font-black text-white">
               Punjab PPSC & PSSSB Clerical + Punjabi Live 50-50 Mock Sets
             </h2>
@@ -171,7 +166,7 @@ export default function MockTestHub() {
         <div className="rounded-xl bg-slate-900/90 border border-teal-500/50 p-3.5 space-y-2.5">
           <div className="flex items-start justify-between gap-2">
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-teal-400 block">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-teal-400 block">
                 Live Test 1 • All Clerical & PPSC Subjects Combined ({ppscClerkMegaCount} Qs Bank)
               </span>
               <h3 className="text-sm font-black text-white">
@@ -208,7 +203,7 @@ export default function MockTestHub() {
         <div className="rounded-xl bg-slate-900/90 border border-amber-500/50 p-3.5 space-y-2.5">
           <div className="flex items-start justify-between gap-2">
             <div>
-              <span className="text-[10px] font-extrabold uppercase tracking-wider text-amber-400 block">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-amber-400 block">
                 Live Test 2 • Punjab GK + Compulsory Punjabi Paper A & B ({punjabGkPunjabiMegaCount} Qs Bank)
               </span>
               <h3 className="text-sm font-black text-white">
@@ -260,9 +255,9 @@ export default function MockTestHub() {
         <p className="text-xs text-slate-200">Polity, Indian History, Geography, Science and Punjab GK · 20 questions each.</p>
         <p className="text-[11px] text-amber-200">English · हिंदी · ਪੰਜਾਬੀ questions, options and explanations. AI-assisted original practice; independent editorial and translation review pending. Not a PYQ, current-affairs set, or official full-paper mock. 90-minute practice timer; +1 correct, −0.25 wrong, 0 skipped.</p>
         <div className="flex flex-wrap gap-2">
-          <Link className="rounded-lg bg-emerald-600 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=100&mode=exam&fresh=1">Start 100-question GK test →</Link>
-          <Link className="rounded-lg bg-teal-600 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=50&set=1&mode=exam">Set 1 (Q1–50) →</Link>
-          <Link className="rounded-lg bg-teal-600 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=50&set=2&mode=exam">Set 2 (Q51–100) →</Link>
+          <Link className="rounded-lg bg-emerald-700 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=100&mode=exam&fresh=1">Start 100-question GK test →</Link>
+          <Link className="rounded-lg bg-teal-700 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=50&set=1&mode=exam">Set 1 (Q1–50) →</Link>
+          <Link className="rounded-lg bg-teal-700 px-3.5 py-2.5 text-xs font-bold text-white" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=50&set=2&mode=exam">Set 2 (Q51–100) →</Link>
           <Link className="rounded-lg border border-emerald-500 px-3.5 py-2.5 text-xs text-emerald-200" href="/mock-test/topic-clerk-gk-fast-practice/?exam=punjab-clerk&count=20&mode=exam&fresh=1">Quick 20-question practice</Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">{Object.entries({Polity:'gk-polity-foundation',History:'gk-history-foundation',Geography:'gk-geography-foundation',Science:'gk-science-foundation','Punjab GK':'gk-punjab-foundation'}).map(([name,id])=><Link key={id} className="rounded-lg bg-slate-800 hover:bg-slate-700 p-2.5 text-xs font-semibold text-emerald-200 border border-slate-700" href={`/mock-test/topic-${id}/?exam=punjab-clerk&count=20&mode=exam&fresh=1`}>{name} · 20 questions →</Link>)}</div>
@@ -277,11 +272,11 @@ export default function MockTestHub() {
               <Target size={22} />
             </span>
             <div>
-              <h1 className="text-white font-extrabold text-lg">Mock Test & PYQ Portal</h1>
-              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — Historical labels under review & topic practice</p>
+              <h1 className="text-white font-extrabold text-lg">Mock Test & Practice Portal</h1>
+              <p className="text-[11px] text-slate-300">ਟੈਸਟ ਪੋਰਟਲ — Year-tagged practice sets (sources under review)</p>
             </div>
           </div>
-          <span className="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
+          <span className="bg-amber-500/20 text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-500/30 flex items-center gap-1">
             <Flame size={12} /> Live CBT
           </span>
         </div>
@@ -290,7 +285,7 @@ export default function MockTestHub() {
         {lastLevel ? (
           <div className="mt-3 pt-3 border-t border-slate-700/60 flex items-center justify-between bg-slate-900/60 p-3 rounded-xl">
             <div>
-              <span className="text-[10px] uppercase font-bold text-slate-400">Latest Performance</span>
+              <span className="text-xs uppercase font-bold text-slate-400">Latest Performance</span>
               <div className="text-sm font-bold text-teal-300 flex items-center gap-1.5 mt-0.5">
                 <Award size={16} className="text-amber-400" />
                 {lastLevel.title}
@@ -298,7 +293,7 @@ export default function MockTestHub() {
             </div>
             <div className="text-right">
               <span className="text-xs font-mono font-bold text-white">{lastLevel.percentage}% Score</span>
-              <div className="text-[10px] text-teal-400 font-medium">
+              <div className="text-xs text-teal-400 font-medium">
                 {lastLevel.rankText || lastLevel.badge}
               </div>
             </div>
@@ -328,7 +323,7 @@ export default function MockTestHub() {
               </p>
             </div>
           </div>
-          <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-black px-2 py-0.5 rounded-full border border-emerald-500/30">
+          <span className="bg-emerald-500/20 text-emerald-300 text-xs font-black px-2 py-0.5 rounded-full border border-emerald-500/30">
             Up to 50 Qs
           </span>
         </div>
@@ -358,7 +353,7 @@ export default function MockTestHub() {
           <div>
             <div className="flex items-center gap-2">
               <h3 className="text-white font-bold text-xs sm:text-sm">AI Drill Generator ✨</h3>
-              <span className="text-[9px] bg-teal-500/20 text-teal-300 font-bold px-1.5 py-0.5 rounded border border-teal-500/30 font-mono">Cloud AI drafts</span>
+              <span className="text-xs bg-teal-500/20 text-teal-300 font-bold px-1.5 py-0.5 rounded border border-teal-500/30 font-mono">Cloud AI drafts</span>
             </div>
             <p className="text-[11px] text-slate-300 mt-0.5">
               Paste handwritten notes, PDF text, or coaching material to generate custom CBT drills instantly.
@@ -374,7 +369,7 @@ export default function MockTestHub() {
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
             1. Configure selected examination
           </h2>
-          <span className="text-[10px] text-teal-400 font-semibold">Coverage under review</span>
+          <span className="text-xs text-teal-400 font-semibold">Coverage under review</span>
         </div>
         
         <div className="grid grid-cols-2 gap-2.5">
@@ -386,22 +381,22 @@ export default function MockTestHub() {
             >
               <div>
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[9px] font-bold text-teal-400 bg-teal-500/10 px-1.5 py-0.5 rounded border border-teal-500/20">
+                  <span className="text-xs font-bold text-teal-400 bg-teal-500/10 px-1.5 py-0.5 rounded border border-teal-500/20">
                     {exam.badge}
                   </span>
-                  <span className="text-[9px] text-slate-400 font-mono">
-                    {getQuestionPool({examId: exam.id}).length} available
+                  <span className="text-xs text-slate-400 font-mono">
+                    {examAvailableCount} available
                   </span>
                 </div>
                 <h3 className="text-white font-bold text-xs group-hover:text-teal-300 transition line-clamp-1">
                   {exam.name}
                 </h3>
-                <p className="text-[10px] text-slate-400 mt-0.5 line-clamp-1">
+                <p className="text-xs text-slate-400 mt-0.5 line-clamp-1">
                   {exam.pyqSpan}
                 </p>
               </div>
 
-              <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-700/60 text-[10px] text-teal-400 font-bold">
+              <div className="flex items-center justify-between mt-2 pt-2 border-t border-slate-700/60 text-xs text-teal-400 font-bold">
                 <span>Configure Test</span>
                 <ChevronRight size={12} className="group-hover:translate-x-1 transition-transform" />
               </div>
@@ -416,7 +411,7 @@ export default function MockTestHub() {
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
             2. Question Difficulty Tier
           </h2>
-          <span className="text-[10px] text-slate-400">Exam Grading Filter</span>
+          <span className="text-xs text-slate-400">Exam Grading Filter</span>
         </div>
 
         <div className="grid grid-cols-4 gap-2">
@@ -438,7 +433,7 @@ export default function MockTestHub() {
                 }`}
               >
                 <div className={`text-xs font-bold ${diff.color}`}>{diff.label}</div>
-                <div className="text-[9px] text-slate-400 mt-0.5">{diff.desc}</div>
+                <div className="text-xs text-slate-400 mt-0.5">{diff.desc}</div>
               </button>
             );
           })}
@@ -519,13 +514,13 @@ export default function MockTestHub() {
           <h2 className="text-xs font-bold uppercase text-slate-400 tracking-wider">
             Ready topic tests ({filteredTopics.length} Topics)
           </h2>
-          <span className="text-[10px] text-teal-400 font-semibold">Topic availability below</span>
+          <span className="text-xs text-teal-400 font-semibold">Topic availability below</span>
         </div>
         
         <label className="block text-sm mb-3">Find a topic / विषय खोजें / ਵਿਸ਼ਾ ਲੱਭੋ
           <input type="search" aria-label="Find a topic" value={topicSearch} onChange={event=>setTopicSearch(event.target.value)} placeholder="History, Science, Punjab…" className="block w-full rounded-lg bg-slate-800 p-3 mt-1" />
         </label>
-        <label className="flex gap-2 text-xs text-slate-300 mb-3"><input type="checkbox" checked={showUnavailable} onChange={event=>setShowUnavailable(event.target.checked)} />Show topics still being prepared ({examTopics.filter(topic=>!topic.availableCount).length})</label>
+        <label className="flex gap-2 text-xs text-slate-300 mb-3"><input type="checkbox" checked={showUnavailable} onChange={event=>setShowUnavailable(event.target.checked)} />Show topics still being prepared ({counts ? examTopics.filter(topic=>!topic.availableCount).length : '…'})</label>
         {!filteredTopics.length && <p role="status" className="p-4 text-amber-200">No ready tests match this selection. Try another subject or clear the search. Topics still being prepared have no usable questions yet.</p>}
         {/* Subject Filter Pills */}
         <div className="flex gap-1.5 overflow-x-auto pb-2 scrollbar-none">
@@ -554,16 +549,16 @@ export default function MockTestHub() {
               <div className="flex items-start justify-between gap-2">
                 <div className="min-w-0">
                   <div className="flex items-center gap-2 mb-1">
-                    <span className="bg-slate-700 text-slate-300 text-[9px] font-bold uppercase px-2 py-0.5 rounded">
+                    <span className="bg-slate-700 text-slate-300 text-xs font-bold uppercase px-2 py-0.5 rounded">
                       {topic.subject}
                     </span>
                     {false && topic.isPYQRich && (
-                      <span className="bg-emerald-500/20 text-emerald-300 text-[9px] font-bold px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
+                      <span className="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-1.5 py-0.5 rounded border border-emerald-500/30 flex items-center gap-1">
                         <Calendar size={10} /> Year-labelled (unverified)
                       </span>
                     )}
-                    <span className="text-teal-400 text-[10px] font-semibold">
-                      {topic.availableCount} available questions
+                    <span className="text-teal-400 text-xs font-semibold">
+                      {topic.availableCount ?? '…'} available questions
                     </span>
                   </div>
                   <h3 className="text-white font-bold text-xs leading-snug">
@@ -576,18 +571,18 @@ export default function MockTestHub() {
               </div>
 
               {/* Multi-Set 50-Q Pills when topic has > 50 questions */}
-              {topic.availableCount > 50 && (
+              {topic.availableCount !== null && topic.availableCount > 50 && (
                 <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1">
-                  <span className="text-[10px] font-bold text-slate-400 shrink-0">50-Q Sets:</span>
+                  <span className="text-xs font-bold text-slate-400 shrink-0">50-Q Sets:</span>
                   {Array.from({ length: Math.min(Math.ceil(topic.availableCount / 50), 8) }, (_, idx) => {
                     const sNum = idx + 1;
                     const startQ = (sNum - 1) * 50 + 1;
-                    const endQ = Math.min(sNum * 50, topic.availableCount);
+                    const endQ = Math.min(sNum * 50, topic.availableCount ?? 0);
                     return (
                       <button
                         key={sNum}
                         onClick={() => startTopicTest(topic.id, 'exam', false, sNum)}
-                        className="px-2 py-1 rounded-md text-[10px] font-bold shrink-0 bg-slate-900 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 transition"
+                        className="px-2 py-1 rounded-md text-xs font-bold shrink-0 bg-slate-900 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 transition"
                       >
                         Set {sNum} ({startQ}–{endQ})
                       </button>
@@ -599,14 +594,14 @@ export default function MockTestHub() {
               {/* Action Buttons */}
               <div className="flex items-center gap-2 pt-2 border-t border-slate-700/60">
                 <button
-                  disabled={!topic.availableCount}
+                  disabled={topic.availableCount === 0}
                   onClick={() => startTopicTest(topic.id, 'exam', false, 1)}
                   className="flex-1 bg-teal-500/20 hover:bg-teal-500 text-teal-300 hover:text-slate-950 border border-teal-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >
-                  <Play size={12} /> {topic.availableCount ? `Start ${Math.min(questionCount, topic.availableCount)} questions` : 'Questions coming soon'}
+                  <Play size={12} /> {topic.availableCount === null ? `Start ${questionCount} questions` : topic.availableCount ? `Start ${Math.min(questionCount, topic.availableCount)} questions` : 'Questions coming soon'}
                 </button>
                 <button
-                  disabled={!topic.availableCount}
+                  disabled={topic.availableCount === 0}
                   onClick={() => startTopicTest(topic.id, 'flip', false, 1)}
                   className="flex-1 bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 border border-amber-500/40 py-1.5 px-3 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-sm"
                 >

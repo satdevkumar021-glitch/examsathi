@@ -1,4 +1,4 @@
-import type { Question } from './questions';
+import type { Question } from '../question-types';
 const supported = new Set(['percent', 'ratio', 'mathematics-core', 'quantitative-aptitude', 'ssc-cgl-quant', 'ett-primary-math', 'elementary-mathematics', 'primary-mathematics']);
 /** Computed answers and distinct options; these are practice variants, never PYQs. */
 export function generateQuantPractice(topicId: string, count: number): Question[] {

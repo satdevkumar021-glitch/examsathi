@@ -12,6 +12,7 @@ import InstallAppButton from '@/components/ui/InstallAppButton';
 import StreakBadge from '@/components/ui/StreakBadge';
 import StreakCard from '@/components/dashboard/StreakCard';
 import DailyKnowledge from '@/components/dashboard/DailyKnowledge';
+import WeakTopicsCard from '@/components/dashboard/WeakTopicsCard';
 import { getTodayContent } from '@/lib/data/daily_content';
 import { Target, Book, Layers, ArrowRight, Keyboard, Compass, Sparkles, GraduationCap, Briefcase, Share2, Brain } from 'lucide-react';
 
@@ -107,13 +108,12 @@ export default function Dashboard() {
       {/* Dynamic 7-Day Study Streak Tracker */}
       <StreakCard />
 
+      <WeakTopicsCard />
+
       {/* 🔴 TODAY'S LIVE EXAM MOCKS — 1-CLICK 50-50 SETS */}
       <section className="rounded-2xl border-2 border-amber-500/70 bg-gradient-to-br from-indigo-950/90 via-slate-900 to-teal-950/90 p-4 space-y-3.5 shadow-xl">
         <div className="flex items-center justify-between gap-2 flex-wrap">
           <div className="flex items-center gap-2">
-            <span className="bg-amber-500 text-slate-950 text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
-              🔴 LIVE EXAM SPECIAL
-            </span>
             <h2 className="text-sm font-black text-white">
               Start 50-Question Sets in 1 Click (ਪੰਜਾਬੀ • हिंदी • EN)
             </h2>
@@ -129,7 +129,7 @@ export default function Dashboard() {
             <h3 className="text-xs sm:text-sm font-black text-white">
               💼 1. Punjab PPSC &amp; PSSSB Clerk All-Subjects Practice Mock (300+ Qs)
             </h3>
-            <span className="text-[10px] font-bold text-teal-300 shrink-0">50-50 Sets</span>
+            <span className="text-xs font-bold text-teal-300 shrink-0">50-50 Sets</span>
           </div>
           <p className="text-[11px] text-slate-300">
             All subjects: GK, Polity, History, Geography, Economy, Current Affairs, Sports, Science, Punjabi, English, Computer &amp; Reasoning.
@@ -146,7 +146,7 @@ export default function Dashboard() {
                 }`}
               >
                 Set {setNum}
-                <span className="block text-[9px] font-normal opacity-80">
+                <span className="block text-xs font-normal opacity-80">
                   {(setNum - 1) * 50 + 1}–{setNum * 50}
                 </span>
               </Link>
@@ -160,7 +160,7 @@ export default function Dashboard() {
             <h3 className="text-xs sm:text-sm font-black text-white">
               🪯 2. Punjab GK, 10 Sikh Gurus &amp; Compulsory Punjabi Mock (250+ Qs)
             </h3>
-            <span className="text-[10px] font-bold text-amber-300 shrink-0">Paper A + B</span>
+            <span className="text-xs font-bold text-amber-300 shrink-0">Paper A + B</span>
           </div>
           <p className="text-[11px] text-slate-300">
             10 Sikh Gurus, Banda Singh Bahadur, Maharaja Ranjit Singh, Punjab Culture, Gurmukhi Script, Grammar, Idioms &amp; Vocabulary.
@@ -177,7 +177,7 @@ export default function Dashboard() {
                 }`}
               >
                 Set {setNum}
-                <span className="block text-[9px] font-normal opacity-80">
+                <span className="block text-xs font-normal opacity-80">
                   {(setNum - 1) * 50 + 1}–{setNum * 50}
                 </span>
               </Link>
@@ -187,7 +187,7 @@ export default function Dashboard() {
 
         {/* 1-Click Subject & Topic Tests */}
         <div className="space-y-1.5 pt-1">
-          <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-300 block">
+          <span className="text-xs font-extrabold uppercase tracking-wider text-slate-300 block">
             ⚡ 1-Click Subject &amp; Topic Practice (English • ਪੰਜਾਬੀ • हिंदी):
           </span>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
@@ -254,7 +254,7 @@ export default function Dashboard() {
                 </p>
                 <p className="text-xs font-semibold text-slate-200">{daily.gkTitle}</p>
                 <p className="text-xs text-slate-400 mt-1 line-clamp-2">{daily.gkDescription}</p>
-                {daily.gkSource && <p className="text-[10px] text-slate-500 mt-1">स्रोत: {daily.gkSource}</p>}
+                {daily.gkSource && <p className="text-xs text-slate-400 mt-1">स्रोत: {daily.gkSource}</p>}
               </div>
             )}
           </div>
@@ -272,10 +272,10 @@ export default function Dashboard() {
           </div>
           <div className="min-w-0">
             <div className="flex items-center gap-1.5 mb-0.5">
-              <span className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">
+              <span className="text-xs font-bold text-amber-400 uppercase tracking-wider">
                 ⚡ Curated Practice Bank
               </span>
-              <span className="bg-teal-500/20 text-teal-300 text-[9px] font-bold px-1.5 py-0.2 rounded border border-teal-500/30">
+              <span className="bg-teal-500/20 text-teal-300 text-xs font-bold px-1.5 py-0.2 rounded border border-teal-500/30">
                 50 Qs Set
               </span>
             </div>
@@ -306,7 +306,7 @@ export default function Dashboard() {
             <p className="text-[11px] text-slate-300 truncate">Turn notes or PDF excerpts into live MCQs with explanations</p>
           </div>
         </div>
-        <span className="text-[10px] text-teal-300 font-bold shrink-0 bg-teal-500/10 px-2 py-1 rounded border border-teal-500/30">
+        <span className="text-xs text-teal-300 font-bold shrink-0 bg-teal-500/10 px-2 py-1 rounded border border-teal-500/30">
           Try Free &rarr;
         </span>
       </Link>
@@ -337,7 +337,7 @@ export default function Dashboard() {
                 Master Cadre, Lecturer Cadre, ETT, REET, CTET (SST, Science, Languages)
               </p>
             </div>
-            <span className="text-[10px] text-teal-400 font-semibold mt-auto flex items-center gap-1">
+            <span className="text-xs text-teal-400 font-semibold mt-auto flex items-center gap-1">
               Explore Syllabus &rarr;
             </span>
           </Link>
@@ -356,7 +356,7 @@ export default function Dashboard() {
                 PSSSB Clerk, Patwari, Police, RSMSSB, SSC CHSL &amp; CGL
               </p>
             </div>
-            <span className="text-[10px] text-teal-400 font-semibold mt-auto flex items-center gap-1">
+            <span className="text-xs text-teal-400 font-semibold mt-auto flex items-center gap-1">
               Explore Syllabus &rarr;
             </span>
           </Link>
@@ -368,22 +368,22 @@ export default function Dashboard() {
         <div className="grid grid-cols-4 gap-2.5">
           <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
             <span className="text-teal-400 font-bold text-lg">{readinessValue}</span>
-            <span className="text-slate-400 text-[10px] uppercase font-semibold">Last Score</span>
+            <span className="text-slate-400 text-xs uppercase font-semibold">Last Score</span>
           </div>
           <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
             <span className="text-indigo-400 font-bold text-lg">{topicsDone}</span>
-            <span className="text-slate-400 text-[10px] uppercase font-semibold">Topics</span>
+            <span className="text-slate-400 text-xs uppercase font-semibold">Topics</span>
           </div>
           <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
             <span className="text-amber-400 font-bold text-lg">{cardsCount}</span>
-            <span className="text-slate-400 text-[10px] uppercase font-semibold">Cards</span>
+            <span className="text-slate-400 text-xs uppercase font-semibold">Cards</span>
           </div>
           <div className="bg-slate-800/80 rounded-xl p-3 flex flex-col items-center justify-center border border-slate-700 shadow-sm text-center">
             <span className="text-emerald-400 font-bold text-lg">{avgScore}</span>
-            <span className="text-slate-400 text-[10px] uppercase font-semibold">Last Acc</span>
+            <span className="text-slate-400 text-xs uppercase font-semibold">Last Acc</span>
           </div>
         </div>
-        <p className="text-[10px] text-slate-400 text-center">
+        <p className="text-xs text-slate-400 text-center">
           {lastResult
             ? '🎯 Scores reflect your latest CBT test attempt. Complete topics across your syllabus to build broad exam mastery.'
             : '🎯 Complete your first CBT Mock Test to calculate practice accuracy and answer explanations.'}
@@ -417,7 +417,7 @@ export default function Dashboard() {
                 <p className="text-slate-400 text-[11px] truncate">1469-1708, Khalsa 1699, Misals, Ranjit Singh &amp; Ghadar</p>
               </div>
             </div>
-            <span className="bg-slate-700 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
+            <span className="bg-slate-700 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full shrink-0">
               12-15 Qs
             </span>
           </Link>
@@ -436,7 +436,7 @@ export default function Dashboard() {
                 <p className="text-slate-400 text-[11px] truncate">Plassey, Buxar, 1857 Revolt, INC, Dandi March, 1947</p>
               </div>
             </div>
-            <span className="bg-slate-700 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
+            <span className="bg-slate-700 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full shrink-0">
               10-12 Qs
             </span>
           </Link>
@@ -455,7 +455,7 @@ export default function Dashboard() {
                 <p className="text-slate-400 text-[11px] truncate">Part III, Articles 12-35, 6 Categories &amp; 5 Supreme Court Writs</p>
               </div>
             </div>
-            <span className="bg-slate-700 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
+            <span className="bg-slate-700 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full shrink-0">
               8-10 Qs
             </span>
           </Link>
@@ -474,7 +474,7 @@ export default function Dashboard() {
                 <p className="text-slate-400 text-[11px] truncate">30 WPM Benchmark, 92% Accuracy, MS Office Shortcuts</p>
               </div>
             </div>
-            <span className="bg-slate-700 text-teal-300 text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0">
+            <span className="bg-slate-700 text-teal-300 text-xs font-bold px-2 py-0.5 rounded-full shrink-0">
               20 Qs
             </span>
           </Link>
@@ -500,7 +500,7 @@ export default function Dashboard() {
               <div className="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
                 🧭
               </div>
-              <span className="text-[9px] bg-indigo-500/20 text-indigo-300 font-bold px-2 py-0.5 rounded border border-indigo-500/30">
+              <span className="text-xs bg-indigo-500/20 text-indigo-300 font-bold px-2 py-0.5 rounded border border-indigo-500/30">
                 60-Day Plan
               </span>
             </div>
@@ -510,7 +510,7 @@ export default function Dashboard() {
                 ETT, Clerk &amp; Master Cadre daily milestones + merit decider challenge
               </p>
             </div>
-            <span className="text-[10px] text-indigo-400 font-bold mt-auto flex items-center gap-1">
+            <span className="text-xs text-indigo-400 font-bold mt-auto flex items-center gap-1">
               Today&apos;s Targets &rarr;
             </span>
           </Link>
@@ -524,7 +524,7 @@ export default function Dashboard() {
               <div className="w-10 h-10 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center text-xl group-hover:scale-105 transition-transform">
                 🏛️
               </div>
-              <span className="text-[9px] bg-teal-500/20 text-teal-300 font-bold px-2 py-0.5 rounded border border-teal-500/30">
+              <span className="text-xs bg-teal-500/20 text-teal-300 font-bold px-2 py-0.5 rounded border border-teal-500/30">
                 16 Focus Desks
               </span>
             </div>
@@ -534,7 +534,7 @@ export default function Dashboard() {
                 Quiet reading desks, Pomodoro timer (25/45/60m) &amp; live desk mock
               </p>
             </div>
-            <span className="text-[10px] text-teal-400 font-bold mt-auto flex items-center gap-1">
+            <span className="text-xs text-teal-400 font-bold mt-auto flex items-center gap-1">
               Select Your Desk &rarr;
             </span>
           </Link>
@@ -609,7 +609,7 @@ export default function Dashboard() {
             </span>
             <div>
               <h3 className="text-white font-bold text-xs">Share ExamSathi with Friends &amp; Aspirants</h3>
-              <p className="text-[10px] text-emerald-300">100% Free • Open Learning Movement • Spread the Word</p>
+              <p className="text-xs text-emerald-300">100% Free • Open Learning Movement • Spread the Word</p>
             </div>
           </div>
         </div>
@@ -622,7 +622,7 @@ export default function Dashboard() {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-2 shadow transition"
+          className="w-full bg-emerald-700 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-center text-xs flex items-center justify-center gap-2 shadow transition"
         >
           <span>📲 Share on WhatsApp (व्हाट्सएप पर शेयर करें)</span>
         </a>
@@ -641,7 +641,7 @@ export default function Dashboard() {
       </div>
 
       {/* Footer */}
-      <div className="mt-4 pt-4 border-t border-slate-800 flex flex-wrap justify-center gap-4 text-xs text-slate-500">
+      <div className="mt-4 pt-4 border-t border-slate-800 flex flex-wrap justify-center gap-4 text-xs text-slate-400">
         <Link href="/about" className="hover:text-slate-400">About</Link>
         <Link href="/privacy" className="hover:text-slate-400">Privacy Policy</Link>
         <Link href="/terms" className="hover:text-slate-400">Terms</Link>

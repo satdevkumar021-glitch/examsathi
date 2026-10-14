@@ -48,13 +48,13 @@ test('cloud save propagates version conflicts without changing local records', a
   const { saveCloudStudy } = moduleAt('src/lib/cloud-study.ts', { './supabase/client': { createClient: () => client }, './study-backup': { exportStudyBackup: () => '{"version":1,"records":{}}', restoreStudyBackup: () => { restored++; } } }, { Blob, window: { localStorage: { getItem: () => 'alice' } } });
   await assert.rejects(saveCloudStudy(4), /Another device changed/); assert.equal(parameters.p_expected_version, 4); assert.equal(restored, 0);
 });
-test('Node production and Pages exports keep assets, API and auth redirects on matching paths', () => {
-  for (const [staticExport, prefix] of [['false', ''], ['true', '/examsathi']]) {
-    const globals = { process: { env: { NODE_ENV: 'production', NEXT_PUBLIC_STATIC_EXPORT: staticExport } }, URL, window: { location: { origin: 'https://exam.example' } } };
+test('assets, API and auth redirects stay on matching paths with and without a base path', () => {
+  for (const prefix of ['', '/examsathi']) {
+    const globals = { process: { env: { NODE_ENV: 'production', NEXT_PUBLIC_BASE_PATH: prefix } }, URL, window: { location: { origin: 'https://exam.example' } } };
     const paths = moduleAt('src/lib/paths.ts', {}, globals);
     const auth = moduleAt('src/lib/supabase/config.ts', {}, globals);
     assert.equal(paths.publicPath('/ocr/worker.min.js'), prefix + '/ocr/worker.min.js');
-    assert.equal(paths.apiUrl('/api/ai/generate'), staticExport === 'true' ? null : '/api/ai/generate');
+    assert.equal(paths.apiUrl('/api/ai/generate'), prefix + '/api/ai/generate');
     assert.equal(auth.authRedirectUrl('/auth/callback'), 'https://exam.example' + prefix + '/auth/callback/');
   }
 });

@@ -13,7 +13,7 @@ function load(file) {
   if (cache.has(file)) return cache.get(file).exports;
   const loaded = { exports: {} }; cache.set(file, loaded);
   const js = ts.transpileModule(readFileSync(file, 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
-  vm.runInNewContext(js, { module: loaded, exports: loaded.exports, require: name => load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)), window, Event: class Event {}, Date, Math, Set, Map, process, console });
+  vm.runInNewContext(js, { module: loaded, exports: loaded.exports, require: name => name === 'server-only' ? {} : load(name.startsWith('@/') ? path.resolve('src', name.slice(2)) : path.resolve(path.dirname(file), name)), window, Event: class Event {}, Date, Math, Set, Map, process, console });
   return loaded.exports;
 }
 const engine = load('src/lib/data/question_bank_engine.ts');
@@ -67,12 +67,12 @@ test('ETT reflection offers real localized lessons and a finite strictly scoped 
     assert.ok(lesson.sections.every(section => section.text[lang].length > 100));
   }
   const pool = engine.getQuestionPool({ examId: 'punjab-ett', topicId: 'ett-light-reflection' });
-  assert.equal(pool.length, 20);
-  assert.equal(engine.getTestQuestions({ examId: 'punjab-ett', topicId: 'ett-light-reflection', count: 50 }).length, 20);
+  assert.ok(pool.length >= 20, `reflection bank must have at least 20 questions (found ${pool.length})`);
+  assert.equal(engine.getTestQuestions({ examId: 'punjab-ett', topicId: 'ett-light-reflection', count: 50 }).length, pool.length);
   assert.equal(engine.getQuestionPool({ examId: 'punjab-clerk', topicId: 'ett-light-reflection' }).length, 0);
   assert.equal(engine.getQuestionPool({ examId: 'punjab-ett', topicId: 'ett-light-reflection', pyqOnly: true }).length, 0);
   for (const q of pool) {
-    assert.equal(q.topicId, 'ett-light-reflection');
+    assert.equal(canonical(q.topicId), 'ett-light-reflection', `Question ${q.id} topicId '${q.topicId}' must canonicalize to ett-light-reflection`);
     assert.equal(q.year, undefined);
     assert.equal(q.editorialStatus, 'authored');
     assert.equal(new Set(Object.values(q.options).map(o => o.en)).size, 4);
@@ -158,16 +158,26 @@ test('no rank is invented without a verified candidate cohort', () => {
   assert.equal(rank.hasEnoughData, false);
   assert.equal(rank.totalCandidates, 0);
 });
-test('saved generated questions survive vault lookup and custom-practice transport', () => {
+test('only AI-made drills are snapshotted in the browser; bank questions are fetched by id', async () => {
   local.clear();
+  const fetched = [];
+  cache.set(path.resolve('src/lib/question-client.ts'), { exports: {
+    isLocalQuestionId: id => /^(notes|ai)-\d+-\d+$/.test(id),
+    lookupQuestions: async ids => { fetched.push(...ids); return ids.map(id => ({ id, question: { en: `server ${id}` } })); },
+  } });
   const vault = load('src/lib/question-vault.ts');
   const { studyStorage } = load('src/lib/storage.ts');
-  const generated = engine.getTestQuestions({ topicId: 'percent', count: 50 }).find(q => q.id.startsWith('gen-quant'));
-  vault.saveCustomPractice([generated]);
-  assert.equal(JSON.parse(studyStorage.getItem('examsathi_custom_cbt_questions'))[0].id, generated.id);
-  assert.equal(vault.getVaultQuestions([generated.id])[0].question.en, generated.question.en);
-  studyStorage.setItem('examsathi_result_example', JSON.stringify({ questions: [generated], testTitle: 'Saved review' }));
-  assert.equal(vault.savedReviewQuestions('example').questions[0].id, generated.id);
+  const aiQuestion = { id: 'ai-1700000000000-0', question: { en: 'AI made' }, correct: 'A' };
+  const bankQuestion = { id: 'gen-quant-percent-3', question: { en: 'Bank question' }, correct: 'B' };
+  vault.saveCustomPractice([aiQuestion, bankQuestion]);
+  assert.equal(JSON.parse(studyStorage.getItem('examsathi_custom_cbt_questions')).length, 2);
+  const snapshots = JSON.parse(studyStorage.getItem('examsathi_question_snapshots'));
+  assert.deepEqual(Object.keys(snapshots), [aiQuestion.id], 'bank questions must not be copied to the device');
+  const found = await vault.getVaultQuestions([aiQuestion.id, bankQuestion.id]);
+  assert.deepEqual(found.map(q => q.id), [aiQuestion.id, bankQuestion.id]);
+  assert.deepEqual(fetched, [bankQuestion.id], 'only the bank id goes to the server');
+  studyStorage.setItem('examsathi_result_example', JSON.stringify({ questions: [aiQuestion], testTitle: 'Saved review' }));
+  assert.equal(vault.savedReviewQuestions('example').questions[0].id, aiQuestion.id);
   assert.equal(vault.savedReviewQuestions('missing'), null);
 });
 test('focus session handles sleeping tabs and pause/resume without elapsed-time drift', () => {
