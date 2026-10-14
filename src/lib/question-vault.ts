@@ -3,17 +3,33 @@ import { isLocalQuestionId, lookupQuestions } from './question-client';
 import { studyStorage } from './storage';
 
 const KEY = 'examsathi_question_snapshots';
+const MAX_SNAPSHOTS = 100;
 
 /**
  * Only questions the server cannot rebuild (AI-made drills) are snapshotted in the browser.
  * Bank questions are fetched by id on demand, so the bank is never copied to the device.
+ * Snapshots are capped at MAX_SNAPSHOTS to prevent LocalStorage quota overflow on mobile devices.
  */
 export function rememberQuestions(questions: ReviewedQuestion[]): void {
   const local = questions.filter(q => isLocalQuestionId(q.id));
   if (local.length === 0) return;
   const existing = readSnapshots();
   for (const question of local) existing[question.id] = question;
-  studyStorage.setItem(KEY, JSON.stringify(existing));
+  const keys = Object.keys(existing);
+  if (keys.length > MAX_SNAPSHOTS) {
+    const toRemove = keys.slice(0, keys.length - MAX_SNAPSHOTS);
+    for (const k of toRemove) delete existing[k];
+  }
+  try {
+    studyStorage.setItem(KEY, JSON.stringify(existing));
+  } catch {
+    // If quota exceeded, trim more aggressively (keep 50) and retry
+    const trimmedKeys = Object.keys(existing);
+    if (trimmedKeys.length > 50) {
+      for (const k of trimmedKeys.slice(0, trimmedKeys.length - 50)) delete existing[k];
+      try { studyStorage.setItem(KEY, JSON.stringify(existing)); } catch {}
+    }
+  }
 }
 function readSnapshots(): Record<string, ReviewedQuestion> {
   try { return JSON.parse(studyStorage.getItem(KEY) || '{}'); } catch { return {}; }

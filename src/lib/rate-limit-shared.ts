@@ -61,6 +61,10 @@ export function createLimiter(options: Options = {}) {
 }
 
 /** Shared limiter configured from the environment. */
+if (process.env.NODE_ENV === 'production' && !process.env.UPSTASH_REDIS_REST_URL) {
+  console.warn('[SECURITY] UPSTASH_REDIS_REST_URL is unset in production: rate limiter will use in-memory per-instance fallback.');
+}
+
 export const limitRequest = createLimiter({
   url: process.env.UPSTASH_REDIS_REST_URL,
   token: process.env.UPSTASH_REDIS_REST_TOKEN,
